@@ -1152,7 +1152,7 @@ public open class CfnJob internal constructor(
   }
 
   /**
-   * Specifies configuration properties of a notification.
+   * Specifies the connections used by a job.
    *
    * Example:
    *
@@ -1160,80 +1160,174 @@ public open class CfnJob internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.glue.*;
-   * NotificationPropertyProperty notificationPropertyProperty =
-   * NotificationPropertyProperty.builder()
-   * .notifyDelayAfter(123)
+   * ConnectionsListProperty connectionsListProperty = ConnectionsListProperty.builder()
+   * .connections(List.of("connections"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-notificationproperty.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html)
    */
-  public interface NotificationPropertyProperty {
+  public interface ConnectionsListProperty {
     /**
-     * After a job run starts, the number of minutes to wait before sending a job run delay
-     * notification.
+     * A list of connections used by the job.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-notificationproperty.html#cfn-glue-job-notificationproperty-notifydelayafter)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html#cfn-glue-job-connectionslist-connections)
      */
-    public fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
+    public fun connections(): List<String> = unwrap(this).getConnections() ?: emptyList()
 
     /**
-     * A builder for [NotificationPropertyProperty]
+     * A builder for [ConnectionsListProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param notifyDelayAfter After a job run starts, the number of minutes to wait before
-       * sending a job run delay notification.
+       * @param connections A list of connections used by the job.
        */
-      public fun notifyDelayAfter(notifyDelayAfter: Number)
+      public fun connections(connections: List<String>)
+
+      /**
+       * @param connections A list of connections used by the job.
+       */
+      public fun connections(vararg connections: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty.builder()
+          software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty.builder()
 
       /**
-       * @param notifyDelayAfter After a job run starts, the number of minutes to wait before
-       * sending a job run delay notification.
+       * @param connections A list of connections used by the job.
        */
-      override fun notifyDelayAfter(notifyDelayAfter: Number) {
-        cdkBuilder.notifyDelayAfter(notifyDelayAfter)
+      override fun connections(connections: List<String>) {
+        cdkBuilder.connections(connections)
       }
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty =
+      /**
+       * @param connections A list of connections used by the job.
+       */
+      override fun connections(vararg connections: String): Unit = connections(connections.toList())
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty,
-    ) : CdkObject(cdkObject), NotificationPropertyProperty {
+      override val cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty,
+    ) : CdkObject(cdkObject), ConnectionsListProperty {
       /**
-       * After a job run starts, the number of minutes to wait before sending a job run delay
-       * notification.
+       * A list of connections used by the job.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-notificationproperty.html#cfn-glue-job-notificationproperty-notifydelayafter)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html#cfn-glue-job-connectionslist-connections)
        */
-      override fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
+      override fun connections(): List<String> = unwrap(this).getConnections() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationPropertyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionsListProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty):
-          NotificationPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationPropertyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty):
+          ConnectionsListProperty = CdkObjectWrappers.wrap(cdkObject) as? ConnectionsListProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NotificationPropertyProperty):
-          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty = (wrapped as
+      internal fun unwrap(wrapped: ConnectionsListProperty):
+          software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty
+          software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty
+    }
+  }
+
+  /**
+   * An execution property of a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * ExecutionPropertyProperty executionPropertyProperty = ExecutionPropertyProperty.builder()
+   * .maxConcurrentRuns(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html)
+   */
+  public interface ExecutionPropertyProperty {
+    /**
+     * The maximum number of concurrent runs allowed for the job.
+     *
+     * The default is 1. An error is returned when this threshold is reached. The maximum value you
+     * can specify is controlled by a service limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns)
+     */
+    public fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
+
+    /**
+     * A builder for [ExecutionPropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxConcurrentRuns The maximum number of concurrent runs allowed for the job.
+       * The default is 1. An error is returned when this threshold is reached. The maximum value
+       * you can specify is controlled by a service limit.
+       */
+      public fun maxConcurrentRuns(maxConcurrentRuns: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty.builder()
+
+      /**
+       * @param maxConcurrentRuns The maximum number of concurrent runs allowed for the job.
+       * The default is 1. An error is returned when this threshold is reached. The maximum value
+       * you can specify is controlled by a service limit.
+       */
+      override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
+        cdkBuilder.maxConcurrentRuns(maxConcurrentRuns)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty,
+    ) : CdkObject(cdkObject), ExecutionPropertyProperty {
+      /**
+       * The maximum number of concurrent runs allowed for the job.
+       *
+       * The default is 1. An error is returned when this threshold is reached. The maximum value
+       * you can specify is controlled by a service limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns)
+       */
+      override fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExecutionPropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty):
+          ExecutionPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExecutionPropertyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExecutionPropertyProperty):
+          software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty
     }
   }
 
@@ -1438,7 +1532,7 @@ public open class CfnJob internal constructor(
   }
 
   /**
-   * Specifies the connections used by a job.
+   * Specifies configuration properties of a notification.
    *
    * Example:
    *
@@ -1446,174 +1540,80 @@ public open class CfnJob internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.glue.*;
-   * ConnectionsListProperty connectionsListProperty = ConnectionsListProperty.builder()
-   * .connections(List.of("connections"))
+   * NotificationPropertyProperty notificationPropertyProperty =
+   * NotificationPropertyProperty.builder()
+   * .notifyDelayAfter(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-notificationproperty.html)
    */
-  public interface ConnectionsListProperty {
+  public interface NotificationPropertyProperty {
     /**
-     * A list of connections used by the job.
+     * After a job run starts, the number of minutes to wait before sending a job run delay
+     * notification.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html#cfn-glue-job-connectionslist-connections)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-notificationproperty.html#cfn-glue-job-notificationproperty-notifydelayafter)
      */
-    public fun connections(): List<String> = unwrap(this).getConnections() ?: emptyList()
+    public fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
 
     /**
-     * A builder for [ConnectionsListProperty]
+     * A builder for [NotificationPropertyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param connections A list of connections used by the job.
+       * @param notifyDelayAfter After a job run starts, the number of minutes to wait before
+       * sending a job run delay notification.
        */
-      public fun connections(connections: List<String>)
-
-      /**
-       * @param connections A list of connections used by the job.
-       */
-      public fun connections(vararg connections: String)
+      public fun notifyDelayAfter(notifyDelayAfter: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty.builder()
+          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty.builder()
 
       /**
-       * @param connections A list of connections used by the job.
+       * @param notifyDelayAfter After a job run starts, the number of minutes to wait before
+       * sending a job run delay notification.
        */
-      override fun connections(connections: List<String>) {
-        cdkBuilder.connections(connections)
+      override fun notifyDelayAfter(notifyDelayAfter: Number) {
+        cdkBuilder.notifyDelayAfter(notifyDelayAfter)
       }
 
-      /**
-       * @param connections A list of connections used by the job.
-       */
-      override fun connections(vararg connections: String): Unit = connections(connections.toList())
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty =
+      public fun build(): software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty,
-    ) : CdkObject(cdkObject), ConnectionsListProperty {
+      override val cdkObject:
+          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty,
+    ) : CdkObject(cdkObject), NotificationPropertyProperty {
       /**
-       * A list of connections used by the job.
+       * After a job run starts, the number of minutes to wait before sending a job run delay
+       * notification.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-connectionslist.html#cfn-glue-job-connectionslist-connections)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-notificationproperty.html#cfn-glue-job-notificationproperty-notifydelayafter)
        */
-      override fun connections(): List<String> = unwrap(this).getConnections() ?: emptyList()
+      override fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionsListProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationPropertyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty):
-          ConnectionsListProperty = CdkObjectWrappers.wrap(cdkObject) as? ConnectionsListProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty):
+          NotificationPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationPropertyProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ConnectionsListProperty):
-          software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty = (wrapped as
+      internal fun unwrap(wrapped: NotificationPropertyProperty):
+          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty
-    }
-  }
-
-  /**
-   * An execution property of a job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * ExecutionPropertyProperty executionPropertyProperty = ExecutionPropertyProperty.builder()
-   * .maxConcurrentRuns(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html)
-   */
-  public interface ExecutionPropertyProperty {
-    /**
-     * The maximum number of concurrent runs allowed for the job.
-     *
-     * The default is 1. An error is returned when this threshold is reached. The maximum value you
-     * can specify is controlled by a service limit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns)
-     */
-    public fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
-
-    /**
-     * A builder for [ExecutionPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxConcurrentRuns The maximum number of concurrent runs allowed for the job.
-       * The default is 1. An error is returned when this threshold is reached. The maximum value
-       * you can specify is controlled by a service limit.
-       */
-      public fun maxConcurrentRuns(maxConcurrentRuns: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty.builder()
-
-      /**
-       * @param maxConcurrentRuns The maximum number of concurrent runs allowed for the job.
-       * The default is 1. An error is returned when this threshold is reached. The maximum value
-       * you can specify is controlled by a service limit.
-       */
-      override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
-        cdkBuilder.maxConcurrentRuns(maxConcurrentRuns)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty,
-    ) : CdkObject(cdkObject), ExecutionPropertyProperty {
-      /**
-       * The maximum number of concurrent runs allowed for the job.
-       *
-       * The default is 1. An error is returned when this threshold is reached. The maximum value
-       * you can specify is controlled by a service limit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-executionproperty.html#cfn-glue-job-executionproperty-maxconcurrentruns)
-       */
-      override fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExecutionPropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty):
-          ExecutionPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ExecutionPropertyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExecutionPropertyProperty):
-          software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty
+          software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty
     }
   }
 }

@@ -698,313 +698,6 @@ public open class CfnContainer internal constructor(
   }
 
   /**
-   * A setting that enables metrics at the object level.
-   *
-   * Each rule contains an object group and an object group name. If the policy includes the
-   * MetricPolicyRules parameter, you must include at least one rule. Each metric policy can include up
-   * to five rules by default. You can also [request a quota
-   * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-   * to allow up to 300 rules per policy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediastore.*;
-   * MetricPolicyRuleProperty metricPolicyRuleProperty = MetricPolicyRuleProperty.builder()
-   * .objectGroup("objectGroup")
-   * .objectGroupName("objectGroupName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html)
-   */
-  public interface MetricPolicyRuleProperty {
-    /**
-     * A path or file name that defines which objects to include in the group.
-     *
-     * Wildcards (*) are acceptable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroup)
-     */
-    public fun objectGroup(): String
-
-    /**
-     * A name that allows you to refer to the object group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroupname)
-     */
-    public fun objectGroupName(): String
-
-    /**
-     * A builder for [MetricPolicyRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param objectGroup A path or file name that defines which objects to include in the group. 
-       * Wildcards (*) are acceptable.
-       */
-      public fun objectGroup(objectGroup: String)
-
-      /**
-       * @param objectGroupName A name that allows you to refer to the object group. 
-       */
-      public fun objectGroupName(objectGroupName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty.Builder =
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty.builder()
-
-      /**
-       * @param objectGroup A path or file name that defines which objects to include in the group. 
-       * Wildcards (*) are acceptable.
-       */
-      override fun objectGroup(objectGroup: String) {
-        cdkBuilder.objectGroup(objectGroup)
-      }
-
-      /**
-       * @param objectGroupName A name that allows you to refer to the object group. 
-       */
-      override fun objectGroupName(objectGroupName: String) {
-        cdkBuilder.objectGroupName(objectGroupName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty,
-    ) : CdkObject(cdkObject), MetricPolicyRuleProperty {
-      /**
-       * A path or file name that defines which objects to include in the group.
-       *
-       * Wildcards (*) are acceptable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroup)
-       */
-      override fun objectGroup(): String = unwrap(this).getObjectGroup()
-
-      /**
-       * A name that allows you to refer to the object group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroupname)
-       */
-      override fun objectGroupName(): String = unwrap(this).getObjectGroupName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricPolicyRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty):
-          MetricPolicyRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricPolicyRuleProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricPolicyRuleProperty):
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty
-    }
-  }
-
-  /**
-   * The metric policy that is associated with the container.
-   *
-   * A metric policy allows AWS Elemental MediaStore to send metrics to Amazon CloudWatch. In the
-   * policy, you must indicate whether you want MediaStore to send container-level metrics. You can
-   * also include rules to define groups of objects that you want MediaStore to send object-level
-   * metrics for.
-   *
-   * To view examples of how to construct a metric policy for your use case, see [Example Metric
-   * Policies](https://docs.aws.amazon.com/mediastore/latest/ug/policies-metric-examples.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediastore.*;
-   * MetricPolicyProperty metricPolicyProperty = MetricPolicyProperty.builder()
-   * .containerLevelMetrics("containerLevelMetrics")
-   * // the properties below are optional
-   * .metricPolicyRules(List.of(MetricPolicyRuleProperty.builder()
-   * .objectGroup("objectGroup")
-   * .objectGroupName("objectGroupName")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html)
-   */
-  public interface MetricPolicyProperty {
-    /**
-     * A setting to enable or disable metrics at the container level.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-containerlevelmetrics)
-     */
-    public fun containerLevelMetrics(): String
-
-    /**
-     * A parameter that holds an array of rules that enable metrics at the object level.
-     *
-     * This parameter is optional, but if you choose to include it, you must also include at least
-     * one rule. By default, you can include up to five rules. You can also [request a quota
-     * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-     * to allow up to 300 rules per policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-metricpolicyrules)
-     */
-    public fun metricPolicyRules(): Any? = unwrap(this).getMetricPolicyRules()
-
-    /**
-     * A builder for [MetricPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerLevelMetrics A setting to enable or disable metrics at the container level.
-       * 
-       */
-      public fun containerLevelMetrics(containerLevelMetrics: String)
-
-      /**
-       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
-       * the object level.
-       * This parameter is optional, but if you choose to include it, you must also include at least
-       * one rule. By default, you can include up to five rules. You can also [request a quota
-       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-       * to allow up to 300 rules per policy.
-       */
-      public fun metricPolicyRules(metricPolicyRules: IResolvable)
-
-      /**
-       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
-       * the object level.
-       * This parameter is optional, but if you choose to include it, you must also include at least
-       * one rule. By default, you can include up to five rules. You can also [request a quota
-       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-       * to allow up to 300 rules per policy.
-       */
-      public fun metricPolicyRules(metricPolicyRules: List<Any>)
-
-      /**
-       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
-       * the object level.
-       * This parameter is optional, but if you choose to include it, you must also include at least
-       * one rule. By default, you can include up to five rules. You can also [request a quota
-       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-       * to allow up to 300 rules per policy.
-       */
-      public fun metricPolicyRules(vararg metricPolicyRules: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty.Builder =
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty.builder()
-
-      /**
-       * @param containerLevelMetrics A setting to enable or disable metrics at the container level.
-       * 
-       */
-      override fun containerLevelMetrics(containerLevelMetrics: String) {
-        cdkBuilder.containerLevelMetrics(containerLevelMetrics)
-      }
-
-      /**
-       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
-       * the object level.
-       * This parameter is optional, but if you choose to include it, you must also include at least
-       * one rule. By default, you can include up to five rules. You can also [request a quota
-       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-       * to allow up to 300 rules per policy.
-       */
-      override fun metricPolicyRules(metricPolicyRules: IResolvable) {
-        cdkBuilder.metricPolicyRules(metricPolicyRules.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
-       * the object level.
-       * This parameter is optional, but if you choose to include it, you must also include at least
-       * one rule. By default, you can include up to five rules. You can also [request a quota
-       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-       * to allow up to 300 rules per policy.
-       */
-      override fun metricPolicyRules(metricPolicyRules: List<Any>) {
-        cdkBuilder.metricPolicyRules(metricPolicyRules)
-      }
-
-      /**
-       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
-       * the object level.
-       * This parameter is optional, but if you choose to include it, you must also include at least
-       * one rule. By default, you can include up to five rules. You can also [request a quota
-       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-       * to allow up to 300 rules per policy.
-       */
-      override fun metricPolicyRules(vararg metricPolicyRules: Any): Unit =
-          metricPolicyRules(metricPolicyRules.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty,
-    ) : CdkObject(cdkObject), MetricPolicyProperty {
-      /**
-       * A setting to enable or disable metrics at the container level.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-containerlevelmetrics)
-       */
-      override fun containerLevelMetrics(): String = unwrap(this).getContainerLevelMetrics()
-
-      /**
-       * A parameter that holds an array of rules that enable metrics at the object level.
-       *
-       * This parameter is optional, but if you choose to include it, you must also include at least
-       * one rule. By default, you can include up to five rules. You can also [request a quota
-       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
-       * to allow up to 300 rules per policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-metricpolicyrules)
-       */
-      override fun metricPolicyRules(): Any? = unwrap(this).getMetricPolicyRules()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty):
-          MetricPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricPolicyProperty):
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty
-    }
-  }
-
-  /**
    * A rule for a CORS policy.
    *
    * You can add up to 100 rules to a CORS policy. If more than one rule applies, the service uses
@@ -1333,6 +1026,313 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty
+    }
+  }
+
+  /**
+   * The metric policy that is associated with the container.
+   *
+   * A metric policy allows AWS Elemental MediaStore to send metrics to Amazon CloudWatch. In the
+   * policy, you must indicate whether you want MediaStore to send container-level metrics. You can
+   * also include rules to define groups of objects that you want MediaStore to send object-level
+   * metrics for.
+   *
+   * To view examples of how to construct a metric policy for your use case, see [Example Metric
+   * Policies](https://docs.aws.amazon.com/mediastore/latest/ug/policies-metric-examples.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediastore.*;
+   * MetricPolicyProperty metricPolicyProperty = MetricPolicyProperty.builder()
+   * .containerLevelMetrics("containerLevelMetrics")
+   * // the properties below are optional
+   * .metricPolicyRules(List.of(MetricPolicyRuleProperty.builder()
+   * .objectGroup("objectGroup")
+   * .objectGroupName("objectGroupName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html)
+   */
+  public interface MetricPolicyProperty {
+    /**
+     * A setting to enable or disable metrics at the container level.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-containerlevelmetrics)
+     */
+    public fun containerLevelMetrics(): String
+
+    /**
+     * A parameter that holds an array of rules that enable metrics at the object level.
+     *
+     * This parameter is optional, but if you choose to include it, you must also include at least
+     * one rule. By default, you can include up to five rules. You can also [request a quota
+     * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+     * to allow up to 300 rules per policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-metricpolicyrules)
+     */
+    public fun metricPolicyRules(): Any? = unwrap(this).getMetricPolicyRules()
+
+    /**
+     * A builder for [MetricPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerLevelMetrics A setting to enable or disable metrics at the container level.
+       * 
+       */
+      public fun containerLevelMetrics(containerLevelMetrics: String)
+
+      /**
+       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
+       * the object level.
+       * This parameter is optional, but if you choose to include it, you must also include at least
+       * one rule. By default, you can include up to five rules. You can also [request a quota
+       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+       * to allow up to 300 rules per policy.
+       */
+      public fun metricPolicyRules(metricPolicyRules: IResolvable)
+
+      /**
+       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
+       * the object level.
+       * This parameter is optional, but if you choose to include it, you must also include at least
+       * one rule. By default, you can include up to five rules. You can also [request a quota
+       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+       * to allow up to 300 rules per policy.
+       */
+      public fun metricPolicyRules(metricPolicyRules: List<Any>)
+
+      /**
+       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
+       * the object level.
+       * This parameter is optional, but if you choose to include it, you must also include at least
+       * one rule. By default, you can include up to five rules. You can also [request a quota
+       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+       * to allow up to 300 rules per policy.
+       */
+      public fun metricPolicyRules(vararg metricPolicyRules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty.Builder =
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty.builder()
+
+      /**
+       * @param containerLevelMetrics A setting to enable or disable metrics at the container level.
+       * 
+       */
+      override fun containerLevelMetrics(containerLevelMetrics: String) {
+        cdkBuilder.containerLevelMetrics(containerLevelMetrics)
+      }
+
+      /**
+       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
+       * the object level.
+       * This parameter is optional, but if you choose to include it, you must also include at least
+       * one rule. By default, you can include up to five rules. You can also [request a quota
+       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+       * to allow up to 300 rules per policy.
+       */
+      override fun metricPolicyRules(metricPolicyRules: IResolvable) {
+        cdkBuilder.metricPolicyRules(metricPolicyRules.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
+       * the object level.
+       * This parameter is optional, but if you choose to include it, you must also include at least
+       * one rule. By default, you can include up to five rules. You can also [request a quota
+       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+       * to allow up to 300 rules per policy.
+       */
+      override fun metricPolicyRules(metricPolicyRules: List<Any>) {
+        cdkBuilder.metricPolicyRules(metricPolicyRules)
+      }
+
+      /**
+       * @param metricPolicyRules A parameter that holds an array of rules that enable metrics at
+       * the object level.
+       * This parameter is optional, but if you choose to include it, you must also include at least
+       * one rule. By default, you can include up to five rules. You can also [request a quota
+       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+       * to allow up to 300 rules per policy.
+       */
+      override fun metricPolicyRules(vararg metricPolicyRules: Any): Unit =
+          metricPolicyRules(metricPolicyRules.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty,
+    ) : CdkObject(cdkObject), MetricPolicyProperty {
+      /**
+       * A setting to enable or disable metrics at the container level.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-containerlevelmetrics)
+       */
+      override fun containerLevelMetrics(): String = unwrap(this).getContainerLevelMetrics()
+
+      /**
+       * A parameter that holds an array of rules that enable metrics at the object level.
+       *
+       * This parameter is optional, but if you choose to include it, you must also include at least
+       * one rule. By default, you can include up to five rules. You can also [request a quota
+       * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+       * to allow up to 300 rules per policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-metricpolicyrules)
+       */
+      override fun metricPolicyRules(): Any? = unwrap(this).getMetricPolicyRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty):
+          MetricPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricPolicyProperty):
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty
+    }
+  }
+
+  /**
+   * A setting that enables metrics at the object level.
+   *
+   * Each rule contains an object group and an object group name. If the policy includes the
+   * MetricPolicyRules parameter, you must include at least one rule. Each metric policy can include up
+   * to five rules by default. You can also [request a quota
+   * increase](https://docs.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas)
+   * to allow up to 300 rules per policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediastore.*;
+   * MetricPolicyRuleProperty metricPolicyRuleProperty = MetricPolicyRuleProperty.builder()
+   * .objectGroup("objectGroup")
+   * .objectGroupName("objectGroupName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html)
+   */
+  public interface MetricPolicyRuleProperty {
+    /**
+     * A path or file name that defines which objects to include in the group.
+     *
+     * Wildcards (*) are acceptable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroup)
+     */
+    public fun objectGroup(): String
+
+    /**
+     * A name that allows you to refer to the object group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroupname)
+     */
+    public fun objectGroupName(): String
+
+    /**
+     * A builder for [MetricPolicyRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param objectGroup A path or file name that defines which objects to include in the group. 
+       * Wildcards (*) are acceptable.
+       */
+      public fun objectGroup(objectGroup: String)
+
+      /**
+       * @param objectGroupName A name that allows you to refer to the object group. 
+       */
+      public fun objectGroupName(objectGroupName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty.Builder =
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty.builder()
+
+      /**
+       * @param objectGroup A path or file name that defines which objects to include in the group. 
+       * Wildcards (*) are acceptable.
+       */
+      override fun objectGroup(objectGroup: String) {
+        cdkBuilder.objectGroup(objectGroup)
+      }
+
+      /**
+       * @param objectGroupName A name that allows you to refer to the object group. 
+       */
+      override fun objectGroupName(objectGroupName: String) {
+        cdkBuilder.objectGroupName(objectGroupName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty,
+    ) : CdkObject(cdkObject), MetricPolicyRuleProperty {
+      /**
+       * A path or file name that defines which objects to include in the group.
+       *
+       * Wildcards (*) are acceptable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroup)
+       */
+      override fun objectGroup(): String = unwrap(this).getObjectGroup()
+
+      /**
+       * A name that allows you to refer to the object group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroupname)
+       */
+      override fun objectGroupName(): String = unwrap(this).getObjectGroupName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricPolicyRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty):
+          MetricPolicyRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricPolicyRuleProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricPolicyRuleProperty):
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty
     }
   }
 }

@@ -446,14 +446,7 @@ public open class CfnGateway internal constructor(
   }
 
   /**
-   * Contains details for a gateway that runs on AWS IoT Greengrass V2 .
-   *
-   * To create a gateway that runs on AWS IoT Greengrass V2 , you must deploy the IoT SiteWise Edge
-   * component to your gateway device. Your [Greengrass device
-   * role](https://docs.aws.amazon.com/greengrass/v2/developerguide/device-service-role.html) must use
-   * the `AWSIoTSiteWiseEdgeAccess` policy. For more information, see [Using AWS IoT SiteWise at the
-   * edge](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/sw-gateways.html) in the *AWS IoT
-   * SiteWise User Guide* .
+   * Contains a summary of a gateway capability configuration.
    *
    * Example:
    *
@@ -461,183 +454,144 @@ public open class CfnGateway internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * GreengrassV2Property greengrassV2Property = GreengrassV2Property.builder()
-   * .coreDeviceThingName("coreDeviceThingName")
+   * GatewayCapabilitySummaryProperty gatewayCapabilitySummaryProperty =
+   * GatewayCapabilitySummaryProperty.builder()
+   * .capabilityNamespace("capabilityNamespace")
+   * // the properties below are optional
+   * .capabilityConfiguration("capabilityConfiguration")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html)
    */
-  public interface GreengrassV2Property {
+  public interface GatewayCapabilitySummaryProperty {
     /**
-     * The name of the AWS IoT thing for your AWS IoT Greengrass V2 core device.
+     * The JSON document that defines the configuration for the gateway capability.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html#cfn-iotsitewise-gateway-greengrassv2-coredevicethingname)
+     * For more information, see [Configuring data sources
+     * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli)
+     * in the *AWS IoT SiteWise User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilityconfiguration)
      */
-    public fun coreDeviceThingName(): String
+    public fun capabilityConfiguration(): String? = unwrap(this).getCapabilityConfiguration()
 
     /**
-     * A builder for [GreengrassV2Property]
+     * The namespace of the capability configuration.
+     *
+     * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
+     * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
+     * `version` is a number such as `1` .
+     *
+     * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace)
+     */
+    public fun capabilityNamespace(): String
+
+    /**
+     * A builder for [GatewayCapabilitySummaryProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param coreDeviceThingName The name of the AWS IoT thing for your AWS IoT Greengrass V2
-       * core device. 
+       * @param capabilityConfiguration The JSON document that defines the configuration for the
+       * gateway capability.
+       * For more information, see [Configuring data sources
+       * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli)
+       * in the *AWS IoT SiteWise User Guide* .
        */
-      public fun coreDeviceThingName(coreDeviceThingName: String)
+      public fun capabilityConfiguration(capabilityConfiguration: String)
+
+      /**
+       * @param capabilityNamespace The namespace of the capability configuration. 
+       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
+       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
+       * `version` is a number such as `1` .
+       *
+       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
+       */
+      public fun capabilityNamespace(capabilityNamespace: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property.Builder =
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property.builder()
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty.Builder
+          =
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty.builder()
 
       /**
-       * @param coreDeviceThingName The name of the AWS IoT thing for your AWS IoT Greengrass V2
-       * core device. 
+       * @param capabilityConfiguration The JSON document that defines the configuration for the
+       * gateway capability.
+       * For more information, see [Configuring data sources
+       * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli)
+       * in the *AWS IoT SiteWise User Guide* .
        */
-      override fun coreDeviceThingName(coreDeviceThingName: String) {
-        cdkBuilder.coreDeviceThingName(coreDeviceThingName)
+      override fun capabilityConfiguration(capabilityConfiguration: String) {
+        cdkBuilder.capabilityConfiguration(capabilityConfiguration)
+      }
+
+      /**
+       * @param capabilityNamespace The namespace of the capability configuration. 
+       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
+       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
+       * `version` is a number such as `1` .
+       *
+       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
+       */
+      override fun capabilityNamespace(capabilityNamespace: String) {
+        cdkBuilder.capabilityNamespace(capabilityNamespace)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property =
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property,
-    ) : CdkObject(cdkObject), GreengrassV2Property {
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty,
+    ) : CdkObject(cdkObject), GatewayCapabilitySummaryProperty {
       /**
-       * The name of the AWS IoT thing for your AWS IoT Greengrass V2 core device.
+       * The JSON document that defines the configuration for the gateway capability.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html#cfn-iotsitewise-gateway-greengrassv2-coredevicethingname)
+       * For more information, see [Configuring data sources
+       * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli)
+       * in the *AWS IoT SiteWise User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilityconfiguration)
        */
-      override fun coreDeviceThingName(): String = unwrap(this).getCoreDeviceThingName()
+      override fun capabilityConfiguration(): String? = unwrap(this).getCapabilityConfiguration()
+
+      /**
+       * The namespace of the capability configuration.
+       *
+       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
+       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
+       * `version` is a number such as `1` .
+       *
+       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace)
+       */
+      override fun capabilityNamespace(): String = unwrap(this).getCapabilityNamespace()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GreengrassV2Property {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GatewayCapabilitySummaryProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property):
-          GreengrassV2Property = CdkObjectWrappers.wrap(cdkObject) as? GreengrassV2Property ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty):
+          GatewayCapabilitySummaryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayCapabilitySummaryProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: GreengrassV2Property):
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property
-    }
-  }
-
-  /**
-   * Contains details for a gateway that runs on AWS IoT Greengrass .
-   *
-   * To create a gateway that runs on AWS IoT Greengrass , you must add the IoT SiteWise connector
-   * to a Greengrass group and deploy it. Your Greengrass group must also have permissions to upload
-   * data to AWS IoT SiteWise . For more information, see [Ingesting data using a
-   * gateway](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/gateway-connector.html) in the
-   * *AWS IoT SiteWise User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * GreengrassProperty greengrassProperty = GreengrassProperty.builder()
-   * .groupArn("groupArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html)
-   */
-  public interface GreengrassProperty {
-    /**
-     * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
-     * Greengrass group. For more information about how to find a group's ARN, see
-     * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html) and
-     * [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html) in the
-     * *AWS IoT Greengrass API Reference* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html#cfn-iotsitewise-gateway-greengrass-grouparn)
-     */
-    public fun groupArn(): String
-
-    /**
-     * A builder for [GreengrassProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param groupArn The
-       * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
-       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
-       * in the *AWS IoT Greengrass API Reference* . 
-       */
-      public fun groupArn(groupArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty.Builder =
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty.builder()
-
-      /**
-       * @param groupArn The
-       * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
-       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
-       * in the *AWS IoT Greengrass API Reference* . 
-       */
-      override fun groupArn(groupArn: String) {
-        cdkBuilder.groupArn(groupArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty,
-    ) : CdkObject(cdkObject), GreengrassProperty {
-      /**
-       * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of
-       * the Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
-       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
-       * in the *AWS IoT Greengrass API Reference* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html#cfn-iotsitewise-gateway-greengrass-grouparn)
-       */
-      override fun groupArn(): String = unwrap(this).getGroupArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GreengrassProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty):
-          GreengrassProperty = CdkObjectWrappers.wrap(cdkObject) as? GreengrassProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GreengrassProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty
+      internal fun unwrap(wrapped: GatewayCapabilitySummaryProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty
     }
   }
 
@@ -809,7 +763,13 @@ public open class CfnGateway internal constructor(
   }
 
   /**
-   * Contains a summary of a gateway capability configuration.
+   * Contains details for a gateway that runs on AWS IoT Greengrass .
+   *
+   * To create a gateway that runs on AWS IoT Greengrass , you must add the IoT SiteWise connector
+   * to a Greengrass group and deploy it. Your Greengrass group must also have permissions to upload
+   * data to AWS IoT SiteWise . For more information, see [Ingesting data using a
+   * gateway](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/gateway-connector.html) in the
+   * *AWS IoT SiteWise User Guide* .
    *
    * Example:
    *
@@ -817,144 +777,184 @@ public open class CfnGateway internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * GatewayCapabilitySummaryProperty gatewayCapabilitySummaryProperty =
-   * GatewayCapabilitySummaryProperty.builder()
-   * .capabilityNamespace("capabilityNamespace")
-   * // the properties below are optional
-   * .capabilityConfiguration("capabilityConfiguration")
+   * GreengrassProperty greengrassProperty = GreengrassProperty.builder()
+   * .groupArn("groupArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html)
    */
-  public interface GatewayCapabilitySummaryProperty {
+  public interface GreengrassProperty {
     /**
-     * The JSON document that defines the configuration for the gateway capability.
+     * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
+     * Greengrass group. For more information about how to find a group's ARN, see
+     * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html) and
+     * [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html) in the
+     * *AWS IoT Greengrass API Reference* .
      *
-     * For more information, see [Configuring data sources
-     * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli)
-     * in the *AWS IoT SiteWise User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilityconfiguration)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html#cfn-iotsitewise-gateway-greengrass-grouparn)
      */
-    public fun capabilityConfiguration(): String? = unwrap(this).getCapabilityConfiguration()
+    public fun groupArn(): String
 
     /**
-     * The namespace of the capability configuration.
-     *
-     * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
-     * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
-     * `version` is a number such as `1` .
-     *
-     * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace)
-     */
-    public fun capabilityNamespace(): String
-
-    /**
-     * A builder for [GatewayCapabilitySummaryProperty]
+     * A builder for [GreengrassProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param capabilityConfiguration The JSON document that defines the configuration for the
-       * gateway capability.
-       * For more information, see [Configuring data sources
-       * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli)
-       * in the *AWS IoT SiteWise User Guide* .
+       * @param groupArn The
+       * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
+       * Greengrass group. For more information about how to find a group's ARN, see
+       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
+       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
+       * in the *AWS IoT Greengrass API Reference* . 
        */
-      public fun capabilityConfiguration(capabilityConfiguration: String)
-
-      /**
-       * @param capabilityNamespace The namespace of the capability configuration. 
-       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
-       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
-       * `version` is a number such as `1` .
-       *
-       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
-       */
-      public fun capabilityNamespace(capabilityNamespace: String)
+      public fun groupArn(groupArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty.Builder
-          =
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty.builder()
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty.builder()
 
       /**
-       * @param capabilityConfiguration The JSON document that defines the configuration for the
-       * gateway capability.
-       * For more information, see [Configuring data sources
-       * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli)
-       * in the *AWS IoT SiteWise User Guide* .
+       * @param groupArn The
+       * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
+       * Greengrass group. For more information about how to find a group's ARN, see
+       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
+       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
+       * in the *AWS IoT Greengrass API Reference* . 
        */
-      override fun capabilityConfiguration(capabilityConfiguration: String) {
-        cdkBuilder.capabilityConfiguration(capabilityConfiguration)
+      override fun groupArn(groupArn: String) {
+        cdkBuilder.groupArn(groupArn)
       }
 
-      /**
-       * @param capabilityNamespace The namespace of the capability configuration. 
-       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
-       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
-       * `version` is a number such as `1` .
-       *
-       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
-       */
-      override fun capabilityNamespace(capabilityNamespace: String) {
-        cdkBuilder.capabilityNamespace(capabilityNamespace)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty =
-          cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty,
-    ) : CdkObject(cdkObject), GatewayCapabilitySummaryProperty {
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty,
+    ) : CdkObject(cdkObject), GreengrassProperty {
       /**
-       * The JSON document that defines the configuration for the gateway capability.
+       * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of
+       * the Greengrass group. For more information about how to find a group's ARN, see
+       * [ListGroups](https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html)
+       * and [GetGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html)
+       * in the *AWS IoT Greengrass API Reference* .
        *
-       * For more information, see [Configuring data sources
-       * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli)
-       * in the *AWS IoT SiteWise User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilityconfiguration)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html#cfn-iotsitewise-gateway-greengrass-grouparn)
        */
-      override fun capabilityConfiguration(): String? = unwrap(this).getCapabilityConfiguration()
-
-      /**
-       * The namespace of the capability configuration.
-       *
-       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
-       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
-       * `version` is a number such as `1` .
-       *
-       * The maximum length is 512 characters with the pattern `^[a-zA-Z]+:[a-zA-Z]+:[0-9]+$` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace)
-       */
-      override fun capabilityNamespace(): String = unwrap(this).getCapabilityNamespace()
+      override fun groupArn(): String = unwrap(this).getGroupArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GatewayCapabilitySummaryProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GreengrassProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty):
-          GatewayCapabilitySummaryProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GatewayCapabilitySummaryProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty):
+          GreengrassProperty = CdkObjectWrappers.wrap(cdkObject) as? GreengrassProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: GatewayCapabilitySummaryProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty
+      internal fun unwrap(wrapped: GreengrassProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty
+    }
+  }
+
+  /**
+   * Contains details for a gateway that runs on AWS IoT Greengrass V2 .
+   *
+   * To create a gateway that runs on AWS IoT Greengrass V2 , you must deploy the IoT SiteWise Edge
+   * component to your gateway device. Your [Greengrass device
+   * role](https://docs.aws.amazon.com/greengrass/v2/developerguide/device-service-role.html) must use
+   * the `AWSIoTSiteWiseEdgeAccess` policy. For more information, see [Using AWS IoT SiteWise at the
+   * edge](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/sw-gateways.html) in the *AWS IoT
+   * SiteWise User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * GreengrassV2Property greengrassV2Property = GreengrassV2Property.builder()
+   * .coreDeviceThingName("coreDeviceThingName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html)
+   */
+  public interface GreengrassV2Property {
+    /**
+     * The name of the AWS IoT thing for your AWS IoT Greengrass V2 core device.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html#cfn-iotsitewise-gateway-greengrassv2-coredevicethingname)
+     */
+    public fun coreDeviceThingName(): String
+
+    /**
+     * A builder for [GreengrassV2Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param coreDeviceThingName The name of the AWS IoT thing for your AWS IoT Greengrass V2
+       * core device. 
+       */
+      public fun coreDeviceThingName(coreDeviceThingName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property.builder()
+
+      /**
+       * @param coreDeviceThingName The name of the AWS IoT thing for your AWS IoT Greengrass V2
+       * core device. 
+       */
+      override fun coreDeviceThingName(coreDeviceThingName: String) {
+        cdkBuilder.coreDeviceThingName(coreDeviceThingName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property,
+    ) : CdkObject(cdkObject), GreengrassV2Property {
+      /**
+       * The name of the AWS IoT thing for your AWS IoT Greengrass V2 core device.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html#cfn-iotsitewise-gateway-greengrassv2-coredevicethingname)
+       */
+      override fun coreDeviceThingName(): String = unwrap(this).getCoreDeviceThingName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GreengrassV2Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property):
+          GreengrassV2Property = CdkObjectWrappers.wrap(cdkObject) as? GreengrassV2Property ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GreengrassV2Property):
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property
     }
   }
 }

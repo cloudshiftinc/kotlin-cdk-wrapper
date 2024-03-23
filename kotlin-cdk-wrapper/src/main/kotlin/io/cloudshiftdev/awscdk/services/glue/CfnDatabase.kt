@@ -254,6 +254,225 @@ public open class CfnDatabase internal constructor(
   }
 
   /**
+   * The AWS Lake Formation principal.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * DataLakePrincipalProperty dataLakePrincipalProperty = DataLakePrincipalProperty.builder()
+   * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html)
+   */
+  public interface DataLakePrincipalProperty {
+    /**
+     * An identifier for the AWS Lake Formation principal.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html#cfn-glue-database-datalakeprincipal-datalakeprincipalidentifier)
+     */
+    public fun dataLakePrincipalIdentifier(): String? =
+        unwrap(this).getDataLakePrincipalIdentifier()
+
+    /**
+     * A builder for [DataLakePrincipalProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
+       */
+      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty.builder()
+
+      /**
+       * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
+       */
+      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
+        cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty,
+    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
+      /**
+       * An identifier for the AWS Lake Formation principal.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html#cfn-glue-database-datalakeprincipal-datalakeprincipalidentifier)
+       */
+      override fun dataLakePrincipalIdentifier(): String? =
+          unwrap(this).getDataLakePrincipalIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataLakePrincipalProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty):
+          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataLakePrincipalProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataLakePrincipalProperty):
+          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty
+    }
+  }
+
+  /**
+   * A structure that describes a target database for resource linking.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * DatabaseIdentifierProperty databaseIdentifierProperty = DatabaseIdentifierProperty.builder()
+   * .catalogId("catalogId")
+   * .databaseName("databaseName")
+   * .region("region")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html)
+   */
+  public interface DatabaseIdentifierProperty {
+    /**
+     * The ID of the Data Catalog in which the database resides.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-catalogid)
+     */
+    public fun catalogId(): String? = unwrap(this).getCatalogId()
+
+    /**
+     * The name of the catalog database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-databasename)
+     */
+    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+    /**
+     * The Region of the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-region)
+     */
+    public fun region(): String? = unwrap(this).getRegion()
+
+    /**
+     * A builder for [DatabaseIdentifierProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalogId The ID of the Data Catalog in which the database resides.
+       */
+      public fun catalogId(catalogId: String)
+
+      /**
+       * @param databaseName The name of the catalog database.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param region The Region of the database.
+       */
+      public fun region(region: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty.builder()
+
+      /**
+       * @param catalogId The ID of the Data Catalog in which the database resides.
+       */
+      override fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+      }
+
+      /**
+       * @param databaseName The name of the catalog database.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param region The Region of the database.
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty,
+    ) : CdkObject(cdkObject), DatabaseIdentifierProperty {
+      /**
+       * The ID of the Data Catalog in which the database resides.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-catalogid)
+       */
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
+
+      /**
+       * The name of the catalog database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-databasename)
+       */
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+      /**
+       * The Region of the database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-region)
+       */
+      override fun region(): String? = unwrap(this).getRegion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseIdentifierProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty):
+          DatabaseIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabaseIdentifierProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabaseIdentifierProperty):
+          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty
+    }
+  }
+
+  /**
    * The structure used to create or update a database.
    *
    * Example:
@@ -733,89 +952,6 @@ public open class CfnDatabase internal constructor(
   }
 
   /**
-   * The AWS Lake Formation principal.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * DataLakePrincipalProperty dataLakePrincipalProperty = DataLakePrincipalProperty.builder()
-   * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html)
-   */
-  public interface DataLakePrincipalProperty {
-    /**
-     * An identifier for the AWS Lake Formation principal.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html#cfn-glue-database-datalakeprincipal-datalakeprincipalidentifier)
-     */
-    public fun dataLakePrincipalIdentifier(): String? =
-        unwrap(this).getDataLakePrincipalIdentifier()
-
-    /**
-     * A builder for [DataLakePrincipalProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
-       */
-      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty.builder()
-
-      /**
-       * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
-       */
-      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
-        cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty,
-    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
-      /**
-       * An identifier for the AWS Lake Formation principal.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html#cfn-glue-database-datalakeprincipal-datalakeprincipalidentifier)
-       */
-      override fun dataLakePrincipalIdentifier(): String? =
-          unwrap(this).getDataLakePrincipalIdentifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataLakePrincipalProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty):
-          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataLakePrincipalProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataLakePrincipalProperty):
-          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty
-    }
-  }
-
-  /**
    * the permissions granted to a principal.
    *
    * Example:
@@ -960,142 +1096,6 @@ public open class CfnDatabase internal constructor(
           software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty
-    }
-  }
-
-  /**
-   * A structure that describes a target database for resource linking.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * DatabaseIdentifierProperty databaseIdentifierProperty = DatabaseIdentifierProperty.builder()
-   * .catalogId("catalogId")
-   * .databaseName("databaseName")
-   * .region("region")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html)
-   */
-  public interface DatabaseIdentifierProperty {
-    /**
-     * The ID of the Data Catalog in which the database resides.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-catalogid)
-     */
-    public fun catalogId(): String? = unwrap(this).getCatalogId()
-
-    /**
-     * The name of the catalog database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-databasename)
-     */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-    /**
-     * The Region of the database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-region)
-     */
-    public fun region(): String? = unwrap(this).getRegion()
-
-    /**
-     * A builder for [DatabaseIdentifierProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId The ID of the Data Catalog in which the database resides.
-       */
-      public fun catalogId(catalogId: String)
-
-      /**
-       * @param databaseName The name of the catalog database.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param region The Region of the database.
-       */
-      public fun region(region: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty.builder()
-
-      /**
-       * @param catalogId The ID of the Data Catalog in which the database resides.
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
-
-      /**
-       * @param databaseName The name of the catalog database.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param region The Region of the database.
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty,
-    ) : CdkObject(cdkObject), DatabaseIdentifierProperty {
-      /**
-       * The ID of the Data Catalog in which the database resides.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-catalogid)
-       */
-      override fun catalogId(): String? = unwrap(this).getCatalogId()
-
-      /**
-       * The name of the catalog database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-databasename)
-       */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-      /**
-       * The Region of the database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-region)
-       */
-      override fun region(): String? = unwrap(this).getRegion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseIdentifierProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty):
-          DatabaseIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DatabaseIdentifierProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatabaseIdentifierProperty):
-          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty
     }
   }
 }

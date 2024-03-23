@@ -723,6 +723,2295 @@ public open class CfnCertificate internal constructor(
   }
 
   /**
+   * Contains X.509 certificate information to be placed in an issued certificate. An
+   * `APIPassthrough` or `APICSRPassthrough` template variant must be selected, or else this parameter
+   * is ignored.
+   *
+   * If conflicting or duplicate certificate information is supplied from other sources, AWS Private
+   * CA applies [order of operation
+   * rules](https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations)
+   * to determine what information is used.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * ApiPassthroughProperty apiPassthroughProperty = ApiPassthroughProperty.builder()
+   * .extensions(ExtensionsProperty.builder()
+   * .certificatePolicies(List.of(PolicyInformationProperty.builder()
+   * .certPolicyId("certPolicyId")
+   * // the properties below are optional
+   * .policyQualifiers(List.of(PolicyQualifierInfoProperty.builder()
+   * .policyQualifierId("policyQualifierId")
+   * .qualifier(QualifierProperty.builder()
+   * .cpsUri("cpsUri")
+   * .build())
+   * .build()))
+   * .build()))
+   * .customExtensions(List.of(CustomExtensionProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * // the properties below are optional
+   * .critical(false)
+   * .build()))
+   * .extendedKeyUsage(List.of(ExtendedKeyUsageProperty.builder()
+   * .extendedKeyUsageObjectIdentifier("extendedKeyUsageObjectIdentifier")
+   * .extendedKeyUsageType("extendedKeyUsageType")
+   * .build()))
+   * .keyUsage(KeyUsageProperty.builder()
+   * .crlSign(false)
+   * .dataEncipherment(false)
+   * .decipherOnly(false)
+   * .digitalSignature(false)
+   * .encipherOnly(false)
+   * .keyAgreement(false)
+   * .keyCertSign(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * .subjectAlternativeNames(List.of(GeneralNameProperty.builder()
+   * .directoryName(SubjectProperty.builder()
+   * .commonName("commonName")
+   * .country("country")
+   * .customAttributes(List.of(CustomAttributeProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * .build()))
+   * .distinguishedNameQualifier("distinguishedNameQualifier")
+   * .generationQualifier("generationQualifier")
+   * .givenName("givenName")
+   * .initials("initials")
+   * .locality("locality")
+   * .organization("organization")
+   * .organizationalUnit("organizationalUnit")
+   * .pseudonym("pseudonym")
+   * .serialNumber("serialNumber")
+   * .state("state")
+   * .surname("surname")
+   * .title("title")
+   * .build())
+   * .dnsName("dnsName")
+   * .ediPartyName(EdiPartyNameProperty.builder()
+   * .nameAssigner("nameAssigner")
+   * .partyName("partyName")
+   * .build())
+   * .ipAddress("ipAddress")
+   * .otherName(OtherNameProperty.builder()
+   * .typeId("typeId")
+   * .value("value")
+   * .build())
+   * .registeredId("registeredId")
+   * .rfc822Name("rfc822Name")
+   * .uniformResourceIdentifier("uniformResourceIdentifier")
+   * .build()))
+   * .build())
+   * .subject(SubjectProperty.builder()
+   * .commonName("commonName")
+   * .country("country")
+   * .customAttributes(List.of(CustomAttributeProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * .build()))
+   * .distinguishedNameQualifier("distinguishedNameQualifier")
+   * .generationQualifier("generationQualifier")
+   * .givenName("givenName")
+   * .initials("initials")
+   * .locality("locality")
+   * .organization("organization")
+   * .organizationalUnit("organizationalUnit")
+   * .pseudonym("pseudonym")
+   * .serialNumber("serialNumber")
+   * .state("state")
+   * .surname("surname")
+   * .title("title")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html)
+   */
+  public interface ApiPassthroughProperty {
+    /**
+     * Specifies X.509 extension information for a certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html#cfn-acmpca-certificate-apipassthrough-extensions)
+     */
+    public fun extensions(): Any? = unwrap(this).getExtensions()
+
+    /**
+     * Contains information about the certificate subject.
+     *
+     * The Subject field in the certificate identifies the entity that owns or controls the public
+     * key in the certificate. The entity can be a user, computer, device, or service. The Subject must
+     * contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished names
+     * (RDNs). The RDNs are separated by commas in the certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html#cfn-acmpca-certificate-apipassthrough-subject)
+     */
+    public fun subject(): Any? = unwrap(this).getSubject()
+
+    /**
+     * A builder for [ApiPassthroughProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param extensions Specifies X.509 extension information for a certificate.
+       */
+      public fun extensions(extensions: IResolvable)
+
+      /**
+       * @param extensions Specifies X.509 extension information for a certificate.
+       */
+      public fun extensions(extensions: ExtensionsProperty)
+
+      /**
+       * @param extensions Specifies X.509 extension information for a certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("737c1adb62e6848e2a5f445164e3c36994488e6feea295330c4dcc0fb119bb4d")
+      public fun extensions(extensions: ExtensionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param subject Contains information about the certificate subject.
+       * The Subject field in the certificate identifies the entity that owns or controls the public
+       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
+       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
+       * names (RDNs). The RDNs are separated by commas in the certificate.
+       */
+      public fun subject(subject: IResolvable)
+
+      /**
+       * @param subject Contains information about the certificate subject.
+       * The Subject field in the certificate identifies the entity that owns or controls the public
+       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
+       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
+       * names (RDNs). The RDNs are separated by commas in the certificate.
+       */
+      public fun subject(subject: SubjectProperty)
+
+      /**
+       * @param subject Contains information about the certificate subject.
+       * The Subject field in the certificate identifies the entity that owns or controls the public
+       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
+       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
+       * names (RDNs). The RDNs are separated by commas in the certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f3305f385f07191a605279b3db7c1e906d8d10c24265cc76c3142c585c3d0ffd")
+      public fun subject(subject: SubjectProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty.builder()
+
+      /**
+       * @param extensions Specifies X.509 extension information for a certificate.
+       */
+      override fun extensions(extensions: IResolvable) {
+        cdkBuilder.extensions(extensions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param extensions Specifies X.509 extension information for a certificate.
+       */
+      override fun extensions(extensions: ExtensionsProperty) {
+        cdkBuilder.extensions(extensions.let(ExtensionsProperty::unwrap))
+      }
+
+      /**
+       * @param extensions Specifies X.509 extension information for a certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("737c1adb62e6848e2a5f445164e3c36994488e6feea295330c4dcc0fb119bb4d")
+      override fun extensions(extensions: ExtensionsProperty.Builder.() -> Unit): Unit =
+          extensions(ExtensionsProperty(extensions))
+
+      /**
+       * @param subject Contains information about the certificate subject.
+       * The Subject field in the certificate identifies the entity that owns or controls the public
+       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
+       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
+       * names (RDNs). The RDNs are separated by commas in the certificate.
+       */
+      override fun subject(subject: IResolvable) {
+        cdkBuilder.subject(subject.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param subject Contains information about the certificate subject.
+       * The Subject field in the certificate identifies the entity that owns or controls the public
+       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
+       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
+       * names (RDNs). The RDNs are separated by commas in the certificate.
+       */
+      override fun subject(subject: SubjectProperty) {
+        cdkBuilder.subject(subject.let(SubjectProperty::unwrap))
+      }
+
+      /**
+       * @param subject Contains information about the certificate subject.
+       * The Subject field in the certificate identifies the entity that owns or controls the public
+       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
+       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
+       * names (RDNs). The RDNs are separated by commas in the certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f3305f385f07191a605279b3db7c1e906d8d10c24265cc76c3142c585c3d0ffd")
+      override fun subject(subject: SubjectProperty.Builder.() -> Unit): Unit =
+          subject(SubjectProperty(subject))
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty,
+    ) : CdkObject(cdkObject), ApiPassthroughProperty {
+      /**
+       * Specifies X.509 extension information for a certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html#cfn-acmpca-certificate-apipassthrough-extensions)
+       */
+      override fun extensions(): Any? = unwrap(this).getExtensions()
+
+      /**
+       * Contains information about the certificate subject.
+       *
+       * The Subject field in the certificate identifies the entity that owns or controls the public
+       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
+       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
+       * names (RDNs). The RDNs are separated by commas in the certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html#cfn-acmpca-certificate-apipassthrough-subject)
+       */
+      override fun subject(): Any? = unwrap(this).getSubject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApiPassthroughProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty):
+          ApiPassthroughProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiPassthroughProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApiPassthroughProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty
+    }
+  }
+
+  /**
+   * Defines the X.500 relative distinguished name (RDN).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * CustomAttributeProperty customAttributeProperty = CustomAttributeProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html)
+   */
+  public interface CustomAttributeProperty {
+    /**
+     * Specifies the object identifier (OID) of the attribute type of the relative distinguished
+     * name (RDN).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html#cfn-acmpca-certificate-customattribute-objectidentifier)
+     */
+    public fun objectIdentifier(): String
+
+    /**
+     * Specifies the attribute value of relative distinguished name (RDN).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html#cfn-acmpca-certificate-customattribute-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [CustomAttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
+       * relative distinguished name (RDN). 
+       */
+      public fun objectIdentifier(objectIdentifier: String)
+
+      /**
+       * @param value Specifies the attribute value of relative distinguished name (RDN). 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty.builder()
+
+      /**
+       * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
+       * relative distinguished name (RDN). 
+       */
+      override fun objectIdentifier(objectIdentifier: String) {
+        cdkBuilder.objectIdentifier(objectIdentifier)
+      }
+
+      /**
+       * @param value Specifies the attribute value of relative distinguished name (RDN). 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty,
+    ) : CdkObject(cdkObject), CustomAttributeProperty {
+      /**
+       * Specifies the object identifier (OID) of the attribute type of the relative distinguished
+       * name (RDN).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html#cfn-acmpca-certificate-customattribute-objectidentifier)
+       */
+      override fun objectIdentifier(): String = unwrap(this).getObjectIdentifier()
+
+      /**
+       * Specifies the attribute value of relative distinguished name (RDN).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html#cfn-acmpca-certificate-customattribute-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomAttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty):
+          CustomAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomAttributeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomAttributeProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty
+    }
+  }
+
+  /**
+   * Specifies the X.509 extension information for a certificate.
+   *
+   * Extensions present in `CustomExtensions` follow the `ApiPassthrough` [template
+   * rules](https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * CustomExtensionProperty customExtensionProperty = CustomExtensionProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * // the properties below are optional
+   * .critical(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html)
+   */
+  public interface CustomExtensionProperty {
+    /**
+     * Specifies the critical flag of the X.509 extension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-critical)
+     */
+    public fun critical(): Any? = unwrap(this).getCritical()
+
+    /**
+     * Specifies the object identifier (OID) of the X.509 extension. For more information, see the
+     * [Global OID reference database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-objectidentifier)
+     */
+    public fun objectIdentifier(): String
+
+    /**
+     * Specifies the base64-encoded value of the X.509 extension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [CustomExtensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param critical Specifies the critical flag of the X.509 extension.
+       */
+      public fun critical(critical: Boolean)
+
+      /**
+       * @param critical Specifies the critical flag of the X.509 extension.
+       */
+      public fun critical(critical: IResolvable)
+
+      /**
+       * @param objectIdentifier Specifies the object identifier (OID) of the X.509 extension. For
+       * more information, see the [Global OID reference
+       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29). 
+       */
+      public fun objectIdentifier(objectIdentifier: String)
+
+      /**
+       * @param value Specifies the base64-encoded value of the X.509 extension. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty.builder()
+
+      /**
+       * @param critical Specifies the critical flag of the X.509 extension.
+       */
+      override fun critical(critical: Boolean) {
+        cdkBuilder.critical(critical)
+      }
+
+      /**
+       * @param critical Specifies the critical flag of the X.509 extension.
+       */
+      override fun critical(critical: IResolvable) {
+        cdkBuilder.critical(critical.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param objectIdentifier Specifies the object identifier (OID) of the X.509 extension. For
+       * more information, see the [Global OID reference
+       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29). 
+       */
+      override fun objectIdentifier(objectIdentifier: String) {
+        cdkBuilder.objectIdentifier(objectIdentifier)
+      }
+
+      /**
+       * @param value Specifies the base64-encoded value of the X.509 extension. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty,
+    ) : CdkObject(cdkObject), CustomExtensionProperty {
+      /**
+       * Specifies the critical flag of the X.509 extension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-critical)
+       */
+      override fun critical(): Any? = unwrap(this).getCritical()
+
+      /**
+       * Specifies the object identifier (OID) of the X.509 extension. For more information, see the
+       * [Global OID reference database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-objectidentifier)
+       */
+      override fun objectIdentifier(): String = unwrap(this).getObjectIdentifier()
+
+      /**
+       * Specifies the base64-encoded value of the X.509 extension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomExtensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty):
+          CustomExtensionProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomExtensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomExtensionProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty
+    }
+  }
+
+  /**
+   * Describes an Electronic Data Interchange (EDI) entity as described in as defined in [Subject
+   * Alternative Name](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) in
+   * RFC 5280.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * EdiPartyNameProperty ediPartyNameProperty = EdiPartyNameProperty.builder()
+   * .nameAssigner("nameAssigner")
+   * .partyName("partyName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html)
+   */
+  public interface EdiPartyNameProperty {
+    /**
+     * Specifies the name assigner.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-nameassigner)
+     */
+    public fun nameAssigner(): String
+
+    /**
+     * Specifies the party name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-partyname)
+     */
+    public fun partyName(): String
+
+    /**
+     * A builder for [EdiPartyNameProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param nameAssigner Specifies the name assigner. 
+       */
+      public fun nameAssigner(nameAssigner: String)
+
+      /**
+       * @param partyName Specifies the party name. 
+       */
+      public fun partyName(partyName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty.builder()
+
+      /**
+       * @param nameAssigner Specifies the name assigner. 
+       */
+      override fun nameAssigner(nameAssigner: String) {
+        cdkBuilder.nameAssigner(nameAssigner)
+      }
+
+      /**
+       * @param partyName Specifies the party name. 
+       */
+      override fun partyName(partyName: String) {
+        cdkBuilder.partyName(partyName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty,
+    ) : CdkObject(cdkObject), EdiPartyNameProperty {
+      /**
+       * Specifies the name assigner.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-nameassigner)
+       */
+      override fun nameAssigner(): String = unwrap(this).getNameAssigner()
+
+      /**
+       * Specifies the party name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-partyname)
+       */
+      override fun partyName(): String = unwrap(this).getPartyName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EdiPartyNameProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty):
+          EdiPartyNameProperty = CdkObjectWrappers.wrap(cdkObject) as? EdiPartyNameProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EdiPartyNameProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty
+    }
+  }
+
+  /**
+   * Specifies additional purposes for which the certified public key may be used other than basic
+   * purposes indicated in the `KeyUsage` extension.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * ExtendedKeyUsageProperty extendedKeyUsageProperty = ExtendedKeyUsageProperty.builder()
+   * .extendedKeyUsageObjectIdentifier("extendedKeyUsageObjectIdentifier")
+   * .extendedKeyUsageType("extendedKeyUsageType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html)
+   */
+  public interface ExtendedKeyUsageProperty {
+    /**
+     * Specifies a custom `ExtendedKeyUsage` with an object identifier (OID).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusageobjectidentifier)
+     */
+    public fun extendedKeyUsageObjectIdentifier(): String? =
+        unwrap(this).getExtendedKeyUsageObjectIdentifier()
+
+    /**
+     * Specifies a standard `ExtendedKeyUsage` as defined as in [RFC
+     * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusagetype)
+     */
+    public fun extendedKeyUsageType(): String? = unwrap(this).getExtendedKeyUsageType()
+
+    /**
+     * A builder for [ExtendedKeyUsageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param extendedKeyUsageObjectIdentifier Specifies a custom `ExtendedKeyUsage` with an
+       * object identifier (OID).
+       */
+      public fun extendedKeyUsageObjectIdentifier(extendedKeyUsageObjectIdentifier: String)
+
+      /**
+       * @param extendedKeyUsageType Specifies a standard `ExtendedKeyUsage` as defined as in [RFC
+       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)
+       * .
+       */
+      public fun extendedKeyUsageType(extendedKeyUsageType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty.builder()
+
+      /**
+       * @param extendedKeyUsageObjectIdentifier Specifies a custom `ExtendedKeyUsage` with an
+       * object identifier (OID).
+       */
+      override fun extendedKeyUsageObjectIdentifier(extendedKeyUsageObjectIdentifier: String) {
+        cdkBuilder.extendedKeyUsageObjectIdentifier(extendedKeyUsageObjectIdentifier)
+      }
+
+      /**
+       * @param extendedKeyUsageType Specifies a standard `ExtendedKeyUsage` as defined as in [RFC
+       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)
+       * .
+       */
+      override fun extendedKeyUsageType(extendedKeyUsageType: String) {
+        cdkBuilder.extendedKeyUsageType(extendedKeyUsageType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty,
+    ) : CdkObject(cdkObject), ExtendedKeyUsageProperty {
+      /**
+       * Specifies a custom `ExtendedKeyUsage` with an object identifier (OID).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusageobjectidentifier)
+       */
+      override fun extendedKeyUsageObjectIdentifier(): String? =
+          unwrap(this).getExtendedKeyUsageObjectIdentifier()
+
+      /**
+       * Specifies a standard `ExtendedKeyUsage` as defined as in [RFC
+       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusagetype)
+       */
+      override fun extendedKeyUsageType(): String? = unwrap(this).getExtendedKeyUsageType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExtendedKeyUsageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty):
+          ExtendedKeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as? ExtendedKeyUsageProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExtendedKeyUsageProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty
+    }
+  }
+
+  /**
+   * Contains X.509 extension information for a certificate.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * ExtensionsProperty extensionsProperty = ExtensionsProperty.builder()
+   * .certificatePolicies(List.of(PolicyInformationProperty.builder()
+   * .certPolicyId("certPolicyId")
+   * // the properties below are optional
+   * .policyQualifiers(List.of(PolicyQualifierInfoProperty.builder()
+   * .policyQualifierId("policyQualifierId")
+   * .qualifier(QualifierProperty.builder()
+   * .cpsUri("cpsUri")
+   * .build())
+   * .build()))
+   * .build()))
+   * .customExtensions(List.of(CustomExtensionProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * // the properties below are optional
+   * .critical(false)
+   * .build()))
+   * .extendedKeyUsage(List.of(ExtendedKeyUsageProperty.builder()
+   * .extendedKeyUsageObjectIdentifier("extendedKeyUsageObjectIdentifier")
+   * .extendedKeyUsageType("extendedKeyUsageType")
+   * .build()))
+   * .keyUsage(KeyUsageProperty.builder()
+   * .crlSign(false)
+   * .dataEncipherment(false)
+   * .decipherOnly(false)
+   * .digitalSignature(false)
+   * .encipherOnly(false)
+   * .keyAgreement(false)
+   * .keyCertSign(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * .subjectAlternativeNames(List.of(GeneralNameProperty.builder()
+   * .directoryName(SubjectProperty.builder()
+   * .commonName("commonName")
+   * .country("country")
+   * .customAttributes(List.of(CustomAttributeProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * .build()))
+   * .distinguishedNameQualifier("distinguishedNameQualifier")
+   * .generationQualifier("generationQualifier")
+   * .givenName("givenName")
+   * .initials("initials")
+   * .locality("locality")
+   * .organization("organization")
+   * .organizationalUnit("organizationalUnit")
+   * .pseudonym("pseudonym")
+   * .serialNumber("serialNumber")
+   * .state("state")
+   * .surname("surname")
+   * .title("title")
+   * .build())
+   * .dnsName("dnsName")
+   * .ediPartyName(EdiPartyNameProperty.builder()
+   * .nameAssigner("nameAssigner")
+   * .partyName("partyName")
+   * .build())
+   * .ipAddress("ipAddress")
+   * .otherName(OtherNameProperty.builder()
+   * .typeId("typeId")
+   * .value("value")
+   * .build())
+   * .registeredId("registeredId")
+   * .rfc822Name("rfc822Name")
+   * .uniformResourceIdentifier("uniformResourceIdentifier")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html)
+   */
+  public interface ExtensionsProperty {
+    /**
+     * Contains a sequence of one or more policy information terms, each of which consists of an
+     * object identifier (OID) and optional qualifiers.
+     *
+     * For more information, see NIST's definition of [Object Identifier
+     * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+     *
+     * In an end-entity certificate, these terms indicate the policy under which the certificate was
+     * issued and the purposes for which it may be used. In a CA certificate, these terms limit the set
+     * of policies for certification paths that include this certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-certificatepolicies)
+     */
+    public fun certificatePolicies(): Any? = unwrap(this).getCertificatePolicies()
+
+    /**
+     * Contains a sequence of one or more X.509 extensions, each of which consists of an object
+     * identifier (OID), a base64-encoded value, and the critical flag. For more information, see the
+     * [Global OID reference database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-customextensions)
+     */
+    public fun customExtensions(): Any? = unwrap(this).getCustomExtensions()
+
+    /**
+     * Specifies additional purposes for which the certified public key may be used other than basic
+     * purposes indicated in the `KeyUsage` extension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-extendedkeyusage)
+     */
+    public fun extendedKeyUsage(): Any? = unwrap(this).getExtendedKeyUsage()
+
+    /**
+     * Defines one or more purposes for which the key contained in the certificate can be used.
+     *
+     * Default value for each option is false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-keyusage)
+     */
+    public fun keyUsage(): Any? = unwrap(this).getKeyUsage()
+
+    /**
+     * The subject alternative name extension allows identities to be bound to the subject of the
+     * certificate.
+     *
+     * These identities may be included in addition to or in place of the identity in the subject
+     * field of the certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-subjectalternativenames)
+     */
+    public fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
+
+    /**
+     * A builder for [ExtensionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificatePolicies Contains a sequence of one or more policy information terms,
+       * each of which consists of an object identifier (OID) and optional qualifiers.
+       * For more information, see NIST's definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       *
+       * In an end-entity certificate, these terms indicate the policy under which the certificate
+       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
+       * the set of policies for certification paths that include this certificate.
+       */
+      public fun certificatePolicies(certificatePolicies: IResolvable)
+
+      /**
+       * @param certificatePolicies Contains a sequence of one or more policy information terms,
+       * each of which consists of an object identifier (OID) and optional qualifiers.
+       * For more information, see NIST's definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       *
+       * In an end-entity certificate, these terms indicate the policy under which the certificate
+       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
+       * the set of policies for certification paths that include this certificate.
+       */
+      public fun certificatePolicies(certificatePolicies: List<Any>)
+
+      /**
+       * @param certificatePolicies Contains a sequence of one or more policy information terms,
+       * each of which consists of an object identifier (OID) and optional qualifiers.
+       * For more information, see NIST's definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       *
+       * In an end-entity certificate, these terms indicate the policy under which the certificate
+       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
+       * the set of policies for certification paths that include this certificate.
+       */
+      public fun certificatePolicies(vararg certificatePolicies: Any)
+
+      /**
+       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
+       * more information, see the [Global OID reference
+       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+       */
+      public fun customExtensions(customExtensions: IResolvable)
+
+      /**
+       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
+       * more information, see the [Global OID reference
+       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+       */
+      public fun customExtensions(customExtensions: List<Any>)
+
+      /**
+       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
+       * more information, see the [Global OID reference
+       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+       */
+      public fun customExtensions(vararg customExtensions: Any)
+
+      /**
+       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
+       * may be used other than basic purposes indicated in the `KeyUsage` extension.
+       */
+      public fun extendedKeyUsage(extendedKeyUsage: IResolvable)
+
+      /**
+       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
+       * may be used other than basic purposes indicated in the `KeyUsage` extension.
+       */
+      public fun extendedKeyUsage(extendedKeyUsage: List<Any>)
+
+      /**
+       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
+       * may be used other than basic purposes indicated in the `KeyUsage` extension.
+       */
+      public fun extendedKeyUsage(vararg extendedKeyUsage: Any)
+
+      /**
+       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
+       * can be used.
+       * Default value for each option is false.
+       */
+      public fun keyUsage(keyUsage: IResolvable)
+
+      /**
+       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
+       * can be used.
+       * Default value for each option is false.
+       */
+      public fun keyUsage(keyUsage: KeyUsageProperty)
+
+      /**
+       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
+       * can be used.
+       * Default value for each option is false.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("54805af00844784ad9ab9b73287f368f891631f66e0dfcec483a64c96173c64d")
+      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
+
+      /**
+       * @param subjectAlternativeNames The subject alternative name extension allows identities to
+       * be bound to the subject of the certificate.
+       * These identities may be included in addition to or in place of the identity in the subject
+       * field of the certificate.
+       */
+      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
+
+      /**
+       * @param subjectAlternativeNames The subject alternative name extension allows identities to
+       * be bound to the subject of the certificate.
+       * These identities may be included in addition to or in place of the identity in the subject
+       * field of the certificate.
+       */
+      public fun subjectAlternativeNames(subjectAlternativeNames: List<Any>)
+
+      /**
+       * @param subjectAlternativeNames The subject alternative name extension allows identities to
+       * be bound to the subject of the certificate.
+       * These identities may be included in addition to or in place of the identity in the subject
+       * field of the certificate.
+       */
+      public fun subjectAlternativeNames(vararg subjectAlternativeNames: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty.builder()
+
+      /**
+       * @param certificatePolicies Contains a sequence of one or more policy information terms,
+       * each of which consists of an object identifier (OID) and optional qualifiers.
+       * For more information, see NIST's definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       *
+       * In an end-entity certificate, these terms indicate the policy under which the certificate
+       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
+       * the set of policies for certification paths that include this certificate.
+       */
+      override fun certificatePolicies(certificatePolicies: IResolvable) {
+        cdkBuilder.certificatePolicies(certificatePolicies.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param certificatePolicies Contains a sequence of one or more policy information terms,
+       * each of which consists of an object identifier (OID) and optional qualifiers.
+       * For more information, see NIST's definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       *
+       * In an end-entity certificate, these terms indicate the policy under which the certificate
+       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
+       * the set of policies for certification paths that include this certificate.
+       */
+      override fun certificatePolicies(certificatePolicies: List<Any>) {
+        cdkBuilder.certificatePolicies(certificatePolicies)
+      }
+
+      /**
+       * @param certificatePolicies Contains a sequence of one or more policy information terms,
+       * each of which consists of an object identifier (OID) and optional qualifiers.
+       * For more information, see NIST's definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       *
+       * In an end-entity certificate, these terms indicate the policy under which the certificate
+       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
+       * the set of policies for certification paths that include this certificate.
+       */
+      override fun certificatePolicies(vararg certificatePolicies: Any): Unit =
+          certificatePolicies(certificatePolicies.toList())
+
+      /**
+       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
+       * more information, see the [Global OID reference
+       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+       */
+      override fun customExtensions(customExtensions: IResolvable) {
+        cdkBuilder.customExtensions(customExtensions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
+       * more information, see the [Global OID reference
+       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+       */
+      override fun customExtensions(customExtensions: List<Any>) {
+        cdkBuilder.customExtensions(customExtensions)
+      }
+
+      /**
+       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
+       * more information, see the [Global OID reference
+       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+       */
+      override fun customExtensions(vararg customExtensions: Any): Unit =
+          customExtensions(customExtensions.toList())
+
+      /**
+       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
+       * may be used other than basic purposes indicated in the `KeyUsage` extension.
+       */
+      override fun extendedKeyUsage(extendedKeyUsage: IResolvable) {
+        cdkBuilder.extendedKeyUsage(extendedKeyUsage.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
+       * may be used other than basic purposes indicated in the `KeyUsage` extension.
+       */
+      override fun extendedKeyUsage(extendedKeyUsage: List<Any>) {
+        cdkBuilder.extendedKeyUsage(extendedKeyUsage)
+      }
+
+      /**
+       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
+       * may be used other than basic purposes indicated in the `KeyUsage` extension.
+       */
+      override fun extendedKeyUsage(vararg extendedKeyUsage: Any): Unit =
+          extendedKeyUsage(extendedKeyUsage.toList())
+
+      /**
+       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
+       * can be used.
+       * Default value for each option is false.
+       */
+      override fun keyUsage(keyUsage: IResolvable) {
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
+       * can be used.
+       * Default value for each option is false.
+       */
+      override fun keyUsage(keyUsage: KeyUsageProperty) {
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+      }
+
+      /**
+       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
+       * can be used.
+       * Default value for each option is false.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("54805af00844784ad9ab9b73287f368f891631f66e0dfcec483a64c96173c64d")
+      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
+          keyUsage(KeyUsageProperty(keyUsage))
+
+      /**
+       * @param subjectAlternativeNames The subject alternative name extension allows identities to
+       * be bound to the subject of the certificate.
+       * These identities may be included in addition to or in place of the identity in the subject
+       * field of the certificate.
+       */
+      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param subjectAlternativeNames The subject alternative name extension allows identities to
+       * be bound to the subject of the certificate.
+       * These identities may be included in addition to or in place of the identity in the subject
+       * field of the certificate.
+       */
+      override fun subjectAlternativeNames(subjectAlternativeNames: List<Any>) {
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
+      }
+
+      /**
+       * @param subjectAlternativeNames The subject alternative name extension allows identities to
+       * be bound to the subject of the certificate.
+       * These identities may be included in addition to or in place of the identity in the subject
+       * field of the certificate.
+       */
+      override fun subjectAlternativeNames(vararg subjectAlternativeNames: Any): Unit =
+          subjectAlternativeNames(subjectAlternativeNames.toList())
+
+      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty,
+    ) : CdkObject(cdkObject), ExtensionsProperty {
+      /**
+       * Contains a sequence of one or more policy information terms, each of which consists of an
+       * object identifier (OID) and optional qualifiers.
+       *
+       * For more information, see NIST's definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       *
+       * In an end-entity certificate, these terms indicate the policy under which the certificate
+       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
+       * the set of policies for certification paths that include this certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-certificatepolicies)
+       */
+      override fun certificatePolicies(): Any? = unwrap(this).getCertificatePolicies()
+
+      /**
+       * Contains a sequence of one or more X.509 extensions, each of which consists of an object
+       * identifier (OID), a base64-encoded value, and the critical flag. For more information, see the
+       * [Global OID reference database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-customextensions)
+       */
+      override fun customExtensions(): Any? = unwrap(this).getCustomExtensions()
+
+      /**
+       * Specifies additional purposes for which the certified public key may be used other than
+       * basic purposes indicated in the `KeyUsage` extension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-extendedkeyusage)
+       */
+      override fun extendedKeyUsage(): Any? = unwrap(this).getExtendedKeyUsage()
+
+      /**
+       * Defines one or more purposes for which the key contained in the certificate can be used.
+       *
+       * Default value for each option is false.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-keyusage)
+       */
+      override fun keyUsage(): Any? = unwrap(this).getKeyUsage()
+
+      /**
+       * The subject alternative name extension allows identities to be bound to the subject of the
+       * certificate.
+       *
+       * These identities may be included in addition to or in place of the identity in the subject
+       * field of the certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-subjectalternativenames)
+       */
+      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExtensionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty):
+          ExtensionsProperty = CdkObjectWrappers.wrap(cdkObject) as? ExtensionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExtensionsProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty
+    }
+  }
+
+  /**
+   * Describes an ASN.1 X.400 `GeneralName` as defined in [RFC
+   * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) . Only one of the
+   * following naming options should be provided. Providing more than one option results in an
+   * `InvalidArgsException` error.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * GeneralNameProperty generalNameProperty = GeneralNameProperty.builder()
+   * .directoryName(SubjectProperty.builder()
+   * .commonName("commonName")
+   * .country("country")
+   * .customAttributes(List.of(CustomAttributeProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * .build()))
+   * .distinguishedNameQualifier("distinguishedNameQualifier")
+   * .generationQualifier("generationQualifier")
+   * .givenName("givenName")
+   * .initials("initials")
+   * .locality("locality")
+   * .organization("organization")
+   * .organizationalUnit("organizationalUnit")
+   * .pseudonym("pseudonym")
+   * .serialNumber("serialNumber")
+   * .state("state")
+   * .surname("surname")
+   * .title("title")
+   * .build())
+   * .dnsName("dnsName")
+   * .ediPartyName(EdiPartyNameProperty.builder()
+   * .nameAssigner("nameAssigner")
+   * .partyName("partyName")
+   * .build())
+   * .ipAddress("ipAddress")
+   * .otherName(OtherNameProperty.builder()
+   * .typeId("typeId")
+   * .value("value")
+   * .build())
+   * .registeredId("registeredId")
+   * .rfc822Name("rfc822Name")
+   * .uniformResourceIdentifier("uniformResourceIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html)
+   */
+  public interface GeneralNameProperty {
+    /**
+     * Contains information about the certificate subject.
+     *
+     * The certificate can be one issued by your private certificate authority (CA) or it can be
+     * your private CA certificate. The Subject field in the certificate identifies the entity that
+     * owns or controls the public key in the certificate. The entity can be a user, computer, device,
+     * or service. The Subject must contain an X.500 distinguished name (DN). A DN is a sequence of
+     * relative distinguished names (RDNs). The RDNs are separated by commas in the certificate. The DN
+     * must be unique for each entity, but your private CA can issue more than one certificate with the
+     * same DN to the same entity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-directoryname)
+     */
+    public fun directoryName(): Any? = unwrap(this).getDirectoryName()
+
+    /**
+     * Represents `GeneralName` as a DNS name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-dnsname)
+     */
+    public fun dnsName(): String? = unwrap(this).getDnsName()
+
+    /**
+     * Represents `GeneralName` as an `EdiPartyName` object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-edipartyname)
+     */
+    public fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
+
+    /**
+     * Represents `GeneralName` as an IPv4 or IPv6 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-ipaddress)
+     */
+    public fun ipAddress(): String? = unwrap(this).getIpAddress()
+
+    /**
+     * Represents `GeneralName` using an `OtherName` object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-othername)
+     */
+    public fun otherName(): Any? = unwrap(this).getOtherName()
+
+    /**
+     * Represents `GeneralName` as an object identifier (OID).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-registeredid)
+     */
+    public fun registeredId(): String? = unwrap(this).getRegisteredId()
+
+    /**
+     * Represents `GeneralName` as an [RFC
+     * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-rfc822name)
+     */
+    public fun rfc822Name(): String? = unwrap(this).getRfc822Name()
+
+    /**
+     * Represents `GeneralName` as a URI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-uniformresourceidentifier)
+     */
+    public fun uniformResourceIdentifier(): String? = unwrap(this).getUniformResourceIdentifier()
+
+    /**
+     * A builder for [GeneralNameProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      public fun directoryName(directoryName: IResolvable)
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      public fun directoryName(directoryName: SubjectProperty)
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("96b850009393b18157988126a30febc9603e07c94088e24394c1d0568c06bd3e")
+      public fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit)
+
+      /**
+       * @param dnsName Represents `GeneralName` as a DNS name.
+       */
+      public fun dnsName(dnsName: String)
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      public fun ediPartyName(ediPartyName: IResolvable)
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      public fun ediPartyName(ediPartyName: EdiPartyNameProperty)
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e8f9859ee6c7e211c3066fc9466926f9f9403e42f2c69f794333b0ed6fe97aa6")
+      public fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit)
+
+      /**
+       * @param ipAddress Represents `GeneralName` as an IPv4 or IPv6 address.
+       */
+      public fun ipAddress(ipAddress: String)
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      public fun otherName(otherName: IResolvable)
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      public fun otherName(otherName: OtherNameProperty)
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a26c7790fb156970216368ee9c7f92b35bf5d47e6291f46ff359bcc77c84b626")
+      public fun otherName(otherName: OtherNameProperty.Builder.() -> Unit)
+
+      /**
+       * @param registeredId Represents `GeneralName` as an object identifier (OID).
+       */
+      public fun registeredId(registeredId: String)
+
+      /**
+       * @param rfc822Name Represents `GeneralName` as an [RFC
+       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
+       */
+      public fun rfc822Name(rfc822Name: String)
+
+      /**
+       * @param uniformResourceIdentifier Represents `GeneralName` as a URI.
+       */
+      public fun uniformResourceIdentifier(uniformResourceIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty.builder()
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      override fun directoryName(directoryName: IResolvable) {
+        cdkBuilder.directoryName(directoryName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      override fun directoryName(directoryName: SubjectProperty) {
+        cdkBuilder.directoryName(directoryName.let(SubjectProperty::unwrap))
+      }
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("96b850009393b18157988126a30febc9603e07c94088e24394c1d0568c06bd3e")
+      override fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit): Unit =
+          directoryName(SubjectProperty(directoryName))
+
+      /**
+       * @param dnsName Represents `GeneralName` as a DNS name.
+       */
+      override fun dnsName(dnsName: String) {
+        cdkBuilder.dnsName(dnsName)
+      }
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      override fun ediPartyName(ediPartyName: IResolvable) {
+        cdkBuilder.ediPartyName(ediPartyName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      override fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
+        cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty::unwrap))
+      }
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e8f9859ee6c7e211c3066fc9466926f9f9403e42f2c69f794333b0ed6fe97aa6")
+      override fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit): Unit =
+          ediPartyName(EdiPartyNameProperty(ediPartyName))
+
+      /**
+       * @param ipAddress Represents `GeneralName` as an IPv4 or IPv6 address.
+       */
+      override fun ipAddress(ipAddress: String) {
+        cdkBuilder.ipAddress(ipAddress)
+      }
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      override fun otherName(otherName: IResolvable) {
+        cdkBuilder.otherName(otherName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      override fun otherName(otherName: OtherNameProperty) {
+        cdkBuilder.otherName(otherName.let(OtherNameProperty::unwrap))
+      }
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a26c7790fb156970216368ee9c7f92b35bf5d47e6291f46ff359bcc77c84b626")
+      override fun otherName(otherName: OtherNameProperty.Builder.() -> Unit): Unit =
+          otherName(OtherNameProperty(otherName))
+
+      /**
+       * @param registeredId Represents `GeneralName` as an object identifier (OID).
+       */
+      override fun registeredId(registeredId: String) {
+        cdkBuilder.registeredId(registeredId)
+      }
+
+      /**
+       * @param rfc822Name Represents `GeneralName` as an [RFC
+       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
+       */
+      override fun rfc822Name(rfc822Name: String) {
+        cdkBuilder.rfc822Name(rfc822Name)
+      }
+
+      /**
+       * @param uniformResourceIdentifier Represents `GeneralName` as a URI.
+       */
+      override fun uniformResourceIdentifier(uniformResourceIdentifier: String) {
+        cdkBuilder.uniformResourceIdentifier(uniformResourceIdentifier)
+      }
+
+      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty,
+    ) : CdkObject(cdkObject), GeneralNameProperty {
+      /**
+       * Contains information about the certificate subject.
+       *
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-directoryname)
+       */
+      override fun directoryName(): Any? = unwrap(this).getDirectoryName()
+
+      /**
+       * Represents `GeneralName` as a DNS name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-dnsname)
+       */
+      override fun dnsName(): String? = unwrap(this).getDnsName()
+
+      /**
+       * Represents `GeneralName` as an `EdiPartyName` object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-edipartyname)
+       */
+      override fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
+
+      /**
+       * Represents `GeneralName` as an IPv4 or IPv6 address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-ipaddress)
+       */
+      override fun ipAddress(): String? = unwrap(this).getIpAddress()
+
+      /**
+       * Represents `GeneralName` using an `OtherName` object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-othername)
+       */
+      override fun otherName(): Any? = unwrap(this).getOtherName()
+
+      /**
+       * Represents `GeneralName` as an object identifier (OID).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-registeredid)
+       */
+      override fun registeredId(): String? = unwrap(this).getRegisteredId()
+
+      /**
+       * Represents `GeneralName` as an [RFC
+       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-rfc822name)
+       */
+      override fun rfc822Name(): String? = unwrap(this).getRfc822Name()
+
+      /**
+       * Represents `GeneralName` as a URI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-uniformresourceidentifier)
+       */
+      override fun uniformResourceIdentifier(): String? =
+          unwrap(this).getUniformResourceIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralNameProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty):
+          GeneralNameProperty = CdkObjectWrappers.wrap(cdkObject) as? GeneralNameProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GeneralNameProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty
+    }
+  }
+
+  /**
+   * Defines one or more purposes for which the key contained in the certificate can be used.
+   *
+   * Default value for each option is false.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * KeyUsageProperty keyUsageProperty = KeyUsageProperty.builder()
+   * .crlSign(false)
+   * .dataEncipherment(false)
+   * .decipherOnly(false)
+   * .digitalSignature(false)
+   * .encipherOnly(false)
+   * .keyAgreement(false)
+   * .keyCertSign(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html)
+   */
+  public interface KeyUsageProperty {
+    /**
+     * Key can be used to sign CRLs.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-crlsign)
+     */
+    public fun crlSign(): Any? = unwrap(this).getCrlSign()
+
+    /**
+     * Key can be used to decipher data.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-dataencipherment)
+     */
+    public fun dataEncipherment(): Any? = unwrap(this).getDataEncipherment()
+
+    /**
+     * Key can be used only to decipher data.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-decipheronly)
+     */
+    public fun decipherOnly(): Any? = unwrap(this).getDecipherOnly()
+
+    /**
+     * Key can be used for digital signing.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-digitalsignature)
+     */
+    public fun digitalSignature(): Any? = unwrap(this).getDigitalSignature()
+
+    /**
+     * Key can be used only to encipher data.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-encipheronly)
+     */
+    public fun encipherOnly(): Any? = unwrap(this).getEncipherOnly()
+
+    /**
+     * Key can be used in a key-agreement protocol.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyagreement)
+     */
+    public fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
+
+    /**
+     * Key can be used to sign certificates.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keycertsign)
+     */
+    public fun keyCertSign(): Any? = unwrap(this).getKeyCertSign()
+
+    /**
+     * Key can be used to encipher data.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyencipherment)
+     */
+    public fun keyEncipherment(): Any? = unwrap(this).getKeyEncipherment()
+
+    /**
+     * Key can be used for non-repudiation.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-nonrepudiation)
+     */
+    public fun nonRepudiation(): Any? = unwrap(this).getNonRepudiation()
+
+    /**
+     * A builder for [KeyUsageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param crlSign Key can be used to sign CRLs.
+       */
+      public fun crlSign(crlSign: Boolean)
+
+      /**
+       * @param crlSign Key can be used to sign CRLs.
+       */
+      public fun crlSign(crlSign: IResolvable)
+
+      /**
+       * @param dataEncipherment Key can be used to decipher data.
+       */
+      public fun dataEncipherment(dataEncipherment: Boolean)
+
+      /**
+       * @param dataEncipherment Key can be used to decipher data.
+       */
+      public fun dataEncipherment(dataEncipherment: IResolvable)
+
+      /**
+       * @param decipherOnly Key can be used only to decipher data.
+       */
+      public fun decipherOnly(decipherOnly: Boolean)
+
+      /**
+       * @param decipherOnly Key can be used only to decipher data.
+       */
+      public fun decipherOnly(decipherOnly: IResolvable)
+
+      /**
+       * @param digitalSignature Key can be used for digital signing.
+       */
+      public fun digitalSignature(digitalSignature: Boolean)
+
+      /**
+       * @param digitalSignature Key can be used for digital signing.
+       */
+      public fun digitalSignature(digitalSignature: IResolvable)
+
+      /**
+       * @param encipherOnly Key can be used only to encipher data.
+       */
+      public fun encipherOnly(encipherOnly: Boolean)
+
+      /**
+       * @param encipherOnly Key can be used only to encipher data.
+       */
+      public fun encipherOnly(encipherOnly: IResolvable)
+
+      /**
+       * @param keyAgreement Key can be used in a key-agreement protocol.
+       */
+      public fun keyAgreement(keyAgreement: Boolean)
+
+      /**
+       * @param keyAgreement Key can be used in a key-agreement protocol.
+       */
+      public fun keyAgreement(keyAgreement: IResolvable)
+
+      /**
+       * @param keyCertSign Key can be used to sign certificates.
+       */
+      public fun keyCertSign(keyCertSign: Boolean)
+
+      /**
+       * @param keyCertSign Key can be used to sign certificates.
+       */
+      public fun keyCertSign(keyCertSign: IResolvable)
+
+      /**
+       * @param keyEncipherment Key can be used to encipher data.
+       */
+      public fun keyEncipherment(keyEncipherment: Boolean)
+
+      /**
+       * @param keyEncipherment Key can be used to encipher data.
+       */
+      public fun keyEncipherment(keyEncipherment: IResolvable)
+
+      /**
+       * @param nonRepudiation Key can be used for non-repudiation.
+       */
+      public fun nonRepudiation(nonRepudiation: Boolean)
+
+      /**
+       * @param nonRepudiation Key can be used for non-repudiation.
+       */
+      public fun nonRepudiation(nonRepudiation: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty.builder()
+
+      /**
+       * @param crlSign Key can be used to sign CRLs.
+       */
+      override fun crlSign(crlSign: Boolean) {
+        cdkBuilder.crlSign(crlSign)
+      }
+
+      /**
+       * @param crlSign Key can be used to sign CRLs.
+       */
+      override fun crlSign(crlSign: IResolvable) {
+        cdkBuilder.crlSign(crlSign.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dataEncipherment Key can be used to decipher data.
+       */
+      override fun dataEncipherment(dataEncipherment: Boolean) {
+        cdkBuilder.dataEncipherment(dataEncipherment)
+      }
+
+      /**
+       * @param dataEncipherment Key can be used to decipher data.
+       */
+      override fun dataEncipherment(dataEncipherment: IResolvable) {
+        cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param decipherOnly Key can be used only to decipher data.
+       */
+      override fun decipherOnly(decipherOnly: Boolean) {
+        cdkBuilder.decipherOnly(decipherOnly)
+      }
+
+      /**
+       * @param decipherOnly Key can be used only to decipher data.
+       */
+      override fun decipherOnly(decipherOnly: IResolvable) {
+        cdkBuilder.decipherOnly(decipherOnly.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param digitalSignature Key can be used for digital signing.
+       */
+      override fun digitalSignature(digitalSignature: Boolean) {
+        cdkBuilder.digitalSignature(digitalSignature)
+      }
+
+      /**
+       * @param digitalSignature Key can be used for digital signing.
+       */
+      override fun digitalSignature(digitalSignature: IResolvable) {
+        cdkBuilder.digitalSignature(digitalSignature.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encipherOnly Key can be used only to encipher data.
+       */
+      override fun encipherOnly(encipherOnly: Boolean) {
+        cdkBuilder.encipherOnly(encipherOnly)
+      }
+
+      /**
+       * @param encipherOnly Key can be used only to encipher data.
+       */
+      override fun encipherOnly(encipherOnly: IResolvable) {
+        cdkBuilder.encipherOnly(encipherOnly.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyAgreement Key can be used in a key-agreement protocol.
+       */
+      override fun keyAgreement(keyAgreement: Boolean) {
+        cdkBuilder.keyAgreement(keyAgreement)
+      }
+
+      /**
+       * @param keyAgreement Key can be used in a key-agreement protocol.
+       */
+      override fun keyAgreement(keyAgreement: IResolvable) {
+        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyCertSign Key can be used to sign certificates.
+       */
+      override fun keyCertSign(keyCertSign: Boolean) {
+        cdkBuilder.keyCertSign(keyCertSign)
+      }
+
+      /**
+       * @param keyCertSign Key can be used to sign certificates.
+       */
+      override fun keyCertSign(keyCertSign: IResolvable) {
+        cdkBuilder.keyCertSign(keyCertSign.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyEncipherment Key can be used to encipher data.
+       */
+      override fun keyEncipherment(keyEncipherment: Boolean) {
+        cdkBuilder.keyEncipherment(keyEncipherment)
+      }
+
+      /**
+       * @param keyEncipherment Key can be used to encipher data.
+       */
+      override fun keyEncipherment(keyEncipherment: IResolvable) {
+        cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param nonRepudiation Key can be used for non-repudiation.
+       */
+      override fun nonRepudiation(nonRepudiation: Boolean) {
+        cdkBuilder.nonRepudiation(nonRepudiation)
+      }
+
+      /**
+       * @param nonRepudiation Key can be used for non-repudiation.
+       */
+      override fun nonRepudiation(nonRepudiation: IResolvable) {
+        cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty,
+    ) : CdkObject(cdkObject), KeyUsageProperty {
+      /**
+       * Key can be used to sign CRLs.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-crlsign)
+       */
+      override fun crlSign(): Any? = unwrap(this).getCrlSign()
+
+      /**
+       * Key can be used to decipher data.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-dataencipherment)
+       */
+      override fun dataEncipherment(): Any? = unwrap(this).getDataEncipherment()
+
+      /**
+       * Key can be used only to decipher data.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-decipheronly)
+       */
+      override fun decipherOnly(): Any? = unwrap(this).getDecipherOnly()
+
+      /**
+       * Key can be used for digital signing.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-digitalsignature)
+       */
+      override fun digitalSignature(): Any? = unwrap(this).getDigitalSignature()
+
+      /**
+       * Key can be used only to encipher data.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-encipheronly)
+       */
+      override fun encipherOnly(): Any? = unwrap(this).getEncipherOnly()
+
+      /**
+       * Key can be used in a key-agreement protocol.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyagreement)
+       */
+      override fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
+
+      /**
+       * Key can be used to sign certificates.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keycertsign)
+       */
+      override fun keyCertSign(): Any? = unwrap(this).getKeyCertSign()
+
+      /**
+       * Key can be used to encipher data.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyencipherment)
+       */
+      override fun keyEncipherment(): Any? = unwrap(this).getKeyEncipherment()
+
+      /**
+       * Key can be used for non-repudiation.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-nonrepudiation)
+       */
+      override fun nonRepudiation(): Any? = unwrap(this).getNonRepudiation()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyUsageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty):
+          KeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyUsageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeyUsageProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty
+    }
+  }
+
+  /**
+   * Defines a custom ASN.1 X.400 `GeneralName` using an object identifier (OID) and value. The OID
+   * must satisfy the regular expression shown below. For more information, see NIST's definition of
+   * [Object Identifier
+   * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * OtherNameProperty otherNameProperty = OtherNameProperty.builder()
+   * .typeId("typeId")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html)
+   */
+  public interface OtherNameProperty {
+    /**
+     * Specifies an OID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-typeid)
+     */
+    public fun typeId(): String
+
+    /**
+     * Specifies an OID value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [OtherNameProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param typeId Specifies an OID. 
+       */
+      public fun typeId(typeId: String)
+
+      /**
+       * @param value Specifies an OID value. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty.builder()
+
+      /**
+       * @param typeId Specifies an OID. 
+       */
+      override fun typeId(typeId: String) {
+        cdkBuilder.typeId(typeId)
+      }
+
+      /**
+       * @param value Specifies an OID value. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty,
+    ) : CdkObject(cdkObject), OtherNameProperty {
+      /**
+       * Specifies an OID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-typeid)
+       */
+      override fun typeId(): String = unwrap(this).getTypeId()
+
+      /**
+       * Specifies an OID value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OtherNameProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty):
+          OtherNameProperty = CdkObjectWrappers.wrap(cdkObject) as? OtherNameProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OtherNameProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty
+    }
+  }
+
+  /**
    * Defines the X.509 `CertificatePolicies` extension.
    *
    * Example:
@@ -881,6 +3170,244 @@ public open class CfnCertificate internal constructor(
           software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyInformationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyInformationProperty
+    }
+  }
+
+  /**
+   * Modifies the `CertPolicyId` of a `PolicyInformation` object with a qualifier.
+   *
+   * AWS Private CA supports the certification practice statement (CPS) qualifier.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * PolicyQualifierInfoProperty policyQualifierInfoProperty = PolicyQualifierInfoProperty.builder()
+   * .policyQualifierId("policyQualifierId")
+   * .qualifier(QualifierProperty.builder()
+   * .cpsUri("cpsUri")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html)
+   */
+  public interface PolicyQualifierInfoProperty {
+    /**
+     * Identifies the qualifier modifying a `CertPolicyId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-policyqualifierid)
+     */
+    public fun policyQualifierId(): String
+
+    /**
+     * Defines the qualifier type.
+     *
+     * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-qualifier)
+     */
+    public fun qualifier(): Any
+
+    /**
+     * A builder for [PolicyQualifierInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param policyQualifierId Identifies the qualifier modifying a `CertPolicyId` . 
+       */
+      public fun policyQualifierId(policyQualifierId: String)
+
+      /**
+       * @param qualifier Defines the qualifier type. 
+       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
+       */
+      public fun qualifier(qualifier: IResolvable)
+
+      /**
+       * @param qualifier Defines the qualifier type. 
+       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
+       */
+      public fun qualifier(qualifier: QualifierProperty)
+
+      /**
+       * @param qualifier Defines the qualifier type. 
+       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8ee9cc5d6a73f316af21c3d09037a6a30842ae9ad855c30559512fada499d86a")
+      public fun qualifier(qualifier: QualifierProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty.builder()
+
+      /**
+       * @param policyQualifierId Identifies the qualifier modifying a `CertPolicyId` . 
+       */
+      override fun policyQualifierId(policyQualifierId: String) {
+        cdkBuilder.policyQualifierId(policyQualifierId)
+      }
+
+      /**
+       * @param qualifier Defines the qualifier type. 
+       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
+       */
+      override fun qualifier(qualifier: IResolvable) {
+        cdkBuilder.qualifier(qualifier.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param qualifier Defines the qualifier type. 
+       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
+       */
+      override fun qualifier(qualifier: QualifierProperty) {
+        cdkBuilder.qualifier(qualifier.let(QualifierProperty::unwrap))
+      }
+
+      /**
+       * @param qualifier Defines the qualifier type. 
+       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8ee9cc5d6a73f316af21c3d09037a6a30842ae9ad855c30559512fada499d86a")
+      override fun qualifier(qualifier: QualifierProperty.Builder.() -> Unit): Unit =
+          qualifier(QualifierProperty(qualifier))
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty,
+    ) : CdkObject(cdkObject), PolicyQualifierInfoProperty {
+      /**
+       * Identifies the qualifier modifying a `CertPolicyId` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-policyqualifierid)
+       */
+      override fun policyQualifierId(): String = unwrap(this).getPolicyQualifierId()
+
+      /**
+       * Defines the qualifier type.
+       *
+       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-qualifier)
+       */
+      override fun qualifier(): Any = unwrap(this).getQualifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PolicyQualifierInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty):
+          PolicyQualifierInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PolicyQualifierInfoProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PolicyQualifierInfoProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty
+    }
+  }
+
+  /**
+   * Defines a `PolicyInformation` qualifier.
+   *
+   * AWS Private CA supports the [certification practice statement (CPS)
+   * qualifier](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.4)
+   * defined in RFC 5280.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * QualifierProperty qualifierProperty = QualifierProperty.builder()
+   * .cpsUri("cpsUri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-qualifier.html)
+   */
+  public interface QualifierProperty {
+    /**
+     * Contains a pointer to a certification practice statement (CPS) published by the CA.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-qualifier.html#cfn-acmpca-certificate-qualifier-cpsuri)
+     */
+    public fun cpsUri(): String
+
+    /**
+     * A builder for [QualifierProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpsUri Contains a pointer to a certification practice statement (CPS) published by
+       * the CA. 
+       */
+      public fun cpsUri(cpsUri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty.builder()
+
+      /**
+       * @param cpsUri Contains a pointer to a certification practice statement (CPS) published by
+       * the CA. 
+       */
+      override fun cpsUri(cpsUri: String) {
+        cdkBuilder.cpsUri(cpsUri)
+      }
+
+      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty,
+    ) : CdkObject(cdkObject), QualifierProperty {
+      /**
+       * Contains a pointer to a certification practice statement (CPS) published by the CA.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-qualifier.html#cfn-acmpca-certificate-qualifier-cpsuri)
+       */
+      override fun cpsUri(): String = unwrap(this).getCpsUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QualifierProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty):
+          QualifierProperty = CdkObjectWrappers.wrap(cdkObject) as? QualifierProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QualifierProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty
     }
   }
 
@@ -1475,2533 +4002,6 @@ public open class CfnCertificate internal constructor(
           software.amazon.awscdk.services.acmpca.CfnCertificate.SubjectProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.acmpca.CfnCertificate.SubjectProperty
-    }
-  }
-
-  /**
-   * Modifies the `CertPolicyId` of a `PolicyInformation` object with a qualifier.
-   *
-   * AWS Private CA supports the certification practice statement (CPS) qualifier.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * PolicyQualifierInfoProperty policyQualifierInfoProperty = PolicyQualifierInfoProperty.builder()
-   * .policyQualifierId("policyQualifierId")
-   * .qualifier(QualifierProperty.builder()
-   * .cpsUri("cpsUri")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html)
-   */
-  public interface PolicyQualifierInfoProperty {
-    /**
-     * Identifies the qualifier modifying a `CertPolicyId` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-policyqualifierid)
-     */
-    public fun policyQualifierId(): String
-
-    /**
-     * Defines the qualifier type.
-     *
-     * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-qualifier)
-     */
-    public fun qualifier(): Any
-
-    /**
-     * A builder for [PolicyQualifierInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param policyQualifierId Identifies the qualifier modifying a `CertPolicyId` . 
-       */
-      public fun policyQualifierId(policyQualifierId: String)
-
-      /**
-       * @param qualifier Defines the qualifier type. 
-       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
-       */
-      public fun qualifier(qualifier: IResolvable)
-
-      /**
-       * @param qualifier Defines the qualifier type. 
-       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
-       */
-      public fun qualifier(qualifier: QualifierProperty)
-
-      /**
-       * @param qualifier Defines the qualifier type. 
-       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8ee9cc5d6a73f316af21c3d09037a6a30842ae9ad855c30559512fada499d86a")
-      public fun qualifier(qualifier: QualifierProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty.Builder
-          =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty.builder()
-
-      /**
-       * @param policyQualifierId Identifies the qualifier modifying a `CertPolicyId` . 
-       */
-      override fun policyQualifierId(policyQualifierId: String) {
-        cdkBuilder.policyQualifierId(policyQualifierId)
-      }
-
-      /**
-       * @param qualifier Defines the qualifier type. 
-       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
-       */
-      override fun qualifier(qualifier: IResolvable) {
-        cdkBuilder.qualifier(qualifier.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param qualifier Defines the qualifier type. 
-       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
-       */
-      override fun qualifier(qualifier: QualifierProperty) {
-        cdkBuilder.qualifier(qualifier.let(QualifierProperty::unwrap))
-      }
-
-      /**
-       * @param qualifier Defines the qualifier type. 
-       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8ee9cc5d6a73f316af21c3d09037a6a30842ae9ad855c30559512fada499d86a")
-      override fun qualifier(qualifier: QualifierProperty.Builder.() -> Unit): Unit =
-          qualifier(QualifierProperty(qualifier))
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty,
-    ) : CdkObject(cdkObject), PolicyQualifierInfoProperty {
-      /**
-       * Identifies the qualifier modifying a `CertPolicyId` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-policyqualifierid)
-       */
-      override fun policyQualifierId(): String = unwrap(this).getPolicyQualifierId()
-
-      /**
-       * Defines the qualifier type.
-       *
-       * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-qualifier)
-       */
-      override fun qualifier(): Any = unwrap(this).getQualifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PolicyQualifierInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty):
-          PolicyQualifierInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PolicyQualifierInfoProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PolicyQualifierInfoProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty
-    }
-  }
-
-  /**
-   * Describes an ASN.1 X.400 `GeneralName` as defined in [RFC
-   * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) . Only one of the
-   * following naming options should be provided. Providing more than one option results in an
-   * `InvalidArgsException` error.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * GeneralNameProperty generalNameProperty = GeneralNameProperty.builder()
-   * .directoryName(SubjectProperty.builder()
-   * .commonName("commonName")
-   * .country("country")
-   * .customAttributes(List.of(CustomAttributeProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * .build()))
-   * .distinguishedNameQualifier("distinguishedNameQualifier")
-   * .generationQualifier("generationQualifier")
-   * .givenName("givenName")
-   * .initials("initials")
-   * .locality("locality")
-   * .organization("organization")
-   * .organizationalUnit("organizationalUnit")
-   * .pseudonym("pseudonym")
-   * .serialNumber("serialNumber")
-   * .state("state")
-   * .surname("surname")
-   * .title("title")
-   * .build())
-   * .dnsName("dnsName")
-   * .ediPartyName(EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
-   * .partyName("partyName")
-   * .build())
-   * .ipAddress("ipAddress")
-   * .otherName(OtherNameProperty.builder()
-   * .typeId("typeId")
-   * .value("value")
-   * .build())
-   * .registeredId("registeredId")
-   * .rfc822Name("rfc822Name")
-   * .uniformResourceIdentifier("uniformResourceIdentifier")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html)
-   */
-  public interface GeneralNameProperty {
-    /**
-     * Contains information about the certificate subject.
-     *
-     * The certificate can be one issued by your private certificate authority (CA) or it can be
-     * your private CA certificate. The Subject field in the certificate identifies the entity that
-     * owns or controls the public key in the certificate. The entity can be a user, computer, device,
-     * or service. The Subject must contain an X.500 distinguished name (DN). A DN is a sequence of
-     * relative distinguished names (RDNs). The RDNs are separated by commas in the certificate. The DN
-     * must be unique for each entity, but your private CA can issue more than one certificate with the
-     * same DN to the same entity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-directoryname)
-     */
-    public fun directoryName(): Any? = unwrap(this).getDirectoryName()
-
-    /**
-     * Represents `GeneralName` as a DNS name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-dnsname)
-     */
-    public fun dnsName(): String? = unwrap(this).getDnsName()
-
-    /**
-     * Represents `GeneralName` as an `EdiPartyName` object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-edipartyname)
-     */
-    public fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
-
-    /**
-     * Represents `GeneralName` as an IPv4 or IPv6 address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-ipaddress)
-     */
-    public fun ipAddress(): String? = unwrap(this).getIpAddress()
-
-    /**
-     * Represents `GeneralName` using an `OtherName` object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-othername)
-     */
-    public fun otherName(): Any? = unwrap(this).getOtherName()
-
-    /**
-     * Represents `GeneralName` as an object identifier (OID).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-registeredid)
-     */
-    public fun registeredId(): String? = unwrap(this).getRegisteredId()
-
-    /**
-     * Represents `GeneralName` as an [RFC
-     * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-rfc822name)
-     */
-    public fun rfc822Name(): String? = unwrap(this).getRfc822Name()
-
-    /**
-     * Represents `GeneralName` as a URI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-uniformresourceidentifier)
-     */
-    public fun uniformResourceIdentifier(): String? = unwrap(this).getUniformResourceIdentifier()
-
-    /**
-     * A builder for [GeneralNameProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      public fun directoryName(directoryName: IResolvable)
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      public fun directoryName(directoryName: SubjectProperty)
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("96b850009393b18157988126a30febc9603e07c94088e24394c1d0568c06bd3e")
-      public fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit)
-
-      /**
-       * @param dnsName Represents `GeneralName` as a DNS name.
-       */
-      public fun dnsName(dnsName: String)
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      public fun ediPartyName(ediPartyName: IResolvable)
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      public fun ediPartyName(ediPartyName: EdiPartyNameProperty)
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e8f9859ee6c7e211c3066fc9466926f9f9403e42f2c69f794333b0ed6fe97aa6")
-      public fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit)
-
-      /**
-       * @param ipAddress Represents `GeneralName` as an IPv4 or IPv6 address.
-       */
-      public fun ipAddress(ipAddress: String)
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      public fun otherName(otherName: IResolvable)
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      public fun otherName(otherName: OtherNameProperty)
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a26c7790fb156970216368ee9c7f92b35bf5d47e6291f46ff359bcc77c84b626")
-      public fun otherName(otherName: OtherNameProperty.Builder.() -> Unit)
-
-      /**
-       * @param registeredId Represents `GeneralName` as an object identifier (OID).
-       */
-      public fun registeredId(registeredId: String)
-
-      /**
-       * @param rfc822Name Represents `GeneralName` as an [RFC
-       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
-       */
-      public fun rfc822Name(rfc822Name: String)
-
-      /**
-       * @param uniformResourceIdentifier Represents `GeneralName` as a URI.
-       */
-      public fun uniformResourceIdentifier(uniformResourceIdentifier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty.builder()
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      override fun directoryName(directoryName: IResolvable) {
-        cdkBuilder.directoryName(directoryName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      override fun directoryName(directoryName: SubjectProperty) {
-        cdkBuilder.directoryName(directoryName.let(SubjectProperty::unwrap))
-      }
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("96b850009393b18157988126a30febc9603e07c94088e24394c1d0568c06bd3e")
-      override fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit): Unit =
-          directoryName(SubjectProperty(directoryName))
-
-      /**
-       * @param dnsName Represents `GeneralName` as a DNS name.
-       */
-      override fun dnsName(dnsName: String) {
-        cdkBuilder.dnsName(dnsName)
-      }
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      override fun ediPartyName(ediPartyName: IResolvable) {
-        cdkBuilder.ediPartyName(ediPartyName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      override fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
-        cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty::unwrap))
-      }
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e8f9859ee6c7e211c3066fc9466926f9f9403e42f2c69f794333b0ed6fe97aa6")
-      override fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit): Unit =
-          ediPartyName(EdiPartyNameProperty(ediPartyName))
-
-      /**
-       * @param ipAddress Represents `GeneralName` as an IPv4 or IPv6 address.
-       */
-      override fun ipAddress(ipAddress: String) {
-        cdkBuilder.ipAddress(ipAddress)
-      }
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      override fun otherName(otherName: IResolvable) {
-        cdkBuilder.otherName(otherName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      override fun otherName(otherName: OtherNameProperty) {
-        cdkBuilder.otherName(otherName.let(OtherNameProperty::unwrap))
-      }
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a26c7790fb156970216368ee9c7f92b35bf5d47e6291f46ff359bcc77c84b626")
-      override fun otherName(otherName: OtherNameProperty.Builder.() -> Unit): Unit =
-          otherName(OtherNameProperty(otherName))
-
-      /**
-       * @param registeredId Represents `GeneralName` as an object identifier (OID).
-       */
-      override fun registeredId(registeredId: String) {
-        cdkBuilder.registeredId(registeredId)
-      }
-
-      /**
-       * @param rfc822Name Represents `GeneralName` as an [RFC
-       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
-       */
-      override fun rfc822Name(rfc822Name: String) {
-        cdkBuilder.rfc822Name(rfc822Name)
-      }
-
-      /**
-       * @param uniformResourceIdentifier Represents `GeneralName` as a URI.
-       */
-      override fun uniformResourceIdentifier(uniformResourceIdentifier: String) {
-        cdkBuilder.uniformResourceIdentifier(uniformResourceIdentifier)
-      }
-
-      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty,
-    ) : CdkObject(cdkObject), GeneralNameProperty {
-      /**
-       * Contains information about the certificate subject.
-       *
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-directoryname)
-       */
-      override fun directoryName(): Any? = unwrap(this).getDirectoryName()
-
-      /**
-       * Represents `GeneralName` as a DNS name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-dnsname)
-       */
-      override fun dnsName(): String? = unwrap(this).getDnsName()
-
-      /**
-       * Represents `GeneralName` as an `EdiPartyName` object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-edipartyname)
-       */
-      override fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
-
-      /**
-       * Represents `GeneralName` as an IPv4 or IPv6 address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-ipaddress)
-       */
-      override fun ipAddress(): String? = unwrap(this).getIpAddress()
-
-      /**
-       * Represents `GeneralName` using an `OtherName` object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-othername)
-       */
-      override fun otherName(): Any? = unwrap(this).getOtherName()
-
-      /**
-       * Represents `GeneralName` as an object identifier (OID).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-registeredid)
-       */
-      override fun registeredId(): String? = unwrap(this).getRegisteredId()
-
-      /**
-       * Represents `GeneralName` as an [RFC
-       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-rfc822name)
-       */
-      override fun rfc822Name(): String? = unwrap(this).getRfc822Name()
-
-      /**
-       * Represents `GeneralName` as a URI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-generalname.html#cfn-acmpca-certificate-generalname-uniformresourceidentifier)
-       */
-      override fun uniformResourceIdentifier(): String? =
-          unwrap(this).getUniformResourceIdentifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralNameProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty):
-          GeneralNameProperty = CdkObjectWrappers.wrap(cdkObject) as? GeneralNameProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GeneralNameProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty
-    }
-  }
-
-  /**
-   * Describes an Electronic Data Interchange (EDI) entity as described in as defined in [Subject
-   * Alternative Name](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) in
-   * RFC 5280.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * EdiPartyNameProperty ediPartyNameProperty = EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
-   * .partyName("partyName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html)
-   */
-  public interface EdiPartyNameProperty {
-    /**
-     * Specifies the name assigner.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-nameassigner)
-     */
-    public fun nameAssigner(): String
-
-    /**
-     * Specifies the party name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-partyname)
-     */
-    public fun partyName(): String
-
-    /**
-     * A builder for [EdiPartyNameProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param nameAssigner Specifies the name assigner. 
-       */
-      public fun nameAssigner(nameAssigner: String)
-
-      /**
-       * @param partyName Specifies the party name. 
-       */
-      public fun partyName(partyName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty.builder()
-
-      /**
-       * @param nameAssigner Specifies the name assigner. 
-       */
-      override fun nameAssigner(nameAssigner: String) {
-        cdkBuilder.nameAssigner(nameAssigner)
-      }
-
-      /**
-       * @param partyName Specifies the party name. 
-       */
-      override fun partyName(partyName: String) {
-        cdkBuilder.partyName(partyName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty,
-    ) : CdkObject(cdkObject), EdiPartyNameProperty {
-      /**
-       * Specifies the name assigner.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-nameassigner)
-       */
-      override fun nameAssigner(): String = unwrap(this).getNameAssigner()
-
-      /**
-       * Specifies the party name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-partyname)
-       */
-      override fun partyName(): String = unwrap(this).getPartyName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EdiPartyNameProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty):
-          EdiPartyNameProperty = CdkObjectWrappers.wrap(cdkObject) as? EdiPartyNameProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EdiPartyNameProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty
-    }
-  }
-
-  /**
-   * Specifies the X.509 extension information for a certificate.
-   *
-   * Extensions present in `CustomExtensions` follow the `ApiPassthrough` [template
-   * rules](https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * CustomExtensionProperty customExtensionProperty = CustomExtensionProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * // the properties below are optional
-   * .critical(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html)
-   */
-  public interface CustomExtensionProperty {
-    /**
-     * Specifies the critical flag of the X.509 extension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-critical)
-     */
-    public fun critical(): Any? = unwrap(this).getCritical()
-
-    /**
-     * Specifies the object identifier (OID) of the X.509 extension. For more information, see the
-     * [Global OID reference database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-objectidentifier)
-     */
-    public fun objectIdentifier(): String
-
-    /**
-     * Specifies the base64-encoded value of the X.509 extension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [CustomExtensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param critical Specifies the critical flag of the X.509 extension.
-       */
-      public fun critical(critical: Boolean)
-
-      /**
-       * @param critical Specifies the critical flag of the X.509 extension.
-       */
-      public fun critical(critical: IResolvable)
-
-      /**
-       * @param objectIdentifier Specifies the object identifier (OID) of the X.509 extension. For
-       * more information, see the [Global OID reference
-       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29). 
-       */
-      public fun objectIdentifier(objectIdentifier: String)
-
-      /**
-       * @param value Specifies the base64-encoded value of the X.509 extension. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty.builder()
-
-      /**
-       * @param critical Specifies the critical flag of the X.509 extension.
-       */
-      override fun critical(critical: Boolean) {
-        cdkBuilder.critical(critical)
-      }
-
-      /**
-       * @param critical Specifies the critical flag of the X.509 extension.
-       */
-      override fun critical(critical: IResolvable) {
-        cdkBuilder.critical(critical.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param objectIdentifier Specifies the object identifier (OID) of the X.509 extension. For
-       * more information, see the [Global OID reference
-       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29). 
-       */
-      override fun objectIdentifier(objectIdentifier: String) {
-        cdkBuilder.objectIdentifier(objectIdentifier)
-      }
-
-      /**
-       * @param value Specifies the base64-encoded value of the X.509 extension. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty,
-    ) : CdkObject(cdkObject), CustomExtensionProperty {
-      /**
-       * Specifies the critical flag of the X.509 extension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-critical)
-       */
-      override fun critical(): Any? = unwrap(this).getCritical()
-
-      /**
-       * Specifies the object identifier (OID) of the X.509 extension. For more information, see the
-       * [Global OID reference database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-objectidentifier)
-       */
-      override fun objectIdentifier(): String = unwrap(this).getObjectIdentifier()
-
-      /**
-       * Specifies the base64-encoded value of the X.509 extension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html#cfn-acmpca-certificate-customextension-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomExtensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty):
-          CustomExtensionProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomExtensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomExtensionProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty
-    }
-  }
-
-  /**
-   * Contains X.509 certificate information to be placed in an issued certificate. An
-   * `APIPassthrough` or `APICSRPassthrough` template variant must be selected, or else this parameter
-   * is ignored.
-   *
-   * If conflicting or duplicate certificate information is supplied from other sources, AWS Private
-   * CA applies [order of operation
-   * rules](https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations)
-   * to determine what information is used.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * ApiPassthroughProperty apiPassthroughProperty = ApiPassthroughProperty.builder()
-   * .extensions(ExtensionsProperty.builder()
-   * .certificatePolicies(List.of(PolicyInformationProperty.builder()
-   * .certPolicyId("certPolicyId")
-   * // the properties below are optional
-   * .policyQualifiers(List.of(PolicyQualifierInfoProperty.builder()
-   * .policyQualifierId("policyQualifierId")
-   * .qualifier(QualifierProperty.builder()
-   * .cpsUri("cpsUri")
-   * .build())
-   * .build()))
-   * .build()))
-   * .customExtensions(List.of(CustomExtensionProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * // the properties below are optional
-   * .critical(false)
-   * .build()))
-   * .extendedKeyUsage(List.of(ExtendedKeyUsageProperty.builder()
-   * .extendedKeyUsageObjectIdentifier("extendedKeyUsageObjectIdentifier")
-   * .extendedKeyUsageType("extendedKeyUsageType")
-   * .build()))
-   * .keyUsage(KeyUsageProperty.builder()
-   * .crlSign(false)
-   * .dataEncipherment(false)
-   * .decipherOnly(false)
-   * .digitalSignature(false)
-   * .encipherOnly(false)
-   * .keyAgreement(false)
-   * .keyCertSign(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * .subjectAlternativeNames(List.of(GeneralNameProperty.builder()
-   * .directoryName(SubjectProperty.builder()
-   * .commonName("commonName")
-   * .country("country")
-   * .customAttributes(List.of(CustomAttributeProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * .build()))
-   * .distinguishedNameQualifier("distinguishedNameQualifier")
-   * .generationQualifier("generationQualifier")
-   * .givenName("givenName")
-   * .initials("initials")
-   * .locality("locality")
-   * .organization("organization")
-   * .organizationalUnit("organizationalUnit")
-   * .pseudonym("pseudonym")
-   * .serialNumber("serialNumber")
-   * .state("state")
-   * .surname("surname")
-   * .title("title")
-   * .build())
-   * .dnsName("dnsName")
-   * .ediPartyName(EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
-   * .partyName("partyName")
-   * .build())
-   * .ipAddress("ipAddress")
-   * .otherName(OtherNameProperty.builder()
-   * .typeId("typeId")
-   * .value("value")
-   * .build())
-   * .registeredId("registeredId")
-   * .rfc822Name("rfc822Name")
-   * .uniformResourceIdentifier("uniformResourceIdentifier")
-   * .build()))
-   * .build())
-   * .subject(SubjectProperty.builder()
-   * .commonName("commonName")
-   * .country("country")
-   * .customAttributes(List.of(CustomAttributeProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * .build()))
-   * .distinguishedNameQualifier("distinguishedNameQualifier")
-   * .generationQualifier("generationQualifier")
-   * .givenName("givenName")
-   * .initials("initials")
-   * .locality("locality")
-   * .organization("organization")
-   * .organizationalUnit("organizationalUnit")
-   * .pseudonym("pseudonym")
-   * .serialNumber("serialNumber")
-   * .state("state")
-   * .surname("surname")
-   * .title("title")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html)
-   */
-  public interface ApiPassthroughProperty {
-    /**
-     * Specifies X.509 extension information for a certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html#cfn-acmpca-certificate-apipassthrough-extensions)
-     */
-    public fun extensions(): Any? = unwrap(this).getExtensions()
-
-    /**
-     * Contains information about the certificate subject.
-     *
-     * The Subject field in the certificate identifies the entity that owns or controls the public
-     * key in the certificate. The entity can be a user, computer, device, or service. The Subject must
-     * contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished names
-     * (RDNs). The RDNs are separated by commas in the certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html#cfn-acmpca-certificate-apipassthrough-subject)
-     */
-    public fun subject(): Any? = unwrap(this).getSubject()
-
-    /**
-     * A builder for [ApiPassthroughProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param extensions Specifies X.509 extension information for a certificate.
-       */
-      public fun extensions(extensions: IResolvable)
-
-      /**
-       * @param extensions Specifies X.509 extension information for a certificate.
-       */
-      public fun extensions(extensions: ExtensionsProperty)
-
-      /**
-       * @param extensions Specifies X.509 extension information for a certificate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("737c1adb62e6848e2a5f445164e3c36994488e6feea295330c4dcc0fb119bb4d")
-      public fun extensions(extensions: ExtensionsProperty.Builder.() -> Unit)
-
-      /**
-       * @param subject Contains information about the certificate subject.
-       * The Subject field in the certificate identifies the entity that owns or controls the public
-       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
-       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
-       * names (RDNs). The RDNs are separated by commas in the certificate.
-       */
-      public fun subject(subject: IResolvable)
-
-      /**
-       * @param subject Contains information about the certificate subject.
-       * The Subject field in the certificate identifies the entity that owns or controls the public
-       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
-       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
-       * names (RDNs). The RDNs are separated by commas in the certificate.
-       */
-      public fun subject(subject: SubjectProperty)
-
-      /**
-       * @param subject Contains information about the certificate subject.
-       * The Subject field in the certificate identifies the entity that owns or controls the public
-       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
-       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
-       * names (RDNs). The RDNs are separated by commas in the certificate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f3305f385f07191a605279b3db7c1e906d8d10c24265cc76c3142c585c3d0ffd")
-      public fun subject(subject: SubjectProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty.builder()
-
-      /**
-       * @param extensions Specifies X.509 extension information for a certificate.
-       */
-      override fun extensions(extensions: IResolvable) {
-        cdkBuilder.extensions(extensions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param extensions Specifies X.509 extension information for a certificate.
-       */
-      override fun extensions(extensions: ExtensionsProperty) {
-        cdkBuilder.extensions(extensions.let(ExtensionsProperty::unwrap))
-      }
-
-      /**
-       * @param extensions Specifies X.509 extension information for a certificate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("737c1adb62e6848e2a5f445164e3c36994488e6feea295330c4dcc0fb119bb4d")
-      override fun extensions(extensions: ExtensionsProperty.Builder.() -> Unit): Unit =
-          extensions(ExtensionsProperty(extensions))
-
-      /**
-       * @param subject Contains information about the certificate subject.
-       * The Subject field in the certificate identifies the entity that owns or controls the public
-       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
-       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
-       * names (RDNs). The RDNs are separated by commas in the certificate.
-       */
-      override fun subject(subject: IResolvable) {
-        cdkBuilder.subject(subject.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param subject Contains information about the certificate subject.
-       * The Subject field in the certificate identifies the entity that owns or controls the public
-       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
-       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
-       * names (RDNs). The RDNs are separated by commas in the certificate.
-       */
-      override fun subject(subject: SubjectProperty) {
-        cdkBuilder.subject(subject.let(SubjectProperty::unwrap))
-      }
-
-      /**
-       * @param subject Contains information about the certificate subject.
-       * The Subject field in the certificate identifies the entity that owns or controls the public
-       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
-       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
-       * names (RDNs). The RDNs are separated by commas in the certificate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f3305f385f07191a605279b3db7c1e906d8d10c24265cc76c3142c585c3d0ffd")
-      override fun subject(subject: SubjectProperty.Builder.() -> Unit): Unit =
-          subject(SubjectProperty(subject))
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty,
-    ) : CdkObject(cdkObject), ApiPassthroughProperty {
-      /**
-       * Specifies X.509 extension information for a certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html#cfn-acmpca-certificate-apipassthrough-extensions)
-       */
-      override fun extensions(): Any? = unwrap(this).getExtensions()
-
-      /**
-       * Contains information about the certificate subject.
-       *
-       * The Subject field in the certificate identifies the entity that owns or controls the public
-       * key in the certificate. The entity can be a user, computer, device, or service. The Subject
-       * must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished
-       * names (RDNs). The RDNs are separated by commas in the certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-apipassthrough.html#cfn-acmpca-certificate-apipassthrough-subject)
-       */
-      override fun subject(): Any? = unwrap(this).getSubject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ApiPassthroughProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty):
-          ApiPassthroughProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiPassthroughProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ApiPassthroughProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty
-    }
-  }
-
-  /**
-   * Defines one or more purposes for which the key contained in the certificate can be used.
-   *
-   * Default value for each option is false.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * KeyUsageProperty keyUsageProperty = KeyUsageProperty.builder()
-   * .crlSign(false)
-   * .dataEncipherment(false)
-   * .decipherOnly(false)
-   * .digitalSignature(false)
-   * .encipherOnly(false)
-   * .keyAgreement(false)
-   * .keyCertSign(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html)
-   */
-  public interface KeyUsageProperty {
-    /**
-     * Key can be used to sign CRLs.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-crlsign)
-     */
-    public fun crlSign(): Any? = unwrap(this).getCrlSign()
-
-    /**
-     * Key can be used to decipher data.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-dataencipherment)
-     */
-    public fun dataEncipherment(): Any? = unwrap(this).getDataEncipherment()
-
-    /**
-     * Key can be used only to decipher data.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-decipheronly)
-     */
-    public fun decipherOnly(): Any? = unwrap(this).getDecipherOnly()
-
-    /**
-     * Key can be used for digital signing.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-digitalsignature)
-     */
-    public fun digitalSignature(): Any? = unwrap(this).getDigitalSignature()
-
-    /**
-     * Key can be used only to encipher data.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-encipheronly)
-     */
-    public fun encipherOnly(): Any? = unwrap(this).getEncipherOnly()
-
-    /**
-     * Key can be used in a key-agreement protocol.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyagreement)
-     */
-    public fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
-
-    /**
-     * Key can be used to sign certificates.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keycertsign)
-     */
-    public fun keyCertSign(): Any? = unwrap(this).getKeyCertSign()
-
-    /**
-     * Key can be used to encipher data.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyencipherment)
-     */
-    public fun keyEncipherment(): Any? = unwrap(this).getKeyEncipherment()
-
-    /**
-     * Key can be used for non-repudiation.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-nonrepudiation)
-     */
-    public fun nonRepudiation(): Any? = unwrap(this).getNonRepudiation()
-
-    /**
-     * A builder for [KeyUsageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param crlSign Key can be used to sign CRLs.
-       */
-      public fun crlSign(crlSign: Boolean)
-
-      /**
-       * @param crlSign Key can be used to sign CRLs.
-       */
-      public fun crlSign(crlSign: IResolvable)
-
-      /**
-       * @param dataEncipherment Key can be used to decipher data.
-       */
-      public fun dataEncipherment(dataEncipherment: Boolean)
-
-      /**
-       * @param dataEncipherment Key can be used to decipher data.
-       */
-      public fun dataEncipherment(dataEncipherment: IResolvable)
-
-      /**
-       * @param decipherOnly Key can be used only to decipher data.
-       */
-      public fun decipherOnly(decipherOnly: Boolean)
-
-      /**
-       * @param decipherOnly Key can be used only to decipher data.
-       */
-      public fun decipherOnly(decipherOnly: IResolvable)
-
-      /**
-       * @param digitalSignature Key can be used for digital signing.
-       */
-      public fun digitalSignature(digitalSignature: Boolean)
-
-      /**
-       * @param digitalSignature Key can be used for digital signing.
-       */
-      public fun digitalSignature(digitalSignature: IResolvable)
-
-      /**
-       * @param encipherOnly Key can be used only to encipher data.
-       */
-      public fun encipherOnly(encipherOnly: Boolean)
-
-      /**
-       * @param encipherOnly Key can be used only to encipher data.
-       */
-      public fun encipherOnly(encipherOnly: IResolvable)
-
-      /**
-       * @param keyAgreement Key can be used in a key-agreement protocol.
-       */
-      public fun keyAgreement(keyAgreement: Boolean)
-
-      /**
-       * @param keyAgreement Key can be used in a key-agreement protocol.
-       */
-      public fun keyAgreement(keyAgreement: IResolvable)
-
-      /**
-       * @param keyCertSign Key can be used to sign certificates.
-       */
-      public fun keyCertSign(keyCertSign: Boolean)
-
-      /**
-       * @param keyCertSign Key can be used to sign certificates.
-       */
-      public fun keyCertSign(keyCertSign: IResolvable)
-
-      /**
-       * @param keyEncipherment Key can be used to encipher data.
-       */
-      public fun keyEncipherment(keyEncipherment: Boolean)
-
-      /**
-       * @param keyEncipherment Key can be used to encipher data.
-       */
-      public fun keyEncipherment(keyEncipherment: IResolvable)
-
-      /**
-       * @param nonRepudiation Key can be used for non-repudiation.
-       */
-      public fun nonRepudiation(nonRepudiation: Boolean)
-
-      /**
-       * @param nonRepudiation Key can be used for non-repudiation.
-       */
-      public fun nonRepudiation(nonRepudiation: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty.builder()
-
-      /**
-       * @param crlSign Key can be used to sign CRLs.
-       */
-      override fun crlSign(crlSign: Boolean) {
-        cdkBuilder.crlSign(crlSign)
-      }
-
-      /**
-       * @param crlSign Key can be used to sign CRLs.
-       */
-      override fun crlSign(crlSign: IResolvable) {
-        cdkBuilder.crlSign(crlSign.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dataEncipherment Key can be used to decipher data.
-       */
-      override fun dataEncipherment(dataEncipherment: Boolean) {
-        cdkBuilder.dataEncipherment(dataEncipherment)
-      }
-
-      /**
-       * @param dataEncipherment Key can be used to decipher data.
-       */
-      override fun dataEncipherment(dataEncipherment: IResolvable) {
-        cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param decipherOnly Key can be used only to decipher data.
-       */
-      override fun decipherOnly(decipherOnly: Boolean) {
-        cdkBuilder.decipherOnly(decipherOnly)
-      }
-
-      /**
-       * @param decipherOnly Key can be used only to decipher data.
-       */
-      override fun decipherOnly(decipherOnly: IResolvable) {
-        cdkBuilder.decipherOnly(decipherOnly.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param digitalSignature Key can be used for digital signing.
-       */
-      override fun digitalSignature(digitalSignature: Boolean) {
-        cdkBuilder.digitalSignature(digitalSignature)
-      }
-
-      /**
-       * @param digitalSignature Key can be used for digital signing.
-       */
-      override fun digitalSignature(digitalSignature: IResolvable) {
-        cdkBuilder.digitalSignature(digitalSignature.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encipherOnly Key can be used only to encipher data.
-       */
-      override fun encipherOnly(encipherOnly: Boolean) {
-        cdkBuilder.encipherOnly(encipherOnly)
-      }
-
-      /**
-       * @param encipherOnly Key can be used only to encipher data.
-       */
-      override fun encipherOnly(encipherOnly: IResolvable) {
-        cdkBuilder.encipherOnly(encipherOnly.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyAgreement Key can be used in a key-agreement protocol.
-       */
-      override fun keyAgreement(keyAgreement: Boolean) {
-        cdkBuilder.keyAgreement(keyAgreement)
-      }
-
-      /**
-       * @param keyAgreement Key can be used in a key-agreement protocol.
-       */
-      override fun keyAgreement(keyAgreement: IResolvable) {
-        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyCertSign Key can be used to sign certificates.
-       */
-      override fun keyCertSign(keyCertSign: Boolean) {
-        cdkBuilder.keyCertSign(keyCertSign)
-      }
-
-      /**
-       * @param keyCertSign Key can be used to sign certificates.
-       */
-      override fun keyCertSign(keyCertSign: IResolvable) {
-        cdkBuilder.keyCertSign(keyCertSign.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyEncipherment Key can be used to encipher data.
-       */
-      override fun keyEncipherment(keyEncipherment: Boolean) {
-        cdkBuilder.keyEncipherment(keyEncipherment)
-      }
-
-      /**
-       * @param keyEncipherment Key can be used to encipher data.
-       */
-      override fun keyEncipherment(keyEncipherment: IResolvable) {
-        cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param nonRepudiation Key can be used for non-repudiation.
-       */
-      override fun nonRepudiation(nonRepudiation: Boolean) {
-        cdkBuilder.nonRepudiation(nonRepudiation)
-      }
-
-      /**
-       * @param nonRepudiation Key can be used for non-repudiation.
-       */
-      override fun nonRepudiation(nonRepudiation: IResolvable) {
-        cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty,
-    ) : CdkObject(cdkObject), KeyUsageProperty {
-      /**
-       * Key can be used to sign CRLs.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-crlsign)
-       */
-      override fun crlSign(): Any? = unwrap(this).getCrlSign()
-
-      /**
-       * Key can be used to decipher data.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-dataencipherment)
-       */
-      override fun dataEncipherment(): Any? = unwrap(this).getDataEncipherment()
-
-      /**
-       * Key can be used only to decipher data.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-decipheronly)
-       */
-      override fun decipherOnly(): Any? = unwrap(this).getDecipherOnly()
-
-      /**
-       * Key can be used for digital signing.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-digitalsignature)
-       */
-      override fun digitalSignature(): Any? = unwrap(this).getDigitalSignature()
-
-      /**
-       * Key can be used only to encipher data.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-encipheronly)
-       */
-      override fun encipherOnly(): Any? = unwrap(this).getEncipherOnly()
-
-      /**
-       * Key can be used in a key-agreement protocol.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyagreement)
-       */
-      override fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
-
-      /**
-       * Key can be used to sign certificates.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keycertsign)
-       */
-      override fun keyCertSign(): Any? = unwrap(this).getKeyCertSign()
-
-      /**
-       * Key can be used to encipher data.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyencipherment)
-       */
-      override fun keyEncipherment(): Any? = unwrap(this).getKeyEncipherment()
-
-      /**
-       * Key can be used for non-repudiation.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-nonrepudiation)
-       */
-      override fun nonRepudiation(): Any? = unwrap(this).getNonRepudiation()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyUsageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty):
-          KeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyUsageProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KeyUsageProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty
-    }
-  }
-
-  /**
-   * Defines the X.500 relative distinguished name (RDN).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * CustomAttributeProperty customAttributeProperty = CustomAttributeProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html)
-   */
-  public interface CustomAttributeProperty {
-    /**
-     * Specifies the object identifier (OID) of the attribute type of the relative distinguished
-     * name (RDN).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html#cfn-acmpca-certificate-customattribute-objectidentifier)
-     */
-    public fun objectIdentifier(): String
-
-    /**
-     * Specifies the attribute value of relative distinguished name (RDN).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html#cfn-acmpca-certificate-customattribute-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [CustomAttributeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
-       * relative distinguished name (RDN). 
-       */
-      public fun objectIdentifier(objectIdentifier: String)
-
-      /**
-       * @param value Specifies the attribute value of relative distinguished name (RDN). 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty.builder()
-
-      /**
-       * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
-       * relative distinguished name (RDN). 
-       */
-      override fun objectIdentifier(objectIdentifier: String) {
-        cdkBuilder.objectIdentifier(objectIdentifier)
-      }
-
-      /**
-       * @param value Specifies the attribute value of relative distinguished name (RDN). 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty,
-    ) : CdkObject(cdkObject), CustomAttributeProperty {
-      /**
-       * Specifies the object identifier (OID) of the attribute type of the relative distinguished
-       * name (RDN).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html#cfn-acmpca-certificate-customattribute-objectidentifier)
-       */
-      override fun objectIdentifier(): String = unwrap(this).getObjectIdentifier()
-
-      /**
-       * Specifies the attribute value of relative distinguished name (RDN).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customattribute.html#cfn-acmpca-certificate-customattribute-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomAttributeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty):
-          CustomAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomAttributeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomAttributeProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty
-    }
-  }
-
-  /**
-   * Contains X.509 extension information for a certificate.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * ExtensionsProperty extensionsProperty = ExtensionsProperty.builder()
-   * .certificatePolicies(List.of(PolicyInformationProperty.builder()
-   * .certPolicyId("certPolicyId")
-   * // the properties below are optional
-   * .policyQualifiers(List.of(PolicyQualifierInfoProperty.builder()
-   * .policyQualifierId("policyQualifierId")
-   * .qualifier(QualifierProperty.builder()
-   * .cpsUri("cpsUri")
-   * .build())
-   * .build()))
-   * .build()))
-   * .customExtensions(List.of(CustomExtensionProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * // the properties below are optional
-   * .critical(false)
-   * .build()))
-   * .extendedKeyUsage(List.of(ExtendedKeyUsageProperty.builder()
-   * .extendedKeyUsageObjectIdentifier("extendedKeyUsageObjectIdentifier")
-   * .extendedKeyUsageType("extendedKeyUsageType")
-   * .build()))
-   * .keyUsage(KeyUsageProperty.builder()
-   * .crlSign(false)
-   * .dataEncipherment(false)
-   * .decipherOnly(false)
-   * .digitalSignature(false)
-   * .encipherOnly(false)
-   * .keyAgreement(false)
-   * .keyCertSign(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * .subjectAlternativeNames(List.of(GeneralNameProperty.builder()
-   * .directoryName(SubjectProperty.builder()
-   * .commonName("commonName")
-   * .country("country")
-   * .customAttributes(List.of(CustomAttributeProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * .build()))
-   * .distinguishedNameQualifier("distinguishedNameQualifier")
-   * .generationQualifier("generationQualifier")
-   * .givenName("givenName")
-   * .initials("initials")
-   * .locality("locality")
-   * .organization("organization")
-   * .organizationalUnit("organizationalUnit")
-   * .pseudonym("pseudonym")
-   * .serialNumber("serialNumber")
-   * .state("state")
-   * .surname("surname")
-   * .title("title")
-   * .build())
-   * .dnsName("dnsName")
-   * .ediPartyName(EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
-   * .partyName("partyName")
-   * .build())
-   * .ipAddress("ipAddress")
-   * .otherName(OtherNameProperty.builder()
-   * .typeId("typeId")
-   * .value("value")
-   * .build())
-   * .registeredId("registeredId")
-   * .rfc822Name("rfc822Name")
-   * .uniformResourceIdentifier("uniformResourceIdentifier")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html)
-   */
-  public interface ExtensionsProperty {
-    /**
-     * Contains a sequence of one or more policy information terms, each of which consists of an
-     * object identifier (OID) and optional qualifiers.
-     *
-     * For more information, see NIST's definition of [Object Identifier
-     * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-     *
-     * In an end-entity certificate, these terms indicate the policy under which the certificate was
-     * issued and the purposes for which it may be used. In a CA certificate, these terms limit the set
-     * of policies for certification paths that include this certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-certificatepolicies)
-     */
-    public fun certificatePolicies(): Any? = unwrap(this).getCertificatePolicies()
-
-    /**
-     * Contains a sequence of one or more X.509 extensions, each of which consists of an object
-     * identifier (OID), a base64-encoded value, and the critical flag. For more information, see the
-     * [Global OID reference database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-customextensions)
-     */
-    public fun customExtensions(): Any? = unwrap(this).getCustomExtensions()
-
-    /**
-     * Specifies additional purposes for which the certified public key may be used other than basic
-     * purposes indicated in the `KeyUsage` extension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-extendedkeyusage)
-     */
-    public fun extendedKeyUsage(): Any? = unwrap(this).getExtendedKeyUsage()
-
-    /**
-     * Defines one or more purposes for which the key contained in the certificate can be used.
-     *
-     * Default value for each option is false.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-keyusage)
-     */
-    public fun keyUsage(): Any? = unwrap(this).getKeyUsage()
-
-    /**
-     * The subject alternative name extension allows identities to be bound to the subject of the
-     * certificate.
-     *
-     * These identities may be included in addition to or in place of the identity in the subject
-     * field of the certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-subjectalternativenames)
-     */
-    public fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
-
-    /**
-     * A builder for [ExtensionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificatePolicies Contains a sequence of one or more policy information terms,
-       * each of which consists of an object identifier (OID) and optional qualifiers.
-       * For more information, see NIST's definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       *
-       * In an end-entity certificate, these terms indicate the policy under which the certificate
-       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
-       * the set of policies for certification paths that include this certificate.
-       */
-      public fun certificatePolicies(certificatePolicies: IResolvable)
-
-      /**
-       * @param certificatePolicies Contains a sequence of one or more policy information terms,
-       * each of which consists of an object identifier (OID) and optional qualifiers.
-       * For more information, see NIST's definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       *
-       * In an end-entity certificate, these terms indicate the policy under which the certificate
-       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
-       * the set of policies for certification paths that include this certificate.
-       */
-      public fun certificatePolicies(certificatePolicies: List<Any>)
-
-      /**
-       * @param certificatePolicies Contains a sequence of one or more policy information terms,
-       * each of which consists of an object identifier (OID) and optional qualifiers.
-       * For more information, see NIST's definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       *
-       * In an end-entity certificate, these terms indicate the policy under which the certificate
-       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
-       * the set of policies for certification paths that include this certificate.
-       */
-      public fun certificatePolicies(vararg certificatePolicies: Any)
-
-      /**
-       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
-       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
-       * more information, see the [Global OID reference
-       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-       */
-      public fun customExtensions(customExtensions: IResolvable)
-
-      /**
-       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
-       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
-       * more information, see the [Global OID reference
-       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-       */
-      public fun customExtensions(customExtensions: List<Any>)
-
-      /**
-       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
-       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
-       * more information, see the [Global OID reference
-       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-       */
-      public fun customExtensions(vararg customExtensions: Any)
-
-      /**
-       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
-       * may be used other than basic purposes indicated in the `KeyUsage` extension.
-       */
-      public fun extendedKeyUsage(extendedKeyUsage: IResolvable)
-
-      /**
-       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
-       * may be used other than basic purposes indicated in the `KeyUsage` extension.
-       */
-      public fun extendedKeyUsage(extendedKeyUsage: List<Any>)
-
-      /**
-       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
-       * may be used other than basic purposes indicated in the `KeyUsage` extension.
-       */
-      public fun extendedKeyUsage(vararg extendedKeyUsage: Any)
-
-      /**
-       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
-       * can be used.
-       * Default value for each option is false.
-       */
-      public fun keyUsage(keyUsage: IResolvable)
-
-      /**
-       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
-       * can be used.
-       * Default value for each option is false.
-       */
-      public fun keyUsage(keyUsage: KeyUsageProperty)
-
-      /**
-       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
-       * can be used.
-       * Default value for each option is false.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("54805af00844784ad9ab9b73287f368f891631f66e0dfcec483a64c96173c64d")
-      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
-
-      /**
-       * @param subjectAlternativeNames The subject alternative name extension allows identities to
-       * be bound to the subject of the certificate.
-       * These identities may be included in addition to or in place of the identity in the subject
-       * field of the certificate.
-       */
-      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
-
-      /**
-       * @param subjectAlternativeNames The subject alternative name extension allows identities to
-       * be bound to the subject of the certificate.
-       * These identities may be included in addition to or in place of the identity in the subject
-       * field of the certificate.
-       */
-      public fun subjectAlternativeNames(subjectAlternativeNames: List<Any>)
-
-      /**
-       * @param subjectAlternativeNames The subject alternative name extension allows identities to
-       * be bound to the subject of the certificate.
-       * These identities may be included in addition to or in place of the identity in the subject
-       * field of the certificate.
-       */
-      public fun subjectAlternativeNames(vararg subjectAlternativeNames: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty.builder()
-
-      /**
-       * @param certificatePolicies Contains a sequence of one or more policy information terms,
-       * each of which consists of an object identifier (OID) and optional qualifiers.
-       * For more information, see NIST's definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       *
-       * In an end-entity certificate, these terms indicate the policy under which the certificate
-       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
-       * the set of policies for certification paths that include this certificate.
-       */
-      override fun certificatePolicies(certificatePolicies: IResolvable) {
-        cdkBuilder.certificatePolicies(certificatePolicies.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param certificatePolicies Contains a sequence of one or more policy information terms,
-       * each of which consists of an object identifier (OID) and optional qualifiers.
-       * For more information, see NIST's definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       *
-       * In an end-entity certificate, these terms indicate the policy under which the certificate
-       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
-       * the set of policies for certification paths that include this certificate.
-       */
-      override fun certificatePolicies(certificatePolicies: List<Any>) {
-        cdkBuilder.certificatePolicies(certificatePolicies)
-      }
-
-      /**
-       * @param certificatePolicies Contains a sequence of one or more policy information terms,
-       * each of which consists of an object identifier (OID) and optional qualifiers.
-       * For more information, see NIST's definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       *
-       * In an end-entity certificate, these terms indicate the policy under which the certificate
-       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
-       * the set of policies for certification paths that include this certificate.
-       */
-      override fun certificatePolicies(vararg certificatePolicies: Any): Unit =
-          certificatePolicies(certificatePolicies.toList())
-
-      /**
-       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
-       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
-       * more information, see the [Global OID reference
-       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-       */
-      override fun customExtensions(customExtensions: IResolvable) {
-        cdkBuilder.customExtensions(customExtensions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
-       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
-       * more information, see the [Global OID reference
-       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-       */
-      override fun customExtensions(customExtensions: List<Any>) {
-        cdkBuilder.customExtensions(customExtensions)
-      }
-
-      /**
-       * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
-       * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For
-       * more information, see the [Global OID reference
-       * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-       */
-      override fun customExtensions(vararg customExtensions: Any): Unit =
-          customExtensions(customExtensions.toList())
-
-      /**
-       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
-       * may be used other than basic purposes indicated in the `KeyUsage` extension.
-       */
-      override fun extendedKeyUsage(extendedKeyUsage: IResolvable) {
-        cdkBuilder.extendedKeyUsage(extendedKeyUsage.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
-       * may be used other than basic purposes indicated in the `KeyUsage` extension.
-       */
-      override fun extendedKeyUsage(extendedKeyUsage: List<Any>) {
-        cdkBuilder.extendedKeyUsage(extendedKeyUsage)
-      }
-
-      /**
-       * @param extendedKeyUsage Specifies additional purposes for which the certified public key
-       * may be used other than basic purposes indicated in the `KeyUsage` extension.
-       */
-      override fun extendedKeyUsage(vararg extendedKeyUsage: Any): Unit =
-          extendedKeyUsage(extendedKeyUsage.toList())
-
-      /**
-       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
-       * can be used.
-       * Default value for each option is false.
-       */
-      override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
-       * can be used.
-       * Default value for each option is false.
-       */
-      override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
-      }
-
-      /**
-       * @param keyUsage Defines one or more purposes for which the key contained in the certificate
-       * can be used.
-       * Default value for each option is false.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("54805af00844784ad9ab9b73287f368f891631f66e0dfcec483a64c96173c64d")
-      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
-          keyUsage(KeyUsageProperty(keyUsage))
-
-      /**
-       * @param subjectAlternativeNames The subject alternative name extension allows identities to
-       * be bound to the subject of the certificate.
-       * These identities may be included in addition to or in place of the identity in the subject
-       * field of the certificate.
-       */
-      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param subjectAlternativeNames The subject alternative name extension allows identities to
-       * be bound to the subject of the certificate.
-       * These identities may be included in addition to or in place of the identity in the subject
-       * field of the certificate.
-       */
-      override fun subjectAlternativeNames(subjectAlternativeNames: List<Any>) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
-      }
-
-      /**
-       * @param subjectAlternativeNames The subject alternative name extension allows identities to
-       * be bound to the subject of the certificate.
-       * These identities may be included in addition to or in place of the identity in the subject
-       * field of the certificate.
-       */
-      override fun subjectAlternativeNames(vararg subjectAlternativeNames: Any): Unit =
-          subjectAlternativeNames(subjectAlternativeNames.toList())
-
-      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty,
-    ) : CdkObject(cdkObject), ExtensionsProperty {
-      /**
-       * Contains a sequence of one or more policy information terms, each of which consists of an
-       * object identifier (OID) and optional qualifiers.
-       *
-       * For more information, see NIST's definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       *
-       * In an end-entity certificate, these terms indicate the policy under which the certificate
-       * was issued and the purposes for which it may be used. In a CA certificate, these terms limit
-       * the set of policies for certification paths that include this certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-certificatepolicies)
-       */
-      override fun certificatePolicies(): Any? = unwrap(this).getCertificatePolicies()
-
-      /**
-       * Contains a sequence of one or more X.509 extensions, each of which consists of an object
-       * identifier (OID), a base64-encoded value, and the critical flag. For more information, see the
-       * [Global OID reference database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-customextensions)
-       */
-      override fun customExtensions(): Any? = unwrap(this).getCustomExtensions()
-
-      /**
-       * Specifies additional purposes for which the certified public key may be used other than
-       * basic purposes indicated in the `KeyUsage` extension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-extendedkeyusage)
-       */
-      override fun extendedKeyUsage(): Any? = unwrap(this).getExtendedKeyUsage()
-
-      /**
-       * Defines one or more purposes for which the key contained in the certificate can be used.
-       *
-       * Default value for each option is false.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-keyusage)
-       */
-      override fun keyUsage(): Any? = unwrap(this).getKeyUsage()
-
-      /**
-       * The subject alternative name extension allows identities to be bound to the subject of the
-       * certificate.
-       *
-       * These identities may be included in addition to or in place of the identity in the subject
-       * field of the certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extensions.html#cfn-acmpca-certificate-extensions-subjectalternativenames)
-       */
-      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExtensionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty):
-          ExtensionsProperty = CdkObjectWrappers.wrap(cdkObject) as? ExtensionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExtensionsProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty
-    }
-  }
-
-  /**
-   * Specifies additional purposes for which the certified public key may be used other than basic
-   * purposes indicated in the `KeyUsage` extension.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * ExtendedKeyUsageProperty extendedKeyUsageProperty = ExtendedKeyUsageProperty.builder()
-   * .extendedKeyUsageObjectIdentifier("extendedKeyUsageObjectIdentifier")
-   * .extendedKeyUsageType("extendedKeyUsageType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html)
-   */
-  public interface ExtendedKeyUsageProperty {
-    /**
-     * Specifies a custom `ExtendedKeyUsage` with an object identifier (OID).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusageobjectidentifier)
-     */
-    public fun extendedKeyUsageObjectIdentifier(): String? =
-        unwrap(this).getExtendedKeyUsageObjectIdentifier()
-
-    /**
-     * Specifies a standard `ExtendedKeyUsage` as defined as in [RFC
-     * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusagetype)
-     */
-    public fun extendedKeyUsageType(): String? = unwrap(this).getExtendedKeyUsageType()
-
-    /**
-     * A builder for [ExtendedKeyUsageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param extendedKeyUsageObjectIdentifier Specifies a custom `ExtendedKeyUsage` with an
-       * object identifier (OID).
-       */
-      public fun extendedKeyUsageObjectIdentifier(extendedKeyUsageObjectIdentifier: String)
-
-      /**
-       * @param extendedKeyUsageType Specifies a standard `ExtendedKeyUsage` as defined as in [RFC
-       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)
-       * .
-       */
-      public fun extendedKeyUsageType(extendedKeyUsageType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty.builder()
-
-      /**
-       * @param extendedKeyUsageObjectIdentifier Specifies a custom `ExtendedKeyUsage` with an
-       * object identifier (OID).
-       */
-      override fun extendedKeyUsageObjectIdentifier(extendedKeyUsageObjectIdentifier: String) {
-        cdkBuilder.extendedKeyUsageObjectIdentifier(extendedKeyUsageObjectIdentifier)
-      }
-
-      /**
-       * @param extendedKeyUsageType Specifies a standard `ExtendedKeyUsage` as defined as in [RFC
-       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)
-       * .
-       */
-      override fun extendedKeyUsageType(extendedKeyUsageType: String) {
-        cdkBuilder.extendedKeyUsageType(extendedKeyUsageType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty,
-    ) : CdkObject(cdkObject), ExtendedKeyUsageProperty {
-      /**
-       * Specifies a custom `ExtendedKeyUsage` with an object identifier (OID).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusageobjectidentifier)
-       */
-      override fun extendedKeyUsageObjectIdentifier(): String? =
-          unwrap(this).getExtendedKeyUsageObjectIdentifier()
-
-      /**
-       * Specifies a standard `ExtendedKeyUsage` as defined as in [RFC
-       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusagetype)
-       */
-      override fun extendedKeyUsageType(): String? = unwrap(this).getExtendedKeyUsageType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExtendedKeyUsageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty):
-          ExtendedKeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as? ExtendedKeyUsageProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExtendedKeyUsageProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty
-    }
-  }
-
-  /**
-   * Defines a `PolicyInformation` qualifier.
-   *
-   * AWS Private CA supports the [certification practice statement (CPS)
-   * qualifier](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.4)
-   * defined in RFC 5280.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * QualifierProperty qualifierProperty = QualifierProperty.builder()
-   * .cpsUri("cpsUri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-qualifier.html)
-   */
-  public interface QualifierProperty {
-    /**
-     * Contains a pointer to a certification practice statement (CPS) published by the CA.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-qualifier.html#cfn-acmpca-certificate-qualifier-cpsuri)
-     */
-    public fun cpsUri(): String
-
-    /**
-     * A builder for [QualifierProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpsUri Contains a pointer to a certification practice statement (CPS) published by
-       * the CA. 
-       */
-      public fun cpsUri(cpsUri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty.builder()
-
-      /**
-       * @param cpsUri Contains a pointer to a certification practice statement (CPS) published by
-       * the CA. 
-       */
-      override fun cpsUri(cpsUri: String) {
-        cdkBuilder.cpsUri(cpsUri)
-      }
-
-      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty,
-    ) : CdkObject(cdkObject), QualifierProperty {
-      /**
-       * Contains a pointer to a certification practice statement (CPS) published by the CA.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-qualifier.html#cfn-acmpca-certificate-qualifier-cpsuri)
-       */
-      override fun cpsUri(): String = unwrap(this).getCpsUri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): QualifierProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty):
-          QualifierProperty = CdkObjectWrappers.wrap(cdkObject) as? QualifierProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: QualifierProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty
-    }
-  }
-
-  /**
-   * Defines a custom ASN.1 X.400 `GeneralName` using an object identifier (OID) and value. The OID
-   * must satisfy the regular expression shown below. For more information, see NIST's definition of
-   * [Object Identifier
-   * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * OtherNameProperty otherNameProperty = OtherNameProperty.builder()
-   * .typeId("typeId")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html)
-   */
-  public interface OtherNameProperty {
-    /**
-     * Specifies an OID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-typeid)
-     */
-    public fun typeId(): String
-
-    /**
-     * Specifies an OID value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [OtherNameProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param typeId Specifies an OID. 
-       */
-      public fun typeId(typeId: String)
-
-      /**
-       * @param value Specifies an OID value. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty.builder()
-
-      /**
-       * @param typeId Specifies an OID. 
-       */
-      override fun typeId(typeId: String) {
-        cdkBuilder.typeId(typeId)
-      }
-
-      /**
-       * @param value Specifies an OID value. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty,
-    ) : CdkObject(cdkObject), OtherNameProperty {
-      /**
-       * Specifies an OID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-typeid)
-       */
-      override fun typeId(): String = unwrap(this).getTypeId()
-
-      /**
-       * Specifies an OID value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OtherNameProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty):
-          OtherNameProperty = CdkObjectWrappers.wrap(cdkObject) as? OtherNameProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OtherNameProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty
     }
   }
 

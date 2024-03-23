@@ -495,6 +495,1051 @@ public open class CfnPrincipalPermissions internal constructor(
   }
 
   /**
+   * A wildcard object, consisting of an optional list of excluded column names or indexes.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * ColumnWildcardProperty columnWildcardProperty = ColumnWildcardProperty.builder()
+   * .excludedColumnNames(List.of("excludedColumnNames"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-columnwildcard.html)
+   */
+  public interface ColumnWildcardProperty {
+    /**
+     * Excludes column names.
+     *
+     * Any column with this name will be excluded.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-columnwildcard.html#cfn-lakeformation-principalpermissions-columnwildcard-excludedcolumnnames)
+     */
+    public fun excludedColumnNames(): List<String> = unwrap(this).getExcludedColumnNames() ?:
+        emptyList()
+
+    /**
+     * A builder for [ColumnWildcardProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param excludedColumnNames Excludes column names.
+       * Any column with this name will be excluded.
+       */
+      public fun excludedColumnNames(excludedColumnNames: List<String>)
+
+      /**
+       * @param excludedColumnNames Excludes column names.
+       * Any column with this name will be excluded.
+       */
+      public fun excludedColumnNames(vararg excludedColumnNames: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty.builder()
+
+      /**
+       * @param excludedColumnNames Excludes column names.
+       * Any column with this name will be excluded.
+       */
+      override fun excludedColumnNames(excludedColumnNames: List<String>) {
+        cdkBuilder.excludedColumnNames(excludedColumnNames)
+      }
+
+      /**
+       * @param excludedColumnNames Excludes column names.
+       * Any column with this name will be excluded.
+       */
+      override fun excludedColumnNames(vararg excludedColumnNames: String): Unit =
+          excludedColumnNames(excludedColumnNames.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty,
+    ) : CdkObject(cdkObject), ColumnWildcardProperty {
+      /**
+       * Excludes column names.
+       *
+       * Any column with this name will be excluded.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-columnwildcard.html#cfn-lakeformation-principalpermissions-columnwildcard-excludedcolumnnames)
+       */
+      override fun excludedColumnNames(): List<String> = unwrap(this).getExcludedColumnNames() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ColumnWildcardProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty):
+          ColumnWildcardProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnWildcardProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ColumnWildcardProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty
+    }
+  }
+
+  /**
+   * A structure that describes certain columns on certain rows.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * DataCellsFilterResourceProperty dataCellsFilterResourceProperty =
+   * DataCellsFilterResourceProperty.builder()
+   * .databaseName("databaseName")
+   * .name("name")
+   * .tableCatalogId("tableCatalogId")
+   * .tableName("tableName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html)
+   */
+  public interface DataCellsFilterResourceProperty {
+    /**
+     * A database in the Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * The name given by the user to the data filter cell.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-name)
+     */
+    public fun name(): String
+
+    /**
+     * The ID of the catalog to which the table belongs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-tablecatalogid)
+     */
+    public fun tableCatalogId(): String
+
+    /**
+     * The name of the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * A builder for [DataCellsFilterResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseName A database in the Data Catalog . 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param name The name given by the user to the data filter cell. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param tableCatalogId The ID of the catalog to which the table belongs. 
+       */
+      public fun tableCatalogId(tableCatalogId: String)
+
+      /**
+       * @param tableName The name of the table. 
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty.builder()
+
+      /**
+       * @param databaseName A database in the Data Catalog . 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param name The name given by the user to the data filter cell. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param tableCatalogId The ID of the catalog to which the table belongs. 
+       */
+      override fun tableCatalogId(tableCatalogId: String) {
+        cdkBuilder.tableCatalogId(tableCatalogId)
+      }
+
+      /**
+       * @param tableName The name of the table. 
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty,
+    ) : CdkObject(cdkObject), DataCellsFilterResourceProperty {
+      /**
+       * A database in the Data Catalog .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The name given by the user to the data filter cell.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The ID of the catalog to which the table belongs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-tablecatalogid)
+       */
+      override fun tableCatalogId(): String = unwrap(this).getTableCatalogId()
+
+      /**
+       * The name of the table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataCellsFilterResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty):
+          DataCellsFilterResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCellsFilterResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataCellsFilterResourceProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty
+    }
+  }
+
+  /**
+   * The AWS Lake Formation principal.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * DataLakePrincipalProperty dataLakePrincipalProperty = DataLakePrincipalProperty.builder()
+   * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalakeprincipal.html)
+   */
+  public interface DataLakePrincipalProperty {
+    /**
+     * An identifier for the AWS Lake Formation principal.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalakeprincipal.html#cfn-lakeformation-principalpermissions-datalakeprincipal-datalakeprincipalidentifier)
+     */
+    public fun dataLakePrincipalIdentifier(): String? =
+        unwrap(this).getDataLakePrincipalIdentifier()
+
+    /**
+     * A builder for [DataLakePrincipalProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
+       */
+      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty.builder()
+
+      /**
+       * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
+       */
+      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
+        cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty,
+    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
+      /**
+       * An identifier for the AWS Lake Formation principal.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalakeprincipal.html#cfn-lakeformation-principalpermissions-datalakeprincipal-datalakeprincipalidentifier)
+       */
+      override fun dataLakePrincipalIdentifier(): String? =
+          unwrap(this).getDataLakePrincipalIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataLakePrincipalProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty):
+          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataLakePrincipalProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataLakePrincipalProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty
+    }
+  }
+
+  /**
+   * A structure for a data location object where permissions are granted or revoked.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * DataLocationResourceProperty dataLocationResourceProperty =
+   * DataLocationResourceProperty.builder()
+   * .catalogId("catalogId")
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html)
+   */
+  public interface DataLocationResourceProperty {
+    /**
+     * The identifier for the Data Catalog where the location is registered with AWS Lake Formation
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html#cfn-lakeformation-principalpermissions-datalocationresource-catalogid)
+     */
+    public fun catalogId(): String
+
+    /**
+     * The Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html#cfn-lakeformation-principalpermissions-datalocationresource-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [DataLocationResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalogId The identifier for the Data Catalog where the location is registered with
+       * AWS Lake Formation . 
+       */
+      public fun catalogId(catalogId: String)
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies the data
+       * location resource. 
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty.builder()
+
+      /**
+       * @param catalogId The identifier for the Data Catalog where the location is registered with
+       * AWS Lake Formation . 
+       */
+      override fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+      }
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies the data
+       * location resource. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty,
+    ) : CdkObject(cdkObject), DataLocationResourceProperty {
+      /**
+       * The identifier for the Data Catalog where the location is registered with AWS Lake
+       * Formation .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html#cfn-lakeformation-principalpermissions-datalocationresource-catalogid)
+       */
+      override fun catalogId(): String = unwrap(this).getCatalogId()
+
+      /**
+       * The Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html#cfn-lakeformation-principalpermissions-datalocationresource-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataLocationResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty):
+          DataLocationResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataLocationResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataLocationResourceProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty
+    }
+  }
+
+  /**
+   * A structure for the database object.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * DatabaseResourceProperty databaseResourceProperty = DatabaseResourceProperty.builder()
+   * .catalogId("catalogId")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html)
+   */
+  public interface DatabaseResourceProperty {
+    /**
+     * The identifier for the Data Catalog.
+     *
+     * By default, it is the account ID of the caller.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html#cfn-lakeformation-principalpermissions-databaseresource-catalogid)
+     */
+    public fun catalogId(): String
+
+    /**
+     * The name of the database resource.
+     *
+     * Unique to the Data Catalog.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html#cfn-lakeformation-principalpermissions-databaseresource-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [DatabaseResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalogId The identifier for the Data Catalog. 
+       * By default, it is the account ID of the caller.
+       */
+      public fun catalogId(catalogId: String)
+
+      /**
+       * @param name The name of the database resource. 
+       * Unique to the Data Catalog.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty.builder()
+
+      /**
+       * @param catalogId The identifier for the Data Catalog. 
+       * By default, it is the account ID of the caller.
+       */
+      override fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+      }
+
+      /**
+       * @param name The name of the database resource. 
+       * Unique to the Data Catalog.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty,
+    ) : CdkObject(cdkObject), DatabaseResourceProperty {
+      /**
+       * The identifier for the Data Catalog.
+       *
+       * By default, it is the account ID of the caller.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html#cfn-lakeformation-principalpermissions-databaseresource-catalogid)
+       */
+      override fun catalogId(): String = unwrap(this).getCatalogId()
+
+      /**
+       * The name of the database resource.
+       *
+       * Unique to the Data Catalog.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html#cfn-lakeformation-principalpermissions-databaseresource-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty):
+          DatabaseResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseResourceProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabaseResourceProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty
+    }
+  }
+
+  /**
+   * A structure containing an LF-tag key and values for a resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * LFTagKeyResourceProperty lFTagKeyResourceProperty = LFTagKeyResourceProperty.builder()
+   * .catalogId("catalogId")
+   * .tagKey("tagKey")
+   * .tagValues(List.of("tagValues"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html)
+   */
+  public interface LFTagKeyResourceProperty {
+    /**
+     * The identifier for the Data Catalog where the location is registered with Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-catalogid)
+     */
+    public fun catalogId(): String
+
+    /**
+     * The key-name for the LF-tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-tagkey)
+     */
+    public fun tagKey(): String
+
+    /**
+     * A list of possible values for the corresponding `TagKey` of an LF-tag key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-tagvalues)
+     */
+    public fun tagValues(): List<String>
+
+    /**
+     * A builder for [LFTagKeyResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalogId The identifier for the Data Catalog where the location is registered with
+       * Data Catalog . 
+       */
+      public fun catalogId(catalogId: String)
+
+      /**
+       * @param tagKey The key-name for the LF-tag. 
+       */
+      public fun tagKey(tagKey: String)
+
+      /**
+       * @param tagValues A list of possible values for the corresponding `TagKey` of an LF-tag
+       * key-value pair. 
+       */
+      public fun tagValues(tagValues: List<String>)
+
+      /**
+       * @param tagValues A list of possible values for the corresponding `TagKey` of an LF-tag
+       * key-value pair. 
+       */
+      public fun tagValues(vararg tagValues: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty.builder()
+
+      /**
+       * @param catalogId The identifier for the Data Catalog where the location is registered with
+       * Data Catalog . 
+       */
+      override fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+      }
+
+      /**
+       * @param tagKey The key-name for the LF-tag. 
+       */
+      override fun tagKey(tagKey: String) {
+        cdkBuilder.tagKey(tagKey)
+      }
+
+      /**
+       * @param tagValues A list of possible values for the corresponding `TagKey` of an LF-tag
+       * key-value pair. 
+       */
+      override fun tagValues(tagValues: List<String>) {
+        cdkBuilder.tagValues(tagValues)
+      }
+
+      /**
+       * @param tagValues A list of possible values for the corresponding `TagKey` of an LF-tag
+       * key-value pair. 
+       */
+      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty,
+    ) : CdkObject(cdkObject), LFTagKeyResourceProperty {
+      /**
+       * The identifier for the Data Catalog where the location is registered with Data Catalog .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-catalogid)
+       */
+      override fun catalogId(): String = unwrap(this).getCatalogId()
+
+      /**
+       * The key-name for the LF-tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-tagkey)
+       */
+      override fun tagKey(): String = unwrap(this).getTagKey()
+
+      /**
+       * A list of possible values for the corresponding `TagKey` of an LF-tag key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-tagvalues)
+       */
+      override fun tagValues(): List<String> = unwrap(this).getTagValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LFTagKeyResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty):
+          LFTagKeyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagKeyResourceProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LFTagKeyResourceProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty
+    }
+  }
+
+  /**
+   * A list of LF-tag conditions that define a resource's LF-tag policy.
+   *
+   * A structure that allows an admin to grant user permissions on certain conditions. For example,
+   * granting a role access to all columns that do not have the LF-tag 'PII' in tables that have the
+   * LF-tag 'Prod'.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * LFTagPolicyResourceProperty lFTagPolicyResourceProperty = LFTagPolicyResourceProperty.builder()
+   * .catalogId("catalogId")
+   * .expression(List.of(LFTagProperty.builder()
+   * .tagKey("tagKey")
+   * .tagValues(List.of("tagValues"))
+   * .build()))
+   * .resourceType("resourceType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html)
+   */
+  public interface LFTagPolicyResourceProperty {
+    /**
+     * The identifier for the Data Catalog .
+     *
+     * The Data Catalog is the persistent metadata store. It contains database definitions, table
+     * definitions, and other control information to manage your AWS Lake Formation environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-catalogid)
+     */
+    public fun catalogId(): String
+
+    /**
+     * A list of LF-tag conditions that apply to the resource's LF-tag policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-expression)
+     */
+    public fun expression(): Any
+
+    /**
+     * The resource type for which the LF-tag policy applies.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-resourcetype)
+     */
+    public fun resourceType(): String
+
+    /**
+     * A builder for [LFTagPolicyResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalogId The identifier for the Data Catalog . 
+       * The Data Catalog is the persistent metadata store. It contains database definitions, table
+       * definitions, and other control information to manage your AWS Lake Formation environment.
+       */
+      public fun catalogId(catalogId: String)
+
+      /**
+       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+       */
+      public fun expression(expression: IResolvable)
+
+      /**
+       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+       */
+      public fun expression(expression: List<Any>)
+
+      /**
+       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+       */
+      public fun expression(vararg expression: Any)
+
+      /**
+       * @param resourceType The resource type for which the LF-tag policy applies. 
+       */
+      public fun resourceType(resourceType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty.builder()
+
+      /**
+       * @param catalogId The identifier for the Data Catalog . 
+       * The Data Catalog is the persistent metadata store. It contains database definitions, table
+       * definitions, and other control information to manage your AWS Lake Formation environment.
+       */
+      override fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+      }
+
+      /**
+       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+       */
+      override fun expression(expression: IResolvable) {
+        cdkBuilder.expression(expression.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+       */
+      override fun expression(expression: List<Any>) {
+        cdkBuilder.expression(expression)
+      }
+
+      /**
+       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+       */
+      override fun expression(vararg expression: Any): Unit = expression(expression.toList())
+
+      /**
+       * @param resourceType The resource type for which the LF-tag policy applies. 
+       */
+      override fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty,
+    ) : CdkObject(cdkObject), LFTagPolicyResourceProperty {
+      /**
+       * The identifier for the Data Catalog .
+       *
+       * The Data Catalog is the persistent metadata store. It contains database definitions, table
+       * definitions, and other control information to manage your AWS Lake Formation environment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-catalogid)
+       */
+      override fun catalogId(): String = unwrap(this).getCatalogId()
+
+      /**
+       * A list of LF-tag conditions that apply to the resource's LF-tag policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-expression)
+       */
+      override fun expression(): Any = unwrap(this).getExpression()
+
+      /**
+       * The resource type for which the LF-tag policy applies.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-resourcetype)
+       */
+      override fun resourceType(): String = unwrap(this).getResourceType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LFTagPolicyResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty):
+          LFTagPolicyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LFTagPolicyResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LFTagPolicyResourceProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty
+    }
+  }
+
+  /**
+   * The LF-tag key and values attached to a resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * LFTagProperty lFTagProperty = LFTagProperty.builder()
+   * .tagKey("tagKey")
+   * .tagValues(List.of("tagValues"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html)
+   */
+  public interface LFTagProperty {
+    /**
+     * The key-name for the LF-tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html#cfn-lakeformation-principalpermissions-lftag-tagkey)
+     */
+    public fun tagKey(): String? = unwrap(this).getTagKey()
+
+    /**
+     * A list of possible values of the corresponding `TagKey` of an LF-tag key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html#cfn-lakeformation-principalpermissions-lftag-tagvalues)
+     */
+    public fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
+
+    /**
+     * A builder for [LFTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tagKey The key-name for the LF-tag.
+       */
+      public fun tagKey(tagKey: String)
+
+      /**
+       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+       * key-value pair.
+       */
+      public fun tagValues(tagValues: List<String>)
+
+      /**
+       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+       * key-value pair.
+       */
+      public fun tagValues(vararg tagValues: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty.builder()
+
+      /**
+       * @param tagKey The key-name for the LF-tag.
+       */
+      override fun tagKey(tagKey: String) {
+        cdkBuilder.tagKey(tagKey)
+      }
+
+      /**
+       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+       * key-value pair.
+       */
+      override fun tagValues(tagValues: List<String>) {
+        cdkBuilder.tagValues(tagValues)
+      }
+
+      /**
+       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+       * key-value pair.
+       */
+      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty,
+    ) : CdkObject(cdkObject), LFTagProperty {
+      /**
+       * The key-name for the LF-tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html#cfn-lakeformation-principalpermissions-lftag-tagkey)
+       */
+      override fun tagKey(): String? = unwrap(this).getTagKey()
+
+      /**
+       * A list of possible values of the corresponding `TagKey` of an LF-tag key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html#cfn-lakeformation-principalpermissions-lftag-tagvalues)
+       */
+      override fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LFTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty):
+          LFTagProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LFTagProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty
+    }
+  }
+
+  /**
    * A structure for the resource.
    *
    * Example:
@@ -1073,7 +2118,10 @@ public open class CfnPrincipalPermissions internal constructor(
   }
 
   /**
-   * A structure for a data location object where permissions are granted or revoked.
+   * A structure for the table object.
+   *
+   * A table is a metadata definition that represents your data. You can Grant and Revoke table
+   * privileges to a principal.
    *
    * Example:
    *
@@ -1081,276 +2129,182 @@ public open class CfnPrincipalPermissions internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * DataLocationResourceProperty dataLocationResourceProperty =
-   * DataLocationResourceProperty.builder()
+   * Object tableWildcard;
+   * TableResourceProperty tableResourceProperty = TableResourceProperty.builder()
    * .catalogId("catalogId")
-   * .resourceArn("resourceArn")
+   * .databaseName("databaseName")
+   * // the properties below are optional
+   * .name("name")
+   * .tableWildcard(tableWildcard)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html)
    */
-  public interface DataLocationResourceProperty {
+  public interface TableResourceProperty {
     /**
-     * The identifier for the Data Catalog where the location is registered with AWS Lake Formation
-     * .
+     * The identifier for the Data Catalog.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html#cfn-lakeformation-principalpermissions-datalocationresource-catalogid)
+     * By default, it is the account ID of the caller.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-catalogid)
      */
     public fun catalogId(): String
 
     /**
-     * The Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+     * The name of the database for the table.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html#cfn-lakeformation-principalpermissions-datalocationresource-resourcearn)
+     * Unique to a Data Catalog. A database is a set of associated table definitions organized into
+     * a logical group. You can Grant and Revoke database privileges to a principal.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-databasename)
      */
-    public fun resourceArn(): String
+    public fun databaseName(): String
 
     /**
-     * A builder for [DataLocationResourceProperty]
+     * The name of the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A wildcard object representing every table under a database.
+     *
+     * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-tablewildcard)
+     */
+    public fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
+
+    /**
+     * A builder for [TableResourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param catalogId The identifier for the Data Catalog where the location is registered with
-       * AWS Lake Formation . 
+       * @param catalogId The identifier for the Data Catalog. 
+       * By default, it is the account ID of the caller.
        */
       public fun catalogId(catalogId: String)
 
       /**
-       * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies the data
-       * location resource. 
+       * @param databaseName The name of the database for the table. 
+       * Unique to a Data Catalog. A database is a set of associated table definitions organized
+       * into a logical group. You can Grant and Revoke database privileges to a principal.
        */
-      public fun resourceArn(resourceArn: String)
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param name The name of the table.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param tableWildcard A wildcard object representing every table under a database.
+       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+       */
+      public fun tableWildcard(tableWildcard: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty.Builder
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty.Builder
           =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty.builder()
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty.builder()
 
       /**
-       * @param catalogId The identifier for the Data Catalog where the location is registered with
-       * AWS Lake Formation . 
+       * @param catalogId The identifier for the Data Catalog. 
+       * By default, it is the account ID of the caller.
        */
       override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
       /**
-       * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies the data
-       * location resource. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty,
-    ) : CdkObject(cdkObject), DataLocationResourceProperty {
-      /**
-       * The identifier for the Data Catalog where the location is registered with AWS Lake
-       * Formation .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html#cfn-lakeformation-principalpermissions-datalocationresource-catalogid)
-       */
-      override fun catalogId(): String = unwrap(this).getCatalogId()
-
-      /**
-       * The Amazon Resource Name (ARN) that uniquely identifies the data location resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html#cfn-lakeformation-principalpermissions-datalocationresource-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataLocationResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty):
-          DataLocationResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataLocationResourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataLocationResourceProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty
-    }
-  }
-
-  /**
-   * A structure that describes certain columns on certain rows.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * DataCellsFilterResourceProperty dataCellsFilterResourceProperty =
-   * DataCellsFilterResourceProperty.builder()
-   * .databaseName("databaseName")
-   * .name("name")
-   * .tableCatalogId("tableCatalogId")
-   * .tableName("tableName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html)
-   */
-  public interface DataCellsFilterResourceProperty {
-    /**
-     * A database in the Data Catalog .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-databasename)
-     */
-    public fun databaseName(): String
-
-    /**
-     * The name given by the user to the data filter cell.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-name)
-     */
-    public fun name(): String
-
-    /**
-     * The ID of the catalog to which the table belongs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-tablecatalogid)
-     */
-    public fun tableCatalogId(): String
-
-    /**
-     * The name of the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-tablename)
-     */
-    public fun tableName(): String
-
-    /**
-     * A builder for [DataCellsFilterResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param databaseName A database in the Data Catalog . 
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param name The name given by the user to the data filter cell. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param tableCatalogId The ID of the catalog to which the table belongs. 
-       */
-      public fun tableCatalogId(tableCatalogId: String)
-
-      /**
-       * @param tableName The name of the table. 
-       */
-      public fun tableName(tableName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty.builder()
-
-      /**
-       * @param databaseName A database in the Data Catalog . 
+       * @param databaseName The name of the database for the table. 
+       * Unique to a Data Catalog. A database is a set of associated table definitions organized
+       * into a logical group. You can Grant and Revoke database privileges to a principal.
        */
       override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
       /**
-       * @param name The name given by the user to the data filter cell. 
+       * @param name The name of the table.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param tableCatalogId The ID of the catalog to which the table belongs. 
+       * @param tableWildcard A wildcard object representing every table under a database.
+       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
        */
-      override fun tableCatalogId(tableCatalogId: String) {
-        cdkBuilder.tableCatalogId(tableCatalogId)
-      }
-
-      /**
-       * @param tableName The name of the table. 
-       */
-      override fun tableName(tableName: String) {
-        cdkBuilder.tableName(tableName)
+      override fun tableWildcard(tableWildcard: Any) {
+        cdkBuilder.tableWildcard(tableWildcard)
       }
 
       public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty,
-    ) : CdkObject(cdkObject), DataCellsFilterResourceProperty {
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty,
+    ) : CdkObject(cdkObject), TableResourceProperty {
       /**
-       * A database in the Data Catalog .
+       * The identifier for the Data Catalog.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-databasename)
+       * By default, it is the account ID of the caller.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-catalogid)
+       */
+      override fun catalogId(): String = unwrap(this).getCatalogId()
+
+      /**
+       * The name of the database for the table.
+       *
+       * Unique to a Data Catalog. A database is a set of associated table definitions organized
+       * into a logical group. You can Grant and Revoke database privileges to a principal.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-databasename)
        */
       override fun databaseName(): String = unwrap(this).getDatabaseName()
 
       /**
-       * The name given by the user to the data filter cell.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The ID of the catalog to which the table belongs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-tablecatalogid)
-       */
-      override fun tableCatalogId(): String = unwrap(this).getTableCatalogId()
-
-      /**
        * The name of the table.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html#cfn-lakeformation-principalpermissions-datacellsfilterresource-tablename)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-name)
        */
-      override fun tableName(): String = unwrap(this).getTableName()
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * A wildcard object representing every table under a database.
+       *
+       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-tablewildcard)
+       */
+      override fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataCellsFilterResourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TableResourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty):
-          DataCellsFilterResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataCellsFilterResourceProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty):
+          TableResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? TableResourceProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DataCellsFilterResourceProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty
+      internal fun unwrap(wrapped: TableResourceProperty):
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty
+          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty
     }
   }
 
@@ -1629,960 +2583,6 @@ public open class CfnPrincipalPermissions internal constructor(
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableWithColumnsResourceProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableWithColumnsResourceProperty
-    }
-  }
-
-  /**
-   * The AWS Lake Formation principal.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * DataLakePrincipalProperty dataLakePrincipalProperty = DataLakePrincipalProperty.builder()
-   * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalakeprincipal.html)
-   */
-  public interface DataLakePrincipalProperty {
-    /**
-     * An identifier for the AWS Lake Formation principal.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalakeprincipal.html#cfn-lakeformation-principalpermissions-datalakeprincipal-datalakeprincipalidentifier)
-     */
-    public fun dataLakePrincipalIdentifier(): String? =
-        unwrap(this).getDataLakePrincipalIdentifier()
-
-    /**
-     * A builder for [DataLakePrincipalProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
-       */
-      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty.builder()
-
-      /**
-       * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
-       */
-      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
-        cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty,
-    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
-      /**
-       * An identifier for the AWS Lake Formation principal.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalakeprincipal.html#cfn-lakeformation-principalpermissions-datalakeprincipal-datalakeprincipalidentifier)
-       */
-      override fun dataLakePrincipalIdentifier(): String? =
-          unwrap(this).getDataLakePrincipalIdentifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataLakePrincipalProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty):
-          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataLakePrincipalProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataLakePrincipalProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty
-    }
-  }
-
-  /**
-   * A structure containing an LF-tag key and values for a resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * LFTagKeyResourceProperty lFTagKeyResourceProperty = LFTagKeyResourceProperty.builder()
-   * .catalogId("catalogId")
-   * .tagKey("tagKey")
-   * .tagValues(List.of("tagValues"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html)
-   */
-  public interface LFTagKeyResourceProperty {
-    /**
-     * The identifier for the Data Catalog where the location is registered with Data Catalog .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-catalogid)
-     */
-    public fun catalogId(): String
-
-    /**
-     * The key-name for the LF-tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-tagkey)
-     */
-    public fun tagKey(): String
-
-    /**
-     * A list of possible values for the corresponding `TagKey` of an LF-tag key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-tagvalues)
-     */
-    public fun tagValues(): List<String>
-
-    /**
-     * A builder for [LFTagKeyResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId The identifier for the Data Catalog where the location is registered with
-       * Data Catalog . 
-       */
-      public fun catalogId(catalogId: String)
-
-      /**
-       * @param tagKey The key-name for the LF-tag. 
-       */
-      public fun tagKey(tagKey: String)
-
-      /**
-       * @param tagValues A list of possible values for the corresponding `TagKey` of an LF-tag
-       * key-value pair. 
-       */
-      public fun tagValues(tagValues: List<String>)
-
-      /**
-       * @param tagValues A list of possible values for the corresponding `TagKey` of an LF-tag
-       * key-value pair. 
-       */
-      public fun tagValues(vararg tagValues: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty.builder()
-
-      /**
-       * @param catalogId The identifier for the Data Catalog where the location is registered with
-       * Data Catalog . 
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
-
-      /**
-       * @param tagKey The key-name for the LF-tag. 
-       */
-      override fun tagKey(tagKey: String) {
-        cdkBuilder.tagKey(tagKey)
-      }
-
-      /**
-       * @param tagValues A list of possible values for the corresponding `TagKey` of an LF-tag
-       * key-value pair. 
-       */
-      override fun tagValues(tagValues: List<String>) {
-        cdkBuilder.tagValues(tagValues)
-      }
-
-      /**
-       * @param tagValues A list of possible values for the corresponding `TagKey` of an LF-tag
-       * key-value pair. 
-       */
-      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty,
-    ) : CdkObject(cdkObject), LFTagKeyResourceProperty {
-      /**
-       * The identifier for the Data Catalog where the location is registered with Data Catalog .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-catalogid)
-       */
-      override fun catalogId(): String = unwrap(this).getCatalogId()
-
-      /**
-       * The key-name for the LF-tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-tagkey)
-       */
-      override fun tagKey(): String = unwrap(this).getTagKey()
-
-      /**
-       * A list of possible values for the corresponding `TagKey` of an LF-tag key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html#cfn-lakeformation-principalpermissions-lftagkeyresource-tagvalues)
-       */
-      override fun tagValues(): List<String> = unwrap(this).getTagValues()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LFTagKeyResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty):
-          LFTagKeyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagKeyResourceProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LFTagKeyResourceProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty
-    }
-  }
-
-  /**
-   * A list of LF-tag conditions that define a resource's LF-tag policy.
-   *
-   * A structure that allows an admin to grant user permissions on certain conditions. For example,
-   * granting a role access to all columns that do not have the LF-tag 'PII' in tables that have the
-   * LF-tag 'Prod'.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * LFTagPolicyResourceProperty lFTagPolicyResourceProperty = LFTagPolicyResourceProperty.builder()
-   * .catalogId("catalogId")
-   * .expression(List.of(LFTagProperty.builder()
-   * .tagKey("tagKey")
-   * .tagValues(List.of("tagValues"))
-   * .build()))
-   * .resourceType("resourceType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html)
-   */
-  public interface LFTagPolicyResourceProperty {
-    /**
-     * The identifier for the Data Catalog .
-     *
-     * The Data Catalog is the persistent metadata store. It contains database definitions, table
-     * definitions, and other control information to manage your AWS Lake Formation environment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-catalogid)
-     */
-    public fun catalogId(): String
-
-    /**
-     * A list of LF-tag conditions that apply to the resource's LF-tag policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-expression)
-     */
-    public fun expression(): Any
-
-    /**
-     * The resource type for which the LF-tag policy applies.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-resourcetype)
-     */
-    public fun resourceType(): String
-
-    /**
-     * A builder for [LFTagPolicyResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId The identifier for the Data Catalog . 
-       * The Data Catalog is the persistent metadata store. It contains database definitions, table
-       * definitions, and other control information to manage your AWS Lake Formation environment.
-       */
-      public fun catalogId(catalogId: String)
-
-      /**
-       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
-       */
-      public fun expression(expression: IResolvable)
-
-      /**
-       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
-       */
-      public fun expression(expression: List<Any>)
-
-      /**
-       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
-       */
-      public fun expression(vararg expression: Any)
-
-      /**
-       * @param resourceType The resource type for which the LF-tag policy applies. 
-       */
-      public fun resourceType(resourceType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty.builder()
-
-      /**
-       * @param catalogId The identifier for the Data Catalog . 
-       * The Data Catalog is the persistent metadata store. It contains database definitions, table
-       * definitions, and other control information to manage your AWS Lake Formation environment.
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
-
-      /**
-       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
-       */
-      override fun expression(expression: IResolvable) {
-        cdkBuilder.expression(expression.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
-       */
-      override fun expression(expression: List<Any>) {
-        cdkBuilder.expression(expression)
-      }
-
-      /**
-       * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
-       */
-      override fun expression(vararg expression: Any): Unit = expression(expression.toList())
-
-      /**
-       * @param resourceType The resource type for which the LF-tag policy applies. 
-       */
-      override fun resourceType(resourceType: String) {
-        cdkBuilder.resourceType(resourceType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty,
-    ) : CdkObject(cdkObject), LFTagPolicyResourceProperty {
-      /**
-       * The identifier for the Data Catalog .
-       *
-       * The Data Catalog is the persistent metadata store. It contains database definitions, table
-       * definitions, and other control information to manage your AWS Lake Formation environment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-catalogid)
-       */
-      override fun catalogId(): String = unwrap(this).getCatalogId()
-
-      /**
-       * A list of LF-tag conditions that apply to the resource's LF-tag policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-expression)
-       */
-      override fun expression(): Any = unwrap(this).getExpression()
-
-      /**
-       * The resource type for which the LF-tag policy applies.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html#cfn-lakeformation-principalpermissions-lftagpolicyresource-resourcetype)
-       */
-      override fun resourceType(): String = unwrap(this).getResourceType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LFTagPolicyResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty):
-          LFTagPolicyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LFTagPolicyResourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LFTagPolicyResourceProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty
-    }
-  }
-
-  /**
-   * A wildcard object, consisting of an optional list of excluded column names or indexes.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * ColumnWildcardProperty columnWildcardProperty = ColumnWildcardProperty.builder()
-   * .excludedColumnNames(List.of("excludedColumnNames"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-columnwildcard.html)
-   */
-  public interface ColumnWildcardProperty {
-    /**
-     * Excludes column names.
-     *
-     * Any column with this name will be excluded.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-columnwildcard.html#cfn-lakeformation-principalpermissions-columnwildcard-excludedcolumnnames)
-     */
-    public fun excludedColumnNames(): List<String> = unwrap(this).getExcludedColumnNames() ?:
-        emptyList()
-
-    /**
-     * A builder for [ColumnWildcardProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param excludedColumnNames Excludes column names.
-       * Any column with this name will be excluded.
-       */
-      public fun excludedColumnNames(excludedColumnNames: List<String>)
-
-      /**
-       * @param excludedColumnNames Excludes column names.
-       * Any column with this name will be excluded.
-       */
-      public fun excludedColumnNames(vararg excludedColumnNames: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty.builder()
-
-      /**
-       * @param excludedColumnNames Excludes column names.
-       * Any column with this name will be excluded.
-       */
-      override fun excludedColumnNames(excludedColumnNames: List<String>) {
-        cdkBuilder.excludedColumnNames(excludedColumnNames)
-      }
-
-      /**
-       * @param excludedColumnNames Excludes column names.
-       * Any column with this name will be excluded.
-       */
-      override fun excludedColumnNames(vararg excludedColumnNames: String): Unit =
-          excludedColumnNames(excludedColumnNames.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty,
-    ) : CdkObject(cdkObject), ColumnWildcardProperty {
-      /**
-       * Excludes column names.
-       *
-       * Any column with this name will be excluded.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-columnwildcard.html#cfn-lakeformation-principalpermissions-columnwildcard-excludedcolumnnames)
-       */
-      override fun excludedColumnNames(): List<String> = unwrap(this).getExcludedColumnNames() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ColumnWildcardProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty):
-          ColumnWildcardProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnWildcardProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ColumnWildcardProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty
-    }
-  }
-
-  /**
-   * A structure for the table object.
-   *
-   * A table is a metadata definition that represents your data. You can Grant and Revoke table
-   * privileges to a principal.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * Object tableWildcard;
-   * TableResourceProperty tableResourceProperty = TableResourceProperty.builder()
-   * .catalogId("catalogId")
-   * .databaseName("databaseName")
-   * // the properties below are optional
-   * .name("name")
-   * .tableWildcard(tableWildcard)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html)
-   */
-  public interface TableResourceProperty {
-    /**
-     * The identifier for the Data Catalog.
-     *
-     * By default, it is the account ID of the caller.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-catalogid)
-     */
-    public fun catalogId(): String
-
-    /**
-     * The name of the database for the table.
-     *
-     * Unique to a Data Catalog. A database is a set of associated table definitions organized into
-     * a logical group. You can Grant and Revoke database privileges to a principal.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-databasename)
-     */
-    public fun databaseName(): String
-
-    /**
-     * The name of the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A wildcard object representing every table under a database.
-     *
-     * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-tablewildcard)
-     */
-    public fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
-
-    /**
-     * A builder for [TableResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId The identifier for the Data Catalog. 
-       * By default, it is the account ID of the caller.
-       */
-      public fun catalogId(catalogId: String)
-
-      /**
-       * @param databaseName The name of the database for the table. 
-       * Unique to a Data Catalog. A database is a set of associated table definitions organized
-       * into a logical group. You can Grant and Revoke database privileges to a principal.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param name The name of the table.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param tableWildcard A wildcard object representing every table under a database.
-       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
-       */
-      public fun tableWildcard(tableWildcard: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty.builder()
-
-      /**
-       * @param catalogId The identifier for the Data Catalog. 
-       * By default, it is the account ID of the caller.
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
-
-      /**
-       * @param databaseName The name of the database for the table. 
-       * Unique to a Data Catalog. A database is a set of associated table definitions organized
-       * into a logical group. You can Grant and Revoke database privileges to a principal.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param name The name of the table.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param tableWildcard A wildcard object representing every table under a database.
-       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
-       */
-      override fun tableWildcard(tableWildcard: Any) {
-        cdkBuilder.tableWildcard(tableWildcard)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty,
-    ) : CdkObject(cdkObject), TableResourceProperty {
-      /**
-       * The identifier for the Data Catalog.
-       *
-       * By default, it is the account ID of the caller.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-catalogid)
-       */
-      override fun catalogId(): String = unwrap(this).getCatalogId()
-
-      /**
-       * The name of the database for the table.
-       *
-       * Unique to a Data Catalog. A database is a set of associated table definitions organized
-       * into a logical group. You can Grant and Revoke database privileges to a principal.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-databasename)
-       */
-      override fun databaseName(): String = unwrap(this).getDatabaseName()
-
-      /**
-       * The name of the table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * A wildcard object representing every table under a database.
-       *
-       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html#cfn-lakeformation-principalpermissions-tableresource-tablewildcard)
-       */
-      override fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TableResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty):
-          TableResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? TableResourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TableResourceProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty
-    }
-  }
-
-  /**
-   * A structure for the database object.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * DatabaseResourceProperty databaseResourceProperty = DatabaseResourceProperty.builder()
-   * .catalogId("catalogId")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html)
-   */
-  public interface DatabaseResourceProperty {
-    /**
-     * The identifier for the Data Catalog.
-     *
-     * By default, it is the account ID of the caller.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html#cfn-lakeformation-principalpermissions-databaseresource-catalogid)
-     */
-    public fun catalogId(): String
-
-    /**
-     * The name of the database resource.
-     *
-     * Unique to the Data Catalog.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html#cfn-lakeformation-principalpermissions-databaseresource-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [DatabaseResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId The identifier for the Data Catalog. 
-       * By default, it is the account ID of the caller.
-       */
-      public fun catalogId(catalogId: String)
-
-      /**
-       * @param name The name of the database resource. 
-       * Unique to the Data Catalog.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty.builder()
-
-      /**
-       * @param catalogId The identifier for the Data Catalog. 
-       * By default, it is the account ID of the caller.
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
-
-      /**
-       * @param name The name of the database resource. 
-       * Unique to the Data Catalog.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty,
-    ) : CdkObject(cdkObject), DatabaseResourceProperty {
-      /**
-       * The identifier for the Data Catalog.
-       *
-       * By default, it is the account ID of the caller.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html#cfn-lakeformation-principalpermissions-databaseresource-catalogid)
-       */
-      override fun catalogId(): String = unwrap(this).getCatalogId()
-
-      /**
-       * The name of the database resource.
-       *
-       * Unique to the Data Catalog.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html#cfn-lakeformation-principalpermissions-databaseresource-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty):
-          DatabaseResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseResourceProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatabaseResourceProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty
-    }
-  }
-
-  /**
-   * The LF-tag key and values attached to a resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * LFTagProperty lFTagProperty = LFTagProperty.builder()
-   * .tagKey("tagKey")
-   * .tagValues(List.of("tagValues"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html)
-   */
-  public interface LFTagProperty {
-    /**
-     * The key-name for the LF-tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html#cfn-lakeformation-principalpermissions-lftag-tagkey)
-     */
-    public fun tagKey(): String? = unwrap(this).getTagKey()
-
-    /**
-     * A list of possible values of the corresponding `TagKey` of an LF-tag key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html#cfn-lakeformation-principalpermissions-lftag-tagvalues)
-     */
-    public fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
-
-    /**
-     * A builder for [LFTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param tagKey The key-name for the LF-tag.
-       */
-      public fun tagKey(tagKey: String)
-
-      /**
-       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
-       * key-value pair.
-       */
-      public fun tagValues(tagValues: List<String>)
-
-      /**
-       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
-       * key-value pair.
-       */
-      public fun tagValues(vararg tagValues: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty.builder()
-
-      /**
-       * @param tagKey The key-name for the LF-tag.
-       */
-      override fun tagKey(tagKey: String) {
-        cdkBuilder.tagKey(tagKey)
-      }
-
-      /**
-       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
-       * key-value pair.
-       */
-      override fun tagValues(tagValues: List<String>) {
-        cdkBuilder.tagValues(tagValues)
-      }
-
-      /**
-       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
-       * key-value pair.
-       */
-      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty,
-    ) : CdkObject(cdkObject), LFTagProperty {
-      /**
-       * The key-name for the LF-tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html#cfn-lakeformation-principalpermissions-lftag-tagkey)
-       */
-      override fun tagKey(): String? = unwrap(this).getTagKey()
-
-      /**
-       * A list of possible values of the corresponding `TagKey` of an LF-tag key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html#cfn-lakeformation-principalpermissions-lftag-tagvalues)
-       */
-      override fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LFTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty):
-          LFTagProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LFTagProperty):
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty
     }
   }
 }

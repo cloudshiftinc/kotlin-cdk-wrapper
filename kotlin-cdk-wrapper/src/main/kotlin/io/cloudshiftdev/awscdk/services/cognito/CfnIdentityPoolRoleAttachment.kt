@@ -294,129 +294,6 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
   }
 
   /**
-   * `RulesConfigurationType` is a subproperty of the
-   * [RoleMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html)
-   * property that defines the rules to be used for mapping users to roles.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * RulesConfigurationTypeProperty rulesConfigurationTypeProperty =
-   * RulesConfigurationTypeProperty.builder()
-   * .rules(List.of(MappingRuleProperty.builder()
-   * .claim("claim")
-   * .matchType("matchType")
-   * .roleArn("roleArn")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html)
-   */
-  public interface RulesConfigurationTypeProperty {
-    /**
-     * The rules.
-     *
-     * You can specify up to 25 rules per identity provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)
-     */
-    public fun rules(): Any
-
-    /**
-     * A builder for [RulesConfigurationTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param rules The rules. 
-       * You can specify up to 25 rules per identity provider.
-       */
-      public fun rules(rules: IResolvable)
-
-      /**
-       * @param rules The rules. 
-       * You can specify up to 25 rules per identity provider.
-       */
-      public fun rules(rules: List<Any>)
-
-      /**
-       * @param rules The rules. 
-       * You can specify up to 25 rules per identity provider.
-       */
-      public fun rules(vararg rules: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.builder()
-
-      /**
-       * @param rules The rules. 
-       * You can specify up to 25 rules per identity provider.
-       */
-      override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param rules The rules. 
-       * You can specify up to 25 rules per identity provider.
-       */
-      override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
-      }
-
-      /**
-       * @param rules The rules. 
-       * You can specify up to 25 rules per identity provider.
-       */
-      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty,
-    ) : CdkObject(cdkObject), RulesConfigurationTypeProperty {
-      /**
-       * The rules.
-       *
-       * You can specify up to 25 rules per identity provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)
-       */
-      override fun rules(): Any = unwrap(this).getRules()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RulesConfigurationTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty):
-          RulesConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RulesConfigurationTypeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RulesConfigurationTypeProperty):
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
-    }
-  }
-
-  /**
    * Defines how to map a claim to a role ARN.
    *
    * Example:
@@ -872,6 +749,129 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty
+    }
+  }
+
+  /**
+   * `RulesConfigurationType` is a subproperty of the
+   * [RoleMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html)
+   * property that defines the rules to be used for mapping users to roles.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * RulesConfigurationTypeProperty rulesConfigurationTypeProperty =
+   * RulesConfigurationTypeProperty.builder()
+   * .rules(List.of(MappingRuleProperty.builder()
+   * .claim("claim")
+   * .matchType("matchType")
+   * .roleArn("roleArn")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html)
+   */
+  public interface RulesConfigurationTypeProperty {
+    /**
+     * The rules.
+     *
+     * You can specify up to 25 rules per identity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)
+     */
+    public fun rules(): Any
+
+    /**
+     * A builder for [RulesConfigurationTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param rules The rules. 
+       * You can specify up to 25 rules per identity provider.
+       */
+      public fun rules(rules: IResolvable)
+
+      /**
+       * @param rules The rules. 
+       * You can specify up to 25 rules per identity provider.
+       */
+      public fun rules(rules: List<Any>)
+
+      /**
+       * @param rules The rules. 
+       * You can specify up to 25 rules per identity provider.
+       */
+      public fun rules(vararg rules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.builder()
+
+      /**
+       * @param rules The rules. 
+       * You can specify up to 25 rules per identity provider.
+       */
+      override fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param rules The rules. 
+       * You can specify up to 25 rules per identity provider.
+       */
+      override fun rules(rules: List<Any>) {
+        cdkBuilder.rules(rules)
+      }
+
+      /**
+       * @param rules The rules. 
+       * You can specify up to 25 rules per identity provider.
+       */
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty,
+    ) : CdkObject(cdkObject), RulesConfigurationTypeProperty {
+      /**
+       * The rules.
+       *
+       * You can specify up to 25 rules per identity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)
+       */
+      override fun rules(): Any = unwrap(this).getRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RulesConfigurationTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty):
+          RulesConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RulesConfigurationTypeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RulesConfigurationTypeProperty):
+          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
     }
   }
 }

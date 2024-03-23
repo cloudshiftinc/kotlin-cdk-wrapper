@@ -888,177 +888,6 @@ public open class CfnLoadBalancer internal constructor(
   }
 
   /**
-   * Specifies a subnet for a load balancer.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * SubnetMappingProperty subnetMappingProperty = SubnetMappingProperty.builder()
-   * .subnetId("subnetId")
-   * // the properties below are optional
-   * .allocationId("allocationId")
-   * .iPv6Address("iPv6Address")
-   * .privateIPv4Address("privateIPv4Address")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html)
-   */
-  public interface SubnetMappingProperty {
-    /**
-     * [Network Load Balancers] The allocation ID of the Elastic IP address for an internet-facing
-     * load balancer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)
-     */
-    public fun allocationId(): String? = unwrap(this).getAllocationId()
-
-    /**
-     * [Network Load Balancers] The IPv6 address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-ipv6address)
-     */
-    public fun iPv6Address(): String? = unwrap(this).getIPv6Address()
-
-    /**
-     * [Network Load Balancers] The private IPv4 address for an internal load balancer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address)
-     */
-    public fun privateIPv4Address(): String? = unwrap(this).getPrivateIPv4Address()
-
-    /**
-     * The ID of the subnet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
-     */
-    public fun subnetId(): String
-
-    /**
-     * A builder for [SubnetMappingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allocationId [Network Load Balancers] The allocation ID of the Elastic IP address
-       * for an internet-facing load balancer.
-       */
-      public fun allocationId(allocationId: String)
-
-      /**
-       * @param iPv6Address [Network Load Balancers] The IPv6 address.
-       */
-      public fun iPv6Address(iPv6Address: String)
-
-      /**
-       * @param privateIPv4Address [Network Load Balancers] The private IPv4 address for an internal
-       * load balancer.
-       */
-      public fun privateIPv4Address(privateIPv4Address: String)
-
-      /**
-       * @param subnetId The ID of the subnet. 
-       */
-      public fun subnetId(subnetId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty.builder()
-
-      /**
-       * @param allocationId [Network Load Balancers] The allocation ID of the Elastic IP address
-       * for an internet-facing load balancer.
-       */
-      override fun allocationId(allocationId: String) {
-        cdkBuilder.allocationId(allocationId)
-      }
-
-      /**
-       * @param iPv6Address [Network Load Balancers] The IPv6 address.
-       */
-      override fun iPv6Address(iPv6Address: String) {
-        cdkBuilder.iPv6Address(iPv6Address)
-      }
-
-      /**
-       * @param privateIPv4Address [Network Load Balancers] The private IPv4 address for an internal
-       * load balancer.
-       */
-      override fun privateIPv4Address(privateIPv4Address: String) {
-        cdkBuilder.privateIPv4Address(privateIPv4Address)
-      }
-
-      /**
-       * @param subnetId The ID of the subnet. 
-       */
-      override fun subnetId(subnetId: String) {
-        cdkBuilder.subnetId(subnetId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty,
-    ) : CdkObject(cdkObject), SubnetMappingProperty {
-      /**
-       * [Network Load Balancers] The allocation ID of the Elastic IP address for an internet-facing
-       * load balancer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)
-       */
-      override fun allocationId(): String? = unwrap(this).getAllocationId()
-
-      /**
-       * [Network Load Balancers] The IPv6 address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-ipv6address)
-       */
-      override fun iPv6Address(): String? = unwrap(this).getIPv6Address()
-
-      /**
-       * [Network Load Balancers] The private IPv4 address for an internal load balancer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address)
-       */
-      override fun privateIPv4Address(): String? = unwrap(this).getPrivateIPv4Address()
-
-      /**
-       * The ID of the subnet.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
-       */
-      override fun subnetId(): String = unwrap(this).getSubnetId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubnetMappingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty):
-          SubnetMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubnetMappingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubnetMappingProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty
-    }
-  }
-
-  /**
    * Specifies an attribute for an Application Load Balancer, a Network Load Balancer, or a Gateway
    * Load Balancer.
    *
@@ -1489,6 +1318,177 @@ public open class CfnLoadBalancer internal constructor(
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty
+    }
+  }
+
+  /**
+   * Specifies a subnet for a load balancer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * SubnetMappingProperty subnetMappingProperty = SubnetMappingProperty.builder()
+   * .subnetId("subnetId")
+   * // the properties below are optional
+   * .allocationId("allocationId")
+   * .iPv6Address("iPv6Address")
+   * .privateIPv4Address("privateIPv4Address")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html)
+   */
+  public interface SubnetMappingProperty {
+    /**
+     * [Network Load Balancers] The allocation ID of the Elastic IP address for an internet-facing
+     * load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)
+     */
+    public fun allocationId(): String? = unwrap(this).getAllocationId()
+
+    /**
+     * [Network Load Balancers] The IPv6 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-ipv6address)
+     */
+    public fun iPv6Address(): String? = unwrap(this).getIPv6Address()
+
+    /**
+     * [Network Load Balancers] The private IPv4 address for an internal load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address)
+     */
+    public fun privateIPv4Address(): String? = unwrap(this).getPrivateIPv4Address()
+
+    /**
+     * The ID of the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
+     */
+    public fun subnetId(): String
+
+    /**
+     * A builder for [SubnetMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allocationId [Network Load Balancers] The allocation ID of the Elastic IP address
+       * for an internet-facing load balancer.
+       */
+      public fun allocationId(allocationId: String)
+
+      /**
+       * @param iPv6Address [Network Load Balancers] The IPv6 address.
+       */
+      public fun iPv6Address(iPv6Address: String)
+
+      /**
+       * @param privateIPv4Address [Network Load Balancers] The private IPv4 address for an internal
+       * load balancer.
+       */
+      public fun privateIPv4Address(privateIPv4Address: String)
+
+      /**
+       * @param subnetId The ID of the subnet. 
+       */
+      public fun subnetId(subnetId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty.builder()
+
+      /**
+       * @param allocationId [Network Load Balancers] The allocation ID of the Elastic IP address
+       * for an internet-facing load balancer.
+       */
+      override fun allocationId(allocationId: String) {
+        cdkBuilder.allocationId(allocationId)
+      }
+
+      /**
+       * @param iPv6Address [Network Load Balancers] The IPv6 address.
+       */
+      override fun iPv6Address(iPv6Address: String) {
+        cdkBuilder.iPv6Address(iPv6Address)
+      }
+
+      /**
+       * @param privateIPv4Address [Network Load Balancers] The private IPv4 address for an internal
+       * load balancer.
+       */
+      override fun privateIPv4Address(privateIPv4Address: String) {
+        cdkBuilder.privateIPv4Address(privateIPv4Address)
+      }
+
+      /**
+       * @param subnetId The ID of the subnet. 
+       */
+      override fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty,
+    ) : CdkObject(cdkObject), SubnetMappingProperty {
+      /**
+       * [Network Load Balancers] The allocation ID of the Elastic IP address for an internet-facing
+       * load balancer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)
+       */
+      override fun allocationId(): String? = unwrap(this).getAllocationId()
+
+      /**
+       * [Network Load Balancers] The IPv6 address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-ipv6address)
+       */
+      override fun iPv6Address(): String? = unwrap(this).getIPv6Address()
+
+      /**
+       * [Network Load Balancers] The private IPv4 address for an internal load balancer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address)
+       */
+      override fun privateIPv4Address(): String? = unwrap(this).getPrivateIPv4Address()
+
+      /**
+       * The ID of the subnet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
+       */
+      override fun subnetId(): String = unwrap(this).getSubnetId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubnetMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty):
+          SubnetMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubnetMappingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubnetMappingProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty
     }
   }
 }

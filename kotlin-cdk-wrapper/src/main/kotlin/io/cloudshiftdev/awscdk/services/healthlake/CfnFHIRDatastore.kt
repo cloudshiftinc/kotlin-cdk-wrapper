@@ -604,9 +604,7 @@ public open class CfnFHIRDatastore internal constructor(
   }
 
   /**
-   * Optional parameter to preload data upon creation of the data store.
-   *
-   * Currently, the only supported preloaded data is synthetic data generated from Synthea.
+   * The time that a Data Store was created.
    *
    * Example:
    *
@@ -614,83 +612,103 @@ public open class CfnFHIRDatastore internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.healthlake.*;
-   * PreloadDataConfigProperty preloadDataConfigProperty = PreloadDataConfigProperty.builder()
-   * .preloadDataType("preloadDataType")
+   * CreatedAtProperty createdAtProperty = CreatedAtProperty.builder()
+   * .nanos(123)
+   * .seconds("seconds")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-preloaddataconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html)
    */
-  public interface PreloadDataConfigProperty {
+  public interface CreatedAtProperty {
     /**
-     * The type of preloaded data.
+     * Nanoseconds.
      *
-     * Only Synthea preloaded data is supported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-preloaddataconfig.html#cfn-healthlake-fhirdatastore-preloaddataconfig-preloaddatatype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html#cfn-healthlake-fhirdatastore-createdat-nanos)
      */
-    public fun preloadDataType(): String
+    public fun nanos(): Number
 
     /**
-     * A builder for [PreloadDataConfigProperty]
+     * Seconds since epoch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html#cfn-healthlake-fhirdatastore-createdat-seconds)
+     */
+    public fun seconds(): String
+
+    /**
+     * A builder for [CreatedAtProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param preloadDataType The type of preloaded data. 
-       * Only Synthea preloaded data is supported.
+       * @param nanos Nanoseconds. 
        */
-      public fun preloadDataType(preloadDataType: String)
+      public fun nanos(nanos: Number)
+
+      /**
+       * @param seconds Seconds since epoch. 
+       */
+      public fun seconds(seconds: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty.builder()
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty.Builder =
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty.builder()
 
       /**
-       * @param preloadDataType The type of preloaded data. 
-       * Only Synthea preloaded data is supported.
+       * @param nanos Nanoseconds. 
        */
-      override fun preloadDataType(preloadDataType: String) {
-        cdkBuilder.preloadDataType(preloadDataType)
+      override fun nanos(nanos: Number) {
+        cdkBuilder.nanos(nanos)
+      }
+
+      /**
+       * @param seconds Seconds since epoch. 
+       */
+      override fun seconds(seconds: String) {
+        cdkBuilder.seconds(seconds)
       }
 
       public fun build():
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty =
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty,
-    ) : CdkObject(cdkObject), PreloadDataConfigProperty {
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty,
+    ) : CdkObject(cdkObject), CreatedAtProperty {
       /**
-       * The type of preloaded data.
+       * Nanoseconds.
        *
-       * Only Synthea preloaded data is supported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-preloaddataconfig.html#cfn-healthlake-fhirdatastore-preloaddataconfig-preloaddatatype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html#cfn-healthlake-fhirdatastore-createdat-nanos)
        */
-      override fun preloadDataType(): String = unwrap(this).getPreloadDataType()
+      override fun nanos(): Number = unwrap(this).getNanos()
+
+      /**
+       * Seconds since epoch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html#cfn-healthlake-fhirdatastore-createdat-seconds)
+       */
+      override fun seconds(): String = unwrap(this).getSeconds()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PreloadDataConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CreatedAtProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty):
-          PreloadDataConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PreloadDataConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty):
+          CreatedAtProperty = CdkObjectWrappers.wrap(cdkObject) as? CreatedAtProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PreloadDataConfigProperty):
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty
+      internal fun unwrap(wrapped: CreatedAtProperty):
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty
     }
   }
 
@@ -962,237 +980,6 @@ public open class CfnFHIRDatastore internal constructor(
   }
 
   /**
-   * The server-side encryption key configuration for a customer provided encryption key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.healthlake.*;
-   * SseConfigurationProperty sseConfigurationProperty = SseConfigurationProperty.builder()
-   * .kmsEncryptionConfig(KmsEncryptionConfigProperty.builder()
-   * .cmkType("cmkType")
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-sseconfiguration.html)
-   */
-  public interface SseConfigurationProperty {
-    /**
-     * The server-side encryption key configuration for a customer provided encryption key (CMK).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-sseconfiguration.html#cfn-healthlake-fhirdatastore-sseconfiguration-kmsencryptionconfig)
-     */
-    public fun kmsEncryptionConfig(): Any
-
-    /**
-     * A builder for [SseConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
-       */
-      public fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable)
-
-      /**
-       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
-       */
-      public fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty)
-
-      /**
-       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4c721448173211696f2fe6251251770004484fa49a3e92d45027181a323d63ff")
-      public
-          fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty.builder()
-
-      /**
-       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
-       */
-      override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
-        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
-       */
-      override fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty) {
-        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KmsEncryptionConfigProperty::unwrap))
-      }
-
-      /**
-       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4c721448173211696f2fe6251251770004484fa49a3e92d45027181a323d63ff")
-      override
-          fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty.Builder.() -> Unit):
-          Unit = kmsEncryptionConfig(KmsEncryptionConfigProperty(kmsEncryptionConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty,
-    ) : CdkObject(cdkObject), SseConfigurationProperty {
-      /**
-       * The server-side encryption key configuration for a customer provided encryption key (CMK).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-sseconfiguration.html#cfn-healthlake-fhirdatastore-sseconfiguration-kmsencryptionconfig)
-       */
-      override fun kmsEncryptionConfig(): Any = unwrap(this).getKmsEncryptionConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SseConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty):
-          SseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SseConfigurationProperty):
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty
-    }
-  }
-
-  /**
-   * The time that a Data Store was created.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.healthlake.*;
-   * CreatedAtProperty createdAtProperty = CreatedAtProperty.builder()
-   * .nanos(123)
-   * .seconds("seconds")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html)
-   */
-  public interface CreatedAtProperty {
-    /**
-     * Nanoseconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html#cfn-healthlake-fhirdatastore-createdat-nanos)
-     */
-    public fun nanos(): Number
-
-    /**
-     * Seconds since epoch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html#cfn-healthlake-fhirdatastore-createdat-seconds)
-     */
-    public fun seconds(): String
-
-    /**
-     * A builder for [CreatedAtProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param nanos Nanoseconds. 
-       */
-      public fun nanos(nanos: Number)
-
-      /**
-       * @param seconds Seconds since epoch. 
-       */
-      public fun seconds(seconds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty.Builder =
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty.builder()
-
-      /**
-       * @param nanos Nanoseconds. 
-       */
-      override fun nanos(nanos: Number) {
-        cdkBuilder.nanos(nanos)
-      }
-
-      /**
-       * @param seconds Seconds since epoch. 
-       */
-      override fun seconds(seconds: String) {
-        cdkBuilder.seconds(seconds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty,
-    ) : CdkObject(cdkObject), CreatedAtProperty {
-      /**
-       * Nanoseconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html#cfn-healthlake-fhirdatastore-createdat-nanos)
-       */
-      override fun nanos(): Number = unwrap(this).getNanos()
-
-      /**
-       * Seconds since epoch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-createdat.html#cfn-healthlake-fhirdatastore-createdat-seconds)
-       */
-      override fun seconds(): String = unwrap(this).getSeconds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CreatedAtProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty):
-          CreatedAtProperty = CdkObjectWrappers.wrap(cdkObject) as? CreatedAtProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CreatedAtProperty):
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty
-    }
-  }
-
-  /**
    * The customer-managed-key(CMK) used when creating a Data Store.
    *
    * If a customer owned key is not specified, an Amazon owned key will be used for encryption.
@@ -1322,6 +1109,219 @@ public open class CfnFHIRDatastore internal constructor(
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty
+    }
+  }
+
+  /**
+   * Optional parameter to preload data upon creation of the data store.
+   *
+   * Currently, the only supported preloaded data is synthetic data generated from Synthea.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.healthlake.*;
+   * PreloadDataConfigProperty preloadDataConfigProperty = PreloadDataConfigProperty.builder()
+   * .preloadDataType("preloadDataType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-preloaddataconfig.html)
+   */
+  public interface PreloadDataConfigProperty {
+    /**
+     * The type of preloaded data.
+     *
+     * Only Synthea preloaded data is supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-preloaddataconfig.html#cfn-healthlake-fhirdatastore-preloaddataconfig-preloaddatatype)
+     */
+    public fun preloadDataType(): String
+
+    /**
+     * A builder for [PreloadDataConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param preloadDataType The type of preloaded data. 
+       * Only Synthea preloaded data is supported.
+       */
+      public fun preloadDataType(preloadDataType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty.builder()
+
+      /**
+       * @param preloadDataType The type of preloaded data. 
+       * Only Synthea preloaded data is supported.
+       */
+      override fun preloadDataType(preloadDataType: String) {
+        cdkBuilder.preloadDataType(preloadDataType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty,
+    ) : CdkObject(cdkObject), PreloadDataConfigProperty {
+      /**
+       * The type of preloaded data.
+       *
+       * Only Synthea preloaded data is supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-preloaddataconfig.html#cfn-healthlake-fhirdatastore-preloaddataconfig-preloaddatatype)
+       */
+      override fun preloadDataType(): String = unwrap(this).getPreloadDataType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PreloadDataConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty):
+          PreloadDataConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PreloadDataConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PreloadDataConfigProperty):
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty
+    }
+  }
+
+  /**
+   * The server-side encryption key configuration for a customer provided encryption key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.healthlake.*;
+   * SseConfigurationProperty sseConfigurationProperty = SseConfigurationProperty.builder()
+   * .kmsEncryptionConfig(KmsEncryptionConfigProperty.builder()
+   * .cmkType("cmkType")
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-sseconfiguration.html)
+   */
+  public interface SseConfigurationProperty {
+    /**
+     * The server-side encryption key configuration for a customer provided encryption key (CMK).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-sseconfiguration.html#cfn-healthlake-fhirdatastore-sseconfiguration-kmsencryptionconfig)
+     */
+    public fun kmsEncryptionConfig(): Any
+
+    /**
+     * A builder for [SseConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
+       * provided encryption key (CMK). 
+       */
+      public fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable)
+
+      /**
+       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
+       * provided encryption key (CMK). 
+       */
+      public fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty)
+
+      /**
+       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
+       * provided encryption key (CMK). 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4c721448173211696f2fe6251251770004484fa49a3e92d45027181a323d63ff")
+      public
+          fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty.builder()
+
+      /**
+       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
+       * provided encryption key (CMK). 
+       */
+      override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
+        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
+       * provided encryption key (CMK). 
+       */
+      override fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty) {
+        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KmsEncryptionConfigProperty::unwrap))
+      }
+
+      /**
+       * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
+       * provided encryption key (CMK). 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4c721448173211696f2fe6251251770004484fa49a3e92d45027181a323d63ff")
+      override
+          fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty.Builder.() -> Unit):
+          Unit = kmsEncryptionConfig(KmsEncryptionConfigProperty(kmsEncryptionConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty,
+    ) : CdkObject(cdkObject), SseConfigurationProperty {
+      /**
+       * The server-side encryption key configuration for a customer provided encryption key (CMK).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-sseconfiguration.html#cfn-healthlake-fhirdatastore-sseconfiguration-kmsencryptionconfig)
+       */
+      override fun kmsEncryptionConfig(): Any = unwrap(this).getKmsEncryptionConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SseConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty):
+          SseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SseConfigurationProperty):
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty
     }
   }
 }

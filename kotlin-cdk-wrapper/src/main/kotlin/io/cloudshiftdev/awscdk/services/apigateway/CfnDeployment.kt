@@ -446,6 +446,979 @@ public open class CfnDeployment internal constructor(
   }
 
   /**
+   * The `AccessLogSetting` property type specifies settings for logging access in this stage.
+   *
+   * `AccessLogSetting` is a property of the
+   * [StageDescription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * AccessLogSettingProperty accessLogSettingProperty = AccessLogSettingProperty.builder()
+   * .destinationArn("destinationArn")
+   * .format("format")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html)
+   */
+  public interface AccessLogSettingProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose
+     * delivery stream to receive access logs.
+     *
+     * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
+     * `amazon-apigateway-` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-destinationarn)
+     */
+    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+    /**
+     * A single line format of the access logs of data, as specified by selected $context variables.
+     *
+     * The format must include at least `$context.requestId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-format)
+     */
+    public fun format(): String? = unwrap(this).getFormat()
+
+    /**
+     * A builder for [AccessLogSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or
+       * Kinesis Data Firehose delivery stream to receive access logs.
+       * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
+       * `amazon-apigateway-` .
+       */
+      public fun destinationArn(destinationArn: String)
+
+      /**
+       * @param format A single line format of the access logs of data, as specified by selected
+       * $context variables.
+       * The format must include at least `$context.requestId` .
+       */
+      public fun format(format: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty.Builder
+          =
+          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty.builder()
+
+      /**
+       * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or
+       * Kinesis Data Firehose delivery stream to receive access logs.
+       * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
+       * `amazon-apigateway-` .
+       */
+      override fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+      }
+
+      /**
+       * @param format A single line format of the access logs of data, as specified by selected
+       * $context variables.
+       * The format must include at least `$context.requestId` .
+       */
+      override fun format(format: String) {
+        cdkBuilder.format(format)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty,
+    ) : CdkObject(cdkObject), AccessLogSettingProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose
+       * delivery stream to receive access logs.
+       *
+       * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
+       * `amazon-apigateway-` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-destinationarn)
+       */
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+      /**
+       * A single line format of the access logs of data, as specified by selected $context
+       * variables.
+       *
+       * The format must include at least `$context.requestId` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-format)
+       */
+      override fun format(): String? = unwrap(this).getFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessLogSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty):
+          AccessLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessLogSettingProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessLogSettingProperty):
+          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty
+    }
+  }
+
+  /**
+   * The `CanarySetting` property type specifies settings for the canary deployment in this stage.
+   *
+   * `CanarySetting` is a property of the
+   * [StageDescription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * CanarySettingProperty canarySettingProperty = CanarySettingProperty.builder()
+   * .percentTraffic(123)
+   * .stageVariableOverrides(Map.of(
+   * "stageVariableOverridesKey", "stageVariableOverrides"))
+   * .useStageCache(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html)
+   */
+  public interface CanarySettingProperty {
+    /**
+     * The percent (0-100) of traffic diverted to a canary deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic)
+     */
+    public fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
+
+    /**
+     * Stage variables overridden for a canary release deployment, including new stage variables
+     * introduced in the canary.
+     *
+     * These stage variables are represented as a string-to-string map between stage variable names
+     * and their values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-stagevariableoverrides)
+     */
+    public fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
+
+    /**
+     * A Boolean flag to indicate whether the canary deployment uses the stage cache or not.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache)
+     */
+    public fun useStageCache(): Any? = unwrap(this).getUseStageCache()
+
+    /**
+     * A builder for [CanarySettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param percentTraffic The percent (0-100) of traffic diverted to a canary deployment.
+       */
+      public fun percentTraffic(percentTraffic: Number)
+
+      /**
+       * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
+       * including new stage variables introduced in the canary.
+       * These stage variables are represented as a string-to-string map between stage variable
+       * names and their values.
+       */
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
+
+      /**
+       * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
+       * including new stage variables introduced in the canary.
+       * These stage variables are represented as a string-to-string map between stage variable
+       * names and their values.
+       */
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
+
+      /**
+       * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
+       * stage cache or not.
+       */
+      public fun useStageCache(useStageCache: Boolean)
+
+      /**
+       * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
+       * stage cache or not.
+       */
+      public fun useStageCache(useStageCache: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty.Builder =
+          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty.builder()
+
+      /**
+       * @param percentTraffic The percent (0-100) of traffic diverted to a canary deployment.
+       */
+      override fun percentTraffic(percentTraffic: Number) {
+        cdkBuilder.percentTraffic(percentTraffic)
+      }
+
+      /**
+       * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
+       * including new stage variables introduced in the canary.
+       * These stage variables are represented as a string-to-string map between stage variable
+       * names and their values.
+       */
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
+       * including new stage variables introduced in the canary.
+       * These stage variables are represented as a string-to-string map between stage variable
+       * names and their values.
+       */
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
+      }
+
+      /**
+       * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
+       * stage cache or not.
+       */
+      override fun useStageCache(useStageCache: Boolean) {
+        cdkBuilder.useStageCache(useStageCache)
+      }
+
+      /**
+       * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
+       * stage cache or not.
+       */
+      override fun useStageCache(useStageCache: IResolvable) {
+        cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty,
+    ) : CdkObject(cdkObject), CanarySettingProperty {
+      /**
+       * The percent (0-100) of traffic diverted to a canary deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic)
+       */
+      override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
+
+      /**
+       * Stage variables overridden for a canary release deployment, including new stage variables
+       * introduced in the canary.
+       *
+       * These stage variables are represented as a string-to-string map between stage variable
+       * names and their values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-stagevariableoverrides)
+       */
+      override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
+
+      /**
+       * A Boolean flag to indicate whether the canary deployment uses the stage cache or not.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache)
+       */
+      override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CanarySettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty):
+          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? CanarySettingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CanarySettingProperty):
+          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty
+    }
+  }
+
+  /**
+   * The `DeploymentCanarySettings` property type specifies settings for the canary deployment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * DeploymentCanarySettingsProperty deploymentCanarySettingsProperty =
+   * DeploymentCanarySettingsProperty.builder()
+   * .percentTraffic(123)
+   * .stageVariableOverrides(Map.of(
+   * "stageVariableOverridesKey", "stageVariableOverrides"))
+   * .useStageCache(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html)
+   */
+  public interface DeploymentCanarySettingsProperty {
+    /**
+     * The percentage (0.0-100.0) of traffic routed to the canary deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic)
+     */
+    public fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
+
+    /**
+     * A stage variable overrides used for the canary release deployment.
+     *
+     * They can override existing stage variables or add new stage variables for the canary release
+     * deployment. These stage variables are represented as a string-to-string map between stage
+     * variable names and their values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides)
+     */
+    public fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
+
+    /**
+     * A Boolean flag to indicate whether the canary release deployment uses the stage cache or not.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache)
+     */
+    public fun useStageCache(): Any? = unwrap(this).getUseStageCache()
+
+    /**
+     * A builder for [DeploymentCanarySettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param percentTraffic The percentage (0.0-100.0) of traffic routed to the canary
+       * deployment.
+       */
+      public fun percentTraffic(percentTraffic: Number)
+
+      /**
+       * @param stageVariableOverrides A stage variable overrides used for the canary release
+       * deployment.
+       * They can override existing stage variables or add new stage variables for the canary
+       * release deployment. These stage variables are represented as a string-to-string map between
+       * stage variable names and their values.
+       */
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
+
+      /**
+       * @param stageVariableOverrides A stage variable overrides used for the canary release
+       * deployment.
+       * They can override existing stage variables or add new stage variables for the canary
+       * release deployment. These stage variables are represented as a string-to-string map between
+       * stage variable names and their values.
+       */
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
+
+      /**
+       * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
+       * the stage cache or not.
+       */
+      public fun useStageCache(useStageCache: Boolean)
+
+      /**
+       * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
+       * the stage cache or not.
+       */
+      public fun useStageCache(useStageCache: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty.builder()
+
+      /**
+       * @param percentTraffic The percentage (0.0-100.0) of traffic routed to the canary
+       * deployment.
+       */
+      override fun percentTraffic(percentTraffic: Number) {
+        cdkBuilder.percentTraffic(percentTraffic)
+      }
+
+      /**
+       * @param stageVariableOverrides A stage variable overrides used for the canary release
+       * deployment.
+       * They can override existing stage variables or add new stage variables for the canary
+       * release deployment. These stage variables are represented as a string-to-string map between
+       * stage variable names and their values.
+       */
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param stageVariableOverrides A stage variable overrides used for the canary release
+       * deployment.
+       * They can override existing stage variables or add new stage variables for the canary
+       * release deployment. These stage variables are represented as a string-to-string map between
+       * stage variable names and their values.
+       */
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
+      }
+
+      /**
+       * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
+       * the stage cache or not.
+       */
+      override fun useStageCache(useStageCache: Boolean) {
+        cdkBuilder.useStageCache(useStageCache)
+      }
+
+      /**
+       * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
+       * the stage cache or not.
+       */
+      override fun useStageCache(useStageCache: IResolvable) {
+        cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty,
+    ) : CdkObject(cdkObject), DeploymentCanarySettingsProperty {
+      /**
+       * The percentage (0.0-100.0) of traffic routed to the canary deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic)
+       */
+      override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
+
+      /**
+       * A stage variable overrides used for the canary release deployment.
+       *
+       * They can override existing stage variables or add new stage variables for the canary
+       * release deployment. These stage variables are represented as a string-to-string map between
+       * stage variable names and their values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides)
+       */
+      override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
+
+      /**
+       * A Boolean flag to indicate whether the canary release deployment uses the stage cache or
+       * not.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache)
+       */
+      override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentCanarySettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty):
+          DeploymentCanarySettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentCanarySettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentCanarySettingsProperty):
+          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty
+    }
+  }
+
+  /**
+   * The `MethodSetting` property type configures settings for all methods in a stage.
+   *
+   * The `MethodSettings` property of the [Amazon API Gateway Deployment
+   * StageDescription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
+   * property type contains a list of `MethodSetting` property types.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * MethodSettingProperty methodSettingProperty = MethodSettingProperty.builder()
+   * .cacheDataEncrypted(false)
+   * .cacheTtlInSeconds(123)
+   * .cachingEnabled(false)
+   * .dataTraceEnabled(false)
+   * .httpMethod("httpMethod")
+   * .loggingLevel("loggingLevel")
+   * .metricsEnabled(false)
+   * .resourcePath("resourcePath")
+   * .throttlingBurstLimit(123)
+   * .throttlingRateLimit(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html)
+   */
+  public interface MethodSettingProperty {
+    /**
+     * Specifies whether the cached responses are encrypted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachedataencrypted)
+     */
+    public fun cacheDataEncrypted(): Any? = unwrap(this).getCacheDataEncrypted()
+
+    /**
+     * Specifies the time to live (TTL), in seconds, for cached responses.
+     *
+     * The higher the TTL, the longer the response will be cached.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachettlinseconds)
+     */
+    public fun cacheTtlInSeconds(): Number? = unwrap(this).getCacheTtlInSeconds()
+
+    /**
+     * Specifies whether responses should be cached and returned for requests.
+     *
+     * A cache cluster must be enabled on the stage for responses to be cached.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachingenabled)
+     */
+    public fun cachingEnabled(): Any? = unwrap(this).getCachingEnabled()
+
+    /**
+     * Specifies whether data trace logging is enabled for this method, which affects the log
+     * entries pushed to Amazon CloudWatch Logs.
+     *
+     * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+     * recommend that you don't enable this option for production APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-datatraceenabled)
+     */
+    public fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+
+    /**
+     * The HTTP method.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-httpmethod)
+     */
+    public fun httpMethod(): String? = unwrap(this).getHttpMethod()
+
+    /**
+     * Specifies the logging level for this method, which affects the log entries pushed to Amazon
+     * CloudWatch Logs.
+     *
+     * Valid values are `OFF` , `ERROR` , and `INFO` . Choose `ERROR` to write only error-level
+     * entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra
+     * informational events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-logginglevel)
+     */
+    public fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
+
+    /**
+     * Specifies whether Amazon CloudWatch metrics are enabled for this method.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-metricsenabled)
+     */
+    public fun metricsEnabled(): Any? = unwrap(this).getMetricsEnabled()
+
+    /**
+     * The resource path for this method.
+     *
+     * Forward slashes ( `/` ) are encoded as `~1` and the initial slash must include a forward
+     * slash. For example, the path value `/resource/subresource` must be encoded as
+     * `/~1resource~1subresource` . To specify the root path, use only a slash ( `/` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-resourcepath)
+     */
+    public fun resourcePath(): String? = unwrap(this).getResourcePath()
+
+    /**
+     * Specifies the throttling burst limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-throttlingburstlimit)
+     */
+    public fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+
+    /**
+     * Specifies the throttling rate limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-throttlingratelimit)
+     */
+    public fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+
+    /**
+     * A builder for [MethodSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
+       */
+      public fun cacheDataEncrypted(cacheDataEncrypted: Boolean)
+
+      /**
+       * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
+       */
+      public fun cacheDataEncrypted(cacheDataEncrypted: IResolvable)
+
+      /**
+       * @param cacheTtlInSeconds Specifies the time to live (TTL), in seconds, for cached
+       * responses.
+       * The higher the TTL, the longer the response will be cached.
+       */
+      public fun cacheTtlInSeconds(cacheTtlInSeconds: Number)
+
+      /**
+       * @param cachingEnabled Specifies whether responses should be cached and returned for
+       * requests.
+       * A cache cluster must be enabled on the stage for responses to be cached.
+       */
+      public fun cachingEnabled(cachingEnabled: Boolean)
+
+      /**
+       * @param cachingEnabled Specifies whether responses should be cached and returned for
+       * requests.
+       * A cache cluster must be enabled on the stage for responses to be cached.
+       */
+      public fun cachingEnabled(cachingEnabled: IResolvable)
+
+      /**
+       * @param dataTraceEnabled Specifies whether data trace logging is enabled for this method,
+       * which affects the log entries pushed to Amazon CloudWatch Logs.
+       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+       * recommend that you don't enable this option for production APIs.
+       */
+      public fun dataTraceEnabled(dataTraceEnabled: Boolean)
+
+      /**
+       * @param dataTraceEnabled Specifies whether data trace logging is enabled for this method,
+       * which affects the log entries pushed to Amazon CloudWatch Logs.
+       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+       * recommend that you don't enable this option for production APIs.
+       */
+      public fun dataTraceEnabled(dataTraceEnabled: IResolvable)
+
+      /**
+       * @param httpMethod The HTTP method.
+       */
+      public fun httpMethod(httpMethod: String)
+
+      /**
+       * @param loggingLevel Specifies the logging level for this method, which affects the log
+       * entries pushed to Amazon CloudWatch Logs.
+       * Valid values are `OFF` , `ERROR` , and `INFO` . Choose `ERROR` to write only error-level
+       * entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra
+       * informational events.
+       */
+      public fun loggingLevel(loggingLevel: String)
+
+      /**
+       * @param metricsEnabled Specifies whether Amazon CloudWatch metrics are enabled for this
+       * method.
+       */
+      public fun metricsEnabled(metricsEnabled: Boolean)
+
+      /**
+       * @param metricsEnabled Specifies whether Amazon CloudWatch metrics are enabled for this
+       * method.
+       */
+      public fun metricsEnabled(metricsEnabled: IResolvable)
+
+      /**
+       * @param resourcePath The resource path for this method.
+       * Forward slashes ( `/` ) are encoded as `~1` and the initial slash must include a forward
+       * slash. For example, the path value `/resource/subresource` must be encoded as
+       * `/~1resource~1subresource` . To specify the root path, use only a slash ( `/` ).
+       */
+      public fun resourcePath(resourcePath: String)
+
+      /**
+       * @param throttlingBurstLimit Specifies the throttling burst limit.
+       */
+      public fun throttlingBurstLimit(throttlingBurstLimit: Number)
+
+      /**
+       * @param throttlingRateLimit Specifies the throttling rate limit.
+       */
+      public fun throttlingRateLimit(throttlingRateLimit: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty.Builder =
+          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty.builder()
+
+      /**
+       * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
+       */
+      override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
+        cdkBuilder.cacheDataEncrypted(cacheDataEncrypted)
+      }
+
+      /**
+       * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
+       */
+      override fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
+        cdkBuilder.cacheDataEncrypted(cacheDataEncrypted.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cacheTtlInSeconds Specifies the time to live (TTL), in seconds, for cached
+       * responses.
+       * The higher the TTL, the longer the response will be cached.
+       */
+      override fun cacheTtlInSeconds(cacheTtlInSeconds: Number) {
+        cdkBuilder.cacheTtlInSeconds(cacheTtlInSeconds)
+      }
+
+      /**
+       * @param cachingEnabled Specifies whether responses should be cached and returned for
+       * requests.
+       * A cache cluster must be enabled on the stage for responses to be cached.
+       */
+      override fun cachingEnabled(cachingEnabled: Boolean) {
+        cdkBuilder.cachingEnabled(cachingEnabled)
+      }
+
+      /**
+       * @param cachingEnabled Specifies whether responses should be cached and returned for
+       * requests.
+       * A cache cluster must be enabled on the stage for responses to be cached.
+       */
+      override fun cachingEnabled(cachingEnabled: IResolvable) {
+        cdkBuilder.cachingEnabled(cachingEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dataTraceEnabled Specifies whether data trace logging is enabled for this method,
+       * which affects the log entries pushed to Amazon CloudWatch Logs.
+       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+       * recommend that you don't enable this option for production APIs.
+       */
+      override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled)
+      }
+
+      /**
+       * @param dataTraceEnabled Specifies whether data trace logging is enabled for this method,
+       * which affects the log entries pushed to Amazon CloudWatch Logs.
+       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+       * recommend that you don't enable this option for production APIs.
+       */
+      override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param httpMethod The HTTP method.
+       */
+      override fun httpMethod(httpMethod: String) {
+        cdkBuilder.httpMethod(httpMethod)
+      }
+
+      /**
+       * @param loggingLevel Specifies the logging level for this method, which affects the log
+       * entries pushed to Amazon CloudWatch Logs.
+       * Valid values are `OFF` , `ERROR` , and `INFO` . Choose `ERROR` to write only error-level
+       * entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra
+       * informational events.
+       */
+      override fun loggingLevel(loggingLevel: String) {
+        cdkBuilder.loggingLevel(loggingLevel)
+      }
+
+      /**
+       * @param metricsEnabled Specifies whether Amazon CloudWatch metrics are enabled for this
+       * method.
+       */
+      override fun metricsEnabled(metricsEnabled: Boolean) {
+        cdkBuilder.metricsEnabled(metricsEnabled)
+      }
+
+      /**
+       * @param metricsEnabled Specifies whether Amazon CloudWatch metrics are enabled for this
+       * method.
+       */
+      override fun metricsEnabled(metricsEnabled: IResolvable) {
+        cdkBuilder.metricsEnabled(metricsEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resourcePath The resource path for this method.
+       * Forward slashes ( `/` ) are encoded as `~1` and the initial slash must include a forward
+       * slash. For example, the path value `/resource/subresource` must be encoded as
+       * `/~1resource~1subresource` . To specify the root path, use only a slash ( `/` ).
+       */
+      override fun resourcePath(resourcePath: String) {
+        cdkBuilder.resourcePath(resourcePath)
+      }
+
+      /**
+       * @param throttlingBurstLimit Specifies the throttling burst limit.
+       */
+      override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
+        cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
+      }
+
+      /**
+       * @param throttlingRateLimit Specifies the throttling rate limit.
+       */
+      override fun throttlingRateLimit(throttlingRateLimit: Number) {
+        cdkBuilder.throttlingRateLimit(throttlingRateLimit)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty,
+    ) : CdkObject(cdkObject), MethodSettingProperty {
+      /**
+       * Specifies whether the cached responses are encrypted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachedataencrypted)
+       */
+      override fun cacheDataEncrypted(): Any? = unwrap(this).getCacheDataEncrypted()
+
+      /**
+       * Specifies the time to live (TTL), in seconds, for cached responses.
+       *
+       * The higher the TTL, the longer the response will be cached.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachettlinseconds)
+       */
+      override fun cacheTtlInSeconds(): Number? = unwrap(this).getCacheTtlInSeconds()
+
+      /**
+       * Specifies whether responses should be cached and returned for requests.
+       *
+       * A cache cluster must be enabled on the stage for responses to be cached.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachingenabled)
+       */
+      override fun cachingEnabled(): Any? = unwrap(this).getCachingEnabled()
+
+      /**
+       * Specifies whether data trace logging is enabled for this method, which affects the log
+       * entries pushed to Amazon CloudWatch Logs.
+       *
+       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+       * recommend that you don't enable this option for production APIs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-datatraceenabled)
+       */
+      override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+
+      /**
+       * The HTTP method.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-httpmethod)
+       */
+      override fun httpMethod(): String? = unwrap(this).getHttpMethod()
+
+      /**
+       * Specifies the logging level for this method, which affects the log entries pushed to Amazon
+       * CloudWatch Logs.
+       *
+       * Valid values are `OFF` , `ERROR` , and `INFO` . Choose `ERROR` to write only error-level
+       * entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra
+       * informational events.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-logginglevel)
+       */
+      override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
+
+      /**
+       * Specifies whether Amazon CloudWatch metrics are enabled for this method.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-metricsenabled)
+       */
+      override fun metricsEnabled(): Any? = unwrap(this).getMetricsEnabled()
+
+      /**
+       * The resource path for this method.
+       *
+       * Forward slashes ( `/` ) are encoded as `~1` and the initial slash must include a forward
+       * slash. For example, the path value `/resource/subresource` must be encoded as
+       * `/~1resource~1subresource` . To specify the root path, use only a slash ( `/` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-resourcepath)
+       */
+      override fun resourcePath(): String? = unwrap(this).getResourcePath()
+
+      /**
+       * Specifies the throttling burst limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-throttlingburstlimit)
+       */
+      override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+
+      /**
+       * Specifies the throttling rate limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-throttlingratelimit)
+       */
+      override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MethodSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty):
+          MethodSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? MethodSettingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MethodSettingProperty):
+          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty
+    }
+  }
+
+  /**
    * `StageDescription` is a property of the
    * [AWS::ApiGateway::Deployment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html)
    * resource that configures a deployment stage.
@@ -1363,979 +2336,6 @@ public open class CfnDeployment internal constructor(
           software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty
-    }
-  }
-
-  /**
-   * The `DeploymentCanarySettings` property type specifies settings for the canary deployment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * DeploymentCanarySettingsProperty deploymentCanarySettingsProperty =
-   * DeploymentCanarySettingsProperty.builder()
-   * .percentTraffic(123)
-   * .stageVariableOverrides(Map.of(
-   * "stageVariableOverridesKey", "stageVariableOverrides"))
-   * .useStageCache(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html)
-   */
-  public interface DeploymentCanarySettingsProperty {
-    /**
-     * The percentage (0.0-100.0) of traffic routed to the canary deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic)
-     */
-    public fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
-
-    /**
-     * A stage variable overrides used for the canary release deployment.
-     *
-     * They can override existing stage variables or add new stage variables for the canary release
-     * deployment. These stage variables are represented as a string-to-string map between stage
-     * variable names and their values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides)
-     */
-    public fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
-
-    /**
-     * A Boolean flag to indicate whether the canary release deployment uses the stage cache or not.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache)
-     */
-    public fun useStageCache(): Any? = unwrap(this).getUseStageCache()
-
-    /**
-     * A builder for [DeploymentCanarySettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param percentTraffic The percentage (0.0-100.0) of traffic routed to the canary
-       * deployment.
-       */
-      public fun percentTraffic(percentTraffic: Number)
-
-      /**
-       * @param stageVariableOverrides A stage variable overrides used for the canary release
-       * deployment.
-       * They can override existing stage variables or add new stage variables for the canary
-       * release deployment. These stage variables are represented as a string-to-string map between
-       * stage variable names and their values.
-       */
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
-
-      /**
-       * @param stageVariableOverrides A stage variable overrides used for the canary release
-       * deployment.
-       * They can override existing stage variables or add new stage variables for the canary
-       * release deployment. These stage variables are represented as a string-to-string map between
-       * stage variable names and their values.
-       */
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
-
-      /**
-       * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
-       * the stage cache or not.
-       */
-      public fun useStageCache(useStageCache: Boolean)
-
-      /**
-       * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
-       * the stage cache or not.
-       */
-      public fun useStageCache(useStageCache: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty.builder()
-
-      /**
-       * @param percentTraffic The percentage (0.0-100.0) of traffic routed to the canary
-       * deployment.
-       */
-      override fun percentTraffic(percentTraffic: Number) {
-        cdkBuilder.percentTraffic(percentTraffic)
-      }
-
-      /**
-       * @param stageVariableOverrides A stage variable overrides used for the canary release
-       * deployment.
-       * They can override existing stage variables or add new stage variables for the canary
-       * release deployment. These stage variables are represented as a string-to-string map between
-       * stage variable names and their values.
-       */
-      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param stageVariableOverrides A stage variable overrides used for the canary release
-       * deployment.
-       * They can override existing stage variables or add new stage variables for the canary
-       * release deployment. These stage variables are represented as a string-to-string map between
-       * stage variable names and their values.
-       */
-      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
-      }
-
-      /**
-       * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
-       * the stage cache or not.
-       */
-      override fun useStageCache(useStageCache: Boolean) {
-        cdkBuilder.useStageCache(useStageCache)
-      }
-
-      /**
-       * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
-       * the stage cache or not.
-       */
-      override fun useStageCache(useStageCache: IResolvable) {
-        cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty,
-    ) : CdkObject(cdkObject), DeploymentCanarySettingsProperty {
-      /**
-       * The percentage (0.0-100.0) of traffic routed to the canary deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic)
-       */
-      override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
-
-      /**
-       * A stage variable overrides used for the canary release deployment.
-       *
-       * They can override existing stage variables or add new stage variables for the canary
-       * release deployment. These stage variables are represented as a string-to-string map between
-       * stage variable names and their values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides)
-       */
-      override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
-
-      /**
-       * A Boolean flag to indicate whether the canary release deployment uses the stage cache or
-       * not.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache)
-       */
-      override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentCanarySettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty):
-          DeploymentCanarySettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeploymentCanarySettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeploymentCanarySettingsProperty):
-          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty
-    }
-  }
-
-  /**
-   * The `AccessLogSetting` property type specifies settings for logging access in this stage.
-   *
-   * `AccessLogSetting` is a property of the
-   * [StageDescription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * AccessLogSettingProperty accessLogSettingProperty = AccessLogSettingProperty.builder()
-   * .destinationArn("destinationArn")
-   * .format("format")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html)
-   */
-  public interface AccessLogSettingProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose
-     * delivery stream to receive access logs.
-     *
-     * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
-     * `amazon-apigateway-` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-destinationarn)
-     */
-    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-    /**
-     * A single line format of the access logs of data, as specified by selected $context variables.
-     *
-     * The format must include at least `$context.requestId` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-format)
-     */
-    public fun format(): String? = unwrap(this).getFormat()
-
-    /**
-     * A builder for [AccessLogSettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or
-       * Kinesis Data Firehose delivery stream to receive access logs.
-       * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
-       * `amazon-apigateway-` .
-       */
-      public fun destinationArn(destinationArn: String)
-
-      /**
-       * @param format A single line format of the access logs of data, as specified by selected
-       * $context variables.
-       * The format must include at least `$context.requestId` .
-       */
-      public fun format(format: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty.Builder
-          =
-          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty.builder()
-
-      /**
-       * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or
-       * Kinesis Data Firehose delivery stream to receive access logs.
-       * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
-       * `amazon-apigateway-` .
-       */
-      override fun destinationArn(destinationArn: String) {
-        cdkBuilder.destinationArn(destinationArn)
-      }
-
-      /**
-       * @param format A single line format of the access logs of data, as specified by selected
-       * $context variables.
-       * The format must include at least `$context.requestId` .
-       */
-      override fun format(format: String) {
-        cdkBuilder.format(format)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty,
-    ) : CdkObject(cdkObject), AccessLogSettingProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose
-       * delivery stream to receive access logs.
-       *
-       * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
-       * `amazon-apigateway-` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-destinationarn)
-       */
-      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-      /**
-       * A single line format of the access logs of data, as specified by selected $context
-       * variables.
-       *
-       * The format must include at least `$context.requestId` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-format)
-       */
-      override fun format(): String? = unwrap(this).getFormat()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessLogSettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty):
-          AccessLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessLogSettingProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessLogSettingProperty):
-          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty
-    }
-  }
-
-  /**
-   * The `MethodSetting` property type configures settings for all methods in a stage.
-   *
-   * The `MethodSettings` property of the [Amazon API Gateway Deployment
-   * StageDescription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
-   * property type contains a list of `MethodSetting` property types.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * MethodSettingProperty methodSettingProperty = MethodSettingProperty.builder()
-   * .cacheDataEncrypted(false)
-   * .cacheTtlInSeconds(123)
-   * .cachingEnabled(false)
-   * .dataTraceEnabled(false)
-   * .httpMethod("httpMethod")
-   * .loggingLevel("loggingLevel")
-   * .metricsEnabled(false)
-   * .resourcePath("resourcePath")
-   * .throttlingBurstLimit(123)
-   * .throttlingRateLimit(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html)
-   */
-  public interface MethodSettingProperty {
-    /**
-     * Specifies whether the cached responses are encrypted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachedataencrypted)
-     */
-    public fun cacheDataEncrypted(): Any? = unwrap(this).getCacheDataEncrypted()
-
-    /**
-     * Specifies the time to live (TTL), in seconds, for cached responses.
-     *
-     * The higher the TTL, the longer the response will be cached.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachettlinseconds)
-     */
-    public fun cacheTtlInSeconds(): Number? = unwrap(this).getCacheTtlInSeconds()
-
-    /**
-     * Specifies whether responses should be cached and returned for requests.
-     *
-     * A cache cluster must be enabled on the stage for responses to be cached.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachingenabled)
-     */
-    public fun cachingEnabled(): Any? = unwrap(this).getCachingEnabled()
-
-    /**
-     * Specifies whether data trace logging is enabled for this method, which affects the log
-     * entries pushed to Amazon CloudWatch Logs.
-     *
-     * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
-     * recommend that you don't enable this option for production APIs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-datatraceenabled)
-     */
-    public fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
-
-    /**
-     * The HTTP method.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-httpmethod)
-     */
-    public fun httpMethod(): String? = unwrap(this).getHttpMethod()
-
-    /**
-     * Specifies the logging level for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs.
-     *
-     * Valid values are `OFF` , `ERROR` , and `INFO` . Choose `ERROR` to write only error-level
-     * entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra
-     * informational events.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-logginglevel)
-     */
-    public fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
-
-    /**
-     * Specifies whether Amazon CloudWatch metrics are enabled for this method.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-metricsenabled)
-     */
-    public fun metricsEnabled(): Any? = unwrap(this).getMetricsEnabled()
-
-    /**
-     * The resource path for this method.
-     *
-     * Forward slashes ( `/` ) are encoded as `~1` and the initial slash must include a forward
-     * slash. For example, the path value `/resource/subresource` must be encoded as
-     * `/~1resource~1subresource` . To specify the root path, use only a slash ( `/` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-resourcepath)
-     */
-    public fun resourcePath(): String? = unwrap(this).getResourcePath()
-
-    /**
-     * Specifies the throttling burst limit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-throttlingburstlimit)
-     */
-    public fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
-
-    /**
-     * Specifies the throttling rate limit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-throttlingratelimit)
-     */
-    public fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
-
-    /**
-     * A builder for [MethodSettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
-       */
-      public fun cacheDataEncrypted(cacheDataEncrypted: Boolean)
-
-      /**
-       * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
-       */
-      public fun cacheDataEncrypted(cacheDataEncrypted: IResolvable)
-
-      /**
-       * @param cacheTtlInSeconds Specifies the time to live (TTL), in seconds, for cached
-       * responses.
-       * The higher the TTL, the longer the response will be cached.
-       */
-      public fun cacheTtlInSeconds(cacheTtlInSeconds: Number)
-
-      /**
-       * @param cachingEnabled Specifies whether responses should be cached and returned for
-       * requests.
-       * A cache cluster must be enabled on the stage for responses to be cached.
-       */
-      public fun cachingEnabled(cachingEnabled: Boolean)
-
-      /**
-       * @param cachingEnabled Specifies whether responses should be cached and returned for
-       * requests.
-       * A cache cluster must be enabled on the stage for responses to be cached.
-       */
-      public fun cachingEnabled(cachingEnabled: IResolvable)
-
-      /**
-       * @param dataTraceEnabled Specifies whether data trace logging is enabled for this method,
-       * which affects the log entries pushed to Amazon CloudWatch Logs.
-       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
-       * recommend that you don't enable this option for production APIs.
-       */
-      public fun dataTraceEnabled(dataTraceEnabled: Boolean)
-
-      /**
-       * @param dataTraceEnabled Specifies whether data trace logging is enabled for this method,
-       * which affects the log entries pushed to Amazon CloudWatch Logs.
-       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
-       * recommend that you don't enable this option for production APIs.
-       */
-      public fun dataTraceEnabled(dataTraceEnabled: IResolvable)
-
-      /**
-       * @param httpMethod The HTTP method.
-       */
-      public fun httpMethod(httpMethod: String)
-
-      /**
-       * @param loggingLevel Specifies the logging level for this method, which affects the log
-       * entries pushed to Amazon CloudWatch Logs.
-       * Valid values are `OFF` , `ERROR` , and `INFO` . Choose `ERROR` to write only error-level
-       * entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra
-       * informational events.
-       */
-      public fun loggingLevel(loggingLevel: String)
-
-      /**
-       * @param metricsEnabled Specifies whether Amazon CloudWatch metrics are enabled for this
-       * method.
-       */
-      public fun metricsEnabled(metricsEnabled: Boolean)
-
-      /**
-       * @param metricsEnabled Specifies whether Amazon CloudWatch metrics are enabled for this
-       * method.
-       */
-      public fun metricsEnabled(metricsEnabled: IResolvable)
-
-      /**
-       * @param resourcePath The resource path for this method.
-       * Forward slashes ( `/` ) are encoded as `~1` and the initial slash must include a forward
-       * slash. For example, the path value `/resource/subresource` must be encoded as
-       * `/~1resource~1subresource` . To specify the root path, use only a slash ( `/` ).
-       */
-      public fun resourcePath(resourcePath: String)
-
-      /**
-       * @param throttlingBurstLimit Specifies the throttling burst limit.
-       */
-      public fun throttlingBurstLimit(throttlingBurstLimit: Number)
-
-      /**
-       * @param throttlingRateLimit Specifies the throttling rate limit.
-       */
-      public fun throttlingRateLimit(throttlingRateLimit: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty.Builder =
-          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty.builder()
-
-      /**
-       * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
-       */
-      override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
-        cdkBuilder.cacheDataEncrypted(cacheDataEncrypted)
-      }
-
-      /**
-       * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
-       */
-      override fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
-        cdkBuilder.cacheDataEncrypted(cacheDataEncrypted.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cacheTtlInSeconds Specifies the time to live (TTL), in seconds, for cached
-       * responses.
-       * The higher the TTL, the longer the response will be cached.
-       */
-      override fun cacheTtlInSeconds(cacheTtlInSeconds: Number) {
-        cdkBuilder.cacheTtlInSeconds(cacheTtlInSeconds)
-      }
-
-      /**
-       * @param cachingEnabled Specifies whether responses should be cached and returned for
-       * requests.
-       * A cache cluster must be enabled on the stage for responses to be cached.
-       */
-      override fun cachingEnabled(cachingEnabled: Boolean) {
-        cdkBuilder.cachingEnabled(cachingEnabled)
-      }
-
-      /**
-       * @param cachingEnabled Specifies whether responses should be cached and returned for
-       * requests.
-       * A cache cluster must be enabled on the stage for responses to be cached.
-       */
-      override fun cachingEnabled(cachingEnabled: IResolvable) {
-        cdkBuilder.cachingEnabled(cachingEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dataTraceEnabled Specifies whether data trace logging is enabled for this method,
-       * which affects the log entries pushed to Amazon CloudWatch Logs.
-       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
-       * recommend that you don't enable this option for production APIs.
-       */
-      override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled)
-      }
-
-      /**
-       * @param dataTraceEnabled Specifies whether data trace logging is enabled for this method,
-       * which affects the log entries pushed to Amazon CloudWatch Logs.
-       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
-       * recommend that you don't enable this option for production APIs.
-       */
-      override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param httpMethod The HTTP method.
-       */
-      override fun httpMethod(httpMethod: String) {
-        cdkBuilder.httpMethod(httpMethod)
-      }
-
-      /**
-       * @param loggingLevel Specifies the logging level for this method, which affects the log
-       * entries pushed to Amazon CloudWatch Logs.
-       * Valid values are `OFF` , `ERROR` , and `INFO` . Choose `ERROR` to write only error-level
-       * entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra
-       * informational events.
-       */
-      override fun loggingLevel(loggingLevel: String) {
-        cdkBuilder.loggingLevel(loggingLevel)
-      }
-
-      /**
-       * @param metricsEnabled Specifies whether Amazon CloudWatch metrics are enabled for this
-       * method.
-       */
-      override fun metricsEnabled(metricsEnabled: Boolean) {
-        cdkBuilder.metricsEnabled(metricsEnabled)
-      }
-
-      /**
-       * @param metricsEnabled Specifies whether Amazon CloudWatch metrics are enabled for this
-       * method.
-       */
-      override fun metricsEnabled(metricsEnabled: IResolvable) {
-        cdkBuilder.metricsEnabled(metricsEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resourcePath The resource path for this method.
-       * Forward slashes ( `/` ) are encoded as `~1` and the initial slash must include a forward
-       * slash. For example, the path value `/resource/subresource` must be encoded as
-       * `/~1resource~1subresource` . To specify the root path, use only a slash ( `/` ).
-       */
-      override fun resourcePath(resourcePath: String) {
-        cdkBuilder.resourcePath(resourcePath)
-      }
-
-      /**
-       * @param throttlingBurstLimit Specifies the throttling burst limit.
-       */
-      override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
-        cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
-      }
-
-      /**
-       * @param throttlingRateLimit Specifies the throttling rate limit.
-       */
-      override fun throttlingRateLimit(throttlingRateLimit: Number) {
-        cdkBuilder.throttlingRateLimit(throttlingRateLimit)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty,
-    ) : CdkObject(cdkObject), MethodSettingProperty {
-      /**
-       * Specifies whether the cached responses are encrypted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachedataencrypted)
-       */
-      override fun cacheDataEncrypted(): Any? = unwrap(this).getCacheDataEncrypted()
-
-      /**
-       * Specifies the time to live (TTL), in seconds, for cached responses.
-       *
-       * The higher the TTL, the longer the response will be cached.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachettlinseconds)
-       */
-      override fun cacheTtlInSeconds(): Number? = unwrap(this).getCacheTtlInSeconds()
-
-      /**
-       * Specifies whether responses should be cached and returned for requests.
-       *
-       * A cache cluster must be enabled on the stage for responses to be cached.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-cachingenabled)
-       */
-      override fun cachingEnabled(): Any? = unwrap(this).getCachingEnabled()
-
-      /**
-       * Specifies whether data trace logging is enabled for this method, which affects the log
-       * entries pushed to Amazon CloudWatch Logs.
-       *
-       * This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
-       * recommend that you don't enable this option for production APIs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-datatraceenabled)
-       */
-      override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
-
-      /**
-       * The HTTP method.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-httpmethod)
-       */
-      override fun httpMethod(): String? = unwrap(this).getHttpMethod()
-
-      /**
-       * Specifies the logging level for this method, which affects the log entries pushed to Amazon
-       * CloudWatch Logs.
-       *
-       * Valid values are `OFF` , `ERROR` , and `INFO` . Choose `ERROR` to write only error-level
-       * entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra
-       * informational events.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-logginglevel)
-       */
-      override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
-
-      /**
-       * Specifies whether Amazon CloudWatch metrics are enabled for this method.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-metricsenabled)
-       */
-      override fun metricsEnabled(): Any? = unwrap(this).getMetricsEnabled()
-
-      /**
-       * The resource path for this method.
-       *
-       * Forward slashes ( `/` ) are encoded as `~1` and the initial slash must include a forward
-       * slash. For example, the path value `/resource/subresource` must be encoded as
-       * `/~1resource~1subresource` . To specify the root path, use only a slash ( `/` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-resourcepath)
-       */
-      override fun resourcePath(): String? = unwrap(this).getResourcePath()
-
-      /**
-       * Specifies the throttling burst limit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-throttlingburstlimit)
-       */
-      override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
-
-      /**
-       * Specifies the throttling rate limit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html#cfn-apigateway-deployment-methodsetting-throttlingratelimit)
-       */
-      override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MethodSettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty):
-          MethodSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? MethodSettingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MethodSettingProperty):
-          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty
-    }
-  }
-
-  /**
-   * The `CanarySetting` property type specifies settings for the canary deployment in this stage.
-   *
-   * `CanarySetting` is a property of the
-   * [StageDescription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * CanarySettingProperty canarySettingProperty = CanarySettingProperty.builder()
-   * .percentTraffic(123)
-   * .stageVariableOverrides(Map.of(
-   * "stageVariableOverridesKey", "stageVariableOverrides"))
-   * .useStageCache(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html)
-   */
-  public interface CanarySettingProperty {
-    /**
-     * The percent (0-100) of traffic diverted to a canary deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic)
-     */
-    public fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
-
-    /**
-     * Stage variables overridden for a canary release deployment, including new stage variables
-     * introduced in the canary.
-     *
-     * These stage variables are represented as a string-to-string map between stage variable names
-     * and their values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-stagevariableoverrides)
-     */
-    public fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
-
-    /**
-     * A Boolean flag to indicate whether the canary deployment uses the stage cache or not.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache)
-     */
-    public fun useStageCache(): Any? = unwrap(this).getUseStageCache()
-
-    /**
-     * A builder for [CanarySettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param percentTraffic The percent (0-100) of traffic diverted to a canary deployment.
-       */
-      public fun percentTraffic(percentTraffic: Number)
-
-      /**
-       * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
-       * including new stage variables introduced in the canary.
-       * These stage variables are represented as a string-to-string map between stage variable
-       * names and their values.
-       */
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
-
-      /**
-       * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
-       * including new stage variables introduced in the canary.
-       * These stage variables are represented as a string-to-string map between stage variable
-       * names and their values.
-       */
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
-
-      /**
-       * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
-       * stage cache or not.
-       */
-      public fun useStageCache(useStageCache: Boolean)
-
-      /**
-       * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
-       * stage cache or not.
-       */
-      public fun useStageCache(useStageCache: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty.Builder =
-          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty.builder()
-
-      /**
-       * @param percentTraffic The percent (0-100) of traffic diverted to a canary deployment.
-       */
-      override fun percentTraffic(percentTraffic: Number) {
-        cdkBuilder.percentTraffic(percentTraffic)
-      }
-
-      /**
-       * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
-       * including new stage variables introduced in the canary.
-       * These stage variables are represented as a string-to-string map between stage variable
-       * names and their values.
-       */
-      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
-       * including new stage variables introduced in the canary.
-       * These stage variables are represented as a string-to-string map between stage variable
-       * names and their values.
-       */
-      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
-      }
-
-      /**
-       * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
-       * stage cache or not.
-       */
-      override fun useStageCache(useStageCache: Boolean) {
-        cdkBuilder.useStageCache(useStageCache)
-      }
-
-      /**
-       * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
-       * stage cache or not.
-       */
-      override fun useStageCache(useStageCache: IResolvable) {
-        cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty,
-    ) : CdkObject(cdkObject), CanarySettingProperty {
-      /**
-       * The percent (0-100) of traffic diverted to a canary deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic)
-       */
-      override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
-
-      /**
-       * Stage variables overridden for a canary release deployment, including new stage variables
-       * introduced in the canary.
-       *
-       * These stage variables are represented as a string-to-string map between stage variable
-       * names and their values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-stagevariableoverrides)
-       */
-      override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
-
-      /**
-       * A Boolean flag to indicate whether the canary deployment uses the stage cache or not.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache)
-       */
-      override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CanarySettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty):
-          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? CanarySettingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CanarySettingProperty):
-          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty
     }
   }
 }

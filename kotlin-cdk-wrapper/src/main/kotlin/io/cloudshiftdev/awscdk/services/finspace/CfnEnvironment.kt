@@ -581,6 +581,142 @@ public open class CfnEnvironment internal constructor(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.finspace.*;
+   * AttributeMapItemsProperty attributeMapItemsProperty = AttributeMapItemsProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html)
+   */
+  public interface AttributeMapItemsProperty {
+    /**
+     * The key name of the tag.
+     *
+     * You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed
+     * with aws:. You can use any of the following characters: the set of Unicode letters, digits,
+     * whitespace, _, ., /, =, +, and -.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html#cfn-finspace-environment-attributemapitems-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The value for the tag.
+     *
+     * You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed
+     * with aws:. You can use any of the following characters: the set of Unicode letters, digits,
+     * whitespace, _, ., /, =, +, and -.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html#cfn-finspace-environment-attributemapitems-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [AttributeMapItemsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key name of the tag.
+       * You can specify a value that is 1 to 128 Unicode characters in length and cannot be
+       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
+       * digits, whitespace, _, ., /, =, +, and -.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value for the tag.
+       * You can specify a value that is 0 to 256 Unicode characters in length and cannot be
+       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
+       * digits, whitespace, _, ., /, =, +, and -.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty.Builder
+          =
+          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty.builder()
+
+      /**
+       * @param key The key name of the tag.
+       * You can specify a value that is 1 to 128 Unicode characters in length and cannot be
+       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
+       * digits, whitespace, _, ., /, =, +, and -.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value for the tag.
+       * You can specify a value that is 0 to 256 Unicode characters in length and cannot be
+       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
+       * digits, whitespace, _, ., /, =, +, and -.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty,
+    ) : CdkObject(cdkObject), AttributeMapItemsProperty {
+      /**
+       * The key name of the tag.
+       *
+       * You can specify a value that is 1 to 128 Unicode characters in length and cannot be
+       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
+       * digits, whitespace, _, ., /, =, +, and -.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html#cfn-finspace-environment-attributemapitems-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The value for the tag.
+       *
+       * You can specify a value that is 0 to 256 Unicode characters in length and cannot be
+       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
+       * digits, whitespace, _, ., /, =, +, and -.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html#cfn-finspace-environment-attributemapitems-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeMapItemsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty):
+          AttributeMapItemsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AttributeMapItemsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AttributeMapItemsProperty):
+          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty
+    }
+  }
+
+  /**
    * Configuration information when authentication mode is FEDERATED.
    *
    * Example:
@@ -868,142 +1004,6 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.finspace.*;
-   * AttributeMapItemsProperty attributeMapItemsProperty = AttributeMapItemsProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html)
-   */
-  public interface AttributeMapItemsProperty {
-    /**
-     * The key name of the tag.
-     *
-     * You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed
-     * with aws:. You can use any of the following characters: the set of Unicode letters, digits,
-     * whitespace, _, ., /, =, +, and -.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html#cfn-finspace-environment-attributemapitems-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The value for the tag.
-     *
-     * You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed
-     * with aws:. You can use any of the following characters: the set of Unicode letters, digits,
-     * whitespace, _, ., /, =, +, and -.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html#cfn-finspace-environment-attributemapitems-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [AttributeMapItemsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The key name of the tag.
-       * You can specify a value that is 1 to 128 Unicode characters in length and cannot be
-       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
-       * digits, whitespace, _, ., /, =, +, and -.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value for the tag.
-       * You can specify a value that is 0 to 256 Unicode characters in length and cannot be
-       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
-       * digits, whitespace, _, ., /, =, +, and -.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty.Builder
-          =
-          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty.builder()
-
-      /**
-       * @param key The key name of the tag.
-       * You can specify a value that is 1 to 128 Unicode characters in length and cannot be
-       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
-       * digits, whitespace, _, ., /, =, +, and -.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value for the tag.
-       * You can specify a value that is 0 to 256 Unicode characters in length and cannot be
-       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
-       * digits, whitespace, _, ., /, =, +, and -.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty,
-    ) : CdkObject(cdkObject), AttributeMapItemsProperty {
-      /**
-       * The key name of the tag.
-       *
-       * You can specify a value that is 1 to 128 Unicode characters in length and cannot be
-       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
-       * digits, whitespace, _, ., /, =, +, and -.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html#cfn-finspace-environment-attributemapitems-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * The value for the tag.
-       *
-       * You can specify a value that is 0 to 256 Unicode characters in length and cannot be
-       * prefixed with aws:. You can use any of the following characters: the set of Unicode letters,
-       * digits, whitespace, _, ., /, =, +, and -.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-attributemapitems.html#cfn-finspace-environment-attributemapitems-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeMapItemsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty):
-          AttributeMapItemsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AttributeMapItemsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AttributeMapItemsProperty):
-          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty
     }
   }
 

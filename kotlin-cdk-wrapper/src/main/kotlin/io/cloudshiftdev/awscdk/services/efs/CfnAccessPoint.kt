@@ -487,231 +487,6 @@ public open class CfnAccessPoint internal constructor(
   }
 
   /**
-   * Specifies the directory on the Amazon EFS file system that the access point provides access to.
-   *
-   * The access point exposes the specified file system path as the root directory of your file
-   * system to applications using the access point. NFS clients using the access point can only access
-   * data in the access point's `RootDirectory` and its subdirectories.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * RootDirectoryProperty rootDirectoryProperty = RootDirectoryProperty.builder()
-   * .creationInfo(CreationInfoProperty.builder()
-   * .ownerGid("ownerGid")
-   * .ownerUid("ownerUid")
-   * .permissions("permissions")
-   * .build())
-   * .path("path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html)
-   */
-  public interface RootDirectoryProperty {
-    /**
-     * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's
-     * `RootDirectory` .
-     *
-     * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
-     * using the `CreationInfo` settings when a client connects to an access point. When specifying the
-     * `CreationInfo` , you must provide values for all properties.
-     *
-     *
-     * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
-     * exist, attempts to mount the file system using the access point will fail.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html#cfn-efs-accesspoint-rootdirectory-creationinfo)
-     */
-    public fun creationInfo(): Any? = unwrap(this).getCreationInfo()
-
-    /**
-     * Specifies the path on the EFS file system to expose as the root directory to NFS clients
-     * using the access point to access the EFS file system.
-     *
-     * A path can have up to four subdirectories. If the specified path does not exist, you are
-     * required to provide the `CreationInfo` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html#cfn-efs-accesspoint-rootdirectory-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * A builder for [RootDirectoryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
-       * access point's `RootDirectory` .
-       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
-       * using the `CreationInfo` settings when a client connects to an access point. When specifying
-       * the `CreationInfo` , you must provide values for all properties.
-       *
-       *
-       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
-       * exist, attempts to mount the file system using the access point will fail.
-       */
-      public fun creationInfo(creationInfo: IResolvable)
-
-      /**
-       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
-       * access point's `RootDirectory` .
-       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
-       * using the `CreationInfo` settings when a client connects to an access point. When specifying
-       * the `CreationInfo` , you must provide values for all properties.
-       *
-       *
-       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
-       * exist, attempts to mount the file system using the access point will fail.
-       */
-      public fun creationInfo(creationInfo: CreationInfoProperty)
-
-      /**
-       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
-       * access point's `RootDirectory` .
-       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
-       * using the `CreationInfo` settings when a client connects to an access point. When specifying
-       * the `CreationInfo` , you must provide values for all properties.
-       *
-       *
-       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
-       * exist, attempts to mount the file system using the access point will fail.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0f09715ddaf55a736c58a579888cb8e3718cb5e0640ebf826af3c9dbf3e3ff06")
-      public fun creationInfo(creationInfo: CreationInfoProperty.Builder.() -> Unit)
-
-      /**
-       * @param path Specifies the path on the EFS file system to expose as the root directory to
-       * NFS clients using the access point to access the EFS file system.
-       * A path can have up to four subdirectories. If the specified path does not exist, you are
-       * required to provide the `CreationInfo` .
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty.builder()
-
-      /**
-       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
-       * access point's `RootDirectory` .
-       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
-       * using the `CreationInfo` settings when a client connects to an access point. When specifying
-       * the `CreationInfo` , you must provide values for all properties.
-       *
-       *
-       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
-       * exist, attempts to mount the file system using the access point will fail.
-       */
-      override fun creationInfo(creationInfo: IResolvable) {
-        cdkBuilder.creationInfo(creationInfo.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
-       * access point's `RootDirectory` .
-       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
-       * using the `CreationInfo` settings when a client connects to an access point. When specifying
-       * the `CreationInfo` , you must provide values for all properties.
-       *
-       *
-       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
-       * exist, attempts to mount the file system using the access point will fail.
-       */
-      override fun creationInfo(creationInfo: CreationInfoProperty) {
-        cdkBuilder.creationInfo(creationInfo.let(CreationInfoProperty::unwrap))
-      }
-
-      /**
-       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
-       * access point's `RootDirectory` .
-       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
-       * using the `CreationInfo` settings when a client connects to an access point. When specifying
-       * the `CreationInfo` , you must provide values for all properties.
-       *
-       *
-       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
-       * exist, attempts to mount the file system using the access point will fail.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0f09715ddaf55a736c58a579888cb8e3718cb5e0640ebf826af3c9dbf3e3ff06")
-      override fun creationInfo(creationInfo: CreationInfoProperty.Builder.() -> Unit): Unit =
-          creationInfo(CreationInfoProperty(creationInfo))
-
-      /**
-       * @param path Specifies the path on the EFS file system to expose as the root directory to
-       * NFS clients using the access point to access the EFS file system.
-       * A path can have up to four subdirectories. If the specified path does not exist, you are
-       * required to provide the `CreationInfo` .
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty,
-    ) : CdkObject(cdkObject), RootDirectoryProperty {
-      /**
-       * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's
-       * `RootDirectory` .
-       *
-       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
-       * using the `CreationInfo` settings when a client connects to an access point. When specifying
-       * the `CreationInfo` , you must provide values for all properties.
-       *
-       *
-       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
-       * exist, attempts to mount the file system using the access point will fail.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html#cfn-efs-accesspoint-rootdirectory-creationinfo)
-       */
-      override fun creationInfo(): Any? = unwrap(this).getCreationInfo()
-
-      /**
-       * Specifies the path on the EFS file system to expose as the root directory to NFS clients
-       * using the access point to access the EFS file system.
-       *
-       * A path can have up to four subdirectories. If the specified path does not exist, you are
-       * required to provide the `CreationInfo` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html#cfn-efs-accesspoint-rootdirectory-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RootDirectoryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty):
-          RootDirectoryProperty = CdkObjectWrappers.wrap(cdkObject) as? RootDirectoryProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RootDirectoryProperty):
-          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty
-    }
-  }
-
-  /**
    * A tag is a key-value pair attached to a file system.
    *
    * Allowed characters in the `Key` and `Value` properties are letters, white space, and numbers
@@ -1143,6 +918,231 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty
+    }
+  }
+
+  /**
+   * Specifies the directory on the Amazon EFS file system that the access point provides access to.
+   *
+   * The access point exposes the specified file system path as the root directory of your file
+   * system to applications using the access point. NFS clients using the access point can only access
+   * data in the access point's `RootDirectory` and its subdirectories.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * RootDirectoryProperty rootDirectoryProperty = RootDirectoryProperty.builder()
+   * .creationInfo(CreationInfoProperty.builder()
+   * .ownerGid("ownerGid")
+   * .ownerUid("ownerUid")
+   * .permissions("permissions")
+   * .build())
+   * .path("path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html)
+   */
+  public interface RootDirectoryProperty {
+    /**
+     * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's
+     * `RootDirectory` .
+     *
+     * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
+     * using the `CreationInfo` settings when a client connects to an access point. When specifying the
+     * `CreationInfo` , you must provide values for all properties.
+     *
+     *
+     * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
+     * exist, attempts to mount the file system using the access point will fail.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html#cfn-efs-accesspoint-rootdirectory-creationinfo)
+     */
+    public fun creationInfo(): Any? = unwrap(this).getCreationInfo()
+
+    /**
+     * Specifies the path on the EFS file system to expose as the root directory to NFS clients
+     * using the access point to access the EFS file system.
+     *
+     * A path can have up to four subdirectories. If the specified path does not exist, you are
+     * required to provide the `CreationInfo` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html#cfn-efs-accesspoint-rootdirectory-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * A builder for [RootDirectoryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
+       * access point's `RootDirectory` .
+       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
+       * using the `CreationInfo` settings when a client connects to an access point. When specifying
+       * the `CreationInfo` , you must provide values for all properties.
+       *
+       *
+       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
+       * exist, attempts to mount the file system using the access point will fail.
+       */
+      public fun creationInfo(creationInfo: IResolvable)
+
+      /**
+       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
+       * access point's `RootDirectory` .
+       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
+       * using the `CreationInfo` settings when a client connects to an access point. When specifying
+       * the `CreationInfo` , you must provide values for all properties.
+       *
+       *
+       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
+       * exist, attempts to mount the file system using the access point will fail.
+       */
+      public fun creationInfo(creationInfo: CreationInfoProperty)
+
+      /**
+       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
+       * access point's `RootDirectory` .
+       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
+       * using the `CreationInfo` settings when a client connects to an access point. When specifying
+       * the `CreationInfo` , you must provide values for all properties.
+       *
+       *
+       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
+       * exist, attempts to mount the file system using the access point will fail.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0f09715ddaf55a736c58a579888cb8e3718cb5e0640ebf826af3c9dbf3e3ff06")
+      public fun creationInfo(creationInfo: CreationInfoProperty.Builder.() -> Unit)
+
+      /**
+       * @param path Specifies the path on the EFS file system to expose as the root directory to
+       * NFS clients using the access point to access the EFS file system.
+       * A path can have up to four subdirectories. If the specified path does not exist, you are
+       * required to provide the `CreationInfo` .
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty.builder()
+
+      /**
+       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
+       * access point's `RootDirectory` .
+       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
+       * using the `CreationInfo` settings when a client connects to an access point. When specifying
+       * the `CreationInfo` , you must provide values for all properties.
+       *
+       *
+       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
+       * exist, attempts to mount the file system using the access point will fail.
+       */
+      override fun creationInfo(creationInfo: IResolvable) {
+        cdkBuilder.creationInfo(creationInfo.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
+       * access point's `RootDirectory` .
+       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
+       * using the `CreationInfo` settings when a client connects to an access point. When specifying
+       * the `CreationInfo` , you must provide values for all properties.
+       *
+       *
+       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
+       * exist, attempts to mount the file system using the access point will fail.
+       */
+      override fun creationInfo(creationInfo: CreationInfoProperty) {
+        cdkBuilder.creationInfo(creationInfo.let(CreationInfoProperty::unwrap))
+      }
+
+      /**
+       * @param creationInfo (Optional) Specifies the POSIX IDs and permissions to apply to the
+       * access point's `RootDirectory` .
+       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
+       * using the `CreationInfo` settings when a client connects to an access point. When specifying
+       * the `CreationInfo` , you must provide values for all properties.
+       *
+       *
+       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
+       * exist, attempts to mount the file system using the access point will fail.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0f09715ddaf55a736c58a579888cb8e3718cb5e0640ebf826af3c9dbf3e3ff06")
+      override fun creationInfo(creationInfo: CreationInfoProperty.Builder.() -> Unit): Unit =
+          creationInfo(CreationInfoProperty(creationInfo))
+
+      /**
+       * @param path Specifies the path on the EFS file system to expose as the root directory to
+       * NFS clients using the access point to access the EFS file system.
+       * A path can have up to four subdirectories. If the specified path does not exist, you are
+       * required to provide the `CreationInfo` .
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty,
+    ) : CdkObject(cdkObject), RootDirectoryProperty {
+      /**
+       * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's
+       * `RootDirectory` .
+       *
+       * If the `RootDirectory` &gt; `Path` specified does not exist, EFS creates the root directory
+       * using the `CreationInfo` settings when a client connects to an access point. When specifying
+       * the `CreationInfo` , you must provide values for all properties.
+       *
+       *
+       * If you do not provide `CreationInfo` and the specified `RootDirectory` &gt; `Path` does not
+       * exist, attempts to mount the file system using the access point will fail.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html#cfn-efs-accesspoint-rootdirectory-creationinfo)
+       */
+      override fun creationInfo(): Any? = unwrap(this).getCreationInfo()
+
+      /**
+       * Specifies the path on the EFS file system to expose as the root directory to NFS clients
+       * using the access point to access the EFS file system.
+       *
+       * A path can have up to four subdirectories. If the specified path does not exist, you are
+       * required to provide the `CreationInfo` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html#cfn-efs-accesspoint-rootdirectory-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RootDirectoryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty):
+          RootDirectoryProperty = CdkObjectWrappers.wrap(cdkObject) as? RootDirectoryProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RootDirectoryProperty):
+          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty
     }
   }
 }

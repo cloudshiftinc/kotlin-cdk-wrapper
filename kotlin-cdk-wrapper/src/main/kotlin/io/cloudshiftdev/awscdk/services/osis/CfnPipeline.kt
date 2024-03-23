@@ -707,7 +707,12 @@ public open class CfnPipeline internal constructor(
   }
 
   /**
-   * An OpenSearch Ingestion-managed VPC endpoint that will access one or more pipelines.
+   * Options that specify the configuration of a persistent buffer.
+   *
+   * To configure how OpenSearch Ingestion encrypts this data, set the `EncryptionAtRestOptions` .
+   * For more information, see [Persistent
+   * buffering](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/osis-features-overview.html#persistent-buffering)
+   * .
    *
    * Example:
    *
@@ -715,171 +720,87 @@ public open class CfnPipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.osis.*;
-   * VpcEndpointProperty vpcEndpointProperty = VpcEndpointProperty.builder()
-   * .vpcEndpointId("vpcEndpointId")
-   * .vpcId("vpcId")
-   * .vpcOptions(VpcOptionsProperty.builder()
-   * .subnetIds(List.of("subnetIds"))
-   * // the properties below are optional
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .build())
+   * BufferOptionsProperty bufferOptionsProperty = BufferOptionsProperty.builder()
+   * .persistentBufferEnabled(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-bufferoptions.html)
    */
-  public interface VpcEndpointProperty {
+  public interface BufferOptionsProperty {
     /**
-     * The unique identifier of the endpoint.
+     * Whether persistent buffering should be enabled.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcendpointid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-bufferoptions.html#cfn-osis-pipeline-bufferoptions-persistentbufferenabled)
      */
-    public fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
+    public fun persistentBufferEnabled(): Any
 
     /**
-     * The ID for your VPC.
-     *
-     * AWS PrivateLink generates this value when you create a VPC.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcid)
-     */
-    public fun vpcId(): String? = unwrap(this).getVpcId()
-
-    /**
-     * Information about the VPC, including associated subnets and security groups.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcoptions)
-     */
-    public fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
-
-    /**
-     * A builder for [VpcEndpointProperty]
+     * A builder for [BufferOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param vpcEndpointId The unique identifier of the endpoint.
+       * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
        */
-      public fun vpcEndpointId(vpcEndpointId: String)
+      public fun persistentBufferEnabled(persistentBufferEnabled: Boolean)
 
       /**
-       * @param vpcId The ID for your VPC.
-       * AWS PrivateLink generates this value when you create a VPC.
+       * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
        */
-      public fun vpcId(vpcId: String)
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      public fun vpcOptions(vpcOptions: IResolvable)
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      public fun vpcOptions(vpcOptions: VpcOptionsProperty)
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
-      public fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit)
+      public fun persistentBufferEnabled(persistentBufferEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.Builder =
-          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.builder()
+          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty.Builder =
+          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty.builder()
 
       /**
-       * @param vpcEndpointId The unique identifier of the endpoint.
+       * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
        */
-      override fun vpcEndpointId(vpcEndpointId: String) {
-        cdkBuilder.vpcEndpointId(vpcEndpointId)
+      override fun persistentBufferEnabled(persistentBufferEnabled: Boolean) {
+        cdkBuilder.persistentBufferEnabled(persistentBufferEnabled)
       }
 
       /**
-       * @param vpcId The ID for your VPC.
-       * AWS PrivateLink generates this value when you create a VPC.
+       * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
        */
-      override fun vpcId(vpcId: String) {
-        cdkBuilder.vpcId(vpcId)
+      override fun persistentBufferEnabled(persistentBufferEnabled: IResolvable) {
+        cdkBuilder.persistentBufferEnabled(persistentBufferEnabled.let(IResolvable::unwrap))
       }
 
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      override fun vpcOptions(vpcOptions: IResolvable) {
-        cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
-        cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
-      override fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit): Unit =
-          vpcOptions(VpcOptionsProperty(vpcOptions))
-
-      public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty =
+      public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty,
-    ) : CdkObject(cdkObject), VpcEndpointProperty {
+      override val cdkObject:
+          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty,
+    ) : CdkObject(cdkObject), BufferOptionsProperty {
       /**
-       * The unique identifier of the endpoint.
+       * Whether persistent buffering should be enabled.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcendpointid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-bufferoptions.html#cfn-osis-pipeline-bufferoptions-persistentbufferenabled)
        */
-      override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
-
-      /**
-       * The ID for your VPC.
-       *
-       * AWS PrivateLink generates this value when you create a VPC.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcid)
-       */
-      override fun vpcId(): String? = unwrap(this).getVpcId()
-
-      /**
-       * Information about the VPC, including associated subnets and security groups.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcoptions)
-       */
-      override fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
+      override fun persistentBufferEnabled(): Any = unwrap(this).getPersistentBufferEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcEndpointProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BufferOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty):
-          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcEndpointProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty):
+          BufferOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? BufferOptionsProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VpcEndpointProperty):
-          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty = (wrapped as
+      internal fun unwrap(wrapped: BufferOptionsProperty):
+          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty
+          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty
     }
   }
 
@@ -978,12 +899,7 @@ public open class CfnPipeline internal constructor(
   }
 
   /**
-   * Options that specify the configuration of a persistent buffer.
-   *
-   * To configure how OpenSearch Ingestion encrypts this data, set the `EncryptionAtRestOptions` .
-   * For more information, see [Persistent
-   * buffering](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/osis-features-overview.html#persistent-buffering)
-   * .
+   * Options to control how OpenSearch encrypts buffer data.
    *
    * Example:
    *
@@ -991,87 +907,83 @@ public open class CfnPipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.osis.*;
-   * BufferOptionsProperty bufferOptionsProperty = BufferOptionsProperty.builder()
-   * .persistentBufferEnabled(false)
+   * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
+   * EncryptionAtRestOptionsProperty.builder()
+   * .kmsKeyArn("kmsKeyArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-bufferoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html)
    */
-  public interface BufferOptionsProperty {
+  public interface EncryptionAtRestOptionsProperty {
     /**
-     * Whether persistent buffering should be enabled.
+     * The ARN of the KMS key used to encrypt buffer data.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-bufferoptions.html#cfn-osis-pipeline-bufferoptions-persistentbufferenabled)
+     * By default, data is encrypted using an AWS owned key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html#cfn-osis-pipeline-encryptionatrestoptions-kmskeyarn)
      */
-    public fun persistentBufferEnabled(): Any
+    public fun kmsKeyArn(): String
 
     /**
-     * A builder for [BufferOptionsProperty]
+     * A builder for [EncryptionAtRestOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
+       * @param kmsKeyArn The ARN of the KMS key used to encrypt buffer data. 
+       * By default, data is encrypted using an AWS owned key.
        */
-      public fun persistentBufferEnabled(persistentBufferEnabled: Boolean)
-
-      /**
-       * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
-       */
-      public fun persistentBufferEnabled(persistentBufferEnabled: IResolvable)
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty.Builder =
-          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty.builder()
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.Builder =
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.builder()
 
       /**
-       * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
+       * @param kmsKeyArn The ARN of the KMS key used to encrypt buffer data. 
+       * By default, data is encrypted using an AWS owned key.
        */
-      override fun persistentBufferEnabled(persistentBufferEnabled: Boolean) {
-        cdkBuilder.persistentBufferEnabled(persistentBufferEnabled)
+      override fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
-      /**
-       * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
-       */
-      override fun persistentBufferEnabled(persistentBufferEnabled: IResolvable) {
-        cdkBuilder.persistentBufferEnabled(persistentBufferEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty =
+      public fun build():
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty,
-    ) : CdkObject(cdkObject), BufferOptionsProperty {
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty,
+    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
       /**
-       * Whether persistent buffering should be enabled.
+       * The ARN of the KMS key used to encrypt buffer data.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-bufferoptions.html#cfn-osis-pipeline-bufferoptions-persistentbufferenabled)
+       * By default, data is encrypted using an AWS owned key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html#cfn-osis-pipeline-encryptionatrestoptions-kmskeyarn)
        */
-      override fun persistentBufferEnabled(): Any = unwrap(this).getPersistentBufferEnabled()
+      override fun kmsKeyArn(): String = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BufferOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty):
-          BufferOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? BufferOptionsProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty):
+          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BufferOptionsProperty):
-          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty
+      internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty
     }
   }
 
@@ -1251,7 +1163,7 @@ public open class CfnPipeline internal constructor(
   }
 
   /**
-   * Options to control how OpenSearch encrypts buffer data.
+   * An OpenSearch Ingestion-managed VPC endpoint that will access one or more pipelines.
    *
    * Example:
    *
@@ -1259,83 +1171,171 @@ public open class CfnPipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.osis.*;
-   * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
-   * EncryptionAtRestOptionsProperty.builder()
-   * .kmsKeyArn("kmsKeyArn")
+   * VpcEndpointProperty vpcEndpointProperty = VpcEndpointProperty.builder()
+   * .vpcEndpointId("vpcEndpointId")
+   * .vpcId("vpcId")
+   * .vpcOptions(VpcOptionsProperty.builder()
+   * .subnetIds(List.of("subnetIds"))
+   * // the properties below are optional
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html)
    */
-  public interface EncryptionAtRestOptionsProperty {
+  public interface VpcEndpointProperty {
     /**
-     * The ARN of the KMS key used to encrypt buffer data.
+     * The unique identifier of the endpoint.
      *
-     * By default, data is encrypted using an AWS owned key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html#cfn-osis-pipeline-encryptionatrestoptions-kmskeyarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcendpointid)
      */
-    public fun kmsKeyArn(): String
+    public fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
 
     /**
-     * A builder for [EncryptionAtRestOptionsProperty]
+     * The ID for your VPC.
+     *
+     * AWS PrivateLink generates this value when you create a VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcid)
+     */
+    public fun vpcId(): String? = unwrap(this).getVpcId()
+
+    /**
+     * Information about the VPC, including associated subnets and security groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcoptions)
+     */
+    public fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
+
+    /**
+     * A builder for [VpcEndpointProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param kmsKeyArn The ARN of the KMS key used to encrypt buffer data. 
-       * By default, data is encrypted using an AWS owned key.
+       * @param vpcEndpointId The unique identifier of the endpoint.
        */
-      public fun kmsKeyArn(kmsKeyArn: String)
+      public fun vpcEndpointId(vpcEndpointId: String)
+
+      /**
+       * @param vpcId The ID for your VPC.
+       * AWS PrivateLink generates this value when you create a VPC.
+       */
+      public fun vpcId(vpcId: String)
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      public fun vpcOptions(vpcOptions: IResolvable)
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      public fun vpcOptions(vpcOptions: VpcOptionsProperty)
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
+      public fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.Builder =
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.builder()
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.Builder =
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.builder()
 
       /**
-       * @param kmsKeyArn The ARN of the KMS key used to encrypt buffer data. 
-       * By default, data is encrypted using an AWS owned key.
+       * @param vpcEndpointId The unique identifier of the endpoint.
        */
-      override fun kmsKeyArn(kmsKeyArn: String) {
-        cdkBuilder.kmsKeyArn(kmsKeyArn)
+      override fun vpcEndpointId(vpcEndpointId: String) {
+        cdkBuilder.vpcEndpointId(vpcEndpointId)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
+      /**
+       * @param vpcId The ID for your VPC.
+       * AWS PrivateLink generates this value when you create a VPC.
+       */
+      override fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+      }
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      override fun vpcOptions(vpcOptions: IResolvable) {
+        cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
+        cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty::unwrap))
+      }
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
+      override fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit): Unit =
+          vpcOptions(VpcOptionsProperty(vpcOptions))
+
+      public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty,
-    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
+      override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty,
+    ) : CdkObject(cdkObject), VpcEndpointProperty {
       /**
-       * The ARN of the KMS key used to encrypt buffer data.
+       * The unique identifier of the endpoint.
        *
-       * By default, data is encrypted using an AWS owned key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html#cfn-osis-pipeline-encryptionatrestoptions-kmskeyarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcendpointid)
        */
-      override fun kmsKeyArn(): String = unwrap(this).getKmsKeyArn()
+      override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
+
+      /**
+       * The ID for your VPC.
+       *
+       * AWS PrivateLink generates this value when you create a VPC.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcid)
+       */
+      override fun vpcId(): String? = unwrap(this).getVpcId()
+
+      /**
+       * Information about the VPC, including associated subnets and security groups.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcoptions)
+       */
+      override fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcEndpointProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty):
-          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty):
+          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcEndpointProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty
+      internal fun unwrap(wrapped: VpcEndpointProperty):
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty
     }
   }
 

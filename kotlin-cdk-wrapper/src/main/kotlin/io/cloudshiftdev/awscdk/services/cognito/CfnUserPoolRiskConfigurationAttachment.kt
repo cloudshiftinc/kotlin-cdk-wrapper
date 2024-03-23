@@ -702,7 +702,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
   }
 
   /**
-   * The notify email type.
+   * Account takeover actions type.
    *
    * Example:
    *
@@ -710,217 +710,223 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * NotifyEmailTypeProperty notifyEmailTypeProperty = NotifyEmailTypeProperty.builder()
-   * .subject("subject")
-   * // the properties below are optional
-   * .htmlBody("htmlBody")
-   * .textBody("textBody")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html)
-   */
-  public interface NotifyEmailTypeProperty {
-    /**
-     * The email HTML body.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-htmlbody)
-     */
-    public fun htmlBody(): String? = unwrap(this).getHtmlBody()
-
-    /**
-     * The email subject.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-subject)
-     */
-    public fun subject(): String
-
-    /**
-     * The email text body.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-textbody)
-     */
-    public fun textBody(): String? = unwrap(this).getTextBody()
-
-    /**
-     * A builder for [NotifyEmailTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param htmlBody The email HTML body.
-       */
-      public fun htmlBody(htmlBody: String)
-
-      /**
-       * @param subject The email subject. 
-       */
-      public fun subject(subject: String)
-
-      /**
-       * @param textBody The email text body.
-       */
-      public fun textBody(textBody: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty.builder()
-
-      /**
-       * @param htmlBody The email HTML body.
-       */
-      override fun htmlBody(htmlBody: String) {
-        cdkBuilder.htmlBody(htmlBody)
-      }
-
-      /**
-       * @param subject The email subject. 
-       */
-      override fun subject(subject: String) {
-        cdkBuilder.subject(subject)
-      }
-
-      /**
-       * @param textBody The email text body.
-       */
-      override fun textBody(textBody: String) {
-        cdkBuilder.textBody(textBody)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty,
-    ) : CdkObject(cdkObject), NotifyEmailTypeProperty {
-      /**
-       * The email HTML body.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-htmlbody)
-       */
-      override fun htmlBody(): String? = unwrap(this).getHtmlBody()
-
-      /**
-       * The email subject.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-subject)
-       */
-      override fun subject(): String = unwrap(this).getSubject()
-
-      /**
-       * The email text body.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-textbody)
-       */
-      override fun textBody(): String? = unwrap(this).getTextBody()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NotifyEmailTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty):
-          NotifyEmailTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? NotifyEmailTypeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotifyEmailTypeProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty
-    }
-  }
-
-  /**
-   * The compromised credentials actions type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * CompromisedCredentialsActionsTypeProperty compromisedCredentialsActionsTypeProperty =
-   * CompromisedCredentialsActionsTypeProperty.builder()
+   * AccountTakeoverActionsTypeProperty accountTakeoverActionsTypeProperty =
+   * AccountTakeoverActionsTypeProperty.builder()
+   * .highAction(AccountTakeoverActionTypeProperty.builder()
    * .eventAction("eventAction")
+   * .notify(false)
+   * .build())
+   * .lowAction(AccountTakeoverActionTypeProperty.builder()
+   * .eventAction("eventAction")
+   * .notify(false)
+   * .build())
+   * .mediumAction(AccountTakeoverActionTypeProperty.builder()
+   * .eventAction("eventAction")
+   * .notify(false)
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html)
    */
-  public interface CompromisedCredentialsActionsTypeProperty {
+  public interface AccountTakeoverActionsTypeProperty {
     /**
-     * The event action.
+     * Action to take for a high risk.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype-eventaction)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)
      */
-    public fun eventAction(): String
+    public fun highAction(): Any? = unwrap(this).getHighAction()
 
     /**
-     * A builder for [CompromisedCredentialsActionsTypeProperty]
+     * Action to take for a low risk.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)
+     */
+    public fun lowAction(): Any? = unwrap(this).getLowAction()
+
+    /**
+     * Action to take for a medium risk.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)
+     */
+    public fun mediumAction(): Any? = unwrap(this).getMediumAction()
+
+    /**
+     * A builder for [AccountTakeoverActionsTypeProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param eventAction The event action. 
+       * @param highAction Action to take for a high risk.
        */
-      public fun eventAction(eventAction: String)
+      public fun highAction(highAction: IResolvable)
+
+      /**
+       * @param highAction Action to take for a high risk.
+       */
+      public fun highAction(highAction: AccountTakeoverActionTypeProperty)
+
+      /**
+       * @param highAction Action to take for a high risk.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("70360ca930418d113c3f4f29d74bc50c78c8d0a8793e26af75eb1c32ddf009d2")
+      public fun highAction(highAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit)
+
+      /**
+       * @param lowAction Action to take for a low risk.
+       */
+      public fun lowAction(lowAction: IResolvable)
+
+      /**
+       * @param lowAction Action to take for a low risk.
+       */
+      public fun lowAction(lowAction: AccountTakeoverActionTypeProperty)
+
+      /**
+       * @param lowAction Action to take for a low risk.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fb015d149cc8017ed15bddd8e6ff46fc0e53195f831d12fc31fe005305b98829")
+      public fun lowAction(lowAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit)
+
+      /**
+       * @param mediumAction Action to take for a medium risk.
+       */
+      public fun mediumAction(mediumAction: IResolvable)
+
+      /**
+       * @param mediumAction Action to take for a medium risk.
+       */
+      public fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty)
+
+      /**
+       * @param mediumAction Action to take for a medium risk.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d0be028fa84e1ccf8a6615b4fb0fa99924be459f987b9f079eaf28bcdf633f50")
+      public fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.Builder
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty.Builder
           =
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.builder()
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty.builder()
 
       /**
-       * @param eventAction The event action. 
+       * @param highAction Action to take for a high risk.
        */
-      override fun eventAction(eventAction: String) {
-        cdkBuilder.eventAction(eventAction)
+      override fun highAction(highAction: IResolvable) {
+        cdkBuilder.highAction(highAction.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param highAction Action to take for a high risk.
+       */
+      override fun highAction(highAction: AccountTakeoverActionTypeProperty) {
+        cdkBuilder.highAction(highAction.let(AccountTakeoverActionTypeProperty::unwrap))
+      }
+
+      /**
+       * @param highAction Action to take for a high risk.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("70360ca930418d113c3f4f29d74bc50c78c8d0a8793e26af75eb1c32ddf009d2")
+      override fun highAction(highAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit):
+          Unit = highAction(AccountTakeoverActionTypeProperty(highAction))
+
+      /**
+       * @param lowAction Action to take for a low risk.
+       */
+      override fun lowAction(lowAction: IResolvable) {
+        cdkBuilder.lowAction(lowAction.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param lowAction Action to take for a low risk.
+       */
+      override fun lowAction(lowAction: AccountTakeoverActionTypeProperty) {
+        cdkBuilder.lowAction(lowAction.let(AccountTakeoverActionTypeProperty::unwrap))
+      }
+
+      /**
+       * @param lowAction Action to take for a low risk.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fb015d149cc8017ed15bddd8e6ff46fc0e53195f831d12fc31fe005305b98829")
+      override fun lowAction(lowAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit): Unit
+          = lowAction(AccountTakeoverActionTypeProperty(lowAction))
+
+      /**
+       * @param mediumAction Action to take for a medium risk.
+       */
+      override fun mediumAction(mediumAction: IResolvable) {
+        cdkBuilder.mediumAction(mediumAction.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param mediumAction Action to take for a medium risk.
+       */
+      override fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty) {
+        cdkBuilder.mediumAction(mediumAction.let(AccountTakeoverActionTypeProperty::unwrap))
+      }
+
+      /**
+       * @param mediumAction Action to take for a medium risk.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d0be028fa84e1ccf8a6615b4fb0fa99924be459f987b9f079eaf28bcdf633f50")
+      override fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit):
+          Unit = mediumAction(AccountTakeoverActionTypeProperty(mediumAction))
+
       public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty,
-    ) : CdkObject(cdkObject), CompromisedCredentialsActionsTypeProperty {
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty,
+    ) : CdkObject(cdkObject), AccountTakeoverActionsTypeProperty {
       /**
-       * The event action.
+       * Action to take for a high risk.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype-eventaction)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)
        */
-      override fun eventAction(): String = unwrap(this).getEventAction()
+      override fun highAction(): Any? = unwrap(this).getHighAction()
+
+      /**
+       * Action to take for a low risk.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)
+       */
+      override fun lowAction(): Any? = unwrap(this).getLowAction()
+
+      /**
+       * Action to take for a medium risk.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)
+       */
+      override fun mediumAction(): Any? = unwrap(this).getMediumAction()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          CompromisedCredentialsActionsTypeProperty {
+          AccountTakeoverActionsTypeProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty):
-          CompromisedCredentialsActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CompromisedCredentialsActionsTypeProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty):
+          AccountTakeoverActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountTakeoverActionsTypeProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CompromisedCredentialsActionsTypeProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty
+      internal fun unwrap(wrapped: AccountTakeoverActionsTypeProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
     }
   }
 
@@ -1127,6 +1133,252 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty
+    }
+  }
+
+  /**
+   * The compromised credentials actions type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * CompromisedCredentialsActionsTypeProperty compromisedCredentialsActionsTypeProperty =
+   * CompromisedCredentialsActionsTypeProperty.builder()
+   * .eventAction("eventAction")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype.html)
+   */
+  public interface CompromisedCredentialsActionsTypeProperty {
+    /**
+     * The event action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype-eventaction)
+     */
+    public fun eventAction(): String
+
+    /**
+     * A builder for [CompromisedCredentialsActionsTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param eventAction The event action. 
+       */
+      public fun eventAction(eventAction: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.builder()
+
+      /**
+       * @param eventAction The event action. 
+       */
+      override fun eventAction(eventAction: String) {
+        cdkBuilder.eventAction(eventAction)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty,
+    ) : CdkObject(cdkObject), CompromisedCredentialsActionsTypeProperty {
+      /**
+       * The event action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype-eventaction)
+       */
+      override fun eventAction(): String = unwrap(this).getEventAction()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CompromisedCredentialsActionsTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty):
+          CompromisedCredentialsActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CompromisedCredentialsActionsTypeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CompromisedCredentialsActionsTypeProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty
+    }
+  }
+
+  /**
+   * The compromised credentials risk configuration type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * CompromisedCredentialsRiskConfigurationTypeProperty
+   * compromisedCredentialsRiskConfigurationTypeProperty =
+   * CompromisedCredentialsRiskConfigurationTypeProperty.builder()
+   * .actions(CompromisedCredentialsActionsTypeProperty.builder()
+   * .eventAction("eventAction")
+   * .build())
+   * // the properties below are optional
+   * .eventFilter(List.of("eventFilter"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html)
+   */
+  public interface CompromisedCredentialsRiskConfigurationTypeProperty {
+    /**
+     * The compromised credentials risk configuration actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-actions)
+     */
+    public fun actions(): Any
+
+    /**
+     * Perform the action for these events.
+     *
+     * The default is to perform all events if no event filter is specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-eventfilter)
+     */
+    public fun eventFilter(): List<String> = unwrap(this).getEventFilter() ?: emptyList()
+
+    /**
+     * A builder for [CompromisedCredentialsRiskConfigurationTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actions The compromised credentials risk configuration actions. 
+       */
+      public fun actions(actions: IResolvable)
+
+      /**
+       * @param actions The compromised credentials risk configuration actions. 
+       */
+      public fun actions(actions: CompromisedCredentialsActionsTypeProperty)
+
+      /**
+       * @param actions The compromised credentials risk configuration actions. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("10d7c10c415afdc9e4c831e0df67d2a60d7475d6b543b486081c0c73b3fce0e7")
+      public fun actions(actions: CompromisedCredentialsActionsTypeProperty.Builder.() -> Unit)
+
+      /**
+       * @param eventFilter Perform the action for these events.
+       * The default is to perform all events if no event filter is specified.
+       */
+      public fun eventFilter(eventFilter: List<String>)
+
+      /**
+       * @param eventFilter Perform the action for these events.
+       * The default is to perform all events if no event filter is specified.
+       */
+      public fun eventFilter(vararg eventFilter: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty.builder()
+
+      /**
+       * @param actions The compromised credentials risk configuration actions. 
+       */
+      override fun actions(actions: IResolvable) {
+        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param actions The compromised credentials risk configuration actions. 
+       */
+      override fun actions(actions: CompromisedCredentialsActionsTypeProperty) {
+        cdkBuilder.actions(actions.let(CompromisedCredentialsActionsTypeProperty::unwrap))
+      }
+
+      /**
+       * @param actions The compromised credentials risk configuration actions. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("10d7c10c415afdc9e4c831e0df67d2a60d7475d6b543b486081c0c73b3fce0e7")
+      override fun actions(actions: CompromisedCredentialsActionsTypeProperty.Builder.() -> Unit):
+          Unit = actions(CompromisedCredentialsActionsTypeProperty(actions))
+
+      /**
+       * @param eventFilter Perform the action for these events.
+       * The default is to perform all events if no event filter is specified.
+       */
+      override fun eventFilter(eventFilter: List<String>) {
+        cdkBuilder.eventFilter(eventFilter)
+      }
+
+      /**
+       * @param eventFilter Perform the action for these events.
+       * The default is to perform all events if no event filter is specified.
+       */
+      override fun eventFilter(vararg eventFilter: String): Unit = eventFilter(eventFilter.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty,
+    ) : CdkObject(cdkObject), CompromisedCredentialsRiskConfigurationTypeProperty {
+      /**
+       * The compromised credentials risk configuration actions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-actions)
+       */
+      override fun actions(): Any = unwrap(this).getActions()
+
+      /**
+       * Perform the action for these events.
+       *
+       * The default is to perform all events if no event filter is specified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-eventfilter)
+       */
+      override fun eventFilter(): List<String> = unwrap(this).getEventFilter() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CompromisedCredentialsRiskConfigurationTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty):
+          CompromisedCredentialsRiskConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? CompromisedCredentialsRiskConfigurationTypeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CompromisedCredentialsRiskConfigurationTypeProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty
     }
   }
 
@@ -1479,7 +1731,7 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
   }
 
   /**
-   * Account takeover actions type.
+   * The notify email type.
    *
    * Example:
    *
@@ -1487,223 +1739,132 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * AccountTakeoverActionsTypeProperty accountTakeoverActionsTypeProperty =
-   * AccountTakeoverActionsTypeProperty.builder()
-   * .highAction(AccountTakeoverActionTypeProperty.builder()
-   * .eventAction("eventAction")
-   * .notify(false)
-   * .build())
-   * .lowAction(AccountTakeoverActionTypeProperty.builder()
-   * .eventAction("eventAction")
-   * .notify(false)
-   * .build())
-   * .mediumAction(AccountTakeoverActionTypeProperty.builder()
-   * .eventAction("eventAction")
-   * .notify(false)
-   * .build())
+   * NotifyEmailTypeProperty notifyEmailTypeProperty = NotifyEmailTypeProperty.builder()
+   * .subject("subject")
+   * // the properties below are optional
+   * .htmlBody("htmlBody")
+   * .textBody("textBody")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html)
    */
-  public interface AccountTakeoverActionsTypeProperty {
+  public interface NotifyEmailTypeProperty {
     /**
-     * Action to take for a high risk.
+     * The email HTML body.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-htmlbody)
      */
-    public fun highAction(): Any? = unwrap(this).getHighAction()
+    public fun htmlBody(): String? = unwrap(this).getHtmlBody()
 
     /**
-     * Action to take for a low risk.
+     * The email subject.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-subject)
      */
-    public fun lowAction(): Any? = unwrap(this).getLowAction()
+    public fun subject(): String
 
     /**
-     * Action to take for a medium risk.
+     * The email text body.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-textbody)
      */
-    public fun mediumAction(): Any? = unwrap(this).getMediumAction()
+    public fun textBody(): String? = unwrap(this).getTextBody()
 
     /**
-     * A builder for [AccountTakeoverActionsTypeProperty]
+     * A builder for [NotifyEmailTypeProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param highAction Action to take for a high risk.
+       * @param htmlBody The email HTML body.
        */
-      public fun highAction(highAction: IResolvable)
+      public fun htmlBody(htmlBody: String)
 
       /**
-       * @param highAction Action to take for a high risk.
+       * @param subject The email subject. 
        */
-      public fun highAction(highAction: AccountTakeoverActionTypeProperty)
+      public fun subject(subject: String)
 
       /**
-       * @param highAction Action to take for a high risk.
+       * @param textBody The email text body.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("70360ca930418d113c3f4f29d74bc50c78c8d0a8793e26af75eb1c32ddf009d2")
-      public fun highAction(highAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit)
-
-      /**
-       * @param lowAction Action to take for a low risk.
-       */
-      public fun lowAction(lowAction: IResolvable)
-
-      /**
-       * @param lowAction Action to take for a low risk.
-       */
-      public fun lowAction(lowAction: AccountTakeoverActionTypeProperty)
-
-      /**
-       * @param lowAction Action to take for a low risk.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fb015d149cc8017ed15bddd8e6ff46fc0e53195f831d12fc31fe005305b98829")
-      public fun lowAction(lowAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit)
-
-      /**
-       * @param mediumAction Action to take for a medium risk.
-       */
-      public fun mediumAction(mediumAction: IResolvable)
-
-      /**
-       * @param mediumAction Action to take for a medium risk.
-       */
-      public fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty)
-
-      /**
-       * @param mediumAction Action to take for a medium risk.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d0be028fa84e1ccf8a6615b4fb0fa99924be459f987b9f079eaf28bcdf633f50")
-      public fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit)
+      public fun textBody(textBody: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty.Builder
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty.Builder
           =
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty.builder()
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty.builder()
 
       /**
-       * @param highAction Action to take for a high risk.
+       * @param htmlBody The email HTML body.
        */
-      override fun highAction(highAction: IResolvable) {
-        cdkBuilder.highAction(highAction.let(IResolvable::unwrap))
+      override fun htmlBody(htmlBody: String) {
+        cdkBuilder.htmlBody(htmlBody)
       }
 
       /**
-       * @param highAction Action to take for a high risk.
+       * @param subject The email subject. 
        */
-      override fun highAction(highAction: AccountTakeoverActionTypeProperty) {
-        cdkBuilder.highAction(highAction.let(AccountTakeoverActionTypeProperty::unwrap))
+      override fun subject(subject: String) {
+        cdkBuilder.subject(subject)
       }
 
       /**
-       * @param highAction Action to take for a high risk.
+       * @param textBody The email text body.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("70360ca930418d113c3f4f29d74bc50c78c8d0a8793e26af75eb1c32ddf009d2")
-      override fun highAction(highAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit):
-          Unit = highAction(AccountTakeoverActionTypeProperty(highAction))
-
-      /**
-       * @param lowAction Action to take for a low risk.
-       */
-      override fun lowAction(lowAction: IResolvable) {
-        cdkBuilder.lowAction(lowAction.let(IResolvable::unwrap))
+      override fun textBody(textBody: String) {
+        cdkBuilder.textBody(textBody)
       }
-
-      /**
-       * @param lowAction Action to take for a low risk.
-       */
-      override fun lowAction(lowAction: AccountTakeoverActionTypeProperty) {
-        cdkBuilder.lowAction(lowAction.let(AccountTakeoverActionTypeProperty::unwrap))
-      }
-
-      /**
-       * @param lowAction Action to take for a low risk.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fb015d149cc8017ed15bddd8e6ff46fc0e53195f831d12fc31fe005305b98829")
-      override fun lowAction(lowAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit): Unit
-          = lowAction(AccountTakeoverActionTypeProperty(lowAction))
-
-      /**
-       * @param mediumAction Action to take for a medium risk.
-       */
-      override fun mediumAction(mediumAction: IResolvable) {
-        cdkBuilder.mediumAction(mediumAction.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param mediumAction Action to take for a medium risk.
-       */
-      override fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty) {
-        cdkBuilder.mediumAction(mediumAction.let(AccountTakeoverActionTypeProperty::unwrap))
-      }
-
-      /**
-       * @param mediumAction Action to take for a medium risk.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d0be028fa84e1ccf8a6615b4fb0fa99924be459f987b9f079eaf28bcdf633f50")
-      override fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit):
-          Unit = mediumAction(AccountTakeoverActionTypeProperty(mediumAction))
 
       public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty,
-    ) : CdkObject(cdkObject), AccountTakeoverActionsTypeProperty {
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty,
+    ) : CdkObject(cdkObject), NotifyEmailTypeProperty {
       /**
-       * Action to take for a high risk.
+       * The email HTML body.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-htmlbody)
        */
-      override fun highAction(): Any? = unwrap(this).getHighAction()
+      override fun htmlBody(): String? = unwrap(this).getHtmlBody()
 
       /**
-       * Action to take for a low risk.
+       * The email subject.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-subject)
        */
-      override fun lowAction(): Any? = unwrap(this).getLowAction()
+      override fun subject(): String = unwrap(this).getSubject()
 
       /**
-       * Action to take for a medium risk.
+       * The email text body.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-textbody)
        */
-      override fun mediumAction(): Any? = unwrap(this).getMediumAction()
+      override fun textBody(): String? = unwrap(this).getTextBody()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AccountTakeoverActionsTypeProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NotifyEmailTypeProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty):
-          AccountTakeoverActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AccountTakeoverActionsTypeProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty):
+          NotifyEmailTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? NotifyEmailTypeProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AccountTakeoverActionsTypeProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
+      internal fun unwrap(wrapped: NotifyEmailTypeProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
+          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty
     }
   }
 
@@ -1872,167 +2033,6 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty
-    }
-  }
-
-  /**
-   * The compromised credentials risk configuration type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * CompromisedCredentialsRiskConfigurationTypeProperty
-   * compromisedCredentialsRiskConfigurationTypeProperty =
-   * CompromisedCredentialsRiskConfigurationTypeProperty.builder()
-   * .actions(CompromisedCredentialsActionsTypeProperty.builder()
-   * .eventAction("eventAction")
-   * .build())
-   * // the properties below are optional
-   * .eventFilter(List.of("eventFilter"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html)
-   */
-  public interface CompromisedCredentialsRiskConfigurationTypeProperty {
-    /**
-     * The compromised credentials risk configuration actions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-actions)
-     */
-    public fun actions(): Any
-
-    /**
-     * Perform the action for these events.
-     *
-     * The default is to perform all events if no event filter is specified.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-eventfilter)
-     */
-    public fun eventFilter(): List<String> = unwrap(this).getEventFilter() ?: emptyList()
-
-    /**
-     * A builder for [CompromisedCredentialsRiskConfigurationTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actions The compromised credentials risk configuration actions. 
-       */
-      public fun actions(actions: IResolvable)
-
-      /**
-       * @param actions The compromised credentials risk configuration actions. 
-       */
-      public fun actions(actions: CompromisedCredentialsActionsTypeProperty)
-
-      /**
-       * @param actions The compromised credentials risk configuration actions. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("10d7c10c415afdc9e4c831e0df67d2a60d7475d6b543b486081c0c73b3fce0e7")
-      public fun actions(actions: CompromisedCredentialsActionsTypeProperty.Builder.() -> Unit)
-
-      /**
-       * @param eventFilter Perform the action for these events.
-       * The default is to perform all events if no event filter is specified.
-       */
-      public fun eventFilter(eventFilter: List<String>)
-
-      /**
-       * @param eventFilter Perform the action for these events.
-       * The default is to perform all events if no event filter is specified.
-       */
-      public fun eventFilter(vararg eventFilter: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty.builder()
-
-      /**
-       * @param actions The compromised credentials risk configuration actions. 
-       */
-      override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param actions The compromised credentials risk configuration actions. 
-       */
-      override fun actions(actions: CompromisedCredentialsActionsTypeProperty) {
-        cdkBuilder.actions(actions.let(CompromisedCredentialsActionsTypeProperty::unwrap))
-      }
-
-      /**
-       * @param actions The compromised credentials risk configuration actions. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("10d7c10c415afdc9e4c831e0df67d2a60d7475d6b543b486081c0c73b3fce0e7")
-      override fun actions(actions: CompromisedCredentialsActionsTypeProperty.Builder.() -> Unit):
-          Unit = actions(CompromisedCredentialsActionsTypeProperty(actions))
-
-      /**
-       * @param eventFilter Perform the action for these events.
-       * The default is to perform all events if no event filter is specified.
-       */
-      override fun eventFilter(eventFilter: List<String>) {
-        cdkBuilder.eventFilter(eventFilter)
-      }
-
-      /**
-       * @param eventFilter Perform the action for these events.
-       * The default is to perform all events if no event filter is specified.
-       */
-      override fun eventFilter(vararg eventFilter: String): Unit = eventFilter(eventFilter.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty,
-    ) : CdkObject(cdkObject), CompromisedCredentialsRiskConfigurationTypeProperty {
-      /**
-       * The compromised credentials risk configuration actions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-actions)
-       */
-      override fun actions(): Any = unwrap(this).getActions()
-
-      /**
-       * Perform the action for these events.
-       *
-       * The default is to perform all events if no event filter is specified.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-eventfilter)
-       */
-      override fun eventFilter(): List<String> = unwrap(this).getEventFilter() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CompromisedCredentialsRiskConfigurationTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty):
-          CompromisedCredentialsRiskConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject)
-          as? CompromisedCredentialsRiskConfigurationTypeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CompromisedCredentialsRiskConfigurationTypeProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty
     }
   }
 }

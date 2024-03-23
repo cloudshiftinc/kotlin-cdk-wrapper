@@ -618,6 +618,118 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
   }
 
   /**
+   * Describes the options for an AWS Verified Access device-identity based trust provider.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * DeviceOptionsProperty deviceOptionsProperty = DeviceOptionsProperty.builder()
+   * .publicSigningKeyUrl("publicSigningKeyUrl")
+   * .tenantId("tenantId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html)
+   */
+  public interface DeviceOptionsProperty {
+    /**
+     * The URL AWS Verified Access will use to verify the authenticity of the device tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html#cfn-ec2-verifiedaccesstrustprovider-deviceoptions-publicsigningkeyurl)
+     */
+    public fun publicSigningKeyUrl(): String? = unwrap(this).getPublicSigningKeyUrl()
+
+    /**
+     * The ID of the tenant application with the device-identity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html#cfn-ec2-verifiedaccesstrustprovider-deviceoptions-tenantid)
+     */
+    public fun tenantId(): String? = unwrap(this).getTenantId()
+
+    /**
+     * A builder for [DeviceOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param publicSigningKeyUrl The URL AWS Verified Access will use to verify the authenticity
+       * of the device tokens.
+       */
+      public fun publicSigningKeyUrl(publicSigningKeyUrl: String)
+
+      /**
+       * @param tenantId The ID of the tenant application with the device-identity provider.
+       */
+      public fun tenantId(tenantId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.builder()
+
+      /**
+       * @param publicSigningKeyUrl The URL AWS Verified Access will use to verify the authenticity
+       * of the device tokens.
+       */
+      override fun publicSigningKeyUrl(publicSigningKeyUrl: String) {
+        cdkBuilder.publicSigningKeyUrl(publicSigningKeyUrl)
+      }
+
+      /**
+       * @param tenantId The ID of the tenant application with the device-identity provider.
+       */
+      override fun tenantId(tenantId: String) {
+        cdkBuilder.tenantId(tenantId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty,
+    ) : CdkObject(cdkObject), DeviceOptionsProperty {
+      /**
+       * The URL AWS Verified Access will use to verify the authenticity of the device tokens.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html#cfn-ec2-verifiedaccesstrustprovider-deviceoptions-publicsigningkeyurl)
+       */
+      override fun publicSigningKeyUrl(): String? = unwrap(this).getPublicSigningKeyUrl()
+
+      /**
+       * The ID of the tenant application with the device-identity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html#cfn-ec2-verifiedaccesstrustprovider-deviceoptions-tenantid)
+       */
+      override fun tenantId(): String? = unwrap(this).getTenantId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty):
+          DeviceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeviceOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty
+    }
+  }
+
+  /**
    * Describes the options for an OpenID Connect-compatible user-identity trust provider.
    *
    * Example:
@@ -859,118 +971,6 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty
-    }
-  }
-
-  /**
-   * Describes the options for an AWS Verified Access device-identity based trust provider.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * DeviceOptionsProperty deviceOptionsProperty = DeviceOptionsProperty.builder()
-   * .publicSigningKeyUrl("publicSigningKeyUrl")
-   * .tenantId("tenantId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html)
-   */
-  public interface DeviceOptionsProperty {
-    /**
-     * The URL AWS Verified Access will use to verify the authenticity of the device tokens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html#cfn-ec2-verifiedaccesstrustprovider-deviceoptions-publicsigningkeyurl)
-     */
-    public fun publicSigningKeyUrl(): String? = unwrap(this).getPublicSigningKeyUrl()
-
-    /**
-     * The ID of the tenant application with the device-identity provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html#cfn-ec2-verifiedaccesstrustprovider-deviceoptions-tenantid)
-     */
-    public fun tenantId(): String? = unwrap(this).getTenantId()
-
-    /**
-     * A builder for [DeviceOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param publicSigningKeyUrl The URL AWS Verified Access will use to verify the authenticity
-       * of the device tokens.
-       */
-      public fun publicSigningKeyUrl(publicSigningKeyUrl: String)
-
-      /**
-       * @param tenantId The ID of the tenant application with the device-identity provider.
-       */
-      public fun tenantId(tenantId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.builder()
-
-      /**
-       * @param publicSigningKeyUrl The URL AWS Verified Access will use to verify the authenticity
-       * of the device tokens.
-       */
-      override fun publicSigningKeyUrl(publicSigningKeyUrl: String) {
-        cdkBuilder.publicSigningKeyUrl(publicSigningKeyUrl)
-      }
-
-      /**
-       * @param tenantId The ID of the tenant application with the device-identity provider.
-       */
-      override fun tenantId(tenantId: String) {
-        cdkBuilder.tenantId(tenantId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty,
-    ) : CdkObject(cdkObject), DeviceOptionsProperty {
-      /**
-       * The URL AWS Verified Access will use to verify the authenticity of the device tokens.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html#cfn-ec2-verifiedaccesstrustprovider-deviceoptions-publicsigningkeyurl)
-       */
-      override fun publicSigningKeyUrl(): String? = unwrap(this).getPublicSigningKeyUrl()
-
-      /**
-       * The ID of the tenant application with the device-identity provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-deviceoptions.html#cfn-ec2-verifiedaccesstrustprovider-deviceoptions-tenantid)
-       */
-      override fun tenantId(): String? = unwrap(this).getTenantId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty):
-          DeviceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeviceOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty
     }
   }
 

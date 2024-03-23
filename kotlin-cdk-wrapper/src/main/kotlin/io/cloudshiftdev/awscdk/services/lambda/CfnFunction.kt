@@ -2065,1483 +2065,6 @@ public open class CfnFunction internal constructor(
   }
 
   /**
-   * The function's [AWS X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html)
-   * tracing configuration. To sample and record incoming requests, set `Mode` to `Active` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * TracingConfigProperty tracingConfigProperty = TracingConfigProperty.builder()
-   * .mode("mode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html)
-   */
-  public interface TracingConfigProperty {
-    /**
-     * The tracing mode.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode)
-     */
-    public fun mode(): String? = unwrap(this).getMode()
-
-    /**
-     * A builder for [TracingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mode The tracing mode.
-       */
-      public fun mode(mode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty.builder()
-
-      /**
-       * @param mode The tracing mode.
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty,
-    ) : CdkObject(cdkObject), TracingConfigProperty {
-      /**
-       * The tracing mode.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode)
-       */
-      override fun mode(): String? = unwrap(this).getMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TracingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty):
-          TracingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TracingConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TracingConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty
-    }
-  }
-
-  /**
-   * The VPC security groups and subnets that are attached to a Lambda function.
-   *
-   * When you connect a function to a VPC, Lambda creates an elastic network interface for each
-   * combination of security group and subnet in the function's VPC configuration. The function can
-   * only access resources and the internet through that VPC. For more information, see [VPC
-   * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
-   *
-   *
-   * When you delete a function, AWS CloudFormation monitors the state of its network interfaces and
-   * waits for Lambda to delete them before proceeding. If the VPC is defined in the same stack, the
-   * network interfaces need to be deleted by Lambda before AWS CloudFormation can delete the VPC's
-   * resources.
-   *
-   * To monitor network interfaces, AWS CloudFormation needs the `ec2:DescribeNetworkInterfaces`
-   * permission. It obtains this from the user or role that modifies the stack. If you don't provide
-   * this permission, AWS CloudFormation does not wait for network interfaces to be deleted.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
-   * .ipv6AllowedForDualStack(false)
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnetIds(List.of("subnetIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
-   */
-  public interface VpcConfigProperty {
-    /**
-     * Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-ipv6allowedfordualstack)
-     */
-    public fun ipv6AllowedForDualStack(): Any? = unwrap(this).getIpv6AllowedForDualStack()
-
-    /**
-     * A list of VPC security group IDs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-securitygroupids)
-     */
-    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
-
-    /**
-     * A list of VPC subnet IDs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-subnetids)
-     */
-    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
-
-    /**
-     * A builder for [VpcConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
-       * connected to dual-stack subnets.
-       */
-      public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean)
-
-      /**
-       * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
-       * connected to dual-stack subnets.
-       */
-      public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: IResolvable)
-
-      /**
-       * @param securityGroupIds A list of VPC security group IDs.
-       */
-      public fun securityGroupIds(securityGroupIds: List<String>)
-
-      /**
-       * @param securityGroupIds A list of VPC security group IDs.
-       */
-      public fun securityGroupIds(vararg securityGroupIds: String)
-
-      /**
-       * @param subnetIds A list of VPC subnet IDs.
-       */
-      public fun subnetIds(subnetIds: List<String>)
-
-      /**
-       * @param subnetIds A list of VPC subnet IDs.
-       */
-      public fun subnetIds(vararg subnetIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty.builder()
-
-      /**
-       * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
-       * connected to dual-stack subnets.
-       */
-      override fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean) {
-        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack)
-      }
-
-      /**
-       * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
-       * connected to dual-stack subnets.
-       */
-      override fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: IResolvable) {
-        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param securityGroupIds A list of VPC security group IDs.
-       */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
-      }
-
-      /**
-       * @param securityGroupIds A list of VPC security group IDs.
-       */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnetIds A list of VPC subnet IDs.
-       */
-      override fun subnetIds(subnetIds: List<String>) {
-        cdkBuilder.subnetIds(subnetIds)
-      }
-
-      /**
-       * @param subnetIds A list of VPC subnet IDs.
-       */
-      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
-
-      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
-      /**
-       * Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-ipv6allowedfordualstack)
-       */
-      override fun ipv6AllowedForDualStack(): Any? = unwrap(this).getIpv6AllowedForDualStack()
-
-      /**
-       * A list of VPC security group IDs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-securitygroupids)
-       */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
-
-      /**
-       * A list of VPC subnet IDs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-subnetids)
-       */
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty
-    }
-  }
-
-  /**
-   * The function's [AWS Lambda
-   * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * SnapStartProperty snapStartProperty = SnapStartProperty.builder()
-   * .applyOn("applyOn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstart.html)
-   */
-  public interface SnapStartProperty {
-    /**
-     * Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized execution
-     * environment when you publish a function version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstart.html#cfn-lambda-function-snapstart-applyon)
-     */
-    public fun applyOn(): String
-
-    /**
-     * A builder for [SnapStartProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applyOn Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized
-       * execution environment when you publish a function version. 
-       */
-      public fun applyOn(applyOn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty.builder()
-
-      /**
-       * @param applyOn Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized
-       * execution environment when you publish a function version. 
-       */
-      override fun applyOn(applyOn: String) {
-        cdkBuilder.applyOn(applyOn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty,
-    ) : CdkObject(cdkObject), SnapStartProperty {
-      /**
-       * Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized execution
-       * environment when you publish a function version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstart.html#cfn-lambda-function-snapstart-applyon)
-       */
-      override fun applyOn(): String = unwrap(this).getApplyOn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SnapStartProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty):
-          SnapStartProperty = CdkObjectWrappers.wrap(cdkObject) as? SnapStartProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnapStartProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty
-    }
-  }
-
-  /**
-   * The size of the function's `/tmp` directory in MB.
-   *
-   * The default value is 512, but it can be any whole number between 512 and 10,240 MB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * EphemeralStorageProperty ephemeralStorageProperty = EphemeralStorageProperty.builder()
-   * .size(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-ephemeralstorage.html)
-   */
-  public interface EphemeralStorageProperty {
-    /**
-     * The size of the function's `/tmp` directory.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-ephemeralstorage.html#cfn-lambda-function-ephemeralstorage-size)
-     */
-    public fun size(): Number
-
-    /**
-     * A builder for [EphemeralStorageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param size The size of the function's `/tmp` directory. 
-       */
-      public fun size(size: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty.builder()
-
-      /**
-       * @param size The size of the function's `/tmp` directory. 
-       */
-      override fun size(size: Number) {
-        cdkBuilder.size(size)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty,
-    ) : CdkObject(cdkObject), EphemeralStorageProperty {
-      /**
-       * The size of the function's `/tmp` directory.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-ephemeralstorage.html#cfn-lambda-function-ephemeralstorage-size)
-       */
-      override fun size(): Number = unwrap(this).getSize()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EphemeralStorageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty):
-          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? EphemeralStorageProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EphemeralStorageProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty
-    }
-  }
-
-  /**
-   * Sets the runtime management configuration for a function's version.
-   *
-   * For more information, see [Runtime
-   * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * RuntimeManagementConfigProperty runtimeManagementConfigProperty =
-   * RuntimeManagementConfigProperty.builder()
-   * .updateRuntimeOn("updateRuntimeOn")
-   * // the properties below are optional
-   * .runtimeVersionArn("runtimeVersionArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html)
-   */
-  public interface RuntimeManagementConfigProperty {
-    /**
-     * The ARN of the runtime version you want the function to use.
-     *
-     *
-     * This is only required if you're using the *Manual* runtime update mode.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-runtimeversionarn)
-     */
-    public fun runtimeVersionArn(): String? = unwrap(this).getRuntimeVersionArn()
-
-    /**
-     * Specify the runtime update mode.
-     *
-     * * *Auto (default)* - Automatically update to the most recent and secure runtime version using
-     * a [Two-phase runtime version
-     * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
-     * . This is the best choice for most customers to ensure they always benefit from runtime updates.
-     * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and secure
-     * runtime version when you update your function. This approach synchronizes runtime updates with
-     * function deployments, giving you control over when runtime updates are applied and allowing you
-     * to detect and mitigate rare runtime update incompatibilities early. When using this setting, you
-     * need to regularly update your functions to keep their runtime up-to-date.
-     * * *Manual* - You specify a runtime version in your function configuration. The function will
-     * use this runtime version indefinitely. In the rare case where a new runtime version is
-     * incompatible with an existing function, this allows you to roll back your function to an earlier
-     * runtime version. For more information, see [Roll back a runtime
-     * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
-     * .
-     *
-     * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-updateruntimeon)
-     */
-    public fun updateRuntimeOn(): String
-
-    /**
-     * A builder for [RuntimeManagementConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param runtimeVersionArn The ARN of the runtime version you want the function to use.
-       *
-       * This is only required if you're using the *Manual* runtime update mode.
-       */
-      public fun runtimeVersionArn(runtimeVersionArn: String)
-
-      /**
-       * @param updateRuntimeOn Specify the runtime update mode. 
-       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
-       * using a [Two-phase runtime version
-       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
-       * . This is the best choice for most customers to ensure they always benefit from runtime
-       * updates.
-       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
-       * secure runtime version when you update your function. This approach synchronizes runtime
-       * updates with function deployments, giving you control over when runtime updates are applied
-       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
-       * using this setting, you need to regularly update your functions to keep their runtime
-       * up-to-date.
-       * * *Manual* - You specify a runtime version in your function configuration. The function
-       * will use this runtime version indefinitely. In the rare case where a new runtime version is
-       * incompatible with an existing function, this allows you to roll back your function to an
-       * earlier runtime version. For more information, see [Roll back a runtime
-       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
-       * .
-       *
-       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
-       */
-      public fun updateRuntimeOn(updateRuntimeOn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty.builder()
-
-      /**
-       * @param runtimeVersionArn The ARN of the runtime version you want the function to use.
-       *
-       * This is only required if you're using the *Manual* runtime update mode.
-       */
-      override fun runtimeVersionArn(runtimeVersionArn: String) {
-        cdkBuilder.runtimeVersionArn(runtimeVersionArn)
-      }
-
-      /**
-       * @param updateRuntimeOn Specify the runtime update mode. 
-       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
-       * using a [Two-phase runtime version
-       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
-       * . This is the best choice for most customers to ensure they always benefit from runtime
-       * updates.
-       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
-       * secure runtime version when you update your function. This approach synchronizes runtime
-       * updates with function deployments, giving you control over when runtime updates are applied
-       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
-       * using this setting, you need to regularly update your functions to keep their runtime
-       * up-to-date.
-       * * *Manual* - You specify a runtime version in your function configuration. The function
-       * will use this runtime version indefinitely. In the rare case where a new runtime version is
-       * incompatible with an existing function, this allows you to roll back your function to an
-       * earlier runtime version. For more information, see [Roll back a runtime
-       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
-       * .
-       *
-       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
-       */
-      override fun updateRuntimeOn(updateRuntimeOn: String) {
-        cdkBuilder.updateRuntimeOn(updateRuntimeOn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty,
-    ) : CdkObject(cdkObject), RuntimeManagementConfigProperty {
-      /**
-       * The ARN of the runtime version you want the function to use.
-       *
-       *
-       * This is only required if you're using the *Manual* runtime update mode.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-runtimeversionarn)
-       */
-      override fun runtimeVersionArn(): String? = unwrap(this).getRuntimeVersionArn()
-
-      /**
-       * Specify the runtime update mode.
-       *
-       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
-       * using a [Two-phase runtime version
-       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
-       * . This is the best choice for most customers to ensure they always benefit from runtime
-       * updates.
-       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
-       * secure runtime version when you update your function. This approach synchronizes runtime
-       * updates with function deployments, giving you control over when runtime updates are applied
-       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
-       * using this setting, you need to regularly update your functions to keep their runtime
-       * up-to-date.
-       * * *Manual* - You specify a runtime version in your function configuration. The function
-       * will use this runtime version indefinitely. In the rare case where a new runtime version is
-       * incompatible with an existing function, this allows you to roll back your function to an
-       * earlier runtime version. For more information, see [Roll back a runtime
-       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
-       * .
-       *
-       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-updateruntimeon)
-       */
-      override fun updateRuntimeOn(): String = unwrap(this).getUpdateRuntimeOn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuntimeManagementConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty):
-          RuntimeManagementConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RuntimeManagementConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RuntimeManagementConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty
-    }
-  }
-
-  /**
-   * The function's Amazon CloudWatch Logs configuration settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * LoggingConfigProperty loggingConfigProperty = LoggingConfigProperty.builder()
-   * .applicationLogLevel("applicationLogLevel")
-   * .logFormat("logFormat")
-   * .logGroup("logGroup")
-   * .systemLogLevel("systemLogLevel")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html)
-   */
-  public interface LoggingConfigProperty {
-    /**
-     * Set this property to filter the application logs for your function that Lambda sends to
-     * CloudWatch.
-     *
-     * Lambda only sends application logs at the selected level of detail and lower, where `TRACE`
-     * is the highest level and `FATAL` is the lowest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-applicationloglevel)
-     */
-    public fun applicationLogLevel(): String? = unwrap(this).getApplicationLogLevel()
-
-    /**
-     * The format in which Lambda sends your function's application and system logs to CloudWatch.
-     *
-     * Select between plain text and structured JSON.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-logformat)
-     */
-    public fun logFormat(): String? = unwrap(this).getLogFormat()
-
-    /**
-     * The name of the Amazon CloudWatch log group the function sends logs to.
-     *
-     * By default, Lambda functions send logs to a default log group named `/aws/lambda/&lt;function
-     * name&gt;` . To use a different log group, enter an existing log group or enter a new log group
-     * name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-loggroup)
-     */
-    public fun logGroup(): String? = unwrap(this).getLogGroup()
-
-    /**
-     * Set this property to filter the system logs for your function that Lambda sends to
-     * CloudWatch.
-     *
-     * Lambda only sends system logs at the selected level of detail and lower, where `DEBUG` is the
-     * highest level and `WARN` is the lowest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-systemloglevel)
-     */
-    public fun systemLogLevel(): String? = unwrap(this).getSystemLogLevel()
-
-    /**
-     * A builder for [LoggingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applicationLogLevel Set this property to filter the application logs for your
-       * function that Lambda sends to CloudWatch.
-       * Lambda only sends application logs at the selected level of detail and lower, where `TRACE`
-       * is the highest level and `FATAL` is the lowest.
-       */
-      public fun applicationLogLevel(applicationLogLevel: String)
-
-      /**
-       * @param logFormat The format in which Lambda sends your function's application and system
-       * logs to CloudWatch.
-       * Select between plain text and structured JSON.
-       */
-      public fun logFormat(logFormat: String)
-
-      /**
-       * @param logGroup The name of the Amazon CloudWatch log group the function sends logs to.
-       * By default, Lambda functions send logs to a default log group named
-       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
-       * group or enter a new log group name.
-       */
-      public fun logGroup(logGroup: String)
-
-      /**
-       * @param systemLogLevel Set this property to filter the system logs for your function that
-       * Lambda sends to CloudWatch.
-       * Lambda only sends system logs at the selected level of detail and lower, where `DEBUG` is
-       * the highest level and `WARN` is the lowest.
-       */
-      public fun systemLogLevel(systemLogLevel: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty.builder()
-
-      /**
-       * @param applicationLogLevel Set this property to filter the application logs for your
-       * function that Lambda sends to CloudWatch.
-       * Lambda only sends application logs at the selected level of detail and lower, where `TRACE`
-       * is the highest level and `FATAL` is the lowest.
-       */
-      override fun applicationLogLevel(applicationLogLevel: String) {
-        cdkBuilder.applicationLogLevel(applicationLogLevel)
-      }
-
-      /**
-       * @param logFormat The format in which Lambda sends your function's application and system
-       * logs to CloudWatch.
-       * Select between plain text and structured JSON.
-       */
-      override fun logFormat(logFormat: String) {
-        cdkBuilder.logFormat(logFormat)
-      }
-
-      /**
-       * @param logGroup The name of the Amazon CloudWatch log group the function sends logs to.
-       * By default, Lambda functions send logs to a default log group named
-       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
-       * group or enter a new log group name.
-       */
-      override fun logGroup(logGroup: String) {
-        cdkBuilder.logGroup(logGroup)
-      }
-
-      /**
-       * @param systemLogLevel Set this property to filter the system logs for your function that
-       * Lambda sends to CloudWatch.
-       * Lambda only sends system logs at the selected level of detail and lower, where `DEBUG` is
-       * the highest level and `WARN` is the lowest.
-       */
-      override fun systemLogLevel(systemLogLevel: String) {
-        cdkBuilder.systemLogLevel(systemLogLevel)
-      }
-
-      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty,
-    ) : CdkObject(cdkObject), LoggingConfigProperty {
-      /**
-       * Set this property to filter the application logs for your function that Lambda sends to
-       * CloudWatch.
-       *
-       * Lambda only sends application logs at the selected level of detail and lower, where `TRACE`
-       * is the highest level and `FATAL` is the lowest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-applicationloglevel)
-       */
-      override fun applicationLogLevel(): String? = unwrap(this).getApplicationLogLevel()
-
-      /**
-       * The format in which Lambda sends your function's application and system logs to CloudWatch.
-       *
-       * Select between plain text and structured JSON.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-logformat)
-       */
-      override fun logFormat(): String? = unwrap(this).getLogFormat()
-
-      /**
-       * The name of the Amazon CloudWatch log group the function sends logs to.
-       *
-       * By default, Lambda functions send logs to a default log group named
-       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
-       * group or enter a new log group name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-loggroup)
-       */
-      override fun logGroup(): String? = unwrap(this).getLogGroup()
-
-      /**
-       * Set this property to filter the system logs for your function that Lambda sends to
-       * CloudWatch.
-       *
-       * Lambda only sends system logs at the selected level of detail and lower, where `DEBUG` is
-       * the highest level and `WARN` is the lowest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-systemloglevel)
-       */
-      override fun systemLogLevel(): String? = unwrap(this).getSystemLogLevel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty):
-          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggingConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty
-    }
-  }
-
-  /**
-   * The [dead-letter queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq)
-   * for failed asynchronous invocations.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * DeadLetterConfigProperty deadLetterConfigProperty = DeadLetterConfigProperty.builder()
-   * .targetArn("targetArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html)
-   */
-  public interface DeadLetterConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn)
-     */
-    public fun targetArn(): String? = unwrap(this).getTargetArn()
-
-    /**
-     * A builder for [DeadLetterConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetArn The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
-       */
-      public fun targetArn(targetArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty.builder()
-
-      /**
-       * @param targetArn The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
-       */
-      override fun targetArn(targetArn: String) {
-        cdkBuilder.targetArn(targetArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty,
-    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn)
-       */
-      override fun targetArn(): String? = unwrap(this).getTargetArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeadLetterConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty):
-          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeadLetterConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty
-    }
-  }
-
-  /**
-   * Configuration values that override the container image Dockerfile settings.
-   *
-   * For more information, see [Container image
-   * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * ImageConfigProperty imageConfigProperty = ImageConfigProperty.builder()
-   * .command(List.of("command"))
-   * .entryPoint(List.of("entryPoint"))
-   * .workingDirectory("workingDirectory")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html)
-   */
-  public interface ImageConfigProperty {
-    /**
-     * Specifies parameters that you want to pass in with ENTRYPOINT.
-     *
-     * You can specify a maximum of 1,500 parameters in the list.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-command)
-     */
-    public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
-
-    /**
-     * Specifies the entry point to their application, which is typically the location of the
-     * runtime executable.
-     *
-     * You can specify a maximum of 1,500 string entries in the list.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-entrypoint)
-     */
-    public fun entryPoint(): List<String> = unwrap(this).getEntryPoint() ?: emptyList()
-
-    /**
-     * Specifies the working directory.
-     *
-     * The length of the directory string cannot exceed 1,000 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-workingdirectory)
-     */
-    public fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
-
-    /**
-     * A builder for [ImageConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param command Specifies parameters that you want to pass in with ENTRYPOINT.
-       * You can specify a maximum of 1,500 parameters in the list.
-       */
-      public fun command(command: List<String>)
-
-      /**
-       * @param command Specifies parameters that you want to pass in with ENTRYPOINT.
-       * You can specify a maximum of 1,500 parameters in the list.
-       */
-      public fun command(vararg command: String)
-
-      /**
-       * @param entryPoint Specifies the entry point to their application, which is typically the
-       * location of the runtime executable.
-       * You can specify a maximum of 1,500 string entries in the list.
-       */
-      public fun entryPoint(entryPoint: List<String>)
-
-      /**
-       * @param entryPoint Specifies the entry point to their application, which is typically the
-       * location of the runtime executable.
-       * You can specify a maximum of 1,500 string entries in the list.
-       */
-      public fun entryPoint(vararg entryPoint: String)
-
-      /**
-       * @param workingDirectory Specifies the working directory.
-       * The length of the directory string cannot exceed 1,000 characters.
-       */
-      public fun workingDirectory(workingDirectory: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty.builder()
-
-      /**
-       * @param command Specifies parameters that you want to pass in with ENTRYPOINT.
-       * You can specify a maximum of 1,500 parameters in the list.
-       */
-      override fun command(command: List<String>) {
-        cdkBuilder.command(command)
-      }
-
-      /**
-       * @param command Specifies parameters that you want to pass in with ENTRYPOINT.
-       * You can specify a maximum of 1,500 parameters in the list.
-       */
-      override fun command(vararg command: String): Unit = command(command.toList())
-
-      /**
-       * @param entryPoint Specifies the entry point to their application, which is typically the
-       * location of the runtime executable.
-       * You can specify a maximum of 1,500 string entries in the list.
-       */
-      override fun entryPoint(entryPoint: List<String>) {
-        cdkBuilder.entryPoint(entryPoint)
-      }
-
-      /**
-       * @param entryPoint Specifies the entry point to their application, which is typically the
-       * location of the runtime executable.
-       * You can specify a maximum of 1,500 string entries in the list.
-       */
-      override fun entryPoint(vararg entryPoint: String): Unit = entryPoint(entryPoint.toList())
-
-      /**
-       * @param workingDirectory Specifies the working directory.
-       * The length of the directory string cannot exceed 1,000 characters.
-       */
-      override fun workingDirectory(workingDirectory: String) {
-        cdkBuilder.workingDirectory(workingDirectory)
-      }
-
-      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty,
-    ) : CdkObject(cdkObject), ImageConfigProperty {
-      /**
-       * Specifies parameters that you want to pass in with ENTRYPOINT.
-       *
-       * You can specify a maximum of 1,500 parameters in the list.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-command)
-       */
-      override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
-
-      /**
-       * Specifies the entry point to their application, which is typically the location of the
-       * runtime executable.
-       *
-       * You can specify a maximum of 1,500 string entries in the list.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-entrypoint)
-       */
-      override fun entryPoint(): List<String> = unwrap(this).getEntryPoint() ?: emptyList()
-
-      /**
-       * Specifies the working directory.
-       *
-       * The length of the directory string cannot exceed 1,000 characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-workingdirectory)
-       */
-      override fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ImageConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty):
-          ImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ImageConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ImageConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty
-    }
-  }
-
-  /**
-   * A function's environment variable settings.
-   *
-   * You can use environment variables to adjust your function's behavior without updating code. An
-   * environment variable is a pair of strings that are stored in a function's version-specific
-   * configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * EnvironmentProperty environmentProperty = EnvironmentProperty.builder()
-   * .variables(Map.of(
-   * "variablesKey", "variables"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html)
-   */
-  public interface EnvironmentProperty {
-    /**
-     * Environment variable key-value pairs.
-     *
-     * For more information, see [Using Lambda environment
-     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
-     */
-    public fun variables(): Any? = unwrap(this).getVariables()
-
-    /**
-     * A builder for [EnvironmentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param variables Environment variable key-value pairs.
-       * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
-       */
-      public fun variables(variables: IResolvable)
-
-      /**
-       * @param variables Environment variable key-value pairs.
-       * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
-       */
-      public fun variables(variables: Map<String, String>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty.builder()
-
-      /**
-       * @param variables Environment variable key-value pairs.
-       * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
-       */
-      override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param variables Environment variable key-value pairs.
-       * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
-       */
-      override fun variables(variables: Map<String, String>) {
-        cdkBuilder.variables(variables)
-      }
-
-      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty,
-    ) : CdkObject(cdkObject), EnvironmentProperty {
-      /**
-       * Environment variable key-value pairs.
-       *
-       * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
-       */
-      override fun variables(): Any? = unwrap(this).getVariables()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty):
-          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnvironmentProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty
-    }
-  }
-
-  /**
-   * Details about the connection between a Lambda function and an [Amazon EFS file
-   * system](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * FileSystemConfigProperty fileSystemConfigProperty = FileSystemConfigProperty.builder()
-   * .arn("arn")
-   * .localMountPath("localMountPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html)
-   */
-  public interface FileSystemConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the
-     * file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-arn)
-     */
-    public fun arn(): String
-
-    /**
-     * The path where the function can access the file system, starting with `/mnt/` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-localmountpath)
-     */
-    public fun localMountPath(): String
-
-    /**
-     * A builder for [FileSystemConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the Amazon EFS access point that provides
-       * access to the file system. 
-       */
-      public fun arn(arn: String)
-
-      /**
-       * @param localMountPath The path where the function can access the file system, starting with
-       * `/mnt/` . 
-       */
-      public fun localMountPath(localMountPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty.builder()
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the Amazon EFS access point that provides
-       * access to the file system. 
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      /**
-       * @param localMountPath The path where the function can access the file system, starting with
-       * `/mnt/` . 
-       */
-      override fun localMountPath(localMountPath: String) {
-        cdkBuilder.localMountPath(localMountPath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty,
-    ) : CdkObject(cdkObject), FileSystemConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the
-       * file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-arn)
-       */
-      override fun arn(): String = unwrap(this).getArn()
-
-      /**
-       * The path where the function can access the file system, starting with `/mnt/` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-localmountpath)
-       */
-      override fun localMountPath(): String = unwrap(this).getLocalMountPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FileSystemConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty):
-          FileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FileSystemConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FileSystemConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty
-    }
-  }
-
-  /**
-   * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
-   * setting.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * SnapStartResponseProperty snapStartResponseProperty = SnapStartResponseProperty.builder()
-   * .applyOn("applyOn")
-   * .optimizationStatus("optimizationStatus")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html)
-   */
-  public interface SnapStartResponseProperty {
-    /**
-     * When set to `PublishedVersions` , Lambda creates a snapshot of the execution environment when
-     * you publish a function version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-applyon)
-     */
-    public fun applyOn(): String? = unwrap(this).getApplyOn()
-
-    /**
-     * When you provide a [qualified Amazon Resource Name
-     * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
-     * , this response element indicates whether SnapStart is activated for the specified function
-     * version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-optimizationstatus)
-     */
-    public fun optimizationStatus(): String? = unwrap(this).getOptimizationStatus()
-
-    /**
-     * A builder for [SnapStartResponseProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applyOn When set to `PublishedVersions` , Lambda creates a snapshot of the execution
-       * environment when you publish a function version.
-       */
-      public fun applyOn(applyOn: String)
-
-      /**
-       * @param optimizationStatus When you provide a [qualified Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
-       * , this response element indicates whether SnapStart is activated for the specified function
-       * version.
-       */
-      public fun optimizationStatus(optimizationStatus: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty.builder()
-
-      /**
-       * @param applyOn When set to `PublishedVersions` , Lambda creates a snapshot of the execution
-       * environment when you publish a function version.
-       */
-      override fun applyOn(applyOn: String) {
-        cdkBuilder.applyOn(applyOn)
-      }
-
-      /**
-       * @param optimizationStatus When you provide a [qualified Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
-       * , this response element indicates whether SnapStart is activated for the specified function
-       * version.
-       */
-      override fun optimizationStatus(optimizationStatus: String) {
-        cdkBuilder.optimizationStatus(optimizationStatus)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty,
-    ) : CdkObject(cdkObject), SnapStartResponseProperty {
-      /**
-       * When set to `PublishedVersions` , Lambda creates a snapshot of the execution environment
-       * when you publish a function version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-applyon)
-       */
-      override fun applyOn(): String? = unwrap(this).getApplyOn()
-
-      /**
-       * When you provide a [qualified Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
-       * , this response element indicates whether SnapStart is activated for the specified function
-       * version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-optimizationstatus)
-       */
-      override fun optimizationStatus(): String? = unwrap(this).getOptimizationStatus()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SnapStartResponseProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty):
-          SnapStartResponseProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SnapStartResponseProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnapStartResponseProperty):
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty
-    }
-  }
-
-  /**
    * The [deployment
    * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
    * function. To deploy a function defined as a container image, you specify the location of a
@@ -3808,6 +2331,1483 @@ public open class CfnFunction internal constructor(
       internal fun unwrap(wrapped: CodeProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.CodeProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.lambda.CfnFunction.CodeProperty
+    }
+  }
+
+  /**
+   * The [dead-letter queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq)
+   * for failed asynchronous invocations.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * DeadLetterConfigProperty deadLetterConfigProperty = DeadLetterConfigProperty.builder()
+   * .targetArn("targetArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html)
+   */
+  public interface DeadLetterConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn)
+     */
+    public fun targetArn(): String? = unwrap(this).getTargetArn()
+
+    /**
+     * A builder for [DeadLetterConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetArn The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+       */
+      public fun targetArn(targetArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty.builder()
+
+      /**
+       * @param targetArn The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+       */
+      override fun targetArn(targetArn: String) {
+        cdkBuilder.targetArn(targetArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty,
+    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn)
+       */
+      override fun targetArn(): String? = unwrap(this).getTargetArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeadLetterConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty):
+          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeadLetterConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty
+    }
+  }
+
+  /**
+   * A function's environment variable settings.
+   *
+   * You can use environment variables to adjust your function's behavior without updating code. An
+   * environment variable is a pair of strings that are stored in a function's version-specific
+   * configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * EnvironmentProperty environmentProperty = EnvironmentProperty.builder()
+   * .variables(Map.of(
+   * "variablesKey", "variables"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html)
+   */
+  public interface EnvironmentProperty {
+    /**
+     * Environment variable key-value pairs.
+     *
+     * For more information, see [Using Lambda environment
+     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
+     */
+    public fun variables(): Any? = unwrap(this).getVariables()
+
+    /**
+     * A builder for [EnvironmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param variables Environment variable key-value pairs.
+       * For more information, see [Using Lambda environment
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       */
+      public fun variables(variables: IResolvable)
+
+      /**
+       * @param variables Environment variable key-value pairs.
+       * For more information, see [Using Lambda environment
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       */
+      public fun variables(variables: Map<String, String>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty.builder()
+
+      /**
+       * @param variables Environment variable key-value pairs.
+       * For more information, see [Using Lambda environment
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       */
+      override fun variables(variables: IResolvable) {
+        cdkBuilder.variables(variables.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param variables Environment variable key-value pairs.
+       * For more information, see [Using Lambda environment
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       */
+      override fun variables(variables: Map<String, String>) {
+        cdkBuilder.variables(variables)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty,
+    ) : CdkObject(cdkObject), EnvironmentProperty {
+      /**
+       * Environment variable key-value pairs.
+       *
+       * For more information, see [Using Lambda environment
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
+       */
+      override fun variables(): Any? = unwrap(this).getVariables()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty):
+          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnvironmentProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty
+    }
+  }
+
+  /**
+   * The size of the function's `/tmp` directory in MB.
+   *
+   * The default value is 512, but it can be any whole number between 512 and 10,240 MB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * EphemeralStorageProperty ephemeralStorageProperty = EphemeralStorageProperty.builder()
+   * .size(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-ephemeralstorage.html)
+   */
+  public interface EphemeralStorageProperty {
+    /**
+     * The size of the function's `/tmp` directory.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-ephemeralstorage.html#cfn-lambda-function-ephemeralstorage-size)
+     */
+    public fun size(): Number
+
+    /**
+     * A builder for [EphemeralStorageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param size The size of the function's `/tmp` directory. 
+       */
+      public fun size(size: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty.builder()
+
+      /**
+       * @param size The size of the function's `/tmp` directory. 
+       */
+      override fun size(size: Number) {
+        cdkBuilder.size(size)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty,
+    ) : CdkObject(cdkObject), EphemeralStorageProperty {
+      /**
+       * The size of the function's `/tmp` directory.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-ephemeralstorage.html#cfn-lambda-function-ephemeralstorage-size)
+       */
+      override fun size(): Number = unwrap(this).getSize()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EphemeralStorageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty):
+          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? EphemeralStorageProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EphemeralStorageProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty
+    }
+  }
+
+  /**
+   * Details about the connection between a Lambda function and an [Amazon EFS file
+   * system](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * FileSystemConfigProperty fileSystemConfigProperty = FileSystemConfigProperty.builder()
+   * .arn("arn")
+   * .localMountPath("localMountPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html)
+   */
+  public interface FileSystemConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the
+     * file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-arn)
+     */
+    public fun arn(): String
+
+    /**
+     * The path where the function can access the file system, starting with `/mnt/` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-localmountpath)
+     */
+    public fun localMountPath(): String
+
+    /**
+     * A builder for [FileSystemConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the Amazon EFS access point that provides
+       * access to the file system. 
+       */
+      public fun arn(arn: String)
+
+      /**
+       * @param localMountPath The path where the function can access the file system, starting with
+       * `/mnt/` . 
+       */
+      public fun localMountPath(localMountPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty.builder()
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the Amazon EFS access point that provides
+       * access to the file system. 
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      /**
+       * @param localMountPath The path where the function can access the file system, starting with
+       * `/mnt/` . 
+       */
+      override fun localMountPath(localMountPath: String) {
+        cdkBuilder.localMountPath(localMountPath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty,
+    ) : CdkObject(cdkObject), FileSystemConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the
+       * file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-arn)
+       */
+      override fun arn(): String = unwrap(this).getArn()
+
+      /**
+       * The path where the function can access the file system, starting with `/mnt/` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-localmountpath)
+       */
+      override fun localMountPath(): String = unwrap(this).getLocalMountPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FileSystemConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty):
+          FileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FileSystemConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FileSystemConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty
+    }
+  }
+
+  /**
+   * Configuration values that override the container image Dockerfile settings.
+   *
+   * For more information, see [Container image
+   * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * ImageConfigProperty imageConfigProperty = ImageConfigProperty.builder()
+   * .command(List.of("command"))
+   * .entryPoint(List.of("entryPoint"))
+   * .workingDirectory("workingDirectory")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html)
+   */
+  public interface ImageConfigProperty {
+    /**
+     * Specifies parameters that you want to pass in with ENTRYPOINT.
+     *
+     * You can specify a maximum of 1,500 parameters in the list.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-command)
+     */
+    public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+
+    /**
+     * Specifies the entry point to their application, which is typically the location of the
+     * runtime executable.
+     *
+     * You can specify a maximum of 1,500 string entries in the list.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-entrypoint)
+     */
+    public fun entryPoint(): List<String> = unwrap(this).getEntryPoint() ?: emptyList()
+
+    /**
+     * Specifies the working directory.
+     *
+     * The length of the directory string cannot exceed 1,000 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-workingdirectory)
+     */
+    public fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
+
+    /**
+     * A builder for [ImageConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param command Specifies parameters that you want to pass in with ENTRYPOINT.
+       * You can specify a maximum of 1,500 parameters in the list.
+       */
+      public fun command(command: List<String>)
+
+      /**
+       * @param command Specifies parameters that you want to pass in with ENTRYPOINT.
+       * You can specify a maximum of 1,500 parameters in the list.
+       */
+      public fun command(vararg command: String)
+
+      /**
+       * @param entryPoint Specifies the entry point to their application, which is typically the
+       * location of the runtime executable.
+       * You can specify a maximum of 1,500 string entries in the list.
+       */
+      public fun entryPoint(entryPoint: List<String>)
+
+      /**
+       * @param entryPoint Specifies the entry point to their application, which is typically the
+       * location of the runtime executable.
+       * You can specify a maximum of 1,500 string entries in the list.
+       */
+      public fun entryPoint(vararg entryPoint: String)
+
+      /**
+       * @param workingDirectory Specifies the working directory.
+       * The length of the directory string cannot exceed 1,000 characters.
+       */
+      public fun workingDirectory(workingDirectory: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty.builder()
+
+      /**
+       * @param command Specifies parameters that you want to pass in with ENTRYPOINT.
+       * You can specify a maximum of 1,500 parameters in the list.
+       */
+      override fun command(command: List<String>) {
+        cdkBuilder.command(command)
+      }
+
+      /**
+       * @param command Specifies parameters that you want to pass in with ENTRYPOINT.
+       * You can specify a maximum of 1,500 parameters in the list.
+       */
+      override fun command(vararg command: String): Unit = command(command.toList())
+
+      /**
+       * @param entryPoint Specifies the entry point to their application, which is typically the
+       * location of the runtime executable.
+       * You can specify a maximum of 1,500 string entries in the list.
+       */
+      override fun entryPoint(entryPoint: List<String>) {
+        cdkBuilder.entryPoint(entryPoint)
+      }
+
+      /**
+       * @param entryPoint Specifies the entry point to their application, which is typically the
+       * location of the runtime executable.
+       * You can specify a maximum of 1,500 string entries in the list.
+       */
+      override fun entryPoint(vararg entryPoint: String): Unit = entryPoint(entryPoint.toList())
+
+      /**
+       * @param workingDirectory Specifies the working directory.
+       * The length of the directory string cannot exceed 1,000 characters.
+       */
+      override fun workingDirectory(workingDirectory: String) {
+        cdkBuilder.workingDirectory(workingDirectory)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty,
+    ) : CdkObject(cdkObject), ImageConfigProperty {
+      /**
+       * Specifies parameters that you want to pass in with ENTRYPOINT.
+       *
+       * You can specify a maximum of 1,500 parameters in the list.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-command)
+       */
+      override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+
+      /**
+       * Specifies the entry point to their application, which is typically the location of the
+       * runtime executable.
+       *
+       * You can specify a maximum of 1,500 string entries in the list.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-entrypoint)
+       */
+      override fun entryPoint(): List<String> = unwrap(this).getEntryPoint() ?: emptyList()
+
+      /**
+       * Specifies the working directory.
+       *
+       * The length of the directory string cannot exceed 1,000 characters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html#cfn-lambda-function-imageconfig-workingdirectory)
+       */
+      override fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ImageConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty):
+          ImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ImageConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ImageConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty
+    }
+  }
+
+  /**
+   * The function's Amazon CloudWatch Logs configuration settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * LoggingConfigProperty loggingConfigProperty = LoggingConfigProperty.builder()
+   * .applicationLogLevel("applicationLogLevel")
+   * .logFormat("logFormat")
+   * .logGroup("logGroup")
+   * .systemLogLevel("systemLogLevel")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html)
+   */
+  public interface LoggingConfigProperty {
+    /**
+     * Set this property to filter the application logs for your function that Lambda sends to
+     * CloudWatch.
+     *
+     * Lambda only sends application logs at the selected level of detail and lower, where `TRACE`
+     * is the highest level and `FATAL` is the lowest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-applicationloglevel)
+     */
+    public fun applicationLogLevel(): String? = unwrap(this).getApplicationLogLevel()
+
+    /**
+     * The format in which Lambda sends your function's application and system logs to CloudWatch.
+     *
+     * Select between plain text and structured JSON.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-logformat)
+     */
+    public fun logFormat(): String? = unwrap(this).getLogFormat()
+
+    /**
+     * The name of the Amazon CloudWatch log group the function sends logs to.
+     *
+     * By default, Lambda functions send logs to a default log group named `/aws/lambda/&lt;function
+     * name&gt;` . To use a different log group, enter an existing log group or enter a new log group
+     * name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-loggroup)
+     */
+    public fun logGroup(): String? = unwrap(this).getLogGroup()
+
+    /**
+     * Set this property to filter the system logs for your function that Lambda sends to
+     * CloudWatch.
+     *
+     * Lambda only sends system logs at the selected level of detail and lower, where `DEBUG` is the
+     * highest level and `WARN` is the lowest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-systemloglevel)
+     */
+    public fun systemLogLevel(): String? = unwrap(this).getSystemLogLevel()
+
+    /**
+     * A builder for [LoggingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applicationLogLevel Set this property to filter the application logs for your
+       * function that Lambda sends to CloudWatch.
+       * Lambda only sends application logs at the selected level of detail and lower, where `TRACE`
+       * is the highest level and `FATAL` is the lowest.
+       */
+      public fun applicationLogLevel(applicationLogLevel: String)
+
+      /**
+       * @param logFormat The format in which Lambda sends your function's application and system
+       * logs to CloudWatch.
+       * Select between plain text and structured JSON.
+       */
+      public fun logFormat(logFormat: String)
+
+      /**
+       * @param logGroup The name of the Amazon CloudWatch log group the function sends logs to.
+       * By default, Lambda functions send logs to a default log group named
+       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
+       * group or enter a new log group name.
+       */
+      public fun logGroup(logGroup: String)
+
+      /**
+       * @param systemLogLevel Set this property to filter the system logs for your function that
+       * Lambda sends to CloudWatch.
+       * Lambda only sends system logs at the selected level of detail and lower, where `DEBUG` is
+       * the highest level and `WARN` is the lowest.
+       */
+      public fun systemLogLevel(systemLogLevel: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty.builder()
+
+      /**
+       * @param applicationLogLevel Set this property to filter the application logs for your
+       * function that Lambda sends to CloudWatch.
+       * Lambda only sends application logs at the selected level of detail and lower, where `TRACE`
+       * is the highest level and `FATAL` is the lowest.
+       */
+      override fun applicationLogLevel(applicationLogLevel: String) {
+        cdkBuilder.applicationLogLevel(applicationLogLevel)
+      }
+
+      /**
+       * @param logFormat The format in which Lambda sends your function's application and system
+       * logs to CloudWatch.
+       * Select between plain text and structured JSON.
+       */
+      override fun logFormat(logFormat: String) {
+        cdkBuilder.logFormat(logFormat)
+      }
+
+      /**
+       * @param logGroup The name of the Amazon CloudWatch log group the function sends logs to.
+       * By default, Lambda functions send logs to a default log group named
+       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
+       * group or enter a new log group name.
+       */
+      override fun logGroup(logGroup: String) {
+        cdkBuilder.logGroup(logGroup)
+      }
+
+      /**
+       * @param systemLogLevel Set this property to filter the system logs for your function that
+       * Lambda sends to CloudWatch.
+       * Lambda only sends system logs at the selected level of detail and lower, where `DEBUG` is
+       * the highest level and `WARN` is the lowest.
+       */
+      override fun systemLogLevel(systemLogLevel: String) {
+        cdkBuilder.systemLogLevel(systemLogLevel)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty,
+    ) : CdkObject(cdkObject), LoggingConfigProperty {
+      /**
+       * Set this property to filter the application logs for your function that Lambda sends to
+       * CloudWatch.
+       *
+       * Lambda only sends application logs at the selected level of detail and lower, where `TRACE`
+       * is the highest level and `FATAL` is the lowest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-applicationloglevel)
+       */
+      override fun applicationLogLevel(): String? = unwrap(this).getApplicationLogLevel()
+
+      /**
+       * The format in which Lambda sends your function's application and system logs to CloudWatch.
+       *
+       * Select between plain text and structured JSON.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-logformat)
+       */
+      override fun logFormat(): String? = unwrap(this).getLogFormat()
+
+      /**
+       * The name of the Amazon CloudWatch log group the function sends logs to.
+       *
+       * By default, Lambda functions send logs to a default log group named
+       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
+       * group or enter a new log group name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-loggroup)
+       */
+      override fun logGroup(): String? = unwrap(this).getLogGroup()
+
+      /**
+       * Set this property to filter the system logs for your function that Lambda sends to
+       * CloudWatch.
+       *
+       * Lambda only sends system logs at the selected level of detail and lower, where `DEBUG` is
+       * the highest level and `WARN` is the lowest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-systemloglevel)
+       */
+      override fun systemLogLevel(): String? = unwrap(this).getSystemLogLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty):
+          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoggingConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty
+    }
+  }
+
+  /**
+   * Sets the runtime management configuration for a function's version.
+   *
+   * For more information, see [Runtime
+   * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * RuntimeManagementConfigProperty runtimeManagementConfigProperty =
+   * RuntimeManagementConfigProperty.builder()
+   * .updateRuntimeOn("updateRuntimeOn")
+   * // the properties below are optional
+   * .runtimeVersionArn("runtimeVersionArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html)
+   */
+  public interface RuntimeManagementConfigProperty {
+    /**
+     * The ARN of the runtime version you want the function to use.
+     *
+     *
+     * This is only required if you're using the *Manual* runtime update mode.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-runtimeversionarn)
+     */
+    public fun runtimeVersionArn(): String? = unwrap(this).getRuntimeVersionArn()
+
+    /**
+     * Specify the runtime update mode.
+     *
+     * * *Auto (default)* - Automatically update to the most recent and secure runtime version using
+     * a [Two-phase runtime version
+     * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
+     * . This is the best choice for most customers to ensure they always benefit from runtime updates.
+     * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and secure
+     * runtime version when you update your function. This approach synchronizes runtime updates with
+     * function deployments, giving you control over when runtime updates are applied and allowing you
+     * to detect and mitigate rare runtime update incompatibilities early. When using this setting, you
+     * need to regularly update your functions to keep their runtime up-to-date.
+     * * *Manual* - You specify a runtime version in your function configuration. The function will
+     * use this runtime version indefinitely. In the rare case where a new runtime version is
+     * incompatible with an existing function, this allows you to roll back your function to an earlier
+     * runtime version. For more information, see [Roll back a runtime
+     * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
+     * .
+     *
+     * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-updateruntimeon)
+     */
+    public fun updateRuntimeOn(): String
+
+    /**
+     * A builder for [RuntimeManagementConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param runtimeVersionArn The ARN of the runtime version you want the function to use.
+       *
+       * This is only required if you're using the *Manual* runtime update mode.
+       */
+      public fun runtimeVersionArn(runtimeVersionArn: String)
+
+      /**
+       * @param updateRuntimeOn Specify the runtime update mode. 
+       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
+       * using a [Two-phase runtime version
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
+       * . This is the best choice for most customers to ensure they always benefit from runtime
+       * updates.
+       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
+       * secure runtime version when you update your function. This approach synchronizes runtime
+       * updates with function deployments, giving you control over when runtime updates are applied
+       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
+       * using this setting, you need to regularly update your functions to keep their runtime
+       * up-to-date.
+       * * *Manual* - You specify a runtime version in your function configuration. The function
+       * will use this runtime version indefinitely. In the rare case where a new runtime version is
+       * incompatible with an existing function, this allows you to roll back your function to an
+       * earlier runtime version. For more information, see [Roll back a runtime
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
+       * .
+       *
+       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
+       */
+      public fun updateRuntimeOn(updateRuntimeOn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty.builder()
+
+      /**
+       * @param runtimeVersionArn The ARN of the runtime version you want the function to use.
+       *
+       * This is only required if you're using the *Manual* runtime update mode.
+       */
+      override fun runtimeVersionArn(runtimeVersionArn: String) {
+        cdkBuilder.runtimeVersionArn(runtimeVersionArn)
+      }
+
+      /**
+       * @param updateRuntimeOn Specify the runtime update mode. 
+       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
+       * using a [Two-phase runtime version
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
+       * . This is the best choice for most customers to ensure they always benefit from runtime
+       * updates.
+       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
+       * secure runtime version when you update your function. This approach synchronizes runtime
+       * updates with function deployments, giving you control over when runtime updates are applied
+       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
+       * using this setting, you need to regularly update your functions to keep their runtime
+       * up-to-date.
+       * * *Manual* - You specify a runtime version in your function configuration. The function
+       * will use this runtime version indefinitely. In the rare case where a new runtime version is
+       * incompatible with an existing function, this allows you to roll back your function to an
+       * earlier runtime version. For more information, see [Roll back a runtime
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
+       * .
+       *
+       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
+       */
+      override fun updateRuntimeOn(updateRuntimeOn: String) {
+        cdkBuilder.updateRuntimeOn(updateRuntimeOn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty,
+    ) : CdkObject(cdkObject), RuntimeManagementConfigProperty {
+      /**
+       * The ARN of the runtime version you want the function to use.
+       *
+       *
+       * This is only required if you're using the *Manual* runtime update mode.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-runtimeversionarn)
+       */
+      override fun runtimeVersionArn(): String? = unwrap(this).getRuntimeVersionArn()
+
+      /**
+       * Specify the runtime update mode.
+       *
+       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
+       * using a [Two-phase runtime version
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
+       * . This is the best choice for most customers to ensure they always benefit from runtime
+       * updates.
+       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
+       * secure runtime version when you update your function. This approach synchronizes runtime
+       * updates with function deployments, giving you control over when runtime updates are applied
+       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
+       * using this setting, you need to regularly update your functions to keep their runtime
+       * up-to-date.
+       * * *Manual* - You specify a runtime version in your function configuration. The function
+       * will use this runtime version indefinitely. In the rare case where a new runtime version is
+       * incompatible with an existing function, this allows you to roll back your function to an
+       * earlier runtime version. For more information, see [Roll back a runtime
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
+       * .
+       *
+       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-updateruntimeon)
+       */
+      override fun updateRuntimeOn(): String = unwrap(this).getUpdateRuntimeOn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuntimeManagementConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty):
+          RuntimeManagementConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RuntimeManagementConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuntimeManagementConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty
+    }
+  }
+
+  /**
+   * The function's [AWS Lambda
+   * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SnapStartProperty snapStartProperty = SnapStartProperty.builder()
+   * .applyOn("applyOn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstart.html)
+   */
+  public interface SnapStartProperty {
+    /**
+     * Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized execution
+     * environment when you publish a function version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstart.html#cfn-lambda-function-snapstart-applyon)
+     */
+    public fun applyOn(): String
+
+    /**
+     * A builder for [SnapStartProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applyOn Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized
+       * execution environment when you publish a function version. 
+       */
+      public fun applyOn(applyOn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty.builder()
+
+      /**
+       * @param applyOn Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized
+       * execution environment when you publish a function version. 
+       */
+      override fun applyOn(applyOn: String) {
+        cdkBuilder.applyOn(applyOn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty,
+    ) : CdkObject(cdkObject), SnapStartProperty {
+      /**
+       * Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized execution
+       * environment when you publish a function version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstart.html#cfn-lambda-function-snapstart-applyon)
+       */
+      override fun applyOn(): String = unwrap(this).getApplyOn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnapStartProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty):
+          SnapStartProperty = CdkObjectWrappers.wrap(cdkObject) as? SnapStartProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnapStartProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty
+    }
+  }
+
+  /**
+   * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+   * setting.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SnapStartResponseProperty snapStartResponseProperty = SnapStartResponseProperty.builder()
+   * .applyOn("applyOn")
+   * .optimizationStatus("optimizationStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html)
+   */
+  public interface SnapStartResponseProperty {
+    /**
+     * When set to `PublishedVersions` , Lambda creates a snapshot of the execution environment when
+     * you publish a function version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-applyon)
+     */
+    public fun applyOn(): String? = unwrap(this).getApplyOn()
+
+    /**
+     * When you provide a [qualified Amazon Resource Name
+     * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
+     * , this response element indicates whether SnapStart is activated for the specified function
+     * version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-optimizationstatus)
+     */
+    public fun optimizationStatus(): String? = unwrap(this).getOptimizationStatus()
+
+    /**
+     * A builder for [SnapStartResponseProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applyOn When set to `PublishedVersions` , Lambda creates a snapshot of the execution
+       * environment when you publish a function version.
+       */
+      public fun applyOn(applyOn: String)
+
+      /**
+       * @param optimizationStatus When you provide a [qualified Amazon Resource Name
+       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
+       * , this response element indicates whether SnapStart is activated for the specified function
+       * version.
+       */
+      public fun optimizationStatus(optimizationStatus: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty.builder()
+
+      /**
+       * @param applyOn When set to `PublishedVersions` , Lambda creates a snapshot of the execution
+       * environment when you publish a function version.
+       */
+      override fun applyOn(applyOn: String) {
+        cdkBuilder.applyOn(applyOn)
+      }
+
+      /**
+       * @param optimizationStatus When you provide a [qualified Amazon Resource Name
+       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
+       * , this response element indicates whether SnapStart is activated for the specified function
+       * version.
+       */
+      override fun optimizationStatus(optimizationStatus: String) {
+        cdkBuilder.optimizationStatus(optimizationStatus)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty,
+    ) : CdkObject(cdkObject), SnapStartResponseProperty {
+      /**
+       * When set to `PublishedVersions` , Lambda creates a snapshot of the execution environment
+       * when you publish a function version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-applyon)
+       */
+      override fun applyOn(): String? = unwrap(this).getApplyOn()
+
+      /**
+       * When you provide a [qualified Amazon Resource Name
+       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
+       * , this response element indicates whether SnapStart is activated for the specified function
+       * version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-optimizationstatus)
+       */
+      override fun optimizationStatus(): String? = unwrap(this).getOptimizationStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnapStartResponseProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty):
+          SnapStartResponseProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnapStartResponseProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnapStartResponseProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty
+    }
+  }
+
+  /**
+   * The function's [AWS X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html)
+   * tracing configuration. To sample and record incoming requests, set `Mode` to `Active` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * TracingConfigProperty tracingConfigProperty = TracingConfigProperty.builder()
+   * .mode("mode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html)
+   */
+  public interface TracingConfigProperty {
+    /**
+     * The tracing mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode)
+     */
+    public fun mode(): String? = unwrap(this).getMode()
+
+    /**
+     * A builder for [TracingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mode The tracing mode.
+       */
+      public fun mode(mode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty.builder()
+
+      /**
+       * @param mode The tracing mode.
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty,
+    ) : CdkObject(cdkObject), TracingConfigProperty {
+      /**
+       * The tracing mode.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode)
+       */
+      override fun mode(): String? = unwrap(this).getMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TracingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty):
+          TracingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TracingConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TracingConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty
+    }
+  }
+
+  /**
+   * The VPC security groups and subnets that are attached to a Lambda function.
+   *
+   * When you connect a function to a VPC, Lambda creates an elastic network interface for each
+   * combination of security group and subnet in the function's VPC configuration. The function can
+   * only access resources and the internet through that VPC. For more information, see [VPC
+   * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
+   *
+   *
+   * When you delete a function, AWS CloudFormation monitors the state of its network interfaces and
+   * waits for Lambda to delete them before proceeding. If the VPC is defined in the same stack, the
+   * network interfaces need to be deleted by Lambda before AWS CloudFormation can delete the VPC's
+   * resources.
+   *
+   * To monitor network interfaces, AWS CloudFormation needs the `ec2:DescribeNetworkInterfaces`
+   * permission. It obtains this from the user or role that modifies the stack. If you don't provide
+   * this permission, AWS CloudFormation does not wait for network interfaces to be deleted.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+   * .ipv6AllowedForDualStack(false)
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnetIds(List.of("subnetIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html)
+   */
+  public interface VpcConfigProperty {
+    /**
+     * Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-ipv6allowedfordualstack)
+     */
+    public fun ipv6AllowedForDualStack(): Any? = unwrap(this).getIpv6AllowedForDualStack()
+
+    /**
+     * A list of VPC security group IDs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
+
+    /**
+     * A list of VPC subnet IDs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-subnetids)
+     */
+    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+
+    /**
+     * A builder for [VpcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
+       * connected to dual-stack subnets.
+       */
+      public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean)
+
+      /**
+       * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
+       * connected to dual-stack subnets.
+       */
+      public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: IResolvable)
+
+      /**
+       * @param securityGroupIds A list of VPC security group IDs.
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds A list of VPC security group IDs.
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnetIds A list of VPC subnet IDs.
+       */
+      public fun subnetIds(subnetIds: List<String>)
+
+      /**
+       * @param subnetIds A list of VPC subnet IDs.
+       */
+      public fun subnetIds(vararg subnetIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty.builder()
+
+      /**
+       * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
+       * connected to dual-stack subnets.
+       */
+      override fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean) {
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack)
+      }
+
+      /**
+       * @param ipv6AllowedForDualStack Allows outbound IPv6 traffic on VPC functions that are
+       * connected to dual-stack subnets.
+       */
+      override fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: IResolvable) {
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param securityGroupIds A list of VPC security group IDs.
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds A list of VPC security group IDs.
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnetIds A list of VPC subnet IDs.
+       */
+      override fun subnetIds(subnetIds: List<String>) {
+        cdkBuilder.subnetIds(subnetIds)
+      }
+
+      /**
+       * @param subnetIds A list of VPC subnet IDs.
+       */
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+      public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty,
+    ) : CdkObject(cdkObject), VpcConfigProperty {
+      /**
+       * Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-ipv6allowedfordualstack)
+       */
+      override fun ipv6AllowedForDualStack(): Any? = unwrap(this).getIpv6AllowedForDualStack()
+
+      /**
+       * A list of VPC security group IDs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+          emptyList()
+
+      /**
+       * A list of VPC subnet IDs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html#cfn-lambda-function-vpcconfig-subnetids)
+       */
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty):
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty
     }
   }
 }

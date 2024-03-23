@@ -672,6 +672,134 @@ public open class CfnStage internal constructor(
   }
 
   /**
+   * Settings for logging access in a stage.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+   * AccessLogSettingsProperty accessLogSettingsProperty = AccessLogSettingsProperty.builder()
+   * .destinationArn("destinationArn")
+   * .format("format")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html)
+   */
+  public interface AccessLogSettingsProperty {
+    /**
+     * The ARN of the CloudWatch Logs log group to receive access logs.
+     *
+     * This parameter is required to enable access logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html#cfn-apigatewayv2-stage-accesslogsettings-destinationarn)
+     */
+    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+    /**
+     * A single line format of the access logs of data, as specified by selected $context variables.
+     *
+     * The format must include at least $context.requestId. This parameter is required to enable
+     * access logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html#cfn-apigatewayv2-stage-accesslogsettings-format)
+     */
+    public fun format(): String? = unwrap(this).getFormat()
+
+    /**
+     * A builder for [AccessLogSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs.
+       * This parameter is required to enable access logging.
+       */
+      public fun destinationArn(destinationArn: String)
+
+      /**
+       * @param format A single line format of the access logs of data, as specified by selected
+       * $context variables.
+       * The format must include at least $context.requestId. This parameter is required to enable
+       * access logging.
+       */
+      public fun format(format: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty.Builder =
+          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty.builder()
+
+      /**
+       * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs.
+       * This parameter is required to enable access logging.
+       */
+      override fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+      }
+
+      /**
+       * @param format A single line format of the access logs of data, as specified by selected
+       * $context variables.
+       * The format must include at least $context.requestId. This parameter is required to enable
+       * access logging.
+       */
+      override fun format(format: String) {
+        cdkBuilder.format(format)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty,
+    ) : CdkObject(cdkObject), AccessLogSettingsProperty {
+      /**
+       * The ARN of the CloudWatch Logs log group to receive access logs.
+       *
+       * This parameter is required to enable access logging.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html#cfn-apigatewayv2-stage-accesslogsettings-destinationarn)
+       */
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+      /**
+       * A single line format of the access logs of data, as specified by selected $context
+       * variables.
+       *
+       * The format must include at least $context.requestId. This parameter is required to enable
+       * access logging.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html#cfn-apigatewayv2-stage-accesslogsettings-format)
+       */
+      override fun format(): String? = unwrap(this).getFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessLogSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty):
+          AccessLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessLogSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessLogSettingsProperty):
+          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty
+    }
+  }
+
+  /**
    * Represents a collection of route settings.
    *
    * Example:
@@ -913,134 +1041,6 @@ public open class CfnStage internal constructor(
           software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty
-    }
-  }
-
-  /**
-   * Settings for logging access in a stage.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
-   * AccessLogSettingsProperty accessLogSettingsProperty = AccessLogSettingsProperty.builder()
-   * .destinationArn("destinationArn")
-   * .format("format")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html)
-   */
-  public interface AccessLogSettingsProperty {
-    /**
-     * The ARN of the CloudWatch Logs log group to receive access logs.
-     *
-     * This parameter is required to enable access logging.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html#cfn-apigatewayv2-stage-accesslogsettings-destinationarn)
-     */
-    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-    /**
-     * A single line format of the access logs of data, as specified by selected $context variables.
-     *
-     * The format must include at least $context.requestId. This parameter is required to enable
-     * access logging.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html#cfn-apigatewayv2-stage-accesslogsettings-format)
-     */
-    public fun format(): String? = unwrap(this).getFormat()
-
-    /**
-     * A builder for [AccessLogSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs.
-       * This parameter is required to enable access logging.
-       */
-      public fun destinationArn(destinationArn: String)
-
-      /**
-       * @param format A single line format of the access logs of data, as specified by selected
-       * $context variables.
-       * The format must include at least $context.requestId. This parameter is required to enable
-       * access logging.
-       */
-      public fun format(format: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty.Builder =
-          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty.builder()
-
-      /**
-       * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs.
-       * This parameter is required to enable access logging.
-       */
-      override fun destinationArn(destinationArn: String) {
-        cdkBuilder.destinationArn(destinationArn)
-      }
-
-      /**
-       * @param format A single line format of the access logs of data, as specified by selected
-       * $context variables.
-       * The format must include at least $context.requestId. This parameter is required to enable
-       * access logging.
-       */
-      override fun format(format: String) {
-        cdkBuilder.format(format)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty,
-    ) : CdkObject(cdkObject), AccessLogSettingsProperty {
-      /**
-       * The ARN of the CloudWatch Logs log group to receive access logs.
-       *
-       * This parameter is required to enable access logging.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html#cfn-apigatewayv2-stage-accesslogsettings-destinationarn)
-       */
-      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-      /**
-       * A single line format of the access logs of data, as specified by selected $context
-       * variables.
-       *
-       * The format must include at least $context.requestId. This parameter is required to enable
-       * access logging.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-stage-accesslogsettings.html#cfn-apigatewayv2-stage-accesslogsettings-format)
-       */
-      override fun format(): String? = unwrap(this).getFormat()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessLogSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty):
-          AccessLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AccessLogSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessLogSettingsProperty):
-          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty
     }
   }
 }

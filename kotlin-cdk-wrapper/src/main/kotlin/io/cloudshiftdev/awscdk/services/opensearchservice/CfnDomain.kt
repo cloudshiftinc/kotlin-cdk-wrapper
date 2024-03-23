@@ -1977,223 +1977,6 @@ public open class CfnDomain internal constructor(
   }
 
   /**
-   * Specifies information about the master user.
-   *
-   * Required if if `InternalUserDatabaseEnabled` is true in
-   * [AdvancedSecurityOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * MasterUserOptionsProperty masterUserOptionsProperty = MasterUserOptionsProperty.builder()
-   * .masterUserArn("masterUserArn")
-   * .masterUserName("masterUserName")
-   * .masterUserPassword("masterUserPassword")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html)
-   */
-  public interface MasterUserOptionsProperty {
-    /**
-     * Amazon Resource Name (ARN) for the master user.
-     *
-     * The ARN can point to an IAM user or role. This property is required for Amazon Cognito to
-     * work, and it must match the role configured for Cognito. Only specify if
-     * `InternalUserDatabaseEnabled` is false in
-     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserarn)
-     */
-    public fun masterUserArn(): String? = unwrap(this).getMasterUserArn()
-
-    /**
-     * Username for the master user. Only specify if `InternalUserDatabaseEnabled` is true in
-     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-     * .
-     *
-     * If you don't want to specify this value directly within the template, you can use a [dynamic
-     * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
-     * instead.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masterusername)
-     */
-    public fun masterUserName(): String? = unwrap(this).getMasterUserName()
-
-    /**
-     * Password for the master user. Only specify if `InternalUserDatabaseEnabled` is true in
-     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-     * .
-     *
-     * If you don't want to specify this value directly within the template, you can use a [dynamic
-     * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
-     * instead.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserpassword)
-     */
-    public fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
-
-    /**
-     * A builder for [MasterUserOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param masterUserArn Amazon Resource Name (ARN) for the master user.
-       * The ARN can point to an IAM user or role. This property is required for Amazon Cognito to
-       * work, and it must match the role configured for Cognito. Only specify if
-       * `InternalUserDatabaseEnabled` is false in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       */
-      public fun masterUserArn(masterUserArn: String)
-
-      /**
-       * @param masterUserName Username for the master user. Only specify if
-       * `InternalUserDatabaseEnabled` is true in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       * If you don't want to specify this value directly within the template, you can use a
-       * [dynamic
-       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
-       * instead.
-       */
-      public fun masterUserName(masterUserName: String)
-
-      /**
-       * @param masterUserPassword Password for the master user. Only specify if
-       * `InternalUserDatabaseEnabled` is true in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       * If you don't want to specify this value directly within the template, you can use a
-       * [dynamic
-       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
-       * instead.
-       */
-      public fun masterUserPassword(masterUserPassword: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty.builder()
-
-      /**
-       * @param masterUserArn Amazon Resource Name (ARN) for the master user.
-       * The ARN can point to an IAM user or role. This property is required for Amazon Cognito to
-       * work, and it must match the role configured for Cognito. Only specify if
-       * `InternalUserDatabaseEnabled` is false in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       */
-      override fun masterUserArn(masterUserArn: String) {
-        cdkBuilder.masterUserArn(masterUserArn)
-      }
-
-      /**
-       * @param masterUserName Username for the master user. Only specify if
-       * `InternalUserDatabaseEnabled` is true in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       * If you don't want to specify this value directly within the template, you can use a
-       * [dynamic
-       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
-       * instead.
-       */
-      override fun masterUserName(masterUserName: String) {
-        cdkBuilder.masterUserName(masterUserName)
-      }
-
-      /**
-       * @param masterUserPassword Password for the master user. Only specify if
-       * `InternalUserDatabaseEnabled` is true in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       * If you don't want to specify this value directly within the template, you can use a
-       * [dynamic
-       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
-       * instead.
-       */
-      override fun masterUserPassword(masterUserPassword: String) {
-        cdkBuilder.masterUserPassword(masterUserPassword)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty,
-    ) : CdkObject(cdkObject), MasterUserOptionsProperty {
-      /**
-       * Amazon Resource Name (ARN) for the master user.
-       *
-       * The ARN can point to an IAM user or role. This property is required for Amazon Cognito to
-       * work, and it must match the role configured for Cognito. Only specify if
-       * `InternalUserDatabaseEnabled` is false in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserarn)
-       */
-      override fun masterUserArn(): String? = unwrap(this).getMasterUserArn()
-
-      /**
-       * Username for the master user. Only specify if `InternalUserDatabaseEnabled` is true in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       *
-       * If you don't want to specify this value directly within the template, you can use a
-       * [dynamic
-       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
-       * instead.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masterusername)
-       */
-      override fun masterUserName(): String? = unwrap(this).getMasterUserName()
-
-      /**
-       * Password for the master user. Only specify if `InternalUserDatabaseEnabled` is true in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       *
-       * If you don't want to specify this value directly within the template, you can use a
-       * [dynamic
-       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
-       * instead.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserpassword)
-       */
-      override fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MasterUserOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty):
-          MasterUserOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MasterUserOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MasterUserOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty
-    }
-  }
-
-  /**
    * Specifies options for fine-grained access control.
    *
    * If you specify advanced security options, you must also enable node-to-node encryption (
@@ -2591,1141 +2374,6 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty
-    }
-  }
-
-  /**
-   * Specifies whether the OpenSearch Service domain publishes application, search slow logs, or
-   * index slow logs to Amazon CloudWatch.
-   *
-   * Each option must be an object of name `SEARCH_SLOW_LOGS` , `ES_APPLICATION_LOGS` ,
-   * `INDEX_SLOW_LOGS` , or `AUDIT_LOGS` depending on the type of logs you want to publish. For the
-   * full syntax, see the
-   * [examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#aws-resource-opensearchservice-domain--examples)
-   * .
-   *
-   * Before you enable log publishing, you need to create a CloudWatch log group and provide
-   * OpenSearch Service the correct permissions to write to it. To learn more, see [Enabling log
-   * publishing ( AWS
-   * CloudFormation)](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createdomain-configure-slow-logs.html#createdomain-configure-slow-logs-cfn)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * LogPublishingOptionProperty logPublishingOptionProperty = LogPublishingOptionProperty.builder()
-   * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html)
-   */
-  public interface LogPublishingOptionProperty {
-    /**
-     * Specifies the CloudWatch log group to publish to.
-     *
-     * Required if you enable log publishing.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-cloudwatchlogsloggrouparn)
-     */
-    public fun cloudWatchLogsLogGroupArn(): String? = unwrap(this).getCloudWatchLogsLogGroupArn()
-
-    /**
-     * If `true` , enables the publishing of logs to CloudWatch.
-     *
-     * Default: `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [LogPublishingOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogsLogGroupArn Specifies the CloudWatch log group to publish to.
-       * Required if you enable log publishing.
-       */
-      public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
-
-      /**
-       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
-       * Default: `false` .
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
-       * Default: `false` .
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty.Builder
-          =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty.builder()
-
-      /**
-       * @param cloudWatchLogsLogGroupArn Specifies the CloudWatch log group to publish to.
-       * Required if you enable log publishing.
-       */
-      override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
-        cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
-      }
-
-      /**
-       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
-       * Default: `false` .
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
-       * Default: `false` .
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty,
-    ) : CdkObject(cdkObject), LogPublishingOptionProperty {
-      /**
-       * Specifies the CloudWatch log group to publish to.
-       *
-       * Required if you enable log publishing.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-cloudwatchlogsloggrouparn)
-       */
-      override fun cloudWatchLogsLogGroupArn(): String? =
-          unwrap(this).getCloudWatchLogsLogGroupArn()
-
-      /**
-       * If `true` , enables the publishing of logs to CloudWatch.
-       *
-       * Default: `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogPublishingOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty):
-          LogPublishingOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LogPublishingOptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogPublishingOptionProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty
-    }
-  }
-
-  /**
-   * The SAML Identity Provider's information.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * IdpProperty idpProperty = IdpProperty.builder()
-   * .entityId("entityId")
-   * .metadataContent("metadataContent")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html)
-   */
-  public interface IdpProperty {
-    /**
-     * The unique entity ID of the application in the SAML identity provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html#cfn-opensearchservice-domain-idp-entityid)
-     */
-    public fun entityId(): String
-
-    /**
-     * The metadata of the SAML application, in XML format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html#cfn-opensearchservice-domain-idp-metadatacontent)
-     */
-    public fun metadataContent(): String
-
-    /**
-     * A builder for [IdpProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param entityId The unique entity ID of the application in the SAML identity provider. 
-       */
-      public fun entityId(entityId: String)
-
-      /**
-       * @param metadataContent The metadata of the SAML application, in XML format. 
-       */
-      public fun metadataContent(metadataContent: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty.Builder =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty.builder()
-
-      /**
-       * @param entityId The unique entity ID of the application in the SAML identity provider. 
-       */
-      override fun entityId(entityId: String) {
-        cdkBuilder.entityId(entityId)
-      }
-
-      /**
-       * @param metadataContent The metadata of the SAML application, in XML format. 
-       */
-      override fun metadataContent(metadataContent: String) {
-        cdkBuilder.metadataContent(metadataContent)
-      }
-
-      public fun build(): software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty,
-    ) : CdkObject(cdkObject), IdpProperty {
-      /**
-       * The unique entity ID of the application in the SAML identity provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html#cfn-opensearchservice-domain-idp-entityid)
-       */
-      override fun entityId(): String = unwrap(this).getEntityId()
-
-      /**
-       * The metadata of the SAML application, in XML format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html#cfn-opensearchservice-domain-idp-metadatacontent)
-       */
-      override fun metadataContent(): String = unwrap(this).getMetadataContent()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IdpProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty):
-          IdpProperty = CdkObjectWrappers.wrap(cdkObject) as? IdpProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IdpProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty
-    }
-  }
-
-  /**
-   * Options for configuring service software updates for a domain.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * SoftwareUpdateOptionsProperty softwareUpdateOptionsProperty =
-   * SoftwareUpdateOptionsProperty.builder()
-   * .autoSoftwareUpdateEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html)
-   */
-  public interface SoftwareUpdateOptionsProperty {
-    /**
-     * Specifies whether automatic service software updates are enabled for the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html#cfn-opensearchservice-domain-softwareupdateoptions-autosoftwareupdateenabled)
-     */
-    public fun autoSoftwareUpdateEnabled(): Any? = unwrap(this).getAutoSoftwareUpdateEnabled()
-
-    /**
-     * A builder for [SoftwareUpdateOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
-       * enabled for the domain.
-       */
-      public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean)
-
-      /**
-       * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
-       * enabled for the domain.
-       */
-      public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty.builder()
-
-      /**
-       * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
-       * enabled for the domain.
-       */
-      override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean) {
-        cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled)
-      }
-
-      /**
-       * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
-       * enabled for the domain.
-       */
-      override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable) {
-        cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty,
-    ) : CdkObject(cdkObject), SoftwareUpdateOptionsProperty {
-      /**
-       * Specifies whether automatic service software updates are enabled for the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html#cfn-opensearchservice-domain-softwareupdateoptions-autosoftwareupdateenabled)
-       */
-      override fun autoSoftwareUpdateEnabled(): Any? = unwrap(this).getAutoSoftwareUpdateEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SoftwareUpdateOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty):
-          SoftwareUpdateOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SoftwareUpdateOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SoftwareUpdateOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty
-    }
-  }
-
-  /**
-   * A custom 10-hour, low-traffic window during which OpenSearch Service can perform mandatory
-   * configuration changes on the domain.
-   *
-   * These actions can include scheduled service software updates and blue/green Auto-Tune
-   * enhancements. OpenSearch Service will schedule these actions during the window that you specify.
-   * If you don't specify a window start time, it defaults to 10:00 P.M. local time.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * OffPeakWindowProperty offPeakWindowProperty = OffPeakWindowProperty.builder()
-   * .windowStartTime(WindowStartTimeProperty.builder()
-   * .hours(123)
-   * .minutes(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindow.html)
-   */
-  public interface OffPeakWindowProperty {
-    /**
-     * The desired start time for an off-peak maintenance window.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindow.html#cfn-opensearchservice-domain-offpeakwindow-windowstarttime)
-     */
-    public fun windowStartTime(): Any? = unwrap(this).getWindowStartTime()
-
-    /**
-     * A builder for [OffPeakWindowProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param windowStartTime The desired start time for an off-peak maintenance window.
-       */
-      public fun windowStartTime(windowStartTime: IResolvable)
-
-      /**
-       * @param windowStartTime The desired start time for an off-peak maintenance window.
-       */
-      public fun windowStartTime(windowStartTime: WindowStartTimeProperty)
-
-      /**
-       * @param windowStartTime The desired start time for an off-peak maintenance window.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cc5262ef36470bc541159ef7d9a759a914ee2768b27431e784d1afc15afb33f3")
-      public fun windowStartTime(windowStartTime: WindowStartTimeProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty.Builder
-          =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty.builder()
-
-      /**
-       * @param windowStartTime The desired start time for an off-peak maintenance window.
-       */
-      override fun windowStartTime(windowStartTime: IResolvable) {
-        cdkBuilder.windowStartTime(windowStartTime.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param windowStartTime The desired start time for an off-peak maintenance window.
-       */
-      override fun windowStartTime(windowStartTime: WindowStartTimeProperty) {
-        cdkBuilder.windowStartTime(windowStartTime.let(WindowStartTimeProperty::unwrap))
-      }
-
-      /**
-       * @param windowStartTime The desired start time for an off-peak maintenance window.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cc5262ef36470bc541159ef7d9a759a914ee2768b27431e784d1afc15afb33f3")
-      override fun windowStartTime(windowStartTime: WindowStartTimeProperty.Builder.() -> Unit):
-          Unit = windowStartTime(WindowStartTimeProperty(windowStartTime))
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty,
-    ) : CdkObject(cdkObject), OffPeakWindowProperty {
-      /**
-       * The desired start time for an off-peak maintenance window.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindow.html#cfn-opensearchservice-domain-offpeakwindow-windowstarttime)
-       */
-      override fun windowStartTime(): Any? = unwrap(this).getWindowStartTime()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OffPeakWindowProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty):
-          OffPeakWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? OffPeakWindowProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OffPeakWindowProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty
-    }
-  }
-
-  /**
-   * Container for information about the SAML configuration for OpenSearch Dashboards.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * SAMLOptionsProperty sAMLOptionsProperty = SAMLOptionsProperty.builder()
-   * .enabled(false)
-   * .idp(IdpProperty.builder()
-   * .entityId("entityId")
-   * .metadataContent("metadataContent")
-   * .build())
-   * .masterBackendRole("masterBackendRole")
-   * .masterUserName("masterUserName")
-   * .rolesKey("rolesKey")
-   * .sessionTimeoutMinutes(123)
-   * .subjectKey("subjectKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html)
-   */
-  public interface SAMLOptionsProperty {
-    /**
-     * True to enable SAML authentication for a domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * The SAML Identity Provider's information.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-idp)
-     */
-    public fun idp(): Any? = unwrap(this).getIdp()
-
-    /**
-     * The backend role that the SAML master user is mapped to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-masterbackendrole)
-     */
-    public fun masterBackendRole(): String? = unwrap(this).getMasterBackendRole()
-
-    /**
-     * The SAML master user name, which is stored in the domain's internal user database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-masterusername)
-     */
-    public fun masterUserName(): String? = unwrap(this).getMasterUserName()
-
-    /**
-     * Element of the SAML assertion to use for backend roles.
-     *
-     * Default is `roles` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-roleskey)
-     */
-    public fun rolesKey(): String? = unwrap(this).getRolesKey()
-
-    /**
-     * The duration, in minutes, after which a user session becomes inactive.
-     *
-     * Acceptable values are between 1 and 1440, and the default value is 60.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-sessiontimeoutminutes)
-     */
-    public fun sessionTimeoutMinutes(): Number? = unwrap(this).getSessionTimeoutMinutes()
-
-    /**
-     * Element of the SAML assertion to use for the user name.
-     *
-     * Default is `NameID` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-subjectkey)
-     */
-    public fun subjectKey(): String? = unwrap(this).getSubjectKey()
-
-    /**
-     * A builder for [SAMLOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled True to enable SAML authentication for a domain.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled True to enable SAML authentication for a domain.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param idp The SAML Identity Provider's information.
-       */
-      public fun idp(idp: IResolvable)
-
-      /**
-       * @param idp The SAML Identity Provider's information.
-       */
-      public fun idp(idp: IdpProperty)
-
-      /**
-       * @param idp The SAML Identity Provider's information.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("98f2e7eab165afbb620ad885b13a80a025703d8a9b6df570b0ab2364e8364860")
-      public fun idp(idp: IdpProperty.Builder.() -> Unit)
-
-      /**
-       * @param masterBackendRole The backend role that the SAML master user is mapped to.
-       */
-      public fun masterBackendRole(masterBackendRole: String)
-
-      /**
-       * @param masterUserName The SAML master user name, which is stored in the domain's internal
-       * user database.
-       */
-      public fun masterUserName(masterUserName: String)
-
-      /**
-       * @param rolesKey Element of the SAML assertion to use for backend roles.
-       * Default is `roles` .
-       */
-      public fun rolesKey(rolesKey: String)
-
-      /**
-       * @param sessionTimeoutMinutes The duration, in minutes, after which a user session becomes
-       * inactive.
-       * Acceptable values are between 1 and 1440, and the default value is 60.
-       */
-      public fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number)
-
-      /**
-       * @param subjectKey Element of the SAML assertion to use for the user name.
-       * Default is `NameID` .
-       */
-      public fun subjectKey(subjectKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty.Builder =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty.builder()
-
-      /**
-       * @param enabled True to enable SAML authentication for a domain.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled True to enable SAML authentication for a domain.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param idp The SAML Identity Provider's information.
-       */
-      override fun idp(idp: IResolvable) {
-        cdkBuilder.idp(idp.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param idp The SAML Identity Provider's information.
-       */
-      override fun idp(idp: IdpProperty) {
-        cdkBuilder.idp(idp.let(IdpProperty::unwrap))
-      }
-
-      /**
-       * @param idp The SAML Identity Provider's information.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("98f2e7eab165afbb620ad885b13a80a025703d8a9b6df570b0ab2364e8364860")
-      override fun idp(idp: IdpProperty.Builder.() -> Unit): Unit = idp(IdpProperty(idp))
-
-      /**
-       * @param masterBackendRole The backend role that the SAML master user is mapped to.
-       */
-      override fun masterBackendRole(masterBackendRole: String) {
-        cdkBuilder.masterBackendRole(masterBackendRole)
-      }
-
-      /**
-       * @param masterUserName The SAML master user name, which is stored in the domain's internal
-       * user database.
-       */
-      override fun masterUserName(masterUserName: String) {
-        cdkBuilder.masterUserName(masterUserName)
-      }
-
-      /**
-       * @param rolesKey Element of the SAML assertion to use for backend roles.
-       * Default is `roles` .
-       */
-      override fun rolesKey(rolesKey: String) {
-        cdkBuilder.rolesKey(rolesKey)
-      }
-
-      /**
-       * @param sessionTimeoutMinutes The duration, in minutes, after which a user session becomes
-       * inactive.
-       * Acceptable values are between 1 and 1440, and the default value is 60.
-       */
-      override fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number) {
-        cdkBuilder.sessionTimeoutMinutes(sessionTimeoutMinutes)
-      }
-
-      /**
-       * @param subjectKey Element of the SAML assertion to use for the user name.
-       * Default is `NameID` .
-       */
-      override fun subjectKey(subjectKey: String) {
-        cdkBuilder.subjectKey(subjectKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty,
-    ) : CdkObject(cdkObject), SAMLOptionsProperty {
-      /**
-       * True to enable SAML authentication for a domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * The SAML Identity Provider's information.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-idp)
-       */
-      override fun idp(): Any? = unwrap(this).getIdp()
-
-      /**
-       * The backend role that the SAML master user is mapped to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-masterbackendrole)
-       */
-      override fun masterBackendRole(): String? = unwrap(this).getMasterBackendRole()
-
-      /**
-       * The SAML master user name, which is stored in the domain's internal user database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-masterusername)
-       */
-      override fun masterUserName(): String? = unwrap(this).getMasterUserName()
-
-      /**
-       * Element of the SAML assertion to use for backend roles.
-       *
-       * Default is `roles` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-roleskey)
-       */
-      override fun rolesKey(): String? = unwrap(this).getRolesKey()
-
-      /**
-       * The duration, in minutes, after which a user session becomes inactive.
-       *
-       * Acceptable values are between 1 and 1440, and the default value is 60.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-sessiontimeoutminutes)
-       */
-      override fun sessionTimeoutMinutes(): Number? = unwrap(this).getSessionTimeoutMinutes()
-
-      /**
-       * Element of the SAML assertion to use for the user name.
-       *
-       * Default is `NameID` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-subjectkey)
-       */
-      override fun subjectKey(): String? = unwrap(this).getSubjectKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SAMLOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty):
-          SAMLOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SAMLOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SAMLOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty
-    }
-  }
-
-  /**
-   * Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key
-   * to use.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
-   * EncryptionAtRestOptionsProperty.builder()
-   * .enabled(false)
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html)
-   */
-  public interface EncryptionAtRestOptionsProperty {
-    /**
-     * Specify `true` to enable encryption at rest. Required if you enable fine-grained access
-     * control in
-     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-     * .
-     *
-     * If no encryption at rest options were initially specified in the template, updating this
-     * property by adding it causes no interruption. However, if you change this property after it's
-     * already been set within a template, the domain is deleted and recreated in order to modify the
-     * property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * The KMS key ID. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable
-     * encryption at rest.
-     *
-     * You can also use `keyAlias` as a value.
-     *
-     * If no encryption at rest options were initially specified in the template, updating this
-     * property by adding it causes no interruption. However, if you change this property after it's
-     * already been set within a template, the domain is deleted and recreated in order to modify the
-     * property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * A builder for [EncryptionAtRestOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Specify `true` to enable encryption at rest. Required if you enable
-       * fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       * If no encryption at rest options were initially specified in the template, updating this
-       * property by adding it causes no interruption. However, if you change this property after it's
-       * already been set within a template, the domain is deleted and recreated in order to modify the
-       * property.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specify `true` to enable encryption at rest. Required if you enable
-       * fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       * If no encryption at rest options were initially specified in the template, updating this
-       * property by adding it causes no interruption. However, if you change this property after it's
-       * already been set within a template, the domain is deleted and recreated in order to modify the
-       * property.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param kmsKeyId The KMS key ID. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` .
-       * Required if you enable encryption at rest.
-       * You can also use `keyAlias` as a value.
-       *
-       * If no encryption at rest options were initially specified in the template, updating this
-       * property by adding it causes no interruption. However, if you change this property after it's
-       * already been set within a template, the domain is deleted and recreated in order to modify the
-       * property.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty.builder()
-
-      /**
-       * @param enabled Specify `true` to enable encryption at rest. Required if you enable
-       * fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       * If no encryption at rest options were initially specified in the template, updating this
-       * property by adding it causes no interruption. However, if you change this property after it's
-       * already been set within a template, the domain is deleted and recreated in order to modify the
-       * property.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specify `true` to enable encryption at rest. Required if you enable
-       * fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       * If no encryption at rest options were initially specified in the template, updating this
-       * property by adding it causes no interruption. However, if you change this property after it's
-       * already been set within a template, the domain is deleted and recreated in order to modify the
-       * property.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param kmsKeyId The KMS key ID. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` .
-       * Required if you enable encryption at rest.
-       * You can also use `keyAlias` as a value.
-       *
-       * If no encryption at rest options were initially specified in the template, updating this
-       * property by adding it causes no interruption. However, if you change this property after it's
-       * already been set within a template, the domain is deleted and recreated in order to modify the
-       * property.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty,
-    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
-      /**
-       * Specify `true` to enable encryption at rest. Required if you enable fine-grained access
-       * control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
-       * .
-       *
-       * If no encryption at rest options were initially specified in the template, updating this
-       * property by adding it causes no interruption. However, if you change this property after it's
-       * already been set within a template, the domain is deleted and recreated in order to modify the
-       * property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * The KMS key ID. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you
-       * enable encryption at rest.
-       *
-       * You can also use `keyAlias` as a value.
-       *
-       * If no encryption at rest options were initially specified in the template, updating this
-       * property by adding it causes no interruption. However, if you change this property after it's
-       * already been set within a template, the domain is deleted and recreated in order to modify the
-       * property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty):
-          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
-    }
-  }
-
-  /**
-   * Off-peak window settings for the domain.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * OffPeakWindowOptionsProperty offPeakWindowOptionsProperty =
-   * OffPeakWindowOptionsProperty.builder()
-   * .enabled(false)
-   * .offPeakWindow(OffPeakWindowProperty.builder()
-   * .windowStartTime(WindowStartTimeProperty.builder()
-   * .hours(123)
-   * .minutes(123)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html)
-   */
-  public interface OffPeakWindowOptionsProperty {
-    /**
-     * Specifies whether off-peak window settings are enabled for the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html#cfn-opensearchservice-domain-offpeakwindowoptions-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * Off-peak window settings for the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html#cfn-opensearchservice-domain-offpeakwindowoptions-offpeakwindow)
-     */
-    public fun offPeakWindow(): Any? = unwrap(this).getOffPeakWindow()
-
-    /**
-     * A builder for [OffPeakWindowOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Specifies whether off-peak window settings are enabled for the domain.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specifies whether off-peak window settings are enabled for the domain.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param offPeakWindow Off-peak window settings for the domain.
-       */
-      public fun offPeakWindow(offPeakWindow: IResolvable)
-
-      /**
-       * @param offPeakWindow Off-peak window settings for the domain.
-       */
-      public fun offPeakWindow(offPeakWindow: OffPeakWindowProperty)
-
-      /**
-       * @param offPeakWindow Off-peak window settings for the domain.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0816bae19b39183938b8f9bbfbcecebc689836be9c7c945c0fda0ba6d6bb8c40")
-      public fun offPeakWindow(offPeakWindow: OffPeakWindowProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty.builder()
-
-      /**
-       * @param enabled Specifies whether off-peak window settings are enabled for the domain.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specifies whether off-peak window settings are enabled for the domain.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param offPeakWindow Off-peak window settings for the domain.
-       */
-      override fun offPeakWindow(offPeakWindow: IResolvable) {
-        cdkBuilder.offPeakWindow(offPeakWindow.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param offPeakWindow Off-peak window settings for the domain.
-       */
-      override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty) {
-        cdkBuilder.offPeakWindow(offPeakWindow.let(OffPeakWindowProperty::unwrap))
-      }
-
-      /**
-       * @param offPeakWindow Off-peak window settings for the domain.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0816bae19b39183938b8f9bbfbcecebc689836be9c7c945c0fda0ba6d6bb8c40")
-      override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty.Builder.() -> Unit): Unit =
-          offPeakWindow(OffPeakWindowProperty(offPeakWindow))
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty,
-    ) : CdkObject(cdkObject), OffPeakWindowOptionsProperty {
-      /**
-       * Specifies whether off-peak window settings are enabled for the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html#cfn-opensearchservice-domain-offpeakwindowoptions-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * Off-peak window settings for the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html#cfn-opensearchservice-domain-offpeakwindowoptions-offpeakwindow)
-       */
-      override fun offPeakWindow(): Any? = unwrap(this).getOffPeakWindow()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OffPeakWindowOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty):
-          OffPeakWindowOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OffPeakWindowOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OffPeakWindowOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty
     }
   }
 
@@ -4412,7 +3060,7 @@ public open class CfnDomain internal constructor(
   }
 
   /**
-   * Specifies options for node-to-node encryption.
+   * Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards.
    *
    * Example:
    *
@@ -4420,58 +3068,114 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * NodeToNodeEncryptionOptionsProperty nodeToNodeEncryptionOptionsProperty =
-   * NodeToNodeEncryptionOptionsProperty.builder()
+   * CognitoOptionsProperty cognitoOptionsProperty = CognitoOptionsProperty.builder()
    * .enabled(false)
+   * .identityPoolId("identityPoolId")
+   * .roleArn("roleArn")
+   * .userPoolId("userPoolId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html)
    */
-  public interface NodeToNodeEncryptionOptionsProperty {
+  public interface CognitoOptionsProperty {
     /**
-     * Specifies to enable or disable node-to-node encryption on the domain.
+     * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
      *
-     * Required if you enable fine-grained access control in
-     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+     * See [Amazon Cognito authentication for OpenSearch
+     * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
      * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html#cfn-opensearchservice-domain-nodetonodeencryptionoptions-enabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-enabled)
      */
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     /**
-     * A builder for [NodeToNodeEncryptionOptionsProperty]
+     * The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch
+     * Dashboards authentication.
+     *
+     * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-identitypoolid)
+     */
+    public fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
+
+    /**
+     * The `AmazonOpenSearchServiceCognitoAccess` role that allows OpenSearch Service to configure
+     * your user pool and identity pool.
+     *
+     * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-rolearn)
+     */
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch
+     * Dashboards authentication.
+     *
+     * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-userpoolid)
+     */
+    public fun userPoolId(): String? = unwrap(this).getUserPoolId()
+
+    /**
+     * A builder for [CognitoOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Specifies to enable or disable node-to-node encryption on the domain.
-       * Required if you enable fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+       * Dashboards.
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
        * .
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled Specifies to enable or disable node-to-node encryption on the domain.
-       * Required if you enable fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+       * Dashboards.
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
        * .
        */
       public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service
+       * to use for OpenSearch Dashboards authentication.
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       */
+      public fun identityPoolId(identityPoolId: String)
+
+      /**
+       * @param roleArn The `AmazonOpenSearchServiceCognitoAccess` role that allows OpenSearch
+       * Service to configure your user pool and identity pool.
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use
+       * for OpenSearch Dashboards authentication.
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       */
+      public fun userPoolId(userPoolId: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty.Builder
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty.Builder
           =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty.builder()
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty.builder()
 
       /**
-       * @param enabled Specifies to enable or disable node-to-node encryption on the domain.
-       * Required if you enable fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+       * Dashboards.
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
        * .
        */
       override fun enabled(enabled: Boolean) {
@@ -4479,250 +3183,215 @@ public open class CfnDomain internal constructor(
       }
 
       /**
-       * @param enabled Specifies to enable or disable node-to-node encryption on the domain.
-       * Required if you enable fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+       * Dashboards.
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
        * .
        */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service
+       * to use for OpenSearch Dashboards authentication.
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       */
+      override fun identityPoolId(identityPoolId: String) {
+        cdkBuilder.identityPoolId(identityPoolId)
+      }
+
+      /**
+       * @param roleArn The `AmazonOpenSearchServiceCognitoAccess` role that allows OpenSearch
+       * Service to configure your user pool and identity pool.
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use
+       * for OpenSearch Dashboards authentication.
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       */
+      override fun userPoolId(userPoolId: String) {
+        cdkBuilder.userPoolId(userPoolId)
+      }
+
       public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty,
-    ) : CdkObject(cdkObject), NodeToNodeEncryptionOptionsProperty {
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty,
+    ) : CdkObject(cdkObject), CognitoOptionsProperty {
       /**
-       * Specifies to enable or disable node-to-node encryption on the domain.
+       * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
        *
-       * Required if you enable fine-grained access control in
-       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
        * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html#cfn-opensearchservice-domain-nodetonodeencryptionoptions-enabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch
+       * Dashboards authentication.
+       *
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-identitypoolid)
+       */
+      override fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
+
+      /**
+       * The `AmazonOpenSearchServiceCognitoAccess` role that allows OpenSearch Service to configure
+       * your user pool and identity pool.
+       *
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-rolearn)
+       */
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+      /**
+       * The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch
+       * Dashboards authentication.
+       *
+       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-userpoolid)
+       */
+      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CognitoOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty):
+          CognitoOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CognitoOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CognitoOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty
+    }
+  }
+
+  /**
+   * Container for the parameters required to enable cold storage for an OpenSearch Service domain.
+   *
+   * For more information, see [Cold storage for Amazon OpenSearch
+   * Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * ColdStorageOptionsProperty coldStorageOptionsProperty = ColdStorageOptionsProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-coldstorageoptions.html)
+   */
+  public interface ColdStorageOptionsProperty {
+    /**
+     * Whether to enable or disable cold storage on the domain.
+     *
+     * You must enable UltraWarm storage to enable cold storage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-coldstorageoptions.html#cfn-opensearchservice-domain-coldstorageoptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [ColdStorageOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Whether to enable or disable cold storage on the domain.
+       * You must enable UltraWarm storage to enable cold storage.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Whether to enable or disable cold storage on the domain.
+       * You must enable UltraWarm storage to enable cold storage.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty.builder()
+
+      /**
+       * @param enabled Whether to enable or disable cold storage on the domain.
+       * You must enable UltraWarm storage to enable cold storage.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Whether to enable or disable cold storage on the domain.
+       * You must enable UltraWarm storage to enable cold storage.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty,
+    ) : CdkObject(cdkObject), ColdStorageOptionsProperty {
+      /**
+       * Whether to enable or disable cold storage on the domain.
+       *
+       * You must enable UltraWarm storage to enable cold storage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-coldstorageoptions.html#cfn-opensearchservice-domain-coldstorageoptions-enabled)
        */
       override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NodeToNodeEncryptionOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ColdStorageOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty):
-          NodeToNodeEncryptionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NodeToNodeEncryptionOptionsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty):
+          ColdStorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColdStorageOptionsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NodeToNodeEncryptionOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty
-    }
-  }
-
-  /**
-   * *DEPRECATED* .
-   *
-   * This setting is only relevant to domains running legacy Elasticsearch OSS versions earlier than
-   * 5.3. It does not apply to OpenSearch domains.
-   *
-   * The automated snapshot configuration for the OpenSearch Service domain indexes.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * SnapshotOptionsProperty snapshotOptionsProperty = SnapshotOptionsProperty.builder()
-   * .automatedSnapshotStartHour(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-snapshotoptions.html)
-   */
-  public interface SnapshotOptionsProperty {
-    /**
-     * The hour in UTC during which the service takes an automated daily snapshot of the indexes in
-     * the OpenSearch Service domain.
-     *
-     * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday
-     * between midnight and 1 am. You can specify a value between 0 and 23.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-snapshotoptions.html#cfn-opensearchservice-domain-snapshotoptions-automatedsnapshotstarthour)
-     */
-    public fun automatedSnapshotStartHour(): Number? = unwrap(this).getAutomatedSnapshotStartHour()
-
-    /**
-     * A builder for [SnapshotOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param automatedSnapshotStartHour The hour in UTC during which the service takes an
-       * automated daily snapshot of the indexes in the OpenSearch Service domain.
-       * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday
-       * between midnight and 1 am. You can specify a value between 0 and 23.
-       */
-      public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty.builder()
-
-      /**
-       * @param automatedSnapshotStartHour The hour in UTC during which the service takes an
-       * automated daily snapshot of the indexes in the OpenSearch Service domain.
-       * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday
-       * between midnight and 1 am. You can specify a value between 0 and 23.
-       */
-      override fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
-        cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty,
-    ) : CdkObject(cdkObject), SnapshotOptionsProperty {
-      /**
-       * The hour in UTC during which the service takes an automated daily snapshot of the indexes
-       * in the OpenSearch Service domain.
-       *
-       * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday
-       * between midnight and 1 am. You can specify a value between 0 and 23.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-snapshotoptions.html#cfn-opensearchservice-domain-snapshotoptions-automatedsnapshotstarthour)
-       */
-      override fun automatedSnapshotStartHour(): Number? =
-          unwrap(this).getAutomatedSnapshotStartHour()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SnapshotOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty):
-          SnapshotOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SnapshotOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnapshotOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty =
+      internal fun unwrap(wrapped: ColdStorageOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty
-    }
-  }
-
-  /**
-   * Specifies zone awareness configuration options.
-   *
-   * Only use if `ZoneAwarenessEnabled` is `true` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * ZoneAwarenessConfigProperty zoneAwarenessConfigProperty = ZoneAwarenessConfigProperty.builder()
-   * .availabilityZoneCount(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-zoneawarenessconfig.html)
-   */
-  public interface ZoneAwarenessConfigProperty {
-    /**
-     * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the domain
-     * to use.
-     *
-     * Valid values are `2` and `3` . Default is 2.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-zoneawarenessconfig.html#cfn-opensearchservice-domain-zoneawarenessconfig-availabilityzonecount)
-     */
-    public fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
-
-    /**
-     * A builder for [ZoneAwarenessConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number
-       * of AZs that you want the domain to use.
-       * Valid values are `2` and `3` . Default is 2.
-       */
-      public fun availabilityZoneCount(availabilityZoneCount: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty.builder()
-
-      /**
-       * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number
-       * of AZs that you want the domain to use.
-       * Valid values are `2` and `3` . Default is 2.
-       */
-      override fun availabilityZoneCount(availabilityZoneCount: Number) {
-        cdkBuilder.availabilityZoneCount(availabilityZoneCount)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty,
-    ) : CdkObject(cdkObject), ZoneAwarenessConfigProperty {
-      /**
-       * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the
-       * domain to use.
-       *
-       * Valid values are `2` and `3` . Default is 2.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-zoneawarenessconfig.html#cfn-opensearchservice-domain-zoneawarenessconfig-availabilityzonecount)
-       */
-      override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ZoneAwarenessConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty):
-          ZoneAwarenessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ZoneAwarenessConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ZoneAwarenessConfigProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty
     }
   }
 
@@ -5004,6 +3673,1636 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty
+    }
+  }
+
+  /**
+   * The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data
+   * nodes in the OpenSearch Service domain.
+   *
+   * For more information, see [EBS volume size
+   * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * EBSOptionsProperty eBSOptionsProperty = EBSOptionsProperty.builder()
+   * .ebsEnabled(false)
+   * .iops(123)
+   * .throughput(123)
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html)
+   */
+  public interface EBSOptionsProperty {
+    /**
+     * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
+     * domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-ebsenabled)
+     */
+    public fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
+
+    /**
+     * The number of I/O operations per second (IOPS) that the volume supports.
+     *
+     * This property applies only to the `gp3` and provisioned IOPS EBS volume types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * The throughput (in MiB/s) of the EBS volumes attached to data nodes.
+     *
+     * Applies only to the `gp3` volume type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-throughput)
+     */
+    public fun throughput(): Number? = unwrap(this).getThroughput()
+
+    /**
+     * The size (in GiB) of the EBS volume for each data node.
+     *
+     * The minimum and maximum size of an EBS volume depends on the EBS volume type and the instance
+     * type to which it is attached. For more information, see [EBS volume size
+     * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+     * in the *Amazon OpenSearch Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumesize)
+     */
+    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+    /**
+     * The EBS volume type to use with the OpenSearch Service domain.
+     *
+     * If you choose `gp3` , you must also specify values for `Iops` and `Throughput` . For more
+     * information about each type, see [Amazon EBS volume
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+     * EC2 User Guide for Linux Instances* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumetype)
+     */
+    public fun volumeType(): String? = unwrap(this).getVolumeType()
+
+    /**
+     * A builder for [EBSOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
+       * OpenSearch Service domain.
+       */
+      public fun ebsEnabled(ebsEnabled: Boolean)
+
+      /**
+       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
+       * OpenSearch Service domain.
+       */
+      public fun ebsEnabled(ebsEnabled: IResolvable)
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+       * This property applies only to the `gp3` and provisioned IOPS EBS volume types.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param throughput The throughput (in MiB/s) of the EBS volumes attached to data nodes.
+       * Applies only to the `gp3` volume type.
+       */
+      public fun throughput(throughput: Number)
+
+      /**
+       * @param volumeSize The size (in GiB) of the EBS volume for each data node.
+       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
+       * instance type to which it is attached. For more information, see [EBS volume size
+       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+       * in the *Amazon OpenSearch Service Developer Guide* .
+       */
+      public fun volumeSize(volumeSize: Number)
+
+      /**
+       * @param volumeType The EBS volume type to use with the OpenSearch Service domain.
+       * If you choose `gp3` , you must also specify values for `Iops` and `Throughput` . For more
+       * information about each type, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide for Linux Instances* .
+       */
+      public fun volumeType(volumeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty.Builder =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty.builder()
+
+      /**
+       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
+       * OpenSearch Service domain.
+       */
+      override fun ebsEnabled(ebsEnabled: Boolean) {
+        cdkBuilder.ebsEnabled(ebsEnabled)
+      }
+
+      /**
+       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
+       * OpenSearch Service domain.
+       */
+      override fun ebsEnabled(ebsEnabled: IResolvable) {
+        cdkBuilder.ebsEnabled(ebsEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+       * This property applies only to the `gp3` and provisioned IOPS EBS volume types.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param throughput The throughput (in MiB/s) of the EBS volumes attached to data nodes.
+       * Applies only to the `gp3` volume type.
+       */
+      override fun throughput(throughput: Number) {
+        cdkBuilder.throughput(throughput)
+      }
+
+      /**
+       * @param volumeSize The size (in GiB) of the EBS volume for each data node.
+       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
+       * instance type to which it is attached. For more information, see [EBS volume size
+       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+       * in the *Amazon OpenSearch Service Developer Guide* .
+       */
+      override fun volumeSize(volumeSize: Number) {
+        cdkBuilder.volumeSize(volumeSize)
+      }
+
+      /**
+       * @param volumeType The EBS volume type to use with the OpenSearch Service domain.
+       * If you choose `gp3` , you must also specify values for `Iops` and `Throughput` . For more
+       * information about each type, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide for Linux Instances* .
+       */
+      override fun volumeType(volumeType: String) {
+        cdkBuilder.volumeType(volumeType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty,
+    ) : CdkObject(cdkObject), EBSOptionsProperty {
+      /**
+       * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
+       * domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-ebsenabled)
+       */
+      override fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
+
+      /**
+       * The number of I/O operations per second (IOPS) that the volume supports.
+       *
+       * This property applies only to the `gp3` and provisioned IOPS EBS volume types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * The throughput (in MiB/s) of the EBS volumes attached to data nodes.
+       *
+       * Applies only to the `gp3` volume type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-throughput)
+       */
+      override fun throughput(): Number? = unwrap(this).getThroughput()
+
+      /**
+       * The size (in GiB) of the EBS volume for each data node.
+       *
+       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
+       * instance type to which it is attached. For more information, see [EBS volume size
+       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+       * in the *Amazon OpenSearch Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumesize)
+       */
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+      /**
+       * The EBS volume type to use with the OpenSearch Service domain.
+       *
+       * If you choose `gp3` , you must also specify values for `Iops` and `Throughput` . For more
+       * information about each type, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide for Linux Instances* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumetype)
+       */
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EBSOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty):
+          EBSOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? EBSOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EBSOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty
+    }
+  }
+
+  /**
+   * Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key
+   * to use.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
+   * EncryptionAtRestOptionsProperty.builder()
+   * .enabled(false)
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html)
+   */
+  public interface EncryptionAtRestOptionsProperty {
+    /**
+     * Specify `true` to enable encryption at rest. Required if you enable fine-grained access
+     * control in
+     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+     * .
+     *
+     * If no encryption at rest options were initially specified in the template, updating this
+     * property by adding it causes no interruption. However, if you change this property after it's
+     * already been set within a template, the domain is deleted and recreated in order to modify the
+     * property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * The KMS key ID. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable
+     * encryption at rest.
+     *
+     * You can also use `keyAlias` as a value.
+     *
+     * If no encryption at rest options were initially specified in the template, updating this
+     * property by adding it causes no interruption. However, if you change this property after it's
+     * already been set within a template, the domain is deleted and recreated in order to modify the
+     * property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * A builder for [EncryptionAtRestOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Specify `true` to enable encryption at rest. Required if you enable
+       * fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       * If no encryption at rest options were initially specified in the template, updating this
+       * property by adding it causes no interruption. However, if you change this property after it's
+       * already been set within a template, the domain is deleted and recreated in order to modify the
+       * property.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specify `true` to enable encryption at rest. Required if you enable
+       * fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       * If no encryption at rest options were initially specified in the template, updating this
+       * property by adding it causes no interruption. However, if you change this property after it's
+       * already been set within a template, the domain is deleted and recreated in order to modify the
+       * property.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param kmsKeyId The KMS key ID. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` .
+       * Required if you enable encryption at rest.
+       * You can also use `keyAlias` as a value.
+       *
+       * If no encryption at rest options were initially specified in the template, updating this
+       * property by adding it causes no interruption. However, if you change this property after it's
+       * already been set within a template, the domain is deleted and recreated in order to modify the
+       * property.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty.builder()
+
+      /**
+       * @param enabled Specify `true` to enable encryption at rest. Required if you enable
+       * fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       * If no encryption at rest options were initially specified in the template, updating this
+       * property by adding it causes no interruption. However, if you change this property after it's
+       * already been set within a template, the domain is deleted and recreated in order to modify the
+       * property.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specify `true` to enable encryption at rest. Required if you enable
+       * fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       * If no encryption at rest options were initially specified in the template, updating this
+       * property by adding it causes no interruption. However, if you change this property after it's
+       * already been set within a template, the domain is deleted and recreated in order to modify the
+       * property.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param kmsKeyId The KMS key ID. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` .
+       * Required if you enable encryption at rest.
+       * You can also use `keyAlias` as a value.
+       *
+       * If no encryption at rest options were initially specified in the template, updating this
+       * property by adding it causes no interruption. However, if you change this property after it's
+       * already been set within a template, the domain is deleted and recreated in order to modify the
+       * property.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty,
+    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
+      /**
+       * Specify `true` to enable encryption at rest. Required if you enable fine-grained access
+       * control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       *
+       * If no encryption at rest options were initially specified in the template, updating this
+       * property by adding it causes no interruption. However, if you change this property after it's
+       * already been set within a template, the domain is deleted and recreated in order to modify the
+       * property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The KMS key ID. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you
+       * enable encryption at rest.
+       *
+       * You can also use `keyAlias` as a value.
+       *
+       * If no encryption at rest options were initially specified in the template, updating this
+       * property by adding it causes no interruption. However, if you change this property after it's
+       * already been set within a template, the domain is deleted and recreated in order to modify the
+       * property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty):
+          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
+    }
+  }
+
+  /**
+   * The SAML Identity Provider's information.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * IdpProperty idpProperty = IdpProperty.builder()
+   * .entityId("entityId")
+   * .metadataContent("metadataContent")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html)
+   */
+  public interface IdpProperty {
+    /**
+     * The unique entity ID of the application in the SAML identity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html#cfn-opensearchservice-domain-idp-entityid)
+     */
+    public fun entityId(): String
+
+    /**
+     * The metadata of the SAML application, in XML format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html#cfn-opensearchservice-domain-idp-metadatacontent)
+     */
+    public fun metadataContent(): String
+
+    /**
+     * A builder for [IdpProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param entityId The unique entity ID of the application in the SAML identity provider. 
+       */
+      public fun entityId(entityId: String)
+
+      /**
+       * @param metadataContent The metadata of the SAML application, in XML format. 
+       */
+      public fun metadataContent(metadataContent: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty.Builder =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty.builder()
+
+      /**
+       * @param entityId The unique entity ID of the application in the SAML identity provider. 
+       */
+      override fun entityId(entityId: String) {
+        cdkBuilder.entityId(entityId)
+      }
+
+      /**
+       * @param metadataContent The metadata of the SAML application, in XML format. 
+       */
+      override fun metadataContent(metadataContent: String) {
+        cdkBuilder.metadataContent(metadataContent)
+      }
+
+      public fun build(): software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty,
+    ) : CdkObject(cdkObject), IdpProperty {
+      /**
+       * The unique entity ID of the application in the SAML identity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html#cfn-opensearchservice-domain-idp-entityid)
+       */
+      override fun entityId(): String = unwrap(this).getEntityId()
+
+      /**
+       * The metadata of the SAML application, in XML format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html#cfn-opensearchservice-domain-idp-metadatacontent)
+       */
+      override fun metadataContent(): String = unwrap(this).getMetadataContent()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IdpProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty):
+          IdpProperty = CdkObjectWrappers.wrap(cdkObject) as? IdpProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdpProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty
+    }
+  }
+
+  /**
+   * Specifies whether the OpenSearch Service domain publishes application, search slow logs, or
+   * index slow logs to Amazon CloudWatch.
+   *
+   * Each option must be an object of name `SEARCH_SLOW_LOGS` , `ES_APPLICATION_LOGS` ,
+   * `INDEX_SLOW_LOGS` , or `AUDIT_LOGS` depending on the type of logs you want to publish. For the
+   * full syntax, see the
+   * [examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#aws-resource-opensearchservice-domain--examples)
+   * .
+   *
+   * Before you enable log publishing, you need to create a CloudWatch log group and provide
+   * OpenSearch Service the correct permissions to write to it. To learn more, see [Enabling log
+   * publishing ( AWS
+   * CloudFormation)](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createdomain-configure-slow-logs.html#createdomain-configure-slow-logs-cfn)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * LogPublishingOptionProperty logPublishingOptionProperty = LogPublishingOptionProperty.builder()
+   * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html)
+   */
+  public interface LogPublishingOptionProperty {
+    /**
+     * Specifies the CloudWatch log group to publish to.
+     *
+     * Required if you enable log publishing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-cloudwatchlogsloggrouparn)
+     */
+    public fun cloudWatchLogsLogGroupArn(): String? = unwrap(this).getCloudWatchLogsLogGroupArn()
+
+    /**
+     * If `true` , enables the publishing of logs to CloudWatch.
+     *
+     * Default: `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [LogPublishingOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogsLogGroupArn Specifies the CloudWatch log group to publish to.
+       * Required if you enable log publishing.
+       */
+      public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
+
+      /**
+       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
+       * Default: `false` .
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
+       * Default: `false` .
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty.builder()
+
+      /**
+       * @param cloudWatchLogsLogGroupArn Specifies the CloudWatch log group to publish to.
+       * Required if you enable log publishing.
+       */
+      override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
+        cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
+      }
+
+      /**
+       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
+       * Default: `false` .
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
+       * Default: `false` .
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty,
+    ) : CdkObject(cdkObject), LogPublishingOptionProperty {
+      /**
+       * Specifies the CloudWatch log group to publish to.
+       *
+       * Required if you enable log publishing.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-cloudwatchlogsloggrouparn)
+       */
+      override fun cloudWatchLogsLogGroupArn(): String? =
+          unwrap(this).getCloudWatchLogsLogGroupArn()
+
+      /**
+       * If `true` , enables the publishing of logs to CloudWatch.
+       *
+       * Default: `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogPublishingOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty):
+          LogPublishingOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogPublishingOptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogPublishingOptionProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty
+    }
+  }
+
+  /**
+   * Specifies information about the master user.
+   *
+   * Required if if `InternalUserDatabaseEnabled` is true in
+   * [AdvancedSecurityOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * MasterUserOptionsProperty masterUserOptionsProperty = MasterUserOptionsProperty.builder()
+   * .masterUserArn("masterUserArn")
+   * .masterUserName("masterUserName")
+   * .masterUserPassword("masterUserPassword")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html)
+   */
+  public interface MasterUserOptionsProperty {
+    /**
+     * Amazon Resource Name (ARN) for the master user.
+     *
+     * The ARN can point to an IAM user or role. This property is required for Amazon Cognito to
+     * work, and it must match the role configured for Cognito. Only specify if
+     * `InternalUserDatabaseEnabled` is false in
+     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserarn)
+     */
+    public fun masterUserArn(): String? = unwrap(this).getMasterUserArn()
+
+    /**
+     * Username for the master user. Only specify if `InternalUserDatabaseEnabled` is true in
+     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+     * .
+     *
+     * If you don't want to specify this value directly within the template, you can use a [dynamic
+     * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
+     * instead.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masterusername)
+     */
+    public fun masterUserName(): String? = unwrap(this).getMasterUserName()
+
+    /**
+     * Password for the master user. Only specify if `InternalUserDatabaseEnabled` is true in
+     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+     * .
+     *
+     * If you don't want to specify this value directly within the template, you can use a [dynamic
+     * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
+     * instead.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserpassword)
+     */
+    public fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
+
+    /**
+     * A builder for [MasterUserOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param masterUserArn Amazon Resource Name (ARN) for the master user.
+       * The ARN can point to an IAM user or role. This property is required for Amazon Cognito to
+       * work, and it must match the role configured for Cognito. Only specify if
+       * `InternalUserDatabaseEnabled` is false in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       */
+      public fun masterUserArn(masterUserArn: String)
+
+      /**
+       * @param masterUserName Username for the master user. Only specify if
+       * `InternalUserDatabaseEnabled` is true in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       * If you don't want to specify this value directly within the template, you can use a
+       * [dynamic
+       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
+       * instead.
+       */
+      public fun masterUserName(masterUserName: String)
+
+      /**
+       * @param masterUserPassword Password for the master user. Only specify if
+       * `InternalUserDatabaseEnabled` is true in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       * If you don't want to specify this value directly within the template, you can use a
+       * [dynamic
+       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
+       * instead.
+       */
+      public fun masterUserPassword(masterUserPassword: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty.builder()
+
+      /**
+       * @param masterUserArn Amazon Resource Name (ARN) for the master user.
+       * The ARN can point to an IAM user or role. This property is required for Amazon Cognito to
+       * work, and it must match the role configured for Cognito. Only specify if
+       * `InternalUserDatabaseEnabled` is false in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       */
+      override fun masterUserArn(masterUserArn: String) {
+        cdkBuilder.masterUserArn(masterUserArn)
+      }
+
+      /**
+       * @param masterUserName Username for the master user. Only specify if
+       * `InternalUserDatabaseEnabled` is true in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       * If you don't want to specify this value directly within the template, you can use a
+       * [dynamic
+       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
+       * instead.
+       */
+      override fun masterUserName(masterUserName: String) {
+        cdkBuilder.masterUserName(masterUserName)
+      }
+
+      /**
+       * @param masterUserPassword Password for the master user. Only specify if
+       * `InternalUserDatabaseEnabled` is true in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       * If you don't want to specify this value directly within the template, you can use a
+       * [dynamic
+       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
+       * instead.
+       */
+      override fun masterUserPassword(masterUserPassword: String) {
+        cdkBuilder.masterUserPassword(masterUserPassword)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty,
+    ) : CdkObject(cdkObject), MasterUserOptionsProperty {
+      /**
+       * Amazon Resource Name (ARN) for the master user.
+       *
+       * The ARN can point to an IAM user or role. This property is required for Amazon Cognito to
+       * work, and it must match the role configured for Cognito. Only specify if
+       * `InternalUserDatabaseEnabled` is false in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserarn)
+       */
+      override fun masterUserArn(): String? = unwrap(this).getMasterUserArn()
+
+      /**
+       * Username for the master user. Only specify if `InternalUserDatabaseEnabled` is true in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       *
+       * If you don't want to specify this value directly within the template, you can use a
+       * [dynamic
+       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
+       * instead.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masterusername)
+       */
+      override fun masterUserName(): String? = unwrap(this).getMasterUserName()
+
+      /**
+       * Password for the master user. Only specify if `InternalUserDatabaseEnabled` is true in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       *
+       * If you don't want to specify this value directly within the template, you can use a
+       * [dynamic
+       * reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)
+       * instead.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserpassword)
+       */
+      override fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MasterUserOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty):
+          MasterUserOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MasterUserOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MasterUserOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies options for node-to-node encryption.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * NodeToNodeEncryptionOptionsProperty nodeToNodeEncryptionOptionsProperty =
+   * NodeToNodeEncryptionOptionsProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html)
+   */
+  public interface NodeToNodeEncryptionOptionsProperty {
+    /**
+     * Specifies to enable or disable node-to-node encryption on the domain.
+     *
+     * Required if you enable fine-grained access control in
+     * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html#cfn-opensearchservice-domain-nodetonodeencryptionoptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [NodeToNodeEncryptionOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Specifies to enable or disable node-to-node encryption on the domain.
+       * Required if you enable fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies to enable or disable node-to-node encryption on the domain.
+       * Required if you enable fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty.builder()
+
+      /**
+       * @param enabled Specifies to enable or disable node-to-node encryption on the domain.
+       * Required if you enable fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies to enable or disable node-to-node encryption on the domain.
+       * Required if you enable fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty,
+    ) : CdkObject(cdkObject), NodeToNodeEncryptionOptionsProperty {
+      /**
+       * Specifies to enable or disable node-to-node encryption on the domain.
+       *
+       * Required if you enable fine-grained access control in
+       * [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html#cfn-opensearchservice-domain-nodetonodeencryptionoptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NodeToNodeEncryptionOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty):
+          NodeToNodeEncryptionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NodeToNodeEncryptionOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NodeToNodeEncryptionOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty
+    }
+  }
+
+  /**
+   * Off-peak window settings for the domain.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * OffPeakWindowOptionsProperty offPeakWindowOptionsProperty =
+   * OffPeakWindowOptionsProperty.builder()
+   * .enabled(false)
+   * .offPeakWindow(OffPeakWindowProperty.builder()
+   * .windowStartTime(WindowStartTimeProperty.builder()
+   * .hours(123)
+   * .minutes(123)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html)
+   */
+  public interface OffPeakWindowOptionsProperty {
+    /**
+     * Specifies whether off-peak window settings are enabled for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html#cfn-opensearchservice-domain-offpeakwindowoptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * Off-peak window settings for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html#cfn-opensearchservice-domain-offpeakwindowoptions-offpeakwindow)
+     */
+    public fun offPeakWindow(): Any? = unwrap(this).getOffPeakWindow()
+
+    /**
+     * A builder for [OffPeakWindowOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Specifies whether off-peak window settings are enabled for the domain.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether off-peak window settings are enabled for the domain.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param offPeakWindow Off-peak window settings for the domain.
+       */
+      public fun offPeakWindow(offPeakWindow: IResolvable)
+
+      /**
+       * @param offPeakWindow Off-peak window settings for the domain.
+       */
+      public fun offPeakWindow(offPeakWindow: OffPeakWindowProperty)
+
+      /**
+       * @param offPeakWindow Off-peak window settings for the domain.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0816bae19b39183938b8f9bbfbcecebc689836be9c7c945c0fda0ba6d6bb8c40")
+      public fun offPeakWindow(offPeakWindow: OffPeakWindowProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty.builder()
+
+      /**
+       * @param enabled Specifies whether off-peak window settings are enabled for the domain.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies whether off-peak window settings are enabled for the domain.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param offPeakWindow Off-peak window settings for the domain.
+       */
+      override fun offPeakWindow(offPeakWindow: IResolvable) {
+        cdkBuilder.offPeakWindow(offPeakWindow.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param offPeakWindow Off-peak window settings for the domain.
+       */
+      override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty) {
+        cdkBuilder.offPeakWindow(offPeakWindow.let(OffPeakWindowProperty::unwrap))
+      }
+
+      /**
+       * @param offPeakWindow Off-peak window settings for the domain.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0816bae19b39183938b8f9bbfbcecebc689836be9c7c945c0fda0ba6d6bb8c40")
+      override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty.Builder.() -> Unit): Unit =
+          offPeakWindow(OffPeakWindowProperty(offPeakWindow))
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty,
+    ) : CdkObject(cdkObject), OffPeakWindowOptionsProperty {
+      /**
+       * Specifies whether off-peak window settings are enabled for the domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html#cfn-opensearchservice-domain-offpeakwindowoptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * Off-peak window settings for the domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html#cfn-opensearchservice-domain-offpeakwindowoptions-offpeakwindow)
+       */
+      override fun offPeakWindow(): Any? = unwrap(this).getOffPeakWindow()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OffPeakWindowOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty):
+          OffPeakWindowOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OffPeakWindowOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OffPeakWindowOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty
+    }
+  }
+
+  /**
+   * A custom 10-hour, low-traffic window during which OpenSearch Service can perform mandatory
+   * configuration changes on the domain.
+   *
+   * These actions can include scheduled service software updates and blue/green Auto-Tune
+   * enhancements. OpenSearch Service will schedule these actions during the window that you specify.
+   * If you don't specify a window start time, it defaults to 10:00 P.M. local time.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * OffPeakWindowProperty offPeakWindowProperty = OffPeakWindowProperty.builder()
+   * .windowStartTime(WindowStartTimeProperty.builder()
+   * .hours(123)
+   * .minutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindow.html)
+   */
+  public interface OffPeakWindowProperty {
+    /**
+     * The desired start time for an off-peak maintenance window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindow.html#cfn-opensearchservice-domain-offpeakwindow-windowstarttime)
+     */
+    public fun windowStartTime(): Any? = unwrap(this).getWindowStartTime()
+
+    /**
+     * A builder for [OffPeakWindowProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param windowStartTime The desired start time for an off-peak maintenance window.
+       */
+      public fun windowStartTime(windowStartTime: IResolvable)
+
+      /**
+       * @param windowStartTime The desired start time for an off-peak maintenance window.
+       */
+      public fun windowStartTime(windowStartTime: WindowStartTimeProperty)
+
+      /**
+       * @param windowStartTime The desired start time for an off-peak maintenance window.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cc5262ef36470bc541159ef7d9a759a914ee2768b27431e784d1afc15afb33f3")
+      public fun windowStartTime(windowStartTime: WindowStartTimeProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty.builder()
+
+      /**
+       * @param windowStartTime The desired start time for an off-peak maintenance window.
+       */
+      override fun windowStartTime(windowStartTime: IResolvable) {
+        cdkBuilder.windowStartTime(windowStartTime.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param windowStartTime The desired start time for an off-peak maintenance window.
+       */
+      override fun windowStartTime(windowStartTime: WindowStartTimeProperty) {
+        cdkBuilder.windowStartTime(windowStartTime.let(WindowStartTimeProperty::unwrap))
+      }
+
+      /**
+       * @param windowStartTime The desired start time for an off-peak maintenance window.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cc5262ef36470bc541159ef7d9a759a914ee2768b27431e784d1afc15afb33f3")
+      override fun windowStartTime(windowStartTime: WindowStartTimeProperty.Builder.() -> Unit):
+          Unit = windowStartTime(WindowStartTimeProperty(windowStartTime))
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty,
+    ) : CdkObject(cdkObject), OffPeakWindowProperty {
+      /**
+       * The desired start time for an off-peak maintenance window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindow.html#cfn-opensearchservice-domain-offpeakwindow-windowstarttime)
+       */
+      override fun windowStartTime(): Any? = unwrap(this).getWindowStartTime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OffPeakWindowProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty):
+          OffPeakWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? OffPeakWindowProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OffPeakWindowProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty
+    }
+  }
+
+  /**
+   * Container for information about the SAML configuration for OpenSearch Dashboards.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * SAMLOptionsProperty sAMLOptionsProperty = SAMLOptionsProperty.builder()
+   * .enabled(false)
+   * .idp(IdpProperty.builder()
+   * .entityId("entityId")
+   * .metadataContent("metadataContent")
+   * .build())
+   * .masterBackendRole("masterBackendRole")
+   * .masterUserName("masterUserName")
+   * .rolesKey("rolesKey")
+   * .sessionTimeoutMinutes(123)
+   * .subjectKey("subjectKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html)
+   */
+  public interface SAMLOptionsProperty {
+    /**
+     * True to enable SAML authentication for a domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * The SAML Identity Provider's information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-idp)
+     */
+    public fun idp(): Any? = unwrap(this).getIdp()
+
+    /**
+     * The backend role that the SAML master user is mapped to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-masterbackendrole)
+     */
+    public fun masterBackendRole(): String? = unwrap(this).getMasterBackendRole()
+
+    /**
+     * The SAML master user name, which is stored in the domain's internal user database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-masterusername)
+     */
+    public fun masterUserName(): String? = unwrap(this).getMasterUserName()
+
+    /**
+     * Element of the SAML assertion to use for backend roles.
+     *
+     * Default is `roles` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-roleskey)
+     */
+    public fun rolesKey(): String? = unwrap(this).getRolesKey()
+
+    /**
+     * The duration, in minutes, after which a user session becomes inactive.
+     *
+     * Acceptable values are between 1 and 1440, and the default value is 60.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-sessiontimeoutminutes)
+     */
+    public fun sessionTimeoutMinutes(): Number? = unwrap(this).getSessionTimeoutMinutes()
+
+    /**
+     * Element of the SAML assertion to use for the user name.
+     *
+     * Default is `NameID` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-subjectkey)
+     */
+    public fun subjectKey(): String? = unwrap(this).getSubjectKey()
+
+    /**
+     * A builder for [SAMLOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled True to enable SAML authentication for a domain.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled True to enable SAML authentication for a domain.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param idp The SAML Identity Provider's information.
+       */
+      public fun idp(idp: IResolvable)
+
+      /**
+       * @param idp The SAML Identity Provider's information.
+       */
+      public fun idp(idp: IdpProperty)
+
+      /**
+       * @param idp The SAML Identity Provider's information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("98f2e7eab165afbb620ad885b13a80a025703d8a9b6df570b0ab2364e8364860")
+      public fun idp(idp: IdpProperty.Builder.() -> Unit)
+
+      /**
+       * @param masterBackendRole The backend role that the SAML master user is mapped to.
+       */
+      public fun masterBackendRole(masterBackendRole: String)
+
+      /**
+       * @param masterUserName The SAML master user name, which is stored in the domain's internal
+       * user database.
+       */
+      public fun masterUserName(masterUserName: String)
+
+      /**
+       * @param rolesKey Element of the SAML assertion to use for backend roles.
+       * Default is `roles` .
+       */
+      public fun rolesKey(rolesKey: String)
+
+      /**
+       * @param sessionTimeoutMinutes The duration, in minutes, after which a user session becomes
+       * inactive.
+       * Acceptable values are between 1 and 1440, and the default value is 60.
+       */
+      public fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number)
+
+      /**
+       * @param subjectKey Element of the SAML assertion to use for the user name.
+       * Default is `NameID` .
+       */
+      public fun subjectKey(subjectKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty.Builder =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty.builder()
+
+      /**
+       * @param enabled True to enable SAML authentication for a domain.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled True to enable SAML authentication for a domain.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param idp The SAML Identity Provider's information.
+       */
+      override fun idp(idp: IResolvable) {
+        cdkBuilder.idp(idp.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param idp The SAML Identity Provider's information.
+       */
+      override fun idp(idp: IdpProperty) {
+        cdkBuilder.idp(idp.let(IdpProperty::unwrap))
+      }
+
+      /**
+       * @param idp The SAML Identity Provider's information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("98f2e7eab165afbb620ad885b13a80a025703d8a9b6df570b0ab2364e8364860")
+      override fun idp(idp: IdpProperty.Builder.() -> Unit): Unit = idp(IdpProperty(idp))
+
+      /**
+       * @param masterBackendRole The backend role that the SAML master user is mapped to.
+       */
+      override fun masterBackendRole(masterBackendRole: String) {
+        cdkBuilder.masterBackendRole(masterBackendRole)
+      }
+
+      /**
+       * @param masterUserName The SAML master user name, which is stored in the domain's internal
+       * user database.
+       */
+      override fun masterUserName(masterUserName: String) {
+        cdkBuilder.masterUserName(masterUserName)
+      }
+
+      /**
+       * @param rolesKey Element of the SAML assertion to use for backend roles.
+       * Default is `roles` .
+       */
+      override fun rolesKey(rolesKey: String) {
+        cdkBuilder.rolesKey(rolesKey)
+      }
+
+      /**
+       * @param sessionTimeoutMinutes The duration, in minutes, after which a user session becomes
+       * inactive.
+       * Acceptable values are between 1 and 1440, and the default value is 60.
+       */
+      override fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number) {
+        cdkBuilder.sessionTimeoutMinutes(sessionTimeoutMinutes)
+      }
+
+      /**
+       * @param subjectKey Element of the SAML assertion to use for the user name.
+       * Default is `NameID` .
+       */
+      override fun subjectKey(subjectKey: String) {
+        cdkBuilder.subjectKey(subjectKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty,
+    ) : CdkObject(cdkObject), SAMLOptionsProperty {
+      /**
+       * True to enable SAML authentication for a domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The SAML Identity Provider's information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-idp)
+       */
+      override fun idp(): Any? = unwrap(this).getIdp()
+
+      /**
+       * The backend role that the SAML master user is mapped to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-masterbackendrole)
+       */
+      override fun masterBackendRole(): String? = unwrap(this).getMasterBackendRole()
+
+      /**
+       * The SAML master user name, which is stored in the domain's internal user database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-masterusername)
+       */
+      override fun masterUserName(): String? = unwrap(this).getMasterUserName()
+
+      /**
+       * Element of the SAML assertion to use for backend roles.
+       *
+       * Default is `roles` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-roleskey)
+       */
+      override fun rolesKey(): String? = unwrap(this).getRolesKey()
+
+      /**
+       * The duration, in minutes, after which a user session becomes inactive.
+       *
+       * Acceptable values are between 1 and 1440, and the default value is 60.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-sessiontimeoutminutes)
+       */
+      override fun sessionTimeoutMinutes(): Number? = unwrap(this).getSessionTimeoutMinutes()
+
+      /**
+       * Element of the SAML assertion to use for the user name.
+       *
+       * Default is `NameID` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html#cfn-opensearchservice-domain-samloptions-subjectkey)
+       */
+      override fun subjectKey(): String? = unwrap(this).getSubjectKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SAMLOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty):
+          SAMLOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SAMLOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SAMLOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty
     }
   }
 
@@ -5354,10 +5653,12 @@ public open class CfnDomain internal constructor(
   }
 
   /**
-   * A custom start time for the off-peak window, in Coordinated Universal Time (UTC).
+   * *DEPRECATED* .
    *
-   * The window length will always be 10 hours, so you can't specify an end time. For example, if
-   * you specify 11:00 P.M. UTC as a start time, the end time will automatically be set to 9:00 A.M.
+   * This setting is only relevant to domains running legacy Elasticsearch OSS versions earlier than
+   * 5.3. It does not apply to OpenSearch domains.
+   *
+   * The automated snapshot configuration for the OpenSearch Service domain indexes.
    *
    * Example:
    *
@@ -5365,129 +5666,97 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * WindowStartTimeProperty windowStartTimeProperty = WindowStartTimeProperty.builder()
-   * .hours(123)
-   * .minutes(123)
+   * SnapshotOptionsProperty snapshotOptionsProperty = SnapshotOptionsProperty.builder()
+   * .automatedSnapshotStartHour(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-snapshotoptions.html)
    */
-  public interface WindowStartTimeProperty {
+  public interface SnapshotOptionsProperty {
     /**
-     * The start hour of the window in Coordinated Universal Time (UTC), using 24-hour time.
+     * The hour in UTC during which the service takes an automated daily snapshot of the indexes in
+     * the OpenSearch Service domain.
      *
-     * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is 23.
+     * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday
+     * between midnight and 1 am. You can specify a value between 0 and 23.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html#cfn-opensearchservice-domain-windowstarttime-hours)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-snapshotoptions.html#cfn-opensearchservice-domain-snapshotoptions-automatedsnapshotstarthour)
      */
-    public fun hours(): Number
+    public fun automatedSnapshotStartHour(): Number? = unwrap(this).getAutomatedSnapshotStartHour()
 
     /**
-     * The start minute of the window, in UTC.
-     *
-     * The minimum value is 0 and the maximum value is 59.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html#cfn-opensearchservice-domain-windowstarttime-minutes)
-     */
-    public fun minutes(): Number
-
-    /**
-     * A builder for [WindowStartTimeProperty]
+     * A builder for [SnapshotOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param hours The start hour of the window in Coordinated Universal Time (UTC), using
-       * 24-hour time. 
-       * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is
-       * 23.
+       * @param automatedSnapshotStartHour The hour in UTC during which the service takes an
+       * automated daily snapshot of the indexes in the OpenSearch Service domain.
+       * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday
+       * between midnight and 1 am. You can specify a value between 0 and 23.
        */
-      public fun hours(hours: Number)
-
-      /**
-       * @param minutes The start minute of the window, in UTC. 
-       * The minimum value is 0 and the maximum value is 59.
-       */
-      public fun minutes(minutes: Number)
+      public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty.Builder
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty.Builder
           =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty.builder()
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty.builder()
 
       /**
-       * @param hours The start hour of the window in Coordinated Universal Time (UTC), using
-       * 24-hour time. 
-       * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is
-       * 23.
+       * @param automatedSnapshotStartHour The hour in UTC during which the service takes an
+       * automated daily snapshot of the indexes in the OpenSearch Service domain.
+       * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday
+       * between midnight and 1 am. You can specify a value between 0 and 23.
        */
-      override fun hours(hours: Number) {
-        cdkBuilder.hours(hours)
-      }
-
-      /**
-       * @param minutes The start minute of the window, in UTC. 
-       * The minimum value is 0 and the maximum value is 59.
-       */
-      override fun minutes(minutes: Number) {
-        cdkBuilder.minutes(minutes)
+      override fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
+        cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
       }
 
       public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty,
-    ) : CdkObject(cdkObject), WindowStartTimeProperty {
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty,
+    ) : CdkObject(cdkObject), SnapshotOptionsProperty {
       /**
-       * The start hour of the window in Coordinated Universal Time (UTC), using 24-hour time.
+       * The hour in UTC during which the service takes an automated daily snapshot of the indexes
+       * in the OpenSearch Service domain.
        *
-       * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is
-       * 23.
+       * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday
+       * between midnight and 1 am. You can specify a value between 0 and 23.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html#cfn-opensearchservice-domain-windowstarttime-hours)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-snapshotoptions.html#cfn-opensearchservice-domain-snapshotoptions-automatedsnapshotstarthour)
        */
-      override fun hours(): Number = unwrap(this).getHours()
-
-      /**
-       * The start minute of the window, in UTC.
-       *
-       * The minimum value is 0 and the maximum value is 59.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html#cfn-opensearchservice-domain-windowstarttime-minutes)
-       */
-      override fun minutes(): Number = unwrap(this).getMinutes()
+      override fun automatedSnapshotStartHour(): Number? =
+          unwrap(this).getAutomatedSnapshotStartHour()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WindowStartTimeProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnapshotOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty):
-          WindowStartTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? WindowStartTimeProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty):
+          SnapshotOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SnapshotOptionsProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: WindowStartTimeProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty =
+      internal fun unwrap(wrapped: SnapshotOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty
     }
   }
 
   /**
-   * Container for the parameters required to enable cold storage for an OpenSearch Service domain.
-   *
-   * For more information, see [Cold storage for Amazon OpenSearch
-   * Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html) .
+   * Options for configuring service software updates for a domain.
    *
    * Example:
    *
@@ -5495,97 +5764,94 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * ColdStorageOptionsProperty coldStorageOptionsProperty = ColdStorageOptionsProperty.builder()
-   * .enabled(false)
+   * SoftwareUpdateOptionsProperty softwareUpdateOptionsProperty =
+   * SoftwareUpdateOptionsProperty.builder()
+   * .autoSoftwareUpdateEnabled(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-coldstorageoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html)
    */
-  public interface ColdStorageOptionsProperty {
+  public interface SoftwareUpdateOptionsProperty {
     /**
-     * Whether to enable or disable cold storage on the domain.
+     * Specifies whether automatic service software updates are enabled for the domain.
      *
-     * You must enable UltraWarm storage to enable cold storage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-coldstorageoptions.html#cfn-opensearchservice-domain-coldstorageoptions-enabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html#cfn-opensearchservice-domain-softwareupdateoptions-autosoftwareupdateenabled)
      */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
+    public fun autoSoftwareUpdateEnabled(): Any? = unwrap(this).getAutoSoftwareUpdateEnabled()
 
     /**
-     * A builder for [ColdStorageOptionsProperty]
+     * A builder for [SoftwareUpdateOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Whether to enable or disable cold storage on the domain.
-       * You must enable UltraWarm storage to enable cold storage.
+       * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
+       * enabled for the domain.
        */
-      public fun enabled(enabled: Boolean)
+      public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean)
 
       /**
-       * @param enabled Whether to enable or disable cold storage on the domain.
-       * You must enable UltraWarm storage to enable cold storage.
+       * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
+       * enabled for the domain.
        */
-      public fun enabled(enabled: IResolvable)
+      public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty.Builder
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty.Builder
           =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty.builder()
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty.builder()
 
       /**
-       * @param enabled Whether to enable or disable cold storage on the domain.
-       * You must enable UltraWarm storage to enable cold storage.
+       * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
+       * enabled for the domain.
        */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
+      override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean) {
+        cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled)
       }
 
       /**
-       * @param enabled Whether to enable or disable cold storage on the domain.
-       * You must enable UltraWarm storage to enable cold storage.
+       * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
+       * enabled for the domain.
        */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable) {
+        cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty,
-    ) : CdkObject(cdkObject), ColdStorageOptionsProperty {
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty,
+    ) : CdkObject(cdkObject), SoftwareUpdateOptionsProperty {
       /**
-       * Whether to enable or disable cold storage on the domain.
+       * Specifies whether automatic service software updates are enabled for the domain.
        *
-       * You must enable UltraWarm storage to enable cold storage.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-coldstorageoptions.html#cfn-opensearchservice-domain-coldstorageoptions-enabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html#cfn-opensearchservice-domain-softwareupdateoptions-autosoftwareupdateenabled)
        */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun autoSoftwareUpdateEnabled(): Any? = unwrap(this).getAutoSoftwareUpdateEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ColdStorageOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SoftwareUpdateOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty):
-          ColdStorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ColdStorageOptionsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty):
+          SoftwareUpdateOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SoftwareUpdateOptionsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ColdStorageOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty
+      internal fun unwrap(wrapped: SoftwareUpdateOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty
     }
   }
 
@@ -5810,12 +6076,10 @@ public open class CfnDomain internal constructor(
   }
 
   /**
-   * The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data
-   * nodes in the OpenSearch Service domain.
+   * A custom start time for the off-peak window, in Coordinated Universal Time (UTC).
    *
-   * For more information, see [EBS volume size
-   * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
+   * The window length will always be 10 hours, so you can't specify an end time. For example, if
+   * you specify 11:00 P.M. UTC as a start time, the end time will automatically be set to 9:00 A.M.
    *
    * Example:
    *
@@ -5823,255 +6087,128 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * EBSOptionsProperty eBSOptionsProperty = EBSOptionsProperty.builder()
-   * .ebsEnabled(false)
-   * .iops(123)
-   * .throughput(123)
-   * .volumeSize(123)
-   * .volumeType("volumeType")
+   * WindowStartTimeProperty windowStartTimeProperty = WindowStartTimeProperty.builder()
+   * .hours(123)
+   * .minutes(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html)
    */
-  public interface EBSOptionsProperty {
+  public interface WindowStartTimeProperty {
     /**
-     * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
-     * domain.
+     * The start hour of the window in Coordinated Universal Time (UTC), using 24-hour time.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-ebsenabled)
+     * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is 23.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html#cfn-opensearchservice-domain-windowstarttime-hours)
      */
-    public fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
+    public fun hours(): Number
 
     /**
-     * The number of I/O operations per second (IOPS) that the volume supports.
+     * The start minute of the window, in UTC.
      *
-     * This property applies only to the `gp3` and provisioned IOPS EBS volume types.
+     * The minimum value is 0 and the maximum value is 59.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-iops)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html#cfn-opensearchservice-domain-windowstarttime-minutes)
      */
-    public fun iops(): Number? = unwrap(this).getIops()
+    public fun minutes(): Number
 
     /**
-     * The throughput (in MiB/s) of the EBS volumes attached to data nodes.
-     *
-     * Applies only to the `gp3` volume type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-throughput)
-     */
-    public fun throughput(): Number? = unwrap(this).getThroughput()
-
-    /**
-     * The size (in GiB) of the EBS volume for each data node.
-     *
-     * The minimum and maximum size of an EBS volume depends on the EBS volume type and the instance
-     * type to which it is attached. For more information, see [EBS volume size
-     * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-     * in the *Amazon OpenSearch Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumesize)
-     */
-    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-    /**
-     * The EBS volume type to use with the OpenSearch Service domain.
-     *
-     * If you choose `gp3` , you must also specify values for `Iops` and `Throughput` . For more
-     * information about each type, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumetype)
-     */
-    public fun volumeType(): String? = unwrap(this).getVolumeType()
-
-    /**
-     * A builder for [EBSOptionsProperty]
+     * A builder for [WindowStartTimeProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-       * OpenSearch Service domain.
+       * @param hours The start hour of the window in Coordinated Universal Time (UTC), using
+       * 24-hour time. 
+       * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is
+       * 23.
        */
-      public fun ebsEnabled(ebsEnabled: Boolean)
+      public fun hours(hours: Number)
 
       /**
-       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-       * OpenSearch Service domain.
+       * @param minutes The start minute of the window, in UTC. 
+       * The minimum value is 0 and the maximum value is 59.
        */
-      public fun ebsEnabled(ebsEnabled: IResolvable)
-
-      /**
-       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
-       * This property applies only to the `gp3` and provisioned IOPS EBS volume types.
-       */
-      public fun iops(iops: Number)
-
-      /**
-       * @param throughput The throughput (in MiB/s) of the EBS volumes attached to data nodes.
-       * Applies only to the `gp3` volume type.
-       */
-      public fun throughput(throughput: Number)
-
-      /**
-       * @param volumeSize The size (in GiB) of the EBS volume for each data node.
-       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
-       * instance type to which it is attached. For more information, see [EBS volume size
-       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-       * in the *Amazon OpenSearch Service Developer Guide* .
-       */
-      public fun volumeSize(volumeSize: Number)
-
-      /**
-       * @param volumeType The EBS volume type to use with the OpenSearch Service domain.
-       * If you choose `gp3` , you must also specify values for `Iops` and `Throughput` . For more
-       * information about each type, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
-       */
-      public fun volumeType(volumeType: String)
+      public fun minutes(minutes: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty.Builder =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty.builder()
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty.builder()
 
       /**
-       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-       * OpenSearch Service domain.
+       * @param hours The start hour of the window in Coordinated Universal Time (UTC), using
+       * 24-hour time. 
+       * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is
+       * 23.
        */
-      override fun ebsEnabled(ebsEnabled: Boolean) {
-        cdkBuilder.ebsEnabled(ebsEnabled)
+      override fun hours(hours: Number) {
+        cdkBuilder.hours(hours)
       }
 
       /**
-       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-       * OpenSearch Service domain.
+       * @param minutes The start minute of the window, in UTC. 
+       * The minimum value is 0 and the maximum value is 59.
        */
-      override fun ebsEnabled(ebsEnabled: IResolvable) {
-        cdkBuilder.ebsEnabled(ebsEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
-       * This property applies only to the `gp3` and provisioned IOPS EBS volume types.
-       */
-      override fun iops(iops: Number) {
-        cdkBuilder.iops(iops)
-      }
-
-      /**
-       * @param throughput The throughput (in MiB/s) of the EBS volumes attached to data nodes.
-       * Applies only to the `gp3` volume type.
-       */
-      override fun throughput(throughput: Number) {
-        cdkBuilder.throughput(throughput)
-      }
-
-      /**
-       * @param volumeSize The size (in GiB) of the EBS volume for each data node.
-       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
-       * instance type to which it is attached. For more information, see [EBS volume size
-       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-       * in the *Amazon OpenSearch Service Developer Guide* .
-       */
-      override fun volumeSize(volumeSize: Number) {
-        cdkBuilder.volumeSize(volumeSize)
-      }
-
-      /**
-       * @param volumeType The EBS volume type to use with the OpenSearch Service domain.
-       * If you choose `gp3` , you must also specify values for `Iops` and `Throughput` . For more
-       * information about each type, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
-       */
-      override fun volumeType(volumeType: String) {
-        cdkBuilder.volumeType(volumeType)
+      override fun minutes(minutes: Number) {
+        cdkBuilder.minutes(minutes)
       }
 
       public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty,
-    ) : CdkObject(cdkObject), EBSOptionsProperty {
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty,
+    ) : CdkObject(cdkObject), WindowStartTimeProperty {
       /**
-       * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
-       * domain.
+       * The start hour of the window in Coordinated Universal Time (UTC), using 24-hour time.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-ebsenabled)
+       * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is
+       * 23.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html#cfn-opensearchservice-domain-windowstarttime-hours)
        */
-      override fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
+      override fun hours(): Number = unwrap(this).getHours()
 
       /**
-       * The number of I/O operations per second (IOPS) that the volume supports.
+       * The start minute of the window, in UTC.
        *
-       * This property applies only to the `gp3` and provisioned IOPS EBS volume types.
+       * The minimum value is 0 and the maximum value is 59.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-iops)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-windowstarttime.html#cfn-opensearchservice-domain-windowstarttime-minutes)
        */
-      override fun iops(): Number? = unwrap(this).getIops()
-
-      /**
-       * The throughput (in MiB/s) of the EBS volumes attached to data nodes.
-       *
-       * Applies only to the `gp3` volume type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-throughput)
-       */
-      override fun throughput(): Number? = unwrap(this).getThroughput()
-
-      /**
-       * The size (in GiB) of the EBS volume for each data node.
-       *
-       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
-       * instance type to which it is attached. For more information, see [EBS volume size
-       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-       * in the *Amazon OpenSearch Service Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumesize)
-       */
-      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-      /**
-       * The EBS volume type to use with the OpenSearch Service domain.
-       *
-       * If you choose `gp3` , you must also specify values for `Iops` and `Throughput` . For more
-       * information about each type, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumetype)
-       */
-      override fun volumeType(): String? = unwrap(this).getVolumeType()
+      override fun minutes(): Number = unwrap(this).getMinutes()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EBSOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WindowStartTimeProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty):
-          EBSOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? EBSOptionsProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty):
+          WindowStartTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? WindowStartTimeProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EBSOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty
+      internal fun unwrap(wrapped: WindowStartTimeProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty
     }
   }
 
   /**
-   * Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards.
+   * Specifies zone awareness configuration options.
+   *
+   * Only use if `ZoneAwarenessEnabled` is `true` .
    *
    * Example:
    *
@@ -6079,224 +6216,87 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
-   * CognitoOptionsProperty cognitoOptionsProperty = CognitoOptionsProperty.builder()
-   * .enabled(false)
-   * .identityPoolId("identityPoolId")
-   * .roleArn("roleArn")
-   * .userPoolId("userPoolId")
+   * ZoneAwarenessConfigProperty zoneAwarenessConfigProperty = ZoneAwarenessConfigProperty.builder()
+   * .availabilityZoneCount(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-zoneawarenessconfig.html)
    */
-  public interface CognitoOptionsProperty {
+  public interface ZoneAwarenessConfigProperty {
     /**
-     * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
+     * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the domain
+     * to use.
      *
-     * See [Amazon Cognito authentication for OpenSearch
-     * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-     * .
+     * Valid values are `2` and `3` . Default is 2.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-enabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-zoneawarenessconfig.html#cfn-opensearchservice-domain-zoneawarenessconfig-availabilityzonecount)
      */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
+    public fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
 
     /**
-     * The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch
-     * Dashboards authentication.
-     *
-     * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-identitypoolid)
-     */
-    public fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
-
-    /**
-     * The `AmazonOpenSearchServiceCognitoAccess` role that allows OpenSearch Service to configure
-     * your user pool and identity pool.
-     *
-     * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-rolearn)
-     */
-    public fun roleArn(): String? = unwrap(this).getRoleArn()
-
-    /**
-     * The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch
-     * Dashboards authentication.
-     *
-     * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-userpoolid)
-     */
-    public fun userPoolId(): String? = unwrap(this).getUserPoolId()
-
-    /**
-     * A builder for [CognitoOptionsProperty]
+     * A builder for [ZoneAwarenessConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
-       * Dashboards.
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
+       * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number
+       * of AZs that you want the domain to use.
+       * Valid values are `2` and `3` . Default is 2.
        */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
-       * Dashboards.
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service
-       * to use for OpenSearch Dashboards authentication.
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       */
-      public fun identityPoolId(identityPoolId: String)
-
-      /**
-       * @param roleArn The `AmazonOpenSearchServiceCognitoAccess` role that allows OpenSearch
-       * Service to configure your user pool and identity pool.
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use
-       * for OpenSearch Dashboards authentication.
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       */
-      public fun userPoolId(userPoolId: String)
+      public fun availabilityZoneCount(availabilityZoneCount: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty.Builder
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty.Builder
           =
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty.builder()
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty.builder()
 
       /**
-       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
-       * Dashboards.
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
+       * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number
+       * of AZs that you want the domain to use.
+       * Valid values are `2` and `3` . Default is 2.
        */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
-       * Dashboards.
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service
-       * to use for OpenSearch Dashboards authentication.
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       */
-      override fun identityPoolId(identityPoolId: String) {
-        cdkBuilder.identityPoolId(identityPoolId)
-      }
-
-      /**
-       * @param roleArn The `AmazonOpenSearchServiceCognitoAccess` role that allows OpenSearch
-       * Service to configure your user pool and identity pool.
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use
-       * for OpenSearch Dashboards authentication.
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       */
-      override fun userPoolId(userPoolId: String) {
-        cdkBuilder.userPoolId(userPoolId)
+      override fun availabilityZoneCount(availabilityZoneCount: Number) {
+        cdkBuilder.availabilityZoneCount(availabilityZoneCount)
       }
 
       public fun build():
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty,
-    ) : CdkObject(cdkObject), CognitoOptionsProperty {
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty,
+    ) : CdkObject(cdkObject), ZoneAwarenessConfigProperty {
       /**
-       * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
+       * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the
+       * domain to use.
        *
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
+       * Valid values are `2` and `3` . Default is 2.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-enabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-zoneawarenessconfig.html#cfn-opensearchservice-domain-zoneawarenessconfig-availabilityzonecount)
        */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch
-       * Dashboards authentication.
-       *
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-identitypoolid)
-       */
-      override fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
-
-      /**
-       * The `AmazonOpenSearchServiceCognitoAccess` role that allows OpenSearch Service to configure
-       * your user pool and identity pool.
-       *
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-rolearn)
-       */
-      override fun roleArn(): String? = unwrap(this).getRoleArn()
-
-      /**
-       * The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch
-       * Dashboards authentication.
-       *
-       * Required if you enabled Cognito Authentication for OpenSearch Dashboards.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-userpoolid)
-       */
-      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
+      override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CognitoOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ZoneAwarenessConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty):
-          CognitoOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CognitoOptionsProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty):
+          ZoneAwarenessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZoneAwarenessConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CognitoOptionsProperty):
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty =
+      internal fun unwrap(wrapped: ZoneAwarenessConfigProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty
     }
   }
 }

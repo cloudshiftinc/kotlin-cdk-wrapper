@@ -437,122 +437,6 @@ public open class CfnVirtualRouter internal constructor(
   }
 
   /**
-   * An object that represents the specification of a virtual router.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualRouterSpecProperty virtualRouterSpecProperty = VirtualRouterSpecProperty.builder()
-   * .listeners(List.of(VirtualRouterListenerProperty.builder()
-   * .portMapping(PortMappingProperty.builder()
-   * .port(123)
-   * .protocol("protocol")
-   * .build())
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html)
-   */
-  public interface VirtualRouterSpecProperty {
-    /**
-     * The listeners that the virtual router is expected to receive inbound traffic from.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)
-     */
-    public fun listeners(): Any
-
-    /**
-     * A builder for [VirtualRouterSpecProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      public fun listeners(listeners: IResolvable)
-
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      public fun listeners(listeners: List<Any>)
-
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      public fun listeners(vararg listeners: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty.builder()
-
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      override fun listeners(listeners: IResolvable) {
-        cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      override fun listeners(listeners: List<Any>) {
-        cdkBuilder.listeners(listeners)
-      }
-
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      override fun listeners(vararg listeners: Any): Unit = listeners(listeners.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty,
-    ) : CdkObject(cdkObject), VirtualRouterSpecProperty {
-      /**
-       * The listeners that the virtual router is expected to receive inbound traffic from.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)
-       */
-      override fun listeners(): Any = unwrap(this).getListeners()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualRouterSpecProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty):
-          VirtualRouterSpecProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualRouterSpecProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualRouterSpecProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty
-    }
-  }
-
-  /**
    * An object representing a virtual router listener port mapping.
    *
    * Example:
@@ -778,6 +662,122 @@ public open class CfnVirtualRouter internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty
+    }
+  }
+
+  /**
+   * An object that represents the specification of a virtual router.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualRouterSpecProperty virtualRouterSpecProperty = VirtualRouterSpecProperty.builder()
+   * .listeners(List.of(VirtualRouterListenerProperty.builder()
+   * .portMapping(PortMappingProperty.builder()
+   * .port(123)
+   * .protocol("protocol")
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html)
+   */
+  public interface VirtualRouterSpecProperty {
+    /**
+     * The listeners that the virtual router is expected to receive inbound traffic from.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)
+     */
+    public fun listeners(): Any
+
+    /**
+     * A builder for [VirtualRouterSpecProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param listeners The listeners that the virtual router is expected to receive inbound
+       * traffic from. 
+       */
+      public fun listeners(listeners: IResolvable)
+
+      /**
+       * @param listeners The listeners that the virtual router is expected to receive inbound
+       * traffic from. 
+       */
+      public fun listeners(listeners: List<Any>)
+
+      /**
+       * @param listeners The listeners that the virtual router is expected to receive inbound
+       * traffic from. 
+       */
+      public fun listeners(vararg listeners: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty.builder()
+
+      /**
+       * @param listeners The listeners that the virtual router is expected to receive inbound
+       * traffic from. 
+       */
+      override fun listeners(listeners: IResolvable) {
+        cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param listeners The listeners that the virtual router is expected to receive inbound
+       * traffic from. 
+       */
+      override fun listeners(listeners: List<Any>) {
+        cdkBuilder.listeners(listeners)
+      }
+
+      /**
+       * @param listeners The listeners that the virtual router is expected to receive inbound
+       * traffic from. 
+       */
+      override fun listeners(vararg listeners: Any): Unit = listeners(listeners.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty,
+    ) : CdkObject(cdkObject), VirtualRouterSpecProperty {
+      /**
+       * The listeners that the virtual router is expected to receive inbound traffic from.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)
+       */
+      override fun listeners(): Any = unwrap(this).getListeners()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualRouterSpecProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty):
+          VirtualRouterSpecProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualRouterSpecProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualRouterSpecProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty
     }
   }
 }

@@ -533,6 +533,236 @@ public open class EmrModifyInstanceGroupByName internal constructor(
   }
 
   /**
+   * Modify the size or configurations of an instance group.
+   *
+   * Example:
+   *
+   * ```
+   * EmrModifyInstanceGroupByName.Builder.create(this, "Task")
+   * .clusterId("ClusterId")
+   * .instanceGroupName(JsonPath.stringAt("$.InstanceGroupName"))
+   * .instanceGroup(InstanceGroupModifyConfigProperty.builder()
+   * .instanceCount(1)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_InstanceGroupModifyConfig.html)
+   */
+  public interface InstanceGroupModifyConfigProperty {
+    /**
+     * A list of new or modified configurations to apply for an instance group.
+     *
+     * Default: - None
+     */
+    public fun configurations(): List<EmrCreateCluster.ConfigurationProperty> =
+        unwrap(this).getConfigurations()?.map(EmrCreateCluster.ConfigurationProperty::wrap) ?:
+        emptyList()
+
+    /**
+     * The EC2 InstanceIds to terminate.
+     *
+     * After you terminate the instances, the instance group will not return to its original
+     * requested size.
+     *
+     * Default: - None
+     */
+    public fun ec2InstanceIdsToTerminate(): List<String> =
+        unwrap(this).getEC2InstanceIdsToTerminate() ?: emptyList()
+
+    /**
+     * Target size for the instance group.
+     *
+     * Default: - None
+     */
+    public fun instanceCount(): Number? = unwrap(this).getInstanceCount()
+
+    /**
+     * Policy for customizing shrink operations.
+     *
+     * Default: - None
+     *
+     * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ShrinkPolicy.html)
+     */
+    public fun shrinkPolicy(): ShrinkPolicyProperty? =
+        unwrap(this).getShrinkPolicy()?.let(ShrinkPolicyProperty::wrap)
+
+    /**
+     * A builder for [InstanceGroupModifyConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configurations A list of new or modified configurations to apply for an instance
+       * group.
+       */
+      public fun configurations(configurations: List<EmrCreateCluster.ConfigurationProperty>)
+
+      /**
+       * @param configurations A list of new or modified configurations to apply for an instance
+       * group.
+       */
+      public fun configurations(vararg configurations: EmrCreateCluster.ConfigurationProperty)
+
+      /**
+       * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
+       * After you terminate the instances, the instance group will not return to its original
+       * requested size.
+       */
+      public fun eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate: List<String>)
+
+      /**
+       * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
+       * After you terminate the instances, the instance group will not return to its original
+       * requested size.
+       */
+      public fun eC2InstanceIdsToTerminate(vararg eC2InstanceIdsToTerminate: String)
+
+      /**
+       * @param instanceCount Target size for the instance group.
+       */
+      public fun instanceCount(instanceCount: Number)
+
+      /**
+       * @param shrinkPolicy Policy for customizing shrink operations.
+       */
+      public fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty)
+
+      /**
+       * @param shrinkPolicy Policy for customizing shrink operations.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("780915b8831837b2846bf69d48cc0a5e6f8bfaa375d231e50add83eedad1c123")
+      public fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty.builder()
+
+      /**
+       * @param configurations A list of new or modified configurations to apply for an instance
+       * group.
+       */
+      override fun configurations(configurations: List<EmrCreateCluster.ConfigurationProperty>) {
+        cdkBuilder.configurations(configurations.map(EmrCreateCluster.ConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param configurations A list of new or modified configurations to apply for an instance
+       * group.
+       */
+      override fun configurations(vararg configurations: EmrCreateCluster.ConfigurationProperty):
+          Unit = configurations(configurations.toList())
+
+      /**
+       * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
+       * After you terminate the instances, the instance group will not return to its original
+       * requested size.
+       */
+      override fun eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate: List<String>) {
+        cdkBuilder.eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate)
+      }
+
+      /**
+       * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
+       * After you terminate the instances, the instance group will not return to its original
+       * requested size.
+       */
+      override fun eC2InstanceIdsToTerminate(vararg eC2InstanceIdsToTerminate: String): Unit =
+          eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate.toList())
+
+      /**
+       * @param instanceCount Target size for the instance group.
+       */
+      override fun instanceCount(instanceCount: Number) {
+        cdkBuilder.instanceCount(instanceCount)
+      }
+
+      /**
+       * @param shrinkPolicy Policy for customizing shrink operations.
+       */
+      override fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty) {
+        cdkBuilder.shrinkPolicy(shrinkPolicy.let(ShrinkPolicyProperty::unwrap))
+      }
+
+      /**
+       * @param shrinkPolicy Policy for customizing shrink operations.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("780915b8831837b2846bf69d48cc0a5e6f8bfaa375d231e50add83eedad1c123")
+      override fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty.Builder.() -> Unit): Unit =
+          shrinkPolicy(ShrinkPolicyProperty(shrinkPolicy))
+
+      public fun build():
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty,
+    ) : CdkObject(cdkObject), InstanceGroupModifyConfigProperty {
+      /**
+       * A list of new or modified configurations to apply for an instance group.
+       *
+       * Default: - None
+       */
+      override fun configurations(): List<EmrCreateCluster.ConfigurationProperty> =
+          unwrap(this).getConfigurations()?.map(EmrCreateCluster.ConfigurationProperty::wrap) ?:
+          emptyList()
+
+      /**
+       * The EC2 InstanceIds to terminate.
+       *
+       * After you terminate the instances, the instance group will not return to its original
+       * requested size.
+       *
+       * Default: - None
+       */
+      override fun ec2InstanceIdsToTerminate(): List<String> =
+          unwrap(this).getEC2InstanceIdsToTerminate() ?: emptyList()
+
+      /**
+       * Target size for the instance group.
+       *
+       * Default: - None
+       */
+      override fun instanceCount(): Number? = unwrap(this).getInstanceCount()
+
+      /**
+       * Policy for customizing shrink operations.
+       *
+       * Default: - None
+       *
+       * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ShrinkPolicy.html)
+       */
+      override fun shrinkPolicy(): ShrinkPolicyProperty? =
+          unwrap(this).getShrinkPolicy()?.let(ShrinkPolicyProperty::wrap)
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceGroupModifyConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty):
+          InstanceGroupModifyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceGroupModifyConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceGroupModifyConfigProperty):
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty
+    }
+  }
+
+  /**
    * Custom policy for requesting termination protection or termination of specific instances when
    * shrinking an instance group.
    *
@@ -857,236 +1087,6 @@ public open class EmrModifyInstanceGroupByName internal constructor(
           software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
-    }
-  }
-
-  /**
-   * Modify the size or configurations of an instance group.
-   *
-   * Example:
-   *
-   * ```
-   * EmrModifyInstanceGroupByName.Builder.create(this, "Task")
-   * .clusterId("ClusterId")
-   * .instanceGroupName(JsonPath.stringAt("$.InstanceGroupName"))
-   * .instanceGroup(InstanceGroupModifyConfigProperty.builder()
-   * .instanceCount(1)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_InstanceGroupModifyConfig.html)
-   */
-  public interface InstanceGroupModifyConfigProperty {
-    /**
-     * A list of new or modified configurations to apply for an instance group.
-     *
-     * Default: - None
-     */
-    public fun configurations(): List<EmrCreateCluster.ConfigurationProperty> =
-        unwrap(this).getConfigurations()?.map(EmrCreateCluster.ConfigurationProperty::wrap) ?:
-        emptyList()
-
-    /**
-     * The EC2 InstanceIds to terminate.
-     *
-     * After you terminate the instances, the instance group will not return to its original
-     * requested size.
-     *
-     * Default: - None
-     */
-    public fun ec2InstanceIdsToTerminate(): List<String> =
-        unwrap(this).getEC2InstanceIdsToTerminate() ?: emptyList()
-
-    /**
-     * Target size for the instance group.
-     *
-     * Default: - None
-     */
-    public fun instanceCount(): Number? = unwrap(this).getInstanceCount()
-
-    /**
-     * Policy for customizing shrink operations.
-     *
-     * Default: - None
-     *
-     * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ShrinkPolicy.html)
-     */
-    public fun shrinkPolicy(): ShrinkPolicyProperty? =
-        unwrap(this).getShrinkPolicy()?.let(ShrinkPolicyProperty::wrap)
-
-    /**
-     * A builder for [InstanceGroupModifyConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param configurations A list of new or modified configurations to apply for an instance
-       * group.
-       */
-      public fun configurations(configurations: List<EmrCreateCluster.ConfigurationProperty>)
-
-      /**
-       * @param configurations A list of new or modified configurations to apply for an instance
-       * group.
-       */
-      public fun configurations(vararg configurations: EmrCreateCluster.ConfigurationProperty)
-
-      /**
-       * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
-       * After you terminate the instances, the instance group will not return to its original
-       * requested size.
-       */
-      public fun eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate: List<String>)
-
-      /**
-       * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
-       * After you terminate the instances, the instance group will not return to its original
-       * requested size.
-       */
-      public fun eC2InstanceIdsToTerminate(vararg eC2InstanceIdsToTerminate: String)
-
-      /**
-       * @param instanceCount Target size for the instance group.
-       */
-      public fun instanceCount(instanceCount: Number)
-
-      /**
-       * @param shrinkPolicy Policy for customizing shrink operations.
-       */
-      public fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty)
-
-      /**
-       * @param shrinkPolicy Policy for customizing shrink operations.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("780915b8831837b2846bf69d48cc0a5e6f8bfaa375d231e50add83eedad1c123")
-      public fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty.builder()
-
-      /**
-       * @param configurations A list of new or modified configurations to apply for an instance
-       * group.
-       */
-      override fun configurations(configurations: List<EmrCreateCluster.ConfigurationProperty>) {
-        cdkBuilder.configurations(configurations.map(EmrCreateCluster.ConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param configurations A list of new or modified configurations to apply for an instance
-       * group.
-       */
-      override fun configurations(vararg configurations: EmrCreateCluster.ConfigurationProperty):
-          Unit = configurations(configurations.toList())
-
-      /**
-       * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
-       * After you terminate the instances, the instance group will not return to its original
-       * requested size.
-       */
-      override fun eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate: List<String>) {
-        cdkBuilder.eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate)
-      }
-
-      /**
-       * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
-       * After you terminate the instances, the instance group will not return to its original
-       * requested size.
-       */
-      override fun eC2InstanceIdsToTerminate(vararg eC2InstanceIdsToTerminate: String): Unit =
-          eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate.toList())
-
-      /**
-       * @param instanceCount Target size for the instance group.
-       */
-      override fun instanceCount(instanceCount: Number) {
-        cdkBuilder.instanceCount(instanceCount)
-      }
-
-      /**
-       * @param shrinkPolicy Policy for customizing shrink operations.
-       */
-      override fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty) {
-        cdkBuilder.shrinkPolicy(shrinkPolicy.let(ShrinkPolicyProperty::unwrap))
-      }
-
-      /**
-       * @param shrinkPolicy Policy for customizing shrink operations.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("780915b8831837b2846bf69d48cc0a5e6f8bfaa375d231e50add83eedad1c123")
-      override fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty.Builder.() -> Unit): Unit =
-          shrinkPolicy(ShrinkPolicyProperty(shrinkPolicy))
-
-      public fun build():
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty,
-    ) : CdkObject(cdkObject), InstanceGroupModifyConfigProperty {
-      /**
-       * A list of new or modified configurations to apply for an instance group.
-       *
-       * Default: - None
-       */
-      override fun configurations(): List<EmrCreateCluster.ConfigurationProperty> =
-          unwrap(this).getConfigurations()?.map(EmrCreateCluster.ConfigurationProperty::wrap) ?:
-          emptyList()
-
-      /**
-       * The EC2 InstanceIds to terminate.
-       *
-       * After you terminate the instances, the instance group will not return to its original
-       * requested size.
-       *
-       * Default: - None
-       */
-      override fun ec2InstanceIdsToTerminate(): List<String> =
-          unwrap(this).getEC2InstanceIdsToTerminate() ?: emptyList()
-
-      /**
-       * Target size for the instance group.
-       *
-       * Default: - None
-       */
-      override fun instanceCount(): Number? = unwrap(this).getInstanceCount()
-
-      /**
-       * Policy for customizing shrink operations.
-       *
-       * Default: - None
-       *
-       * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ShrinkPolicy.html)
-       */
-      override fun shrinkPolicy(): ShrinkPolicyProperty? =
-          unwrap(this).getShrinkPolicy()?.let(ShrinkPolicyProperty::wrap)
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InstanceGroupModifyConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty):
-          InstanceGroupModifyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceGroupModifyConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceGroupModifyConfigProperty):
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty
     }
   }
 }

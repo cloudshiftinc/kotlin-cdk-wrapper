@@ -638,6 +638,344 @@ public open class CfnPipeline internal constructor(
   }
 
   /**
+   * A key-value pair that describes a property of a `PipelineObject` .
+   *
+   * The value is specified as either a string value ( `StringValue` ) or a reference to another
+   * object ( `RefValue` ) but not as both. To view fields for a data pipeline object, see [Pipeline
+   * Object
+   * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+   * in the *AWS Data Pipeline Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
+   * FieldProperty fieldProperty = FieldProperty.builder()
+   * .key("key")
+   * // the properties below are optional
+   * .refValue("refValue")
+   * .stringValue("stringValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html)
+   */
+  public interface FieldProperty {
+    /**
+     * Specifies the name of a field for a particular object.
+     *
+     * To view valid values for a particular field, see [Pipeline Object
+     * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+     * in the *AWS Data Pipeline Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-key)
+     */
+    public fun key(): String
+
+    /**
+     * A field value that you specify as an identifier of another object in the same pipeline
+     * definition.
+     *
+     *
+     * You can specify the field value as either a string value ( `StringValue` ) or a reference to
+     * another object ( `RefValue` ), but not both.
+     *
+     *
+     * Required if the key that you are using requires it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-refvalue)
+     */
+    public fun refValue(): String? = unwrap(this).getRefValue()
+
+    /**
+     * A field value that you specify as a string.
+     *
+     * To view valid values for a particular field, see [Pipeline Object
+     * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+     * in the *AWS Data Pipeline Developer Guide* .
+     *
+     *
+     * You can specify the field value as either a string value ( `StringValue` ) or a reference to
+     * another object ( `RefValue` ), but not both.
+     *
+     *
+     * Required if the key that you are using requires it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-stringvalue)
+     */
+    public fun stringValue(): String? = unwrap(this).getStringValue()
+
+    /**
+     * A builder for [FieldProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key Specifies the name of a field for a particular object. 
+       * To view valid values for a particular field, see [Pipeline Object
+       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+       * in the *AWS Data Pipeline Developer Guide* .
+       */
+      public fun key(key: String)
+
+      /**
+       * @param refValue A field value that you specify as an identifier of another object in the
+       * same pipeline definition.
+       *
+       * You can specify the field value as either a string value ( `StringValue` ) or a reference
+       * to another object ( `RefValue` ), but not both.
+       *
+       *
+       * Required if the key that you are using requires it.
+       */
+      public fun refValue(refValue: String)
+
+      /**
+       * @param stringValue A field value that you specify as a string.
+       * To view valid values for a particular field, see [Pipeline Object
+       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+       * in the *AWS Data Pipeline Developer Guide* .
+       *
+       *
+       * You can specify the field value as either a string value ( `StringValue` ) or a reference
+       * to another object ( `RefValue` ), but not both.
+       *
+       *
+       * Required if the key that you are using requires it.
+       */
+      public fun stringValue(stringValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty.Builder =
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty.builder()
+
+      /**
+       * @param key Specifies the name of a field for a particular object. 
+       * To view valid values for a particular field, see [Pipeline Object
+       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+       * in the *AWS Data Pipeline Developer Guide* .
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param refValue A field value that you specify as an identifier of another object in the
+       * same pipeline definition.
+       *
+       * You can specify the field value as either a string value ( `StringValue` ) or a reference
+       * to another object ( `RefValue` ), but not both.
+       *
+       *
+       * Required if the key that you are using requires it.
+       */
+      override fun refValue(refValue: String) {
+        cdkBuilder.refValue(refValue)
+      }
+
+      /**
+       * @param stringValue A field value that you specify as a string.
+       * To view valid values for a particular field, see [Pipeline Object
+       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+       * in the *AWS Data Pipeline Developer Guide* .
+       *
+       *
+       * You can specify the field value as either a string value ( `StringValue` ) or a reference
+       * to another object ( `RefValue` ), but not both.
+       *
+       *
+       * Required if the key that you are using requires it.
+       */
+      override fun stringValue(stringValue: String) {
+        cdkBuilder.stringValue(stringValue)
+      }
+
+      public fun build(): software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty,
+    ) : CdkObject(cdkObject), FieldProperty {
+      /**
+       * Specifies the name of a field for a particular object.
+       *
+       * To view valid values for a particular field, see [Pipeline Object
+       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+       * in the *AWS Data Pipeline Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * A field value that you specify as an identifier of another object in the same pipeline
+       * definition.
+       *
+       *
+       * You can specify the field value as either a string value ( `StringValue` ) or a reference
+       * to another object ( `RefValue` ), but not both.
+       *
+       *
+       * Required if the key that you are using requires it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-refvalue)
+       */
+      override fun refValue(): String? = unwrap(this).getRefValue()
+
+      /**
+       * A field value that you specify as a string.
+       *
+       * To view valid values for a particular field, see [Pipeline Object
+       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+       * in the *AWS Data Pipeline Developer Guide* .
+       *
+       *
+       * You can specify the field value as either a string value ( `StringValue` ) or a reference
+       * to another object ( `RefValue` ), but not both.
+       *
+       *
+       * Required if the key that you are using requires it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-stringvalue)
+       */
+      override fun stringValue(): String? = unwrap(this).getStringValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FieldProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty):
+          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FieldProperty):
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty
+    }
+  }
+
+  /**
+   * `Attribute` is a property of `ParameterObject` that defines the attributes of a parameter
+   * object as key-value pairs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
+   * ParameterAttributeProperty parameterAttributeProperty = ParameterAttributeProperty.builder()
+   * .key("key")
+   * .stringValue("stringValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html)
+   */
+  public interface ParameterAttributeProperty {
+    /**
+     * The field identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-key)
+     */
+    public fun key(): String
+
+    /**
+     * The field value, expressed as a String.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-stringvalue)
+     */
+    public fun stringValue(): String
+
+    /**
+     * A builder for [ParameterAttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The field identifier. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param stringValue The field value, expressed as a String. 
+       */
+      public fun stringValue(stringValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.Builder
+          =
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.builder()
+
+      /**
+       * @param key The field identifier. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param stringValue The field value, expressed as a String. 
+       */
+      override fun stringValue(stringValue: String) {
+        cdkBuilder.stringValue(stringValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty,
+    ) : CdkObject(cdkObject), ParameterAttributeProperty {
+      /**
+       * The field identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The field value, expressed as a String.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-stringvalue)
+       */
+      override fun stringValue(): String = unwrap(this).getStringValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterAttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty):
+          ParameterAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParameterAttributeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParameterAttributeProperty):
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty
+    }
+  }
+
+  /**
    * Contains information about a parameter object.
    *
    * Example:
@@ -1048,117 +1386,6 @@ public open class CfnPipeline internal constructor(
   }
 
   /**
-   * `Attribute` is a property of `ParameterObject` that defines the attributes of a parameter
-   * object as key-value pairs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
-   * ParameterAttributeProperty parameterAttributeProperty = ParameterAttributeProperty.builder()
-   * .key("key")
-   * .stringValue("stringValue")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html)
-   */
-  public interface ParameterAttributeProperty {
-    /**
-     * The field identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-key)
-     */
-    public fun key(): String
-
-    /**
-     * The field value, expressed as a String.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-stringvalue)
-     */
-    public fun stringValue(): String
-
-    /**
-     * A builder for [ParameterAttributeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The field identifier. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param stringValue The field value, expressed as a String. 
-       */
-      public fun stringValue(stringValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.Builder
-          =
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.builder()
-
-      /**
-       * @param key The field identifier. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param stringValue The field value, expressed as a String. 
-       */
-      override fun stringValue(stringValue: String) {
-        cdkBuilder.stringValue(stringValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty,
-    ) : CdkObject(cdkObject), ParameterAttributeProperty {
-      /**
-       * The field identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The field value, expressed as a String.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-stringvalue)
-       */
-      override fun stringValue(): String = unwrap(this).getStringValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterAttributeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty):
-          ParameterAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ParameterAttributeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ParameterAttributeProperty):
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty
-    }
-  }
-
-  /**
    * A list of arbitrary tags (key-value pairs) to associate with the pipeline, which you can use to
    * control permissions.
    *
@@ -1269,233 +1496,6 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty
-    }
-  }
-
-  /**
-   * A key-value pair that describes a property of a `PipelineObject` .
-   *
-   * The value is specified as either a string value ( `StringValue` ) or a reference to another
-   * object ( `RefValue` ) but not as both. To view fields for a data pipeline object, see [Pipeline
-   * Object
-   * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-   * in the *AWS Data Pipeline Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
-   * FieldProperty fieldProperty = FieldProperty.builder()
-   * .key("key")
-   * // the properties below are optional
-   * .refValue("refValue")
-   * .stringValue("stringValue")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html)
-   */
-  public interface FieldProperty {
-    /**
-     * Specifies the name of a field for a particular object.
-     *
-     * To view valid values for a particular field, see [Pipeline Object
-     * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-     * in the *AWS Data Pipeline Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-key)
-     */
-    public fun key(): String
-
-    /**
-     * A field value that you specify as an identifier of another object in the same pipeline
-     * definition.
-     *
-     *
-     * You can specify the field value as either a string value ( `StringValue` ) or a reference to
-     * another object ( `RefValue` ), but not both.
-     *
-     *
-     * Required if the key that you are using requires it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-refvalue)
-     */
-    public fun refValue(): String? = unwrap(this).getRefValue()
-
-    /**
-     * A field value that you specify as a string.
-     *
-     * To view valid values for a particular field, see [Pipeline Object
-     * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-     * in the *AWS Data Pipeline Developer Guide* .
-     *
-     *
-     * You can specify the field value as either a string value ( `StringValue` ) or a reference to
-     * another object ( `RefValue` ), but not both.
-     *
-     *
-     * Required if the key that you are using requires it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-stringvalue)
-     */
-    public fun stringValue(): String? = unwrap(this).getStringValue()
-
-    /**
-     * A builder for [FieldProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key Specifies the name of a field for a particular object. 
-       * To view valid values for a particular field, see [Pipeline Object
-       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-       * in the *AWS Data Pipeline Developer Guide* .
-       */
-      public fun key(key: String)
-
-      /**
-       * @param refValue A field value that you specify as an identifier of another object in the
-       * same pipeline definition.
-       *
-       * You can specify the field value as either a string value ( `StringValue` ) or a reference
-       * to another object ( `RefValue` ), but not both.
-       *
-       *
-       * Required if the key that you are using requires it.
-       */
-      public fun refValue(refValue: String)
-
-      /**
-       * @param stringValue A field value that you specify as a string.
-       * To view valid values for a particular field, see [Pipeline Object
-       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-       * in the *AWS Data Pipeline Developer Guide* .
-       *
-       *
-       * You can specify the field value as either a string value ( `StringValue` ) or a reference
-       * to another object ( `RefValue` ), but not both.
-       *
-       *
-       * Required if the key that you are using requires it.
-       */
-      public fun stringValue(stringValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty.Builder =
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty.builder()
-
-      /**
-       * @param key Specifies the name of a field for a particular object. 
-       * To view valid values for a particular field, see [Pipeline Object
-       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-       * in the *AWS Data Pipeline Developer Guide* .
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param refValue A field value that you specify as an identifier of another object in the
-       * same pipeline definition.
-       *
-       * You can specify the field value as either a string value ( `StringValue` ) or a reference
-       * to another object ( `RefValue` ), but not both.
-       *
-       *
-       * Required if the key that you are using requires it.
-       */
-      override fun refValue(refValue: String) {
-        cdkBuilder.refValue(refValue)
-      }
-
-      /**
-       * @param stringValue A field value that you specify as a string.
-       * To view valid values for a particular field, see [Pipeline Object
-       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-       * in the *AWS Data Pipeline Developer Guide* .
-       *
-       *
-       * You can specify the field value as either a string value ( `StringValue` ) or a reference
-       * to another object ( `RefValue` ), but not both.
-       *
-       *
-       * Required if the key that you are using requires it.
-       */
-      override fun stringValue(stringValue: String) {
-        cdkBuilder.stringValue(stringValue)
-      }
-
-      public fun build(): software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty,
-    ) : CdkObject(cdkObject), FieldProperty {
-      /**
-       * Specifies the name of a field for a particular object.
-       *
-       * To view valid values for a particular field, see [Pipeline Object
-       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-       * in the *AWS Data Pipeline Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * A field value that you specify as an identifier of another object in the same pipeline
-       * definition.
-       *
-       *
-       * You can specify the field value as either a string value ( `StringValue` ) or a reference
-       * to another object ( `RefValue` ), but not both.
-       *
-       *
-       * Required if the key that you are using requires it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-refvalue)
-       */
-      override fun refValue(): String? = unwrap(this).getRefValue()
-
-      /**
-       * A field value that you specify as a string.
-       *
-       * To view valid values for a particular field, see [Pipeline Object
-       * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
-       * in the *AWS Data Pipeline Developer Guide* .
-       *
-       *
-       * You can specify the field value as either a string value ( `StringValue` ) or a reference
-       * to another object ( `RefValue` ), but not both.
-       *
-       *
-       * Required if the key that you are using requires it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html#cfn-datapipeline-pipeline-field-stringvalue)
-       */
-      override fun stringValue(): String? = unwrap(this).getStringValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FieldProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty):
-          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FieldProperty):
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty
     }
   }
 }

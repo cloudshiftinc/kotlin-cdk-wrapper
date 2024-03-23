@@ -466,133 +466,6 @@ public open class CfnDirectoryConfig internal constructor(
   }
 
   /**
-   * The credentials for the service account used by the streaming instance to connect to the
-   * directory.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appstream.*;
-   * ServiceAccountCredentialsProperty serviceAccountCredentialsProperty =
-   * ServiceAccountCredentialsProperty.builder()
-   * .accountName("accountName")
-   * .accountPassword("accountPassword")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html)
-   */
-  public interface ServiceAccountCredentialsProperty {
-    /**
-     * The user name of the account.
-     *
-     * This account must have the following privileges: create computer objects, join computers to
-     * the domain, and change/reset the password on descendant computer objects for the organizational
-     * units specified.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountname)
-     */
-    public fun accountName(): String
-
-    /**
-     * The password for the account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountpassword)
-     */
-    public fun accountPassword(): String
-
-    /**
-     * A builder for [ServiceAccountCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accountName The user name of the account. 
-       * This account must have the following privileges: create computer objects, join computers to
-       * the domain, and change/reset the password on descendant computer objects for the
-       * organizational units specified.
-       */
-      public fun accountName(accountName: String)
-
-      /**
-       * @param accountPassword The password for the account. 
-       */
-      public fun accountPassword(accountPassword: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty.builder()
-
-      /**
-       * @param accountName The user name of the account. 
-       * This account must have the following privileges: create computer objects, join computers to
-       * the domain, and change/reset the password on descendant computer objects for the
-       * organizational units specified.
-       */
-      override fun accountName(accountName: String) {
-        cdkBuilder.accountName(accountName)
-      }
-
-      /**
-       * @param accountPassword The password for the account. 
-       */
-      override fun accountPassword(accountPassword: String) {
-        cdkBuilder.accountPassword(accountPassword)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty,
-    ) : CdkObject(cdkObject), ServiceAccountCredentialsProperty {
-      /**
-       * The user name of the account.
-       *
-       * This account must have the following privileges: create computer objects, join computers to
-       * the domain, and change/reset the password on descendant computer objects for the
-       * organizational units specified.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountname)
-       */
-      override fun accountName(): String = unwrap(this).getAccountName()
-
-      /**
-       * The password for the account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountpassword)
-       */
-      override fun accountPassword(): String = unwrap(this).getAccountPassword()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceAccountCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty):
-          ServiceAccountCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceAccountCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServiceAccountCredentialsProperty):
-          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty
-    }
-  }
-
-  /**
    * The certificate-based authentication properties used to authenticate SAML 2.0 Identity Provider
    * (IdP) user identities to Active Directory domain-joined streaming instances.
    *
@@ -728,6 +601,133 @@ public open class CfnDirectoryConfig internal constructor(
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty
+    }
+  }
+
+  /**
+   * The credentials for the service account used by the streaming instance to connect to the
+   * directory.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appstream.*;
+   * ServiceAccountCredentialsProperty serviceAccountCredentialsProperty =
+   * ServiceAccountCredentialsProperty.builder()
+   * .accountName("accountName")
+   * .accountPassword("accountPassword")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html)
+   */
+  public interface ServiceAccountCredentialsProperty {
+    /**
+     * The user name of the account.
+     *
+     * This account must have the following privileges: create computer objects, join computers to
+     * the domain, and change/reset the password on descendant computer objects for the organizational
+     * units specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountname)
+     */
+    public fun accountName(): String
+
+    /**
+     * The password for the account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountpassword)
+     */
+    public fun accountPassword(): String
+
+    /**
+     * A builder for [ServiceAccountCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountName The user name of the account. 
+       * This account must have the following privileges: create computer objects, join computers to
+       * the domain, and change/reset the password on descendant computer objects for the
+       * organizational units specified.
+       */
+      public fun accountName(accountName: String)
+
+      /**
+       * @param accountPassword The password for the account. 
+       */
+      public fun accountPassword(accountPassword: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty.builder()
+
+      /**
+       * @param accountName The user name of the account. 
+       * This account must have the following privileges: create computer objects, join computers to
+       * the domain, and change/reset the password on descendant computer objects for the
+       * organizational units specified.
+       */
+      override fun accountName(accountName: String) {
+        cdkBuilder.accountName(accountName)
+      }
+
+      /**
+       * @param accountPassword The password for the account. 
+       */
+      override fun accountPassword(accountPassword: String) {
+        cdkBuilder.accountPassword(accountPassword)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty,
+    ) : CdkObject(cdkObject), ServiceAccountCredentialsProperty {
+      /**
+       * The user name of the account.
+       *
+       * This account must have the following privileges: create computer objects, join computers to
+       * the domain, and change/reset the password on descendant computer objects for the
+       * organizational units specified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountname)
+       */
+      override fun accountName(): String = unwrap(this).getAccountName()
+
+      /**
+       * The password for the account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountpassword)
+       */
+      override fun accountPassword(): String = unwrap(this).getAccountPassword()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceAccountCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty):
+          ServiceAccountCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceAccountCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceAccountCredentialsProperty):
+          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty
     }
   }
 }

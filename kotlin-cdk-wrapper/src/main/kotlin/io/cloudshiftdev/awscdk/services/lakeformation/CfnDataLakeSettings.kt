@@ -1117,6 +1117,90 @@ public open class CfnDataLakeSettings internal constructor(
   }
 
   /**
+   * The Lake Formation principal.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * DataLakePrincipalProperty dataLakePrincipalProperty = DataLakePrincipalProperty.builder()
+   * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-datalakeprincipal.html)
+   */
+  public interface DataLakePrincipalProperty {
+    /**
+     * An identifier for the Lake Formation principal.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-datalakeprincipal.html#cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier)
+     */
+    public fun dataLakePrincipalIdentifier(): String
+
+    /**
+     * A builder for [DataLakePrincipalProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataLakePrincipalIdentifier An identifier for the Lake Formation principal. 
+       */
+      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty.builder()
+
+      /**
+       * @param dataLakePrincipalIdentifier An identifier for the Lake Formation principal. 
+       */
+      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
+        cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty,
+    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
+      /**
+       * An identifier for the Lake Formation principal.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-datalakeprincipal.html#cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier)
+       */
+      override fun dataLakePrincipalIdentifier(): String =
+          unwrap(this).getDataLakePrincipalIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataLakePrincipalProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty):
+          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataLakePrincipalProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataLakePrincipalProperty):
+          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty
+    }
+  }
+
+  /**
    * Permissions granted to a principal.
    *
    * Example:
@@ -1263,90 +1347,6 @@ public open class CfnDataLakeSettings internal constructor(
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty
-    }
-  }
-
-  /**
-   * The Lake Formation principal.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * DataLakePrincipalProperty dataLakePrincipalProperty = DataLakePrincipalProperty.builder()
-   * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-datalakeprincipal.html)
-   */
-  public interface DataLakePrincipalProperty {
-    /**
-     * An identifier for the Lake Formation principal.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-datalakeprincipal.html#cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier)
-     */
-    public fun dataLakePrincipalIdentifier(): String
-
-    /**
-     * A builder for [DataLakePrincipalProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataLakePrincipalIdentifier An identifier for the Lake Formation principal. 
-       */
-      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty.builder()
-
-      /**
-       * @param dataLakePrincipalIdentifier An identifier for the Lake Formation principal. 
-       */
-      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
-        cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty,
-    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
-      /**
-       * An identifier for the Lake Formation principal.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-datalakeprincipal.html#cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier)
-       */
-      override fun dataLakePrincipalIdentifier(): String =
-          unwrap(this).getDataLakePrincipalIdentifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataLakePrincipalProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty):
-          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataLakePrincipalProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataLakePrincipalProperty):
-          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty
     }
   }
 }

@@ -551,599 +551,6 @@ public open class CfnSamplingRule internal constructor(
   }
 
   /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.xray.*;
-   * SamplingRuleUpdateProperty samplingRuleUpdateProperty = SamplingRuleUpdateProperty.builder()
-   * .attributes(Map.of(
-   * "attributesKey", "attributes"))
-   * .fixedRate(123)
-   * .host("host")
-   * .httpMethod("httpMethod")
-   * .priority(123)
-   * .reservoirSize(123)
-   * .resourceArn("resourceArn")
-   * .ruleArn("ruleArn")
-   * .ruleName("ruleName")
-   * .serviceName("serviceName")
-   * .serviceType("serviceType")
-   * .urlPath("urlPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html)
-   */
-  public interface SamplingRuleUpdateProperty {
-    /**
-     * Matches attributes derived from the request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-attributes)
-     */
-    public fun attributes(): Any? = unwrap(this).getAttributes()
-
-    /**
-     * The percentage of matching requests to instrument, after the reservoir is exhausted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-fixedrate)
-     */
-    public fun fixedRate(): Number? = unwrap(this).getFixedRate()
-
-    /**
-     * Matches the hostname from a request URL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-host)
-     */
-    public fun host(): String? = unwrap(this).getHost()
-
-    /**
-     * Matches the HTTP method from a request URL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-httpmethod)
-     */
-    public fun httpMethod(): String? = unwrap(this).getHttpMethod()
-
-    /**
-     * The priority of the sampling rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-priority)
-     */
-    public fun priority(): Number? = unwrap(this).getPriority()
-
-    /**
-     * A fixed number of matching requests to instrument per second, prior to applying the fixed
-     * rate.
-     *
-     * The reservoir is not used directly by services, but applies to all services using the rule
-     * collectively.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-reservoirsize)
-     */
-    public fun reservoirSize(): Number? = unwrap(this).getReservoirSize()
-
-    /**
-     * Matches the ARN of the AWS resource on which the service runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-resourcearn)
-     */
-    public fun resourceArn(): String? = unwrap(this).getResourceArn()
-
-    /**
-     * The ARN of the sampling rule.
-     *
-     * Specify a rule by either name or ARN, but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-rulearn)
-     */
-    public fun ruleArn(): String? = unwrap(this).getRuleArn()
-
-    /**
-     * The ARN of the sampling rule.
-     *
-     * Specify a rule by either name or ARN, but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-rulename)
-     */
-    public fun ruleName(): String? = unwrap(this).getRuleName()
-
-    /**
-     * Matches the name that the service uses to identify itself in segments.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-servicename)
-     */
-    public fun serviceName(): String? = unwrap(this).getServiceName()
-
-    /**
-     * Matches the origin that the service uses to identify its type in segments.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-servicetype)
-     */
-    public fun serviceType(): String? = unwrap(this).getServiceType()
-
-    /**
-     * Matches the path from a request URL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-urlpath)
-     */
-    public fun urlPath(): String? = unwrap(this).getUrlPath()
-
-    /**
-     * A builder for [SamplingRuleUpdateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributes Matches attributes derived from the request.
-       */
-      public fun attributes(attributes: IResolvable)
-
-      /**
-       * @param attributes Matches attributes derived from the request.
-       */
-      public fun attributes(attributes: Map<String, String>)
-
-      /**
-       * @param fixedRate The percentage of matching requests to instrument, after the reservoir is
-       * exhausted.
-       */
-      public fun fixedRate(fixedRate: Number)
-
-      /**
-       * @param host Matches the hostname from a request URL.
-       */
-      public fun host(host: String)
-
-      /**
-       * @param httpMethod Matches the HTTP method from a request URL.
-       */
-      public fun httpMethod(httpMethod: String)
-
-      /**
-       * @param priority The priority of the sampling rule.
-       */
-      public fun priority(priority: Number)
-
-      /**
-       * @param reservoirSize A fixed number of matching requests to instrument per second, prior to
-       * applying the fixed rate.
-       * The reservoir is not used directly by services, but applies to all services using the rule
-       * collectively.
-       */
-      public fun reservoirSize(reservoirSize: Number)
-
-      /**
-       * @param resourceArn Matches the ARN of the AWS resource on which the service runs.
-       */
-      public fun resourceArn(resourceArn: String)
-
-      /**
-       * @param ruleArn The ARN of the sampling rule.
-       * Specify a rule by either name or ARN, but not both.
-       */
-      public fun ruleArn(ruleArn: String)
-
-      /**
-       * @param ruleName The ARN of the sampling rule.
-       * Specify a rule by either name or ARN, but not both.
-       */
-      public fun ruleName(ruleName: String)
-
-      /**
-       * @param serviceName Matches the name that the service uses to identify itself in segments.
-       */
-      public fun serviceName(serviceName: String)
-
-      /**
-       * @param serviceType Matches the origin that the service uses to identify its type in
-       * segments.
-       */
-      public fun serviceType(serviceType: String)
-
-      /**
-       * @param urlPath Matches the path from a request URL.
-       */
-      public fun urlPath(urlPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty.Builder =
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty.builder()
-
-      /**
-       * @param attributes Matches attributes derived from the request.
-       */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param attributes Matches attributes derived from the request.
-       */
-      override fun attributes(attributes: Map<String, String>) {
-        cdkBuilder.attributes(attributes)
-      }
-
-      /**
-       * @param fixedRate The percentage of matching requests to instrument, after the reservoir is
-       * exhausted.
-       */
-      override fun fixedRate(fixedRate: Number) {
-        cdkBuilder.fixedRate(fixedRate)
-      }
-
-      /**
-       * @param host Matches the hostname from a request URL.
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param httpMethod Matches the HTTP method from a request URL.
-       */
-      override fun httpMethod(httpMethod: String) {
-        cdkBuilder.httpMethod(httpMethod)
-      }
-
-      /**
-       * @param priority The priority of the sampling rule.
-       */
-      override fun priority(priority: Number) {
-        cdkBuilder.priority(priority)
-      }
-
-      /**
-       * @param reservoirSize A fixed number of matching requests to instrument per second, prior to
-       * applying the fixed rate.
-       * The reservoir is not used directly by services, but applies to all services using the rule
-       * collectively.
-       */
-      override fun reservoirSize(reservoirSize: Number) {
-        cdkBuilder.reservoirSize(reservoirSize)
-      }
-
-      /**
-       * @param resourceArn Matches the ARN of the AWS resource on which the service runs.
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      /**
-       * @param ruleArn The ARN of the sampling rule.
-       * Specify a rule by either name or ARN, but not both.
-       */
-      override fun ruleArn(ruleArn: String) {
-        cdkBuilder.ruleArn(ruleArn)
-      }
-
-      /**
-       * @param ruleName The ARN of the sampling rule.
-       * Specify a rule by either name or ARN, but not both.
-       */
-      override fun ruleName(ruleName: String) {
-        cdkBuilder.ruleName(ruleName)
-      }
-
-      /**
-       * @param serviceName Matches the name that the service uses to identify itself in segments.
-       */
-      override fun serviceName(serviceName: String) {
-        cdkBuilder.serviceName(serviceName)
-      }
-
-      /**
-       * @param serviceType Matches the origin that the service uses to identify its type in
-       * segments.
-       */
-      override fun serviceType(serviceType: String) {
-        cdkBuilder.serviceType(serviceType)
-      }
-
-      /**
-       * @param urlPath Matches the path from a request URL.
-       */
-      override fun urlPath(urlPath: String) {
-        cdkBuilder.urlPath(urlPath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty,
-    ) : CdkObject(cdkObject), SamplingRuleUpdateProperty {
-      /**
-       * Matches attributes derived from the request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-attributes)
-       */
-      override fun attributes(): Any? = unwrap(this).getAttributes()
-
-      /**
-       * The percentage of matching requests to instrument, after the reservoir is exhausted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-fixedrate)
-       */
-      override fun fixedRate(): Number? = unwrap(this).getFixedRate()
-
-      /**
-       * Matches the hostname from a request URL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-host)
-       */
-      override fun host(): String? = unwrap(this).getHost()
-
-      /**
-       * Matches the HTTP method from a request URL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-httpmethod)
-       */
-      override fun httpMethod(): String? = unwrap(this).getHttpMethod()
-
-      /**
-       * The priority of the sampling rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-priority)
-       */
-      override fun priority(): Number? = unwrap(this).getPriority()
-
-      /**
-       * A fixed number of matching requests to instrument per second, prior to applying the fixed
-       * rate.
-       *
-       * The reservoir is not used directly by services, but applies to all services using the rule
-       * collectively.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-reservoirsize)
-       */
-      override fun reservoirSize(): Number? = unwrap(this).getReservoirSize()
-
-      /**
-       * Matches the ARN of the AWS resource on which the service runs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-resourcearn)
-       */
-      override fun resourceArn(): String? = unwrap(this).getResourceArn()
-
-      /**
-       * The ARN of the sampling rule.
-       *
-       * Specify a rule by either name or ARN, but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-rulearn)
-       */
-      override fun ruleArn(): String? = unwrap(this).getRuleArn()
-
-      /**
-       * The ARN of the sampling rule.
-       *
-       * Specify a rule by either name or ARN, but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-rulename)
-       */
-      override fun ruleName(): String? = unwrap(this).getRuleName()
-
-      /**
-       * Matches the name that the service uses to identify itself in segments.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-servicename)
-       */
-      override fun serviceName(): String? = unwrap(this).getServiceName()
-
-      /**
-       * Matches the origin that the service uses to identify its type in segments.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-servicetype)
-       */
-      override fun serviceType(): String? = unwrap(this).getServiceType()
-
-      /**
-       * Matches the path from a request URL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-urlpath)
-       */
-      override fun urlPath(): String? = unwrap(this).getUrlPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SamplingRuleUpdateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty):
-          SamplingRuleUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SamplingRuleUpdateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SamplingRuleUpdateProperty):
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.xray.*;
-   * SamplingRuleRecordProperty samplingRuleRecordProperty = SamplingRuleRecordProperty.builder()
-   * .createdAt("createdAt")
-   * .modifiedAt("modifiedAt")
-   * .samplingRule(SamplingRuleProperty.builder()
-   * .fixedRate(123)
-   * .host("host")
-   * .httpMethod("httpMethod")
-   * .priority(123)
-   * .reservoirSize(123)
-   * .resourceArn("resourceArn")
-   * .serviceName("serviceName")
-   * .serviceType("serviceType")
-   * .urlPath("urlPath")
-   * // the properties below are optional
-   * .attributes(Map.of(
-   * "attributesKey", "attributes"))
-   * .ruleArn("ruleArn")
-   * .ruleName("ruleName")
-   * .version(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html)
-   */
-  public interface SamplingRuleRecordProperty {
-    /**
-     * When the rule was created, in Unix time seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-createdat)
-     */
-    public fun createdAt(): String? = unwrap(this).getCreatedAt()
-
-    /**
-     * When the rule was modified, in Unix time seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-modifiedat)
-     */
-    public fun modifiedAt(): String? = unwrap(this).getModifiedAt()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-samplingrule)
-     */
-    public fun samplingRule(): Any? = unwrap(this).getSamplingRule()
-
-    /**
-     * A builder for [SamplingRuleRecordProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param createdAt When the rule was created, in Unix time seconds.
-       */
-      public fun createdAt(createdAt: String)
-
-      /**
-       * @param modifiedAt When the rule was modified, in Unix time seconds.
-       */
-      public fun modifiedAt(modifiedAt: String)
-
-      /**
-       * @param samplingRule the value to be set.
-       */
-      public fun samplingRule(samplingRule: IResolvable)
-
-      /**
-       * @param samplingRule the value to be set.
-       */
-      public fun samplingRule(samplingRule: SamplingRuleProperty)
-
-      /**
-       * @param samplingRule the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("41c9de72ca80f09c20d098e90d2651b92910a0810750e74af4d05c2fa127941a")
-      public fun samplingRule(samplingRule: SamplingRuleProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty.Builder =
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty.builder()
-
-      /**
-       * @param createdAt When the rule was created, in Unix time seconds.
-       */
-      override fun createdAt(createdAt: String) {
-        cdkBuilder.createdAt(createdAt)
-      }
-
-      /**
-       * @param modifiedAt When the rule was modified, in Unix time seconds.
-       */
-      override fun modifiedAt(modifiedAt: String) {
-        cdkBuilder.modifiedAt(modifiedAt)
-      }
-
-      /**
-       * @param samplingRule the value to be set.
-       */
-      override fun samplingRule(samplingRule: IResolvable) {
-        cdkBuilder.samplingRule(samplingRule.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param samplingRule the value to be set.
-       */
-      override fun samplingRule(samplingRule: SamplingRuleProperty) {
-        cdkBuilder.samplingRule(samplingRule.let(SamplingRuleProperty::unwrap))
-      }
-
-      /**
-       * @param samplingRule the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("41c9de72ca80f09c20d098e90d2651b92910a0810750e74af4d05c2fa127941a")
-      override fun samplingRule(samplingRule: SamplingRuleProperty.Builder.() -> Unit): Unit =
-          samplingRule(SamplingRuleProperty(samplingRule))
-
-      public fun build():
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty,
-    ) : CdkObject(cdkObject), SamplingRuleRecordProperty {
-      /**
-       * When the rule was created, in Unix time seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-createdat)
-       */
-      override fun createdAt(): String? = unwrap(this).getCreatedAt()
-
-      /**
-       * When the rule was modified, in Unix time seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-modifiedat)
-       */
-      override fun modifiedAt(): String? = unwrap(this).getModifiedAt()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-samplingrule)
-       */
-      override fun samplingRule(): Any? = unwrap(this).getSamplingRule()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SamplingRuleRecordProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty):
-          SamplingRuleRecordProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SamplingRuleRecordProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SamplingRuleRecordProperty):
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty
-    }
-  }
-
-  /**
    * A sampling rule that services use to decide whether to instrument a request.
    *
    * Rule fields can match properties of the service, or properties of a request. The service can
@@ -1644,6 +1051,599 @@ public open class CfnSamplingRule internal constructor(
           software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.xray.*;
+   * SamplingRuleRecordProperty samplingRuleRecordProperty = SamplingRuleRecordProperty.builder()
+   * .createdAt("createdAt")
+   * .modifiedAt("modifiedAt")
+   * .samplingRule(SamplingRuleProperty.builder()
+   * .fixedRate(123)
+   * .host("host")
+   * .httpMethod("httpMethod")
+   * .priority(123)
+   * .reservoirSize(123)
+   * .resourceArn("resourceArn")
+   * .serviceName("serviceName")
+   * .serviceType("serviceType")
+   * .urlPath("urlPath")
+   * // the properties below are optional
+   * .attributes(Map.of(
+   * "attributesKey", "attributes"))
+   * .ruleArn("ruleArn")
+   * .ruleName("ruleName")
+   * .version(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html)
+   */
+  public interface SamplingRuleRecordProperty {
+    /**
+     * When the rule was created, in Unix time seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-createdat)
+     */
+    public fun createdAt(): String? = unwrap(this).getCreatedAt()
+
+    /**
+     * When the rule was modified, in Unix time seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-modifiedat)
+     */
+    public fun modifiedAt(): String? = unwrap(this).getModifiedAt()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-samplingrule)
+     */
+    public fun samplingRule(): Any? = unwrap(this).getSamplingRule()
+
+    /**
+     * A builder for [SamplingRuleRecordProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param createdAt When the rule was created, in Unix time seconds.
+       */
+      public fun createdAt(createdAt: String)
+
+      /**
+       * @param modifiedAt When the rule was modified, in Unix time seconds.
+       */
+      public fun modifiedAt(modifiedAt: String)
+
+      /**
+       * @param samplingRule the value to be set.
+       */
+      public fun samplingRule(samplingRule: IResolvable)
+
+      /**
+       * @param samplingRule the value to be set.
+       */
+      public fun samplingRule(samplingRule: SamplingRuleProperty)
+
+      /**
+       * @param samplingRule the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("41c9de72ca80f09c20d098e90d2651b92910a0810750e74af4d05c2fa127941a")
+      public fun samplingRule(samplingRule: SamplingRuleProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty.Builder =
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty.builder()
+
+      /**
+       * @param createdAt When the rule was created, in Unix time seconds.
+       */
+      override fun createdAt(createdAt: String) {
+        cdkBuilder.createdAt(createdAt)
+      }
+
+      /**
+       * @param modifiedAt When the rule was modified, in Unix time seconds.
+       */
+      override fun modifiedAt(modifiedAt: String) {
+        cdkBuilder.modifiedAt(modifiedAt)
+      }
+
+      /**
+       * @param samplingRule the value to be set.
+       */
+      override fun samplingRule(samplingRule: IResolvable) {
+        cdkBuilder.samplingRule(samplingRule.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param samplingRule the value to be set.
+       */
+      override fun samplingRule(samplingRule: SamplingRuleProperty) {
+        cdkBuilder.samplingRule(samplingRule.let(SamplingRuleProperty::unwrap))
+      }
+
+      /**
+       * @param samplingRule the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("41c9de72ca80f09c20d098e90d2651b92910a0810750e74af4d05c2fa127941a")
+      override fun samplingRule(samplingRule: SamplingRuleProperty.Builder.() -> Unit): Unit =
+          samplingRule(SamplingRuleProperty(samplingRule))
+
+      public fun build():
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty,
+    ) : CdkObject(cdkObject), SamplingRuleRecordProperty {
+      /**
+       * When the rule was created, in Unix time seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-createdat)
+       */
+      override fun createdAt(): String? = unwrap(this).getCreatedAt()
+
+      /**
+       * When the rule was modified, in Unix time seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-modifiedat)
+       */
+      override fun modifiedAt(): String? = unwrap(this).getModifiedAt()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrulerecord.html#cfn-xray-samplingrule-samplingrulerecord-samplingrule)
+       */
+      override fun samplingRule(): Any? = unwrap(this).getSamplingRule()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SamplingRuleRecordProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty):
+          SamplingRuleRecordProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SamplingRuleRecordProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SamplingRuleRecordProperty):
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.xray.*;
+   * SamplingRuleUpdateProperty samplingRuleUpdateProperty = SamplingRuleUpdateProperty.builder()
+   * .attributes(Map.of(
+   * "attributesKey", "attributes"))
+   * .fixedRate(123)
+   * .host("host")
+   * .httpMethod("httpMethod")
+   * .priority(123)
+   * .reservoirSize(123)
+   * .resourceArn("resourceArn")
+   * .ruleArn("ruleArn")
+   * .ruleName("ruleName")
+   * .serviceName("serviceName")
+   * .serviceType("serviceType")
+   * .urlPath("urlPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html)
+   */
+  public interface SamplingRuleUpdateProperty {
+    /**
+     * Matches attributes derived from the request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-attributes)
+     */
+    public fun attributes(): Any? = unwrap(this).getAttributes()
+
+    /**
+     * The percentage of matching requests to instrument, after the reservoir is exhausted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-fixedrate)
+     */
+    public fun fixedRate(): Number? = unwrap(this).getFixedRate()
+
+    /**
+     * Matches the hostname from a request URL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-host)
+     */
+    public fun host(): String? = unwrap(this).getHost()
+
+    /**
+     * Matches the HTTP method from a request URL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-httpmethod)
+     */
+    public fun httpMethod(): String? = unwrap(this).getHttpMethod()
+
+    /**
+     * The priority of the sampling rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-priority)
+     */
+    public fun priority(): Number? = unwrap(this).getPriority()
+
+    /**
+     * A fixed number of matching requests to instrument per second, prior to applying the fixed
+     * rate.
+     *
+     * The reservoir is not used directly by services, but applies to all services using the rule
+     * collectively.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-reservoirsize)
+     */
+    public fun reservoirSize(): Number? = unwrap(this).getReservoirSize()
+
+    /**
+     * Matches the ARN of the AWS resource on which the service runs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-resourcearn)
+     */
+    public fun resourceArn(): String? = unwrap(this).getResourceArn()
+
+    /**
+     * The ARN of the sampling rule.
+     *
+     * Specify a rule by either name or ARN, but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-rulearn)
+     */
+    public fun ruleArn(): String? = unwrap(this).getRuleArn()
+
+    /**
+     * The ARN of the sampling rule.
+     *
+     * Specify a rule by either name or ARN, but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-rulename)
+     */
+    public fun ruleName(): String? = unwrap(this).getRuleName()
+
+    /**
+     * Matches the name that the service uses to identify itself in segments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-servicename)
+     */
+    public fun serviceName(): String? = unwrap(this).getServiceName()
+
+    /**
+     * Matches the origin that the service uses to identify its type in segments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-servicetype)
+     */
+    public fun serviceType(): String? = unwrap(this).getServiceType()
+
+    /**
+     * Matches the path from a request URL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-urlpath)
+     */
+    public fun urlPath(): String? = unwrap(this).getUrlPath()
+
+    /**
+     * A builder for [SamplingRuleUpdateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributes Matches attributes derived from the request.
+       */
+      public fun attributes(attributes: IResolvable)
+
+      /**
+       * @param attributes Matches attributes derived from the request.
+       */
+      public fun attributes(attributes: Map<String, String>)
+
+      /**
+       * @param fixedRate The percentage of matching requests to instrument, after the reservoir is
+       * exhausted.
+       */
+      public fun fixedRate(fixedRate: Number)
+
+      /**
+       * @param host Matches the hostname from a request URL.
+       */
+      public fun host(host: String)
+
+      /**
+       * @param httpMethod Matches the HTTP method from a request URL.
+       */
+      public fun httpMethod(httpMethod: String)
+
+      /**
+       * @param priority The priority of the sampling rule.
+       */
+      public fun priority(priority: Number)
+
+      /**
+       * @param reservoirSize A fixed number of matching requests to instrument per second, prior to
+       * applying the fixed rate.
+       * The reservoir is not used directly by services, but applies to all services using the rule
+       * collectively.
+       */
+      public fun reservoirSize(reservoirSize: Number)
+
+      /**
+       * @param resourceArn Matches the ARN of the AWS resource on which the service runs.
+       */
+      public fun resourceArn(resourceArn: String)
+
+      /**
+       * @param ruleArn The ARN of the sampling rule.
+       * Specify a rule by either name or ARN, but not both.
+       */
+      public fun ruleArn(ruleArn: String)
+
+      /**
+       * @param ruleName The ARN of the sampling rule.
+       * Specify a rule by either name or ARN, but not both.
+       */
+      public fun ruleName(ruleName: String)
+
+      /**
+       * @param serviceName Matches the name that the service uses to identify itself in segments.
+       */
+      public fun serviceName(serviceName: String)
+
+      /**
+       * @param serviceType Matches the origin that the service uses to identify its type in
+       * segments.
+       */
+      public fun serviceType(serviceType: String)
+
+      /**
+       * @param urlPath Matches the path from a request URL.
+       */
+      public fun urlPath(urlPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty.Builder =
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty.builder()
+
+      /**
+       * @param attributes Matches attributes derived from the request.
+       */
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param attributes Matches attributes derived from the request.
+       */
+      override fun attributes(attributes: Map<String, String>) {
+        cdkBuilder.attributes(attributes)
+      }
+
+      /**
+       * @param fixedRate The percentage of matching requests to instrument, after the reservoir is
+       * exhausted.
+       */
+      override fun fixedRate(fixedRate: Number) {
+        cdkBuilder.fixedRate(fixedRate)
+      }
+
+      /**
+       * @param host Matches the hostname from a request URL.
+       */
+      override fun host(host: String) {
+        cdkBuilder.host(host)
+      }
+
+      /**
+       * @param httpMethod Matches the HTTP method from a request URL.
+       */
+      override fun httpMethod(httpMethod: String) {
+        cdkBuilder.httpMethod(httpMethod)
+      }
+
+      /**
+       * @param priority The priority of the sampling rule.
+       */
+      override fun priority(priority: Number) {
+        cdkBuilder.priority(priority)
+      }
+
+      /**
+       * @param reservoirSize A fixed number of matching requests to instrument per second, prior to
+       * applying the fixed rate.
+       * The reservoir is not used directly by services, but applies to all services using the rule
+       * collectively.
+       */
+      override fun reservoirSize(reservoirSize: Number) {
+        cdkBuilder.reservoirSize(reservoirSize)
+      }
+
+      /**
+       * @param resourceArn Matches the ARN of the AWS resource on which the service runs.
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      /**
+       * @param ruleArn The ARN of the sampling rule.
+       * Specify a rule by either name or ARN, but not both.
+       */
+      override fun ruleArn(ruleArn: String) {
+        cdkBuilder.ruleArn(ruleArn)
+      }
+
+      /**
+       * @param ruleName The ARN of the sampling rule.
+       * Specify a rule by either name or ARN, but not both.
+       */
+      override fun ruleName(ruleName: String) {
+        cdkBuilder.ruleName(ruleName)
+      }
+
+      /**
+       * @param serviceName Matches the name that the service uses to identify itself in segments.
+       */
+      override fun serviceName(serviceName: String) {
+        cdkBuilder.serviceName(serviceName)
+      }
+
+      /**
+       * @param serviceType Matches the origin that the service uses to identify its type in
+       * segments.
+       */
+      override fun serviceType(serviceType: String) {
+        cdkBuilder.serviceType(serviceType)
+      }
+
+      /**
+       * @param urlPath Matches the path from a request URL.
+       */
+      override fun urlPath(urlPath: String) {
+        cdkBuilder.urlPath(urlPath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty,
+    ) : CdkObject(cdkObject), SamplingRuleUpdateProperty {
+      /**
+       * Matches attributes derived from the request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-attributes)
+       */
+      override fun attributes(): Any? = unwrap(this).getAttributes()
+
+      /**
+       * The percentage of matching requests to instrument, after the reservoir is exhausted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-fixedrate)
+       */
+      override fun fixedRate(): Number? = unwrap(this).getFixedRate()
+
+      /**
+       * Matches the hostname from a request URL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-host)
+       */
+      override fun host(): String? = unwrap(this).getHost()
+
+      /**
+       * Matches the HTTP method from a request URL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-httpmethod)
+       */
+      override fun httpMethod(): String? = unwrap(this).getHttpMethod()
+
+      /**
+       * The priority of the sampling rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-priority)
+       */
+      override fun priority(): Number? = unwrap(this).getPriority()
+
+      /**
+       * A fixed number of matching requests to instrument per second, prior to applying the fixed
+       * rate.
+       *
+       * The reservoir is not used directly by services, but applies to all services using the rule
+       * collectively.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-reservoirsize)
+       */
+      override fun reservoirSize(): Number? = unwrap(this).getReservoirSize()
+
+      /**
+       * Matches the ARN of the AWS resource on which the service runs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-resourcearn)
+       */
+      override fun resourceArn(): String? = unwrap(this).getResourceArn()
+
+      /**
+       * The ARN of the sampling rule.
+       *
+       * Specify a rule by either name or ARN, but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-rulearn)
+       */
+      override fun ruleArn(): String? = unwrap(this).getRuleArn()
+
+      /**
+       * The ARN of the sampling rule.
+       *
+       * Specify a rule by either name or ARN, but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-rulename)
+       */
+      override fun ruleName(): String? = unwrap(this).getRuleName()
+
+      /**
+       * Matches the name that the service uses to identify itself in segments.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-servicename)
+       */
+      override fun serviceName(): String? = unwrap(this).getServiceName()
+
+      /**
+       * Matches the origin that the service uses to identify its type in segments.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-servicetype)
+       */
+      override fun serviceType(): String? = unwrap(this).getServiceType()
+
+      /**
+       * Matches the path from a request URL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html#cfn-xray-samplingrule-samplingruleupdate-urlpath)
+       */
+      override fun urlPath(): String? = unwrap(this).getUrlPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SamplingRuleUpdateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty):
+          SamplingRuleUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SamplingRuleUpdateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SamplingRuleUpdateProperty):
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty
     }
   }
 }

@@ -372,268 +372,6 @@ public open class CfnRuleset internal constructor(
   }
 
   /**
-   * The threshold used with a non-aggregate check expression.
-   *
-   * The non-aggregate check expression will be applied to each row in a specific column. Then the
-   * threshold will be used to determine whether the validation succeeds.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * ThresholdProperty thresholdProperty = ThresholdProperty.builder()
-   * .value(123)
-   * // the properties below are optional
-   * .type("type")
-   * .unit("unit")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html)
-   */
-  public interface ThresholdProperty {
-    /**
-     * The type of a threshold.
-     *
-     * Used for comparison of an actual count of rows that satisfy the rule to the threshold value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * Unit of threshold value.
-     *
-     * Can be either a COUNT or PERCENTAGE of the full sample size used for validation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-unit)
-     */
-    public fun unit(): String? = unwrap(this).getUnit()
-
-    /**
-     * The value of a threshold.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-value)
-     */
-    public fun `value`(): Number
-
-    /**
-     * A builder for [ThresholdProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The type of a threshold.
-       * Used for comparison of an actual count of rows that satisfy the rule to the threshold
-       * value.
-       */
-      public fun type(type: String)
-
-      /**
-       * @param unit Unit of threshold value.
-       * Can be either a COUNT or PERCENTAGE of the full sample size used for validation.
-       */
-      public fun unit(unit: String)
-
-      /**
-       * @param value The value of a threshold. 
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty.builder()
-
-      /**
-       * @param type The type of a threshold.
-       * Used for comparison of an actual count of rows that satisfy the rule to the threshold
-       * value.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param unit Unit of threshold value.
-       * Can be either a COUNT or PERCENTAGE of the full sample size used for validation.
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      /**
-       * @param value The value of a threshold. 
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty,
-    ) : CdkObject(cdkObject), ThresholdProperty {
-      /**
-       * The type of a threshold.
-       *
-       * Used for comparison of an actual count of rows that satisfy the rule to the threshold
-       * value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-
-      /**
-       * Unit of threshold value.
-       *
-       * Can be either a COUNT or PERCENTAGE of the full sample size used for validation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-unit)
-       */
-      override fun unit(): String? = unwrap(this).getUnit()
-
-      /**
-       * The value of a threshold.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-value)
-       */
-      override fun `value`(): Number = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ThresholdProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty):
-          ThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as? ThresholdProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ThresholdProperty):
-          software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty
-    }
-  }
-
-  /**
-   * A key-value pair to associate an expression's substitution variable names with their values.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * SubstitutionValueProperty substitutionValueProperty = SubstitutionValueProperty.builder()
-   * .value("value")
-   * .valueReference("valueReference")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html)
-   */
-  public interface SubstitutionValueProperty {
-    /**
-     * Value or column name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * Variable name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-valuereference)
-     */
-    public fun valueReference(): String
-
-    /**
-     * A builder for [SubstitutionValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value Value or column name. 
-       */
-      public fun `value`(`value`: String)
-
-      /**
-       * @param valueReference Variable name. 
-       */
-      public fun valueReference(valueReference: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty.builder()
-
-      /**
-       * @param value Value or column name. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      /**
-       * @param valueReference Variable name. 
-       */
-      override fun valueReference(valueReference: String) {
-        cdkBuilder.valueReference(valueReference)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty,
-    ) : CdkObject(cdkObject), SubstitutionValueProperty {
-      /**
-       * Value or column name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-
-      /**
-       * Variable name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-valuereference)
-       */
-      override fun valueReference(): String = unwrap(this).getValueReference()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubstitutionValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty):
-          SubstitutionValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SubstitutionValueProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubstitutionValueProperty):
-          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty
-    }
-  }
-
-  /**
    * Selector of a column from a dataset for profile job configuration.
    *
    * One selector includes either a column name or a regular expression.
@@ -1170,6 +908,268 @@ public open class CfnRuleset internal constructor(
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty
+    }
+  }
+
+  /**
+   * A key-value pair to associate an expression's substitution variable names with their values.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * SubstitutionValueProperty substitutionValueProperty = SubstitutionValueProperty.builder()
+   * .value("value")
+   * .valueReference("valueReference")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html)
+   */
+  public interface SubstitutionValueProperty {
+    /**
+     * Value or column name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * Variable name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-valuereference)
+     */
+    public fun valueReference(): String
+
+    /**
+     * A builder for [SubstitutionValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param value Value or column name. 
+       */
+      public fun `value`(`value`: String)
+
+      /**
+       * @param valueReference Variable name. 
+       */
+      public fun valueReference(valueReference: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty.builder()
+
+      /**
+       * @param value Value or column name. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      /**
+       * @param valueReference Variable name. 
+       */
+      override fun valueReference(valueReference: String) {
+        cdkBuilder.valueReference(valueReference)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty,
+    ) : CdkObject(cdkObject), SubstitutionValueProperty {
+      /**
+       * Value or column name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+
+      /**
+       * Variable name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-valuereference)
+       */
+      override fun valueReference(): String = unwrap(this).getValueReference()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubstitutionValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty):
+          SubstitutionValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubstitutionValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubstitutionValueProperty):
+          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty
+    }
+  }
+
+  /**
+   * The threshold used with a non-aggregate check expression.
+   *
+   * The non-aggregate check expression will be applied to each row in a specific column. Then the
+   * threshold will be used to determine whether the validation succeeds.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * ThresholdProperty thresholdProperty = ThresholdProperty.builder()
+   * .value(123)
+   * // the properties below are optional
+   * .type("type")
+   * .unit("unit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html)
+   */
+  public interface ThresholdProperty {
+    /**
+     * The type of a threshold.
+     *
+     * Used for comparison of an actual count of rows that satisfy the rule to the threshold value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * Unit of threshold value.
+     *
+     * Can be either a COUNT or PERCENTAGE of the full sample size used for validation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-unit)
+     */
+    public fun unit(): String? = unwrap(this).getUnit()
+
+    /**
+     * The value of a threshold.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [ThresholdProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The type of a threshold.
+       * Used for comparison of an actual count of rows that satisfy the rule to the threshold
+       * value.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param unit Unit of threshold value.
+       * Can be either a COUNT or PERCENTAGE of the full sample size used for validation.
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value The value of a threshold. 
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty.builder()
+
+      /**
+       * @param type The type of a threshold.
+       * Used for comparison of an actual count of rows that satisfy the rule to the threshold
+       * value.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param unit Unit of threshold value.
+       * Can be either a COUNT or PERCENTAGE of the full sample size used for validation.
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value The value of a threshold. 
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty,
+    ) : CdkObject(cdkObject), ThresholdProperty {
+      /**
+       * The type of a threshold.
+       *
+       * Used for comparison of an actual count of rows that satisfy the rule to the threshold
+       * value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * Unit of threshold value.
+       *
+       * Can be either a COUNT or PERCENTAGE of the full sample size used for validation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-unit)
+       */
+      override fun unit(): String? = unwrap(this).getUnit()
+
+      /**
+       * The value of a threshold.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html#cfn-databrew-ruleset-threshold-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ThresholdProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty):
+          ThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as? ThresholdProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ThresholdProperty):
+          software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty
     }
   }
 }

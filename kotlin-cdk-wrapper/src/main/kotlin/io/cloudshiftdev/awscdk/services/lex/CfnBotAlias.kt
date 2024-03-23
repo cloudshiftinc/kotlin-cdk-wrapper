@@ -636,6 +636,120 @@ public open class CfnBotAlias internal constructor(
   }
 
   /**
+   * Specifies the S3 bucket location where audio logs are stored.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * AudioLogDestinationProperty audioLogDestinationProperty = AudioLogDestinationProperty.builder()
+   * .s3Bucket(S3BucketLogDestinationProperty.builder()
+   * .logPrefix("logPrefix")
+   * .s3BucketArn("s3BucketArn")
+   * // the properties below are optional
+   * .kmsKeyArn("kmsKeyArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-audiologdestination.html)
+   */
+  public interface AudioLogDestinationProperty {
+    /**
+     * The S3 bucket location where audio logs are stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-audiologdestination.html#cfn-lex-botalias-audiologdestination-s3bucket)
+     */
+    public fun s3Bucket(): Any
+
+    /**
+     * A builder for [AudioLogDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       */
+      public fun s3Bucket(s3Bucket: IResolvable)
+
+      /**
+       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       */
+      public fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty)
+
+      /**
+       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2f8f1defb0eed06484c23d307f6271c407c94ce540e0efade59a31f34da430b1")
+      public fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty.builder()
+
+      /**
+       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       */
+      override fun s3Bucket(s3Bucket: IResolvable) {
+        cdkBuilder.s3Bucket(s3Bucket.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       */
+      override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty) {
+        cdkBuilder.s3Bucket(s3Bucket.let(S3BucketLogDestinationProperty::unwrap))
+      }
+
+      /**
+       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2f8f1defb0eed06484c23d307f6271c407c94ce540e0efade59a31f34da430b1")
+      override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty.Builder.() -> Unit): Unit =
+          s3Bucket(S3BucketLogDestinationProperty(s3Bucket))
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty,
+    ) : CdkObject(cdkObject), AudioLogDestinationProperty {
+      /**
+       * The S3 bucket location where audio logs are stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-audiologdestination.html#cfn-lex-botalias-audiologdestination-s3bucket)
+       */
+      override fun s3Bucket(): Any = unwrap(this).getS3Bucket()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AudioLogDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty):
+          AudioLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioLogDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AudioLogDestinationProperty):
+          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty
+    }
+  }
+
+  /**
    * Settings for logging audio of conversations between Amazon Lex and a user.
    *
    * You specify whether to log audio and the Amazon S3 bucket where the audio file is stored.
@@ -794,6 +908,158 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty
+    }
+  }
+
+  /**
+   * Specifies settings that are unique to a locale.
+   *
+   * For example, you can use different Lambda function depending on the bot's locale.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BotAliasLocaleSettingsItemProperty botAliasLocaleSettingsItemProperty =
+   * BotAliasLocaleSettingsItemProperty.builder()
+   * .botAliasLocaleSetting(BotAliasLocaleSettingsProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .codeHookSpecification(CodeHookSpecificationProperty.builder()
+   * .lambdaCodeHook(LambdaCodeHookProperty.builder()
+   * .codeHookInterfaceVersion("codeHookInterfaceVersion")
+   * .lambdaArn("lambdaArn")
+   * .build())
+   * .build())
+   * .build())
+   * .localeId("localeId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html)
+   */
+  public interface BotAliasLocaleSettingsItemProperty {
+    /**
+     * Specifies settings that are unique to a locale.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html#cfn-lex-botalias-botaliaslocalesettingsitem-botaliaslocalesetting)
+     */
+    public fun botAliasLocaleSetting(): Any
+
+    /**
+     * The unique identifier of the locale.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html#cfn-lex-botalias-botaliaslocalesettingsitem-localeid)
+     */
+    public fun localeId(): String
+
+    /**
+     * A builder for [BotAliasLocaleSettingsItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
+       */
+      public fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable)
+
+      /**
+       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
+       */
+      public fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty)
+
+      /**
+       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("40e7307211638298925ef64f94a772d3f0a29670df6319215ef6ec37c2a7bbf3")
+      public
+          fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param localeId The unique identifier of the locale. 
+       */
+      public fun localeId(localeId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty.builder()
+
+      /**
+       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
+       */
+      override fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable) {
+        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
+       */
+      override fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty) {
+        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(BotAliasLocaleSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("40e7307211638298925ef64f94a772d3f0a29670df6319215ef6ec37c2a7bbf3")
+      override
+          fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty.Builder.() -> Unit):
+          Unit = botAliasLocaleSetting(BotAliasLocaleSettingsProperty(botAliasLocaleSetting))
+
+      /**
+       * @param localeId The unique identifier of the locale. 
+       */
+      override fun localeId(localeId: String) {
+        cdkBuilder.localeId(localeId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty,
+    ) : CdkObject(cdkObject), BotAliasLocaleSettingsItemProperty {
+      /**
+       * Specifies settings that are unique to a locale.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html#cfn-lex-botalias-botaliaslocalesettingsitem-botaliaslocalesetting)
+       */
+      override fun botAliasLocaleSetting(): Any = unwrap(this).getBotAliasLocaleSetting()
+
+      /**
+       * The unique identifier of the locale.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html#cfn-lex-botalias-botaliaslocalesettingsitem-localeid)
+       */
+      override fun localeId(): String = unwrap(this).getLocaleId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BotAliasLocaleSettingsItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty):
+          BotAliasLocaleSettingsItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BotAliasLocaleSettingsItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BotAliasLocaleSettingsItemProperty):
+          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty
     }
   }
 
@@ -971,8 +1237,9 @@ public open class CfnBotAlias internal constructor(
   }
 
   /**
-   * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user
-   * utterances.
+   * The Amazon CloudWatch Logs log group where the text and metadata logs are delivered.
+   *
+   * The log group must exist before you enable logging.
    *
    * Example:
    *
@@ -980,95 +1247,110 @@ public open class CfnBotAlias internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.lex.*;
-   * SentimentAnalysisSettingsProperty sentimentAnalysisSettingsProperty =
-   * SentimentAnalysisSettingsProperty.builder()
-   * .detectSentiment(false)
+   * CloudWatchLogGroupLogDestinationProperty cloudWatchLogGroupLogDestinationProperty =
+   * CloudWatchLogGroupLogDestinationProperty.builder()
+   * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+   * .logPrefix("logPrefix")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-sentimentanalysissettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html)
    */
-  public interface SentimentAnalysisSettingsProperty {
+  public interface CloudWatchLogGroupLogDestinationProperty {
     /**
-     * Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment of user utterances.
+     * The Amazon Resource Name (ARN) of the log group where text and metadata logs are delivered.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-sentimentanalysissettings.html#cfn-lex-botalias-sentimentanalysissettings-detectsentiment)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html#cfn-lex-botalias-cloudwatchloggrouplogdestination-cloudwatchloggrouparn)
      */
-    public fun detectSentiment(): Any
+    public fun cloudWatchLogGroupArn(): String
 
     /**
-     * A builder for [SentimentAnalysisSettingsProperty]
+     * The prefix of the log stream name within the log group that you specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html#cfn-lex-botalias-cloudwatchloggrouplogdestination-logprefix)
+     */
+    public fun logPrefix(): String
+
+    /**
+     * A builder for [CloudWatchLogGroupLogDestinationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the
-       * sentiment of user utterances. 
+       * @param cloudWatchLogGroupArn The Amazon Resource Name (ARN) of the log group where text and
+       * metadata logs are delivered. 
        */
-      public fun detectSentiment(detectSentiment: Boolean)
+      public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String)
 
       /**
-       * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the
-       * sentiment of user utterances. 
+       * @param logPrefix The prefix of the log stream name within the log group that you specified.
+       * 
        */
-      public fun detectSentiment(detectSentiment: IResolvable)
+      public fun logPrefix(logPrefix: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty.Builder
+          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty.Builder
           =
-          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty.builder()
+          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty.builder()
 
       /**
-       * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the
-       * sentiment of user utterances. 
+       * @param cloudWatchLogGroupArn The Amazon Resource Name (ARN) of the log group where text and
+       * metadata logs are delivered. 
        */
-      override fun detectSentiment(detectSentiment: Boolean) {
-        cdkBuilder.detectSentiment(detectSentiment)
+      override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
+        cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
       }
 
       /**
-       * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the
-       * sentiment of user utterances. 
+       * @param logPrefix The prefix of the log stream name within the log group that you specified.
+       * 
        */
-      override fun detectSentiment(detectSentiment: IResolvable) {
-        cdkBuilder.detectSentiment(detectSentiment.let(IResolvable::unwrap))
+      override fun logPrefix(logPrefix: String) {
+        cdkBuilder.logPrefix(logPrefix)
       }
 
       public fun build():
-          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty =
+          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty,
-    ) : CdkObject(cdkObject), SentimentAnalysisSettingsProperty {
+          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogGroupLogDestinationProperty {
       /**
-       * Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment of user utterances.
+       * The Amazon Resource Name (ARN) of the log group where text and metadata logs are delivered.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-sentimentanalysissettings.html#cfn-lex-botalias-sentimentanalysissettings-detectsentiment)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html#cfn-lex-botalias-cloudwatchloggrouplogdestination-cloudwatchloggrouparn)
        */
-      override fun detectSentiment(): Any = unwrap(this).getDetectSentiment()
+      override fun cloudWatchLogGroupArn(): String = unwrap(this).getCloudWatchLogGroupArn()
+
+      /**
+       * The prefix of the log stream name within the log group that you specified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html#cfn-lex-botalias-cloudwatchloggrouplogdestination-logprefix)
+       */
+      override fun logPrefix(): String = unwrap(this).getLogPrefix()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          SentimentAnalysisSettingsProperty {
+          CloudWatchLogGroupLogDestinationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty):
-          SentimentAnalysisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SentimentAnalysisSettingsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty):
+          CloudWatchLogGroupLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogGroupLogDestinationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SentimentAnalysisSettingsProperty):
-          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty =
+      internal fun unwrap(wrapped: CloudWatchLogGroupLogDestinationProperty):
+          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty
+          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty
     }
   }
 
@@ -1194,6 +1476,181 @@ public open class CfnBotAlias internal constructor(
   }
 
   /**
+   * Configures conversation logging that saves audio, text, and metadata for the conversations with
+   * your users.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * ConversationLogSettingsProperty conversationLogSettingsProperty =
+   * ConversationLogSettingsProperty.builder()
+   * .audioLogSettings(List.of(AudioLogSettingProperty.builder()
+   * .destination(AudioLogDestinationProperty.builder()
+   * .s3Bucket(S3BucketLogDestinationProperty.builder()
+   * .logPrefix("logPrefix")
+   * .s3BucketArn("s3BucketArn")
+   * // the properties below are optional
+   * .kmsKeyArn("kmsKeyArn")
+   * .build())
+   * .build())
+   * .enabled(false)
+   * .build()))
+   * .textLogSettings(List.of(TextLogSettingProperty.builder()
+   * .destination(TextLogDestinationProperty.builder()
+   * .cloudWatch(CloudWatchLogGroupLogDestinationProperty.builder()
+   * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+   * .logPrefix("logPrefix")
+   * .build())
+   * .build())
+   * .enabled(false)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html)
+   */
+  public interface ConversationLogSettingsProperty {
+    /**
+     * The Amazon S3 settings for logging audio to an S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html#cfn-lex-botalias-conversationlogsettings-audiologsettings)
+     */
+    public fun audioLogSettings(): Any? = unwrap(this).getAudioLogSettings()
+
+    /**
+     * The Amazon CloudWatch Logs settings for logging text and metadata.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html#cfn-lex-botalias-conversationlogsettings-textlogsettings)
+     */
+    public fun textLogSettings(): Any? = unwrap(this).getTextLogSettings()
+
+    /**
+     * A builder for [ConversationLogSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+       */
+      public fun audioLogSettings(audioLogSettings: IResolvable)
+
+      /**
+       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+       */
+      public fun audioLogSettings(audioLogSettings: List<Any>)
+
+      /**
+       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+       */
+      public fun audioLogSettings(vararg audioLogSettings: Any)
+
+      /**
+       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+       */
+      public fun textLogSettings(textLogSettings: IResolvable)
+
+      /**
+       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+       */
+      public fun textLogSettings(textLogSettings: List<Any>)
+
+      /**
+       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+       */
+      public fun textLogSettings(vararg textLogSettings: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty.builder()
+
+      /**
+       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+       */
+      override fun audioLogSettings(audioLogSettings: IResolvable) {
+        cdkBuilder.audioLogSettings(audioLogSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+       */
+      override fun audioLogSettings(audioLogSettings: List<Any>) {
+        cdkBuilder.audioLogSettings(audioLogSettings)
+      }
+
+      /**
+       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+       */
+      override fun audioLogSettings(vararg audioLogSettings: Any): Unit =
+          audioLogSettings(audioLogSettings.toList())
+
+      /**
+       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+       */
+      override fun textLogSettings(textLogSettings: IResolvable) {
+        cdkBuilder.textLogSettings(textLogSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+       */
+      override fun textLogSettings(textLogSettings: List<Any>) {
+        cdkBuilder.textLogSettings(textLogSettings)
+      }
+
+      /**
+       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+       */
+      override fun textLogSettings(vararg textLogSettings: Any): Unit =
+          textLogSettings(textLogSettings.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty,
+    ) : CdkObject(cdkObject), ConversationLogSettingsProperty {
+      /**
+       * The Amazon S3 settings for logging audio to an S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html#cfn-lex-botalias-conversationlogsettings-audiologsettings)
+       */
+      override fun audioLogSettings(): Any? = unwrap(this).getAudioLogSettings()
+
+      /**
+       * The Amazon CloudWatch Logs settings for logging text and metadata.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html#cfn-lex-botalias-conversationlogsettings-textlogsettings)
+       */
+      override fun textLogSettings(): Any? = unwrap(this).getTextLogSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConversationLogSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty):
+          ConversationLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConversationLogSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConversationLogSettingsProperty):
+          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty
+    }
+  }
+
+  /**
    * Specifies a Lambda function that verifies requests to a bot or fulfills the user's request to a
    * bot.
    *
@@ -1303,158 +1760,6 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty
-    }
-  }
-
-  /**
-   * Specifies settings that are unique to a locale.
-   *
-   * For example, you can use different Lambda function depending on the bot's locale.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lex.*;
-   * BotAliasLocaleSettingsItemProperty botAliasLocaleSettingsItemProperty =
-   * BotAliasLocaleSettingsItemProperty.builder()
-   * .botAliasLocaleSetting(BotAliasLocaleSettingsProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .codeHookSpecification(CodeHookSpecificationProperty.builder()
-   * .lambdaCodeHook(LambdaCodeHookProperty.builder()
-   * .codeHookInterfaceVersion("codeHookInterfaceVersion")
-   * .lambdaArn("lambdaArn")
-   * .build())
-   * .build())
-   * .build())
-   * .localeId("localeId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html)
-   */
-  public interface BotAliasLocaleSettingsItemProperty {
-    /**
-     * Specifies settings that are unique to a locale.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html#cfn-lex-botalias-botaliaslocalesettingsitem-botaliaslocalesetting)
-     */
-    public fun botAliasLocaleSetting(): Any
-
-    /**
-     * The unique identifier of the locale.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html#cfn-lex-botalias-botaliaslocalesettingsitem-localeid)
-     */
-    public fun localeId(): String
-
-    /**
-     * A builder for [BotAliasLocaleSettingsItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
-       */
-      public fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable)
-
-      /**
-       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
-       */
-      public fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty)
-
-      /**
-       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("40e7307211638298925ef64f94a772d3f0a29670df6319215ef6ec37c2a7bbf3")
-      public
-          fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty.Builder.() -> Unit)
-
-      /**
-       * @param localeId The unique identifier of the locale. 
-       */
-      public fun localeId(localeId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty.Builder
-          =
-          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty.builder()
-
-      /**
-       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
-       */
-      override fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable) {
-        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
-       */
-      override fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty) {
-        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(BotAliasLocaleSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("40e7307211638298925ef64f94a772d3f0a29670df6319215ef6ec37c2a7bbf3")
-      override
-          fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty.Builder.() -> Unit):
-          Unit = botAliasLocaleSetting(BotAliasLocaleSettingsProperty(botAliasLocaleSetting))
-
-      /**
-       * @param localeId The unique identifier of the locale. 
-       */
-      override fun localeId(localeId: String) {
-        cdkBuilder.localeId(localeId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty,
-    ) : CdkObject(cdkObject), BotAliasLocaleSettingsItemProperty {
-      /**
-       * Specifies settings that are unique to a locale.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html#cfn-lex-botalias-botaliaslocalesettingsitem-botaliaslocalesetting)
-       */
-      override fun botAliasLocaleSetting(): Any = unwrap(this).getBotAliasLocaleSetting()
-
-      /**
-       * The unique identifier of the locale.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-botaliaslocalesettingsitem.html#cfn-lex-botalias-botaliaslocalesettingsitem-localeid)
-       */
-      override fun localeId(): String = unwrap(this).getLocaleId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          BotAliasLocaleSettingsItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty):
-          BotAliasLocaleSettingsItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BotAliasLocaleSettingsItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BotAliasLocaleSettingsItemProperty):
-          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty
     }
   }
 
@@ -1603,7 +1908,8 @@ public open class CfnBotAlias internal constructor(
   }
 
   /**
-   * Specifies the S3 bucket location where audio logs are stored.
+   * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user
+   * utterances.
    *
    * Example:
    *
@@ -1611,108 +1917,95 @@ public open class CfnBotAlias internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.lex.*;
-   * AudioLogDestinationProperty audioLogDestinationProperty = AudioLogDestinationProperty.builder()
-   * .s3Bucket(S3BucketLogDestinationProperty.builder()
-   * .logPrefix("logPrefix")
-   * .s3BucketArn("s3BucketArn")
-   * // the properties below are optional
-   * .kmsKeyArn("kmsKeyArn")
-   * .build())
+   * SentimentAnalysisSettingsProperty sentimentAnalysisSettingsProperty =
+   * SentimentAnalysisSettingsProperty.builder()
+   * .detectSentiment(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-audiologdestination.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-sentimentanalysissettings.html)
    */
-  public interface AudioLogDestinationProperty {
+  public interface SentimentAnalysisSettingsProperty {
     /**
-     * The S3 bucket location where audio logs are stored.
+     * Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment of user utterances.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-audiologdestination.html#cfn-lex-botalias-audiologdestination-s3bucket)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-sentimentanalysissettings.html#cfn-lex-botalias-sentimentanalysissettings-detectsentiment)
      */
-    public fun s3Bucket(): Any
+    public fun detectSentiment(): Any
 
     /**
-     * A builder for [AudioLogDestinationProperty]
+     * A builder for [SentimentAnalysisSettingsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the
+       * sentiment of user utterances. 
        */
-      public fun s3Bucket(s3Bucket: IResolvable)
+      public fun detectSentiment(detectSentiment: Boolean)
 
       /**
-       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the
+       * sentiment of user utterances. 
        */
-      public fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty)
-
-      /**
-       * @param s3Bucket The S3 bucket location where audio logs are stored. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2f8f1defb0eed06484c23d307f6271c407c94ce540e0efade59a31f34da430b1")
-      public fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty.Builder.() -> Unit)
+      public fun detectSentiment(detectSentiment: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty.Builder =
-          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty.builder()
+          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty.builder()
 
       /**
-       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the
+       * sentiment of user utterances. 
        */
-      override fun s3Bucket(s3Bucket: IResolvable) {
-        cdkBuilder.s3Bucket(s3Bucket.let(IResolvable::unwrap))
+      override fun detectSentiment(detectSentiment: Boolean) {
+        cdkBuilder.detectSentiment(detectSentiment)
       }
 
       /**
-       * @param s3Bucket The S3 bucket location where audio logs are stored. 
+       * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the
+       * sentiment of user utterances. 
        */
-      override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty) {
-        cdkBuilder.s3Bucket(s3Bucket.let(S3BucketLogDestinationProperty::unwrap))
+      override fun detectSentiment(detectSentiment: IResolvable) {
+        cdkBuilder.detectSentiment(detectSentiment.let(IResolvable::unwrap))
       }
-
-      /**
-       * @param s3Bucket The S3 bucket location where audio logs are stored. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2f8f1defb0eed06484c23d307f6271c407c94ce540e0efade59a31f34da430b1")
-      override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty.Builder.() -> Unit): Unit =
-          s3Bucket(S3BucketLogDestinationProperty(s3Bucket))
 
       public fun build():
-          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty =
+          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty,
-    ) : CdkObject(cdkObject), AudioLogDestinationProperty {
+          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty,
+    ) : CdkObject(cdkObject), SentimentAnalysisSettingsProperty {
       /**
-       * The S3 bucket location where audio logs are stored.
+       * Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment of user utterances.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-audiologdestination.html#cfn-lex-botalias-audiologdestination-s3bucket)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-sentimentanalysissettings.html#cfn-lex-botalias-sentimentanalysissettings-detectsentiment)
        */
-      override fun s3Bucket(): Any = unwrap(this).getS3Bucket()
+      override fun detectSentiment(): Any = unwrap(this).getDetectSentiment()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AudioLogDestinationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SentimentAnalysisSettingsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty):
-          AudioLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AudioLogDestinationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty):
+          SentimentAnalysisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SentimentAnalysisSettingsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AudioLogDestinationProperty):
-          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty
+      internal fun unwrap(wrapped: SentimentAnalysisSettingsProperty):
+          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty
     }
   }
 
@@ -1989,299 +2282,6 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty
-    }
-  }
-
-  /**
-   * The Amazon CloudWatch Logs log group where the text and metadata logs are delivered.
-   *
-   * The log group must exist before you enable logging.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lex.*;
-   * CloudWatchLogGroupLogDestinationProperty cloudWatchLogGroupLogDestinationProperty =
-   * CloudWatchLogGroupLogDestinationProperty.builder()
-   * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
-   * .logPrefix("logPrefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html)
-   */
-  public interface CloudWatchLogGroupLogDestinationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the log group where text and metadata logs are delivered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html#cfn-lex-botalias-cloudwatchloggrouplogdestination-cloudwatchloggrouparn)
-     */
-    public fun cloudWatchLogGroupArn(): String
-
-    /**
-     * The prefix of the log stream name within the log group that you specified.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html#cfn-lex-botalias-cloudwatchloggrouplogdestination-logprefix)
-     */
-    public fun logPrefix(): String
-
-    /**
-     * A builder for [CloudWatchLogGroupLogDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogGroupArn The Amazon Resource Name (ARN) of the log group where text and
-       * metadata logs are delivered. 
-       */
-      public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String)
-
-      /**
-       * @param logPrefix The prefix of the log stream name within the log group that you specified.
-       * 
-       */
-      public fun logPrefix(logPrefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty.builder()
-
-      /**
-       * @param cloudWatchLogGroupArn The Amazon Resource Name (ARN) of the log group where text and
-       * metadata logs are delivered. 
-       */
-      override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
-        cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
-      }
-
-      /**
-       * @param logPrefix The prefix of the log stream name within the log group that you specified.
-       * 
-       */
-      override fun logPrefix(logPrefix: String) {
-        cdkBuilder.logPrefix(logPrefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogGroupLogDestinationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the log group where text and metadata logs are delivered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html#cfn-lex-botalias-cloudwatchloggrouplogdestination-cloudwatchloggrouparn)
-       */
-      override fun cloudWatchLogGroupArn(): String = unwrap(this).getCloudWatchLogGroupArn()
-
-      /**
-       * The prefix of the log stream name within the log group that you specified.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-cloudwatchloggrouplogdestination.html#cfn-lex-botalias-cloudwatchloggrouplogdestination-logprefix)
-       */
-      override fun logPrefix(): String = unwrap(this).getLogPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CloudWatchLogGroupLogDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty):
-          CloudWatchLogGroupLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogGroupLogDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogGroupLogDestinationProperty):
-          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty
-    }
-  }
-
-  /**
-   * Configures conversation logging that saves audio, text, and metadata for the conversations with
-   * your users.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lex.*;
-   * ConversationLogSettingsProperty conversationLogSettingsProperty =
-   * ConversationLogSettingsProperty.builder()
-   * .audioLogSettings(List.of(AudioLogSettingProperty.builder()
-   * .destination(AudioLogDestinationProperty.builder()
-   * .s3Bucket(S3BucketLogDestinationProperty.builder()
-   * .logPrefix("logPrefix")
-   * .s3BucketArn("s3BucketArn")
-   * // the properties below are optional
-   * .kmsKeyArn("kmsKeyArn")
-   * .build())
-   * .build())
-   * .enabled(false)
-   * .build()))
-   * .textLogSettings(List.of(TextLogSettingProperty.builder()
-   * .destination(TextLogDestinationProperty.builder()
-   * .cloudWatch(CloudWatchLogGroupLogDestinationProperty.builder()
-   * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
-   * .logPrefix("logPrefix")
-   * .build())
-   * .build())
-   * .enabled(false)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html)
-   */
-  public interface ConversationLogSettingsProperty {
-    /**
-     * The Amazon S3 settings for logging audio to an S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html#cfn-lex-botalias-conversationlogsettings-audiologsettings)
-     */
-    public fun audioLogSettings(): Any? = unwrap(this).getAudioLogSettings()
-
-    /**
-     * The Amazon CloudWatch Logs settings for logging text and metadata.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html#cfn-lex-botalias-conversationlogsettings-textlogsettings)
-     */
-    public fun textLogSettings(): Any? = unwrap(this).getTextLogSettings()
-
-    /**
-     * A builder for [ConversationLogSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
-       */
-      public fun audioLogSettings(audioLogSettings: IResolvable)
-
-      /**
-       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
-       */
-      public fun audioLogSettings(audioLogSettings: List<Any>)
-
-      /**
-       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
-       */
-      public fun audioLogSettings(vararg audioLogSettings: Any)
-
-      /**
-       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
-       */
-      public fun textLogSettings(textLogSettings: IResolvable)
-
-      /**
-       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
-       */
-      public fun textLogSettings(textLogSettings: List<Any>)
-
-      /**
-       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
-       */
-      public fun textLogSettings(vararg textLogSettings: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty.Builder =
-          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty.builder()
-
-      /**
-       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
-       */
-      override fun audioLogSettings(audioLogSettings: IResolvable) {
-        cdkBuilder.audioLogSettings(audioLogSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
-       */
-      override fun audioLogSettings(audioLogSettings: List<Any>) {
-        cdkBuilder.audioLogSettings(audioLogSettings)
-      }
-
-      /**
-       * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
-       */
-      override fun audioLogSettings(vararg audioLogSettings: Any): Unit =
-          audioLogSettings(audioLogSettings.toList())
-
-      /**
-       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
-       */
-      override fun textLogSettings(textLogSettings: IResolvable) {
-        cdkBuilder.textLogSettings(textLogSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
-       */
-      override fun textLogSettings(textLogSettings: List<Any>) {
-        cdkBuilder.textLogSettings(textLogSettings)
-      }
-
-      /**
-       * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
-       */
-      override fun textLogSettings(vararg textLogSettings: Any): Unit =
-          textLogSettings(textLogSettings.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty,
-    ) : CdkObject(cdkObject), ConversationLogSettingsProperty {
-      /**
-       * The Amazon S3 settings for logging audio to an S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html#cfn-lex-botalias-conversationlogsettings-audiologsettings)
-       */
-      override fun audioLogSettings(): Any? = unwrap(this).getAudioLogSettings()
-
-      /**
-       * The Amazon CloudWatch Logs settings for logging text and metadata.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html#cfn-lex-botalias-conversationlogsettings-textlogsettings)
-       */
-      override fun textLogSettings(): Any? = unwrap(this).getTextLogSettings()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConversationLogSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty):
-          ConversationLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConversationLogSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConversationLogSettingsProperty):
-          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty
     }
   }
 }

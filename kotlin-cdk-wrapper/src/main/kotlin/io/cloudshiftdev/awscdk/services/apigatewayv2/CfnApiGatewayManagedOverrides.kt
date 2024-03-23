@@ -443,6 +443,326 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
   }
 
   /**
+   * The `AccessLogSettings` property overrides the access log settings for an API Gateway-managed
+   * stage.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+   * AccessLogSettingsProperty accessLogSettingsProperty = AccessLogSettingsProperty.builder()
+   * .destinationArn("destinationArn")
+   * .format("format")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html)
+   */
+  public interface AccessLogSettingsProperty {
+    /**
+     * The ARN of the CloudWatch Logs log group to receive access logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-destinationarn)
+     */
+    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+    /**
+     * A single line format of the access logs of data, as specified by selected $context variables.
+     *
+     * The format must include at least $context.requestId.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-format)
+     */
+    public fun format(): String? = unwrap(this).getFormat()
+
+    /**
+     * A builder for [AccessLogSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs.
+       */
+      public fun destinationArn(destinationArn: String)
+
+      /**
+       * @param format A single line format of the access logs of data, as specified by selected
+       * $context variables.
+       * The format must include at least $context.requestId.
+       */
+      public fun format(format: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty.builder()
+
+      /**
+       * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs.
+       */
+      override fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+      }
+
+      /**
+       * @param format A single line format of the access logs of data, as specified by selected
+       * $context variables.
+       * The format must include at least $context.requestId.
+       */
+      override fun format(format: String) {
+        cdkBuilder.format(format)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty,
+    ) : CdkObject(cdkObject), AccessLogSettingsProperty {
+      /**
+       * The ARN of the CloudWatch Logs log group to receive access logs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-destinationarn)
+       */
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+      /**
+       * A single line format of the access logs of data, as specified by selected $context
+       * variables.
+       *
+       * The format must include at least $context.requestId.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-format)
+       */
+      override fun format(): String? = unwrap(this).getFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessLogSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty):
+          AccessLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessLogSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessLogSettingsProperty):
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty
+    }
+  }
+
+  /**
+   * The `IntegrationOverrides` property overrides the integration settings for an API
+   * Gateway-managed integration.
+   *
+   * If you remove this property, API Gateway restores the default values.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+   * IntegrationOverridesProperty integrationOverridesProperty =
+   * IntegrationOverridesProperty.builder()
+   * .description("description")
+   * .integrationMethod("integrationMethod")
+   * .payloadFormatVersion("payloadFormatVersion")
+   * .timeoutInMillis(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html)
+   */
+  public interface IntegrationOverridesProperty {
+    /**
+     * The description of the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Specifies the integration's HTTP method type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-integrationmethod)
+     */
+    public fun integrationMethod(): String? = unwrap(this).getIntegrationMethod()
+
+    /**
+     * Specifies the format of the payload sent to an integration.
+     *
+     * Required for HTTP APIs. For HTTP APIs, supported values for Lambda proxy integrations are
+     * `1.0` and `2.0` . For all other integrations, `1.0` is the only supported value. To learn more,
+     * see [Working with AWS Lambda proxy integrations for HTTP
+     * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-payloadformatversion)
+     */
+    public fun payloadFormatVersion(): String? = unwrap(this).getPayloadFormatVersion()
+
+    /**
+     * Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and
+     * 30,000 milliseconds for HTTP APIs.
+     *
+     * The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-timeoutinmillis)
+     */
+    public fun timeoutInMillis(): Number? = unwrap(this).getTimeoutInMillis()
+
+    /**
+     * A builder for [IntegrationOverridesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description The description of the integration.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param integrationMethod Specifies the integration's HTTP method type.
+       */
+      public fun integrationMethod(integrationMethod: String)
+
+      /**
+       * @param payloadFormatVersion Specifies the format of the payload sent to an integration.
+       * Required for HTTP APIs. For HTTP APIs, supported values for Lambda proxy integrations are
+       * `1.0` and `2.0` . For all other integrations, `1.0` is the only supported value. To learn
+       * more, see [Working with AWS Lambda proxy integrations for HTTP
+       * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
+       * .
+       */
+      public fun payloadFormatVersion(payloadFormatVersion: String)
+
+      /**
+       * @param timeoutInMillis Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs
+       * and between 50 and 30,000 milliseconds for HTTP APIs.
+       * The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+       */
+      public fun timeoutInMillis(timeoutInMillis: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty.Builder
+          =
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty.builder()
+
+      /**
+       * @param description The description of the integration.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param integrationMethod Specifies the integration's HTTP method type.
+       */
+      override fun integrationMethod(integrationMethod: String) {
+        cdkBuilder.integrationMethod(integrationMethod)
+      }
+
+      /**
+       * @param payloadFormatVersion Specifies the format of the payload sent to an integration.
+       * Required for HTTP APIs. For HTTP APIs, supported values for Lambda proxy integrations are
+       * `1.0` and `2.0` . For all other integrations, `1.0` is the only supported value. To learn
+       * more, see [Working with AWS Lambda proxy integrations for HTTP
+       * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
+       * .
+       */
+      override fun payloadFormatVersion(payloadFormatVersion: String) {
+        cdkBuilder.payloadFormatVersion(payloadFormatVersion)
+      }
+
+      /**
+       * @param timeoutInMillis Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs
+       * and between 50 and 30,000 milliseconds for HTTP APIs.
+       * The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+       */
+      override fun timeoutInMillis(timeoutInMillis: Number) {
+        cdkBuilder.timeoutInMillis(timeoutInMillis)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty,
+    ) : CdkObject(cdkObject), IntegrationOverridesProperty {
+      /**
+       * The description of the integration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * Specifies the integration's HTTP method type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-integrationmethod)
+       */
+      override fun integrationMethod(): String? = unwrap(this).getIntegrationMethod()
+
+      /**
+       * Specifies the format of the payload sent to an integration.
+       *
+       * Required for HTTP APIs. For HTTP APIs, supported values for Lambda proxy integrations are
+       * `1.0` and `2.0` . For all other integrations, `1.0` is the only supported value. To learn
+       * more, see [Working with AWS Lambda proxy integrations for HTTP
+       * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-payloadformatversion)
+       */
+      override fun payloadFormatVersion(): String? = unwrap(this).getPayloadFormatVersion()
+
+      /**
+       * Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and
+       * 30,000 milliseconds for HTTP APIs.
+       *
+       * The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-timeoutinmillis)
+       */
+      override fun timeoutInMillis(): Number? = unwrap(this).getTimeoutInMillis()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IntegrationOverridesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty):
+          IntegrationOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntegrationOverridesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IntegrationOverridesProperty):
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty
+    }
+  }
+
+  /**
    * The `RouteOverrides` property overrides the route configuration for an API Gateway-managed
    * route.
    *
@@ -924,326 +1244,6 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
           software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteSettingsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteSettingsProperty
-    }
-  }
-
-  /**
-   * The `AccessLogSettings` property overrides the access log settings for an API Gateway-managed
-   * stage.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
-   * AccessLogSettingsProperty accessLogSettingsProperty = AccessLogSettingsProperty.builder()
-   * .destinationArn("destinationArn")
-   * .format("format")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html)
-   */
-  public interface AccessLogSettingsProperty {
-    /**
-     * The ARN of the CloudWatch Logs log group to receive access logs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-destinationarn)
-     */
-    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-    /**
-     * A single line format of the access logs of data, as specified by selected $context variables.
-     *
-     * The format must include at least $context.requestId.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-format)
-     */
-    public fun format(): String? = unwrap(this).getFormat()
-
-    /**
-     * A builder for [AccessLogSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs.
-       */
-      public fun destinationArn(destinationArn: String)
-
-      /**
-       * @param format A single line format of the access logs of data, as specified by selected
-       * $context variables.
-       * The format must include at least $context.requestId.
-       */
-      public fun format(format: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty.builder()
-
-      /**
-       * @param destinationArn The ARN of the CloudWatch Logs log group to receive access logs.
-       */
-      override fun destinationArn(destinationArn: String) {
-        cdkBuilder.destinationArn(destinationArn)
-      }
-
-      /**
-       * @param format A single line format of the access logs of data, as specified by selected
-       * $context variables.
-       * The format must include at least $context.requestId.
-       */
-      override fun format(format: String) {
-        cdkBuilder.format(format)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty,
-    ) : CdkObject(cdkObject), AccessLogSettingsProperty {
-      /**
-       * The ARN of the CloudWatch Logs log group to receive access logs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-destinationarn)
-       */
-      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-      /**
-       * A single line format of the access logs of data, as specified by selected $context
-       * variables.
-       *
-       * The format must include at least $context.requestId.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-format)
-       */
-      override fun format(): String? = unwrap(this).getFormat()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessLogSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty):
-          AccessLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AccessLogSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessLogSettingsProperty):
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty
-    }
-  }
-
-  /**
-   * The `IntegrationOverrides` property overrides the integration settings for an API
-   * Gateway-managed integration.
-   *
-   * If you remove this property, API Gateway restores the default values.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
-   * IntegrationOverridesProperty integrationOverridesProperty =
-   * IntegrationOverridesProperty.builder()
-   * .description("description")
-   * .integrationMethod("integrationMethod")
-   * .payloadFormatVersion("payloadFormatVersion")
-   * .timeoutInMillis(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html)
-   */
-  public interface IntegrationOverridesProperty {
-    /**
-     * The description of the integration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * Specifies the integration's HTTP method type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-integrationmethod)
-     */
-    public fun integrationMethod(): String? = unwrap(this).getIntegrationMethod()
-
-    /**
-     * Specifies the format of the payload sent to an integration.
-     *
-     * Required for HTTP APIs. For HTTP APIs, supported values for Lambda proxy integrations are
-     * `1.0` and `2.0` . For all other integrations, `1.0` is the only supported value. To learn more,
-     * see [Working with AWS Lambda proxy integrations for HTTP
-     * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-payloadformatversion)
-     */
-    public fun payloadFormatVersion(): String? = unwrap(this).getPayloadFormatVersion()
-
-    /**
-     * Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and
-     * 30,000 milliseconds for HTTP APIs.
-     *
-     * The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-timeoutinmillis)
-     */
-    public fun timeoutInMillis(): Number? = unwrap(this).getTimeoutInMillis()
-
-    /**
-     * A builder for [IntegrationOverridesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param description The description of the integration.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param integrationMethod Specifies the integration's HTTP method type.
-       */
-      public fun integrationMethod(integrationMethod: String)
-
-      /**
-       * @param payloadFormatVersion Specifies the format of the payload sent to an integration.
-       * Required for HTTP APIs. For HTTP APIs, supported values for Lambda proxy integrations are
-       * `1.0` and `2.0` . For all other integrations, `1.0` is the only supported value. To learn
-       * more, see [Working with AWS Lambda proxy integrations for HTTP
-       * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
-       * .
-       */
-      public fun payloadFormatVersion(payloadFormatVersion: String)
-
-      /**
-       * @param timeoutInMillis Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs
-       * and between 50 and 30,000 milliseconds for HTTP APIs.
-       * The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
-       */
-      public fun timeoutInMillis(timeoutInMillis: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty.Builder
-          =
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty.builder()
-
-      /**
-       * @param description The description of the integration.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param integrationMethod Specifies the integration's HTTP method type.
-       */
-      override fun integrationMethod(integrationMethod: String) {
-        cdkBuilder.integrationMethod(integrationMethod)
-      }
-
-      /**
-       * @param payloadFormatVersion Specifies the format of the payload sent to an integration.
-       * Required for HTTP APIs. For HTTP APIs, supported values for Lambda proxy integrations are
-       * `1.0` and `2.0` . For all other integrations, `1.0` is the only supported value. To learn
-       * more, see [Working with AWS Lambda proxy integrations for HTTP
-       * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
-       * .
-       */
-      override fun payloadFormatVersion(payloadFormatVersion: String) {
-        cdkBuilder.payloadFormatVersion(payloadFormatVersion)
-      }
-
-      /**
-       * @param timeoutInMillis Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs
-       * and between 50 and 30,000 milliseconds for HTTP APIs.
-       * The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
-       */
-      override fun timeoutInMillis(timeoutInMillis: Number) {
-        cdkBuilder.timeoutInMillis(timeoutInMillis)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty,
-    ) : CdkObject(cdkObject), IntegrationOverridesProperty {
-      /**
-       * The description of the integration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * Specifies the integration's HTTP method type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-integrationmethod)
-       */
-      override fun integrationMethod(): String? = unwrap(this).getIntegrationMethod()
-
-      /**
-       * Specifies the format of the payload sent to an integration.
-       *
-       * Required for HTTP APIs. For HTTP APIs, supported values for Lambda proxy integrations are
-       * `1.0` and `2.0` . For all other integrations, `1.0` is the only supported value. To learn
-       * more, see [Working with AWS Lambda proxy integrations for HTTP
-       * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-payloadformatversion)
-       */
-      override fun payloadFormatVersion(): String? = unwrap(this).getPayloadFormatVersion()
-
-      /**
-       * Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and
-       * 30,000 milliseconds for HTTP APIs.
-       *
-       * The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html#cfn-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides-timeoutinmillis)
-       */
-      override fun timeoutInMillis(): Number? = unwrap(this).getTimeoutInMillis()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IntegrationOverridesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty):
-          IntegrationOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IntegrationOverridesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IntegrationOverridesProperty):
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty
     }
   }
 

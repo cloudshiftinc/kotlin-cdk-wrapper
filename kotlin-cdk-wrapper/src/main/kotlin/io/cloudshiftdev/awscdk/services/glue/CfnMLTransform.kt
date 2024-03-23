@@ -907,326 +907,6 @@ public open class CfnMLTransform internal constructor(
   }
 
   /**
-   * The database and table in the AWS Glue Data Catalog that is used for input or output data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * GlueTablesProperty glueTablesProperty = GlueTablesProperty.builder()
-   * .databaseName("databaseName")
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .catalogId("catalogId")
-   * .connectionName("connectionName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html)
-   */
-  public interface GlueTablesProperty {
-    /**
-     * A unique identifier for the AWS Glue Data Catalog .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-catalogid)
-     */
-    public fun catalogId(): String? = unwrap(this).getCatalogId()
-
-    /**
-     * The name of the connection to the AWS Glue Data Catalog .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-connectionname)
-     */
-    public fun connectionName(): String? = unwrap(this).getConnectionName()
-
-    /**
-     * A database name in the AWS Glue Data Catalog .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-databasename)
-     */
-    public fun databaseName(): String
-
-    /**
-     * A table name in the AWS Glue Data Catalog .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-tablename)
-     */
-    public fun tableName(): String
-
-    /**
-     * A builder for [GlueTablesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId A unique identifier for the AWS Glue Data Catalog .
-       */
-      public fun catalogId(catalogId: String)
-
-      /**
-       * @param connectionName The name of the connection to the AWS Glue Data Catalog .
-       */
-      public fun connectionName(connectionName: String)
-
-      /**
-       * @param databaseName A database name in the AWS Glue Data Catalog . 
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param tableName A table name in the AWS Glue Data Catalog . 
-       */
-      public fun tableName(tableName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty.builder()
-
-      /**
-       * @param catalogId A unique identifier for the AWS Glue Data Catalog .
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
-
-      /**
-       * @param connectionName The name of the connection to the AWS Glue Data Catalog .
-       */
-      override fun connectionName(connectionName: String) {
-        cdkBuilder.connectionName(connectionName)
-      }
-
-      /**
-       * @param databaseName A database name in the AWS Glue Data Catalog . 
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param tableName A table name in the AWS Glue Data Catalog . 
-       */
-      override fun tableName(tableName: String) {
-        cdkBuilder.tableName(tableName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty,
-    ) : CdkObject(cdkObject), GlueTablesProperty {
-      /**
-       * A unique identifier for the AWS Glue Data Catalog .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-catalogid)
-       */
-      override fun catalogId(): String? = unwrap(this).getCatalogId()
-
-      /**
-       * The name of the connection to the AWS Glue Data Catalog .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-connectionname)
-       */
-      override fun connectionName(): String? = unwrap(this).getConnectionName()
-
-      /**
-       * A database name in the AWS Glue Data Catalog .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-databasename)
-       */
-      override fun databaseName(): String = unwrap(this).getDatabaseName()
-
-      /**
-       * A table name in the AWS Glue Data Catalog .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-tablename)
-       */
-      override fun tableName(): String = unwrap(this).getTableName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GlueTablesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty):
-          GlueTablesProperty = CdkObjectWrappers.wrap(cdkObject) as? GlueTablesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GlueTablesProperty):
-          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty
-    }
-  }
-
-  /**
-   * The encryption-at-rest settings of the transform that apply to accessing user data.
-   *
-   * Machine learning
-   * transforms can access user data encrypted in Amazon S3 using KMS.
-   *
-   * Additionally, imported labels and trained transforms can now be encrypted using a customer
-   * provided
-   * KMS key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * TransformEncryptionProperty transformEncryptionProperty = TransformEncryptionProperty.builder()
-   * .mlUserDataEncryption(MLUserDataEncryptionProperty.builder()
-   * .mlUserDataEncryptionMode("mlUserDataEncryptionMode")
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build())
-   * .taskRunSecurityConfigurationName("taskRunSecurityConfigurationName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html)
-   */
-  public interface TransformEncryptionProperty {
-    /**
-     * The encryption-at-rest settings of the transform that apply to accessing user data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-mluserdataencryption)
-     */
-    public fun mlUserDataEncryption(): Any? = unwrap(this).getMlUserDataEncryption()
-
-    /**
-     * The name of the security configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-taskrunsecurityconfigurationname)
-     */
-    public fun taskRunSecurityConfigurationName(): String? =
-        unwrap(this).getTaskRunSecurityConfigurationName()
-
-    /**
-     * A builder for [TransformEncryptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
-       * accessing user data.
-       */
-      public fun mlUserDataEncryption(mlUserDataEncryption: IResolvable)
-
-      /**
-       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
-       * accessing user data.
-       */
-      public fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty)
-
-      /**
-       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
-       * accessing user data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6581c0127c03889021bdaa631f1ef422965b6cae92da1772aa113a216c632231")
-      public
-          fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty.Builder.() -> Unit)
-
-      /**
-       * @param taskRunSecurityConfigurationName The name of the security configuration.
-       */
-      public fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty.builder()
-
-      /**
-       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
-       * accessing user data.
-       */
-      override fun mlUserDataEncryption(mlUserDataEncryption: IResolvable) {
-        cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
-       * accessing user data.
-       */
-      override fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty) {
-        cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(MLUserDataEncryptionProperty::unwrap))
-      }
-
-      /**
-       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
-       * accessing user data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6581c0127c03889021bdaa631f1ef422965b6cae92da1772aa113a216c632231")
-      override
-          fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty.Builder.() -> Unit):
-          Unit = mlUserDataEncryption(MLUserDataEncryptionProperty(mlUserDataEncryption))
-
-      /**
-       * @param taskRunSecurityConfigurationName The name of the security configuration.
-       */
-      override fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String) {
-        cdkBuilder.taskRunSecurityConfigurationName(taskRunSecurityConfigurationName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty,
-    ) : CdkObject(cdkObject), TransformEncryptionProperty {
-      /**
-       * The encryption-at-rest settings of the transform that apply to accessing user data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-mluserdataencryption)
-       */
-      override fun mlUserDataEncryption(): Any? = unwrap(this).getMlUserDataEncryption()
-
-      /**
-       * The name of the security configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-taskrunsecurityconfigurationname)
-       */
-      override fun taskRunSecurityConfigurationName(): String? =
-          unwrap(this).getTaskRunSecurityConfigurationName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TransformEncryptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty):
-          TransformEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TransformEncryptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TransformEncryptionProperty):
-          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty
-    }
-  }
-
-  /**
    * The parameters to configure the find matches transform.
    *
    * Example:
@@ -1539,6 +1219,573 @@ public open class CfnMLTransform internal constructor(
   }
 
   /**
+   * The database and table in the AWS Glue Data Catalog that is used for input or output data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * GlueTablesProperty glueTablesProperty = GlueTablesProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .catalogId("catalogId")
+   * .connectionName("connectionName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html)
+   */
+  public interface GlueTablesProperty {
+    /**
+     * A unique identifier for the AWS Glue Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-catalogid)
+     */
+    public fun catalogId(): String? = unwrap(this).getCatalogId()
+
+    /**
+     * The name of the connection to the AWS Glue Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-connectionname)
+     */
+    public fun connectionName(): String? = unwrap(this).getConnectionName()
+
+    /**
+     * A database name in the AWS Glue Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * A table name in the AWS Glue Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * A builder for [GlueTablesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalogId A unique identifier for the AWS Glue Data Catalog .
+       */
+      public fun catalogId(catalogId: String)
+
+      /**
+       * @param connectionName The name of the connection to the AWS Glue Data Catalog .
+       */
+      public fun connectionName(connectionName: String)
+
+      /**
+       * @param databaseName A database name in the AWS Glue Data Catalog . 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param tableName A table name in the AWS Glue Data Catalog . 
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty.builder()
+
+      /**
+       * @param catalogId A unique identifier for the AWS Glue Data Catalog .
+       */
+      override fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+      }
+
+      /**
+       * @param connectionName The name of the connection to the AWS Glue Data Catalog .
+       */
+      override fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+      }
+
+      /**
+       * @param databaseName A database name in the AWS Glue Data Catalog . 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param tableName A table name in the AWS Glue Data Catalog . 
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty,
+    ) : CdkObject(cdkObject), GlueTablesProperty {
+      /**
+       * A unique identifier for the AWS Glue Data Catalog .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-catalogid)
+       */
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
+
+      /**
+       * The name of the connection to the AWS Glue Data Catalog .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-connectionname)
+       */
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
+
+      /**
+       * A database name in the AWS Glue Data Catalog .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * A table name in the AWS Glue Data Catalog .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html#cfn-glue-mltransform-gluetables-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GlueTablesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty):
+          GlueTablesProperty = CdkObjectWrappers.wrap(cdkObject) as? GlueTablesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GlueTablesProperty):
+          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty
+    }
+  }
+
+  /**
+   * A list of AWS Glue table definitions used by the transform.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * InputRecordTablesProperty inputRecordTablesProperty = InputRecordTablesProperty.builder()
+   * .glueTables(List.of(GlueTablesProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .catalogId("catalogId")
+   * .connectionName("connectionName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-inputrecordtables.html)
+   */
+  public interface InputRecordTablesProperty {
+    /**
+     * The database and table in the AWS Glue Data Catalog that is used for input or output data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-inputrecordtables.html#cfn-glue-mltransform-inputrecordtables-gluetables)
+     */
+    public fun glueTables(): Any? = unwrap(this).getGlueTables()
+
+    /**
+     * A builder for [InputRecordTablesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
+       * input or output data.
+       */
+      public fun glueTables(glueTables: IResolvable)
+
+      /**
+       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
+       * input or output data.
+       */
+      public fun glueTables(glueTables: List<Any>)
+
+      /**
+       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
+       * input or output data.
+       */
+      public fun glueTables(vararg glueTables: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty.builder()
+
+      /**
+       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
+       * input or output data.
+       */
+      override fun glueTables(glueTables: IResolvable) {
+        cdkBuilder.glueTables(glueTables.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
+       * input or output data.
+       */
+      override fun glueTables(glueTables: List<Any>) {
+        cdkBuilder.glueTables(glueTables)
+      }
+
+      /**
+       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
+       * input or output data.
+       */
+      override fun glueTables(vararg glueTables: Any): Unit = glueTables(glueTables.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty,
+    ) : CdkObject(cdkObject), InputRecordTablesProperty {
+      /**
+       * The database and table in the AWS Glue Data Catalog that is used for input or output data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-inputrecordtables.html#cfn-glue-mltransform-inputrecordtables-gluetables)
+       */
+      override fun glueTables(): Any? = unwrap(this).getGlueTables()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputRecordTablesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty):
+          InputRecordTablesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputRecordTablesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputRecordTablesProperty):
+          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty
+    }
+  }
+
+  /**
+   * The encryption-at-rest settings of the transform that apply to accessing user data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * MLUserDataEncryptionProperty mLUserDataEncryptionProperty =
+   * MLUserDataEncryptionProperty.builder()
+   * .mlUserDataEncryptionMode("mlUserDataEncryptionMode")
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html)
+   */
+  public interface MLUserDataEncryptionProperty {
+    /**
+     * The ID for the customer-provided KMS key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html#cfn-glue-mltransform-mluserdataencryption-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * The encryption mode applied to user data. Valid values are:.
+     *
+     * * DISABLED: encryption is disabled.
+     * * SSEKMS: use of server-side encryption with AWS Key Management Service (SSE-KMS) for user
+     * data
+     * stored in Amazon S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html#cfn-glue-mltransform-mluserdataencryption-mluserdataencryptionmode)
+     */
+    public fun mlUserDataEncryptionMode(): String
+
+    /**
+     * A builder for [MLUserDataEncryptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The ID for the customer-provided KMS key.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param mlUserDataEncryptionMode The encryption mode applied to user data. Valid values
+       * are:. 
+       * * DISABLED: encryption is disabled.
+       * * SSEKMS: use of server-side encryption with AWS Key Management Service (SSE-KMS) for user
+       * data
+       * stored in Amazon S3.
+       */
+      public fun mlUserDataEncryptionMode(mlUserDataEncryptionMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty.builder()
+
+      /**
+       * @param kmsKeyId The ID for the customer-provided KMS key.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param mlUserDataEncryptionMode The encryption mode applied to user data. Valid values
+       * are:. 
+       * * DISABLED: encryption is disabled.
+       * * SSEKMS: use of server-side encryption with AWS Key Management Service (SSE-KMS) for user
+       * data
+       * stored in Amazon S3.
+       */
+      override fun mlUserDataEncryptionMode(mlUserDataEncryptionMode: String) {
+        cdkBuilder.mlUserDataEncryptionMode(mlUserDataEncryptionMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty,
+    ) : CdkObject(cdkObject), MLUserDataEncryptionProperty {
+      /**
+       * The ID for the customer-provided KMS key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html#cfn-glue-mltransform-mluserdataencryption-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * The encryption mode applied to user data. Valid values are:.
+       *
+       * * DISABLED: encryption is disabled.
+       * * SSEKMS: use of server-side encryption with AWS Key Management Service (SSE-KMS) for user
+       * data
+       * stored in Amazon S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html#cfn-glue-mltransform-mluserdataencryption-mluserdataencryptionmode)
+       */
+      override fun mlUserDataEncryptionMode(): String = unwrap(this).getMlUserDataEncryptionMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MLUserDataEncryptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty):
+          MLUserDataEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MLUserDataEncryptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MLUserDataEncryptionProperty):
+          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty
+    }
+  }
+
+  /**
+   * The encryption-at-rest settings of the transform that apply to accessing user data.
+   *
+   * Machine learning
+   * transforms can access user data encrypted in Amazon S3 using KMS.
+   *
+   * Additionally, imported labels and trained transforms can now be encrypted using a customer
+   * provided
+   * KMS key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * TransformEncryptionProperty transformEncryptionProperty = TransformEncryptionProperty.builder()
+   * .mlUserDataEncryption(MLUserDataEncryptionProperty.builder()
+   * .mlUserDataEncryptionMode("mlUserDataEncryptionMode")
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build())
+   * .taskRunSecurityConfigurationName("taskRunSecurityConfigurationName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html)
+   */
+  public interface TransformEncryptionProperty {
+    /**
+     * The encryption-at-rest settings of the transform that apply to accessing user data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-mluserdataencryption)
+     */
+    public fun mlUserDataEncryption(): Any? = unwrap(this).getMlUserDataEncryption()
+
+    /**
+     * The name of the security configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-taskrunsecurityconfigurationname)
+     */
+    public fun taskRunSecurityConfigurationName(): String? =
+        unwrap(this).getTaskRunSecurityConfigurationName()
+
+    /**
+     * A builder for [TransformEncryptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
+       * accessing user data.
+       */
+      public fun mlUserDataEncryption(mlUserDataEncryption: IResolvable)
+
+      /**
+       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
+       * accessing user data.
+       */
+      public fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty)
+
+      /**
+       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
+       * accessing user data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6581c0127c03889021bdaa631f1ef422965b6cae92da1772aa113a216c632231")
+      public
+          fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty.Builder.() -> Unit)
+
+      /**
+       * @param taskRunSecurityConfigurationName The name of the security configuration.
+       */
+      public fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty.builder()
+
+      /**
+       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
+       * accessing user data.
+       */
+      override fun mlUserDataEncryption(mlUserDataEncryption: IResolvable) {
+        cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
+       * accessing user data.
+       */
+      override fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty) {
+        cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(MLUserDataEncryptionProperty::unwrap))
+      }
+
+      /**
+       * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
+       * accessing user data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6581c0127c03889021bdaa631f1ef422965b6cae92da1772aa113a216c632231")
+      override
+          fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty.Builder.() -> Unit):
+          Unit = mlUserDataEncryption(MLUserDataEncryptionProperty(mlUserDataEncryption))
+
+      /**
+       * @param taskRunSecurityConfigurationName The name of the security configuration.
+       */
+      override fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String) {
+        cdkBuilder.taskRunSecurityConfigurationName(taskRunSecurityConfigurationName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty,
+    ) : CdkObject(cdkObject), TransformEncryptionProperty {
+      /**
+       * The encryption-at-rest settings of the transform that apply to accessing user data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-mluserdataencryption)
+       */
+      override fun mlUserDataEncryption(): Any? = unwrap(this).getMlUserDataEncryption()
+
+      /**
+       * The name of the security configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-taskrunsecurityconfigurationname)
+       */
+      override fun taskRunSecurityConfigurationName(): String? =
+          unwrap(this).getTaskRunSecurityConfigurationName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TransformEncryptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty):
+          TransformEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransformEncryptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TransformEncryptionProperty):
+          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty
+    }
+  }
+
+  /**
    * The algorithm-specific parameters that are associated with the machine learning transform.
    *
    * Example:
@@ -1700,253 +1947,6 @@ public open class CfnMLTransform internal constructor(
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformParametersProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformParametersProperty
-    }
-  }
-
-  /**
-   * The encryption-at-rest settings of the transform that apply to accessing user data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * MLUserDataEncryptionProperty mLUserDataEncryptionProperty =
-   * MLUserDataEncryptionProperty.builder()
-   * .mlUserDataEncryptionMode("mlUserDataEncryptionMode")
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html)
-   */
-  public interface MLUserDataEncryptionProperty {
-    /**
-     * The ID for the customer-provided KMS key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html#cfn-glue-mltransform-mluserdataencryption-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * The encryption mode applied to user data. Valid values are:.
-     *
-     * * DISABLED: encryption is disabled.
-     * * SSEKMS: use of server-side encryption with AWS Key Management Service (SSE-KMS) for user
-     * data
-     * stored in Amazon S3.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html#cfn-glue-mltransform-mluserdataencryption-mluserdataencryptionmode)
-     */
-    public fun mlUserDataEncryptionMode(): String
-
-    /**
-     * A builder for [MLUserDataEncryptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The ID for the customer-provided KMS key.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param mlUserDataEncryptionMode The encryption mode applied to user data. Valid values
-       * are:. 
-       * * DISABLED: encryption is disabled.
-       * * SSEKMS: use of server-side encryption with AWS Key Management Service (SSE-KMS) for user
-       * data
-       * stored in Amazon S3.
-       */
-      public fun mlUserDataEncryptionMode(mlUserDataEncryptionMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty.builder()
-
-      /**
-       * @param kmsKeyId The ID for the customer-provided KMS key.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param mlUserDataEncryptionMode The encryption mode applied to user data. Valid values
-       * are:. 
-       * * DISABLED: encryption is disabled.
-       * * SSEKMS: use of server-side encryption with AWS Key Management Service (SSE-KMS) for user
-       * data
-       * stored in Amazon S3.
-       */
-      override fun mlUserDataEncryptionMode(mlUserDataEncryptionMode: String) {
-        cdkBuilder.mlUserDataEncryptionMode(mlUserDataEncryptionMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty,
-    ) : CdkObject(cdkObject), MLUserDataEncryptionProperty {
-      /**
-       * The ID for the customer-provided KMS key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html#cfn-glue-mltransform-mluserdataencryption-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * The encryption mode applied to user data. Valid values are:.
-       *
-       * * DISABLED: encryption is disabled.
-       * * SSEKMS: use of server-side encryption with AWS Key Management Service (SSE-KMS) for user
-       * data
-       * stored in Amazon S3.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html#cfn-glue-mltransform-mluserdataencryption-mluserdataencryptionmode)
-       */
-      override fun mlUserDataEncryptionMode(): String = unwrap(this).getMlUserDataEncryptionMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MLUserDataEncryptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty):
-          MLUserDataEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MLUserDataEncryptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MLUserDataEncryptionProperty):
-          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty
-    }
-  }
-
-  /**
-   * A list of AWS Glue table definitions used by the transform.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * InputRecordTablesProperty inputRecordTablesProperty = InputRecordTablesProperty.builder()
-   * .glueTables(List.of(GlueTablesProperty.builder()
-   * .databaseName("databaseName")
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .catalogId("catalogId")
-   * .connectionName("connectionName")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-inputrecordtables.html)
-   */
-  public interface InputRecordTablesProperty {
-    /**
-     * The database and table in the AWS Glue Data Catalog that is used for input or output data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-inputrecordtables.html#cfn-glue-mltransform-inputrecordtables-gluetables)
-     */
-    public fun glueTables(): Any? = unwrap(this).getGlueTables()
-
-    /**
-     * A builder for [InputRecordTablesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
-       * input or output data.
-       */
-      public fun glueTables(glueTables: IResolvable)
-
-      /**
-       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
-       * input or output data.
-       */
-      public fun glueTables(glueTables: List<Any>)
-
-      /**
-       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
-       * input or output data.
-       */
-      public fun glueTables(vararg glueTables: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty.builder()
-
-      /**
-       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
-       * input or output data.
-       */
-      override fun glueTables(glueTables: IResolvable) {
-        cdkBuilder.glueTables(glueTables.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
-       * input or output data.
-       */
-      override fun glueTables(glueTables: List<Any>) {
-        cdkBuilder.glueTables(glueTables)
-      }
-
-      /**
-       * @param glueTables The database and table in the AWS Glue Data Catalog that is used for
-       * input or output data.
-       */
-      override fun glueTables(vararg glueTables: Any): Unit = glueTables(glueTables.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty,
-    ) : CdkObject(cdkObject), InputRecordTablesProperty {
-      /**
-       * The database and table in the AWS Glue Data Catalog that is used for input or output data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-inputrecordtables.html#cfn-glue-mltransform-inputrecordtables-gluetables)
-       */
-      override fun glueTables(): Any? = unwrap(this).getGlueTables()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputRecordTablesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty):
-          InputRecordTablesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InputRecordTablesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputRecordTablesProperty):
-          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty
     }
   }
 }

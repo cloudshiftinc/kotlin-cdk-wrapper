@@ -416,6 +416,129 @@ public open class CfnRobotApplication internal constructor(
   }
 
   /**
+   * Information about a robot software suite.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.robomaker.*;
+   * RobotSoftwareSuiteProperty robotSoftwareSuiteProperty = RobotSoftwareSuiteProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html)
+   */
+  public interface RobotSoftwareSuiteProperty {
+    /**
+     * The name of the robot software suite.
+     *
+     * `General` is the only supported value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-name)
+     */
+    public fun name(): String
+
+    /**
+     * The version of the robot software suite.
+     *
+     * Not applicable for General software suite.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [RobotSoftwareSuiteProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the robot software suite. 
+       * `General` is the only supported value.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param version The version of the robot software suite.
+       * Not applicable for General software suite.
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty.Builder
+          =
+          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty.builder()
+
+      /**
+       * @param name The name of the robot software suite. 
+       * `General` is the only supported value.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param version The version of the robot software suite.
+       * Not applicable for General software suite.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty,
+    ) : CdkObject(cdkObject), RobotSoftwareSuiteProperty {
+      /**
+       * The name of the robot software suite.
+       *
+       * `General` is the only supported value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The version of the robot software suite.
+       *
+       * Not applicable for General software suite.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RobotSoftwareSuiteProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty):
+          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RobotSoftwareSuiteProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RobotSoftwareSuiteProperty):
+          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty
+    }
+  }
+
+  /**
    * Information about a source configuration.
    *
    * Example:
@@ -549,129 +672,6 @@ public open class CfnRobotApplication internal constructor(
           software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty
-    }
-  }
-
-  /**
-   * Information about a robot software suite.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.robomaker.*;
-   * RobotSoftwareSuiteProperty robotSoftwareSuiteProperty = RobotSoftwareSuiteProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html)
-   */
-  public interface RobotSoftwareSuiteProperty {
-    /**
-     * The name of the robot software suite.
-     *
-     * `General` is the only supported value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-name)
-     */
-    public fun name(): String
-
-    /**
-     * The version of the robot software suite.
-     *
-     * Not applicable for General software suite.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [RobotSoftwareSuiteProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the robot software suite. 
-       * `General` is the only supported value.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param version The version of the robot software suite.
-       * Not applicable for General software suite.
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty.Builder
-          =
-          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty.builder()
-
-      /**
-       * @param name The name of the robot software suite. 
-       * `General` is the only supported value.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param version The version of the robot software suite.
-       * Not applicable for General software suite.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty,
-    ) : CdkObject(cdkObject), RobotSoftwareSuiteProperty {
-      /**
-       * The name of the robot software suite.
-       *
-       * `General` is the only supported value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The version of the robot software suite.
-       *
-       * Not applicable for General software suite.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RobotSoftwareSuiteProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty):
-          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RobotSoftwareSuiteProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RobotSoftwareSuiteProperty):
-          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty
     }
   }
 }

@@ -559,6 +559,92 @@ public open class CfnRoute internal constructor(
   }
 
   /**
+   * The configuration for the default route type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.refactorspaces.*;
+   * DefaultRouteInputProperty defaultRouteInputProperty = DefaultRouteInputProperty.builder()
+   * .activationState("activationState")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-defaultrouteinput.html)
+   */
+  public interface DefaultRouteInputProperty {
+    /**
+     * If set to `ACTIVE` , traffic is forwarded to this route’s service after the route is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-defaultrouteinput.html#cfn-refactorspaces-route-defaultrouteinput-activationstate)
+     */
+    public fun activationState(): String
+
+    /**
+     * A builder for [DefaultRouteInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param activationState If set to `ACTIVE` , traffic is forwarded to this route’s service
+       * after the route is created. 
+       */
+      public fun activationState(activationState: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty.Builder
+          =
+          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty.builder()
+
+      /**
+       * @param activationState If set to `ACTIVE` , traffic is forwarded to this route’s service
+       * after the route is created. 
+       */
+      override fun activationState(activationState: String) {
+        cdkBuilder.activationState(activationState)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty,
+    ) : CdkObject(cdkObject), DefaultRouteInputProperty {
+      /**
+       * If set to `ACTIVE` , traffic is forwarded to this route’s service after the route is
+       * created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-defaultrouteinput.html#cfn-refactorspaces-route-defaultrouteinput-activationstate)
+       */
+      override fun activationState(): String = unwrap(this).getActivationState()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DefaultRouteInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty):
+          DefaultRouteInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultRouteInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DefaultRouteInputProperty):
+          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty
+    }
+  }
+
+  /**
    * The configuration for the URI path route type.
    *
    * Example:
@@ -830,92 +916,6 @@ public open class CfnRoute internal constructor(
           software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty
-    }
-  }
-
-  /**
-   * The configuration for the default route type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.refactorspaces.*;
-   * DefaultRouteInputProperty defaultRouteInputProperty = DefaultRouteInputProperty.builder()
-   * .activationState("activationState")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-defaultrouteinput.html)
-   */
-  public interface DefaultRouteInputProperty {
-    /**
-     * If set to `ACTIVE` , traffic is forwarded to this route’s service after the route is created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-defaultrouteinput.html#cfn-refactorspaces-route-defaultrouteinput-activationstate)
-     */
-    public fun activationState(): String
-
-    /**
-     * A builder for [DefaultRouteInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param activationState If set to `ACTIVE` , traffic is forwarded to this route’s service
-       * after the route is created. 
-       */
-      public fun activationState(activationState: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty.Builder
-          =
-          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty.builder()
-
-      /**
-       * @param activationState If set to `ACTIVE` , traffic is forwarded to this route’s service
-       * after the route is created. 
-       */
-      override fun activationState(activationState: String) {
-        cdkBuilder.activationState(activationState)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty,
-    ) : CdkObject(cdkObject), DefaultRouteInputProperty {
-      /**
-       * If set to `ACTIVE` , traffic is forwarded to this route’s service after the route is
-       * created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-defaultrouteinput.html#cfn-refactorspaces-route-defaultrouteinput-activationstate)
-       */
-      override fun activationState(): String = unwrap(this).getActivationState()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DefaultRouteInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty):
-          DefaultRouteInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DefaultRouteInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DefaultRouteInputProperty):
-          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty
     }
   }
 }

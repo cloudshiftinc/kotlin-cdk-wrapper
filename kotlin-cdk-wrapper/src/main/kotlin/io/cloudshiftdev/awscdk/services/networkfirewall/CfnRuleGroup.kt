@@ -505,9 +505,7 @@ public open class CfnRuleGroup internal constructor(
   }
 
   /**
-   * A list of IP addresses and address ranges, in CIDR notation.
-   *
-   * This is part of a `RuleGroup.RuleVariables` .
+   * A custom action to use in stateless rule actions settings.
    *
    * Example:
    *
@@ -515,83 +513,329 @@ public open class CfnRuleGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * IPSetProperty iPSetProperty = Map.of(
-   * "definition", List.of("definition"));
+   * ActionDefinitionProperty actionDefinitionProperty = ActionDefinitionProperty.builder()
+   * .publishMetricAction(PublishMetricActionProperty.builder()
+   * .dimensions(List.of(DimensionProperty.builder()
+   * .value("value")
+   * .build()))
+   * .build())
+   * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipset.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-actiondefinition.html)
    */
-  public interface IPSetProperty {
+  public interface ActionDefinitionProperty {
     /**
-     * The list of IP addresses and address ranges, in CIDR notation.
+     * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for
+     * the matching packet.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipset.html#cfn-networkfirewall-rulegroup-ipset-definition)
+     * This setting defines a CloudWatch dimension value to be published.
+     *
+     * You can pair this custom action with any of the standard stateless rule actions. For example,
+     * you could pair this in a rule action with the standard action that forwards the packet for
+     * stateful inspection. Then, when a packet matches the rule, Network Firewall publishes metrics
+     * for the packet and forwards it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-actiondefinition.html#cfn-networkfirewall-rulegroup-actiondefinition-publishmetricaction)
      */
-    public fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
+    public fun publishMetricAction(): Any? = unwrap(this).getPublishMetricAction()
 
     /**
-     * A builder for [IPSetProperty]
+     * A builder for [ActionDefinitionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       * @param publishMetricAction Stateless inspection criteria that publishes the specified
+       * metrics to Amazon CloudWatch for the matching packet.
+       * This setting defines a CloudWatch dimension value to be published.
+       *
+       * You can pair this custom action with any of the standard stateless rule actions. For
+       * example, you could pair this in a rule action with the standard action that forwards the
+       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
+       * publishes metrics for the packet and forwards it.
        */
-      public fun definition(definition: List<String>)
+      public fun publishMetricAction(publishMetricAction: IResolvable)
 
       /**
-       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       * @param publishMetricAction Stateless inspection criteria that publishes the specified
+       * metrics to Amazon CloudWatch for the matching packet.
+       * This setting defines a CloudWatch dimension value to be published.
+       *
+       * You can pair this custom action with any of the standard stateless rule actions. For
+       * example, you could pair this in a rule action with the standard action that forwards the
+       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
+       * publishes metrics for the packet and forwards it.
        */
-      public fun definition(vararg definition: String)
+      public fun publishMetricAction(publishMetricAction: PublishMetricActionProperty)
+
+      /**
+       * @param publishMetricAction Stateless inspection criteria that publishes the specified
+       * metrics to Amazon CloudWatch for the matching packet.
+       * This setting defines a CloudWatch dimension value to be published.
+       *
+       * You can pair this custom action with any of the standard stateless rule actions. For
+       * example, you could pair this in a rule action with the standard action that forwards the
+       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
+       * publishes metrics for the packet and forwards it.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9c709e38e77861004c23b0b23e18c692c5afae875be2890cf84ebfddc0c185d9")
+      public
+          fun publishMetricAction(publishMetricAction: PublishMetricActionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty.Builder =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty.builder()
 
       /**
-       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       * @param publishMetricAction Stateless inspection criteria that publishes the specified
+       * metrics to Amazon CloudWatch for the matching packet.
+       * This setting defines a CloudWatch dimension value to be published.
+       *
+       * You can pair this custom action with any of the standard stateless rule actions. For
+       * example, you could pair this in a rule action with the standard action that forwards the
+       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
+       * publishes metrics for the packet and forwards it.
        */
-      override fun definition(definition: List<String>) {
-        cdkBuilder.definition(definition)
+      override fun publishMetricAction(publishMetricAction: IResolvable) {
+        cdkBuilder.publishMetricAction(publishMetricAction.let(IResolvable::unwrap))
       }
 
       /**
-       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       * @param publishMetricAction Stateless inspection criteria that publishes the specified
+       * metrics to Amazon CloudWatch for the matching packet.
+       * This setting defines a CloudWatch dimension value to be published.
+       *
+       * You can pair this custom action with any of the standard stateless rule actions. For
+       * example, you could pair this in a rule action with the standard action that forwards the
+       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
+       * publishes metrics for the packet and forwards it.
        */
-      override fun definition(vararg definition: String): Unit = definition(definition.toList())
+      override fun publishMetricAction(publishMetricAction: PublishMetricActionProperty) {
+        cdkBuilder.publishMetricAction(publishMetricAction.let(PublishMetricActionProperty::unwrap))
+      }
 
-      public fun build(): software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty
-          = cdkBuilder.build()
+      /**
+       * @param publishMetricAction Stateless inspection criteria that publishes the specified
+       * metrics to Amazon CloudWatch for the matching packet.
+       * This setting defines a CloudWatch dimension value to be published.
+       *
+       * You can pair this custom action with any of the standard stateless rule actions. For
+       * example, you could pair this in a rule action with the standard action that forwards the
+       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
+       * publishes metrics for the packet and forwards it.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9c709e38e77861004c23b0b23e18c692c5afae875be2890cf84ebfddc0c185d9")
+      override
+          fun publishMetricAction(publishMetricAction: PublishMetricActionProperty.Builder.() -> Unit):
+          Unit = publishMetricAction(PublishMetricActionProperty(publishMetricAction))
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty,
-    ) : CdkObject(cdkObject), IPSetProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty,
+    ) : CdkObject(cdkObject), ActionDefinitionProperty {
       /**
-       * The list of IP addresses and address ranges, in CIDR notation.
+       * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for
+       * the matching packet.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipset.html#cfn-networkfirewall-rulegroup-ipset-definition)
+       * This setting defines a CloudWatch dimension value to be published.
+       *
+       * You can pair this custom action with any of the standard stateless rule actions. For
+       * example, you could pair this in a rule action with the standard action that forwards the
+       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
+       * publishes metrics for the packet and forwards it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-actiondefinition.html#cfn-networkfirewall-rulegroup-actiondefinition-publishmetricaction)
        */
-      override fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
+      override fun publishMetricAction(): Any? = unwrap(this).getPublishMetricAction()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IPSetProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ActionDefinitionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty):
-          IPSetProperty = CdkObjectWrappers.wrap(cdkObject) as? IPSetProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty):
+          ActionDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionDefinitionProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: IPSetProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty = (wrapped as
+      internal fun unwrap(wrapped: ActionDefinitionProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty
+    }
+  }
+
+  /**
+   * A single IP address specification.
+   *
+   * This is used in the `RuleGroup.MatchAttributes` source and destination specifications.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * AddressProperty addressProperty = AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html)
+   */
+  public interface AddressProperty {
+    /**
+     * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+     * notation.
+     *
+     * Network Firewall supports all address ranges for IPv4 and IPv6.
+     *
+     * Examples:
+     *
+     * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+     * `192.0.2.44/32` .
+     * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+     * specify `192.0.2.0/24` .
+     * * To configure Network Firewall to inspect for the IP address
+     * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128` .
+     * * To configure Network Firewall to inspect for IP addresses from
+     * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+     * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+     *
+     * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+     * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html#cfn-networkfirewall-rulegroup-address-addressdefinition)
+     */
+    public fun addressDefinition(): String
+
+    /**
+     * A builder for [AddressProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param addressDefinition Specify an IP address or a block of IP addresses in Classless
+       * Inter-Domain Routing (CIDR) notation. 
+       * Network Firewall supports all address ranges for IPv4 and IPv6.
+       *
+       * Examples:
+       *
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+       *
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * .
+       */
+      public fun addressDefinition(addressDefinition: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty.Builder =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty.builder()
+
+      /**
+       * @param addressDefinition Specify an IP address or a block of IP addresses in Classless
+       * Inter-Domain Routing (CIDR) notation. 
+       * Network Firewall supports all address ranges for IPv4 and IPv6.
+       *
+       * Examples:
+       *
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+       *
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * .
+       */
+      override fun addressDefinition(addressDefinition: String) {
+        cdkBuilder.addressDefinition(addressDefinition)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty,
+    ) : CdkObject(cdkObject), AddressProperty {
+      /**
+       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+       * notation.
+       *
+       * Network Firewall supports all address ranges for IPv4 and IPv6.
+       *
+       * Examples:
+       *
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+       *
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html#cfn-networkfirewall-rulegroup-address-addressdefinition)
+       */
+      override fun addressDefinition(): String = unwrap(this).getAddressDefinition()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AddressProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty):
+          AddressProperty = CdkObjectWrappers.wrap(cdkObject) as? AddressProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AddressProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty
     }
   }
 
@@ -761,10 +1005,18 @@ public open class CfnRuleGroup internal constructor(
   }
 
   /**
-   * The stateless or stateful rules definitions for use in a single rule group.
+   * The value to use in an Amazon CloudWatch custom metric dimension.
    *
-   * Each rule group requires a single `RulesSource` . You can use an instance of this for either
-   * stateless rules or stateful rules.
+   * This is used in the `PublishMetrics` custom action. A CloudWatch custom metric dimension is a
+   * name/value pair that's part of the identity of a metric.
+   *
+   * AWS Network Firewall sets the dimension name to `CustomAction` and you provide the dimension
+   * value.
+   *
+   * For more information about CloudWatch custom metric dimensions, see [Publishing Custom
+   * Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html#usingDimensions)
+   * in the [Amazon CloudWatch User
+   * Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) .
    *
    * Example:
    *
@@ -772,403 +1024,515 @@ public open class CfnRuleGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * RulesSourceProperty rulesSourceProperty = RulesSourceProperty.builder()
-   * .rulesSourceList(RulesSourceListProperty.builder()
-   * .generatedRulesType("generatedRulesType")
-   * .targets(List.of("targets"))
-   * .targetTypes(List.of("targetTypes"))
-   * .build())
-   * .rulesString("rulesString")
-   * .statefulRules(List.of(StatefulRuleProperty.builder()
-   * .action("action")
-   * .header(HeaderProperty.builder()
+   * DimensionProperty dimensionProperty = DimensionProperty.builder()
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-dimension.html)
+   */
+  public interface DimensionProperty {
+    /**
+     * The value to use in the custom metric dimension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-dimension.html#cfn-networkfirewall-rulegroup-dimension-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [DimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param value The value to use in the custom metric dimension. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty.Builder =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty.builder()
+
+      /**
+       * @param value The value to use in the custom metric dimension. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty,
+    ) : CdkObject(cdkObject), DimensionProperty {
+      /**
+       * The value to use in the custom metric dimension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-dimension.html#cfn-networkfirewall-rulegroup-dimension-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty):
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DimensionProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty
+    }
+  }
+
+  /**
+   * The 5-tuple criteria for AWS Network Firewall to use to inspect packet headers in stateful
+   * traffic flow inspection.
+   *
+   * Traffic flows that match the criteria are a match for the corresponding stateful rule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * HeaderProperty headerProperty = HeaderProperty.builder()
    * .destination("destination")
    * .destinationPort("destinationPort")
    * .direction("direction")
    * .protocol("protocol")
    * .source("source")
    * .sourcePort("sourcePort")
-   * .build())
-   * .ruleOptions(List.of(RuleOptionProperty.builder()
-   * .keyword("keyword")
-   * // the properties below are optional
-   * .settings(List.of("settings"))
-   * .build()))
-   * .build()))
-   * .statelessRulesAndCustomActions(StatelessRulesAndCustomActionsProperty.builder()
-   * .statelessRules(List.of(StatelessRuleProperty.builder()
-   * .priority(123)
-   * .ruleDefinition(RuleDefinitionProperty.builder()
-   * .actions(List.of("actions"))
-   * .matchAttributes(MatchAttributesProperty.builder()
-   * .destinationPorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .destinations(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .protocols(List.of(123))
-   * .sourcePorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .sources(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
-   * .flags(List.of("flags"))
-   * // the properties below are optional
-   * .masks(List.of("masks"))
-   * .build()))
-   * .build())
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .customActions(List.of(CustomActionProperty.builder()
-   * .actionDefinition(ActionDefinitionProperty.builder()
-   * .publishMetricAction(PublishMetricActionProperty.builder()
-   * .dimensions(List.of(DimensionProperty.builder()
-   * .value("value")
-   * .build()))
-   * .build())
-   * .build())
-   * .actionName("actionName")
-   * .build()))
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html)
    */
-  public interface RulesSourceProperty {
+  public interface HeaderProperty {
     /**
-     * Stateful inspection criteria for a domain list rule group.
+     * The destination IP address or address range to inspect for, in CIDR notation.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulessourcelist)
-     */
-    public fun rulesSourceList(): Any? = unwrap(this).getRulesSourceList()
-
-    /**
-     * Stateful inspection criteria, provided in Suricata compatible rules.
+     * To match with any address, specify `ANY` .
      *
-     * Suricata is an open-source threat detection framework that includes a standard rule-based
-     * language for network traffic inspection.
+     * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+     * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
      *
-     * These rules contain the inspection criteria and the action to take for traffic that matches
-     * the criteria, so this type of rule group doesn't have a separate action setting.
+     * Examples:
      *
+     * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+     * `192.0.2.44/32` .
+     * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+     * specify `192.0.2.0/24` .
+     * * To configure Network Firewall to inspect for the IP address
+     * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128` .
+     * * To configure Network Firewall to inspect for IP addresses from
+     * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+     * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
      *
-     * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
-     * set to `STRICT_ORDER` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulesstring)
-     */
-    public fun rulesString(): String? = unwrap(this).getRulesString()
-
-    /**
-     * An array of individual stateful rules inspection criteria to be used together in a stateful
-     * rule group.
-     *
-     * Use this option to specify simple Suricata rules with protocol, source and destination,
-     * ports, direction, and rule options. For information about the Suricata `Rules` format, see
-     * [Rules
-     * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+     * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+     * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
      * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statefulrules)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destination)
      */
-    public fun statefulRules(): Any? = unwrap(this).getStatefulRules()
+    public fun destination(): String
 
     /**
-     * Stateless inspection criteria to be used in a stateless rule group.
+     * The destination port to inspect for.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statelessrulesandcustomactions)
+     * You can specify an individual port, for example `1994` and you can specify a port range, for
+     * example `1990:1994` . To match with any port, specify `ANY` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destinationport)
      */
-    public fun statelessRulesAndCustomActions(): Any? =
-        unwrap(this).getStatelessRulesAndCustomActions()
+    public fun destinationPort(): String
 
     /**
-     * A builder for [RulesSourceProperty]
+     * The direction of traffic flow to inspect.
+     *
+     * If set to `ANY` , the inspection matches bidirectional traffic, both from the source to the
+     * destination and from the destination to the source. If set to `FORWARD` , the inspection only
+     * matches traffic going from the source to the destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-direction)
+     */
+    public fun direction(): String
+
+    /**
+     * The protocol to inspect for.
+     *
+     * To specify all, you can use `IP` , because all traffic on AWS and on the internet is IP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-protocol)
+     */
+    public fun protocol(): String
+
+    /**
+     * The source IP address or address range to inspect for, in CIDR notation.
+     *
+     * To match with any address, specify `ANY` .
+     *
+     * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+     * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
+     *
+     * Examples:
+     *
+     * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+     * `192.0.2.44/32` .
+     * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+     * specify `192.0.2.0/24` .
+     * * To configure Network Firewall to inspect for the IP address
+     * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128` .
+     * * To configure Network Firewall to inspect for IP addresses from
+     * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+     * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+     *
+     * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+     * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-source)
+     */
+    public fun source(): String
+
+    /**
+     * The source port to inspect for.
+     *
+     * You can specify an individual port, for example `1994` and you can specify a port range, for
+     * example `1990:1994` . To match with any port, specify `ANY` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-sourceport)
+     */
+    public fun sourcePort(): String
+
+    /**
+     * A builder for [HeaderProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
-       */
-      public fun rulesSourceList(rulesSourceList: IResolvable)
-
-      /**
-       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
-       */
-      public fun rulesSourceList(rulesSourceList: RulesSourceListProperty)
-
-      /**
-       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4c7c626f64d529118eaa4e54bb67e966574361929b99cc5af792bcd0b173bb69")
-      public fun rulesSourceList(rulesSourceList: RulesSourceListProperty.Builder.() -> Unit)
-
-      /**
-       * @param rulesString Stateful inspection criteria, provided in Suricata compatible rules.
-       * Suricata is an open-source threat detection framework that includes a standard rule-based
-       * language for network traffic inspection.
+       * @param destination The destination IP address or address range to inspect for, in CIDR
+       * notation. 
+       * To match with any address, specify `ANY` .
        *
-       * These rules contain the inspection criteria and the action to take for traffic that matches
-       * the criteria, so this type of rule group doesn't have a separate action setting.
+       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
        *
+       * Examples:
        *
-       * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
-       * set to `STRICT_ORDER` .
-       */
-      public fun rulesString(rulesString: String)
-
-      /**
-       * @param statefulRules An array of individual stateful rules inspection criteria to be used
-       * together in a stateful rule group.
-       * Use this option to specify simple Suricata rules with protocol, source and destination,
-       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
-       * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+       *
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
        * .
        */
-      public fun statefulRules(statefulRules: IResolvable)
+      public fun destination(destination: String)
 
       /**
-       * @param statefulRules An array of individual stateful rules inspection criteria to be used
-       * together in a stateful rule group.
-       * Use this option to specify simple Suricata rules with protocol, source and destination,
-       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
-       * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * @param destinationPort The destination port to inspect for. 
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
+       */
+      public fun destinationPort(destinationPort: String)
+
+      /**
+       * @param direction The direction of traffic flow to inspect. 
+       * If set to `ANY` , the inspection matches bidirectional traffic, both from the source to the
+       * destination and from the destination to the source. If set to `FORWARD` , the inspection only
+       * matches traffic going from the source to the destination.
+       */
+      public fun direction(direction: String)
+
+      /**
+       * @param protocol The protocol to inspect for. 
+       * To specify all, you can use `IP` , because all traffic on AWS and on the internet is IP.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param source The source IP address or address range to inspect for, in CIDR notation. 
+       * To match with any address, specify `ANY` .
+       *
+       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
+       *
+       * Examples:
+       *
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+       *
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
        * .
        */
-      public fun statefulRules(statefulRules: List<Any>)
+      public fun source(source: String)
 
       /**
-       * @param statefulRules An array of individual stateful rules inspection criteria to be used
-       * together in a stateful rule group.
-       * Use this option to specify simple Suricata rules with protocol, source and destination,
-       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
-       * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
-       * .
+       * @param sourcePort The source port to inspect for. 
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        */
-      public fun statefulRules(vararg statefulRules: Any)
-
-      /**
-       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
-       * stateless rule group.
-       */
-      public fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: IResolvable)
-
-      /**
-       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
-       * stateless rule group.
-       */
-      public
-          fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty)
-
-      /**
-       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
-       * stateless rule group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4f0a5148e36d61899ba2f443efda913fa8b21432f14729eb6f802a14e2625fb0")
-      public
-          fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty.Builder.() -> Unit)
+      public fun sourcePort(sourcePort: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty.Builder =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty.Builder =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty.builder()
 
       /**
-       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
-       */
-      override fun rulesSourceList(rulesSourceList: IResolvable) {
-        cdkBuilder.rulesSourceList(rulesSourceList.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
-       */
-      override fun rulesSourceList(rulesSourceList: RulesSourceListProperty) {
-        cdkBuilder.rulesSourceList(rulesSourceList.let(RulesSourceListProperty::unwrap))
-      }
-
-      /**
-       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4c7c626f64d529118eaa4e54bb67e966574361929b99cc5af792bcd0b173bb69")
-      override fun rulesSourceList(rulesSourceList: RulesSourceListProperty.Builder.() -> Unit):
-          Unit = rulesSourceList(RulesSourceListProperty(rulesSourceList))
-
-      /**
-       * @param rulesString Stateful inspection criteria, provided in Suricata compatible rules.
-       * Suricata is an open-source threat detection framework that includes a standard rule-based
-       * language for network traffic inspection.
+       * @param destination The destination IP address or address range to inspect for, in CIDR
+       * notation. 
+       * To match with any address, specify `ANY` .
        *
-       * These rules contain the inspection criteria and the action to take for traffic that matches
-       * the criteria, so this type of rule group doesn't have a separate action setting.
+       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
        *
+       * Examples:
        *
-       * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
-       * set to `STRICT_ORDER` .
-       */
-      override fun rulesString(rulesString: String) {
-        cdkBuilder.rulesString(rulesString)
-      }
-
-      /**
-       * @param statefulRules An array of individual stateful rules inspection criteria to be used
-       * together in a stateful rule group.
-       * Use this option to specify simple Suricata rules with protocol, source and destination,
-       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
-       * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+       *
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
        * .
        */
-      override fun statefulRules(statefulRules: IResolvable) {
-        cdkBuilder.statefulRules(statefulRules.let(IResolvable::unwrap))
+      override fun destination(destination: String) {
+        cdkBuilder.destination(destination)
       }
 
       /**
-       * @param statefulRules An array of individual stateful rules inspection criteria to be used
-       * together in a stateful rule group.
-       * Use this option to specify simple Suricata rules with protocol, source and destination,
-       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
-       * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * @param destinationPort The destination port to inspect for. 
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
+       */
+      override fun destinationPort(destinationPort: String) {
+        cdkBuilder.destinationPort(destinationPort)
+      }
+
+      /**
+       * @param direction The direction of traffic flow to inspect. 
+       * If set to `ANY` , the inspection matches bidirectional traffic, both from the source to the
+       * destination and from the destination to the source. If set to `FORWARD` , the inspection only
+       * matches traffic going from the source to the destination.
+       */
+      override fun direction(direction: String) {
+        cdkBuilder.direction(direction)
+      }
+
+      /**
+       * @param protocol The protocol to inspect for. 
+       * To specify all, you can use `IP` , because all traffic on AWS and on the internet is IP.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param source The source IP address or address range to inspect for, in CIDR notation. 
+       * To match with any address, specify `ANY` .
+       *
+       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
+       *
+       * Examples:
+       *
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+       *
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
        * .
        */
-      override fun statefulRules(statefulRules: List<Any>) {
-        cdkBuilder.statefulRules(statefulRules)
+      override fun source(source: String) {
+        cdkBuilder.source(source)
       }
 
       /**
-       * @param statefulRules An array of individual stateful rules inspection criteria to be used
-       * together in a stateful rule group.
-       * Use this option to specify simple Suricata rules with protocol, source and destination,
-       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
-       * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
-       * .
+       * @param sourcePort The source port to inspect for. 
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        */
-      override fun statefulRules(vararg statefulRules: Any): Unit =
-          statefulRules(statefulRules.toList())
-
-      /**
-       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
-       * stateless rule group.
-       */
-      override fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: IResolvable) {
-        cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(IResolvable::unwrap))
+      override fun sourcePort(sourcePort: String) {
+        cdkBuilder.sourcePort(sourcePort)
       }
-
-      /**
-       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
-       * stateless rule group.
-       */
-      override
-          fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty) {
-        cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(StatelessRulesAndCustomActionsProperty::unwrap))
-      }
-
-      /**
-       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
-       * stateless rule group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4f0a5148e36d61899ba2f443efda913fa8b21432f14729eb6f802a14e2625fb0")
-      override
-          fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty.Builder.() -> Unit):
-          Unit =
-          statelessRulesAndCustomActions(StatelessRulesAndCustomActionsProperty(statelessRulesAndCustomActions))
 
       public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty,
-    ) : CdkObject(cdkObject), RulesSourceProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty,
+    ) : CdkObject(cdkObject), HeaderProperty {
       /**
-       * Stateful inspection criteria for a domain list rule group.
+       * The destination IP address or address range to inspect for, in CIDR notation.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulessourcelist)
-       */
-      override fun rulesSourceList(): Any? = unwrap(this).getRulesSourceList()
-
-      /**
-       * Stateful inspection criteria, provided in Suricata compatible rules.
+       * To match with any address, specify `ANY` .
        *
-       * Suricata is an open-source threat detection framework that includes a standard rule-based
-       * language for network traffic inspection.
+       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
        *
-       * These rules contain the inspection criteria and the action to take for traffic that matches
-       * the criteria, so this type of rule group doesn't have a separate action setting.
+       * Examples:
        *
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
        *
-       * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
-       * set to `STRICT_ORDER` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulesstring)
-       */
-      override fun rulesString(): String? = unwrap(this).getRulesString()
-
-      /**
-       * An array of individual stateful rules inspection criteria to be used together in a stateful
-       * rule group.
-       *
-       * Use this option to specify simple Suricata rules with protocol, source and destination,
-       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
-       * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
        * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statefulrules)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destination)
        */
-      override fun statefulRules(): Any? = unwrap(this).getStatefulRules()
+      override fun destination(): String = unwrap(this).getDestination()
 
       /**
-       * Stateless inspection criteria to be used in a stateless rule group.
+       * The destination port to inspect for.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statelessrulesandcustomactions)
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destinationport)
        */
-      override fun statelessRulesAndCustomActions(): Any? =
-          unwrap(this).getStatelessRulesAndCustomActions()
+      override fun destinationPort(): String = unwrap(this).getDestinationPort()
+
+      /**
+       * The direction of traffic flow to inspect.
+       *
+       * If set to `ANY` , the inspection matches bidirectional traffic, both from the source to the
+       * destination and from the destination to the source. If set to `FORWARD` , the inspection only
+       * matches traffic going from the source to the destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-direction)
+       */
+      override fun direction(): String = unwrap(this).getDirection()
+
+      /**
+       * The protocol to inspect for.
+       *
+       * To specify all, you can use `IP` , because all traffic on AWS and on the internet is IP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-protocol)
+       */
+      override fun protocol(): String = unwrap(this).getProtocol()
+
+      /**
+       * The source IP address or address range to inspect for, in CIDR notation.
+       *
+       * To match with any address, specify `ANY` .
+       *
+       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
+       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
+       *
+       * Examples:
+       *
+       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
+       * `192.0.2.44/32` .
+       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
+       * specify `192.0.2.0/24` .
+       * * To configure Network Firewall to inspect for the IP address
+       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
+       * .
+       * * To configure Network Firewall to inspect for IP addresses from
+       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
+       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
+       *
+       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
+       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-source)
+       */
+      override fun source(): String = unwrap(this).getSource()
+
+      /**
+       * The source port to inspect for.
+       *
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-sourceport)
+       */
+      override fun sourcePort(): String = unwrap(this).getSourcePort()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RulesSourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HeaderProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty):
-          RulesSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? RulesSourceProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty):
+          HeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RulesSourceProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty
+      internal fun unwrap(wrapped: HeaderProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty
     }
   }
 
   /**
-   * Stateless inspection criteria.
+   * A list of IP addresses and address ranges, in CIDR notation.
    *
-   * Each stateless rule group uses exactly one of these data types to define its stateless rules.
+   * This is part of a `RuleGroup.RuleVariables` .
    *
    * Example:
    *
@@ -1176,235 +1540,97 @@ public open class CfnRuleGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * StatelessRulesAndCustomActionsProperty statelessRulesAndCustomActionsProperty =
-   * StatelessRulesAndCustomActionsProperty.builder()
-   * .statelessRules(List.of(StatelessRuleProperty.builder()
-   * .priority(123)
-   * .ruleDefinition(RuleDefinitionProperty.builder()
-   * .actions(List.of("actions"))
-   * .matchAttributes(MatchAttributesProperty.builder()
-   * .destinationPorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .destinations(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .protocols(List.of(123))
-   * .sourcePorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .sources(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
-   * .flags(List.of("flags"))
-   * // the properties below are optional
-   * .masks(List.of("masks"))
-   * .build()))
-   * .build())
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .customActions(List.of(CustomActionProperty.builder()
-   * .actionDefinition(ActionDefinitionProperty.builder()
-   * .publishMetricAction(PublishMetricActionProperty.builder()
-   * .dimensions(List.of(DimensionProperty.builder()
-   * .value("value")
-   * .build()))
-   * .build())
-   * .build())
-   * .actionName("actionName")
-   * .build()))
-   * .build();
+   * IPSetProperty iPSetProperty = Map.of(
+   * "definition", List.of("definition"));
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipset.html)
    */
-  public interface StatelessRulesAndCustomActionsProperty {
+  public interface IPSetProperty {
     /**
-     * Defines an array of individual custom action definitions that are available for use by the
-     * stateless rules in this `StatelessRulesAndCustomActions` specification.
+     * The list of IP addresses and address ranges, in CIDR notation.
      *
-     * You name each custom action that you define, and then you can use it by name in your
-     * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-customactions)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipset.html#cfn-networkfirewall-rulegroup-ipset-definition)
      */
-    public fun customActions(): Any? = unwrap(this).getCustomActions()
+    public fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
 
     /**
-     * Defines the set of stateless rules for use in a stateless rule group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-statelessrules)
-     */
-    public fun statelessRules(): Any
-
-    /**
-     * A builder for [StatelessRulesAndCustomActionsProperty]
+     * A builder for [IPSetProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param customActions Defines an array of individual custom action definitions that are
-       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
-       * specification.
-       * You name each custom action that you define, and then you can use it by name in your
-       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       * @param definition The list of IP addresses and address ranges, in CIDR notation.
        */
-      public fun customActions(customActions: IResolvable)
+      public fun definition(definition: List<String>)
 
       /**
-       * @param customActions Defines an array of individual custom action definitions that are
-       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
-       * specification.
-       * You name each custom action that you define, and then you can use it by name in your
-       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       * @param definition The list of IP addresses and address ranges, in CIDR notation.
        */
-      public fun customActions(customActions: List<Any>)
-
-      /**
-       * @param customActions Defines an array of individual custom action definitions that are
-       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
-       * specification.
-       * You name each custom action that you define, and then you can use it by name in your
-       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
-       */
-      public fun customActions(vararg customActions: Any)
-
-      /**
-       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
-       * 
-       */
-      public fun statelessRules(statelessRules: IResolvable)
-
-      /**
-       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
-       * 
-       */
-      public fun statelessRules(statelessRules: List<Any>)
-
-      /**
-       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
-       * 
-       */
-      public fun statelessRules(vararg statelessRules: Any)
+      public fun definition(vararg definition: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty.Builder =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty.builder()
 
       /**
-       * @param customActions Defines an array of individual custom action definitions that are
-       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
-       * specification.
-       * You name each custom action that you define, and then you can use it by name in your
-       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       * @param definition The list of IP addresses and address ranges, in CIDR notation.
        */
-      override fun customActions(customActions: IResolvable) {
-        cdkBuilder.customActions(customActions.let(IResolvable::unwrap))
+      override fun definition(definition: List<String>) {
+        cdkBuilder.definition(definition)
       }
 
       /**
-       * @param customActions Defines an array of individual custom action definitions that are
-       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
-       * specification.
-       * You name each custom action that you define, and then you can use it by name in your
-       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       * @param definition The list of IP addresses and address ranges, in CIDR notation.
        */
-      override fun customActions(customActions: List<Any>) {
-        cdkBuilder.customActions(customActions)
-      }
+      override fun definition(vararg definition: String): Unit = definition(definition.toList())
 
-      /**
-       * @param customActions Defines an array of individual custom action definitions that are
-       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
-       * specification.
-       * You name each custom action that you define, and then you can use it by name in your
-       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
-       */
-      override fun customActions(vararg customActions: Any): Unit =
-          customActions(customActions.toList())
-
-      /**
-       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
-       * 
-       */
-      override fun statelessRules(statelessRules: IResolvable) {
-        cdkBuilder.statelessRules(statelessRules.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
-       * 
-       */
-      override fun statelessRules(statelessRules: List<Any>) {
-        cdkBuilder.statelessRules(statelessRules)
-      }
-
-      /**
-       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
-       * 
-       */
-      override fun statelessRules(vararg statelessRules: Any): Unit =
-          statelessRules(statelessRules.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty
+      public fun build(): software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty,
-    ) : CdkObject(cdkObject), StatelessRulesAndCustomActionsProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty,
+    ) : CdkObject(cdkObject), IPSetProperty {
       /**
-       * Defines an array of individual custom action definitions that are available for use by the
-       * stateless rules in this `StatelessRulesAndCustomActions` specification.
+       * The list of IP addresses and address ranges, in CIDR notation.
        *
-       * You name each custom action that you define, and then you can use it by name in your
-       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-customactions)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipset.html#cfn-networkfirewall-rulegroup-ipset-definition)
        */
-      override fun customActions(): Any? = unwrap(this).getCustomActions()
-
-      /**
-       * Defines the set of stateless rules for use in a stateless rule group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-statelessrules)
-       */
-      override fun statelessRules(): Any = unwrap(this).getStatelessRules()
+      override fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          StatelessRulesAndCustomActionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IPSetProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty):
-          StatelessRulesAndCustomActionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StatelessRulesAndCustomActionsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty):
+          IPSetProperty = CdkObjectWrappers.wrap(cdkObject) as? IPSetProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StatelessRulesAndCustomActionsProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty
+      internal fun unwrap(wrapped: IPSetProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty
     }
   }
 
   /**
-   * A single port range specification.
+   * Configures one or more `IPSetReferences` for a Suricata-compatible rule group.
    *
-   * This is used for source and destination port ranges in the stateless
-   * `RuleGroup.MatchAttributes` .
+   * An IP set reference is a rule variable that references a resource that you create and manage in
+   * another AWS service, such as an Amazon VPC prefix list. Network Firewall IP set references enable
+   * you to dynamically update the contents of your rules. When you create, update, or delete the IP
+   * set you are referencing in your rule, Network Firewall automatically updates the rule's content
+   * with the changes. For more information about IP set references in Network Firewall , see [Using IP
+   * set
+   * references](https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups-ip-set-references.html)
+   * in the *Network Firewall Developer Guide* .
    *
    * Example:
    *
@@ -1412,786 +1638,79 @@ public open class CfnRuleGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build();
+   * IPSetReferenceProperty iPSetReferenceProperty = Map.of(
+   * "referenceArn", "referenceArn");
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipsetreference.html)
    */
-  public interface PortRangeProperty {
+  public interface IPSetReferenceProperty {
     /**
-     * The lower limit of the port range.
+     * The Amazon Resource Name (ARN) of the resource to include in the `RuleGroup.IPSetReference` .
      *
-     * This must be less than or equal to the `ToPort` specification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-fromport)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipsetreference.html#cfn-networkfirewall-rulegroup-ipsetreference-referencearn)
      */
-    public fun fromPort(): Number
+    public fun referenceArn(): String? = unwrap(this).getReferenceArn()
 
     /**
-     * The upper limit of the port range.
-     *
-     * This must be greater than or equal to the `FromPort` specification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-toport)
-     */
-    public fun toPort(): Number
-
-    /**
-     * A builder for [PortRangeProperty]
+     * A builder for [IPSetReferenceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param fromPort The lower limit of the port range. 
-       * This must be less than or equal to the `ToPort` specification.
+       * @param referenceArn The Amazon Resource Name (ARN) of the resource to include in the
+       * `RuleGroup.IPSetReference` .
        */
-      public fun fromPort(fromPort: Number)
-
-      /**
-       * @param toPort The upper limit of the port range. 
-       * This must be greater than or equal to the `FromPort` specification.
-       */
-      public fun toPort(toPort: Number)
+      public fun referenceArn(referenceArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty.Builder =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty.builder()
-
-      /**
-       * @param fromPort The lower limit of the port range. 
-       * This must be less than or equal to the `ToPort` specification.
-       */
-      override fun fromPort(fromPort: Number) {
-        cdkBuilder.fromPort(fromPort)
-      }
-
-      /**
-       * @param toPort The upper limit of the port range. 
-       * This must be greater than or equal to the `FromPort` specification.
-       */
-      override fun toPort(toPort: Number) {
-        cdkBuilder.toPort(toPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty,
-    ) : CdkObject(cdkObject), PortRangeProperty {
-      /**
-       * The lower limit of the port range.
-       *
-       * This must be less than or equal to the `ToPort` specification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-fromport)
-       */
-      override fun fromPort(): Number = unwrap(this).getFromPort()
-
-      /**
-       * The upper limit of the port range.
-       *
-       * This must be greater than or equal to the `FromPort` specification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-toport)
-       */
-      override fun toPort(): Number = unwrap(this).getToPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PortRangeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty):
-          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PortRangeProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty
-    }
-  }
-
-  /**
-   * The inspection criteria and action for a single stateless rule.
-   *
-   * AWS Network Firewall inspects each packet for the specified matching criteria. When a packet
-   * matches the criteria, Network Firewall performs the rule's actions on the packet.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * RuleDefinitionProperty ruleDefinitionProperty = RuleDefinitionProperty.builder()
-   * .actions(List.of("actions"))
-   * .matchAttributes(MatchAttributesProperty.builder()
-   * .destinationPorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .destinations(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .protocols(List.of(123))
-   * .sourcePorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .sources(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
-   * .flags(List.of("flags"))
-   * // the properties below are optional
-   * .masks(List.of("masks"))
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html)
-   */
-  public interface RuleDefinitionProperty {
-    /**
-     * The actions to take on a packet that matches one of the stateless rule definition's match
-     * attributes.
-     *
-     * You must specify a standard action and you can add custom actions.
-     *
-     *
-     * Network Firewall only forwards a packet for stateful rule inspection if you specify
-     * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
-     * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
-     * for the `FirewallPolicy` .
-     *
-     *
-     * For every rule, you must specify exactly one of the following standard actions.
-     *
-     * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its intended
-     * destination.
-     * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
-     * intended destination.
-     * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
-     * the stateful rule engine for inspection.
-     *
-     * Additionally, you can specify a custom action. To do this, you define a custom action by name
-     * and type, then provide the name you've assigned to the action in this `Actions` setting.
-     *
-     * To provide more than one action in this setting, separate the settings with a comma. For
-     * example, if you have a publish metrics custom action that you've named `MyMetricsAction` , then
-     * you could specify the standard action `aws:pass` combined with the custom action using
-     * `[“aws:pass”, “MyMetricsAction”]` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-actions)
-     */
-    public fun actions(): List<String>
-
-    /**
-     * Criteria for Network Firewall to use to inspect an individual packet in stateless rule
-     * inspection.
-     *
-     * Each match attributes set can include one or more items such as IP address, CIDR range, port
-     * number, protocol, and TCP flags.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-matchattributes)
-     */
-    public fun matchAttributes(): Any
-
-    /**
-     * A builder for [RuleDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actions The actions to take on a packet that matches one of the stateless rule
-       * definition's match attributes. 
-       * You must specify a standard action and you can add custom actions.
-       *
-       *
-       * Network Firewall only forwards a packet for stateful rule inspection if you specify
-       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
-       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
-       * for the `FirewallPolicy` .
-       *
-       *
-       * For every rule, you must specify exactly one of the following standard actions.
-       *
-       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
-       * intended destination.
-       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
-       * intended destination.
-       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
-       * the stateful rule engine for inspection.
-       *
-       * Additionally, you can specify a custom action. To do this, you define a custom action by
-       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
-       *
-       * To provide more than one action in this setting, separate the settings with a comma. For
-       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
-       * then you could specify the standard action `aws:pass` combined with the custom action using
-       * `[“aws:pass”, “MyMetricsAction”]` .
-       */
-      public fun actions(actions: List<String>)
-
-      /**
-       * @param actions The actions to take on a packet that matches one of the stateless rule
-       * definition's match attributes. 
-       * You must specify a standard action and you can add custom actions.
-       *
-       *
-       * Network Firewall only forwards a packet for stateful rule inspection if you specify
-       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
-       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
-       * for the `FirewallPolicy` .
-       *
-       *
-       * For every rule, you must specify exactly one of the following standard actions.
-       *
-       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
-       * intended destination.
-       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
-       * intended destination.
-       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
-       * the stateful rule engine for inspection.
-       *
-       * Additionally, you can specify a custom action. To do this, you define a custom action by
-       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
-       *
-       * To provide more than one action in this setting, separate the settings with a comma. For
-       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
-       * then you could specify the standard action `aws:pass` combined with the custom action using
-       * `[“aws:pass”, “MyMetricsAction”]` .
-       */
-      public fun actions(vararg actions: String)
-
-      /**
-       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
-       * in stateless rule inspection. 
-       * Each match attributes set can include one or more items such as IP address, CIDR range,
-       * port number, protocol, and TCP flags.
-       */
-      public fun matchAttributes(matchAttributes: IResolvable)
-
-      /**
-       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
-       * in stateless rule inspection. 
-       * Each match attributes set can include one or more items such as IP address, CIDR range,
-       * port number, protocol, and TCP flags.
-       */
-      public fun matchAttributes(matchAttributes: MatchAttributesProperty)
-
-      /**
-       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
-       * in stateless rule inspection. 
-       * Each match attributes set can include one or more items such as IP address, CIDR range,
-       * port number, protocol, and TCP flags.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("be49946981ce0bea8247a6726d3b4ecc81fddd180a7d520f19c5edb1676fcccb")
-      public fun matchAttributes(matchAttributes: MatchAttributesProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty.Builder
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty.Builder
           =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty.builder()
 
       /**
-       * @param actions The actions to take on a packet that matches one of the stateless rule
-       * definition's match attributes. 
-       * You must specify a standard action and you can add custom actions.
-       *
-       *
-       * Network Firewall only forwards a packet for stateful rule inspection if you specify
-       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
-       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
-       * for the `FirewallPolicy` .
-       *
-       *
-       * For every rule, you must specify exactly one of the following standard actions.
-       *
-       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
-       * intended destination.
-       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
-       * intended destination.
-       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
-       * the stateful rule engine for inspection.
-       *
-       * Additionally, you can specify a custom action. To do this, you define a custom action by
-       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
-       *
-       * To provide more than one action in this setting, separate the settings with a comma. For
-       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
-       * then you could specify the standard action `aws:pass` combined with the custom action using
-       * `[“aws:pass”, “MyMetricsAction”]` .
+       * @param referenceArn The Amazon Resource Name (ARN) of the resource to include in the
+       * `RuleGroup.IPSetReference` .
        */
-      override fun actions(actions: List<String>) {
-        cdkBuilder.actions(actions)
+      override fun referenceArn(referenceArn: String) {
+        cdkBuilder.referenceArn(referenceArn)
       }
-
-      /**
-       * @param actions The actions to take on a packet that matches one of the stateless rule
-       * definition's match attributes. 
-       * You must specify a standard action and you can add custom actions.
-       *
-       *
-       * Network Firewall only forwards a packet for stateful rule inspection if you specify
-       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
-       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
-       * for the `FirewallPolicy` .
-       *
-       *
-       * For every rule, you must specify exactly one of the following standard actions.
-       *
-       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
-       * intended destination.
-       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
-       * intended destination.
-       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
-       * the stateful rule engine for inspection.
-       *
-       * Additionally, you can specify a custom action. To do this, you define a custom action by
-       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
-       *
-       * To provide more than one action in this setting, separate the settings with a comma. For
-       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
-       * then you could specify the standard action `aws:pass` combined with the custom action using
-       * `[“aws:pass”, “MyMetricsAction”]` .
-       */
-      override fun actions(vararg actions: String): Unit = actions(actions.toList())
-
-      /**
-       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
-       * in stateless rule inspection. 
-       * Each match attributes set can include one or more items such as IP address, CIDR range,
-       * port number, protocol, and TCP flags.
-       */
-      override fun matchAttributes(matchAttributes: IResolvable) {
-        cdkBuilder.matchAttributes(matchAttributes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
-       * in stateless rule inspection. 
-       * Each match attributes set can include one or more items such as IP address, CIDR range,
-       * port number, protocol, and TCP flags.
-       */
-      override fun matchAttributes(matchAttributes: MatchAttributesProperty) {
-        cdkBuilder.matchAttributes(matchAttributes.let(MatchAttributesProperty::unwrap))
-      }
-
-      /**
-       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
-       * in stateless rule inspection. 
-       * Each match attributes set can include one or more items such as IP address, CIDR range,
-       * port number, protocol, and TCP flags.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("be49946981ce0bea8247a6726d3b4ecc81fddd180a7d520f19c5edb1676fcccb")
-      override fun matchAttributes(matchAttributes: MatchAttributesProperty.Builder.() -> Unit):
-          Unit = matchAttributes(MatchAttributesProperty(matchAttributes))
 
       public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty,
-    ) : CdkObject(cdkObject), RuleDefinitionProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty,
+    ) : CdkObject(cdkObject), IPSetReferenceProperty {
       /**
-       * The actions to take on a packet that matches one of the stateless rule definition's match
-       * attributes.
+       * The Amazon Resource Name (ARN) of the resource to include in the `RuleGroup.IPSetReference`
+       * .
        *
-       * You must specify a standard action and you can add custom actions.
-       *
-       *
-       * Network Firewall only forwards a packet for stateful rule inspection if you specify
-       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
-       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
-       * for the `FirewallPolicy` .
-       *
-       *
-       * For every rule, you must specify exactly one of the following standard actions.
-       *
-       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
-       * intended destination.
-       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
-       * intended destination.
-       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
-       * the stateful rule engine for inspection.
-       *
-       * Additionally, you can specify a custom action. To do this, you define a custom action by
-       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
-       *
-       * To provide more than one action in this setting, separate the settings with a comma. For
-       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
-       * then you could specify the standard action `aws:pass` combined with the custom action using
-       * `[“aws:pass”, “MyMetricsAction”]` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-actions)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipsetreference.html#cfn-networkfirewall-rulegroup-ipsetreference-referencearn)
        */
-      override fun actions(): List<String> = unwrap(this).getActions()
-
-      /**
-       * Criteria for Network Firewall to use to inspect an individual packet in stateless rule
-       * inspection.
-       *
-       * Each match attributes set can include one or more items such as IP address, CIDR range,
-       * port number, protocol, and TCP flags.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-matchattributes)
-       */
-      override fun matchAttributes(): Any = unwrap(this).getMatchAttributes()
+      override fun referenceArn(): String? = unwrap(this).getReferenceArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuleDefinitionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IPSetReferenceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty):
-          RuleDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleDefinitionProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty):
+          IPSetReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? IPSetReferenceProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RuleDefinitionProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty =
+      internal fun unwrap(wrapped: IPSetReferenceProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty
-    }
-  }
-
-  /**
-   * A single Suricata rules specification, for use in a stateful rule group.
-   *
-   * Use this option to specify a simple Suricata rule with protocol, source and destination, ports,
-   * direction, and rule options. For information about the Suricata `Rules` format, see [Rules
-   * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * StatefulRuleProperty statefulRuleProperty = StatefulRuleProperty.builder()
-   * .action("action")
-   * .header(HeaderProperty.builder()
-   * .destination("destination")
-   * .destinationPort("destinationPort")
-   * .direction("direction")
-   * .protocol("protocol")
-   * .source("source")
-   * .sourcePort("sourcePort")
-   * .build())
-   * .ruleOptions(List.of(RuleOptionProperty.builder()
-   * .keyword("keyword")
-   * // the properties below are optional
-   * .settings(List.of("settings"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html)
-   */
-  public interface StatefulRuleProperty {
-    /**
-     * Defines what Network Firewall should do with the packets in a traffic flow when the flow
-     * matches the stateful rule criteria.
-     *
-     * For all actions, Network Firewall performs the specified action and discontinues stateful
-     * inspection of the traffic flow.
-     *
-     * The actions for a stateful rule are defined as follows:
-     *
-     * * *PASS* - Permits the packets to go to the intended destination.
-     * * *DROP* - Blocks the packets from going to the intended destination and sends an alert log
-     * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
-     * * *REJECT* - Drops traffic that matches the conditions of the stateful rule and sends a TCP
-     * reset packet back to sender of the packet. A TCP reset packet is a packet with no payload and a
-     * `RST` bit contained in the TCP header flags. `REJECT` is available only for TCP traffic.
-     * * *ALERT* - Permits the packets to go to the intended destination and sends an alert log
-     * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
-     *
-     * You can use this action to test a rule that you intend to use to drop traffic. You can enable
-     * the rule with `ALERT` action, verify in the logs that the rule is filtering as you want, then
-     * change the action to `DROP` .
-     *
-     * * *REJECT* - Drops TCP traffic that matches the conditions of the stateful rule, and sends a
-     * TCP reset packet back to sender of the packet. A TCP reset packet is a packet with no payload
-     * and a `RST` bit contained in the TCP header flags. Also sends an alert log mesage if alert
-     * logging is configured in the `Firewall` `LoggingConfiguration` .
-     *
-     * `REJECT` isn't currently available for use with IMAP and FTP protocols.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-action)
-     */
-    public fun action(): String
-
-    /**
-     * The stateful inspection criteria for this rule, used to inspect traffic flows.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-header)
-     */
-    public fun `header`(): Any
-
-    /**
-     * Additional settings for a stateful rule, provided as keywords and settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-ruleoptions)
-     */
-    public fun ruleOptions(): Any
-
-    /**
-     * A builder for [StatefulRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action Defines what Network Firewall should do with the packets in a traffic flow
-       * when the flow matches the stateful rule criteria. 
-       * For all actions, Network Firewall performs the specified action and discontinues stateful
-       * inspection of the traffic flow.
-       *
-       * The actions for a stateful rule are defined as follows:
-       *
-       * * *PASS* - Permits the packets to go to the intended destination.
-       * * *DROP* - Blocks the packets from going to the intended destination and sends an alert log
-       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       * * *REJECT* - Drops traffic that matches the conditions of the stateful rule and sends a TCP
-       * reset packet back to sender of the packet. A TCP reset packet is a packet with no payload and
-       * a `RST` bit contained in the TCP header flags. `REJECT` is available only for TCP traffic.
-       * * *ALERT* - Permits the packets to go to the intended destination and sends an alert log
-       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       *
-       * You can use this action to test a rule that you intend to use to drop traffic. You can
-       * enable the rule with `ALERT` action, verify in the logs that the rule is filtering as you
-       * want, then change the action to `DROP` .
-       *
-       * * *REJECT* - Drops TCP traffic that matches the conditions of the stateful rule, and sends
-       * a TCP reset packet back to sender of the packet. A TCP reset packet is a packet with no
-       * payload and a `RST` bit contained in the TCP header flags. Also sends an alert log mesage if
-       * alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       *
-       * `REJECT` isn't currently available for use with IMAP and FTP protocols.
-       */
-      public fun action(action: String)
-
-      /**
-       * @param header The stateful inspection criteria for this rule, used to inspect traffic
-       * flows. 
-       */
-      public fun `header`(`header`: IResolvable)
-
-      /**
-       * @param header The stateful inspection criteria for this rule, used to inspect traffic
-       * flows. 
-       */
-      public fun `header`(`header`: HeaderProperty)
-
-      /**
-       * @param header The stateful inspection criteria for this rule, used to inspect traffic
-       * flows. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("47c83241672bba57efea9b623ce5228ca59fdf785b34a8abd5df7a45b2ec11e6")
-      public fun `header`(`header`: HeaderProperty.Builder.() -> Unit)
-
-      /**
-       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
-       * settings. 
-       */
-      public fun ruleOptions(ruleOptions: IResolvable)
-
-      /**
-       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
-       * settings. 
-       */
-      public fun ruleOptions(ruleOptions: List<Any>)
-
-      /**
-       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
-       * settings. 
-       */
-      public fun ruleOptions(vararg ruleOptions: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty.builder()
-
-      /**
-       * @param action Defines what Network Firewall should do with the packets in a traffic flow
-       * when the flow matches the stateful rule criteria. 
-       * For all actions, Network Firewall performs the specified action and discontinues stateful
-       * inspection of the traffic flow.
-       *
-       * The actions for a stateful rule are defined as follows:
-       *
-       * * *PASS* - Permits the packets to go to the intended destination.
-       * * *DROP* - Blocks the packets from going to the intended destination and sends an alert log
-       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       * * *REJECT* - Drops traffic that matches the conditions of the stateful rule and sends a TCP
-       * reset packet back to sender of the packet. A TCP reset packet is a packet with no payload and
-       * a `RST` bit contained in the TCP header flags. `REJECT` is available only for TCP traffic.
-       * * *ALERT* - Permits the packets to go to the intended destination and sends an alert log
-       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       *
-       * You can use this action to test a rule that you intend to use to drop traffic. You can
-       * enable the rule with `ALERT` action, verify in the logs that the rule is filtering as you
-       * want, then change the action to `DROP` .
-       *
-       * * *REJECT* - Drops TCP traffic that matches the conditions of the stateful rule, and sends
-       * a TCP reset packet back to sender of the packet. A TCP reset packet is a packet with no
-       * payload and a `RST` bit contained in the TCP header flags. Also sends an alert log mesage if
-       * alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       *
-       * `REJECT` isn't currently available for use with IMAP and FTP protocols.
-       */
-      override fun action(action: String) {
-        cdkBuilder.action(action)
-      }
-
-      /**
-       * @param header The stateful inspection criteria for this rule, used to inspect traffic
-       * flows. 
-       */
-      override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param header The stateful inspection criteria for this rule, used to inspect traffic
-       * flows. 
-       */
-      override fun `header`(`header`: HeaderProperty) {
-        cdkBuilder.`header`(`header`.let(HeaderProperty::unwrap))
-      }
-
-      /**
-       * @param header The stateful inspection criteria for this rule, used to inspect traffic
-       * flows. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("47c83241672bba57efea9b623ce5228ca59fdf785b34a8abd5df7a45b2ec11e6")
-      override fun `header`(`header`: HeaderProperty.Builder.() -> Unit): Unit =
-          `header`(HeaderProperty(`header`))
-
-      /**
-       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
-       * settings. 
-       */
-      override fun ruleOptions(ruleOptions: IResolvable) {
-        cdkBuilder.ruleOptions(ruleOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
-       * settings. 
-       */
-      override fun ruleOptions(ruleOptions: List<Any>) {
-        cdkBuilder.ruleOptions(ruleOptions)
-      }
-
-      /**
-       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
-       * settings. 
-       */
-      override fun ruleOptions(vararg ruleOptions: Any): Unit = ruleOptions(ruleOptions.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty,
-    ) : CdkObject(cdkObject), StatefulRuleProperty {
-      /**
-       * Defines what Network Firewall should do with the packets in a traffic flow when the flow
-       * matches the stateful rule criteria.
-       *
-       * For all actions, Network Firewall performs the specified action and discontinues stateful
-       * inspection of the traffic flow.
-       *
-       * The actions for a stateful rule are defined as follows:
-       *
-       * * *PASS* - Permits the packets to go to the intended destination.
-       * * *DROP* - Blocks the packets from going to the intended destination and sends an alert log
-       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       * * *REJECT* - Drops traffic that matches the conditions of the stateful rule and sends a TCP
-       * reset packet back to sender of the packet. A TCP reset packet is a packet with no payload and
-       * a `RST` bit contained in the TCP header flags. `REJECT` is available only for TCP traffic.
-       * * *ALERT* - Permits the packets to go to the intended destination and sends an alert log
-       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       *
-       * You can use this action to test a rule that you intend to use to drop traffic. You can
-       * enable the rule with `ALERT` action, verify in the logs that the rule is filtering as you
-       * want, then change the action to `DROP` .
-       *
-       * * *REJECT* - Drops TCP traffic that matches the conditions of the stateful rule, and sends
-       * a TCP reset packet back to sender of the packet. A TCP reset packet is a packet with no
-       * payload and a `RST` bit contained in the TCP header flags. Also sends an alert log mesage if
-       * alert logging is configured in the `Firewall` `LoggingConfiguration` .
-       *
-       * `REJECT` isn't currently available for use with IMAP and FTP protocols.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-action)
-       */
-      override fun action(): String = unwrap(this).getAction()
-
-      /**
-       * The stateful inspection criteria for this rule, used to inspect traffic flows.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-header)
-       */
-      override fun `header`(): Any = unwrap(this).getHeader()
-
-      /**
-       * Additional settings for a stateful rule, provided as keywords and settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-ruleoptions)
-       */
-      override fun ruleOptions(): Any = unwrap(this).getRuleOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StatefulRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty):
-          StatefulRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? StatefulRuleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StatefulRuleProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty
     }
   }
 
@@ -2712,116 +2231,10 @@ public open class CfnRuleGroup internal constructor(
   }
 
   /**
-   * Additional options governing how Network Firewall handles the rule group.
+   * A single port range specification.
    *
-   * You can only use these for stateful rule groups.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * StatefulRuleOptionsProperty statefulRuleOptionsProperty = StatefulRuleOptionsProperty.builder()
-   * .ruleOrder("ruleOrder")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulruleoptions.html)
-   */
-  public interface StatefulRuleOptionsProperty {
-    /**
-     * Indicates how to manage the order of the rule evaluation for the rule group.
-     *
-     * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
-     * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
-     * For more information, see [Evaluation order for stateful
-     * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-     * in the *AWS Network Firewall Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulruleoptions.html#cfn-networkfirewall-rulegroup-statefulruleoptions-ruleorder)
-     */
-    public fun ruleOrder(): String? = unwrap(this).getRuleOrder()
-
-    /**
-     * A builder for [StatefulRuleOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ruleOrder Indicates how to manage the order of the rule evaluation for the rule
-       * group.
-       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
-       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
-       * For more information, see [Evaluation order for stateful
-       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       */
-      public fun ruleOrder(ruleOrder: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty.builder()
-
-      /**
-       * @param ruleOrder Indicates how to manage the order of the rule evaluation for the rule
-       * group.
-       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
-       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
-       * For more information, see [Evaluation order for stateful
-       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       */
-      override fun ruleOrder(ruleOrder: String) {
-        cdkBuilder.ruleOrder(ruleOrder)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty,
-    ) : CdkObject(cdkObject), StatefulRuleOptionsProperty {
-      /**
-       * Indicates how to manage the order of the rule evaluation for the rule group.
-       *
-       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
-       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
-       * For more information, see [Evaluation order for stateful
-       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulruleoptions.html#cfn-networkfirewall-rulegroup-statefulruleoptions-ruleorder)
-       */
-      override fun ruleOrder(): String? = unwrap(this).getRuleOrder()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StatefulRuleOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty):
-          StatefulRuleOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StatefulRuleOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StatefulRuleOptionsProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty
-    }
-  }
-
-  /**
-   * Additional settings for a stateful rule.
+   * This is used for source and destination port ranges in the stateless
+   * `RuleGroup.MatchAttributes` .
    *
    * Example:
    *
@@ -2829,168 +2242,115 @@ public open class CfnRuleGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * RuleOptionProperty ruleOptionProperty = RuleOptionProperty.builder()
-   * .keyword("keyword")
-   * // the properties below are optional
-   * .settings(List.of("settings"))
+   * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html)
    */
-  public interface RuleOptionProperty {
+  public interface PortRangeProperty {
     /**
-     * The Suricata rule option keywords.
+     * The lower limit of the port range.
      *
-     * For Network Firewall , the keyword signature ID (sid) is required in the format `sid:112233`
-     * . The sid must be unique within the rule group. For information about Suricata rule option
-     * keywords, see [Rule
-     * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-     * .
+     * This must be less than or equal to the `ToPort` specification.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-keyword)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-fromport)
      */
-    public fun keyword(): String
+    public fun fromPort(): Number
 
     /**
-     * The Suricata rule option settings.
+     * The upper limit of the port range.
      *
-     * Settings have zero or more values, and the number of possible settings and required settings
-     * depends on the keyword. The format for Settings is `number` . For information about Suricata
-     * rule option settings, see [Rule
-     * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-     * .
+     * This must be greater than or equal to the `FromPort` specification.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-settings)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-toport)
      */
-    public fun settings(): List<String> = unwrap(this).getSettings() ?: emptyList()
+    public fun toPort(): Number
 
     /**
-     * A builder for [RuleOptionProperty]
+     * A builder for [PortRangeProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param keyword The Suricata rule option keywords. 
-       * For Network Firewall , the keyword signature ID (sid) is required in the format
-       * `sid:112233` . The sid must be unique within the rule group. For information about Suricata
-       * rule option keywords, see [Rule
-       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-       * .
+       * @param fromPort The lower limit of the port range. 
+       * This must be less than or equal to the `ToPort` specification.
        */
-      public fun keyword(keyword: String)
+      public fun fromPort(fromPort: Number)
 
       /**
-       * @param settings The Suricata rule option settings.
-       * Settings have zero or more values, and the number of possible settings and required
-       * settings depends on the keyword. The format for Settings is `number` . For information about
-       * Suricata rule option settings, see [Rule
-       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-       * .
+       * @param toPort The upper limit of the port range. 
+       * This must be greater than or equal to the `FromPort` specification.
        */
-      public fun tings(settings: List<String>)
-
-      /**
-       * @param settings The Suricata rule option settings.
-       * Settings have zero or more values, and the number of possible settings and required
-       * settings depends on the keyword. The format for Settings is `number` . For information about
-       * Suricata rule option settings, see [Rule
-       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-       * .
-       */
-      public fun tings(vararg settings: String)
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty.Builder =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty.Builder =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty.builder()
 
       /**
-       * @param keyword The Suricata rule option keywords. 
-       * For Network Firewall , the keyword signature ID (sid) is required in the format
-       * `sid:112233` . The sid must be unique within the rule group. For information about Suricata
-       * rule option keywords, see [Rule
-       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-       * .
+       * @param fromPort The lower limit of the port range. 
+       * This must be less than or equal to the `ToPort` specification.
        */
-      override fun keyword(keyword: String) {
-        cdkBuilder.keyword(keyword)
+      override fun fromPort(fromPort: Number) {
+        cdkBuilder.fromPort(fromPort)
       }
 
       /**
-       * @param settings The Suricata rule option settings.
-       * Settings have zero or more values, and the number of possible settings and required
-       * settings depends on the keyword. The format for Settings is `number` . For information about
-       * Suricata rule option settings, see [Rule
-       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-       * .
+       * @param toPort The upper limit of the port range. 
+       * This must be greater than or equal to the `FromPort` specification.
        */
-      override fun tings(settings: List<String>) {
-        cdkBuilder.settings(settings)
+      override fun toPort(toPort: Number) {
+        cdkBuilder.toPort(toPort)
       }
-
-      /**
-       * @param settings The Suricata rule option settings.
-       * Settings have zero or more values, and the number of possible settings and required
-       * settings depends on the keyword. The format for Settings is `number` . For information about
-       * Suricata rule option settings, see [Rule
-       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-       * .
-       */
-      override fun tings(vararg settings: String): Unit = tings(settings.toList())
 
       public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty,
-    ) : CdkObject(cdkObject), RuleOptionProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty,
+    ) : CdkObject(cdkObject), PortRangeProperty {
       /**
-       * The Suricata rule option keywords.
+       * The lower limit of the port range.
        *
-       * For Network Firewall , the keyword signature ID (sid) is required in the format
-       * `sid:112233` . The sid must be unique within the rule group. For information about Suricata
-       * rule option keywords, see [Rule
-       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-       * .
+       * This must be less than or equal to the `ToPort` specification.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-keyword)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-fromport)
        */
-      override fun keyword(): String = unwrap(this).getKeyword()
+      override fun fromPort(): Number = unwrap(this).getFromPort()
 
       /**
-       * The Suricata rule option settings.
+       * The upper limit of the port range.
        *
-       * Settings have zero or more values, and the number of possible settings and required
-       * settings depends on the keyword. The format for Settings is `number` . For information about
-       * Suricata rule option settings, see [Rule
-       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
-       * .
+       * This must be greater than or equal to the `FromPort` specification.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-settings)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-toport)
        */
-      override fun settings(): List<String> = unwrap(this).getSettings() ?: emptyList()
+      override fun toPort(): Number = unwrap(this).getToPort()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuleOptionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PortRangeProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty):
-          RuleOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleOptionProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty):
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RuleOptionProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty = (wrapped
+      internal fun unwrap(wrapped: PortRangeProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortRangeProperty
     }
   }
 
@@ -3083,949 +2443,6 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortSetProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortSetProperty
-    }
-  }
-
-  /**
-   * A single stateless rule.
-   *
-   * This is used in `RuleGroup.StatelessRulesAndCustomActions` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * StatelessRuleProperty statelessRuleProperty = StatelessRuleProperty.builder()
-   * .priority(123)
-   * .ruleDefinition(RuleDefinitionProperty.builder()
-   * .actions(List.of("actions"))
-   * .matchAttributes(MatchAttributesProperty.builder()
-   * .destinationPorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .destinations(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .protocols(List.of(123))
-   * .sourcePorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .sources(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
-   * .flags(List.of("flags"))
-   * // the properties below are optional
-   * .masks(List.of("masks"))
-   * .build()))
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html)
-   */
-  public interface StatelessRuleProperty {
-    /**
-     * Indicates the order in which to run this rule relative to all of the rules that are defined
-     * for a stateless rule group.
-     *
-     * Network Firewall evaluates the rules in a rule group starting with the lowest priority
-     * setting. You must ensure that the priority settings are unique for the rule group.
-     *
-     * Each stateless rule group uses exactly one `StatelessRulesAndCustomActions` object, and each
-     * `StatelessRulesAndCustomActions` contains exactly one `StatelessRules` object. To ensure unique
-     * priority settings for your rule groups, set unique priorities for the stateless rules that you
-     * define inside any single `StatelessRules` object.
-     *
-     * You can change the priority settings of your rules at any time. To make it easier to insert
-     * rules later, number them so there's a wide range in between, for example use 100, 200, and so
-     * on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-priority)
-     */
-    public fun priority(): Number
-
-    /**
-     * Defines the stateless 5-tuple packet inspection criteria and the action to take on a packet
-     * that matches the criteria.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-ruledefinition)
-     */
-    public fun ruleDefinition(): Any
-
-    /**
-     * A builder for [StatelessRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param priority Indicates the order in which to run this rule relative to all of the rules
-       * that are defined for a stateless rule group. 
-       * Network Firewall evaluates the rules in a rule group starting with the lowest priority
-       * setting. You must ensure that the priority settings are unique for the rule group.
-       *
-       * Each stateless rule group uses exactly one `StatelessRulesAndCustomActions` object, and
-       * each `StatelessRulesAndCustomActions` contains exactly one `StatelessRules` object. To ensure
-       * unique priority settings for your rule groups, set unique priorities for the stateless rules
-       * that you define inside any single `StatelessRules` object.
-       *
-       * You can change the priority settings of your rules at any time. To make it easier to insert
-       * rules later, number them so there's a wide range in between, for example use 100, 200, and so
-       * on.
-       */
-      public fun priority(priority: Number)
-
-      /**
-       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
-       * action to take on a packet that matches the criteria. 
-       */
-      public fun ruleDefinition(ruleDefinition: IResolvable)
-
-      /**
-       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
-       * action to take on a packet that matches the criteria. 
-       */
-      public fun ruleDefinition(ruleDefinition: RuleDefinitionProperty)
-
-      /**
-       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
-       * action to take on a packet that matches the criteria. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("43c34ade5d18e8bd5988d3b80759936fc07623d0552b77d061fbdfc8c246238e")
-      public fun ruleDefinition(ruleDefinition: RuleDefinitionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty.builder()
-
-      /**
-       * @param priority Indicates the order in which to run this rule relative to all of the rules
-       * that are defined for a stateless rule group. 
-       * Network Firewall evaluates the rules in a rule group starting with the lowest priority
-       * setting. You must ensure that the priority settings are unique for the rule group.
-       *
-       * Each stateless rule group uses exactly one `StatelessRulesAndCustomActions` object, and
-       * each `StatelessRulesAndCustomActions` contains exactly one `StatelessRules` object. To ensure
-       * unique priority settings for your rule groups, set unique priorities for the stateless rules
-       * that you define inside any single `StatelessRules` object.
-       *
-       * You can change the priority settings of your rules at any time. To make it easier to insert
-       * rules later, number them so there's a wide range in between, for example use 100, 200, and so
-       * on.
-       */
-      override fun priority(priority: Number) {
-        cdkBuilder.priority(priority)
-      }
-
-      /**
-       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
-       * action to take on a packet that matches the criteria. 
-       */
-      override fun ruleDefinition(ruleDefinition: IResolvable) {
-        cdkBuilder.ruleDefinition(ruleDefinition.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
-       * action to take on a packet that matches the criteria. 
-       */
-      override fun ruleDefinition(ruleDefinition: RuleDefinitionProperty) {
-        cdkBuilder.ruleDefinition(ruleDefinition.let(RuleDefinitionProperty::unwrap))
-      }
-
-      /**
-       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
-       * action to take on a packet that matches the criteria. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("43c34ade5d18e8bd5988d3b80759936fc07623d0552b77d061fbdfc8c246238e")
-      override fun ruleDefinition(ruleDefinition: RuleDefinitionProperty.Builder.() -> Unit): Unit =
-          ruleDefinition(RuleDefinitionProperty(ruleDefinition))
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty,
-    ) : CdkObject(cdkObject), StatelessRuleProperty {
-      /**
-       * Indicates the order in which to run this rule relative to all of the rules that are defined
-       * for a stateless rule group.
-       *
-       * Network Firewall evaluates the rules in a rule group starting with the lowest priority
-       * setting. You must ensure that the priority settings are unique for the rule group.
-       *
-       * Each stateless rule group uses exactly one `StatelessRulesAndCustomActions` object, and
-       * each `StatelessRulesAndCustomActions` contains exactly one `StatelessRules` object. To ensure
-       * unique priority settings for your rule groups, set unique priorities for the stateless rules
-       * that you define inside any single `StatelessRules` object.
-       *
-       * You can change the priority settings of your rules at any time. To make it easier to insert
-       * rules later, number them so there's a wide range in between, for example use 100, 200, and so
-       * on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-priority)
-       */
-      override fun priority(): Number = unwrap(this).getPriority()
-
-      /**
-       * Defines the stateless 5-tuple packet inspection criteria and the action to take on a packet
-       * that matches the criteria.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-ruledefinition)
-       */
-      override fun ruleDefinition(): Any = unwrap(this).getRuleDefinition()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StatelessRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty):
-          StatelessRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? StatelessRuleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StatelessRuleProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty
-    }
-  }
-
-  /**
-   * The value to use in an Amazon CloudWatch custom metric dimension.
-   *
-   * This is used in the `PublishMetrics` custom action. A CloudWatch custom metric dimension is a
-   * name/value pair that's part of the identity of a metric.
-   *
-   * AWS Network Firewall sets the dimension name to `CustomAction` and you provide the dimension
-   * value.
-   *
-   * For more information about CloudWatch custom metric dimensions, see [Publishing Custom
-   * Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html#usingDimensions)
-   * in the [Amazon CloudWatch User
-   * Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * DimensionProperty dimensionProperty = DimensionProperty.builder()
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-dimension.html)
-   */
-  public interface DimensionProperty {
-    /**
-     * The value to use in the custom metric dimension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-dimension.html#cfn-networkfirewall-rulegroup-dimension-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [DimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value The value to use in the custom metric dimension. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty.Builder =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty.builder()
-
-      /**
-       * @param value The value to use in the custom metric dimension. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty,
-    ) : CdkObject(cdkObject), DimensionProperty {
-      /**
-       * The value to use in the custom metric dimension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-dimension.html#cfn-networkfirewall-rulegroup-dimension-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty):
-          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DimensionProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.DimensionProperty
-    }
-  }
-
-  /**
-   * Settings that are available for use in the rules in the `RuleGroup` where this is defined.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * RuleVariablesProperty ruleVariablesProperty = RuleVariablesProperty.builder()
-   * .ipSets(Map.of(
-   * "ipSetsKey", Map.of(
-   * "definition", List.of("definition"))))
-   * .portSets(Map.of(
-   * "portSetsKey", PortSetProperty.builder()
-   * .definition(List.of("definition"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html)
-   */
-  public interface RuleVariablesProperty {
-    /**
-     * A list of IP addresses and address ranges, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-ipsets)
-     */
-    public fun ipSets(): Any? = unwrap(this).getIpSets()
-
-    /**
-     * A list of port ranges.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-portsets)
-     */
-    public fun portSets(): Any? = unwrap(this).getPortSets()
-
-    /**
-     * A builder for [RuleVariablesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
-       */
-      public fun ipSets(ipSets: IResolvable)
-
-      /**
-       * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
-       */
-      public fun ipSets(ipSets: Map<String, Any>)
-
-      /**
-       * @param portSets A list of port ranges.
-       */
-      public fun portSets(portSets: IResolvable)
-
-      /**
-       * @param portSets A list of port ranges.
-       */
-      public fun portSets(portSets: Map<String, Any>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty.builder()
-
-      /**
-       * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
-       */
-      override fun ipSets(ipSets: IResolvable) {
-        cdkBuilder.ipSets(ipSets.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
-       */
-      override fun ipSets(ipSets: Map<String, Any>) {
-        cdkBuilder.ipSets(ipSets)
-      }
-
-      /**
-       * @param portSets A list of port ranges.
-       */
-      override fun portSets(portSets: IResolvable) {
-        cdkBuilder.portSets(portSets.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param portSets A list of port ranges.
-       */
-      override fun portSets(portSets: Map<String, Any>) {
-        cdkBuilder.portSets(portSets)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty,
-    ) : CdkObject(cdkObject), RuleVariablesProperty {
-      /**
-       * A list of IP addresses and address ranges, in CIDR notation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-ipsets)
-       */
-      override fun ipSets(): Any? = unwrap(this).getIpSets()
-
-      /**
-       * A list of port ranges.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-portsets)
-       */
-      override fun portSets(): Any? = unwrap(this).getPortSets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuleVariablesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty):
-          RuleVariablesProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleVariablesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RuleVariablesProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty
-    }
-  }
-
-  /**
-   * Configures the `ReferenceSets` for a stateful rule group.
-   *
-   * For more information, see the [Using IP set references in Suricata compatible rule
-   * groups](https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups-ip-set-references.html)
-   * in the *Network Firewall User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * ReferenceSetsProperty referenceSetsProperty = ReferenceSetsProperty.builder()
-   * .ipSetReferences(Map.of(
-   * "ipSetReferencesKey", Map.of(
-   * "referenceArn", "referenceArn")))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-referencesets.html)
-   */
-  public interface ReferenceSetsProperty {
-    /**
-     * The IP set references to use in the stateful rule group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-referencesets.html#cfn-networkfirewall-rulegroup-referencesets-ipsetreferences)
-     */
-    public fun ipSetReferences(): Any? = unwrap(this).getIpSetReferences()
-
-    /**
-     * A builder for [ReferenceSetsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipSetReferences The IP set references to use in the stateful rule group.
-       */
-      public fun ipSetReferences(ipSetReferences: IResolvable)
-
-      /**
-       * @param ipSetReferences The IP set references to use in the stateful rule group.
-       */
-      public fun ipSetReferences(ipSetReferences: Map<String, Any>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty.builder()
-
-      /**
-       * @param ipSetReferences The IP set references to use in the stateful rule group.
-       */
-      override fun ipSetReferences(ipSetReferences: IResolvable) {
-        cdkBuilder.ipSetReferences(ipSetReferences.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ipSetReferences The IP set references to use in the stateful rule group.
-       */
-      override fun ipSetReferences(ipSetReferences: Map<String, Any>) {
-        cdkBuilder.ipSetReferences(ipSetReferences)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty,
-    ) : CdkObject(cdkObject), ReferenceSetsProperty {
-      /**
-       * The IP set references to use in the stateful rule group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-referencesets.html#cfn-networkfirewall-rulegroup-referencesets-ipsetreferences)
-       */
-      override fun ipSetReferences(): Any? = unwrap(this).getIpSetReferences()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReferenceSetsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty):
-          ReferenceSetsProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceSetsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReferenceSetsProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty
-    }
-  }
-
-  /**
-   * Stateful inspection criteria for a domain list rule group.
-   *
-   * For HTTPS traffic, domain filtering is SNI-based. It uses the server name indicator extension
-   * of the TLS handshake.
-   *
-   * By default, Network Firewall domain list inspection only includes traffic coming from the VPC
-   * where you deploy the firewall. To inspect traffic from IP addresses outside of the deployment VPC,
-   * you set the `HOME_NET` rule variable to include the CIDR range of the deployment VPC plus the
-   * other CIDR ranges. For more information, see `RuleGroup.RuleVariables` in this guide and [Stateful
-   * domain list rule groups in AWS Network
-   * Firewall](https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html)
-   * in the *Network Firewall Developer Guide*
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * RulesSourceListProperty rulesSourceListProperty = RulesSourceListProperty.builder()
-   * .generatedRulesType("generatedRulesType")
-   * .targets(List.of("targets"))
-   * .targetTypes(List.of("targetTypes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html)
-   */
-  public interface RulesSourceListProperty {
-    /**
-     * Whether you want to allow or deny access to the domains in your target list.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-generatedrulestype)
-     */
-    public fun generatedRulesType(): String
-
-    /**
-     * The types of targets to inspect for.
-     *
-     * Valid values are `TLS_SNI` and `HTTP_HOST` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targettypes)
-     */
-    public fun targetTypes(): List<String>
-
-    /**
-     * The domains that you want to inspect for in your traffic flows. Valid domain specifications
-     * are the following:.
-     *
-     * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com` .
-     * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For example,
-     * `.example.com` matches `example.com` and matches all subdomains of `example.com` , such as
-     * `abc.example.com` and `www.example.com` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targets)
-     */
-    public fun targets(): List<String>
-
-    /**
-     * A builder for [RulesSourceListProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param generatedRulesType Whether you want to allow or deny access to the domains in your
-       * target list. 
-       */
-      public fun generatedRulesType(generatedRulesType: String)
-
-      /**
-       * @param targetTypes The types of targets to inspect for. 
-       * Valid values are `TLS_SNI` and `HTTP_HOST` .
-       */
-      public fun targetTypes(targetTypes: List<String>)
-
-      /**
-       * @param targetTypes The types of targets to inspect for. 
-       * Valid values are `TLS_SNI` and `HTTP_HOST` .
-       */
-      public fun targetTypes(vararg targetTypes: String)
-
-      /**
-       * @param targets The domains that you want to inspect for in your traffic flows. Valid domain
-       * specifications are the following:. 
-       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
-       * .
-       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
-       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
-       * such as `abc.example.com` and `www.example.com` .
-       */
-      public fun targets(targets: List<String>)
-
-      /**
-       * @param targets The domains that you want to inspect for in your traffic flows. Valid domain
-       * specifications are the following:. 
-       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
-       * .
-       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
-       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
-       * such as `abc.example.com` and `www.example.com` .
-       */
-      public fun targets(vararg targets: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty.builder()
-
-      /**
-       * @param generatedRulesType Whether you want to allow or deny access to the domains in your
-       * target list. 
-       */
-      override fun generatedRulesType(generatedRulesType: String) {
-        cdkBuilder.generatedRulesType(generatedRulesType)
-      }
-
-      /**
-       * @param targetTypes The types of targets to inspect for. 
-       * Valid values are `TLS_SNI` and `HTTP_HOST` .
-       */
-      override fun targetTypes(targetTypes: List<String>) {
-        cdkBuilder.targetTypes(targetTypes)
-      }
-
-      /**
-       * @param targetTypes The types of targets to inspect for. 
-       * Valid values are `TLS_SNI` and `HTTP_HOST` .
-       */
-      override fun targetTypes(vararg targetTypes: String): Unit = targetTypes(targetTypes.toList())
-
-      /**
-       * @param targets The domains that you want to inspect for in your traffic flows. Valid domain
-       * specifications are the following:. 
-       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
-       * .
-       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
-       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
-       * such as `abc.example.com` and `www.example.com` .
-       */
-      override fun targets(targets: List<String>) {
-        cdkBuilder.targets(targets)
-      }
-
-      /**
-       * @param targets The domains that you want to inspect for in your traffic flows. Valid domain
-       * specifications are the following:. 
-       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
-       * .
-       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
-       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
-       * such as `abc.example.com` and `www.example.com` .
-       */
-      override fun targets(vararg targets: String): Unit = targets(targets.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty,
-    ) : CdkObject(cdkObject), RulesSourceListProperty {
-      /**
-       * Whether you want to allow or deny access to the domains in your target list.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-generatedrulestype)
-       */
-      override fun generatedRulesType(): String = unwrap(this).getGeneratedRulesType()
-
-      /**
-       * The types of targets to inspect for.
-       *
-       * Valid values are `TLS_SNI` and `HTTP_HOST` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targettypes)
-       */
-      override fun targetTypes(): List<String> = unwrap(this).getTargetTypes()
-
-      /**
-       * The domains that you want to inspect for in your traffic flows. Valid domain specifications
-       * are the following:.
-       *
-       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
-       * .
-       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
-       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
-       * such as `abc.example.com` and `www.example.com` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targets)
-       */
-      override fun targets(): List<String> = unwrap(this).getTargets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RulesSourceListProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty):
-          RulesSourceListProperty = CdkObjectWrappers.wrap(cdkObject) as? RulesSourceListProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RulesSourceListProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty
-    }
-  }
-
-  /**
-   * A custom action to use in stateless rule actions settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * ActionDefinitionProperty actionDefinitionProperty = ActionDefinitionProperty.builder()
-   * .publishMetricAction(PublishMetricActionProperty.builder()
-   * .dimensions(List.of(DimensionProperty.builder()
-   * .value("value")
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-actiondefinition.html)
-   */
-  public interface ActionDefinitionProperty {
-    /**
-     * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for
-     * the matching packet.
-     *
-     * This setting defines a CloudWatch dimension value to be published.
-     *
-     * You can pair this custom action with any of the standard stateless rule actions. For example,
-     * you could pair this in a rule action with the standard action that forwards the packet for
-     * stateful inspection. Then, when a packet matches the rule, Network Firewall publishes metrics
-     * for the packet and forwards it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-actiondefinition.html#cfn-networkfirewall-rulegroup-actiondefinition-publishmetricaction)
-     */
-    public fun publishMetricAction(): Any? = unwrap(this).getPublishMetricAction()
-
-    /**
-     * A builder for [ActionDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param publishMetricAction Stateless inspection criteria that publishes the specified
-       * metrics to Amazon CloudWatch for the matching packet.
-       * This setting defines a CloudWatch dimension value to be published.
-       *
-       * You can pair this custom action with any of the standard stateless rule actions. For
-       * example, you could pair this in a rule action with the standard action that forwards the
-       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
-       * publishes metrics for the packet and forwards it.
-       */
-      public fun publishMetricAction(publishMetricAction: IResolvable)
-
-      /**
-       * @param publishMetricAction Stateless inspection criteria that publishes the specified
-       * metrics to Amazon CloudWatch for the matching packet.
-       * This setting defines a CloudWatch dimension value to be published.
-       *
-       * You can pair this custom action with any of the standard stateless rule actions. For
-       * example, you could pair this in a rule action with the standard action that forwards the
-       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
-       * publishes metrics for the packet and forwards it.
-       */
-      public fun publishMetricAction(publishMetricAction: PublishMetricActionProperty)
-
-      /**
-       * @param publishMetricAction Stateless inspection criteria that publishes the specified
-       * metrics to Amazon CloudWatch for the matching packet.
-       * This setting defines a CloudWatch dimension value to be published.
-       *
-       * You can pair this custom action with any of the standard stateless rule actions. For
-       * example, you could pair this in a rule action with the standard action that forwards the
-       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
-       * publishes metrics for the packet and forwards it.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9c709e38e77861004c23b0b23e18c692c5afae875be2890cf84ebfddc0c185d9")
-      public
-          fun publishMetricAction(publishMetricAction: PublishMetricActionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty.builder()
-
-      /**
-       * @param publishMetricAction Stateless inspection criteria that publishes the specified
-       * metrics to Amazon CloudWatch for the matching packet.
-       * This setting defines a CloudWatch dimension value to be published.
-       *
-       * You can pair this custom action with any of the standard stateless rule actions. For
-       * example, you could pair this in a rule action with the standard action that forwards the
-       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
-       * publishes metrics for the packet and forwards it.
-       */
-      override fun publishMetricAction(publishMetricAction: IResolvable) {
-        cdkBuilder.publishMetricAction(publishMetricAction.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param publishMetricAction Stateless inspection criteria that publishes the specified
-       * metrics to Amazon CloudWatch for the matching packet.
-       * This setting defines a CloudWatch dimension value to be published.
-       *
-       * You can pair this custom action with any of the standard stateless rule actions. For
-       * example, you could pair this in a rule action with the standard action that forwards the
-       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
-       * publishes metrics for the packet and forwards it.
-       */
-      override fun publishMetricAction(publishMetricAction: PublishMetricActionProperty) {
-        cdkBuilder.publishMetricAction(publishMetricAction.let(PublishMetricActionProperty::unwrap))
-      }
-
-      /**
-       * @param publishMetricAction Stateless inspection criteria that publishes the specified
-       * metrics to Amazon CloudWatch for the matching packet.
-       * This setting defines a CloudWatch dimension value to be published.
-       *
-       * You can pair this custom action with any of the standard stateless rule actions. For
-       * example, you could pair this in a rule action with the standard action that forwards the
-       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
-       * publishes metrics for the packet and forwards it.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9c709e38e77861004c23b0b23e18c692c5afae875be2890cf84ebfddc0c185d9")
-      override
-          fun publishMetricAction(publishMetricAction: PublishMetricActionProperty.Builder.() -> Unit):
-          Unit = publishMetricAction(PublishMetricActionProperty(publishMetricAction))
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty,
-    ) : CdkObject(cdkObject), ActionDefinitionProperty {
-      /**
-       * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for
-       * the matching packet.
-       *
-       * This setting defines a CloudWatch dimension value to be published.
-       *
-       * You can pair this custom action with any of the standard stateless rule actions. For
-       * example, you could pair this in a rule action with the standard action that forwards the
-       * packet for stateful inspection. Then, when a packet matches the rule, Network Firewall
-       * publishes metrics for the packet and forwards it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-actiondefinition.html#cfn-networkfirewall-rulegroup-actiondefinition-publishmetricaction)
-       */
-      override fun publishMetricAction(): Any? = unwrap(this).getPublishMetricAction()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ActionDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty):
-          ActionDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionDefinitionProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActionDefinitionProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ActionDefinitionProperty
     }
   }
 
@@ -4136,16 +2553,11 @@ public open class CfnRuleGroup internal constructor(
   }
 
   /**
-   * Configures one or more `IPSetReferences` for a Suricata-compatible rule group.
+   * Configures the `ReferenceSets` for a stateful rule group.
    *
-   * An IP set reference is a rule variable that references a resource that you create and manage in
-   * another AWS service, such as an Amazon VPC prefix list. Network Firewall IP set references enable
-   * you to dynamically update the contents of your rules. When you create, update, or delete the IP
-   * set you are referencing in your rule, Network Firewall automatically updates the rule's content
-   * with the changes. For more information about IP set references in Network Firewall , see [Using IP
-   * set
-   * references](https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups-ip-set-references.html)
-   * in the *Network Firewall Developer Guide* .
+   * For more information, see the [Using IP set references in Suricata compatible rule
+   * groups](https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups-ip-set-references.html)
+   * in the *Network Firewall User Guide* .
    *
    * Example:
    *
@@ -4153,79 +2565,446 @@ public open class CfnRuleGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * IPSetReferenceProperty iPSetReferenceProperty = Map.of(
-   * "referenceArn", "referenceArn");
+   * ReferenceSetsProperty referenceSetsProperty = ReferenceSetsProperty.builder()
+   * .ipSetReferences(Map.of(
+   * "ipSetReferencesKey", Map.of(
+   * "referenceArn", "referenceArn")))
+   * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipsetreference.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-referencesets.html)
    */
-  public interface IPSetReferenceProperty {
+  public interface ReferenceSetsProperty {
     /**
-     * The Amazon Resource Name (ARN) of the resource to include in the `RuleGroup.IPSetReference` .
+     * The IP set references to use in the stateful rule group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipsetreference.html#cfn-networkfirewall-rulegroup-ipsetreference-referencearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-referencesets.html#cfn-networkfirewall-rulegroup-referencesets-ipsetreferences)
      */
-    public fun referenceArn(): String? = unwrap(this).getReferenceArn()
+    public fun ipSetReferences(): Any? = unwrap(this).getIpSetReferences()
 
     /**
-     * A builder for [IPSetReferenceProperty]
+     * A builder for [ReferenceSetsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param referenceArn The Amazon Resource Name (ARN) of the resource to include in the
-       * `RuleGroup.IPSetReference` .
+       * @param ipSetReferences The IP set references to use in the stateful rule group.
        */
-      public fun referenceArn(referenceArn: String)
+      public fun ipSetReferences(ipSetReferences: IResolvable)
+
+      /**
+       * @param ipSetReferences The IP set references to use in the stateful rule group.
+       */
+      public fun ipSetReferences(ipSetReferences: Map<String, Any>)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty.Builder
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty.Builder
           =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty.builder()
 
       /**
-       * @param referenceArn The Amazon Resource Name (ARN) of the resource to include in the
-       * `RuleGroup.IPSetReference` .
+       * @param ipSetReferences The IP set references to use in the stateful rule group.
        */
-      override fun referenceArn(referenceArn: String) {
-        cdkBuilder.referenceArn(referenceArn)
+      override fun ipSetReferences(ipSetReferences: IResolvable) {
+        cdkBuilder.ipSetReferences(ipSetReferences.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ipSetReferences The IP set references to use in the stateful rule group.
+       */
+      override fun ipSetReferences(ipSetReferences: Map<String, Any>) {
+        cdkBuilder.ipSetReferences(ipSetReferences)
       }
 
       public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty,
-    ) : CdkObject(cdkObject), IPSetReferenceProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty,
+    ) : CdkObject(cdkObject), ReferenceSetsProperty {
       /**
-       * The Amazon Resource Name (ARN) of the resource to include in the `RuleGroup.IPSetReference`
-       * .
+       * The IP set references to use in the stateful rule group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipsetreference.html#cfn-networkfirewall-rulegroup-ipsetreference-referencearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-referencesets.html#cfn-networkfirewall-rulegroup-referencesets-ipsetreferences)
        */
-      override fun referenceArn(): String? = unwrap(this).getReferenceArn()
+      override fun ipSetReferences(): Any? = unwrap(this).getIpSetReferences()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IPSetReferenceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReferenceSetsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty):
-          IPSetReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? IPSetReferenceProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty):
+          ReferenceSetsProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceSetsProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: IPSetReferenceProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty =
+      internal fun unwrap(wrapped: ReferenceSetsProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetReferenceProperty
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.ReferenceSetsProperty
+    }
+  }
+
+  /**
+   * The inspection criteria and action for a single stateless rule.
+   *
+   * AWS Network Firewall inspects each packet for the specified matching criteria. When a packet
+   * matches the criteria, Network Firewall performs the rule's actions on the packet.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * RuleDefinitionProperty ruleDefinitionProperty = RuleDefinitionProperty.builder()
+   * .actions(List.of("actions"))
+   * .matchAttributes(MatchAttributesProperty.builder()
+   * .destinationPorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .destinations(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .protocols(List.of(123))
+   * .sourcePorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .sources(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
+   * .flags(List.of("flags"))
+   * // the properties below are optional
+   * .masks(List.of("masks"))
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html)
+   */
+  public interface RuleDefinitionProperty {
+    /**
+     * The actions to take on a packet that matches one of the stateless rule definition's match
+     * attributes.
+     *
+     * You must specify a standard action and you can add custom actions.
+     *
+     *
+     * Network Firewall only forwards a packet for stateful rule inspection if you specify
+     * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
+     * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
+     * for the `FirewallPolicy` .
+     *
+     *
+     * For every rule, you must specify exactly one of the following standard actions.
+     *
+     * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its intended
+     * destination.
+     * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
+     * intended destination.
+     * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
+     * the stateful rule engine for inspection.
+     *
+     * Additionally, you can specify a custom action. To do this, you define a custom action by name
+     * and type, then provide the name you've assigned to the action in this `Actions` setting.
+     *
+     * To provide more than one action in this setting, separate the settings with a comma. For
+     * example, if you have a publish metrics custom action that you've named `MyMetricsAction` , then
+     * you could specify the standard action `aws:pass` combined with the custom action using
+     * `[“aws:pass”, “MyMetricsAction”]` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-actions)
+     */
+    public fun actions(): List<String>
+
+    /**
+     * Criteria for Network Firewall to use to inspect an individual packet in stateless rule
+     * inspection.
+     *
+     * Each match attributes set can include one or more items such as IP address, CIDR range, port
+     * number, protocol, and TCP flags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-matchattributes)
+     */
+    public fun matchAttributes(): Any
+
+    /**
+     * A builder for [RuleDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actions The actions to take on a packet that matches one of the stateless rule
+       * definition's match attributes. 
+       * You must specify a standard action and you can add custom actions.
+       *
+       *
+       * Network Firewall only forwards a packet for stateful rule inspection if you specify
+       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
+       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
+       * for the `FirewallPolicy` .
+       *
+       *
+       * For every rule, you must specify exactly one of the following standard actions.
+       *
+       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
+       * intended destination.
+       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
+       * intended destination.
+       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
+       * the stateful rule engine for inspection.
+       *
+       * Additionally, you can specify a custom action. To do this, you define a custom action by
+       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
+       *
+       * To provide more than one action in this setting, separate the settings with a comma. For
+       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
+       * then you could specify the standard action `aws:pass` combined with the custom action using
+       * `[“aws:pass”, “MyMetricsAction”]` .
+       */
+      public fun actions(actions: List<String>)
+
+      /**
+       * @param actions The actions to take on a packet that matches one of the stateless rule
+       * definition's match attributes. 
+       * You must specify a standard action and you can add custom actions.
+       *
+       *
+       * Network Firewall only forwards a packet for stateful rule inspection if you specify
+       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
+       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
+       * for the `FirewallPolicy` .
+       *
+       *
+       * For every rule, you must specify exactly one of the following standard actions.
+       *
+       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
+       * intended destination.
+       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
+       * intended destination.
+       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
+       * the stateful rule engine for inspection.
+       *
+       * Additionally, you can specify a custom action. To do this, you define a custom action by
+       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
+       *
+       * To provide more than one action in this setting, separate the settings with a comma. For
+       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
+       * then you could specify the standard action `aws:pass` combined with the custom action using
+       * `[“aws:pass”, “MyMetricsAction”]` .
+       */
+      public fun actions(vararg actions: String)
+
+      /**
+       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
+       * in stateless rule inspection. 
+       * Each match attributes set can include one or more items such as IP address, CIDR range,
+       * port number, protocol, and TCP flags.
+       */
+      public fun matchAttributes(matchAttributes: IResolvable)
+
+      /**
+       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
+       * in stateless rule inspection. 
+       * Each match attributes set can include one or more items such as IP address, CIDR range,
+       * port number, protocol, and TCP flags.
+       */
+      public fun matchAttributes(matchAttributes: MatchAttributesProperty)
+
+      /**
+       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
+       * in stateless rule inspection. 
+       * Each match attributes set can include one or more items such as IP address, CIDR range,
+       * port number, protocol, and TCP flags.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("be49946981ce0bea8247a6726d3b4ecc81fddd180a7d520f19c5edb1676fcccb")
+      public fun matchAttributes(matchAttributes: MatchAttributesProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty.builder()
+
+      /**
+       * @param actions The actions to take on a packet that matches one of the stateless rule
+       * definition's match attributes. 
+       * You must specify a standard action and you can add custom actions.
+       *
+       *
+       * Network Firewall only forwards a packet for stateful rule inspection if you specify
+       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
+       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
+       * for the `FirewallPolicy` .
+       *
+       *
+       * For every rule, you must specify exactly one of the following standard actions.
+       *
+       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
+       * intended destination.
+       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
+       * intended destination.
+       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
+       * the stateful rule engine for inspection.
+       *
+       * Additionally, you can specify a custom action. To do this, you define a custom action by
+       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
+       *
+       * To provide more than one action in this setting, separate the settings with a comma. For
+       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
+       * then you could specify the standard action `aws:pass` combined with the custom action using
+       * `[“aws:pass”, “MyMetricsAction”]` .
+       */
+      override fun actions(actions: List<String>) {
+        cdkBuilder.actions(actions)
+      }
+
+      /**
+       * @param actions The actions to take on a packet that matches one of the stateless rule
+       * definition's match attributes. 
+       * You must specify a standard action and you can add custom actions.
+       *
+       *
+       * Network Firewall only forwards a packet for stateful rule inspection if you specify
+       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
+       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
+       * for the `FirewallPolicy` .
+       *
+       *
+       * For every rule, you must specify exactly one of the following standard actions.
+       *
+       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
+       * intended destination.
+       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
+       * intended destination.
+       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
+       * the stateful rule engine for inspection.
+       *
+       * Additionally, you can specify a custom action. To do this, you define a custom action by
+       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
+       *
+       * To provide more than one action in this setting, separate the settings with a comma. For
+       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
+       * then you could specify the standard action `aws:pass` combined with the custom action using
+       * `[“aws:pass”, “MyMetricsAction”]` .
+       */
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
+
+      /**
+       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
+       * in stateless rule inspection. 
+       * Each match attributes set can include one or more items such as IP address, CIDR range,
+       * port number, protocol, and TCP flags.
+       */
+      override fun matchAttributes(matchAttributes: IResolvable) {
+        cdkBuilder.matchAttributes(matchAttributes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
+       * in stateless rule inspection. 
+       * Each match attributes set can include one or more items such as IP address, CIDR range,
+       * port number, protocol, and TCP flags.
+       */
+      override fun matchAttributes(matchAttributes: MatchAttributesProperty) {
+        cdkBuilder.matchAttributes(matchAttributes.let(MatchAttributesProperty::unwrap))
+      }
+
+      /**
+       * @param matchAttributes Criteria for Network Firewall to use to inspect an individual packet
+       * in stateless rule inspection. 
+       * Each match attributes set can include one or more items such as IP address, CIDR range,
+       * port number, protocol, and TCP flags.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("be49946981ce0bea8247a6726d3b4ecc81fddd180a7d520f19c5edb1676fcccb")
+      override fun matchAttributes(matchAttributes: MatchAttributesProperty.Builder.() -> Unit):
+          Unit = matchAttributes(MatchAttributesProperty(matchAttributes))
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty,
+    ) : CdkObject(cdkObject), RuleDefinitionProperty {
+      /**
+       * The actions to take on a packet that matches one of the stateless rule definition's match
+       * attributes.
+       *
+       * You must specify a standard action and you can add custom actions.
+       *
+       *
+       * Network Firewall only forwards a packet for stateful rule inspection if you specify
+       * `aws:forward_to_sfe` for a rule that the packet matches, or if the packet doesn't match any
+       * stateless rule and you specify `aws:forward_to_sfe` for the `StatelessDefaultActions` setting
+       * for the `FirewallPolicy` .
+       *
+       *
+       * For every rule, you must specify exactly one of the following standard actions.
+       *
+       * * *aws:pass* - Discontinues all inspection of the packet and permits it to go to its
+       * intended destination.
+       * * *aws:drop* - Discontinues all inspection of the packet and blocks it from going to its
+       * intended destination.
+       * * *aws:forward_to_sfe* - Discontinues stateless inspection of the packet and forwards it to
+       * the stateful rule engine for inspection.
+       *
+       * Additionally, you can specify a custom action. To do this, you define a custom action by
+       * name and type, then provide the name you've assigned to the action in this `Actions` setting.
+       *
+       * To provide more than one action in this setting, separate the settings with a comma. For
+       * example, if you have a publish metrics custom action that you've named `MyMetricsAction` ,
+       * then you could specify the standard action `aws:pass` combined with the custom action using
+       * `[“aws:pass”, “MyMetricsAction”]` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-actions)
+       */
+      override fun actions(): List<String> = unwrap(this).getActions()
+
+      /**
+       * Criteria for Network Firewall to use to inspect an individual packet in stateless rule
+       * inspection.
+       *
+       * Each match attributes set can include one or more items such as IP address, CIDR range,
+       * port number, protocol, and TCP flags.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-matchattributes)
+       */
+      override fun matchAttributes(): Any = unwrap(this).getMatchAttributes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty):
+          RuleDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleDefinitionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuleDefinitionProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty
     }
   }
 
@@ -4648,9 +3427,7 @@ public open class CfnRuleGroup internal constructor(
   }
 
   /**
-   * A single IP address specification.
-   *
-   * This is used in the `RuleGroup.MatchAttributes` source and destination specifications.
+   * Additional settings for a stateful rule.
    *
    * Example:
    *
@@ -4658,161 +3435,173 @@ public open class CfnRuleGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * AddressProperty addressProperty = AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
+   * RuleOptionProperty ruleOptionProperty = RuleOptionProperty.builder()
+   * .keyword("keyword")
+   * // the properties below are optional
+   * .settings(List.of("settings"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html)
    */
-  public interface AddressProperty {
+  public interface RuleOptionProperty {
     /**
-     * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-     * notation.
+     * The Suricata rule option keywords.
      *
-     * Network Firewall supports all address ranges for IPv4 and IPv6.
-     *
-     * Examples:
-     *
-     * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-     * `192.0.2.44/32` .
-     * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-     * specify `192.0.2.0/24` .
-     * * To configure Network Firewall to inspect for the IP address
-     * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128` .
-     * * To configure Network Firewall to inspect for IP addresses from
-     * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-     * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-     *
-     * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-     * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * For Network Firewall , the keyword signature ID (sid) is required in the format `sid:112233`
+     * . The sid must be unique within the rule group. For information about Suricata rule option
+     * keywords, see [Rule
+     * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
      * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html#cfn-networkfirewall-rulegroup-address-addressdefinition)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-keyword)
      */
-    public fun addressDefinition(): String
+    public fun keyword(): String
 
     /**
-     * A builder for [AddressProperty]
+     * The Suricata rule option settings.
+     *
+     * Settings have zero or more values, and the number of possible settings and required settings
+     * depends on the keyword. The format for Settings is `number` . For information about Suricata
+     * rule option settings, see [Rule
+     * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-settings)
+     */
+    public fun settings(): List<String> = unwrap(this).getSettings() ?: emptyList()
+
+    /**
+     * A builder for [RuleOptionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param addressDefinition Specify an IP address or a block of IP addresses in Classless
-       * Inter-Domain Routing (CIDR) notation. 
-       * Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * @param keyword The Suricata rule option keywords. 
+       * For Network Firewall , the keyword signature ID (sid) is required in the format
+       * `sid:112233` . The sid must be unique within the rule group. For information about Suricata
+       * rule option keywords, see [Rule
+       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
        * .
        */
-      public fun addressDefinition(addressDefinition: String)
+      public fun keyword(keyword: String)
+
+      /**
+       * @param settings The Suricata rule option settings.
+       * Settings have zero or more values, and the number of possible settings and required
+       * settings depends on the keyword. The format for Settings is `number` . For information about
+       * Suricata rule option settings, see [Rule
+       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+       * .
+       */
+      public fun tings(settings: List<String>)
+
+      /**
+       * @param settings The Suricata rule option settings.
+       * Settings have zero or more values, and the number of possible settings and required
+       * settings depends on the keyword. The format for Settings is `number` . For information about
+       * Suricata rule option settings, see [Rule
+       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+       * .
+       */
+      public fun tings(vararg settings: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty.Builder =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty.Builder =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty.builder()
 
       /**
-       * @param addressDefinition Specify an IP address or a block of IP addresses in Classless
-       * Inter-Domain Routing (CIDR) notation. 
-       * Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * @param keyword The Suricata rule option keywords. 
+       * For Network Firewall , the keyword signature ID (sid) is required in the format
+       * `sid:112233` . The sid must be unique within the rule group. For information about Suricata
+       * rule option keywords, see [Rule
+       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
        * .
        */
-      override fun addressDefinition(addressDefinition: String) {
-        cdkBuilder.addressDefinition(addressDefinition)
+      override fun keyword(keyword: String) {
+        cdkBuilder.keyword(keyword)
       }
 
+      /**
+       * @param settings The Suricata rule option settings.
+       * Settings have zero or more values, and the number of possible settings and required
+       * settings depends on the keyword. The format for Settings is `number` . For information about
+       * Suricata rule option settings, see [Rule
+       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+       * .
+       */
+      override fun tings(settings: List<String>) {
+        cdkBuilder.settings(settings)
+      }
+
+      /**
+       * @param settings The Suricata rule option settings.
+       * Settings have zero or more values, and the number of possible settings and required
+       * settings depends on the keyword. The format for Settings is `number` . For information about
+       * Suricata rule option settings, see [Rule
+       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+       * .
+       */
+      override fun tings(vararg settings: String): Unit = tings(settings.toList())
+
       public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty,
-    ) : CdkObject(cdkObject), AddressProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty,
+    ) : CdkObject(cdkObject), RuleOptionProperty {
       /**
-       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-       * notation.
+       * The Suricata rule option keywords.
        *
-       * Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * For Network Firewall , the keyword signature ID (sid) is required in the format
+       * `sid:112233` . The sid must be unique within the rule group. For information about Suricata
+       * rule option keywords, see [Rule
+       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
        * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html#cfn-networkfirewall-rulegroup-address-addressdefinition)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-keyword)
        */
-      override fun addressDefinition(): String = unwrap(this).getAddressDefinition()
+      override fun keyword(): String = unwrap(this).getKeyword()
+
+      /**
+       * The Suricata rule option settings.
+       *
+       * Settings have zero or more values, and the number of possible settings and required
+       * settings depends on the keyword. The format for Settings is `number` . For information about
+       * Suricata rule option settings, see [Rule
+       * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-settings)
+       */
+      override fun settings(): List<String> = unwrap(this).getSettings() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AddressProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleOptionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty):
-          AddressProperty = CdkObjectWrappers.wrap(cdkObject) as? AddressProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty):
+          RuleOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleOptionProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AddressProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.AddressProperty
+      internal fun unwrap(wrapped: RuleOptionProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty
     }
   }
 
   /**
-   * The 5-tuple criteria for AWS Network Firewall to use to inspect packet headers in stateful
-   * traffic flow inspection.
-   *
-   * Traffic flows that match the criteria are a match for the corresponding stateful rule.
+   * Settings that are available for use in the rules in the `RuleGroup` where this is defined.
    *
    * Example:
    *
@@ -4820,423 +3609,1634 @@ public open class CfnRuleGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * HeaderProperty headerProperty = HeaderProperty.builder()
+   * RuleVariablesProperty ruleVariablesProperty = RuleVariablesProperty.builder()
+   * .ipSets(Map.of(
+   * "ipSetsKey", Map.of(
+   * "definition", List.of("definition"))))
+   * .portSets(Map.of(
+   * "portSetsKey", PortSetProperty.builder()
+   * .definition(List.of("definition"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html)
+   */
+  public interface RuleVariablesProperty {
+    /**
+     * A list of IP addresses and address ranges, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-ipsets)
+     */
+    public fun ipSets(): Any? = unwrap(this).getIpSets()
+
+    /**
+     * A list of port ranges.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-portsets)
+     */
+    public fun portSets(): Any? = unwrap(this).getPortSets()
+
+    /**
+     * A builder for [RuleVariablesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
+       */
+      public fun ipSets(ipSets: IResolvable)
+
+      /**
+       * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
+       */
+      public fun ipSets(ipSets: Map<String, Any>)
+
+      /**
+       * @param portSets A list of port ranges.
+       */
+      public fun portSets(portSets: IResolvable)
+
+      /**
+       * @param portSets A list of port ranges.
+       */
+      public fun portSets(portSets: Map<String, Any>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty.builder()
+
+      /**
+       * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
+       */
+      override fun ipSets(ipSets: IResolvable) {
+        cdkBuilder.ipSets(ipSets.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
+       */
+      override fun ipSets(ipSets: Map<String, Any>) {
+        cdkBuilder.ipSets(ipSets)
+      }
+
+      /**
+       * @param portSets A list of port ranges.
+       */
+      override fun portSets(portSets: IResolvable) {
+        cdkBuilder.portSets(portSets.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param portSets A list of port ranges.
+       */
+      override fun portSets(portSets: Map<String, Any>) {
+        cdkBuilder.portSets(portSets)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty,
+    ) : CdkObject(cdkObject), RuleVariablesProperty {
+      /**
+       * A list of IP addresses and address ranges, in CIDR notation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-ipsets)
+       */
+      override fun ipSets(): Any? = unwrap(this).getIpSets()
+
+      /**
+       * A list of port ranges.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-portsets)
+       */
+      override fun portSets(): Any? = unwrap(this).getPortSets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleVariablesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty):
+          RuleVariablesProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleVariablesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuleVariablesProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleVariablesProperty
+    }
+  }
+
+  /**
+   * Stateful inspection criteria for a domain list rule group.
+   *
+   * For HTTPS traffic, domain filtering is SNI-based. It uses the server name indicator extension
+   * of the TLS handshake.
+   *
+   * By default, Network Firewall domain list inspection only includes traffic coming from the VPC
+   * where you deploy the firewall. To inspect traffic from IP addresses outside of the deployment VPC,
+   * you set the `HOME_NET` rule variable to include the CIDR range of the deployment VPC plus the
+   * other CIDR ranges. For more information, see `RuleGroup.RuleVariables` in this guide and [Stateful
+   * domain list rule groups in AWS Network
+   * Firewall](https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html)
+   * in the *Network Firewall Developer Guide*
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * RulesSourceListProperty rulesSourceListProperty = RulesSourceListProperty.builder()
+   * .generatedRulesType("generatedRulesType")
+   * .targets(List.of("targets"))
+   * .targetTypes(List.of("targetTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html)
+   */
+  public interface RulesSourceListProperty {
+    /**
+     * Whether you want to allow or deny access to the domains in your target list.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-generatedrulestype)
+     */
+    public fun generatedRulesType(): String
+
+    /**
+     * The types of targets to inspect for.
+     *
+     * Valid values are `TLS_SNI` and `HTTP_HOST` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targettypes)
+     */
+    public fun targetTypes(): List<String>
+
+    /**
+     * The domains that you want to inspect for in your traffic flows. Valid domain specifications
+     * are the following:.
+     *
+     * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com` .
+     * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For example,
+     * `.example.com` matches `example.com` and matches all subdomains of `example.com` , such as
+     * `abc.example.com` and `www.example.com` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targets)
+     */
+    public fun targets(): List<String>
+
+    /**
+     * A builder for [RulesSourceListProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param generatedRulesType Whether you want to allow or deny access to the domains in your
+       * target list. 
+       */
+      public fun generatedRulesType(generatedRulesType: String)
+
+      /**
+       * @param targetTypes The types of targets to inspect for. 
+       * Valid values are `TLS_SNI` and `HTTP_HOST` .
+       */
+      public fun targetTypes(targetTypes: List<String>)
+
+      /**
+       * @param targetTypes The types of targets to inspect for. 
+       * Valid values are `TLS_SNI` and `HTTP_HOST` .
+       */
+      public fun targetTypes(vararg targetTypes: String)
+
+      /**
+       * @param targets The domains that you want to inspect for in your traffic flows. Valid domain
+       * specifications are the following:. 
+       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
+       * .
+       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
+       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
+       * such as `abc.example.com` and `www.example.com` .
+       */
+      public fun targets(targets: List<String>)
+
+      /**
+       * @param targets The domains that you want to inspect for in your traffic flows. Valid domain
+       * specifications are the following:. 
+       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
+       * .
+       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
+       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
+       * such as `abc.example.com` and `www.example.com` .
+       */
+      public fun targets(vararg targets: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty.builder()
+
+      /**
+       * @param generatedRulesType Whether you want to allow or deny access to the domains in your
+       * target list. 
+       */
+      override fun generatedRulesType(generatedRulesType: String) {
+        cdkBuilder.generatedRulesType(generatedRulesType)
+      }
+
+      /**
+       * @param targetTypes The types of targets to inspect for. 
+       * Valid values are `TLS_SNI` and `HTTP_HOST` .
+       */
+      override fun targetTypes(targetTypes: List<String>) {
+        cdkBuilder.targetTypes(targetTypes)
+      }
+
+      /**
+       * @param targetTypes The types of targets to inspect for. 
+       * Valid values are `TLS_SNI` and `HTTP_HOST` .
+       */
+      override fun targetTypes(vararg targetTypes: String): Unit = targetTypes(targetTypes.toList())
+
+      /**
+       * @param targets The domains that you want to inspect for in your traffic flows. Valid domain
+       * specifications are the following:. 
+       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
+       * .
+       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
+       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
+       * such as `abc.example.com` and `www.example.com` .
+       */
+      override fun targets(targets: List<String>) {
+        cdkBuilder.targets(targets)
+      }
+
+      /**
+       * @param targets The domains that you want to inspect for in your traffic flows. Valid domain
+       * specifications are the following:. 
+       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
+       * .
+       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
+       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
+       * such as `abc.example.com` and `www.example.com` .
+       */
+      override fun targets(vararg targets: String): Unit = targets(targets.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty,
+    ) : CdkObject(cdkObject), RulesSourceListProperty {
+      /**
+       * Whether you want to allow or deny access to the domains in your target list.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-generatedrulestype)
+       */
+      override fun generatedRulesType(): String = unwrap(this).getGeneratedRulesType()
+
+      /**
+       * The types of targets to inspect for.
+       *
+       * Valid values are `TLS_SNI` and `HTTP_HOST` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targettypes)
+       */
+      override fun targetTypes(): List<String> = unwrap(this).getTargetTypes()
+
+      /**
+       * The domains that you want to inspect for in your traffic flows. Valid domain specifications
+       * are the following:.
+       *
+       * * Explicit names. For example, `abc.example.com` matches only the domain `abc.example.com`
+       * .
+       * * Names that use a domain wildcard, which you indicate with an initial ' `.` '. For
+       * example, `.example.com` matches `example.com` and matches all subdomains of `example.com` ,
+       * such as `abc.example.com` and `www.example.com` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targets)
+       */
+      override fun targets(): List<String> = unwrap(this).getTargets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RulesSourceListProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty):
+          RulesSourceListProperty = CdkObjectWrappers.wrap(cdkObject) as? RulesSourceListProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RulesSourceListProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty
+    }
+  }
+
+  /**
+   * The stateless or stateful rules definitions for use in a single rule group.
+   *
+   * Each rule group requires a single `RulesSource` . You can use an instance of this for either
+   * stateless rules or stateful rules.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * RulesSourceProperty rulesSourceProperty = RulesSourceProperty.builder()
+   * .rulesSourceList(RulesSourceListProperty.builder()
+   * .generatedRulesType("generatedRulesType")
+   * .targets(List.of("targets"))
+   * .targetTypes(List.of("targetTypes"))
+   * .build())
+   * .rulesString("rulesString")
+   * .statefulRules(List.of(StatefulRuleProperty.builder()
+   * .action("action")
+   * .header(HeaderProperty.builder()
    * .destination("destination")
    * .destinationPort("destinationPort")
    * .direction("direction")
    * .protocol("protocol")
    * .source("source")
    * .sourcePort("sourcePort")
+   * .build())
+   * .ruleOptions(List.of(RuleOptionProperty.builder()
+   * .keyword("keyword")
+   * // the properties below are optional
+   * .settings(List.of("settings"))
+   * .build()))
+   * .build()))
+   * .statelessRulesAndCustomActions(StatelessRulesAndCustomActionsProperty.builder()
+   * .statelessRules(List.of(StatelessRuleProperty.builder()
+   * .priority(123)
+   * .ruleDefinition(RuleDefinitionProperty.builder()
+   * .actions(List.of("actions"))
+   * .matchAttributes(MatchAttributesProperty.builder()
+   * .destinationPorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .destinations(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .protocols(List.of(123))
+   * .sourcePorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .sources(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
+   * .flags(List.of("flags"))
+   * // the properties below are optional
+   * .masks(List.of("masks"))
+   * .build()))
+   * .build())
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .customActions(List.of(CustomActionProperty.builder()
+   * .actionDefinition(ActionDefinitionProperty.builder()
+   * .publishMetricAction(PublishMetricActionProperty.builder()
+   * .dimensions(List.of(DimensionProperty.builder()
+   * .value("value")
+   * .build()))
+   * .build())
+   * .build())
+   * .actionName("actionName")
+   * .build()))
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html)
    */
-  public interface HeaderProperty {
+  public interface RulesSourceProperty {
     /**
-     * The destination IP address or address range to inspect for, in CIDR notation.
+     * Stateful inspection criteria for a domain list rule group.
      *
-     * To match with any address, specify `ANY` .
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulessourcelist)
+     */
+    public fun rulesSourceList(): Any? = unwrap(this).getRulesSourceList()
+
+    /**
+     * Stateful inspection criteria, provided in Suricata compatible rules.
      *
-     * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-     * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
+     * Suricata is an open-source threat detection framework that includes a standard rule-based
+     * language for network traffic inspection.
      *
-     * Examples:
+     * These rules contain the inspection criteria and the action to take for traffic that matches
+     * the criteria, so this type of rule group doesn't have a separate action setting.
      *
-     * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-     * `192.0.2.44/32` .
-     * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-     * specify `192.0.2.0/24` .
-     * * To configure Network Firewall to inspect for the IP address
-     * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128` .
-     * * To configure Network Firewall to inspect for IP addresses from
-     * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-     * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
      *
-     * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-     * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
+     * set to `STRICT_ORDER` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulesstring)
+     */
+    public fun rulesString(): String? = unwrap(this).getRulesString()
+
+    /**
+     * An array of individual stateful rules inspection criteria to be used together in a stateful
+     * rule group.
+     *
+     * Use this option to specify simple Suricata rules with protocol, source and destination,
+     * ports, direction, and rule options. For information about the Suricata `Rules` format, see
+     * [Rules
+     * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
      * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destination)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statefulrules)
      */
-    public fun destination(): String
+    public fun statefulRules(): Any? = unwrap(this).getStatefulRules()
 
     /**
-     * The destination port to inspect for.
+     * Stateless inspection criteria to be used in a stateless rule group.
      *
-     * You can specify an individual port, for example `1994` and you can specify a port range, for
-     * example `1990:1994` . To match with any port, specify `ANY` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destinationport)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statelessrulesandcustomactions)
      */
-    public fun destinationPort(): String
+    public fun statelessRulesAndCustomActions(): Any? =
+        unwrap(this).getStatelessRulesAndCustomActions()
 
     /**
-     * The direction of traffic flow to inspect.
-     *
-     * If set to `ANY` , the inspection matches bidirectional traffic, both from the source to the
-     * destination and from the destination to the source. If set to `FORWARD` , the inspection only
-     * matches traffic going from the source to the destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-direction)
-     */
-    public fun direction(): String
-
-    /**
-     * The protocol to inspect for.
-     *
-     * To specify all, you can use `IP` , because all traffic on AWS and on the internet is IP.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-protocol)
-     */
-    public fun protocol(): String
-
-    /**
-     * The source IP address or address range to inspect for, in CIDR notation.
-     *
-     * To match with any address, specify `ANY` .
-     *
-     * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-     * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
-     *
-     * Examples:
-     *
-     * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-     * `192.0.2.44/32` .
-     * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-     * specify `192.0.2.0/24` .
-     * * To configure Network Firewall to inspect for the IP address
-     * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128` .
-     * * To configure Network Firewall to inspect for IP addresses from
-     * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-     * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-     *
-     * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-     * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-source)
-     */
-    public fun source(): String
-
-    /**
-     * The source port to inspect for.
-     *
-     * You can specify an individual port, for example `1994` and you can specify a port range, for
-     * example `1990:1994` . To match with any port, specify `ANY` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-sourceport)
-     */
-    public fun sourcePort(): String
-
-    /**
-     * A builder for [HeaderProperty]
+     * A builder for [RulesSourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param destination The destination IP address or address range to inspect for, in CIDR
-       * notation. 
-       * To match with any address, specify `ANY` .
-       *
-       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-       * .
+       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
        */
-      public fun destination(destination: String)
+      public fun rulesSourceList(rulesSourceList: IResolvable)
 
       /**
-       * @param destinationPort The destination port to inspect for. 
-       * You can specify an individual port, for example `1994` and you can specify a port range,
-       * for example `1990:1994` . To match with any port, specify `ANY` .
+       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
        */
-      public fun destinationPort(destinationPort: String)
+      public fun rulesSourceList(rulesSourceList: RulesSourceListProperty)
 
       /**
-       * @param direction The direction of traffic flow to inspect. 
-       * If set to `ANY` , the inspection matches bidirectional traffic, both from the source to the
-       * destination and from the destination to the source. If set to `FORWARD` , the inspection only
-       * matches traffic going from the source to the destination.
+       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
        */
-      public fun direction(direction: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4c7c626f64d529118eaa4e54bb67e966574361929b99cc5af792bcd0b173bb69")
+      public fun rulesSourceList(rulesSourceList: RulesSourceListProperty.Builder.() -> Unit)
 
       /**
-       * @param protocol The protocol to inspect for. 
-       * To specify all, you can use `IP` , because all traffic on AWS and on the internet is IP.
+       * @param rulesString Stateful inspection criteria, provided in Suricata compatible rules.
+       * Suricata is an open-source threat detection framework that includes a standard rule-based
+       * language for network traffic inspection.
+       *
+       * These rules contain the inspection criteria and the action to take for traffic that matches
+       * the criteria, so this type of rule group doesn't have a separate action setting.
+       *
+       *
+       * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
+       * set to `STRICT_ORDER` .
        */
-      public fun protocol(protocol: String)
+      public fun rulesString(rulesString: String)
 
       /**
-       * @param source The source IP address or address range to inspect for, in CIDR notation. 
-       * To match with any address, specify `ANY` .
-       *
-       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * @param statefulRules An array of individual stateful rules inspection criteria to be used
+       * together in a stateful rule group.
+       * Use this option to specify simple Suricata rules with protocol, source and destination,
+       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
+       * [Rules
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
        * .
        */
-      public fun source(source: String)
+      public fun statefulRules(statefulRules: IResolvable)
 
       /**
-       * @param sourcePort The source port to inspect for. 
-       * You can specify an individual port, for example `1994` and you can specify a port range,
-       * for example `1990:1994` . To match with any port, specify `ANY` .
+       * @param statefulRules An array of individual stateful rules inspection criteria to be used
+       * together in a stateful rule group.
+       * Use this option to specify simple Suricata rules with protocol, source and destination,
+       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
+       * [Rules
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * .
        */
-      public fun sourcePort(sourcePort: String)
+      public fun statefulRules(statefulRules: List<Any>)
+
+      /**
+       * @param statefulRules An array of individual stateful rules inspection criteria to be used
+       * together in a stateful rule group.
+       * Use this option to specify simple Suricata rules with protocol, source and destination,
+       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
+       * [Rules
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * .
+       */
+      public fun statefulRules(vararg statefulRules: Any)
+
+      /**
+       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
+       * stateless rule group.
+       */
+      public fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: IResolvable)
+
+      /**
+       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
+       * stateless rule group.
+       */
+      public
+          fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty)
+
+      /**
+       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
+       * stateless rule group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4f0a5148e36d61899ba2f443efda913fa8b21432f14729eb6f802a14e2625fb0")
+      public
+          fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty.Builder =
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty.Builder =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty.builder()
 
       /**
-       * @param destination The destination IP address or address range to inspect for, in CIDR
-       * notation. 
-       * To match with any address, specify `ANY` .
-       *
-       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-       * .
+       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
        */
-      override fun destination(destination: String) {
-        cdkBuilder.destination(destination)
+      override fun rulesSourceList(rulesSourceList: IResolvable) {
+        cdkBuilder.rulesSourceList(rulesSourceList.let(IResolvable::unwrap))
       }
 
       /**
-       * @param destinationPort The destination port to inspect for. 
-       * You can specify an individual port, for example `1994` and you can specify a port range,
-       * for example `1990:1994` . To match with any port, specify `ANY` .
+       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
        */
-      override fun destinationPort(destinationPort: String) {
-        cdkBuilder.destinationPort(destinationPort)
+      override fun rulesSourceList(rulesSourceList: RulesSourceListProperty) {
+        cdkBuilder.rulesSourceList(rulesSourceList.let(RulesSourceListProperty::unwrap))
       }
 
       /**
-       * @param direction The direction of traffic flow to inspect. 
-       * If set to `ANY` , the inspection matches bidirectional traffic, both from the source to the
-       * destination and from the destination to the source. If set to `FORWARD` , the inspection only
-       * matches traffic going from the source to the destination.
+       * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
        */
-      override fun direction(direction: String) {
-        cdkBuilder.direction(direction)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4c7c626f64d529118eaa4e54bb67e966574361929b99cc5af792bcd0b173bb69")
+      override fun rulesSourceList(rulesSourceList: RulesSourceListProperty.Builder.() -> Unit):
+          Unit = rulesSourceList(RulesSourceListProperty(rulesSourceList))
+
+      /**
+       * @param rulesString Stateful inspection criteria, provided in Suricata compatible rules.
+       * Suricata is an open-source threat detection framework that includes a standard rule-based
+       * language for network traffic inspection.
+       *
+       * These rules contain the inspection criteria and the action to take for traffic that matches
+       * the criteria, so this type of rule group doesn't have a separate action setting.
+       *
+       *
+       * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
+       * set to `STRICT_ORDER` .
+       */
+      override fun rulesString(rulesString: String) {
+        cdkBuilder.rulesString(rulesString)
       }
 
       /**
-       * @param protocol The protocol to inspect for. 
-       * To specify all, you can use `IP` , because all traffic on AWS and on the internet is IP.
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param source The source IP address or address range to inspect for, in CIDR notation. 
-       * To match with any address, specify `ANY` .
-       *
-       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * @param statefulRules An array of individual stateful rules inspection criteria to be used
+       * together in a stateful rule group.
+       * Use this option to specify simple Suricata rules with protocol, source and destination,
+       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
+       * [Rules
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
        * .
        */
-      override fun source(source: String) {
-        cdkBuilder.source(source)
+      override fun statefulRules(statefulRules: IResolvable) {
+        cdkBuilder.statefulRules(statefulRules.let(IResolvable::unwrap))
       }
 
       /**
-       * @param sourcePort The source port to inspect for. 
-       * You can specify an individual port, for example `1994` and you can specify a port range,
-       * for example `1990:1994` . To match with any port, specify `ANY` .
+       * @param statefulRules An array of individual stateful rules inspection criteria to be used
+       * together in a stateful rule group.
+       * Use this option to specify simple Suricata rules with protocol, source and destination,
+       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
+       * [Rules
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * .
        */
-      override fun sourcePort(sourcePort: String) {
-        cdkBuilder.sourcePort(sourcePort)
+      override fun statefulRules(statefulRules: List<Any>) {
+        cdkBuilder.statefulRules(statefulRules)
       }
+
+      /**
+       * @param statefulRules An array of individual stateful rules inspection criteria to be used
+       * together in a stateful rule group.
+       * Use this option to specify simple Suricata rules with protocol, source and destination,
+       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
+       * [Rules
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * .
+       */
+      override fun statefulRules(vararg statefulRules: Any): Unit =
+          statefulRules(statefulRules.toList())
+
+      /**
+       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
+       * stateless rule group.
+       */
+      override fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: IResolvable) {
+        cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
+       * stateless rule group.
+       */
+      override
+          fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty) {
+        cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(StatelessRulesAndCustomActionsProperty::unwrap))
+      }
+
+      /**
+       * @param statelessRulesAndCustomActions Stateless inspection criteria to be used in a
+       * stateless rule group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4f0a5148e36d61899ba2f443efda913fa8b21432f14729eb6f802a14e2625fb0")
+      override
+          fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty.Builder.() -> Unit):
+          Unit =
+          statelessRulesAndCustomActions(StatelessRulesAndCustomActionsProperty(statelessRulesAndCustomActions))
 
       public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty,
-    ) : CdkObject(cdkObject), HeaderProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty,
+    ) : CdkObject(cdkObject), RulesSourceProperty {
       /**
-       * The destination IP address or address range to inspect for, in CIDR notation.
+       * Stateful inspection criteria for a domain list rule group.
        *
-       * To match with any address, specify `ANY` .
-       *
-       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destination)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulessourcelist)
        */
-      override fun destination(): String = unwrap(this).getDestination()
+      override fun rulesSourceList(): Any? = unwrap(this).getRulesSourceList()
 
       /**
-       * The destination port to inspect for.
+       * Stateful inspection criteria, provided in Suricata compatible rules.
        *
-       * You can specify an individual port, for example `1994` and you can specify a port range,
-       * for example `1990:1994` . To match with any port, specify `ANY` .
+       * Suricata is an open-source threat detection framework that includes a standard rule-based
+       * language for network traffic inspection.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destinationport)
+       * These rules contain the inspection criteria and the action to take for traffic that matches
+       * the criteria, so this type of rule group doesn't have a separate action setting.
+       *
+       *
+       * You can't use the `priority` keyword if the `RuleOrder` option in `StatefulRuleOptions` is
+       * set to `STRICT_ORDER` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulesstring)
        */
-      override fun destinationPort(): String = unwrap(this).getDestinationPort()
+      override fun rulesString(): String? = unwrap(this).getRulesString()
 
       /**
-       * The direction of traffic flow to inspect.
+       * An array of individual stateful rules inspection criteria to be used together in a stateful
+       * rule group.
        *
-       * If set to `ANY` , the inspection matches bidirectional traffic, both from the source to the
-       * destination and from the destination to the source. If set to `FORWARD` , the inspection only
-       * matches traffic going from the source to the destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-direction)
-       */
-      override fun direction(): String = unwrap(this).getDirection()
-
-      /**
-       * The protocol to inspect for.
-       *
-       * To specify all, you can use `IP` , because all traffic on AWS and on the internet is IP.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-protocol)
-       */
-      override fun protocol(): String = unwrap(this).getProtocol()
-
-      /**
-       * The source IP address or address range to inspect for, in CIDR notation.
-       *
-       * To match with any address, specify `ANY` .
-       *
-       * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
-       * notation. Network Firewall supports all address ranges for IPv4 and IPv6.
-       *
-       * Examples:
-       *
-       * * To configure Network Firewall to inspect for the IP address 192.0.2.44, specify
-       * `192.0.2.44/32` .
-       * * To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255,
-       * specify `192.0.2.0/24` .
-       * * To configure Network Firewall to inspect for the IP address
-       * 1111:0000:0000:0000:0000:0000:0000:0111, specify `1111:0000:0000:0000:0000:0000:0000:0111/128`
-       * .
-       * * To configure Network Firewall to inspect for IP addresses from
-       * 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
-       * `1111:0000:0000:0000:0000:0000:0000:0000/64` .
-       *
-       * For more information about CIDR notation, see the Wikipedia entry [Classless Inter-Domain
-       * Routing](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+       * Use this option to specify simple Suricata rules with protocol, source and destination,
+       * ports, direction, and rule options. For information about the Suricata `Rules` format, see
+       * [Rules
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
        * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-source)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statefulrules)
        */
-      override fun source(): String = unwrap(this).getSource()
+      override fun statefulRules(): Any? = unwrap(this).getStatefulRules()
 
       /**
-       * The source port to inspect for.
+       * Stateless inspection criteria to be used in a stateless rule group.
        *
-       * You can specify an individual port, for example `1994` and you can specify a port range,
-       * for example `1990:1994` . To match with any port, specify `ANY` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-sourceport)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statelessrulesandcustomactions)
        */
-      override fun sourcePort(): String = unwrap(this).getSourcePort()
+      override fun statelessRulesAndCustomActions(): Any? =
+          unwrap(this).getStatelessRulesAndCustomActions()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HeaderProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RulesSourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty):
-          HeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty):
+          RulesSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? RulesSourceProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: HeaderProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.HeaderProperty
+      internal fun unwrap(wrapped: RulesSourceProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceProperty
+    }
+  }
+
+  /**
+   * Additional options governing how Network Firewall handles the rule group.
+   *
+   * You can only use these for stateful rule groups.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * StatefulRuleOptionsProperty statefulRuleOptionsProperty = StatefulRuleOptionsProperty.builder()
+   * .ruleOrder("ruleOrder")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulruleoptions.html)
+   */
+  public interface StatefulRuleOptionsProperty {
+    /**
+     * Indicates how to manage the order of the rule evaluation for the rule group.
+     *
+     * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+     * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
+     * For more information, see [Evaluation order for stateful
+     * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+     * in the *AWS Network Firewall Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulruleoptions.html#cfn-networkfirewall-rulegroup-statefulruleoptions-ruleorder)
+     */
+    public fun ruleOrder(): String? = unwrap(this).getRuleOrder()
+
+    /**
+     * A builder for [StatefulRuleOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ruleOrder Indicates how to manage the order of the rule evaluation for the rule
+       * group.
+       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
+       * For more information, see [Evaluation order for stateful
+       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       */
+      public fun ruleOrder(ruleOrder: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty.builder()
+
+      /**
+       * @param ruleOrder Indicates how to manage the order of the rule evaluation for the rule
+       * group.
+       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
+       * For more information, see [Evaluation order for stateful
+       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       */
+      override fun ruleOrder(ruleOrder: String) {
+        cdkBuilder.ruleOrder(ruleOrder)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty,
+    ) : CdkObject(cdkObject), StatefulRuleOptionsProperty {
+      /**
+       * Indicates how to manage the order of the rule evaluation for the rule group.
+       *
+       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
+       * For more information, see [Evaluation order for stateful
+       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulruleoptions.html#cfn-networkfirewall-rulegroup-statefulruleoptions-ruleorder)
+       */
+      override fun ruleOrder(): String? = unwrap(this).getRuleOrder()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StatefulRuleOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty):
+          StatefulRuleOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatefulRuleOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatefulRuleOptionsProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleOptionsProperty
+    }
+  }
+
+  /**
+   * A single Suricata rules specification, for use in a stateful rule group.
+   *
+   * Use this option to specify a simple Suricata rule with protocol, source and destination, ports,
+   * direction, and rule options. For information about the Suricata `Rules` format, see [Rules
+   * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * StatefulRuleProperty statefulRuleProperty = StatefulRuleProperty.builder()
+   * .action("action")
+   * .header(HeaderProperty.builder()
+   * .destination("destination")
+   * .destinationPort("destinationPort")
+   * .direction("direction")
+   * .protocol("protocol")
+   * .source("source")
+   * .sourcePort("sourcePort")
+   * .build())
+   * .ruleOptions(List.of(RuleOptionProperty.builder()
+   * .keyword("keyword")
+   * // the properties below are optional
+   * .settings(List.of("settings"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html)
+   */
+  public interface StatefulRuleProperty {
+    /**
+     * Defines what Network Firewall should do with the packets in a traffic flow when the flow
+     * matches the stateful rule criteria.
+     *
+     * For all actions, Network Firewall performs the specified action and discontinues stateful
+     * inspection of the traffic flow.
+     *
+     * The actions for a stateful rule are defined as follows:
+     *
+     * * *PASS* - Permits the packets to go to the intended destination.
+     * * *DROP* - Blocks the packets from going to the intended destination and sends an alert log
+     * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
+     * * *REJECT* - Drops traffic that matches the conditions of the stateful rule and sends a TCP
+     * reset packet back to sender of the packet. A TCP reset packet is a packet with no payload and a
+     * `RST` bit contained in the TCP header flags. `REJECT` is available only for TCP traffic.
+     * * *ALERT* - Permits the packets to go to the intended destination and sends an alert log
+     * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
+     *
+     * You can use this action to test a rule that you intend to use to drop traffic. You can enable
+     * the rule with `ALERT` action, verify in the logs that the rule is filtering as you want, then
+     * change the action to `DROP` .
+     *
+     * * *REJECT* - Drops TCP traffic that matches the conditions of the stateful rule, and sends a
+     * TCP reset packet back to sender of the packet. A TCP reset packet is a packet with no payload
+     * and a `RST` bit contained in the TCP header flags. Also sends an alert log mesage if alert
+     * logging is configured in the `Firewall` `LoggingConfiguration` .
+     *
+     * `REJECT` isn't currently available for use with IMAP and FTP protocols.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-action)
+     */
+    public fun action(): String
+
+    /**
+     * The stateful inspection criteria for this rule, used to inspect traffic flows.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-header)
+     */
+    public fun `header`(): Any
+
+    /**
+     * Additional settings for a stateful rule, provided as keywords and settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-ruleoptions)
+     */
+    public fun ruleOptions(): Any
+
+    /**
+     * A builder for [StatefulRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action Defines what Network Firewall should do with the packets in a traffic flow
+       * when the flow matches the stateful rule criteria. 
+       * For all actions, Network Firewall performs the specified action and discontinues stateful
+       * inspection of the traffic flow.
+       *
+       * The actions for a stateful rule are defined as follows:
+       *
+       * * *PASS* - Permits the packets to go to the intended destination.
+       * * *DROP* - Blocks the packets from going to the intended destination and sends an alert log
+       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       * * *REJECT* - Drops traffic that matches the conditions of the stateful rule and sends a TCP
+       * reset packet back to sender of the packet. A TCP reset packet is a packet with no payload and
+       * a `RST` bit contained in the TCP header flags. `REJECT` is available only for TCP traffic.
+       * * *ALERT* - Permits the packets to go to the intended destination and sends an alert log
+       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       *
+       * You can use this action to test a rule that you intend to use to drop traffic. You can
+       * enable the rule with `ALERT` action, verify in the logs that the rule is filtering as you
+       * want, then change the action to `DROP` .
+       *
+       * * *REJECT* - Drops TCP traffic that matches the conditions of the stateful rule, and sends
+       * a TCP reset packet back to sender of the packet. A TCP reset packet is a packet with no
+       * payload and a `RST` bit contained in the TCP header flags. Also sends an alert log mesage if
+       * alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       *
+       * `REJECT` isn't currently available for use with IMAP and FTP protocols.
+       */
+      public fun action(action: String)
+
+      /**
+       * @param header The stateful inspection criteria for this rule, used to inspect traffic
+       * flows. 
+       */
+      public fun `header`(`header`: IResolvable)
+
+      /**
+       * @param header The stateful inspection criteria for this rule, used to inspect traffic
+       * flows. 
+       */
+      public fun `header`(`header`: HeaderProperty)
+
+      /**
+       * @param header The stateful inspection criteria for this rule, used to inspect traffic
+       * flows. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("47c83241672bba57efea9b623ce5228ca59fdf785b34a8abd5df7a45b2ec11e6")
+      public fun `header`(`header`: HeaderProperty.Builder.() -> Unit)
+
+      /**
+       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
+       * settings. 
+       */
+      public fun ruleOptions(ruleOptions: IResolvable)
+
+      /**
+       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
+       * settings. 
+       */
+      public fun ruleOptions(ruleOptions: List<Any>)
+
+      /**
+       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
+       * settings. 
+       */
+      public fun ruleOptions(vararg ruleOptions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty.builder()
+
+      /**
+       * @param action Defines what Network Firewall should do with the packets in a traffic flow
+       * when the flow matches the stateful rule criteria. 
+       * For all actions, Network Firewall performs the specified action and discontinues stateful
+       * inspection of the traffic flow.
+       *
+       * The actions for a stateful rule are defined as follows:
+       *
+       * * *PASS* - Permits the packets to go to the intended destination.
+       * * *DROP* - Blocks the packets from going to the intended destination and sends an alert log
+       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       * * *REJECT* - Drops traffic that matches the conditions of the stateful rule and sends a TCP
+       * reset packet back to sender of the packet. A TCP reset packet is a packet with no payload and
+       * a `RST` bit contained in the TCP header flags. `REJECT` is available only for TCP traffic.
+       * * *ALERT* - Permits the packets to go to the intended destination and sends an alert log
+       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       *
+       * You can use this action to test a rule that you intend to use to drop traffic. You can
+       * enable the rule with `ALERT` action, verify in the logs that the rule is filtering as you
+       * want, then change the action to `DROP` .
+       *
+       * * *REJECT* - Drops TCP traffic that matches the conditions of the stateful rule, and sends
+       * a TCP reset packet back to sender of the packet. A TCP reset packet is a packet with no
+       * payload and a `RST` bit contained in the TCP header flags. Also sends an alert log mesage if
+       * alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       *
+       * `REJECT` isn't currently available for use with IMAP and FTP protocols.
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param header The stateful inspection criteria for this rule, used to inspect traffic
+       * flows. 
+       */
+      override fun `header`(`header`: IResolvable) {
+        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param header The stateful inspection criteria for this rule, used to inspect traffic
+       * flows. 
+       */
+      override fun `header`(`header`: HeaderProperty) {
+        cdkBuilder.`header`(`header`.let(HeaderProperty::unwrap))
+      }
+
+      /**
+       * @param header The stateful inspection criteria for this rule, used to inspect traffic
+       * flows. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("47c83241672bba57efea9b623ce5228ca59fdf785b34a8abd5df7a45b2ec11e6")
+      override fun `header`(`header`: HeaderProperty.Builder.() -> Unit): Unit =
+          `header`(HeaderProperty(`header`))
+
+      /**
+       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
+       * settings. 
+       */
+      override fun ruleOptions(ruleOptions: IResolvable) {
+        cdkBuilder.ruleOptions(ruleOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
+       * settings. 
+       */
+      override fun ruleOptions(ruleOptions: List<Any>) {
+        cdkBuilder.ruleOptions(ruleOptions)
+      }
+
+      /**
+       * @param ruleOptions Additional settings for a stateful rule, provided as keywords and
+       * settings. 
+       */
+      override fun ruleOptions(vararg ruleOptions: Any): Unit = ruleOptions(ruleOptions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty,
+    ) : CdkObject(cdkObject), StatefulRuleProperty {
+      /**
+       * Defines what Network Firewall should do with the packets in a traffic flow when the flow
+       * matches the stateful rule criteria.
+       *
+       * For all actions, Network Firewall performs the specified action and discontinues stateful
+       * inspection of the traffic flow.
+       *
+       * The actions for a stateful rule are defined as follows:
+       *
+       * * *PASS* - Permits the packets to go to the intended destination.
+       * * *DROP* - Blocks the packets from going to the intended destination and sends an alert log
+       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       * * *REJECT* - Drops traffic that matches the conditions of the stateful rule and sends a TCP
+       * reset packet back to sender of the packet. A TCP reset packet is a packet with no payload and
+       * a `RST` bit contained in the TCP header flags. `REJECT` is available only for TCP traffic.
+       * * *ALERT* - Permits the packets to go to the intended destination and sends an alert log
+       * message, if alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       *
+       * You can use this action to test a rule that you intend to use to drop traffic. You can
+       * enable the rule with `ALERT` action, verify in the logs that the rule is filtering as you
+       * want, then change the action to `DROP` .
+       *
+       * * *REJECT* - Drops TCP traffic that matches the conditions of the stateful rule, and sends
+       * a TCP reset packet back to sender of the packet. A TCP reset packet is a packet with no
+       * payload and a `RST` bit contained in the TCP header flags. Also sends an alert log mesage if
+       * alert logging is configured in the `Firewall` `LoggingConfiguration` .
+       *
+       * `REJECT` isn't currently available for use with IMAP and FTP protocols.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-action)
+       */
+      override fun action(): String = unwrap(this).getAction()
+
+      /**
+       * The stateful inspection criteria for this rule, used to inspect traffic flows.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-header)
+       */
+      override fun `header`(): Any = unwrap(this).getHeader()
+
+      /**
+       * Additional settings for a stateful rule, provided as keywords and settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-ruleoptions)
+       */
+      override fun ruleOptions(): Any = unwrap(this).getRuleOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StatefulRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty):
+          StatefulRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? StatefulRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatefulRuleProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty
+    }
+  }
+
+  /**
+   * A single stateless rule.
+   *
+   * This is used in `RuleGroup.StatelessRulesAndCustomActions` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * StatelessRuleProperty statelessRuleProperty = StatelessRuleProperty.builder()
+   * .priority(123)
+   * .ruleDefinition(RuleDefinitionProperty.builder()
+   * .actions(List.of("actions"))
+   * .matchAttributes(MatchAttributesProperty.builder()
+   * .destinationPorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .destinations(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .protocols(List.of(123))
+   * .sourcePorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .sources(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
+   * .flags(List.of("flags"))
+   * // the properties below are optional
+   * .masks(List.of("masks"))
+   * .build()))
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html)
+   */
+  public interface StatelessRuleProperty {
+    /**
+     * Indicates the order in which to run this rule relative to all of the rules that are defined
+     * for a stateless rule group.
+     *
+     * Network Firewall evaluates the rules in a rule group starting with the lowest priority
+     * setting. You must ensure that the priority settings are unique for the rule group.
+     *
+     * Each stateless rule group uses exactly one `StatelessRulesAndCustomActions` object, and each
+     * `StatelessRulesAndCustomActions` contains exactly one `StatelessRules` object. To ensure unique
+     * priority settings for your rule groups, set unique priorities for the stateless rules that you
+     * define inside any single `StatelessRules` object.
+     *
+     * You can change the priority settings of your rules at any time. To make it easier to insert
+     * rules later, number them so there's a wide range in between, for example use 100, 200, and so
+     * on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-priority)
+     */
+    public fun priority(): Number
+
+    /**
+     * Defines the stateless 5-tuple packet inspection criteria and the action to take on a packet
+     * that matches the criteria.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-ruledefinition)
+     */
+    public fun ruleDefinition(): Any
+
+    /**
+     * A builder for [StatelessRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param priority Indicates the order in which to run this rule relative to all of the rules
+       * that are defined for a stateless rule group. 
+       * Network Firewall evaluates the rules in a rule group starting with the lowest priority
+       * setting. You must ensure that the priority settings are unique for the rule group.
+       *
+       * Each stateless rule group uses exactly one `StatelessRulesAndCustomActions` object, and
+       * each `StatelessRulesAndCustomActions` contains exactly one `StatelessRules` object. To ensure
+       * unique priority settings for your rule groups, set unique priorities for the stateless rules
+       * that you define inside any single `StatelessRules` object.
+       *
+       * You can change the priority settings of your rules at any time. To make it easier to insert
+       * rules later, number them so there's a wide range in between, for example use 100, 200, and so
+       * on.
+       */
+      public fun priority(priority: Number)
+
+      /**
+       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
+       * action to take on a packet that matches the criteria. 
+       */
+      public fun ruleDefinition(ruleDefinition: IResolvable)
+
+      /**
+       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
+       * action to take on a packet that matches the criteria. 
+       */
+      public fun ruleDefinition(ruleDefinition: RuleDefinitionProperty)
+
+      /**
+       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
+       * action to take on a packet that matches the criteria. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("43c34ade5d18e8bd5988d3b80759936fc07623d0552b77d061fbdfc8c246238e")
+      public fun ruleDefinition(ruleDefinition: RuleDefinitionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty.builder()
+
+      /**
+       * @param priority Indicates the order in which to run this rule relative to all of the rules
+       * that are defined for a stateless rule group. 
+       * Network Firewall evaluates the rules in a rule group starting with the lowest priority
+       * setting. You must ensure that the priority settings are unique for the rule group.
+       *
+       * Each stateless rule group uses exactly one `StatelessRulesAndCustomActions` object, and
+       * each `StatelessRulesAndCustomActions` contains exactly one `StatelessRules` object. To ensure
+       * unique priority settings for your rule groups, set unique priorities for the stateless rules
+       * that you define inside any single `StatelessRules` object.
+       *
+       * You can change the priority settings of your rules at any time. To make it easier to insert
+       * rules later, number them so there's a wide range in between, for example use 100, 200, and so
+       * on.
+       */
+      override fun priority(priority: Number) {
+        cdkBuilder.priority(priority)
+      }
+
+      /**
+       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
+       * action to take on a packet that matches the criteria. 
+       */
+      override fun ruleDefinition(ruleDefinition: IResolvable) {
+        cdkBuilder.ruleDefinition(ruleDefinition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
+       * action to take on a packet that matches the criteria. 
+       */
+      override fun ruleDefinition(ruleDefinition: RuleDefinitionProperty) {
+        cdkBuilder.ruleDefinition(ruleDefinition.let(RuleDefinitionProperty::unwrap))
+      }
+
+      /**
+       * @param ruleDefinition Defines the stateless 5-tuple packet inspection criteria and the
+       * action to take on a packet that matches the criteria. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("43c34ade5d18e8bd5988d3b80759936fc07623d0552b77d061fbdfc8c246238e")
+      override fun ruleDefinition(ruleDefinition: RuleDefinitionProperty.Builder.() -> Unit): Unit =
+          ruleDefinition(RuleDefinitionProperty(ruleDefinition))
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty,
+    ) : CdkObject(cdkObject), StatelessRuleProperty {
+      /**
+       * Indicates the order in which to run this rule relative to all of the rules that are defined
+       * for a stateless rule group.
+       *
+       * Network Firewall evaluates the rules in a rule group starting with the lowest priority
+       * setting. You must ensure that the priority settings are unique for the rule group.
+       *
+       * Each stateless rule group uses exactly one `StatelessRulesAndCustomActions` object, and
+       * each `StatelessRulesAndCustomActions` contains exactly one `StatelessRules` object. To ensure
+       * unique priority settings for your rule groups, set unique priorities for the stateless rules
+       * that you define inside any single `StatelessRules` object.
+       *
+       * You can change the priority settings of your rules at any time. To make it easier to insert
+       * rules later, number them so there's a wide range in between, for example use 100, 200, and so
+       * on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-priority)
+       */
+      override fun priority(): Number = unwrap(this).getPriority()
+
+      /**
+       * Defines the stateless 5-tuple packet inspection criteria and the action to take on a packet
+       * that matches the criteria.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-ruledefinition)
+       */
+      override fun ruleDefinition(): Any = unwrap(this).getRuleDefinition()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StatelessRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty):
+          StatelessRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? StatelessRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatelessRuleProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRuleProperty
+    }
+  }
+
+  /**
+   * Stateless inspection criteria.
+   *
+   * Each stateless rule group uses exactly one of these data types to define its stateless rules.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * StatelessRulesAndCustomActionsProperty statelessRulesAndCustomActionsProperty =
+   * StatelessRulesAndCustomActionsProperty.builder()
+   * .statelessRules(List.of(StatelessRuleProperty.builder()
+   * .priority(123)
+   * .ruleDefinition(RuleDefinitionProperty.builder()
+   * .actions(List.of("actions"))
+   * .matchAttributes(MatchAttributesProperty.builder()
+   * .destinationPorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .destinations(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .protocols(List.of(123))
+   * .sourcePorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .sources(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
+   * .flags(List.of("flags"))
+   * // the properties below are optional
+   * .masks(List.of("masks"))
+   * .build()))
+   * .build())
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .customActions(List.of(CustomActionProperty.builder()
+   * .actionDefinition(ActionDefinitionProperty.builder()
+   * .publishMetricAction(PublishMetricActionProperty.builder()
+   * .dimensions(List.of(DimensionProperty.builder()
+   * .value("value")
+   * .build()))
+   * .build())
+   * .build())
+   * .actionName("actionName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html)
+   */
+  public interface StatelessRulesAndCustomActionsProperty {
+    /**
+     * Defines an array of individual custom action definitions that are available for use by the
+     * stateless rules in this `StatelessRulesAndCustomActions` specification.
+     *
+     * You name each custom action that you define, and then you can use it by name in your
+     * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-customactions)
+     */
+    public fun customActions(): Any? = unwrap(this).getCustomActions()
+
+    /**
+     * Defines the set of stateless rules for use in a stateless rule group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-statelessrules)
+     */
+    public fun statelessRules(): Any
+
+    /**
+     * A builder for [StatelessRulesAndCustomActionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param customActions Defines an array of individual custom action definitions that are
+       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
+       * specification.
+       * You name each custom action that you define, and then you can use it by name in your
+       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       */
+      public fun customActions(customActions: IResolvable)
+
+      /**
+       * @param customActions Defines an array of individual custom action definitions that are
+       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
+       * specification.
+       * You name each custom action that you define, and then you can use it by name in your
+       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       */
+      public fun customActions(customActions: List<Any>)
+
+      /**
+       * @param customActions Defines an array of individual custom action definitions that are
+       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
+       * specification.
+       * You name each custom action that you define, and then you can use it by name in your
+       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       */
+      public fun customActions(vararg customActions: Any)
+
+      /**
+       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
+       * 
+       */
+      public fun statelessRules(statelessRules: IResolvable)
+
+      /**
+       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
+       * 
+       */
+      public fun statelessRules(statelessRules: List<Any>)
+
+      /**
+       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
+       * 
+       */
+      public fun statelessRules(vararg statelessRules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty.builder()
+
+      /**
+       * @param customActions Defines an array of individual custom action definitions that are
+       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
+       * specification.
+       * You name each custom action that you define, and then you can use it by name in your
+       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       */
+      override fun customActions(customActions: IResolvable) {
+        cdkBuilder.customActions(customActions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param customActions Defines an array of individual custom action definitions that are
+       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
+       * specification.
+       * You name each custom action that you define, and then you can use it by name in your
+       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       */
+      override fun customActions(customActions: List<Any>) {
+        cdkBuilder.customActions(customActions)
+      }
+
+      /**
+       * @param customActions Defines an array of individual custom action definitions that are
+       * available for use by the stateless rules in this `StatelessRulesAndCustomActions`
+       * specification.
+       * You name each custom action that you define, and then you can use it by name in your
+       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       */
+      override fun customActions(vararg customActions: Any): Unit =
+          customActions(customActions.toList())
+
+      /**
+       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
+       * 
+       */
+      override fun statelessRules(statelessRules: IResolvable) {
+        cdkBuilder.statelessRules(statelessRules.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
+       * 
+       */
+      override fun statelessRules(statelessRules: List<Any>) {
+        cdkBuilder.statelessRules(statelessRules)
+      }
+
+      /**
+       * @param statelessRules Defines the set of stateless rules for use in a stateless rule group.
+       * 
+       */
+      override fun statelessRules(vararg statelessRules: Any): Unit =
+          statelessRules(statelessRules.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty,
+    ) : CdkObject(cdkObject), StatelessRulesAndCustomActionsProperty {
+      /**
+       * Defines an array of individual custom action definitions that are available for use by the
+       * stateless rules in this `StatelessRulesAndCustomActions` specification.
+       *
+       * You name each custom action that you define, and then you can use it by name in your
+       * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-customactions)
+       */
+      override fun customActions(): Any? = unwrap(this).getCustomActions()
+
+      /**
+       * Defines the set of stateless rules for use in a stateless rule group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-statelessrules)
+       */
+      override fun statelessRules(): Any = unwrap(this).getStatelessRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          StatelessRulesAndCustomActionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty):
+          StatelessRulesAndCustomActionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatelessRulesAndCustomActionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatelessRulesAndCustomActionsProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty
     }
   }
 

@@ -867,6 +867,181 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
   }
 
   /**
+   * Describes the load balancer options when creating an AWS Verified Access endpoint using the
+   * `load-balancer` type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * LoadBalancerOptionsProperty loadBalancerOptionsProperty = LoadBalancerOptionsProperty.builder()
+   * .loadBalancerArn("loadBalancerArn")
+   * .port(123)
+   * .protocol("protocol")
+   * .subnetIds(List.of("subnetIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html)
+   */
+  public interface LoadBalancerOptionsProperty {
+    /**
+     * The ARN of the load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-loadbalancerarn)
+     */
+    public fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
+
+    /**
+     * The IP port number.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * The IP protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-protocol)
+     */
+    public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * The IDs of the subnets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-subnetids)
+     */
+    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+
+    /**
+     * A builder for [LoadBalancerOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param loadBalancerArn The ARN of the load balancer.
+       */
+      public fun loadBalancerArn(loadBalancerArn: String)
+
+      /**
+       * @param port The IP port number.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param protocol The IP protocol.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       */
+      public fun subnetIds(subnetIds: List<String>)
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       */
+      public fun subnetIds(vararg subnetIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty.builder()
+
+      /**
+       * @param loadBalancerArn The ARN of the load balancer.
+       */
+      override fun loadBalancerArn(loadBalancerArn: String) {
+        cdkBuilder.loadBalancerArn(loadBalancerArn)
+      }
+
+      /**
+       * @param port The IP port number.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param protocol The IP protocol.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       */
+      override fun subnetIds(subnetIds: List<String>) {
+        cdkBuilder.subnetIds(subnetIds)
+      }
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       */
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty,
+    ) : CdkObject(cdkObject), LoadBalancerOptionsProperty {
+      /**
+       * The ARN of the load balancer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-loadbalancerarn)
+       */
+      override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
+
+      /**
+       * The IP port number.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+
+      /**
+       * The IP protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-protocol)
+       */
+      override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * The IDs of the subnets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-subnetids)
+       */
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoadBalancerOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty):
+          LoadBalancerOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoadBalancerOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoadBalancerOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty
+    }
+  }
+
+  /**
    * Describes the network interface options when creating an AWS Verified Access endpoint using the
    * `network-interface` type.
    *
@@ -1140,181 +1315,6 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty
-    }
-  }
-
-  /**
-   * Describes the load balancer options when creating an AWS Verified Access endpoint using the
-   * `load-balancer` type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * LoadBalancerOptionsProperty loadBalancerOptionsProperty = LoadBalancerOptionsProperty.builder()
-   * .loadBalancerArn("loadBalancerArn")
-   * .port(123)
-   * .protocol("protocol")
-   * .subnetIds(List.of("subnetIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html)
-   */
-  public interface LoadBalancerOptionsProperty {
-    /**
-     * The ARN of the load balancer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-loadbalancerarn)
-     */
-    public fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
-
-    /**
-     * The IP port number.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * The IP protocol.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-protocol)
-     */
-    public fun protocol(): String? = unwrap(this).getProtocol()
-
-    /**
-     * The IDs of the subnets.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-subnetids)
-     */
-    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
-
-    /**
-     * A builder for [LoadBalancerOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param loadBalancerArn The ARN of the load balancer.
-       */
-      public fun loadBalancerArn(loadBalancerArn: String)
-
-      /**
-       * @param port The IP port number.
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param protocol The IP protocol.
-       */
-      public fun protocol(protocol: String)
-
-      /**
-       * @param subnetIds The IDs of the subnets.
-       */
-      public fun subnetIds(subnetIds: List<String>)
-
-      /**
-       * @param subnetIds The IDs of the subnets.
-       */
-      public fun subnetIds(vararg subnetIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty.builder()
-
-      /**
-       * @param loadBalancerArn The ARN of the load balancer.
-       */
-      override fun loadBalancerArn(loadBalancerArn: String) {
-        cdkBuilder.loadBalancerArn(loadBalancerArn)
-      }
-
-      /**
-       * @param port The IP port number.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param protocol The IP protocol.
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param subnetIds The IDs of the subnets.
-       */
-      override fun subnetIds(subnetIds: List<String>) {
-        cdkBuilder.subnetIds(subnetIds)
-      }
-
-      /**
-       * @param subnetIds The IDs of the subnets.
-       */
-      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty,
-    ) : CdkObject(cdkObject), LoadBalancerOptionsProperty {
-      /**
-       * The ARN of the load balancer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-loadbalancerarn)
-       */
-      override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
-
-      /**
-       * The IP port number.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-
-      /**
-       * The IP protocol.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-protocol)
-       */
-      override fun protocol(): String? = unwrap(this).getProtocol()
-
-      /**
-       * The IDs of the subnets.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-subnetids)
-       */
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoadBalancerOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty):
-          LoadBalancerOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LoadBalancerOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoadBalancerOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty
     }
   }
 }

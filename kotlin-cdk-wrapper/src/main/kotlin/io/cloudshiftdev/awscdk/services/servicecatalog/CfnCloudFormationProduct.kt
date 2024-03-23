@@ -797,293 +797,6 @@ public open class CfnCloudFormationProduct internal constructor(
   }
 
   /**
-   * Information about a provisioning artifact (also known as a version) for a product.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
-   * Object info;
-   * ProvisioningArtifactPropertiesProperty provisioningArtifactPropertiesProperty =
-   * ProvisioningArtifactPropertiesProperty.builder()
-   * .info(info)
-   * // the properties below are optional
-   * .description("description")
-   * .disableTemplateValidation(false)
-   * .name("name")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html)
-   */
-  public interface ProvisioningArtifactPropertiesProperty {
-    /**
-     * The description of the provisioning artifact, including how it differs from the previous
-     * provisioning artifact.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * If set to true, AWS Service Catalog stops validating the specified provisioning artifact even
-     * if it is invalid.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation)
-     */
-    public fun disableTemplateValidation(): Any? = unwrap(this).getDisableTemplateValidation()
-
-    /**
-     * Specify the template source with one of the following options, but not both.
-     *
-     * Keys accepted: [ `LoadTemplateFromURL` , `ImportFromPhysicalId` ]
-     *
-     * The URL of the AWS CloudFormation template in Amazon S3 in JSON format. Specify the URL in
-     * JSON format as follows:
-     *
-     * `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
-     *
-     * `ImportFromPhysicalId` : The physical id of the resource that contains the template.
-     * Currently only supports AWS CloudFormation stack arn. Specify the physical id in JSON format as
-     * follows: `ImportFromPhysicalId:
-     * “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info)
-     */
-    public fun info(): Any
-
-    /**
-     * The name of the provisioning artifact (for example, v1 v2beta).
-     *
-     * No spaces are allowed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The type of provisioning artifact.
-     *
-     * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
-     * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
-     * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
-     * * `EXTERNAL` - External configuration file
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ProvisioningArtifactPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param description The description of the provisioning artifact, including how it differs
-       * from the previous provisioning artifact.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param disableTemplateValidation If set to true, AWS Service Catalog stops validating the
-       * specified provisioning artifact even if it is invalid.
-       */
-      public fun disableTemplateValidation(disableTemplateValidation: Boolean)
-
-      /**
-       * @param disableTemplateValidation If set to true, AWS Service Catalog stops validating the
-       * specified provisioning artifact even if it is invalid.
-       */
-      public fun disableTemplateValidation(disableTemplateValidation: IResolvable)
-
-      /**
-       * @param info Specify the template source with one of the following options, but not both. 
-       * Keys accepted: [ `LoadTemplateFromURL` , `ImportFromPhysicalId` ]
-       *
-       * The URL of the AWS CloudFormation template in Amazon S3 in JSON format. Specify the URL in
-       * JSON format as follows:
-       *
-       * `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
-       *
-       * `ImportFromPhysicalId` : The physical id of the resource that contains the template.
-       * Currently only supports AWS CloudFormation stack arn. Specify the physical id in JSON format
-       * as follows: `ImportFromPhysicalId:
-       * “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`
-       */
-      public fun info(info: Any)
-
-      /**
-       * @param name The name of the provisioning artifact (for example, v1 v2beta).
-       * No spaces are allowed.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param type The type of provisioning artifact.
-       * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
-       * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
-       * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
-       * * `EXTERNAL` - External configuration file
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty.builder()
-
-      /**
-       * @param description The description of the provisioning artifact, including how it differs
-       * from the previous provisioning artifact.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param disableTemplateValidation If set to true, AWS Service Catalog stops validating the
-       * specified provisioning artifact even if it is invalid.
-       */
-      override fun disableTemplateValidation(disableTemplateValidation: Boolean) {
-        cdkBuilder.disableTemplateValidation(disableTemplateValidation)
-      }
-
-      /**
-       * @param disableTemplateValidation If set to true, AWS Service Catalog stops validating the
-       * specified provisioning artifact even if it is invalid.
-       */
-      override fun disableTemplateValidation(disableTemplateValidation: IResolvable) {
-        cdkBuilder.disableTemplateValidation(disableTemplateValidation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param info Specify the template source with one of the following options, but not both. 
-       * Keys accepted: [ `LoadTemplateFromURL` , `ImportFromPhysicalId` ]
-       *
-       * The URL of the AWS CloudFormation template in Amazon S3 in JSON format. Specify the URL in
-       * JSON format as follows:
-       *
-       * `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
-       *
-       * `ImportFromPhysicalId` : The physical id of the resource that contains the template.
-       * Currently only supports AWS CloudFormation stack arn. Specify the physical id in JSON format
-       * as follows: `ImportFromPhysicalId:
-       * “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`
-       */
-      override fun info(info: Any) {
-        cdkBuilder.info(info)
-      }
-
-      /**
-       * @param name The name of the provisioning artifact (for example, v1 v2beta).
-       * No spaces are allowed.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param type The type of provisioning artifact.
-       * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
-       * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
-       * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
-       * * `EXTERNAL` - External configuration file
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty,
-    ) : CdkObject(cdkObject), ProvisioningArtifactPropertiesProperty {
-      /**
-       * The description of the provisioning artifact, including how it differs from the previous
-       * provisioning artifact.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * If set to true, AWS Service Catalog stops validating the specified provisioning artifact
-       * even if it is invalid.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation)
-       */
-      override fun disableTemplateValidation(): Any? = unwrap(this).getDisableTemplateValidation()
-
-      /**
-       * Specify the template source with one of the following options, but not both.
-       *
-       * Keys accepted: [ `LoadTemplateFromURL` , `ImportFromPhysicalId` ]
-       *
-       * The URL of the AWS CloudFormation template in Amazon S3 in JSON format. Specify the URL in
-       * JSON format as follows:
-       *
-       * `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
-       *
-       * `ImportFromPhysicalId` : The physical id of the resource that contains the template.
-       * Currently only supports AWS CloudFormation stack arn. Specify the physical id in JSON format
-       * as follows: `ImportFromPhysicalId:
-       * “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info)
-       */
-      override fun info(): Any = unwrap(this).getInfo()
-
-      /**
-       * The name of the provisioning artifact (for example, v1 v2beta).
-       *
-       * No spaces are allowed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The type of provisioning artifact.
-       *
-       * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
-       * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
-       * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
-       * * `EXTERNAL` - External configuration file
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ProvisioningArtifactPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty):
-          ProvisioningArtifactPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProvisioningArtifactPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProvisioningArtifactPropertiesProperty):
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
-    }
-  }
-
-  /**
    * The subtype containing details about the Codestar connection `Type` .
    *
    * Example:
@@ -1372,6 +1085,293 @@ public open class CfnCloudFormationProduct internal constructor(
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
+    }
+  }
+
+  /**
+   * Information about a provisioning artifact (also known as a version) for a product.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
+   * Object info;
+   * ProvisioningArtifactPropertiesProperty provisioningArtifactPropertiesProperty =
+   * ProvisioningArtifactPropertiesProperty.builder()
+   * .info(info)
+   * // the properties below are optional
+   * .description("description")
+   * .disableTemplateValidation(false)
+   * .name("name")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html)
+   */
+  public interface ProvisioningArtifactPropertiesProperty {
+    /**
+     * The description of the provisioning artifact, including how it differs from the previous
+     * provisioning artifact.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * If set to true, AWS Service Catalog stops validating the specified provisioning artifact even
+     * if it is invalid.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation)
+     */
+    public fun disableTemplateValidation(): Any? = unwrap(this).getDisableTemplateValidation()
+
+    /**
+     * Specify the template source with one of the following options, but not both.
+     *
+     * Keys accepted: [ `LoadTemplateFromURL` , `ImportFromPhysicalId` ]
+     *
+     * The URL of the AWS CloudFormation template in Amazon S3 in JSON format. Specify the URL in
+     * JSON format as follows:
+     *
+     * `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
+     *
+     * `ImportFromPhysicalId` : The physical id of the resource that contains the template.
+     * Currently only supports AWS CloudFormation stack arn. Specify the physical id in JSON format as
+     * follows: `ImportFromPhysicalId:
+     * “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info)
+     */
+    public fun info(): Any
+
+    /**
+     * The name of the provisioning artifact (for example, v1 v2beta).
+     *
+     * No spaces are allowed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The type of provisioning artifact.
+     *
+     * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
+     * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
+     * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
+     * * `EXTERNAL` - External configuration file
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ProvisioningArtifactPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description The description of the provisioning artifact, including how it differs
+       * from the previous provisioning artifact.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param disableTemplateValidation If set to true, AWS Service Catalog stops validating the
+       * specified provisioning artifact even if it is invalid.
+       */
+      public fun disableTemplateValidation(disableTemplateValidation: Boolean)
+
+      /**
+       * @param disableTemplateValidation If set to true, AWS Service Catalog stops validating the
+       * specified provisioning artifact even if it is invalid.
+       */
+      public fun disableTemplateValidation(disableTemplateValidation: IResolvable)
+
+      /**
+       * @param info Specify the template source with one of the following options, but not both. 
+       * Keys accepted: [ `LoadTemplateFromURL` , `ImportFromPhysicalId` ]
+       *
+       * The URL of the AWS CloudFormation template in Amazon S3 in JSON format. Specify the URL in
+       * JSON format as follows:
+       *
+       * `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
+       *
+       * `ImportFromPhysicalId` : The physical id of the resource that contains the template.
+       * Currently only supports AWS CloudFormation stack arn. Specify the physical id in JSON format
+       * as follows: `ImportFromPhysicalId:
+       * “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`
+       */
+      public fun info(info: Any)
+
+      /**
+       * @param name The name of the provisioning artifact (for example, v1 v2beta).
+       * No spaces are allowed.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param type The type of provisioning artifact.
+       * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
+       * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
+       * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
+       * * `EXTERNAL` - External configuration file
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty.builder()
+
+      /**
+       * @param description The description of the provisioning artifact, including how it differs
+       * from the previous provisioning artifact.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param disableTemplateValidation If set to true, AWS Service Catalog stops validating the
+       * specified provisioning artifact even if it is invalid.
+       */
+      override fun disableTemplateValidation(disableTemplateValidation: Boolean) {
+        cdkBuilder.disableTemplateValidation(disableTemplateValidation)
+      }
+
+      /**
+       * @param disableTemplateValidation If set to true, AWS Service Catalog stops validating the
+       * specified provisioning artifact even if it is invalid.
+       */
+      override fun disableTemplateValidation(disableTemplateValidation: IResolvable) {
+        cdkBuilder.disableTemplateValidation(disableTemplateValidation.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param info Specify the template source with one of the following options, but not both. 
+       * Keys accepted: [ `LoadTemplateFromURL` , `ImportFromPhysicalId` ]
+       *
+       * The URL of the AWS CloudFormation template in Amazon S3 in JSON format. Specify the URL in
+       * JSON format as follows:
+       *
+       * `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
+       *
+       * `ImportFromPhysicalId` : The physical id of the resource that contains the template.
+       * Currently only supports AWS CloudFormation stack arn. Specify the physical id in JSON format
+       * as follows: `ImportFromPhysicalId:
+       * “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`
+       */
+      override fun info(info: Any) {
+        cdkBuilder.info(info)
+      }
+
+      /**
+       * @param name The name of the provisioning artifact (for example, v1 v2beta).
+       * No spaces are allowed.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param type The type of provisioning artifact.
+       * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
+       * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
+       * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
+       * * `EXTERNAL` - External configuration file
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty,
+    ) : CdkObject(cdkObject), ProvisioningArtifactPropertiesProperty {
+      /**
+       * The description of the provisioning artifact, including how it differs from the previous
+       * provisioning artifact.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * If set to true, AWS Service Catalog stops validating the specified provisioning artifact
+       * even if it is invalid.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-disabletemplatevalidation)
+       */
+      override fun disableTemplateValidation(): Any? = unwrap(this).getDisableTemplateValidation()
+
+      /**
+       * Specify the template source with one of the following options, but not both.
+       *
+       * Keys accepted: [ `LoadTemplateFromURL` , `ImportFromPhysicalId` ]
+       *
+       * The URL of the AWS CloudFormation template in Amazon S3 in JSON format. Specify the URL in
+       * JSON format as follows:
+       *
+       * `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`
+       *
+       * `ImportFromPhysicalId` : The physical id of the resource that contains the template.
+       * Currently only supports AWS CloudFormation stack arn. Specify the physical id in JSON format
+       * as follows: `ImportFromPhysicalId:
+       * “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info)
+       */
+      override fun info(): Any = unwrap(this).getInfo()
+
+      /**
+       * The name of the provisioning artifact (for example, v1 v2beta).
+       *
+       * No spaces are allowed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The type of provisioning artifact.
+       *
+       * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
+       * * `TERRAFORM_OPEN_SOURCE` - Terraform Open Source configuration file
+       * * `TERRAFORM_CLOUD` - Terraform Cloud configuration file
+       * * `EXTERNAL` - External configuration file
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ProvisioningArtifactPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty):
+          ProvisioningArtifactPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisioningArtifactPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProvisioningArtifactPropertiesProperty):
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
     }
   }
 

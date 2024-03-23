@@ -275,6 +275,106 @@ public open class CfnProject internal constructor(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot1click.*;
+   * Object callbackOverrides;
+   * DeviceTemplateProperty deviceTemplateProperty = DeviceTemplateProperty.builder()
+   * .callbackOverrides(callbackOverrides)
+   * .deviceType("deviceType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html)
+   */
+  public interface DeviceTemplateProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-callbackoverrides)
+     */
+    public fun callbackOverrides(): Any? = unwrap(this).getCallbackOverrides()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-devicetype)
+     */
+    public fun deviceType(): String? = unwrap(this).getDeviceType()
+
+    /**
+     * A builder for [DeviceTemplateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param callbackOverrides the value to be set.
+       */
+      public fun callbackOverrides(callbackOverrides: Any)
+
+      /**
+       * @param deviceType the value to be set.
+       */
+      public fun deviceType(deviceType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty.Builder =
+          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty.builder()
+
+      /**
+       * @param callbackOverrides the value to be set.
+       */
+      override fun callbackOverrides(callbackOverrides: Any) {
+        cdkBuilder.callbackOverrides(callbackOverrides)
+      }
+
+      /**
+       * @param deviceType the value to be set.
+       */
+      override fun deviceType(deviceType: String) {
+        cdkBuilder.deviceType(deviceType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty,
+    ) : CdkObject(cdkObject), DeviceTemplateProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-callbackoverrides)
+       */
+      override fun callbackOverrides(): Any? = unwrap(this).getCallbackOverrides()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-devicetype)
+       */
+      override fun deviceType(): String? = unwrap(this).getDeviceType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceTemplateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty):
+          DeviceTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceTemplateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeviceTemplateProperty):
+          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty
+    }
+  }
+
+  /**
    * In AWS CloudFormation , use the `PlacementTemplate` property type to define the template for an
    * AWS IoT 1-Click project.
    *
@@ -428,106 +528,6 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot1click.*;
-   * Object callbackOverrides;
-   * DeviceTemplateProperty deviceTemplateProperty = DeviceTemplateProperty.builder()
-   * .callbackOverrides(callbackOverrides)
-   * .deviceType("deviceType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html)
-   */
-  public interface DeviceTemplateProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-callbackoverrides)
-     */
-    public fun callbackOverrides(): Any? = unwrap(this).getCallbackOverrides()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-devicetype)
-     */
-    public fun deviceType(): String? = unwrap(this).getDeviceType()
-
-    /**
-     * A builder for [DeviceTemplateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param callbackOverrides the value to be set.
-       */
-      public fun callbackOverrides(callbackOverrides: Any)
-
-      /**
-       * @param deviceType the value to be set.
-       */
-      public fun deviceType(deviceType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty.Builder =
-          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty.builder()
-
-      /**
-       * @param callbackOverrides the value to be set.
-       */
-      override fun callbackOverrides(callbackOverrides: Any) {
-        cdkBuilder.callbackOverrides(callbackOverrides)
-      }
-
-      /**
-       * @param deviceType the value to be set.
-       */
-      override fun deviceType(deviceType: String) {
-        cdkBuilder.deviceType(deviceType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty,
-    ) : CdkObject(cdkObject), DeviceTemplateProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-callbackoverrides)
-       */
-      override fun callbackOverrides(): Any? = unwrap(this).getCallbackOverrides()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot1click-project-devicetemplate.html#cfn-iot1click-project-devicetemplate-devicetype)
-       */
-      override fun deviceType(): String? = unwrap(this).getDeviceType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceTemplateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty):
-          DeviceTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceTemplateProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeviceTemplateProperty):
-          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty
     }
   }
 }

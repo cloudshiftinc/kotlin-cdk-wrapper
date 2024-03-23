@@ -622,27 +622,8 @@ public open class CfnMonitoringSchedule internal constructor(
   }
 
   /**
-   * Specifies a limit to how long a model training job or model compilation job can run.
-   *
-   * It also specifies how long a managed spot training job has to complete. When the job reaches
-   * the time limit, SageMaker ends the training or compilation job. Use this API to cap model training
-   * costs.
-   *
-   * To stop a training job, SageMaker sends the algorithm the `SIGTERM` signal, which delays job
-   * termination for 120 seconds. Algorithms can use this 120-second window to save the model
-   * artifacts, so the results of training are not lost.
-   *
-   * The training algorithms provided by SageMaker automatically save the intermediate results of a
-   * model training job when possible. This attempt to save artifacts is only a best effort case as
-   * model might not be in a state from which it can be saved. For example, if training has just
-   * started, the model might not be ready to save. When saved, this intermediate data is a valid model
-   * artifact. You can use it to create a model with `CreateModel` .
-   *
-   *
-   * The Neural Topic Model (NTM) currently does not support saving intermediate model artifacts.
-   * When training NTMs, make sure that the maximum runtime is sufficient for the training job to
-   * complete.
-   *
+   * Baseline configuration used to validate that the data conforms to the specified constraints and
+   * statistics.
    *
    * Example:
    *
@@ -650,127 +631,174 @@ public open class CfnMonitoringSchedule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * StoppingConditionProperty stoppingConditionProperty = StoppingConditionProperty.builder()
-   * .maxRuntimeInSeconds(123)
+   * BaselineConfigProperty baselineConfigProperty = BaselineConfigProperty.builder()
+   * .constraintsResource(ConstraintsResourceProperty.builder()
+   * .s3Uri("s3Uri")
+   * .build())
+   * .statisticsResource(StatisticsResourceProperty.builder()
+   * .s3Uri("s3Uri")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-stoppingcondition.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html)
    */
-  public interface StoppingConditionProperty {
+  public interface BaselineConfigProperty {
     /**
-     * The maximum length of time, in seconds, that a training or compilation job can run before it
-     * is stopped.
+     * The Amazon S3 URI for the constraints resource.
      *
-     * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
-     * generated. We recommend starting with 900 seconds and increasing as necessary based on your
-     * model.
-     *
-     * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
-     * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
-     * maximum time for all of the attempts in total, not each individual attempt. The default value is
-     * 1 day. The maximum value is 28 days.
-     *
-     * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
-     * metrics or archiving and uploading models after it has been stopped, is 30 days.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-stoppingcondition.html#cfn-sagemaker-monitoringschedule-stoppingcondition-maxruntimeinseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html#cfn-sagemaker-monitoringschedule-baselineconfig-constraintsresource)
      */
-    public fun maxRuntimeInSeconds(): Number
+    public fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
 
     /**
-     * A builder for [StoppingConditionProperty]
+     * The baseline statistics file in Amazon S3 that the current monitoring job should be validated
+     * against.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html#cfn-sagemaker-monitoringschedule-baselineconfig-statisticsresource)
+     */
+    public fun statisticsResource(): Any? = unwrap(this).getStatisticsResource()
+
+    /**
+     * A builder for [BaselineConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxRuntimeInSeconds The maximum length of time, in seconds, that a training or
-       * compilation job can run before it is stopped. 
-       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
-       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
-       * model.
-       *
-       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
-       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
-       * maximum time for all of the attempts in total, not each individual attempt. The default value
-       * is 1 day. The maximum value is 28 days.
-       *
-       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
-       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       * @param constraintsResource The Amazon S3 URI for the constraints resource.
        */
-      public fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number)
+      public fun constraintsResource(constraintsResource: IResolvable)
+
+      /**
+       * @param constraintsResource The Amazon S3 URI for the constraints resource.
+       */
+      public fun constraintsResource(constraintsResource: ConstraintsResourceProperty)
+
+      /**
+       * @param constraintsResource The Amazon S3 URI for the constraints resource.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("60a9519e03630673bb7da9627f7020656378dfcca99f79101f445540f36e8101")
+      public
+          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
+       * monitoring job should be validated against.
+       */
+      public fun statisticsResource(statisticsResource: IResolvable)
+
+      /**
+       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
+       * monitoring job should be validated against.
+       */
+      public fun statisticsResource(statisticsResource: StatisticsResourceProperty)
+
+      /**
+       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
+       * monitoring job should be validated against.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("92d3382c0ab7be9dec1b304b69e9f65d03676c7c3db097baeb527474f5116586")
+      public
+          fun statisticsResource(statisticsResource: StatisticsResourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty.builder()
 
       /**
-       * @param maxRuntimeInSeconds The maximum length of time, in seconds, that a training or
-       * compilation job can run before it is stopped. 
-       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
-       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
-       * model.
-       *
-       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
-       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
-       * maximum time for all of the attempts in total, not each individual attempt. The default value
-       * is 1 day. The maximum value is 28 days.
-       *
-       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
-       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       * @param constraintsResource The Amazon S3 URI for the constraints resource.
        */
-      override fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number) {
-        cdkBuilder.maxRuntimeInSeconds(maxRuntimeInSeconds)
+      override fun constraintsResource(constraintsResource: IResolvable) {
+        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param constraintsResource The Amazon S3 URI for the constraints resource.
+       */
+      override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
+        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
+      }
+
+      /**
+       * @param constraintsResource The Amazon S3 URI for the constraints resource.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("60a9519e03630673bb7da9627f7020656378dfcca99f79101f445540f36e8101")
+      override
+          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit):
+          Unit = constraintsResource(ConstraintsResourceProperty(constraintsResource))
+
+      /**
+       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
+       * monitoring job should be validated against.
+       */
+      override fun statisticsResource(statisticsResource: IResolvable) {
+        cdkBuilder.statisticsResource(statisticsResource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
+       * monitoring job should be validated against.
+       */
+      override fun statisticsResource(statisticsResource: StatisticsResourceProperty) {
+        cdkBuilder.statisticsResource(statisticsResource.let(StatisticsResourceProperty::unwrap))
+      }
+
+      /**
+       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
+       * monitoring job should be validated against.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("92d3382c0ab7be9dec1b304b69e9f65d03676c7c3db097baeb527474f5116586")
+      override
+          fun statisticsResource(statisticsResource: StatisticsResourceProperty.Builder.() -> Unit):
+          Unit = statisticsResource(StatisticsResourceProperty(statisticsResource))
+
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty,
-    ) : CdkObject(cdkObject), StoppingConditionProperty {
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty,
+    ) : CdkObject(cdkObject), BaselineConfigProperty {
       /**
-       * The maximum length of time, in seconds, that a training or compilation job can run before
-       * it is stopped.
+       * The Amazon S3 URI for the constraints resource.
        *
-       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
-       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
-       * model.
-       *
-       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
-       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
-       * maximum time for all of the attempts in total, not each individual attempt. The default value
-       * is 1 day. The maximum value is 28 days.
-       *
-       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
-       * metrics or archiving and uploading models after it has been stopped, is 30 days.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-stoppingcondition.html#cfn-sagemaker-monitoringschedule-stoppingcondition-maxruntimeinseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html#cfn-sagemaker-monitoringschedule-baselineconfig-constraintsresource)
        */
-      override fun maxRuntimeInSeconds(): Number = unwrap(this).getMaxRuntimeInSeconds()
+      override fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
+
+      /**
+       * The baseline statistics file in Amazon S3 that the current monitoring job should be
+       * validated against.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html#cfn-sagemaker-monitoringschedule-baselineconfig-statisticsresource)
+       */
+      override fun statisticsResource(): Any? = unwrap(this).getStatisticsResource()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StoppingConditionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BaselineConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty):
-          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StoppingConditionProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty):
+          BaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BaselineConfigProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StoppingConditionProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty
+      internal fun unwrap(wrapped: BaselineConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty
     }
   }
 
@@ -1056,7 +1084,7 @@ public open class CfnMonitoringSchedule internal constructor(
   }
 
   /**
-   * The Json format.
+   * Configuration for the cluster used to run model monitoring jobs.
    *
    * Example:
    *
@@ -1064,87 +1092,562 @@ public open class CfnMonitoringSchedule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * JsonProperty jsonProperty = JsonProperty.builder()
-   * .line(false)
+   * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
+   * .instanceCount(123)
+   * .instanceType("instanceType")
+   * .volumeSizeInGb(123)
+   * // the properties below are optional
+   * .volumeKmsKeyId("volumeKmsKeyId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-json.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html)
    */
-  public interface JsonProperty {
+  public interface ClusterConfigProperty {
     /**
-     * A boolean flag indicating if it is JSON line format.
+     * The number of ML compute instances to use in the model monitoring job.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-json.html#cfn-sagemaker-monitoringschedule-json-line)
+     * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-instancecount)
      */
-    public fun line(): Any? = unwrap(this).getLine()
+    public fun instanceCount(): Number
 
     /**
-     * A builder for [JsonProperty]
+     * The ML compute instance type for the processing job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-instancetype)
+     */
+    public fun instanceType(): String
+
+    /**
+     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-volumekmskeyid)
+     */
+    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+    /**
+     * The size of the ML storage volume, in gigabytes, that you want to provision.
+     *
+     * You must specify sufficient ML storage for your scenario.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-volumesizeingb)
+     */
+    public fun volumeSizeInGb(): Number
+
+    /**
+     * A builder for [ClusterConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param line A boolean flag indicating if it is JSON line format.
+       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
+       * 
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
        */
-      public fun line(line: Boolean)
+      public fun instanceCount(instanceCount: Number)
 
       /**
-       * @param line A boolean flag indicating if it is JSON line format.
+       * @param instanceType The ML compute instance type for the processing job. 
        */
-      public fun line(line: IResolvable)
+      public fun instanceType(instanceType: String)
+
+      /**
+       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
+       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
+       * model monitoring job.
+       */
+      public fun volumeKmsKeyId(volumeKmsKeyId: String)
+
+      /**
+       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
+       * provision. 
+       * You must specify sufficient ML storage for your scenario.
+       */
+      public fun volumeSizeInGb(volumeSizeInGb: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty.builder()
 
       /**
-       * @param line A boolean flag indicating if it is JSON line format.
+       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
+       * 
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
        */
-      override fun line(line: Boolean) {
-        cdkBuilder.line(line)
+      override fun instanceCount(instanceCount: Number) {
+        cdkBuilder.instanceCount(instanceCount)
       }
 
       /**
-       * @param line A boolean flag indicating if it is JSON line format.
+       * @param instanceType The ML compute instance type for the processing job. 
        */
-      override fun line(line: IResolvable) {
-        cdkBuilder.line(line.let(IResolvable::unwrap))
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
+      }
+
+      /**
+       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
+       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
+       * model monitoring job.
+       */
+      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
+        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
+      }
+
+      /**
+       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
+       * provision. 
+       * You must specify sufficient ML storage for your scenario.
+       */
+      override fun volumeSizeInGb(volumeSizeInGb: Number) {
+        cdkBuilder.volumeSizeInGb(volumeSizeInGb)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty,
-    ) : CdkObject(cdkObject), JsonProperty {
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty,
+    ) : CdkObject(cdkObject), ClusterConfigProperty {
       /**
-       * A boolean flag indicating if it is JSON line format.
+       * The number of ML compute instances to use in the model monitoring job.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-json.html#cfn-sagemaker-monitoringschedule-json-line)
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-instancecount)
        */
-      override fun line(): Any? = unwrap(this).getLine()
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+
+      /**
+       * The ML compute instance type for the processing job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-instancetype)
+       */
+      override fun instanceType(): String = unwrap(this).getInstanceType()
+
+      /**
+       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
+       * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-volumekmskeyid)
+       */
+      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+      /**
+       * The size of the ML storage volume, in gigabytes, that you want to provision.
+       *
+       * You must specify sufficient ML storage for your scenario.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-volumesizeingb)
+       */
+      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JsonProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty):
-          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty):
+          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: JsonProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty = (wrapped as
+      internal fun unwrap(wrapped: ClusterConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty
+    }
+  }
+
+  /**
+   * The Amazon S3 URI for the constraints resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ConstraintsResourceProperty constraintsResourceProperty = ConstraintsResourceProperty.builder()
+   * .s3Uri("s3Uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-constraintsresource.html)
+   */
+  public interface ConstraintsResourceProperty {
+    /**
+     * The Amazon S3 URI for the constraints resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-constraintsresource.html#cfn-sagemaker-monitoringschedule-constraintsresource-s3uri)
+     */
+    public fun s3Uri(): String? = unwrap(this).getS3Uri()
+
+    /**
+     * A builder for [ConstraintsResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Uri The Amazon S3 URI for the constraints resource.
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty.builder()
+
+      /**
+       * @param s3Uri The Amazon S3 URI for the constraints resource.
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty,
+    ) : CdkObject(cdkObject), ConstraintsResourceProperty {
+      /**
+       * The Amazon S3 URI for the constraints resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-constraintsresource.html#cfn-sagemaker-monitoringschedule-constraintsresource-s3uri)
+       */
+      override fun s3Uri(): String? = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConstraintsResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty):
+          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConstraintsResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConstraintsResourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty
+    }
+  }
+
+  /**
+   * The CSV format.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CsvProperty csvProperty = CsvProperty.builder()
+   * .header(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-csv.html)
+   */
+  public interface CsvProperty {
+    /**
+     * A boolean flag indicating if given CSV has header.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-csv.html#cfn-sagemaker-monitoringschedule-csv-header)
+     */
+    public fun `header`(): Any? = unwrap(this).getHeader()
+
+    /**
+     * A builder for [CsvProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      public fun `header`(`header`: Boolean)
+
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      public fun `header`(`header`: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty.builder()
+
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      override fun `header`(`header`: Boolean) {
+        cdkBuilder.`header`(`header`)
+      }
+
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      override fun `header`(`header`: IResolvable) {
+        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty,
+    ) : CdkObject(cdkObject), CsvProperty {
+      /**
+       * A boolean flag indicating if given CSV has header.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-csv.html#cfn-sagemaker-monitoringschedule-csv-header)
+       */
+      override fun `header`(): Any? = unwrap(this).getHeader()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CsvProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty):
+          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CsvProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty
+    }
+  }
+
+  /**
+   * The dataset format of the data to monitor.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DatasetFormatProperty datasetFormatProperty = DatasetFormatProperty.builder()
+   * .csv(CsvProperty.builder()
+   * .header(false)
+   * .build())
+   * .json(JsonProperty.builder()
+   * .line(false)
+   * .build())
+   * .parquet(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html)
+   */
+  public interface DatasetFormatProperty {
+    /**
+     * The CSV format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-csv)
+     */
+    public fun csv(): Any? = unwrap(this).getCsv()
+
+    /**
+     * The Json format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-json)
+     */
+    public fun json(): Any? = unwrap(this).getJson()
+
+    /**
+     * A flag indicating if the dataset format is Parquet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-parquet)
+     */
+    public fun parquet(): Any? = unwrap(this).getParquet()
+
+    /**
+     * A builder for [DatasetFormatProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param csv The CSV format.
+       */
+      public fun csv(csv: IResolvable)
+
+      /**
+       * @param csv The CSV format.
+       */
+      public fun csv(csv: CsvProperty)
+
+      /**
+       * @param csv The CSV format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("584118a065f1e778d9fc5d7875fbad8a47859971d25053a99db55e7f4427151f")
+      public fun csv(csv: CsvProperty.Builder.() -> Unit)
+
+      /**
+       * @param json The Json format.
+       */
+      public fun json(json: IResolvable)
+
+      /**
+       * @param json The Json format.
+       */
+      public fun json(json: JsonProperty)
+
+      /**
+       * @param json The Json format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("27cbe0d83c6f9d282dc965ffde94c2e6a7426393149c5c419f22f80d47c0cbda")
+      public fun json(json: JsonProperty.Builder.() -> Unit)
+
+      /**
+       * @param parquet A flag indicating if the dataset format is Parquet.
+       */
+      public fun parquet(parquet: Boolean)
+
+      /**
+       * @param parquet A flag indicating if the dataset format is Parquet.
+       */
+      public fun parquet(parquet: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty.builder()
+
+      /**
+       * @param csv The CSV format.
+       */
+      override fun csv(csv: IResolvable) {
+        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param csv The CSV format.
+       */
+      override fun csv(csv: CsvProperty) {
+        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
+      }
+
+      /**
+       * @param csv The CSV format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("584118a065f1e778d9fc5d7875fbad8a47859971d25053a99db55e7f4427151f")
+      override fun csv(csv: CsvProperty.Builder.() -> Unit): Unit = csv(CsvProperty(csv))
+
+      /**
+       * @param json The Json format.
+       */
+      override fun json(json: IResolvable) {
+        cdkBuilder.json(json.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param json The Json format.
+       */
+      override fun json(json: JsonProperty) {
+        cdkBuilder.json(json.let(JsonProperty::unwrap))
+      }
+
+      /**
+       * @param json The Json format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("27cbe0d83c6f9d282dc965ffde94c2e6a7426393149c5c419f22f80d47c0cbda")
+      override fun json(json: JsonProperty.Builder.() -> Unit): Unit = json(JsonProperty(json))
+
+      /**
+       * @param parquet A flag indicating if the dataset format is Parquet.
+       */
+      override fun parquet(parquet: Boolean) {
+        cdkBuilder.parquet(parquet)
+      }
+
+      /**
+       * @param parquet A flag indicating if the dataset format is Parquet.
+       */
+      override fun parquet(parquet: IResolvable) {
+        cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty,
+    ) : CdkObject(cdkObject), DatasetFormatProperty {
+      /**
+       * The CSV format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-csv)
+       */
+      override fun csv(): Any? = unwrap(this).getCsv()
+
+      /**
+       * The Json format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-json)
+       */
+      override fun json(): Any? = unwrap(this).getJson()
+
+      /**
+       * A flag indicating if the dataset format is Parquet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-parquet)
+       */
+      override fun parquet(): Any? = unwrap(this).getParquet()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatasetFormatProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty):
+          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetFormatProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatasetFormatProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty
     }
   }
 
@@ -1367,6 +1870,99 @@ public open class CfnMonitoringSchedule internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.EndpointInputProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.EndpointInputProperty
+    }
+  }
+
+  /**
+   * The Json format.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * JsonProperty jsonProperty = JsonProperty.builder()
+   * .line(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-json.html)
+   */
+  public interface JsonProperty {
+    /**
+     * A boolean flag indicating if it is JSON line format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-json.html#cfn-sagemaker-monitoringschedule-json-line)
+     */
+    public fun line(): Any? = unwrap(this).getLine()
+
+    /**
+     * A builder for [JsonProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param line A boolean flag indicating if it is JSON line format.
+       */
+      public fun line(line: Boolean)
+
+      /**
+       * @param line A boolean flag indicating if it is JSON line format.
+       */
+      public fun line(line: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty.builder()
+
+      /**
+       * @param line A boolean flag indicating if it is JSON line format.
+       */
+      override fun line(line: Boolean) {
+        cdkBuilder.line(line)
+      }
+
+      /**
+       * @param line A boolean flag indicating if it is JSON line format.
+       */
+      override fun line(line: IResolvable) {
+        cdkBuilder.line(line.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty,
+    ) : CdkObject(cdkObject), JsonProperty {
+      /**
+       * A boolean flag indicating if it is JSON line format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-json.html#cfn-sagemaker-monitoringschedule-json-line)
+       */
+      override fun line(): Any? = unwrap(this).getLine()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JsonProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty):
+          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JsonProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty
     }
   }
 
@@ -1622,519 +2218,6 @@ public open class CfnMonitoringSchedule internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringAppSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringAppSpecificationProperty
-    }
-  }
-
-  /**
-   * The output configuration for monitoring jobs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringOutputConfigProperty monitoringOutputConfigProperty =
-   * MonitoringOutputConfigProperty.builder()
-   * .monitoringOutputs(List.of(MonitoringOutputProperty.builder()
-   * .s3Output(S3OutputProperty.builder()
-   * .localPath("localPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .s3UploadMode("s3UploadMode")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html)
-   */
-  public interface MonitoringOutputConfigProperty {
-    /**
-     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
-     * model artifacts at rest using Amazon S3 server-side encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * Monitoring outputs for monitoring jobs.
-     *
-     * This is where the output of the periodic monitoring jobs is uploaded.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-monitoringoutputs)
-     */
-    public fun monitoringOutputs(): Any
-
-    /**
-     * A builder for [MonitoringOutputConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(monitoringOutputs: IResolvable)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(monitoringOutputs: List<Any>)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(vararg monitoringOutputs: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty.builder()
-
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(monitoringOutputs: IResolvable) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(monitoringOutputs: List<Any>) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs)
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(vararg monitoringOutputs: Any): Unit =
-          monitoringOutputs(monitoringOutputs.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
-      /**
-       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
-       * model artifacts at rest using Amazon S3 server-side encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * Monitoring outputs for monitoring jobs.
-       *
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-monitoringoutputs)
-       */
-      override fun monitoringOutputs(): Any = unwrap(this).getMonitoringOutputs()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty):
-          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty
-    }
-  }
-
-  /**
-   * The inputs for a monitoring job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringInputProperty monitoringInputProperty = MonitoringInputProperty.builder()
-   * .batchTransformInput(BatchTransformInputProperty.builder()
-   * .dataCapturedDestinationS3Uri("dataCapturedDestinationS3Uri")
-   * .datasetFormat(DatasetFormatProperty.builder()
-   * .csv(CsvProperty.builder()
-   * .header(false)
-   * .build())
-   * .json(JsonProperty.builder()
-   * .line(false)
-   * .build())
-   * .parquet(false)
-   * .build())
-   * .localPath("localPath")
-   * // the properties below are optional
-   * .excludeFeaturesAttribute("excludeFeaturesAttribute")
-   * .s3DataDistributionType("s3DataDistributionType")
-   * .s3InputMode("s3InputMode")
-   * .build())
-   * .endpointInput(EndpointInputProperty.builder()
-   * .endpointName("endpointName")
-   * .localPath("localPath")
-   * // the properties below are optional
-   * .excludeFeaturesAttribute("excludeFeaturesAttribute")
-   * .s3DataDistributionType("s3DataDistributionType")
-   * .s3InputMode("s3InputMode")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html)
-   */
-  public interface MonitoringInputProperty {
-    /**
-     * Input object for the batch transform job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html#cfn-sagemaker-monitoringschedule-monitoringinput-batchtransforminput)
-     */
-    public fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
-
-    /**
-     * The endpoint for a monitoring job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html#cfn-sagemaker-monitoringschedule-monitoringinput-endpointinput)
-     */
-    public fun endpointInput(): Any? = unwrap(this).getEndpointInput()
-
-    /**
-     * A builder for [MonitoringInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      public fun batchTransformInput(batchTransformInput: IResolvable)
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      public fun batchTransformInput(batchTransformInput: BatchTransformInputProperty)
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("db41791840963983b97700ef7ac73e98d09b85c6db56bd096e155140e7f40940")
-      public
-          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit)
-
-      /**
-       * @param endpointInput The endpoint for a monitoring job.
-       */
-      public fun endpointInput(endpointInput: IResolvable)
-
-      /**
-       * @param endpointInput The endpoint for a monitoring job.
-       */
-      public fun endpointInput(endpointInput: EndpointInputProperty)
-
-      /**
-       * @param endpointInput The endpoint for a monitoring job.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c253a1262d85ceceb38075f6ddcf0a394d94ac975e8b3c6196b29e44dccf0b73")
-      public fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty.builder()
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      override fun batchTransformInput(batchTransformInput: IResolvable) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
-      }
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("db41791840963983b97700ef7ac73e98d09b85c6db56bd096e155140e7f40940")
-      override
-          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit):
-          Unit = batchTransformInput(BatchTransformInputProperty(batchTransformInput))
-
-      /**
-       * @param endpointInput The endpoint for a monitoring job.
-       */
-      override fun endpointInput(endpointInput: IResolvable) {
-        cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param endpointInput The endpoint for a monitoring job.
-       */
-      override fun endpointInput(endpointInput: EndpointInputProperty) {
-        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
-      }
-
-      /**
-       * @param endpointInput The endpoint for a monitoring job.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c253a1262d85ceceb38075f6ddcf0a394d94ac975e8b3c6196b29e44dccf0b73")
-      override fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit): Unit =
-          endpointInput(EndpointInputProperty(endpointInput))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty,
-    ) : CdkObject(cdkObject), MonitoringInputProperty {
-      /**
-       * Input object for the batch transform job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html#cfn-sagemaker-monitoringschedule-monitoringinput-batchtransforminput)
-       */
-      override fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
-
-      /**
-       * The endpoint for a monitoring job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html#cfn-sagemaker-monitoringschedule-monitoringinput-endpointinput)
-       */
-      override fun endpointInput(): Any? = unwrap(this).getEndpointInput()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty):
-          MonitoringInputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringInputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringInputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty
-    }
-  }
-
-  /**
-   * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
-   * compute resources have access to.
-   *
-   * You can control access to and from your resources by configuring a VPC. For more information,
-   * see [Give SageMaker Access to Resources in your Amazon
-   * VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnets(List.of("subnets"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html)
-   */
-  public interface VpcConfigProperty {
-    /**
-     * The VPC security group IDs, in the form `sg-xxxxxxxx` .
-     *
-     * Specify the security groups for the VPC that is specified in the `Subnets` field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html#cfn-sagemaker-monitoringschedule-vpcconfig-securitygroupids)
-     */
-    public fun securityGroupIds(): List<String>
-
-    /**
-     * The ID of the subnets in the VPC to which you want to connect your training job or model.
-     *
-     * For information about the availability of specific instance types, see [Supported Instance
-     * Types and Availability
-     * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html#cfn-sagemaker-monitoringschedule-vpcconfig-subnets)
-     */
-    public fun subnets(): List<String>
-
-    /**
-     * A builder for [VpcConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       */
-      public fun securityGroupIds(securityGroupIds: List<String>)
-
-      /**
-       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       */
-      public fun securityGroupIds(vararg securityGroupIds: String)
-
-      /**
-       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
-       * job or model. 
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       */
-      public fun subnets(subnets: List<String>)
-
-      /**
-       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
-       * job or model. 
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       */
-      public fun subnets(vararg subnets: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty.builder()
-
-      /**
-       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
-      }
-
-      /**
-       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
-       * job or model. 
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       */
-      override fun subnets(subnets: List<String>) {
-        cdkBuilder.subnets(subnets)
-      }
-
-      /**
-       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
-       * job or model. 
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       */
-      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
-      /**
-       * The VPC security group IDs, in the form `sg-xxxxxxxx` .
-       *
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html#cfn-sagemaker-monitoringschedule-vpcconfig-securitygroupids)
-       */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
-
-      /**
-       * The ID of the subnets in the VPC to which you want to connect your training job or model.
-       *
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html#cfn-sagemaker-monitoringschedule-vpcconfig-subnets)
-       */
-      override fun subnets(): List<String> = unwrap(this).getSubnets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty
     }
   }
 
@@ -2416,7 +2499,7 @@ public open class CfnMonitoringSchedule internal constructor(
   }
 
   /**
-   * The output object for a monitoring job.
+   * The inputs for a monitoring job.
    *
    * Example:
    *
@@ -2424,291 +2507,183 @@ public open class CfnMonitoringSchedule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringOutputProperty monitoringOutputProperty = MonitoringOutputProperty.builder()
-   * .s3Output(S3OutputProperty.builder()
+   * MonitoringInputProperty monitoringInputProperty = MonitoringInputProperty.builder()
+   * .batchTransformInput(BatchTransformInputProperty.builder()
+   * .dataCapturedDestinationS3Uri("dataCapturedDestinationS3Uri")
+   * .datasetFormat(DatasetFormatProperty.builder()
+   * .csv(CsvProperty.builder()
+   * .header(false)
+   * .build())
+   * .json(JsonProperty.builder()
+   * .line(false)
+   * .build())
+   * .parquet(false)
+   * .build())
    * .localPath("localPath")
-   * .s3Uri("s3Uri")
    * // the properties below are optional
-   * .s3UploadMode("s3UploadMode")
+   * .excludeFeaturesAttribute("excludeFeaturesAttribute")
+   * .s3DataDistributionType("s3DataDistributionType")
+   * .s3InputMode("s3InputMode")
+   * .build())
+   * .endpointInput(EndpointInputProperty.builder()
+   * .endpointName("endpointName")
+   * .localPath("localPath")
+   * // the properties below are optional
+   * .excludeFeaturesAttribute("excludeFeaturesAttribute")
+   * .s3DataDistributionType("s3DataDistributionType")
+   * .s3InputMode("s3InputMode")
    * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutput.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html)
    */
-  public interface MonitoringOutputProperty {
+  public interface MonitoringInputProperty {
     /**
-     * The Amazon S3 storage location where the results of a monitoring job are saved.
+     * Input object for the batch transform job.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutput.html#cfn-sagemaker-monitoringschedule-monitoringoutput-s3output)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html#cfn-sagemaker-monitoringschedule-monitoringinput-batchtransforminput)
      */
-    public fun s3Output(): Any
+    public fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
 
     /**
-     * A builder for [MonitoringOutputProperty]
+     * The endpoint for a monitoring job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html#cfn-sagemaker-monitoringschedule-monitoringinput-endpointinput)
+     */
+    public fun endpointInput(): Any? = unwrap(this).getEndpointInput()
+
+    /**
+     * A builder for [MonitoringInputProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param batchTransformInput Input object for the batch transform job.
        */
-      public fun s3Output(s3Output: IResolvable)
+      public fun batchTransformInput(batchTransformInput: IResolvable)
 
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param batchTransformInput Input object for the batch transform job.
        */
-      public fun s3Output(s3Output: S3OutputProperty)
+      public fun batchTransformInput(batchTransformInput: BatchTransformInputProperty)
 
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param batchTransformInput Input object for the batch transform job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("48d428be201223df59ac91d45718e8b034447a634441c6ba2054abda24cf6a6a")
-      public fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit)
+      @JvmName("db41791840963983b97700ef7ac73e98d09b85c6db56bd096e155140e7f40940")
+      public
+          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit)
+
+      /**
+       * @param endpointInput The endpoint for a monitoring job.
+       */
+      public fun endpointInput(endpointInput: IResolvable)
+
+      /**
+       * @param endpointInput The endpoint for a monitoring job.
+       */
+      public fun endpointInput(endpointInput: EndpointInputProperty)
+
+      /**
+       * @param endpointInput The endpoint for a monitoring job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c253a1262d85ceceb38075f6ddcf0a394d94ac975e8b3c6196b29e44dccf0b73")
+      public fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty.builder()
 
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param batchTransformInput Input object for the batch transform job.
        */
-      override fun s3Output(s3Output: IResolvable) {
-        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+      override fun batchTransformInput(batchTransformInput: IResolvable) {
+        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
       }
 
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param batchTransformInput Input object for the batch transform job.
        */
-      override fun s3Output(s3Output: S3OutputProperty) {
-        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+      override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
+        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
       }
 
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param batchTransformInput Input object for the batch transform job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("48d428be201223df59ac91d45718e8b034447a634441c6ba2054abda24cf6a6a")
-      override fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit): Unit =
-          s3Output(S3OutputProperty(s3Output))
+      @JvmName("db41791840963983b97700ef7ac73e98d09b85c6db56bd096e155140e7f40940")
+      override
+          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit):
+          Unit = batchTransformInput(BatchTransformInputProperty(batchTransformInput))
+
+      /**
+       * @param endpointInput The endpoint for a monitoring job.
+       */
+      override fun endpointInput(endpointInput: IResolvable) {
+        cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param endpointInput The endpoint for a monitoring job.
+       */
+      override fun endpointInput(endpointInput: EndpointInputProperty) {
+        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
+      }
+
+      /**
+       * @param endpointInput The endpoint for a monitoring job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c253a1262d85ceceb38075f6ddcf0a394d94ac975e8b3c6196b29e44dccf0b73")
+      override fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit): Unit =
+          endpointInput(EndpointInputProperty(endpointInput))
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputProperty {
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty,
+    ) : CdkObject(cdkObject), MonitoringInputProperty {
       /**
-       * The Amazon S3 storage location where the results of a monitoring job are saved.
+       * Input object for the batch transform job.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutput.html#cfn-sagemaker-monitoringschedule-monitoringoutput-s3output)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html#cfn-sagemaker-monitoringschedule-monitoringinput-batchtransforminput)
        */
-      override fun s3Output(): Any = unwrap(this).getS3Output()
+      override fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
+
+      /**
+       * The endpoint for a monitoring job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringinput.html#cfn-sagemaker-monitoringschedule-monitoringinput-endpointinput)
+       */
+      override fun endpointInput(): Any? = unwrap(this).getEndpointInput()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringInputProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty):
-          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty):
+          MonitoringInputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringInputProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MonitoringOutputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty =
+      internal fun unwrap(wrapped: MonitoringInputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty
-    }
-  }
-
-  /**
-   * The Amazon S3 URI for the constraints resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ConstraintsResourceProperty constraintsResourceProperty = ConstraintsResourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-constraintsresource.html)
-   */
-  public interface ConstraintsResourceProperty {
-    /**
-     * The Amazon S3 URI for the constraints resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-constraintsresource.html#cfn-sagemaker-monitoringschedule-constraintsresource-s3uri)
-     */
-    public fun s3Uri(): String? = unwrap(this).getS3Uri()
-
-    /**
-     * A builder for [ConstraintsResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Uri The Amazon S3 URI for the constraints resource.
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty.builder()
-
-      /**
-       * @param s3Uri The Amazon S3 URI for the constraints resource.
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty,
-    ) : CdkObject(cdkObject), ConstraintsResourceProperty {
-      /**
-       * The Amazon S3 URI for the constraints resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-constraintsresource.html#cfn-sagemaker-monitoringschedule-constraintsresource-s3uri)
-       */
-      override fun s3Uri(): String? = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConstraintsResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty):
-          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConstraintsResourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConstraintsResourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty
-    }
-  }
-
-  /**
-   * The CSV format.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CsvProperty csvProperty = CsvProperty.builder()
-   * .header(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-csv.html)
-   */
-  public interface CsvProperty {
-    /**
-     * A boolean flag indicating if given CSV has header.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-csv.html#cfn-sagemaker-monitoringschedule-csv-header)
-     */
-    public fun `header`(): Any? = unwrap(this).getHeader()
-
-    /**
-     * A builder for [CsvProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      public fun `header`(`header`: Boolean)
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      public fun `header`(`header`: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty.builder()
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      override fun `header`(`header`: Boolean) {
-        cdkBuilder.`header`(`header`)
-      }
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty,
-    ) : CdkObject(cdkObject), CsvProperty {
-      /**
-       * A boolean flag indicating if given CSV has header.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-csv.html#cfn-sagemaker-monitoringschedule-csv-header)
-       */
-      override fun `header`(): Any? = unwrap(this).getHeader()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CsvProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty):
-          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CsvProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty
     }
   }
 
@@ -3348,6 +3323,283 @@ public open class CfnMonitoringSchedule internal constructor(
   }
 
   /**
+   * The output configuration for monitoring jobs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MonitoringOutputConfigProperty monitoringOutputConfigProperty =
+   * MonitoringOutputConfigProperty.builder()
+   * .monitoringOutputs(List.of(MonitoringOutputProperty.builder()
+   * .s3Output(S3OutputProperty.builder()
+   * .localPath("localPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .s3UploadMode("s3UploadMode")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html)
+   */
+  public interface MonitoringOutputConfigProperty {
+    /**
+     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+     * model artifacts at rest using Amazon S3 server-side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * Monitoring outputs for monitoring jobs.
+     *
+     * This is where the output of the periodic monitoring jobs is uploaded.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-monitoringoutputs)
+     */
+    public fun monitoringOutputs(): Any
+
+    /**
+     * A builder for [MonitoringOutputConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
+       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(monitoringOutputs: IResolvable)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(monitoringOutputs: List<Any>)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(vararg monitoringOutputs: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty.builder()
+
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
+       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(monitoringOutputs: IResolvable) {
+        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(monitoringOutputs: List<Any>) {
+        cdkBuilder.monitoringOutputs(monitoringOutputs)
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(vararg monitoringOutputs: Any): Unit =
+          monitoringOutputs(monitoringOutputs.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty,
+    ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
+      /**
+       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+       * model artifacts at rest using Amazon S3 server-side encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * Monitoring outputs for monitoring jobs.
+       *
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-monitoringoutputs)
+       */
+      override fun monitoringOutputs(): Any = unwrap(this).getMonitoringOutputs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty):
+          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty
+    }
+  }
+
+  /**
+   * The output object for a monitoring job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MonitoringOutputProperty monitoringOutputProperty = MonitoringOutputProperty.builder()
+   * .s3Output(S3OutputProperty.builder()
+   * .localPath("localPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .s3UploadMode("s3UploadMode")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutput.html)
+   */
+  public interface MonitoringOutputProperty {
+    /**
+     * The Amazon S3 storage location where the results of a monitoring job are saved.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutput.html#cfn-sagemaker-monitoringschedule-monitoringoutput-s3output)
+     */
+    public fun s3Output(): Any
+
+    /**
+     * A builder for [MonitoringOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      public fun s3Output(s3Output: IResolvable)
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      public fun s3Output(s3Output: S3OutputProperty)
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("48d428be201223df59ac91d45718e8b034447a634441c6ba2054abda24cf6a6a")
+      public fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty.builder()
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      override fun s3Output(s3Output: IResolvable) {
+        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      override fun s3Output(s3Output: S3OutputProperty) {
+        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+      }
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("48d428be201223df59ac91d45718e8b034447a634441c6ba2054abda24cf6a6a")
+      override fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit): Unit =
+          s3Output(S3OutputProperty(s3Output))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty,
+    ) : CdkObject(cdkObject), MonitoringOutputProperty {
+      /**
+       * The Amazon S3 storage location where the results of a monitoring job are saved.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutput.html#cfn-sagemaker-monitoringschedule-monitoringoutput-s3output)
+       */
+      override fun s3Output(): Any = unwrap(this).getS3Output()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty):
+          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringOutputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty
+    }
+  }
+
+  /**
    * Identifies the resources to deploy for a monitoring job.
    *
    * Example:
@@ -3466,1183 +3718,6 @@ public open class CfnMonitoringSchedule internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringResourcesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringResourcesProperty
-    }
-  }
-
-  /**
-   * The dataset format of the data to monitor.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DatasetFormatProperty datasetFormatProperty = DatasetFormatProperty.builder()
-   * .csv(CsvProperty.builder()
-   * .header(false)
-   * .build())
-   * .json(JsonProperty.builder()
-   * .line(false)
-   * .build())
-   * .parquet(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html)
-   */
-  public interface DatasetFormatProperty {
-    /**
-     * The CSV format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-csv)
-     */
-    public fun csv(): Any? = unwrap(this).getCsv()
-
-    /**
-     * The Json format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-json)
-     */
-    public fun json(): Any? = unwrap(this).getJson()
-
-    /**
-     * A flag indicating if the dataset format is Parquet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-parquet)
-     */
-    public fun parquet(): Any? = unwrap(this).getParquet()
-
-    /**
-     * A builder for [DatasetFormatProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param csv The CSV format.
-       */
-      public fun csv(csv: IResolvable)
-
-      /**
-       * @param csv The CSV format.
-       */
-      public fun csv(csv: CsvProperty)
-
-      /**
-       * @param csv The CSV format.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("584118a065f1e778d9fc5d7875fbad8a47859971d25053a99db55e7f4427151f")
-      public fun csv(csv: CsvProperty.Builder.() -> Unit)
-
-      /**
-       * @param json The Json format.
-       */
-      public fun json(json: IResolvable)
-
-      /**
-       * @param json The Json format.
-       */
-      public fun json(json: JsonProperty)
-
-      /**
-       * @param json The Json format.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("27cbe0d83c6f9d282dc965ffde94c2e6a7426393149c5c419f22f80d47c0cbda")
-      public fun json(json: JsonProperty.Builder.() -> Unit)
-
-      /**
-       * @param parquet A flag indicating if the dataset format is Parquet.
-       */
-      public fun parquet(parquet: Boolean)
-
-      /**
-       * @param parquet A flag indicating if the dataset format is Parquet.
-       */
-      public fun parquet(parquet: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty.builder()
-
-      /**
-       * @param csv The CSV format.
-       */
-      override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param csv The CSV format.
-       */
-      override fun csv(csv: CsvProperty) {
-        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
-      }
-
-      /**
-       * @param csv The CSV format.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("584118a065f1e778d9fc5d7875fbad8a47859971d25053a99db55e7f4427151f")
-      override fun csv(csv: CsvProperty.Builder.() -> Unit): Unit = csv(CsvProperty(csv))
-
-      /**
-       * @param json The Json format.
-       */
-      override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param json The Json format.
-       */
-      override fun json(json: JsonProperty) {
-        cdkBuilder.json(json.let(JsonProperty::unwrap))
-      }
-
-      /**
-       * @param json The Json format.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("27cbe0d83c6f9d282dc965ffde94c2e6a7426393149c5c419f22f80d47c0cbda")
-      override fun json(json: JsonProperty.Builder.() -> Unit): Unit = json(JsonProperty(json))
-
-      /**
-       * @param parquet A flag indicating if the dataset format is Parquet.
-       */
-      override fun parquet(parquet: Boolean) {
-        cdkBuilder.parquet(parquet)
-      }
-
-      /**
-       * @param parquet A flag indicating if the dataset format is Parquet.
-       */
-      override fun parquet(parquet: IResolvable) {
-        cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty,
-    ) : CdkObject(cdkObject), DatasetFormatProperty {
-      /**
-       * The CSV format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-csv)
-       */
-      override fun csv(): Any? = unwrap(this).getCsv()
-
-      /**
-       * The Json format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-json)
-       */
-      override fun json(): Any? = unwrap(this).getJson()
-
-      /**
-       * A flag indicating if the dataset format is Parquet.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-datasetformat.html#cfn-sagemaker-monitoringschedule-datasetformat-parquet)
-       */
-      override fun parquet(): Any? = unwrap(this).getParquet()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatasetFormatProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty):
-          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetFormatProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatasetFormatProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty
-    }
-  }
-
-  /**
-   * Configuration for the cluster used to run model monitoring jobs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
-   * .instanceCount(123)
-   * .instanceType("instanceType")
-   * .volumeSizeInGb(123)
-   * // the properties below are optional
-   * .volumeKmsKeyId("volumeKmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html)
-   */
-  public interface ClusterConfigProperty {
-    /**
-     * The number of ML compute instances to use in the model monitoring job.
-     *
-     * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-instancecount)
-     */
-    public fun instanceCount(): Number
-
-    /**
-     * The ML compute instance type for the processing job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-instancetype)
-     */
-    public fun instanceType(): String
-
-    /**
-     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
-     * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-volumekmskeyid)
-     */
-    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
-
-    /**
-     * The size of the ML storage volume, in gigabytes, that you want to provision.
-     *
-     * You must specify sufficient ML storage for your scenario.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-volumesizeingb)
-     */
-    public fun volumeSizeInGb(): Number
-
-    /**
-     * A builder for [ClusterConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
-       * 
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       */
-      public fun instanceCount(instanceCount: Number)
-
-      /**
-       * @param instanceType The ML compute instance type for the processing job. 
-       */
-      public fun instanceType(instanceType: String)
-
-      /**
-       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
-       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
-       * model monitoring job.
-       */
-      public fun volumeKmsKeyId(volumeKmsKeyId: String)
-
-      /**
-       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
-       * provision. 
-       * You must specify sufficient ML storage for your scenario.
-       */
-      public fun volumeSizeInGb(volumeSizeInGb: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty.builder()
-
-      /**
-       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
-       * 
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       */
-      override fun instanceCount(instanceCount: Number) {
-        cdkBuilder.instanceCount(instanceCount)
-      }
-
-      /**
-       * @param instanceType The ML compute instance type for the processing job. 
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      /**
-       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
-       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
-       * model monitoring job.
-       */
-      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
-        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
-      }
-
-      /**
-       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
-       * provision. 
-       * You must specify sufficient ML storage for your scenario.
-       */
-      override fun volumeSizeInGb(volumeSizeInGb: Number) {
-        cdkBuilder.volumeSizeInGb(volumeSizeInGb)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty,
-    ) : CdkObject(cdkObject), ClusterConfigProperty {
-      /**
-       * The number of ML compute instances to use in the model monitoring job.
-       *
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-instancecount)
-       */
-      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
-
-      /**
-       * The ML compute instance type for the processing job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-instancetype)
-       */
-      override fun instanceType(): String = unwrap(this).getInstanceType()
-
-      /**
-       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
-       * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-volumekmskeyid)
-       */
-      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
-
-      /**
-       * The size of the ML storage volume, in gigabytes, that you want to provision.
-       *
-       * You must specify sufficient ML storage for your scenario.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html#cfn-sagemaker-monitoringschedule-clusterconfig-volumesizeingb)
-       */
-      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty):
-          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClusterConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty
-    }
-  }
-
-  /**
-   * The baseline statistics file in Amazon S3 that the current monitoring job should be validated
-   * against.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * StatisticsResourceProperty statisticsResourceProperty = StatisticsResourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-statisticsresource.html)
-   */
-  public interface StatisticsResourceProperty {
-    /**
-     * The S3 URI for the statistics resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-statisticsresource.html#cfn-sagemaker-monitoringschedule-statisticsresource-s3uri)
-     */
-    public fun s3Uri(): String? = unwrap(this).getS3Uri()
-
-    /**
-     * A builder for [StatisticsResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Uri The S3 URI for the statistics resource.
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty.builder()
-
-      /**
-       * @param s3Uri The S3 URI for the statistics resource.
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty,
-    ) : CdkObject(cdkObject), StatisticsResourceProperty {
-      /**
-       * The S3 URI for the statistics resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-statisticsresource.html#cfn-sagemaker-monitoringschedule-statisticsresource-s3uri)
-       */
-      override fun s3Uri(): String? = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StatisticsResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty):
-          StatisticsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StatisticsResourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StatisticsResourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty
-    }
-  }
-
-  /**
-   * Configuration details about the monitoring schedule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ScheduleConfigProperty scheduleConfigProperty = ScheduleConfigProperty.builder()
-   * .scheduleExpression("scheduleExpression")
-   * // the properties below are optional
-   * .dataAnalysisEndTime("dataAnalysisEndTime")
-   * .dataAnalysisStartTime("dataAnalysisStartTime")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html)
-   */
-  public interface ScheduleConfigProperty {
-    /**
-     * Sets the end time for a monitoring job window.
-     *
-     * Express this time as an offset to the times that you schedule your monitoring jobs to run.
-     * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in ISO
-     * 8601 duration format. For example, if you want to end the window one hour before the start of
-     * each monitoring job, you would specify: `"-PT1H"` .
-     *
-     * The end time that you specify must not follow the start time that you specify by more than 24
-     * hours. You specify the start time with the `DataAnalysisStartTime` parameter.
-     *
-     * If you set `ScheduleExpression` to `NOW` , this parameter is required.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-dataanalysisendtime)
-     */
-    public fun dataAnalysisEndTime(): String? = unwrap(this).getDataAnalysisEndTime()
-
-    /**
-     * Sets the start time for a monitoring job window.
-     *
-     * Express this time as an offset to the times that you schedule your monitoring jobs to run.
-     * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in ISO
-     * 8601 duration format. For example, if you want to monitor the five hours of data in your dataset
-     * that precede the start of each monitoring job, you would specify: `"-PT5H"` .
-     *
-     * The start time that you specify must not precede the end time that you specify by more than
-     * 24 hours. You specify the end time with the `DataAnalysisEndTime` parameter.
-     *
-     * If you set `ScheduleExpression` to `NOW` , this parameter is required.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-dataanalysisstarttime)
-     */
-    public fun dataAnalysisStartTime(): String? = unwrap(this).getDataAnalysisStartTime()
-
-    /**
-     * A cron expression that describes details about the monitoring schedule.
-     *
-     * The supported cron expressions are:
-     *
-     * * If you want to set the job to start every hour, use the following:
-     *
-     * `Hourly: cron(0 * ? * * *)`
-     *
-     * * If you want to start the job daily:
-     *
-     * `cron(0 [00-23] ? * * *)`
-     *
-     * * If you want to run the job one time, immediately, use the following keyword:
-     *
-     * `NOW`
-     *
-     * For example, the following are valid cron expressions:
-     *
-     * * Daily at noon UTC: `cron(0 12 ? * * *)`
-     * * Daily at midnight UTC: `cron(0 0 ? * * *)`
-     *
-     * To support running every 6, 12 hours, the following are also supported:
-     *
-     * `cron(0 [00-23]/[01-24] ? * * *)`
-     *
-     * For example, the following are valid cron expressions:
-     *
-     * * Every 12 hours, starting at 5pm UTC: `cron(0 17/12 ? * * *)`
-     * * Every two hours starting at midnight: `cron(0 0/2 ? * * *)`
-     *
-     *
-     * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
-     * delay of 0-20 minutes from the actual requested time to run the execution.
-     * * We recommend that if you would like a daily schedule, you do not provide this parameter.
-     * Amazon SageMaker will pick a time for running every day.
-     *
-     *
-     * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
-     * without recurring.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-scheduleexpression)
-     */
-    public fun scheduleExpression(): String
-
-    /**
-     * A builder for [ScheduleConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataAnalysisEndTime Sets the end time for a monitoring job window.
-       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
-       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
-       * ISO 8601 duration format. For example, if you want to end the window one hour before the start
-       * of each monitoring job, you would specify: `"-PT1H"` .
-       *
-       * The end time that you specify must not follow the start time that you specify by more than
-       * 24 hours. You specify the start time with the `DataAnalysisStartTime` parameter.
-       *
-       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
-       */
-      public fun dataAnalysisEndTime(dataAnalysisEndTime: String)
-
-      /**
-       * @param dataAnalysisStartTime Sets the start time for a monitoring job window.
-       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
-       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
-       * ISO 8601 duration format. For example, if you want to monitor the five hours of data in your
-       * dataset that precede the start of each monitoring job, you would specify: `"-PT5H"` .
-       *
-       * The start time that you specify must not precede the end time that you specify by more than
-       * 24 hours. You specify the end time with the `DataAnalysisEndTime` parameter.
-       *
-       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
-       */
-      public fun dataAnalysisStartTime(dataAnalysisStartTime: String)
-
-      /**
-       * @param scheduleExpression A cron expression that describes details about the monitoring
-       * schedule. 
-       * The supported cron expressions are:
-       *
-       * * If you want to set the job to start every hour, use the following:
-       *
-       * `Hourly: cron(0 * ? * * *)`
-       *
-       * * If you want to start the job daily:
-       *
-       * `cron(0 [00-23] ? * * *)`
-       *
-       * * If you want to run the job one time, immediately, use the following keyword:
-       *
-       * `NOW`
-       *
-       * For example, the following are valid cron expressions:
-       *
-       * * Daily at noon UTC: `cron(0 12 ? * * *)`
-       * * Daily at midnight UTC: `cron(0 0 ? * * *)`
-       *
-       * To support running every 6, 12 hours, the following are also supported:
-       *
-       * `cron(0 [00-23]/[01-24] ? * * *)`
-       *
-       * For example, the following are valid cron expressions:
-       *
-       * * Every 12 hours, starting at 5pm UTC: `cron(0 17/12 ? * * *)`
-       * * Every two hours starting at midnight: `cron(0 0/2 ? * * *)`
-       *
-       *
-       * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
-       * delay of 0-20 minutes from the actual requested time to run the execution.
-       * * We recommend that if you would like a daily schedule, you do not provide this parameter.
-       * Amazon SageMaker will pick a time for running every day.
-       *
-       *
-       * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
-       * without recurring.
-       */
-      public fun scheduleExpression(scheduleExpression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty.builder()
-
-      /**
-       * @param dataAnalysisEndTime Sets the end time for a monitoring job window.
-       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
-       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
-       * ISO 8601 duration format. For example, if you want to end the window one hour before the start
-       * of each monitoring job, you would specify: `"-PT1H"` .
-       *
-       * The end time that you specify must not follow the start time that you specify by more than
-       * 24 hours. You specify the start time with the `DataAnalysisStartTime` parameter.
-       *
-       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
-       */
-      override fun dataAnalysisEndTime(dataAnalysisEndTime: String) {
-        cdkBuilder.dataAnalysisEndTime(dataAnalysisEndTime)
-      }
-
-      /**
-       * @param dataAnalysisStartTime Sets the start time for a monitoring job window.
-       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
-       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
-       * ISO 8601 duration format. For example, if you want to monitor the five hours of data in your
-       * dataset that precede the start of each monitoring job, you would specify: `"-PT5H"` .
-       *
-       * The start time that you specify must not precede the end time that you specify by more than
-       * 24 hours. You specify the end time with the `DataAnalysisEndTime` parameter.
-       *
-       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
-       */
-      override fun dataAnalysisStartTime(dataAnalysisStartTime: String) {
-        cdkBuilder.dataAnalysisStartTime(dataAnalysisStartTime)
-      }
-
-      /**
-       * @param scheduleExpression A cron expression that describes details about the monitoring
-       * schedule. 
-       * The supported cron expressions are:
-       *
-       * * If you want to set the job to start every hour, use the following:
-       *
-       * `Hourly: cron(0 * ? * * *)`
-       *
-       * * If you want to start the job daily:
-       *
-       * `cron(0 [00-23] ? * * *)`
-       *
-       * * If you want to run the job one time, immediately, use the following keyword:
-       *
-       * `NOW`
-       *
-       * For example, the following are valid cron expressions:
-       *
-       * * Daily at noon UTC: `cron(0 12 ? * * *)`
-       * * Daily at midnight UTC: `cron(0 0 ? * * *)`
-       *
-       * To support running every 6, 12 hours, the following are also supported:
-       *
-       * `cron(0 [00-23]/[01-24] ? * * *)`
-       *
-       * For example, the following are valid cron expressions:
-       *
-       * * Every 12 hours, starting at 5pm UTC: `cron(0 17/12 ? * * *)`
-       * * Every two hours starting at midnight: `cron(0 0/2 ? * * *)`
-       *
-       *
-       * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
-       * delay of 0-20 minutes from the actual requested time to run the execution.
-       * * We recommend that if you would like a daily schedule, you do not provide this parameter.
-       * Amazon SageMaker will pick a time for running every day.
-       *
-       *
-       * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
-       * without recurring.
-       */
-      override fun scheduleExpression(scheduleExpression: String) {
-        cdkBuilder.scheduleExpression(scheduleExpression)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty,
-    ) : CdkObject(cdkObject), ScheduleConfigProperty {
-      /**
-       * Sets the end time for a monitoring job window.
-       *
-       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
-       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
-       * ISO 8601 duration format. For example, if you want to end the window one hour before the start
-       * of each monitoring job, you would specify: `"-PT1H"` .
-       *
-       * The end time that you specify must not follow the start time that you specify by more than
-       * 24 hours. You specify the start time with the `DataAnalysisStartTime` parameter.
-       *
-       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-dataanalysisendtime)
-       */
-      override fun dataAnalysisEndTime(): String? = unwrap(this).getDataAnalysisEndTime()
-
-      /**
-       * Sets the start time for a monitoring job window.
-       *
-       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
-       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
-       * ISO 8601 duration format. For example, if you want to monitor the five hours of data in your
-       * dataset that precede the start of each monitoring job, you would specify: `"-PT5H"` .
-       *
-       * The start time that you specify must not precede the end time that you specify by more than
-       * 24 hours. You specify the end time with the `DataAnalysisEndTime` parameter.
-       *
-       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-dataanalysisstarttime)
-       */
-      override fun dataAnalysisStartTime(): String? = unwrap(this).getDataAnalysisStartTime()
-
-      /**
-       * A cron expression that describes details about the monitoring schedule.
-       *
-       * The supported cron expressions are:
-       *
-       * * If you want to set the job to start every hour, use the following:
-       *
-       * `Hourly: cron(0 * ? * * *)`
-       *
-       * * If you want to start the job daily:
-       *
-       * `cron(0 [00-23] ? * * *)`
-       *
-       * * If you want to run the job one time, immediately, use the following keyword:
-       *
-       * `NOW`
-       *
-       * For example, the following are valid cron expressions:
-       *
-       * * Daily at noon UTC: `cron(0 12 ? * * *)`
-       * * Daily at midnight UTC: `cron(0 0 ? * * *)`
-       *
-       * To support running every 6, 12 hours, the following are also supported:
-       *
-       * `cron(0 [00-23]/[01-24] ? * * *)`
-       *
-       * For example, the following are valid cron expressions:
-       *
-       * * Every 12 hours, starting at 5pm UTC: `cron(0 17/12 ? * * *)`
-       * * Every two hours starting at midnight: `cron(0 0/2 ? * * *)`
-       *
-       *
-       * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
-       * delay of 0-20 minutes from the actual requested time to run the execution.
-       * * We recommend that if you would like a daily schedule, you do not provide this parameter.
-       * Amazon SageMaker will pick a time for running every day.
-       *
-       *
-       * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
-       * without recurring.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-scheduleexpression)
-       */
-      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty):
-          ScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduleConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty
-    }
-  }
-
-  /**
-   * Information about where and how you want to store the results of a monitoring job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * S3OutputProperty s3OutputProperty = S3OutputProperty.builder()
-   * .localPath("localPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .s3UploadMode("s3UploadMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html)
-   */
-  public interface S3OutputProperty {
-    /**
-     * The local path to the S3 storage location where SageMaker saves the results of a monitoring
-     * job.
-     *
-     * LocalPath is an absolute path for the output data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-localpath)
-     */
-    public fun localPath(): String
-
-    /**
-     * Whether to upload the results of the monitoring job continuously or after the job completes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-s3uploadmode)
-     */
-    public fun s3UploadMode(): String? = unwrap(this).getS3UploadMode()
-
-    /**
-     * A URI that identifies the S3 storage location where SageMaker saves the results of a
-     * monitoring job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-s3uri)
-     */
-    public fun s3Uri(): String
-
-    /**
-     * A builder for [S3OutputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param localPath The local path to the S3 storage location where SageMaker saves the
-       * results of a monitoring job. 
-       * LocalPath is an absolute path for the output data.
-       */
-      public fun localPath(localPath: String)
-
-      /**
-       * @param s3UploadMode Whether to upload the results of the monitoring job continuously or
-       * after the job completes.
-       */
-      public fun s3UploadMode(s3UploadMode: String)
-
-      /**
-       * @param s3Uri A URI that identifies the S3 storage location where SageMaker saves the
-       * results of a monitoring job. 
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty.builder()
-
-      /**
-       * @param localPath The local path to the S3 storage location where SageMaker saves the
-       * results of a monitoring job. 
-       * LocalPath is an absolute path for the output data.
-       */
-      override fun localPath(localPath: String) {
-        cdkBuilder.localPath(localPath)
-      }
-
-      /**
-       * @param s3UploadMode Whether to upload the results of the monitoring job continuously or
-       * after the job completes.
-       */
-      override fun s3UploadMode(s3UploadMode: String) {
-        cdkBuilder.s3UploadMode(s3UploadMode)
-      }
-
-      /**
-       * @param s3Uri A URI that identifies the S3 storage location where SageMaker saves the
-       * results of a monitoring job. 
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty,
-    ) : CdkObject(cdkObject), S3OutputProperty {
-      /**
-       * The local path to the S3 storage location where SageMaker saves the results of a monitoring
-       * job.
-       *
-       * LocalPath is an absolute path for the output data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-localpath)
-       */
-      override fun localPath(): String = unwrap(this).getLocalPath()
-
-      /**
-       * Whether to upload the results of the monitoring job continuously or after the job
-       * completes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-s3uploadmode)
-       */
-      override fun s3UploadMode(): String? = unwrap(this).getS3UploadMode()
-
-      /**
-       * A URI that identifies the S3 storage location where SageMaker saves the results of a
-       * monitoring job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-s3uri)
-       */
-      override fun s3Uri(): String = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3OutputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty):
-          S3OutputProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OutputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3OutputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty
-    }
-  }
-
-  /**
-   * Baseline configuration used to validate that the data conforms to the specified constraints and
-   * statistics.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * BaselineConfigProperty baselineConfigProperty = BaselineConfigProperty.builder()
-   * .constraintsResource(ConstraintsResourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * .build())
-   * .statisticsResource(StatisticsResourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html)
-   */
-  public interface BaselineConfigProperty {
-    /**
-     * The Amazon S3 URI for the constraints resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html#cfn-sagemaker-monitoringschedule-baselineconfig-constraintsresource)
-     */
-    public fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
-
-    /**
-     * The baseline statistics file in Amazon S3 that the current monitoring job should be validated
-     * against.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html#cfn-sagemaker-monitoringschedule-baselineconfig-statisticsresource)
-     */
-    public fun statisticsResource(): Any? = unwrap(this).getStatisticsResource()
-
-    /**
-     * A builder for [BaselineConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param constraintsResource The Amazon S3 URI for the constraints resource.
-       */
-      public fun constraintsResource(constraintsResource: IResolvable)
-
-      /**
-       * @param constraintsResource The Amazon S3 URI for the constraints resource.
-       */
-      public fun constraintsResource(constraintsResource: ConstraintsResourceProperty)
-
-      /**
-       * @param constraintsResource The Amazon S3 URI for the constraints resource.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("60a9519e03630673bb7da9627f7020656378dfcca99f79101f445540f36e8101")
-      public
-          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
-       * monitoring job should be validated against.
-       */
-      public fun statisticsResource(statisticsResource: IResolvable)
-
-      /**
-       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
-       * monitoring job should be validated against.
-       */
-      public fun statisticsResource(statisticsResource: StatisticsResourceProperty)
-
-      /**
-       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
-       * monitoring job should be validated against.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("92d3382c0ab7be9dec1b304b69e9f65d03676c7c3db097baeb527474f5116586")
-      public
-          fun statisticsResource(statisticsResource: StatisticsResourceProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty.builder()
-
-      /**
-       * @param constraintsResource The Amazon S3 URI for the constraints resource.
-       */
-      override fun constraintsResource(constraintsResource: IResolvable) {
-        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param constraintsResource The Amazon S3 URI for the constraints resource.
-       */
-      override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
-        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
-      }
-
-      /**
-       * @param constraintsResource The Amazon S3 URI for the constraints resource.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("60a9519e03630673bb7da9627f7020656378dfcca99f79101f445540f36e8101")
-      override
-          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit):
-          Unit = constraintsResource(ConstraintsResourceProperty(constraintsResource))
-
-      /**
-       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
-       * monitoring job should be validated against.
-       */
-      override fun statisticsResource(statisticsResource: IResolvable) {
-        cdkBuilder.statisticsResource(statisticsResource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
-       * monitoring job should be validated against.
-       */
-      override fun statisticsResource(statisticsResource: StatisticsResourceProperty) {
-        cdkBuilder.statisticsResource(statisticsResource.let(StatisticsResourceProperty::unwrap))
-      }
-
-      /**
-       * @param statisticsResource The baseline statistics file in Amazon S3 that the current
-       * monitoring job should be validated against.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("92d3382c0ab7be9dec1b304b69e9f65d03676c7c3db097baeb527474f5116586")
-      override
-          fun statisticsResource(statisticsResource: StatisticsResourceProperty.Builder.() -> Unit):
-          Unit = statisticsResource(StatisticsResourceProperty(statisticsResource))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty,
-    ) : CdkObject(cdkObject), BaselineConfigProperty {
-      /**
-       * The Amazon S3 URI for the constraints resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html#cfn-sagemaker-monitoringschedule-baselineconfig-constraintsresource)
-       */
-      override fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
-
-      /**
-       * The baseline statistics file in Amazon S3 that the current monitoring job should be
-       * validated against.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-baselineconfig.html#cfn-sagemaker-monitoringschedule-baselineconfig-statisticsresource)
-       */
-      override fun statisticsResource(): Any? = unwrap(this).getStatisticsResource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BaselineConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty):
-          BaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BaselineConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BaselineConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty
     }
   }
 
@@ -5217,6 +4292,931 @@ public open class CfnMonitoringSchedule internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.NetworkConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.NetworkConfigProperty
+    }
+  }
+
+  /**
+   * Information about where and how you want to store the results of a monitoring job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * S3OutputProperty s3OutputProperty = S3OutputProperty.builder()
+   * .localPath("localPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .s3UploadMode("s3UploadMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html)
+   */
+  public interface S3OutputProperty {
+    /**
+     * The local path to the S3 storage location where SageMaker saves the results of a monitoring
+     * job.
+     *
+     * LocalPath is an absolute path for the output data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-localpath)
+     */
+    public fun localPath(): String
+
+    /**
+     * Whether to upload the results of the monitoring job continuously or after the job completes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-s3uploadmode)
+     */
+    public fun s3UploadMode(): String? = unwrap(this).getS3UploadMode()
+
+    /**
+     * A URI that identifies the S3 storage location where SageMaker saves the results of a
+     * monitoring job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-s3uri)
+     */
+    public fun s3Uri(): String
+
+    /**
+     * A builder for [S3OutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param localPath The local path to the S3 storage location where SageMaker saves the
+       * results of a monitoring job. 
+       * LocalPath is an absolute path for the output data.
+       */
+      public fun localPath(localPath: String)
+
+      /**
+       * @param s3UploadMode Whether to upload the results of the monitoring job continuously or
+       * after the job completes.
+       */
+      public fun s3UploadMode(s3UploadMode: String)
+
+      /**
+       * @param s3Uri A URI that identifies the S3 storage location where SageMaker saves the
+       * results of a monitoring job. 
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty.builder()
+
+      /**
+       * @param localPath The local path to the S3 storage location where SageMaker saves the
+       * results of a monitoring job. 
+       * LocalPath is an absolute path for the output data.
+       */
+      override fun localPath(localPath: String) {
+        cdkBuilder.localPath(localPath)
+      }
+
+      /**
+       * @param s3UploadMode Whether to upload the results of the monitoring job continuously or
+       * after the job completes.
+       */
+      override fun s3UploadMode(s3UploadMode: String) {
+        cdkBuilder.s3UploadMode(s3UploadMode)
+      }
+
+      /**
+       * @param s3Uri A URI that identifies the S3 storage location where SageMaker saves the
+       * results of a monitoring job. 
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty,
+    ) : CdkObject(cdkObject), S3OutputProperty {
+      /**
+       * The local path to the S3 storage location where SageMaker saves the results of a monitoring
+       * job.
+       *
+       * LocalPath is an absolute path for the output data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-localpath)
+       */
+      override fun localPath(): String = unwrap(this).getLocalPath()
+
+      /**
+       * Whether to upload the results of the monitoring job continuously or after the job
+       * completes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-s3uploadmode)
+       */
+      override fun s3UploadMode(): String? = unwrap(this).getS3UploadMode()
+
+      /**
+       * A URI that identifies the S3 storage location where SageMaker saves the results of a
+       * monitoring job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html#cfn-sagemaker-monitoringschedule-s3output-s3uri)
+       */
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3OutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty):
+          S3OutputProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OutputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3OutputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty
+    }
+  }
+
+  /**
+   * Configuration details about the monitoring schedule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ScheduleConfigProperty scheduleConfigProperty = ScheduleConfigProperty.builder()
+   * .scheduleExpression("scheduleExpression")
+   * // the properties below are optional
+   * .dataAnalysisEndTime("dataAnalysisEndTime")
+   * .dataAnalysisStartTime("dataAnalysisStartTime")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html)
+   */
+  public interface ScheduleConfigProperty {
+    /**
+     * Sets the end time for a monitoring job window.
+     *
+     * Express this time as an offset to the times that you schedule your monitoring jobs to run.
+     * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in ISO
+     * 8601 duration format. For example, if you want to end the window one hour before the start of
+     * each monitoring job, you would specify: `"-PT1H"` .
+     *
+     * The end time that you specify must not follow the start time that you specify by more than 24
+     * hours. You specify the start time with the `DataAnalysisStartTime` parameter.
+     *
+     * If you set `ScheduleExpression` to `NOW` , this parameter is required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-dataanalysisendtime)
+     */
+    public fun dataAnalysisEndTime(): String? = unwrap(this).getDataAnalysisEndTime()
+
+    /**
+     * Sets the start time for a monitoring job window.
+     *
+     * Express this time as an offset to the times that you schedule your monitoring jobs to run.
+     * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in ISO
+     * 8601 duration format. For example, if you want to monitor the five hours of data in your dataset
+     * that precede the start of each monitoring job, you would specify: `"-PT5H"` .
+     *
+     * The start time that you specify must not precede the end time that you specify by more than
+     * 24 hours. You specify the end time with the `DataAnalysisEndTime` parameter.
+     *
+     * If you set `ScheduleExpression` to `NOW` , this parameter is required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-dataanalysisstarttime)
+     */
+    public fun dataAnalysisStartTime(): String? = unwrap(this).getDataAnalysisStartTime()
+
+    /**
+     * A cron expression that describes details about the monitoring schedule.
+     *
+     * The supported cron expressions are:
+     *
+     * * If you want to set the job to start every hour, use the following:
+     *
+     * `Hourly: cron(0 * ? * * *)`
+     *
+     * * If you want to start the job daily:
+     *
+     * `cron(0 [00-23] ? * * *)`
+     *
+     * * If you want to run the job one time, immediately, use the following keyword:
+     *
+     * `NOW`
+     *
+     * For example, the following are valid cron expressions:
+     *
+     * * Daily at noon UTC: `cron(0 12 ? * * *)`
+     * * Daily at midnight UTC: `cron(0 0 ? * * *)`
+     *
+     * To support running every 6, 12 hours, the following are also supported:
+     *
+     * `cron(0 [00-23]/[01-24] ? * * *)`
+     *
+     * For example, the following are valid cron expressions:
+     *
+     * * Every 12 hours, starting at 5pm UTC: `cron(0 17/12 ? * * *)`
+     * * Every two hours starting at midnight: `cron(0 0/2 ? * * *)`
+     *
+     *
+     * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
+     * delay of 0-20 minutes from the actual requested time to run the execution.
+     * * We recommend that if you would like a daily schedule, you do not provide this parameter.
+     * Amazon SageMaker will pick a time for running every day.
+     *
+     *
+     * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
+     * without recurring.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-scheduleexpression)
+     */
+    public fun scheduleExpression(): String
+
+    /**
+     * A builder for [ScheduleConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataAnalysisEndTime Sets the end time for a monitoring job window.
+       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
+       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
+       * ISO 8601 duration format. For example, if you want to end the window one hour before the start
+       * of each monitoring job, you would specify: `"-PT1H"` .
+       *
+       * The end time that you specify must not follow the start time that you specify by more than
+       * 24 hours. You specify the start time with the `DataAnalysisStartTime` parameter.
+       *
+       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
+       */
+      public fun dataAnalysisEndTime(dataAnalysisEndTime: String)
+
+      /**
+       * @param dataAnalysisStartTime Sets the start time for a monitoring job window.
+       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
+       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
+       * ISO 8601 duration format. For example, if you want to monitor the five hours of data in your
+       * dataset that precede the start of each monitoring job, you would specify: `"-PT5H"` .
+       *
+       * The start time that you specify must not precede the end time that you specify by more than
+       * 24 hours. You specify the end time with the `DataAnalysisEndTime` parameter.
+       *
+       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
+       */
+      public fun dataAnalysisStartTime(dataAnalysisStartTime: String)
+
+      /**
+       * @param scheduleExpression A cron expression that describes details about the monitoring
+       * schedule. 
+       * The supported cron expressions are:
+       *
+       * * If you want to set the job to start every hour, use the following:
+       *
+       * `Hourly: cron(0 * ? * * *)`
+       *
+       * * If you want to start the job daily:
+       *
+       * `cron(0 [00-23] ? * * *)`
+       *
+       * * If you want to run the job one time, immediately, use the following keyword:
+       *
+       * `NOW`
+       *
+       * For example, the following are valid cron expressions:
+       *
+       * * Daily at noon UTC: `cron(0 12 ? * * *)`
+       * * Daily at midnight UTC: `cron(0 0 ? * * *)`
+       *
+       * To support running every 6, 12 hours, the following are also supported:
+       *
+       * `cron(0 [00-23]/[01-24] ? * * *)`
+       *
+       * For example, the following are valid cron expressions:
+       *
+       * * Every 12 hours, starting at 5pm UTC: `cron(0 17/12 ? * * *)`
+       * * Every two hours starting at midnight: `cron(0 0/2 ? * * *)`
+       *
+       *
+       * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
+       * delay of 0-20 minutes from the actual requested time to run the execution.
+       * * We recommend that if you would like a daily schedule, you do not provide this parameter.
+       * Amazon SageMaker will pick a time for running every day.
+       *
+       *
+       * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
+       * without recurring.
+       */
+      public fun scheduleExpression(scheduleExpression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty.builder()
+
+      /**
+       * @param dataAnalysisEndTime Sets the end time for a monitoring job window.
+       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
+       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
+       * ISO 8601 duration format. For example, if you want to end the window one hour before the start
+       * of each monitoring job, you would specify: `"-PT1H"` .
+       *
+       * The end time that you specify must not follow the start time that you specify by more than
+       * 24 hours. You specify the start time with the `DataAnalysisStartTime` parameter.
+       *
+       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
+       */
+      override fun dataAnalysisEndTime(dataAnalysisEndTime: String) {
+        cdkBuilder.dataAnalysisEndTime(dataAnalysisEndTime)
+      }
+
+      /**
+       * @param dataAnalysisStartTime Sets the start time for a monitoring job window.
+       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
+       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
+       * ISO 8601 duration format. For example, if you want to monitor the five hours of data in your
+       * dataset that precede the start of each monitoring job, you would specify: `"-PT5H"` .
+       *
+       * The start time that you specify must not precede the end time that you specify by more than
+       * 24 hours. You specify the end time with the `DataAnalysisEndTime` parameter.
+       *
+       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
+       */
+      override fun dataAnalysisStartTime(dataAnalysisStartTime: String) {
+        cdkBuilder.dataAnalysisStartTime(dataAnalysisStartTime)
+      }
+
+      /**
+       * @param scheduleExpression A cron expression that describes details about the monitoring
+       * schedule. 
+       * The supported cron expressions are:
+       *
+       * * If you want to set the job to start every hour, use the following:
+       *
+       * `Hourly: cron(0 * ? * * *)`
+       *
+       * * If you want to start the job daily:
+       *
+       * `cron(0 [00-23] ? * * *)`
+       *
+       * * If you want to run the job one time, immediately, use the following keyword:
+       *
+       * `NOW`
+       *
+       * For example, the following are valid cron expressions:
+       *
+       * * Daily at noon UTC: `cron(0 12 ? * * *)`
+       * * Daily at midnight UTC: `cron(0 0 ? * * *)`
+       *
+       * To support running every 6, 12 hours, the following are also supported:
+       *
+       * `cron(0 [00-23]/[01-24] ? * * *)`
+       *
+       * For example, the following are valid cron expressions:
+       *
+       * * Every 12 hours, starting at 5pm UTC: `cron(0 17/12 ? * * *)`
+       * * Every two hours starting at midnight: `cron(0 0/2 ? * * *)`
+       *
+       *
+       * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
+       * delay of 0-20 minutes from the actual requested time to run the execution.
+       * * We recommend that if you would like a daily schedule, you do not provide this parameter.
+       * Amazon SageMaker will pick a time for running every day.
+       *
+       *
+       * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
+       * without recurring.
+       */
+      override fun scheduleExpression(scheduleExpression: String) {
+        cdkBuilder.scheduleExpression(scheduleExpression)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty,
+    ) : CdkObject(cdkObject), ScheduleConfigProperty {
+      /**
+       * Sets the end time for a monitoring job window.
+       *
+       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
+       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
+       * ISO 8601 duration format. For example, if you want to end the window one hour before the start
+       * of each monitoring job, you would specify: `"-PT1H"` .
+       *
+       * The end time that you specify must not follow the start time that you specify by more than
+       * 24 hours. You specify the start time with the `DataAnalysisStartTime` parameter.
+       *
+       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-dataanalysisendtime)
+       */
+      override fun dataAnalysisEndTime(): String? = unwrap(this).getDataAnalysisEndTime()
+
+      /**
+       * Sets the start time for a monitoring job window.
+       *
+       * Express this time as an offset to the times that you schedule your monitoring jobs to run.
+       * You schedule monitoring jobs with the `ScheduleExpression` parameter. Specify this offset in
+       * ISO 8601 duration format. For example, if you want to monitor the five hours of data in your
+       * dataset that precede the start of each monitoring job, you would specify: `"-PT5H"` .
+       *
+       * The start time that you specify must not precede the end time that you specify by more than
+       * 24 hours. You specify the end time with the `DataAnalysisEndTime` parameter.
+       *
+       * If you set `ScheduleExpression` to `NOW` , this parameter is required.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-dataanalysisstarttime)
+       */
+      override fun dataAnalysisStartTime(): String? = unwrap(this).getDataAnalysisStartTime()
+
+      /**
+       * A cron expression that describes details about the monitoring schedule.
+       *
+       * The supported cron expressions are:
+       *
+       * * If you want to set the job to start every hour, use the following:
+       *
+       * `Hourly: cron(0 * ? * * *)`
+       *
+       * * If you want to start the job daily:
+       *
+       * `cron(0 [00-23] ? * * *)`
+       *
+       * * If you want to run the job one time, immediately, use the following keyword:
+       *
+       * `NOW`
+       *
+       * For example, the following are valid cron expressions:
+       *
+       * * Daily at noon UTC: `cron(0 12 ? * * *)`
+       * * Daily at midnight UTC: `cron(0 0 ? * * *)`
+       *
+       * To support running every 6, 12 hours, the following are also supported:
+       *
+       * `cron(0 [00-23]/[01-24] ? * * *)`
+       *
+       * For example, the following are valid cron expressions:
+       *
+       * * Every 12 hours, starting at 5pm UTC: `cron(0 17/12 ? * * *)`
+       * * Every two hours starting at midnight: `cron(0 0/2 ? * * *)`
+       *
+       *
+       * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
+       * delay of 0-20 minutes from the actual requested time to run the execution.
+       * * We recommend that if you would like a daily schedule, you do not provide this parameter.
+       * Amazon SageMaker will pick a time for running every day.
+       *
+       *
+       * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
+       * without recurring.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-scheduleconfig.html#cfn-sagemaker-monitoringschedule-scheduleconfig-scheduleexpression)
+       */
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty):
+          ScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScheduleConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty
+    }
+  }
+
+  /**
+   * The baseline statistics file in Amazon S3 that the current monitoring job should be validated
+   * against.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * StatisticsResourceProperty statisticsResourceProperty = StatisticsResourceProperty.builder()
+   * .s3Uri("s3Uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-statisticsresource.html)
+   */
+  public interface StatisticsResourceProperty {
+    /**
+     * The S3 URI for the statistics resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-statisticsresource.html#cfn-sagemaker-monitoringschedule-statisticsresource-s3uri)
+     */
+    public fun s3Uri(): String? = unwrap(this).getS3Uri()
+
+    /**
+     * A builder for [StatisticsResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Uri The S3 URI for the statistics resource.
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty.builder()
+
+      /**
+       * @param s3Uri The S3 URI for the statistics resource.
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty,
+    ) : CdkObject(cdkObject), StatisticsResourceProperty {
+      /**
+       * The S3 URI for the statistics resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-statisticsresource.html#cfn-sagemaker-monitoringschedule-statisticsresource-s3uri)
+       */
+      override fun s3Uri(): String? = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StatisticsResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty):
+          StatisticsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatisticsResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatisticsResourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty
+    }
+  }
+
+  /**
+   * Specifies a limit to how long a model training job or model compilation job can run.
+   *
+   * It also specifies how long a managed spot training job has to complete. When the job reaches
+   * the time limit, SageMaker ends the training or compilation job. Use this API to cap model training
+   * costs.
+   *
+   * To stop a training job, SageMaker sends the algorithm the `SIGTERM` signal, which delays job
+   * termination for 120 seconds. Algorithms can use this 120-second window to save the model
+   * artifacts, so the results of training are not lost.
+   *
+   * The training algorithms provided by SageMaker automatically save the intermediate results of a
+   * model training job when possible. This attempt to save artifacts is only a best effort case as
+   * model might not be in a state from which it can be saved. For example, if training has just
+   * started, the model might not be ready to save. When saved, this intermediate data is a valid model
+   * artifact. You can use it to create a model with `CreateModel` .
+   *
+   *
+   * The Neural Topic Model (NTM) currently does not support saving intermediate model artifacts.
+   * When training NTMs, make sure that the maximum runtime is sufficient for the training job to
+   * complete.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * StoppingConditionProperty stoppingConditionProperty = StoppingConditionProperty.builder()
+   * .maxRuntimeInSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-stoppingcondition.html)
+   */
+  public interface StoppingConditionProperty {
+    /**
+     * The maximum length of time, in seconds, that a training or compilation job can run before it
+     * is stopped.
+     *
+     * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
+     * generated. We recommend starting with 900 seconds and increasing as necessary based on your
+     * model.
+     *
+     * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
+     * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
+     * maximum time for all of the attempts in total, not each individual attempt. The default value is
+     * 1 day. The maximum value is 28 days.
+     *
+     * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
+     * metrics or archiving and uploading models after it has been stopped, is 30 days.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-stoppingcondition.html#cfn-sagemaker-monitoringschedule-stoppingcondition-maxruntimeinseconds)
+     */
+    public fun maxRuntimeInSeconds(): Number
+
+    /**
+     * A builder for [StoppingConditionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxRuntimeInSeconds The maximum length of time, in seconds, that a training or
+       * compilation job can run before it is stopped. 
+       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
+       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
+       * model.
+       *
+       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
+       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
+       * maximum time for all of the attempts in total, not each individual attempt. The default value
+       * is 1 day. The maximum value is 28 days.
+       *
+       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
+       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       */
+      public fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty.builder()
+
+      /**
+       * @param maxRuntimeInSeconds The maximum length of time, in seconds, that a training or
+       * compilation job can run before it is stopped. 
+       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
+       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
+       * model.
+       *
+       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
+       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
+       * maximum time for all of the attempts in total, not each individual attempt. The default value
+       * is 1 day. The maximum value is 28 days.
+       *
+       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
+       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       */
+      override fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number) {
+        cdkBuilder.maxRuntimeInSeconds(maxRuntimeInSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty,
+    ) : CdkObject(cdkObject), StoppingConditionProperty {
+      /**
+       * The maximum length of time, in seconds, that a training or compilation job can run before
+       * it is stopped.
+       *
+       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
+       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
+       * model.
+       *
+       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
+       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
+       * maximum time for all of the attempts in total, not each individual attempt. The default value
+       * is 1 day. The maximum value is 28 days.
+       *
+       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
+       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-stoppingcondition.html#cfn-sagemaker-monitoringschedule-stoppingcondition-maxruntimeinseconds)
+       */
+      override fun maxRuntimeInSeconds(): Number = unwrap(this).getMaxRuntimeInSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StoppingConditionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty):
+          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StoppingConditionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StoppingConditionProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty
+    }
+  }
+
+  /**
+   * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+   * compute resources have access to.
+   *
+   * You can control access to and from your resources by configuring a VPC. For more information,
+   * see [Give SageMaker Access to Resources in your Amazon
+   * VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html)
+   */
+  public interface VpcConfigProperty {
+    /**
+     * The VPC security group IDs, in the form `sg-xxxxxxxx` .
+     *
+     * Specify the security groups for the VPC that is specified in the `Subnets` field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html#cfn-sagemaker-monitoringschedule-vpcconfig-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String>
+
+    /**
+     * The ID of the subnets in the VPC to which you want to connect your training job or model.
+     *
+     * For information about the availability of specific instance types, see [Supported Instance
+     * Types and Availability
+     * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html#cfn-sagemaker-monitoringschedule-vpcconfig-subnets)
+     */
+    public fun subnets(): List<String>
+
+    /**
+     * A builder for [VpcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
+       * job or model. 
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       */
+      public fun subnets(subnets: List<String>)
+
+      /**
+       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
+       * job or model. 
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       */
+      public fun subnets(vararg subnets: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty.builder()
+
+      /**
+       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
+       * job or model. 
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
+      }
+
+      /**
+       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
+       * job or model. 
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       */
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty,
+    ) : CdkObject(cdkObject), VpcConfigProperty {
+      /**
+       * The VPC security group IDs, in the form `sg-xxxxxxxx` .
+       *
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html#cfn-sagemaker-monitoringschedule-vpcconfig-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
+
+      /**
+       * The ID of the subnets in the VPC to which you want to connect your training job or model.
+       *
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-vpcconfig.html#cfn-sagemaker-monitoringschedule-vpcconfig-subnets)
+       */
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty):
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty
     }
   }
 }

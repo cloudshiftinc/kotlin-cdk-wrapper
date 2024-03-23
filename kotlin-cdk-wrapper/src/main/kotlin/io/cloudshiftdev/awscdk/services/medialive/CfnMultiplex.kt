@@ -531,6 +531,135 @@ public open class CfnMultiplex internal constructor(
   }
 
   /**
+   * Multiplex output destination settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * MultiplexOutputDestinationProperty multiplexOutputDestinationProperty =
+   * MultiplexOutputDestinationProperty.builder()
+   * .multiplexMediaConnectOutputDestinationSettings(MultiplexMediaConnectOutputDestinationSettingsProperty.builder()
+   * .entitlementArn("entitlementArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexoutputdestination.html)
+   */
+  public interface MultiplexOutputDestinationProperty {
+    /**
+     * Multiplex MediaConnect output destination settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexoutputdestination.html#cfn-medialive-multiplex-multiplexoutputdestination-multiplexmediaconnectoutputdestinationsettings)
+     */
+    public fun multiplexMediaConnectOutputDestinationSettings(): Any? =
+        unwrap(this).getMultiplexMediaConnectOutputDestinationSettings()
+
+    /**
+     * A builder for [MultiplexOutputDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
+       * destination settings.
+       */
+      public
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: IResolvable)
+
+      /**
+       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
+       * destination settings.
+       */
+      public
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty)
+
+      /**
+       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
+       * destination settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2569c3f12cb772a27991b1621a83c9f430ff4d781d3da6fbd420a85060180260")
+      public
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty.builder()
+
+      /**
+       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
+       * destination settings.
+       */
+      override
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: IResolvable) {
+        cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
+       * destination settings.
+       */
+      override
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty) {
+        cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(MultiplexMediaConnectOutputDestinationSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
+       * destination settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2569c3f12cb772a27991b1621a83c9f430ff4d781d3da6fbd420a85060180260")
+      override
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty.Builder.() -> Unit):
+          Unit =
+          multiplexMediaConnectOutputDestinationSettings(MultiplexMediaConnectOutputDestinationSettingsProperty(multiplexMediaConnectOutputDestinationSettings))
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty,
+    ) : CdkObject(cdkObject), MultiplexOutputDestinationProperty {
+      /**
+       * Multiplex MediaConnect output destination settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexoutputdestination.html#cfn-medialive-multiplex-multiplexoutputdestination-multiplexmediaconnectoutputdestinationsettings)
+       */
+      override fun multiplexMediaConnectOutputDestinationSettings(): Any? =
+          unwrap(this).getMultiplexMediaConnectOutputDestinationSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MultiplexOutputDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty):
+          MultiplexOutputDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexOutputDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiplexOutputDestinationProperty):
+          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty
+    }
+  }
+
+  /**
    * Contains configuration for a Multiplex event.
    *
    * Example:
@@ -696,135 +825,6 @@ public open class CfnMultiplex internal constructor(
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty
-    }
-  }
-
-  /**
-   * Multiplex output destination settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.medialive.*;
-   * MultiplexOutputDestinationProperty multiplexOutputDestinationProperty =
-   * MultiplexOutputDestinationProperty.builder()
-   * .multiplexMediaConnectOutputDestinationSettings(MultiplexMediaConnectOutputDestinationSettingsProperty.builder()
-   * .entitlementArn("entitlementArn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexoutputdestination.html)
-   */
-  public interface MultiplexOutputDestinationProperty {
-    /**
-     * Multiplex MediaConnect output destination settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexoutputdestination.html#cfn-medialive-multiplex-multiplexoutputdestination-multiplexmediaconnectoutputdestinationsettings)
-     */
-    public fun multiplexMediaConnectOutputDestinationSettings(): Any? =
-        unwrap(this).getMultiplexMediaConnectOutputDestinationSettings()
-
-    /**
-     * A builder for [MultiplexOutputDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
-       * destination settings.
-       */
-      public
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: IResolvable)
-
-      /**
-       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
-       * destination settings.
-       */
-      public
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty)
-
-      /**
-       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
-       * destination settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2569c3f12cb772a27991b1621a83c9f430ff4d781d3da6fbd420a85060180260")
-      public
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty.builder()
-
-      /**
-       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
-       * destination settings.
-       */
-      override
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: IResolvable) {
-        cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
-       * destination settings.
-       */
-      override
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty) {
-        cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(MultiplexMediaConnectOutputDestinationSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param multiplexMediaConnectOutputDestinationSettings Multiplex MediaConnect output
-       * destination settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2569c3f12cb772a27991b1621a83c9f430ff4d781d3da6fbd420a85060180260")
-      override
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty.Builder.() -> Unit):
-          Unit =
-          multiplexMediaConnectOutputDestinationSettings(MultiplexMediaConnectOutputDestinationSettingsProperty(multiplexMediaConnectOutputDestinationSettings))
-
-      public fun build():
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty,
-    ) : CdkObject(cdkObject), MultiplexOutputDestinationProperty {
-      /**
-       * Multiplex MediaConnect output destination settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplex-multiplexoutputdestination.html#cfn-medialive-multiplex-multiplexoutputdestination-multiplexmediaconnectoutputdestinationsettings)
-       */
-      override fun multiplexMediaConnectOutputDestinationSettings(): Any? =
-          unwrap(this).getMultiplexMediaConnectOutputDestinationSettings()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MultiplexOutputDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty):
-          MultiplexOutputDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MultiplexOutputDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MultiplexOutputDestinationProperty):
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty
     }
   }
 }

@@ -1028,6 +1028,178 @@ public open class CfnRestApi internal constructor(
   }
 
   /**
+   * The `EndpointConfiguration` property type specifies the endpoint types of a REST API.
+   *
+   * `EndpointConfiguration` is a property of the
+   * [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * EndpointConfigurationProperty endpointConfigurationProperty =
+   * EndpointConfigurationProperty.builder()
+   * .types(List.of("types"))
+   * .vpcEndpointIds(List.of("vpcEndpointIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+   */
+  public interface EndpointConfigurationProperty {
+    /**
+     * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
+     *
+     * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+     * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+     * the endpoint type is `PRIVATE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types)
+     */
+    public fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
+
+    /**
+     * A list of VpcEndpointIds of an API (RestApi) against which to create Route53 ALIASes.
+     *
+     * It is only supported for `PRIVATE` endpoint type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-vpcendpointids)
+     */
+    public fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
+
+    /**
+     * A builder for [EndpointConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
+       * (DomainName).
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       */
+      public fun types(types: List<String>)
+
+      /**
+       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
+       * (DomainName).
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       */
+      public fun types(vararg types: String)
+
+      /**
+       * @param vpcEndpointIds A list of VpcEndpointIds of an API (RestApi) against which to create
+       * Route53 ALIASes.
+       * It is only supported for `PRIVATE` endpoint type.
+       */
+      public fun vpcEndpointIds(vpcEndpointIds: List<String>)
+
+      /**
+       * @param vpcEndpointIds A list of VpcEndpointIds of an API (RestApi) against which to create
+       * Route53 ALIASes.
+       * It is only supported for `PRIVATE` endpoint type.
+       */
+      public fun vpcEndpointIds(vararg vpcEndpointIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty.builder()
+
+      /**
+       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
+       * (DomainName).
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       */
+      override fun types(types: List<String>) {
+        cdkBuilder.types(types)
+      }
+
+      /**
+       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
+       * (DomainName).
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       */
+      override fun types(vararg types: String): Unit = types(types.toList())
+
+      /**
+       * @param vpcEndpointIds A list of VpcEndpointIds of an API (RestApi) against which to create
+       * Route53 ALIASes.
+       * It is only supported for `PRIVATE` endpoint type.
+       */
+      override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
+        cdkBuilder.vpcEndpointIds(vpcEndpointIds)
+      }
+
+      /**
+       * @param vpcEndpointIds A list of VpcEndpointIds of an API (RestApi) against which to create
+       * Route53 ALIASes.
+       * It is only supported for `PRIVATE` endpoint type.
+       */
+      override fun vpcEndpointIds(vararg vpcEndpointIds: String): Unit =
+          vpcEndpointIds(vpcEndpointIds.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
+    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
+      /**
+       * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
+       *
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types)
+       */
+      override fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
+
+      /**
+       * A list of VpcEndpointIds of an API (RestApi) against which to create Route53 ALIASes.
+       *
+       * It is only supported for `PRIVATE` endpoint type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-vpcendpointids)
+       */
+      override fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty):
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EndpointConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EndpointConfigurationProperty):
+          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty
+    }
+  }
+
+  /**
    * `S3Location` is a property of the
    * [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
    * resource that specifies the Amazon S3 location of a OpenAPI (formerly Swagger) file that defines a
@@ -1201,178 +1373,6 @@ public open class CfnRestApi internal constructor(
           software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty
-    }
-  }
-
-  /**
-   * The `EndpointConfiguration` property type specifies the endpoint types of a REST API.
-   *
-   * `EndpointConfiguration` is a property of the
-   * [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * EndpointConfigurationProperty endpointConfigurationProperty =
-   * EndpointConfigurationProperty.builder()
-   * .types(List.of("types"))
-   * .vpcEndpointIds(List.of("vpcEndpointIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
-   */
-  public interface EndpointConfigurationProperty {
-    /**
-     * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
-     *
-     * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-     * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-     * the endpoint type is `PRIVATE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types)
-     */
-    public fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
-
-    /**
-     * A list of VpcEndpointIds of an API (RestApi) against which to create Route53 ALIASes.
-     *
-     * It is only supported for `PRIVATE` endpoint type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-vpcendpointids)
-     */
-    public fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
-
-    /**
-     * A builder for [EndpointConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
-       * (DomainName).
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       */
-      public fun types(types: List<String>)
-
-      /**
-       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
-       * (DomainName).
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       */
-      public fun types(vararg types: String)
-
-      /**
-       * @param vpcEndpointIds A list of VpcEndpointIds of an API (RestApi) against which to create
-       * Route53 ALIASes.
-       * It is only supported for `PRIVATE` endpoint type.
-       */
-      public fun vpcEndpointIds(vpcEndpointIds: List<String>)
-
-      /**
-       * @param vpcEndpointIds A list of VpcEndpointIds of an API (RestApi) against which to create
-       * Route53 ALIASes.
-       * It is only supported for `PRIVATE` endpoint type.
-       */
-      public fun vpcEndpointIds(vararg vpcEndpointIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty.builder()
-
-      /**
-       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
-       * (DomainName).
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       */
-      override fun types(types: List<String>) {
-        cdkBuilder.types(types)
-      }
-
-      /**
-       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
-       * (DomainName).
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       */
-      override fun types(vararg types: String): Unit = types(types.toList())
-
-      /**
-       * @param vpcEndpointIds A list of VpcEndpointIds of an API (RestApi) against which to create
-       * Route53 ALIASes.
-       * It is only supported for `PRIVATE` endpoint type.
-       */
-      override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
-        cdkBuilder.vpcEndpointIds(vpcEndpointIds)
-      }
-
-      /**
-       * @param vpcEndpointIds A list of VpcEndpointIds of an API (RestApi) against which to create
-       * Route53 ALIASes.
-       * It is only supported for `PRIVATE` endpoint type.
-       */
-      override fun vpcEndpointIds(vararg vpcEndpointIds: String): Unit =
-          vpcEndpointIds(vpcEndpointIds.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
-    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
-      /**
-       * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
-       *
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types)
-       */
-      override fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
-
-      /**
-       * A list of VpcEndpointIds of an API (RestApi) against which to create Route53 ALIASes.
-       *
-       * It is only supported for `PRIVATE` endpoint type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-vpcendpointids)
-       */
-      override fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EndpointConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EndpointConfigurationProperty):
-          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty
     }
   }
 }

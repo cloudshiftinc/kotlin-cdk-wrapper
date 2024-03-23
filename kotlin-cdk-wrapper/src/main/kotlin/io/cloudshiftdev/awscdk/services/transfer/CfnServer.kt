@@ -1615,1171 +1615,6 @@ public open class CfnServer internal constructor(
   }
 
   /**
-   * The protocol settings that are configured for your server.
-   *
-   * * To indicate passive mode (for FTP and FTPS protocols), use the `PassiveIp` parameter. Enter a
-   * single dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load
-   * balancer.
-   * * To ignore the error that is generated when the client attempts to use the `SETSTAT` command
-   * on a file that you are uploading to an Amazon S3 bucket, use the `SetStatOption` parameter. To
-   * have the AWS Transfer Family server ignore the `SETSTAT` command and upload files without needing
-   * to make any changes to your SFTP client, set the value to `ENABLE_NO_OP` . If you set the
-   * `SetStatOption` parameter to `ENABLE_NO_OP` , Transfer Family generates a log entry to Amazon
-   * CloudWatch Logs, so that you can determine when the client is making a `SETSTAT` call.
-   * * To determine whether your AWS Transfer Family server resumes recent, negotiated sessions
-   * through a unique session ID, use the `TlsSessionResumptionMode` parameter.
-   * * `As2Transports` indicates the transport method for the AS2 messages. Currently, only HTTP is
-   * supported.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.transfer.*;
-   * ProtocolDetailsProperty protocolDetailsProperty = ProtocolDetailsProperty.builder()
-   * .as2Transports(List.of("as2Transports"))
-   * .passiveIp("passiveIp")
-   * .setStatOption("setStatOption")
-   * .tlsSessionResumptionMode("tlsSessionResumptionMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html)
-   */
-  public interface ProtocolDetailsProperty {
-    /**
-     * List of `As2Transport` objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-as2transports)
-     */
-    public fun as2Transports(): List<String> = unwrap(this).getAs2Transports() ?: emptyList()
-
-    /**
-     * Indicates passive mode, for FTP and FTPS protocols.
-     *
-     * Enter a single IPv4 address, such as the public IP address of a firewall, router, or load
-     * balancer. For example:
-     *
-     * `aws transfer update-server --protocol-details PassiveIp=0.0.0.0`
-     *
-     * Replace `0.0.0.0` in the example above with the actual IP address you want to use.
-     *
-     *
-     * If you change the `PassiveIp` value, you must stop and then restart your Transfer Family
-     * server for the change to take effect. For details on using passive mode (PASV) in a NAT
-     * environment, see [Configuring your FTPS server behind a firewall or NAT with AWS Transfer
-     * Family](https://docs.aws.amazon.com/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/)
-     * .
-     *
-     *
-     * *Special values*
-     *
-     * The `AUTO` and `0.0.0.0` are special values for the `PassiveIp` parameter. The value
-     * `PassiveIp=AUTO` is assigned by default to FTP and FTPS type servers. In this case, the server
-     * automatically responds with one of the endpoint IPs within the PASV response.
-     * `PassiveIp=0.0.0.0` has a more unique application for its usage. For example, if you have a High
-     * Availability (HA) Network Load Balancer (NLB) environment, where you have 3 subnets, you can
-     * only specify a single IP address using the `PassiveIp` parameter. This reduces the effectiveness
-     * of having High Availability. In this case, you can specify `PassiveIp=0.0.0.0` . This tells the
-     * client to use the same IP address as the Control connection and utilize all AZs for their
-     * connections. Note, however, that not all FTP clients support the `PassiveIp=0.0.0.0` response.
-     * FileZilla and WinSCP do support it. If you are using other clients, check to see if your client
-     * supports the `PassiveIp=0.0.0.0` response.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-passiveip)
-     */
-    public fun passiveIp(): String? = unwrap(this).getPassiveIp()
-
-    /**
-     * Use the `SetStatOption` to ignore the error that is generated when the client attempts to use
-     * `SETSTAT` on a file you are uploading to an S3 bucket.
-     *
-     * Some SFTP file transfer clients can attempt to change the attributes of remote files,
-     * including timestamp and permissions, using commands, such as `SETSTAT` when uploading the file.
-     * However, these commands are not compatible with object storage systems, such as Amazon S3. Due
-     * to this incompatibility, file uploads from these clients can result in errors even when the file
-     * is otherwise successfully uploaded.
-     *
-     * Set the value to `ENABLE_NO_OP` to have the Transfer Family server ignore the `SETSTAT`
-     * command, and upload files without needing to make any changes to your SFTP client. While the
-     * `SetStatOption` `ENABLE_NO_OP` setting ignores the error, it does generate a log entry in Amazon
-     * CloudWatch Logs, so you can determine when the client is making a `SETSTAT` call.
-     *
-     *
-     * If you want to preserve the original timestamp for your file, and modify other file
-     * attributes using `SETSTAT` , you can use Amazon EFS as backend storage with Transfer Family.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-setstatoption)
-     */
-    public fun setStatOption(): String? = unwrap(this).getSetStatOption()
-
-    /**
-     * A property used with Transfer Family servers that use the FTPS protocol.
-     *
-     * TLS Session Resumption provides a mechanism to resume or share a negotiated secret key
-     * between the control and data connection for an FTPS session. `TlsSessionResumptionMode`
-     * determines whether or not the server resumes recent, negotiated sessions through a unique
-     * session ID. This property is available during `CreateServer` and `UpdateServer` calls. If a
-     * `TlsSessionResumptionMode` value is not specified during `CreateServer` , it is set to
-     * `ENFORCED` by default.
-     *
-     * * `DISABLED` : the server does not process TLS session resumption client requests and creates
-     * a new TLS session for each request.
-     * * `ENABLED` : the server processes and accepts clients that are performing TLS session
-     * resumption. The server doesn't reject client data connections that do not perform the TLS
-     * session resumption client processing.
-     * * `ENFORCED` : the server processes and accepts clients that are performing TLS session
-     * resumption. The server rejects client data connections that do not perform the TLS session
-     * resumption client processing. Before you set the value to `ENFORCED` , test your clients.
-     *
-     *
-     * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session
-     * resumption, you prevent any connections from FTPS clients that don't perform the protocol
-     * negotiation. To determine whether or not you can use the `ENFORCED` value, you need to test your
-     * clients.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-tlssessionresumptionmode)
-     */
-    public fun tlsSessionResumptionMode(): String? = unwrap(this).getTlsSessionResumptionMode()
-
-    /**
-     * A builder for [ProtocolDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param as2Transports List of `As2Transport` objects.
-       */
-      public fun as2Transports(as2Transports: List<String>)
-
-      /**
-       * @param as2Transports List of `As2Transport` objects.
-       */
-      public fun as2Transports(vararg as2Transports: String)
-
-      /**
-       * @param passiveIp Indicates passive mode, for FTP and FTPS protocols.
-       * Enter a single IPv4 address, such as the public IP address of a firewall, router, or load
-       * balancer. For example:
-       *
-       * `aws transfer update-server --protocol-details PassiveIp=0.0.0.0`
-       *
-       * Replace `0.0.0.0` in the example above with the actual IP address you want to use.
-       *
-       *
-       * If you change the `PassiveIp` value, you must stop and then restart your Transfer Family
-       * server for the change to take effect. For details on using passive mode (PASV) in a NAT
-       * environment, see [Configuring your FTPS server behind a firewall or NAT with AWS Transfer
-       * Family](https://docs.aws.amazon.com/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/)
-       * .
-       *
-       *
-       * *Special values*
-       *
-       * The `AUTO` and `0.0.0.0` are special values for the `PassiveIp` parameter. The value
-       * `PassiveIp=AUTO` is assigned by default to FTP and FTPS type servers. In this case, the server
-       * automatically responds with one of the endpoint IPs within the PASV response.
-       * `PassiveIp=0.0.0.0` has a more unique application for its usage. For example, if you have a
-       * High Availability (HA) Network Load Balancer (NLB) environment, where you have 3 subnets, you
-       * can only specify a single IP address using the `PassiveIp` parameter. This reduces the
-       * effectiveness of having High Availability. In this case, you can specify `PassiveIp=0.0.0.0` .
-       * This tells the client to use the same IP address as the Control connection and utilize all AZs
-       * for their connections. Note, however, that not all FTP clients support the `PassiveIp=0.0.0.0`
-       * response. FileZilla and WinSCP do support it. If you are using other clients, check to see if
-       * your client supports the `PassiveIp=0.0.0.0` response.
-       */
-      public fun passiveIp(passiveIp: String)
-
-      /**
-       * @param setStatOption Use the `SetStatOption` to ignore the error that is generated when the
-       * client attempts to use `SETSTAT` on a file you are uploading to an S3 bucket.
-       * Some SFTP file transfer clients can attempt to change the attributes of remote files,
-       * including timestamp and permissions, using commands, such as `SETSTAT` when uploading the
-       * file. However, these commands are not compatible with object storage systems, such as Amazon
-       * S3. Due to this incompatibility, file uploads from these clients can result in errors even
-       * when the file is otherwise successfully uploaded.
-       *
-       * Set the value to `ENABLE_NO_OP` to have the Transfer Family server ignore the `SETSTAT`
-       * command, and upload files without needing to make any changes to your SFTP client. While the
-       * `SetStatOption` `ENABLE_NO_OP` setting ignores the error, it does generate a log entry in
-       * Amazon CloudWatch Logs, so you can determine when the client is making a `SETSTAT` call.
-       *
-       *
-       * If you want to preserve the original timestamp for your file, and modify other file
-       * attributes using `SETSTAT` , you can use Amazon EFS as backend storage with Transfer Family.
-       */
-      public fun statOption(setStatOption: String)
-
-      /**
-       * @param tlsSessionResumptionMode A property used with Transfer Family servers that use the
-       * FTPS protocol.
-       * TLS Session Resumption provides a mechanism to resume or share a negotiated secret key
-       * between the control and data connection for an FTPS session. `TlsSessionResumptionMode`
-       * determines whether or not the server resumes recent, negotiated sessions through a unique
-       * session ID. This property is available during `CreateServer` and `UpdateServer` calls. If a
-       * `TlsSessionResumptionMode` value is not specified during `CreateServer` , it is set to
-       * `ENFORCED` by default.
-       *
-       * * `DISABLED` : the server does not process TLS session resumption client requests and
-       * creates a new TLS session for each request.
-       * * `ENABLED` : the server processes and accepts clients that are performing TLS session
-       * resumption. The server doesn't reject client data connections that do not perform the TLS
-       * session resumption client processing.
-       * * `ENFORCED` : the server processes and accepts clients that are performing TLS session
-       * resumption. The server rejects client data connections that do not perform the TLS session
-       * resumption client processing. Before you set the value to `ENFORCED` , test your clients.
-       *
-       *
-       * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS
-       * session resumption, you prevent any connections from FTPS clients that don't perform the
-       * protocol negotiation. To determine whether or not you can use the `ENFORCED` value, you need
-       * to test your clients.
-       */
-      public fun tlsSessionResumptionMode(tlsSessionResumptionMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty.builder()
-
-      /**
-       * @param as2Transports List of `As2Transport` objects.
-       */
-      override fun as2Transports(as2Transports: List<String>) {
-        cdkBuilder.as2Transports(as2Transports)
-      }
-
-      /**
-       * @param as2Transports List of `As2Transport` objects.
-       */
-      override fun as2Transports(vararg as2Transports: String): Unit =
-          as2Transports(as2Transports.toList())
-
-      /**
-       * @param passiveIp Indicates passive mode, for FTP and FTPS protocols.
-       * Enter a single IPv4 address, such as the public IP address of a firewall, router, or load
-       * balancer. For example:
-       *
-       * `aws transfer update-server --protocol-details PassiveIp=0.0.0.0`
-       *
-       * Replace `0.0.0.0` in the example above with the actual IP address you want to use.
-       *
-       *
-       * If you change the `PassiveIp` value, you must stop and then restart your Transfer Family
-       * server for the change to take effect. For details on using passive mode (PASV) in a NAT
-       * environment, see [Configuring your FTPS server behind a firewall or NAT with AWS Transfer
-       * Family](https://docs.aws.amazon.com/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/)
-       * .
-       *
-       *
-       * *Special values*
-       *
-       * The `AUTO` and `0.0.0.0` are special values for the `PassiveIp` parameter. The value
-       * `PassiveIp=AUTO` is assigned by default to FTP and FTPS type servers. In this case, the server
-       * automatically responds with one of the endpoint IPs within the PASV response.
-       * `PassiveIp=0.0.0.0` has a more unique application for its usage. For example, if you have a
-       * High Availability (HA) Network Load Balancer (NLB) environment, where you have 3 subnets, you
-       * can only specify a single IP address using the `PassiveIp` parameter. This reduces the
-       * effectiveness of having High Availability. In this case, you can specify `PassiveIp=0.0.0.0` .
-       * This tells the client to use the same IP address as the Control connection and utilize all AZs
-       * for their connections. Note, however, that not all FTP clients support the `PassiveIp=0.0.0.0`
-       * response. FileZilla and WinSCP do support it. If you are using other clients, check to see if
-       * your client supports the `PassiveIp=0.0.0.0` response.
-       */
-      override fun passiveIp(passiveIp: String) {
-        cdkBuilder.passiveIp(passiveIp)
-      }
-
-      /**
-       * @param setStatOption Use the `SetStatOption` to ignore the error that is generated when the
-       * client attempts to use `SETSTAT` on a file you are uploading to an S3 bucket.
-       * Some SFTP file transfer clients can attempt to change the attributes of remote files,
-       * including timestamp and permissions, using commands, such as `SETSTAT` when uploading the
-       * file. However, these commands are not compatible with object storage systems, such as Amazon
-       * S3. Due to this incompatibility, file uploads from these clients can result in errors even
-       * when the file is otherwise successfully uploaded.
-       *
-       * Set the value to `ENABLE_NO_OP` to have the Transfer Family server ignore the `SETSTAT`
-       * command, and upload files without needing to make any changes to your SFTP client. While the
-       * `SetStatOption` `ENABLE_NO_OP` setting ignores the error, it does generate a log entry in
-       * Amazon CloudWatch Logs, so you can determine when the client is making a `SETSTAT` call.
-       *
-       *
-       * If you want to preserve the original timestamp for your file, and modify other file
-       * attributes using `SETSTAT` , you can use Amazon EFS as backend storage with Transfer Family.
-       */
-      override fun statOption(setStatOption: String) {
-        cdkBuilder.setStatOption(setStatOption)
-      }
-
-      /**
-       * @param tlsSessionResumptionMode A property used with Transfer Family servers that use the
-       * FTPS protocol.
-       * TLS Session Resumption provides a mechanism to resume or share a negotiated secret key
-       * between the control and data connection for an FTPS session. `TlsSessionResumptionMode`
-       * determines whether or not the server resumes recent, negotiated sessions through a unique
-       * session ID. This property is available during `CreateServer` and `UpdateServer` calls. If a
-       * `TlsSessionResumptionMode` value is not specified during `CreateServer` , it is set to
-       * `ENFORCED` by default.
-       *
-       * * `DISABLED` : the server does not process TLS session resumption client requests and
-       * creates a new TLS session for each request.
-       * * `ENABLED` : the server processes and accepts clients that are performing TLS session
-       * resumption. The server doesn't reject client data connections that do not perform the TLS
-       * session resumption client processing.
-       * * `ENFORCED` : the server processes and accepts clients that are performing TLS session
-       * resumption. The server rejects client data connections that do not perform the TLS session
-       * resumption client processing. Before you set the value to `ENFORCED` , test your clients.
-       *
-       *
-       * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS
-       * session resumption, you prevent any connections from FTPS clients that don't perform the
-       * protocol negotiation. To determine whether or not you can use the `ENFORCED` value, you need
-       * to test your clients.
-       */
-      override fun tlsSessionResumptionMode(tlsSessionResumptionMode: String) {
-        cdkBuilder.tlsSessionResumptionMode(tlsSessionResumptionMode)
-      }
-
-      public fun build(): software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty,
-    ) : CdkObject(cdkObject), ProtocolDetailsProperty {
-      /**
-       * List of `As2Transport` objects.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-as2transports)
-       */
-      override fun as2Transports(): List<String> = unwrap(this).getAs2Transports() ?: emptyList()
-
-      /**
-       * Indicates passive mode, for FTP and FTPS protocols.
-       *
-       * Enter a single IPv4 address, such as the public IP address of a firewall, router, or load
-       * balancer. For example:
-       *
-       * `aws transfer update-server --protocol-details PassiveIp=0.0.0.0`
-       *
-       * Replace `0.0.0.0` in the example above with the actual IP address you want to use.
-       *
-       *
-       * If you change the `PassiveIp` value, you must stop and then restart your Transfer Family
-       * server for the change to take effect. For details on using passive mode (PASV) in a NAT
-       * environment, see [Configuring your FTPS server behind a firewall or NAT with AWS Transfer
-       * Family](https://docs.aws.amazon.com/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/)
-       * .
-       *
-       *
-       * *Special values*
-       *
-       * The `AUTO` and `0.0.0.0` are special values for the `PassiveIp` parameter. The value
-       * `PassiveIp=AUTO` is assigned by default to FTP and FTPS type servers. In this case, the server
-       * automatically responds with one of the endpoint IPs within the PASV response.
-       * `PassiveIp=0.0.0.0` has a more unique application for its usage. For example, if you have a
-       * High Availability (HA) Network Load Balancer (NLB) environment, where you have 3 subnets, you
-       * can only specify a single IP address using the `PassiveIp` parameter. This reduces the
-       * effectiveness of having High Availability. In this case, you can specify `PassiveIp=0.0.0.0` .
-       * This tells the client to use the same IP address as the Control connection and utilize all AZs
-       * for their connections. Note, however, that not all FTP clients support the `PassiveIp=0.0.0.0`
-       * response. FileZilla and WinSCP do support it. If you are using other clients, check to see if
-       * your client supports the `PassiveIp=0.0.0.0` response.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-passiveip)
-       */
-      override fun passiveIp(): String? = unwrap(this).getPassiveIp()
-
-      /**
-       * Use the `SetStatOption` to ignore the error that is generated when the client attempts to
-       * use `SETSTAT` on a file you are uploading to an S3 bucket.
-       *
-       * Some SFTP file transfer clients can attempt to change the attributes of remote files,
-       * including timestamp and permissions, using commands, such as `SETSTAT` when uploading the
-       * file. However, these commands are not compatible with object storage systems, such as Amazon
-       * S3. Due to this incompatibility, file uploads from these clients can result in errors even
-       * when the file is otherwise successfully uploaded.
-       *
-       * Set the value to `ENABLE_NO_OP` to have the Transfer Family server ignore the `SETSTAT`
-       * command, and upload files without needing to make any changes to your SFTP client. While the
-       * `SetStatOption` `ENABLE_NO_OP` setting ignores the error, it does generate a log entry in
-       * Amazon CloudWatch Logs, so you can determine when the client is making a `SETSTAT` call.
-       *
-       *
-       * If you want to preserve the original timestamp for your file, and modify other file
-       * attributes using `SETSTAT` , you can use Amazon EFS as backend storage with Transfer Family.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-setstatoption)
-       */
-      override fun setStatOption(): String? = unwrap(this).getSetStatOption()
-
-      /**
-       * A property used with Transfer Family servers that use the FTPS protocol.
-       *
-       * TLS Session Resumption provides a mechanism to resume or share a negotiated secret key
-       * between the control and data connection for an FTPS session. `TlsSessionResumptionMode`
-       * determines whether or not the server resumes recent, negotiated sessions through a unique
-       * session ID. This property is available during `CreateServer` and `UpdateServer` calls. If a
-       * `TlsSessionResumptionMode` value is not specified during `CreateServer` , it is set to
-       * `ENFORCED` by default.
-       *
-       * * `DISABLED` : the server does not process TLS session resumption client requests and
-       * creates a new TLS session for each request.
-       * * `ENABLED` : the server processes and accepts clients that are performing TLS session
-       * resumption. The server doesn't reject client data connections that do not perform the TLS
-       * session resumption client processing.
-       * * `ENFORCED` : the server processes and accepts clients that are performing TLS session
-       * resumption. The server rejects client data connections that do not perform the TLS session
-       * resumption client processing. Before you set the value to `ENFORCED` , test your clients.
-       *
-       *
-       * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS
-       * session resumption, you prevent any connections from FTPS clients that don't perform the
-       * protocol negotiation. To determine whether or not you can use the `ENFORCED` value, you need
-       * to test your clients.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-tlssessionresumptionmode)
-       */
-      override fun tlsSessionResumptionMode(): String? = unwrap(this).getTlsSessionResumptionMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProtocolDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty):
-          ProtocolDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? ProtocolDetailsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProtocolDetailsProperty):
-          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty
-    }
-  }
-
-  /**
-   * Container for the `WorkflowDetail` data type.
-   *
-   * It is used by actions that trigger a workflow to begin execution.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.transfer.*;
-   * WorkflowDetailsProperty workflowDetailsProperty = WorkflowDetailsProperty.builder()
-   * .onPartialUpload(List.of(WorkflowDetailProperty.builder()
-   * .executionRole("executionRole")
-   * .workflowId("workflowId")
-   * .build()))
-   * .onUpload(List.of(WorkflowDetailProperty.builder()
-   * .executionRole("executionRole")
-   * .workflowId("workflowId")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html)
-   */
-  public interface WorkflowDetailsProperty {
-    /**
-     * A trigger that starts a workflow if a file is only partially uploaded.
-     *
-     * You can attach a workflow to a server that executes whenever there is a partial upload.
-     *
-     * A *partial upload* occurs when a file is open when the session disconnects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onpartialupload)
-     */
-    public fun onPartialUpload(): Any? = unwrap(this).getOnPartialUpload()
-
-    /**
-     * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
-     *
-     * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
-     * as in the following example.
-     *
-     * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
-     * '{"OnUpload":[]}'`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onupload)
-     */
-    public fun onUpload(): Any? = unwrap(this).getOnUpload()
-
-    /**
-     * A builder for [WorkflowDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
-       * uploaded.
-       * You can attach a workflow to a server that executes whenever there is a partial upload.
-       *
-       * A *partial upload* occurs when a file is open when the session disconnects.
-       */
-      public fun onPartialUpload(onPartialUpload: IResolvable)
-
-      /**
-       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
-       * uploaded.
-       * You can attach a workflow to a server that executes whenever there is a partial upload.
-       *
-       * A *partial upload* occurs when a file is open when the session disconnects.
-       */
-      public fun onPartialUpload(onPartialUpload: List<Any>)
-
-      /**
-       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
-       * uploaded.
-       * You can attach a workflow to a server that executes whenever there is a partial upload.
-       *
-       * A *partial upload* occurs when a file is open when the session disconnects.
-       */
-      public fun onPartialUpload(vararg onPartialUpload: Any)
-
-      /**
-       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
-       * file is uploaded.
-       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
-       * as in the following example.
-       *
-       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
-       * '{"OnUpload":[]}'`
-       */
-      public fun onUpload(onUpload: IResolvable)
-
-      /**
-       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
-       * file is uploaded.
-       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
-       * as in the following example.
-       *
-       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
-       * '{"OnUpload":[]}'`
-       */
-      public fun onUpload(onUpload: List<Any>)
-
-      /**
-       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
-       * file is uploaded.
-       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
-       * as in the following example.
-       *
-       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
-       * '{"OnUpload":[]}'`
-       */
-      public fun onUpload(vararg onUpload: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty.builder()
-
-      /**
-       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
-       * uploaded.
-       * You can attach a workflow to a server that executes whenever there is a partial upload.
-       *
-       * A *partial upload* occurs when a file is open when the session disconnects.
-       */
-      override fun onPartialUpload(onPartialUpload: IResolvable) {
-        cdkBuilder.onPartialUpload(onPartialUpload.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
-       * uploaded.
-       * You can attach a workflow to a server that executes whenever there is a partial upload.
-       *
-       * A *partial upload* occurs when a file is open when the session disconnects.
-       */
-      override fun onPartialUpload(onPartialUpload: List<Any>) {
-        cdkBuilder.onPartialUpload(onPartialUpload)
-      }
-
-      /**
-       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
-       * uploaded.
-       * You can attach a workflow to a server that executes whenever there is a partial upload.
-       *
-       * A *partial upload* occurs when a file is open when the session disconnects.
-       */
-      override fun onPartialUpload(vararg onPartialUpload: Any): Unit =
-          onPartialUpload(onPartialUpload.toList())
-
-      /**
-       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
-       * file is uploaded.
-       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
-       * as in the following example.
-       *
-       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
-       * '{"OnUpload":[]}'`
-       */
-      override fun onUpload(onUpload: IResolvable) {
-        cdkBuilder.onUpload(onUpload.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
-       * file is uploaded.
-       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
-       * as in the following example.
-       *
-       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
-       * '{"OnUpload":[]}'`
-       */
-      override fun onUpload(onUpload: List<Any>) {
-        cdkBuilder.onUpload(onUpload)
-      }
-
-      /**
-       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
-       * file is uploaded.
-       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
-       * as in the following example.
-       *
-       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
-       * '{"OnUpload":[]}'`
-       */
-      override fun onUpload(vararg onUpload: Any): Unit = onUpload(onUpload.toList())
-
-      public fun build(): software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty,
-    ) : CdkObject(cdkObject), WorkflowDetailsProperty {
-      /**
-       * A trigger that starts a workflow if a file is only partially uploaded.
-       *
-       * You can attach a workflow to a server that executes whenever there is a partial upload.
-       *
-       * A *partial upload* occurs when a file is open when the session disconnects.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onpartialupload)
-       */
-      override fun onPartialUpload(): Any? = unwrap(this).getOnPartialUpload()
-
-      /**
-       * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
-       *
-       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
-       * as in the following example.
-       *
-       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
-       * '{"OnUpload":[]}'`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onupload)
-       */
-      override fun onUpload(): Any? = unwrap(this).getOnUpload()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty):
-          WorkflowDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkflowDetailsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WorkflowDetailsProperty):
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty
-    }
-  }
-
-  /**
-   * Specifies the workflow ID for the workflow to assign and the execution role that's used for
-   * executing the workflow.
-   *
-   * In addition to a workflow to execute when a file is uploaded completely, `WorkflowDetails` can
-   * also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A
-   * partial upload occurs when a file is open when the session disconnects.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.transfer.*;
-   * WorkflowDetailProperty workflowDetailProperty = WorkflowDetailProperty.builder()
-   * .executionRole("executionRole")
-   * .workflowId("workflowId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html)
-   */
-  public interface WorkflowDetailProperty {
-    /**
-     * Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can
-     * assume, so that all workflow steps can operate on the required resources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html#cfn-transfer-server-workflowdetail-executionrole)
-     */
-    public fun executionRole(): String
-
-    /**
-     * A unique identifier for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html#cfn-transfer-server-workflowdetail-workflowid)
-     */
-    public fun workflowId(): String
-
-    /**
-     * A builder for [WorkflowDetailProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param executionRole Includes the necessary permissions for S3, EFS, and Lambda operations
-       * that Transfer can assume, so that all workflow steps can operate on the required resources. 
-       */
-      public fun executionRole(executionRole: String)
-
-      /**
-       * @param workflowId A unique identifier for the workflow. 
-       */
-      public fun workflowId(workflowId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty.builder()
-
-      /**
-       * @param executionRole Includes the necessary permissions for S3, EFS, and Lambda operations
-       * that Transfer can assume, so that all workflow steps can operate on the required resources. 
-       */
-      override fun executionRole(executionRole: String) {
-        cdkBuilder.executionRole(executionRole)
-      }
-
-      /**
-       * @param workflowId A unique identifier for the workflow. 
-       */
-      override fun workflowId(workflowId: String) {
-        cdkBuilder.workflowId(workflowId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty,
-    ) : CdkObject(cdkObject), WorkflowDetailProperty {
-      /**
-       * Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can
-       * assume, so that all workflow steps can operate on the required resources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html#cfn-transfer-server-workflowdetail-executionrole)
-       */
-      override fun executionRole(): String = unwrap(this).getExecutionRole()
-
-      /**
-       * A unique identifier for the workflow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html#cfn-transfer-server-workflowdetail-workflowid)
-       */
-      override fun workflowId(): String = unwrap(this).getWorkflowId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowDetailProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty):
-          WorkflowDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkflowDetailProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WorkflowDetailProperty):
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty
-    }
-  }
-
-  /**
-   * The Amazon S3 storage options that are configured for your server.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.transfer.*;
-   * S3StorageOptionsProperty s3StorageOptionsProperty = S3StorageOptionsProperty.builder()
-   * .directoryListingOptimization("directoryListingOptimization")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-s3storageoptions.html)
-   */
-  public interface S3StorageOptionsProperty {
-    /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
-     *
-     * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
-     * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
-     * mapping to have a file target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-s3storageoptions.html#cfn-transfer-server-s3storageoptions-directorylistingoptimization)
-     */
-    public fun directoryListingOptimization(): String? =
-        unwrap(this).getDirectoryListingOptimization()
-
-    /**
-     * A builder for [S3StorageOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param directoryListingOptimization Specifies whether or not performance for your Amazon S3
-       * directories is optimized. This is disabled by default.
-       * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
-       * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if
-       * you want a mapping to have a file target.
-       */
-      public fun directoryListingOptimization(directoryListingOptimization: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty.builder()
-
-      /**
-       * @param directoryListingOptimization Specifies whether or not performance for your Amazon S3
-       * directories is optimized. This is disabled by default.
-       * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
-       * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if
-       * you want a mapping to have a file target.
-       */
-      override fun directoryListingOptimization(directoryListingOptimization: String) {
-        cdkBuilder.directoryListingOptimization(directoryListingOptimization)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty,
-    ) : CdkObject(cdkObject), S3StorageOptionsProperty {
-      /**
-       * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-       * disabled by default.
-       *
-       * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
-       * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if
-       * you want a mapping to have a file target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-s3storageoptions.html#cfn-transfer-server-s3storageoptions-directorylistingoptimization)
-       */
-      override fun directoryListingOptimization(): String? =
-          unwrap(this).getDirectoryListingOptimization()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3StorageOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty):
-          S3StorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? S3StorageOptionsProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3StorageOptionsProperty):
-          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty
-    }
-  }
-
-  /**
-   * Required when `IdentityProviderType` is set to `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or
-   * `API_GATEWAY` .
-   *
-   * Accepts an array containing all of the information required to use a directory in
-   * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-   * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.transfer.*;
-   * IdentityProviderDetailsProperty identityProviderDetailsProperty =
-   * IdentityProviderDetailsProperty.builder()
-   * .directoryId("directoryId")
-   * .function("function")
-   * .invocationRole("invocationRole")
-   * .sftpAuthenticationMethods("sftpAuthenticationMethods")
-   * .url("url")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html)
-   */
-  public interface IdentityProviderDetailsProperty {
-    /**
-     * The identifier of the AWS Directory Service directory that you want to use as your identity
-     * provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-directoryid)
-     */
-    public fun directoryId(): String? = unwrap(this).getDirectoryId()
-
-    /**
-     * The ARN for a Lambda function to use for the Identity provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-function)
-     */
-    public fun function(): String? = unwrap(this).getFunction()
-
-    /**
-     * This parameter is only applicable if your `IdentityProviderType` is `API_GATEWAY` .
-     *
-     * Provides the type of `InvocationRole` used to authenticate the user account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-invocationrole)
-     */
-    public fun invocationRole(): String? = unwrap(this).getInvocationRole()
-
-    /**
-     * For SFTP-enabled servers, and for custom identity providers *only* , you can specify whether
-     * to authenticate using a password, SSH key pair, or both.
-     *
-     * * `PASSWORD` - users must provide their password to connect.
-     * * `PUBLIC_KEY` - users must provide their private key to connect.
-     * * `PUBLIC_KEY_OR_PASSWORD` - users can authenticate with either their password or their key.
-     * This is the default value.
-     * * `PUBLIC_KEY_AND_PASSWORD` - users must provide both their private key and their password to
-     * connect. The server checks the key first, and then if the key is valid, the system prompts for a
-     * password. If the private key provided does not match the public key that is stored,
-     * authentication fails.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-sftpauthenticationmethods)
-     */
-    public fun sftpAuthenticationMethods(): String? = unwrap(this).getSftpAuthenticationMethods()
-
-    /**
-     * Provides the location of the service endpoint used to authenticate users.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-url)
-     */
-    public fun url(): String? = unwrap(this).getUrl()
-
-    /**
-     * A builder for [IdentityProviderDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param directoryId The identifier of the AWS Directory Service directory that you want to
-       * use as your identity provider.
-       */
-      public fun directoryId(directoryId: String)
-
-      /**
-       * @param function The ARN for a Lambda function to use for the Identity provider.
-       */
-      public fun function(function: String)
-
-      /**
-       * @param invocationRole This parameter is only applicable if your `IdentityProviderType` is
-       * `API_GATEWAY` .
-       * Provides the type of `InvocationRole` used to authenticate the user account.
-       */
-      public fun invocationRole(invocationRole: String)
-
-      /**
-       * @param sftpAuthenticationMethods For SFTP-enabled servers, and for custom identity
-       * providers *only* , you can specify whether to authenticate using a password, SSH key pair, or
-       * both.
-       * * `PASSWORD` - users must provide their password to connect.
-       * * `PUBLIC_KEY` - users must provide their private key to connect.
-       * * `PUBLIC_KEY_OR_PASSWORD` - users can authenticate with either their password or their
-       * key. This is the default value.
-       * * `PUBLIC_KEY_AND_PASSWORD` - users must provide both their private key and their password
-       * to connect. The server checks the key first, and then if the key is valid, the system prompts
-       * for a password. If the private key provided does not match the public key that is stored,
-       * authentication fails.
-       */
-      public fun sftpAuthenticationMethods(sftpAuthenticationMethods: String)
-
-      /**
-       * @param url Provides the location of the service endpoint used to authenticate users.
-       */
-      public fun url(url: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty.builder()
-
-      /**
-       * @param directoryId The identifier of the AWS Directory Service directory that you want to
-       * use as your identity provider.
-       */
-      override fun directoryId(directoryId: String) {
-        cdkBuilder.directoryId(directoryId)
-      }
-
-      /**
-       * @param function The ARN for a Lambda function to use for the Identity provider.
-       */
-      override fun function(function: String) {
-        cdkBuilder.function(function)
-      }
-
-      /**
-       * @param invocationRole This parameter is only applicable if your `IdentityProviderType` is
-       * `API_GATEWAY` .
-       * Provides the type of `InvocationRole` used to authenticate the user account.
-       */
-      override fun invocationRole(invocationRole: String) {
-        cdkBuilder.invocationRole(invocationRole)
-      }
-
-      /**
-       * @param sftpAuthenticationMethods For SFTP-enabled servers, and for custom identity
-       * providers *only* , you can specify whether to authenticate using a password, SSH key pair, or
-       * both.
-       * * `PASSWORD` - users must provide their password to connect.
-       * * `PUBLIC_KEY` - users must provide their private key to connect.
-       * * `PUBLIC_KEY_OR_PASSWORD` - users can authenticate with either their password or their
-       * key. This is the default value.
-       * * `PUBLIC_KEY_AND_PASSWORD` - users must provide both their private key and their password
-       * to connect. The server checks the key first, and then if the key is valid, the system prompts
-       * for a password. If the private key provided does not match the public key that is stored,
-       * authentication fails.
-       */
-      override fun sftpAuthenticationMethods(sftpAuthenticationMethods: String) {
-        cdkBuilder.sftpAuthenticationMethods(sftpAuthenticationMethods)
-      }
-
-      /**
-       * @param url Provides the location of the service endpoint used to authenticate users.
-       */
-      override fun url(url: String) {
-        cdkBuilder.url(url)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty,
-    ) : CdkObject(cdkObject), IdentityProviderDetailsProperty {
-      /**
-       * The identifier of the AWS Directory Service directory that you want to use as your identity
-       * provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-directoryid)
-       */
-      override fun directoryId(): String? = unwrap(this).getDirectoryId()
-
-      /**
-       * The ARN for a Lambda function to use for the Identity provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-function)
-       */
-      override fun function(): String? = unwrap(this).getFunction()
-
-      /**
-       * This parameter is only applicable if your `IdentityProviderType` is `API_GATEWAY` .
-       *
-       * Provides the type of `InvocationRole` used to authenticate the user account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-invocationrole)
-       */
-      override fun invocationRole(): String? = unwrap(this).getInvocationRole()
-
-      /**
-       * For SFTP-enabled servers, and for custom identity providers *only* , you can specify
-       * whether to authenticate using a password, SSH key pair, or both.
-       *
-       * * `PASSWORD` - users must provide their password to connect.
-       * * `PUBLIC_KEY` - users must provide their private key to connect.
-       * * `PUBLIC_KEY_OR_PASSWORD` - users can authenticate with either their password or their
-       * key. This is the default value.
-       * * `PUBLIC_KEY_AND_PASSWORD` - users must provide both their private key and their password
-       * to connect. The server checks the key first, and then if the key is valid, the system prompts
-       * for a password. If the private key provided does not match the public key that is stored,
-       * authentication fails.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-sftpauthenticationmethods)
-       */
-      override fun sftpAuthenticationMethods(): String? =
-          unwrap(this).getSftpAuthenticationMethods()
-
-      /**
-       * Provides the location of the service endpoint used to authenticate users.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-url)
-       */
-      override fun url(): String? = unwrap(this).getUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IdentityProviderDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty):
-          IdentityProviderDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IdentityProviderDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IdentityProviderDetailsProperty):
-          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty
-    }
-  }
-
-  /**
    * The virtual private cloud (VPC) endpoint settings that are configured for your server.
    *
    * When you host your endpoint within your VPC, you can make your endpoint accessible only to
@@ -3271,6 +2106,1171 @@ public open class CfnServer internal constructor(
           software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty
+    }
+  }
+
+  /**
+   * Required when `IdentityProviderType` is set to `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or
+   * `API_GATEWAY` .
+   *
+   * Accepts an array containing all of the information required to use a directory in
+   * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
+   * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.transfer.*;
+   * IdentityProviderDetailsProperty identityProviderDetailsProperty =
+   * IdentityProviderDetailsProperty.builder()
+   * .directoryId("directoryId")
+   * .function("function")
+   * .invocationRole("invocationRole")
+   * .sftpAuthenticationMethods("sftpAuthenticationMethods")
+   * .url("url")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html)
+   */
+  public interface IdentityProviderDetailsProperty {
+    /**
+     * The identifier of the AWS Directory Service directory that you want to use as your identity
+     * provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-directoryid)
+     */
+    public fun directoryId(): String? = unwrap(this).getDirectoryId()
+
+    /**
+     * The ARN for a Lambda function to use for the Identity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-function)
+     */
+    public fun function(): String? = unwrap(this).getFunction()
+
+    /**
+     * This parameter is only applicable if your `IdentityProviderType` is `API_GATEWAY` .
+     *
+     * Provides the type of `InvocationRole` used to authenticate the user account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-invocationrole)
+     */
+    public fun invocationRole(): String? = unwrap(this).getInvocationRole()
+
+    /**
+     * For SFTP-enabled servers, and for custom identity providers *only* , you can specify whether
+     * to authenticate using a password, SSH key pair, or both.
+     *
+     * * `PASSWORD` - users must provide their password to connect.
+     * * `PUBLIC_KEY` - users must provide their private key to connect.
+     * * `PUBLIC_KEY_OR_PASSWORD` - users can authenticate with either their password or their key.
+     * This is the default value.
+     * * `PUBLIC_KEY_AND_PASSWORD` - users must provide both their private key and their password to
+     * connect. The server checks the key first, and then if the key is valid, the system prompts for a
+     * password. If the private key provided does not match the public key that is stored,
+     * authentication fails.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-sftpauthenticationmethods)
+     */
+    public fun sftpAuthenticationMethods(): String? = unwrap(this).getSftpAuthenticationMethods()
+
+    /**
+     * Provides the location of the service endpoint used to authenticate users.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-url)
+     */
+    public fun url(): String? = unwrap(this).getUrl()
+
+    /**
+     * A builder for [IdentityProviderDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param directoryId The identifier of the AWS Directory Service directory that you want to
+       * use as your identity provider.
+       */
+      public fun directoryId(directoryId: String)
+
+      /**
+       * @param function The ARN for a Lambda function to use for the Identity provider.
+       */
+      public fun function(function: String)
+
+      /**
+       * @param invocationRole This parameter is only applicable if your `IdentityProviderType` is
+       * `API_GATEWAY` .
+       * Provides the type of `InvocationRole` used to authenticate the user account.
+       */
+      public fun invocationRole(invocationRole: String)
+
+      /**
+       * @param sftpAuthenticationMethods For SFTP-enabled servers, and for custom identity
+       * providers *only* , you can specify whether to authenticate using a password, SSH key pair, or
+       * both.
+       * * `PASSWORD` - users must provide their password to connect.
+       * * `PUBLIC_KEY` - users must provide their private key to connect.
+       * * `PUBLIC_KEY_OR_PASSWORD` - users can authenticate with either their password or their
+       * key. This is the default value.
+       * * `PUBLIC_KEY_AND_PASSWORD` - users must provide both their private key and their password
+       * to connect. The server checks the key first, and then if the key is valid, the system prompts
+       * for a password. If the private key provided does not match the public key that is stored,
+       * authentication fails.
+       */
+      public fun sftpAuthenticationMethods(sftpAuthenticationMethods: String)
+
+      /**
+       * @param url Provides the location of the service endpoint used to authenticate users.
+       */
+      public fun url(url: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty.Builder
+          =
+          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty.builder()
+
+      /**
+       * @param directoryId The identifier of the AWS Directory Service directory that you want to
+       * use as your identity provider.
+       */
+      override fun directoryId(directoryId: String) {
+        cdkBuilder.directoryId(directoryId)
+      }
+
+      /**
+       * @param function The ARN for a Lambda function to use for the Identity provider.
+       */
+      override fun function(function: String) {
+        cdkBuilder.function(function)
+      }
+
+      /**
+       * @param invocationRole This parameter is only applicable if your `IdentityProviderType` is
+       * `API_GATEWAY` .
+       * Provides the type of `InvocationRole` used to authenticate the user account.
+       */
+      override fun invocationRole(invocationRole: String) {
+        cdkBuilder.invocationRole(invocationRole)
+      }
+
+      /**
+       * @param sftpAuthenticationMethods For SFTP-enabled servers, and for custom identity
+       * providers *only* , you can specify whether to authenticate using a password, SSH key pair, or
+       * both.
+       * * `PASSWORD` - users must provide their password to connect.
+       * * `PUBLIC_KEY` - users must provide their private key to connect.
+       * * `PUBLIC_KEY_OR_PASSWORD` - users can authenticate with either their password or their
+       * key. This is the default value.
+       * * `PUBLIC_KEY_AND_PASSWORD` - users must provide both their private key and their password
+       * to connect. The server checks the key first, and then if the key is valid, the system prompts
+       * for a password. If the private key provided does not match the public key that is stored,
+       * authentication fails.
+       */
+      override fun sftpAuthenticationMethods(sftpAuthenticationMethods: String) {
+        cdkBuilder.sftpAuthenticationMethods(sftpAuthenticationMethods)
+      }
+
+      /**
+       * @param url Provides the location of the service endpoint used to authenticate users.
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty,
+    ) : CdkObject(cdkObject), IdentityProviderDetailsProperty {
+      /**
+       * The identifier of the AWS Directory Service directory that you want to use as your identity
+       * provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-directoryid)
+       */
+      override fun directoryId(): String? = unwrap(this).getDirectoryId()
+
+      /**
+       * The ARN for a Lambda function to use for the Identity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-function)
+       */
+      override fun function(): String? = unwrap(this).getFunction()
+
+      /**
+       * This parameter is only applicable if your `IdentityProviderType` is `API_GATEWAY` .
+       *
+       * Provides the type of `InvocationRole` used to authenticate the user account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-invocationrole)
+       */
+      override fun invocationRole(): String? = unwrap(this).getInvocationRole()
+
+      /**
+       * For SFTP-enabled servers, and for custom identity providers *only* , you can specify
+       * whether to authenticate using a password, SSH key pair, or both.
+       *
+       * * `PASSWORD` - users must provide their password to connect.
+       * * `PUBLIC_KEY` - users must provide their private key to connect.
+       * * `PUBLIC_KEY_OR_PASSWORD` - users can authenticate with either their password or their
+       * key. This is the default value.
+       * * `PUBLIC_KEY_AND_PASSWORD` - users must provide both their private key and their password
+       * to connect. The server checks the key first, and then if the key is valid, the system prompts
+       * for a password. If the private key provided does not match the public key that is stored,
+       * authentication fails.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-sftpauthenticationmethods)
+       */
+      override fun sftpAuthenticationMethods(): String? =
+          unwrap(this).getSftpAuthenticationMethods()
+
+      /**
+       * Provides the location of the service endpoint used to authenticate users.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-url)
+       */
+      override fun url(): String? = unwrap(this).getUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IdentityProviderDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty):
+          IdentityProviderDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentityProviderDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdentityProviderDetailsProperty):
+          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty
+    }
+  }
+
+  /**
+   * The protocol settings that are configured for your server.
+   *
+   * * To indicate passive mode (for FTP and FTPS protocols), use the `PassiveIp` parameter. Enter a
+   * single dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load
+   * balancer.
+   * * To ignore the error that is generated when the client attempts to use the `SETSTAT` command
+   * on a file that you are uploading to an Amazon S3 bucket, use the `SetStatOption` parameter. To
+   * have the AWS Transfer Family server ignore the `SETSTAT` command and upload files without needing
+   * to make any changes to your SFTP client, set the value to `ENABLE_NO_OP` . If you set the
+   * `SetStatOption` parameter to `ENABLE_NO_OP` , Transfer Family generates a log entry to Amazon
+   * CloudWatch Logs, so that you can determine when the client is making a `SETSTAT` call.
+   * * To determine whether your AWS Transfer Family server resumes recent, negotiated sessions
+   * through a unique session ID, use the `TlsSessionResumptionMode` parameter.
+   * * `As2Transports` indicates the transport method for the AS2 messages. Currently, only HTTP is
+   * supported.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.transfer.*;
+   * ProtocolDetailsProperty protocolDetailsProperty = ProtocolDetailsProperty.builder()
+   * .as2Transports(List.of("as2Transports"))
+   * .passiveIp("passiveIp")
+   * .setStatOption("setStatOption")
+   * .tlsSessionResumptionMode("tlsSessionResumptionMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html)
+   */
+  public interface ProtocolDetailsProperty {
+    /**
+     * List of `As2Transport` objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-as2transports)
+     */
+    public fun as2Transports(): List<String> = unwrap(this).getAs2Transports() ?: emptyList()
+
+    /**
+     * Indicates passive mode, for FTP and FTPS protocols.
+     *
+     * Enter a single IPv4 address, such as the public IP address of a firewall, router, or load
+     * balancer. For example:
+     *
+     * `aws transfer update-server --protocol-details PassiveIp=0.0.0.0`
+     *
+     * Replace `0.0.0.0` in the example above with the actual IP address you want to use.
+     *
+     *
+     * If you change the `PassiveIp` value, you must stop and then restart your Transfer Family
+     * server for the change to take effect. For details on using passive mode (PASV) in a NAT
+     * environment, see [Configuring your FTPS server behind a firewall or NAT with AWS Transfer
+     * Family](https://docs.aws.amazon.com/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/)
+     * .
+     *
+     *
+     * *Special values*
+     *
+     * The `AUTO` and `0.0.0.0` are special values for the `PassiveIp` parameter. The value
+     * `PassiveIp=AUTO` is assigned by default to FTP and FTPS type servers. In this case, the server
+     * automatically responds with one of the endpoint IPs within the PASV response.
+     * `PassiveIp=0.0.0.0` has a more unique application for its usage. For example, if you have a High
+     * Availability (HA) Network Load Balancer (NLB) environment, where you have 3 subnets, you can
+     * only specify a single IP address using the `PassiveIp` parameter. This reduces the effectiveness
+     * of having High Availability. In this case, you can specify `PassiveIp=0.0.0.0` . This tells the
+     * client to use the same IP address as the Control connection and utilize all AZs for their
+     * connections. Note, however, that not all FTP clients support the `PassiveIp=0.0.0.0` response.
+     * FileZilla and WinSCP do support it. If you are using other clients, check to see if your client
+     * supports the `PassiveIp=0.0.0.0` response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-passiveip)
+     */
+    public fun passiveIp(): String? = unwrap(this).getPassiveIp()
+
+    /**
+     * Use the `SetStatOption` to ignore the error that is generated when the client attempts to use
+     * `SETSTAT` on a file you are uploading to an S3 bucket.
+     *
+     * Some SFTP file transfer clients can attempt to change the attributes of remote files,
+     * including timestamp and permissions, using commands, such as `SETSTAT` when uploading the file.
+     * However, these commands are not compatible with object storage systems, such as Amazon S3. Due
+     * to this incompatibility, file uploads from these clients can result in errors even when the file
+     * is otherwise successfully uploaded.
+     *
+     * Set the value to `ENABLE_NO_OP` to have the Transfer Family server ignore the `SETSTAT`
+     * command, and upload files without needing to make any changes to your SFTP client. While the
+     * `SetStatOption` `ENABLE_NO_OP` setting ignores the error, it does generate a log entry in Amazon
+     * CloudWatch Logs, so you can determine when the client is making a `SETSTAT` call.
+     *
+     *
+     * If you want to preserve the original timestamp for your file, and modify other file
+     * attributes using `SETSTAT` , you can use Amazon EFS as backend storage with Transfer Family.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-setstatoption)
+     */
+    public fun setStatOption(): String? = unwrap(this).getSetStatOption()
+
+    /**
+     * A property used with Transfer Family servers that use the FTPS protocol.
+     *
+     * TLS Session Resumption provides a mechanism to resume or share a negotiated secret key
+     * between the control and data connection for an FTPS session. `TlsSessionResumptionMode`
+     * determines whether or not the server resumes recent, negotiated sessions through a unique
+     * session ID. This property is available during `CreateServer` and `UpdateServer` calls. If a
+     * `TlsSessionResumptionMode` value is not specified during `CreateServer` , it is set to
+     * `ENFORCED` by default.
+     *
+     * * `DISABLED` : the server does not process TLS session resumption client requests and creates
+     * a new TLS session for each request.
+     * * `ENABLED` : the server processes and accepts clients that are performing TLS session
+     * resumption. The server doesn't reject client data connections that do not perform the TLS
+     * session resumption client processing.
+     * * `ENFORCED` : the server processes and accepts clients that are performing TLS session
+     * resumption. The server rejects client data connections that do not perform the TLS session
+     * resumption client processing. Before you set the value to `ENFORCED` , test your clients.
+     *
+     *
+     * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session
+     * resumption, you prevent any connections from FTPS clients that don't perform the protocol
+     * negotiation. To determine whether or not you can use the `ENFORCED` value, you need to test your
+     * clients.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-tlssessionresumptionmode)
+     */
+    public fun tlsSessionResumptionMode(): String? = unwrap(this).getTlsSessionResumptionMode()
+
+    /**
+     * A builder for [ProtocolDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param as2Transports List of `As2Transport` objects.
+       */
+      public fun as2Transports(as2Transports: List<String>)
+
+      /**
+       * @param as2Transports List of `As2Transport` objects.
+       */
+      public fun as2Transports(vararg as2Transports: String)
+
+      /**
+       * @param passiveIp Indicates passive mode, for FTP and FTPS protocols.
+       * Enter a single IPv4 address, such as the public IP address of a firewall, router, or load
+       * balancer. For example:
+       *
+       * `aws transfer update-server --protocol-details PassiveIp=0.0.0.0`
+       *
+       * Replace `0.0.0.0` in the example above with the actual IP address you want to use.
+       *
+       *
+       * If you change the `PassiveIp` value, you must stop and then restart your Transfer Family
+       * server for the change to take effect. For details on using passive mode (PASV) in a NAT
+       * environment, see [Configuring your FTPS server behind a firewall or NAT with AWS Transfer
+       * Family](https://docs.aws.amazon.com/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/)
+       * .
+       *
+       *
+       * *Special values*
+       *
+       * The `AUTO` and `0.0.0.0` are special values for the `PassiveIp` parameter. The value
+       * `PassiveIp=AUTO` is assigned by default to FTP and FTPS type servers. In this case, the server
+       * automatically responds with one of the endpoint IPs within the PASV response.
+       * `PassiveIp=0.0.0.0` has a more unique application for its usage. For example, if you have a
+       * High Availability (HA) Network Load Balancer (NLB) environment, where you have 3 subnets, you
+       * can only specify a single IP address using the `PassiveIp` parameter. This reduces the
+       * effectiveness of having High Availability. In this case, you can specify `PassiveIp=0.0.0.0` .
+       * This tells the client to use the same IP address as the Control connection and utilize all AZs
+       * for their connections. Note, however, that not all FTP clients support the `PassiveIp=0.0.0.0`
+       * response. FileZilla and WinSCP do support it. If you are using other clients, check to see if
+       * your client supports the `PassiveIp=0.0.0.0` response.
+       */
+      public fun passiveIp(passiveIp: String)
+
+      /**
+       * @param setStatOption Use the `SetStatOption` to ignore the error that is generated when the
+       * client attempts to use `SETSTAT` on a file you are uploading to an S3 bucket.
+       * Some SFTP file transfer clients can attempt to change the attributes of remote files,
+       * including timestamp and permissions, using commands, such as `SETSTAT` when uploading the
+       * file. However, these commands are not compatible with object storage systems, such as Amazon
+       * S3. Due to this incompatibility, file uploads from these clients can result in errors even
+       * when the file is otherwise successfully uploaded.
+       *
+       * Set the value to `ENABLE_NO_OP` to have the Transfer Family server ignore the `SETSTAT`
+       * command, and upload files without needing to make any changes to your SFTP client. While the
+       * `SetStatOption` `ENABLE_NO_OP` setting ignores the error, it does generate a log entry in
+       * Amazon CloudWatch Logs, so you can determine when the client is making a `SETSTAT` call.
+       *
+       *
+       * If you want to preserve the original timestamp for your file, and modify other file
+       * attributes using `SETSTAT` , you can use Amazon EFS as backend storage with Transfer Family.
+       */
+      public fun statOption(setStatOption: String)
+
+      /**
+       * @param tlsSessionResumptionMode A property used with Transfer Family servers that use the
+       * FTPS protocol.
+       * TLS Session Resumption provides a mechanism to resume or share a negotiated secret key
+       * between the control and data connection for an FTPS session. `TlsSessionResumptionMode`
+       * determines whether or not the server resumes recent, negotiated sessions through a unique
+       * session ID. This property is available during `CreateServer` and `UpdateServer` calls. If a
+       * `TlsSessionResumptionMode` value is not specified during `CreateServer` , it is set to
+       * `ENFORCED` by default.
+       *
+       * * `DISABLED` : the server does not process TLS session resumption client requests and
+       * creates a new TLS session for each request.
+       * * `ENABLED` : the server processes and accepts clients that are performing TLS session
+       * resumption. The server doesn't reject client data connections that do not perform the TLS
+       * session resumption client processing.
+       * * `ENFORCED` : the server processes and accepts clients that are performing TLS session
+       * resumption. The server rejects client data connections that do not perform the TLS session
+       * resumption client processing. Before you set the value to `ENFORCED` , test your clients.
+       *
+       *
+       * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS
+       * session resumption, you prevent any connections from FTPS clients that don't perform the
+       * protocol negotiation. To determine whether or not you can use the `ENFORCED` value, you need
+       * to test your clients.
+       */
+      public fun tlsSessionResumptionMode(tlsSessionResumptionMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty.builder()
+
+      /**
+       * @param as2Transports List of `As2Transport` objects.
+       */
+      override fun as2Transports(as2Transports: List<String>) {
+        cdkBuilder.as2Transports(as2Transports)
+      }
+
+      /**
+       * @param as2Transports List of `As2Transport` objects.
+       */
+      override fun as2Transports(vararg as2Transports: String): Unit =
+          as2Transports(as2Transports.toList())
+
+      /**
+       * @param passiveIp Indicates passive mode, for FTP and FTPS protocols.
+       * Enter a single IPv4 address, such as the public IP address of a firewall, router, or load
+       * balancer. For example:
+       *
+       * `aws transfer update-server --protocol-details PassiveIp=0.0.0.0`
+       *
+       * Replace `0.0.0.0` in the example above with the actual IP address you want to use.
+       *
+       *
+       * If you change the `PassiveIp` value, you must stop and then restart your Transfer Family
+       * server for the change to take effect. For details on using passive mode (PASV) in a NAT
+       * environment, see [Configuring your FTPS server behind a firewall or NAT with AWS Transfer
+       * Family](https://docs.aws.amazon.com/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/)
+       * .
+       *
+       *
+       * *Special values*
+       *
+       * The `AUTO` and `0.0.0.0` are special values for the `PassiveIp` parameter. The value
+       * `PassiveIp=AUTO` is assigned by default to FTP and FTPS type servers. In this case, the server
+       * automatically responds with one of the endpoint IPs within the PASV response.
+       * `PassiveIp=0.0.0.0` has a more unique application for its usage. For example, if you have a
+       * High Availability (HA) Network Load Balancer (NLB) environment, where you have 3 subnets, you
+       * can only specify a single IP address using the `PassiveIp` parameter. This reduces the
+       * effectiveness of having High Availability. In this case, you can specify `PassiveIp=0.0.0.0` .
+       * This tells the client to use the same IP address as the Control connection and utilize all AZs
+       * for their connections. Note, however, that not all FTP clients support the `PassiveIp=0.0.0.0`
+       * response. FileZilla and WinSCP do support it. If you are using other clients, check to see if
+       * your client supports the `PassiveIp=0.0.0.0` response.
+       */
+      override fun passiveIp(passiveIp: String) {
+        cdkBuilder.passiveIp(passiveIp)
+      }
+
+      /**
+       * @param setStatOption Use the `SetStatOption` to ignore the error that is generated when the
+       * client attempts to use `SETSTAT` on a file you are uploading to an S3 bucket.
+       * Some SFTP file transfer clients can attempt to change the attributes of remote files,
+       * including timestamp and permissions, using commands, such as `SETSTAT` when uploading the
+       * file. However, these commands are not compatible with object storage systems, such as Amazon
+       * S3. Due to this incompatibility, file uploads from these clients can result in errors even
+       * when the file is otherwise successfully uploaded.
+       *
+       * Set the value to `ENABLE_NO_OP` to have the Transfer Family server ignore the `SETSTAT`
+       * command, and upload files without needing to make any changes to your SFTP client. While the
+       * `SetStatOption` `ENABLE_NO_OP` setting ignores the error, it does generate a log entry in
+       * Amazon CloudWatch Logs, so you can determine when the client is making a `SETSTAT` call.
+       *
+       *
+       * If you want to preserve the original timestamp for your file, and modify other file
+       * attributes using `SETSTAT` , you can use Amazon EFS as backend storage with Transfer Family.
+       */
+      override fun statOption(setStatOption: String) {
+        cdkBuilder.setStatOption(setStatOption)
+      }
+
+      /**
+       * @param tlsSessionResumptionMode A property used with Transfer Family servers that use the
+       * FTPS protocol.
+       * TLS Session Resumption provides a mechanism to resume or share a negotiated secret key
+       * between the control and data connection for an FTPS session. `TlsSessionResumptionMode`
+       * determines whether or not the server resumes recent, negotiated sessions through a unique
+       * session ID. This property is available during `CreateServer` and `UpdateServer` calls. If a
+       * `TlsSessionResumptionMode` value is not specified during `CreateServer` , it is set to
+       * `ENFORCED` by default.
+       *
+       * * `DISABLED` : the server does not process TLS session resumption client requests and
+       * creates a new TLS session for each request.
+       * * `ENABLED` : the server processes and accepts clients that are performing TLS session
+       * resumption. The server doesn't reject client data connections that do not perform the TLS
+       * session resumption client processing.
+       * * `ENFORCED` : the server processes and accepts clients that are performing TLS session
+       * resumption. The server rejects client data connections that do not perform the TLS session
+       * resumption client processing. Before you set the value to `ENFORCED` , test your clients.
+       *
+       *
+       * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS
+       * session resumption, you prevent any connections from FTPS clients that don't perform the
+       * protocol negotiation. To determine whether or not you can use the `ENFORCED` value, you need
+       * to test your clients.
+       */
+      override fun tlsSessionResumptionMode(tlsSessionResumptionMode: String) {
+        cdkBuilder.tlsSessionResumptionMode(tlsSessionResumptionMode)
+      }
+
+      public fun build(): software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty,
+    ) : CdkObject(cdkObject), ProtocolDetailsProperty {
+      /**
+       * List of `As2Transport` objects.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-as2transports)
+       */
+      override fun as2Transports(): List<String> = unwrap(this).getAs2Transports() ?: emptyList()
+
+      /**
+       * Indicates passive mode, for FTP and FTPS protocols.
+       *
+       * Enter a single IPv4 address, such as the public IP address of a firewall, router, or load
+       * balancer. For example:
+       *
+       * `aws transfer update-server --protocol-details PassiveIp=0.0.0.0`
+       *
+       * Replace `0.0.0.0` in the example above with the actual IP address you want to use.
+       *
+       *
+       * If you change the `PassiveIp` value, you must stop and then restart your Transfer Family
+       * server for the change to take effect. For details on using passive mode (PASV) in a NAT
+       * environment, see [Configuring your FTPS server behind a firewall or NAT with AWS Transfer
+       * Family](https://docs.aws.amazon.com/storage/configuring-your-ftps-server-behind-a-firewall-or-nat-with-aws-transfer-family/)
+       * .
+       *
+       *
+       * *Special values*
+       *
+       * The `AUTO` and `0.0.0.0` are special values for the `PassiveIp` parameter. The value
+       * `PassiveIp=AUTO` is assigned by default to FTP and FTPS type servers. In this case, the server
+       * automatically responds with one of the endpoint IPs within the PASV response.
+       * `PassiveIp=0.0.0.0` has a more unique application for its usage. For example, if you have a
+       * High Availability (HA) Network Load Balancer (NLB) environment, where you have 3 subnets, you
+       * can only specify a single IP address using the `PassiveIp` parameter. This reduces the
+       * effectiveness of having High Availability. In this case, you can specify `PassiveIp=0.0.0.0` .
+       * This tells the client to use the same IP address as the Control connection and utilize all AZs
+       * for their connections. Note, however, that not all FTP clients support the `PassiveIp=0.0.0.0`
+       * response. FileZilla and WinSCP do support it. If you are using other clients, check to see if
+       * your client supports the `PassiveIp=0.0.0.0` response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-passiveip)
+       */
+      override fun passiveIp(): String? = unwrap(this).getPassiveIp()
+
+      /**
+       * Use the `SetStatOption` to ignore the error that is generated when the client attempts to
+       * use `SETSTAT` on a file you are uploading to an S3 bucket.
+       *
+       * Some SFTP file transfer clients can attempt to change the attributes of remote files,
+       * including timestamp and permissions, using commands, such as `SETSTAT` when uploading the
+       * file. However, these commands are not compatible with object storage systems, such as Amazon
+       * S3. Due to this incompatibility, file uploads from these clients can result in errors even
+       * when the file is otherwise successfully uploaded.
+       *
+       * Set the value to `ENABLE_NO_OP` to have the Transfer Family server ignore the `SETSTAT`
+       * command, and upload files without needing to make any changes to your SFTP client. While the
+       * `SetStatOption` `ENABLE_NO_OP` setting ignores the error, it does generate a log entry in
+       * Amazon CloudWatch Logs, so you can determine when the client is making a `SETSTAT` call.
+       *
+       *
+       * If you want to preserve the original timestamp for your file, and modify other file
+       * attributes using `SETSTAT` , you can use Amazon EFS as backend storage with Transfer Family.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-setstatoption)
+       */
+      override fun setStatOption(): String? = unwrap(this).getSetStatOption()
+
+      /**
+       * A property used with Transfer Family servers that use the FTPS protocol.
+       *
+       * TLS Session Resumption provides a mechanism to resume or share a negotiated secret key
+       * between the control and data connection for an FTPS session. `TlsSessionResumptionMode`
+       * determines whether or not the server resumes recent, negotiated sessions through a unique
+       * session ID. This property is available during `CreateServer` and `UpdateServer` calls. If a
+       * `TlsSessionResumptionMode` value is not specified during `CreateServer` , it is set to
+       * `ENFORCED` by default.
+       *
+       * * `DISABLED` : the server does not process TLS session resumption client requests and
+       * creates a new TLS session for each request.
+       * * `ENABLED` : the server processes and accepts clients that are performing TLS session
+       * resumption. The server doesn't reject client data connections that do not perform the TLS
+       * session resumption client processing.
+       * * `ENFORCED` : the server processes and accepts clients that are performing TLS session
+       * resumption. The server rejects client data connections that do not perform the TLS session
+       * resumption client processing. Before you set the value to `ENFORCED` , test your clients.
+       *
+       *
+       * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS
+       * session resumption, you prevent any connections from FTPS clients that don't perform the
+       * protocol negotiation. To determine whether or not you can use the `ENFORCED` value, you need
+       * to test your clients.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-tlssessionresumptionmode)
+       */
+      override fun tlsSessionResumptionMode(): String? = unwrap(this).getTlsSessionResumptionMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProtocolDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty):
+          ProtocolDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? ProtocolDetailsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProtocolDetailsProperty):
+          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty
+    }
+  }
+
+  /**
+   * The Amazon S3 storage options that are configured for your server.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.transfer.*;
+   * S3StorageOptionsProperty s3StorageOptionsProperty = S3StorageOptionsProperty.builder()
+   * .directoryListingOptimization("directoryListingOptimization")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-s3storageoptions.html)
+   */
+  public interface S3StorageOptionsProperty {
+    /**
+     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
+     * disabled by default.
+     *
+     * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
+     * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
+     * mapping to have a file target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-s3storageoptions.html#cfn-transfer-server-s3storageoptions-directorylistingoptimization)
+     */
+    public fun directoryListingOptimization(): String? =
+        unwrap(this).getDirectoryListingOptimization()
+
+    /**
+     * A builder for [S3StorageOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param directoryListingOptimization Specifies whether or not performance for your Amazon S3
+       * directories is optimized. This is disabled by default.
+       * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
+       * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if
+       * you want a mapping to have a file target.
+       */
+      public fun directoryListingOptimization(directoryListingOptimization: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty.builder()
+
+      /**
+       * @param directoryListingOptimization Specifies whether or not performance for your Amazon S3
+       * directories is optimized. This is disabled by default.
+       * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
+       * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if
+       * you want a mapping to have a file target.
+       */
+      override fun directoryListingOptimization(directoryListingOptimization: String) {
+        cdkBuilder.directoryListingOptimization(directoryListingOptimization)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty,
+    ) : CdkObject(cdkObject), S3StorageOptionsProperty {
+      /**
+       * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
+       * disabled by default.
+       *
+       * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
+       * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if
+       * you want a mapping to have a file target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-s3storageoptions.html#cfn-transfer-server-s3storageoptions-directorylistingoptimization)
+       */
+      override fun directoryListingOptimization(): String? =
+          unwrap(this).getDirectoryListingOptimization()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3StorageOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty):
+          S3StorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? S3StorageOptionsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3StorageOptionsProperty):
+          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies the workflow ID for the workflow to assign and the execution role that's used for
+   * executing the workflow.
+   *
+   * In addition to a workflow to execute when a file is uploaded completely, `WorkflowDetails` can
+   * also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A
+   * partial upload occurs when a file is open when the session disconnects.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.transfer.*;
+   * WorkflowDetailProperty workflowDetailProperty = WorkflowDetailProperty.builder()
+   * .executionRole("executionRole")
+   * .workflowId("workflowId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html)
+   */
+  public interface WorkflowDetailProperty {
+    /**
+     * Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can
+     * assume, so that all workflow steps can operate on the required resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html#cfn-transfer-server-workflowdetail-executionrole)
+     */
+    public fun executionRole(): String
+
+    /**
+     * A unique identifier for the workflow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html#cfn-transfer-server-workflowdetail-workflowid)
+     */
+    public fun workflowId(): String
+
+    /**
+     * A builder for [WorkflowDetailProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param executionRole Includes the necessary permissions for S3, EFS, and Lambda operations
+       * that Transfer can assume, so that all workflow steps can operate on the required resources. 
+       */
+      public fun executionRole(executionRole: String)
+
+      /**
+       * @param workflowId A unique identifier for the workflow. 
+       */
+      public fun workflowId(workflowId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty.builder()
+
+      /**
+       * @param executionRole Includes the necessary permissions for S3, EFS, and Lambda operations
+       * that Transfer can assume, so that all workflow steps can operate on the required resources. 
+       */
+      override fun executionRole(executionRole: String) {
+        cdkBuilder.executionRole(executionRole)
+      }
+
+      /**
+       * @param workflowId A unique identifier for the workflow. 
+       */
+      override fun workflowId(workflowId: String) {
+        cdkBuilder.workflowId(workflowId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty,
+    ) : CdkObject(cdkObject), WorkflowDetailProperty {
+      /**
+       * Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can
+       * assume, so that all workflow steps can operate on the required resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html#cfn-transfer-server-workflowdetail-executionrole)
+       */
+      override fun executionRole(): String = unwrap(this).getExecutionRole()
+
+      /**
+       * A unique identifier for the workflow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetail.html#cfn-transfer-server-workflowdetail-workflowid)
+       */
+      override fun workflowId(): String = unwrap(this).getWorkflowId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowDetailProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty):
+          WorkflowDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkflowDetailProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WorkflowDetailProperty):
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty
+    }
+  }
+
+  /**
+   * Container for the `WorkflowDetail` data type.
+   *
+   * It is used by actions that trigger a workflow to begin execution.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.transfer.*;
+   * WorkflowDetailsProperty workflowDetailsProperty = WorkflowDetailsProperty.builder()
+   * .onPartialUpload(List.of(WorkflowDetailProperty.builder()
+   * .executionRole("executionRole")
+   * .workflowId("workflowId")
+   * .build()))
+   * .onUpload(List.of(WorkflowDetailProperty.builder()
+   * .executionRole("executionRole")
+   * .workflowId("workflowId")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html)
+   */
+  public interface WorkflowDetailsProperty {
+    /**
+     * A trigger that starts a workflow if a file is only partially uploaded.
+     *
+     * You can attach a workflow to a server that executes whenever there is a partial upload.
+     *
+     * A *partial upload* occurs when a file is open when the session disconnects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onpartialupload)
+     */
+    public fun onPartialUpload(): Any? = unwrap(this).getOnPartialUpload()
+
+    /**
+     * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
+     *
+     * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
+     * as in the following example.
+     *
+     * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
+     * '{"OnUpload":[]}'`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onupload)
+     */
+    public fun onUpload(): Any? = unwrap(this).getOnUpload()
+
+    /**
+     * A builder for [WorkflowDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
+       * uploaded.
+       * You can attach a workflow to a server that executes whenever there is a partial upload.
+       *
+       * A *partial upload* occurs when a file is open when the session disconnects.
+       */
+      public fun onPartialUpload(onPartialUpload: IResolvable)
+
+      /**
+       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
+       * uploaded.
+       * You can attach a workflow to a server that executes whenever there is a partial upload.
+       *
+       * A *partial upload* occurs when a file is open when the session disconnects.
+       */
+      public fun onPartialUpload(onPartialUpload: List<Any>)
+
+      /**
+       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
+       * uploaded.
+       * You can attach a workflow to a server that executes whenever there is a partial upload.
+       *
+       * A *partial upload* occurs when a file is open when the session disconnects.
+       */
+      public fun onPartialUpload(vararg onPartialUpload: Any)
+
+      /**
+       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
+       * file is uploaded.
+       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
+       * as in the following example.
+       *
+       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
+       * '{"OnUpload":[]}'`
+       */
+      public fun onUpload(onUpload: IResolvable)
+
+      /**
+       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
+       * file is uploaded.
+       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
+       * as in the following example.
+       *
+       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
+       * '{"OnUpload":[]}'`
+       */
+      public fun onUpload(onUpload: List<Any>)
+
+      /**
+       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
+       * file is uploaded.
+       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
+       * as in the following example.
+       *
+       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
+       * '{"OnUpload":[]}'`
+       */
+      public fun onUpload(vararg onUpload: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty.builder()
+
+      /**
+       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
+       * uploaded.
+       * You can attach a workflow to a server that executes whenever there is a partial upload.
+       *
+       * A *partial upload* occurs when a file is open when the session disconnects.
+       */
+      override fun onPartialUpload(onPartialUpload: IResolvable) {
+        cdkBuilder.onPartialUpload(onPartialUpload.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
+       * uploaded.
+       * You can attach a workflow to a server that executes whenever there is a partial upload.
+       *
+       * A *partial upload* occurs when a file is open when the session disconnects.
+       */
+      override fun onPartialUpload(onPartialUpload: List<Any>) {
+        cdkBuilder.onPartialUpload(onPartialUpload)
+      }
+
+      /**
+       * @param onPartialUpload A trigger that starts a workflow if a file is only partially
+       * uploaded.
+       * You can attach a workflow to a server that executes whenever there is a partial upload.
+       *
+       * A *partial upload* occurs when a file is open when the session disconnects.
+       */
+      override fun onPartialUpload(vararg onPartialUpload: Any): Unit =
+          onPartialUpload(onPartialUpload.toList())
+
+      /**
+       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
+       * file is uploaded.
+       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
+       * as in the following example.
+       *
+       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
+       * '{"OnUpload":[]}'`
+       */
+      override fun onUpload(onUpload: IResolvable) {
+        cdkBuilder.onUpload(onUpload.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
+       * file is uploaded.
+       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
+       * as in the following example.
+       *
+       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
+       * '{"OnUpload":[]}'`
+       */
+      override fun onUpload(onUpload: List<Any>) {
+        cdkBuilder.onUpload(onUpload)
+      }
+
+      /**
+       * @param onUpload A trigger that starts a workflow: the workflow begins to execute after a
+       * file is uploaded.
+       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
+       * as in the following example.
+       *
+       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
+       * '{"OnUpload":[]}'`
+       */
+      override fun onUpload(vararg onUpload: Any): Unit = onUpload(onUpload.toList())
+
+      public fun build(): software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty,
+    ) : CdkObject(cdkObject), WorkflowDetailsProperty {
+      /**
+       * A trigger that starts a workflow if a file is only partially uploaded.
+       *
+       * You can attach a workflow to a server that executes whenever there is a partial upload.
+       *
+       * A *partial upload* occurs when a file is open when the session disconnects.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onpartialupload)
+       */
+      override fun onPartialUpload(): Any? = unwrap(this).getOnPartialUpload()
+
+      /**
+       * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
+       *
+       * To remove an associated workflow from a server, you can provide an empty `OnUpload` object,
+       * as in the following example.
+       *
+       * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
+       * '{"OnUpload":[]}'`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onupload)
+       */
+      override fun onUpload(): Any? = unwrap(this).getOnUpload()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty):
+          WorkflowDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkflowDetailsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WorkflowDetailsProperty):
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty
     }
   }
 }

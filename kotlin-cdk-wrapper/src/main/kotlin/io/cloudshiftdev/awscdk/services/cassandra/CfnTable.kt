@@ -1359,1315 +1359,6 @@ public open class CfnTable internal constructor(
   }
 
   /**
-   * Amazon Keyspaces supports the `target tracking` auto scaling policy.
-   *
-   * With this policy, Amazon Keyspaces auto scaling ensures that the table's ratio of consumed to
-   * provisioned capacity stays at or near the target value that you specify. You define the target
-   * value as a percentage between 20 and 90.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cassandra.*;
-   * ScalingPolicyProperty scalingPolicyProperty = ScalingPolicyProperty.builder()
-   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-scalingpolicy.html)
-   */
-  public interface ScalingPolicyProperty {
-    /**
-     * The auto scaling policy that scales a table based on the ratio of consumed to provisioned
-     * capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-scalingpolicy.html#cfn-cassandra-table-scalingpolicy-targettrackingscalingpolicyconfiguration)
-     */
-    public fun targetTrackingScalingPolicyConfiguration(): Any? =
-        unwrap(this).getTargetTrackingScalingPolicyConfiguration()
-
-    /**
-     * A builder for [ScalingPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
-       * based on the ratio of consumed to provisioned capacity.
-       */
-      public
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable)
-
-      /**
-       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
-       * based on the ratio of consumed to provisioned capacity.
-       */
-      public
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty)
-
-      /**
-       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
-       * based on the ratio of consumed to provisioned capacity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8c0719136d5761003d3e30200cf94101b28345ce0596e84b87cc72daaeb879fb")
-      public
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty.Builder =
-          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty.builder()
-
-      /**
-       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
-       * based on the ratio of consumed to provisioned capacity.
-       */
-      override
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
-        cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
-       * based on the ratio of consumed to provisioned capacity.
-       */
-      override
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty) {
-        cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(TargetTrackingScalingPolicyConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
-       * based on the ratio of consumed to provisioned capacity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8c0719136d5761003d3e30200cf94101b28345ce0596e84b87cc72daaeb879fb")
-      override
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty(targetTrackingScalingPolicyConfiguration))
-
-      public fun build(): software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty,
-    ) : CdkObject(cdkObject), ScalingPolicyProperty {
-      /**
-       * The auto scaling policy that scales a table based on the ratio of consumed to provisioned
-       * capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-scalingpolicy.html#cfn-cassandra-table-scalingpolicy-targettrackingscalingpolicyconfiguration)
-       */
-      override fun targetTrackingScalingPolicyConfiguration(): Any? =
-          unwrap(this).getTargetTrackingScalingPolicyConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty):
-          ScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScalingPolicyProperty):
-          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty
-    }
-  }
-
-  /**
-   * Defines an individual column within the clustering key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cassandra.*;
-   * ClusteringKeyColumnProperty clusteringKeyColumnProperty = ClusteringKeyColumnProperty.builder()
-   * .column(ColumnProperty.builder()
-   * .columnName("columnName")
-   * .columnType("columnType")
-   * .build())
-   * // the properties below are optional
-   * .orderBy("orderBy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html)
-   */
-  public interface ClusteringKeyColumnProperty {
-    /**
-     * The name and data type of this clustering key column.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-column)
-     */
-    public fun column(): Any
-
-    /**
-     * The order in which this column's data is stored:.
-     *
-     * * `ASC` (default) - The column's data is stored in ascending order.
-     * * `DESC` - The column's data is stored in descending order.
-     *
-     * Default: - "ASC"
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-orderby)
-     */
-    public fun orderBy(): String? = unwrap(this).getOrderBy()
-
-    /**
-     * A builder for [ClusteringKeyColumnProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param column The name and data type of this clustering key column. 
-       */
-      public fun column(column: IResolvable)
-
-      /**
-       * @param column The name and data type of this clustering key column. 
-       */
-      public fun column(column: ColumnProperty)
-
-      /**
-       * @param column The name and data type of this clustering key column. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1719c3c601457175d08dcf7402b4c82cda20c2e09b59385102ee0c6f5af0e8cb")
-      public fun column(column: ColumnProperty.Builder.() -> Unit)
-
-      /**
-       * @param orderBy The order in which this column's data is stored:.
-       * * `ASC` (default) - The column's data is stored in ascending order.
-       * * `DESC` - The column's data is stored in descending order.
-       */
-      public fun orderBy(orderBy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty.Builder =
-          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty.builder()
-
-      /**
-       * @param column The name and data type of this clustering key column. 
-       */
-      override fun column(column: IResolvable) {
-        cdkBuilder.column(column.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param column The name and data type of this clustering key column. 
-       */
-      override fun column(column: ColumnProperty) {
-        cdkBuilder.column(column.let(ColumnProperty::unwrap))
-      }
-
-      /**
-       * @param column The name and data type of this clustering key column. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1719c3c601457175d08dcf7402b4c82cda20c2e09b59385102ee0c6f5af0e8cb")
-      override fun column(column: ColumnProperty.Builder.() -> Unit): Unit =
-          column(ColumnProperty(column))
-
-      /**
-       * @param orderBy The order in which this column's data is stored:.
-       * * `ASC` (default) - The column's data is stored in ascending order.
-       * * `DESC` - The column's data is stored in descending order.
-       */
-      override fun orderBy(orderBy: String) {
-        cdkBuilder.orderBy(orderBy)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty,
-    ) : CdkObject(cdkObject), ClusteringKeyColumnProperty {
-      /**
-       * The name and data type of this clustering key column.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-column)
-       */
-      override fun column(): Any = unwrap(this).getColumn()
-
-      /**
-       * The order in which this column's data is stored:.
-       *
-       * * `ASC` (default) - The column's data is stored in ascending order.
-       * * `DESC` - The column's data is stored in descending order.
-       *
-       * Default: - "ASC"
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-orderby)
-       */
-      override fun orderBy(): String? = unwrap(this).getOrderBy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClusteringKeyColumnProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty):
-          ClusteringKeyColumnProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClusteringKeyColumnProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClusteringKeyColumnProperty):
-          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty
-    }
-  }
-
-  /**
-   * Determines the billing mode for the table - on-demand or provisioned.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cassandra.*;
-   * BillingModeProperty billingModeProperty = BillingModeProperty.builder()
-   * .mode("mode")
-   * // the properties below are optional
-   * .provisionedThroughput(ProvisionedThroughputProperty.builder()
-   * .readCapacityUnits(123)
-   * .writeCapacityUnits(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html)
-   */
-  public interface BillingModeProperty {
-    /**
-     * The billing mode for the table:.
-     *
-     * * On-demand mode - `ON_DEMAND`
-     * * Provisioned mode - `PROVISIONED`
-     *
-     *
-     * If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput (read
-     * and write capacity) for the table.
-     *
-     *
-     * Valid values: `ON_DEMAND` | `PROVISIONED`
-     *
-     * Default: - "ON_DEMAND"
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-mode)
-     */
-    public fun mode(): String
-
-    /**
-     * The provisioned read capacity and write capacity for the table.
-     *
-     * For more information, see [Provisioned throughput capacity
-     * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
-     * in the *Amazon Keyspaces Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-provisionedthroughput)
-     */
-    public fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
-
-    /**
-     * A builder for [BillingModeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mode The billing mode for the table:. 
-       * * On-demand mode - `ON_DEMAND`
-       * * Provisioned mode - `PROVISIONED`
-       *
-       *
-       * If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput
-       * (read and write capacity) for the table.
-       *
-       *
-       * Valid values: `ON_DEMAND` | `PROVISIONED`
-       */
-      public fun mode(mode: String)
-
-      /**
-       * @param provisionedThroughput The provisioned read capacity and write capacity for the
-       * table.
-       * For more information, see [Provisioned throughput capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
-       * in the *Amazon Keyspaces Developer Guide* .
-       */
-      public fun provisionedThroughput(provisionedThroughput: IResolvable)
-
-      /**
-       * @param provisionedThroughput The provisioned read capacity and write capacity for the
-       * table.
-       * For more information, see [Provisioned throughput capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
-       * in the *Amazon Keyspaces Developer Guide* .
-       */
-      public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty)
-
-      /**
-       * @param provisionedThroughput The provisioned read capacity and write capacity for the
-       * table.
-       * For more information, see [Provisioned throughput capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
-       * in the *Amazon Keyspaces Developer Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6229fc1deb4ce36008eb6519392ee66844b20166c36bebacd90cc6680480125e")
-      public
-          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty.Builder =
-          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty.builder()
-
-      /**
-       * @param mode The billing mode for the table:. 
-       * * On-demand mode - `ON_DEMAND`
-       * * Provisioned mode - `PROVISIONED`
-       *
-       *
-       * If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput
-       * (read and write capacity) for the table.
-       *
-       *
-       * Valid values: `ON_DEMAND` | `PROVISIONED`
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      /**
-       * @param provisionedThroughput The provisioned read capacity and write capacity for the
-       * table.
-       * For more information, see [Provisioned throughput capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
-       * in the *Amazon Keyspaces Developer Guide* .
-       */
-      override fun provisionedThroughput(provisionedThroughput: IResolvable) {
-        cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param provisionedThroughput The provisioned read capacity and write capacity for the
-       * table.
-       * For more information, see [Provisioned throughput capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
-       * in the *Amazon Keyspaces Developer Guide* .
-       */
-      override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-        cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
-      }
-
-      /**
-       * @param provisionedThroughput The provisioned read capacity and write capacity for the
-       * table.
-       * For more information, see [Provisioned throughput capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
-       * in the *Amazon Keyspaces Developer Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6229fc1deb4ce36008eb6519392ee66844b20166c36bebacd90cc6680480125e")
-      override
-          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit):
-          Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
-
-      public fun build(): software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty,
-    ) : CdkObject(cdkObject), BillingModeProperty {
-      /**
-       * The billing mode for the table:.
-       *
-       * * On-demand mode - `ON_DEMAND`
-       * * Provisioned mode - `PROVISIONED`
-       *
-       *
-       * If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput
-       * (read and write capacity) for the table.
-       *
-       *
-       * Valid values: `ON_DEMAND` | `PROVISIONED`
-       *
-       * Default: - "ON_DEMAND"
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-mode)
-       */
-      override fun mode(): String = unwrap(this).getMode()
-
-      /**
-       * The provisioned read capacity and write capacity for the table.
-       *
-       * For more information, see [Provisioned throughput capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
-       * in the *Amazon Keyspaces Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-provisionedthroughput)
-       */
-      override fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BillingModeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty):
-          BillingModeProperty = CdkObjectWrappers.wrap(cdkObject) as? BillingModeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BillingModeProperty):
-          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty
-    }
-  }
-
-  /**
-   * The optional auto scaling capacity settings for a table in provisioned capacity mode.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cassandra.*;
-   * AutoScalingSpecificationProperty autoScalingSpecificationProperty =
-   * AutoScalingSpecificationProperty.builder()
-   * .readCapacityAutoScaling(AutoScalingSettingProperty.builder()
-   * .autoScalingDisabled(false)
-   * .maximumUnits(123)
-   * .minimumUnits(123)
-   * .scalingPolicy(ScalingPolicyProperty.builder()
-   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build())
-   * .build())
-   * .build())
-   * .writeCapacityAutoScaling(AutoScalingSettingProperty.builder()
-   * .autoScalingDisabled(false)
-   * .maximumUnits(123)
-   * .minimumUnits(123)
-   * .scalingPolicy(ScalingPolicyProperty.builder()
-   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build())
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html)
-   */
-  public interface AutoScalingSpecificationProperty {
-    /**
-     * The auto scaling settings for the table's read capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html#cfn-cassandra-table-autoscalingspecification-readcapacityautoscaling)
-     */
-    public fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
-
-    /**
-     * The auto scaling settings for the table's write capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html#cfn-cassandra-table-autoscalingspecification-writecapacityautoscaling)
-     */
-    public fun writeCapacityAutoScaling(): Any? = unwrap(this).getWriteCapacityAutoScaling()
-
-    /**
-     * A builder for [AutoScalingSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
-       */
-      public fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable)
-
-      /**
-       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
-       */
-      public fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty)
-
-      /**
-       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("70e2f1cb5478a4cbae1d99c8d7df305cf0dcdd513f625d7ebc4c9c89e495ded8")
-      public
-          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
-
-      /**
-       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
-       */
-      public fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable)
-
-      /**
-       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
-       */
-      public fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty)
-
-      /**
-       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fe683f396f3380315b3d21fe213e16fbe5bd7f327ac1abebef53993bc080cc5d")
-      public
-          fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty.builder()
-
-      /**
-       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
-       */
-      override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
-        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
-       */
-      override fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
-        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
-      }
-
-      /**
-       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("70e2f1cb5478a4cbae1d99c8d7df305cf0dcdd513f625d7ebc4c9c89e495ded8")
-      override
-          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
-          Unit = readCapacityAutoScaling(AutoScalingSettingProperty(readCapacityAutoScaling))
-
-      /**
-       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
-       */
-      override fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable) {
-        cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
-       */
-      override fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty) {
-        cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
-      }
-
-      /**
-       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fe683f396f3380315b3d21fe213e16fbe5bd7f327ac1abebef53993bc080cc5d")
-      override
-          fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
-          Unit = writeCapacityAutoScaling(AutoScalingSettingProperty(writeCapacityAutoScaling))
-
-      public fun build():
-          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty,
-    ) : CdkObject(cdkObject), AutoScalingSpecificationProperty {
-      /**
-       * The auto scaling settings for the table's read capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html#cfn-cassandra-table-autoscalingspecification-readcapacityautoscaling)
-       */
-      override fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
-
-      /**
-       * The auto scaling settings for the table's write capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html#cfn-cassandra-table-autoscalingspecification-writecapacityautoscaling)
-       */
-      override fun writeCapacityAutoScaling(): Any? = unwrap(this).getWriteCapacityAutoScaling()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoScalingSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty):
-          AutoScalingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutoScalingSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoScalingSpecificationProperty):
-          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty
-    }
-  }
-
-  /**
-   * Amazon Keyspaces supports the `target tracking` auto scaling policy for a provisioned table.
-   *
-   * This policy scales a table based on the ratio of consumed to provisioned capacity. The auto
-   * scaling target is a percentage of the provisioned capacity of the table.
-   *
-   * * `targetTrackingScalingPolicyConfiguration` : To define the target tracking policy, you must
-   * define the target value.
-   * * `targetValue` : The target utilization rate of the table. Amazon Keyspaces auto scaling
-   * ensures that the ratio of consumed capacity to provisioned capacity stays at or near this value.
-   * You define `targetValue` as a percentage. A `double` between 20 and 90. (Required)
-   * * `disableScaleIn` : A `boolean` that specifies if `scale-in` is disabled or enabled for the
-   * table. This parameter is disabled by default. To turn on `scale-in` , set the `boolean` value to
-   * `FALSE` . This means that capacity for a table can be automatically scaled down on your behalf.
-   * (Optional)
-   * * `scaleInCooldown` : A cooldown period in seconds between scaling activities that lets the
-   * table stabilize before another scale in activity starts. If no value is provided, the default is
-   * 0. (Optional)
-   * * `scaleOutCooldown` : A cooldown period in seconds between scaling activities that lets the
-   * table stabilize before another scale out activity starts. If no value is provided, the default is
-   * 0. (Optional)
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cassandra.*;
-   * TargetTrackingScalingPolicyConfigurationProperty
-   * targetTrackingScalingPolicyConfigurationProperty =
-   * TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html)
-   */
-  public interface TargetTrackingScalingPolicyConfigurationProperty {
-    /**
-     * Specifies if `scale-in` is enabled.
-     *
-     * When auto scaling automatically decreases capacity for a table, the table *scales in* . When
-     * scaling policies are set, they can't scale in the table lower than its minimum capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-disablescalein)
-     */
-    public fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
-
-    /**
-     * Specifies a `scale-in` cool down period.
-     *
-     * A cooldown period in seconds between scaling activities that lets the table stabilize before
-     * another scaling activity starts.
-     *
-     * Default: - 0
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-scaleincooldown)
-     */
-    public fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
-
-    /**
-     * Specifies a scale out cool down period.
-     *
-     * A cooldown period in seconds between scaling activities that lets the table stabilize before
-     * another scaling activity starts.
-     *
-     * Default: - 0
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-scaleoutcooldown)
-     */
-    public fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
-
-    /**
-     * Specifies the target value for the target tracking auto scaling policy.
-     *
-     * Amazon Keyspaces auto scaling scales up capacity automatically when traffic exceeds this
-     * target utilization rate, and then back down when it falls below the target. This ensures that
-     * the ratio of consumed capacity to provisioned capacity stays at or near this value. You define
-     * `targetValue` as a percentage. An `integer` between 20 and 90.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-targetvalue)
-     */
-    public fun targetValue(): Number
-
-    /**
-     * A builder for [TargetTrackingScalingPolicyConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param disableScaleIn Specifies if `scale-in` is enabled.
-       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
-       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
-       */
-      public fun disableScaleIn(disableScaleIn: Boolean)
-
-      /**
-       * @param disableScaleIn Specifies if `scale-in` is enabled.
-       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
-       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
-       */
-      public fun disableScaleIn(disableScaleIn: IResolvable)
-
-      /**
-       * @param scaleInCooldown Specifies a `scale-in` cool down period.
-       * A cooldown period in seconds between scaling activities that lets the table stabilize
-       * before another scaling activity starts.
-       */
-      public fun scaleInCooldown(scaleInCooldown: Number)
-
-      /**
-       * @param scaleOutCooldown Specifies a scale out cool down period.
-       * A cooldown period in seconds between scaling activities that lets the table stabilize
-       * before another scaling activity starts.
-       */
-      public fun scaleOutCooldown(scaleOutCooldown: Number)
-
-      /**
-       * @param targetValue Specifies the target value for the target tracking auto scaling policy. 
-       * Amazon Keyspaces auto scaling scales up capacity automatically when traffic exceeds this
-       * target utilization rate, and then back down when it falls below the target. This ensures that
-       * the ratio of consumed capacity to provisioned capacity stays at or near this value. You define
-       * `targetValue` as a percentage. An `integer` between 20 and 90.
-       */
-      public fun targetValue(targetValue: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty.builder()
-
-      /**
-       * @param disableScaleIn Specifies if `scale-in` is enabled.
-       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
-       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
-       */
-      override fun disableScaleIn(disableScaleIn: Boolean) {
-        cdkBuilder.disableScaleIn(disableScaleIn)
-      }
-
-      /**
-       * @param disableScaleIn Specifies if `scale-in` is enabled.
-       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
-       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
-       */
-      override fun disableScaleIn(disableScaleIn: IResolvable) {
-        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scaleInCooldown Specifies a `scale-in` cool down period.
-       * A cooldown period in seconds between scaling activities that lets the table stabilize
-       * before another scaling activity starts.
-       */
-      override fun scaleInCooldown(scaleInCooldown: Number) {
-        cdkBuilder.scaleInCooldown(scaleInCooldown)
-      }
-
-      /**
-       * @param scaleOutCooldown Specifies a scale out cool down period.
-       * A cooldown period in seconds between scaling activities that lets the table stabilize
-       * before another scaling activity starts.
-       */
-      override fun scaleOutCooldown(scaleOutCooldown: Number) {
-        cdkBuilder.scaleOutCooldown(scaleOutCooldown)
-      }
-
-      /**
-       * @param targetValue Specifies the target value for the target tracking auto scaling policy. 
-       * Amazon Keyspaces auto scaling scales up capacity automatically when traffic exceeds this
-       * target utilization rate, and then back down when it falls below the target. This ensures that
-       * the ratio of consumed capacity to provisioned capacity stays at or near this value. You define
-       * `targetValue` as a percentage. An `integer` between 20 and 90.
-       */
-      override fun targetValue(targetValue: Number) {
-        cdkBuilder.targetValue(targetValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingScalingPolicyConfigurationProperty {
-      /**
-       * Specifies if `scale-in` is enabled.
-       *
-       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
-       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-disablescalein)
-       */
-      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
-
-      /**
-       * Specifies a `scale-in` cool down period.
-       *
-       * A cooldown period in seconds between scaling activities that lets the table stabilize
-       * before another scaling activity starts.
-       *
-       * Default: - 0
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-scaleincooldown)
-       */
-      override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
-
-      /**
-       * Specifies a scale out cool down period.
-       *
-       * A cooldown period in seconds between scaling activities that lets the table stabilize
-       * before another scaling activity starts.
-       *
-       * Default: - 0
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-scaleoutcooldown)
-       */
-      override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
-
-      /**
-       * Specifies the target value for the target tracking auto scaling policy.
-       *
-       * Amazon Keyspaces auto scaling scales up capacity automatically when traffic exceeds this
-       * target utilization rate, and then back down when it falls below the target. This ensures that
-       * the ratio of consumed capacity to provisioned capacity stays at or near this value. You define
-       * `targetValue` as a percentage. An `integer` between 20 and 90.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-targetvalue)
-       */
-      override fun targetValue(): Number = unwrap(this).getTargetValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetTrackingScalingPolicyConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty):
-          TargetTrackingScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetTrackingScalingPolicyConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetTrackingScalingPolicyConfigurationProperty):
-          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty
-    }
-  }
-
-  /**
-   * The AWS Region specific settings of a multi-Region table.
-   *
-   * For a multi-Region table, you can configure the table's read capacity differently per AWS
-   * Region. You can do this by configuring the following parameters.
-   *
-   * * `region` : The Region where these settings are applied. (Required)
-   * * `readCapacityUnits` : The provisioned read capacity units. (Optional)
-   * * `readCapacityAutoScaling` : The read capacity auto scaling settings for the table. (Optional)
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cassandra.*;
-   * ReplicaSpecificationProperty replicaSpecificationProperty =
-   * ReplicaSpecificationProperty.builder()
-   * .region("region")
-   * // the properties below are optional
-   * .readCapacityAutoScaling(AutoScalingSettingProperty.builder()
-   * .autoScalingDisabled(false)
-   * .maximumUnits(123)
-   * .minimumUnits(123)
-   * .scalingPolicy(ScalingPolicyProperty.builder()
-   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build())
-   * .build())
-   * .build())
-   * .readCapacityUnits(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html)
-   */
-  public interface ReplicaSpecificationProperty {
-    /**
-     * The read capacity auto scaling settings for the multi-Region table in the specified AWS
-     * Region.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-readcapacityautoscaling)
-     */
-    public fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
-
-    /**
-     * The provisioned read capacity units for the multi-Region table in the specified AWS Region.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-readcapacityunits)
-     */
-    public fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
-
-    /**
-     * The AWS Region.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-region)
-     */
-    public fun region(): String
-
-    /**
-     * A builder for [ReplicaSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
-       * table in the specified AWS Region.
-       */
-      public fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable)
-
-      /**
-       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
-       * table in the specified AWS Region.
-       */
-      public fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty)
-
-      /**
-       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
-       * table in the specified AWS Region.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e7c8a80c817160ff83e18bab565ddc70e61f3fc146dcbb78e6ed386045600db9")
-      public
-          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
-
-      /**
-       * @param readCapacityUnits The provisioned read capacity units for the multi-Region table in
-       * the specified AWS Region.
-       */
-      public fun readCapacityUnits(readCapacityUnits: Number)
-
-      /**
-       * @param region The AWS Region. 
-       */
-      public fun region(region: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty.Builder =
-          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty.builder()
-
-      /**
-       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
-       * table in the specified AWS Region.
-       */
-      override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
-        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
-       * table in the specified AWS Region.
-       */
-      override fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
-        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
-      }
-
-      /**
-       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
-       * table in the specified AWS Region.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e7c8a80c817160ff83e18bab565ddc70e61f3fc146dcbb78e6ed386045600db9")
-      override
-          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
-          Unit = readCapacityAutoScaling(AutoScalingSettingProperty(readCapacityAutoScaling))
-
-      /**
-       * @param readCapacityUnits The provisioned read capacity units for the multi-Region table in
-       * the specified AWS Region.
-       */
-      override fun readCapacityUnits(readCapacityUnits: Number) {
-        cdkBuilder.readCapacityUnits(readCapacityUnits)
-      }
-
-      /**
-       * @param region The AWS Region. 
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty,
-    ) : CdkObject(cdkObject), ReplicaSpecificationProperty {
-      /**
-       * The read capacity auto scaling settings for the multi-Region table in the specified AWS
-       * Region.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-readcapacityautoscaling)
-       */
-      override fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
-
-      /**
-       * The provisioned read capacity units for the multi-Region table in the specified AWS Region.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-readcapacityunits)
-       */
-      override fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
-
-      /**
-       * The AWS Region.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-region)
-       */
-      override fun region(): String = unwrap(this).getRegion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicaSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty):
-          ReplicaSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReplicaSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplicaSpecificationProperty):
-          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies the encryption at rest option selected for the table.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cassandra.*;
-   * EncryptionSpecificationProperty encryptionSpecificationProperty =
-   * EncryptionSpecificationProperty.builder()
-   * .encryptionType("encryptionType")
-   * // the properties below are optional
-   * .kmsKeyIdentifier("kmsKeyIdentifier")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html)
-   */
-  public interface EncryptionSpecificationProperty {
-    /**
-     * The encryption at rest options for the table.
-     *
-     * * *AWS owned key* (default) - `AWS_OWNED_KMS_KEY`
-     * * *Customer managed key* - `CUSTOMER_MANAGED_KMS_KEY`
-     *
-     *
-     * If you choose `CUSTOMER_MANAGED_KMS_KEY` , a `kms_key_identifier` in the format of a key ARN
-     * is required.
-     *
-     *
-     * Valid values: `CUSTOMER_MANAGED_KMS_KEY` | `AWS_OWNED_KMS_KEY` .
-     *
-     * Default: - "AWS_OWNED_KMS_KEY"
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-encryptiontype)
-     */
-    public fun encryptionType(): String
-
-    /**
-     * Requires a `kms_key_identifier` in the format of a key ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-kmskeyidentifier)
-     */
-    public fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
-
-    /**
-     * A builder for [EncryptionSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param encryptionType The encryption at rest options for the table. 
-       * * *AWS owned key* (default) - `AWS_OWNED_KMS_KEY`
-       * * *Customer managed key* - `CUSTOMER_MANAGED_KMS_KEY`
-       *
-       *
-       * If you choose `CUSTOMER_MANAGED_KMS_KEY` , a `kms_key_identifier` in the format of a key
-       * ARN is required.
-       *
-       *
-       * Valid values: `CUSTOMER_MANAGED_KMS_KEY` | `AWS_OWNED_KMS_KEY` .
-       */
-      public fun encryptionType(encryptionType: String)
-
-      /**
-       * @param kmsKeyIdentifier Requires a `kms_key_identifier` in the format of a key ARN.
-       */
-      public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty.builder()
-
-      /**
-       * @param encryptionType The encryption at rest options for the table. 
-       * * *AWS owned key* (default) - `AWS_OWNED_KMS_KEY`
-       * * *Customer managed key* - `CUSTOMER_MANAGED_KMS_KEY`
-       *
-       *
-       * If you choose `CUSTOMER_MANAGED_KMS_KEY` , a `kms_key_identifier` in the format of a key
-       * ARN is required.
-       *
-       *
-       * Valid values: `CUSTOMER_MANAGED_KMS_KEY` | `AWS_OWNED_KMS_KEY` .
-       */
-      override fun encryptionType(encryptionType: String) {
-        cdkBuilder.encryptionType(encryptionType)
-      }
-
-      /**
-       * @param kmsKeyIdentifier Requires a `kms_key_identifier` in the format of a key ARN.
-       */
-      override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
-        cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty,
-    ) : CdkObject(cdkObject), EncryptionSpecificationProperty {
-      /**
-       * The encryption at rest options for the table.
-       *
-       * * *AWS owned key* (default) - `AWS_OWNED_KMS_KEY`
-       * * *Customer managed key* - `CUSTOMER_MANAGED_KMS_KEY`
-       *
-       *
-       * If you choose `CUSTOMER_MANAGED_KMS_KEY` , a `kms_key_identifier` in the format of a key
-       * ARN is required.
-       *
-       *
-       * Valid values: `CUSTOMER_MANAGED_KMS_KEY` | `AWS_OWNED_KMS_KEY` .
-       *
-       * Default: - "AWS_OWNED_KMS_KEY"
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-encryptiontype)
-       */
-      override fun encryptionType(): String = unwrap(this).getEncryptionType()
-
-      /**
-       * Requires a `kms_key_identifier` in the format of a key ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-kmskeyidentifier)
-       */
-      override fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty):
-          EncryptionSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionSpecificationProperty):
-          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty
-    }
-  }
-
-  /**
    * The optional auto scaling settings for a table with provisioned throughput capacity.
    *
    * To turn on auto scaling for a table in `throughputMode:PROVISIONED` , you must specify the
@@ -2955,8 +1646,7 @@ public open class CfnTable internal constructor(
   }
 
   /**
-   * The provisioned throughput for the table, which consists of `ReadCapacityUnits` and
-   * `WriteCapacityUnits` .
+   * The optional auto scaling capacity settings for a table in provisioned capacity mode.
    *
    * Example:
    *
@@ -2964,132 +1654,558 @@ public open class CfnTable internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cassandra.*;
-   * ProvisionedThroughputProperty provisionedThroughputProperty =
-   * ProvisionedThroughputProperty.builder()
-   * .readCapacityUnits(123)
-   * .writeCapacityUnits(123)
+   * AutoScalingSpecificationProperty autoScalingSpecificationProperty =
+   * AutoScalingSpecificationProperty.builder()
+   * .readCapacityAutoScaling(AutoScalingSettingProperty.builder()
+   * .autoScalingDisabled(false)
+   * .maximumUnits(123)
+   * .minimumUnits(123)
+   * .scalingPolicy(ScalingPolicyProperty.builder()
+   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build())
+   * .build())
+   * .build())
+   * .writeCapacityAutoScaling(AutoScalingSettingProperty.builder()
+   * .autoScalingDisabled(false)
+   * .maximumUnits(123)
+   * .minimumUnits(123)
+   * .scalingPolicy(ScalingPolicyProperty.builder()
+   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build())
+   * .build())
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html)
    */
-  public interface ProvisionedThroughputProperty {
+  public interface AutoScalingSpecificationProperty {
     /**
-     * The amount of read capacity that's provisioned for the table.
+     * The auto scaling settings for the table's read capacity.
      *
-     * For more information, see [Read/write capacity
-     * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
-     * *Amazon Keyspaces Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-readcapacityunits)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html#cfn-cassandra-table-autoscalingspecification-readcapacityautoscaling)
      */
-    public fun readCapacityUnits(): Number
+    public fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
 
     /**
-     * The amount of write capacity that's provisioned for the table.
+     * The auto scaling settings for the table's write capacity.
      *
-     * For more information, see [Read/write capacity
-     * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
-     * *Amazon Keyspaces Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-writecapacityunits)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html#cfn-cassandra-table-autoscalingspecification-writecapacityautoscaling)
      */
-    public fun writeCapacityUnits(): Number
+    public fun writeCapacityAutoScaling(): Any? = unwrap(this).getWriteCapacityAutoScaling()
 
     /**
-     * A builder for [ProvisionedThroughputProperty]
+     * A builder for [AutoScalingSpecificationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param readCapacityUnits The amount of read capacity that's provisioned for the table. 
-       * For more information, see [Read/write capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
-       * *Amazon Keyspaces Developer Guide* .
+       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
        */
-      public fun readCapacityUnits(readCapacityUnits: Number)
+      public fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable)
 
       /**
-       * @param writeCapacityUnits The amount of write capacity that's provisioned for the table. 
-       * For more information, see [Read/write capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
-       * *Amazon Keyspaces Developer Guide* .
+       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
        */
-      public fun writeCapacityUnits(writeCapacityUnits: Number)
+      public fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty)
+
+      /**
+       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("70e2f1cb5478a4cbae1d99c8d7df305cf0dcdd513f625d7ebc4c9c89e495ded8")
+      public
+          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
+
+      /**
+       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
+       */
+      public fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable)
+
+      /**
+       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
+       */
+      public fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty)
+
+      /**
+       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fe683f396f3380315b3d21fe213e16fbe5bd7f327ac1abebef53993bc080cc5d")
+      public
+          fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty.Builder =
-          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty.builder()
+          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty.builder()
 
       /**
-       * @param readCapacityUnits The amount of read capacity that's provisioned for the table. 
-       * For more information, see [Read/write capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
-       * *Amazon Keyspaces Developer Guide* .
+       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
        */
-      override fun readCapacityUnits(readCapacityUnits: Number) {
-        cdkBuilder.readCapacityUnits(readCapacityUnits)
+      override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
+        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable::unwrap))
       }
 
       /**
-       * @param writeCapacityUnits The amount of write capacity that's provisioned for the table. 
-       * For more information, see [Read/write capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
-       * *Amazon Keyspaces Developer Guide* .
+       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
        */
-      override fun writeCapacityUnits(writeCapacityUnits: Number) {
-        cdkBuilder.writeCapacityUnits(writeCapacityUnits)
+      override fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
+        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
       }
+
+      /**
+       * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("70e2f1cb5478a4cbae1d99c8d7df305cf0dcdd513f625d7ebc4c9c89e495ded8")
+      override
+          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
+          Unit = readCapacityAutoScaling(AutoScalingSettingProperty(readCapacityAutoScaling))
+
+      /**
+       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
+       */
+      override fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable) {
+        cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
+       */
+      override fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty) {
+        cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
+      }
+
+      /**
+       * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fe683f396f3380315b3d21fe213e16fbe5bd7f327ac1abebef53993bc080cc5d")
+      override
+          fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
+          Unit = writeCapacityAutoScaling(AutoScalingSettingProperty(writeCapacityAutoScaling))
 
       public fun build():
-          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty =
+          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty,
-    ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
+          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty,
+    ) : CdkObject(cdkObject), AutoScalingSpecificationProperty {
       /**
-       * The amount of read capacity that's provisioned for the table.
+       * The auto scaling settings for the table's read capacity.
        *
-       * For more information, see [Read/write capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
-       * *Amazon Keyspaces Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-readcapacityunits)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html#cfn-cassandra-table-autoscalingspecification-readcapacityautoscaling)
        */
-      override fun readCapacityUnits(): Number = unwrap(this).getReadCapacityUnits()
+      override fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
 
       /**
-       * The amount of write capacity that's provisioned for the table.
+       * The auto scaling settings for the table's write capacity.
        *
-       * For more information, see [Read/write capacity
-       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
-       * *Amazon Keyspaces Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-writecapacityunits)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-autoscalingspecification.html#cfn-cassandra-table-autoscalingspecification-writecapacityautoscaling)
        */
-      override fun writeCapacityUnits(): Number = unwrap(this).getWriteCapacityUnits()
+      override fun writeCapacityAutoScaling(): Any? = unwrap(this).getWriteCapacityAutoScaling()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProvisionedThroughputProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoScalingSpecificationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty):
-          ProvisionedThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProvisionedThroughputProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty):
+          AutoScalingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoScalingSpecificationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ProvisionedThroughputProperty):
-          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty =
+      internal fun unwrap(wrapped: AutoScalingSpecificationProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty
+          software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty
+    }
+  }
+
+  /**
+   * Determines the billing mode for the table - on-demand or provisioned.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cassandra.*;
+   * BillingModeProperty billingModeProperty = BillingModeProperty.builder()
+   * .mode("mode")
+   * // the properties below are optional
+   * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+   * .readCapacityUnits(123)
+   * .writeCapacityUnits(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html)
+   */
+  public interface BillingModeProperty {
+    /**
+     * The billing mode for the table:.
+     *
+     * * On-demand mode - `ON_DEMAND`
+     * * Provisioned mode - `PROVISIONED`
+     *
+     *
+     * If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput (read
+     * and write capacity) for the table.
+     *
+     *
+     * Valid values: `ON_DEMAND` | `PROVISIONED`
+     *
+     * Default: - "ON_DEMAND"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-mode)
+     */
+    public fun mode(): String
+
+    /**
+     * The provisioned read capacity and write capacity for the table.
+     *
+     * For more information, see [Provisioned throughput capacity
+     * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
+     * in the *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-provisionedthroughput)
+     */
+    public fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
+
+    /**
+     * A builder for [BillingModeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mode The billing mode for the table:. 
+       * * On-demand mode - `ON_DEMAND`
+       * * Provisioned mode - `PROVISIONED`
+       *
+       *
+       * If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput
+       * (read and write capacity) for the table.
+       *
+       *
+       * Valid values: `ON_DEMAND` | `PROVISIONED`
+       */
+      public fun mode(mode: String)
+
+      /**
+       * @param provisionedThroughput The provisioned read capacity and write capacity for the
+       * table.
+       * For more information, see [Provisioned throughput capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
+       * in the *Amazon Keyspaces Developer Guide* .
+       */
+      public fun provisionedThroughput(provisionedThroughput: IResolvable)
+
+      /**
+       * @param provisionedThroughput The provisioned read capacity and write capacity for the
+       * table.
+       * For more information, see [Provisioned throughput capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
+       * in the *Amazon Keyspaces Developer Guide* .
+       */
+      public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty)
+
+      /**
+       * @param provisionedThroughput The provisioned read capacity and write capacity for the
+       * table.
+       * For more information, see [Provisioned throughput capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
+       * in the *Amazon Keyspaces Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6229fc1deb4ce36008eb6519392ee66844b20166c36bebacd90cc6680480125e")
+      public
+          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty.Builder =
+          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty.builder()
+
+      /**
+       * @param mode The billing mode for the table:. 
+       * * On-demand mode - `ON_DEMAND`
+       * * Provisioned mode - `PROVISIONED`
+       *
+       *
+       * If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput
+       * (read and write capacity) for the table.
+       *
+       *
+       * Valid values: `ON_DEMAND` | `PROVISIONED`
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      /**
+       * @param provisionedThroughput The provisioned read capacity and write capacity for the
+       * table.
+       * For more information, see [Provisioned throughput capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
+       * in the *Amazon Keyspaces Developer Guide* .
+       */
+      override fun provisionedThroughput(provisionedThroughput: IResolvable) {
+        cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param provisionedThroughput The provisioned read capacity and write capacity for the
+       * table.
+       * For more information, see [Provisioned throughput capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
+       * in the *Amazon Keyspaces Developer Guide* .
+       */
+      override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
+        cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
+      }
+
+      /**
+       * @param provisionedThroughput The provisioned read capacity and write capacity for the
+       * table.
+       * For more information, see [Provisioned throughput capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
+       * in the *Amazon Keyspaces Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6229fc1deb4ce36008eb6519392ee66844b20166c36bebacd90cc6680480125e")
+      override
+          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit):
+          Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
+
+      public fun build(): software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty,
+    ) : CdkObject(cdkObject), BillingModeProperty {
+      /**
+       * The billing mode for the table:.
+       *
+       * * On-demand mode - `ON_DEMAND`
+       * * Provisioned mode - `PROVISIONED`
+       *
+       *
+       * If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput
+       * (read and write capacity) for the table.
+       *
+       *
+       * Valid values: `ON_DEMAND` | `PROVISIONED`
+       *
+       * Default: - "ON_DEMAND"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-mode)
+       */
+      override fun mode(): String = unwrap(this).getMode()
+
+      /**
+       * The provisioned read capacity and write capacity for the table.
+       *
+       * For more information, see [Provisioned throughput capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned)
+       * in the *Amazon Keyspaces Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-billingmode.html#cfn-cassandra-table-billingmode-provisionedthroughput)
+       */
+      override fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BillingModeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty):
+          BillingModeProperty = CdkObjectWrappers.wrap(cdkObject) as? BillingModeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BillingModeProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty
+    }
+  }
+
+  /**
+   * Defines an individual column within the clustering key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cassandra.*;
+   * ClusteringKeyColumnProperty clusteringKeyColumnProperty = ClusteringKeyColumnProperty.builder()
+   * .column(ColumnProperty.builder()
+   * .columnName("columnName")
+   * .columnType("columnType")
+   * .build())
+   * // the properties below are optional
+   * .orderBy("orderBy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html)
+   */
+  public interface ClusteringKeyColumnProperty {
+    /**
+     * The name and data type of this clustering key column.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-column)
+     */
+    public fun column(): Any
+
+    /**
+     * The order in which this column's data is stored:.
+     *
+     * * `ASC` (default) - The column's data is stored in ascending order.
+     * * `DESC` - The column's data is stored in descending order.
+     *
+     * Default: - "ASC"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-orderby)
+     */
+    public fun orderBy(): String? = unwrap(this).getOrderBy()
+
+    /**
+     * A builder for [ClusteringKeyColumnProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param column The name and data type of this clustering key column. 
+       */
+      public fun column(column: IResolvable)
+
+      /**
+       * @param column The name and data type of this clustering key column. 
+       */
+      public fun column(column: ColumnProperty)
+
+      /**
+       * @param column The name and data type of this clustering key column. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1719c3c601457175d08dcf7402b4c82cda20c2e09b59385102ee0c6f5af0e8cb")
+      public fun column(column: ColumnProperty.Builder.() -> Unit)
+
+      /**
+       * @param orderBy The order in which this column's data is stored:.
+       * * `ASC` (default) - The column's data is stored in ascending order.
+       * * `DESC` - The column's data is stored in descending order.
+       */
+      public fun orderBy(orderBy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty.Builder =
+          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty.builder()
+
+      /**
+       * @param column The name and data type of this clustering key column. 
+       */
+      override fun column(column: IResolvable) {
+        cdkBuilder.column(column.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param column The name and data type of this clustering key column. 
+       */
+      override fun column(column: ColumnProperty) {
+        cdkBuilder.column(column.let(ColumnProperty::unwrap))
+      }
+
+      /**
+       * @param column The name and data type of this clustering key column. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1719c3c601457175d08dcf7402b4c82cda20c2e09b59385102ee0c6f5af0e8cb")
+      override fun column(column: ColumnProperty.Builder.() -> Unit): Unit =
+          column(ColumnProperty(column))
+
+      /**
+       * @param orderBy The order in which this column's data is stored:.
+       * * `ASC` (default) - The column's data is stored in ascending order.
+       * * `DESC` - The column's data is stored in descending order.
+       */
+      override fun orderBy(orderBy: String) {
+        cdkBuilder.orderBy(orderBy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty,
+    ) : CdkObject(cdkObject), ClusteringKeyColumnProperty {
+      /**
+       * The name and data type of this clustering key column.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-column)
+       */
+      override fun column(): Any = unwrap(this).getColumn()
+
+      /**
+       * The order in which this column's data is stored:.
+       *
+       * * `ASC` (default) - The column's data is stored in ascending order.
+       * * `DESC` - The column's data is stored in descending order.
+       *
+       * Default: - "ASC"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-orderby)
+       */
+      override fun orderBy(): String? = unwrap(this).getOrderBy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClusteringKeyColumnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty):
+          ClusteringKeyColumnProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClusteringKeyColumnProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClusteringKeyColumnProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty
     }
   }
 
@@ -3231,6 +2347,890 @@ public open class CfnTable internal constructor(
       internal fun unwrap(wrapped: ColumnProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.ColumnProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.cassandra.CfnTable.ColumnProperty
+    }
+  }
+
+  /**
+   * Specifies the encryption at rest option selected for the table.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cassandra.*;
+   * EncryptionSpecificationProperty encryptionSpecificationProperty =
+   * EncryptionSpecificationProperty.builder()
+   * .encryptionType("encryptionType")
+   * // the properties below are optional
+   * .kmsKeyIdentifier("kmsKeyIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html)
+   */
+  public interface EncryptionSpecificationProperty {
+    /**
+     * The encryption at rest options for the table.
+     *
+     * * *AWS owned key* (default) - `AWS_OWNED_KMS_KEY`
+     * * *Customer managed key* - `CUSTOMER_MANAGED_KMS_KEY`
+     *
+     *
+     * If you choose `CUSTOMER_MANAGED_KMS_KEY` , a `kms_key_identifier` in the format of a key ARN
+     * is required.
+     *
+     *
+     * Valid values: `CUSTOMER_MANAGED_KMS_KEY` | `AWS_OWNED_KMS_KEY` .
+     *
+     * Default: - "AWS_OWNED_KMS_KEY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-encryptiontype)
+     */
+    public fun encryptionType(): String
+
+    /**
+     * Requires a `kms_key_identifier` in the format of a key ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-kmskeyidentifier)
+     */
+    public fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
+
+    /**
+     * A builder for [EncryptionSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encryptionType The encryption at rest options for the table. 
+       * * *AWS owned key* (default) - `AWS_OWNED_KMS_KEY`
+       * * *Customer managed key* - `CUSTOMER_MANAGED_KMS_KEY`
+       *
+       *
+       * If you choose `CUSTOMER_MANAGED_KMS_KEY` , a `kms_key_identifier` in the format of a key
+       * ARN is required.
+       *
+       *
+       * Valid values: `CUSTOMER_MANAGED_KMS_KEY` | `AWS_OWNED_KMS_KEY` .
+       */
+      public fun encryptionType(encryptionType: String)
+
+      /**
+       * @param kmsKeyIdentifier Requires a `kms_key_identifier` in the format of a key ARN.
+       */
+      public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty.builder()
+
+      /**
+       * @param encryptionType The encryption at rest options for the table. 
+       * * *AWS owned key* (default) - `AWS_OWNED_KMS_KEY`
+       * * *Customer managed key* - `CUSTOMER_MANAGED_KMS_KEY`
+       *
+       *
+       * If you choose `CUSTOMER_MANAGED_KMS_KEY` , a `kms_key_identifier` in the format of a key
+       * ARN is required.
+       *
+       *
+       * Valid values: `CUSTOMER_MANAGED_KMS_KEY` | `AWS_OWNED_KMS_KEY` .
+       */
+      override fun encryptionType(encryptionType: String) {
+        cdkBuilder.encryptionType(encryptionType)
+      }
+
+      /**
+       * @param kmsKeyIdentifier Requires a `kms_key_identifier` in the format of a key ARN.
+       */
+      override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+        cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty,
+    ) : CdkObject(cdkObject), EncryptionSpecificationProperty {
+      /**
+       * The encryption at rest options for the table.
+       *
+       * * *AWS owned key* (default) - `AWS_OWNED_KMS_KEY`
+       * * *Customer managed key* - `CUSTOMER_MANAGED_KMS_KEY`
+       *
+       *
+       * If you choose `CUSTOMER_MANAGED_KMS_KEY` , a `kms_key_identifier` in the format of a key
+       * ARN is required.
+       *
+       *
+       * Valid values: `CUSTOMER_MANAGED_KMS_KEY` | `AWS_OWNED_KMS_KEY` .
+       *
+       * Default: - "AWS_OWNED_KMS_KEY"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-encryptiontype)
+       */
+      override fun encryptionType(): String = unwrap(this).getEncryptionType()
+
+      /**
+       * Requires a `kms_key_identifier` in the format of a key ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-kmskeyidentifier)
+       */
+      override fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty):
+          EncryptionSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionSpecificationProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty
+    }
+  }
+
+  /**
+   * The provisioned throughput for the table, which consists of `ReadCapacityUnits` and
+   * `WriteCapacityUnits` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cassandra.*;
+   * ProvisionedThroughputProperty provisionedThroughputProperty =
+   * ProvisionedThroughputProperty.builder()
+   * .readCapacityUnits(123)
+   * .writeCapacityUnits(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html)
+   */
+  public interface ProvisionedThroughputProperty {
+    /**
+     * The amount of read capacity that's provisioned for the table.
+     *
+     * For more information, see [Read/write capacity
+     * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-readcapacityunits)
+     */
+    public fun readCapacityUnits(): Number
+
+    /**
+     * The amount of write capacity that's provisioned for the table.
+     *
+     * For more information, see [Read/write capacity
+     * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-writecapacityunits)
+     */
+    public fun writeCapacityUnits(): Number
+
+    /**
+     * A builder for [ProvisionedThroughputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param readCapacityUnits The amount of read capacity that's provisioned for the table. 
+       * For more information, see [Read/write capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
+       * *Amazon Keyspaces Developer Guide* .
+       */
+      public fun readCapacityUnits(readCapacityUnits: Number)
+
+      /**
+       * @param writeCapacityUnits The amount of write capacity that's provisioned for the table. 
+       * For more information, see [Read/write capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
+       * *Amazon Keyspaces Developer Guide* .
+       */
+      public fun writeCapacityUnits(writeCapacityUnits: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty.Builder =
+          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty.builder()
+
+      /**
+       * @param readCapacityUnits The amount of read capacity that's provisioned for the table. 
+       * For more information, see [Read/write capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
+       * *Amazon Keyspaces Developer Guide* .
+       */
+      override fun readCapacityUnits(readCapacityUnits: Number) {
+        cdkBuilder.readCapacityUnits(readCapacityUnits)
+      }
+
+      /**
+       * @param writeCapacityUnits The amount of write capacity that's provisioned for the table. 
+       * For more information, see [Read/write capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
+       * *Amazon Keyspaces Developer Guide* .
+       */
+      override fun writeCapacityUnits(writeCapacityUnits: Number) {
+        cdkBuilder.writeCapacityUnits(writeCapacityUnits)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty,
+    ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
+      /**
+       * The amount of read capacity that's provisioned for the table.
+       *
+       * For more information, see [Read/write capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
+       * *Amazon Keyspaces Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-readcapacityunits)
+       */
+      override fun readCapacityUnits(): Number = unwrap(this).getReadCapacityUnits()
+
+      /**
+       * The amount of write capacity that's provisioned for the table.
+       *
+       * For more information, see [Read/write capacity
+       * mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html) in the
+       * *Amazon Keyspaces Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-writecapacityunits)
+       */
+      override fun writeCapacityUnits(): Number = unwrap(this).getWriteCapacityUnits()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProvisionedThroughputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty):
+          ProvisionedThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisionedThroughputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProvisionedThroughputProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty
+    }
+  }
+
+  /**
+   * The AWS Region specific settings of a multi-Region table.
+   *
+   * For a multi-Region table, you can configure the table's read capacity differently per AWS
+   * Region. You can do this by configuring the following parameters.
+   *
+   * * `region` : The Region where these settings are applied. (Required)
+   * * `readCapacityUnits` : The provisioned read capacity units. (Optional)
+   * * `readCapacityAutoScaling` : The read capacity auto scaling settings for the table. (Optional)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cassandra.*;
+   * ReplicaSpecificationProperty replicaSpecificationProperty =
+   * ReplicaSpecificationProperty.builder()
+   * .region("region")
+   * // the properties below are optional
+   * .readCapacityAutoScaling(AutoScalingSettingProperty.builder()
+   * .autoScalingDisabled(false)
+   * .maximumUnits(123)
+   * .minimumUnits(123)
+   * .scalingPolicy(ScalingPolicyProperty.builder()
+   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build())
+   * .build())
+   * .build())
+   * .readCapacityUnits(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html)
+   */
+  public interface ReplicaSpecificationProperty {
+    /**
+     * The read capacity auto scaling settings for the multi-Region table in the specified AWS
+     * Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-readcapacityautoscaling)
+     */
+    public fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
+
+    /**
+     * The provisioned read capacity units for the multi-Region table in the specified AWS Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-readcapacityunits)
+     */
+    public fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
+
+    /**
+     * The AWS Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-region)
+     */
+    public fun region(): String
+
+    /**
+     * A builder for [ReplicaSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
+       * table in the specified AWS Region.
+       */
+      public fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable)
+
+      /**
+       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
+       * table in the specified AWS Region.
+       */
+      public fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty)
+
+      /**
+       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
+       * table in the specified AWS Region.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e7c8a80c817160ff83e18bab565ddc70e61f3fc146dcbb78e6ed386045600db9")
+      public
+          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
+
+      /**
+       * @param readCapacityUnits The provisioned read capacity units for the multi-Region table in
+       * the specified AWS Region.
+       */
+      public fun readCapacityUnits(readCapacityUnits: Number)
+
+      /**
+       * @param region The AWS Region. 
+       */
+      public fun region(region: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty.Builder =
+          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty.builder()
+
+      /**
+       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
+       * table in the specified AWS Region.
+       */
+      override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
+        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
+       * table in the specified AWS Region.
+       */
+      override fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
+        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
+      }
+
+      /**
+       * @param readCapacityAutoScaling The read capacity auto scaling settings for the multi-Region
+       * table in the specified AWS Region.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e7c8a80c817160ff83e18bab565ddc70e61f3fc146dcbb78e6ed386045600db9")
+      override
+          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
+          Unit = readCapacityAutoScaling(AutoScalingSettingProperty(readCapacityAutoScaling))
+
+      /**
+       * @param readCapacityUnits The provisioned read capacity units for the multi-Region table in
+       * the specified AWS Region.
+       */
+      override fun readCapacityUnits(readCapacityUnits: Number) {
+        cdkBuilder.readCapacityUnits(readCapacityUnits)
+      }
+
+      /**
+       * @param region The AWS Region. 
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty,
+    ) : CdkObject(cdkObject), ReplicaSpecificationProperty {
+      /**
+       * The read capacity auto scaling settings for the multi-Region table in the specified AWS
+       * Region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-readcapacityautoscaling)
+       */
+      override fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
+
+      /**
+       * The provisioned read capacity units for the multi-Region table in the specified AWS Region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-readcapacityunits)
+       */
+      override fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
+
+      /**
+       * The AWS Region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-replicaspecification.html#cfn-cassandra-table-replicaspecification-region)
+       */
+      override fun region(): String = unwrap(this).getRegion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicaSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty):
+          ReplicaSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicaSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicaSpecificationProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty
+    }
+  }
+
+  /**
+   * Amazon Keyspaces supports the `target tracking` auto scaling policy.
+   *
+   * With this policy, Amazon Keyspaces auto scaling ensures that the table's ratio of consumed to
+   * provisioned capacity stays at or near the target value that you specify. You define the target
+   * value as a percentage between 20 and 90.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cassandra.*;
+   * ScalingPolicyProperty scalingPolicyProperty = ScalingPolicyProperty.builder()
+   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-scalingpolicy.html)
+   */
+  public interface ScalingPolicyProperty {
+    /**
+     * The auto scaling policy that scales a table based on the ratio of consumed to provisioned
+     * capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-scalingpolicy.html#cfn-cassandra-table-scalingpolicy-targettrackingscalingpolicyconfiguration)
+     */
+    public fun targetTrackingScalingPolicyConfiguration(): Any? =
+        unwrap(this).getTargetTrackingScalingPolicyConfiguration()
+
+    /**
+     * A builder for [ScalingPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
+       * based on the ratio of consumed to provisioned capacity.
+       */
+      public
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable)
+
+      /**
+       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
+       * based on the ratio of consumed to provisioned capacity.
+       */
+      public
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty)
+
+      /**
+       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
+       * based on the ratio of consumed to provisioned capacity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8c0719136d5761003d3e30200cf94101b28345ce0596e84b87cc72daaeb879fb")
+      public
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty.Builder =
+          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty.builder()
+
+      /**
+       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
+       * based on the ratio of consumed to provisioned capacity.
+       */
+      override
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
+        cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
+       * based on the ratio of consumed to provisioned capacity.
+       */
+      override
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty) {
+        cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(TargetTrackingScalingPolicyConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param targetTrackingScalingPolicyConfiguration The auto scaling policy that scales a table
+       * based on the ratio of consumed to provisioned capacity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8c0719136d5761003d3e30200cf94101b28345ce0596e84b87cc72daaeb879fb")
+      override
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty(targetTrackingScalingPolicyConfiguration))
+
+      public fun build(): software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty,
+    ) : CdkObject(cdkObject), ScalingPolicyProperty {
+      /**
+       * The auto scaling policy that scales a table based on the ratio of consumed to provisioned
+       * capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-scalingpolicy.html#cfn-cassandra-table-scalingpolicy-targettrackingscalingpolicyconfiguration)
+       */
+      override fun targetTrackingScalingPolicyConfiguration(): Any? =
+          unwrap(this).getTargetTrackingScalingPolicyConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty):
+          ScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScalingPolicyProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty
+    }
+  }
+
+  /**
+   * Amazon Keyspaces supports the `target tracking` auto scaling policy for a provisioned table.
+   *
+   * This policy scales a table based on the ratio of consumed to provisioned capacity. The auto
+   * scaling target is a percentage of the provisioned capacity of the table.
+   *
+   * * `targetTrackingScalingPolicyConfiguration` : To define the target tracking policy, you must
+   * define the target value.
+   * * `targetValue` : The target utilization rate of the table. Amazon Keyspaces auto scaling
+   * ensures that the ratio of consumed capacity to provisioned capacity stays at or near this value.
+   * You define `targetValue` as a percentage. A `double` between 20 and 90. (Required)
+   * * `disableScaleIn` : A `boolean` that specifies if `scale-in` is disabled or enabled for the
+   * table. This parameter is disabled by default. To turn on `scale-in` , set the `boolean` value to
+   * `FALSE` . This means that capacity for a table can be automatically scaled down on your behalf.
+   * (Optional)
+   * * `scaleInCooldown` : A cooldown period in seconds between scaling activities that lets the
+   * table stabilize before another scale in activity starts. If no value is provided, the default is
+   * 0. (Optional)
+   * * `scaleOutCooldown` : A cooldown period in seconds between scaling activities that lets the
+   * table stabilize before another scale out activity starts. If no value is provided, the default is
+   * 0. (Optional)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cassandra.*;
+   * TargetTrackingScalingPolicyConfigurationProperty
+   * targetTrackingScalingPolicyConfigurationProperty =
+   * TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html)
+   */
+  public interface TargetTrackingScalingPolicyConfigurationProperty {
+    /**
+     * Specifies if `scale-in` is enabled.
+     *
+     * When auto scaling automatically decreases capacity for a table, the table *scales in* . When
+     * scaling policies are set, they can't scale in the table lower than its minimum capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-disablescalein)
+     */
+    public fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+
+    /**
+     * Specifies a `scale-in` cool down period.
+     *
+     * A cooldown period in seconds between scaling activities that lets the table stabilize before
+     * another scaling activity starts.
+     *
+     * Default: - 0
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-scaleincooldown)
+     */
+    public fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
+
+    /**
+     * Specifies a scale out cool down period.
+     *
+     * A cooldown period in seconds between scaling activities that lets the table stabilize before
+     * another scaling activity starts.
+     *
+     * Default: - 0
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-scaleoutcooldown)
+     */
+    public fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
+
+    /**
+     * Specifies the target value for the target tracking auto scaling policy.
+     *
+     * Amazon Keyspaces auto scaling scales up capacity automatically when traffic exceeds this
+     * target utilization rate, and then back down when it falls below the target. This ensures that
+     * the ratio of consumed capacity to provisioned capacity stays at or near this value. You define
+     * `targetValue` as a percentage. An `integer` between 20 and 90.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-targetvalue)
+     */
+    public fun targetValue(): Number
+
+    /**
+     * A builder for [TargetTrackingScalingPolicyConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param disableScaleIn Specifies if `scale-in` is enabled.
+       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
+       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
+       */
+      public fun disableScaleIn(disableScaleIn: Boolean)
+
+      /**
+       * @param disableScaleIn Specifies if `scale-in` is enabled.
+       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
+       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
+       */
+      public fun disableScaleIn(disableScaleIn: IResolvable)
+
+      /**
+       * @param scaleInCooldown Specifies a `scale-in` cool down period.
+       * A cooldown period in seconds between scaling activities that lets the table stabilize
+       * before another scaling activity starts.
+       */
+      public fun scaleInCooldown(scaleInCooldown: Number)
+
+      /**
+       * @param scaleOutCooldown Specifies a scale out cool down period.
+       * A cooldown period in seconds between scaling activities that lets the table stabilize
+       * before another scaling activity starts.
+       */
+      public fun scaleOutCooldown(scaleOutCooldown: Number)
+
+      /**
+       * @param targetValue Specifies the target value for the target tracking auto scaling policy. 
+       * Amazon Keyspaces auto scaling scales up capacity automatically when traffic exceeds this
+       * target utilization rate, and then back down when it falls below the target. This ensures that
+       * the ratio of consumed capacity to provisioned capacity stays at or near this value. You define
+       * `targetValue` as a percentage. An `integer` between 20 and 90.
+       */
+      public fun targetValue(targetValue: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty.builder()
+
+      /**
+       * @param disableScaleIn Specifies if `scale-in` is enabled.
+       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
+       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
+       */
+      override fun disableScaleIn(disableScaleIn: Boolean) {
+        cdkBuilder.disableScaleIn(disableScaleIn)
+      }
+
+      /**
+       * @param disableScaleIn Specifies if `scale-in` is enabled.
+       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
+       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
+       */
+      override fun disableScaleIn(disableScaleIn: IResolvable) {
+        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param scaleInCooldown Specifies a `scale-in` cool down period.
+       * A cooldown period in seconds between scaling activities that lets the table stabilize
+       * before another scaling activity starts.
+       */
+      override fun scaleInCooldown(scaleInCooldown: Number) {
+        cdkBuilder.scaleInCooldown(scaleInCooldown)
+      }
+
+      /**
+       * @param scaleOutCooldown Specifies a scale out cool down period.
+       * A cooldown period in seconds between scaling activities that lets the table stabilize
+       * before another scaling activity starts.
+       */
+      override fun scaleOutCooldown(scaleOutCooldown: Number) {
+        cdkBuilder.scaleOutCooldown(scaleOutCooldown)
+      }
+
+      /**
+       * @param targetValue Specifies the target value for the target tracking auto scaling policy. 
+       * Amazon Keyspaces auto scaling scales up capacity automatically when traffic exceeds this
+       * target utilization rate, and then back down when it falls below the target. This ensures that
+       * the ratio of consumed capacity to provisioned capacity stays at or near this value. You define
+       * `targetValue` as a percentage. An `integer` between 20 and 90.
+       */
+      override fun targetValue(targetValue: Number) {
+        cdkBuilder.targetValue(targetValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty,
+    ) : CdkObject(cdkObject), TargetTrackingScalingPolicyConfigurationProperty {
+      /**
+       * Specifies if `scale-in` is enabled.
+       *
+       * When auto scaling automatically decreases capacity for a table, the table *scales in* .
+       * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-disablescalein)
+       */
+      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+
+      /**
+       * Specifies a `scale-in` cool down period.
+       *
+       * A cooldown period in seconds between scaling activities that lets the table stabilize
+       * before another scaling activity starts.
+       *
+       * Default: - 0
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-scaleincooldown)
+       */
+      override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
+
+      /**
+       * Specifies a scale out cool down period.
+       *
+       * A cooldown period in seconds between scaling activities that lets the table stabilize
+       * before another scaling activity starts.
+       *
+       * Default: - 0
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-scaleoutcooldown)
+       */
+      override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
+
+      /**
+       * Specifies the target value for the target tracking auto scaling policy.
+       *
+       * Amazon Keyspaces auto scaling scales up capacity automatically when traffic exceeds this
+       * target utilization rate, and then back down when it falls below the target. This ensures that
+       * the ratio of consumed capacity to provisioned capacity stays at or near this value. You define
+       * `targetValue` as a percentage. An `integer` between 20 and 90.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-targettrackingscalingpolicyconfiguration.html#cfn-cassandra-table-targettrackingscalingpolicyconfiguration-targetvalue)
+       */
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TargetTrackingScalingPolicyConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty):
+          TargetTrackingScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingScalingPolicyConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetTrackingScalingPolicyConfigurationProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty
     }
   }
 }

@@ -597,8 +597,7 @@ public open class CfnMatchingWorkflow internal constructor(
   }
 
   /**
-   * An object which defines the list of matching rules to run and has a field `Rules` , which is a
-   * list of rule objects.
+   * An object containing `InputSourceARN` , `SchemaName` , and `ApplyNormalization` .
    *
    * Example:
    *
@@ -606,165 +605,395 @@ public open class CfnMatchingWorkflow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.entityresolution.*;
-   * RuleBasedPropertiesProperty ruleBasedPropertiesProperty = RuleBasedPropertiesProperty.builder()
-   * .attributeMatchingModel("attributeMatchingModel")
-   * .rules(List.of(RuleProperty.builder()
-   * .matchingKeys(List.of("matchingKeys"))
-   * .ruleName("ruleName")
-   * .build()))
+   * InputSourceProperty inputSourceProperty = InputSourceProperty.builder()
+   * .inputSourceArn("inputSourceArn")
+   * .schemaArn("schemaArn")
+   * // the properties below are optional
+   * .applyNormalization(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html)
    */
-  public interface RuleBasedPropertiesProperty {
+  public interface InputSourceProperty {
     /**
-     * The comparison type.
+     * Normalizes the attributes defined in the schema in the input data.
      *
-     * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
-     * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
-     * type. For example, if the value of the `Email` field of Profile A and the value of
-     * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
-     * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
-     * example, only when the value of the `Email` field of Profile A and the value of the `Email`
-     * field of Profile B matches, the two profiles are matched on the `Email` type.
+     * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
+     * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in the
+     * output to (123)-456-7890.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-attributematchingmodel)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-applynormalization)
      */
-    public fun attributeMatchingModel(): String
+    public fun applyNormalization(): Any? = unwrap(this).getApplyNormalization()
 
     /**
-     * A list of `Rule` objects, each of which have fields `RuleName` and `MatchingKeys` .
+     * An object containing `InputSourceARN` , `SchemaName` , and `ApplyNormalization` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-rules)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-inputsourcearn)
      */
-    public fun rules(): Any
+    public fun inputSourceArn(): String
 
     /**
-     * A builder for [RuleBasedPropertiesProperty]
+     * The name of the schema.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-schemaarn)
+     */
+    public fun schemaArn(): String
+
+    /**
+     * A builder for [InputSourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attributeMatchingModel The comparison type. 
-       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
-       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
-       * type. For example, if the value of the `Email` field of Profile A and the value of
-       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
-       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
-       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
-       * field of Profile B matches, the two profiles are matched on the `Email` type.
+       * @param applyNormalization Normalizes the attributes defined in the schema in the input
+       * data.
+       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
+       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
+       * the output to (123)-456-7890.
        */
-      public fun attributeMatchingModel(attributeMatchingModel: String)
+      public fun applyNormalization(applyNormalization: Boolean)
 
       /**
-       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
-       * `MatchingKeys` . 
+       * @param applyNormalization Normalizes the attributes defined in the schema in the input
+       * data.
+       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
+       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
+       * the output to (123)-456-7890.
        */
-      public fun rules(rules: IResolvable)
+      public fun applyNormalization(applyNormalization: IResolvable)
 
       /**
-       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
-       * `MatchingKeys` . 
+       * @param inputSourceArn An object containing `InputSourceARN` , `SchemaName` , and
+       * `ApplyNormalization` . 
        */
-      public fun rules(rules: List<Any>)
+      public fun inputSourceArn(inputSourceArn: String)
 
       /**
-       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
-       * `MatchingKeys` . 
+       * @param schemaArn The name of the schema. 
        */
-      public fun rules(vararg rules: Any)
+      public fun schemaArn(schemaArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty.Builder
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty.Builder
           =
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty.builder()
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty.builder()
 
       /**
-       * @param attributeMatchingModel The comparison type. 
-       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
-       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
-       * type. For example, if the value of the `Email` field of Profile A and the value of
-       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
-       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
-       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
-       * field of Profile B matches, the two profiles are matched on the `Email` type.
+       * @param applyNormalization Normalizes the attributes defined in the schema in the input
+       * data.
+       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
+       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
+       * the output to (123)-456-7890.
        */
-      override fun attributeMatchingModel(attributeMatchingModel: String) {
-        cdkBuilder.attributeMatchingModel(attributeMatchingModel)
+      override fun applyNormalization(applyNormalization: Boolean) {
+        cdkBuilder.applyNormalization(applyNormalization)
       }
 
       /**
-       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
-       * `MatchingKeys` . 
+       * @param applyNormalization Normalizes the attributes defined in the schema in the input
+       * data.
+       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
+       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
+       * the output to (123)-456-7890.
        */
-      override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      override fun applyNormalization(applyNormalization: IResolvable) {
+        cdkBuilder.applyNormalization(applyNormalization.let(IResolvable::unwrap))
       }
 
       /**
-       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
-       * `MatchingKeys` . 
+       * @param inputSourceArn An object containing `InputSourceARN` , `SchemaName` , and
+       * `ApplyNormalization` . 
        */
-      override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+      override fun inputSourceArn(inputSourceArn: String) {
+        cdkBuilder.inputSourceArn(inputSourceArn)
       }
 
       /**
-       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
-       * `MatchingKeys` . 
+       * @param schemaArn The name of the schema. 
        */
-      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+      override fun schemaArn(schemaArn: String) {
+        cdkBuilder.schemaArn(schemaArn)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty,
-    ) : CdkObject(cdkObject), RuleBasedPropertiesProperty {
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty,
+    ) : CdkObject(cdkObject), InputSourceProperty {
       /**
-       * The comparison type.
+       * Normalizes the attributes defined in the schema in the input data.
        *
-       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
-       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
-       * type. For example, if the value of the `Email` field of Profile A and the value of
-       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
-       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
-       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
-       * field of Profile B matches, the two profiles are matched on the `Email` type.
+       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
+       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
+       * the output to (123)-456-7890.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-attributematchingmodel)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-applynormalization)
        */
-      override fun attributeMatchingModel(): String = unwrap(this).getAttributeMatchingModel()
+      override fun applyNormalization(): Any? = unwrap(this).getApplyNormalization()
 
       /**
-       * A list of `Rule` objects, each of which have fields `RuleName` and `MatchingKeys` .
+       * An object containing `InputSourceARN` , `SchemaName` , and `ApplyNormalization` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-rules)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-inputsourcearn)
        */
-      override fun rules(): Any = unwrap(this).getRules()
+      override fun inputSourceArn(): String = unwrap(this).getInputSourceArn()
+
+      /**
+       * The name of the schema.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-schemaarn)
+       */
+      override fun schemaArn(): String = unwrap(this).getSchemaArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuleBasedPropertiesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputSourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty):
-          RuleBasedPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RuleBasedPropertiesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty):
+          InputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSourceProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RuleBasedPropertiesProperty):
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty
+      internal fun unwrap(wrapped: InputSourceProperty):
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty
+    }
+  }
+
+  /**
+   * The Amazon S3 location that temporarily stores your data while it processes.
+   *
+   * Your information won't be saved permanently.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * IntermediateSourceConfigurationProperty intermediateSourceConfigurationProperty =
+   * IntermediateSourceConfigurationProperty.builder()
+   * .intermediateS3Path("intermediateS3Path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-intermediatesourceconfiguration.html)
+   */
+  public interface IntermediateSourceConfigurationProperty {
+    /**
+     * The Amazon S3 location (bucket and prefix).
+     *
+     * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-intermediatesourceconfiguration.html#cfn-entityresolution-matchingworkflow-intermediatesourceconfiguration-intermediates3path)
+     */
+    public fun intermediateS3Path(): String
+
+    /**
+     * A builder for [IntermediateSourceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param intermediateS3Path The Amazon S3 location (bucket and prefix). 
+       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+       */
+      public fun intermediateS3Path(intermediateS3Path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty.builder()
+
+      /**
+       * @param intermediateS3Path The Amazon S3 location (bucket and prefix). 
+       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+       */
+      override fun intermediateS3Path(intermediateS3Path: String) {
+        cdkBuilder.intermediateS3Path(intermediateS3Path)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty,
+    ) : CdkObject(cdkObject), IntermediateSourceConfigurationProperty {
+      /**
+       * The Amazon S3 location (bucket and prefix).
+       *
+       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-intermediatesourceconfiguration.html#cfn-entityresolution-matchingworkflow-intermediatesourceconfiguration-intermediates3path)
+       */
+      override fun intermediateS3Path(): String = unwrap(this).getIntermediateS3Path()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IntermediateSourceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty):
+          IntermediateSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntermediateSourceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IntermediateSourceConfigurationProperty):
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty
+    }
+  }
+
+  /**
+   * A list of `OutputAttribute` objects, each of which have the fields `Name` and `Hashed` .
+   *
+   * Each of these objects selects a column to be included in the output table, and whether the
+   * values of the column should be hashed.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * OutputAttributeProperty outputAttributeProperty = OutputAttributeProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .hashed(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html)
+   */
+  public interface OutputAttributeProperty {
+    /**
+     * Enables the ability to hash the column values in the output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html#cfn-entityresolution-matchingworkflow-outputattribute-hashed)
+     */
+    public fun hashed(): Any? = unwrap(this).getHashed()
+
+    /**
+     * A name of a column to be written to the output.
+     *
+     * This must be an `InputField` name in the schema mapping.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html#cfn-entityresolution-matchingworkflow-outputattribute-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [OutputAttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hashed Enables the ability to hash the column values in the output.
+       */
+      public fun hashed(hashed: Boolean)
+
+      /**
+       * @param hashed Enables the ability to hash the column values in the output.
+       */
+      public fun hashed(hashed: IResolvable)
+
+      /**
+       * @param name A name of a column to be written to the output. 
+       * This must be an `InputField` name in the schema mapping.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty.Builder
+          =
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty.builder()
+
+      /**
+       * @param hashed Enables the ability to hash the column values in the output.
+       */
+      override fun hashed(hashed: Boolean) {
+        cdkBuilder.hashed(hashed)
+      }
+
+      /**
+       * @param hashed Enables the ability to hash the column values in the output.
+       */
+      override fun hashed(hashed: IResolvable) {
+        cdkBuilder.hashed(hashed.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param name A name of a column to be written to the output. 
+       * This must be an `InputField` name in the schema mapping.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty,
+    ) : CdkObject(cdkObject), OutputAttributeProperty {
+      /**
+       * Enables the ability to hash the column values in the output.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html#cfn-entityresolution-matchingworkflow-outputattribute-hashed)
+       */
+      override fun hashed(): Any? = unwrap(this).getHashed()
+
+      /**
+       * A name of a column to be written to the output.
+       *
+       * This must be an `InputField` name in the schema mapping.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html#cfn-entityresolution-matchingworkflow-outputattribute-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OutputAttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty):
+          OutputAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputAttributeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutputAttributeProperty):
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty
     }
   }
 
@@ -1463,7 +1692,8 @@ public open class CfnMatchingWorkflow internal constructor(
   }
 
   /**
-   * An object containing `InputSourceARN` , `SchemaName` , and `ApplyNormalization` .
+   * An object which defines the list of matching rules to run and has a field `Rules` , which is a
+   * list of rule objects.
    *
    * Example:
    *
@@ -1471,395 +1701,165 @@ public open class CfnMatchingWorkflow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.entityresolution.*;
-   * InputSourceProperty inputSourceProperty = InputSourceProperty.builder()
-   * .inputSourceArn("inputSourceArn")
-   * .schemaArn("schemaArn")
-   * // the properties below are optional
-   * .applyNormalization(false)
+   * RuleBasedPropertiesProperty ruleBasedPropertiesProperty = RuleBasedPropertiesProperty.builder()
+   * .attributeMatchingModel("attributeMatchingModel")
+   * .rules(List.of(RuleProperty.builder()
+   * .matchingKeys(List.of("matchingKeys"))
+   * .ruleName("ruleName")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html)
    */
-  public interface InputSourceProperty {
+  public interface RuleBasedPropertiesProperty {
     /**
-     * Normalizes the attributes defined in the schema in the input data.
+     * The comparison type.
      *
-     * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
-     * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in the
-     * output to (123)-456-7890.
+     * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
+     * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
+     * type. For example, if the value of the `Email` field of Profile A and the value of
+     * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
+     * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
+     * example, only when the value of the `Email` field of Profile A and the value of the `Email`
+     * field of Profile B matches, the two profiles are matched on the `Email` type.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-applynormalization)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-attributematchingmodel)
      */
-    public fun applyNormalization(): Any? = unwrap(this).getApplyNormalization()
+    public fun attributeMatchingModel(): String
 
     /**
-     * An object containing `InputSourceARN` , `SchemaName` , and `ApplyNormalization` .
+     * A list of `Rule` objects, each of which have fields `RuleName` and `MatchingKeys` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-inputsourcearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-rules)
      */
-    public fun inputSourceArn(): String
+    public fun rules(): Any
 
     /**
-     * The name of the schema.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-schemaarn)
-     */
-    public fun schemaArn(): String
-
-    /**
-     * A builder for [InputSourceProperty]
+     * A builder for [RuleBasedPropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param applyNormalization Normalizes the attributes defined in the schema in the input
-       * data.
-       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
-       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
-       * the output to (123)-456-7890.
+       * @param attributeMatchingModel The comparison type. 
+       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
+       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
+       * type. For example, if the value of the `Email` field of Profile A and the value of
+       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
+       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
+       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
+       * field of Profile B matches, the two profiles are matched on the `Email` type.
        */
-      public fun applyNormalization(applyNormalization: Boolean)
+      public fun attributeMatchingModel(attributeMatchingModel: String)
 
       /**
-       * @param applyNormalization Normalizes the attributes defined in the schema in the input
-       * data.
-       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
-       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
-       * the output to (123)-456-7890.
+       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
+       * `MatchingKeys` . 
        */
-      public fun applyNormalization(applyNormalization: IResolvable)
+      public fun rules(rules: IResolvable)
 
       /**
-       * @param inputSourceArn An object containing `InputSourceARN` , `SchemaName` , and
-       * `ApplyNormalization` . 
+       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
+       * `MatchingKeys` . 
        */
-      public fun inputSourceArn(inputSourceArn: String)
+      public fun rules(rules: List<Any>)
 
       /**
-       * @param schemaArn The name of the schema. 
+       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
+       * `MatchingKeys` . 
        */
-      public fun schemaArn(schemaArn: String)
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty.Builder
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty.builder()
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty.builder()
 
       /**
-       * @param applyNormalization Normalizes the attributes defined in the schema in the input
-       * data.
-       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
-       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
-       * the output to (123)-456-7890.
+       * @param attributeMatchingModel The comparison type. 
+       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
+       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
+       * type. For example, if the value of the `Email` field of Profile A and the value of
+       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
+       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
+       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
+       * field of Profile B matches, the two profiles are matched on the `Email` type.
        */
-      override fun applyNormalization(applyNormalization: Boolean) {
-        cdkBuilder.applyNormalization(applyNormalization)
+      override fun attributeMatchingModel(attributeMatchingModel: String) {
+        cdkBuilder.attributeMatchingModel(attributeMatchingModel)
       }
 
       /**
-       * @param applyNormalization Normalizes the attributes defined in the schema in the input
-       * data.
-       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
-       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
-       * the output to (123)-456-7890.
+       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
+       * `MatchingKeys` . 
        */
-      override fun applyNormalization(applyNormalization: IResolvable) {
-        cdkBuilder.applyNormalization(applyNormalization.let(IResolvable::unwrap))
+      override fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules.let(IResolvable::unwrap))
       }
 
       /**
-       * @param inputSourceArn An object containing `InputSourceARN` , `SchemaName` , and
-       * `ApplyNormalization` . 
+       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
+       * `MatchingKeys` . 
        */
-      override fun inputSourceArn(inputSourceArn: String) {
-        cdkBuilder.inputSourceArn(inputSourceArn)
+      override fun rules(rules: List<Any>) {
+        cdkBuilder.rules(rules)
       }
 
       /**
-       * @param schemaArn The name of the schema. 
+       * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
+       * `MatchingKeys` . 
        */
-      override fun schemaArn(schemaArn: String) {
-        cdkBuilder.schemaArn(schemaArn)
-      }
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build():
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty,
-    ) : CdkObject(cdkObject), InputSourceProperty {
-      /**
-       * Normalizes the attributes defined in the schema in the input data.
-       *
-       * For example, if an attribute has an `AttributeType` of `PHONE_NUMBER` , and the data in the
-       * input table is in a format of 1234567890, AWS Entity Resolution will normalize this field in
-       * the output to (123)-456-7890.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-applynormalization)
-       */
-      override fun applyNormalization(): Any? = unwrap(this).getApplyNormalization()
-
-      /**
-       * An object containing `InputSourceARN` , `SchemaName` , and `ApplyNormalization` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-inputsourcearn)
-       */
-      override fun inputSourceArn(): String = unwrap(this).getInputSourceArn()
-
-      /**
-       * The name of the schema.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-inputsource.html#cfn-entityresolution-matchingworkflow-inputsource-schemaarn)
-       */
-      override fun schemaArn(): String = unwrap(this).getSchemaArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty):
-          InputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputSourceProperty):
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty
-    }
-  }
-
-  /**
-   * The Amazon S3 location that temporarily stores your data while it processes.
-   *
-   * Your information won't be saved permanently.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
-   * IntermediateSourceConfigurationProperty intermediateSourceConfigurationProperty =
-   * IntermediateSourceConfigurationProperty.builder()
-   * .intermediateS3Path("intermediateS3Path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-intermediatesourceconfiguration.html)
-   */
-  public interface IntermediateSourceConfigurationProperty {
-    /**
-     * The Amazon S3 location (bucket and prefix).
-     *
-     * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-intermediatesourceconfiguration.html#cfn-entityresolution-matchingworkflow-intermediatesourceconfiguration-intermediates3path)
-     */
-    public fun intermediateS3Path(): String
-
-    /**
-     * A builder for [IntermediateSourceConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param intermediateS3Path The Amazon S3 location (bucket and prefix). 
-       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
-       */
-      public fun intermediateS3Path(intermediateS3Path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty.builder()
-
-      /**
-       * @param intermediateS3Path The Amazon S3 location (bucket and prefix). 
-       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
-       */
-      override fun intermediateS3Path(intermediateS3Path: String) {
-        cdkBuilder.intermediateS3Path(intermediateS3Path)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty,
-    ) : CdkObject(cdkObject), IntermediateSourceConfigurationProperty {
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty,
+    ) : CdkObject(cdkObject), RuleBasedPropertiesProperty {
       /**
-       * The Amazon S3 location (bucket and prefix).
+       * The comparison type.
        *
-       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
+       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
+       * type. For example, if the value of the `Email` field of Profile A and the value of
+       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
+       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
+       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
+       * field of Profile B matches, the two profiles are matched on the `Email` type.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-intermediatesourceconfiguration.html#cfn-entityresolution-matchingworkflow-intermediatesourceconfiguration-intermediates3path)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-attributematchingmodel)
        */
-      override fun intermediateS3Path(): String = unwrap(this).getIntermediateS3Path()
+      override fun attributeMatchingModel(): String = unwrap(this).getAttributeMatchingModel()
+
+      /**
+       * A list of `Rule` objects, each of which have fields `RuleName` and `MatchingKeys` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-rules)
+       */
+      override fun rules(): Any = unwrap(this).getRules()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          IntermediateSourceConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleBasedPropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty):
-          IntermediateSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IntermediateSourceConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty):
+          RuleBasedPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RuleBasedPropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: IntermediateSourceConfigurationProperty):
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty
+      internal fun unwrap(wrapped: RuleBasedPropertiesProperty):
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty
-    }
-  }
-
-  /**
-   * A list of `OutputAttribute` objects, each of which have the fields `Name` and `Hashed` .
-   *
-   * Each of these objects selects a column to be included in the output table, and whether the
-   * values of the column should be hashed.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
-   * OutputAttributeProperty outputAttributeProperty = OutputAttributeProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .hashed(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html)
-   */
-  public interface OutputAttributeProperty {
-    /**
-     * Enables the ability to hash the column values in the output.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html#cfn-entityresolution-matchingworkflow-outputattribute-hashed)
-     */
-    public fun hashed(): Any? = unwrap(this).getHashed()
-
-    /**
-     * A name of a column to be written to the output.
-     *
-     * This must be an `InputField` name in the schema mapping.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html#cfn-entityresolution-matchingworkflow-outputattribute-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [OutputAttributeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param hashed Enables the ability to hash the column values in the output.
-       */
-      public fun hashed(hashed: Boolean)
-
-      /**
-       * @param hashed Enables the ability to hash the column values in the output.
-       */
-      public fun hashed(hashed: IResolvable)
-
-      /**
-       * @param name A name of a column to be written to the output. 
-       * This must be an `InputField` name in the schema mapping.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty.Builder
-          =
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty.builder()
-
-      /**
-       * @param hashed Enables the ability to hash the column values in the output.
-       */
-      override fun hashed(hashed: Boolean) {
-        cdkBuilder.hashed(hashed)
-      }
-
-      /**
-       * @param hashed Enables the ability to hash the column values in the output.
-       */
-      override fun hashed(hashed: IResolvable) {
-        cdkBuilder.hashed(hashed.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param name A name of a column to be written to the output. 
-       * This must be an `InputField` name in the schema mapping.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty,
-    ) : CdkObject(cdkObject), OutputAttributeProperty {
-      /**
-       * Enables the ability to hash the column values in the output.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html#cfn-entityresolution-matchingworkflow-outputattribute-hashed)
-       */
-      override fun hashed(): Any? = unwrap(this).getHashed()
-
-      /**
-       * A name of a column to be written to the output.
-       *
-       * This must be an `InputField` name in the schema mapping.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputattribute.html#cfn-entityresolution-matchingworkflow-outputattribute-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OutputAttributeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty):
-          OutputAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputAttributeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OutputAttributeProperty):
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty
     }
   }
 

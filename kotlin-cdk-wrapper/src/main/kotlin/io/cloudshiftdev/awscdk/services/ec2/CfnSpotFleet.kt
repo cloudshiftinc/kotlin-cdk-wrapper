@@ -589,7 +589,7 @@ public open class CfnSpotFleet internal constructor(
   }
 
   /**
-   * The minimum and maximum amount of memory per vCPU, in GiB.
+   * The minimum and maximum amount of total accelerator memory, in MiB.
    *
    * Example:
    *
@@ -597,47 +597,47 @@ public open class CfnSpotFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MemoryGiBPerVCpuRequestProperty memoryGiBPerVCpuRequestProperty =
-   * MemoryGiBPerVCpuRequestProperty.builder()
+   * AcceleratorTotalMemoryMiBRequestProperty acceleratorTotalMemoryMiBRequestProperty =
+   * AcceleratorTotalMemoryMiBRequestProperty.builder()
    * .max(123)
    * .min(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html)
    */
-  public interface MemoryGiBPerVCpuRequestProperty {
+  public interface AcceleratorTotalMemoryMiBRequestProperty {
     /**
-     * The maximum amount of memory per vCPU, in GiB.
+     * The maximum amount of accelerator memory, in MiB.
      *
      * To specify no maximum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html#cfn-ec2-spotfleet-memorygibpervcpurequest-max)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html#cfn-ec2-spotfleet-acceleratortotalmemorymibrequest-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The minimum amount of memory per vCPU, in GiB.
+     * The minimum amount of accelerator memory, in MiB.
      *
      * To specify no minimum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html#cfn-ec2-spotfleet-memorygibpervcpurequest-min)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html#cfn-ec2-spotfleet-acceleratortotalmemorymibrequest-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * A builder for [MemoryGiBPerVCpuRequestProperty]
+     * A builder for [AcceleratorTotalMemoryMiBRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum amount of memory per vCPU, in GiB.
+       * @param max The maximum amount of accelerator memory, in MiB.
        * To specify no maximum limit, omit this parameter.
        */
       public fun max(max: Number)
 
       /**
-       * @param min The minimum amount of memory per vCPU, in GiB.
+       * @param min The minimum amount of accelerator memory, in MiB.
        * To specify no minimum limit, omit this parameter.
        */
       public fun min(min: Number)
@@ -645,11 +645,12 @@ public open class CfnSpotFleet internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty.builder()
 
       /**
-       * @param max The maximum amount of memory per vCPU, in GiB.
+       * @param max The maximum amount of accelerator memory, in MiB.
        * To specify no maximum limit, omit this parameter.
        */
       override fun max(max: Number) {
@@ -657,7 +658,7 @@ public open class CfnSpotFleet internal constructor(
       }
 
       /**
-       * @param min The minimum amount of memory per vCPU, in GiB.
+       * @param min The minimum amount of accelerator memory, in MiB.
        * To specify no minimum limit, omit this parameter.
        */
       override fun min(min: Number) {
@@ -665,48 +666,177 @@ public open class CfnSpotFleet internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty,
-    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty,
+    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
       /**
-       * The maximum amount of memory per vCPU, in GiB.
+       * The maximum amount of accelerator memory, in MiB.
        *
        * To specify no maximum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html#cfn-ec2-spotfleet-memorygibpervcpurequest-max)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html#cfn-ec2-spotfleet-acceleratortotalmemorymibrequest-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The minimum amount of memory per vCPU, in GiB.
+       * The minimum amount of accelerator memory, in MiB.
        *
        * To specify no minimum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html#cfn-ec2-spotfleet-memorygibpervcpurequest-min)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html#cfn-ec2-spotfleet-acceleratortotalmemorymibrequest-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryGiBPerVCpuRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AcceleratorTotalMemoryMiBRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty):
-          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MemoryGiBPerVCpuRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty):
+          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AcceleratorTotalMemoryMiBRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MemoryGiBPerVCpuRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty =
+      internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
+   *
+   * For more information, see [Amazon EBS–optimized
+   * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
+   * EC2 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BaselineEbsBandwidthMbpsRequestProperty baselineEbsBandwidthMbpsRequestProperty =
+   * BaselineEbsBandwidthMbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html)
+   */
+  public interface BaselineEbsBandwidthMbpsRequestProperty {
+    /**
+     * The maximum baseline bandwidth, in Mbps.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-spotfleet-baselineebsbandwidthmbpsrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum baseline bandwidth, in Mbps.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-spotfleet-baselineebsbandwidthmbpsrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [BaselineEbsBandwidthMbpsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum baseline bandwidth, in Mbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum baseline bandwidth, in Mbps.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty.builder()
+
+      /**
+       * @param max The maximum baseline bandwidth, in Mbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum baseline bandwidth, in Mbps.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty,
+    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
+      /**
+       * The maximum baseline bandwidth, in Mbps.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-spotfleet-baselineebsbandwidthmbpsrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum baseline bandwidth, in Mbps.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-spotfleet-baselineebsbandwidthmbpsrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BaselineEbsBandwidthMbpsRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty):
+          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselineEbsBandwidthMbpsRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty
     }
   }
 
@@ -973,7 +1103,7 @@ public open class CfnSpotFleet internal constructor(
   }
 
   /**
-   * Describes whether monitoring is enabled.
+   * Specifies a Classic Load Balancer.
    *
    * Example:
    *
@@ -981,105 +1111,83 @@ public open class CfnSpotFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * SpotFleetMonitoringProperty spotFleetMonitoringProperty = SpotFleetMonitoringProperty.builder()
-   * .enabled(false)
+   * ClassicLoadBalancerProperty classicLoadBalancerProperty = ClassicLoadBalancerProperty.builder()
+   * .name("name")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetmonitoring.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html)
    */
-  public interface SpotFleetMonitoringProperty {
+  public interface ClassicLoadBalancerProperty {
     /**
-     * Enables monitoring for the instance.
+     * The name of the load balancer.
      *
-     * Default: `false`
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetmonitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html#cfn-ec2-spotfleet-classicloadbalancer-name)
      */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
+    public fun name(): String
 
     /**
-     * A builder for [SpotFleetMonitoringProperty]
+     * A builder for [ClassicLoadBalancerProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Enables monitoring for the instance.
-       * Default: `false`
+       * @param name The name of the load balancer. 
        */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Enables monitoring for the instance.
-       * Default: `false`
-       */
-      public fun enabled(enabled: IResolvable)
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty.builder()
 
       /**
-       * @param enabled Enables monitoring for the instance.
-       * Default: `false`
+       * @param name The name of the load balancer. 
        */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Enables monitoring for the instance.
-       * Default: `false`
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty,
-    ) : CdkObject(cdkObject), SpotFleetMonitoringProperty {
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty,
+    ) : CdkObject(cdkObject), ClassicLoadBalancerProperty {
       /**
-       * Enables monitoring for the instance.
+       * The name of the load balancer.
        *
-       * Default: `false`
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetmonitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html#cfn-ec2-spotfleet-classicloadbalancer-name)
        */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SpotFleetMonitoringProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClassicLoadBalancerProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty):
-          SpotFleetMonitoringProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SpotFleetMonitoringProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty):
+          ClassicLoadBalancerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClassicLoadBalancerProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SpotFleetMonitoringProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty = (wrapped as
+      internal fun unwrap(wrapped: ClassicLoadBalancerProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty
     }
   }
 
   /**
-   * The minimum and maximum number of vCPUs.
+   * Specifies the Classic Load Balancers to attach to a Spot Fleet.
+   *
+   * Spot Fleet registers the running Spot Instances with these Classic Load Balancers.
    *
    * Example:
    *
@@ -1087,116 +1195,1685 @@ public open class CfnSpotFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * VCpuCountRangeRequestProperty vCpuCountRangeRequestProperty =
-   * VCpuCountRangeRequestProperty.builder()
-   * .max(123)
-   * .min(123)
+   * ClassicLoadBalancersConfigProperty classicLoadBalancersConfigProperty =
+   * ClassicLoadBalancersConfigProperty.builder()
+   * .classicLoadBalancers(List.of(ClassicLoadBalancerProperty.builder()
+   * .name("name")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html)
    */
-  public interface VCpuCountRangeRequestProperty {
+  public interface ClassicLoadBalancersConfigProperty {
     /**
-     * The maximum number of vCPUs.
+     * One or more Classic Load Balancers.
      *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html#cfn-ec2-spotfleet-vcpucountrangerequest-max)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)
      */
-    public fun max(): Number? = unwrap(this).getMax()
+    public fun classicLoadBalancers(): Any
 
     /**
-     * The minimum number of vCPUs.
-     *
-     * To specify no minimum limit, specify `0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html#cfn-ec2-spotfleet-vcpucountrangerequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [VCpuCountRangeRequestProperty]
+     * A builder for [ClassicLoadBalancersConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum number of vCPUs.
-       * To specify no maximum limit, omit this parameter.
+       * @param classicLoadBalancers One or more Classic Load Balancers. 
        */
-      public fun max(max: Number)
+      public fun classicLoadBalancers(classicLoadBalancers: IResolvable)
 
       /**
-       * @param min The minimum number of vCPUs.
-       * To specify no minimum limit, specify `0` .
+       * @param classicLoadBalancers One or more Classic Load Balancers. 
        */
-      public fun min(min: Number)
+      public fun classicLoadBalancers(classicLoadBalancers: List<Any>)
+
+      /**
+       * @param classicLoadBalancers One or more Classic Load Balancers. 
+       */
+      public fun classicLoadBalancers(vararg classicLoadBalancers: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty.builder()
 
       /**
-       * @param max The maximum number of vCPUs.
-       * To specify no maximum limit, omit this parameter.
+       * @param classicLoadBalancers One or more Classic Load Balancers. 
        */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
+      override fun classicLoadBalancers(classicLoadBalancers: IResolvable) {
+        cdkBuilder.classicLoadBalancers(classicLoadBalancers.let(IResolvable::unwrap))
       }
 
       /**
-       * @param min The minimum number of vCPUs.
-       * To specify no minimum limit, specify `0` .
+       * @param classicLoadBalancers One or more Classic Load Balancers. 
        */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
+      override fun classicLoadBalancers(classicLoadBalancers: List<Any>) {
+        cdkBuilder.classicLoadBalancers(classicLoadBalancers)
       }
+
+      /**
+       * @param classicLoadBalancers One or more Classic Load Balancers. 
+       */
+      override fun classicLoadBalancers(vararg classicLoadBalancers: Any): Unit =
+          classicLoadBalancers(classicLoadBalancers.toList())
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty,
-    ) : CdkObject(cdkObject), VCpuCountRangeRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty,
+    ) : CdkObject(cdkObject), ClassicLoadBalancersConfigProperty {
       /**
-       * The maximum number of vCPUs.
+       * One or more Classic Load Balancers.
        *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html#cfn-ec2-spotfleet-vcpucountrangerequest-max)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)
        */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum number of vCPUs.
-       *
-       * To specify no minimum limit, specify `0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html#cfn-ec2-spotfleet-vcpucountrangerequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
+      override fun classicLoadBalancers(): Any = unwrap(this).getClassicLoadBalancers()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VCpuCountRangeRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ClassicLoadBalancersConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty):
-          VCpuCountRangeRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VCpuCountRangeRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty):
+          ClassicLoadBalancersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClassicLoadBalancersConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VCpuCountRangeRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty
+      internal fun unwrap(wrapped: ClassicLoadBalancersConfigProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty
+    }
+  }
+
+  /**
+   * Describes a block device for an EBS volume.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EbsBlockDeviceProperty ebsBlockDeviceProperty = EbsBlockDeviceProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .snapshotId("snapshotId")
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html)
+   */
+  public interface EbsBlockDeviceProperty {
+    /**
+     * Indicates whether the EBS volume is deleted on instance termination.
+     *
+     * For more information, see [Preserving Amazon EBS volumes on instance
+     * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination)
+     */
+    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+    /**
+     * Indicates whether the encryption state of an EBS volume is changed while being restored from
+     * a backing snapshot.
+     *
+     * The effect of setting the encryption state to `true` depends on the volume origin (new or
+     * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+     * enabled. For more information, see [Amazon EBS
+     * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * In no case can you remove encryption from an encrypted volume.
+     *
+     * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+     * more information, see [Supported Instance
+     * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+     * .
+     *
+     * This parameter is not returned by
+     * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted)
+     */
+    public fun encrypted(): Any? = unwrap(this).getEncrypted()
+
+    /**
+     * The number of I/O operations per second (IOPS).
+     *
+     * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+     * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+     * volume and the rate at which the volume accumulates I/O credits for bursting.
+     *
+     * The following are the supported values for each volume type:
+     *
+     * * `gp3` : 3,000 - 16,000 IOPS
+     * * `io1` : 100 - 64,000 IOPS
+     * * `io2` : 100 - 256,000 IOPS
+     *
+     * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+     * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+     * . On other instances, you can achieve performance up to 32,000 IOPS.
+     *
+     * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
+     * 3,000 IOPS.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * The ID of the snapshot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid)
+     */
+    public fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+    /**
+     * The size of the volume, in GiBs.
+     *
+     * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
+     * default is the snapshot size. You can specify a volume size that is equal to or larger than the
+     * snapshot size.
+     *
+     * The following are the supported sizes for each volume type:
+     *
+     * * `gp2` and `gp3` : 1 - 16,384 GiB
+     * * `io1` : 4 - 16,384 GiB
+     * * `io2` : 4 - 65,536 GiB
+     * * `st1` and `sc1` : 125 - 16,384 GiB
+     * * `standard` : 1 - 1024 GiB
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize)
+     */
+    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+    /**
+     * The volume type.
+     *
+     * For more information, see [Amazon EBS volume
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+     * EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype)
+     */
+    public fun volumeType(): String? = unwrap(this).getVolumeType()
+
+    /**
+     * A builder for [EbsBlockDeviceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
+
+      /**
+       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
+       * being restored from a backing snapshot.
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported Instance
+       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by
+       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
+       * .
+       */
+      public fun encrypted(encrypted: Boolean)
+
+      /**
+       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
+       * being restored from a backing snapshot.
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported Instance
+       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by
+       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
+       * .
+       */
+      public fun encrypted(encrypted: IResolvable)
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS).
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
+       * 3,000 IOPS.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param snapshotId The ID of the snapshot.
+       */
+      public fun snapshotId(snapshotId: String)
+
+      /**
+       * @param volumeSize The size of the volume, in GiBs.
+       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
+       * default is the snapshot size. You can specify a volume size that is equal to or larger than
+       * the snapshot size.
+       *
+       * The following are the supported sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       */
+      public fun volumeSize(volumeSize: Number)
+
+      /**
+       * @param volumeType The volume type.
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide* .
+       */
+      public fun volumeType(volumeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty.builder()
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination)
+      }
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
+       * being restored from a backing snapshot.
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported Instance
+       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by
+       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
+       * .
+       */
+      override fun encrypted(encrypted: Boolean) {
+        cdkBuilder.encrypted(encrypted)
+      }
+
+      /**
+       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
+       * being restored from a backing snapshot.
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported Instance
+       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by
+       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
+       * .
+       */
+      override fun encrypted(encrypted: IResolvable) {
+        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS).
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
+       * 3,000 IOPS.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param snapshotId The ID of the snapshot.
+       */
+      override fun snapshotId(snapshotId: String) {
+        cdkBuilder.snapshotId(snapshotId)
+      }
+
+      /**
+       * @param volumeSize The size of the volume, in GiBs.
+       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
+       * default is the snapshot size. You can specify a volume size that is equal to or larger than
+       * the snapshot size.
+       *
+       * The following are the supported sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       */
+      override fun volumeSize(volumeSize: Number) {
+        cdkBuilder.volumeSize(volumeSize)
+      }
+
+      /**
+       * @param volumeType The volume type.
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide* .
+       */
+      override fun volumeType(volumeType: String) {
+        cdkBuilder.volumeType(volumeType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty,
+    ) : CdkObject(cdkObject), EbsBlockDeviceProperty {
+      /**
+       * Indicates whether the EBS volume is deleted on instance termination.
+       *
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination)
+       */
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+      /**
+       * Indicates whether the encryption state of an EBS volume is changed while being restored
+       * from a backing snapshot.
+       *
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported Instance
+       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by
+       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted)
+       */
+      override fun encrypted(): Any? = unwrap(this).getEncrypted()
+
+      /**
+       * The number of I/O operations per second (IOPS).
+       *
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
+       * 3,000 IOPS.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * The ID of the snapshot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid)
+       */
+      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+      /**
+       * The size of the volume, in GiBs.
+       *
+       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
+       * default is the snapshot size. You can specify a volume size that is equal to or larger than
+       * the snapshot size.
+       *
+       * The following are the supported sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize)
+       */
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+      /**
+       * The volume type.
+       *
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype)
+       */
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EbsBlockDeviceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty):
+          EbsBlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsBlockDeviceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EbsBlockDeviceProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty
+    }
+  }
+
+  /**
+   * Specifies the launch template to be used by the Spot Fleet request for configuring Amazon EC2
+   * instances.
+   *
+   * You must specify the following:
+   *
+   * * The ID or the name of the launch template, but not both.
+   * * The version of the launch template.
+   *
+   * `FleetLaunchTemplateSpecification` is a property of the
+   * [AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html)
+   * resource.
+   *
+   * For information about creating a launch template, see
+   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+   * and [Create a launch
+   * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
+   * in the *Amazon EC2 User Guide* .
+   *
+   * For examples of launch templates, see
+   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * FleetLaunchTemplateSpecificationProperty fleetLaunchTemplateSpecificationProperty =
+   * FleetLaunchTemplateSpecificationProperty.builder()
+   * .version("version")
+   * // the properties below are optional
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html)
+   */
+  public interface FleetLaunchTemplateSpecificationProperty {
+    /**
+     * The ID of the launch template.
+     *
+     * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid)
+     */
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+    /**
+     * The name of the launch template.
+     *
+     * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename)
+     */
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+    /**
+     * The version number of the launch template.
+     *
+     * Specifying `$Latest` or `$Default` for the template version number is not supported. However,
+     * you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the `Fn::GetAtt` intrinsic
+     * function. For more information, see
+     * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version)
+     */
+    public fun version(): String
+
+    /**
+     * A builder for [FleetLaunchTemplateSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       */
+      public fun launchTemplateId(launchTemplateId: String)
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       */
+      public fun launchTemplateName(launchTemplateName: String)
+
+      /**
+       * @param version The version number of the launch template. 
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * .
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty.builder()
+
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       */
+      override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       */
+      override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      /**
+       * @param version The version number of the launch template. 
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * .
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty,
+    ) : CdkObject(cdkObject), FleetLaunchTemplateSpecificationProperty {
+      /**
+       * The ID of the launch template.
+       *
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid)
+       */
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+      /**
+       * The name of the launch template.
+       *
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename)
+       */
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+      /**
+       * The version number of the launch template.
+       *
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version)
+       */
+      override fun version(): String = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FleetLaunchTemplateSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty):
+          FleetLaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FleetLaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FleetLaunchTemplateSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty
+    }
+  }
+
+  /**
+   * Describes a security group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * GroupIdentifierProperty groupIdentifierProperty = GroupIdentifierProperty.builder()
+   * .groupId("groupId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-groupidentifier.html)
+   */
+  public interface GroupIdentifierProperty {
+    /**
+     * The ID of the security group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-groupidentifier.html#cfn-ec2-spotfleet-groupidentifier-groupid)
+     */
+    public fun groupId(): String
+
+    /**
+     * A builder for [GroupIdentifierProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param groupId The ID of the security group. 
+       */
+      public fun groupId(groupId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty.builder()
+
+      /**
+       * @param groupId The ID of the security group. 
+       */
+      override fun groupId(groupId: String) {
+        cdkBuilder.groupId(groupId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty,
+    ) : CdkObject(cdkObject), GroupIdentifierProperty {
+      /**
+       * The ID of the security group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-groupidentifier.html#cfn-ec2-spotfleet-groupidentifier-groupid)
+       */
+      override fun groupId(): String = unwrap(this).getGroupId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GroupIdentifierProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty):
+          GroupIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as? GroupIdentifierProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GroupIdentifierProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty
+    }
+  }
+
+  /**
+   * Describes an IAM instance profile.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * IamInstanceProfileSpecificationProperty iamInstanceProfileSpecificationProperty =
+   * IamInstanceProfileSpecificationProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-iaminstanceprofilespecification.html)
+   */
+  public interface IamInstanceProfileSpecificationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the instance profile.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-iaminstanceprofilespecification.html#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * A builder for [IamInstanceProfileSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the instance profile.
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty.builder()
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the instance profile.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty,
+    ) : CdkObject(cdkObject), IamInstanceProfileSpecificationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the instance profile.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-iaminstanceprofilespecification.html#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IamInstanceProfileSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty):
+          IamInstanceProfileSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IamInstanceProfileSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IamInstanceProfileSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty
+    }
+  }
+
+  /**
+   * Describes an IPv6 address.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * InstanceIpv6AddressProperty instanceIpv6AddressProperty = InstanceIpv6AddressProperty.builder()
+   * .ipv6Address("ipv6Address")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html)
+   */
+  public interface InstanceIpv6AddressProperty {
+    /**
+     * The IPv6 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address)
+     */
+    public fun ipv6Address(): String
+
+    /**
+     * A builder for [InstanceIpv6AddressProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipv6Address The IPv6 address. 
+       */
+      public fun ipv6Address(ipv6Address: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty.builder()
+
+      /**
+       * @param ipv6Address The IPv6 address. 
+       */
+      override fun ipv6Address(ipv6Address: String) {
+        cdkBuilder.ipv6Address(ipv6Address)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty,
+    ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
+      /**
+       * The IPv6 address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address)
+       */
+      override fun ipv6Address(): String = unwrap(this).getIpv6Address()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceIpv6AddressProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty):
+          InstanceIpv6AddressProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceIpv6AddressProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceIpv6AddressProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty
+    }
+  }
+
+  /**
+   * Describes a network interface.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * InstanceNetworkInterfaceSpecificationProperty instanceNetworkInterfaceSpecificationProperty =
+   * InstanceNetworkInterfaceSpecificationProperty.builder()
+   * .associatePublicIpAddress(false)
+   * .deleteOnTermination(false)
+   * .description("description")
+   * .deviceIndex(123)
+   * .groups(List.of("groups"))
+   * .ipv6AddressCount(123)
+   * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
+   * .ipv6Address("ipv6Address")
+   * .build()))
+   * .networkInterfaceId("networkInterfaceId")
+   * .privateIpAddresses(List.of(PrivateIpAddressSpecificationProperty.builder()
+   * .privateIpAddress("privateIpAddress")
+   * // the properties below are optional
+   * .primary(false)
+   * .build()))
+   * .secondaryPrivateIpAddressCount(123)
+   * .subnetId("subnetId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html)
+   */
+  public interface InstanceNetworkInterfaceSpecificationProperty {
+    /**
+     * Indicates whether to assign a public IPv4 address to an instance you launch in a VPC.
+     *
+     * The public IP address can only be assigned to a network interface for eth0, and can only be
+     * assigned to a new network interface, not an existing one. You cannot specify more than one
+     * network interface in the request. If launching into a default subnet, the default value is
+     * `true` .
+     *
+     * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+     * running instances and Elastic IP addresses. For more information, see the *Public IPv4 Address*
+     * tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)
+     */
+    public fun associatePublicIpAddress(): Any? = unwrap(this).getAssociatePublicIpAddress()
+
+    /**
+     * Indicates whether the network interface is deleted when the instance is terminated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)
+     */
+    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+    /**
+     * The description of the network interface.
+     *
+     * Applies only if creating a network interface when launching an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The position of the network interface in the attachment order.
+     *
+     * A primary network interface has a device index of 0.
+     *
+     * If you specify a network interface when launching an instance, you must specify the device
+     * index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)
+     */
+    public fun deviceIndex(): Number? = unwrap(this).getDeviceIndex()
+
+    /**
+     * The IDs of the security groups for the network interface.
+     *
+     * Applies only if creating a network interface when launching an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)
+     */
+    public fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
+
+    /**
+     * A number of IPv6 addresses to assign to the network interface.
+     *
+     * Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this
+     * option and the option to assign specific IPv6 addresses in the same request. You can specify
+     * this option if you've specified a minimum number of instances to launch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)
+     */
+    public fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
+
+    /**
+     * The IPv6 addresses to assign to the network interface.
+     *
+     * You cannot specify this option and the option to assign a number of IPv6 addresses in the
+     * same request. You cannot specify this option if you've specified a minimum number of instances
+     * to launch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)
+     */
+    public fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
+
+    /**
+     * The ID of the network interface.
+     *
+     * If you are creating a Spot Fleet, omit this parameter because you can’t specify a network
+     * interface ID in a launch specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)
+     */
+    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+    /**
+     * The private IPv4 addresses to assign to the network interface.
+     *
+     * Only one private IPv4 address can be designated as primary. You cannot specify this option if
+     * you're launching more than one instance in a
+     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+     * request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)
+     */
+    public fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
+
+    /**
+     * The number of secondary private IPv4 addresses.
+     *
+     * You can't specify this option and specify more than one private IP address using the private
+     * IP addresses option. You cannot specify this option if you're launching more than one instance
+     * in a
+     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+     * request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
+     */
+    public fun secondaryPrivateIpAddressCount(): Number? =
+        unwrap(this).getSecondaryPrivateIpAddressCount()
+
+    /**
+     * The ID of the subnet associated with the network interface.
+     *
+     * Applies only if creating a network interface when launching an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
+     */
+    public fun subnetId(): String? = unwrap(this).getSubnetId()
+
+    /**
+     * A builder for [InstanceNetworkInterfaceSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param associatePublicIpAddress Indicates whether to assign a public IPv4 address to an
+       * instance you launch in a VPC.
+       * The public IP address can only be assigned to a network interface for eth0, and can only be
+       * assigned to a new network interface, not an existing one. You cannot specify more than one
+       * network interface in the request. If launching into a default subnet, the default value is
+       * `true` .
+       *
+       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
+       */
+      public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
+
+      /**
+       * @param associatePublicIpAddress Indicates whether to assign a public IPv4 address to an
+       * instance you launch in a VPC.
+       * The public IP address can only be assigned to a network interface for eth0, and can only be
+       * assigned to a new network interface, not an existing one. You cannot specify more than one
+       * network interface in the request. If launching into a default subnet, the default value is
+       * `true` .
+       *
+       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
+       */
+      public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable)
+
+      /**
+       * @param deleteOnTermination Indicates whether the network interface is deleted when the
+       * instance is terminated.
+       */
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
+
+      /**
+       * @param deleteOnTermination Indicates whether the network interface is deleted when the
+       * instance is terminated.
+       */
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
+
+      /**
+       * @param description The description of the network interface.
+       * Applies only if creating a network interface when launching an instance.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param deviceIndex The position of the network interface in the attachment order.
+       * A primary network interface has a device index of 0.
+       *
+       * If you specify a network interface when launching an instance, you must specify the device
+       * index.
+       */
+      public fun deviceIndex(deviceIndex: Number)
+
+      /**
+       * @param groups The IDs of the security groups for the network interface.
+       * Applies only if creating a network interface when launching an instance.
+       */
+      public fun groups(groups: List<String>)
+
+      /**
+       * @param groups The IDs of the security groups for the network interface.
+       * Applies only if creating a network interface when launching an instance.
+       */
+      public fun groups(vararg groups: String)
+
+      /**
+       * @param ipv6AddressCount A number of IPv6 addresses to assign to the network interface.
+       * Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this
+       * option and the option to assign specific IPv6 addresses in the same request. You can specify
+       * this option if you've specified a minimum number of instances to launch.
+       */
+      public fun ipv6AddressCount(ipv6AddressCount: Number)
+
+      /**
+       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
+       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
+       * same request. You cannot specify this option if you've specified a minimum number of instances
+       * to launch.
+       */
+      public fun ipv6Addresses(ipv6Addresses: IResolvable)
+
+      /**
+       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
+       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
+       * same request. You cannot specify this option if you've specified a minimum number of instances
+       * to launch.
+       */
+      public fun ipv6Addresses(ipv6Addresses: List<Any>)
+
+      /**
+       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
+       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
+       * same request. You cannot specify this option if you've specified a minimum number of instances
+       * to launch.
+       */
+      public fun ipv6Addresses(vararg ipv6Addresses: Any)
+
+      /**
+       * @param networkInterfaceId The ID of the network interface.
+       * If you are creating a Spot Fleet, omit this parameter because you can’t specify a network
+       * interface ID in a launch specification.
+       */
+      public fun networkInterfaceId(networkInterfaceId: String)
+
+      /**
+       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
+       * Only one private IPv4 address can be designated as primary. You cannot specify this option
+       * if you're launching more than one instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       */
+      public fun privateIpAddresses(privateIpAddresses: IResolvable)
+
+      /**
+       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
+       * Only one private IPv4 address can be designated as primary. You cannot specify this option
+       * if you're launching more than one instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       */
+      public fun privateIpAddresses(privateIpAddresses: List<Any>)
+
+      /**
+       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
+       * Only one private IPv4 address can be designated as primary. You cannot specify this option
+       * if you're launching more than one instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       */
+      public fun privateIpAddresses(vararg privateIpAddresses: Any)
+
+      /**
+       * @param secondaryPrivateIpAddressCount The number of secondary private IPv4 addresses.
+       * You can't specify this option and specify more than one private IP address using the
+       * private IP addresses option. You cannot specify this option if you're launching more than one
+       * instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       */
+      public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
+
+      /**
+       * @param subnetId The ID of the subnet associated with the network interface.
+       * Applies only if creating a network interface when launching an instance.
+       */
+      public fun subnetId(subnetId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty.builder()
+
+      /**
+       * @param associatePublicIpAddress Indicates whether to assign a public IPv4 address to an
+       * instance you launch in a VPC.
+       * The public IP address can only be assigned to a network interface for eth0, and can only be
+       * assigned to a new network interface, not an existing one. You cannot specify more than one
+       * network interface in the request. If launching into a default subnet, the default value is
+       * `true` .
+       *
+       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
+       */
+      override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
+      }
+
+      /**
+       * @param associatePublicIpAddress Indicates whether to assign a public IPv4 address to an
+       * instance you launch in a VPC.
+       * The public IP address can only be assigned to a network interface for eth0, and can only be
+       * assigned to a new network interface, not an existing one. You cannot specify more than one
+       * network interface in the request. If launching into a default subnet, the default value is
+       * `true` .
+       *
+       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
+       */
+      override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
+        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param deleteOnTermination Indicates whether the network interface is deleted when the
+       * instance is terminated.
+       */
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination)
+      }
+
+      /**
+       * @param deleteOnTermination Indicates whether the network interface is deleted when the
+       * instance is terminated.
+       */
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param description The description of the network interface.
+       * Applies only if creating a network interface when launching an instance.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param deviceIndex The position of the network interface in the attachment order.
+       * A primary network interface has a device index of 0.
+       *
+       * If you specify a network interface when launching an instance, you must specify the device
+       * index.
+       */
+      override fun deviceIndex(deviceIndex: Number) {
+        cdkBuilder.deviceIndex(deviceIndex)
+      }
+
+      /**
+       * @param groups The IDs of the security groups for the network interface.
+       * Applies only if creating a network interface when launching an instance.
+       */
+      override fun groups(groups: List<String>) {
+        cdkBuilder.groups(groups)
+      }
+
+      /**
+       * @param groups The IDs of the security groups for the network interface.
+       * Applies only if creating a network interface when launching an instance.
+       */
+      override fun groups(vararg groups: String): Unit = groups(groups.toList())
+
+      /**
+       * @param ipv6AddressCount A number of IPv6 addresses to assign to the network interface.
+       * Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this
+       * option and the option to assign specific IPv6 addresses in the same request. You can specify
+       * this option if you've specified a minimum number of instances to launch.
+       */
+      override fun ipv6AddressCount(ipv6AddressCount: Number) {
+        cdkBuilder.ipv6AddressCount(ipv6AddressCount)
+      }
+
+      /**
+       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
+       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
+       * same request. You cannot specify this option if you've specified a minimum number of instances
+       * to launch.
+       */
+      override fun ipv6Addresses(ipv6Addresses: IResolvable) {
+        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
+       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
+       * same request. You cannot specify this option if you've specified a minimum number of instances
+       * to launch.
+       */
+      override fun ipv6Addresses(ipv6Addresses: List<Any>) {
+        cdkBuilder.ipv6Addresses(ipv6Addresses)
+      }
+
+      /**
+       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
+       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
+       * same request. You cannot specify this option if you've specified a minimum number of instances
+       * to launch.
+       */
+      override fun ipv6Addresses(vararg ipv6Addresses: Any): Unit =
+          ipv6Addresses(ipv6Addresses.toList())
+
+      /**
+       * @param networkInterfaceId The ID of the network interface.
+       * If you are creating a Spot Fleet, omit this parameter because you can’t specify a network
+       * interface ID in a launch specification.
+       */
+      override fun networkInterfaceId(networkInterfaceId: String) {
+        cdkBuilder.networkInterfaceId(networkInterfaceId)
+      }
+
+      /**
+       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
+       * Only one private IPv4 address can be designated as primary. You cannot specify this option
+       * if you're launching more than one instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       */
+      override fun privateIpAddresses(privateIpAddresses: IResolvable) {
+        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
+       * Only one private IPv4 address can be designated as primary. You cannot specify this option
+       * if you're launching more than one instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       */
+      override fun privateIpAddresses(privateIpAddresses: List<Any>) {
+        cdkBuilder.privateIpAddresses(privateIpAddresses)
+      }
+
+      /**
+       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
+       * Only one private IPv4 address can be designated as primary. You cannot specify this option
+       * if you're launching more than one instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       */
+      override fun privateIpAddresses(vararg privateIpAddresses: Any): Unit =
+          privateIpAddresses(privateIpAddresses.toList())
+
+      /**
+       * @param secondaryPrivateIpAddressCount The number of secondary private IPv4 addresses.
+       * You can't specify this option and specify more than one private IP address using the
+       * private IP addresses option. You cannot specify this option if you're launching more than one
+       * instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       */
+      override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
+        cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
+      }
+
+      /**
+       * @param subnetId The ID of the subnet associated with the network interface.
+       * Applies only if creating a network interface when launching an instance.
+       */
+      override fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty,
+    ) : CdkObject(cdkObject), InstanceNetworkInterfaceSpecificationProperty {
+      /**
+       * Indicates whether to assign a public IPv4 address to an instance you launch in a VPC.
+       *
+       * The public IP address can only be assigned to a network interface for eth0, and can only be
+       * assigned to a new network interface, not an existing one. You cannot specify more than one
+       * network interface in the request. If launching into a default subnet, the default value is
+       * `true` .
+       *
+       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
+       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
+       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)
+       */
+      override fun associatePublicIpAddress(): Any? = unwrap(this).getAssociatePublicIpAddress()
+
+      /**
+       * Indicates whether the network interface is deleted when the instance is terminated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)
+       */
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+      /**
+       * The description of the network interface.
+       *
+       * Applies only if creating a network interface when launching an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * The position of the network interface in the attachment order.
+       *
+       * A primary network interface has a device index of 0.
+       *
+       * If you specify a network interface when launching an instance, you must specify the device
+       * index.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)
+       */
+      override fun deviceIndex(): Number? = unwrap(this).getDeviceIndex()
+
+      /**
+       * The IDs of the security groups for the network interface.
+       *
+       * Applies only if creating a network interface when launching an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)
+       */
+      override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
+
+      /**
+       * A number of IPv6 addresses to assign to the network interface.
+       *
+       * Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this
+       * option and the option to assign specific IPv6 addresses in the same request. You can specify
+       * this option if you've specified a minimum number of instances to launch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)
+       */
+      override fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
+
+      /**
+       * The IPv6 addresses to assign to the network interface.
+       *
+       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
+       * same request. You cannot specify this option if you've specified a minimum number of instances
+       * to launch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)
+       */
+      override fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
+
+      /**
+       * The ID of the network interface.
+       *
+       * If you are creating a Spot Fleet, omit this parameter because you can’t specify a network
+       * interface ID in a launch specification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)
+       */
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+      /**
+       * The private IPv4 addresses to assign to the network interface.
+       *
+       * Only one private IPv4 address can be designated as primary. You cannot specify this option
+       * if you're launching more than one instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)
+       */
+      override fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
+
+      /**
+       * The number of secondary private IPv4 addresses.
+       *
+       * You can't specify this option and specify more than one private IP address using the
+       * private IP addresses option. You cannot specify this option if you're launching more than one
+       * instance in a
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+       * request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
+       */
+      override fun secondaryPrivateIpAddressCount(): Number? =
+          unwrap(this).getSecondaryPrivateIpAddressCount()
+
+      /**
+       * The ID of the subnet associated with the network interface.
+       *
+       * Applies only if creating a network interface when launching an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
+       */
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceNetworkInterfaceSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty):
+          InstanceNetworkInterfaceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceNetworkInterfaceSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceNetworkInterfaceSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty
     }
   }
 
@@ -3489,286 +5166,6 @@ public open class CfnSpotFleet internal constructor(
   }
 
   /**
-   * The tags for a Spot Fleet resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * SpotFleetTagSpecificationProperty spotFleetTagSpecificationProperty =
-   * SpotFleetTagSpecificationProperty.builder()
-   * .resourceType("resourceType")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html)
-   */
-  public interface SpotFleetTagSpecificationProperty {
-    /**
-     * The type of resource.
-     *
-     * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
-     * request on creation, use the `TagSpecifications` parameter in
-     * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
-     */
-    public fun resourceType(): String? = unwrap(this).getResourceType()
-
-    /**
-     * The tags.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html#cfn-ec2-spotfleet-spotfleettagspecification-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * A builder for [SpotFleetTagSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceType The type of resource.
-       * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
-       * request on creation, use the `TagSpecifications` parameter in
-       * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
-       * .
-       */
-      public fun resourceType(resourceType: String)
-
-      /**
-       * @param tags The tags.
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags The tags.
-       */
-      public fun tags(vararg tags: CfnTag)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty.builder()
-
-      /**
-       * @param resourceType The type of resource.
-       * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
-       * request on creation, use the `TagSpecifications` parameter in
-       * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
-       * .
-       */
-      override fun resourceType(resourceType: String) {
-        cdkBuilder.resourceType(resourceType)
-      }
-
-      /**
-       * @param tags The tags.
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags The tags.
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty,
-    ) : CdkObject(cdkObject), SpotFleetTagSpecificationProperty {
-      /**
-       * The type of resource.
-       *
-       * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
-       * request on creation, use the `TagSpecifications` parameter in
-       * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
-       */
-      override fun resourceType(): String? = unwrap(this).getResourceType()
-
-      /**
-       * The tags.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html#cfn-ec2-spotfleet-spotfleettagspecification-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SpotFleetTagSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty):
-          SpotFleetTagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SpotFleetTagSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SpotFleetTagSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty
-    }
-  }
-
-  /**
-   * Describes a secondary private IPv4 address for a network interface.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PrivateIpAddressSpecificationProperty privateIpAddressSpecificationProperty =
-   * PrivateIpAddressSpecificationProperty.builder()
-   * .privateIpAddress("privateIpAddress")
-   * // the properties below are optional
-   * .primary(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html)
-   */
-  public interface PrivateIpAddressSpecificationProperty {
-    /**
-     * Indicates whether the private IPv4 address is the primary private IPv4 address.
-     *
-     * Only one IPv4 address can be designated as primary.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html#cfn-ec2-spotfleet-privateipaddressspecification-primary)
-     */
-    public fun primary(): Any? = unwrap(this).getPrimary()
-
-    /**
-     * The private IPv4 address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress)
-     */
-    public fun privateIpAddress(): String
-
-    /**
-     * A builder for [PrivateIpAddressSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address.
-       * Only one IPv4 address can be designated as primary.
-       */
-      public fun primary(primary: Boolean)
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address.
-       * Only one IPv4 address can be designated as primary.
-       */
-      public fun primary(primary: IResolvable)
-
-      /**
-       * @param privateIpAddress The private IPv4 address. 
-       */
-      public fun privateIpAddress(privateIpAddress: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty.builder()
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address.
-       * Only one IPv4 address can be designated as primary.
-       */
-      override fun primary(primary: Boolean) {
-        cdkBuilder.primary(primary)
-      }
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address.
-       * Only one IPv4 address can be designated as primary.
-       */
-      override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param privateIpAddress The private IPv4 address. 
-       */
-      override fun privateIpAddress(privateIpAddress: String) {
-        cdkBuilder.privateIpAddress(privateIpAddress)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty,
-    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
-      /**
-       * Indicates whether the private IPv4 address is the primary private IPv4 address.
-       *
-       * Only one IPv4 address can be designated as primary.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html#cfn-ec2-spotfleet-privateipaddressspecification-primary)
-       */
-      override fun primary(): Any? = unwrap(this).getPrimary()
-
-      /**
-       * The private IPv4 address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress)
-       */
-      override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PrivateIpAddressSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty):
-          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateIpAddressSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty
-    }
-  }
-
-  /**
    * Specifies a launch template and overrides.
    *
    * Example:
@@ -4023,7 +5420,7 @@ public open class CfnSpotFleet internal constructor(
   }
 
   /**
-   * Describes a block device for an EBS volume.
+   * Specifies overrides for a launch template.
    *
    * Example:
    *
@@ -4031,651 +5428,1265 @@ public open class CfnSpotFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * EbsBlockDeviceProperty ebsBlockDeviceProperty = EbsBlockDeviceProperty.builder()
-   * .deleteOnTermination(false)
-   * .encrypted(false)
-   * .iops(123)
-   * .snapshotId("snapshotId")
-   * .volumeSize(123)
-   * .volumeType("volumeType")
+   * LaunchTemplateOverridesProperty launchTemplateOverridesProperty =
+   * LaunchTemplateOverridesProperty.builder()
+   * .availabilityZone("availabilityZone")
+   * .instanceRequirements(InstanceRequirementsRequestProperty.builder()
+   * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+   * .acceleratorNames(List.of("acceleratorNames"))
+   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorTypes(List.of("acceleratorTypes"))
+   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+   * .bareMetal("bareMetal")
+   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .burstablePerformance("burstablePerformance")
+   * .cpuManufacturers(List.of("cpuManufacturers"))
+   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+   * .instanceGenerations(List.of("instanceGenerations"))
+   * .localStorage("localStorage")
+   * .localStorageTypes(List.of("localStorageTypes"))
+   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
+   * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .memoryMiB(MemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .onDemandMaxPricePercentageOverLowestPrice(123)
+   * .requireHibernateSupport(false)
+   * .spotMaxPricePercentageOverLowestPrice(123)
+   * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .vCpuCount(VCpuCountRangeRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .build())
+   * .instanceType("instanceType")
+   * .priority(123)
+   * .spotPrice("spotPrice")
+   * .subnetId("subnetId")
+   * .weightedCapacity(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html)
    */
-  public interface EbsBlockDeviceProperty {
+  public interface LaunchTemplateOverridesProperty {
     /**
-     * Indicates whether the EBS volume is deleted on instance termination.
+     * The Availability Zone in which to launch the instances.
      *
-     * For more information, see [Preserving Amazon EBS volumes on instance
-     * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
-     * in the *Amazon EC2 User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone)
      */
-    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
     /**
-     * Indicates whether the encryption state of an EBS volume is changed while being restored from
-     * a backing snapshot.
+     * The instance requirements.
      *
-     * The effect of setting the encryption state to `true` depends on the volume origin (new or
-     * from a snapshot), starting encryption state, ownership, and whether encryption by default is
-     * enabled. For more information, see [Amazon EBS
-     * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
-     * in the *Amazon EC2 User Guide* .
+     * When you specify instance requirements, Amazon EC2 will identify instance types with the
+     * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+     * instances from these instance types, in the same way as when you specify a list of instance
+     * types.
      *
-     * In no case can you remove encryption from an encrypted volume.
      *
-     * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
-     * more information, see [Supported Instance
-     * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-     * .
+     * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
      *
-     * This parameter is not returned by
-     * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
-     * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancerequirements)
      */
-    public fun encrypted(): Any? = unwrap(this).getEncrypted()
+    public fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
 
     /**
-     * The number of I/O operations per second (IOPS).
+     * The instance type.
      *
-     * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
-     * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
-     * volume and the rate at which the volume accumulates I/O credits for bursting.
-     *
-     * The following are the supported values for each volume type:
-     *
-     * * `gp3` : 3,000 - 16,000 IOPS
-     * * `io1` : 100 - 64,000 IOPS
-     * * `io2` : 100 - 256,000 IOPS
-     *
-     * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-     * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-     * . On other instances, you can achieve performance up to 32,000 IOPS.
-     *
-     * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
-     * 3,000 IOPS.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-iops)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype)
      */
-    public fun iops(): Number? = unwrap(this).getIops()
+    public fun instanceType(): String? = unwrap(this).getInstanceType()
 
     /**
-     * The ID of the snapshot.
+     * The priority for the launch template override. The highest priority is launched first.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid)
+     * If `OnDemandAllocationStrategy` is set to `prioritized` , Spot Fleet uses priority to
+     * determine which launch template override to use first in fulfilling On-Demand capacity.
+     *
+     * If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized` , Spot Fleet uses
+     * priority on a best-effort basis to determine which launch template override to use in fulfilling
+     * Spot capacity, but optimizes for capacity first.
+     *
+     * Valid values are whole numbers starting at `0` . The lower the number, the higher the
+     * priority. If no number is set, the launch template override has the lowest priority. You can set
+     * the same priority for different launch template overrides.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-priority)
      */
-    public fun snapshotId(): String? = unwrap(this).getSnapshotId()
+    public fun priority(): Number? = unwrap(this).getPriority()
 
     /**
-     * The size of the volume, in GiBs.
+     * The maximum price per unit hour that you are willing to pay for a Spot Instance.
      *
-     * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
-     * default is the snapshot size. You can specify a volume size that is equal to or larger than the
-     * snapshot size.
+     * We do not recommend using this parameter because it can lead to increased interruptions. If
+     * you do not specify this parameter, you will pay the current Spot price.
      *
-     * The following are the supported sizes for each volume type:
      *
-     * * `gp2` and `gp3` : 1 - 16,384 GiB
-     * * `io1` : 4 - 16,384 GiB
-     * * `io2` : 4 - 65,536 GiB
-     * * `st1` and `sc1` : 125 - 16,384 GiB
-     * * `standard` : 1 - 1024 GiB
+     * If you specify a maximum price, your instances will be interrupted more frequently than if
+     * you do not specify this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice)
      */
-    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+    public fun spotPrice(): String? = unwrap(this).getSpotPrice()
 
     /**
-     * The volume type.
+     * The ID of the subnet in which to launch the instances.
      *
-     * For more information, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * EC2 User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid)
      */
-    public fun volumeType(): String? = unwrap(this).getVolumeType()
+    public fun subnetId(): String? = unwrap(this).getSubnetId()
 
     /**
-     * A builder for [EbsBlockDeviceProperty]
+     * The number of units provided by the specified instance type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
+     */
+    public fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
+
+    /**
+     * A builder for [LaunchTemplateOverridesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
-       * termination.
-       * For more information, see [Preserving Amazon EBS volumes on instance
-       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
-       * in the *Amazon EC2 User Guide* .
+       * @param availabilityZone The Availability Zone in which to launch the instances.
        */
-      public fun deleteOnTermination(deleteOnTermination: Boolean)
+      public fun availabilityZone(availabilityZone: String)
 
       /**
-       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
-       * termination.
-       * For more information, see [Preserving Amazon EBS volumes on instance
-       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
-       * in the *Amazon EC2 User Guide* .
+       * @param instanceRequirements The instance requirements.
+       * When you specify instance requirements, Amazon EC2 will identify instance types with the
+       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+       * instances from these instance types, in the same way as when you specify a list of instance
+       * types.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      public fun deleteOnTermination(deleteOnTermination: IResolvable)
+      public fun instanceRequirements(instanceRequirements: IResolvable)
 
       /**
-       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
-       * being restored from a backing snapshot.
-       * The effect of setting the encryption state to `true` depends on the volume origin (new or
-       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
-       * enabled. For more information, see [Amazon EBS
-       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
-       * in the *Amazon EC2 User Guide* .
+       * @param instanceRequirements The instance requirements.
+       * When you specify instance requirements, Amazon EC2 will identify instance types with the
+       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+       * instances from these instance types, in the same way as when you specify a list of instance
+       * types.
        *
-       * In no case can you remove encryption from an encrypted volume.
        *
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
-       * more information, see [Supported Instance
-       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * .
-       *
-       * This parameter is not returned by
-       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
-       * .
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      public fun encrypted(encrypted: Boolean)
+      public fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty)
 
       /**
-       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
-       * being restored from a backing snapshot.
-       * The effect of setting the encryption state to `true` depends on the volume origin (new or
-       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
-       * enabled. For more information, see [Amazon EBS
-       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
-       * in the *Amazon EC2 User Guide* .
+       * @param instanceRequirements The instance requirements.
+       * When you specify instance requirements, Amazon EC2 will identify instance types with the
+       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+       * instances from these instance types, in the same way as when you specify a list of instance
+       * types.
        *
-       * In no case can you remove encryption from an encrypted volume.
        *
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
-       * more information, see [Supported Instance
-       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * .
-       *
-       * This parameter is not returned by
-       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
-       * .
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      public fun encrypted(encrypted: IResolvable)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6ddf9b5404b04aee7a64694a12d00e743d3313875085babee8d958acad6c3dbe")
+      public
+          fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty.Builder.() -> Unit)
 
       /**
-       * @param iops The number of I/O operations per second (IOPS).
-       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
-       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
-       * volume and the rate at which the volume accumulates I/O credits for bursting.
-       *
-       * The following are the supported values for each volume type:
-       *
-       * * `gp3` : 3,000 - 16,000 IOPS
-       * * `io1` : 100 - 64,000 IOPS
-       * * `io2` : 100 - 256,000 IOPS
-       *
-       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
-       *
-       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
-       * 3,000 IOPS.
+       * @param instanceType The instance type.
        */
-      public fun iops(iops: Number)
+      public fun instanceType(instanceType: String)
 
       /**
-       * @param snapshotId The ID of the snapshot.
+       * @param priority The priority for the launch template override. The highest priority is
+       * launched first.
+       * If `OnDemandAllocationStrategy` is set to `prioritized` , Spot Fleet uses priority to
+       * determine which launch template override to use first in fulfilling On-Demand capacity.
+       *
+       * If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized` , Spot Fleet uses
+       * priority on a best-effort basis to determine which launch template override to use in
+       * fulfilling Spot capacity, but optimizes for capacity first.
+       *
+       * Valid values are whole numbers starting at `0` . The lower the number, the higher the
+       * priority. If no number is set, the launch template override has the lowest priority. You can
+       * set the same priority for different launch template overrides.
        */
-      public fun snapshotId(snapshotId: String)
+      public fun priority(priority: Number)
 
       /**
-       * @param volumeSize The size of the volume, in GiBs.
-       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
-       * default is the snapshot size. You can specify a volume size that is equal to or larger than
-       * the snapshot size.
+       * @param spotPrice The maximum price per unit hour that you are willing to pay for a Spot
+       * Instance.
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
        *
-       * The following are the supported sizes for each volume type:
        *
-       * * `gp2` and `gp3` : 1 - 16,384 GiB
-       * * `io1` : 4 - 16,384 GiB
-       * * `io2` : 4 - 65,536 GiB
-       * * `st1` and `sc1` : 125 - 16,384 GiB
-       * * `standard` : 1 - 1024 GiB
+       * If you specify a maximum price, your instances will be interrupted more frequently than if
+       * you do not specify this parameter.
        */
-      public fun volumeSize(volumeSize: Number)
+      public fun spotPrice(spotPrice: String)
 
       /**
-       * @param volumeType The volume type.
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide* .
+       * @param subnetId The ID of the subnet in which to launch the instances.
        */
-      public fun volumeType(volumeType: String)
+      public fun subnetId(subnetId: String)
+
+      /**
+       * @param weightedCapacity The number of units provided by the specified instance type.
+       */
+      public fun weightedCapacity(weightedCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty.builder()
 
       /**
-       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
-       * termination.
-       * For more information, see [Preserving Amazon EBS volumes on instance
-       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
-       * in the *Amazon EC2 User Guide* .
+       * @param availabilityZone The Availability Zone in which to launch the instances.
        */
-      override fun deleteOnTermination(deleteOnTermination: Boolean) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination)
+      override fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
       }
 
       /**
-       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
-       * termination.
-       * For more information, see [Preserving Amazon EBS volumes on instance
-       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
-       * in the *Amazon EC2 User Guide* .
+       * @param instanceRequirements The instance requirements.
+       * When you specify instance requirements, Amazon EC2 will identify instance types with the
+       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+       * instances from these instance types, in the same way as when you specify a list of instance
+       * types.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      override fun instanceRequirements(instanceRequirements: IResolvable) {
+        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
       }
 
       /**
-       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
-       * being restored from a backing snapshot.
-       * The effect of setting the encryption state to `true` depends on the volume origin (new or
-       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
-       * enabled. For more information, see [Amazon EBS
-       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
-       * in the *Amazon EC2 User Guide* .
+       * @param instanceRequirements The instance requirements.
+       * When you specify instance requirements, Amazon EC2 will identify instance types with the
+       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+       * instances from these instance types, in the same way as when you specify a list of instance
+       * types.
        *
-       * In no case can you remove encryption from an encrypted volume.
        *
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
-       * more information, see [Supported Instance
-       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * .
-       *
-       * This parameter is not returned by
-       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
-       * .
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      override fun encrypted(encrypted: Boolean) {
-        cdkBuilder.encrypted(encrypted)
+      override fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty) {
+        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsRequestProperty::unwrap))
       }
 
       /**
-       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
-       * being restored from a backing snapshot.
-       * The effect of setting the encryption state to `true` depends on the volume origin (new or
-       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
-       * enabled. For more information, see [Amazon EBS
-       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
-       * in the *Amazon EC2 User Guide* .
+       * @param instanceRequirements The instance requirements.
+       * When you specify instance requirements, Amazon EC2 will identify instance types with the
+       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+       * instances from these instance types, in the same way as when you specify a list of instance
+       * types.
        *
-       * In no case can you remove encryption from an encrypted volume.
        *
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
-       * more information, see [Supported Instance
-       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * .
-       *
-       * This parameter is not returned by
-       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
-       * .
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6ddf9b5404b04aee7a64694a12d00e743d3313875085babee8d958acad6c3dbe")
+      override
+          fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty.Builder.() -> Unit):
+          Unit = instanceRequirements(InstanceRequirementsRequestProperty(instanceRequirements))
+
+      /**
+       * @param instanceType The instance type.
+       */
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
       }
 
       /**
-       * @param iops The number of I/O operations per second (IOPS).
-       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
-       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
-       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       * @param priority The priority for the launch template override. The highest priority is
+       * launched first.
+       * If `OnDemandAllocationStrategy` is set to `prioritized` , Spot Fleet uses priority to
+       * determine which launch template override to use first in fulfilling On-Demand capacity.
        *
-       * The following are the supported values for each volume type:
+       * If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized` , Spot Fleet uses
+       * priority on a best-effort basis to determine which launch template override to use in
+       * fulfilling Spot capacity, but optimizes for capacity first.
        *
-       * * `gp3` : 3,000 - 16,000 IOPS
-       * * `io1` : 100 - 64,000 IOPS
-       * * `io2` : 100 - 256,000 IOPS
-       *
-       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
-       *
-       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
-       * 3,000 IOPS.
+       * Valid values are whole numbers starting at `0` . The lower the number, the higher the
+       * priority. If no number is set, the launch template override has the lowest priority. You can
+       * set the same priority for different launch template overrides.
        */
-      override fun iops(iops: Number) {
-        cdkBuilder.iops(iops)
+      override fun priority(priority: Number) {
+        cdkBuilder.priority(priority)
       }
 
       /**
-       * @param snapshotId The ID of the snapshot.
+       * @param spotPrice The maximum price per unit hour that you are willing to pay for a Spot
+       * Instance.
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
+       *
+       *
+       * If you specify a maximum price, your instances will be interrupted more frequently than if
+       * you do not specify this parameter.
        */
-      override fun snapshotId(snapshotId: String) {
-        cdkBuilder.snapshotId(snapshotId)
+      override fun spotPrice(spotPrice: String) {
+        cdkBuilder.spotPrice(spotPrice)
       }
 
       /**
-       * @param volumeSize The size of the volume, in GiBs.
-       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
-       * default is the snapshot size. You can specify a volume size that is equal to or larger than
-       * the snapshot size.
-       *
-       * The following are the supported sizes for each volume type:
-       *
-       * * `gp2` and `gp3` : 1 - 16,384 GiB
-       * * `io1` : 4 - 16,384 GiB
-       * * `io2` : 4 - 65,536 GiB
-       * * `st1` and `sc1` : 125 - 16,384 GiB
-       * * `standard` : 1 - 1024 GiB
+       * @param subnetId The ID of the subnet in which to launch the instances.
        */
-      override fun volumeSize(volumeSize: Number) {
-        cdkBuilder.volumeSize(volumeSize)
+      override fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
       }
 
       /**
-       * @param volumeType The volume type.
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide* .
+       * @param weightedCapacity The number of units provided by the specified instance type.
        */
-      override fun volumeType(volumeType: String) {
-        cdkBuilder.volumeType(volumeType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty,
-    ) : CdkObject(cdkObject), EbsBlockDeviceProperty {
-      /**
-       * Indicates whether the EBS volume is deleted on instance termination.
-       *
-       * For more information, see [Preserving Amazon EBS volumes on instance
-       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
-       * in the *Amazon EC2 User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination)
-       */
-      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
-
-      /**
-       * Indicates whether the encryption state of an EBS volume is changed while being restored
-       * from a backing snapshot.
-       *
-       * The effect of setting the encryption state to `true` depends on the volume origin (new or
-       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
-       * enabled. For more information, see [Amazon EBS
-       * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters)
-       * in the *Amazon EC2 User Guide* .
-       *
-       * In no case can you remove encryption from an encrypted volume.
-       *
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
-       * more information, see [Supported Instance
-       * Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * .
-       *
-       * This parameter is not returned by
-       * [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted)
-       */
-      override fun encrypted(): Any? = unwrap(this).getEncrypted()
-
-      /**
-       * The number of I/O operations per second (IOPS).
-       *
-       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
-       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
-       * volume and the rate at which the volume accumulates I/O credits for bursting.
-       *
-       * The following are the supported values for each volume type:
-       *
-       * * `gp3` : 3,000 - 16,000 IOPS
-       * * `io1` : 100 - 64,000 IOPS
-       * * `io2` : 100 - 256,000 IOPS
-       *
-       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
-       *
-       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
-       * 3,000 IOPS.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-iops)
-       */
-      override fun iops(): Number? = unwrap(this).getIops()
-
-      /**
-       * The ID of the snapshot.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid)
-       */
-      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
-
-      /**
-       * The size of the volume, in GiBs.
-       *
-       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
-       * default is the snapshot size. You can specify a volume size that is equal to or larger than
-       * the snapshot size.
-       *
-       * The following are the supported sizes for each volume type:
-       *
-       * * `gp2` and `gp3` : 1 - 16,384 GiB
-       * * `io1` : 4 - 16,384 GiB
-       * * `io2` : 4 - 65,536 GiB
-       * * `st1` and `sc1` : 125 - 16,384 GiB
-       * * `standard` : 1 - 1024 GiB
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize)
-       */
-      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-      /**
-       * The volume type.
-       *
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype)
-       */
-      override fun volumeType(): String? = unwrap(this).getVolumeType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EbsBlockDeviceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty):
-          EbsBlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsBlockDeviceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EbsBlockDeviceProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty
-    }
-  }
-
-  /**
-   * Describes a security group.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * GroupIdentifierProperty groupIdentifierProperty = GroupIdentifierProperty.builder()
-   * .groupId("groupId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-groupidentifier.html)
-   */
-  public interface GroupIdentifierProperty {
-    /**
-     * The ID of the security group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-groupidentifier.html#cfn-ec2-spotfleet-groupidentifier-groupid)
-     */
-    public fun groupId(): String
-
-    /**
-     * A builder for [GroupIdentifierProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param groupId The ID of the security group. 
-       */
-      public fun groupId(groupId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty.builder()
-
-      /**
-       * @param groupId The ID of the security group. 
-       */
-      override fun groupId(groupId: String) {
-        cdkBuilder.groupId(groupId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty,
-    ) : CdkObject(cdkObject), GroupIdentifierProperty {
-      /**
-       * The ID of the security group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-groupidentifier.html#cfn-ec2-spotfleet-groupidentifier-groupid)
-       */
-      override fun groupId(): String = unwrap(this).getGroupId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GroupIdentifierProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty):
-          GroupIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as? GroupIdentifierProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GroupIdentifierProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty
-    }
-  }
-
-  /**
-   * Specifies a Classic Load Balancer.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * ClassicLoadBalancerProperty classicLoadBalancerProperty = ClassicLoadBalancerProperty.builder()
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html)
-   */
-  public interface ClassicLoadBalancerProperty {
-    /**
-     * The name of the load balancer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html#cfn-ec2-spotfleet-classicloadbalancer-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [ClassicLoadBalancerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the load balancer. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty.builder()
-
-      /**
-       * @param name The name of the load balancer. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun weightedCapacity(weightedCapacity: Number) {
+        cdkBuilder.weightedCapacity(weightedCapacity)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty,
-    ) : CdkObject(cdkObject), ClassicLoadBalancerProperty {
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateOverridesProperty {
       /**
-       * The name of the load balancer.
+       * The Availability Zone in which to launch the instances.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html#cfn-ec2-spotfleet-classicloadbalancer-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone)
        */
-      override fun name(): String = unwrap(this).getName()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+      /**
+       * The instance requirements.
+       *
+       * When you specify instance requirements, Amazon EC2 will identify instance types with the
+       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+       * instances from these instance types, in the same way as when you specify a list of instance
+       * types.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancerequirements)
+       */
+      override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
+
+      /**
+       * The instance type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype)
+       */
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
+
+      /**
+       * The priority for the launch template override. The highest priority is launched first.
+       *
+       * If `OnDemandAllocationStrategy` is set to `prioritized` , Spot Fleet uses priority to
+       * determine which launch template override to use first in fulfilling On-Demand capacity.
+       *
+       * If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized` , Spot Fleet uses
+       * priority on a best-effort basis to determine which launch template override to use in
+       * fulfilling Spot capacity, but optimizes for capacity first.
+       *
+       * Valid values are whole numbers starting at `0` . The lower the number, the higher the
+       * priority. If no number is set, the launch template override has the lowest priority. You can
+       * set the same priority for different launch template overrides.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-priority)
+       */
+      override fun priority(): Number? = unwrap(this).getPriority()
+
+      /**
+       * The maximum price per unit hour that you are willing to pay for a Spot Instance.
+       *
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
+       *
+       *
+       * If you specify a maximum price, your instances will be interrupted more frequently than if
+       * you do not specify this parameter.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice)
+       */
+      override fun spotPrice(): String? = unwrap(this).getSpotPrice()
+
+      /**
+       * The ID of the subnet in which to launch the instances.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid)
+       */
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
+
+      /**
+       * The number of units provided by the specified instance type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
+       */
+      override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClassicLoadBalancerProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchTemplateOverridesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty):
-          ClassicLoadBalancerProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClassicLoadBalancerProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty):
+          LaunchTemplateOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateOverridesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ClassicLoadBalancerProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty = (wrapped as
+      internal fun unwrap(wrapped: LaunchTemplateOverridesProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty
+    }
+  }
+
+  /**
+   * Specifies the Classic Load Balancers and target groups to attach to a Spot Fleet request.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * LoadBalancersConfigProperty loadBalancersConfigProperty = LoadBalancersConfigProperty.builder()
+   * .classicLoadBalancersConfig(ClassicLoadBalancersConfigProperty.builder()
+   * .classicLoadBalancers(List.of(ClassicLoadBalancerProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build())
+   * .targetGroupsConfig(TargetGroupsConfigProperty.builder()
+   * .targetGroups(List.of(TargetGroupProperty.builder()
+   * .arn("arn")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html)
+   */
+  public interface LoadBalancersConfigProperty {
+    /**
+     * The Classic Load Balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)
+     */
+    public fun classicLoadBalancersConfig(): Any? = unwrap(this).getClassicLoadBalancersConfig()
+
+    /**
+     * The target groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)
+     */
+    public fun targetGroupsConfig(): Any? = unwrap(this).getTargetGroupsConfig()
+
+    /**
+     * A builder for [LoadBalancersConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param classicLoadBalancersConfig The Classic Load Balancers.
+       */
+      public fun classicLoadBalancersConfig(classicLoadBalancersConfig: IResolvable)
+
+      /**
+       * @param classicLoadBalancersConfig The Classic Load Balancers.
+       */
+      public
+          fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty)
+
+      /**
+       * @param classicLoadBalancersConfig The Classic Load Balancers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("25b177d5ab308e359fc68672e76e4f903124271a3a7479bab51b0656361308b0")
+      public
+          fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param targetGroupsConfig The target groups.
+       */
+      public fun targetGroupsConfig(targetGroupsConfig: IResolvable)
+
+      /**
+       * @param targetGroupsConfig The target groups.
+       */
+      public fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty)
+
+      /**
+       * @param targetGroupsConfig The target groups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8017e6e27f4e464d54ac3f8fdb795873361e4735def7ddb9ba1e753fc1e521c9")
+      public
+          fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty.builder()
+
+      /**
+       * @param classicLoadBalancersConfig The Classic Load Balancers.
+       */
+      override fun classicLoadBalancersConfig(classicLoadBalancersConfig: IResolvable) {
+        cdkBuilder.classicLoadBalancersConfig(classicLoadBalancersConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param classicLoadBalancersConfig The Classic Load Balancers.
+       */
+      override
+          fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty) {
+        cdkBuilder.classicLoadBalancersConfig(classicLoadBalancersConfig.let(ClassicLoadBalancersConfigProperty::unwrap))
+      }
+
+      /**
+       * @param classicLoadBalancersConfig The Classic Load Balancers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("25b177d5ab308e359fc68672e76e4f903124271a3a7479bab51b0656361308b0")
+      override
+          fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty.Builder.() -> Unit):
+          Unit =
+          classicLoadBalancersConfig(ClassicLoadBalancersConfigProperty(classicLoadBalancersConfig))
+
+      /**
+       * @param targetGroupsConfig The target groups.
+       */
+      override fun targetGroupsConfig(targetGroupsConfig: IResolvable) {
+        cdkBuilder.targetGroupsConfig(targetGroupsConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetGroupsConfig The target groups.
+       */
+      override fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty) {
+        cdkBuilder.targetGroupsConfig(targetGroupsConfig.let(TargetGroupsConfigProperty::unwrap))
+      }
+
+      /**
+       * @param targetGroupsConfig The target groups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8017e6e27f4e464d54ac3f8fdb795873361e4735def7ddb9ba1e753fc1e521c9")
+      override
+          fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty.Builder.() -> Unit):
+          Unit = targetGroupsConfig(TargetGroupsConfigProperty(targetGroupsConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty,
+    ) : CdkObject(cdkObject), LoadBalancersConfigProperty {
+      /**
+       * The Classic Load Balancers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)
+       */
+      override fun classicLoadBalancersConfig(): Any? = unwrap(this).getClassicLoadBalancersConfig()
+
+      /**
+       * The target groups.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)
+       */
+      override fun targetGroupsConfig(): Any? = unwrap(this).getTargetGroupsConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoadBalancersConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty):
+          LoadBalancersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoadBalancersConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoadBalancersConfigProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum amount of memory per vCPU, in GiB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * MemoryGiBPerVCpuRequestProperty memoryGiBPerVCpuRequestProperty =
+   * MemoryGiBPerVCpuRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html)
+   */
+  public interface MemoryGiBPerVCpuRequestProperty {
+    /**
+     * The maximum amount of memory per vCPU, in GiB.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html#cfn-ec2-spotfleet-memorygibpervcpurequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum amount of memory per vCPU, in GiB.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html#cfn-ec2-spotfleet-memorygibpervcpurequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [MemoryGiBPerVCpuRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum amount of memory per vCPU, in GiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum amount of memory per vCPU, in GiB.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty.builder()
+
+      /**
+       * @param max The maximum amount of memory per vCPU, in GiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum amount of memory per vCPU, in GiB.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty,
+    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
+      /**
+       * The maximum amount of memory per vCPU, in GiB.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html#cfn-ec2-spotfleet-memorygibpervcpurequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum amount of memory per vCPU, in GiB.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorygibpervcpurequest.html#cfn-ec2-spotfleet-memorygibpervcpurequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryGiBPerVCpuRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty):
+          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemoryGiBPerVCpuRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemoryGiBPerVCpuRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum amount of memory, in MiB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * MemoryMiBRequestProperty memoryMiBRequestProperty = MemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html)
+   */
+  public interface MemoryMiBRequestProperty {
+    /**
+     * The maximum amount of memory, in MiB.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html#cfn-ec2-spotfleet-memorymibrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum amount of memory, in MiB.
+     *
+     * To specify no minimum limit, specify `0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html#cfn-ec2-spotfleet-memorymibrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [MemoryMiBRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum amount of memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum amount of memory, in MiB.
+       * To specify no minimum limit, specify `0` .
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty.builder()
+
+      /**
+       * @param max The maximum amount of memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum amount of memory, in MiB.
+       * To specify no minimum limit, specify `0` .
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty,
+    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
+      /**
+       * The maximum amount of memory, in MiB.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html#cfn-ec2-spotfleet-memorymibrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum amount of memory, in MiB.
+       *
+       * To specify no minimum limit, specify `0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html#cfn-ec2-spotfleet-memorymibrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryMiBRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty):
+          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBRequestProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemoryMiBRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum amount of baseline network bandwidth, in gigabits per second (Gbps).
+   *
+   * For more information, see [Amazon EC2 instance network
+   * bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html)
+   * in the *Amazon EC2 User Guide* .
+   *
+   * Default: No minimum or maximum limits
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * NetworkBandwidthGbpsRequestProperty networkBandwidthGbpsRequestProperty =
+   * NetworkBandwidthGbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html)
+   */
+  public interface NetworkBandwidthGbpsRequestProperty {
+    /**
+     * The maximum amount of network bandwidth, in Gbps.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html#cfn-ec2-spotfleet-networkbandwidthgbpsrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum amount of network bandwidth, in Gbps.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html#cfn-ec2-spotfleet-networkbandwidthgbpsrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [NetworkBandwidthGbpsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum amount of network bandwidth, in Gbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum amount of network bandwidth, in Gbps.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.builder()
+
+      /**
+       * @param max The maximum amount of network bandwidth, in Gbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum amount of network bandwidth, in Gbps.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty,
+    ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
+      /**
+       * The maximum amount of network bandwidth, in Gbps.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html#cfn-ec2-spotfleet-networkbandwidthgbpsrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum amount of network bandwidth, in Gbps.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html#cfn-ec2-spotfleet-networkbandwidthgbpsrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NetworkBandwidthGbpsRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty):
+          NetworkBandwidthGbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkBandwidthGbpsRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkBandwidthGbpsRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum number of network interfaces.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * NetworkInterfaceCountRequestProperty networkInterfaceCountRequestProperty =
+   * NetworkInterfaceCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html)
+   */
+  public interface NetworkInterfaceCountRequestProperty {
+    /**
+     * The maximum number of network interfaces.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html#cfn-ec2-spotfleet-networkinterfacecountrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum number of network interfaces.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html#cfn-ec2-spotfleet-networkinterfacecountrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [NetworkInterfaceCountRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum number of network interfaces.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum number of network interfaces.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty.builder()
+
+      /**
+       * @param max The maximum number of network interfaces.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum number of network interfaces.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty,
+    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
+      /**
+       * The maximum number of network interfaces.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html#cfn-ec2-spotfleet-networkinterfacecountrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum number of network interfaces.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html#cfn-ec2-spotfleet-networkinterfacecountrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NetworkInterfaceCountRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty):
+          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkInterfaceCountRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkInterfaceCountRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty
+    }
+  }
+
+  /**
+   * Describes a secondary private IPv4 address for a network interface.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PrivateIpAddressSpecificationProperty privateIpAddressSpecificationProperty =
+   * PrivateIpAddressSpecificationProperty.builder()
+   * .privateIpAddress("privateIpAddress")
+   * // the properties below are optional
+   * .primary(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html)
+   */
+  public interface PrivateIpAddressSpecificationProperty {
+    /**
+     * Indicates whether the private IPv4 address is the primary private IPv4 address.
+     *
+     * Only one IPv4 address can be designated as primary.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html#cfn-ec2-spotfleet-privateipaddressspecification-primary)
+     */
+    public fun primary(): Any? = unwrap(this).getPrimary()
+
+    /**
+     * The private IPv4 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress)
+     */
+    public fun privateIpAddress(): String
+
+    /**
+     * A builder for [PrivateIpAddressSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address.
+       * Only one IPv4 address can be designated as primary.
+       */
+      public fun primary(primary: Boolean)
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address.
+       * Only one IPv4 address can be designated as primary.
+       */
+      public fun primary(primary: IResolvable)
+
+      /**
+       * @param privateIpAddress The private IPv4 address. 
+       */
+      public fun privateIpAddress(privateIpAddress: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty.builder()
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address.
+       * Only one IPv4 address can be designated as primary.
+       */
+      override fun primary(primary: Boolean) {
+        cdkBuilder.primary(primary)
+      }
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address.
+       * Only one IPv4 address can be designated as primary.
+       */
+      override fun primary(primary: IResolvable) {
+        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param privateIpAddress The private IPv4 address. 
+       */
+      override fun privateIpAddress(privateIpAddress: String) {
+        cdkBuilder.privateIpAddress(privateIpAddress)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty,
+    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
+      /**
+       * Indicates whether the private IPv4 address is the primary private IPv4 address.
+       *
+       * Only one IPv4 address can be designated as primary.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html#cfn-ec2-spotfleet-privateipaddressspecification-primary)
+       */
+      override fun primary(): Any? = unwrap(this).getPrimary()
+
+      /**
+       * The private IPv4 address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress)
+       */
+      override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrivateIpAddressSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty):
+          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateIpAddressSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty
     }
   }
 
@@ -5988,7 +7999,7 @@ public open class CfnSpotFleet internal constructor(
   }
 
   /**
-   * The minimum and maximum amount of total accelerator memory, in MiB.
+   * Describes whether monitoring is enabled.
    *
    * Example:
    *
@@ -5996,1547 +8007,100 @@ public open class CfnSpotFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AcceleratorTotalMemoryMiBRequestProperty acceleratorTotalMemoryMiBRequestProperty =
-   * AcceleratorTotalMemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
+   * SpotFleetMonitoringProperty spotFleetMonitoringProperty = SpotFleetMonitoringProperty.builder()
+   * .enabled(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetmonitoring.html)
    */
-  public interface AcceleratorTotalMemoryMiBRequestProperty {
+  public interface SpotFleetMonitoringProperty {
     /**
-     * The maximum amount of accelerator memory, in MiB.
+     * Enables monitoring for the instance.
      *
-     * To specify no maximum limit, omit this parameter.
+     * Default: `false`
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html#cfn-ec2-spotfleet-acceleratortotalmemorymibrequest-max)
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetmonitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)
      */
-    public fun max(): Number? = unwrap(this).getMax()
+    public fun enabled(): Any? = unwrap(this).getEnabled()
 
     /**
-     * The minimum amount of accelerator memory, in MiB.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html#cfn-ec2-spotfleet-acceleratortotalmemorymibrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [AcceleratorTotalMemoryMiBRequestProperty]
+     * A builder for [SpotFleetMonitoringProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum amount of accelerator memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
+       * @param enabled Enables monitoring for the instance.
+       * Default: `false`
        */
-      public fun max(max: Number)
+      public fun enabled(enabled: Boolean)
 
       /**
-       * @param min The minimum amount of accelerator memory, in MiB.
-       * To specify no minimum limit, omit this parameter.
+       * @param enabled Enables monitoring for the instance.
+       * Default: `false`
        */
-      public fun min(min: Number)
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty.builder()
 
       /**
-       * @param max The maximum amount of accelerator memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
+       * @param enabled Enables monitoring for the instance.
+       * Default: `false`
        */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param min The minimum amount of accelerator memory, in MiB.
-       * To specify no minimum limit, omit this parameter.
+       * @param enabled Enables monitoring for the instance.
+       * Default: `false`
        */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
-      /**
-       * The maximum amount of accelerator memory, in MiB.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html#cfn-ec2-spotfleet-acceleratortotalmemorymibrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of accelerator memory, in MiB.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-acceleratortotalmemorymibrequest.html#cfn-ec2-spotfleet-acceleratortotalmemorymibrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AcceleratorTotalMemoryMiBRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty):
-          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AcceleratorTotalMemoryMiBRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum number of network interfaces.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * NetworkInterfaceCountRequestProperty networkInterfaceCountRequestProperty =
-   * NetworkInterfaceCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html)
-   */
-  public interface NetworkInterfaceCountRequestProperty {
-    /**
-     * The maximum number of network interfaces.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html#cfn-ec2-spotfleet-networkinterfacecountrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum number of network interfaces.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html#cfn-ec2-spotfleet-networkinterfacecountrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [NetworkInterfaceCountRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum number of network interfaces.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum number of network interfaces.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty.builder()
-
-      /**
-       * @param max The maximum number of network interfaces.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum number of network interfaces.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty,
+    ) : CdkObject(cdkObject), SpotFleetMonitoringProperty {
       /**
-       * The maximum number of network interfaces.
+       * Enables monitoring for the instance.
        *
-       * To specify no maximum limit, omit this parameter.
+       * Default: `false`
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html#cfn-ec2-spotfleet-networkinterfacecountrequest-max)
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetmonitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled)
        */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum number of network interfaces.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkinterfacecountrequest.html#cfn-ec2-spotfleet-networkinterfacecountrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NetworkInterfaceCountRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpotFleetMonitoringProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty):
-          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkInterfaceCountRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty):
+          SpotFleetMonitoringProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotFleetMonitoringProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NetworkInterfaceCountRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty
-    }
-  }
-
-  /**
-   * Describes a load balancer target group.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * TargetGroupProperty targetGroupProperty = TargetGroupProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html)
-   */
-  public interface TargetGroupProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the target group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn)
-     */
-    public fun arn(): String
-
-    /**
-     * A builder for [TargetGroupProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the target group. 
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty.builder()
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the target group. 
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty,
-    ) : CdkObject(cdkObject), TargetGroupProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the target group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn)
-       */
-      override fun arn(): String = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TargetGroupProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty):
-          TargetGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetGroupProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty = (wrapped as
+      internal fun unwrap(wrapped: SpotFleetMonitoringProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum amount of memory, in MiB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MemoryMiBRequestProperty memoryMiBRequestProperty = MemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html)
-   */
-  public interface MemoryMiBRequestProperty {
-    /**
-     * The maximum amount of memory, in MiB.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html#cfn-ec2-spotfleet-memorymibrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of memory, in MiB.
-     *
-     * To specify no minimum limit, specify `0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html#cfn-ec2-spotfleet-memorymibrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [MemoryMiBRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of memory, in MiB.
-       * To specify no minimum limit, specify `0` .
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty.builder()
-
-      /**
-       * @param max The maximum amount of memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of memory, in MiB.
-       * To specify no minimum limit, specify `0` .
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
-      /**
-       * The maximum amount of memory, in MiB.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html#cfn-ec2-spotfleet-memorymibrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of memory, in MiB.
-       *
-       * To specify no minimum limit, specify `0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-memorymibrequest.html#cfn-ec2-spotfleet-memorymibrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryMiBRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty):
-          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBRequestProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MemoryMiBRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty
-    }
-  }
-
-  /**
-   * Specifies overrides for a launch template.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * LaunchTemplateOverridesProperty launchTemplateOverridesProperty =
-   * LaunchTemplateOverridesProperty.builder()
-   * .availabilityZone("availabilityZone")
-   * .instanceRequirements(InstanceRequirementsRequestProperty.builder()
-   * .acceleratorCount(AcceleratorCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
-   * .acceleratorNames(List.of("acceleratorNames"))
-   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorTypes(List.of("acceleratorTypes"))
-   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
-   * .bareMetal("bareMetal")
-   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .burstablePerformance("burstablePerformance")
-   * .cpuManufacturers(List.of("cpuManufacturers"))
-   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
-   * .instanceGenerations(List.of("instanceGenerations"))
-   * .localStorage("localStorage")
-   * .localStorageTypes(List.of("localStorageTypes"))
-   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
-   * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .memoryMiB(MemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .onDemandMaxPricePercentageOverLowestPrice(123)
-   * .requireHibernateSupport(false)
-   * .spotMaxPricePercentageOverLowestPrice(123)
-   * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .vCpuCount(VCpuCountRangeRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .build())
-   * .instanceType("instanceType")
-   * .priority(123)
-   * .spotPrice("spotPrice")
-   * .subnetId("subnetId")
-   * .weightedCapacity(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html)
-   */
-  public interface LaunchTemplateOverridesProperty {
-    /**
-     * The Availability Zone in which to launch the instances.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone)
-     */
-    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
-
-    /**
-     * The instance requirements.
-     *
-     * When you specify instance requirements, Amazon EC2 will identify instance types with the
-     * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
-     * instances from these instance types, in the same way as when you specify a list of instance
-     * types.
-     *
-     *
-     * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancerequirements)
-     */
-    public fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
-
-    /**
-     * The instance type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype)
-     */
-    public fun instanceType(): String? = unwrap(this).getInstanceType()
-
-    /**
-     * The priority for the launch template override. The highest priority is launched first.
-     *
-     * If `OnDemandAllocationStrategy` is set to `prioritized` , Spot Fleet uses priority to
-     * determine which launch template override to use first in fulfilling On-Demand capacity.
-     *
-     * If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized` , Spot Fleet uses
-     * priority on a best-effort basis to determine which launch template override to use in fulfilling
-     * Spot capacity, but optimizes for capacity first.
-     *
-     * Valid values are whole numbers starting at `0` . The lower the number, the higher the
-     * priority. If no number is set, the launch template override has the lowest priority. You can set
-     * the same priority for different launch template overrides.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-priority)
-     */
-    public fun priority(): Number? = unwrap(this).getPriority()
-
-    /**
-     * The maximum price per unit hour that you are willing to pay for a Spot Instance.
-     *
-     * We do not recommend using this parameter because it can lead to increased interruptions. If
-     * you do not specify this parameter, you will pay the current Spot price.
-     *
-     *
-     * If you specify a maximum price, your instances will be interrupted more frequently than if
-     * you do not specify this parameter.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice)
-     */
-    public fun spotPrice(): String? = unwrap(this).getSpotPrice()
-
-    /**
-     * The ID of the subnet in which to launch the instances.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid)
-     */
-    public fun subnetId(): String? = unwrap(this).getSubnetId()
-
-    /**
-     * The number of units provided by the specified instance type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
-     */
-    public fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
-
-    /**
-     * A builder for [LaunchTemplateOverridesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param availabilityZone The Availability Zone in which to launch the instances.
-       */
-      public fun availabilityZone(availabilityZone: String)
-
-      /**
-       * @param instanceRequirements The instance requirements.
-       * When you specify instance requirements, Amazon EC2 will identify instance types with the
-       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
-       * instances from these instance types, in the same way as when you specify a list of instance
-       * types.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       */
-      public fun instanceRequirements(instanceRequirements: IResolvable)
-
-      /**
-       * @param instanceRequirements The instance requirements.
-       * When you specify instance requirements, Amazon EC2 will identify instance types with the
-       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
-       * instances from these instance types, in the same way as when you specify a list of instance
-       * types.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       */
-      public fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty)
-
-      /**
-       * @param instanceRequirements The instance requirements.
-       * When you specify instance requirements, Amazon EC2 will identify instance types with the
-       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
-       * instances from these instance types, in the same way as when you specify a list of instance
-       * types.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6ddf9b5404b04aee7a64694a12d00e743d3313875085babee8d958acad6c3dbe")
-      public
-          fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty.Builder.() -> Unit)
-
-      /**
-       * @param instanceType The instance type.
-       */
-      public fun instanceType(instanceType: String)
-
-      /**
-       * @param priority The priority for the launch template override. The highest priority is
-       * launched first.
-       * If `OnDemandAllocationStrategy` is set to `prioritized` , Spot Fleet uses priority to
-       * determine which launch template override to use first in fulfilling On-Demand capacity.
-       *
-       * If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized` , Spot Fleet uses
-       * priority on a best-effort basis to determine which launch template override to use in
-       * fulfilling Spot capacity, but optimizes for capacity first.
-       *
-       * Valid values are whole numbers starting at `0` . The lower the number, the higher the
-       * priority. If no number is set, the launch template override has the lowest priority. You can
-       * set the same priority for different launch template overrides.
-       */
-      public fun priority(priority: Number)
-
-      /**
-       * @param spotPrice The maximum price per unit hour that you are willing to pay for a Spot
-       * Instance.
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your instances will be interrupted more frequently than if
-       * you do not specify this parameter.
-       */
-      public fun spotPrice(spotPrice: String)
-
-      /**
-       * @param subnetId The ID of the subnet in which to launch the instances.
-       */
-      public fun subnetId(subnetId: String)
-
-      /**
-       * @param weightedCapacity The number of units provided by the specified instance type.
-       */
-      public fun weightedCapacity(weightedCapacity: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty.builder()
-
-      /**
-       * @param availabilityZone The Availability Zone in which to launch the instances.
-       */
-      override fun availabilityZone(availabilityZone: String) {
-        cdkBuilder.availabilityZone(availabilityZone)
-      }
-
-      /**
-       * @param instanceRequirements The instance requirements.
-       * When you specify instance requirements, Amazon EC2 will identify instance types with the
-       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
-       * instances from these instance types, in the same way as when you specify a list of instance
-       * types.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       */
-      override fun instanceRequirements(instanceRequirements: IResolvable) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param instanceRequirements The instance requirements.
-       * When you specify instance requirements, Amazon EC2 will identify instance types with the
-       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
-       * instances from these instance types, in the same way as when you specify a list of instance
-       * types.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       */
-      override fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsRequestProperty::unwrap))
-      }
-
-      /**
-       * @param instanceRequirements The instance requirements.
-       * When you specify instance requirements, Amazon EC2 will identify instance types with the
-       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
-       * instances from these instance types, in the same way as when you specify a list of instance
-       * types.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6ddf9b5404b04aee7a64694a12d00e743d3313875085babee8d958acad6c3dbe")
-      override
-          fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty.Builder.() -> Unit):
-          Unit = instanceRequirements(InstanceRequirementsRequestProperty(instanceRequirements))
-
-      /**
-       * @param instanceType The instance type.
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      /**
-       * @param priority The priority for the launch template override. The highest priority is
-       * launched first.
-       * If `OnDemandAllocationStrategy` is set to `prioritized` , Spot Fleet uses priority to
-       * determine which launch template override to use first in fulfilling On-Demand capacity.
-       *
-       * If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized` , Spot Fleet uses
-       * priority on a best-effort basis to determine which launch template override to use in
-       * fulfilling Spot capacity, but optimizes for capacity first.
-       *
-       * Valid values are whole numbers starting at `0` . The lower the number, the higher the
-       * priority. If no number is set, the launch template override has the lowest priority. You can
-       * set the same priority for different launch template overrides.
-       */
-      override fun priority(priority: Number) {
-        cdkBuilder.priority(priority)
-      }
-
-      /**
-       * @param spotPrice The maximum price per unit hour that you are willing to pay for a Spot
-       * Instance.
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your instances will be interrupted more frequently than if
-       * you do not specify this parameter.
-       */
-      override fun spotPrice(spotPrice: String) {
-        cdkBuilder.spotPrice(spotPrice)
-      }
-
-      /**
-       * @param subnetId The ID of the subnet in which to launch the instances.
-       */
-      override fun subnetId(subnetId: String) {
-        cdkBuilder.subnetId(subnetId)
-      }
-
-      /**
-       * @param weightedCapacity The number of units provided by the specified instance type.
-       */
-      override fun weightedCapacity(weightedCapacity: Number) {
-        cdkBuilder.weightedCapacity(weightedCapacity)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateOverridesProperty {
-      /**
-       * The Availability Zone in which to launch the instances.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone)
-       */
-      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
-
-      /**
-       * The instance requirements.
-       *
-       * When you specify instance requirements, Amazon EC2 will identify instance types with the
-       * provided requirements, and then use your On-Demand and Spot allocation strategies to launch
-       * instances from these instance types, in the same way as when you specify a list of instance
-       * types.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancerequirements)
-       */
-      override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
-
-      /**
-       * The instance type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype)
-       */
-      override fun instanceType(): String? = unwrap(this).getInstanceType()
-
-      /**
-       * The priority for the launch template override. The highest priority is launched first.
-       *
-       * If `OnDemandAllocationStrategy` is set to `prioritized` , Spot Fleet uses priority to
-       * determine which launch template override to use first in fulfilling On-Demand capacity.
-       *
-       * If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized` , Spot Fleet uses
-       * priority on a best-effort basis to determine which launch template override to use in
-       * fulfilling Spot capacity, but optimizes for capacity first.
-       *
-       * Valid values are whole numbers starting at `0` . The lower the number, the higher the
-       * priority. If no number is set, the launch template override has the lowest priority. You can
-       * set the same priority for different launch template overrides.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-priority)
-       */
-      override fun priority(): Number? = unwrap(this).getPriority()
-
-      /**
-       * The maximum price per unit hour that you are willing to pay for a Spot Instance.
-       *
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your instances will be interrupted more frequently than if
-       * you do not specify this parameter.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice)
-       */
-      override fun spotPrice(): String? = unwrap(this).getSpotPrice()
-
-      /**
-       * The ID of the subnet in which to launch the instances.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid)
-       */
-      override fun subnetId(): String? = unwrap(this).getSubnetId()
-
-      /**
-       * The number of units provided by the specified instance type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
-       */
-      override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchTemplateOverridesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty):
-          LaunchTemplateOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LaunchTemplateOverridesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchTemplateOverridesProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty
-    }
-  }
-
-  /**
-   * Describes a network interface.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * InstanceNetworkInterfaceSpecificationProperty instanceNetworkInterfaceSpecificationProperty =
-   * InstanceNetworkInterfaceSpecificationProperty.builder()
-   * .associatePublicIpAddress(false)
-   * .deleteOnTermination(false)
-   * .description("description")
-   * .deviceIndex(123)
-   * .groups(List.of("groups"))
-   * .ipv6AddressCount(123)
-   * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
-   * .ipv6Address("ipv6Address")
-   * .build()))
-   * .networkInterfaceId("networkInterfaceId")
-   * .privateIpAddresses(List.of(PrivateIpAddressSpecificationProperty.builder()
-   * .privateIpAddress("privateIpAddress")
-   * // the properties below are optional
-   * .primary(false)
-   * .build()))
-   * .secondaryPrivateIpAddressCount(123)
-   * .subnetId("subnetId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html)
-   */
-  public interface InstanceNetworkInterfaceSpecificationProperty {
-    /**
-     * Indicates whether to assign a public IPv4 address to an instance you launch in a VPC.
-     *
-     * The public IP address can only be assigned to a network interface for eth0, and can only be
-     * assigned to a new network interface, not an existing one. You cannot specify more than one
-     * network interface in the request. If launching into a default subnet, the default value is
-     * `true` .
-     *
-     * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
-     * running instances and Elastic IP addresses. For more information, see the *Public IPv4 Address*
-     * tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)
-     */
-    public fun associatePublicIpAddress(): Any? = unwrap(this).getAssociatePublicIpAddress()
-
-    /**
-     * Indicates whether the network interface is deleted when the instance is terminated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)
-     */
-    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
-
-    /**
-     * The description of the network interface.
-     *
-     * Applies only if creating a network interface when launching an instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The position of the network interface in the attachment order.
-     *
-     * A primary network interface has a device index of 0.
-     *
-     * If you specify a network interface when launching an instance, you must specify the device
-     * index.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)
-     */
-    public fun deviceIndex(): Number? = unwrap(this).getDeviceIndex()
-
-    /**
-     * The IDs of the security groups for the network interface.
-     *
-     * Applies only if creating a network interface when launching an instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)
-     */
-    public fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
-
-    /**
-     * A number of IPv6 addresses to assign to the network interface.
-     *
-     * Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this
-     * option and the option to assign specific IPv6 addresses in the same request. You can specify
-     * this option if you've specified a minimum number of instances to launch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)
-     */
-    public fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
-
-    /**
-     * The IPv6 addresses to assign to the network interface.
-     *
-     * You cannot specify this option and the option to assign a number of IPv6 addresses in the
-     * same request. You cannot specify this option if you've specified a minimum number of instances
-     * to launch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)
-     */
-    public fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
-
-    /**
-     * The ID of the network interface.
-     *
-     * If you are creating a Spot Fleet, omit this parameter because you can’t specify a network
-     * interface ID in a launch specification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)
-     */
-    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
-
-    /**
-     * The private IPv4 addresses to assign to the network interface.
-     *
-     * Only one private IPv4 address can be designated as primary. You cannot specify this option if
-     * you're launching more than one instance in a
-     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-     * request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)
-     */
-    public fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
-
-    /**
-     * The number of secondary private IPv4 addresses.
-     *
-     * You can't specify this option and specify more than one private IP address using the private
-     * IP addresses option. You cannot specify this option if you're launching more than one instance
-     * in a
-     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-     * request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
-     */
-    public fun secondaryPrivateIpAddressCount(): Number? =
-        unwrap(this).getSecondaryPrivateIpAddressCount()
-
-    /**
-     * The ID of the subnet associated with the network interface.
-     *
-     * Applies only if creating a network interface when launching an instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
-     */
-    public fun subnetId(): String? = unwrap(this).getSubnetId()
-
-    /**
-     * A builder for [InstanceNetworkInterfaceSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param associatePublicIpAddress Indicates whether to assign a public IPv4 address to an
-       * instance you launch in a VPC.
-       * The public IP address can only be assigned to a network interface for eth0, and can only be
-       * assigned to a new network interface, not an existing one. You cannot specify more than one
-       * network interface in the request. If launching into a default subnet, the default value is
-       * `true` .
-       *
-       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
-       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
-       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
-       */
-      public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
-
-      /**
-       * @param associatePublicIpAddress Indicates whether to assign a public IPv4 address to an
-       * instance you launch in a VPC.
-       * The public IP address can only be assigned to a network interface for eth0, and can only be
-       * assigned to a new network interface, not an existing one. You cannot specify more than one
-       * network interface in the request. If launching into a default subnet, the default value is
-       * `true` .
-       *
-       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
-       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
-       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
-       */
-      public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable)
-
-      /**
-       * @param deleteOnTermination Indicates whether the network interface is deleted when the
-       * instance is terminated.
-       */
-      public fun deleteOnTermination(deleteOnTermination: Boolean)
-
-      /**
-       * @param deleteOnTermination Indicates whether the network interface is deleted when the
-       * instance is terminated.
-       */
-      public fun deleteOnTermination(deleteOnTermination: IResolvable)
-
-      /**
-       * @param description The description of the network interface.
-       * Applies only if creating a network interface when launching an instance.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param deviceIndex The position of the network interface in the attachment order.
-       * A primary network interface has a device index of 0.
-       *
-       * If you specify a network interface when launching an instance, you must specify the device
-       * index.
-       */
-      public fun deviceIndex(deviceIndex: Number)
-
-      /**
-       * @param groups The IDs of the security groups for the network interface.
-       * Applies only if creating a network interface when launching an instance.
-       */
-      public fun groups(groups: List<String>)
-
-      /**
-       * @param groups The IDs of the security groups for the network interface.
-       * Applies only if creating a network interface when launching an instance.
-       */
-      public fun groups(vararg groups: String)
-
-      /**
-       * @param ipv6AddressCount A number of IPv6 addresses to assign to the network interface.
-       * Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this
-       * option and the option to assign specific IPv6 addresses in the same request. You can specify
-       * this option if you've specified a minimum number of instances to launch.
-       */
-      public fun ipv6AddressCount(ipv6AddressCount: Number)
-
-      /**
-       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
-       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
-       * same request. You cannot specify this option if you've specified a minimum number of instances
-       * to launch.
-       */
-      public fun ipv6Addresses(ipv6Addresses: IResolvable)
-
-      /**
-       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
-       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
-       * same request. You cannot specify this option if you've specified a minimum number of instances
-       * to launch.
-       */
-      public fun ipv6Addresses(ipv6Addresses: List<Any>)
-
-      /**
-       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
-       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
-       * same request. You cannot specify this option if you've specified a minimum number of instances
-       * to launch.
-       */
-      public fun ipv6Addresses(vararg ipv6Addresses: Any)
-
-      /**
-       * @param networkInterfaceId The ID of the network interface.
-       * If you are creating a Spot Fleet, omit this parameter because you can’t specify a network
-       * interface ID in a launch specification.
-       */
-      public fun networkInterfaceId(networkInterfaceId: String)
-
-      /**
-       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
-       * Only one private IPv4 address can be designated as primary. You cannot specify this option
-       * if you're launching more than one instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       */
-      public fun privateIpAddresses(privateIpAddresses: IResolvable)
-
-      /**
-       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
-       * Only one private IPv4 address can be designated as primary. You cannot specify this option
-       * if you're launching more than one instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       */
-      public fun privateIpAddresses(privateIpAddresses: List<Any>)
-
-      /**
-       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
-       * Only one private IPv4 address can be designated as primary. You cannot specify this option
-       * if you're launching more than one instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       */
-      public fun privateIpAddresses(vararg privateIpAddresses: Any)
-
-      /**
-       * @param secondaryPrivateIpAddressCount The number of secondary private IPv4 addresses.
-       * You can't specify this option and specify more than one private IP address using the
-       * private IP addresses option. You cannot specify this option if you're launching more than one
-       * instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       */
-      public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
-
-      /**
-       * @param subnetId The ID of the subnet associated with the network interface.
-       * Applies only if creating a network interface when launching an instance.
-       */
-      public fun subnetId(subnetId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty.builder()
-
-      /**
-       * @param associatePublicIpAddress Indicates whether to assign a public IPv4 address to an
-       * instance you launch in a VPC.
-       * The public IP address can only be assigned to a network interface for eth0, and can only be
-       * assigned to a new network interface, not an existing one. You cannot specify more than one
-       * network interface in the request. If launching into a default subnet, the default value is
-       * `true` .
-       *
-       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
-       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
-       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
-       */
-      override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
-        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
-      }
-
-      /**
-       * @param associatePublicIpAddress Indicates whether to assign a public IPv4 address to an
-       * instance you launch in a VPC.
-       * The public IP address can only be assigned to a network interface for eth0, and can only be
-       * assigned to a new network interface, not an existing one. You cannot specify more than one
-       * network interface in the request. If launching into a default subnet, the default value is
-       * `true` .
-       *
-       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
-       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
-       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
-       */
-      override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param deleteOnTermination Indicates whether the network interface is deleted when the
-       * instance is terminated.
-       */
-      override fun deleteOnTermination(deleteOnTermination: Boolean) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination)
-      }
-
-      /**
-       * @param deleteOnTermination Indicates whether the network interface is deleted when the
-       * instance is terminated.
-       */
-      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param description The description of the network interface.
-       * Applies only if creating a network interface when launching an instance.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param deviceIndex The position of the network interface in the attachment order.
-       * A primary network interface has a device index of 0.
-       *
-       * If you specify a network interface when launching an instance, you must specify the device
-       * index.
-       */
-      override fun deviceIndex(deviceIndex: Number) {
-        cdkBuilder.deviceIndex(deviceIndex)
-      }
-
-      /**
-       * @param groups The IDs of the security groups for the network interface.
-       * Applies only if creating a network interface when launching an instance.
-       */
-      override fun groups(groups: List<String>) {
-        cdkBuilder.groups(groups)
-      }
-
-      /**
-       * @param groups The IDs of the security groups for the network interface.
-       * Applies only if creating a network interface when launching an instance.
-       */
-      override fun groups(vararg groups: String): Unit = groups(groups.toList())
-
-      /**
-       * @param ipv6AddressCount A number of IPv6 addresses to assign to the network interface.
-       * Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this
-       * option and the option to assign specific IPv6 addresses in the same request. You can specify
-       * this option if you've specified a minimum number of instances to launch.
-       */
-      override fun ipv6AddressCount(ipv6AddressCount: Number) {
-        cdkBuilder.ipv6AddressCount(ipv6AddressCount)
-      }
-
-      /**
-       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
-       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
-       * same request. You cannot specify this option if you've specified a minimum number of instances
-       * to launch.
-       */
-      override fun ipv6Addresses(ipv6Addresses: IResolvable) {
-        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
-       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
-       * same request. You cannot specify this option if you've specified a minimum number of instances
-       * to launch.
-       */
-      override fun ipv6Addresses(ipv6Addresses: List<Any>) {
-        cdkBuilder.ipv6Addresses(ipv6Addresses)
-      }
-
-      /**
-       * @param ipv6Addresses The IPv6 addresses to assign to the network interface.
-       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
-       * same request. You cannot specify this option if you've specified a minimum number of instances
-       * to launch.
-       */
-      override fun ipv6Addresses(vararg ipv6Addresses: Any): Unit =
-          ipv6Addresses(ipv6Addresses.toList())
-
-      /**
-       * @param networkInterfaceId The ID of the network interface.
-       * If you are creating a Spot Fleet, omit this parameter because you can’t specify a network
-       * interface ID in a launch specification.
-       */
-      override fun networkInterfaceId(networkInterfaceId: String) {
-        cdkBuilder.networkInterfaceId(networkInterfaceId)
-      }
-
-      /**
-       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
-       * Only one private IPv4 address can be designated as primary. You cannot specify this option
-       * if you're launching more than one instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       */
-      override fun privateIpAddresses(privateIpAddresses: IResolvable) {
-        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
-       * Only one private IPv4 address can be designated as primary. You cannot specify this option
-       * if you're launching more than one instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       */
-      override fun privateIpAddresses(privateIpAddresses: List<Any>) {
-        cdkBuilder.privateIpAddresses(privateIpAddresses)
-      }
-
-      /**
-       * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
-       * Only one private IPv4 address can be designated as primary. You cannot specify this option
-       * if you're launching more than one instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       */
-      override fun privateIpAddresses(vararg privateIpAddresses: Any): Unit =
-          privateIpAddresses(privateIpAddresses.toList())
-
-      /**
-       * @param secondaryPrivateIpAddressCount The number of secondary private IPv4 addresses.
-       * You can't specify this option and specify more than one private IP address using the
-       * private IP addresses option. You cannot specify this option if you're launching more than one
-       * instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       */
-      override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
-        cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
-      }
-
-      /**
-       * @param subnetId The ID of the subnet associated with the network interface.
-       * Applies only if creating a network interface when launching an instance.
-       */
-      override fun subnetId(subnetId: String) {
-        cdkBuilder.subnetId(subnetId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty,
-    ) : CdkObject(cdkObject), InstanceNetworkInterfaceSpecificationProperty {
-      /**
-       * Indicates whether to assign a public IPv4 address to an instance you launch in a VPC.
-       *
-       * The public IP address can only be assigned to a network interface for eth0, and can only be
-       * assigned to a new network interface, not an existing one. You cannot specify more than one
-       * network interface in the request. If launching into a default subnet, the default value is
-       * `true` .
-       *
-       * AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with
-       * running instances and Elastic IP addresses. For more information, see the *Public IPv4
-       * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-associatepublicipaddress)
-       */
-      override fun associatePublicIpAddress(): Any? = unwrap(this).getAssociatePublicIpAddress()
-
-      /**
-       * Indicates whether the network interface is deleted when the instance is terminated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination)
-       */
-      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
-
-      /**
-       * The description of the network interface.
-       *
-       * Applies only if creating a network interface when launching an instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The position of the network interface in the attachment order.
-       *
-       * A primary network interface has a device index of 0.
-       *
-       * If you specify a network interface when launching an instance, you must specify the device
-       * index.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)
-       */
-      override fun deviceIndex(): Number? = unwrap(this).getDeviceIndex()
-
-      /**
-       * The IDs of the security groups for the network interface.
-       *
-       * Applies only if creating a network interface when launching an instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)
-       */
-      override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
-
-      /**
-       * A number of IPv6 addresses to assign to the network interface.
-       *
-       * Amazon EC2 chooses the IPv6 addresses from the range of the subnet. You cannot specify this
-       * option and the option to assign specific IPv6 addresses in the same request. You can specify
-       * this option if you've specified a minimum number of instances to launch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)
-       */
-      override fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
-
-      /**
-       * The IPv6 addresses to assign to the network interface.
-       *
-       * You cannot specify this option and the option to assign a number of IPv6 addresses in the
-       * same request. You cannot specify this option if you've specified a minimum number of instances
-       * to launch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)
-       */
-      override fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
-
-      /**
-       * The ID of the network interface.
-       *
-       * If you are creating a Spot Fleet, omit this parameter because you can’t specify a network
-       * interface ID in a launch specification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)
-       */
-      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
-
-      /**
-       * The private IPv4 addresses to assign to the network interface.
-       *
-       * Only one private IPv4 address can be designated as primary. You cannot specify this option
-       * if you're launching more than one instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)
-       */
-      override fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
-
-      /**
-       * The number of secondary private IPv4 addresses.
-       *
-       * You can't specify this option and specify more than one private IP address using the
-       * private IP addresses option. You cannot specify this option if you're launching more than one
-       * instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
-       */
-      override fun secondaryPrivateIpAddressCount(): Number? =
-          unwrap(this).getSecondaryPrivateIpAddressCount()
-
-      /**
-       * The ID of the subnet associated with the network interface.
-       *
-       * Applies only if creating a network interface when launching an instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
-       */
-      override fun subnetId(): String? = unwrap(this).getSubnetId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InstanceNetworkInterfaceSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty):
-          InstanceNetworkInterfaceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceNetworkInterfaceSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceNetworkInterfaceSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty
     }
   }
 
@@ -9261,6 +9825,301 @@ public open class CfnSpotFleet internal constructor(
   }
 
   /**
+   * The tags for a Spot Fleet resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * SpotFleetTagSpecificationProperty spotFleetTagSpecificationProperty =
+   * SpotFleetTagSpecificationProperty.builder()
+   * .resourceType("resourceType")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html)
+   */
+  public interface SpotFleetTagSpecificationProperty {
+    /**
+     * The type of resource.
+     *
+     * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
+     * request on creation, use the `TagSpecifications` parameter in
+     * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
+     */
+    public fun resourceType(): String? = unwrap(this).getResourceType()
+
+    /**
+     * The tags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html#cfn-ec2-spotfleet-spotfleettagspecification-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [SpotFleetTagSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceType The type of resource.
+       * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
+       * request on creation, use the `TagSpecifications` parameter in
+       * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
+       * .
+       */
+      public fun resourceType(resourceType: String)
+
+      /**
+       * @param tags The tags.
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The tags.
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty.builder()
+
+      /**
+       * @param resourceType The type of resource.
+       * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
+       * request on creation, use the `TagSpecifications` parameter in
+       * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
+       * .
+       */
+      override fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
+      }
+
+      /**
+       * @param tags The tags.
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      }
+
+      /**
+       * @param tags The tags.
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty,
+    ) : CdkObject(cdkObject), SpotFleetTagSpecificationProperty {
+      /**
+       * The type of resource.
+       *
+       * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
+       * request on creation, use the `TagSpecifications` parameter in
+       * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype)
+       */
+      override fun resourceType(): String? = unwrap(this).getResourceType()
+
+      /**
+       * The tags.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html#cfn-ec2-spotfleet-spotfleettagspecification-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SpotFleetTagSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty):
+          SpotFleetTagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotFleetTagSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpotFleetTagSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty
+    }
+  }
+
+  /**
+   * The strategies for managing your Spot Instances that are at an elevated risk of being
+   * interrupted.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * SpotMaintenanceStrategiesProperty spotMaintenanceStrategiesProperty =
+   * SpotMaintenanceStrategiesProperty.builder()
+   * .capacityRebalance(SpotCapacityRebalanceProperty.builder()
+   * .replacementStrategy("replacementStrategy")
+   * .terminationDelay(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html)
+   */
+  public interface SpotMaintenanceStrategiesProperty {
+    /**
+     * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot
+     * Instance is at an elevated risk of being interrupted.
+     *
+     * For more information, see [Capacity
+     * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+     * in the *Amazon EC2 User Guide for Linux Instances* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html#cfn-ec2-spotfleet-spotmaintenancestrategies-capacityrebalance)
+     */
+    public fun capacityRebalance(): Any? = unwrap(this).getCapacityRebalance()
+
+    /**
+     * A builder for [SpotMaintenanceStrategiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
+       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
+       * For more information, see [Capacity
+       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       */
+      public fun capacityRebalance(capacityRebalance: IResolvable)
+
+      /**
+       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
+       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
+       * For more information, see [Capacity
+       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       */
+      public fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty)
+
+      /**
+       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
+       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
+       * For more information, see [Capacity
+       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2573a18d019a336fa9f65454022b27033103109b979f9370b6b039c2e26ba7e3")
+      public
+          fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty.builder()
+
+      /**
+       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
+       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
+       * For more information, see [Capacity
+       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       */
+      override fun capacityRebalance(capacityRebalance: IResolvable) {
+        cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
+       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
+       * For more information, see [Capacity
+       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       */
+      override fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty) {
+        cdkBuilder.capacityRebalance(capacityRebalance.let(SpotCapacityRebalanceProperty::unwrap))
+      }
+
+      /**
+       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
+       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
+       * For more information, see [Capacity
+       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2573a18d019a336fa9f65454022b27033103109b979f9370b6b039c2e26ba7e3")
+      override
+          fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty.Builder.() -> Unit):
+          Unit = capacityRebalance(SpotCapacityRebalanceProperty(capacityRebalance))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty,
+    ) : CdkObject(cdkObject), SpotMaintenanceStrategiesProperty {
+      /**
+       * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot
+       * Instance is at an elevated risk of being interrupted.
+       *
+       * For more information, see [Capacity
+       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html#cfn-ec2-spotfleet-spotmaintenancestrategies-capacityrebalance)
+       */
+      override fun capacityRebalance(): Any? = unwrap(this).getCapacityRebalance()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SpotMaintenanceStrategiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty):
+          SpotMaintenanceStrategiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotMaintenanceStrategiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpotMaintenanceStrategiesProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty
+    }
+  }
+
+  /**
    * Describes Spot Instance placement.
    *
    * Example:
@@ -9416,27 +10275,7 @@ public open class CfnSpotFleet internal constructor(
   }
 
   /**
-   * Specifies the launch template to be used by the Spot Fleet request for configuring Amazon EC2
-   * instances.
-   *
-   * You must specify the following:
-   *
-   * * The ID or the name of the launch template, but not both.
-   * * The version of the launch template.
-   *
-   * `FleetLaunchTemplateSpecification` is a property of the
-   * [AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html)
-   * resource.
-   *
-   * For information about creating a launch template, see
-   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
-   * and [Create a launch
-   * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
-   * in the *Amazon EC2 User Guide* .
-   *
-   * For examples of launch templates, see
-   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
-   * .
+   * Describes a load balancer target group.
    *
    * Example:
    *
@@ -9444,168 +10283,74 @@ public open class CfnSpotFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * FleetLaunchTemplateSpecificationProperty fleetLaunchTemplateSpecificationProperty =
-   * FleetLaunchTemplateSpecificationProperty.builder()
-   * .version("version")
-   * // the properties below are optional
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
+   * TargetGroupProperty targetGroupProperty = TargetGroupProperty.builder()
+   * .arn("arn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html)
    */
-  public interface FleetLaunchTemplateSpecificationProperty {
+  public interface TargetGroupProperty {
     /**
-     * The ID of the launch template.
+     * The Amazon Resource Name (ARN) of the target group.
      *
-     * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn)
      */
-    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+    public fun arn(): String
 
     /**
-     * The name of the launch template.
-     *
-     * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename)
-     */
-    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-    /**
-     * The version number of the launch template.
-     *
-     * Specifying `$Latest` or `$Default` for the template version number is not supported. However,
-     * you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the `Fn::GetAtt` intrinsic
-     * function. For more information, see
-     * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version)
-     */
-    public fun version(): String
-
-    /**
-     * A builder for [FleetLaunchTemplateSpecificationProperty]
+     * A builder for [TargetGroupProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       * @param arn The Amazon Resource Name (ARN) of the target group. 
        */
-      public fun launchTemplateId(launchTemplateId: String)
-
-      /**
-       * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-       */
-      public fun launchTemplateName(launchTemplateName: String)
-
-      /**
-       * @param version The version number of the launch template. 
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
-       * .
-       */
-      public fun version(version: String)
+      public fun arn(arn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty.builder()
 
       /**
-       * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       * @param arn The Amazon Resource Name (ARN) of the target group. 
        */
-      override fun launchTemplateId(launchTemplateId: String) {
-        cdkBuilder.launchTemplateId(launchTemplateId)
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
       }
 
-      /**
-       * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-       */
-      override fun launchTemplateName(launchTemplateName: String) {
-        cdkBuilder.launchTemplateName(launchTemplateName)
-      }
-
-      /**
-       * @param version The version number of the launch template. 
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
-       * .
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty
-          = cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), FleetLaunchTemplateSpecificationProperty {
+      override val cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty,
+    ) : CdkObject(cdkObject), TargetGroupProperty {
       /**
-       * The ID of the launch template.
+       * The Amazon Resource Name (ARN) of the target group.
        *
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn)
        */
-      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-      /**
-       * The name of the launch template.
-       *
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename)
-       */
-      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-      /**
-       * The version number of the launch template.
-       *
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version)
-       */
-      override fun version(): String = unwrap(this).getVersion()
+      override fun arn(): String = unwrap(this).getArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FleetLaunchTemplateSpecificationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TargetGroupProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty):
-          FleetLaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FleetLaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty):
+          TargetGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FleetLaunchTemplateSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty
+      internal fun unwrap(wrapped: TargetGroupProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty
     }
   }
 
@@ -9715,721 +10460,6 @@ public open class CfnSpotFleet internal constructor(
           software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupsConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupsConfigProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
-   *
-   * For more information, see [Amazon EBS–optimized
-   * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
-   * EC2 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * BaselineEbsBandwidthMbpsRequestProperty baselineEbsBandwidthMbpsRequestProperty =
-   * BaselineEbsBandwidthMbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html)
-   */
-  public interface BaselineEbsBandwidthMbpsRequestProperty {
-    /**
-     * The maximum baseline bandwidth, in Mbps.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-spotfleet-baselineebsbandwidthmbpsrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum baseline bandwidth, in Mbps.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-spotfleet-baselineebsbandwidthmbpsrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [BaselineEbsBandwidthMbpsRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum baseline bandwidth, in Mbps.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum baseline bandwidth, in Mbps.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty.builder()
-
-      /**
-       * @param max The maximum baseline bandwidth, in Mbps.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum baseline bandwidth, in Mbps.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty,
-    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
-      /**
-       * The maximum baseline bandwidth, in Mbps.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-spotfleet-baselineebsbandwidthmbpsrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum baseline bandwidth, in Mbps.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-spotfleet-baselineebsbandwidthmbpsrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          BaselineEbsBandwidthMbpsRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty):
-          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BaselineEbsBandwidthMbpsRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty
-    }
-  }
-
-  /**
-   * Describes an IPv6 address.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * InstanceIpv6AddressProperty instanceIpv6AddressProperty = InstanceIpv6AddressProperty.builder()
-   * .ipv6Address("ipv6Address")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html)
-   */
-  public interface InstanceIpv6AddressProperty {
-    /**
-     * The IPv6 address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address)
-     */
-    public fun ipv6Address(): String
-
-    /**
-     * A builder for [InstanceIpv6AddressProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipv6Address The IPv6 address. 
-       */
-      public fun ipv6Address(ipv6Address: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty.builder()
-
-      /**
-       * @param ipv6Address The IPv6 address. 
-       */
-      override fun ipv6Address(ipv6Address: String) {
-        cdkBuilder.ipv6Address(ipv6Address)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty,
-    ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
-      /**
-       * The IPv6 address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address)
-       */
-      override fun ipv6Address(): String = unwrap(this).getIpv6Address()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceIpv6AddressProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty):
-          InstanceIpv6AddressProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceIpv6AddressProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceIpv6AddressProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty
-    }
-  }
-
-  /**
-   * Describes an IAM instance profile.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * IamInstanceProfileSpecificationProperty iamInstanceProfileSpecificationProperty =
-   * IamInstanceProfileSpecificationProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-iaminstanceprofilespecification.html)
-   */
-  public interface IamInstanceProfileSpecificationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the instance profile.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-iaminstanceprofilespecification.html#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * A builder for [IamInstanceProfileSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the instance profile.
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty.builder()
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the instance profile.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty,
-    ) : CdkObject(cdkObject), IamInstanceProfileSpecificationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the instance profile.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-iaminstanceprofilespecification.html#cfn-ec2-spotfleet-iaminstanceprofilespecification-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          IamInstanceProfileSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty):
-          IamInstanceProfileSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IamInstanceProfileSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IamInstanceProfileSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies the Classic Load Balancers and target groups to attach to a Spot Fleet request.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * LoadBalancersConfigProperty loadBalancersConfigProperty = LoadBalancersConfigProperty.builder()
-   * .classicLoadBalancersConfig(ClassicLoadBalancersConfigProperty.builder()
-   * .classicLoadBalancers(List.of(ClassicLoadBalancerProperty.builder()
-   * .name("name")
-   * .build()))
-   * .build())
-   * .targetGroupsConfig(TargetGroupsConfigProperty.builder()
-   * .targetGroups(List.of(TargetGroupProperty.builder()
-   * .arn("arn")
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html)
-   */
-  public interface LoadBalancersConfigProperty {
-    /**
-     * The Classic Load Balancers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)
-     */
-    public fun classicLoadBalancersConfig(): Any? = unwrap(this).getClassicLoadBalancersConfig()
-
-    /**
-     * The target groups.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)
-     */
-    public fun targetGroupsConfig(): Any? = unwrap(this).getTargetGroupsConfig()
-
-    /**
-     * A builder for [LoadBalancersConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param classicLoadBalancersConfig The Classic Load Balancers.
-       */
-      public fun classicLoadBalancersConfig(classicLoadBalancersConfig: IResolvable)
-
-      /**
-       * @param classicLoadBalancersConfig The Classic Load Balancers.
-       */
-      public
-          fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty)
-
-      /**
-       * @param classicLoadBalancersConfig The Classic Load Balancers.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("25b177d5ab308e359fc68672e76e4f903124271a3a7479bab51b0656361308b0")
-      public
-          fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param targetGroupsConfig The target groups.
-       */
-      public fun targetGroupsConfig(targetGroupsConfig: IResolvable)
-
-      /**
-       * @param targetGroupsConfig The target groups.
-       */
-      public fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty)
-
-      /**
-       * @param targetGroupsConfig The target groups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8017e6e27f4e464d54ac3f8fdb795873361e4735def7ddb9ba1e753fc1e521c9")
-      public
-          fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty.builder()
-
-      /**
-       * @param classicLoadBalancersConfig The Classic Load Balancers.
-       */
-      override fun classicLoadBalancersConfig(classicLoadBalancersConfig: IResolvable) {
-        cdkBuilder.classicLoadBalancersConfig(classicLoadBalancersConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param classicLoadBalancersConfig The Classic Load Balancers.
-       */
-      override
-          fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty) {
-        cdkBuilder.classicLoadBalancersConfig(classicLoadBalancersConfig.let(ClassicLoadBalancersConfigProperty::unwrap))
-      }
-
-      /**
-       * @param classicLoadBalancersConfig The Classic Load Balancers.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("25b177d5ab308e359fc68672e76e4f903124271a3a7479bab51b0656361308b0")
-      override
-          fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty.Builder.() -> Unit):
-          Unit =
-          classicLoadBalancersConfig(ClassicLoadBalancersConfigProperty(classicLoadBalancersConfig))
-
-      /**
-       * @param targetGroupsConfig The target groups.
-       */
-      override fun targetGroupsConfig(targetGroupsConfig: IResolvable) {
-        cdkBuilder.targetGroupsConfig(targetGroupsConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetGroupsConfig The target groups.
-       */
-      override fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty) {
-        cdkBuilder.targetGroupsConfig(targetGroupsConfig.let(TargetGroupsConfigProperty::unwrap))
-      }
-
-      /**
-       * @param targetGroupsConfig The target groups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8017e6e27f4e464d54ac3f8fdb795873361e4735def7ddb9ba1e753fc1e521c9")
-      override
-          fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty.Builder.() -> Unit):
-          Unit = targetGroupsConfig(TargetGroupsConfigProperty(targetGroupsConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty,
-    ) : CdkObject(cdkObject), LoadBalancersConfigProperty {
-      /**
-       * The Classic Load Balancers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)
-       */
-      override fun classicLoadBalancersConfig(): Any? = unwrap(this).getClassicLoadBalancersConfig()
-
-      /**
-       * The target groups.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)
-       */
-      override fun targetGroupsConfig(): Any? = unwrap(this).getTargetGroupsConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoadBalancersConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty):
-          LoadBalancersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LoadBalancersConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoadBalancersConfigProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum amount of baseline network bandwidth, in gigabits per second (Gbps).
-   *
-   * For more information, see [Amazon EC2 instance network
-   * bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html)
-   * in the *Amazon EC2 User Guide* .
-   *
-   * Default: No minimum or maximum limits
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * NetworkBandwidthGbpsRequestProperty networkBandwidthGbpsRequestProperty =
-   * NetworkBandwidthGbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html)
-   */
-  public interface NetworkBandwidthGbpsRequestProperty {
-    /**
-     * The maximum amount of network bandwidth, in Gbps.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html#cfn-ec2-spotfleet-networkbandwidthgbpsrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of network bandwidth, in Gbps.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html#cfn-ec2-spotfleet-networkbandwidthgbpsrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [NetworkBandwidthGbpsRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of network bandwidth, in Gbps.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of network bandwidth, in Gbps.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.builder()
-
-      /**
-       * @param max The maximum amount of network bandwidth, in Gbps.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of network bandwidth, in Gbps.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty,
-    ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
-      /**
-       * The maximum amount of network bandwidth, in Gbps.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html#cfn-ec2-spotfleet-networkbandwidthgbpsrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of network bandwidth, in Gbps.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-networkbandwidthgbpsrequest.html#cfn-ec2-spotfleet-networkbandwidthgbpsrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NetworkBandwidthGbpsRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty):
-          NetworkBandwidthGbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkBandwidthGbpsRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkBandwidthGbpsRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty
-    }
-  }
-
-  /**
-   * Specifies the Classic Load Balancers to attach to a Spot Fleet.
-   *
-   * Spot Fleet registers the running Spot Instances with these Classic Load Balancers.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * ClassicLoadBalancersConfigProperty classicLoadBalancersConfigProperty =
-   * ClassicLoadBalancersConfigProperty.builder()
-   * .classicLoadBalancers(List.of(ClassicLoadBalancerProperty.builder()
-   * .name("name")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html)
-   */
-  public interface ClassicLoadBalancersConfigProperty {
-    /**
-     * One or more Classic Load Balancers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)
-     */
-    public fun classicLoadBalancers(): Any
-
-    /**
-     * A builder for [ClassicLoadBalancersConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param classicLoadBalancers One or more Classic Load Balancers. 
-       */
-      public fun classicLoadBalancers(classicLoadBalancers: IResolvable)
-
-      /**
-       * @param classicLoadBalancers One or more Classic Load Balancers. 
-       */
-      public fun classicLoadBalancers(classicLoadBalancers: List<Any>)
-
-      /**
-       * @param classicLoadBalancers One or more Classic Load Balancers. 
-       */
-      public fun classicLoadBalancers(vararg classicLoadBalancers: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty.builder()
-
-      /**
-       * @param classicLoadBalancers One or more Classic Load Balancers. 
-       */
-      override fun classicLoadBalancers(classicLoadBalancers: IResolvable) {
-        cdkBuilder.classicLoadBalancers(classicLoadBalancers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param classicLoadBalancers One or more Classic Load Balancers. 
-       */
-      override fun classicLoadBalancers(classicLoadBalancers: List<Any>) {
-        cdkBuilder.classicLoadBalancers(classicLoadBalancers)
-      }
-
-      /**
-       * @param classicLoadBalancers One or more Classic Load Balancers. 
-       */
-      override fun classicLoadBalancers(vararg classicLoadBalancers: Any): Unit =
-          classicLoadBalancers(classicLoadBalancers.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty,
-    ) : CdkObject(cdkObject), ClassicLoadBalancersConfigProperty {
-      /**
-       * One or more Classic Load Balancers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)
-       */
-      override fun classicLoadBalancers(): Any = unwrap(this).getClassicLoadBalancers()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ClassicLoadBalancersConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty):
-          ClassicLoadBalancersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClassicLoadBalancersConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClassicLoadBalancersConfigProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty
     }
   }
 
@@ -10558,8 +10588,7 @@ public open class CfnSpotFleet internal constructor(
   }
 
   /**
-   * The strategies for managing your Spot Instances that are at an elevated risk of being
-   * interrupted.
+   * The minimum and maximum number of vCPUs.
    *
    * Example:
    *
@@ -10567,145 +10596,116 @@ public open class CfnSpotFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * SpotMaintenanceStrategiesProperty spotMaintenanceStrategiesProperty =
-   * SpotMaintenanceStrategiesProperty.builder()
-   * .capacityRebalance(SpotCapacityRebalanceProperty.builder()
-   * .replacementStrategy("replacementStrategy")
-   * .terminationDelay(123)
-   * .build())
+   * VCpuCountRangeRequestProperty vCpuCountRangeRequestProperty =
+   * VCpuCountRangeRequestProperty.builder()
+   * .max(123)
+   * .min(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html)
    */
-  public interface SpotMaintenanceStrategiesProperty {
+  public interface VCpuCountRangeRequestProperty {
     /**
-     * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot
-     * Instance is at an elevated risk of being interrupted.
+     * The maximum number of vCPUs.
      *
-     * For more information, see [Capacity
-     * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * To specify no maximum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html#cfn-ec2-spotfleet-spotmaintenancestrategies-capacityrebalance)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html#cfn-ec2-spotfleet-vcpucountrangerequest-max)
      */
-    public fun capacityRebalance(): Any? = unwrap(this).getCapacityRebalance()
+    public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * A builder for [SpotMaintenanceStrategiesProperty]
+     * The minimum number of vCPUs.
+     *
+     * To specify no minimum limit, specify `0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html#cfn-ec2-spotfleet-vcpucountrangerequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [VCpuCountRangeRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
-       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
-       * For more information, see [Capacity
-       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * @param max The maximum number of vCPUs.
+       * To specify no maximum limit, omit this parameter.
        */
-      public fun capacityRebalance(capacityRebalance: IResolvable)
+      public fun max(max: Number)
 
       /**
-       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
-       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
-       * For more information, see [Capacity
-       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * @param min The minimum number of vCPUs.
+       * To specify no minimum limit, specify `0` .
        */
-      public fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty)
-
-      /**
-       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
-       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
-       * For more information, see [Capacity
-       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2573a18d019a336fa9f65454022b27033103109b979f9370b6b039c2e26ba7e3")
-      public
-          fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty.Builder.() -> Unit)
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty.builder()
 
       /**
-       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
-       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
-       * For more information, see [Capacity
-       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * @param max The maximum number of vCPUs.
+       * To specify no maximum limit, omit this parameter.
        */
-      override fun capacityRebalance(capacityRebalance: IResolvable) {
-        cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable::unwrap))
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
       }
 
       /**
-       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
-       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
-       * For more information, see [Capacity
-       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * @param min The minimum number of vCPUs.
+       * To specify no minimum limit, specify `0` .
        */
-      override fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty) {
-        cdkBuilder.capacityRebalance(capacityRebalance.let(SpotCapacityRebalanceProperty::unwrap))
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
       }
-
-      /**
-       * @param capacityRebalance The Spot Instance replacement strategy to use when Amazon EC2
-       * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
-       * For more information, see [Capacity
-       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2573a18d019a336fa9f65454022b27033103109b979f9370b6b039c2e26ba7e3")
-      override
-          fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty.Builder.() -> Unit):
-          Unit = capacityRebalance(SpotCapacityRebalanceProperty(capacityRebalance))
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty,
-    ) : CdkObject(cdkObject), SpotMaintenanceStrategiesProperty {
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty,
+    ) : CdkObject(cdkObject), VCpuCountRangeRequestProperty {
       /**
-       * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot
-       * Instance is at an elevated risk of being interrupted.
+       * The maximum number of vCPUs.
        *
-       * For more information, see [Capacity
-       * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * To specify no maximum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html#cfn-ec2-spotfleet-spotmaintenancestrategies-capacityrebalance)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html#cfn-ec2-spotfleet-vcpucountrangerequest-max)
        */
-      override fun capacityRebalance(): Any? = unwrap(this).getCapacityRebalance()
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum number of vCPUs.
+       *
+       * To specify no minimum limit, specify `0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-vcpucountrangerequest.html#cfn-ec2-spotfleet-vcpucountrangerequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SpotMaintenanceStrategiesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VCpuCountRangeRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty):
-          SpotMaintenanceStrategiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SpotMaintenanceStrategiesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty):
+          VCpuCountRangeRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VCpuCountRangeRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SpotMaintenanceStrategiesProperty):
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty
+      internal fun unwrap(wrapped: VCpuCountRangeRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty
     }
   }
 }

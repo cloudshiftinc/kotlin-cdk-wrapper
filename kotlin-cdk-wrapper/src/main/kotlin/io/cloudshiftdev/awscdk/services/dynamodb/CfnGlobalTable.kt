@@ -1466,7 +1466,7 @@ public open class CfnGlobalTable internal constructor(
   }
 
   /**
-   * Defines a target tracking scaling policy.
+   * Represents an attribute for describing the schema for the table and indexes.
    *
    * Example:
    *
@@ -1474,646 +1474,118 @@ public open class CfnGlobalTable internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * TargetTrackingScalingPolicyConfigurationProperty
-   * targetTrackingScalingPolicyConfigurationProperty =
-   * TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html)
-   */
-  public interface TargetTrackingScalingPolicyConfigurationProperty {
-    /**
-     * Indicates whether scale in by the target tracking scaling policy is disabled.
-     *
-     * The default value is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-disablescalein)
-     */
-    public fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
-
-    /**
-     * The amount of time, in seconds, after a scale-in activity completes before another scale-in
-     * activity can start.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-scaleincooldown)
-     */
-    public fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
-
-    /**
-     * The amount of time, in seconds, after a scale-out activity completes before another scale-out
-     * activity can start.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-scaleoutcooldown)
-     */
-    public fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
-
-    /**
-     * Defines a target value for the scaling policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-targetvalue)
-     */
-    public fun targetValue(): Number
-
-    /**
-     * A builder for [TargetTrackingScalingPolicyConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
-       * disabled.
-       * The default value is `false` .
-       */
-      public fun disableScaleIn(disableScaleIn: Boolean)
-
-      /**
-       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
-       * disabled.
-       * The default value is `false` .
-       */
-      public fun disableScaleIn(disableScaleIn: IResolvable)
-
-      /**
-       * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
-       * before another scale-in activity can start.
-       */
-      public fun scaleInCooldown(scaleInCooldown: Number)
-
-      /**
-       * @param scaleOutCooldown The amount of time, in seconds, after a scale-out activity
-       * completes before another scale-out activity can start.
-       */
-      public fun scaleOutCooldown(scaleOutCooldown: Number)
-
-      /**
-       * @param targetValue Defines a target value for the scaling policy. 
-       */
-      public fun targetValue(targetValue: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty.builder()
-
-      /**
-       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
-       * disabled.
-       * The default value is `false` .
-       */
-      override fun disableScaleIn(disableScaleIn: Boolean) {
-        cdkBuilder.disableScaleIn(disableScaleIn)
-      }
-
-      /**
-       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
-       * disabled.
-       * The default value is `false` .
-       */
-      override fun disableScaleIn(disableScaleIn: IResolvable) {
-        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
-       * before another scale-in activity can start.
-       */
-      override fun scaleInCooldown(scaleInCooldown: Number) {
-        cdkBuilder.scaleInCooldown(scaleInCooldown)
-      }
-
-      /**
-       * @param scaleOutCooldown The amount of time, in seconds, after a scale-out activity
-       * completes before another scale-out activity can start.
-       */
-      override fun scaleOutCooldown(scaleOutCooldown: Number) {
-        cdkBuilder.scaleOutCooldown(scaleOutCooldown)
-      }
-
-      /**
-       * @param targetValue Defines a target value for the scaling policy. 
-       */
-      override fun targetValue(targetValue: Number) {
-        cdkBuilder.targetValue(targetValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingScalingPolicyConfigurationProperty {
-      /**
-       * Indicates whether scale in by the target tracking scaling policy is disabled.
-       *
-       * The default value is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-disablescalein)
-       */
-      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
-
-      /**
-       * The amount of time, in seconds, after a scale-in activity completes before another scale-in
-       * activity can start.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-scaleincooldown)
-       */
-      override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
-
-      /**
-       * The amount of time, in seconds, after a scale-out activity completes before another
-       * scale-out activity can start.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-scaleoutcooldown)
-       */
-      override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
-
-      /**
-       * Defines a target value for the scaling policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-targetvalue)
-       */
-      override fun targetValue(): Number = unwrap(this).getTargetValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetTrackingScalingPolicyConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty):
-          TargetTrackingScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetTrackingScalingPolicyConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetTrackingScalingPolicyConfigurationProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty
-    }
-  }
-
-  /**
-   * Represents the settings used to enable or disable Time to Live (TTL) for the specified table.
-   *
-   * All replicas will have the same time to live configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * TimeToLiveSpecificationProperty timeToLiveSpecificationProperty =
-   * TimeToLiveSpecificationProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
+   * AttributeDefinitionProperty attributeDefinitionProperty = AttributeDefinitionProperty.builder()
    * .attributeName("attributeName")
+   * .attributeType("attributeType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html)
    */
-  public interface TimeToLiveSpecificationProperty {
+  public interface AttributeDefinitionProperty {
     /**
-     * The name of the attribute used to store the expiration time for items in the table.
+     * A name for the attribute.
      *
-     * Currently, you cannot directly change the attribute name used to evaluate time to live. In
-     * order to do so, you must first disable time to live, and then re-enable it with the new
-     * attribute name. It can take up to one hour for changes to time to live to take effect. If you
-     * attempt to modify time to live within that time window, your stack operation might be delayed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html#cfn-dynamodb-globaltable-timetolivespecification-attributename)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html#cfn-dynamodb-globaltable-attributedefinition-attributename)
      */
-    public fun attributeName(): String? = unwrap(this).getAttributeName()
+    public fun attributeName(): String
 
     /**
-     * Indicates whether TTL is to be enabled (true) or disabled (false) on the table.
+     * The data type for the attribute, where:.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html#cfn-dynamodb-globaltable-timetolivespecification-enabled)
+     * * `S` - the attribute is of type String
+     * * `N` - the attribute is of type Number
+     * * `B` - the attribute is of type Binary
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html#cfn-dynamodb-globaltable-attributedefinition-attributetype)
      */
-    public fun enabled(): Any
+    public fun attributeType(): String
 
     /**
-     * A builder for [TimeToLiveSpecificationProperty]
+     * A builder for [AttributeDefinitionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attributeName The name of the attribute used to store the expiration time for items
-       * in the table.
-       * Currently, you cannot directly change the attribute name used to evaluate time to live. In
-       * order to do so, you must first disable time to live, and then re-enable it with the new
-       * attribute name. It can take up to one hour for changes to time to live to take effect. If you
-       * attempt to modify time to live within that time window, your stack operation might be delayed.
+       * @param attributeName A name for the attribute. 
        */
       public fun attributeName(attributeName: String)
 
       /**
-       * @param enabled Indicates whether TTL is to be enabled (true) or disabled (false) on the
-       * table. 
+       * @param attributeType The data type for the attribute, where:. 
+       * * `S` - the attribute is of type String
+       * * `N` - the attribute is of type Number
+       * * `B` - the attribute is of type Binary
        */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Indicates whether TTL is to be enabled (true) or disabled (false) on the
-       * table. 
-       */
-      public fun enabled(enabled: IResolvable)
+      public fun attributeType(attributeType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty.Builder
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty.Builder
           =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty.builder()
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty.builder()
 
       /**
-       * @param attributeName The name of the attribute used to store the expiration time for items
-       * in the table.
-       * Currently, you cannot directly change the attribute name used to evaluate time to live. In
-       * order to do so, you must first disable time to live, and then re-enable it with the new
-       * attribute name. It can take up to one hour for changes to time to live to take effect. If you
-       * attempt to modify time to live within that time window, your stack operation might be delayed.
+       * @param attributeName A name for the attribute. 
        */
       override fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
       }
 
       /**
-       * @param enabled Indicates whether TTL is to be enabled (true) or disabled (false) on the
-       * table. 
+       * @param attributeType The data type for the attribute, where:. 
+       * * `S` - the attribute is of type String
+       * * `N` - the attribute is of type Number
+       * * `B` - the attribute is of type Binary
        */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Indicates whether TTL is to be enabled (true) or disabled (false) on the
-       * table. 
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      override fun attributeType(attributeType: String) {
+        cdkBuilder.attributeType(attributeType)
       }
 
       public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty,
-    ) : CdkObject(cdkObject), TimeToLiveSpecificationProperty {
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty,
+    ) : CdkObject(cdkObject), AttributeDefinitionProperty {
       /**
-       * The name of the attribute used to store the expiration time for items in the table.
+       * A name for the attribute.
        *
-       * Currently, you cannot directly change the attribute name used to evaluate time to live. In
-       * order to do so, you must first disable time to live, and then re-enable it with the new
-       * attribute name. It can take up to one hour for changes to time to live to take effect. If you
-       * attempt to modify time to live within that time window, your stack operation might be delayed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html#cfn-dynamodb-globaltable-timetolivespecification-attributename)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html#cfn-dynamodb-globaltable-attributedefinition-attributename)
        */
-      override fun attributeName(): String? = unwrap(this).getAttributeName()
+      override fun attributeName(): String = unwrap(this).getAttributeName()
 
       /**
-       * Indicates whether TTL is to be enabled (true) or disabled (false) on the table.
+       * The data type for the attribute, where:.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html#cfn-dynamodb-globaltable-timetolivespecification-enabled)
+       * * `S` - the attribute is of type String
+       * * `N` - the attribute is of type Number
+       * * `B` - the attribute is of type Binary
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html#cfn-dynamodb-globaltable-attributedefinition-attributetype)
        */
-      override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun attributeType(): String = unwrap(this).getAttributeType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimeToLiveSpecificationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeDefinitionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty):
-          TimeToLiveSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TimeToLiveSpecificationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty):
+          AttributeDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AttributeDefinitionProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TimeToLiveSpecificationProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty =
+      internal fun unwrap(wrapped: AttributeDefinitionProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty
-    }
-  }
-
-  /**
-   * Represents attributes that are copied (projected) from the table into an index.
-   *
-   * These are in addition to the primary key attributes and index key attributes, which are
-   * automatically projected.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * ProjectionProperty projectionProperty = ProjectionProperty.builder()
-   * .nonKeyAttributes(List.of("nonKeyAttributes"))
-   * .projectionType("projectionType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html)
-   */
-  public interface ProjectionProperty {
-    /**
-     * Represents the non-key attribute names which will be projected into the index.
-     *
-     * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-     * local secondary indexes, must not exceed 100. If you project the same attribute into two
-     * different indexes, this counts as two distinct attributes when determining the total.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-nonkeyattributes)
-     */
-    public fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?: emptyList()
-
-    /**
-     * The set of attributes that are projected into the index:.
-     *
-     * * `KEYS_ONLY` - Only the index and primary keys are projected into the index.
-     * * `INCLUDE` - In addition to the attributes described in `KEYS_ONLY` , the secondary index
-     * will include other non-key attributes that you specify.
-     * * `ALL` - All of the table attributes are projected into the index.
-     *
-     * When using the DynamoDB console, `ALL` is selected by default.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-projectiontype)
-     */
-    public fun projectionType(): String? = unwrap(this).getProjectionType()
-
-    /**
-     * A builder for [ProjectionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
-       * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
-       */
-      public fun nonKeyAttributes(nonKeyAttributes: List<String>)
-
-      /**
-       * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
-       * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
-       */
-      public fun nonKeyAttributes(vararg nonKeyAttributes: String)
-
-      /**
-       * @param projectionType The set of attributes that are projected into the index:.
-       * * `KEYS_ONLY` - Only the index and primary keys are projected into the index.
-       * * `INCLUDE` - In addition to the attributes described in `KEYS_ONLY` , the secondary index
-       * will include other non-key attributes that you specify.
-       * * `ALL` - All of the table attributes are projected into the index.
-       *
-       * When using the DynamoDB console, `ALL` is selected by default.
-       */
-      public fun projectionType(projectionType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty.Builder =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty.builder()
-
-      /**
-       * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
-       * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
-       */
-      override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
-        cdkBuilder.nonKeyAttributes(nonKeyAttributes)
-      }
-
-      /**
-       * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
-       * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
-       */
-      override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
-          nonKeyAttributes(nonKeyAttributes.toList())
-
-      /**
-       * @param projectionType The set of attributes that are projected into the index:.
-       * * `KEYS_ONLY` - Only the index and primary keys are projected into the index.
-       * * `INCLUDE` - In addition to the attributes described in `KEYS_ONLY` , the secondary index
-       * will include other non-key attributes that you specify.
-       * * `ALL` - All of the table attributes are projected into the index.
-       *
-       * When using the DynamoDB console, `ALL` is selected by default.
-       */
-      override fun projectionType(projectionType: String) {
-        cdkBuilder.projectionType(projectionType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty,
-    ) : CdkObject(cdkObject), ProjectionProperty {
-      /**
-       * Represents the non-key attribute names which will be projected into the index.
-       *
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-nonkeyattributes)
-       */
-      override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
-          emptyList()
-
-      /**
-       * The set of attributes that are projected into the index:.
-       *
-       * * `KEYS_ONLY` - Only the index and primary keys are projected into the index.
-       * * `INCLUDE` - In addition to the attributes described in `KEYS_ONLY` , the secondary index
-       * will include other non-key attributes that you specify.
-       * * `ALL` - All of the table attributes are projected into the index.
-       *
-       * When using the DynamoDB console, `ALL` is selected by default.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-projectiontype)
-       */
-      override fun projectionType(): String? = unwrap(this).getProjectionType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty):
-          ProjectionProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProjectionProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty
-    }
-  }
-
-  /**
-   * Represents the DynamoDB Streams configuration for a table in DynamoDB.
-   *
-   * You can only modify this value if your `AWS::DynamoDB::GlobalTable` contains only one entry in
-   * `Replicas` . You must specify a value for this property if your `AWS::DynamoDB::GlobalTable`
-   * contains more than one replica.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * StreamSpecificationProperty streamSpecificationProperty = StreamSpecificationProperty.builder()
-   * .streamViewType("streamViewType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-streamspecification.html)
-   */
-  public interface StreamSpecificationProperty {
-    /**
-     * When an item in the table is modified, `StreamViewType` determines what information is
-     * written to the stream for this table.
-     *
-     * Valid values for `StreamViewType` are:
-     *
-     * * `KEYS_ONLY` - Only the key attributes of the modified item are written to the stream.
-     * * `NEW_IMAGE` - The entire item, as it appears after it was modified, is written to the
-     * stream.
-     * * `OLD_IMAGE` - The entire item, as it appeared before it was modified, is written to the
-     * stream.
-     * * `NEW_AND_OLD_IMAGES` - Both the new and the old item images of the item are written to the
-     * stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-streamspecification.html#cfn-dynamodb-globaltable-streamspecification-streamviewtype)
-     */
-    public fun streamViewType(): String
-
-    /**
-     * A builder for [StreamSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param streamViewType When an item in the table is modified, `StreamViewType` determines
-       * what information is written to the stream for this table. 
-       * Valid values for `StreamViewType` are:
-       *
-       * * `KEYS_ONLY` - Only the key attributes of the modified item are written to the stream.
-       * * `NEW_IMAGE` - The entire item, as it appears after it was modified, is written to the
-       * stream.
-       * * `OLD_IMAGE` - The entire item, as it appeared before it was modified, is written to the
-       * stream.
-       * * `NEW_AND_OLD_IMAGES` - Both the new and the old item images of the item are written to
-       * the stream.
-       */
-      public fun streamViewType(streamViewType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty.builder()
-
-      /**
-       * @param streamViewType When an item in the table is modified, `StreamViewType` determines
-       * what information is written to the stream for this table. 
-       * Valid values for `StreamViewType` are:
-       *
-       * * `KEYS_ONLY` - Only the key attributes of the modified item are written to the stream.
-       * * `NEW_IMAGE` - The entire item, as it appears after it was modified, is written to the
-       * stream.
-       * * `OLD_IMAGE` - The entire item, as it appeared before it was modified, is written to the
-       * stream.
-       * * `NEW_AND_OLD_IMAGES` - Both the new and the old item images of the item are written to
-       * the stream.
-       */
-      override fun streamViewType(streamViewType: String) {
-        cdkBuilder.streamViewType(streamViewType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty,
-    ) : CdkObject(cdkObject), StreamSpecificationProperty {
-      /**
-       * When an item in the table is modified, `StreamViewType` determines what information is
-       * written to the stream for this table.
-       *
-       * Valid values for `StreamViewType` are:
-       *
-       * * `KEYS_ONLY` - Only the key attributes of the modified item are written to the stream.
-       * * `NEW_IMAGE` - The entire item, as it appears after it was modified, is written to the
-       * stream.
-       * * `OLD_IMAGE` - The entire item, as it appeared before it was modified, is written to the
-       * stream.
-       * * `NEW_AND_OLD_IMAGES` - Both the new and the old item images of the item are written to
-       * the stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-streamspecification.html#cfn-dynamodb-globaltable-streamspecification-streamviewtype)
-       */
-      override fun streamViewType(): String = unwrap(this).getStreamViewType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StreamSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty):
-          StreamSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StreamSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StreamSpecificationProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty
     }
   }
 
@@ -2405,6 +1877,1936 @@ public open class CfnGlobalTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.CapacityAutoScalingSettingsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.CapacityAutoScalingSettingsProperty
+    }
+  }
+
+  /**
+   * Configures contributor insights settings for a replica or one of its indexes.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * ContributorInsightsSpecificationProperty contributorInsightsSpecificationProperty =
+   * ContributorInsightsSpecificationProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-contributorinsightsspecification.html)
+   */
+  public interface ContributorInsightsSpecificationProperty {
+    /**
+     * Indicates whether CloudWatch Contributor Insights are to be enabled (true) or disabled
+     * (false).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-contributorinsightsspecification.html#cfn-dynamodb-globaltable-contributorinsightsspecification-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [ContributorInsightsSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true)
+       * or disabled (false). 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true)
+       * or disabled (false). 
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty.builder()
+
+      /**
+       * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true)
+       * or disabled (false). 
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true)
+       * or disabled (false). 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty,
+    ) : CdkObject(cdkObject), ContributorInsightsSpecificationProperty {
+      /**
+       * Indicates whether CloudWatch Contributor Insights are to be enabled (true) or disabled
+       * (false).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-contributorinsightsspecification.html#cfn-dynamodb-globaltable-contributorinsightsspecification-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ContributorInsightsSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty):
+          ContributorInsightsSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContributorInsightsSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContributorInsightsSpecificationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty
+    }
+  }
+
+  /**
+   * Allows you to specify a global secondary index for the global table.
+   *
+   * The index will be defined on all replicas.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * GlobalSecondaryIndexProperty globalSecondaryIndexProperty =
+   * GlobalSecondaryIndexProperty.builder()
+   * .indexName("indexName")
+   * .keySchema(List.of(KeySchemaProperty.builder()
+   * .attributeName("attributeName")
+   * .keyType("keyType")
+   * .build()))
+   * .projection(ProjectionProperty.builder()
+   * .nonKeyAttributes(List.of("nonKeyAttributes"))
+   * .projectionType("projectionType")
+   * .build())
+   * // the properties below are optional
+   * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
+   * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
+   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build())
+   * // the properties below are optional
+   * .seedCapacity(123)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html)
+   */
+  public interface GlobalSecondaryIndexProperty {
+    /**
+     * The name of the global secondary index.
+     *
+     * The name must be unique among all other indexes on this table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-indexname)
+     */
+    public fun indexName(): String
+
+    /**
+     * The complete key schema for a global secondary index, which consists of one or more pairs of
+     * attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key  &gt; The
+     * partition key of an item is also known as its *hash attribute* .
+     *
+     * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+     * evenly distribute data items across partitions, based on their partition key values.
+     *
+     *
+     * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+     * derives from the way DynamoDB stores items with the same partition key physically close
+     * together, in sorted order by the sort key value.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-keyschema)
+     */
+    public fun keySchema(): Any
+
+    /**
+     * Represents attributes that are copied (projected) from the table into the global secondary
+     * index.
+     *
+     * These are in addition to the primary key attributes and index key attributes, which are
+     * automatically projected.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-projection)
+     */
+    public fun projection(): Any
+
+    /**
+     * Defines write capacity settings for the global secondary index.
+     *
+     * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
+     * All replicas will have the same write capacity settings for this global secondary index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-writeprovisionedthroughputsettings)
+     */
+    public fun writeProvisionedThroughputSettings(): Any? =
+        unwrap(this).getWriteProvisionedThroughputSettings()
+
+    /**
+     * A builder for [GlobalSecondaryIndexProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param indexName The name of the global secondary index. 
+       * The name must be unique among all other indexes on this table.
+       */
+      public fun indexName(indexName: String)
+
+      /**
+       * @param keySchema The complete key schema for a global secondary index, which consists of
+       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
+       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      public fun keySchema(keySchema: IResolvable)
+
+      /**
+       * @param keySchema The complete key schema for a global secondary index, which consists of
+       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
+       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      public fun keySchema(keySchema: List<Any>)
+
+      /**
+       * @param keySchema The complete key schema for a global secondary index, which consists of
+       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
+       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      public fun keySchema(vararg keySchema: Any)
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * global secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      public fun projection(projection: IResolvable)
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * global secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      public fun projection(projection: ProjectionProperty)
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * global secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f58d5331a2b6e0e2a944808861029f8d5207b9bfe0b220f19868469cc21f4955")
+      public fun projection(projection: ProjectionProperty.Builder.() -> Unit)
+
+      /**
+       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
+       * secondary index.
+       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
+       * All replicas will have the same write capacity settings for this global secondary index.
+       */
+      public fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: IResolvable)
+
+      /**
+       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
+       * secondary index.
+       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
+       * All replicas will have the same write capacity settings for this global secondary index.
+       */
+      public
+          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: WriteProvisionedThroughputSettingsProperty)
+
+      /**
+       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
+       * secondary index.
+       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
+       * All replicas will have the same write capacity settings for this global secondary index.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a0a9a3e1aa0c2088ddba833b9a25dc013a4c95a011c4e48781b132398f502f21")
+      public
+          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: WriteProvisionedThroughputSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty.builder()
+
+      /**
+       * @param indexName The name of the global secondary index. 
+       * The name must be unique among all other indexes on this table.
+       */
+      override fun indexName(indexName: String) {
+        cdkBuilder.indexName(indexName)
+      }
+
+      /**
+       * @param keySchema The complete key schema for a global secondary index, which consists of
+       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
+       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      override fun keySchema(keySchema: IResolvable) {
+        cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keySchema The complete key schema for a global secondary index, which consists of
+       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
+       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      override fun keySchema(keySchema: List<Any>) {
+        cdkBuilder.keySchema(keySchema)
+      }
+
+      /**
+       * @param keySchema The complete key schema for a global secondary index, which consists of
+       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
+       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * global secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      override fun projection(projection: IResolvable) {
+        cdkBuilder.projection(projection.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * global secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      override fun projection(projection: ProjectionProperty) {
+        cdkBuilder.projection(projection.let(ProjectionProperty::unwrap))
+      }
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * global secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f58d5331a2b6e0e2a944808861029f8d5207b9bfe0b220f19868469cc21f4955")
+      override fun projection(projection: ProjectionProperty.Builder.() -> Unit): Unit =
+          projection(ProjectionProperty(projection))
+
+      /**
+       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
+       * secondary index.
+       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
+       * All replicas will have the same write capacity settings for this global secondary index.
+       */
+      override
+          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: IResolvable) {
+        cdkBuilder.writeProvisionedThroughputSettings(writeProvisionedThroughputSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
+       * secondary index.
+       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
+       * All replicas will have the same write capacity settings for this global secondary index.
+       */
+      override
+          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: WriteProvisionedThroughputSettingsProperty) {
+        cdkBuilder.writeProvisionedThroughputSettings(writeProvisionedThroughputSettings.let(WriteProvisionedThroughputSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
+       * secondary index.
+       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
+       * All replicas will have the same write capacity settings for this global secondary index.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a0a9a3e1aa0c2088ddba833b9a25dc013a4c95a011c4e48781b132398f502f21")
+      override
+          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: WriteProvisionedThroughputSettingsProperty.Builder.() -> Unit):
+          Unit =
+          writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty(writeProvisionedThroughputSettings))
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty,
+    ) : CdkObject(cdkObject), GlobalSecondaryIndexProperty {
+      /**
+       * The name of the global secondary index.
+       *
+       * The name must be unique among all other indexes on this table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-indexname)
+       */
+      override fun indexName(): String = unwrap(this).getIndexName()
+
+      /**
+       * The complete key schema for a global secondary index, which consists of one or more pairs
+       * of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key  &gt; The
+       * partition key of an item is also known as its *hash attribute* .
+       *
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-keyschema)
+       */
+      override fun keySchema(): Any = unwrap(this).getKeySchema()
+
+      /**
+       * Represents attributes that are copied (projected) from the table into the global secondary
+       * index.
+       *
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-projection)
+       */
+      override fun projection(): Any = unwrap(this).getProjection()
+
+      /**
+       * Defines write capacity settings for the global secondary index.
+       *
+       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
+       * All replicas will have the same write capacity settings for this global secondary index.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-writeprovisionedthroughputsettings)
+       */
+      override fun writeProvisionedThroughputSettings(): Any? =
+          unwrap(this).getWriteProvisionedThroughputSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GlobalSecondaryIndexProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty):
+          GlobalSecondaryIndexProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlobalSecondaryIndexProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GlobalSecondaryIndexProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty
+    }
+  }
+
+  /**
+   * Represents *a single element* of a key schema.
+   *
+   * A key schema specifies the attributes that make up the primary key of a table, or the key
+   * attributes of an index.
+   *
+   * A `KeySchemaElement` represents exactly one attribute of the primary key. For example, a simple
+   * primary key would be represented by one `KeySchemaElement` (for the partition key). A composite
+   * primary key would require one `KeySchemaElement` for the partition key, and another
+   * `KeySchemaElement` for the sort key.
+   *
+   * A `KeySchemaElement` must be a scalar, top-level attribute (not a nested attribute). The data
+   * type must be one of String, Number, or Binary. The attribute cannot be nested within a List or a
+   * Map.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * KeySchemaProperty keySchemaProperty = KeySchemaProperty.builder()
+   * .attributeName("attributeName")
+   * .keyType("keyType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html)
+   */
+  public interface KeySchemaProperty {
+    /**
+     * The name of a key attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html#cfn-dynamodb-globaltable-keyschema-attributename)
+     */
+    public fun attributeName(): String
+
+    /**
+     * The role that this key attribute will assume:.
+     *
+     * * `HASH` - partition key
+     * * `RANGE` - sort key
+     *
+     *
+     * The partition key of an item is also known as its *hash attribute* . The term "hash
+     * attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute data
+     * items across partitions, based on their partition key values.
+     *
+     * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+     * derives from the way DynamoDB stores items with the same partition key physically close
+     * together, in sorted order by the sort key value.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html#cfn-dynamodb-globaltable-keyschema-keytype)
+     */
+    public fun keyType(): String
+
+    /**
+     * A builder for [KeySchemaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeName The name of a key attribute. 
+       */
+      public fun attributeName(attributeName: String)
+
+      /**
+       * @param keyType The role that this key attribute will assume:. 
+       * * `HASH` - partition key
+       * * `RANGE` - sort key
+       *
+       *
+       * The partition key of an item is also known as its *hash attribute* . The term "hash
+       * attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute
+       * data items across partitions, based on their partition key values.
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      public fun keyType(keyType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty.Builder =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty.builder()
+
+      /**
+       * @param attributeName The name of a key attribute. 
+       */
+      override fun attributeName(attributeName: String) {
+        cdkBuilder.attributeName(attributeName)
+      }
+
+      /**
+       * @param keyType The role that this key attribute will assume:. 
+       * * `HASH` - partition key
+       * * `RANGE` - sort key
+       *
+       *
+       * The partition key of an item is also known as its *hash attribute* . The term "hash
+       * attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute
+       * data items across partitions, based on their partition key values.
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      override fun keyType(keyType: String) {
+        cdkBuilder.keyType(keyType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty,
+    ) : CdkObject(cdkObject), KeySchemaProperty {
+      /**
+       * The name of a key attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html#cfn-dynamodb-globaltable-keyschema-attributename)
+       */
+      override fun attributeName(): String = unwrap(this).getAttributeName()
+
+      /**
+       * The role that this key attribute will assume:.
+       *
+       * * `HASH` - partition key
+       * * `RANGE` - sort key
+       *
+       *
+       * The partition key of an item is also known as its *hash attribute* . The term "hash
+       * attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute
+       * data items across partitions, based on their partition key values.
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html#cfn-dynamodb-globaltable-keyschema-keytype)
+       */
+      override fun keyType(): String = unwrap(this).getKeyType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeySchemaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty):
+          KeySchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? KeySchemaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeySchemaProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty
+    }
+  }
+
+  /**
+   * The Kinesis Data Streams configuration for the specified global table replica.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * KinesisStreamSpecificationProperty kinesisStreamSpecificationProperty =
+   * KinesisStreamSpecificationProperty.builder()
+   * .streamArn("streamArn")
+   * // the properties below are optional
+   * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html)
+   */
+  public interface KinesisStreamSpecificationProperty {
+    /**
+     * The precision for the time and date that the stream was created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html#cfn-dynamodb-globaltable-kinesisstreamspecification-approximatecreationdatetimeprecision)
+     */
+    public fun approximateCreationDateTimePrecision(): String? =
+        unwrap(this).getApproximateCreationDateTimePrecision()
+
+    /**
+     * The ARN for a specific Kinesis data stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html#cfn-dynamodb-globaltable-kinesisstreamspecification-streamarn)
+     */
+    public fun streamArn(): String
+
+    /**
+     * A builder for [KinesisStreamSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param approximateCreationDateTimePrecision The precision for the time and date that the
+       * stream was created.
+       */
+      public fun approximateCreationDateTimePrecision(approximateCreationDateTimePrecision: String)
+
+      /**
+       * @param streamArn The ARN for a specific Kinesis data stream. 
+       */
+      public fun streamArn(streamArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty.builder()
+
+      /**
+       * @param approximateCreationDateTimePrecision The precision for the time and date that the
+       * stream was created.
+       */
+      override
+          fun approximateCreationDateTimePrecision(approximateCreationDateTimePrecision: String) {
+        cdkBuilder.approximateCreationDateTimePrecision(approximateCreationDateTimePrecision)
+      }
+
+      /**
+       * @param streamArn The ARN for a specific Kinesis data stream. 
+       */
+      override fun streamArn(streamArn: String) {
+        cdkBuilder.streamArn(streamArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty,
+    ) : CdkObject(cdkObject), KinesisStreamSpecificationProperty {
+      /**
+       * The precision for the time and date that the stream was created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html#cfn-dynamodb-globaltable-kinesisstreamspecification-approximatecreationdatetimeprecision)
+       */
+      override fun approximateCreationDateTimePrecision(): String? =
+          unwrap(this).getApproximateCreationDateTimePrecision()
+
+      /**
+       * The ARN for a specific Kinesis data stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html#cfn-dynamodb-globaltable-kinesisstreamspecification-streamarn)
+       */
+      override fun streamArn(): String = unwrap(this).getStreamArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          KinesisStreamSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty):
+          KinesisStreamSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisStreamSpecificationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty
+    }
+  }
+
+  /**
+   * Represents the properties of a local secondary index.
+   *
+   * A local secondary index can only be created when its parent table is created.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * LocalSecondaryIndexProperty localSecondaryIndexProperty = LocalSecondaryIndexProperty.builder()
+   * .indexName("indexName")
+   * .keySchema(List.of(KeySchemaProperty.builder()
+   * .attributeName("attributeName")
+   * .keyType("keyType")
+   * .build()))
+   * .projection(ProjectionProperty.builder()
+   * .nonKeyAttributes(List.of("nonKeyAttributes"))
+   * .projectionType("projectionType")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html)
+   */
+  public interface LocalSecondaryIndexProperty {
+    /**
+     * The name of the local secondary index.
+     *
+     * The name must be unique among all other indexes on this table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-indexname)
+     */
+    public fun indexName(): String
+
+    /**
+     * The complete key schema for the local secondary index, consisting of one or more pairs of
+     * attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key  &gt; The
+     * partition key of an item is also known as its *hash attribute* .
+     *
+     * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+     * evenly distribute data items across partitions, based on their partition key values.
+     *
+     *
+     * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+     * derives from the way DynamoDB stores items with the same partition key physically close
+     * together, in sorted order by the sort key value.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-keyschema)
+     */
+    public fun keySchema(): Any
+
+    /**
+     * Represents attributes that are copied (projected) from the table into the local secondary
+     * index.
+     *
+     * These are in addition to the primary key attributes and index key attributes, which are
+     * automatically projected.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-projection)
+     */
+    public fun projection(): Any
+
+    /**
+     * A builder for [LocalSecondaryIndexProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param indexName The name of the local secondary index. 
+       * The name must be unique among all other indexes on this table.
+       */
+      public fun indexName(indexName: String)
+
+      /**
+       * @param keySchema The complete key schema for the local secondary index, consisting of one
+       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
+       *  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      public fun keySchema(keySchema: IResolvable)
+
+      /**
+       * @param keySchema The complete key schema for the local secondary index, consisting of one
+       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
+       *  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      public fun keySchema(keySchema: List<Any>)
+
+      /**
+       * @param keySchema The complete key schema for the local secondary index, consisting of one
+       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
+       *  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      public fun keySchema(vararg keySchema: Any)
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * local secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      public fun projection(projection: IResolvable)
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * local secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      public fun projection(projection: ProjectionProperty)
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * local secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0e4589d72bff11e2c15ac41559d1db3d78d20953e627958ae218cee61bd0aea9")
+      public fun projection(projection: ProjectionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty.builder()
+
+      /**
+       * @param indexName The name of the local secondary index. 
+       * The name must be unique among all other indexes on this table.
+       */
+      override fun indexName(indexName: String) {
+        cdkBuilder.indexName(indexName)
+      }
+
+      /**
+       * @param keySchema The complete key schema for the local secondary index, consisting of one
+       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
+       *  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      override fun keySchema(keySchema: IResolvable) {
+        cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keySchema The complete key schema for the local secondary index, consisting of one
+       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
+       *  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      override fun keySchema(keySchema: List<Any>) {
+        cdkBuilder.keySchema(keySchema)
+      }
+
+      /**
+       * @param keySchema The complete key schema for the local secondary index, consisting of one
+       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
+       *  &gt; The partition key of an item is also known as its *hash attribute* . 
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       */
+      override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * local secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      override fun projection(projection: IResolvable) {
+        cdkBuilder.projection(projection.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * local secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      override fun projection(projection: ProjectionProperty) {
+        cdkBuilder.projection(projection.let(ProjectionProperty::unwrap))
+      }
+
+      /**
+       * @param projection Represents attributes that are copied (projected) from the table into the
+       * local secondary index. 
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0e4589d72bff11e2c15ac41559d1db3d78d20953e627958ae218cee61bd0aea9")
+      override fun projection(projection: ProjectionProperty.Builder.() -> Unit): Unit =
+          projection(ProjectionProperty(projection))
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty,
+    ) : CdkObject(cdkObject), LocalSecondaryIndexProperty {
+      /**
+       * The name of the local secondary index.
+       *
+       * The name must be unique among all other indexes on this table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-indexname)
+       */
+      override fun indexName(): String = unwrap(this).getIndexName()
+
+      /**
+       * The complete key schema for the local secondary index, consisting of one or more pairs of
+       * attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key  &gt; The
+       * partition key of an item is also known as its *hash attribute* .
+       *
+       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
+       * evenly distribute data items across partitions, based on their partition key values.
+       *
+       *
+       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
+       * derives from the way DynamoDB stores items with the same partition key physically close
+       * together, in sorted order by the sort key value.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-keyschema)
+       */
+      override fun keySchema(): Any = unwrap(this).getKeySchema()
+
+      /**
+       * Represents attributes that are copied (projected) from the table into the local secondary
+       * index.
+       *
+       * These are in addition to the primary key attributes and index key attributes, which are
+       * automatically projected.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-projection)
+       */
+      override fun projection(): Any = unwrap(this).getProjection()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LocalSecondaryIndexProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty):
+          LocalSecondaryIndexProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LocalSecondaryIndexProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LocalSecondaryIndexProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty
+    }
+  }
+
+  /**
+   * Represents the settings used to enable point in time recovery.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * PointInTimeRecoverySpecificationProperty pointInTimeRecoverySpecificationProperty =
+   * PointInTimeRecoverySpecificationProperty.builder()
+   * .pointInTimeRecoveryEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html)
+   */
+  public interface PointInTimeRecoverySpecificationProperty {
+    /**
+     * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html#cfn-dynamodb-globaltable-pointintimerecoveryspecification-pointintimerecoveryenabled)
+     */
+    public fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
+
+    /**
+     * A builder for [PointInTimeRecoverySpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled
+       * (true) or disabled (false) on the table.
+       */
+      public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean)
+
+      /**
+       * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled
+       * (true) or disabled (false) on the table.
+       */
+      public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty.builder()
+
+      /**
+       * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled
+       * (true) or disabled (false) on the table.
+       */
+      override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
+        cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
+      }
+
+      /**
+       * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled
+       * (true) or disabled (false) on the table.
+       */
+      override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
+        cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty,
+    ) : CdkObject(cdkObject), PointInTimeRecoverySpecificationProperty {
+      /**
+       * Indicates whether point in time recovery is enabled (true) or disabled (false) on the
+       * table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html#cfn-dynamodb-globaltable-pointintimerecoveryspecification-pointintimerecoveryenabled)
+       */
+      override fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PointInTimeRecoverySpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty):
+          PointInTimeRecoverySpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PointInTimeRecoverySpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PointInTimeRecoverySpecificationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty
+    }
+  }
+
+  /**
+   * Represents attributes that are copied (projected) from the table into an index.
+   *
+   * These are in addition to the primary key attributes and index key attributes, which are
+   * automatically projected.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * ProjectionProperty projectionProperty = ProjectionProperty.builder()
+   * .nonKeyAttributes(List.of("nonKeyAttributes"))
+   * .projectionType("projectionType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html)
+   */
+  public interface ProjectionProperty {
+    /**
+     * Represents the non-key attribute names which will be projected into the index.
+     *
+     * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
+     * local secondary indexes, must not exceed 100. If you project the same attribute into two
+     * different indexes, this counts as two distinct attributes when determining the total.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-nonkeyattributes)
+     */
+    public fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?: emptyList()
+
+    /**
+     * The set of attributes that are projected into the index:.
+     *
+     * * `KEYS_ONLY` - Only the index and primary keys are projected into the index.
+     * * `INCLUDE` - In addition to the attributes described in `KEYS_ONLY` , the secondary index
+     * will include other non-key attributes that you specify.
+     * * `ALL` - All of the table attributes are projected into the index.
+     *
+     * When using the DynamoDB console, `ALL` is selected by default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-projectiontype)
+     */
+    public fun projectionType(): String? = unwrap(this).getProjectionType()
+
+    /**
+     * A builder for [ProjectionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
+       * the index.
+       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
+       * local secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total.
+       */
+      public fun nonKeyAttributes(nonKeyAttributes: List<String>)
+
+      /**
+       * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
+       * the index.
+       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
+       * local secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total.
+       */
+      public fun nonKeyAttributes(vararg nonKeyAttributes: String)
+
+      /**
+       * @param projectionType The set of attributes that are projected into the index:.
+       * * `KEYS_ONLY` - Only the index and primary keys are projected into the index.
+       * * `INCLUDE` - In addition to the attributes described in `KEYS_ONLY` , the secondary index
+       * will include other non-key attributes that you specify.
+       * * `ALL` - All of the table attributes are projected into the index.
+       *
+       * When using the DynamoDB console, `ALL` is selected by default.
+       */
+      public fun projectionType(projectionType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty.Builder =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty.builder()
+
+      /**
+       * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
+       * the index.
+       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
+       * local secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total.
+       */
+      override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
+        cdkBuilder.nonKeyAttributes(nonKeyAttributes)
+      }
+
+      /**
+       * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
+       * the index.
+       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
+       * local secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total.
+       */
+      override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
+          nonKeyAttributes(nonKeyAttributes.toList())
+
+      /**
+       * @param projectionType The set of attributes that are projected into the index:.
+       * * `KEYS_ONLY` - Only the index and primary keys are projected into the index.
+       * * `INCLUDE` - In addition to the attributes described in `KEYS_ONLY` , the secondary index
+       * will include other non-key attributes that you specify.
+       * * `ALL` - All of the table attributes are projected into the index.
+       *
+       * When using the DynamoDB console, `ALL` is selected by default.
+       */
+      override fun projectionType(projectionType: String) {
+        cdkBuilder.projectionType(projectionType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty,
+    ) : CdkObject(cdkObject), ProjectionProperty {
+      /**
+       * Represents the non-key attribute names which will be projected into the index.
+       *
+       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
+       * local secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-nonkeyattributes)
+       */
+      override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
+          emptyList()
+
+      /**
+       * The set of attributes that are projected into the index:.
+       *
+       * * `KEYS_ONLY` - Only the index and primary keys are projected into the index.
+       * * `INCLUDE` - In addition to the attributes described in `KEYS_ONLY` , the secondary index
+       * will include other non-key attributes that you specify.
+       * * `ALL` - All of the table attributes are projected into the index.
+       *
+       * When using the DynamoDB console, `ALL` is selected by default.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-projectiontype)
+       */
+      override fun projectionType(): String? = unwrap(this).getProjectionType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty):
+          ProjectionProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProjectionProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty
+    }
+  }
+
+  /**
+   * Allows you to specify the read capacity settings for a replica table or a replica global
+   * secondary index when the `BillingMode` is set to `PROVISIONED` .
+   *
+   * You must specify a value for either `ReadCapacityUnits` or `ReadCapacityAutoScalingSettings` ,
+   * but not both. You can switch between fixed capacity and auto scaling.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * ReadProvisionedThroughputSettingsProperty readProvisionedThroughputSettingsProperty =
+   * ReadProvisionedThroughputSettingsProperty.builder()
+   * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
+   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build())
+   * // the properties below are optional
+   * .seedCapacity(123)
+   * .build())
+   * .readCapacityUnits(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html)
+   */
+  public interface ReadProvisionedThroughputSettingsProperty {
+    /**
+     * Specifies auto scaling settings for the replica table or global secondary index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings-readcapacityautoscalingsettings)
+     */
+    public fun readCapacityAutoScalingSettings(): Any? =
+        unwrap(this).getReadCapacityAutoScalingSettings()
+
+    /**
+     * Specifies a fixed read capacity for the replica table or global secondary index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings-readcapacityunits)
+     */
+    public fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
+
+    /**
+     * A builder for [ReadProvisionedThroughputSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
+       * table or global secondary index.
+       */
+      public fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: IResolvable)
+
+      /**
+       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
+       * table or global secondary index.
+       */
+      public
+          fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CapacityAutoScalingSettingsProperty)
+
+      /**
+       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
+       * table or global secondary index.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a0af043491dcca202df6a740240dcabcc4cda2a11fa346d48efb3a2c47230a26")
+      public
+          fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CapacityAutoScalingSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param readCapacityUnits Specifies a fixed read capacity for the replica table or global
+       * secondary index.
+       */
+      public fun readCapacityUnits(readCapacityUnits: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.builder()
+
+      /**
+       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
+       * table or global secondary index.
+       */
+      override fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: IResolvable) {
+        cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
+       * table or global secondary index.
+       */
+      override
+          fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CapacityAutoScalingSettingsProperty) {
+        cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings.let(CapacityAutoScalingSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
+       * table or global secondary index.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a0af043491dcca202df6a740240dcabcc4cda2a11fa346d48efb3a2c47230a26")
+      override
+          fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CapacityAutoScalingSettingsProperty.Builder.() -> Unit):
+          Unit =
+          readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty(readCapacityAutoScalingSettings))
+
+      /**
+       * @param readCapacityUnits Specifies a fixed read capacity for the replica table or global
+       * secondary index.
+       */
+      override fun readCapacityUnits(readCapacityUnits: Number) {
+        cdkBuilder.readCapacityUnits(readCapacityUnits)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty,
+    ) : CdkObject(cdkObject), ReadProvisionedThroughputSettingsProperty {
+      /**
+       * Specifies auto scaling settings for the replica table or global secondary index.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings-readcapacityautoscalingsettings)
+       */
+      override fun readCapacityAutoScalingSettings(): Any? =
+          unwrap(this).getReadCapacityAutoScalingSettings()
+
+      /**
+       * Specifies a fixed read capacity for the replica table or global secondary index.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings-readcapacityunits)
+       */
+      override fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ReadProvisionedThroughputSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty):
+          ReadProvisionedThroughputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReadProvisionedThroughputSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReadProvisionedThroughputSettingsProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty
+    }
+  }
+
+  /**
+   * Represents the properties of a global secondary index that can be set on a per-replica basis.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * ReplicaGlobalSecondaryIndexSpecificationProperty
+   * replicaGlobalSecondaryIndexSpecificationProperty =
+   * ReplicaGlobalSecondaryIndexSpecificationProperty.builder()
+   * .indexName("indexName")
+   * // the properties below are optional
+   * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+   * .enabled(false)
+   * .build())
+   * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
+   * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
+   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build())
+   * // the properties below are optional
+   * .seedCapacity(123)
+   * .build())
+   * .readCapacityUnits(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html)
+   */
+  public interface ReplicaGlobalSecondaryIndexSpecificationProperty {
+    /**
+     * Updates the status for contributor insights for a specific table or index.
+     *
+     * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
+     * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
+     * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition key
+     * and sort key data with an AWS managed key or customer managed key, you should not enable
+     * CloudWatch Contributor Insights for DynamoDB for this table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-contributorinsightsspecification)
+     */
+    public fun contributorInsightsSpecification(): Any? =
+        unwrap(this).getContributorInsightsSpecification()
+
+    /**
+     * The name of the global secondary index.
+     *
+     * The name must be unique among all other indexes on this table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-indexname)
+     */
+    public fun indexName(): String
+
+    /**
+     * Allows you to specify the read capacity settings for a replica global secondary index when
+     * the `BillingMode` is set to `PROVISIONED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readprovisionedthroughputsettings)
+     */
+    public fun readProvisionedThroughputSettings(): Any? =
+        unwrap(this).getReadProvisionedThroughputSettings()
+
+    /**
+     * A builder for [ReplicaGlobalSecondaryIndexSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contributorInsightsSpecification Updates the status for contributor insights for a
+       * specific table or index.
+       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
+       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
+       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
+       * key and sort key data with an AWS managed key or customer managed key, you should not enable
+       * CloudWatch Contributor Insights for DynamoDB for this table.
+       */
+      public fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable)
+
+      /**
+       * @param contributorInsightsSpecification Updates the status for contributor insights for a
+       * specific table or index.
+       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
+       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
+       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
+       * key and sort key data with an AWS managed key or customer managed key, you should not enable
+       * CloudWatch Contributor Insights for DynamoDB for this table.
+       */
+      public
+          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty)
+
+      /**
+       * @param contributorInsightsSpecification Updates the status for contributor insights for a
+       * specific table or index.
+       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
+       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
+       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
+       * key and sort key data with an AWS managed key or customer managed key, you should not enable
+       * CloudWatch Contributor Insights for DynamoDB for this table.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3afc9fdd202c3b1cd2eae6dba9b04577a438b37b5627db7f818ecda8d67c8d11")
+      public
+          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param indexName The name of the global secondary index. 
+       * The name must be unique among all other indexes on this table.
+       */
+      public fun indexName(indexName: String)
+
+      /**
+       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
+       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
+       */
+      public fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: IResolvable)
+
+      /**
+       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
+       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
+       */
+      public
+          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: ReadProvisionedThroughputSettingsProperty)
+
+      /**
+       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
+       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("84995732399c653ddcc401adfea203e3db5a793d859860bd38d504b20c54e3ce")
+      public
+          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: ReadProvisionedThroughputSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty.builder()
+
+      /**
+       * @param contributorInsightsSpecification Updates the status for contributor insights for a
+       * specific table or index.
+       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
+       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
+       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
+       * key and sort key data with an AWS managed key or customer managed key, you should not enable
+       * CloudWatch Contributor Insights for DynamoDB for this table.
+       */
+      override fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
+        cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param contributorInsightsSpecification Updates the status for contributor insights for a
+       * specific table or index.
+       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
+       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
+       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
+       * key and sort key data with an AWS managed key or customer managed key, you should not enable
+       * CloudWatch Contributor Insights for DynamoDB for this table.
+       */
+      override
+          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty) {
+        cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(ContributorInsightsSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param contributorInsightsSpecification Updates the status for contributor insights for a
+       * specific table or index.
+       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
+       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
+       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
+       * key and sort key data with an AWS managed key or customer managed key, you should not enable
+       * CloudWatch Contributor Insights for DynamoDB for this table.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3afc9fdd202c3b1cd2eae6dba9b04577a438b37b5627db7f818ecda8d67c8d11")
+      override
+          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          contributorInsightsSpecification(ContributorInsightsSpecificationProperty(contributorInsightsSpecification))
+
+      /**
+       * @param indexName The name of the global secondary index. 
+       * The name must be unique among all other indexes on this table.
+       */
+      override fun indexName(indexName: String) {
+        cdkBuilder.indexName(indexName)
+      }
+
+      /**
+       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
+       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
+       */
+      override
+          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: IResolvable) {
+        cdkBuilder.readProvisionedThroughputSettings(readProvisionedThroughputSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
+       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
+       */
+      override
+          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: ReadProvisionedThroughputSettingsProperty) {
+        cdkBuilder.readProvisionedThroughputSettings(readProvisionedThroughputSettings.let(ReadProvisionedThroughputSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
+       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("84995732399c653ddcc401adfea203e3db5a793d859860bd38d504b20c54e3ce")
+      override
+          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: ReadProvisionedThroughputSettingsProperty.Builder.() -> Unit):
+          Unit =
+          readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty(readProvisionedThroughputSettings))
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty,
+    ) : CdkObject(cdkObject), ReplicaGlobalSecondaryIndexSpecificationProperty {
+      /**
+       * Updates the status for contributor insights for a specific table or index.
+       *
+       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
+       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
+       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
+       * key and sort key data with an AWS managed key or customer managed key, you should not enable
+       * CloudWatch Contributor Insights for DynamoDB for this table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-contributorinsightsspecification)
+       */
+      override fun contributorInsightsSpecification(): Any? =
+          unwrap(this).getContributorInsightsSpecification()
+
+      /**
+       * The name of the global secondary index.
+       *
+       * The name must be unique among all other indexes on this table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-indexname)
+       */
+      override fun indexName(): String = unwrap(this).getIndexName()
+
+      /**
+       * Allows you to specify the read capacity settings for a replica global secondary index when
+       * the `BillingMode` is set to `PROVISIONED` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readprovisionedthroughputsettings)
+       */
+      override fun readProvisionedThroughputSettings(): Any? =
+          unwrap(this).getReadProvisionedThroughputSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ReplicaGlobalSecondaryIndexSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty):
+          ReplicaGlobalSecondaryIndexSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicaGlobalSecondaryIndexSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicaGlobalSecondaryIndexSpecificationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty
+    }
+  }
+
+  /**
+   * Allows you to specify a KMS key identifier to be used for server-side encryption.
+   *
+   * The key can be specified via ARN, key ID, or alias. The key must be created in the same region
+   * as the replica.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * ReplicaSSESpecificationProperty replicaSSESpecificationProperty =
+   * ReplicaSSESpecificationProperty.builder()
+   * .kmsMasterKeyId("kmsMasterKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicassespecification.html)
+   */
+  public interface ReplicaSSESpecificationProperty {
+    /**
+     * The AWS KMS key that should be used for the AWS KMS encryption.
+     *
+     * To specify a key, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note
+     * that you should only provide this parameter if the key is different from the default DynamoDB
+     * key `alias/aws/dynamodb` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicassespecification.html#cfn-dynamodb-globaltable-replicassespecification-kmsmasterkeyid)
+     */
+    public fun kmsMasterKeyId(): String
+
+    /**
+     * A builder for [ReplicaSSESpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsMasterKeyId The AWS KMS key that should be used for the AWS KMS encryption. 
+       * To specify a key, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN.
+       * Note that you should only provide this parameter if the key is different from the default
+       * DynamoDB key `alias/aws/dynamodb` .
+       */
+      public fun kmsMasterKeyId(kmsMasterKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty.builder()
+
+      /**
+       * @param kmsMasterKeyId The AWS KMS key that should be used for the AWS KMS encryption. 
+       * To specify a key, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN.
+       * Note that you should only provide this parameter if the key is different from the default
+       * DynamoDB key `alias/aws/dynamodb` .
+       */
+      override fun kmsMasterKeyId(kmsMasterKeyId: String) {
+        cdkBuilder.kmsMasterKeyId(kmsMasterKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty,
+    ) : CdkObject(cdkObject), ReplicaSSESpecificationProperty {
+      /**
+       * The AWS KMS key that should be used for the AWS KMS encryption.
+       *
+       * To specify a key, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN.
+       * Note that you should only provide this parameter if the key is different from the default
+       * DynamoDB key `alias/aws/dynamodb` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicassespecification.html#cfn-dynamodb-globaltable-replicassespecification-kmsmasterkeyid)
+       */
+      override fun kmsMasterKeyId(): String = unwrap(this).getKmsMasterKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicaSSESpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty):
+          ReplicaSSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicaSSESpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicaSSESpecificationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty
     }
   }
 
@@ -3112,1027 +4514,6 @@ public open class CfnGlobalTable internal constructor(
   }
 
   /**
-   * Configures contributor insights settings for a replica or one of its indexes.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * ContributorInsightsSpecificationProperty contributorInsightsSpecificationProperty =
-   * ContributorInsightsSpecificationProperty.builder()
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-contributorinsightsspecification.html)
-   */
-  public interface ContributorInsightsSpecificationProperty {
-    /**
-     * Indicates whether CloudWatch Contributor Insights are to be enabled (true) or disabled
-     * (false).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-contributorinsightsspecification.html#cfn-dynamodb-globaltable-contributorinsightsspecification-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * A builder for [ContributorInsightsSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true)
-       * or disabled (false). 
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true)
-       * or disabled (false). 
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty.builder()
-
-      /**
-       * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true)
-       * or disabled (false). 
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true)
-       * or disabled (false). 
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty,
-    ) : CdkObject(cdkObject), ContributorInsightsSpecificationProperty {
-      /**
-       * Indicates whether CloudWatch Contributor Insights are to be enabled (true) or disabled
-       * (false).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-contributorinsightsspecification.html#cfn-dynamodb-globaltable-contributorinsightsspecification-enabled)
-       */
-      override fun enabled(): Any = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ContributorInsightsSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty):
-          ContributorInsightsSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ContributorInsightsSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ContributorInsightsSpecificationProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty
-    }
-  }
-
-  /**
-   * Allows you to specify a global secondary index for the global table.
-   *
-   * The index will be defined on all replicas.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * GlobalSecondaryIndexProperty globalSecondaryIndexProperty =
-   * GlobalSecondaryIndexProperty.builder()
-   * .indexName("indexName")
-   * .keySchema(List.of(KeySchemaProperty.builder()
-   * .attributeName("attributeName")
-   * .keyType("keyType")
-   * .build()))
-   * .projection(ProjectionProperty.builder()
-   * .nonKeyAttributes(List.of("nonKeyAttributes"))
-   * .projectionType("projectionType")
-   * .build())
-   * // the properties below are optional
-   * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
-   * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
-   * .maxCapacity(123)
-   * .minCapacity(123)
-   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build())
-   * // the properties below are optional
-   * .seedCapacity(123)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html)
-   */
-  public interface GlobalSecondaryIndexProperty {
-    /**
-     * The name of the global secondary index.
-     *
-     * The name must be unique among all other indexes on this table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-indexname)
-     */
-    public fun indexName(): String
-
-    /**
-     * The complete key schema for a global secondary index, which consists of one or more pairs of
-     * attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key  &gt; The
-     * partition key of an item is also known as its *hash attribute* .
-     *
-     * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-     * evenly distribute data items across partitions, based on their partition key values.
-     *
-     *
-     * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-     * derives from the way DynamoDB stores items with the same partition key physically close
-     * together, in sorted order by the sort key value.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-keyschema)
-     */
-    public fun keySchema(): Any
-
-    /**
-     * Represents attributes that are copied (projected) from the table into the global secondary
-     * index.
-     *
-     * These are in addition to the primary key attributes and index key attributes, which are
-     * automatically projected.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-projection)
-     */
-    public fun projection(): Any
-
-    /**
-     * Defines write capacity settings for the global secondary index.
-     *
-     * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
-     * All replicas will have the same write capacity settings for this global secondary index.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-writeprovisionedthroughputsettings)
-     */
-    public fun writeProvisionedThroughputSettings(): Any? =
-        unwrap(this).getWriteProvisionedThroughputSettings()
-
-    /**
-     * A builder for [GlobalSecondaryIndexProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param indexName The name of the global secondary index. 
-       * The name must be unique among all other indexes on this table.
-       */
-      public fun indexName(indexName: String)
-
-      /**
-       * @param keySchema The complete key schema for a global secondary index, which consists of
-       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
-       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      public fun keySchema(keySchema: IResolvable)
-
-      /**
-       * @param keySchema The complete key schema for a global secondary index, which consists of
-       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
-       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      public fun keySchema(keySchema: List<Any>)
-
-      /**
-       * @param keySchema The complete key schema for a global secondary index, which consists of
-       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
-       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      public fun keySchema(vararg keySchema: Any)
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * global secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      public fun projection(projection: IResolvable)
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * global secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      public fun projection(projection: ProjectionProperty)
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * global secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f58d5331a2b6e0e2a944808861029f8d5207b9bfe0b220f19868469cc21f4955")
-      public fun projection(projection: ProjectionProperty.Builder.() -> Unit)
-
-      /**
-       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
-       * secondary index.
-       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
-       * All replicas will have the same write capacity settings for this global secondary index.
-       */
-      public fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: IResolvable)
-
-      /**
-       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
-       * secondary index.
-       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
-       * All replicas will have the same write capacity settings for this global secondary index.
-       */
-      public
-          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: WriteProvisionedThroughputSettingsProperty)
-
-      /**
-       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
-       * secondary index.
-       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
-       * All replicas will have the same write capacity settings for this global secondary index.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a0a9a3e1aa0c2088ddba833b9a25dc013a4c95a011c4e48781b132398f502f21")
-      public
-          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: WriteProvisionedThroughputSettingsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty.builder()
-
-      /**
-       * @param indexName The name of the global secondary index. 
-       * The name must be unique among all other indexes on this table.
-       */
-      override fun indexName(indexName: String) {
-        cdkBuilder.indexName(indexName)
-      }
-
-      /**
-       * @param keySchema The complete key schema for a global secondary index, which consists of
-       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
-       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      override fun keySchema(keySchema: IResolvable) {
-        cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keySchema The complete key schema for a global secondary index, which consists of
-       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
-       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      override fun keySchema(keySchema: List<Any>) {
-        cdkBuilder.keySchema(keySchema)
-      }
-
-      /**
-       * @param keySchema The complete key schema for a global secondary index, which consists of
-       * one or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort
-       * key  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * global secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      override fun projection(projection: IResolvable) {
-        cdkBuilder.projection(projection.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * global secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      override fun projection(projection: ProjectionProperty) {
-        cdkBuilder.projection(projection.let(ProjectionProperty::unwrap))
-      }
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * global secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f58d5331a2b6e0e2a944808861029f8d5207b9bfe0b220f19868469cc21f4955")
-      override fun projection(projection: ProjectionProperty.Builder.() -> Unit): Unit =
-          projection(ProjectionProperty(projection))
-
-      /**
-       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
-       * secondary index.
-       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
-       * All replicas will have the same write capacity settings for this global secondary index.
-       */
-      override
-          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: IResolvable) {
-        cdkBuilder.writeProvisionedThroughputSettings(writeProvisionedThroughputSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
-       * secondary index.
-       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
-       * All replicas will have the same write capacity settings for this global secondary index.
-       */
-      override
-          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: WriteProvisionedThroughputSettingsProperty) {
-        cdkBuilder.writeProvisionedThroughputSettings(writeProvisionedThroughputSettings.let(WriteProvisionedThroughputSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param writeProvisionedThroughputSettings Defines write capacity settings for the global
-       * secondary index.
-       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
-       * All replicas will have the same write capacity settings for this global secondary index.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a0a9a3e1aa0c2088ddba833b9a25dc013a4c95a011c4e48781b132398f502f21")
-      override
-          fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: WriteProvisionedThroughputSettingsProperty.Builder.() -> Unit):
-          Unit =
-          writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty(writeProvisionedThroughputSettings))
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty,
-    ) : CdkObject(cdkObject), GlobalSecondaryIndexProperty {
-      /**
-       * The name of the global secondary index.
-       *
-       * The name must be unique among all other indexes on this table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-indexname)
-       */
-      override fun indexName(): String = unwrap(this).getIndexName()
-
-      /**
-       * The complete key schema for a global secondary index, which consists of one or more pairs
-       * of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key  &gt; The
-       * partition key of an item is also known as its *hash attribute* .
-       *
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-keyschema)
-       */
-      override fun keySchema(): Any = unwrap(this).getKeySchema()
-
-      /**
-       * Represents attributes that are copied (projected) from the table into the global secondary
-       * index.
-       *
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-projection)
-       */
-      override fun projection(): Any = unwrap(this).getProjection()
-
-      /**
-       * Defines write capacity settings for the global secondary index.
-       *
-       * You must specify a value for this property if the table's `BillingMode` is `PROVISIONED` .
-       * All replicas will have the same write capacity settings for this global secondary index.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-writeprovisionedthroughputsettings)
-       */
-      override fun writeProvisionedThroughputSettings(): Any? =
-          unwrap(this).getWriteProvisionedThroughputSettings()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GlobalSecondaryIndexProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty):
-          GlobalSecondaryIndexProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GlobalSecondaryIndexProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GlobalSecondaryIndexProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty
-    }
-  }
-
-  /**
-   * Represents the properties of a global secondary index that can be set on a per-replica basis.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * ReplicaGlobalSecondaryIndexSpecificationProperty
-   * replicaGlobalSecondaryIndexSpecificationProperty =
-   * ReplicaGlobalSecondaryIndexSpecificationProperty.builder()
-   * .indexName("indexName")
-   * // the properties below are optional
-   * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
-   * .enabled(false)
-   * .build())
-   * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
-   * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
-   * .maxCapacity(123)
-   * .minCapacity(123)
-   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build())
-   * // the properties below are optional
-   * .seedCapacity(123)
-   * .build())
-   * .readCapacityUnits(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html)
-   */
-  public interface ReplicaGlobalSecondaryIndexSpecificationProperty {
-    /**
-     * Updates the status for contributor insights for a specific table or index.
-     *
-     * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
-     * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
-     * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition key
-     * and sort key data with an AWS managed key or customer managed key, you should not enable
-     * CloudWatch Contributor Insights for DynamoDB for this table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-contributorinsightsspecification)
-     */
-    public fun contributorInsightsSpecification(): Any? =
-        unwrap(this).getContributorInsightsSpecification()
-
-    /**
-     * The name of the global secondary index.
-     *
-     * The name must be unique among all other indexes on this table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-indexname)
-     */
-    public fun indexName(): String
-
-    /**
-     * Allows you to specify the read capacity settings for a replica global secondary index when
-     * the `BillingMode` is set to `PROVISIONED` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readprovisionedthroughputsettings)
-     */
-    public fun readProvisionedThroughputSettings(): Any? =
-        unwrap(this).getReadProvisionedThroughputSettings()
-
-    /**
-     * A builder for [ReplicaGlobalSecondaryIndexSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contributorInsightsSpecification Updates the status for contributor insights for a
-       * specific table or index.
-       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
-       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
-       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
-       * key and sort key data with an AWS managed key or customer managed key, you should not enable
-       * CloudWatch Contributor Insights for DynamoDB for this table.
-       */
-      public fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable)
-
-      /**
-       * @param contributorInsightsSpecification Updates the status for contributor insights for a
-       * specific table or index.
-       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
-       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
-       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
-       * key and sort key data with an AWS managed key or customer managed key, you should not enable
-       * CloudWatch Contributor Insights for DynamoDB for this table.
-       */
-      public
-          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty)
-
-      /**
-       * @param contributorInsightsSpecification Updates the status for contributor insights for a
-       * specific table or index.
-       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
-       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
-       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
-       * key and sort key data with an AWS managed key or customer managed key, you should not enable
-       * CloudWatch Contributor Insights for DynamoDB for this table.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3afc9fdd202c3b1cd2eae6dba9b04577a438b37b5627db7f818ecda8d67c8d11")
-      public
-          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param indexName The name of the global secondary index. 
-       * The name must be unique among all other indexes on this table.
-       */
-      public fun indexName(indexName: String)
-
-      /**
-       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
-       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
-       */
-      public fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: IResolvable)
-
-      /**
-       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
-       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
-       */
-      public
-          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: ReadProvisionedThroughputSettingsProperty)
-
-      /**
-       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
-       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("84995732399c653ddcc401adfea203e3db5a793d859860bd38d504b20c54e3ce")
-      public
-          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: ReadProvisionedThroughputSettingsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty.builder()
-
-      /**
-       * @param contributorInsightsSpecification Updates the status for contributor insights for a
-       * specific table or index.
-       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
-       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
-       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
-       * key and sort key data with an AWS managed key or customer managed key, you should not enable
-       * CloudWatch Contributor Insights for DynamoDB for this table.
-       */
-      override fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
-        cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param contributorInsightsSpecification Updates the status for contributor insights for a
-       * specific table or index.
-       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
-       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
-       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
-       * key and sort key data with an AWS managed key or customer managed key, you should not enable
-       * CloudWatch Contributor Insights for DynamoDB for this table.
-       */
-      override
-          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty) {
-        cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(ContributorInsightsSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param contributorInsightsSpecification Updates the status for contributor insights for a
-       * specific table or index.
-       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
-       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
-       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
-       * key and sort key data with an AWS managed key or customer managed key, you should not enable
-       * CloudWatch Contributor Insights for DynamoDB for this table.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3afc9fdd202c3b1cd2eae6dba9b04577a438b37b5627db7f818ecda8d67c8d11")
-      override
-          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          contributorInsightsSpecification(ContributorInsightsSpecificationProperty(contributorInsightsSpecification))
-
-      /**
-       * @param indexName The name of the global secondary index. 
-       * The name must be unique among all other indexes on this table.
-       */
-      override fun indexName(indexName: String) {
-        cdkBuilder.indexName(indexName)
-      }
-
-      /**
-       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
-       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
-       */
-      override
-          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: IResolvable) {
-        cdkBuilder.readProvisionedThroughputSettings(readProvisionedThroughputSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
-       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
-       */
-      override
-          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: ReadProvisionedThroughputSettingsProperty) {
-        cdkBuilder.readProvisionedThroughputSettings(readProvisionedThroughputSettings.let(ReadProvisionedThroughputSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param readProvisionedThroughputSettings Allows you to specify the read capacity settings
-       * for a replica global secondary index when the `BillingMode` is set to `PROVISIONED` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("84995732399c653ddcc401adfea203e3db5a793d859860bd38d504b20c54e3ce")
-      override
-          fun readProvisionedThroughputSettings(readProvisionedThroughputSettings: ReadProvisionedThroughputSettingsProperty.Builder.() -> Unit):
-          Unit =
-          readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty(readProvisionedThroughputSettings))
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty,
-    ) : CdkObject(cdkObject), ReplicaGlobalSecondaryIndexSpecificationProperty {
-      /**
-       * Updates the status for contributor insights for a specific table or index.
-       *
-       * CloudWatch Contributor Insights for DynamoDB graphs display the partition key and (if
-       * applicable) sort key of frequently accessed items and frequently throttled items in plaintext.
-       * If you require the use of AWS Key Management Service (KMS) to encrypt this table’s partition
-       * key and sort key data with an AWS managed key or customer managed key, you should not enable
-       * CloudWatch Contributor Insights for DynamoDB for this table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-contributorinsightsspecification)
-       */
-      override fun contributorInsightsSpecification(): Any? =
-          unwrap(this).getContributorInsightsSpecification()
-
-      /**
-       * The name of the global secondary index.
-       *
-       * The name must be unique among all other indexes on this table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-indexname)
-       */
-      override fun indexName(): String = unwrap(this).getIndexName()
-
-      /**
-       * Allows you to specify the read capacity settings for a replica global secondary index when
-       * the `BillingMode` is set to `PROVISIONED` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readprovisionedthroughputsettings)
-       */
-      override fun readProvisionedThroughputSettings(): Any? =
-          unwrap(this).getReadProvisionedThroughputSettings()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ReplicaGlobalSecondaryIndexSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty):
-          ReplicaGlobalSecondaryIndexSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReplicaGlobalSecondaryIndexSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplicaGlobalSecondaryIndexSpecificationProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty
-    }
-  }
-
-  /**
-   * Represents an attribute for describing the schema for the table and indexes.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * AttributeDefinitionProperty attributeDefinitionProperty = AttributeDefinitionProperty.builder()
-   * .attributeName("attributeName")
-   * .attributeType("attributeType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html)
-   */
-  public interface AttributeDefinitionProperty {
-    /**
-     * A name for the attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html#cfn-dynamodb-globaltable-attributedefinition-attributename)
-     */
-    public fun attributeName(): String
-
-    /**
-     * The data type for the attribute, where:.
-     *
-     * * `S` - the attribute is of type String
-     * * `N` - the attribute is of type Number
-     * * `B` - the attribute is of type Binary
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html#cfn-dynamodb-globaltable-attributedefinition-attributetype)
-     */
-    public fun attributeType(): String
-
-    /**
-     * A builder for [AttributeDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributeName A name for the attribute. 
-       */
-      public fun attributeName(attributeName: String)
-
-      /**
-       * @param attributeType The data type for the attribute, where:. 
-       * * `S` - the attribute is of type String
-       * * `N` - the attribute is of type Number
-       * * `B` - the attribute is of type Binary
-       */
-      public fun attributeType(attributeType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty.builder()
-
-      /**
-       * @param attributeName A name for the attribute. 
-       */
-      override fun attributeName(attributeName: String) {
-        cdkBuilder.attributeName(attributeName)
-      }
-
-      /**
-       * @param attributeType The data type for the attribute, where:. 
-       * * `S` - the attribute is of type String
-       * * `N` - the attribute is of type Number
-       * * `B` - the attribute is of type Binary
-       */
-      override fun attributeType(attributeType: String) {
-        cdkBuilder.attributeType(attributeType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty,
-    ) : CdkObject(cdkObject), AttributeDefinitionProperty {
-      /**
-       * A name for the attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html#cfn-dynamodb-globaltable-attributedefinition-attributename)
-       */
-      override fun attributeName(): String = unwrap(this).getAttributeName()
-
-      /**
-       * The data type for the attribute, where:.
-       *
-       * * `S` - the attribute is of type String
-       * * `N` - the attribute is of type Number
-       * * `B` - the attribute is of type Binary
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-attributedefinition.html#cfn-dynamodb-globaltable-attributedefinition-attributetype)
-       */
-      override fun attributeType(): String = unwrap(this).getAttributeType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty):
-          AttributeDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AttributeDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AttributeDefinitionProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty
-    }
-  }
-
-  /**
-   * Allows you to specify a KMS key identifier to be used for server-side encryption.
-   *
-   * The key can be specified via ARN, key ID, or alias. The key must be created in the same region
-   * as the replica.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * ReplicaSSESpecificationProperty replicaSSESpecificationProperty =
-   * ReplicaSSESpecificationProperty.builder()
-   * .kmsMasterKeyId("kmsMasterKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicassespecification.html)
-   */
-  public interface ReplicaSSESpecificationProperty {
-    /**
-     * The AWS KMS key that should be used for the AWS KMS encryption.
-     *
-     * To specify a key, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. Note
-     * that you should only provide this parameter if the key is different from the default DynamoDB
-     * key `alias/aws/dynamodb` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicassespecification.html#cfn-dynamodb-globaltable-replicassespecification-kmsmasterkeyid)
-     */
-    public fun kmsMasterKeyId(): String
-
-    /**
-     * A builder for [ReplicaSSESpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsMasterKeyId The AWS KMS key that should be used for the AWS KMS encryption. 
-       * To specify a key, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN.
-       * Note that you should only provide this parameter if the key is different from the default
-       * DynamoDB key `alias/aws/dynamodb` .
-       */
-      public fun kmsMasterKeyId(kmsMasterKeyId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty.builder()
-
-      /**
-       * @param kmsMasterKeyId The AWS KMS key that should be used for the AWS KMS encryption. 
-       * To specify a key, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN.
-       * Note that you should only provide this parameter if the key is different from the default
-       * DynamoDB key `alias/aws/dynamodb` .
-       */
-      override fun kmsMasterKeyId(kmsMasterKeyId: String) {
-        cdkBuilder.kmsMasterKeyId(kmsMasterKeyId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty,
-    ) : CdkObject(cdkObject), ReplicaSSESpecificationProperty {
-      /**
-       * The AWS KMS key that should be used for the AWS KMS encryption.
-       *
-       * To specify a key, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN.
-       * Note that you should only provide this parameter if the key is different from the default
-       * DynamoDB key `alias/aws/dynamodb` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicassespecification.html#cfn-dynamodb-globaltable-replicassespecification-kmsmasterkeyid)
-       */
-      override fun kmsMasterKeyId(): String = unwrap(this).getKmsMasterKeyId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicaSSESpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty):
-          ReplicaSSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReplicaSSESpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplicaSSESpecificationProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty
-    }
-  }
-
-  /**
    * Represents the settings used to enable server-side encryption.
    *
    * Example:
@@ -4303,19 +4684,11 @@ public open class CfnGlobalTable internal constructor(
   }
 
   /**
-   * Represents *a single element* of a key schema.
+   * Represents the DynamoDB Streams configuration for a table in DynamoDB.
    *
-   * A key schema specifies the attributes that make up the primary key of a table, or the key
-   * attributes of an index.
-   *
-   * A `KeySchemaElement` represents exactly one attribute of the primary key. For example, a simple
-   * primary key would be represented by one `KeySchemaElement` (for the partition key). A composite
-   * primary key would require one `KeySchemaElement` for the partition key, and another
-   * `KeySchemaElement` for the sort key.
-   *
-   * A `KeySchemaElement` must be a scalar, top-level attribute (not a nested attribute). The data
-   * type must be one of String, Number, or Binary. The attribute cannot be nested within a List or a
-   * Map.
+   * You can only modify this value if your `AWS::DynamoDB::GlobalTable` contains only one entry in
+   * `Replicas` . You must specify a value for this property if your `AWS::DynamoDB::GlobalTable`
+   * contains more than one replica.
    *
    * Example:
    *
@@ -4323,150 +4696,469 @@ public open class CfnGlobalTable internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * KeySchemaProperty keySchemaProperty = KeySchemaProperty.builder()
-   * .attributeName("attributeName")
-   * .keyType("keyType")
+   * StreamSpecificationProperty streamSpecificationProperty = StreamSpecificationProperty.builder()
+   * .streamViewType("streamViewType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-streamspecification.html)
    */
-  public interface KeySchemaProperty {
+  public interface StreamSpecificationProperty {
     /**
-     * The name of a key attribute.
+     * When an item in the table is modified, `StreamViewType` determines what information is
+     * written to the stream for this table.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html#cfn-dynamodb-globaltable-keyschema-attributename)
+     * Valid values for `StreamViewType` are:
+     *
+     * * `KEYS_ONLY` - Only the key attributes of the modified item are written to the stream.
+     * * `NEW_IMAGE` - The entire item, as it appears after it was modified, is written to the
+     * stream.
+     * * `OLD_IMAGE` - The entire item, as it appeared before it was modified, is written to the
+     * stream.
+     * * `NEW_AND_OLD_IMAGES` - Both the new and the old item images of the item are written to the
+     * stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-streamspecification.html#cfn-dynamodb-globaltable-streamspecification-streamviewtype)
      */
-    public fun attributeName(): String
+    public fun streamViewType(): String
 
     /**
-     * The role that this key attribute will assume:.
-     *
-     * * `HASH` - partition key
-     * * `RANGE` - sort key
-     *
-     *
-     * The partition key of an item is also known as its *hash attribute* . The term "hash
-     * attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute data
-     * items across partitions, based on their partition key values.
-     *
-     * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-     * derives from the way DynamoDB stores items with the same partition key physically close
-     * together, in sorted order by the sort key value.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html#cfn-dynamodb-globaltable-keyschema-keytype)
-     */
-    public fun keyType(): String
-
-    /**
-     * A builder for [KeySchemaProperty]
+     * A builder for [StreamSpecificationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attributeName The name of a key attribute. 
+       * @param streamViewType When an item in the table is modified, `StreamViewType` determines
+       * what information is written to the stream for this table. 
+       * Valid values for `StreamViewType` are:
+       *
+       * * `KEYS_ONLY` - Only the key attributes of the modified item are written to the stream.
+       * * `NEW_IMAGE` - The entire item, as it appears after it was modified, is written to the
+       * stream.
+       * * `OLD_IMAGE` - The entire item, as it appeared before it was modified, is written to the
+       * stream.
+       * * `NEW_AND_OLD_IMAGES` - Both the new and the old item images of the item are written to
+       * the stream.
        */
-      public fun attributeName(attributeName: String)
-
-      /**
-       * @param keyType The role that this key attribute will assume:. 
-       * * `HASH` - partition key
-       * * `RANGE` - sort key
-       *
-       *
-       * The partition key of an item is also known as its *hash attribute* . The term "hash
-       * attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute
-       * data items across partitions, based on their partition key values.
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      public fun keyType(keyType: String)
+      public fun streamViewType(streamViewType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty.Builder =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty.builder()
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty.builder()
 
       /**
-       * @param attributeName The name of a key attribute. 
+       * @param streamViewType When an item in the table is modified, `StreamViewType` determines
+       * what information is written to the stream for this table. 
+       * Valid values for `StreamViewType` are:
+       *
+       * * `KEYS_ONLY` - Only the key attributes of the modified item are written to the stream.
+       * * `NEW_IMAGE` - The entire item, as it appears after it was modified, is written to the
+       * stream.
+       * * `OLD_IMAGE` - The entire item, as it appeared before it was modified, is written to the
+       * stream.
+       * * `NEW_AND_OLD_IMAGES` - Both the new and the old item images of the item are written to
+       * the stream.
+       */
+      override fun streamViewType(streamViewType: String) {
+        cdkBuilder.streamViewType(streamViewType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty,
+    ) : CdkObject(cdkObject), StreamSpecificationProperty {
+      /**
+       * When an item in the table is modified, `StreamViewType` determines what information is
+       * written to the stream for this table.
+       *
+       * Valid values for `StreamViewType` are:
+       *
+       * * `KEYS_ONLY` - Only the key attributes of the modified item are written to the stream.
+       * * `NEW_IMAGE` - The entire item, as it appears after it was modified, is written to the
+       * stream.
+       * * `OLD_IMAGE` - The entire item, as it appeared before it was modified, is written to the
+       * stream.
+       * * `NEW_AND_OLD_IMAGES` - Both the new and the old item images of the item are written to
+       * the stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-streamspecification.html#cfn-dynamodb-globaltable-streamspecification-streamviewtype)
+       */
+      override fun streamViewType(): String = unwrap(this).getStreamViewType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StreamSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty):
+          StreamSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StreamSpecificationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty
+    }
+  }
+
+  /**
+   * Defines a target tracking scaling policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * TargetTrackingScalingPolicyConfigurationProperty
+   * targetTrackingScalingPolicyConfigurationProperty =
+   * TargetTrackingScalingPolicyConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .disableScaleIn(false)
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html)
+   */
+  public interface TargetTrackingScalingPolicyConfigurationProperty {
+    /**
+     * Indicates whether scale in by the target tracking scaling policy is disabled.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-disablescalein)
+     */
+    public fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+
+    /**
+     * The amount of time, in seconds, after a scale-in activity completes before another scale-in
+     * activity can start.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-scaleincooldown)
+     */
+    public fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
+
+    /**
+     * The amount of time, in seconds, after a scale-out activity completes before another scale-out
+     * activity can start.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-scaleoutcooldown)
+     */
+    public fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
+
+    /**
+     * Defines a target value for the scaling policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-targetvalue)
+     */
+    public fun targetValue(): Number
+
+    /**
+     * A builder for [TargetTrackingScalingPolicyConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
+       * disabled.
+       * The default value is `false` .
+       */
+      public fun disableScaleIn(disableScaleIn: Boolean)
+
+      /**
+       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
+       * disabled.
+       * The default value is `false` .
+       */
+      public fun disableScaleIn(disableScaleIn: IResolvable)
+
+      /**
+       * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
+       * before another scale-in activity can start.
+       */
+      public fun scaleInCooldown(scaleInCooldown: Number)
+
+      /**
+       * @param scaleOutCooldown The amount of time, in seconds, after a scale-out activity
+       * completes before another scale-out activity can start.
+       */
+      public fun scaleOutCooldown(scaleOutCooldown: Number)
+
+      /**
+       * @param targetValue Defines a target value for the scaling policy. 
+       */
+      public fun targetValue(targetValue: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty.builder()
+
+      /**
+       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
+       * disabled.
+       * The default value is `false` .
+       */
+      override fun disableScaleIn(disableScaleIn: Boolean) {
+        cdkBuilder.disableScaleIn(disableScaleIn)
+      }
+
+      /**
+       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
+       * disabled.
+       * The default value is `false` .
+       */
+      override fun disableScaleIn(disableScaleIn: IResolvable) {
+        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
+       * before another scale-in activity can start.
+       */
+      override fun scaleInCooldown(scaleInCooldown: Number) {
+        cdkBuilder.scaleInCooldown(scaleInCooldown)
+      }
+
+      /**
+       * @param scaleOutCooldown The amount of time, in seconds, after a scale-out activity
+       * completes before another scale-out activity can start.
+       */
+      override fun scaleOutCooldown(scaleOutCooldown: Number) {
+        cdkBuilder.scaleOutCooldown(scaleOutCooldown)
+      }
+
+      /**
+       * @param targetValue Defines a target value for the scaling policy. 
+       */
+      override fun targetValue(targetValue: Number) {
+        cdkBuilder.targetValue(targetValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty,
+    ) : CdkObject(cdkObject), TargetTrackingScalingPolicyConfigurationProperty {
+      /**
+       * Indicates whether scale in by the target tracking scaling policy is disabled.
+       *
+       * The default value is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-disablescalein)
+       */
+      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+
+      /**
+       * The amount of time, in seconds, after a scale-in activity completes before another scale-in
+       * activity can start.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-scaleincooldown)
+       */
+      override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
+
+      /**
+       * The amount of time, in seconds, after a scale-out activity completes before another
+       * scale-out activity can start.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-scaleoutcooldown)
+       */
+      override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
+
+      /**
+       * Defines a target value for the scaling policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-targettrackingscalingpolicyconfiguration.html#cfn-dynamodb-globaltable-targettrackingscalingpolicyconfiguration-targetvalue)
+       */
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TargetTrackingScalingPolicyConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty):
+          TargetTrackingScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingScalingPolicyConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetTrackingScalingPolicyConfigurationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty
+    }
+  }
+
+  /**
+   * Represents the settings used to enable or disable Time to Live (TTL) for the specified table.
+   *
+   * All replicas will have the same time to live configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * TimeToLiveSpecificationProperty timeToLiveSpecificationProperty =
+   * TimeToLiveSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .attributeName("attributeName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html)
+   */
+  public interface TimeToLiveSpecificationProperty {
+    /**
+     * The name of the attribute used to store the expiration time for items in the table.
+     *
+     * Currently, you cannot directly change the attribute name used to evaluate time to live. In
+     * order to do so, you must first disable time to live, and then re-enable it with the new
+     * attribute name. It can take up to one hour for changes to time to live to take effect. If you
+     * attempt to modify time to live within that time window, your stack operation might be delayed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html#cfn-dynamodb-globaltable-timetolivespecification-attributename)
+     */
+    public fun attributeName(): String? = unwrap(this).getAttributeName()
+
+    /**
+     * Indicates whether TTL is to be enabled (true) or disabled (false) on the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html#cfn-dynamodb-globaltable-timetolivespecification-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [TimeToLiveSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeName The name of the attribute used to store the expiration time for items
+       * in the table.
+       * Currently, you cannot directly change the attribute name used to evaluate time to live. In
+       * order to do so, you must first disable time to live, and then re-enable it with the new
+       * attribute name. It can take up to one hour for changes to time to live to take effect. If you
+       * attempt to modify time to live within that time window, your stack operation might be delayed.
+       */
+      public fun attributeName(attributeName: String)
+
+      /**
+       * @param enabled Indicates whether TTL is to be enabled (true) or disabled (false) on the
+       * table. 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Indicates whether TTL is to be enabled (true) or disabled (false) on the
+       * table. 
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty.builder()
+
+      /**
+       * @param attributeName The name of the attribute used to store the expiration time for items
+       * in the table.
+       * Currently, you cannot directly change the attribute name used to evaluate time to live. In
+       * order to do so, you must first disable time to live, and then re-enable it with the new
+       * attribute name. It can take up to one hour for changes to time to live to take effect. If you
+       * attempt to modify time to live within that time window, your stack operation might be delayed.
        */
       override fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
       }
 
       /**
-       * @param keyType The role that this key attribute will assume:. 
-       * * `HASH` - partition key
-       * * `RANGE` - sort key
-       *
-       *
-       * The partition key of an item is also known as its *hash attribute* . The term "hash
-       * attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute
-       * data items across partitions, based on their partition key values.
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
+       * @param enabled Indicates whether TTL is to be enabled (true) or disabled (false) on the
+       * table. 
        */
-      override fun keyType(keyType: String) {
-        cdkBuilder.keyType(keyType)
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
-      public fun build(): software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty
-          = cdkBuilder.build()
+      /**
+       * @param enabled Indicates whether TTL is to be enabled (true) or disabled (false) on the
+       * table. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty,
-    ) : CdkObject(cdkObject), KeySchemaProperty {
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty,
+    ) : CdkObject(cdkObject), TimeToLiveSpecificationProperty {
       /**
-       * The name of a key attribute.
+       * The name of the attribute used to store the expiration time for items in the table.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html#cfn-dynamodb-globaltable-keyschema-attributename)
+       * Currently, you cannot directly change the attribute name used to evaluate time to live. In
+       * order to do so, you must first disable time to live, and then re-enable it with the new
+       * attribute name. It can take up to one hour for changes to time to live to take effect. If you
+       * attempt to modify time to live within that time window, your stack operation might be delayed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html#cfn-dynamodb-globaltable-timetolivespecification-attributename)
        */
-      override fun attributeName(): String = unwrap(this).getAttributeName()
+      override fun attributeName(): String? = unwrap(this).getAttributeName()
 
       /**
-       * The role that this key attribute will assume:.
+       * Indicates whether TTL is to be enabled (true) or disabled (false) on the table.
        *
-       * * `HASH` - partition key
-       * * `RANGE` - sort key
-       *
-       *
-       * The partition key of an item is also known as its *hash attribute* . The term "hash
-       * attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute
-       * data items across partitions, based on their partition key values.
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html#cfn-dynamodb-globaltable-keyschema-keytype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-timetolivespecification.html#cfn-dynamodb-globaltable-timetolivespecification-enabled)
        */
-      override fun keyType(): String = unwrap(this).getKeyType()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeySchemaProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimeToLiveSpecificationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty):
-          KeySchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? KeySchemaProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty):
+          TimeToLiveSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeToLiveSpecificationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: KeySchemaProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty
+      internal fun unwrap(wrapped: TimeToLiveSpecificationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty
     }
   }
 
@@ -4607,698 +5299,6 @@ public open class CfnGlobalTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteProvisionedThroughputSettingsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteProvisionedThroughputSettingsProperty
-    }
-  }
-
-  /**
-   * Represents the properties of a local secondary index.
-   *
-   * A local secondary index can only be created when its parent table is created.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * LocalSecondaryIndexProperty localSecondaryIndexProperty = LocalSecondaryIndexProperty.builder()
-   * .indexName("indexName")
-   * .keySchema(List.of(KeySchemaProperty.builder()
-   * .attributeName("attributeName")
-   * .keyType("keyType")
-   * .build()))
-   * .projection(ProjectionProperty.builder()
-   * .nonKeyAttributes(List.of("nonKeyAttributes"))
-   * .projectionType("projectionType")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html)
-   */
-  public interface LocalSecondaryIndexProperty {
-    /**
-     * The name of the local secondary index.
-     *
-     * The name must be unique among all other indexes on this table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-indexname)
-     */
-    public fun indexName(): String
-
-    /**
-     * The complete key schema for the local secondary index, consisting of one or more pairs of
-     * attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key  &gt; The
-     * partition key of an item is also known as its *hash attribute* .
-     *
-     * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-     * evenly distribute data items across partitions, based on their partition key values.
-     *
-     *
-     * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-     * derives from the way DynamoDB stores items with the same partition key physically close
-     * together, in sorted order by the sort key value.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-keyschema)
-     */
-    public fun keySchema(): Any
-
-    /**
-     * Represents attributes that are copied (projected) from the table into the local secondary
-     * index.
-     *
-     * These are in addition to the primary key attributes and index key attributes, which are
-     * automatically projected.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-projection)
-     */
-    public fun projection(): Any
-
-    /**
-     * A builder for [LocalSecondaryIndexProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param indexName The name of the local secondary index. 
-       * The name must be unique among all other indexes on this table.
-       */
-      public fun indexName(indexName: String)
-
-      /**
-       * @param keySchema The complete key schema for the local secondary index, consisting of one
-       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
-       *  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      public fun keySchema(keySchema: IResolvable)
-
-      /**
-       * @param keySchema The complete key schema for the local secondary index, consisting of one
-       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
-       *  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      public fun keySchema(keySchema: List<Any>)
-
-      /**
-       * @param keySchema The complete key schema for the local secondary index, consisting of one
-       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
-       *  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      public fun keySchema(vararg keySchema: Any)
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * local secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      public fun projection(projection: IResolvable)
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * local secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      public fun projection(projection: ProjectionProperty)
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * local secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0e4589d72bff11e2c15ac41559d1db3d78d20953e627958ae218cee61bd0aea9")
-      public fun projection(projection: ProjectionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty.builder()
-
-      /**
-       * @param indexName The name of the local secondary index. 
-       * The name must be unique among all other indexes on this table.
-       */
-      override fun indexName(indexName: String) {
-        cdkBuilder.indexName(indexName)
-      }
-
-      /**
-       * @param keySchema The complete key schema for the local secondary index, consisting of one
-       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
-       *  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      override fun keySchema(keySchema: IResolvable) {
-        cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keySchema The complete key schema for the local secondary index, consisting of one
-       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
-       *  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      override fun keySchema(keySchema: List<Any>) {
-        cdkBuilder.keySchema(keySchema)
-      }
-
-      /**
-       * @param keySchema The complete key schema for the local secondary index, consisting of one
-       * or more pairs of attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key
-       *  &gt; The partition key of an item is also known as its *hash attribute* . 
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       */
-      override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * local secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      override fun projection(projection: IResolvable) {
-        cdkBuilder.projection(projection.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * local secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      override fun projection(projection: ProjectionProperty) {
-        cdkBuilder.projection(projection.let(ProjectionProperty::unwrap))
-      }
-
-      /**
-       * @param projection Represents attributes that are copied (projected) from the table into the
-       * local secondary index. 
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0e4589d72bff11e2c15ac41559d1db3d78d20953e627958ae218cee61bd0aea9")
-      override fun projection(projection: ProjectionProperty.Builder.() -> Unit): Unit =
-          projection(ProjectionProperty(projection))
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty,
-    ) : CdkObject(cdkObject), LocalSecondaryIndexProperty {
-      /**
-       * The name of the local secondary index.
-       *
-       * The name must be unique among all other indexes on this table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-indexname)
-       */
-      override fun indexName(): String = unwrap(this).getIndexName()
-
-      /**
-       * The complete key schema for the local secondary index, consisting of one or more pairs of
-       * attribute names and key types:  - `HASH` - partition key - `RANGE` - sort key  &gt; The
-       * partition key of an item is also known as its *hash attribute* .
-       *
-       * The term "hash attribute" derives from DynamoDB's usage of an internal hash function to
-       * evenly distribute data items across partitions, based on their partition key values.
-       *
-       *
-       * The sort key of an item is also known as its *range attribute* . The term "range attribute"
-       * derives from the way DynamoDB stores items with the same partition key physically close
-       * together, in sorted order by the sort key value.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-keyschema)
-       */
-      override fun keySchema(): Any = unwrap(this).getKeySchema()
-
-      /**
-       * Represents attributes that are copied (projected) from the table into the local secondary
-       * index.
-       *
-       * These are in addition to the primary key attributes and index key attributes, which are
-       * automatically projected.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-localsecondaryindex.html#cfn-dynamodb-globaltable-localsecondaryindex-projection)
-       */
-      override fun projection(): Any = unwrap(this).getProjection()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LocalSecondaryIndexProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty):
-          LocalSecondaryIndexProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LocalSecondaryIndexProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LocalSecondaryIndexProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty
-    }
-  }
-
-  /**
-   * Represents the settings used to enable point in time recovery.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * PointInTimeRecoverySpecificationProperty pointInTimeRecoverySpecificationProperty =
-   * PointInTimeRecoverySpecificationProperty.builder()
-   * .pointInTimeRecoveryEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html)
-   */
-  public interface PointInTimeRecoverySpecificationProperty {
-    /**
-     * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html#cfn-dynamodb-globaltable-pointintimerecoveryspecification-pointintimerecoveryenabled)
-     */
-    public fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
-
-    /**
-     * A builder for [PointInTimeRecoverySpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled
-       * (true) or disabled (false) on the table.
-       */
-      public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean)
-
-      /**
-       * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled
-       * (true) or disabled (false) on the table.
-       */
-      public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty.builder()
-
-      /**
-       * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled
-       * (true) or disabled (false) on the table.
-       */
-      override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
-        cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
-      }
-
-      /**
-       * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled
-       * (true) or disabled (false) on the table.
-       */
-      override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
-        cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty,
-    ) : CdkObject(cdkObject), PointInTimeRecoverySpecificationProperty {
-      /**
-       * Indicates whether point in time recovery is enabled (true) or disabled (false) on the
-       * table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html#cfn-dynamodb-globaltable-pointintimerecoveryspecification-pointintimerecoveryenabled)
-       */
-      override fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PointInTimeRecoverySpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty):
-          PointInTimeRecoverySpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PointInTimeRecoverySpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PointInTimeRecoverySpecificationProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty
-    }
-  }
-
-  /**
-   * Allows you to specify the read capacity settings for a replica table or a replica global
-   * secondary index when the `BillingMode` is set to `PROVISIONED` .
-   *
-   * You must specify a value for either `ReadCapacityUnits` or `ReadCapacityAutoScalingSettings` ,
-   * but not both. You can switch between fixed capacity and auto scaling.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * ReadProvisionedThroughputSettingsProperty readProvisionedThroughputSettingsProperty =
-   * ReadProvisionedThroughputSettingsProperty.builder()
-   * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
-   * .maxCapacity(123)
-   * .minCapacity(123)
-   * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .disableScaleIn(false)
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
-   * .build())
-   * // the properties below are optional
-   * .seedCapacity(123)
-   * .build())
-   * .readCapacityUnits(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html)
-   */
-  public interface ReadProvisionedThroughputSettingsProperty {
-    /**
-     * Specifies auto scaling settings for the replica table or global secondary index.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings-readcapacityautoscalingsettings)
-     */
-    public fun readCapacityAutoScalingSettings(): Any? =
-        unwrap(this).getReadCapacityAutoScalingSettings()
-
-    /**
-     * Specifies a fixed read capacity for the replica table or global secondary index.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings-readcapacityunits)
-     */
-    public fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
-
-    /**
-     * A builder for [ReadProvisionedThroughputSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
-       * table or global secondary index.
-       */
-      public fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: IResolvable)
-
-      /**
-       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
-       * table or global secondary index.
-       */
-      public
-          fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CapacityAutoScalingSettingsProperty)
-
-      /**
-       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
-       * table or global secondary index.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a0af043491dcca202df6a740240dcabcc4cda2a11fa346d48efb3a2c47230a26")
-      public
-          fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CapacityAutoScalingSettingsProperty.Builder.() -> Unit)
-
-      /**
-       * @param readCapacityUnits Specifies a fixed read capacity for the replica table or global
-       * secondary index.
-       */
-      public fun readCapacityUnits(readCapacityUnits: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.builder()
-
-      /**
-       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
-       * table or global secondary index.
-       */
-      override fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: IResolvable) {
-        cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
-       * table or global secondary index.
-       */
-      override
-          fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CapacityAutoScalingSettingsProperty) {
-        cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings.let(CapacityAutoScalingSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica
-       * table or global secondary index.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a0af043491dcca202df6a740240dcabcc4cda2a11fa346d48efb3a2c47230a26")
-      override
-          fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CapacityAutoScalingSettingsProperty.Builder.() -> Unit):
-          Unit =
-          readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty(readCapacityAutoScalingSettings))
-
-      /**
-       * @param readCapacityUnits Specifies a fixed read capacity for the replica table or global
-       * secondary index.
-       */
-      override fun readCapacityUnits(readCapacityUnits: Number) {
-        cdkBuilder.readCapacityUnits(readCapacityUnits)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty,
-    ) : CdkObject(cdkObject), ReadProvisionedThroughputSettingsProperty {
-      /**
-       * Specifies auto scaling settings for the replica table or global secondary index.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings-readcapacityautoscalingsettings)
-       */
-      override fun readCapacityAutoScalingSettings(): Any? =
-          unwrap(this).getReadCapacityAutoScalingSettings()
-
-      /**
-       * Specifies a fixed read capacity for the replica table or global secondary index.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readprovisionedthroughputsettings.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings-readcapacityunits)
-       */
-      override fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ReadProvisionedThroughputSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty):
-          ReadProvisionedThroughputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReadProvisionedThroughputSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReadProvisionedThroughputSettingsProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty
-    }
-  }
-
-  /**
-   * The Kinesis Data Streams configuration for the specified global table replica.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
-   * KinesisStreamSpecificationProperty kinesisStreamSpecificationProperty =
-   * KinesisStreamSpecificationProperty.builder()
-   * .streamArn("streamArn")
-   * // the properties below are optional
-   * .approximateCreationDateTimePrecision("approximateCreationDateTimePrecision")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html)
-   */
-  public interface KinesisStreamSpecificationProperty {
-    /**
-     * The precision for the time and date that the stream was created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html#cfn-dynamodb-globaltable-kinesisstreamspecification-approximatecreationdatetimeprecision)
-     */
-    public fun approximateCreationDateTimePrecision(): String? =
-        unwrap(this).getApproximateCreationDateTimePrecision()
-
-    /**
-     * The ARN for a specific Kinesis data stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html#cfn-dynamodb-globaltable-kinesisstreamspecification-streamarn)
-     */
-    public fun streamArn(): String
-
-    /**
-     * A builder for [KinesisStreamSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param approximateCreationDateTimePrecision The precision for the time and date that the
-       * stream was created.
-       */
-      public fun approximateCreationDateTimePrecision(approximateCreationDateTimePrecision: String)
-
-      /**
-       * @param streamArn The ARN for a specific Kinesis data stream. 
-       */
-      public fun streamArn(streamArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty.builder()
-
-      /**
-       * @param approximateCreationDateTimePrecision The precision for the time and date that the
-       * stream was created.
-       */
-      override
-          fun approximateCreationDateTimePrecision(approximateCreationDateTimePrecision: String) {
-        cdkBuilder.approximateCreationDateTimePrecision(approximateCreationDateTimePrecision)
-      }
-
-      /**
-       * @param streamArn The ARN for a specific Kinesis data stream. 
-       */
-      override fun streamArn(streamArn: String) {
-        cdkBuilder.streamArn(streamArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty,
-    ) : CdkObject(cdkObject), KinesisStreamSpecificationProperty {
-      /**
-       * The precision for the time and date that the stream was created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html#cfn-dynamodb-globaltable-kinesisstreamspecification-approximatecreationdatetimeprecision)
-       */
-      override fun approximateCreationDateTimePrecision(): String? =
-          unwrap(this).getApproximateCreationDateTimePrecision()
-
-      /**
-       * The ARN for a specific Kinesis data stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-kinesisstreamspecification.html#cfn-dynamodb-globaltable-kinesisstreamspecification-streamarn)
-       */
-      override fun streamArn(): String = unwrap(this).getStreamArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          KinesisStreamSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty):
-          KinesisStreamSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisStreamSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisStreamSpecificationProperty):
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty
     }
   }
 }

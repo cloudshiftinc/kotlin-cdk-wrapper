@@ -317,6 +317,234 @@ public open class CfnAccessPoint internal constructor(
   }
 
   /**
+   * The alias of an Object Lambda Access Point.
+   *
+   * For more information, see [How to use a bucket-style alias for your S3 bucket Object Lambda
+   * Access
+   * Point](https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-use.html#ol-access-points-alias)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3objectlambda.*;
+   * AliasProperty aliasProperty = AliasProperty.builder()
+   * .value("value")
+   * // the properties below are optional
+   * .status("status")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html)
+   */
+  public interface AliasProperty {
+    /**
+     * The status of the Object Lambda Access Point alias.
+     *
+     * If the status is `PROVISIONING` , the Object Lambda Access Point is provisioning the alias
+     * and the alias is not ready for use yet. If the status is `READY` , the Object Lambda Access
+     * Point alias is successfully provisioned and ready for use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html#cfn-s3objectlambda-accesspoint-alias-status)
+     */
+    public fun status(): String? = unwrap(this).getStatus()
+
+    /**
+     * The alias value of the Object Lambda Access Point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html#cfn-s3objectlambda-accesspoint-alias-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [AliasProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param status The status of the Object Lambda Access Point alias.
+       * If the status is `PROVISIONING` , the Object Lambda Access Point is provisioning the alias
+       * and the alias is not ready for use yet. If the status is `READY` , the Object Lambda Access
+       * Point alias is successfully provisioned and ready for use.
+       */
+      public fun status(status: String)
+
+      /**
+       * @param value The alias value of the Object Lambda Access Point. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty.Builder =
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty.builder()
+
+      /**
+       * @param status The status of the Object Lambda Access Point alias.
+       * If the status is `PROVISIONING` , the Object Lambda Access Point is provisioning the alias
+       * and the alias is not ready for use yet. If the status is `READY` , the Object Lambda Access
+       * Point alias is successfully provisioned and ready for use.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      /**
+       * @param value The alias value of the Object Lambda Access Point. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty,
+    ) : CdkObject(cdkObject), AliasProperty {
+      /**
+       * The status of the Object Lambda Access Point alias.
+       *
+       * If the status is `PROVISIONING` , the Object Lambda Access Point is provisioning the alias
+       * and the alias is not ready for use yet. If the status is `READY` , the Object Lambda Access
+       * Point alias is successfully provisioned and ready for use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html#cfn-s3objectlambda-accesspoint-alias-status)
+       */
+      override fun status(): String? = unwrap(this).getStatus()
+
+      /**
+       * The alias value of the Object Lambda Access Point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html#cfn-s3objectlambda-accesspoint-alias-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AliasProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty):
+          AliasProperty = CdkObjectWrappers.wrap(cdkObject) as? AliasProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AliasProperty):
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3objectlambda.*;
+   * AwsLambdaProperty awsLambdaProperty = AwsLambdaProperty.builder()
+   * .functionArn("functionArn")
+   * // the properties below are optional
+   * .functionPayload("functionPayload")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html)
+   */
+  public interface AwsLambdaProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionarn)
+     */
+    public fun functionArn(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionpayload)
+     */
+    public fun functionPayload(): String? = unwrap(this).getFunctionPayload()
+
+    /**
+     * A builder for [AwsLambdaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param functionArn the value to be set. 
+       */
+      public fun functionArn(functionArn: String)
+
+      /**
+       * @param functionPayload the value to be set.
+       */
+      public fun functionPayload(functionPayload: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty.Builder =
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty.builder()
+
+      /**
+       * @param functionArn the value to be set. 
+       */
+      override fun functionArn(functionArn: String) {
+        cdkBuilder.functionArn(functionArn)
+      }
+
+      /**
+       * @param functionPayload the value to be set.
+       */
+      override fun functionPayload(functionPayload: String) {
+        cdkBuilder.functionPayload(functionPayload)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty,
+    ) : CdkObject(cdkObject), AwsLambdaProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionarn)
+       */
+      override fun functionArn(): String = unwrap(this).getFunctionArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionpayload)
+       */
+      override fun functionPayload(): String? = unwrap(this).getFunctionPayload()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AwsLambdaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty):
+          AwsLambdaProperty = CdkObjectWrappers.wrap(cdkObject) as? AwsLambdaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AwsLambdaProperty):
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty
+    }
+  }
+
+  /**
    * Example:
    *
    * ```
@@ -426,6 +654,251 @@ public open class CfnAccessPoint internal constructor(
   }
 
   /**
+   * A configuration used when creating an Object Lambda Access Point.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3objectlambda.*;
+   * Object contentTransformation;
+   * ObjectLambdaConfigurationProperty objectLambdaConfigurationProperty =
+   * ObjectLambdaConfigurationProperty.builder()
+   * .supportingAccessPoint("supportingAccessPoint")
+   * .transformationConfigurations(List.of(TransformationConfigurationProperty.builder()
+   * .actions(List.of("actions"))
+   * .contentTransformation(contentTransformation)
+   * .build()))
+   * // the properties below are optional
+   * .allowedFeatures(List.of("allowedFeatures"))
+   * .cloudWatchMetricsEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html)
+   */
+  public interface ObjectLambdaConfigurationProperty {
+    /**
+     * A container for allowed features.
+     *
+     * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
+     * `HeadObject-PartNumber` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-allowedfeatures)
+     */
+    public fun allowedFeatures(): List<String> = unwrap(this).getAllowedFeatures() ?: emptyList()
+
+    /**
+     * A container for whether the CloudWatch metrics configuration is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-cloudwatchmetricsenabled)
+     */
+    public fun cloudWatchMetricsEnabled(): Any? = unwrap(this).getCloudWatchMetricsEnabled()
+
+    /**
+     * Standard access point associated with the Object Lambda Access Point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-supportingaccesspoint)
+     */
+    public fun supportingAccessPoint(): String
+
+    /**
+     * A container for transformation configurations for an Object Lambda Access Point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-transformationconfigurations)
+     */
+    public fun transformationConfigurations(): Any
+
+    /**
+     * A builder for [ObjectLambdaConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allowedFeatures A container for allowed features.
+       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
+       * `HeadObject-PartNumber` .
+       */
+      public fun allowedFeatures(allowedFeatures: List<String>)
+
+      /**
+       * @param allowedFeatures A container for allowed features.
+       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
+       * `HeadObject-PartNumber` .
+       */
+      public fun allowedFeatures(vararg allowedFeatures: String)
+
+      /**
+       * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics
+       * configuration is enabled.
+       */
+      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean)
+
+      /**
+       * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics
+       * configuration is enabled.
+       */
+      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable)
+
+      /**
+       * @param supportingAccessPoint Standard access point associated with the Object Lambda Access
+       * Point. 
+       */
+      public fun supportingAccessPoint(supportingAccessPoint: String)
+
+      /**
+       * @param transformationConfigurations A container for transformation configurations for an
+       * Object Lambda Access Point. 
+       */
+      public fun transformationConfigurations(transformationConfigurations: IResolvable)
+
+      /**
+       * @param transformationConfigurations A container for transformation configurations for an
+       * Object Lambda Access Point. 
+       */
+      public fun transformationConfigurations(transformationConfigurations: List<Any>)
+
+      /**
+       * @param transformationConfigurations A container for transformation configurations for an
+       * Object Lambda Access Point. 
+       */
+      public fun transformationConfigurations(vararg transformationConfigurations: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty.builder()
+
+      /**
+       * @param allowedFeatures A container for allowed features.
+       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
+       * `HeadObject-PartNumber` .
+       */
+      override fun allowedFeatures(allowedFeatures: List<String>) {
+        cdkBuilder.allowedFeatures(allowedFeatures)
+      }
+
+      /**
+       * @param allowedFeatures A container for allowed features.
+       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
+       * `HeadObject-PartNumber` .
+       */
+      override fun allowedFeatures(vararg allowedFeatures: String): Unit =
+          allowedFeatures(allowedFeatures.toList())
+
+      /**
+       * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics
+       * configuration is enabled.
+       */
+      override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
+        cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
+      }
+
+      /**
+       * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics
+       * configuration is enabled.
+       */
+      override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
+        cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param supportingAccessPoint Standard access point associated with the Object Lambda Access
+       * Point. 
+       */
+      override fun supportingAccessPoint(supportingAccessPoint: String) {
+        cdkBuilder.supportingAccessPoint(supportingAccessPoint)
+      }
+
+      /**
+       * @param transformationConfigurations A container for transformation configurations for an
+       * Object Lambda Access Point. 
+       */
+      override fun transformationConfigurations(transformationConfigurations: IResolvable) {
+        cdkBuilder.transformationConfigurations(transformationConfigurations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param transformationConfigurations A container for transformation configurations for an
+       * Object Lambda Access Point. 
+       */
+      override fun transformationConfigurations(transformationConfigurations: List<Any>) {
+        cdkBuilder.transformationConfigurations(transformationConfigurations)
+      }
+
+      /**
+       * @param transformationConfigurations A container for transformation configurations for an
+       * Object Lambda Access Point. 
+       */
+      override fun transformationConfigurations(vararg transformationConfigurations: Any): Unit =
+          transformationConfigurations(transformationConfigurations.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty,
+    ) : CdkObject(cdkObject), ObjectLambdaConfigurationProperty {
+      /**
+       * A container for allowed features.
+       *
+       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
+       * `HeadObject-PartNumber` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-allowedfeatures)
+       */
+      override fun allowedFeatures(): List<String> = unwrap(this).getAllowedFeatures() ?:
+          emptyList()
+
+      /**
+       * A container for whether the CloudWatch metrics configuration is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-cloudwatchmetricsenabled)
+       */
+      override fun cloudWatchMetricsEnabled(): Any? = unwrap(this).getCloudWatchMetricsEnabled()
+
+      /**
+       * Standard access point associated with the Object Lambda Access Point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-supportingaccesspoint)
+       */
+      override fun supportingAccessPoint(): String = unwrap(this).getSupportingAccessPoint()
+
+      /**
+       * A container for transformation configurations for an Object Lambda Access Point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-transformationconfigurations)
+       */
+      override fun transformationConfigurations(): Any =
+          unwrap(this).getTransformationConfigurations()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ObjectLambdaConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty):
+          ObjectLambdaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ObjectLambdaConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ObjectLambdaConfigurationProperty):
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty
+    }
+  }
+
+  /**
    * Example:
    *
    * ```
@@ -523,106 +996,6 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PolicyStatusProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PolicyStatusProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3objectlambda.*;
-   * AwsLambdaProperty awsLambdaProperty = AwsLambdaProperty.builder()
-   * .functionArn("functionArn")
-   * // the properties below are optional
-   * .functionPayload("functionPayload")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html)
-   */
-  public interface AwsLambdaProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionarn)
-     */
-    public fun functionArn(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionpayload)
-     */
-    public fun functionPayload(): String? = unwrap(this).getFunctionPayload()
-
-    /**
-     * A builder for [AwsLambdaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param functionArn the value to be set. 
-       */
-      public fun functionArn(functionArn: String)
-
-      /**
-       * @param functionPayload the value to be set.
-       */
-      public fun functionPayload(functionPayload: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty.Builder =
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty.builder()
-
-      /**
-       * @param functionArn the value to be set. 
-       */
-      override fun functionArn(functionArn: String) {
-        cdkBuilder.functionArn(functionArn)
-      }
-
-      /**
-       * @param functionPayload the value to be set.
-       */
-      override fun functionPayload(functionPayload: String) {
-        cdkBuilder.functionPayload(functionPayload)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty,
-    ) : CdkObject(cdkObject), AwsLambdaProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionarn)
-       */
-      override fun functionArn(): String = unwrap(this).getFunctionArn()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionpayload)
-       */
-      override fun functionPayload(): String? = unwrap(this).getFunctionPayload()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AwsLambdaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty):
-          AwsLambdaProperty = CdkObjectWrappers.wrap(cdkObject) as? AwsLambdaProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AwsLambdaProperty):
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty
     }
   }
 
@@ -1200,379 +1573,6 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.TransformationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.TransformationConfigurationProperty
-    }
-  }
-
-  /**
-   * A configuration used when creating an Object Lambda Access Point.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3objectlambda.*;
-   * Object contentTransformation;
-   * ObjectLambdaConfigurationProperty objectLambdaConfigurationProperty =
-   * ObjectLambdaConfigurationProperty.builder()
-   * .supportingAccessPoint("supportingAccessPoint")
-   * .transformationConfigurations(List.of(TransformationConfigurationProperty.builder()
-   * .actions(List.of("actions"))
-   * .contentTransformation(contentTransformation)
-   * .build()))
-   * // the properties below are optional
-   * .allowedFeatures(List.of("allowedFeatures"))
-   * .cloudWatchMetricsEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html)
-   */
-  public interface ObjectLambdaConfigurationProperty {
-    /**
-     * A container for allowed features.
-     *
-     * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
-     * `HeadObject-PartNumber` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-allowedfeatures)
-     */
-    public fun allowedFeatures(): List<String> = unwrap(this).getAllowedFeatures() ?: emptyList()
-
-    /**
-     * A container for whether the CloudWatch metrics configuration is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-cloudwatchmetricsenabled)
-     */
-    public fun cloudWatchMetricsEnabled(): Any? = unwrap(this).getCloudWatchMetricsEnabled()
-
-    /**
-     * Standard access point associated with the Object Lambda Access Point.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-supportingaccesspoint)
-     */
-    public fun supportingAccessPoint(): String
-
-    /**
-     * A container for transformation configurations for an Object Lambda Access Point.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-transformationconfigurations)
-     */
-    public fun transformationConfigurations(): Any
-
-    /**
-     * A builder for [ObjectLambdaConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allowedFeatures A container for allowed features.
-       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
-       * `HeadObject-PartNumber` .
-       */
-      public fun allowedFeatures(allowedFeatures: List<String>)
-
-      /**
-       * @param allowedFeatures A container for allowed features.
-       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
-       * `HeadObject-PartNumber` .
-       */
-      public fun allowedFeatures(vararg allowedFeatures: String)
-
-      /**
-       * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics
-       * configuration is enabled.
-       */
-      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean)
-
-      /**
-       * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics
-       * configuration is enabled.
-       */
-      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable)
-
-      /**
-       * @param supportingAccessPoint Standard access point associated with the Object Lambda Access
-       * Point. 
-       */
-      public fun supportingAccessPoint(supportingAccessPoint: String)
-
-      /**
-       * @param transformationConfigurations A container for transformation configurations for an
-       * Object Lambda Access Point. 
-       */
-      public fun transformationConfigurations(transformationConfigurations: IResolvable)
-
-      /**
-       * @param transformationConfigurations A container for transformation configurations for an
-       * Object Lambda Access Point. 
-       */
-      public fun transformationConfigurations(transformationConfigurations: List<Any>)
-
-      /**
-       * @param transformationConfigurations A container for transformation configurations for an
-       * Object Lambda Access Point. 
-       */
-      public fun transformationConfigurations(vararg transformationConfigurations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty.builder()
-
-      /**
-       * @param allowedFeatures A container for allowed features.
-       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
-       * `HeadObject-PartNumber` .
-       */
-      override fun allowedFeatures(allowedFeatures: List<String>) {
-        cdkBuilder.allowedFeatures(allowedFeatures)
-      }
-
-      /**
-       * @param allowedFeatures A container for allowed features.
-       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
-       * `HeadObject-PartNumber` .
-       */
-      override fun allowedFeatures(vararg allowedFeatures: String): Unit =
-          allowedFeatures(allowedFeatures.toList())
-
-      /**
-       * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics
-       * configuration is enabled.
-       */
-      override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
-        cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
-      }
-
-      /**
-       * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics
-       * configuration is enabled.
-       */
-      override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
-        cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param supportingAccessPoint Standard access point associated with the Object Lambda Access
-       * Point. 
-       */
-      override fun supportingAccessPoint(supportingAccessPoint: String) {
-        cdkBuilder.supportingAccessPoint(supportingAccessPoint)
-      }
-
-      /**
-       * @param transformationConfigurations A container for transformation configurations for an
-       * Object Lambda Access Point. 
-       */
-      override fun transformationConfigurations(transformationConfigurations: IResolvable) {
-        cdkBuilder.transformationConfigurations(transformationConfigurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param transformationConfigurations A container for transformation configurations for an
-       * Object Lambda Access Point. 
-       */
-      override fun transformationConfigurations(transformationConfigurations: List<Any>) {
-        cdkBuilder.transformationConfigurations(transformationConfigurations)
-      }
-
-      /**
-       * @param transformationConfigurations A container for transformation configurations for an
-       * Object Lambda Access Point. 
-       */
-      override fun transformationConfigurations(vararg transformationConfigurations: Any): Unit =
-          transformationConfigurations(transformationConfigurations.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty,
-    ) : CdkObject(cdkObject), ObjectLambdaConfigurationProperty {
-      /**
-       * A container for allowed features.
-       *
-       * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
-       * `HeadObject-PartNumber` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-allowedfeatures)
-       */
-      override fun allowedFeatures(): List<String> = unwrap(this).getAllowedFeatures() ?:
-          emptyList()
-
-      /**
-       * A container for whether the CloudWatch metrics configuration is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-cloudwatchmetricsenabled)
-       */
-      override fun cloudWatchMetricsEnabled(): Any? = unwrap(this).getCloudWatchMetricsEnabled()
-
-      /**
-       * Standard access point associated with the Object Lambda Access Point.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-supportingaccesspoint)
-       */
-      override fun supportingAccessPoint(): String = unwrap(this).getSupportingAccessPoint()
-
-      /**
-       * A container for transformation configurations for an Object Lambda Access Point.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-transformationconfigurations)
-       */
-      override fun transformationConfigurations(): Any =
-          unwrap(this).getTransformationConfigurations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ObjectLambdaConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty):
-          ObjectLambdaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ObjectLambdaConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ObjectLambdaConfigurationProperty):
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty
-    }
-  }
-
-  /**
-   * The alias of an Object Lambda Access Point.
-   *
-   * For more information, see [How to use a bucket-style alias for your S3 bucket Object Lambda
-   * Access
-   * Point](https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-use.html#ol-access-points-alias)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3objectlambda.*;
-   * AliasProperty aliasProperty = AliasProperty.builder()
-   * .value("value")
-   * // the properties below are optional
-   * .status("status")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html)
-   */
-  public interface AliasProperty {
-    /**
-     * The status of the Object Lambda Access Point alias.
-     *
-     * If the status is `PROVISIONING` , the Object Lambda Access Point is provisioning the alias
-     * and the alias is not ready for use yet. If the status is `READY` , the Object Lambda Access
-     * Point alias is successfully provisioned and ready for use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html#cfn-s3objectlambda-accesspoint-alias-status)
-     */
-    public fun status(): String? = unwrap(this).getStatus()
-
-    /**
-     * The alias value of the Object Lambda Access Point.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html#cfn-s3objectlambda-accesspoint-alias-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [AliasProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param status The status of the Object Lambda Access Point alias.
-       * If the status is `PROVISIONING` , the Object Lambda Access Point is provisioning the alias
-       * and the alias is not ready for use yet. If the status is `READY` , the Object Lambda Access
-       * Point alias is successfully provisioned and ready for use.
-       */
-      public fun status(status: String)
-
-      /**
-       * @param value The alias value of the Object Lambda Access Point. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty.Builder =
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty.builder()
-
-      /**
-       * @param status The status of the Object Lambda Access Point alias.
-       * If the status is `PROVISIONING` , the Object Lambda Access Point is provisioning the alias
-       * and the alias is not ready for use yet. If the status is `READY` , the Object Lambda Access
-       * Point alias is successfully provisioned and ready for use.
-       */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
-      }
-
-      /**
-       * @param value The alias value of the Object Lambda Access Point. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty,
-    ) : CdkObject(cdkObject), AliasProperty {
-      /**
-       * The status of the Object Lambda Access Point alias.
-       *
-       * If the status is `PROVISIONING` , the Object Lambda Access Point is provisioning the alias
-       * and the alias is not ready for use yet. If the status is `READY` , the Object Lambda Access
-       * Point alias is successfully provisioned and ready for use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html#cfn-s3objectlambda-accesspoint-alias-status)
-       */
-      override fun status(): String? = unwrap(this).getStatus()
-
-      /**
-       * The alias value of the Object Lambda Access Point.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html#cfn-s3objectlambda-accesspoint-alias-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AliasProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty):
-          AliasProperty = CdkObjectWrappers.wrap(cdkObject) as? AliasProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AliasProperty):
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty
     }
   }
 }

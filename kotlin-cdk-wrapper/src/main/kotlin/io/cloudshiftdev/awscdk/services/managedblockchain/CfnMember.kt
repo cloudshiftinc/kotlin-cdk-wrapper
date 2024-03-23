@@ -757,6 +757,258 @@ public open class CfnMember internal constructor(
   }
 
   /**
+   * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain network
+   * that is using the Hyperledger Fabric framework.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.managedblockchain.*;
+   * MemberFabricConfigurationProperty memberFabricConfigurationProperty =
+   * MemberFabricConfigurationProperty.builder()
+   * .adminPassword("adminPassword")
+   * .adminUsername("adminUsername")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html)
+   */
+  public interface MemberFabricConfigurationProperty {
+    /**
+     * The password for the member's initial administrative user.
+     *
+     * The `AdminPassword` must be at least 8 characters long and no more than 32 characters. It
+     * must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot have
+     * a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward
+     * slash(),
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminpassword)
+     */
+    public fun adminPassword(): String
+
+    /**
+     * The user name for the member's initial administrative user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminusername)
+     */
+    public fun adminUsername(): String
+
+    /**
+     * A builder for [MemberFabricConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adminPassword The password for the member's initial administrative user. 
+       * The `AdminPassword` must be at least 8 characters long and no more than 32 characters. It
+       * must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot
+       * have a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward
+       * slash(),
+       */
+      public fun adminPassword(adminPassword: String)
+
+      /**
+       * @param adminUsername The user name for the member's initial administrative user. 
+       */
+      public fun adminUsername(adminUsername: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty.builder()
+
+      /**
+       * @param adminPassword The password for the member's initial administrative user. 
+       * The `AdminPassword` must be at least 8 characters long and no more than 32 characters. It
+       * must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot
+       * have a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward
+       * slash(),
+       */
+      override fun adminPassword(adminPassword: String) {
+        cdkBuilder.adminPassword(adminPassword)
+      }
+
+      /**
+       * @param adminUsername The user name for the member's initial administrative user. 
+       */
+      override fun adminUsername(adminUsername: String) {
+        cdkBuilder.adminUsername(adminUsername)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty,
+    ) : CdkObject(cdkObject), MemberFabricConfigurationProperty {
+      /**
+       * The password for the member's initial administrative user.
+       *
+       * The `AdminPassword` must be at least 8 characters long and no more than 32 characters. It
+       * must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot
+       * have a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward
+       * slash(),
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminpassword)
+       */
+      override fun adminPassword(): String = unwrap(this).getAdminPassword()
+
+      /**
+       * The user name for the member's initial administrative user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminusername)
+       */
+      override fun adminUsername(): String = unwrap(this).getAdminUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MemberFabricConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty):
+          MemberFabricConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemberFabricConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemberFabricConfigurationProperty):
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration properties relevant to a member for the blockchain framework that the Managed
+   * Blockchain network uses.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.managedblockchain.*;
+   * MemberFrameworkConfigurationProperty memberFrameworkConfigurationProperty =
+   * MemberFrameworkConfigurationProperty.builder()
+   * .memberFabricConfiguration(MemberFabricConfigurationProperty.builder()
+   * .adminPassword("adminPassword")
+   * .adminUsername("adminUsername")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberframeworkconfiguration.html)
+   */
+  public interface MemberFrameworkConfigurationProperty {
+    /**
+     * Configuration properties for Hyperledger Fabric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberframeworkconfiguration.html#cfn-managedblockchain-member-memberframeworkconfiguration-memberfabricconfiguration)
+     */
+    public fun memberFabricConfiguration(): Any? = unwrap(this).getMemberFabricConfiguration()
+
+    /**
+     * A builder for [MemberFrameworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
+       */
+      public fun memberFabricConfiguration(memberFabricConfiguration: IResolvable)
+
+      /**
+       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
+       */
+      public
+          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty)
+
+      /**
+       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ac243ffca22c14be7eac106cca3853c1972358665ec67aa7e75bef27844b52fb")
+      public
+          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty.builder()
+
+      /**
+       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
+       */
+      override fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
+        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
+       */
+      override
+          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty) {
+        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(MemberFabricConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ac243ffca22c14be7eac106cca3853c1972358665ec67aa7e75bef27844b52fb")
+      override
+          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          memberFabricConfiguration(MemberFabricConfigurationProperty(memberFabricConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty,
+    ) : CdkObject(cdkObject), MemberFrameworkConfigurationProperty {
+      /**
+       * Configuration properties for Hyperledger Fabric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberframeworkconfiguration.html#cfn-managedblockchain-member-memberframeworkconfiguration-memberfabricconfiguration)
+       */
+      override fun memberFabricConfiguration(): Any? = unwrap(this).getMemberFabricConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MemberFrameworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty):
+          MemberFrameworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemberFrameworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemberFrameworkConfigurationProperty):
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty
+    }
+  }
+
+  /**
    * Configuration properties of the network to which the member belongs.
    *
    * Example:
@@ -1157,6 +1409,134 @@ public open class CfnMember internal constructor(
   }
 
   /**
+   * Configuration properties relevant to the network for the blockchain framework that the network
+   * uses.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.managedblockchain.*;
+   * NetworkFrameworkConfigurationProperty networkFrameworkConfigurationProperty =
+   * NetworkFrameworkConfigurationProperty.builder()
+   * .networkFabricConfiguration(NetworkFabricConfigurationProperty.builder()
+   * .edition("edition")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkframeworkconfiguration.html)
+   */
+  public interface NetworkFrameworkConfigurationProperty {
+    /**
+     * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain network
+     * that is using the Hyperledger Fabric framework.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkframeworkconfiguration.html#cfn-managedblockchain-member-networkframeworkconfiguration-networkfabricconfiguration)
+     */
+    public fun networkFabricConfiguration(): Any? = unwrap(this).getNetworkFabricConfiguration()
+
+    /**
+     * A builder for [NetworkFrameworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
+       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
+       */
+      public fun networkFabricConfiguration(networkFabricConfiguration: IResolvable)
+
+      /**
+       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
+       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
+       */
+      public
+          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty)
+
+      /**
+       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
+       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4491c5e51465df27d1fafff65e7d7024932678b533f6339c9920deace3998cfa")
+      public
+          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty.builder()
+
+      /**
+       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
+       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
+       */
+      override fun networkFabricConfiguration(networkFabricConfiguration: IResolvable) {
+        cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
+       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
+       */
+      override
+          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty) {
+        cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(NetworkFabricConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
+       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4491c5e51465df27d1fafff65e7d7024932678b533f6339c9920deace3998cfa")
+      override
+          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          networkFabricConfiguration(NetworkFabricConfigurationProperty(networkFabricConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty,
+    ) : CdkObject(cdkObject), NetworkFrameworkConfigurationProperty {
+      /**
+       * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain
+       * network that is using the Hyperledger Fabric framework.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkframeworkconfiguration.html#cfn-managedblockchain-member-networkframeworkconfiguration-networkfabricconfiguration)
+       */
+      override fun networkFabricConfiguration(): Any? = unwrap(this).getNetworkFabricConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NetworkFrameworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty):
+          NetworkFrameworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkFrameworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkFrameworkConfigurationProperty):
+          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty
+    }
+  }
+
+  /**
    * The voting rules for the network to decide if a proposal is accepted.
    *
    * Applies only to Hyperledger Fabric.
@@ -1295,386 +1675,6 @@ public open class CfnMember internal constructor(
           software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty
-    }
-  }
-
-  /**
-   * Configuration properties relevant to a member for the blockchain framework that the Managed
-   * Blockchain network uses.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.managedblockchain.*;
-   * MemberFrameworkConfigurationProperty memberFrameworkConfigurationProperty =
-   * MemberFrameworkConfigurationProperty.builder()
-   * .memberFabricConfiguration(MemberFabricConfigurationProperty.builder()
-   * .adminPassword("adminPassword")
-   * .adminUsername("adminUsername")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberframeworkconfiguration.html)
-   */
-  public interface MemberFrameworkConfigurationProperty {
-    /**
-     * Configuration properties for Hyperledger Fabric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberframeworkconfiguration.html#cfn-managedblockchain-member-memberframeworkconfiguration-memberfabricconfiguration)
-     */
-    public fun memberFabricConfiguration(): Any? = unwrap(this).getMemberFabricConfiguration()
-
-    /**
-     * A builder for [MemberFrameworkConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
-       */
-      public fun memberFabricConfiguration(memberFabricConfiguration: IResolvable)
-
-      /**
-       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
-       */
-      public
-          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty)
-
-      /**
-       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ac243ffca22c14be7eac106cca3853c1972358665ec67aa7e75bef27844b52fb")
-      public
-          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty.builder()
-
-      /**
-       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
-       */
-      override fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
-        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
-       */
-      override
-          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty) {
-        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(MemberFabricConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ac243ffca22c14be7eac106cca3853c1972358665ec67aa7e75bef27844b52fb")
-      override
-          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          memberFabricConfiguration(MemberFabricConfigurationProperty(memberFabricConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty,
-    ) : CdkObject(cdkObject), MemberFrameworkConfigurationProperty {
-      /**
-       * Configuration properties for Hyperledger Fabric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberframeworkconfiguration.html#cfn-managedblockchain-member-memberframeworkconfiguration-memberfabricconfiguration)
-       */
-      override fun memberFabricConfiguration(): Any? = unwrap(this).getMemberFabricConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MemberFrameworkConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty):
-          MemberFrameworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MemberFrameworkConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MemberFrameworkConfigurationProperty):
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty
-    }
-  }
-
-  /**
-   * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain network
-   * that is using the Hyperledger Fabric framework.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.managedblockchain.*;
-   * MemberFabricConfigurationProperty memberFabricConfigurationProperty =
-   * MemberFabricConfigurationProperty.builder()
-   * .adminPassword("adminPassword")
-   * .adminUsername("adminUsername")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html)
-   */
-  public interface MemberFabricConfigurationProperty {
-    /**
-     * The password for the member's initial administrative user.
-     *
-     * The `AdminPassword` must be at least 8 characters long and no more than 32 characters. It
-     * must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot have
-     * a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward
-     * slash(),
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminpassword)
-     */
-    public fun adminPassword(): String
-
-    /**
-     * The user name for the member's initial administrative user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminusername)
-     */
-    public fun adminUsername(): String
-
-    /**
-     * A builder for [MemberFabricConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param adminPassword The password for the member's initial administrative user. 
-       * The `AdminPassword` must be at least 8 characters long and no more than 32 characters. It
-       * must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot
-       * have a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward
-       * slash(),
-       */
-      public fun adminPassword(adminPassword: String)
-
-      /**
-       * @param adminUsername The user name for the member's initial administrative user. 
-       */
-      public fun adminUsername(adminUsername: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty.builder()
-
-      /**
-       * @param adminPassword The password for the member's initial administrative user. 
-       * The `AdminPassword` must be at least 8 characters long and no more than 32 characters. It
-       * must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot
-       * have a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward
-       * slash(),
-       */
-      override fun adminPassword(adminPassword: String) {
-        cdkBuilder.adminPassword(adminPassword)
-      }
-
-      /**
-       * @param adminUsername The user name for the member's initial administrative user. 
-       */
-      override fun adminUsername(adminUsername: String) {
-        cdkBuilder.adminUsername(adminUsername)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty,
-    ) : CdkObject(cdkObject), MemberFabricConfigurationProperty {
-      /**
-       * The password for the member's initial administrative user.
-       *
-       * The `AdminPassword` must be at least 8 characters long and no more than 32 characters. It
-       * must contain at least one uppercase letter, one lowercase letter, and one digit. It cannot
-       * have a single quotation mark (‘), a double quotation marks (“), a forward slash(/), a backward
-       * slash(),
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminpassword)
-       */
-      override fun adminPassword(): String = unwrap(this).getAdminPassword()
-
-      /**
-       * The user name for the member's initial administrative user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminusername)
-       */
-      override fun adminUsername(): String = unwrap(this).getAdminUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MemberFabricConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty):
-          MemberFabricConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MemberFabricConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MemberFabricConfigurationProperty):
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty
-    }
-  }
-
-  /**
-   * Configuration properties relevant to the network for the blockchain framework that the network
-   * uses.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.managedblockchain.*;
-   * NetworkFrameworkConfigurationProperty networkFrameworkConfigurationProperty =
-   * NetworkFrameworkConfigurationProperty.builder()
-   * .networkFabricConfiguration(NetworkFabricConfigurationProperty.builder()
-   * .edition("edition")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkframeworkconfiguration.html)
-   */
-  public interface NetworkFrameworkConfigurationProperty {
-    /**
-     * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain network
-     * that is using the Hyperledger Fabric framework.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkframeworkconfiguration.html#cfn-managedblockchain-member-networkframeworkconfiguration-networkfabricconfiguration)
-     */
-    public fun networkFabricConfiguration(): Any? = unwrap(this).getNetworkFabricConfiguration()
-
-    /**
-     * A builder for [NetworkFrameworkConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
-       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
-       */
-      public fun networkFabricConfiguration(networkFabricConfiguration: IResolvable)
-
-      /**
-       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
-       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
-       */
-      public
-          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty)
-
-      /**
-       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
-       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4491c5e51465df27d1fafff65e7d7024932678b533f6339c9920deace3998cfa")
-      public
-          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty.builder()
-
-      /**
-       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
-       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
-       */
-      override fun networkFabricConfiguration(networkFabricConfiguration: IResolvable) {
-        cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
-       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
-       */
-      override
-          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty) {
-        cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(NetworkFabricConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a
-       * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4491c5e51465df27d1fafff65e7d7024932678b533f6339c9920deace3998cfa")
-      override
-          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          networkFabricConfiguration(NetworkFabricConfigurationProperty(networkFabricConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkFrameworkConfigurationProperty {
-      /**
-       * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain
-       * network that is using the Hyperledger Fabric framework.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkframeworkconfiguration.html#cfn-managedblockchain-member-networkframeworkconfiguration-networkfabricconfiguration)
-       */
-      override fun networkFabricConfiguration(): Any? = unwrap(this).getNetworkFabricConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NetworkFrameworkConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty):
-          NetworkFrameworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkFrameworkConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkFrameworkConfigurationProperty):
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty
     }
   }
 }

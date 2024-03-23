@@ -401,316 +401,6 @@ public open class CfnFirewallPolicy internal constructor(
   }
 
   /**
-   * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the
-   * matching packet.
-   *
-   * This setting defines a CloudWatch dimension value to be published.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * PublishMetricActionProperty publishMetricActionProperty = PublishMetricActionProperty.builder()
-   * .dimensions(List.of(DimensionProperty.builder()
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-publishmetricaction.html)
-   */
-  public interface PublishMetricActionProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-publishmetricaction.html#cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions)
-     */
-    public fun dimensions(): Any
-
-    /**
-     * A builder for [PublishMetricActionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensions the value to be set. 
-       */
-      public fun dimensions(dimensions: IResolvable)
-
-      /**
-       * @param dimensions the value to be set. 
-       */
-      public fun dimensions(dimensions: List<Any>)
-
-      /**
-       * @param dimensions the value to be set. 
-       */
-      public fun dimensions(vararg dimensions: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty.builder()
-
-      /**
-       * @param dimensions the value to be set. 
-       */
-      override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dimensions the value to be set. 
-       */
-      override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
-      }
-
-      /**
-       * @param dimensions the value to be set. 
-       */
-      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty,
-    ) : CdkObject(cdkObject), PublishMetricActionProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-publishmetricaction.html#cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions)
-       */
-      override fun dimensions(): Any = unwrap(this).getDimensions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PublishMetricActionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty):
-          PublishMetricActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PublishMetricActionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PublishMetricActionProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty
-    }
-  }
-
-  /**
-   * Configuration settings for the handling of the stateful rule groups in a firewall policy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * StatefulEngineOptionsProperty statefulEngineOptionsProperty =
-   * StatefulEngineOptionsProperty.builder()
-   * .ruleOrder("ruleOrder")
-   * .streamExceptionPolicy("streamExceptionPolicy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html)
-   */
-  public interface StatefulEngineOptionsProperty {
-    /**
-     * Indicates how to manage the order of stateful rule evaluation for the policy.
-     *
-     * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
-     * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
-     * For more information, see [Evaluation order for stateful
-     * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-     * in the *AWS Network Firewall Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-ruleorder)
-     */
-    public fun ruleOrder(): String? = unwrap(this).getRuleOrder()
-
-    /**
-     * Configures how Network Firewall processes traffic when a network connection breaks midstream.
-     *
-     * Network connections can break due to disruptions in external networks or within the firewall
-     * itself.
-     *
-     * * `DROP` - Network Firewall fails closed and drops all subsequent traffic going to the
-     * firewall. This is the default behavior.
-     * * `CONTINUE` - Network Firewall continues to apply rules to the subsequent traffic without
-     * context from traffic before the break. This impacts the behavior of rules that depend on this
-     * context. For example, if you have a stateful rule to `drop http` traffic, Network Firewall won't
-     * match the traffic for this rule because the service won't have the context from session
-     * initialization defining the application layer protocol as HTTP. However, this behavior is rule
-     * dependent—a TCP-layer rule using a `flow:stateless` rule would still match, as would the
-     * `aws:drop_strict` default action.
-     * * `REJECT` - Network Firewall fails closed and drops all subsequent traffic going to the
-     * firewall. Network Firewall also sends a TCP reject packet back to your client so that the client
-     * can immediately establish a new session. Network Firewall will have context about the new
-     * session and will apply rules to the subsequent traffic.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-streamexceptionpolicy)
-     */
-    public fun streamExceptionPolicy(): String? = unwrap(this).getStreamExceptionPolicy()
-
-    /**
-     * A builder for [StatefulEngineOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ruleOrder Indicates how to manage the order of stateful rule evaluation for the
-       * policy.
-       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
-       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
-       * For more information, see [Evaluation order for stateful
-       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       */
-      public fun ruleOrder(ruleOrder: String)
-
-      /**
-       * @param streamExceptionPolicy Configures how Network Firewall processes traffic when a
-       * network connection breaks midstream.
-       * Network connections can break due to disruptions in external networks or within the
-       * firewall itself.
-       *
-       * * `DROP` - Network Firewall fails closed and drops all subsequent traffic going to the
-       * firewall. This is the default behavior.
-       * * `CONTINUE` - Network Firewall continues to apply rules to the subsequent traffic without
-       * context from traffic before the break. This impacts the behavior of rules that depend on this
-       * context. For example, if you have a stateful rule to `drop http` traffic, Network Firewall
-       * won't match the traffic for this rule because the service won't have the context from session
-       * initialization defining the application layer protocol as HTTP. However, this behavior is rule
-       * dependent—a TCP-layer rule using a `flow:stateless` rule would still match, as would the
-       * `aws:drop_strict` default action.
-       * * `REJECT` - Network Firewall fails closed and drops all subsequent traffic going to the
-       * firewall. Network Firewall also sends a TCP reject packet back to your client so that the
-       * client can immediately establish a new session. Network Firewall will have context about the
-       * new session and will apply rules to the subsequent traffic.
-       */
-      public fun streamExceptionPolicy(streamExceptionPolicy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty.builder()
-
-      /**
-       * @param ruleOrder Indicates how to manage the order of stateful rule evaluation for the
-       * policy.
-       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
-       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
-       * For more information, see [Evaluation order for stateful
-       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       */
-      override fun ruleOrder(ruleOrder: String) {
-        cdkBuilder.ruleOrder(ruleOrder)
-      }
-
-      /**
-       * @param streamExceptionPolicy Configures how Network Firewall processes traffic when a
-       * network connection breaks midstream.
-       * Network connections can break due to disruptions in external networks or within the
-       * firewall itself.
-       *
-       * * `DROP` - Network Firewall fails closed and drops all subsequent traffic going to the
-       * firewall. This is the default behavior.
-       * * `CONTINUE` - Network Firewall continues to apply rules to the subsequent traffic without
-       * context from traffic before the break. This impacts the behavior of rules that depend on this
-       * context. For example, if you have a stateful rule to `drop http` traffic, Network Firewall
-       * won't match the traffic for this rule because the service won't have the context from session
-       * initialization defining the application layer protocol as HTTP. However, this behavior is rule
-       * dependent—a TCP-layer rule using a `flow:stateless` rule would still match, as would the
-       * `aws:drop_strict` default action.
-       * * `REJECT` - Network Firewall fails closed and drops all subsequent traffic going to the
-       * firewall. Network Firewall also sends a TCP reject packet back to your client so that the
-       * client can immediately establish a new session. Network Firewall will have context about the
-       * new session and will apply rules to the subsequent traffic.
-       */
-      override fun streamExceptionPolicy(streamExceptionPolicy: String) {
-        cdkBuilder.streamExceptionPolicy(streamExceptionPolicy)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty,
-    ) : CdkObject(cdkObject), StatefulEngineOptionsProperty {
-      /**
-       * Indicates how to manage the order of stateful rule evaluation for the policy.
-       *
-       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
-       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
-       * For more information, see [Evaluation order for stateful
-       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-ruleorder)
-       */
-      override fun ruleOrder(): String? = unwrap(this).getRuleOrder()
-
-      /**
-       * Configures how Network Firewall processes traffic when a network connection breaks
-       * midstream.
-       *
-       * Network connections can break due to disruptions in external networks or within the
-       * firewall itself.
-       *
-       * * `DROP` - Network Firewall fails closed and drops all subsequent traffic going to the
-       * firewall. This is the default behavior.
-       * * `CONTINUE` - Network Firewall continues to apply rules to the subsequent traffic without
-       * context from traffic before the break. This impacts the behavior of rules that depend on this
-       * context. For example, if you have a stateful rule to `drop http` traffic, Network Firewall
-       * won't match the traffic for this rule because the service won't have the context from session
-       * initialization defining the application layer protocol as HTTP. However, this behavior is rule
-       * dependent—a TCP-layer rule using a `flow:stateless` rule would still match, as would the
-       * `aws:drop_strict` default action.
-       * * `REJECT` - Network Firewall fails closed and drops all subsequent traffic going to the
-       * firewall. Network Firewall also sends a TCP reject packet back to your client so that the
-       * client can immediately establish a new session. Network Firewall will have context about the
-       * new session and will apply rules to the subsequent traffic.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-streamexceptionpolicy)
-       */
-      override fun streamExceptionPolicy(): String? = unwrap(this).getStreamExceptionPolicy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StatefulEngineOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty):
-          StatefulEngineOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StatefulEngineOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StatefulEngineOptionsProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty
-    }
-  }
-
-  /**
    * A custom action to use in stateless rule actions settings.
    *
    * Example:
@@ -885,577 +575,6 @@ public open class CfnFirewallPolicy internal constructor(
   }
 
   /**
-   * Identifier for a single stateless rule group, used in a firewall policy to refer to the rule
-   * group.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * StatelessRuleGroupReferenceProperty statelessRuleGroupReferenceProperty =
-   * StatelessRuleGroupReferenceProperty.builder()
-   * .priority(123)
-   * .resourceArn("resourceArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html)
-   */
-  public interface StatelessRuleGroupReferenceProperty {
-    /**
-     * An integer setting that indicates the order in which to run the stateless rule groups in a
-     * single `FirewallPolicy` .
-     *
-     * Network Firewall applies each stateless rule group to a packet starting with the group that
-     * has the lowest priority setting. You must ensure that the priority settings are unique within
-     * each policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-priority)
-     */
-    public fun priority(): Number
-
-    /**
-     * The Amazon Resource Name (ARN) of the stateless rule group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * A builder for [StatelessRuleGroupReferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param priority An integer setting that indicates the order in which to run the stateless
-       * rule groups in a single `FirewallPolicy` . 
-       * Network Firewall applies each stateless rule group to a packet starting with the group that
-       * has the lowest priority setting. You must ensure that the priority settings are unique within
-       * each policy.
-       */
-      public fun priority(priority: Number)
-
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the stateless rule group. 
-       */
-      public fun resourceArn(resourceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty.builder()
-
-      /**
-       * @param priority An integer setting that indicates the order in which to run the stateless
-       * rule groups in a single `FirewallPolicy` . 
-       * Network Firewall applies each stateless rule group to a packet starting with the group that
-       * has the lowest priority setting. You must ensure that the priority settings are unique within
-       * each policy.
-       */
-      override fun priority(priority: Number) {
-        cdkBuilder.priority(priority)
-      }
-
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the stateless rule group. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty,
-    ) : CdkObject(cdkObject), StatelessRuleGroupReferenceProperty {
-      /**
-       * An integer setting that indicates the order in which to run the stateless rule groups in a
-       * single `FirewallPolicy` .
-       *
-       * Network Firewall applies each stateless rule group to a packet starting with the group that
-       * has the lowest priority setting. You must ensure that the priority settings are unique within
-       * each policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-priority)
-       */
-      override fun priority(): Number = unwrap(this).getPriority()
-
-      /**
-       * The Amazon Resource Name (ARN) of the stateless rule group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          StatelessRuleGroupReferenceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty):
-          StatelessRuleGroupReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StatelessRuleGroupReferenceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StatelessRuleGroupReferenceProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty
-    }
-  }
-
-  /**
-   * Identifier for a single stateful rule group, used in a firewall policy to refer to a rule
-   * group.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * StatefulRuleGroupReferenceProperty statefulRuleGroupReferenceProperty =
-   * StatefulRuleGroupReferenceProperty.builder()
-   * .resourceArn("resourceArn")
-   * // the properties below are optional
-   * .override(StatefulRuleGroupOverrideProperty.builder()
-   * .action("action")
-   * .build())
-   * .priority(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html)
-   */
-  public interface StatefulRuleGroupReferenceProperty {
-    /**
-     * The action that allows the policy owner to override the behavior of the rule group within a
-     * policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-override)
-     */
-    public fun `override`(): Any? = unwrap(this).getOverride()
-
-    /**
-     * An integer setting that indicates the order in which to run the stateful rule groups in a
-     * single `FirewallPolicy` .
-     *
-     * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order in
-     * the stateful engine options settings.
-     *
-     * Network Firewall evalutes each stateful rule group against a packet starting with the group
-     * that has the lowest priority setting. You must ensure that the priority settings are unique
-     * within each policy.
-     *
-     * You can change the priority settings of your rule groups at any time. To make it easier to
-     * insert rule groups later, number them so there's a wide range in between, for example use 100,
-     * 200, and so on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-priority)
-     */
-    public fun priority(): Number? = unwrap(this).getPriority()
-
-    /**
-     * The Amazon Resource Name (ARN) of the stateful rule group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * A builder for [StatefulRuleGroupReferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param override The action that allows the policy owner to override the behavior of the
-       * rule group within a policy.
-       */
-      public fun `override`(`override`: IResolvable)
-
-      /**
-       * @param override The action that allows the policy owner to override the behavior of the
-       * rule group within a policy.
-       */
-      public fun `override`(`override`: StatefulRuleGroupOverrideProperty)
-
-      /**
-       * @param override The action that allows the policy owner to override the behavior of the
-       * rule group within a policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("063e3edbf8a3a4bb75a758da399ab9da795146a21d0554e262127c3bacfb8fff")
-      public fun `override`(`override`: StatefulRuleGroupOverrideProperty.Builder.() -> Unit)
-
-      /**
-       * @param priority An integer setting that indicates the order in which to run the stateful
-       * rule groups in a single `FirewallPolicy` .
-       * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order
-       * in the stateful engine options settings.
-       *
-       * Network Firewall evalutes each stateful rule group against a packet starting with the group
-       * that has the lowest priority setting. You must ensure that the priority settings are unique
-       * within each policy.
-       *
-       * You can change the priority settings of your rule groups at any time. To make it easier to
-       * insert rule groups later, number them so there's a wide range in between, for example use 100,
-       * 200, and so on.
-       */
-      public fun priority(priority: Number)
-
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the stateful rule group. 
-       */
-      public fun resourceArn(resourceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty.builder()
-
-      /**
-       * @param override The action that allows the policy owner to override the behavior of the
-       * rule group within a policy.
-       */
-      override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param override The action that allows the policy owner to override the behavior of the
-       * rule group within a policy.
-       */
-      override fun `override`(`override`: StatefulRuleGroupOverrideProperty) {
-        cdkBuilder.`override`(`override`.let(StatefulRuleGroupOverrideProperty::unwrap))
-      }
-
-      /**
-       * @param override The action that allows the policy owner to override the behavior of the
-       * rule group within a policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("063e3edbf8a3a4bb75a758da399ab9da795146a21d0554e262127c3bacfb8fff")
-      override fun `override`(`override`: StatefulRuleGroupOverrideProperty.Builder.() -> Unit):
-          Unit = `override`(StatefulRuleGroupOverrideProperty(`override`))
-
-      /**
-       * @param priority An integer setting that indicates the order in which to run the stateful
-       * rule groups in a single `FirewallPolicy` .
-       * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order
-       * in the stateful engine options settings.
-       *
-       * Network Firewall evalutes each stateful rule group against a packet starting with the group
-       * that has the lowest priority setting. You must ensure that the priority settings are unique
-       * within each policy.
-       *
-       * You can change the priority settings of your rule groups at any time. To make it easier to
-       * insert rule groups later, number them so there's a wide range in between, for example use 100,
-       * 200, and so on.
-       */
-      override fun priority(priority: Number) {
-        cdkBuilder.priority(priority)
-      }
-
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the stateful rule group. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty,
-    ) : CdkObject(cdkObject), StatefulRuleGroupReferenceProperty {
-      /**
-       * The action that allows the policy owner to override the behavior of the rule group within a
-       * policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-override)
-       */
-      override fun `override`(): Any? = unwrap(this).getOverride()
-
-      /**
-       * An integer setting that indicates the order in which to run the stateful rule groups in a
-       * single `FirewallPolicy` .
-       *
-       * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order
-       * in the stateful engine options settings.
-       *
-       * Network Firewall evalutes each stateful rule group against a packet starting with the group
-       * that has the lowest priority setting. You must ensure that the priority settings are unique
-       * within each policy.
-       *
-       * You can change the priority settings of your rule groups at any time. To make it easier to
-       * insert rule groups later, number them so there's a wide range in between, for example use 100,
-       * 200, and so on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-priority)
-       */
-      override fun priority(): Number? = unwrap(this).getPriority()
-
-      /**
-       * The Amazon Resource Name (ARN) of the stateful rule group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          StatefulRuleGroupReferenceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty):
-          StatefulRuleGroupReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StatefulRuleGroupReferenceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StatefulRuleGroupReferenceProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty
-    }
-  }
-
-  /**
-   * The value to use in an Amazon CloudWatch custom metric dimension.
-   *
-   * This is used in the `PublishMetrics` custom action. A CloudWatch custom metric dimension is a
-   * name/value pair that's part of the identity of a metric.
-   *
-   * AWS Network Firewall sets the dimension name to `CustomAction` and you provide the dimension
-   * value.
-   *
-   * For more information about CloudWatch custom metric dimensions, see [Publishing Custom
-   * Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html#usingDimensions)
-   * in the [Amazon CloudWatch User
-   * Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * DimensionProperty dimensionProperty = DimensionProperty.builder()
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-dimension.html)
-   */
-  public interface DimensionProperty {
-    /**
-     * The value to use in the custom metric dimension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-dimension.html#cfn-networkfirewall-firewallpolicy-dimension-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [DimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value The value to use in the custom metric dimension. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty.builder()
-
-      /**
-       * @param value The value to use in the custom metric dimension. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty,
-    ) : CdkObject(cdkObject), DimensionProperty {
-      /**
-       * The value to use in the custom metric dimension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-dimension.html#cfn-networkfirewall-firewallpolicy-dimension-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty):
-          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DimensionProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty
-    }
-  }
-
-  /**
-   * Contains variables that you can use to override default Suricata settings in your firewall
-   * policy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * PolicyVariablesProperty policyVariablesProperty = PolicyVariablesProperty.builder()
-   * .ruleVariables(Map.of(
-   * "ruleVariablesKey", Map.of(
-   * "definition", List.of("definition"))))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-policyvariables.html)
-   */
-  public interface PolicyVariablesProperty {
-    /**
-     * The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata `HOME_NET` variable.
-     *
-     * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
-     * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
-     * Network Firewall by default uses the CIDR of your inspection VPC.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-policyvariables.html#cfn-networkfirewall-firewallpolicy-policyvariables-rulevariables)
-     */
-    public fun ruleVariables(): Any? = unwrap(this).getRuleVariables()
-
-    /**
-     * A builder for [PolicyVariablesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ruleVariables The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata
-       * `HOME_NET` variable.
-       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
-       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
-       * Network Firewall by default uses the CIDR of your inspection VPC.
-       */
-      public fun ruleVariables(ruleVariables: IResolvable)
-
-      /**
-       * @param ruleVariables The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata
-       * `HOME_NET` variable.
-       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
-       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
-       * Network Firewall by default uses the CIDR of your inspection VPC.
-       */
-      public fun ruleVariables(ruleVariables: Map<String, Any>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty.builder()
-
-      /**
-       * @param ruleVariables The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata
-       * `HOME_NET` variable.
-       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
-       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
-       * Network Firewall by default uses the CIDR of your inspection VPC.
-       */
-      override fun ruleVariables(ruleVariables: IResolvable) {
-        cdkBuilder.ruleVariables(ruleVariables.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ruleVariables The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata
-       * `HOME_NET` variable.
-       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
-       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
-       * Network Firewall by default uses the CIDR of your inspection VPC.
-       */
-      override fun ruleVariables(ruleVariables: Map<String, Any>) {
-        cdkBuilder.ruleVariables(ruleVariables)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty,
-    ) : CdkObject(cdkObject), PolicyVariablesProperty {
-      /**
-       * The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata `HOME_NET` variable.
-       *
-       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
-       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
-       * Network Firewall by default uses the CIDR of your inspection VPC.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-policyvariables.html#cfn-networkfirewall-firewallpolicy-policyvariables-rulevariables)
-       */
-      override fun ruleVariables(): Any? = unwrap(this).getRuleVariables()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PolicyVariablesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty):
-          PolicyVariablesProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyVariablesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PolicyVariablesProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty
-    }
-  }
-
-  /**
    * An optional, non-standard action to use for stateless packet handling.
    *
    * You can define this in addition to the standard action that you must specify.
@@ -1617,6 +736,100 @@ public open class CfnFirewallPolicy internal constructor(
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.CustomActionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.CustomActionProperty
+    }
+  }
+
+  /**
+   * The value to use in an Amazon CloudWatch custom metric dimension.
+   *
+   * This is used in the `PublishMetrics` custom action. A CloudWatch custom metric dimension is a
+   * name/value pair that's part of the identity of a metric.
+   *
+   * AWS Network Firewall sets the dimension name to `CustomAction` and you provide the dimension
+   * value.
+   *
+   * For more information about CloudWatch custom metric dimensions, see [Publishing Custom
+   * Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html#usingDimensions)
+   * in the [Amazon CloudWatch User
+   * Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * DimensionProperty dimensionProperty = DimensionProperty.builder()
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-dimension.html)
+   */
+  public interface DimensionProperty {
+    /**
+     * The value to use in the custom metric dimension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-dimension.html#cfn-networkfirewall-firewallpolicy-dimension-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [DimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param value The value to use in the custom metric dimension. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty.builder()
+
+      /**
+       * @param value The value to use in the custom metric dimension. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty,
+    ) : CdkObject(cdkObject), DimensionProperty {
+      /**
+       * The value to use in the custom metric dimension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-dimension.html#cfn-networkfirewall-firewallpolicy-dimension-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty):
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DimensionProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty
     }
   }
 
@@ -2422,6 +1635,530 @@ public open class CfnFirewallPolicy internal constructor(
   }
 
   /**
+   * A list of IP addresses and address ranges, in CIDR notation.
+   *
+   * This is part of a `RuleVariables` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * IPSetProperty iPSetProperty = Map.of(
+   * "definition", List.of("definition"));
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-ipset.html)
+   */
+  public interface IPSetProperty {
+    /**
+     * The list of IP addresses and address ranges, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-ipset.html#cfn-networkfirewall-firewallpolicy-ipset-definition)
+     */
+    public fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
+
+    /**
+     * A builder for [IPSetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       */
+      public fun definition(definition: List<String>)
+
+      /**
+       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       */
+      public fun definition(vararg definition: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty.Builder =
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty.builder()
+
+      /**
+       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       */
+      override fun definition(definition: List<String>) {
+        cdkBuilder.definition(definition)
+      }
+
+      /**
+       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       */
+      override fun definition(vararg definition: String): Unit = definition(definition.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty,
+    ) : CdkObject(cdkObject), IPSetProperty {
+      /**
+       * The list of IP addresses and address ranges, in CIDR notation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-ipset.html#cfn-networkfirewall-firewallpolicy-ipset-definition)
+       */
+      override fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IPSetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty):
+          IPSetProperty = CdkObjectWrappers.wrap(cdkObject) as? IPSetProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IPSetProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty
+    }
+  }
+
+  /**
+   * Contains variables that you can use to override default Suricata settings in your firewall
+   * policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * PolicyVariablesProperty policyVariablesProperty = PolicyVariablesProperty.builder()
+   * .ruleVariables(Map.of(
+   * "ruleVariablesKey", Map.of(
+   * "definition", List.of("definition"))))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-policyvariables.html)
+   */
+  public interface PolicyVariablesProperty {
+    /**
+     * The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata `HOME_NET` variable.
+     *
+     * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
+     * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
+     * Network Firewall by default uses the CIDR of your inspection VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-policyvariables.html#cfn-networkfirewall-firewallpolicy-policyvariables-rulevariables)
+     */
+    public fun ruleVariables(): Any? = unwrap(this).getRuleVariables()
+
+    /**
+     * A builder for [PolicyVariablesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ruleVariables The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata
+       * `HOME_NET` variable.
+       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
+       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
+       * Network Firewall by default uses the CIDR of your inspection VPC.
+       */
+      public fun ruleVariables(ruleVariables: IResolvable)
+
+      /**
+       * @param ruleVariables The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata
+       * `HOME_NET` variable.
+       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
+       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
+       * Network Firewall by default uses the CIDR of your inspection VPC.
+       */
+      public fun ruleVariables(ruleVariables: Map<String, Any>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty.builder()
+
+      /**
+       * @param ruleVariables The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata
+       * `HOME_NET` variable.
+       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
+       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
+       * Network Firewall by default uses the CIDR of your inspection VPC.
+       */
+      override fun ruleVariables(ruleVariables: IResolvable) {
+        cdkBuilder.ruleVariables(ruleVariables.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ruleVariables The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata
+       * `HOME_NET` variable.
+       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
+       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
+       * Network Firewall by default uses the CIDR of your inspection VPC.
+       */
+      override fun ruleVariables(ruleVariables: Map<String, Any>) {
+        cdkBuilder.ruleVariables(ruleVariables)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty,
+    ) : CdkObject(cdkObject), PolicyVariablesProperty {
+      /**
+       * The IPv4 or IPv6 addresses in CIDR notation to use for the Suricata `HOME_NET` variable.
+       *
+       * If your firewall uses an inspection VPC, you might want to override the `HOME_NET` variable
+       * with the CIDRs of your home networks. If you don't override `HOME_NET` with your own CIDRs,
+       * Network Firewall by default uses the CIDR of your inspection VPC.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-policyvariables.html#cfn-networkfirewall-firewallpolicy-policyvariables-rulevariables)
+       */
+      override fun ruleVariables(): Any? = unwrap(this).getRuleVariables()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PolicyVariablesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty):
+          PolicyVariablesProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyVariablesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PolicyVariablesProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty
+    }
+  }
+
+  /**
+   * Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the
+   * matching packet.
+   *
+   * This setting defines a CloudWatch dimension value to be published.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * PublishMetricActionProperty publishMetricActionProperty = PublishMetricActionProperty.builder()
+   * .dimensions(List.of(DimensionProperty.builder()
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-publishmetricaction.html)
+   */
+  public interface PublishMetricActionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-publishmetricaction.html#cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions)
+     */
+    public fun dimensions(): Any
+
+    /**
+     * A builder for [PublishMetricActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensions the value to be set. 
+       */
+      public fun dimensions(dimensions: IResolvable)
+
+      /**
+       * @param dimensions the value to be set. 
+       */
+      public fun dimensions(dimensions: List<Any>)
+
+      /**
+       * @param dimensions the value to be set. 
+       */
+      public fun dimensions(vararg dimensions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty.builder()
+
+      /**
+       * @param dimensions the value to be set. 
+       */
+      override fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dimensions the value to be set. 
+       */
+      override fun dimensions(dimensions: List<Any>) {
+        cdkBuilder.dimensions(dimensions)
+      }
+
+      /**
+       * @param dimensions the value to be set. 
+       */
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty,
+    ) : CdkObject(cdkObject), PublishMetricActionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-publishmetricaction.html#cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions)
+       */
+      override fun dimensions(): Any = unwrap(this).getDimensions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PublishMetricActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty):
+          PublishMetricActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublishMetricActionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PublishMetricActionProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty
+    }
+  }
+
+  /**
+   * Configuration settings for the handling of the stateful rule groups in a firewall policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * StatefulEngineOptionsProperty statefulEngineOptionsProperty =
+   * StatefulEngineOptionsProperty.builder()
+   * .ruleOrder("ruleOrder")
+   * .streamExceptionPolicy("streamExceptionPolicy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html)
+   */
+  public interface StatefulEngineOptionsProperty {
+    /**
+     * Indicates how to manage the order of stateful rule evaluation for the policy.
+     *
+     * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+     * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
+     * For more information, see [Evaluation order for stateful
+     * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+     * in the *AWS Network Firewall Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-ruleorder)
+     */
+    public fun ruleOrder(): String? = unwrap(this).getRuleOrder()
+
+    /**
+     * Configures how Network Firewall processes traffic when a network connection breaks midstream.
+     *
+     * Network connections can break due to disruptions in external networks or within the firewall
+     * itself.
+     *
+     * * `DROP` - Network Firewall fails closed and drops all subsequent traffic going to the
+     * firewall. This is the default behavior.
+     * * `CONTINUE` - Network Firewall continues to apply rules to the subsequent traffic without
+     * context from traffic before the break. This impacts the behavior of rules that depend on this
+     * context. For example, if you have a stateful rule to `drop http` traffic, Network Firewall won't
+     * match the traffic for this rule because the service won't have the context from session
+     * initialization defining the application layer protocol as HTTP. However, this behavior is rule
+     * dependent—a TCP-layer rule using a `flow:stateless` rule would still match, as would the
+     * `aws:drop_strict` default action.
+     * * `REJECT` - Network Firewall fails closed and drops all subsequent traffic going to the
+     * firewall. Network Firewall also sends a TCP reject packet back to your client so that the client
+     * can immediately establish a new session. Network Firewall will have context about the new
+     * session and will apply rules to the subsequent traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-streamexceptionpolicy)
+     */
+    public fun streamExceptionPolicy(): String? = unwrap(this).getStreamExceptionPolicy()
+
+    /**
+     * A builder for [StatefulEngineOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ruleOrder Indicates how to manage the order of stateful rule evaluation for the
+       * policy.
+       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
+       * For more information, see [Evaluation order for stateful
+       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       */
+      public fun ruleOrder(ruleOrder: String)
+
+      /**
+       * @param streamExceptionPolicy Configures how Network Firewall processes traffic when a
+       * network connection breaks midstream.
+       * Network connections can break due to disruptions in external networks or within the
+       * firewall itself.
+       *
+       * * `DROP` - Network Firewall fails closed and drops all subsequent traffic going to the
+       * firewall. This is the default behavior.
+       * * `CONTINUE` - Network Firewall continues to apply rules to the subsequent traffic without
+       * context from traffic before the break. This impacts the behavior of rules that depend on this
+       * context. For example, if you have a stateful rule to `drop http` traffic, Network Firewall
+       * won't match the traffic for this rule because the service won't have the context from session
+       * initialization defining the application layer protocol as HTTP. However, this behavior is rule
+       * dependent—a TCP-layer rule using a `flow:stateless` rule would still match, as would the
+       * `aws:drop_strict` default action.
+       * * `REJECT` - Network Firewall fails closed and drops all subsequent traffic going to the
+       * firewall. Network Firewall also sends a TCP reject packet back to your client so that the
+       * client can immediately establish a new session. Network Firewall will have context about the
+       * new session and will apply rules to the subsequent traffic.
+       */
+      public fun streamExceptionPolicy(streamExceptionPolicy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty.builder()
+
+      /**
+       * @param ruleOrder Indicates how to manage the order of stateful rule evaluation for the
+       * policy.
+       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
+       * For more information, see [Evaluation order for stateful
+       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       */
+      override fun ruleOrder(ruleOrder: String) {
+        cdkBuilder.ruleOrder(ruleOrder)
+      }
+
+      /**
+       * @param streamExceptionPolicy Configures how Network Firewall processes traffic when a
+       * network connection breaks midstream.
+       * Network connections can break due to disruptions in external networks or within the
+       * firewall itself.
+       *
+       * * `DROP` - Network Firewall fails closed and drops all subsequent traffic going to the
+       * firewall. This is the default behavior.
+       * * `CONTINUE` - Network Firewall continues to apply rules to the subsequent traffic without
+       * context from traffic before the break. This impacts the behavior of rules that depend on this
+       * context. For example, if you have a stateful rule to `drop http` traffic, Network Firewall
+       * won't match the traffic for this rule because the service won't have the context from session
+       * initialization defining the application layer protocol as HTTP. However, this behavior is rule
+       * dependent—a TCP-layer rule using a `flow:stateless` rule would still match, as would the
+       * `aws:drop_strict` default action.
+       * * `REJECT` - Network Firewall fails closed and drops all subsequent traffic going to the
+       * firewall. Network Firewall also sends a TCP reject packet back to your client so that the
+       * client can immediately establish a new session. Network Firewall will have context about the
+       * new session and will apply rules to the subsequent traffic.
+       */
+      override fun streamExceptionPolicy(streamExceptionPolicy: String) {
+        cdkBuilder.streamExceptionPolicy(streamExceptionPolicy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty,
+    ) : CdkObject(cdkObject), StatefulEngineOptionsProperty {
+      /**
+       * Indicates how to manage the order of stateful rule evaluation for the policy.
+       *
+       * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+       * engine as Suricata compatible strings, and Suricata evaluates them based on certain settings.
+       * For more information, see [Evaluation order for stateful
+       * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-ruleorder)
+       */
+      override fun ruleOrder(): String? = unwrap(this).getRuleOrder()
+
+      /**
+       * Configures how Network Firewall processes traffic when a network connection breaks
+       * midstream.
+       *
+       * Network connections can break due to disruptions in external networks or within the
+       * firewall itself.
+       *
+       * * `DROP` - Network Firewall fails closed and drops all subsequent traffic going to the
+       * firewall. This is the default behavior.
+       * * `CONTINUE` - Network Firewall continues to apply rules to the subsequent traffic without
+       * context from traffic before the break. This impacts the behavior of rules that depend on this
+       * context. For example, if you have a stateful rule to `drop http` traffic, Network Firewall
+       * won't match the traffic for this rule because the service won't have the context from session
+       * initialization defining the application layer protocol as HTTP. However, this behavior is rule
+       * dependent—a TCP-layer rule using a `flow:stateless` rule would still match, as would the
+       * `aws:drop_strict` default action.
+       * * `REJECT` - Network Firewall fails closed and drops all subsequent traffic going to the
+       * firewall. Network Firewall also sends a TCP reject packet back to your client so that the
+       * client can immediately establish a new session. Network Firewall will have context about the
+       * new session and will apply rules to the subsequent traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-streamexceptionpolicy)
+       */
+      override fun streamExceptionPolicy(): String? = unwrap(this).getStreamExceptionPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StatefulEngineOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty):
+          StatefulEngineOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatefulEngineOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatefulEngineOptionsProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty
+    }
+  }
+
+  /**
    * The setting that allows the policy owner to change the behavior of the rule group within a
    * policy.
    *
@@ -2514,9 +2251,8 @@ public open class CfnFirewallPolicy internal constructor(
   }
 
   /**
-   * A list of IP addresses and address ranges, in CIDR notation.
-   *
-   * This is part of a `RuleVariables` .
+   * Identifier for a single stateful rule group, used in a firewall policy to refer to a rule
+   * group.
    *
    * Example:
    *
@@ -2524,84 +2260,348 @@ public open class CfnFirewallPolicy internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * IPSetProperty iPSetProperty = Map.of(
-   * "definition", List.of("definition"));
+   * StatefulRuleGroupReferenceProperty statefulRuleGroupReferenceProperty =
+   * StatefulRuleGroupReferenceProperty.builder()
+   * .resourceArn("resourceArn")
+   * // the properties below are optional
+   * .override(StatefulRuleGroupOverrideProperty.builder()
+   * .action("action")
+   * .build())
+   * .priority(123)
+   * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-ipset.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html)
    */
-  public interface IPSetProperty {
+  public interface StatefulRuleGroupReferenceProperty {
     /**
-     * The list of IP addresses and address ranges, in CIDR notation.
+     * The action that allows the policy owner to override the behavior of the rule group within a
+     * policy.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-ipset.html#cfn-networkfirewall-firewallpolicy-ipset-definition)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-override)
      */
-    public fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
+    public fun `override`(): Any? = unwrap(this).getOverride()
 
     /**
-     * A builder for [IPSetProperty]
+     * An integer setting that indicates the order in which to run the stateful rule groups in a
+     * single `FirewallPolicy` .
+     *
+     * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order in
+     * the stateful engine options settings.
+     *
+     * Network Firewall evalutes each stateful rule group against a packet starting with the group
+     * that has the lowest priority setting. You must ensure that the priority settings are unique
+     * within each policy.
+     *
+     * You can change the priority settings of your rule groups at any time. To make it easier to
+     * insert rule groups later, number them so there's a wide range in between, for example use 100,
+     * 200, and so on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-priority)
+     */
+    public fun priority(): Number? = unwrap(this).getPriority()
+
+    /**
+     * The Amazon Resource Name (ARN) of the stateful rule group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [StatefulRuleGroupReferenceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       * @param override The action that allows the policy owner to override the behavior of the
+       * rule group within a policy.
        */
-      public fun definition(definition: List<String>)
+      public fun `override`(`override`: IResolvable)
 
       /**
-       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       * @param override The action that allows the policy owner to override the behavior of the
+       * rule group within a policy.
        */
-      public fun definition(vararg definition: String)
+      public fun `override`(`override`: StatefulRuleGroupOverrideProperty)
+
+      /**
+       * @param override The action that allows the policy owner to override the behavior of the
+       * rule group within a policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("063e3edbf8a3a4bb75a758da399ab9da795146a21d0554e262127c3bacfb8fff")
+      public fun `override`(`override`: StatefulRuleGroupOverrideProperty.Builder.() -> Unit)
+
+      /**
+       * @param priority An integer setting that indicates the order in which to run the stateful
+       * rule groups in a single `FirewallPolicy` .
+       * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order
+       * in the stateful engine options settings.
+       *
+       * Network Firewall evalutes each stateful rule group against a packet starting with the group
+       * that has the lowest priority setting. You must ensure that the priority settings are unique
+       * within each policy.
+       *
+       * You can change the priority settings of your rule groups at any time. To make it easier to
+       * insert rule groups later, number them so there's a wide range in between, for example use 100,
+       * 200, and so on.
+       */
+      public fun priority(priority: Number)
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the stateful rule group. 
+       */
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty.Builder =
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty.builder()
 
       /**
-       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       * @param override The action that allows the policy owner to override the behavior of the
+       * rule group within a policy.
        */
-      override fun definition(definition: List<String>) {
-        cdkBuilder.definition(definition)
+      override fun `override`(`override`: IResolvable) {
+        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
       }
 
       /**
-       * @param definition The list of IP addresses and address ranges, in CIDR notation.
+       * @param override The action that allows the policy owner to override the behavior of the
+       * rule group within a policy.
        */
-      override fun definition(vararg definition: String): Unit = definition(definition.toList())
+      override fun `override`(`override`: StatefulRuleGroupOverrideProperty) {
+        cdkBuilder.`override`(`override`.let(StatefulRuleGroupOverrideProperty::unwrap))
+      }
+
+      /**
+       * @param override The action that allows the policy owner to override the behavior of the
+       * rule group within a policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("063e3edbf8a3a4bb75a758da399ab9da795146a21d0554e262127c3bacfb8fff")
+      override fun `override`(`override`: StatefulRuleGroupOverrideProperty.Builder.() -> Unit):
+          Unit = `override`(StatefulRuleGroupOverrideProperty(`override`))
+
+      /**
+       * @param priority An integer setting that indicates the order in which to run the stateful
+       * rule groups in a single `FirewallPolicy` .
+       * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order
+       * in the stateful engine options settings.
+       *
+       * Network Firewall evalutes each stateful rule group against a packet starting with the group
+       * that has the lowest priority setting. You must ensure that the priority settings are unique
+       * within each policy.
+       *
+       * You can change the priority settings of your rule groups at any time. To make it easier to
+       * insert rule groups later, number them so there's a wide range in between, for example use 100,
+       * 200, and so on.
+       */
+      override fun priority(priority: Number) {
+        cdkBuilder.priority(priority)
+      }
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the stateful rule group. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty,
-    ) : CdkObject(cdkObject), IPSetProperty {
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty,
+    ) : CdkObject(cdkObject), StatefulRuleGroupReferenceProperty {
       /**
-       * The list of IP addresses and address ranges, in CIDR notation.
+       * The action that allows the policy owner to override the behavior of the rule group within a
+       * policy.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-ipset.html#cfn-networkfirewall-firewallpolicy-ipset-definition)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-override)
        */
-      override fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
+      override fun `override`(): Any? = unwrap(this).getOverride()
+
+      /**
+       * An integer setting that indicates the order in which to run the stateful rule groups in a
+       * single `FirewallPolicy` .
+       *
+       * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order
+       * in the stateful engine options settings.
+       *
+       * Network Firewall evalutes each stateful rule group against a packet starting with the group
+       * that has the lowest priority setting. You must ensure that the priority settings are unique
+       * within each policy.
+       *
+       * You can change the priority settings of your rule groups at any time. To make it easier to
+       * insert rule groups later, number them so there's a wide range in between, for example use 100,
+       * 200, and so on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-priority)
+       */
+      override fun priority(): Number? = unwrap(this).getPriority()
+
+      /**
+       * The Amazon Resource Name (ARN) of the stateful rule group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IPSetProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          StatefulRuleGroupReferenceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty):
-          IPSetProperty = CdkObjectWrappers.wrap(cdkObject) as? IPSetProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty):
+          StatefulRuleGroupReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatefulRuleGroupReferenceProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: IPSetProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty
+      internal fun unwrap(wrapped: StatefulRuleGroupReferenceProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty
+    }
+  }
+
+  /**
+   * Identifier for a single stateless rule group, used in a firewall policy to refer to the rule
+   * group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * StatelessRuleGroupReferenceProperty statelessRuleGroupReferenceProperty =
+   * StatelessRuleGroupReferenceProperty.builder()
+   * .priority(123)
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html)
+   */
+  public interface StatelessRuleGroupReferenceProperty {
+    /**
+     * An integer setting that indicates the order in which to run the stateless rule groups in a
+     * single `FirewallPolicy` .
+     *
+     * Network Firewall applies each stateless rule group to a packet starting with the group that
+     * has the lowest priority setting. You must ensure that the priority settings are unique within
+     * each policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-priority)
+     */
+    public fun priority(): Number
+
+    /**
+     * The Amazon Resource Name (ARN) of the stateless rule group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [StatelessRuleGroupReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param priority An integer setting that indicates the order in which to run the stateless
+       * rule groups in a single `FirewallPolicy` . 
+       * Network Firewall applies each stateless rule group to a packet starting with the group that
+       * has the lowest priority setting. You must ensure that the priority settings are unique within
+       * each policy.
+       */
+      public fun priority(priority: Number)
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the stateless rule group. 
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty.builder()
+
+      /**
+       * @param priority An integer setting that indicates the order in which to run the stateless
+       * rule groups in a single `FirewallPolicy` . 
+       * Network Firewall applies each stateless rule group to a packet starting with the group that
+       * has the lowest priority setting. You must ensure that the priority settings are unique within
+       * each policy.
+       */
+      override fun priority(priority: Number) {
+        cdkBuilder.priority(priority)
+      }
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the stateless rule group. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty,
+    ) : CdkObject(cdkObject), StatelessRuleGroupReferenceProperty {
+      /**
+       * An integer setting that indicates the order in which to run the stateless rule groups in a
+       * single `FirewallPolicy` .
+       *
+       * Network Firewall applies each stateless rule group to a packet starting with the group that
+       * has the lowest priority setting. You must ensure that the priority settings are unique within
+       * each policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-priority)
+       */
+      override fun priority(): Number = unwrap(this).getPriority()
+
+      /**
+       * The Amazon Resource Name (ARN) of the stateless rule group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          StatelessRuleGroupReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty):
+          StatelessRuleGroupReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatelessRuleGroupReferenceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatelessRuleGroupReferenceProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty
     }
   }
 }

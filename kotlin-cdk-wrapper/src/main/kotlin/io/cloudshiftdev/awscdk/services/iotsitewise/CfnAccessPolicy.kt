@@ -364,464 +364,6 @@ public open class CfnAccessPolicy internal constructor(
   }
 
   /**
-   * Contains information about an AWS Identity and Access Management role.
-   *
-   * For more information, see [IAM
-   * roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * IamRoleProperty iamRoleProperty = IamRoleProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamrole.html)
-   */
-  public interface IamRoleProperty {
-    /**
-     * The ARN of the IAM role.
-     *
-     * For more information, see [IAM
-     * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-     * User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamrole.html#cfn-iotsitewise-accesspolicy-iamrole-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * A builder for [IamRoleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The ARN of the IAM role.
-       * For more information, see [IAM
-       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-       * User Guide* .
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty.Builder =
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty.builder()
-
-      /**
-       * @param arn The ARN of the IAM role.
-       * For more information, see [IAM
-       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-       * User Guide* .
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty,
-    ) : CdkObject(cdkObject), IamRoleProperty {
-      /**
-       * The ARN of the IAM role.
-       *
-       * For more information, see [IAM
-       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-       * User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamrole.html#cfn-iotsitewise-accesspolicy-iamrole-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IamRoleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty):
-          IamRoleProperty = CdkObjectWrappers.wrap(cdkObject) as? IamRoleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IamRoleProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty
-    }
-  }
-
-  /**
-   * Contains information about an AWS Identity and Access Management user.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * IamUserProperty iamUserProperty = IamUserProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamuser.html)
-   */
-  public interface IamUserProperty {
-    /**
-     * The ARN of the IAM user. For more information, see [IAM
-     * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-     * User Guide* .
-     *
-     *
-     * If you delete the IAM user, access policies that contain this identity include an empty `arn`
-     * . You can delete the access policy for the IAM user that no longer exists.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamuser.html#cfn-iotsitewise-accesspolicy-iamuser-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * A builder for [IamUserProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The ARN of the IAM user. For more information, see [IAM
-       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-       * User Guide* .
-       *
-       * If you delete the IAM user, access policies that contain this identity include an empty
-       * `arn` . You can delete the access policy for the IAM user that no longer exists.
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty.Builder =
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty.builder()
-
-      /**
-       * @param arn The ARN of the IAM user. For more information, see [IAM
-       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-       * User Guide* .
-       *
-       * If you delete the IAM user, access policies that contain this identity include an empty
-       * `arn` . You can delete the access policy for the IAM user that no longer exists.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty,
-    ) : CdkObject(cdkObject), IamUserProperty {
-      /**
-       * The ARN of the IAM user. For more information, see [IAM
-       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-       * User Guide* .
-       *
-       *
-       * If you delete the IAM user, access policies that contain this identity include an empty
-       * `arn` . You can delete the access policy for the IAM user that no longer exists.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamuser.html#cfn-iotsitewise-accesspolicy-iamuser-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IamUserProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty):
-          IamUserProperty = CdkObjectWrappers.wrap(cdkObject) as? IamUserProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IamUserProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty
-    }
-  }
-
-  /**
-   * The AWS IoT SiteWise Monitor resource for this access policy.
-   *
-   * Choose either a portal or a project.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * AccessPolicyResourceProperty accessPolicyResourceProperty =
-   * AccessPolicyResourceProperty.builder()
-   * .portal(PortalProperty.builder()
-   * .id("id")
-   * .build())
-   * .project(ProjectProperty.builder()
-   * .id("id")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html)
-   */
-  public interface AccessPolicyResourceProperty {
-    /**
-     * The AWS IoT SiteWise Monitor portal for this access policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html#cfn-iotsitewise-accesspolicy-accesspolicyresource-portal)
-     */
-    public fun portal(): Any? = unwrap(this).getPortal()
-
-    /**
-     * The AWS IoT SiteWise Monitor project for this access policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html#cfn-iotsitewise-accesspolicy-accesspolicyresource-project)
-     */
-    public fun project(): Any? = unwrap(this).getProject()
-
-    /**
-     * A builder for [AccessPolicyResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
-       */
-      public fun portal(portal: IResolvable)
-
-      /**
-       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
-       */
-      public fun portal(portal: PortalProperty)
-
-      /**
-       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e04ce2ff0f5f1fcb91a8a5320cbf19c81ae4c2319745f777cb2cf3acda573f5a")
-      public fun portal(portal: PortalProperty.Builder.() -> Unit)
-
-      /**
-       * @param project The AWS IoT SiteWise Monitor project for this access policy.
-       */
-      public fun project(project: IResolvable)
-
-      /**
-       * @param project The AWS IoT SiteWise Monitor project for this access policy.
-       */
-      public fun project(project: ProjectProperty)
-
-      /**
-       * @param project The AWS IoT SiteWise Monitor project for this access policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f3815225218a2895b45b4c213a61eaa5f7af0abcab4676b89a02eb8016b256d5")
-      public fun project(project: ProjectProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty.builder()
-
-      /**
-       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
-       */
-      override fun portal(portal: IResolvable) {
-        cdkBuilder.portal(portal.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
-       */
-      override fun portal(portal: PortalProperty) {
-        cdkBuilder.portal(portal.let(PortalProperty::unwrap))
-      }
-
-      /**
-       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e04ce2ff0f5f1fcb91a8a5320cbf19c81ae4c2319745f777cb2cf3acda573f5a")
-      override fun portal(portal: PortalProperty.Builder.() -> Unit): Unit =
-          portal(PortalProperty(portal))
-
-      /**
-       * @param project The AWS IoT SiteWise Monitor project for this access policy.
-       */
-      override fun project(project: IResolvable) {
-        cdkBuilder.project(project.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param project The AWS IoT SiteWise Monitor project for this access policy.
-       */
-      override fun project(project: ProjectProperty) {
-        cdkBuilder.project(project.let(ProjectProperty::unwrap))
-      }
-
-      /**
-       * @param project The AWS IoT SiteWise Monitor project for this access policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f3815225218a2895b45b4c213a61eaa5f7af0abcab4676b89a02eb8016b256d5")
-      override fun project(project: ProjectProperty.Builder.() -> Unit): Unit =
-          project(ProjectProperty(project))
-
-      public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty,
-    ) : CdkObject(cdkObject), AccessPolicyResourceProperty {
-      /**
-       * The AWS IoT SiteWise Monitor portal for this access policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html#cfn-iotsitewise-accesspolicy-accesspolicyresource-portal)
-       */
-      override fun portal(): Any? = unwrap(this).getPortal()
-
-      /**
-       * The AWS IoT SiteWise Monitor project for this access policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html#cfn-iotsitewise-accesspolicy-accesspolicyresource-project)
-       */
-      override fun project(): Any? = unwrap(this).getProject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessPolicyResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty):
-          AccessPolicyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AccessPolicyResourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessPolicyResourceProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty
-    }
-  }
-
-  /**
-   * The `User` property type specifies the AWS IoT SiteWise Monitor user for an
-   * [AWS::IoTSiteWise::AccessPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * UserProperty userProperty = UserProperty.builder()
-   * .id("id")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-user.html)
-   */
-  public interface UserProperty {
-    /**
-     * The ID of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-user.html#cfn-iotsitewise-accesspolicy-user-id)
-     */
-    public fun id(): String? = unwrap(this).getId()
-
-    /**
-     * A builder for [UserProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The ID of the user.
-       */
-      public fun id(id: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty.Builder =
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty.builder()
-
-      /**
-       * @param id The ID of the user.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty,
-    ) : CdkObject(cdkObject), UserProperty {
-      /**
-       * The ID of the user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-user.html#cfn-iotsitewise-accesspolicy-user-id)
-       */
-      override fun id(): String? = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UserProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty):
-          UserProperty = CdkObjectWrappers.wrap(cdkObject) as? UserProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UserProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty
-    }
-  }
-
-  /**
    * The identity (IAM Identity Center user, IAM Identity Center group, or IAM user) to which this
    * access policy applies.
    *
@@ -1047,6 +589,382 @@ public open class CfnAccessPolicy internal constructor(
   }
 
   /**
+   * The AWS IoT SiteWise Monitor resource for this access policy.
+   *
+   * Choose either a portal or a project.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * AccessPolicyResourceProperty accessPolicyResourceProperty =
+   * AccessPolicyResourceProperty.builder()
+   * .portal(PortalProperty.builder()
+   * .id("id")
+   * .build())
+   * .project(ProjectProperty.builder()
+   * .id("id")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html)
+   */
+  public interface AccessPolicyResourceProperty {
+    /**
+     * The AWS IoT SiteWise Monitor portal for this access policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html#cfn-iotsitewise-accesspolicy-accesspolicyresource-portal)
+     */
+    public fun portal(): Any? = unwrap(this).getPortal()
+
+    /**
+     * The AWS IoT SiteWise Monitor project for this access policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html#cfn-iotsitewise-accesspolicy-accesspolicyresource-project)
+     */
+    public fun project(): Any? = unwrap(this).getProject()
+
+    /**
+     * A builder for [AccessPolicyResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
+       */
+      public fun portal(portal: IResolvable)
+
+      /**
+       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
+       */
+      public fun portal(portal: PortalProperty)
+
+      /**
+       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e04ce2ff0f5f1fcb91a8a5320cbf19c81ae4c2319745f777cb2cf3acda573f5a")
+      public fun portal(portal: PortalProperty.Builder.() -> Unit)
+
+      /**
+       * @param project The AWS IoT SiteWise Monitor project for this access policy.
+       */
+      public fun project(project: IResolvable)
+
+      /**
+       * @param project The AWS IoT SiteWise Monitor project for this access policy.
+       */
+      public fun project(project: ProjectProperty)
+
+      /**
+       * @param project The AWS IoT SiteWise Monitor project for this access policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f3815225218a2895b45b4c213a61eaa5f7af0abcab4676b89a02eb8016b256d5")
+      public fun project(project: ProjectProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty.builder()
+
+      /**
+       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
+       */
+      override fun portal(portal: IResolvable) {
+        cdkBuilder.portal(portal.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
+       */
+      override fun portal(portal: PortalProperty) {
+        cdkBuilder.portal(portal.let(PortalProperty::unwrap))
+      }
+
+      /**
+       * @param portal The AWS IoT SiteWise Monitor portal for this access policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e04ce2ff0f5f1fcb91a8a5320cbf19c81ae4c2319745f777cb2cf3acda573f5a")
+      override fun portal(portal: PortalProperty.Builder.() -> Unit): Unit =
+          portal(PortalProperty(portal))
+
+      /**
+       * @param project The AWS IoT SiteWise Monitor project for this access policy.
+       */
+      override fun project(project: IResolvable) {
+        cdkBuilder.project(project.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param project The AWS IoT SiteWise Monitor project for this access policy.
+       */
+      override fun project(project: ProjectProperty) {
+        cdkBuilder.project(project.let(ProjectProperty::unwrap))
+      }
+
+      /**
+       * @param project The AWS IoT SiteWise Monitor project for this access policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f3815225218a2895b45b4c213a61eaa5f7af0abcab4676b89a02eb8016b256d5")
+      override fun project(project: ProjectProperty.Builder.() -> Unit): Unit =
+          project(ProjectProperty(project))
+
+      public fun build():
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty,
+    ) : CdkObject(cdkObject), AccessPolicyResourceProperty {
+      /**
+       * The AWS IoT SiteWise Monitor portal for this access policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html#cfn-iotsitewise-accesspolicy-accesspolicyresource-portal)
+       */
+      override fun portal(): Any? = unwrap(this).getPortal()
+
+      /**
+       * The AWS IoT SiteWise Monitor project for this access policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html#cfn-iotsitewise-accesspolicy-accesspolicyresource-project)
+       */
+      override fun project(): Any? = unwrap(this).getProject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessPolicyResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty):
+          AccessPolicyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessPolicyResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessPolicyResourceProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty
+    }
+  }
+
+  /**
+   * Contains information about an AWS Identity and Access Management role.
+   *
+   * For more information, see [IAM
+   * roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * IamRoleProperty iamRoleProperty = IamRoleProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamrole.html)
+   */
+  public interface IamRoleProperty {
+    /**
+     * The ARN of the IAM role.
+     *
+     * For more information, see [IAM
+     * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
+     * User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamrole.html#cfn-iotsitewise-accesspolicy-iamrole-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * A builder for [IamRoleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The ARN of the IAM role.
+       * For more information, see [IAM
+       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
+       * User Guide* .
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty.builder()
+
+      /**
+       * @param arn The ARN of the IAM role.
+       * For more information, see [IAM
+       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
+       * User Guide* .
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty,
+    ) : CdkObject(cdkObject), IamRoleProperty {
+      /**
+       * The ARN of the IAM role.
+       *
+       * For more information, see [IAM
+       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
+       * User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamrole.html#cfn-iotsitewise-accesspolicy-iamrole-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IamRoleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty):
+          IamRoleProperty = CdkObjectWrappers.wrap(cdkObject) as? IamRoleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IamRoleProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty
+    }
+  }
+
+  /**
+   * Contains information about an AWS Identity and Access Management user.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * IamUserProperty iamUserProperty = IamUserProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamuser.html)
+   */
+  public interface IamUserProperty {
+    /**
+     * The ARN of the IAM user. For more information, see [IAM
+     * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
+     * User Guide* .
+     *
+     *
+     * If you delete the IAM user, access policies that contain this identity include an empty `arn`
+     * . You can delete the access policy for the IAM user that no longer exists.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamuser.html#cfn-iotsitewise-accesspolicy-iamuser-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * A builder for [IamUserProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The ARN of the IAM user. For more information, see [IAM
+       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
+       * User Guide* .
+       *
+       * If you delete the IAM user, access policies that contain this identity include an empty
+       * `arn` . You can delete the access policy for the IAM user that no longer exists.
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty.builder()
+
+      /**
+       * @param arn The ARN of the IAM user. For more information, see [IAM
+       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
+       * User Guide* .
+       *
+       * If you delete the IAM user, access policies that contain this identity include an empty
+       * `arn` . You can delete the access policy for the IAM user that no longer exists.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty,
+    ) : CdkObject(cdkObject), IamUserProperty {
+      /**
+       * The ARN of the IAM user. For more information, see [IAM
+       * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
+       * User Guide* .
+       *
+       *
+       * If you delete the IAM user, access policies that contain this identity include an empty
+       * `arn` . You can delete the access policy for the IAM user that no longer exists.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-iamuser.html#cfn-iotsitewise-accesspolicy-iamuser-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IamUserProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty):
+          IamUserProperty = CdkObjectWrappers.wrap(cdkObject) as? IamUserProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IamUserProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty
+    }
+  }
+
+  /**
    * The `Portal` property type specifies the AWS IoT SiteWise Monitor portal for an
    * [AWS::IoTSiteWise::AccessPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html)
    * .
@@ -1210,6 +1128,88 @@ public open class CfnAccessPolicy internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.ProjectProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.ProjectProperty
+    }
+  }
+
+  /**
+   * The `User` property type specifies the AWS IoT SiteWise Monitor user for an
+   * [AWS::IoTSiteWise::AccessPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * UserProperty userProperty = UserProperty.builder()
+   * .id("id")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-user.html)
+   */
+  public interface UserProperty {
+    /**
+     * The ID of the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-user.html#cfn-iotsitewise-accesspolicy-user-id)
+     */
+    public fun id(): String? = unwrap(this).getId()
+
+    /**
+     * A builder for [UserProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The ID of the user.
+       */
+      public fun id(id: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty.builder()
+
+      /**
+       * @param id The ID of the user.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty,
+    ) : CdkObject(cdkObject), UserProperty {
+      /**
+       * The ID of the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-user.html#cfn-iotsitewise-accesspolicy-user-id)
+       */
+      override fun id(): String? = unwrap(this).getId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UserProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty):
+          UserProperty = CdkObjectWrappers.wrap(cdkObject) as? UserProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UserProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty
     }
   }
 }

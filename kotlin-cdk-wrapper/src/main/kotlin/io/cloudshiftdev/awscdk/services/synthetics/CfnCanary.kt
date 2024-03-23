@@ -1311,8 +1311,8 @@ public open class CfnCanary internal constructor(
   }
 
   /**
-   * This structure specifies how often a canary is to make runs and the date and time when it
-   * should stop making runs.
+   * A structure that contains the configuration for canary artifacts, including the
+   * encryption-at-rest settings for artifacts that the canary uploads to Amazon S3 .
    *
    * Example:
    *
@@ -1320,497 +1320,155 @@ public open class CfnCanary internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.synthetics.*;
-   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
-   * .expression("expression")
-   * // the properties below are optional
-   * .durationInSeconds("durationInSeconds")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html)
-   */
-  public interface ScheduleProperty {
-    /**
-     * How long, in seconds, for the canary to continue making regular runs according to the
-     * schedule in the `Expression` value.
-     *
-     * If you specify 0, the canary continues making runs until you stop it. If you omit this field,
-     * the default of 0 is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-durationinseconds)
-     */
-    public fun durationInSeconds(): String? = unwrap(this).getDurationInSeconds()
-
-    /**
-     * A `rate` expression or a `cron` expression that defines how often the canary is to run.
-     *
-     * For a rate expression, The syntax is `rate( *number unit* )` . *unit* can be `minute` ,
-     * `minutes` , or `hour` .
-     *
-     * For example, `rate(1 minute)` runs the canary once a minute, `rate(10 minutes)` runs it once
-     * every 10 minutes, and `rate(1 hour)` runs it once every hour. You can specify a frequency
-     * between `rate(1 minute)` and `rate(1 hour)` .
-     *
-     * Specifying `rate(0 minute)` or `rate(0 hour)` is a special value that causes the canary to
-     * run only once when it is started.
-     *
-     * Use `cron( *expression* )` to specify a cron expression. You can't schedule a canary to wait
-     * for more than a year before running. For information about the syntax for cron expressions, see
-     * [Scheduling canary runs using
-     * cron](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-expression)
-     */
-    public fun expression(): String
-
-    /**
-     * A builder for [ScheduleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param durationInSeconds How long, in seconds, for the canary to continue making regular
-       * runs according to the schedule in the `Expression` value.
-       * If you specify 0, the canary continues making runs until you stop it. If you omit this
-       * field, the default of 0 is used.
-       */
-      public fun durationInSeconds(durationInSeconds: String)
-
-      /**
-       * @param expression A `rate` expression or a `cron` expression that defines how often the
-       * canary is to run. 
-       * For a rate expression, The syntax is `rate( *number unit* )` . *unit* can be `minute` ,
-       * `minutes` , or `hour` .
-       *
-       * For example, `rate(1 minute)` runs the canary once a minute, `rate(10 minutes)` runs it
-       * once every 10 minutes, and `rate(1 hour)` runs it once every hour. You can specify a frequency
-       * between `rate(1 minute)` and `rate(1 hour)` .
-       *
-       * Specifying `rate(0 minute)` or `rate(0 hour)` is a special value that causes the canary to
-       * run only once when it is started.
-       *
-       * Use `cron( *expression* )` to specify a cron expression. You can't schedule a canary to
-       * wait for more than a year before running. For information about the syntax for cron
-       * expressions, see [Scheduling canary runs using
-       * cron](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
-       * .
-       */
-      public fun expression(expression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty.Builder =
-          software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty.builder()
-
-      /**
-       * @param durationInSeconds How long, in seconds, for the canary to continue making regular
-       * runs according to the schedule in the `Expression` value.
-       * If you specify 0, the canary continues making runs until you stop it. If you omit this
-       * field, the default of 0 is used.
-       */
-      override fun durationInSeconds(durationInSeconds: String) {
-        cdkBuilder.durationInSeconds(durationInSeconds)
-      }
-
-      /**
-       * @param expression A `rate` expression or a `cron` expression that defines how often the
-       * canary is to run. 
-       * For a rate expression, The syntax is `rate( *number unit* )` . *unit* can be `minute` ,
-       * `minutes` , or `hour` .
-       *
-       * For example, `rate(1 minute)` runs the canary once a minute, `rate(10 minutes)` runs it
-       * once every 10 minutes, and `rate(1 hour)` runs it once every hour. You can specify a frequency
-       * between `rate(1 minute)` and `rate(1 hour)` .
-       *
-       * Specifying `rate(0 minute)` or `rate(0 hour)` is a special value that causes the canary to
-       * run only once when it is started.
-       *
-       * Use `cron( *expression* )` to specify a cron expression. You can't schedule a canary to
-       * wait for more than a year before running. For information about the syntax for cron
-       * expressions, see [Scheduling canary runs using
-       * cron](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
-       * .
-       */
-      override fun expression(expression: String) {
-        cdkBuilder.expression(expression)
-      }
-
-      public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty,
-    ) : CdkObject(cdkObject), ScheduleProperty {
-      /**
-       * How long, in seconds, for the canary to continue making regular runs according to the
-       * schedule in the `Expression` value.
-       *
-       * If you specify 0, the canary continues making runs until you stop it. If you omit this
-       * field, the default of 0 is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-durationinseconds)
-       */
-      override fun durationInSeconds(): String? = unwrap(this).getDurationInSeconds()
-
-      /**
-       * A `rate` expression or a `cron` expression that defines how often the canary is to run.
-       *
-       * For a rate expression, The syntax is `rate( *number unit* )` . *unit* can be `minute` ,
-       * `minutes` , or `hour` .
-       *
-       * For example, `rate(1 minute)` runs the canary once a minute, `rate(10 minutes)` runs it
-       * once every 10 minutes, and `rate(1 hour)` runs it once every hour. You can specify a frequency
-       * between `rate(1 minute)` and `rate(1 hour)` .
-       *
-       * Specifying `rate(0 minute)` or `rate(0 hour)` is a special value that causes the canary to
-       * run only once when it is started.
-       *
-       * Use `cron( *expression* )` to specify a cron expression. You can't schedule a canary to
-       * wait for more than a year before running. For information about the syntax for cron
-       * expressions, see [Scheduling canary runs using
-       * cron](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-expression)
-       */
-      override fun expression(): String = unwrap(this).getExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty):
-          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduleProperty):
-          software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty
-    }
-  }
-
-  /**
-   * A structure that contains the configuration of the encryption-at-rest settings for artifacts
-   * that the canary uploads to Amazon S3 .
-   *
-   * Artifact encryption functionality is available only for canaries that use Synthetics runtime
-   * version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting canary
-   * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.synthetics.*;
-   * S3EncryptionProperty s3EncryptionProperty = S3EncryptionProperty.builder()
+   * ArtifactConfigProperty artifactConfigProperty = ArtifactConfigProperty.builder()
+   * .s3Encryption(S3EncryptionProperty.builder()
    * .encryptionMode("encryptionMode")
    * .kmsKeyArn("kmsKeyArn")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html)
    */
-  public interface S3EncryptionProperty {
+  public interface ArtifactConfigProperty {
     /**
-     * The encryption method to use for artifacts created by this canary.
+     * A structure that contains the configuration of the encryption-at-rest settings for artifacts
+     * that the canary uploads to Amazon S3 .
      *
-     * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
-     * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
+     * Artifact encryption functionality is available only for canaries that use Synthetics runtime
+     * version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting canary
+     * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+     * .
      *
-     * If you omit this parameter, an AWS -managed AWS KMS key is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-encryptionmode)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html#cfn-synthetics-canary-artifactconfig-s3encryption)
      */
-    public fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
+    public fun s3Encryption(): Any? = unwrap(this).getS3Encryption()
 
     /**
-     * The ARN of the customer-managed AWS KMS key to use, if you specify `SSE-KMS` for
-     * `EncryptionMode`.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-kmskeyarn)
-     */
-    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-
-    /**
-     * A builder for [S3EncryptionProperty]
+     * A builder for [ArtifactConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param encryptionMode The encryption method to use for artifacts created by this canary.
-       * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
-       * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
-       *
-       * If you omit this parameter, an AWS -managed AWS KMS key is used.
+       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
+       * settings for artifacts that the canary uploads to Amazon S3 .
+       * Artifact encryption functionality is available only for canaries that use Synthetics
+       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
+       * canary
+       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+       * .
        */
-      public fun encryptionMode(encryptionMode: String)
+      public fun s3Encryption(s3Encryption: IResolvable)
 
       /**
-       * @param kmsKeyArn The ARN of the customer-managed AWS KMS key to use, if you specify
-       * `SSE-KMS` for `EncryptionMode`.
+       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
+       * settings for artifacts that the canary uploads to Amazon S3 .
+       * Artifact encryption functionality is available only for canaries that use Synthetics
+       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
+       * canary
+       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+       * .
        */
-      public fun kmsKeyArn(kmsKeyArn: String)
+      public fun s3Encryption(s3Encryption: S3EncryptionProperty)
+
+      /**
+       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
+       * settings for artifacts that the canary uploads to Amazon S3 .
+       * Artifact encryption functionality is available only for canaries that use Synthetics
+       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
+       * canary
+       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c139218594ab3ddb52cd25fe29117d299d2b333cbade9bb9b71aa26d9e27fa73")
+      public fun s3Encryption(s3Encryption: S3EncryptionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty.Builder =
-          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty.builder()
+          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty.Builder =
+          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty.builder()
 
       /**
-       * @param encryptionMode The encryption method to use for artifacts created by this canary.
-       * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
-       * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
-       *
-       * If you omit this parameter, an AWS -managed AWS KMS key is used.
+       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
+       * settings for artifacts that the canary uploads to Amazon S3 .
+       * Artifact encryption functionality is available only for canaries that use Synthetics
+       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
+       * canary
+       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+       * .
        */
-      override fun encryptionMode(encryptionMode: String) {
-        cdkBuilder.encryptionMode(encryptionMode)
+      override fun s3Encryption(s3Encryption: IResolvable) {
+        cdkBuilder.s3Encryption(s3Encryption.let(IResolvable::unwrap))
       }
 
       /**
-       * @param kmsKeyArn The ARN of the customer-managed AWS KMS key to use, if you specify
-       * `SSE-KMS` for `EncryptionMode`.
+       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
+       * settings for artifacts that the canary uploads to Amazon S3 .
+       * Artifact encryption functionality is available only for canaries that use Synthetics
+       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
+       * canary
+       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+       * .
        */
-      override fun kmsKeyArn(kmsKeyArn: String) {
-        cdkBuilder.kmsKeyArn(kmsKeyArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty,
-    ) : CdkObject(cdkObject), S3EncryptionProperty {
-      /**
-       * The encryption method to use for artifacts created by this canary.
-       *
-       * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
-       * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
-       *
-       * If you omit this parameter, an AWS -managed AWS KMS key is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-encryptionmode)
-       */
-      override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
-
-      /**
-       * The ARN of the customer-managed AWS KMS key to use, if you specify `SSE-KMS` for
-       * `EncryptionMode`.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-kmskeyarn)
-       */
-      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3EncryptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty):
-          S3EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? S3EncryptionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3EncryptionProperty):
-          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty
-    }
-  }
-
-  /**
-   * Defines the screenshots to use as the baseline for comparisons during visual monitoring
-   * comparisons during future runs of this canary.
-   *
-   * If you omit this parameter, no changes are made to any baseline screenshots that the canary
-   * might be using already.
-   *
-   * Visual monitoring is supported only on canaries running the *syn-puppeteer-node-3.2* runtime or
-   * later. For more information, see [Visual
-   * monitoring](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Library_SyntheticsLogger_VisualTesting.html)
-   * and [Visual monitoring
-   * blueprint](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Blueprints_VisualTesting.html)
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.synthetics.*;
-   * VisualReferenceProperty visualReferenceProperty = VisualReferenceProperty.builder()
-   * .baseCanaryRunId("baseCanaryRunId")
-   * // the properties below are optional
-   * .baseScreenshots(List.of(BaseScreenshotProperty.builder()
-   * .screenshotName("screenshotName")
-   * // the properties below are optional
-   * .ignoreCoordinates(List.of("ignoreCoordinates"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html)
-   */
-  public interface VisualReferenceProperty {
-    /**
-     * Specifies which canary run to use the screenshots from as the baseline for future visual
-     * monitoring with this canary.
-     *
-     * Valid values are `nextrun` to use the screenshots from the next run after this update is
-     * made, `lastrun` to use the screenshots from the most recent run before this update was made, or
-     * the value of `Id` in the
-     * [CanaryRun](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CanaryRun.html)
-     * from any past run of this canary.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html#cfn-synthetics-canary-visualreference-basecanaryrunid)
-     */
-    public fun baseCanaryRunId(): String
-
-    /**
-     * An array of screenshots that are used as the baseline for comparisons during visual
-     * monitoring.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html#cfn-synthetics-canary-visualreference-basescreenshots)
-     */
-    public fun baseScreenshots(): Any? = unwrap(this).getBaseScreenshots()
-
-    /**
-     * A builder for [VisualReferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param baseCanaryRunId Specifies which canary run to use the screenshots from as the
-       * baseline for future visual monitoring with this canary. 
-       * Valid values are `nextrun` to use the screenshots from the next run after this update is
-       * made, `lastrun` to use the screenshots from the most recent run before this update was made,
-       * or the value of `Id` in the
-       * [CanaryRun](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CanaryRun.html)
-       * from any past run of this canary.
-       */
-      public fun baseCanaryRunId(baseCanaryRunId: String)
-
-      /**
-       * @param baseScreenshots An array of screenshots that are used as the baseline for
-       * comparisons during visual monitoring.
-       */
-      public fun baseScreenshots(baseScreenshots: IResolvable)
-
-      /**
-       * @param baseScreenshots An array of screenshots that are used as the baseline for
-       * comparisons during visual monitoring.
-       */
-      public fun baseScreenshots(baseScreenshots: List<Any>)
-
-      /**
-       * @param baseScreenshots An array of screenshots that are used as the baseline for
-       * comparisons during visual monitoring.
-       */
-      public fun baseScreenshots(vararg baseScreenshots: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty.Builder =
-          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty.builder()
-
-      /**
-       * @param baseCanaryRunId Specifies which canary run to use the screenshots from as the
-       * baseline for future visual monitoring with this canary. 
-       * Valid values are `nextrun` to use the screenshots from the next run after this update is
-       * made, `lastrun` to use the screenshots from the most recent run before this update was made,
-       * or the value of `Id` in the
-       * [CanaryRun](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CanaryRun.html)
-       * from any past run of this canary.
-       */
-      override fun baseCanaryRunId(baseCanaryRunId: String) {
-        cdkBuilder.baseCanaryRunId(baseCanaryRunId)
+      override fun s3Encryption(s3Encryption: S3EncryptionProperty) {
+        cdkBuilder.s3Encryption(s3Encryption.let(S3EncryptionProperty::unwrap))
       }
 
       /**
-       * @param baseScreenshots An array of screenshots that are used as the baseline for
-       * comparisons during visual monitoring.
+       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
+       * settings for artifacts that the canary uploads to Amazon S3 .
+       * Artifact encryption functionality is available only for canaries that use Synthetics
+       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
+       * canary
+       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+       * .
        */
-      override fun baseScreenshots(baseScreenshots: IResolvable) {
-        cdkBuilder.baseScreenshots(baseScreenshots.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param baseScreenshots An array of screenshots that are used as the baseline for
-       * comparisons during visual monitoring.
-       */
-      override fun baseScreenshots(baseScreenshots: List<Any>) {
-        cdkBuilder.baseScreenshots(baseScreenshots)
-      }
-
-      /**
-       * @param baseScreenshots An array of screenshots that are used as the baseline for
-       * comparisons during visual monitoring.
-       */
-      override fun baseScreenshots(vararg baseScreenshots: Any): Unit =
-          baseScreenshots(baseScreenshots.toList())
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c139218594ab3ddb52cd25fe29117d299d2b333cbade9bb9b71aa26d9e27fa73")
+      override fun s3Encryption(s3Encryption: S3EncryptionProperty.Builder.() -> Unit): Unit =
+          s3Encryption(S3EncryptionProperty(s3Encryption))
 
       public fun build():
-          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty =
+          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty,
-    ) : CdkObject(cdkObject), VisualReferenceProperty {
+          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty,
+    ) : CdkObject(cdkObject), ArtifactConfigProperty {
       /**
-       * Specifies which canary run to use the screenshots from as the baseline for future visual
-       * monitoring with this canary.
+       * A structure that contains the configuration of the encryption-at-rest settings for
+       * artifacts that the canary uploads to Amazon S3 .
        *
-       * Valid values are `nextrun` to use the screenshots from the next run after this update is
-       * made, `lastrun` to use the screenshots from the most recent run before this update was made,
-       * or the value of `Id` in the
-       * [CanaryRun](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CanaryRun.html)
-       * from any past run of this canary.
+       * Artifact encryption functionality is available only for canaries that use Synthetics
+       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
+       * canary
+       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+       * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html#cfn-synthetics-canary-visualreference-basecanaryrunid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html#cfn-synthetics-canary-artifactconfig-s3encryption)
        */
-      override fun baseCanaryRunId(): String = unwrap(this).getBaseCanaryRunId()
-
-      /**
-       * An array of screenshots that are used as the baseline for comparisons during visual
-       * monitoring.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html#cfn-synthetics-canary-visualreference-basescreenshots)
-       */
-      override fun baseScreenshots(): Any? = unwrap(this).getBaseScreenshots()
+      override fun s3Encryption(): Any? = unwrap(this).getS3Encryption()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VisualReferenceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ArtifactConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty):
-          VisualReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? VisualReferenceProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty):
+          ArtifactConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VisualReferenceProperty):
-          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty = (wrapped as
+      internal fun unwrap(wrapped: ArtifactConfigProperty):
+          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty
+          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty
     }
   }
 
@@ -1975,6 +1633,275 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty
+    }
+  }
+
+  /**
+   * Use this structure to input your script code for the canary.
+   *
+   * This structure contains the Lambda handler with the location where the canary should start
+   * running the script. If the script is stored in an S3 bucket, the bucket name, key, and version are
+   * also included. If the script is passed into the canary directly, the script code is contained in
+   * the value of `Script` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.synthetics.*;
+   * CodeProperty codeProperty = CodeProperty.builder()
+   * .handler("handler")
+   * // the properties below are optional
+   * .s3Bucket("s3Bucket")
+   * .s3Key("s3Key")
+   * .s3ObjectVersion("s3ObjectVersion")
+   * .script("script")
+   * .sourceLocationArn("sourceLocationArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html)
+   */
+  public interface CodeProperty {
+    /**
+     * The entry point to use for the source code when running the canary.
+     *
+     * For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer`
+     * runtime earlier than `syn-nodejs.puppeteer-3.4` , the handler must be specified as `*fileName*
+     * .handler` . For `syn-python-selenium-1.1` , `syn-nodejs.puppeteer-3.4` , and later runtimes, the
+     * handler can be specified as `*fileName* . *functionName*` , or you can specify a folder where
+     * canary scripts reside as `*folder* / *fileName* . *functionName*` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-handler)
+     */
+    public fun handler(): String
+
+    /**
+     * If your canary script is located in S3, specify the bucket name here.
+     *
+     * The bucket must already exist.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3bucket)
+     */
+    public fun s3Bucket(): String? = unwrap(this).getS3Bucket()
+
+    /**
+     * The S3 key of your script.
+     *
+     * For more information, see [Working with Amazon S3
+     * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3key)
+     */
+    public fun s3Key(): String? = unwrap(this).getS3Key()
+
+    /**
+     * The S3 version ID of your script.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3objectversion)
+     */
+    public fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
+
+    /**
+     * If you input your canary script directly into the canary instead of referring to an S3
+     * location, the value of this parameter is the script in plain text.
+     *
+     * It can be up to 5 MB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-script)
+     */
+    public fun script(): String? = unwrap(this).getScript()
+
+    /**
+     * The ARN of the Lambda layer where Synthetics stores the canary script code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-sourcelocationarn)
+     */
+    public fun sourceLocationArn(): String? = unwrap(this).getSourceLocationArn()
+
+    /**
+     * A builder for [CodeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param handler The entry point to use for the source code when running the canary. 
+       * For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer`
+       * runtime earlier than `syn-nodejs.puppeteer-3.4` , the handler must be specified as `*fileName*
+       * .handler` . For `syn-python-selenium-1.1` , `syn-nodejs.puppeteer-3.4` , and later runtimes,
+       * the handler can be specified as `*fileName* . *functionName*` , or you can specify a folder
+       * where canary scripts reside as `*folder* / *fileName* . *functionName*` .
+       */
+      public fun handler(handler: String)
+
+      /**
+       * @param s3Bucket If your canary script is located in S3, specify the bucket name here.
+       * The bucket must already exist.
+       */
+      public fun s3Bucket(s3Bucket: String)
+
+      /**
+       * @param s3Key The S3 key of your script.
+       * For more information, see [Working with Amazon S3
+       * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
+       */
+      public fun s3Key(s3Key: String)
+
+      /**
+       * @param s3ObjectVersion The S3 version ID of your script.
+       */
+      public fun s3ObjectVersion(s3ObjectVersion: String)
+
+      /**
+       * @param script If you input your canary script directly into the canary instead of referring
+       * to an S3 location, the value of this parameter is the script in plain text.
+       * It can be up to 5 MB.
+       */
+      public fun script(script: String)
+
+      /**
+       * @param sourceLocationArn The ARN of the Lambda layer where Synthetics stores the canary
+       * script code.
+       */
+      public fun sourceLocationArn(sourceLocationArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty.Builder =
+          software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty.builder()
+
+      /**
+       * @param handler The entry point to use for the source code when running the canary. 
+       * For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer`
+       * runtime earlier than `syn-nodejs.puppeteer-3.4` , the handler must be specified as `*fileName*
+       * .handler` . For `syn-python-selenium-1.1` , `syn-nodejs.puppeteer-3.4` , and later runtimes,
+       * the handler can be specified as `*fileName* . *functionName*` , or you can specify a folder
+       * where canary scripts reside as `*folder* / *fileName* . *functionName*` .
+       */
+      override fun handler(handler: String) {
+        cdkBuilder.handler(handler)
+      }
+
+      /**
+       * @param s3Bucket If your canary script is located in S3, specify the bucket name here.
+       * The bucket must already exist.
+       */
+      override fun s3Bucket(s3Bucket: String) {
+        cdkBuilder.s3Bucket(s3Bucket)
+      }
+
+      /**
+       * @param s3Key The S3 key of your script.
+       * For more information, see [Working with Amazon S3
+       * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
+       */
+      override fun s3Key(s3Key: String) {
+        cdkBuilder.s3Key(s3Key)
+      }
+
+      /**
+       * @param s3ObjectVersion The S3 version ID of your script.
+       */
+      override fun s3ObjectVersion(s3ObjectVersion: String) {
+        cdkBuilder.s3ObjectVersion(s3ObjectVersion)
+      }
+
+      /**
+       * @param script If you input your canary script directly into the canary instead of referring
+       * to an S3 location, the value of this parameter is the script in plain text.
+       * It can be up to 5 MB.
+       */
+      override fun script(script: String) {
+        cdkBuilder.script(script)
+      }
+
+      /**
+       * @param sourceLocationArn The ARN of the Lambda layer where Synthetics stores the canary
+       * script code.
+       */
+      override fun sourceLocationArn(sourceLocationArn: String) {
+        cdkBuilder.sourceLocationArn(sourceLocationArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty,
+    ) : CdkObject(cdkObject), CodeProperty {
+      /**
+       * The entry point to use for the source code when running the canary.
+       *
+       * For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer`
+       * runtime earlier than `syn-nodejs.puppeteer-3.4` , the handler must be specified as `*fileName*
+       * .handler` . For `syn-python-selenium-1.1` , `syn-nodejs.puppeteer-3.4` , and later runtimes,
+       * the handler can be specified as `*fileName* . *functionName*` , or you can specify a folder
+       * where canary scripts reside as `*folder* / *fileName* . *functionName*` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-handler)
+       */
+      override fun handler(): String = unwrap(this).getHandler()
+
+      /**
+       * If your canary script is located in S3, specify the bucket name here.
+       *
+       * The bucket must already exist.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3bucket)
+       */
+      override fun s3Bucket(): String? = unwrap(this).getS3Bucket()
+
+      /**
+       * The S3 key of your script.
+       *
+       * For more information, see [Working with Amazon S3
+       * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3key)
+       */
+      override fun s3Key(): String? = unwrap(this).getS3Key()
+
+      /**
+       * The S3 version ID of your script.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3objectversion)
+       */
+      override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
+
+      /**
+       * If you input your canary script directly into the canary instead of referring to an S3
+       * location, the value of this parameter is the script in plain text.
+       *
+       * It can be up to 5 MB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-script)
+       */
+      override fun script(): String? = unwrap(this).getScript()
+
+      /**
+       * The ARN of the Lambda layer where Synthetics stores the canary script code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-sourcelocationarn)
+       */
+      override fun sourceLocationArn(): String? = unwrap(this).getSourceLocationArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CodeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty):
+          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CodeProperty):
+          software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty
     }
   }
 
@@ -2313,8 +2240,13 @@ public open class CfnCanary internal constructor(
   }
 
   /**
-   * A structure that contains the configuration for canary artifacts, including the
-   * encryption-at-rest settings for artifacts that the canary uploads to Amazon S3 .
+   * A structure that contains the configuration of the encryption-at-rest settings for artifacts
+   * that the canary uploads to Amazon S3 .
+   *
+   * Artifact encryption functionality is available only for canaries that use Synthetics runtime
+   * version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting canary
+   * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+   * .
    *
    * Example:
    *
@@ -2322,155 +2254,311 @@ public open class CfnCanary internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.synthetics.*;
-   * ArtifactConfigProperty artifactConfigProperty = ArtifactConfigProperty.builder()
-   * .s3Encryption(S3EncryptionProperty.builder()
+   * S3EncryptionProperty s3EncryptionProperty = S3EncryptionProperty.builder()
    * .encryptionMode("encryptionMode")
    * .kmsKeyArn("kmsKeyArn")
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html)
    */
-  public interface ArtifactConfigProperty {
+  public interface S3EncryptionProperty {
     /**
-     * A structure that contains the configuration of the encryption-at-rest settings for artifacts
-     * that the canary uploads to Amazon S3 .
+     * The encryption method to use for artifacts created by this canary.
      *
-     * Artifact encryption functionality is available only for canaries that use Synthetics runtime
-     * version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting canary
-     * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-     * .
+     * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
+     * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html#cfn-synthetics-canary-artifactconfig-s3encryption)
+     * If you omit this parameter, an AWS -managed AWS KMS key is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-encryptionmode)
      */
-    public fun s3Encryption(): Any? = unwrap(this).getS3Encryption()
+    public fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
 
     /**
-     * A builder for [ArtifactConfigProperty]
+     * The ARN of the customer-managed AWS KMS key to use, if you specify `SSE-KMS` for
+     * `EncryptionMode`.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-kmskeyarn)
+     */
+    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+
+    /**
+     * A builder for [S3EncryptionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
-       * settings for artifacts that the canary uploads to Amazon S3 .
-       * Artifact encryption functionality is available only for canaries that use Synthetics
-       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
-       * canary
-       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-       * .
+       * @param encryptionMode The encryption method to use for artifacts created by this canary.
+       * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
+       * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
+       *
+       * If you omit this parameter, an AWS -managed AWS KMS key is used.
        */
-      public fun s3Encryption(s3Encryption: IResolvable)
+      public fun encryptionMode(encryptionMode: String)
 
       /**
-       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
-       * settings for artifacts that the canary uploads to Amazon S3 .
-       * Artifact encryption functionality is available only for canaries that use Synthetics
-       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
-       * canary
-       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-       * .
+       * @param kmsKeyArn The ARN of the customer-managed AWS KMS key to use, if you specify
+       * `SSE-KMS` for `EncryptionMode`.
        */
-      public fun s3Encryption(s3Encryption: S3EncryptionProperty)
-
-      /**
-       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
-       * settings for artifacts that the canary uploads to Amazon S3 .
-       * Artifact encryption functionality is available only for canaries that use Synthetics
-       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
-       * canary
-       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c139218594ab3ddb52cd25fe29117d299d2b333cbade9bb9b71aa26d9e27fa73")
-      public fun s3Encryption(s3Encryption: S3EncryptionProperty.Builder.() -> Unit)
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty.Builder =
-          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty.builder()
+          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty.Builder =
+          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty.builder()
 
       /**
-       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
-       * settings for artifacts that the canary uploads to Amazon S3 .
-       * Artifact encryption functionality is available only for canaries that use Synthetics
-       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
-       * canary
-       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-       * .
+       * @param encryptionMode The encryption method to use for artifacts created by this canary.
+       * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
+       * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
+       *
+       * If you omit this parameter, an AWS -managed AWS KMS key is used.
        */
-      override fun s3Encryption(s3Encryption: IResolvable) {
-        cdkBuilder.s3Encryption(s3Encryption.let(IResolvable::unwrap))
+      override fun encryptionMode(encryptionMode: String) {
+        cdkBuilder.encryptionMode(encryptionMode)
       }
 
       /**
-       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
-       * settings for artifacts that the canary uploads to Amazon S3 .
-       * Artifact encryption functionality is available only for canaries that use Synthetics
-       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
-       * canary
-       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-       * .
+       * @param kmsKeyArn The ARN of the customer-managed AWS KMS key to use, if you specify
+       * `SSE-KMS` for `EncryptionMode`.
        */
-      override fun s3Encryption(s3Encryption: S3EncryptionProperty) {
-        cdkBuilder.s3Encryption(s3Encryption.let(S3EncryptionProperty::unwrap))
+      override fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
-      /**
-       * @param s3Encryption A structure that contains the configuration of the encryption-at-rest
-       * settings for artifacts that the canary uploads to Amazon S3 .
-       * Artifact encryption functionality is available only for canaries that use Synthetics
-       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
-       * canary
-       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c139218594ab3ddb52cd25fe29117d299d2b333cbade9bb9b71aa26d9e27fa73")
-      override fun s3Encryption(s3Encryption: S3EncryptionProperty.Builder.() -> Unit): Unit =
-          s3Encryption(S3EncryptionProperty(s3Encryption))
-
-      public fun build():
-          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty =
-          cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty,
-    ) : CdkObject(cdkObject), ArtifactConfigProperty {
+          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty,
+    ) : CdkObject(cdkObject), S3EncryptionProperty {
       /**
-       * A structure that contains the configuration of the encryption-at-rest settings for
-       * artifacts that the canary uploads to Amazon S3 .
+       * The encryption method to use for artifacts created by this canary.
        *
-       * Artifact encryption functionality is available only for canaries that use Synthetics
-       * runtime version syn-nodejs-puppeteer-3.3 or later. For more information, see [Encrypting
-       * canary
-       * artifacts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
-       * .
+       * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
+       * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html#cfn-synthetics-canary-artifactconfig-s3encryption)
+       * If you omit this parameter, an AWS -managed AWS KMS key is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-encryptionmode)
        */
-      override fun s3Encryption(): Any? = unwrap(this).getS3Encryption()
+      override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
+
+      /**
+       * The ARN of the customer-managed AWS KMS key to use, if you specify `SSE-KMS` for
+       * `EncryptionMode`.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-kmskeyarn)
+       */
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ArtifactConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3EncryptionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty):
-          ArtifactConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty):
+          S3EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? S3EncryptionProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ArtifactConfigProperty):
-          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty = (wrapped as
+      internal fun unwrap(wrapped: S3EncryptionProperty):
+          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty
+          software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty
+    }
+  }
+
+  /**
+   * This structure specifies how often a canary is to make runs and the date and time when it
+   * should stop making runs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.synthetics.*;
+   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+   * .expression("expression")
+   * // the properties below are optional
+   * .durationInSeconds("durationInSeconds")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html)
+   */
+  public interface ScheduleProperty {
+    /**
+     * How long, in seconds, for the canary to continue making regular runs according to the
+     * schedule in the `Expression` value.
+     *
+     * If you specify 0, the canary continues making runs until you stop it. If you omit this field,
+     * the default of 0 is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-durationinseconds)
+     */
+    public fun durationInSeconds(): String? = unwrap(this).getDurationInSeconds()
+
+    /**
+     * A `rate` expression or a `cron` expression that defines how often the canary is to run.
+     *
+     * For a rate expression, The syntax is `rate( *number unit* )` . *unit* can be `minute` ,
+     * `minutes` , or `hour` .
+     *
+     * For example, `rate(1 minute)` runs the canary once a minute, `rate(10 minutes)` runs it once
+     * every 10 minutes, and `rate(1 hour)` runs it once every hour. You can specify a frequency
+     * between `rate(1 minute)` and `rate(1 hour)` .
+     *
+     * Specifying `rate(0 minute)` or `rate(0 hour)` is a special value that causes the canary to
+     * run only once when it is started.
+     *
+     * Use `cron( *expression* )` to specify a cron expression. You can't schedule a canary to wait
+     * for more than a year before running. For information about the syntax for cron expressions, see
+     * [Scheduling canary runs using
+     * cron](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-expression)
+     */
+    public fun expression(): String
+
+    /**
+     * A builder for [ScheduleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param durationInSeconds How long, in seconds, for the canary to continue making regular
+       * runs according to the schedule in the `Expression` value.
+       * If you specify 0, the canary continues making runs until you stop it. If you omit this
+       * field, the default of 0 is used.
+       */
+      public fun durationInSeconds(durationInSeconds: String)
+
+      /**
+       * @param expression A `rate` expression or a `cron` expression that defines how often the
+       * canary is to run. 
+       * For a rate expression, The syntax is `rate( *number unit* )` . *unit* can be `minute` ,
+       * `minutes` , or `hour` .
+       *
+       * For example, `rate(1 minute)` runs the canary once a minute, `rate(10 minutes)` runs it
+       * once every 10 minutes, and `rate(1 hour)` runs it once every hour. You can specify a frequency
+       * between `rate(1 minute)` and `rate(1 hour)` .
+       *
+       * Specifying `rate(0 minute)` or `rate(0 hour)` is a special value that causes the canary to
+       * run only once when it is started.
+       *
+       * Use `cron( *expression* )` to specify a cron expression. You can't schedule a canary to
+       * wait for more than a year before running. For information about the syntax for cron
+       * expressions, see [Scheduling canary runs using
+       * cron](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
+       * .
+       */
+      public fun expression(expression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty.Builder =
+          software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty.builder()
+
+      /**
+       * @param durationInSeconds How long, in seconds, for the canary to continue making regular
+       * runs according to the schedule in the `Expression` value.
+       * If you specify 0, the canary continues making runs until you stop it. If you omit this
+       * field, the default of 0 is used.
+       */
+      override fun durationInSeconds(durationInSeconds: String) {
+        cdkBuilder.durationInSeconds(durationInSeconds)
+      }
+
+      /**
+       * @param expression A `rate` expression or a `cron` expression that defines how often the
+       * canary is to run. 
+       * For a rate expression, The syntax is `rate( *number unit* )` . *unit* can be `minute` ,
+       * `minutes` , or `hour` .
+       *
+       * For example, `rate(1 minute)` runs the canary once a minute, `rate(10 minutes)` runs it
+       * once every 10 minutes, and `rate(1 hour)` runs it once every hour. You can specify a frequency
+       * between `rate(1 minute)` and `rate(1 hour)` .
+       *
+       * Specifying `rate(0 minute)` or `rate(0 hour)` is a special value that causes the canary to
+       * run only once when it is started.
+       *
+       * Use `cron( *expression* )` to specify a cron expression. You can't schedule a canary to
+       * wait for more than a year before running. For information about the syntax for cron
+       * expressions, see [Scheduling canary runs using
+       * cron](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
+       * .
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty,
+    ) : CdkObject(cdkObject), ScheduleProperty {
+      /**
+       * How long, in seconds, for the canary to continue making regular runs according to the
+       * schedule in the `Expression` value.
+       *
+       * If you specify 0, the canary continues making runs until you stop it. If you omit this
+       * field, the default of 0 is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-durationinseconds)
+       */
+      override fun durationInSeconds(): String? = unwrap(this).getDurationInSeconds()
+
+      /**
+       * A `rate` expression or a `cron` expression that defines how often the canary is to run.
+       *
+       * For a rate expression, The syntax is `rate( *number unit* )` . *unit* can be `minute` ,
+       * `minutes` , or `hour` .
+       *
+       * For example, `rate(1 minute)` runs the canary once a minute, `rate(10 minutes)` runs it
+       * once every 10 minutes, and `rate(1 hour)` runs it once every hour. You can specify a frequency
+       * between `rate(1 minute)` and `rate(1 hour)` .
+       *
+       * Specifying `rate(0 minute)` or `rate(0 hour)` is a special value that causes the canary to
+       * run only once when it is started.
+       *
+       * Use `cron( *expression* )` to specify a cron expression. You can't schedule a canary to
+       * wait for more than a year before running. For information about the syntax for cron
+       * expressions, see [Scheduling canary runs using
+       * cron](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_cron.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-expression)
+       */
+      override fun expression(): String = unwrap(this).getExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty):
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScheduleProperty):
+          software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty
     }
   }
 
@@ -2637,12 +2725,17 @@ public open class CfnCanary internal constructor(
   }
 
   /**
-   * Use this structure to input your script code for the canary.
+   * Defines the screenshots to use as the baseline for comparisons during visual monitoring
+   * comparisons during future runs of this canary.
    *
-   * This structure contains the Lambda handler with the location where the canary should start
-   * running the script. If the script is stored in an S3 bucket, the bucket name, key, and version are
-   * also included. If the script is passed into the canary directly, the script code is contained in
-   * the value of `Script` .
+   * If you omit this parameter, no changes are made to any baseline screenshots that the canary
+   * might be using already.
+   *
+   * Visual monitoring is supported only on canaries running the *syn-puppeteer-node-3.2* runtime or
+   * later. For more information, see [Visual
+   * monitoring](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Library_SyntheticsLogger_VisualTesting.html)
+   * and [Visual monitoring
+   * blueprint](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Blueprints_VisualTesting.html)
    *
    * Example:
    *
@@ -2650,258 +2743,165 @@ public open class CfnCanary internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.synthetics.*;
-   * CodeProperty codeProperty = CodeProperty.builder()
-   * .handler("handler")
+   * VisualReferenceProperty visualReferenceProperty = VisualReferenceProperty.builder()
+   * .baseCanaryRunId("baseCanaryRunId")
    * // the properties below are optional
-   * .s3Bucket("s3Bucket")
-   * .s3Key("s3Key")
-   * .s3ObjectVersion("s3ObjectVersion")
-   * .script("script")
-   * .sourceLocationArn("sourceLocationArn")
+   * .baseScreenshots(List.of(BaseScreenshotProperty.builder()
+   * .screenshotName("screenshotName")
+   * // the properties below are optional
+   * .ignoreCoordinates(List.of("ignoreCoordinates"))
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html)
    */
-  public interface CodeProperty {
+  public interface VisualReferenceProperty {
     /**
-     * The entry point to use for the source code when running the canary.
+     * Specifies which canary run to use the screenshots from as the baseline for future visual
+     * monitoring with this canary.
      *
-     * For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer`
-     * runtime earlier than `syn-nodejs.puppeteer-3.4` , the handler must be specified as `*fileName*
-     * .handler` . For `syn-python-selenium-1.1` , `syn-nodejs.puppeteer-3.4` , and later runtimes, the
-     * handler can be specified as `*fileName* . *functionName*` , or you can specify a folder where
-     * canary scripts reside as `*folder* / *fileName* . *functionName*` .
+     * Valid values are `nextrun` to use the screenshots from the next run after this update is
+     * made, `lastrun` to use the screenshots from the most recent run before this update was made, or
+     * the value of `Id` in the
+     * [CanaryRun](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CanaryRun.html)
+     * from any past run of this canary.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-handler)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html#cfn-synthetics-canary-visualreference-basecanaryrunid)
      */
-    public fun handler(): String
+    public fun baseCanaryRunId(): String
 
     /**
-     * If your canary script is located in S3, specify the bucket name here.
+     * An array of screenshots that are used as the baseline for comparisons during visual
+     * monitoring.
      *
-     * The bucket must already exist.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3bucket)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html#cfn-synthetics-canary-visualreference-basescreenshots)
      */
-    public fun s3Bucket(): String? = unwrap(this).getS3Bucket()
+    public fun baseScreenshots(): Any? = unwrap(this).getBaseScreenshots()
 
     /**
-     * The S3 key of your script.
-     *
-     * For more information, see [Working with Amazon S3
-     * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3key)
-     */
-    public fun s3Key(): String? = unwrap(this).getS3Key()
-
-    /**
-     * The S3 version ID of your script.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3objectversion)
-     */
-    public fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
-
-    /**
-     * If you input your canary script directly into the canary instead of referring to an S3
-     * location, the value of this parameter is the script in plain text.
-     *
-     * It can be up to 5 MB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-script)
-     */
-    public fun script(): String? = unwrap(this).getScript()
-
-    /**
-     * The ARN of the Lambda layer where Synthetics stores the canary script code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-sourcelocationarn)
-     */
-    public fun sourceLocationArn(): String? = unwrap(this).getSourceLocationArn()
-
-    /**
-     * A builder for [CodeProperty]
+     * A builder for [VisualReferenceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param handler The entry point to use for the source code when running the canary. 
-       * For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer`
-       * runtime earlier than `syn-nodejs.puppeteer-3.4` , the handler must be specified as `*fileName*
-       * .handler` . For `syn-python-selenium-1.1` , `syn-nodejs.puppeteer-3.4` , and later runtimes,
-       * the handler can be specified as `*fileName* . *functionName*` , or you can specify a folder
-       * where canary scripts reside as `*folder* / *fileName* . *functionName*` .
+       * @param baseCanaryRunId Specifies which canary run to use the screenshots from as the
+       * baseline for future visual monitoring with this canary. 
+       * Valid values are `nextrun` to use the screenshots from the next run after this update is
+       * made, `lastrun` to use the screenshots from the most recent run before this update was made,
+       * or the value of `Id` in the
+       * [CanaryRun](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CanaryRun.html)
+       * from any past run of this canary.
        */
-      public fun handler(handler: String)
+      public fun baseCanaryRunId(baseCanaryRunId: String)
 
       /**
-       * @param s3Bucket If your canary script is located in S3, specify the bucket name here.
-       * The bucket must already exist.
+       * @param baseScreenshots An array of screenshots that are used as the baseline for
+       * comparisons during visual monitoring.
        */
-      public fun s3Bucket(s3Bucket: String)
+      public fun baseScreenshots(baseScreenshots: IResolvable)
 
       /**
-       * @param s3Key The S3 key of your script.
-       * For more information, see [Working with Amazon S3
-       * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
+       * @param baseScreenshots An array of screenshots that are used as the baseline for
+       * comparisons during visual monitoring.
        */
-      public fun s3Key(s3Key: String)
+      public fun baseScreenshots(baseScreenshots: List<Any>)
 
       /**
-       * @param s3ObjectVersion The S3 version ID of your script.
+       * @param baseScreenshots An array of screenshots that are used as the baseline for
+       * comparisons during visual monitoring.
        */
-      public fun s3ObjectVersion(s3ObjectVersion: String)
-
-      /**
-       * @param script If you input your canary script directly into the canary instead of referring
-       * to an S3 location, the value of this parameter is the script in plain text.
-       * It can be up to 5 MB.
-       */
-      public fun script(script: String)
-
-      /**
-       * @param sourceLocationArn The ARN of the Lambda layer where Synthetics stores the canary
-       * script code.
-       */
-      public fun sourceLocationArn(sourceLocationArn: String)
+      public fun baseScreenshots(vararg baseScreenshots: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty.Builder =
-          software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty.builder()
+          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty.Builder =
+          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty.builder()
 
       /**
-       * @param handler The entry point to use for the source code when running the canary. 
-       * For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer`
-       * runtime earlier than `syn-nodejs.puppeteer-3.4` , the handler must be specified as `*fileName*
-       * .handler` . For `syn-python-selenium-1.1` , `syn-nodejs.puppeteer-3.4` , and later runtimes,
-       * the handler can be specified as `*fileName* . *functionName*` , or you can specify a folder
-       * where canary scripts reside as `*folder* / *fileName* . *functionName*` .
+       * @param baseCanaryRunId Specifies which canary run to use the screenshots from as the
+       * baseline for future visual monitoring with this canary. 
+       * Valid values are `nextrun` to use the screenshots from the next run after this update is
+       * made, `lastrun` to use the screenshots from the most recent run before this update was made,
+       * or the value of `Id` in the
+       * [CanaryRun](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CanaryRun.html)
+       * from any past run of this canary.
        */
-      override fun handler(handler: String) {
-        cdkBuilder.handler(handler)
+      override fun baseCanaryRunId(baseCanaryRunId: String) {
+        cdkBuilder.baseCanaryRunId(baseCanaryRunId)
       }
 
       /**
-       * @param s3Bucket If your canary script is located in S3, specify the bucket name here.
-       * The bucket must already exist.
+       * @param baseScreenshots An array of screenshots that are used as the baseline for
+       * comparisons during visual monitoring.
        */
-      override fun s3Bucket(s3Bucket: String) {
-        cdkBuilder.s3Bucket(s3Bucket)
+      override fun baseScreenshots(baseScreenshots: IResolvable) {
+        cdkBuilder.baseScreenshots(baseScreenshots.let(IResolvable::unwrap))
       }
 
       /**
-       * @param s3Key The S3 key of your script.
-       * For more information, see [Working with Amazon S3
-       * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
+       * @param baseScreenshots An array of screenshots that are used as the baseline for
+       * comparisons during visual monitoring.
        */
-      override fun s3Key(s3Key: String) {
-        cdkBuilder.s3Key(s3Key)
+      override fun baseScreenshots(baseScreenshots: List<Any>) {
+        cdkBuilder.baseScreenshots(baseScreenshots)
       }
 
       /**
-       * @param s3ObjectVersion The S3 version ID of your script.
+       * @param baseScreenshots An array of screenshots that are used as the baseline for
+       * comparisons during visual monitoring.
        */
-      override fun s3ObjectVersion(s3ObjectVersion: String) {
-        cdkBuilder.s3ObjectVersion(s3ObjectVersion)
-      }
+      override fun baseScreenshots(vararg baseScreenshots: Any): Unit =
+          baseScreenshots(baseScreenshots.toList())
 
-      /**
-       * @param script If you input your canary script directly into the canary instead of referring
-       * to an S3 location, the value of this parameter is the script in plain text.
-       * It can be up to 5 MB.
-       */
-      override fun script(script: String) {
-        cdkBuilder.script(script)
-      }
-
-      /**
-       * @param sourceLocationArn The ARN of the Lambda layer where Synthetics stores the canary
-       * script code.
-       */
-      override fun sourceLocationArn(sourceLocationArn: String) {
-        cdkBuilder.sourceLocationArn(sourceLocationArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty =
+      public fun build():
+          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty,
-    ) : CdkObject(cdkObject), CodeProperty {
+      override val cdkObject:
+          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty,
+    ) : CdkObject(cdkObject), VisualReferenceProperty {
       /**
-       * The entry point to use for the source code when running the canary.
+       * Specifies which canary run to use the screenshots from as the baseline for future visual
+       * monitoring with this canary.
        *
-       * For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer`
-       * runtime earlier than `syn-nodejs.puppeteer-3.4` , the handler must be specified as `*fileName*
-       * .handler` . For `syn-python-selenium-1.1` , `syn-nodejs.puppeteer-3.4` , and later runtimes,
-       * the handler can be specified as `*fileName* . *functionName*` , or you can specify a folder
-       * where canary scripts reside as `*folder* / *fileName* . *functionName*` .
+       * Valid values are `nextrun` to use the screenshots from the next run after this update is
+       * made, `lastrun` to use the screenshots from the most recent run before this update was made,
+       * or the value of `Id` in the
+       * [CanaryRun](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CanaryRun.html)
+       * from any past run of this canary.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-handler)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html#cfn-synthetics-canary-visualreference-basecanaryrunid)
        */
-      override fun handler(): String = unwrap(this).getHandler()
+      override fun baseCanaryRunId(): String = unwrap(this).getBaseCanaryRunId()
 
       /**
-       * If your canary script is located in S3, specify the bucket name here.
+       * An array of screenshots that are used as the baseline for comparisons during visual
+       * monitoring.
        *
-       * The bucket must already exist.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3bucket)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html#cfn-synthetics-canary-visualreference-basescreenshots)
        */
-      override fun s3Bucket(): String? = unwrap(this).getS3Bucket()
-
-      /**
-       * The S3 key of your script.
-       *
-       * For more information, see [Working with Amazon S3
-       * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3key)
-       */
-      override fun s3Key(): String? = unwrap(this).getS3Key()
-
-      /**
-       * The S3 version ID of your script.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3objectversion)
-       */
-      override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
-
-      /**
-       * If you input your canary script directly into the canary instead of referring to an S3
-       * location, the value of this parameter is the script in plain text.
-       *
-       * It can be up to 5 MB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-script)
-       */
-      override fun script(): String? = unwrap(this).getScript()
-
-      /**
-       * The ARN of the Lambda layer where Synthetics stores the canary script code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-sourcelocationarn)
-       */
-      override fun sourceLocationArn(): String? = unwrap(this).getSourceLocationArn()
+      override fun baseScreenshots(): Any? = unwrap(this).getBaseScreenshots()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CodeProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VisualReferenceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty):
-          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty):
+          VisualReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? VisualReferenceProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CodeProperty):
-          software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty
+      internal fun unwrap(wrapped: VisualReferenceProperty):
+          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty
     }
   }
 }

@@ -614,271 +614,6 @@ public open class CfnInstanceFleetConfig internal constructor(
   }
 
   /**
-   * `EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * EbsConfigurationProperty ebsConfigurationProperty = EbsConfigurationProperty.builder()
-   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
-   * .volumeSpecification(VolumeSpecificationProperty.builder()
-   * .sizeInGb(123)
-   * .volumeType("volumeType")
-   * // the properties below are optional
-   * .iops(123)
-   * .throughput(123)
-   * .build())
-   * // the properties below are optional
-   * .volumesPerInstance(123)
-   * .build()))
-   * .ebsOptimized(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html)
-   */
-  public interface EbsConfigurationProperty {
-    /**
-     * An array of Amazon EBS volume specifications attached to a cluster instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs)
-     */
-    public fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
-
-    /**
-     * Indicates whether an Amazon EBS volume is EBS-optimized.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsoptimized)
-     */
-    public fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
-
-    /**
-     * A builder for [EbsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable)
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      public fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any)
-
-      /**
-       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
-       */
-      public fun ebsOptimized(ebsOptimized: Boolean)
-
-      /**
-       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
-       */
-      public fun ebsOptimized(ebsOptimized: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty.builder()
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
-      }
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      override fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any): Unit =
-          ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.toList())
-
-      /**
-       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
-       */
-      override fun ebsOptimized(ebsOptimized: Boolean) {
-        cdkBuilder.ebsOptimized(ebsOptimized)
-      }
-
-      /**
-       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
-       */
-      override fun ebsOptimized(ebsOptimized: IResolvable) {
-        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty,
-    ) : CdkObject(cdkObject), EbsConfigurationProperty {
-      /**
-       * An array of Amazon EBS volume specifications attached to a cluster instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs)
-       */
-      override fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
-
-      /**
-       * Indicates whether an Amazon EBS volume is EBS-optimized.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsoptimized)
-       */
-      override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EbsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty):
-          EbsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EbsConfigurationProperty):
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty
-    }
-  }
-
-  /**
-   * The launch specification for On-Demand Instances in the instance fleet, which determines the
-   * allocation strategy.
-   *
-   *
-   * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-   * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-   * releases 5.12.1 and later.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * OnDemandProvisioningSpecificationProperty onDemandProvisioningSpecificationProperty =
-   * OnDemandProvisioningSpecificationProperty.builder()
-   * .allocationStrategy("allocationStrategy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html)
-   */
-  public interface OnDemandProvisioningSpecificationProperty {
-    /**
-     * Specifies the strategy to use in launching On-Demand instance fleets.
-     *
-     * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-     * first.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html#cfn-emr-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy)
-     */
-    public fun allocationStrategy(): String
-
-    /**
-     * A builder for [OnDemandProvisioningSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
-       * fleets. 
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
-       */
-      public fun allocationStrategy(allocationStrategy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty.builder()
-
-      /**
-       * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
-       * fleets. 
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
-       */
-      override fun allocationStrategy(allocationStrategy: String) {
-        cdkBuilder.allocationStrategy(allocationStrategy)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty,
-    ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
-      /**
-       * Specifies the strategy to use in launching On-Demand instance fleets.
-       *
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html#cfn-emr-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy)
-       */
-      override fun allocationStrategy(): String = unwrap(this).getAllocationStrategy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          OnDemandProvisioningSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty):
-          OnDemandProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OnDemandProvisioningSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnDemandProvisioningSpecificationProperty):
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty
-    }
-  }
-
-  /**
    * Used only with Amazon EMR release 4.0 and later.
    *
    * `Configuration` specifies optional configurations for customizing open-source big data
@@ -1248,16 +983,7 @@ public open class CfnInstanceFleetConfig internal constructor(
   }
 
   /**
-   * `SpotProvisioningSpecification` is a subproperty of the
-   * `InstanceFleetProvisioningSpecifications` property type.
-   *
-   * `SpotProvisioningSpecification` determines the launch specification for Spot instances in the
-   * instance fleet, which includes the defined duration and provisioning timeout behavior.
-   *
-   *
-   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
-   * excluding 5.0.x versions.
-   *
+   * `EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances.
    *
    * Example:
    *
@@ -1265,288 +991,393 @@ public open class CfnInstanceFleetConfig internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.emr.*;
-   * SpotProvisioningSpecificationProperty spotProvisioningSpecificationProperty =
-   * SpotProvisioningSpecificationProperty.builder()
-   * .timeoutAction("timeoutAction")
-   * .timeoutDurationMinutes(123)
+   * EbsConfigurationProperty ebsConfigurationProperty = EbsConfigurationProperty.builder()
+   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+   * .volumeSpecification(VolumeSpecificationProperty.builder()
+   * .sizeInGb(123)
+   * .volumeType("volumeType")
    * // the properties below are optional
-   * .allocationStrategy("allocationStrategy")
-   * .blockDurationMinutes(123)
+   * .iops(123)
+   * .throughput(123)
+   * .build())
+   * // the properties below are optional
+   * .volumesPerInstance(123)
+   * .build()))
+   * .ebsOptimized(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html)
    */
-  public interface SpotProvisioningSpecificationProperty {
+  public interface EbsConfigurationProperty {
     /**
-     * Specifies one of the following strategies to launch Spot Instance fleets:
-     * `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified` .
+     * An array of Amazon EBS volume specifications attached to a cluster instance.
      *
-     * For more information on the provisioning strategies, see [Allocation strategies for Spot
-     * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
-     *
-     *
-     * When you launch a Spot Instance fleet with the old console, it automatically launches with
-     * the `capacity-optimized` strategy. You can't change the allocation strategy from the old
-     * console.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-allocationstrategy)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs)
      */
-    public fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+    public fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
 
     /**
-     * The defined duration for Spot Instances (also known as Spot blocks) in minutes.
+     * Indicates whether an Amazon EBS volume is EBS-optimized.
      *
-     * When specified, the Spot Instance does not terminate before the defined duration expires, and
-     * defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240, 300, or
-     * 360. The duration period starts as soon as a Spot Instance receives its instance ID. At the end
-     * of the duration, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance
-     * termination notice, which gives the instance a two-minute warning before it terminates.
-     *
-     *
-     * Spot Instances with a defined duration (also known as Spot blocks) are no longer available to
-     * new customers from July 1, 2021. For customers who have previously used the feature, we will
-     * continue to support Spot Instances with a defined duration until December 31, 2022.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-blockdurationminutes)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsoptimized)
      */
-    public fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+    public fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
 
     /**
-     * The action to take when `TargetSpotCapacity` has not been fulfilled when the
-     * `TimeoutDurationMinutes` has expired;
-     *
-     * that is, when all Spot Instances could not be provisioned within the Spot provisioning
-     * timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND` . SWITCH_TO_ON_DEMAND
-     * specifies that if no Spot Instances are available, On-Demand Instances should be provisioned to
-     * fulfill any remaining Spot capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-timeoutaction)
-     */
-    public fun timeoutAction(): String
-
-    /**
-     * The Spot provisioning timeout period in minutes.
-     *
-     * If Spot Instances are not provisioned within this time period, the `TimeOutAction` is taken.
-     * Minimum value is 5 and maximum value is 1440. The timeout applies only during initial
-     * provisioning, when the cluster is first created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-timeoutdurationminutes)
-     */
-    public fun timeoutDurationMinutes(): Number
-
-    /**
-     * A builder for [SpotProvisioningSpecificationProperty]
+     * A builder for [EbsConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param allocationStrategy Specifies one of the following strategies to launch Spot Instance
-       * fleets: `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified`
-       * .
-       * For more information on the provisioning strategies, see [Allocation strategies for Spot
-       * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
-       *
-       *
-       * When you launch a Spot Instance fleet with the old console, it automatically launches with
-       * the `capacity-optimized` strategy. You can't change the allocation strategy from the old
-       * console.
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
        */
-      public fun allocationStrategy(allocationStrategy: String)
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable)
 
       /**
-       * @param blockDurationMinutes The defined duration for Spot Instances (also known as Spot
-       * blocks) in minutes.
-       * When specified, the Spot Instance does not terminate before the defined duration expires,
-       * and defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240,
-       * 300, or 360. The duration period starts as soon as a Spot Instance receives its instance ID.
-       * At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
-       * Spot Instance termination notice, which gives the instance a two-minute warning before it
-       * terminates.
-       *
-       *
-       * Spot Instances with a defined duration (also known as Spot blocks) are no longer available
-       * to new customers from July 1, 2021. For customers who have previously used the feature, we
-       * will continue to support Spot Instances with a defined duration until December 31, 2022.
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
        */
-      public fun blockDurationMinutes(blockDurationMinutes: Number)
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
 
       /**
-       * @param timeoutAction The action to take when `TargetSpotCapacity` has not been fulfilled
-       * when the `TimeoutDurationMinutes` has expired;. 
-       * that is, when all Spot Instances could not be provisioned within the Spot provisioning
-       * timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND` . SWITCH_TO_ON_DEMAND
-       * specifies that if no Spot Instances are available, On-Demand Instances should be provisioned
-       * to fulfill any remaining Spot capacity.
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
        */
-      public fun timeoutAction(timeoutAction: String)
+      public fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any)
 
       /**
-       * @param timeoutDurationMinutes The Spot provisioning timeout period in minutes. 
-       * If Spot Instances are not provisioned within this time period, the `TimeOutAction` is
-       * taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial
-       * provisioning, when the cluster is first created.
+       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
        */
-      public fun timeoutDurationMinutes(timeoutDurationMinutes: Number)
+      public fun ebsOptimized(ebsOptimized: Boolean)
+
+      /**
+       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       */
+      public fun ebsOptimized(ebsOptimized: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty.Builder
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty.builder()
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty.builder()
 
       /**
-       * @param allocationStrategy Specifies one of the following strategies to launch Spot Instance
-       * fleets: `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified`
-       * .
-       * For more information on the provisioning strategies, see [Allocation strategies for Spot
-       * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
-       *
-       *
-       * When you launch a Spot Instance fleet with the old console, it automatically launches with
-       * the `capacity-optimized` strategy. You can't change the allocation strategy from the old
-       * console.
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
        */
-      override fun allocationStrategy(allocationStrategy: String) {
-        cdkBuilder.allocationStrategy(allocationStrategy)
+      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
       }
 
       /**
-       * @param blockDurationMinutes The defined duration for Spot Instances (also known as Spot
-       * blocks) in minutes.
-       * When specified, the Spot Instance does not terminate before the defined duration expires,
-       * and defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240,
-       * 300, or 360. The duration period starts as soon as a Spot Instance receives its instance ID.
-       * At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
-       * Spot Instance termination notice, which gives the instance a two-minute warning before it
-       * terminates.
-       *
-       *
-       * Spot Instances with a defined duration (also known as Spot blocks) are no longer available
-       * to new customers from July 1, 2021. For customers who have previously used the feature, we
-       * will continue to support Spot Instances with a defined duration until December 31, 2022.
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
        */
-      override fun blockDurationMinutes(blockDurationMinutes: Number) {
-        cdkBuilder.blockDurationMinutes(blockDurationMinutes)
+      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
       }
 
       /**
-       * @param timeoutAction The action to take when `TargetSpotCapacity` has not been fulfilled
-       * when the `TimeoutDurationMinutes` has expired;. 
-       * that is, when all Spot Instances could not be provisioned within the Spot provisioning
-       * timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND` . SWITCH_TO_ON_DEMAND
-       * specifies that if no Spot Instances are available, On-Demand Instances should be provisioned
-       * to fulfill any remaining Spot capacity.
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
        */
-      override fun timeoutAction(timeoutAction: String) {
-        cdkBuilder.timeoutAction(timeoutAction)
+      override fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any): Unit =
+          ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.toList())
+
+      /**
+       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       */
+      override fun ebsOptimized(ebsOptimized: Boolean) {
+        cdkBuilder.ebsOptimized(ebsOptimized)
       }
 
       /**
-       * @param timeoutDurationMinutes The Spot provisioning timeout period in minutes. 
-       * If Spot Instances are not provisioned within this time period, the `TimeOutAction` is
-       * taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial
-       * provisioning, when the cluster is first created.
+       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
        */
-      override fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
-        cdkBuilder.timeoutDurationMinutes(timeoutDurationMinutes)
+      override fun ebsOptimized(ebsOptimized: IResolvable) {
+        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty,
-    ) : CdkObject(cdkObject), SpotProvisioningSpecificationProperty {
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty,
+    ) : CdkObject(cdkObject), EbsConfigurationProperty {
       /**
-       * Specifies one of the following strategies to launch Spot Instance fleets:
-       * `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified` .
+       * An array of Amazon EBS volume specifications attached to a cluster instance.
        *
-       * For more information on the provisioning strategies, see [Allocation strategies for Spot
-       * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
-       *
-       *
-       * When you launch a Spot Instance fleet with the old console, it automatically launches with
-       * the `capacity-optimized` strategy. You can't change the allocation strategy from the old
-       * console.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-allocationstrategy)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs)
        */
-      override fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+      override fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
 
       /**
-       * The defined duration for Spot Instances (also known as Spot blocks) in minutes.
+       * Indicates whether an Amazon EBS volume is EBS-optimized.
        *
-       * When specified, the Spot Instance does not terminate before the defined duration expires,
-       * and defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240,
-       * 300, or 360. The duration period starts as soon as a Spot Instance receives its instance ID.
-       * At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
-       * Spot Instance termination notice, which gives the instance a two-minute warning before it
-       * terminates.
-       *
-       *
-       * Spot Instances with a defined duration (also known as Spot blocks) are no longer available
-       * to new customers from July 1, 2021. For customers who have previously used the feature, we
-       * will continue to support Spot Instances with a defined duration until December 31, 2022.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-blockdurationminutes)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsoptimized)
        */
-      override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
-
-      /**
-       * The action to take when `TargetSpotCapacity` has not been fulfilled when the
-       * `TimeoutDurationMinutes` has expired;
-       *
-       * that is, when all Spot Instances could not be provisioned within the Spot provisioning
-       * timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND` . SWITCH_TO_ON_DEMAND
-       * specifies that if no Spot Instances are available, On-Demand Instances should be provisioned
-       * to fulfill any remaining Spot capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-timeoutaction)
-       */
-      override fun timeoutAction(): String = unwrap(this).getTimeoutAction()
-
-      /**
-       * The Spot provisioning timeout period in minutes.
-       *
-       * If Spot Instances are not provisioned within this time period, the `TimeOutAction` is
-       * taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial
-       * provisioning, when the cluster is first created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-timeoutdurationminutes)
-       */
-      override fun timeoutDurationMinutes(): Number = unwrap(this).getTimeoutDurationMinutes()
+      override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SpotProvisioningSpecificationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EbsConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty):
-          SpotProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SpotProvisioningSpecificationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty):
+          EbsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsConfigurationProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SpotProvisioningSpecificationProperty):
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty
+      internal fun unwrap(wrapped: EbsConfigurationProperty):
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty
+    }
+  }
+
+  /**
+   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+   * excluding 5.0.x versions.
+   *
+   * `InstanceTypeConfig` is a sub-property of `InstanceFleetConfig` . `InstanceTypeConfig`
+   * determines the EC2 instances that Amazon EMR attempts to provision to fulfill On-Demand and Spot
+   * target capacities.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * InstanceFleetProvisioningSpecificationsProperty instanceFleetProvisioningSpecificationsProperty
+   * = InstanceFleetProvisioningSpecificationsProperty.builder()
+   * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .build())
+   * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
+   * .timeoutAction("timeoutAction")
+   * .timeoutDurationMinutes(123)
+   * // the properties below are optional
+   * .allocationStrategy("allocationStrategy")
+   * .blockDurationMinutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html)
+   */
+  public interface InstanceFleetProvisioningSpecificationsProperty {
+    /**
+     * The launch specification for On-Demand Instances in the instance fleet, which determines the
+     * allocation strategy.
+     *
+     *
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+     * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+     * releases 5.12.1 and later.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-ondemandspecification)
+     */
+    public fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
+
+    /**
+     * The launch specification for Spot instances in the fleet, which determines the defined
+     * duration, provisioning timeout behavior, and allocation strategy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification)
+     */
+    public fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
+
+    /**
+     * A builder for [InstanceFleetProvisioningSpecificationsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      public fun onDemandSpecification(onDemandSpecification: IResolvable)
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      public
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty)
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ab6e3f21606b4de7054e8b9b81faf0552c480fe77fd8cf07532502405e65bf1c")
+      public
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      public fun spotSpecification(spotSpecification: IResolvable)
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty)
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("adf4fa6f990e98f7c46c7bfa05dc84b8118c0023a37aef58de9fc82d05931529")
+      public
+          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty.builder()
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      override fun onDemandSpecification(onDemandSpecification: IResolvable) {
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      override
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ab6e3f21606b4de7054e8b9b81faf0552c480fe77fd8cf07532502405e65bf1c")
+      override
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          onDemandSpecification(OnDemandProvisioningSpecificationProperty(onDemandSpecification))
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      override fun spotSpecification(spotSpecification: IResolvable) {
+        cdkBuilder.spotSpecification(spotSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
+        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("adf4fa6f990e98f7c46c7bfa05dc84b8118c0023a37aef58de9fc82d05931529")
+      override
+          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit):
+          Unit = spotSpecification(SpotProvisioningSpecificationProperty(spotSpecification))
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty,
+    ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
+      /**
+       * The launch specification for On-Demand Instances in the instance fleet, which determines
+       * the allocation strategy.
+       *
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-ondemandspecification)
+       */
+      override fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
+
+      /**
+       * The launch specification for Spot instances in the fleet, which determines the defined
+       * duration, provisioning timeout behavior, and allocation strategy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification)
+       */
+      override fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceFleetProvisioningSpecificationsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty):
+          InstanceFleetProvisioningSpecificationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceFleetProvisioningSpecificationsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceFleetProvisioningSpecificationsProperty):
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty
     }
   }
 
@@ -1980,6 +1811,413 @@ public open class CfnInstanceFleetConfig internal constructor(
   }
 
   /**
+   * The launch specification for On-Demand Instances in the instance fleet, which determines the
+   * allocation strategy.
+   *
+   *
+   * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+   * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+   * releases 5.12.1 and later.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * OnDemandProvisioningSpecificationProperty onDemandProvisioningSpecificationProperty =
+   * OnDemandProvisioningSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html)
+   */
+  public interface OnDemandProvisioningSpecificationProperty {
+    /**
+     * Specifies the strategy to use in launching On-Demand instance fleets.
+     *
+     * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+     * first.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html#cfn-emr-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy)
+     */
+    public fun allocationStrategy(): String
+
+    /**
+     * A builder for [OnDemandProvisioningSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
+       * fleets. 
+       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+       * first.
+       */
+      public fun allocationStrategy(allocationStrategy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty.builder()
+
+      /**
+       * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
+       * fleets. 
+       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+       * first.
+       */
+      override fun allocationStrategy(allocationStrategy: String) {
+        cdkBuilder.allocationStrategy(allocationStrategy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty,
+    ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
+      /**
+       * Specifies the strategy to use in launching On-Demand instance fleets.
+       *
+       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+       * first.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html#cfn-emr-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy)
+       */
+      override fun allocationStrategy(): String = unwrap(this).getAllocationStrategy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OnDemandProvisioningSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty):
+          OnDemandProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnDemandProvisioningSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnDemandProvisioningSpecificationProperty):
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty
+    }
+  }
+
+  /**
+   * `SpotProvisioningSpecification` is a subproperty of the
+   * `InstanceFleetProvisioningSpecifications` property type.
+   *
+   * `SpotProvisioningSpecification` determines the launch specification for Spot instances in the
+   * instance fleet, which includes the defined duration and provisioning timeout behavior.
+   *
+   *
+   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+   * excluding 5.0.x versions.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * SpotProvisioningSpecificationProperty spotProvisioningSpecificationProperty =
+   * SpotProvisioningSpecificationProperty.builder()
+   * .timeoutAction("timeoutAction")
+   * .timeoutDurationMinutes(123)
+   * // the properties below are optional
+   * .allocationStrategy("allocationStrategy")
+   * .blockDurationMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html)
+   */
+  public interface SpotProvisioningSpecificationProperty {
+    /**
+     * Specifies one of the following strategies to launch Spot Instance fleets:
+     * `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified` .
+     *
+     * For more information on the provisioning strategies, see [Allocation strategies for Spot
+     * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
+     * in the *Amazon EC2 User Guide for Linux Instances* .
+     *
+     *
+     * When you launch a Spot Instance fleet with the old console, it automatically launches with
+     * the `capacity-optimized` strategy. You can't change the allocation strategy from the old
+     * console.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-allocationstrategy)
+     */
+    public fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+
+    /**
+     * The defined duration for Spot Instances (also known as Spot blocks) in minutes.
+     *
+     * When specified, the Spot Instance does not terminate before the defined duration expires, and
+     * defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240, 300, or
+     * 360. The duration period starts as soon as a Spot Instance receives its instance ID. At the end
+     * of the duration, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance
+     * termination notice, which gives the instance a two-minute warning before it terminates.
+     *
+     *
+     * Spot Instances with a defined duration (also known as Spot blocks) are no longer available to
+     * new customers from July 1, 2021. For customers who have previously used the feature, we will
+     * continue to support Spot Instances with a defined duration until December 31, 2022.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-blockdurationminutes)
+     */
+    public fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+
+    /**
+     * The action to take when `TargetSpotCapacity` has not been fulfilled when the
+     * `TimeoutDurationMinutes` has expired;
+     *
+     * that is, when all Spot Instances could not be provisioned within the Spot provisioning
+     * timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND` . SWITCH_TO_ON_DEMAND
+     * specifies that if no Spot Instances are available, On-Demand Instances should be provisioned to
+     * fulfill any remaining Spot capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-timeoutaction)
+     */
+    public fun timeoutAction(): String
+
+    /**
+     * The Spot provisioning timeout period in minutes.
+     *
+     * If Spot Instances are not provisioned within this time period, the `TimeOutAction` is taken.
+     * Minimum value is 5 and maximum value is 1440. The timeout applies only during initial
+     * provisioning, when the cluster is first created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-timeoutdurationminutes)
+     */
+    public fun timeoutDurationMinutes(): Number
+
+    /**
+     * A builder for [SpotProvisioningSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allocationStrategy Specifies one of the following strategies to launch Spot Instance
+       * fleets: `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified`
+       * .
+       * For more information on the provisioning strategies, see [Allocation strategies for Spot
+       * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       *
+       *
+       * When you launch a Spot Instance fleet with the old console, it automatically launches with
+       * the `capacity-optimized` strategy. You can't change the allocation strategy from the old
+       * console.
+       */
+      public fun allocationStrategy(allocationStrategy: String)
+
+      /**
+       * @param blockDurationMinutes The defined duration for Spot Instances (also known as Spot
+       * blocks) in minutes.
+       * When specified, the Spot Instance does not terminate before the defined duration expires,
+       * and defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240,
+       * 300, or 360. The duration period starts as soon as a Spot Instance receives its instance ID.
+       * At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
+       * Spot Instance termination notice, which gives the instance a two-minute warning before it
+       * terminates.
+       *
+       *
+       * Spot Instances with a defined duration (also known as Spot blocks) are no longer available
+       * to new customers from July 1, 2021. For customers who have previously used the feature, we
+       * will continue to support Spot Instances with a defined duration until December 31, 2022.
+       */
+      public fun blockDurationMinutes(blockDurationMinutes: Number)
+
+      /**
+       * @param timeoutAction The action to take when `TargetSpotCapacity` has not been fulfilled
+       * when the `TimeoutDurationMinutes` has expired;. 
+       * that is, when all Spot Instances could not be provisioned within the Spot provisioning
+       * timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND` . SWITCH_TO_ON_DEMAND
+       * specifies that if no Spot Instances are available, On-Demand Instances should be provisioned
+       * to fulfill any remaining Spot capacity.
+       */
+      public fun timeoutAction(timeoutAction: String)
+
+      /**
+       * @param timeoutDurationMinutes The Spot provisioning timeout period in minutes. 
+       * If Spot Instances are not provisioned within this time period, the `TimeOutAction` is
+       * taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial
+       * provisioning, when the cluster is first created.
+       */
+      public fun timeoutDurationMinutes(timeoutDurationMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty.builder()
+
+      /**
+       * @param allocationStrategy Specifies one of the following strategies to launch Spot Instance
+       * fleets: `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified`
+       * .
+       * For more information on the provisioning strategies, see [Allocation strategies for Spot
+       * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       *
+       *
+       * When you launch a Spot Instance fleet with the old console, it automatically launches with
+       * the `capacity-optimized` strategy. You can't change the allocation strategy from the old
+       * console.
+       */
+      override fun allocationStrategy(allocationStrategy: String) {
+        cdkBuilder.allocationStrategy(allocationStrategy)
+      }
+
+      /**
+       * @param blockDurationMinutes The defined duration for Spot Instances (also known as Spot
+       * blocks) in minutes.
+       * When specified, the Spot Instance does not terminate before the defined duration expires,
+       * and defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240,
+       * 300, or 360. The duration period starts as soon as a Spot Instance receives its instance ID.
+       * At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
+       * Spot Instance termination notice, which gives the instance a two-minute warning before it
+       * terminates.
+       *
+       *
+       * Spot Instances with a defined duration (also known as Spot blocks) are no longer available
+       * to new customers from July 1, 2021. For customers who have previously used the feature, we
+       * will continue to support Spot Instances with a defined duration until December 31, 2022.
+       */
+      override fun blockDurationMinutes(blockDurationMinutes: Number) {
+        cdkBuilder.blockDurationMinutes(blockDurationMinutes)
+      }
+
+      /**
+       * @param timeoutAction The action to take when `TargetSpotCapacity` has not been fulfilled
+       * when the `TimeoutDurationMinutes` has expired;. 
+       * that is, when all Spot Instances could not be provisioned within the Spot provisioning
+       * timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND` . SWITCH_TO_ON_DEMAND
+       * specifies that if no Spot Instances are available, On-Demand Instances should be provisioned
+       * to fulfill any remaining Spot capacity.
+       */
+      override fun timeoutAction(timeoutAction: String) {
+        cdkBuilder.timeoutAction(timeoutAction)
+      }
+
+      /**
+       * @param timeoutDurationMinutes The Spot provisioning timeout period in minutes. 
+       * If Spot Instances are not provisioned within this time period, the `TimeOutAction` is
+       * taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial
+       * provisioning, when the cluster is first created.
+       */
+      override fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
+        cdkBuilder.timeoutDurationMinutes(timeoutDurationMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty,
+    ) : CdkObject(cdkObject), SpotProvisioningSpecificationProperty {
+      /**
+       * Specifies one of the following strategies to launch Spot Instance fleets:
+       * `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified` .
+       *
+       * For more information on the provisioning strategies, see [Allocation strategies for Spot
+       * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
+       * in the *Amazon EC2 User Guide for Linux Instances* .
+       *
+       *
+       * When you launch a Spot Instance fleet with the old console, it automatically launches with
+       * the `capacity-optimized` strategy. You can't change the allocation strategy from the old
+       * console.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-allocationstrategy)
+       */
+      override fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+
+      /**
+       * The defined duration for Spot Instances (also known as Spot blocks) in minutes.
+       *
+       * When specified, the Spot Instance does not terminate before the defined duration expires,
+       * and defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240,
+       * 300, or 360. The duration period starts as soon as a Spot Instance receives its instance ID.
+       * At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
+       * Spot Instance termination notice, which gives the instance a two-minute warning before it
+       * terminates.
+       *
+       *
+       * Spot Instances with a defined duration (also known as Spot blocks) are no longer available
+       * to new customers from July 1, 2021. For customers who have previously used the feature, we
+       * will continue to support Spot Instances with a defined duration until December 31, 2022.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-blockdurationminutes)
+       */
+      override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+
+      /**
+       * The action to take when `TargetSpotCapacity` has not been fulfilled when the
+       * `TimeoutDurationMinutes` has expired;
+       *
+       * that is, when all Spot Instances could not be provisioned within the Spot provisioning
+       * timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND` . SWITCH_TO_ON_DEMAND
+       * specifies that if no Spot Instances are available, On-Demand Instances should be provisioned
+       * to fulfill any remaining Spot capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-timeoutaction)
+       */
+      override fun timeoutAction(): String = unwrap(this).getTimeoutAction()
+
+      /**
+       * The Spot provisioning timeout period in minutes.
+       *
+       * If Spot Instances are not provisioned within this time period, the `TimeOutAction` is
+       * taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial
+       * provisioning, when the cluster is first created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-spotprovisioningspecification.html#cfn-emr-instancefleetconfig-spotprovisioningspecification-timeoutdurationminutes)
+       */
+      override fun timeoutDurationMinutes(): Number = unwrap(this).getTimeoutDurationMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SpotProvisioningSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty):
+          SpotProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotProvisioningSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpotProvisioningSpecificationProperty):
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty
+    }
+  }
+
+  /**
    * `VolumeSpecification` is a subproperty of the `EbsBlockDeviceConfig` property type.
    *
    * `VolumeSecification` determines the volume type, IOPS, and size (GiB) for EBS volumes attached
@@ -2166,244 +2404,6 @@ public open class CfnInstanceFleetConfig internal constructor(
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty
-    }
-  }
-
-  /**
-   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
-   * excluding 5.0.x versions.
-   *
-   * `InstanceTypeConfig` is a sub-property of `InstanceFleetConfig` . `InstanceTypeConfig`
-   * determines the EC2 instances that Amazon EMR attempts to provision to fulfill On-Demand and Spot
-   * target capacities.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * InstanceFleetProvisioningSpecificationsProperty instanceFleetProvisioningSpecificationsProperty
-   * = InstanceFleetProvisioningSpecificationsProperty.builder()
-   * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
-   * .allocationStrategy("allocationStrategy")
-   * .build())
-   * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
-   * .timeoutAction("timeoutAction")
-   * .timeoutDurationMinutes(123)
-   * // the properties below are optional
-   * .allocationStrategy("allocationStrategy")
-   * .blockDurationMinutes(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html)
-   */
-  public interface InstanceFleetProvisioningSpecificationsProperty {
-    /**
-     * The launch specification for On-Demand Instances in the instance fleet, which determines the
-     * allocation strategy.
-     *
-     *
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-     * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-     * releases 5.12.1 and later.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-ondemandspecification)
-     */
-    public fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
-
-    /**
-     * The launch specification for Spot instances in the fleet, which determines the defined
-     * duration, provisioning timeout behavior, and allocation strategy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification)
-     */
-    public fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
-
-    /**
-     * A builder for [InstanceFleetProvisioningSpecificationsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      public fun onDemandSpecification(onDemandSpecification: IResolvable)
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      public
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty)
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ab6e3f21606b4de7054e8b9b81faf0552c480fe77fd8cf07532502405e65bf1c")
-      public
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      public fun spotSpecification(spotSpecification: IResolvable)
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty)
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("adf4fa6f990e98f7c46c7bfa05dc84b8118c0023a37aef58de9fc82d05931529")
-      public
-          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty.Builder
-          =
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty.builder()
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      override fun onDemandSpecification(onDemandSpecification: IResolvable) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      override
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ab6e3f21606b4de7054e8b9b81faf0552c480fe77fd8cf07532502405e65bf1c")
-      override
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          onDemandSpecification(OnDemandProvisioningSpecificationProperty(onDemandSpecification))
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      override fun spotSpecification(spotSpecification: IResolvable) {
-        cdkBuilder.spotSpecification(spotSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
-        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("adf4fa6f990e98f7c46c7bfa05dc84b8118c0023a37aef58de9fc82d05931529")
-      override
-          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit):
-          Unit = spotSpecification(SpotProvisioningSpecificationProperty(spotSpecification))
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty,
-    ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
-      /**
-       * The launch specification for On-Demand Instances in the instance fleet, which determines
-       * the allocation strategy.
-       *
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-ondemandspecification)
-       */
-      override fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
-
-      /**
-       * The launch specification for Spot instances in the fleet, which determines the defined
-       * duration, provisioning timeout behavior, and allocation strategy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification)
-       */
-      override fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InstanceFleetProvisioningSpecificationsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty):
-          InstanceFleetProvisioningSpecificationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceFleetProvisioningSpecificationsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceFleetProvisioningSpecificationsProperty):
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty
     }
   }
 }

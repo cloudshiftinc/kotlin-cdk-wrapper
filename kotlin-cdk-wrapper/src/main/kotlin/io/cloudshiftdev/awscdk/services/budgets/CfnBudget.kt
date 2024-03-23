@@ -349,6 +349,157 @@ public open class CfnBudget internal constructor(
   }
 
   /**
+   * Determine the budget amount for an auto-adjusting budget.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * AutoAdjustDataProperty autoAdjustDataProperty = AutoAdjustDataProperty.builder()
+   * .autoAdjustType("autoAdjustType")
+   * // the properties below are optional
+   * .historicalOptions(HistoricalOptionsProperty.builder()
+   * .budgetAdjustmentPeriod(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html)
+   */
+  public interface AutoAdjustDataProperty {
+    /**
+     * The string that defines whether your budget auto-adjusts based on historical or forecasted
+     * data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html#cfn-budgets-budget-autoadjustdata-autoadjusttype)
+     */
+    public fun autoAdjustType(): String
+
+    /**
+     * The parameters that define or describe the historical data that your auto-adjusting budget is
+     * based on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html#cfn-budgets-budget-autoadjustdata-historicaloptions)
+     */
+    public fun historicalOptions(): Any? = unwrap(this).getHistoricalOptions()
+
+    /**
+     * A builder for [AutoAdjustDataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoAdjustType The string that defines whether your budget auto-adjusts based on
+       * historical or forecasted data. 
+       */
+      public fun autoAdjustType(autoAdjustType: String)
+
+      /**
+       * @param historicalOptions The parameters that define or describe the historical data that
+       * your auto-adjusting budget is based on.
+       */
+      public fun historicalOptions(historicalOptions: IResolvable)
+
+      /**
+       * @param historicalOptions The parameters that define or describe the historical data that
+       * your auto-adjusting budget is based on.
+       */
+      public fun historicalOptions(historicalOptions: HistoricalOptionsProperty)
+
+      /**
+       * @param historicalOptions The parameters that define or describe the historical data that
+       * your auto-adjusting budget is based on.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5eceb443e67551a23c0248352444c86100f311f34ebddb20ea68d14d5ad8abaf")
+      public fun historicalOptions(historicalOptions: HistoricalOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty.builder()
+
+      /**
+       * @param autoAdjustType The string that defines whether your budget auto-adjusts based on
+       * historical or forecasted data. 
+       */
+      override fun autoAdjustType(autoAdjustType: String) {
+        cdkBuilder.autoAdjustType(autoAdjustType)
+      }
+
+      /**
+       * @param historicalOptions The parameters that define or describe the historical data that
+       * your auto-adjusting budget is based on.
+       */
+      override fun historicalOptions(historicalOptions: IResolvable) {
+        cdkBuilder.historicalOptions(historicalOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param historicalOptions The parameters that define or describe the historical data that
+       * your auto-adjusting budget is based on.
+       */
+      override fun historicalOptions(historicalOptions: HistoricalOptionsProperty) {
+        cdkBuilder.historicalOptions(historicalOptions.let(HistoricalOptionsProperty::unwrap))
+      }
+
+      /**
+       * @param historicalOptions The parameters that define or describe the historical data that
+       * your auto-adjusting budget is based on.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5eceb443e67551a23c0248352444c86100f311f34ebddb20ea68d14d5ad8abaf")
+      override
+          fun historicalOptions(historicalOptions: HistoricalOptionsProperty.Builder.() -> Unit):
+          Unit = historicalOptions(HistoricalOptionsProperty(historicalOptions))
+
+      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty,
+    ) : CdkObject(cdkObject), AutoAdjustDataProperty {
+      /**
+       * The string that defines whether your budget auto-adjusts based on historical or forecasted
+       * data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html#cfn-budgets-budget-autoadjustdata-autoadjusttype)
+       */
+      override fun autoAdjustType(): String = unwrap(this).getAutoAdjustType()
+
+      /**
+       * The parameters that define or describe the historical data that your auto-adjusting budget
+       * is based on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html#cfn-budgets-budget-autoadjustdata-historicaloptions)
+       */
+      override fun historicalOptions(): Any? = unwrap(this).getHistoricalOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoAdjustDataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty):
+          AutoAdjustDataProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoAdjustDataProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoAdjustDataProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty
+    }
+  }
+
+  /**
    * Represents the output of the `CreateBudget` operation.
    *
    * The content consists of the detailed metadata and data file information, and the current status
@@ -1126,1093 +1277,6 @@ public open class CfnBudget internal constructor(
   }
 
   /**
-   * Determine the budget amount for an auto-adjusting budget.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * AutoAdjustDataProperty autoAdjustDataProperty = AutoAdjustDataProperty.builder()
-   * .autoAdjustType("autoAdjustType")
-   * // the properties below are optional
-   * .historicalOptions(HistoricalOptionsProperty.builder()
-   * .budgetAdjustmentPeriod(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html)
-   */
-  public interface AutoAdjustDataProperty {
-    /**
-     * The string that defines whether your budget auto-adjusts based on historical or forecasted
-     * data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html#cfn-budgets-budget-autoadjustdata-autoadjusttype)
-     */
-    public fun autoAdjustType(): String
-
-    /**
-     * The parameters that define or describe the historical data that your auto-adjusting budget is
-     * based on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html#cfn-budgets-budget-autoadjustdata-historicaloptions)
-     */
-    public fun historicalOptions(): Any? = unwrap(this).getHistoricalOptions()
-
-    /**
-     * A builder for [AutoAdjustDataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoAdjustType The string that defines whether your budget auto-adjusts based on
-       * historical or forecasted data. 
-       */
-      public fun autoAdjustType(autoAdjustType: String)
-
-      /**
-       * @param historicalOptions The parameters that define or describe the historical data that
-       * your auto-adjusting budget is based on.
-       */
-      public fun historicalOptions(historicalOptions: IResolvable)
-
-      /**
-       * @param historicalOptions The parameters that define or describe the historical data that
-       * your auto-adjusting budget is based on.
-       */
-      public fun historicalOptions(historicalOptions: HistoricalOptionsProperty)
-
-      /**
-       * @param historicalOptions The parameters that define or describe the historical data that
-       * your auto-adjusting budget is based on.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5eceb443e67551a23c0248352444c86100f311f34ebddb20ea68d14d5ad8abaf")
-      public fun historicalOptions(historicalOptions: HistoricalOptionsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty.Builder =
-          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty.builder()
-
-      /**
-       * @param autoAdjustType The string that defines whether your budget auto-adjusts based on
-       * historical or forecasted data. 
-       */
-      override fun autoAdjustType(autoAdjustType: String) {
-        cdkBuilder.autoAdjustType(autoAdjustType)
-      }
-
-      /**
-       * @param historicalOptions The parameters that define or describe the historical data that
-       * your auto-adjusting budget is based on.
-       */
-      override fun historicalOptions(historicalOptions: IResolvable) {
-        cdkBuilder.historicalOptions(historicalOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param historicalOptions The parameters that define or describe the historical data that
-       * your auto-adjusting budget is based on.
-       */
-      override fun historicalOptions(historicalOptions: HistoricalOptionsProperty) {
-        cdkBuilder.historicalOptions(historicalOptions.let(HistoricalOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param historicalOptions The parameters that define or describe the historical data that
-       * your auto-adjusting budget is based on.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5eceb443e67551a23c0248352444c86100f311f34ebddb20ea68d14d5ad8abaf")
-      override
-          fun historicalOptions(historicalOptions: HistoricalOptionsProperty.Builder.() -> Unit):
-          Unit = historicalOptions(HistoricalOptionsProperty(historicalOptions))
-
-      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty,
-    ) : CdkObject(cdkObject), AutoAdjustDataProperty {
-      /**
-       * The string that defines whether your budget auto-adjusts based on historical or forecasted
-       * data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html#cfn-budgets-budget-autoadjustdata-autoadjusttype)
-       */
-      override fun autoAdjustType(): String = unwrap(this).getAutoAdjustType()
-
-      /**
-       * The parameters that define or describe the historical data that your auto-adjusting budget
-       * is based on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-autoadjustdata.html#cfn-budgets-budget-autoadjustdata-historicaloptions)
-       */
-      override fun historicalOptions(): Any? = unwrap(this).getHistoricalOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoAdjustDataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty):
-          AutoAdjustDataProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoAdjustDataProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoAdjustDataProperty):
-          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty
-    }
-  }
-
-  /**
-   * The period of time that is covered by a budget.
-   *
-   * The period has a start date and an end date. The start date must come before the end date.
-   * There are no restrictions on the end date.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * TimePeriodProperty timePeriodProperty = TimePeriodProperty.builder()
-   * .end("end")
-   * .start("start")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html)
-   */
-  public interface TimePeriodProperty {
-    /**
-     * The end date for a budget.
-     *
-     * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
-     * defaults are the same for the AWS Billing and Cost Management console and the API.
-     *
-     * After the end date, AWS deletes the budget and all the associated notifications and
-     * subscribers. You can change your end date with the `UpdateBudget` operation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html#cfn-budgets-budget-timeperiod-end)
-     */
-    public fun end(): String? = unwrap(this).getEnd()
-
-    /**
-     * The start date for a budget.
-     *
-     * If you created your budget and didn't specify a start date, the start date defaults to the
-     * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
-     * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
-     * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
-     * Management console and the API.
-     *
-     * You can change your start date with the `UpdateBudget` operation.
-     *
-     * Valid values depend on the value of `BudgetType` :
-     *
-     * * If `BudgetType` is `COST` or `USAGE` : Valid values are `MONTHLY` , `QUARTERLY` , and
-     * `ANNUALLY` .
-     * * If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE` : Valid values are `DAILY` , `MONTHLY`
-     * , `QUARTERLY` , and `ANNUALLY` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html#cfn-budgets-budget-timeperiod-start)
-     */
-    public fun start(): String? = unwrap(this).getStart()
-
-    /**
-     * A builder for [TimePeriodProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param end The end date for a budget.
-       * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
-       * defaults are the same for the AWS Billing and Cost Management console and the API.
-       *
-       * After the end date, AWS deletes the budget and all the associated notifications and
-       * subscribers. You can change your end date with the `UpdateBudget` operation.
-       */
-      public fun end(end: String)
-
-      /**
-       * @param start The start date for a budget.
-       * If you created your budget and didn't specify a start date, the start date defaults to the
-       * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
-       * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
-       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
-       * Management console and the API.
-       *
-       * You can change your start date with the `UpdateBudget` operation.
-       *
-       * Valid values depend on the value of `BudgetType` :
-       *
-       * * If `BudgetType` is `COST` or `USAGE` : Valid values are `MONTHLY` , `QUARTERLY` , and
-       * `ANNUALLY` .
-       * * If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE` : Valid values are `DAILY` ,
-       * `MONTHLY` , `QUARTERLY` , and `ANNUALLY` .
-       */
-      public fun start(start: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty.Builder =
-          software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty.builder()
-
-      /**
-       * @param end The end date for a budget.
-       * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
-       * defaults are the same for the AWS Billing and Cost Management console and the API.
-       *
-       * After the end date, AWS deletes the budget and all the associated notifications and
-       * subscribers. You can change your end date with the `UpdateBudget` operation.
-       */
-      override fun end(end: String) {
-        cdkBuilder.end(end)
-      }
-
-      /**
-       * @param start The start date for a budget.
-       * If you created your budget and didn't specify a start date, the start date defaults to the
-       * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
-       * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
-       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
-       * Management console and the API.
-       *
-       * You can change your start date with the `UpdateBudget` operation.
-       *
-       * Valid values depend on the value of `BudgetType` :
-       *
-       * * If `BudgetType` is `COST` or `USAGE` : Valid values are `MONTHLY` , `QUARTERLY` , and
-       * `ANNUALLY` .
-       * * If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE` : Valid values are `DAILY` ,
-       * `MONTHLY` , `QUARTERLY` , and `ANNUALLY` .
-       */
-      override fun start(start: String) {
-        cdkBuilder.start(start)
-      }
-
-      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty,
-    ) : CdkObject(cdkObject), TimePeriodProperty {
-      /**
-       * The end date for a budget.
-       *
-       * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
-       * defaults are the same for the AWS Billing and Cost Management console and the API.
-       *
-       * After the end date, AWS deletes the budget and all the associated notifications and
-       * subscribers. You can change your end date with the `UpdateBudget` operation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html#cfn-budgets-budget-timeperiod-end)
-       */
-      override fun end(): String? = unwrap(this).getEnd()
-
-      /**
-       * The start date for a budget.
-       *
-       * If you created your budget and didn't specify a start date, the start date defaults to the
-       * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
-       * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
-       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
-       * Management console and the API.
-       *
-       * You can change your start date with the `UpdateBudget` operation.
-       *
-       * Valid values depend on the value of `BudgetType` :
-       *
-       * * If `BudgetType` is `COST` or `USAGE` : Valid values are `MONTHLY` , `QUARTERLY` , and
-       * `ANNUALLY` .
-       * * If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE` : Valid values are `DAILY` ,
-       * `MONTHLY` , `QUARTERLY` , and `ANNUALLY` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html#cfn-budgets-budget-timeperiod-start)
-       */
-      override fun start(): String? = unwrap(this).getStart()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimePeriodProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty):
-          TimePeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? TimePeriodProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TimePeriodProperty):
-          software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty
-    }
-  }
-
-  /**
-   * The amount of cost or usage that's measured for a budget.
-   *
-   * *Cost example:* A `Spend` for `3 USD` of costs has the following parameters:
-   *
-   * * An `Amount` of `3`
-   * * A `Unit` of `USD`
-   *
-   * *Usage example:* A `Spend` for `3 GB` of S3 usage has the following parameters:
-   *
-   * * An `Amount` of `3`
-   * * A `Unit` of `GB`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * SpendProperty spendProperty = SpendProperty.builder()
-   * .amount(123)
-   * .unit("unit")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html)
-   */
-  public interface SpendProperty {
-    /**
-     * The cost or usage amount that's associated with a budget forecast, actual spend, or budget
-     * threshold.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-amount)
-     */
-    public fun amount(): Number
-
-    /**
-     * The unit of measurement that's used for the budget forecast, actual spend, or budget
-     * threshold.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-unit)
-     */
-    public fun unit(): String
-
-    /**
-     * A builder for [SpendProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param amount The cost or usage amount that's associated with a budget forecast, actual
-       * spend, or budget threshold. 
-       */
-      public fun amount(amount: Number)
-
-      /**
-       * @param unit The unit of measurement that's used for the budget forecast, actual spend, or
-       * budget threshold. 
-       */
-      public fun unit(unit: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty.Builder =
-          software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty.builder()
-
-      /**
-       * @param amount The cost or usage amount that's associated with a budget forecast, actual
-       * spend, or budget threshold. 
-       */
-      override fun amount(amount: Number) {
-        cdkBuilder.amount(amount)
-      }
-
-      /**
-       * @param unit The unit of measurement that's used for the budget forecast, actual spend, or
-       * budget threshold. 
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty,
-    ) : CdkObject(cdkObject), SpendProperty {
-      /**
-       * The cost or usage amount that's associated with a budget forecast, actual spend, or budget
-       * threshold.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-amount)
-       */
-      override fun amount(): Number = unwrap(this).getAmount()
-
-      /**
-       * The unit of measurement that's used for the budget forecast, actual spend, or budget
-       * threshold.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-unit)
-       */
-      override fun unit(): String = unwrap(this).getUnit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SpendProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty):
-          SpendProperty = CdkObjectWrappers.wrap(cdkObject) as? SpendProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SpendProperty):
-          software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty
-    }
-  }
-
-  /**
-   * The parameters that define or describe the historical data that your auto-adjusting budget is
-   * based on.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * HistoricalOptionsProperty historicalOptionsProperty = HistoricalOptionsProperty.builder()
-   * .budgetAdjustmentPeriod(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-historicaloptions.html)
-   */
-  public interface HistoricalOptionsProperty {
-    /**
-     * The number of budget periods included in the moving-average calculation that determines your
-     * auto-adjusted budget amount.
-     *
-     * The maximum value depends on the `TimeUnit` granularity of the budget:
-     *
-     * * For the `DAILY` granularity, the maximum value is `60` .
-     * * For the `MONTHLY` granularity, the maximum value is `12` .
-     * * For the `QUARTERLY` granularity, the maximum value is `4` .
-     * * For the `ANNUALLY` granularity, the maximum value is `1` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-historicaloptions.html#cfn-budgets-budget-historicaloptions-budgetadjustmentperiod)
-     */
-    public fun budgetAdjustmentPeriod(): Number
-
-    /**
-     * A builder for [HistoricalOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param budgetAdjustmentPeriod The number of budget periods included in the moving-average
-       * calculation that determines your auto-adjusted budget amount. 
-       * The maximum value depends on the `TimeUnit` granularity of the budget:
-       *
-       * * For the `DAILY` granularity, the maximum value is `60` .
-       * * For the `MONTHLY` granularity, the maximum value is `12` .
-       * * For the `QUARTERLY` granularity, the maximum value is `4` .
-       * * For the `ANNUALLY` granularity, the maximum value is `1` .
-       */
-      public fun budgetAdjustmentPeriod(budgetAdjustmentPeriod: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty.Builder =
-          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty.builder()
-
-      /**
-       * @param budgetAdjustmentPeriod The number of budget periods included in the moving-average
-       * calculation that determines your auto-adjusted budget amount. 
-       * The maximum value depends on the `TimeUnit` granularity of the budget:
-       *
-       * * For the `DAILY` granularity, the maximum value is `60` .
-       * * For the `MONTHLY` granularity, the maximum value is `12` .
-       * * For the `QUARTERLY` granularity, the maximum value is `4` .
-       * * For the `ANNUALLY` granularity, the maximum value is `1` .
-       */
-      override fun budgetAdjustmentPeriod(budgetAdjustmentPeriod: Number) {
-        cdkBuilder.budgetAdjustmentPeriod(budgetAdjustmentPeriod)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty,
-    ) : CdkObject(cdkObject), HistoricalOptionsProperty {
-      /**
-       * The number of budget periods included in the moving-average calculation that determines
-       * your auto-adjusted budget amount.
-       *
-       * The maximum value depends on the `TimeUnit` granularity of the budget:
-       *
-       * * For the `DAILY` granularity, the maximum value is `60` .
-       * * For the `MONTHLY` granularity, the maximum value is `12` .
-       * * For the `QUARTERLY` granularity, the maximum value is `4` .
-       * * For the `ANNUALLY` granularity, the maximum value is `1` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-historicaloptions.html#cfn-budgets-budget-historicaloptions-budgetadjustmentperiod)
-       */
-      override fun budgetAdjustmentPeriod(): Number = unwrap(this).getBudgetAdjustmentPeriod()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HistoricalOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty):
-          HistoricalOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HistoricalOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HistoricalOptionsProperty):
-          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty
-    }
-  }
-
-  /**
-   * The `Subscriber` property type specifies who to notify for a Billing and Cost Management budget
-   * notification.
-   *
-   * The subscriber consists of a subscription type, and either an Amazon SNS topic or an email
-   * address.
-   *
-   * For example, an email subscriber would have the following parameters:
-   *
-   * * A `subscriptionType` of `EMAIL`
-   * * An `address` of `example&#64;example.com`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * SubscriberProperty subscriberProperty = SubscriberProperty.builder()
-   * .address("address")
-   * .subscriptionType("subscriptionType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html)
-   */
-  public interface SubscriberProperty {
-    /**
-     * The address that AWS sends budget notifications to, either an SNS topic or an email.
-     *
-     * When you create a subscriber, the value of `Address` can't contain line breaks.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-address)
-     */
-    public fun address(): String
-
-    /**
-     * The type of notification that AWS sends to a subscriber.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-subscriptiontype)
-     */
-    public fun subscriptionType(): String
-
-    /**
-     * A builder for [SubscriberProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param address The address that AWS sends budget notifications to, either an SNS topic or
-       * an email. 
-       * When you create a subscriber, the value of `Address` can't contain line breaks.
-       */
-      public fun address(address: String)
-
-      /**
-       * @param subscriptionType The type of notification that AWS sends to a subscriber. 
-       */
-      public fun subscriptionType(subscriptionType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty.Builder =
-          software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty.builder()
-
-      /**
-       * @param address The address that AWS sends budget notifications to, either an SNS topic or
-       * an email. 
-       * When you create a subscriber, the value of `Address` can't contain line breaks.
-       */
-      override fun address(address: String) {
-        cdkBuilder.address(address)
-      }
-
-      /**
-       * @param subscriptionType The type of notification that AWS sends to a subscriber. 
-       */
-      override fun subscriptionType(subscriptionType: String) {
-        cdkBuilder.subscriptionType(subscriptionType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty,
-    ) : CdkObject(cdkObject), SubscriberProperty {
-      /**
-       * The address that AWS sends budget notifications to, either an SNS topic or an email.
-       *
-       * When you create a subscriber, the value of `Address` can't contain line breaks.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-address)
-       */
-      override fun address(): String = unwrap(this).getAddress()
-
-      /**
-       * The type of notification that AWS sends to a subscriber.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-subscriptiontype)
-       */
-      override fun subscriptionType(): String = unwrap(this).getSubscriptionType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubscriberProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty):
-          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriberProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubscriberProperty):
-          software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty
-    }
-  }
-
-  /**
-   * A notification with subscribers.
-   *
-   * A notification can have one SNS subscriber and up to 10 email subscribers, for a total of 11
-   * subscribers.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * NotificationWithSubscribersProperty notificationWithSubscribersProperty =
-   * NotificationWithSubscribersProperty.builder()
-   * .notification(NotificationProperty.builder()
-   * .comparisonOperator("comparisonOperator")
-   * .notificationType("notificationType")
-   * .threshold(123)
-   * // the properties below are optional
-   * .thresholdType("thresholdType")
-   * .build())
-   * .subscribers(List.of(SubscriberProperty.builder()
-   * .address("address")
-   * .subscriptionType("subscriptionType")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html)
-   */
-  public interface NotificationWithSubscribersProperty {
-    /**
-     * The notification that's associated with a budget.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-notification)
-     */
-    public fun notification(): Any
-
-    /**
-     * A list of subscribers who are subscribed to this notification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-subscribers)
-     */
-    public fun subscribers(): Any
-
-    /**
-     * A builder for [NotificationWithSubscribersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param notification The notification that's associated with a budget. 
-       */
-      public fun notification(notification: IResolvable)
-
-      /**
-       * @param notification The notification that's associated with a budget. 
-       */
-      public fun notification(notification: NotificationProperty)
-
-      /**
-       * @param notification The notification that's associated with a budget. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("be7d8f7c6331b0786274de1d180bb75d8b3e99b34d49f0a476f95488bf96d55b")
-      public fun notification(notification: NotificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param subscribers A list of subscribers who are subscribed to this notification. 
-       */
-      public fun subscribers(subscribers: IResolvable)
-
-      /**
-       * @param subscribers A list of subscribers who are subscribed to this notification. 
-       */
-      public fun subscribers(subscribers: List<Any>)
-
-      /**
-       * @param subscribers A list of subscribers who are subscribed to this notification. 
-       */
-      public fun subscribers(vararg subscribers: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty.Builder
-          =
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty.builder()
-
-      /**
-       * @param notification The notification that's associated with a budget. 
-       */
-      override fun notification(notification: IResolvable) {
-        cdkBuilder.notification(notification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param notification The notification that's associated with a budget. 
-       */
-      override fun notification(notification: NotificationProperty) {
-        cdkBuilder.notification(notification.let(NotificationProperty::unwrap))
-      }
-
-      /**
-       * @param notification The notification that's associated with a budget. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("be7d8f7c6331b0786274de1d180bb75d8b3e99b34d49f0a476f95488bf96d55b")
-      override fun notification(notification: NotificationProperty.Builder.() -> Unit): Unit =
-          notification(NotificationProperty(notification))
-
-      /**
-       * @param subscribers A list of subscribers who are subscribed to this notification. 
-       */
-      override fun subscribers(subscribers: IResolvable) {
-        cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param subscribers A list of subscribers who are subscribed to this notification. 
-       */
-      override fun subscribers(subscribers: List<Any>) {
-        cdkBuilder.subscribers(subscribers)
-      }
-
-      /**
-       * @param subscribers A list of subscribers who are subscribed to this notification. 
-       */
-      override fun subscribers(vararg subscribers: Any): Unit = subscribers(subscribers.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty,
-    ) : CdkObject(cdkObject), NotificationWithSubscribersProperty {
-      /**
-       * The notification that's associated with a budget.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-notification)
-       */
-      override fun notification(): Any = unwrap(this).getNotification()
-
-      /**
-       * A list of subscribers who are subscribed to this notification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-subscribers)
-       */
-      override fun subscribers(): Any = unwrap(this).getSubscribers()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NotificationWithSubscribersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty):
-          NotificationWithSubscribersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationWithSubscribersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationWithSubscribersProperty):
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty
-    }
-  }
-
-  /**
-   * A notification that's associated with a budget. A budget can have up to ten notifications.
-   *
-   * Each notification must have at least one subscriber. A notification can have one SNS subscriber
-   * and up to 10 email subscribers, for a total of 11 subscribers.
-   *
-   * For example, if you have a budget for 200 dollars and you want to be notified when you go over
-   * 160 dollars, create a notification with the following parameters:
-   *
-   * * A notificationType of `ACTUAL`
-   * * A `thresholdType` of `PERCENTAGE`
-   * * A `comparisonOperator` of `GREATER_THAN`
-   * * A notification `threshold` of `80`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * NotificationProperty notificationProperty = NotificationProperty.builder()
-   * .comparisonOperator("comparisonOperator")
-   * .notificationType("notificationType")
-   * .threshold(123)
-   * // the properties below are optional
-   * .thresholdType("thresholdType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html)
-   */
-  public interface NotificationProperty {
-    /**
-     * The comparison that's used for this notification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-comparisonoperator)
-     */
-    public fun comparisonOperator(): String
-
-    /**
-     * Specifies whether the notification is for how much you have spent ( `ACTUAL` ) or for how
-     * much that you're forecasted to spend ( `FORECASTED` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-notificationtype)
-     */
-    public fun notificationType(): String
-
-    /**
-     * The threshold that's associated with a notification.
-     *
-     * Thresholds are always a percentage, and many customers find value being alerted between 50% -
-     * 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above the
-     * budgeted amount.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-threshold)
-     */
-    public fun threshold(): Number
-
-    /**
-     * The type of threshold for a notification.
-     *
-     * For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go
-     * over your total cost threshold. For `PERCENTAGE` thresholds, AWS notifies you when you go over
-     * or are forecasted to go over a certain percentage of your forecasted spend. For example, if you
-     * have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies you
-     * when you go over 160 dollars.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-thresholdtype)
-     */
-    public fun thresholdType(): String? = unwrap(this).getThresholdType()
-
-    /**
-     * A builder for [NotificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comparisonOperator The comparison that's used for this notification. 
-       */
-      public fun comparisonOperator(comparisonOperator: String)
-
-      /**
-       * @param notificationType Specifies whether the notification is for how much you have spent (
-       * `ACTUAL` ) or for how much that you're forecasted to spend ( `FORECASTED` ). 
-       */
-      public fun notificationType(notificationType: String)
-
-      /**
-       * @param threshold The threshold that's associated with a notification. 
-       * Thresholds are always a percentage, and many customers find value being alerted between
-       * 50% - 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above
-       * the budgeted amount.
-       */
-      public fun threshold(threshold: Number)
-
-      /**
-       * @param thresholdType The type of threshold for a notification.
-       * For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go
-       * over your total cost threshold. For `PERCENTAGE` thresholds, AWS notifies you when you go over
-       * or are forecasted to go over a certain percentage of your forecasted spend. For example, if
-       * you have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies
-       * you when you go over 160 dollars.
-       */
-      public fun thresholdType(thresholdType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty.Builder =
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty.builder()
-
-      /**
-       * @param comparisonOperator The comparison that's used for this notification. 
-       */
-      override fun comparisonOperator(comparisonOperator: String) {
-        cdkBuilder.comparisonOperator(comparisonOperator)
-      }
-
-      /**
-       * @param notificationType Specifies whether the notification is for how much you have spent (
-       * `ACTUAL` ) or for how much that you're forecasted to spend ( `FORECASTED` ). 
-       */
-      override fun notificationType(notificationType: String) {
-        cdkBuilder.notificationType(notificationType)
-      }
-
-      /**
-       * @param threshold The threshold that's associated with a notification. 
-       * Thresholds are always a percentage, and many customers find value being alerted between
-       * 50% - 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above
-       * the budgeted amount.
-       */
-      override fun threshold(threshold: Number) {
-        cdkBuilder.threshold(threshold)
-      }
-
-      /**
-       * @param thresholdType The type of threshold for a notification.
-       * For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go
-       * over your total cost threshold. For `PERCENTAGE` thresholds, AWS notifies you when you go over
-       * or are forecasted to go over a certain percentage of your forecasted spend. For example, if
-       * you have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies
-       * you when you go over 160 dollars.
-       */
-      override fun thresholdType(thresholdType: String) {
-        cdkBuilder.thresholdType(thresholdType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty,
-    ) : CdkObject(cdkObject), NotificationProperty {
-      /**
-       * The comparison that's used for this notification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-comparisonoperator)
-       */
-      override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
-
-      /**
-       * Specifies whether the notification is for how much you have spent ( `ACTUAL` ) or for how
-       * much that you're forecasted to spend ( `FORECASTED` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-notificationtype)
-       */
-      override fun notificationType(): String = unwrap(this).getNotificationType()
-
-      /**
-       * The threshold that's associated with a notification.
-       *
-       * Thresholds are always a percentage, and many customers find value being alerted between
-       * 50% - 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above
-       * the budgeted amount.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-threshold)
-       */
-      override fun threshold(): Number = unwrap(this).getThreshold()
-
-      /**
-       * The type of threshold for a notification.
-       *
-       * For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go
-       * over your total cost threshold. For `PERCENTAGE` thresholds, AWS notifies you when you go over
-       * or are forecasted to go over a certain percentage of your forecasted spend. For example, if
-       * you have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies
-       * you when you go over 160 dollars.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-thresholdtype)
-       */
-      override fun thresholdType(): String? = unwrap(this).getThresholdType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty):
-          NotificationProperty = CdkObjectWrappers.wrap(cdkObject) as? NotificationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationProperty):
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty
-    }
-  }
-
-  /**
    * The types of cost that are included in a `COST` budget, such as tax and subscriptions.
    *
    * `USAGE` , `RI_UTILIZATION` , `RI_COVERAGE` , `SAVINGS_PLANS_UTILIZATION` , and
@@ -2790,6 +1854,942 @@ public open class CfnBudget internal constructor(
           software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty
+    }
+  }
+
+  /**
+   * The parameters that define or describe the historical data that your auto-adjusting budget is
+   * based on.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * HistoricalOptionsProperty historicalOptionsProperty = HistoricalOptionsProperty.builder()
+   * .budgetAdjustmentPeriod(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-historicaloptions.html)
+   */
+  public interface HistoricalOptionsProperty {
+    /**
+     * The number of budget periods included in the moving-average calculation that determines your
+     * auto-adjusted budget amount.
+     *
+     * The maximum value depends on the `TimeUnit` granularity of the budget:
+     *
+     * * For the `DAILY` granularity, the maximum value is `60` .
+     * * For the `MONTHLY` granularity, the maximum value is `12` .
+     * * For the `QUARTERLY` granularity, the maximum value is `4` .
+     * * For the `ANNUALLY` granularity, the maximum value is `1` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-historicaloptions.html#cfn-budgets-budget-historicaloptions-budgetadjustmentperiod)
+     */
+    public fun budgetAdjustmentPeriod(): Number
+
+    /**
+     * A builder for [HistoricalOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param budgetAdjustmentPeriod The number of budget periods included in the moving-average
+       * calculation that determines your auto-adjusted budget amount. 
+       * The maximum value depends on the `TimeUnit` granularity of the budget:
+       *
+       * * For the `DAILY` granularity, the maximum value is `60` .
+       * * For the `MONTHLY` granularity, the maximum value is `12` .
+       * * For the `QUARTERLY` granularity, the maximum value is `4` .
+       * * For the `ANNUALLY` granularity, the maximum value is `1` .
+       */
+      public fun budgetAdjustmentPeriod(budgetAdjustmentPeriod: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty.builder()
+
+      /**
+       * @param budgetAdjustmentPeriod The number of budget periods included in the moving-average
+       * calculation that determines your auto-adjusted budget amount. 
+       * The maximum value depends on the `TimeUnit` granularity of the budget:
+       *
+       * * For the `DAILY` granularity, the maximum value is `60` .
+       * * For the `MONTHLY` granularity, the maximum value is `12` .
+       * * For the `QUARTERLY` granularity, the maximum value is `4` .
+       * * For the `ANNUALLY` granularity, the maximum value is `1` .
+       */
+      override fun budgetAdjustmentPeriod(budgetAdjustmentPeriod: Number) {
+        cdkBuilder.budgetAdjustmentPeriod(budgetAdjustmentPeriod)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty,
+    ) : CdkObject(cdkObject), HistoricalOptionsProperty {
+      /**
+       * The number of budget periods included in the moving-average calculation that determines
+       * your auto-adjusted budget amount.
+       *
+       * The maximum value depends on the `TimeUnit` granularity of the budget:
+       *
+       * * For the `DAILY` granularity, the maximum value is `60` .
+       * * For the `MONTHLY` granularity, the maximum value is `12` .
+       * * For the `QUARTERLY` granularity, the maximum value is `4` .
+       * * For the `ANNUALLY` granularity, the maximum value is `1` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-historicaloptions.html#cfn-budgets-budget-historicaloptions-budgetadjustmentperiod)
+       */
+      override fun budgetAdjustmentPeriod(): Number = unwrap(this).getBudgetAdjustmentPeriod()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HistoricalOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty):
+          HistoricalOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HistoricalOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HistoricalOptionsProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty
+    }
+  }
+
+  /**
+   * A notification that's associated with a budget. A budget can have up to ten notifications.
+   *
+   * Each notification must have at least one subscriber. A notification can have one SNS subscriber
+   * and up to 10 email subscribers, for a total of 11 subscribers.
+   *
+   * For example, if you have a budget for 200 dollars and you want to be notified when you go over
+   * 160 dollars, create a notification with the following parameters:
+   *
+   * * A notificationType of `ACTUAL`
+   * * A `thresholdType` of `PERCENTAGE`
+   * * A `comparisonOperator` of `GREATER_THAN`
+   * * A notification `threshold` of `80`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * NotificationProperty notificationProperty = NotificationProperty.builder()
+   * .comparisonOperator("comparisonOperator")
+   * .notificationType("notificationType")
+   * .threshold(123)
+   * // the properties below are optional
+   * .thresholdType("thresholdType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html)
+   */
+  public interface NotificationProperty {
+    /**
+     * The comparison that's used for this notification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-comparisonoperator)
+     */
+    public fun comparisonOperator(): String
+
+    /**
+     * Specifies whether the notification is for how much you have spent ( `ACTUAL` ) or for how
+     * much that you're forecasted to spend ( `FORECASTED` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-notificationtype)
+     */
+    public fun notificationType(): String
+
+    /**
+     * The threshold that's associated with a notification.
+     *
+     * Thresholds are always a percentage, and many customers find value being alerted between 50% -
+     * 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above the
+     * budgeted amount.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-threshold)
+     */
+    public fun threshold(): Number
+
+    /**
+     * The type of threshold for a notification.
+     *
+     * For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go
+     * over your total cost threshold. For `PERCENTAGE` thresholds, AWS notifies you when you go over
+     * or are forecasted to go over a certain percentage of your forecasted spend. For example, if you
+     * have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies you
+     * when you go over 160 dollars.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-thresholdtype)
+     */
+    public fun thresholdType(): String? = unwrap(this).getThresholdType()
+
+    /**
+     * A builder for [NotificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param comparisonOperator The comparison that's used for this notification. 
+       */
+      public fun comparisonOperator(comparisonOperator: String)
+
+      /**
+       * @param notificationType Specifies whether the notification is for how much you have spent (
+       * `ACTUAL` ) or for how much that you're forecasted to spend ( `FORECASTED` ). 
+       */
+      public fun notificationType(notificationType: String)
+
+      /**
+       * @param threshold The threshold that's associated with a notification. 
+       * Thresholds are always a percentage, and many customers find value being alerted between
+       * 50% - 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above
+       * the budgeted amount.
+       */
+      public fun threshold(threshold: Number)
+
+      /**
+       * @param thresholdType The type of threshold for a notification.
+       * For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go
+       * over your total cost threshold. For `PERCENTAGE` thresholds, AWS notifies you when you go over
+       * or are forecasted to go over a certain percentage of your forecasted spend. For example, if
+       * you have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies
+       * you when you go over 160 dollars.
+       */
+      public fun thresholdType(thresholdType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty.builder()
+
+      /**
+       * @param comparisonOperator The comparison that's used for this notification. 
+       */
+      override fun comparisonOperator(comparisonOperator: String) {
+        cdkBuilder.comparisonOperator(comparisonOperator)
+      }
+
+      /**
+       * @param notificationType Specifies whether the notification is for how much you have spent (
+       * `ACTUAL` ) or for how much that you're forecasted to spend ( `FORECASTED` ). 
+       */
+      override fun notificationType(notificationType: String) {
+        cdkBuilder.notificationType(notificationType)
+      }
+
+      /**
+       * @param threshold The threshold that's associated with a notification. 
+       * Thresholds are always a percentage, and many customers find value being alerted between
+       * 50% - 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above
+       * the budgeted amount.
+       */
+      override fun threshold(threshold: Number) {
+        cdkBuilder.threshold(threshold)
+      }
+
+      /**
+       * @param thresholdType The type of threshold for a notification.
+       * For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go
+       * over your total cost threshold. For `PERCENTAGE` thresholds, AWS notifies you when you go over
+       * or are forecasted to go over a certain percentage of your forecasted spend. For example, if
+       * you have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies
+       * you when you go over 160 dollars.
+       */
+      override fun thresholdType(thresholdType: String) {
+        cdkBuilder.thresholdType(thresholdType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty,
+    ) : CdkObject(cdkObject), NotificationProperty {
+      /**
+       * The comparison that's used for this notification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-comparisonoperator)
+       */
+      override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
+
+      /**
+       * Specifies whether the notification is for how much you have spent ( `ACTUAL` ) or for how
+       * much that you're forecasted to spend ( `FORECASTED` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-notificationtype)
+       */
+      override fun notificationType(): String = unwrap(this).getNotificationType()
+
+      /**
+       * The threshold that's associated with a notification.
+       *
+       * Thresholds are always a percentage, and many customers find value being alerted between
+       * 50% - 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above
+       * the budgeted amount.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-threshold)
+       */
+      override fun threshold(): Number = unwrap(this).getThreshold()
+
+      /**
+       * The type of threshold for a notification.
+       *
+       * For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go
+       * over your total cost threshold. For `PERCENTAGE` thresholds, AWS notifies you when you go over
+       * or are forecasted to go over a certain percentage of your forecasted spend. For example, if
+       * you have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies
+       * you when you go over 160 dollars.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-thresholdtype)
+       */
+      override fun thresholdType(): String? = unwrap(this).getThresholdType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty):
+          NotificationProperty = CdkObjectWrappers.wrap(cdkObject) as? NotificationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty
+    }
+  }
+
+  /**
+   * A notification with subscribers.
+   *
+   * A notification can have one SNS subscriber and up to 10 email subscribers, for a total of 11
+   * subscribers.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * NotificationWithSubscribersProperty notificationWithSubscribersProperty =
+   * NotificationWithSubscribersProperty.builder()
+   * .notification(NotificationProperty.builder()
+   * .comparisonOperator("comparisonOperator")
+   * .notificationType("notificationType")
+   * .threshold(123)
+   * // the properties below are optional
+   * .thresholdType("thresholdType")
+   * .build())
+   * .subscribers(List.of(SubscriberProperty.builder()
+   * .address("address")
+   * .subscriptionType("subscriptionType")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html)
+   */
+  public interface NotificationWithSubscribersProperty {
+    /**
+     * The notification that's associated with a budget.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-notification)
+     */
+    public fun notification(): Any
+
+    /**
+     * A list of subscribers who are subscribed to this notification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-subscribers)
+     */
+    public fun subscribers(): Any
+
+    /**
+     * A builder for [NotificationWithSubscribersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param notification The notification that's associated with a budget. 
+       */
+      public fun notification(notification: IResolvable)
+
+      /**
+       * @param notification The notification that's associated with a budget. 
+       */
+      public fun notification(notification: NotificationProperty)
+
+      /**
+       * @param notification The notification that's associated with a budget. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("be7d8f7c6331b0786274de1d180bb75d8b3e99b34d49f0a476f95488bf96d55b")
+      public fun notification(notification: NotificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param subscribers A list of subscribers who are subscribed to this notification. 
+       */
+      public fun subscribers(subscribers: IResolvable)
+
+      /**
+       * @param subscribers A list of subscribers who are subscribed to this notification. 
+       */
+      public fun subscribers(subscribers: List<Any>)
+
+      /**
+       * @param subscribers A list of subscribers who are subscribed to this notification. 
+       */
+      public fun subscribers(vararg subscribers: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty.Builder
+          =
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty.builder()
+
+      /**
+       * @param notification The notification that's associated with a budget. 
+       */
+      override fun notification(notification: IResolvable) {
+        cdkBuilder.notification(notification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param notification The notification that's associated with a budget. 
+       */
+      override fun notification(notification: NotificationProperty) {
+        cdkBuilder.notification(notification.let(NotificationProperty::unwrap))
+      }
+
+      /**
+       * @param notification The notification that's associated with a budget. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("be7d8f7c6331b0786274de1d180bb75d8b3e99b34d49f0a476f95488bf96d55b")
+      override fun notification(notification: NotificationProperty.Builder.() -> Unit): Unit =
+          notification(NotificationProperty(notification))
+
+      /**
+       * @param subscribers A list of subscribers who are subscribed to this notification. 
+       */
+      override fun subscribers(subscribers: IResolvable) {
+        cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param subscribers A list of subscribers who are subscribed to this notification. 
+       */
+      override fun subscribers(subscribers: List<Any>) {
+        cdkBuilder.subscribers(subscribers)
+      }
+
+      /**
+       * @param subscribers A list of subscribers who are subscribed to this notification. 
+       */
+      override fun subscribers(vararg subscribers: Any): Unit = subscribers(subscribers.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty,
+    ) : CdkObject(cdkObject), NotificationWithSubscribersProperty {
+      /**
+       * The notification that's associated with a budget.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-notification)
+       */
+      override fun notification(): Any = unwrap(this).getNotification()
+
+      /**
+       * A list of subscribers who are subscribed to this notification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-subscribers)
+       */
+      override fun subscribers(): Any = unwrap(this).getSubscribers()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NotificationWithSubscribersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty):
+          NotificationWithSubscribersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationWithSubscribersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationWithSubscribersProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty
+    }
+  }
+
+  /**
+   * The amount of cost or usage that's measured for a budget.
+   *
+   * *Cost example:* A `Spend` for `3 USD` of costs has the following parameters:
+   *
+   * * An `Amount` of `3`
+   * * A `Unit` of `USD`
+   *
+   * *Usage example:* A `Spend` for `3 GB` of S3 usage has the following parameters:
+   *
+   * * An `Amount` of `3`
+   * * A `Unit` of `GB`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * SpendProperty spendProperty = SpendProperty.builder()
+   * .amount(123)
+   * .unit("unit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html)
+   */
+  public interface SpendProperty {
+    /**
+     * The cost or usage amount that's associated with a budget forecast, actual spend, or budget
+     * threshold.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-amount)
+     */
+    public fun amount(): Number
+
+    /**
+     * The unit of measurement that's used for the budget forecast, actual spend, or budget
+     * threshold.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-unit)
+     */
+    public fun unit(): String
+
+    /**
+     * A builder for [SpendProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param amount The cost or usage amount that's associated with a budget forecast, actual
+       * spend, or budget threshold. 
+       */
+      public fun amount(amount: Number)
+
+      /**
+       * @param unit The unit of measurement that's used for the budget forecast, actual spend, or
+       * budget threshold. 
+       */
+      public fun unit(unit: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty.builder()
+
+      /**
+       * @param amount The cost or usage amount that's associated with a budget forecast, actual
+       * spend, or budget threshold. 
+       */
+      override fun amount(amount: Number) {
+        cdkBuilder.amount(amount)
+      }
+
+      /**
+       * @param unit The unit of measurement that's used for the budget forecast, actual spend, or
+       * budget threshold. 
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty,
+    ) : CdkObject(cdkObject), SpendProperty {
+      /**
+       * The cost or usage amount that's associated with a budget forecast, actual spend, or budget
+       * threshold.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-amount)
+       */
+      override fun amount(): Number = unwrap(this).getAmount()
+
+      /**
+       * The unit of measurement that's used for the budget forecast, actual spend, or budget
+       * threshold.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-unit)
+       */
+      override fun unit(): String = unwrap(this).getUnit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpendProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty):
+          SpendProperty = CdkObjectWrappers.wrap(cdkObject) as? SpendProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpendProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty
+    }
+  }
+
+  /**
+   * The `Subscriber` property type specifies who to notify for a Billing and Cost Management budget
+   * notification.
+   *
+   * The subscriber consists of a subscription type, and either an Amazon SNS topic or an email
+   * address.
+   *
+   * For example, an email subscriber would have the following parameters:
+   *
+   * * A `subscriptionType` of `EMAIL`
+   * * An `address` of `example&#64;example.com`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * SubscriberProperty subscriberProperty = SubscriberProperty.builder()
+   * .address("address")
+   * .subscriptionType("subscriptionType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html)
+   */
+  public interface SubscriberProperty {
+    /**
+     * The address that AWS sends budget notifications to, either an SNS topic or an email.
+     *
+     * When you create a subscriber, the value of `Address` can't contain line breaks.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-address)
+     */
+    public fun address(): String
+
+    /**
+     * The type of notification that AWS sends to a subscriber.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-subscriptiontype)
+     */
+    public fun subscriptionType(): String
+
+    /**
+     * A builder for [SubscriberProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param address The address that AWS sends budget notifications to, either an SNS topic or
+       * an email. 
+       * When you create a subscriber, the value of `Address` can't contain line breaks.
+       */
+      public fun address(address: String)
+
+      /**
+       * @param subscriptionType The type of notification that AWS sends to a subscriber. 
+       */
+      public fun subscriptionType(subscriptionType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty.builder()
+
+      /**
+       * @param address The address that AWS sends budget notifications to, either an SNS topic or
+       * an email. 
+       * When you create a subscriber, the value of `Address` can't contain line breaks.
+       */
+      override fun address(address: String) {
+        cdkBuilder.address(address)
+      }
+
+      /**
+       * @param subscriptionType The type of notification that AWS sends to a subscriber. 
+       */
+      override fun subscriptionType(subscriptionType: String) {
+        cdkBuilder.subscriptionType(subscriptionType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty,
+    ) : CdkObject(cdkObject), SubscriberProperty {
+      /**
+       * The address that AWS sends budget notifications to, either an SNS topic or an email.
+       *
+       * When you create a subscriber, the value of `Address` can't contain line breaks.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-address)
+       */
+      override fun address(): String = unwrap(this).getAddress()
+
+      /**
+       * The type of notification that AWS sends to a subscriber.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-subscriptiontype)
+       */
+      override fun subscriptionType(): String = unwrap(this).getSubscriptionType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubscriberProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty):
+          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriberProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubscriberProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty
+    }
+  }
+
+  /**
+   * The period of time that is covered by a budget.
+   *
+   * The period has a start date and an end date. The start date must come before the end date.
+   * There are no restrictions on the end date.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * TimePeriodProperty timePeriodProperty = TimePeriodProperty.builder()
+   * .end("end")
+   * .start("start")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html)
+   */
+  public interface TimePeriodProperty {
+    /**
+     * The end date for a budget.
+     *
+     * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
+     * defaults are the same for the AWS Billing and Cost Management console and the API.
+     *
+     * After the end date, AWS deletes the budget and all the associated notifications and
+     * subscribers. You can change your end date with the `UpdateBudget` operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html#cfn-budgets-budget-timeperiod-end)
+     */
+    public fun end(): String? = unwrap(this).getEnd()
+
+    /**
+     * The start date for a budget.
+     *
+     * If you created your budget and didn't specify a start date, the start date defaults to the
+     * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
+     * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
+     * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
+     * Management console and the API.
+     *
+     * You can change your start date with the `UpdateBudget` operation.
+     *
+     * Valid values depend on the value of `BudgetType` :
+     *
+     * * If `BudgetType` is `COST` or `USAGE` : Valid values are `MONTHLY` , `QUARTERLY` , and
+     * `ANNUALLY` .
+     * * If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE` : Valid values are `DAILY` , `MONTHLY`
+     * , `QUARTERLY` , and `ANNUALLY` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html#cfn-budgets-budget-timeperiod-start)
+     */
+    public fun start(): String? = unwrap(this).getStart()
+
+    /**
+     * A builder for [TimePeriodProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param end The end date for a budget.
+       * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
+       * defaults are the same for the AWS Billing and Cost Management console and the API.
+       *
+       * After the end date, AWS deletes the budget and all the associated notifications and
+       * subscribers. You can change your end date with the `UpdateBudget` operation.
+       */
+      public fun end(end: String)
+
+      /**
+       * @param start The start date for a budget.
+       * If you created your budget and didn't specify a start date, the start date defaults to the
+       * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
+       * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
+       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
+       * Management console and the API.
+       *
+       * You can change your start date with the `UpdateBudget` operation.
+       *
+       * Valid values depend on the value of `BudgetType` :
+       *
+       * * If `BudgetType` is `COST` or `USAGE` : Valid values are `MONTHLY` , `QUARTERLY` , and
+       * `ANNUALLY` .
+       * * If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE` : Valid values are `DAILY` ,
+       * `MONTHLY` , `QUARTERLY` , and `ANNUALLY` .
+       */
+      public fun start(start: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty.builder()
+
+      /**
+       * @param end The end date for a budget.
+       * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
+       * defaults are the same for the AWS Billing and Cost Management console and the API.
+       *
+       * After the end date, AWS deletes the budget and all the associated notifications and
+       * subscribers. You can change your end date with the `UpdateBudget` operation.
+       */
+      override fun end(end: String) {
+        cdkBuilder.end(end)
+      }
+
+      /**
+       * @param start The start date for a budget.
+       * If you created your budget and didn't specify a start date, the start date defaults to the
+       * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
+       * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
+       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
+       * Management console and the API.
+       *
+       * You can change your start date with the `UpdateBudget` operation.
+       *
+       * Valid values depend on the value of `BudgetType` :
+       *
+       * * If `BudgetType` is `COST` or `USAGE` : Valid values are `MONTHLY` , `QUARTERLY` , and
+       * `ANNUALLY` .
+       * * If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE` : Valid values are `DAILY` ,
+       * `MONTHLY` , `QUARTERLY` , and `ANNUALLY` .
+       */
+      override fun start(start: String) {
+        cdkBuilder.start(start)
+      }
+
+      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty,
+    ) : CdkObject(cdkObject), TimePeriodProperty {
+      /**
+       * The end date for a budget.
+       *
+       * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
+       * defaults are the same for the AWS Billing and Cost Management console and the API.
+       *
+       * After the end date, AWS deletes the budget and all the associated notifications and
+       * subscribers. You can change your end date with the `UpdateBudget` operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html#cfn-budgets-budget-timeperiod-end)
+       */
+      override fun end(): String? = unwrap(this).getEnd()
+
+      /**
+       * The start date for a budget.
+       *
+       * If you created your budget and didn't specify a start date, the start date defaults to the
+       * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
+       * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
+       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
+       * Management console and the API.
+       *
+       * You can change your start date with the `UpdateBudget` operation.
+       *
+       * Valid values depend on the value of `BudgetType` :
+       *
+       * * If `BudgetType` is `COST` or `USAGE` : Valid values are `MONTHLY` , `QUARTERLY` , and
+       * `ANNUALLY` .
+       * * If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE` : Valid values are `DAILY` ,
+       * `MONTHLY` , `QUARTERLY` , and `ANNUALLY` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html#cfn-budgets-budget-timeperiod-start)
+       */
+      override fun start(): String? = unwrap(this).getStart()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimePeriodProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty):
+          TimePeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? TimePeriodProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimePeriodProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty
     }
   }
 }

@@ -736,6 +736,160 @@ public open class CfnInferenceScheduler internal constructor(
   }
 
   /**
+   * Specifies configuration information for the output results for the inference scheduler,
+   * including the S3 location for the output.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutequipment.*;
+   * DataOutputConfigurationProperty dataOutputConfigurationProperty =
+   * DataOutputConfigurationProperty.builder()
+   * .s3OutputConfiguration(S3OutputConfigurationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .prefix("prefix")
+   * .build())
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html)
+   */
+  public interface DataOutputConfigurationProperty {
+    /**
+     * The ID number for the AWS KMS key used to encrypt the inference output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * Specifies configuration information for the output results from the inference, including
+     * output S3 location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration-s3outputconfiguration)
+     */
+    public fun s3OutputConfiguration(): Any
+
+    /**
+     * A builder for [DataOutputConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The ID number for the AWS KMS key used to encrypt the inference output.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param s3OutputConfiguration Specifies configuration information for the output results
+       * from the inference, including output S3 location. 
+       */
+      public fun s3OutputConfiguration(s3OutputConfiguration: IResolvable)
+
+      /**
+       * @param s3OutputConfiguration Specifies configuration information for the output results
+       * from the inference, including output S3 location. 
+       */
+      public fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty)
+
+      /**
+       * @param s3OutputConfiguration Specifies configuration information for the output results
+       * from the inference, including output S3 location. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("58f2e19d838f5a1605d85010c381976bec8cbbb520d702395aa620174c42879c")
+      public
+          fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty.builder()
+
+      /**
+       * @param kmsKeyId The ID number for the AWS KMS key used to encrypt the inference output.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param s3OutputConfiguration Specifies configuration information for the output results
+       * from the inference, including output S3 location. 
+       */
+      override fun s3OutputConfiguration(s3OutputConfiguration: IResolvable) {
+        cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3OutputConfiguration Specifies configuration information for the output results
+       * from the inference, including output S3 location. 
+       */
+      override fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty) {
+        cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(S3OutputConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param s3OutputConfiguration Specifies configuration information for the output results
+       * from the inference, including output S3 location. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("58f2e19d838f5a1605d85010c381976bec8cbbb520d702395aa620174c42879c")
+      override
+          fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty.Builder.() -> Unit):
+          Unit = s3OutputConfiguration(S3OutputConfigurationProperty(s3OutputConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty,
+    ) : CdkObject(cdkObject), DataOutputConfigurationProperty {
+      /**
+       * The ID number for the AWS KMS key used to encrypt the inference output.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * Specifies configuration information for the output results from the inference, including
+       * output S3 location.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration-s3outputconfiguration)
+       */
+      override fun s3OutputConfiguration(): Any = unwrap(this).getS3OutputConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataOutputConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty):
+          DataOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataOutputConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataOutputConfigurationProperty):
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
+    }
+  }
+
+  /**
    * Specifies configuration information for the input data for the inference, including timestamp
    * format and delimiter.
    *
@@ -955,160 +1109,6 @@ public open class CfnInferenceScheduler internal constructor(
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies configuration information for the output results for the inference scheduler,
-   * including the S3 location for the output.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutequipment.*;
-   * DataOutputConfigurationProperty dataOutputConfigurationProperty =
-   * DataOutputConfigurationProperty.builder()
-   * .s3OutputConfiguration(S3OutputConfigurationProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .prefix("prefix")
-   * .build())
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html)
-   */
-  public interface DataOutputConfigurationProperty {
-    /**
-     * The ID number for the AWS KMS key used to encrypt the inference output.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * Specifies configuration information for the output results from the inference, including
-     * output S3 location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration-s3outputconfiguration)
-     */
-    public fun s3OutputConfiguration(): Any
-
-    /**
-     * A builder for [DataOutputConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The ID number for the AWS KMS key used to encrypt the inference output.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param s3OutputConfiguration Specifies configuration information for the output results
-       * from the inference, including output S3 location. 
-       */
-      public fun s3OutputConfiguration(s3OutputConfiguration: IResolvable)
-
-      /**
-       * @param s3OutputConfiguration Specifies configuration information for the output results
-       * from the inference, including output S3 location. 
-       */
-      public fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty)
-
-      /**
-       * @param s3OutputConfiguration Specifies configuration information for the output results
-       * from the inference, including output S3 location. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("58f2e19d838f5a1605d85010c381976bec8cbbb520d702395aa620174c42879c")
-      public
-          fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty.builder()
-
-      /**
-       * @param kmsKeyId The ID number for the AWS KMS key used to encrypt the inference output.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param s3OutputConfiguration Specifies configuration information for the output results
-       * from the inference, including output S3 location. 
-       */
-      override fun s3OutputConfiguration(s3OutputConfiguration: IResolvable) {
-        cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3OutputConfiguration Specifies configuration information for the output results
-       * from the inference, including output S3 location. 
-       */
-      override fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty) {
-        cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(S3OutputConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param s3OutputConfiguration Specifies configuration information for the output results
-       * from the inference, including output S3 location. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("58f2e19d838f5a1605d85010c381976bec8cbbb520d702395aa620174c42879c")
-      override
-          fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty.Builder.() -> Unit):
-          Unit = s3OutputConfiguration(S3OutputConfigurationProperty(s3OutputConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty,
-    ) : CdkObject(cdkObject), DataOutputConfigurationProperty {
-      /**
-       * The ID number for the AWS KMS key used to encrypt the inference output.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * Specifies configuration information for the output results from the inference, including
-       * output S3 location.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration-s3outputconfiguration)
-       */
-      override fun s3OutputConfiguration(): Any = unwrap(this).getS3OutputConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataOutputConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty):
-          DataOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataOutputConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataOutputConfigurationProperty):
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
     }
   }
 

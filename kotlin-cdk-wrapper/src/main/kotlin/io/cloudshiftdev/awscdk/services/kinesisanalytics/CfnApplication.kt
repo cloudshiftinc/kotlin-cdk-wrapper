@@ -432,9 +432,14 @@ public open class CfnApplication internal constructor(
   }
 
   /**
-   * When configuring application input at the time of creating or updating an application, provides
-   * additional mapping information specific to the record format (such as JSON, CSV, or record fields
-   * delimited by some delimiter) on the streaming source.
+   * Provides additional mapping information when the record format uses delimiters, such as CSV.
+   *
+   * For example, the following sample records use CSV format, where the records use the *'\n'* as
+   * the row delimiter and a comma (",") as the column delimiter:
+   *
+   * `"name1", "address1"`
+   *
+   * `"name2", "address2"`
    *
    * Example:
    *
@@ -442,183 +447,258 @@ public open class CfnApplication internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * MappingParametersProperty mappingParametersProperty = MappingParametersProperty.builder()
-   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * CSVMappingParametersProperty cSVMappingParametersProperty =
+   * CSVMappingParametersProperty.builder()
    * .recordColumnDelimiter("recordColumnDelimiter")
    * .recordRowDelimiter("recordRowDelimiter")
-   * .build())
-   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html)
    */
-  public interface MappingParametersProperty {
+  public interface CSVMappingParametersProperty {
     /**
-     * Provides additional mapping information when the record format uses delimiters (for example,
-     * CSV).
+     * Column delimiter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters)
+     * For example, in a CSV format, a comma (",") is the typical column delimiter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter)
      */
-    public fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
+    public fun recordColumnDelimiter(): String
 
     /**
-     * Provides additional mapping information when JSON is the record format on the streaming
-     * source.
+     * Row delimiter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters)
+     * For example, in a CSV format, *'\n'* is the typical row delimiter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter)
      */
-    public fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
+    public fun recordRowDelimiter(): String
 
     /**
-     * A builder for [MappingParametersProperty]
+     * A builder for [CSVMappingParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
+       * @param recordColumnDelimiter Column delimiter. 
+       * For example, in a CSV format, a comma (",") is the typical column delimiter.
        */
-      public fun csvMappingParameters(csvMappingParameters: IResolvable)
+      public fun recordColumnDelimiter(recordColumnDelimiter: String)
 
       /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
+       * @param recordRowDelimiter Row delimiter. 
+       * For example, in a CSV format, *'\n'* is the typical row delimiter.
        */
-      public fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty)
-
-      /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("71603913f441a14fff1edb084e4fe4d97caad4d8fe61bc2d3a57b40ba26e2d78")
-      public
-          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit)
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      public fun jsonMappingParameters(jsonMappingParameters: IResolvable)
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      public fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty)
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("180124263f709d356d579515a3b1136b6826dc1cb855a4e2b52bd528765b49c9")
-      public
-          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit)
+      public fun recordRowDelimiter(recordRowDelimiter: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty.builder()
 
       /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
+       * @param recordColumnDelimiter Column delimiter. 
+       * For example, in a CSV format, a comma (",") is the typical column delimiter.
        */
-      override fun csvMappingParameters(csvMappingParameters: IResolvable) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
+      override fun recordColumnDelimiter(recordColumnDelimiter: String) {
+        cdkBuilder.recordColumnDelimiter(recordColumnDelimiter)
       }
 
       /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
+       * @param recordRowDelimiter Row delimiter. 
+       * For example, in a CSV format, *'\n'* is the typical row delimiter.
        */
-      override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
+      override fun recordRowDelimiter(recordRowDelimiter: String) {
+        cdkBuilder.recordRowDelimiter(recordRowDelimiter)
       }
-
-      /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("71603913f441a14fff1edb084e4fe4d97caad4d8fe61bc2d3a57b40ba26e2d78")
-      override
-          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit):
-          Unit = csvMappingParameters(CSVMappingParametersProperty(csvMappingParameters))
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
-      }
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("180124263f709d356d579515a3b1136b6826dc1cb855a4e2b52bd528765b49c9")
-      override
-          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit):
-          Unit = jsonMappingParameters(JSONMappingParametersProperty(jsonMappingParameters))
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty,
-    ) : CdkObject(cdkObject), MappingParametersProperty {
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty,
+    ) : CdkObject(cdkObject), CSVMappingParametersProperty {
       /**
-       * Provides additional mapping information when the record format uses delimiters (for
-       * example, CSV).
+       * Column delimiter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters)
+       * For example, in a CSV format, a comma (",") is the typical column delimiter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter)
        */
-      override fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
+      override fun recordColumnDelimiter(): String = unwrap(this).getRecordColumnDelimiter()
 
       /**
-       * Provides additional mapping information when JSON is the record format on the streaming
-       * source.
+       * Row delimiter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters)
+       * For example, in a CSV format, *'\n'* is the typical row delimiter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter)
        */
-      override fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
+      override fun recordRowDelimiter(): String = unwrap(this).getRecordRowDelimiter()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MappingParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CSVMappingParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty):
-          MappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MappingParametersProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty):
+          CSVMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CSVMappingParametersProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MappingParametersProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty
+      internal fun unwrap(wrapped: CSVMappingParametersProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty
+    }
+  }
+
+  /**
+   * An object that contains the Amazon Resource Name (ARN) of the [AWS
+   * Lambda](https://docs.aws.amazon.com/lambda/) function that is used to preprocess records in the
+   * stream, and the ARN of the IAM role that is used to access the AWS Lambda function.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * InputLambdaProcessorProperty inputLambdaProcessorProperty =
+   * InputLambdaProcessorProperty.builder()
+   * .resourceArn("resourceArn")
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html)
+   */
+  public interface InputLambdaProcessorProperty {
+    /**
+     * The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/) function that operates on
+     * records in the stream.
+     *
+     *
+     * To specify an earlier version of the Lambda function than the latest, include the Lambda
+     * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+     * [Example ARNs: AWS
+     * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * The ARN of the IAM role that is used to access the AWS Lambda function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [InputLambdaProcessorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/)
+       * function that operates on records in the stream. 
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: AWS
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       */
+      public fun resourceArn(resourceArn: String)
+
+      /**
+       * @param roleArn The ARN of the IAM role that is used to access the AWS Lambda function. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty.builder()
+
+      /**
+       * @param resourceArn The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/)
+       * function that operates on records in the stream. 
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: AWS
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      /**
+       * @param roleArn The ARN of the IAM role that is used to access the AWS Lambda function. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty,
+    ) : CdkObject(cdkObject), InputLambdaProcessorProperty {
+      /**
+       * The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/) function that operates on
+       * records in the stream.
+       *
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: AWS
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+
+      /**
+       * The ARN of the IAM role that is used to access the AWS Lambda function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputLambdaProcessorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty):
+          InputLambdaProcessorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputLambdaProcessorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputLambdaProcessorProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty
     }
   }
 
@@ -715,427 +795,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputParallelismProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputParallelismProperty
-    }
-  }
-
-  /**
-   * Describes the format of the data in the streaming source, and how each data element maps to
-   * corresponding columns in the in-application stream that is being created.
-   *
-   * Also used to describe the format of the reference data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * InputSchemaProperty inputSchemaProperty = InputSchemaProperty.builder()
-   * .recordColumns(List.of(RecordColumnProperty.builder()
-   * .name("name")
-   * .sqlType("sqlType")
-   * // the properties below are optional
-   * .mapping("mapping")
-   * .build()))
-   * .recordFormat(RecordFormatProperty.builder()
-   * .recordFormatType("recordFormatType")
-   * // the properties below are optional
-   * .mappingParameters(MappingParametersProperty.builder()
-   * .csvMappingParameters(CSVMappingParametersProperty.builder()
-   * .recordColumnDelimiter("recordColumnDelimiter")
-   * .recordRowDelimiter("recordRowDelimiter")
-   * .build())
-   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build())
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .recordEncoding("recordEncoding")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html)
-   */
-  public interface InputSchemaProperty {
-    /**
-     * A list of `RecordColumn` objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordcolumns)
-     */
-    public fun recordColumns(): Any
-
-    /**
-     * Specifies the encoding of the records in the streaming source.
-     *
-     * For example, UTF-8.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordencoding)
-     */
-    public fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
-
-    /**
-     * Specifies the format of the records on the streaming source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordformat)
-     */
-    public fun recordFormat(): Any
-
-    /**
-     * A builder for [InputSchemaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(recordColumns: IResolvable)
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(recordColumns: List<Any>)
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(vararg recordColumns: Any)
-
-      /**
-       * @param recordEncoding Specifies the encoding of the records in the streaming source.
-       * For example, UTF-8.
-       */
-      public fun recordEncoding(recordEncoding: String)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      public fun recordFormat(recordFormat: IResolvable)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      public fun recordFormat(recordFormat: RecordFormatProperty)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0ff787489b02d04f0997a1e4cc9c0dc9e2f0320ca7207ed654730401ebfded77")
-      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty.builder()
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(recordColumns: IResolvable) {
-        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(recordColumns: List<Any>) {
-        cdkBuilder.recordColumns(recordColumns)
-      }
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(vararg recordColumns: Any): Unit =
-          recordColumns(recordColumns.toList())
-
-      /**
-       * @param recordEncoding Specifies the encoding of the records in the streaming source.
-       * For example, UTF-8.
-       */
-      override fun recordEncoding(recordEncoding: String) {
-        cdkBuilder.recordEncoding(recordEncoding)
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      override fun recordFormat(recordFormat: IResolvable) {
-        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      override fun recordFormat(recordFormat: RecordFormatProperty) {
-        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0ff787489b02d04f0997a1e4cc9c0dc9e2f0320ca7207ed654730401ebfded77")
-      override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit =
-          recordFormat(RecordFormatProperty(recordFormat))
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty,
-    ) : CdkObject(cdkObject), InputSchemaProperty {
-      /**
-       * A list of `RecordColumn` objects.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordcolumns)
-       */
-      override fun recordColumns(): Any = unwrap(this).getRecordColumns()
-
-      /**
-       * Specifies the encoding of the records in the streaming source.
-       *
-       * For example, UTF-8.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordencoding)
-       */
-      override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
-
-      /**
-       * Specifies the format of the records on the streaming source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordformat)
-       */
-      override fun recordFormat(): Any = unwrap(this).getRecordFormat()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputSchemaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty):
-          InputSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSchemaProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputSchemaProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty
-    }
-  }
-
-  /**
-   * Provides additional mapping information when JSON is the record format on the streaming source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * JSONMappingParametersProperty jSONMappingParametersProperty =
-   * JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html)
-   */
-  public interface JSONMappingParametersProperty {
-    /**
-     * Path to the top-level parent that contains the records.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html#cfn-kinesisanalytics-application-jsonmappingparameters-recordrowpath)
-     */
-    public fun recordRowPath(): String
-
-    /**
-     * A builder for [JSONMappingParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param recordRowPath Path to the top-level parent that contains the records. 
-       */
-      public fun recordRowPath(recordRowPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty.builder()
-
-      /**
-       * @param recordRowPath Path to the top-level parent that contains the records. 
-       */
-      override fun recordRowPath(recordRowPath: String) {
-        cdkBuilder.recordRowPath(recordRowPath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty,
-    ) : CdkObject(cdkObject), JSONMappingParametersProperty {
-      /**
-       * Path to the top-level parent that contains the records.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html#cfn-kinesisanalytics-application-jsonmappingparameters-recordrowpath)
-       */
-      override fun recordRowPath(): String = unwrap(this).getRecordRowPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JSONMappingParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty):
-          JSONMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JSONMappingParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JSONMappingParametersProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty
-    }
-  }
-
-  /**
-   * Identifies an Amazon Kinesis stream as the streaming source.
-   *
-   * You provide the stream's Amazon Resource Name (ARN) and an IAM role ARN that enables Amazon
-   * Kinesis Analytics to access the stream on your behalf.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * KinesisStreamsInputProperty kinesisStreamsInputProperty = KinesisStreamsInputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html)
-   */
-  public interface KinesisStreamsInputProperty {
-    /**
-     * ARN of the input Amazon Kinesis stream to read.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your
-     * behalf.
-     *
-     * You need to grant the necessary permissions to this role.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [KinesisStreamsInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn ARN of the input Amazon Kinesis stream to read. 
-       */
-      public fun resourceArn(resourceArn: String)
-
-      /**
-       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
-       * stream on your behalf. 
-       * You need to grant the necessary permissions to this role.
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty.builder()
-
-      /**
-       * @param resourceArn ARN of the input Amazon Kinesis stream to read. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      /**
-       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
-       * stream on your behalf. 
-       * You need to grant the necessary permissions to this role.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty,
-    ) : CdkObject(cdkObject), KinesisStreamsInputProperty {
-      /**
-       * ARN of the input Amazon Kinesis stream to read.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-
-      /**
-       * ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your
-       * behalf.
-       *
-       * You need to grant the necessary permissions to this role.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamsInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty):
-          KinesisStreamsInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisStreamsInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisStreamsInputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty
     }
   }
 
@@ -1281,130 +940,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputProcessingConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputProcessingConfigurationProperty
-    }
-  }
-
-  /**
-   * Identifies an Amazon Kinesis Firehose delivery stream as the streaming source.
-   *
-   * You provide the delivery stream's Amazon Resource Name (ARN) and an IAM role ARN that enables
-   * Amazon Kinesis Analytics to access the stream on your behalf.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * KinesisFirehoseInputProperty kinesisFirehoseInputProperty =
-   * KinesisFirehoseInputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html)
-   */
-  public interface KinesisFirehoseInputProperty {
-    /**
-     * ARN of the input delivery stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your
-     * behalf.
-     *
-     * You need to make sure that the role has the necessary permissions to access the stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [KinesisFirehoseInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn ARN of the input delivery stream. 
-       */
-      public fun resourceArn(resourceArn: String)
-
-      /**
-       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
-       * stream on your behalf. 
-       * You need to make sure that the role has the necessary permissions to access the stream.
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty.builder()
-
-      /**
-       * @param resourceArn ARN of the input delivery stream. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      /**
-       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
-       * stream on your behalf. 
-       * You need to make sure that the role has the necessary permissions to access the stream.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseInputProperty {
-      /**
-       * ARN of the input delivery stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-
-      /**
-       * ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your
-       * behalf.
-       *
-       * You need to make sure that the role has the necessary permissions to access the stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisFirehoseInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty):
-          KinesisFirehoseInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisFirehoseInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisFirehoseInputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty
     }
   }
 
@@ -1982,6 +1517,742 @@ public open class CfnApplication internal constructor(
   }
 
   /**
+   * Describes the format of the data in the streaming source, and how each data element maps to
+   * corresponding columns in the in-application stream that is being created.
+   *
+   * Also used to describe the format of the reference data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * InputSchemaProperty inputSchemaProperty = InputSchemaProperty.builder()
+   * .recordColumns(List.of(RecordColumnProperty.builder()
+   * .name("name")
+   * .sqlType("sqlType")
+   * // the properties below are optional
+   * .mapping("mapping")
+   * .build()))
+   * .recordFormat(RecordFormatProperty.builder()
+   * .recordFormatType("recordFormatType")
+   * // the properties below are optional
+   * .mappingParameters(MappingParametersProperty.builder()
+   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * .recordColumnDelimiter("recordColumnDelimiter")
+   * .recordRowDelimiter("recordRowDelimiter")
+   * .build())
+   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build())
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .recordEncoding("recordEncoding")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html)
+   */
+  public interface InputSchemaProperty {
+    /**
+     * A list of `RecordColumn` objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordcolumns)
+     */
+    public fun recordColumns(): Any
+
+    /**
+     * Specifies the encoding of the records in the streaming source.
+     *
+     * For example, UTF-8.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordencoding)
+     */
+    public fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
+
+    /**
+     * Specifies the format of the records on the streaming source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordformat)
+     */
+    public fun recordFormat(): Any
+
+    /**
+     * A builder for [InputSchemaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      public fun recordColumns(recordColumns: IResolvable)
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      public fun recordColumns(recordColumns: List<Any>)
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      public fun recordColumns(vararg recordColumns: Any)
+
+      /**
+       * @param recordEncoding Specifies the encoding of the records in the streaming source.
+       * For example, UTF-8.
+       */
+      public fun recordEncoding(recordEncoding: String)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      public fun recordFormat(recordFormat: IResolvable)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      public fun recordFormat(recordFormat: RecordFormatProperty)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0ff787489b02d04f0997a1e4cc9c0dc9e2f0320ca7207ed654730401ebfded77")
+      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty.builder()
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      override fun recordColumns(recordColumns: IResolvable) {
+        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      override fun recordColumns(recordColumns: List<Any>) {
+        cdkBuilder.recordColumns(recordColumns)
+      }
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      override fun recordColumns(vararg recordColumns: Any): Unit =
+          recordColumns(recordColumns.toList())
+
+      /**
+       * @param recordEncoding Specifies the encoding of the records in the streaming source.
+       * For example, UTF-8.
+       */
+      override fun recordEncoding(recordEncoding: String) {
+        cdkBuilder.recordEncoding(recordEncoding)
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      override fun recordFormat(recordFormat: IResolvable) {
+        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      override fun recordFormat(recordFormat: RecordFormatProperty) {
+        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0ff787489b02d04f0997a1e4cc9c0dc9e2f0320ca7207ed654730401ebfded77")
+      override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit =
+          recordFormat(RecordFormatProperty(recordFormat))
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty,
+    ) : CdkObject(cdkObject), InputSchemaProperty {
+      /**
+       * A list of `RecordColumn` objects.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordcolumns)
+       */
+      override fun recordColumns(): Any = unwrap(this).getRecordColumns()
+
+      /**
+       * Specifies the encoding of the records in the streaming source.
+       *
+       * For example, UTF-8.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordencoding)
+       */
+      override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
+
+      /**
+       * Specifies the format of the records on the streaming source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordformat)
+       */
+      override fun recordFormat(): Any = unwrap(this).getRecordFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputSchemaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty):
+          InputSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSchemaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputSchemaProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty
+    }
+  }
+
+  /**
+   * Provides additional mapping information when JSON is the record format on the streaming source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * JSONMappingParametersProperty jSONMappingParametersProperty =
+   * JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html)
+   */
+  public interface JSONMappingParametersProperty {
+    /**
+     * Path to the top-level parent that contains the records.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html#cfn-kinesisanalytics-application-jsonmappingparameters-recordrowpath)
+     */
+    public fun recordRowPath(): String
+
+    /**
+     * A builder for [JSONMappingParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param recordRowPath Path to the top-level parent that contains the records. 
+       */
+      public fun recordRowPath(recordRowPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty.builder()
+
+      /**
+       * @param recordRowPath Path to the top-level parent that contains the records. 
+       */
+      override fun recordRowPath(recordRowPath: String) {
+        cdkBuilder.recordRowPath(recordRowPath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty,
+    ) : CdkObject(cdkObject), JSONMappingParametersProperty {
+      /**
+       * Path to the top-level parent that contains the records.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html#cfn-kinesisanalytics-application-jsonmappingparameters-recordrowpath)
+       */
+      override fun recordRowPath(): String = unwrap(this).getRecordRowPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JSONMappingParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty):
+          JSONMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JSONMappingParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JSONMappingParametersProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty
+    }
+  }
+
+  /**
+   * Identifies an Amazon Kinesis Firehose delivery stream as the streaming source.
+   *
+   * You provide the delivery stream's Amazon Resource Name (ARN) and an IAM role ARN that enables
+   * Amazon Kinesis Analytics to access the stream on your behalf.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * KinesisFirehoseInputProperty kinesisFirehoseInputProperty =
+   * KinesisFirehoseInputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html)
+   */
+  public interface KinesisFirehoseInputProperty {
+    /**
+     * ARN of the input delivery stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your
+     * behalf.
+     *
+     * You need to make sure that the role has the necessary permissions to access the stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [KinesisFirehoseInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn ARN of the input delivery stream. 
+       */
+      public fun resourceArn(resourceArn: String)
+
+      /**
+       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
+       * stream on your behalf. 
+       * You need to make sure that the role has the necessary permissions to access the stream.
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty.builder()
+
+      /**
+       * @param resourceArn ARN of the input delivery stream. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      /**
+       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
+       * stream on your behalf. 
+       * You need to make sure that the role has the necessary permissions to access the stream.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty,
+    ) : CdkObject(cdkObject), KinesisFirehoseInputProperty {
+      /**
+       * ARN of the input delivery stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+
+      /**
+       * ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your
+       * behalf.
+       *
+       * You need to make sure that the role has the necessary permissions to access the stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisFirehoseInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty):
+          KinesisFirehoseInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisFirehoseInputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty
+    }
+  }
+
+  /**
+   * Identifies an Amazon Kinesis stream as the streaming source.
+   *
+   * You provide the stream's Amazon Resource Name (ARN) and an IAM role ARN that enables Amazon
+   * Kinesis Analytics to access the stream on your behalf.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * KinesisStreamsInputProperty kinesisStreamsInputProperty = KinesisStreamsInputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html)
+   */
+  public interface KinesisStreamsInputProperty {
+    /**
+     * ARN of the input Amazon Kinesis stream to read.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your
+     * behalf.
+     *
+     * You need to grant the necessary permissions to this role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [KinesisStreamsInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn ARN of the input Amazon Kinesis stream to read. 
+       */
+      public fun resourceArn(resourceArn: String)
+
+      /**
+       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
+       * stream on your behalf. 
+       * You need to grant the necessary permissions to this role.
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty.builder()
+
+      /**
+       * @param resourceArn ARN of the input Amazon Kinesis stream to read. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      /**
+       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
+       * stream on your behalf. 
+       * You need to grant the necessary permissions to this role.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty,
+    ) : CdkObject(cdkObject), KinesisStreamsInputProperty {
+      /**
+       * ARN of the input Amazon Kinesis stream to read.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+
+      /**
+       * ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your
+       * behalf.
+       *
+       * You need to grant the necessary permissions to this role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamsInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty):
+          KinesisStreamsInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamsInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisStreamsInputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty
+    }
+  }
+
+  /**
+   * When configuring application input at the time of creating or updating an application, provides
+   * additional mapping information specific to the record format (such as JSON, CSV, or record fields
+   * delimited by some delimiter) on the streaming source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * MappingParametersProperty mappingParametersProperty = MappingParametersProperty.builder()
+   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * .recordColumnDelimiter("recordColumnDelimiter")
+   * .recordRowDelimiter("recordRowDelimiter")
+   * .build())
+   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html)
+   */
+  public interface MappingParametersProperty {
+    /**
+     * Provides additional mapping information when the record format uses delimiters (for example,
+     * CSV).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters)
+     */
+    public fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
+
+    /**
+     * Provides additional mapping information when JSON is the record format on the streaming
+     * source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters)
+     */
+    public fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
+
+    /**
+     * A builder for [MappingParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      public fun csvMappingParameters(csvMappingParameters: IResolvable)
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      public fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty)
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("71603913f441a14fff1edb084e4fe4d97caad4d8fe61bc2d3a57b40ba26e2d78")
+      public
+          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit)
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      public fun jsonMappingParameters(jsonMappingParameters: IResolvable)
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      public fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty)
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("180124263f709d356d579515a3b1136b6826dc1cb855a4e2b52bd528765b49c9")
+      public
+          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty.builder()
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      override fun csvMappingParameters(csvMappingParameters: IResolvable) {
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
+      }
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("71603913f441a14fff1edb084e4fe4d97caad4d8fe61bc2d3a57b40ba26e2d78")
+      override
+          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit):
+          Unit = csvMappingParameters(CSVMappingParametersProperty(csvMappingParameters))
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
+      }
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("180124263f709d356d579515a3b1136b6826dc1cb855a4e2b52bd528765b49c9")
+      override
+          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit):
+          Unit = jsonMappingParameters(JSONMappingParametersProperty(jsonMappingParameters))
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty,
+    ) : CdkObject(cdkObject), MappingParametersProperty {
+      /**
+       * Provides additional mapping information when the record format uses delimiters (for
+       * example, CSV).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters)
+       */
+      override fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
+
+      /**
+       * Provides additional mapping information when JSON is the record format on the streaming
+       * source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters)
+       */
+      override fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MappingParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty):
+          MappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MappingParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MappingParametersProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty
+    }
+  }
+
+  /**
    * Describes the mapping of each data element in the streaming source to the corresponding column
    * in the in-application stream.
    *
@@ -2139,136 +2410,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplication.RecordColumnProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplication.RecordColumnProperty
-    }
-  }
-
-  /**
-   * Provides additional mapping information when the record format uses delimiters, such as CSV.
-   *
-   * For example, the following sample records use CSV format, where the records use the *'\n'* as
-   * the row delimiter and a comma (",") as the column delimiter:
-   *
-   * `"name1", "address1"`
-   *
-   * `"name2", "address2"`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * CSVMappingParametersProperty cSVMappingParametersProperty =
-   * CSVMappingParametersProperty.builder()
-   * .recordColumnDelimiter("recordColumnDelimiter")
-   * .recordRowDelimiter("recordRowDelimiter")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html)
-   */
-  public interface CSVMappingParametersProperty {
-    /**
-     * Column delimiter.
-     *
-     * For example, in a CSV format, a comma (",") is the typical column delimiter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter)
-     */
-    public fun recordColumnDelimiter(): String
-
-    /**
-     * Row delimiter.
-     *
-     * For example, in a CSV format, *'\n'* is the typical row delimiter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter)
-     */
-    public fun recordRowDelimiter(): String
-
-    /**
-     * A builder for [CSVMappingParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param recordColumnDelimiter Column delimiter. 
-       * For example, in a CSV format, a comma (",") is the typical column delimiter.
-       */
-      public fun recordColumnDelimiter(recordColumnDelimiter: String)
-
-      /**
-       * @param recordRowDelimiter Row delimiter. 
-       * For example, in a CSV format, *'\n'* is the typical row delimiter.
-       */
-      public fun recordRowDelimiter(recordRowDelimiter: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty.builder()
-
-      /**
-       * @param recordColumnDelimiter Column delimiter. 
-       * For example, in a CSV format, a comma (",") is the typical column delimiter.
-       */
-      override fun recordColumnDelimiter(recordColumnDelimiter: String) {
-        cdkBuilder.recordColumnDelimiter(recordColumnDelimiter)
-      }
-
-      /**
-       * @param recordRowDelimiter Row delimiter. 
-       * For example, in a CSV format, *'\n'* is the typical row delimiter.
-       */
-      override fun recordRowDelimiter(recordRowDelimiter: String) {
-        cdkBuilder.recordRowDelimiter(recordRowDelimiter)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty,
-    ) : CdkObject(cdkObject), CSVMappingParametersProperty {
-      /**
-       * Column delimiter.
-       *
-       * For example, in a CSV format, a comma (",") is the typical column delimiter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter)
-       */
-      override fun recordColumnDelimiter(): String = unwrap(this).getRecordColumnDelimiter()
-
-      /**
-       * Row delimiter.
-       *
-       * For example, in a CSV format, *'\n'* is the typical row delimiter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter)
-       */
-      override fun recordRowDelimiter(): String = unwrap(this).getRecordRowDelimiter()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CSVMappingParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty):
-          CSVMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CSVMappingParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CSVMappingParametersProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty
     }
   }
 
@@ -2433,147 +2574,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplication.RecordFormatProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplication.RecordFormatProperty
-    }
-  }
-
-  /**
-   * An object that contains the Amazon Resource Name (ARN) of the [AWS
-   * Lambda](https://docs.aws.amazon.com/lambda/) function that is used to preprocess records in the
-   * stream, and the ARN of the IAM role that is used to access the AWS Lambda function.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * InputLambdaProcessorProperty inputLambdaProcessorProperty =
-   * InputLambdaProcessorProperty.builder()
-   * .resourceArn("resourceArn")
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html)
-   */
-  public interface InputLambdaProcessorProperty {
-    /**
-     * The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/) function that operates on
-     * records in the stream.
-     *
-     *
-     * To specify an earlier version of the Lambda function than the latest, include the Lambda
-     * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-     * [Example ARNs: AWS
-     * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * The ARN of the IAM role that is used to access the AWS Lambda function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [InputLambdaProcessorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/)
-       * function that operates on records in the stream. 
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: AWS
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       */
-      public fun resourceArn(resourceArn: String)
-
-      /**
-       * @param roleArn The ARN of the IAM role that is used to access the AWS Lambda function. 
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty.builder()
-
-      /**
-       * @param resourceArn The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/)
-       * function that operates on records in the stream. 
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: AWS
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      /**
-       * @param roleArn The ARN of the IAM role that is used to access the AWS Lambda function. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty,
-    ) : CdkObject(cdkObject), InputLambdaProcessorProperty {
-      /**
-       * The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/) function that operates on
-       * records in the stream.
-       *
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: AWS
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-
-      /**
-       * The ARN of the IAM role that is used to access the AWS Lambda function.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputLambdaProcessorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty):
-          InputLambdaProcessorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InputLambdaProcessorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputLambdaProcessorProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty
     }
   }
 }

@@ -307,214 +307,6 @@ public open class CfnBackupPlan internal constructor(
   }
 
   /**
-   * Copies backups created by a backup rule to another vault.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.backup.*;
-   * CopyActionResourceTypeProperty copyActionResourceTypeProperty =
-   * CopyActionResourceTypeProperty.builder()
-   * .destinationBackupVaultArn("destinationBackupVaultArn")
-   * // the properties below are optional
-   * .lifecycle(LifecycleResourceTypeProperty.builder()
-   * .deleteAfterDays(123)
-   * .moveToColdStorageAfterDays(123)
-   * .optInToArchiveForSupportedResources(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html)
-   */
-  public interface CopyActionResourceTypeProperty {
-    /**
-     * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the
-     * copied backup.
-     *
-     * For example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn)
-     */
-    public fun destinationBackupVaultArn(): String
-
-    /**
-     * Defines when a protected resource is transitioned to cold storage and when it expires.
-     *
-     * AWS Backup transitions and expires backups automatically according to the lifecycle that you
-     * define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the source
-     * backup to the destination backup.
-     *
-     * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-lifecycle)
-     */
-    public fun lifecycle(): Any? = unwrap(this).getLifecycle()
-
-    /**
-     * A builder for [CopyActionResourceTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationBackupVaultArn An Amazon Resource Name (ARN) that uniquely identifies the
-       * destination backup vault for the copied backup. 
-       * For example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.`
-       */
-      public fun destinationBackupVaultArn(destinationBackupVaultArn: String)
-
-      /**
-       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
-       * it expires.
-       * AWS Backup transitions and expires backups automatically according to the lifecycle that
-       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
-       * source backup to the destination backup.
-       *
-       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
-       * days.
-       */
-      public fun lifecycle(lifecycle: IResolvable)
-
-      /**
-       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
-       * it expires.
-       * AWS Backup transitions and expires backups automatically according to the lifecycle that
-       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
-       * source backup to the destination backup.
-       *
-       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
-       * days.
-       */
-      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty)
-
-      /**
-       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
-       * it expires.
-       * AWS Backup transitions and expires backups automatically according to the lifecycle that
-       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
-       * source backup to the destination backup.
-       *
-       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
-       * days.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9dbbe619efbd94ebbcffe3e2d61e20f2d1c9393f514d35642d54e265d1434d19")
-      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty.Builder
-          =
-          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty.builder()
-
-      /**
-       * @param destinationBackupVaultArn An Amazon Resource Name (ARN) that uniquely identifies the
-       * destination backup vault for the copied backup. 
-       * For example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.`
-       */
-      override fun destinationBackupVaultArn(destinationBackupVaultArn: String) {
-        cdkBuilder.destinationBackupVaultArn(destinationBackupVaultArn)
-      }
-
-      /**
-       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
-       * it expires.
-       * AWS Backup transitions and expires backups automatically according to the lifecycle that
-       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
-       * source backup to the destination backup.
-       *
-       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
-       * days.
-       */
-      override fun lifecycle(lifecycle: IResolvable) {
-        cdkBuilder.lifecycle(lifecycle.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
-       * it expires.
-       * AWS Backup transitions and expires backups automatically according to the lifecycle that
-       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
-       * source backup to the destination backup.
-       *
-       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
-       * days.
-       */
-      override fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
-        cdkBuilder.lifecycle(lifecycle.let(LifecycleResourceTypeProperty::unwrap))
-      }
-
-      /**
-       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
-       * it expires.
-       * AWS Backup transitions and expires backups automatically according to the lifecycle that
-       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
-       * source backup to the destination backup.
-       *
-       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
-       * days.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9dbbe619efbd94ebbcffe3e2d61e20f2d1c9393f514d35642d54e265d1434d19")
-      override fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit): Unit =
-          lifecycle(LifecycleResourceTypeProperty(lifecycle))
-
-      public fun build():
-          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty,
-    ) : CdkObject(cdkObject), CopyActionResourceTypeProperty {
-      /**
-       * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the
-       * copied backup.
-       *
-       * For example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn)
-       */
-      override fun destinationBackupVaultArn(): String = unwrap(this).getDestinationBackupVaultArn()
-
-      /**
-       * Defines when a protected resource is transitioned to cold storage and when it expires.
-       *
-       * AWS Backup transitions and expires backups automatically according to the lifecycle that
-       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
-       * source backup to the destination backup.
-       *
-       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
-       * days.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-lifecycle)
-       */
-      override fun lifecycle(): Any? = unwrap(this).getLifecycle()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CopyActionResourceTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty):
-          CopyActionResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CopyActionResourceTypeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CopyActionResourceTypeProperty):
-          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty
-    }
-  }
-
-  /**
    * Specifies an object containing resource type and backup options.
    *
    * This is only supported for Windows VSS backups.
@@ -1408,6 +1200,214 @@ public open class CfnBackupPlan internal constructor(
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty
+    }
+  }
+
+  /**
+   * Copies backups created by a backup rule to another vault.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.backup.*;
+   * CopyActionResourceTypeProperty copyActionResourceTypeProperty =
+   * CopyActionResourceTypeProperty.builder()
+   * .destinationBackupVaultArn("destinationBackupVaultArn")
+   * // the properties below are optional
+   * .lifecycle(LifecycleResourceTypeProperty.builder()
+   * .deleteAfterDays(123)
+   * .moveToColdStorageAfterDays(123)
+   * .optInToArchiveForSupportedResources(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html)
+   */
+  public interface CopyActionResourceTypeProperty {
+    /**
+     * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the
+     * copied backup.
+     *
+     * For example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn)
+     */
+    public fun destinationBackupVaultArn(): String
+
+    /**
+     * Defines when a protected resource is transitioned to cold storage and when it expires.
+     *
+     * AWS Backup transitions and expires backups automatically according to the lifecycle that you
+     * define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the source
+     * backup to the destination backup.
+     *
+     * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-lifecycle)
+     */
+    public fun lifecycle(): Any? = unwrap(this).getLifecycle()
+
+    /**
+     * A builder for [CopyActionResourceTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationBackupVaultArn An Amazon Resource Name (ARN) that uniquely identifies the
+       * destination backup vault for the copied backup. 
+       * For example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.`
+       */
+      public fun destinationBackupVaultArn(destinationBackupVaultArn: String)
+
+      /**
+       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
+       * it expires.
+       * AWS Backup transitions and expires backups automatically according to the lifecycle that
+       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
+       * source backup to the destination backup.
+       *
+       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
+       * days.
+       */
+      public fun lifecycle(lifecycle: IResolvable)
+
+      /**
+       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
+       * it expires.
+       * AWS Backup transitions and expires backups automatically according to the lifecycle that
+       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
+       * source backup to the destination backup.
+       *
+       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
+       * days.
+       */
+      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty)
+
+      /**
+       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
+       * it expires.
+       * AWS Backup transitions and expires backups automatically according to the lifecycle that
+       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
+       * source backup to the destination backup.
+       *
+       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
+       * days.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9dbbe619efbd94ebbcffe3e2d61e20f2d1c9393f514d35642d54e265d1434d19")
+      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty.Builder
+          =
+          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty.builder()
+
+      /**
+       * @param destinationBackupVaultArn An Amazon Resource Name (ARN) that uniquely identifies the
+       * destination backup vault for the copied backup. 
+       * For example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.`
+       */
+      override fun destinationBackupVaultArn(destinationBackupVaultArn: String) {
+        cdkBuilder.destinationBackupVaultArn(destinationBackupVaultArn)
+      }
+
+      /**
+       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
+       * it expires.
+       * AWS Backup transitions and expires backups automatically according to the lifecycle that
+       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
+       * source backup to the destination backup.
+       *
+       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
+       * days.
+       */
+      override fun lifecycle(lifecycle: IResolvable) {
+        cdkBuilder.lifecycle(lifecycle.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
+       * it expires.
+       * AWS Backup transitions and expires backups automatically according to the lifecycle that
+       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
+       * source backup to the destination backup.
+       *
+       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
+       * days.
+       */
+      override fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
+        cdkBuilder.lifecycle(lifecycle.let(LifecycleResourceTypeProperty::unwrap))
+      }
+
+      /**
+       * @param lifecycle Defines when a protected resource is transitioned to cold storage and when
+       * it expires.
+       * AWS Backup transitions and expires backups automatically according to the lifecycle that
+       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
+       * source backup to the destination backup.
+       *
+       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
+       * days.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9dbbe619efbd94ebbcffe3e2d61e20f2d1c9393f514d35642d54e265d1434d19")
+      override fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit): Unit =
+          lifecycle(LifecycleResourceTypeProperty(lifecycle))
+
+      public fun build():
+          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty,
+    ) : CdkObject(cdkObject), CopyActionResourceTypeProperty {
+      /**
+       * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the
+       * copied backup.
+       *
+       * For example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn)
+       */
+      override fun destinationBackupVaultArn(): String = unwrap(this).getDestinationBackupVaultArn()
+
+      /**
+       * Defines when a protected resource is transitioned to cold storage and when it expires.
+       *
+       * AWS Backup transitions and expires backups automatically according to the lifecycle that
+       * you define. If you do not specify a lifecycle, AWS Backup applies the lifecycle policy of the
+       * source backup to the destination backup.
+       *
+       * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90
+       * days.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-lifecycle)
+       */
+      override fun lifecycle(): Any? = unwrap(this).getLifecycle()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CopyActionResourceTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty):
+          CopyActionResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CopyActionResourceTypeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CopyActionResourceTypeProperty):
+          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty
     }
   }
 

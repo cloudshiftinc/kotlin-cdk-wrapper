@@ -768,122 +768,6 @@ public open class CfnSecret internal constructor(
   }
 
   /**
-   * Specifies a `Region` and the `KmsKeyId` for a replica secret.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
-   * ReplicaRegionProperty replicaRegionProperty = ReplicaRegionProperty.builder()
-   * .region("region")
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html)
-   */
-  public interface ReplicaRegionProperty {
-    /**
-     * The ARN, key ID, or alias of the KMS key to encrypt the secret.
-     *
-     * If you don't include this field, Secrets Manager uses `aws/secretsmanager` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html#cfn-secretsmanager-secret-replicaregion-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * A string that represents a `Region` , for example "us-east-1".
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html#cfn-secretsmanager-secret-replicaregion-region)
-     */
-    public fun region(): String
-
-    /**
-     * A builder for [ReplicaRegionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The ARN, key ID, or alias of the KMS key to encrypt the secret.
-       * If you don't include this field, Secrets Manager uses `aws/secretsmanager` .
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param region A string that represents a `Region` , for example "us-east-1". 
-       */
-      public fun region(region: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty.Builder =
-          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty.builder()
-
-      /**
-       * @param kmsKeyId The ARN, key ID, or alias of the KMS key to encrypt the secret.
-       * If you don't include this field, Secrets Manager uses `aws/secretsmanager` .
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param region A string that represents a `Region` , for example "us-east-1". 
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty,
-    ) : CdkObject(cdkObject), ReplicaRegionProperty {
-      /**
-       * The ARN, key ID, or alias of the KMS key to encrypt the secret.
-       *
-       * If you don't include this field, Secrets Manager uses `aws/secretsmanager` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html#cfn-secretsmanager-secret-replicaregion-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * A string that represents a `Region` , for example "us-east-1".
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html#cfn-secretsmanager-secret-replicaregion-region)
-       */
-      override fun region(): String = unwrap(this).getRegion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicaRegionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty):
-          ReplicaRegionProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicaRegionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplicaRegionProperty):
-          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty
-    }
-  }
-
-  /**
    * Generates a random password.
    *
    * We recommend that you specify the maximum length and include every character type that the
@@ -1381,6 +1265,122 @@ public open class CfnSecret internal constructor(
           software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty
+    }
+  }
+
+  /**
+   * Specifies a `Region` and the `KmsKeyId` for a replica secret.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
+   * ReplicaRegionProperty replicaRegionProperty = ReplicaRegionProperty.builder()
+   * .region("region")
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html)
+   */
+  public interface ReplicaRegionProperty {
+    /**
+     * The ARN, key ID, or alias of the KMS key to encrypt the secret.
+     *
+     * If you don't include this field, Secrets Manager uses `aws/secretsmanager` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html#cfn-secretsmanager-secret-replicaregion-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * A string that represents a `Region` , for example "us-east-1".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html#cfn-secretsmanager-secret-replicaregion-region)
+     */
+    public fun region(): String
+
+    /**
+     * A builder for [ReplicaRegionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The ARN, key ID, or alias of the KMS key to encrypt the secret.
+       * If you don't include this field, Secrets Manager uses `aws/secretsmanager` .
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param region A string that represents a `Region` , for example "us-east-1". 
+       */
+      public fun region(region: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty.Builder =
+          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty.builder()
+
+      /**
+       * @param kmsKeyId The ARN, key ID, or alias of the KMS key to encrypt the secret.
+       * If you don't include this field, Secrets Manager uses `aws/secretsmanager` .
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param region A string that represents a `Region` , for example "us-east-1". 
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty,
+    ) : CdkObject(cdkObject), ReplicaRegionProperty {
+      /**
+       * The ARN, key ID, or alias of the KMS key to encrypt the secret.
+       *
+       * If you don't include this field, Secrets Manager uses `aws/secretsmanager` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html#cfn-secretsmanager-secret-replicaregion-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * A string that represents a `Region` , for example "us-east-1".
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html#cfn-secretsmanager-secret-replicaregion-region)
+       */
+      override fun region(): String = unwrap(this).getRegion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicaRegionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty):
+          ReplicaRegionProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicaRegionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicaRegionProperty):
+          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty
     }
   }
 }

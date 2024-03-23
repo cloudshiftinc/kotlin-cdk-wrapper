@@ -1635,6 +1635,451 @@ public open class CfnWorkspace internal constructor(
   }
 
   /**
+   * The configuration settings for in-bound network access to your workspace.
+   *
+   * When this is configured, only listed IP addresses and VPC endpoints will be able to access your
+   * workspace. Standard Grafana authentication and authorization are still required.
+   *
+   * Access is granted to a caller that is in either the IP address list or the VPC endpoint list -
+   * they do not need to be in both.
+   *
+   * If this is not configured, or is removed, then all IP addresses and VPC endpoints are allowed.
+   * Standard Grafana authentication and authorization are still required.
+   *
+   *
+   * While both `prefixListIds` and `vpceIds` are required, you can pass in an empty array of
+   * strings for either parameter if you do not want to allow any of that type.
+   *
+   * If both are passed as empty arrays, no traffic is allowed to the workspace, because only
+   * *explicitly* allowed connections are accepted.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.grafana.*;
+   * NetworkAccessControlProperty networkAccessControlProperty =
+   * NetworkAccessControlProperty.builder()
+   * .prefixListIds(List.of("prefixListIds"))
+   * .vpceIds(List.of("vpceIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html)
+   */
+  public interface NetworkAccessControlProperty {
+    /**
+     * An array of prefix list IDs.
+     *
+     * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
+     * allowed to access your workspace. If the list is not included in the configuration (passed an
+     * empty array) then no IP addresses are allowed to access the workspace. You create a prefix list
+     * using the Amazon VPC console.
+     *
+     * Prefix list IDs have the format `pl- *1a2b3c4d*` .
+     *
+     * For more information about prefix lists, see [Group CIDR blocks using managed prefix
+     * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
+     * *Amazon Virtual Private Cloud User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html#cfn-grafana-workspace-networkaccesscontrol-prefixlistids)
+     */
+    public fun prefixListIds(): List<String> = unwrap(this).getPrefixListIds() ?: emptyList()
+
+    /**
+     * An array of Amazon VPC endpoint IDs for the workspace.
+     *
+     * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from within
+     * a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified here are
+     * allowed to access the workspace. If you pass in an empty array of strings, then no VPCs are
+     * allowed to access the workspace.
+     *
+     * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
+     *
+     * For more information about creating an interface VPC endpoint, see [Interface VPC
+     * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
+     * Managed Grafana User Guide* .
+     *
+     *
+     * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
+     * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
+     * endpoints are ignored.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html#cfn-grafana-workspace-networkaccesscontrol-vpceids)
+     */
+    public fun vpceIds(): List<String> = unwrap(this).getVpceIds() ?: emptyList()
+
+    /**
+     * A builder for [NetworkAccessControlProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param prefixListIds An array of prefix list IDs.
+       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
+       * allowed to access your workspace. If the list is not included in the configuration (passed an
+       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
+       * list using the Amazon VPC console.
+       *
+       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
+       *
+       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
+       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
+       * *Amazon Virtual Private Cloud User Guide* .
+       */
+      public fun prefixListIds(prefixListIds: List<String>)
+
+      /**
+       * @param prefixListIds An array of prefix list IDs.
+       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
+       * allowed to access your workspace. If the list is not included in the configuration (passed an
+       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
+       * list using the Amazon VPC console.
+       *
+       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
+       *
+       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
+       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
+       * *Amazon Virtual Private Cloud User Guide* .
+       */
+      public fun prefixListIds(vararg prefixListIds: String)
+
+      /**
+       * @param vpceIds An array of Amazon VPC endpoint IDs for the workspace.
+       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
+       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
+       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
+       * VPCs are allowed to access the workspace.
+       *
+       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
+       *
+       * For more information about creating an interface VPC endpoint, see [Interface VPC
+       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
+       * Managed Grafana User Guide* .
+       *
+       *
+       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
+       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
+       * endpoints are ignored.
+       */
+      public fun vpceIds(vpceIds: List<String>)
+
+      /**
+       * @param vpceIds An array of Amazon VPC endpoint IDs for the workspace.
+       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
+       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
+       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
+       * VPCs are allowed to access the workspace.
+       *
+       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
+       *
+       * For more information about creating an interface VPC endpoint, see [Interface VPC
+       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
+       * Managed Grafana User Guide* .
+       *
+       *
+       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
+       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
+       * endpoints are ignored.
+       */
+      public fun vpceIds(vararg vpceIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty.Builder
+          =
+          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty.builder()
+
+      /**
+       * @param prefixListIds An array of prefix list IDs.
+       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
+       * allowed to access your workspace. If the list is not included in the configuration (passed an
+       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
+       * list using the Amazon VPC console.
+       *
+       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
+       *
+       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
+       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
+       * *Amazon Virtual Private Cloud User Guide* .
+       */
+      override fun prefixListIds(prefixListIds: List<String>) {
+        cdkBuilder.prefixListIds(prefixListIds)
+      }
+
+      /**
+       * @param prefixListIds An array of prefix list IDs.
+       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
+       * allowed to access your workspace. If the list is not included in the configuration (passed an
+       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
+       * list using the Amazon VPC console.
+       *
+       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
+       *
+       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
+       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
+       * *Amazon Virtual Private Cloud User Guide* .
+       */
+      override fun prefixListIds(vararg prefixListIds: String): Unit =
+          prefixListIds(prefixListIds.toList())
+
+      /**
+       * @param vpceIds An array of Amazon VPC endpoint IDs for the workspace.
+       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
+       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
+       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
+       * VPCs are allowed to access the workspace.
+       *
+       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
+       *
+       * For more information about creating an interface VPC endpoint, see [Interface VPC
+       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
+       * Managed Grafana User Guide* .
+       *
+       *
+       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
+       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
+       * endpoints are ignored.
+       */
+      override fun vpceIds(vpceIds: List<String>) {
+        cdkBuilder.vpceIds(vpceIds)
+      }
+
+      /**
+       * @param vpceIds An array of Amazon VPC endpoint IDs for the workspace.
+       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
+       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
+       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
+       * VPCs are allowed to access the workspace.
+       *
+       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
+       *
+       * For more information about creating an interface VPC endpoint, see [Interface VPC
+       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
+       * Managed Grafana User Guide* .
+       *
+       *
+       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
+       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
+       * endpoints are ignored.
+       */
+      override fun vpceIds(vararg vpceIds: String): Unit = vpceIds(vpceIds.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty,
+    ) : CdkObject(cdkObject), NetworkAccessControlProperty {
+      /**
+       * An array of prefix list IDs.
+       *
+       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
+       * allowed to access your workspace. If the list is not included in the configuration (passed an
+       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
+       * list using the Amazon VPC console.
+       *
+       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
+       *
+       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
+       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
+       * *Amazon Virtual Private Cloud User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html#cfn-grafana-workspace-networkaccesscontrol-prefixlistids)
+       */
+      override fun prefixListIds(): List<String> = unwrap(this).getPrefixListIds() ?: emptyList()
+
+      /**
+       * An array of Amazon VPC endpoint IDs for the workspace.
+       *
+       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
+       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
+       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
+       * VPCs are allowed to access the workspace.
+       *
+       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
+       *
+       * For more information about creating an interface VPC endpoint, see [Interface VPC
+       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
+       * Managed Grafana User Guide* .
+       *
+       *
+       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
+       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
+       * endpoints are ignored.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html#cfn-grafana-workspace-networkaccesscontrol-vpceids)
+       */
+      override fun vpceIds(): List<String> = unwrap(this).getVpceIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkAccessControlProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty):
+          NetworkAccessControlProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkAccessControlProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkAccessControlProperty):
+          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty
+    }
+  }
+
+  /**
+   * This structure defines which groups defined in the SAML assertion attribute are to be mapped to
+   * the Grafana `Admin` and `Editor` roles in the workspace.
+   *
+   * SAML authenticated users not part of `Admin` or `Editor` role groups have `Viewer` permission
+   * over the workspace.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.grafana.*;
+   * RoleValuesProperty roleValuesProperty = RoleValuesProperty.builder()
+   * .admin(List.of("admin"))
+   * .editor(List.of("editor"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html)
+   */
+  public interface RoleValuesProperty {
+    /**
+     * A list of groups from the SAML assertion attribute to grant the Grafana `Admin` role to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html#cfn-grafana-workspace-rolevalues-admin)
+     */
+    public fun admin(): List<String> = unwrap(this).getAdmin() ?: emptyList()
+
+    /**
+     * A list of groups from the SAML assertion attribute to grant the Grafana `Editor` role to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html#cfn-grafana-workspace-rolevalues-editor)
+     */
+    public fun editor(): List<String> = unwrap(this).getEditor() ?: emptyList()
+
+    /**
+     * A builder for [RoleValuesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param admin A list of groups from the SAML assertion attribute to grant the Grafana
+       * `Admin` role to.
+       */
+      public fun admin(admin: List<String>)
+
+      /**
+       * @param admin A list of groups from the SAML assertion attribute to grant the Grafana
+       * `Admin` role to.
+       */
+      public fun admin(vararg admin: String)
+
+      /**
+       * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
+       * `Editor` role to.
+       */
+      public fun editor(editor: List<String>)
+
+      /**
+       * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
+       * `Editor` role to.
+       */
+      public fun editor(vararg editor: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty.Builder =
+          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty.builder()
+
+      /**
+       * @param admin A list of groups from the SAML assertion attribute to grant the Grafana
+       * `Admin` role to.
+       */
+      override fun admin(admin: List<String>) {
+        cdkBuilder.admin(admin)
+      }
+
+      /**
+       * @param admin A list of groups from the SAML assertion attribute to grant the Grafana
+       * `Admin` role to.
+       */
+      override fun admin(vararg admin: String): Unit = admin(admin.toList())
+
+      /**
+       * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
+       * `Editor` role to.
+       */
+      override fun editor(editor: List<String>) {
+        cdkBuilder.editor(editor)
+      }
+
+      /**
+       * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
+       * `Editor` role to.
+       */
+      override fun editor(vararg editor: String): Unit = editor(editor.toList())
+
+      public fun build(): software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty,
+    ) : CdkObject(cdkObject), RoleValuesProperty {
+      /**
+       * A list of groups from the SAML assertion attribute to grant the Grafana `Admin` role to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html#cfn-grafana-workspace-rolevalues-admin)
+       */
+      override fun admin(): List<String> = unwrap(this).getAdmin() ?: emptyList()
+
+      /**
+       * A list of groups from the SAML assertion attribute to grant the Grafana `Editor` role to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html#cfn-grafana-workspace-rolevalues-editor)
+       */
+      override fun editor(): List<String> = unwrap(this).getEditor() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RoleValuesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty):
+          RoleValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? RoleValuesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RoleValuesProperty):
+          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty
+    }
+  }
+
+  /**
    * A structure containing information about how this workspace works with SAML.
    *
    * Example:
@@ -1981,311 +2426,6 @@ public open class CfnWorkspace internal constructor(
   }
 
   /**
-   * The configuration settings for in-bound network access to your workspace.
-   *
-   * When this is configured, only listed IP addresses and VPC endpoints will be able to access your
-   * workspace. Standard Grafana authentication and authorization are still required.
-   *
-   * Access is granted to a caller that is in either the IP address list or the VPC endpoint list -
-   * they do not need to be in both.
-   *
-   * If this is not configured, or is removed, then all IP addresses and VPC endpoints are allowed.
-   * Standard Grafana authentication and authorization are still required.
-   *
-   *
-   * While both `prefixListIds` and `vpceIds` are required, you can pass in an empty array of
-   * strings for either parameter if you do not want to allow any of that type.
-   *
-   * If both are passed as empty arrays, no traffic is allowed to the workspace, because only
-   * *explicitly* allowed connections are accepted.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.grafana.*;
-   * NetworkAccessControlProperty networkAccessControlProperty =
-   * NetworkAccessControlProperty.builder()
-   * .prefixListIds(List.of("prefixListIds"))
-   * .vpceIds(List.of("vpceIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html)
-   */
-  public interface NetworkAccessControlProperty {
-    /**
-     * An array of prefix list IDs.
-     *
-     * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
-     * allowed to access your workspace. If the list is not included in the configuration (passed an
-     * empty array) then no IP addresses are allowed to access the workspace. You create a prefix list
-     * using the Amazon VPC console.
-     *
-     * Prefix list IDs have the format `pl- *1a2b3c4d*` .
-     *
-     * For more information about prefix lists, see [Group CIDR blocks using managed prefix
-     * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
-     * *Amazon Virtual Private Cloud User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html#cfn-grafana-workspace-networkaccesscontrol-prefixlistids)
-     */
-    public fun prefixListIds(): List<String> = unwrap(this).getPrefixListIds() ?: emptyList()
-
-    /**
-     * An array of Amazon VPC endpoint IDs for the workspace.
-     *
-     * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from within
-     * a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified here are
-     * allowed to access the workspace. If you pass in an empty array of strings, then no VPCs are
-     * allowed to access the workspace.
-     *
-     * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
-     *
-     * For more information about creating an interface VPC endpoint, see [Interface VPC
-     * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
-     * Managed Grafana User Guide* .
-     *
-     *
-     * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
-     * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
-     * endpoints are ignored.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html#cfn-grafana-workspace-networkaccesscontrol-vpceids)
-     */
-    public fun vpceIds(): List<String> = unwrap(this).getVpceIds() ?: emptyList()
-
-    /**
-     * A builder for [NetworkAccessControlProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param prefixListIds An array of prefix list IDs.
-       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
-       * allowed to access your workspace. If the list is not included in the configuration (passed an
-       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
-       * list using the Amazon VPC console.
-       *
-       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
-       *
-       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
-       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
-       * *Amazon Virtual Private Cloud User Guide* .
-       */
-      public fun prefixListIds(prefixListIds: List<String>)
-
-      /**
-       * @param prefixListIds An array of prefix list IDs.
-       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
-       * allowed to access your workspace. If the list is not included in the configuration (passed an
-       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
-       * list using the Amazon VPC console.
-       *
-       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
-       *
-       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
-       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
-       * *Amazon Virtual Private Cloud User Guide* .
-       */
-      public fun prefixListIds(vararg prefixListIds: String)
-
-      /**
-       * @param vpceIds An array of Amazon VPC endpoint IDs for the workspace.
-       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
-       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
-       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
-       * VPCs are allowed to access the workspace.
-       *
-       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
-       *
-       * For more information about creating an interface VPC endpoint, see [Interface VPC
-       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
-       * Managed Grafana User Guide* .
-       *
-       *
-       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
-       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
-       * endpoints are ignored.
-       */
-      public fun vpceIds(vpceIds: List<String>)
-
-      /**
-       * @param vpceIds An array of Amazon VPC endpoint IDs for the workspace.
-       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
-       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
-       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
-       * VPCs are allowed to access the workspace.
-       *
-       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
-       *
-       * For more information about creating an interface VPC endpoint, see [Interface VPC
-       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
-       * Managed Grafana User Guide* .
-       *
-       *
-       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
-       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
-       * endpoints are ignored.
-       */
-      public fun vpceIds(vararg vpceIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty.Builder
-          =
-          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty.builder()
-
-      /**
-       * @param prefixListIds An array of prefix list IDs.
-       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
-       * allowed to access your workspace. If the list is not included in the configuration (passed an
-       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
-       * list using the Amazon VPC console.
-       *
-       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
-       *
-       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
-       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
-       * *Amazon Virtual Private Cloud User Guide* .
-       */
-      override fun prefixListIds(prefixListIds: List<String>) {
-        cdkBuilder.prefixListIds(prefixListIds)
-      }
-
-      /**
-       * @param prefixListIds An array of prefix list IDs.
-       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
-       * allowed to access your workspace. If the list is not included in the configuration (passed an
-       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
-       * list using the Amazon VPC console.
-       *
-       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
-       *
-       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
-       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
-       * *Amazon Virtual Private Cloud User Guide* .
-       */
-      override fun prefixListIds(vararg prefixListIds: String): Unit =
-          prefixListIds(prefixListIds.toList())
-
-      /**
-       * @param vpceIds An array of Amazon VPC endpoint IDs for the workspace.
-       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
-       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
-       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
-       * VPCs are allowed to access the workspace.
-       *
-       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
-       *
-       * For more information about creating an interface VPC endpoint, see [Interface VPC
-       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
-       * Managed Grafana User Guide* .
-       *
-       *
-       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
-       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
-       * endpoints are ignored.
-       */
-      override fun vpceIds(vpceIds: List<String>) {
-        cdkBuilder.vpceIds(vpceIds)
-      }
-
-      /**
-       * @param vpceIds An array of Amazon VPC endpoint IDs for the workspace.
-       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
-       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
-       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
-       * VPCs are allowed to access the workspace.
-       *
-       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
-       *
-       * For more information about creating an interface VPC endpoint, see [Interface VPC
-       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
-       * Managed Grafana User Guide* .
-       *
-       *
-       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
-       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
-       * endpoints are ignored.
-       */
-      override fun vpceIds(vararg vpceIds: String): Unit = vpceIds(vpceIds.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty,
-    ) : CdkObject(cdkObject), NetworkAccessControlProperty {
-      /**
-       * An array of prefix list IDs.
-       *
-       * A prefix list is a list of CIDR ranges of IP addresses. The IP addresses specified are
-       * allowed to access your workspace. If the list is not included in the configuration (passed an
-       * empty array) then no IP addresses are allowed to access the workspace. You create a prefix
-       * list using the Amazon VPC console.
-       *
-       * Prefix list IDs have the format `pl- *1a2b3c4d*` .
-       *
-       * For more information about prefix lists, see [Group CIDR blocks using managed prefix
-       * lists](https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html) in the
-       * *Amazon Virtual Private Cloud User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html#cfn-grafana-workspace-networkaccesscontrol-prefixlistids)
-       */
-      override fun prefixListIds(): List<String> = unwrap(this).getPrefixListIds() ?: emptyList()
-
-      /**
-       * An array of Amazon VPC endpoint IDs for the workspace.
-       *
-       * You can create VPC endpoints to your Amazon Managed Grafana workspace for access from
-       * within a VPC. If a `NetworkAccessConfiguration` is specified then only VPC endpoints specified
-       * here are allowed to access the workspace. If you pass in an empty array of strings, then no
-       * VPCs are allowed to access the workspace.
-       *
-       * VPC endpoint IDs have the format `vpce- *1a2b3c4d*` .
-       *
-       * For more information about creating an interface VPC endpoint, see [Interface VPC
-       * endpoints](https://docs.aws.amazon.com/grafana/latest/userguide/VPC-endpoints) in the *Amazon
-       * Managed Grafana User Guide* .
-       *
-       *
-       * The only VPC endpoints that can be specified here are interface VPC endpoints for Grafana
-       * workspaces (using the `com.amazonaws.[region].grafana-workspace` service endpoint). Other VPC
-       * endpoints are ignored.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html#cfn-grafana-workspace-networkaccesscontrol-vpceids)
-       */
-      override fun vpceIds(): List<String> = unwrap(this).getVpceIds() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkAccessControlProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty):
-          NetworkAccessControlProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkAccessControlProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkAccessControlProperty):
-          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty
-    }
-  }
-
-  /**
    * The configuration settings for an Amazon VPC that contains data sources for your Grafana
    * workspace to connect to.
    *
@@ -2496,146 +2636,6 @@ public open class CfnWorkspace internal constructor(
           software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty
-    }
-  }
-
-  /**
-   * This structure defines which groups defined in the SAML assertion attribute are to be mapped to
-   * the Grafana `Admin` and `Editor` roles in the workspace.
-   *
-   * SAML authenticated users not part of `Admin` or `Editor` role groups have `Viewer` permission
-   * over the workspace.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.grafana.*;
-   * RoleValuesProperty roleValuesProperty = RoleValuesProperty.builder()
-   * .admin(List.of("admin"))
-   * .editor(List.of("editor"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html)
-   */
-  public interface RoleValuesProperty {
-    /**
-     * A list of groups from the SAML assertion attribute to grant the Grafana `Admin` role to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html#cfn-grafana-workspace-rolevalues-admin)
-     */
-    public fun admin(): List<String> = unwrap(this).getAdmin() ?: emptyList()
-
-    /**
-     * A list of groups from the SAML assertion attribute to grant the Grafana `Editor` role to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html#cfn-grafana-workspace-rolevalues-editor)
-     */
-    public fun editor(): List<String> = unwrap(this).getEditor() ?: emptyList()
-
-    /**
-     * A builder for [RoleValuesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param admin A list of groups from the SAML assertion attribute to grant the Grafana
-       * `Admin` role to.
-       */
-      public fun admin(admin: List<String>)
-
-      /**
-       * @param admin A list of groups from the SAML assertion attribute to grant the Grafana
-       * `Admin` role to.
-       */
-      public fun admin(vararg admin: String)
-
-      /**
-       * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
-       * `Editor` role to.
-       */
-      public fun editor(editor: List<String>)
-
-      /**
-       * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
-       * `Editor` role to.
-       */
-      public fun editor(vararg editor: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty.Builder =
-          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty.builder()
-
-      /**
-       * @param admin A list of groups from the SAML assertion attribute to grant the Grafana
-       * `Admin` role to.
-       */
-      override fun admin(admin: List<String>) {
-        cdkBuilder.admin(admin)
-      }
-
-      /**
-       * @param admin A list of groups from the SAML assertion attribute to grant the Grafana
-       * `Admin` role to.
-       */
-      override fun admin(vararg admin: String): Unit = admin(admin.toList())
-
-      /**
-       * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
-       * `Editor` role to.
-       */
-      override fun editor(editor: List<String>) {
-        cdkBuilder.editor(editor)
-      }
-
-      /**
-       * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
-       * `Editor` role to.
-       */
-      override fun editor(vararg editor: String): Unit = editor(editor.toList())
-
-      public fun build(): software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty,
-    ) : CdkObject(cdkObject), RoleValuesProperty {
-      /**
-       * A list of groups from the SAML assertion attribute to grant the Grafana `Admin` role to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html#cfn-grafana-workspace-rolevalues-admin)
-       */
-      override fun admin(): List<String> = unwrap(this).getAdmin() ?: emptyList()
-
-      /**
-       * A list of groups from the SAML assertion attribute to grant the Grafana `Editor` role to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html#cfn-grafana-workspace-rolevalues-editor)
-       */
-      override fun editor(): List<String> = unwrap(this).getEditor() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RoleValuesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty):
-          RoleValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? RoleValuesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RoleValuesProperty):
-          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty
     }
   }
 }

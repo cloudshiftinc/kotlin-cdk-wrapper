@@ -1364,7 +1364,7 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * The parameters for Amazon RDS.
+   * The parameters for OpenSearch.
    *
    * Example:
    *
@@ -1372,103 +1372,296 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * RdsParametersProperty rdsParametersProperty = RdsParametersProperty.builder()
-   * .database("database")
-   * .instanceId("instanceId")
+   * AmazonElasticsearchParametersProperty amazonElasticsearchParametersProperty =
+   * AmazonElasticsearchParametersProperty.builder()
+   * .domain("domain")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonelasticsearchparameters.html)
    */
-  public interface RdsParametersProperty {
+  public interface AmazonElasticsearchParametersProperty {
     /**
-     * Database.
+     * The OpenSearch domain.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html#cfn-quicksight-datasource-rdsparameters-database)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonelasticsearchparameters.html#cfn-quicksight-datasource-amazonelasticsearchparameters-domain)
      */
-    public fun database(): String
+    public fun domain(): String
 
     /**
-     * Instance ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html#cfn-quicksight-datasource-rdsparameters-instanceid)
-     */
-    public fun instanceId(): String
-
-    /**
-     * A builder for [RdsParametersProperty]
+     * A builder for [AmazonElasticsearchParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param database Database. 
+       * @param domain The OpenSearch domain. 
        */
-      public fun database(database: String)
-
-      /**
-       * @param instanceId Instance ID. 
-       */
-      public fun instanceId(instanceId: String)
+      public fun domain(domain: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty.builder()
 
       /**
-       * @param database Database. 
+       * @param domain The OpenSearch domain. 
        */
-      override fun database(database: String) {
-        cdkBuilder.database(database)
-      }
-
-      /**
-       * @param instanceId Instance ID. 
-       */
-      override fun instanceId(instanceId: String) {
-        cdkBuilder.instanceId(instanceId)
+      override fun domain(domain: String) {
+        cdkBuilder.domain(domain)
       }
 
       public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty,
-    ) : CdkObject(cdkObject), RdsParametersProperty {
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty,
+    ) : CdkObject(cdkObject), AmazonElasticsearchParametersProperty {
       /**
-       * Database.
+       * The OpenSearch domain.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html#cfn-quicksight-datasource-rdsparameters-database)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonelasticsearchparameters.html#cfn-quicksight-datasource-amazonelasticsearchparameters-domain)
        */
-      override fun database(): String = unwrap(this).getDatabase()
-
-      /**
-       * Instance ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html#cfn-quicksight-datasource-rdsparameters-instanceid)
-       */
-      override fun instanceId(): String = unwrap(this).getInstanceId()
+      override fun domain(): String = unwrap(this).getDomain()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RdsParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AmazonElasticsearchParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty):
-          RdsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? RdsParametersProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty):
+          AmazonElasticsearchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmazonElasticsearchParametersProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RdsParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty
+      internal fun unwrap(wrapped: AmazonElasticsearchParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty
+    }
+  }
+
+  /**
+   * The parameters for OpenSearch.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * AmazonOpenSearchParametersProperty amazonOpenSearchParametersProperty =
+   * AmazonOpenSearchParametersProperty.builder()
+   * .domain("domain")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonopensearchparameters.html)
+   */
+  public interface AmazonOpenSearchParametersProperty {
+    /**
+     * The OpenSearch domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonopensearchparameters.html#cfn-quicksight-datasource-amazonopensearchparameters-domain)
+     */
+    public fun domain(): String
+
+    /**
+     * A builder for [AmazonOpenSearchParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param domain The OpenSearch domain. 
+       */
+      public fun domain(domain: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty.builder()
+
+      /**
+       * @param domain The OpenSearch domain. 
+       */
+      override fun domain(domain: String) {
+        cdkBuilder.domain(domain)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty,
+    ) : CdkObject(cdkObject), AmazonOpenSearchParametersProperty {
+      /**
+       * The OpenSearch domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonopensearchparameters.html#cfn-quicksight-datasource-amazonopensearchparameters-domain)
+       */
+      override fun domain(): String = unwrap(this).getDomain()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AmazonOpenSearchParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty):
+          AmazonOpenSearchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmazonOpenSearchParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AmazonOpenSearchParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty
+    }
+  }
+
+  /**
+   * Parameters for Amazon Athena.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * AthenaParametersProperty athenaParametersProperty = AthenaParametersProperty.builder()
+   * .roleArn("roleArn")
+   * .workGroup("workGroup")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html)
+   */
+  public interface AthenaParametersProperty {
+    /**
+     * Use the `RoleArn` structure to override an account-wide role for a specific Athena data
+     * source.
+     *
+     * For example, say an account administrator has turned off all Athena access with an
+     * account-wide role. The administrator can then use `RoleArn` to bypass the account-wide role and
+     * allow Athena access for the single Athena data source that is specified in the structure, even
+     * if the account-wide role forbidding Athena access is still active.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-rolearn)
+     */
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * The workgroup that Amazon Athena uses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-workgroup)
+     */
+    public fun workGroup(): String? = unwrap(this).getWorkGroup()
+
+    /**
+     * A builder for [AthenaParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
+       * Athena data source.
+       * For example, say an account administrator has turned off all Athena access with an
+       * account-wide role. The administrator can then use `RoleArn` to bypass the account-wide role
+       * and allow Athena access for the single Athena data source that is specified in the structure,
+       * even if the account-wide role forbidding Athena access is still active.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param workGroup The workgroup that Amazon Athena uses.
+       */
+      public fun workGroup(workGroup: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty.builder()
+
+      /**
+       * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
+       * Athena data source.
+       * For example, say an account administrator has turned off all Athena access with an
+       * account-wide role. The administrator can then use `RoleArn` to bypass the account-wide role
+       * and allow Athena access for the single Athena data source that is specified in the structure,
+       * even if the account-wide role forbidding Athena access is still active.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param workGroup The workgroup that Amazon Athena uses.
+       */
+      override fun workGroup(workGroup: String) {
+        cdkBuilder.workGroup(workGroup)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty,
+    ) : CdkObject(cdkObject), AthenaParametersProperty {
+      /**
+       * Use the `RoleArn` structure to override an account-wide role for a specific Athena data
+       * source.
+       *
+       * For example, say an account administrator has turned off all Athena access with an
+       * account-wide role. The administrator can then use `RoleArn` to bypass the account-wide role
+       * and allow Athena access for the single Athena data source that is specified in the structure,
+       * even if the account-wide role forbidding Athena access is still active.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-rolearn)
+       */
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+      /**
+       * The workgroup that Amazon Athena uses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-workgroup)
+       */
+      override fun workGroup(): String? = unwrap(this).getWorkGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AthenaParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty):
+          AthenaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? AthenaParametersProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AthenaParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty
     }
   }
 
@@ -1610,817 +1803,6 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * The parameters for Amazon Redshift.
-   *
-   * The `ClusterId` field can be blank if `Host` and `Port` are both set. The `Host` and `Port`
-   * fields can be blank if the `ClusterId` field is set.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * RedshiftParametersProperty redshiftParametersProperty = RedshiftParametersProperty.builder()
-   * .database("database")
-   * // the properties below are optional
-   * .clusterId("clusterId")
-   * .host("host")
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html)
-   */
-  public interface RedshiftParametersProperty {
-    /**
-     * Cluster ID.
-     *
-     * This field can be blank if the `Host` and `Port` are provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-clusterid)
-     */
-    public fun clusterId(): String? = unwrap(this).getClusterId()
-
-    /**
-     * Database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-database)
-     */
-    public fun database(): String
-
-    /**
-     * Host.
-     *
-     * This field can be blank if `ClusterId` is provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-host)
-     */
-    public fun host(): String? = unwrap(this).getHost()
-
-    /**
-     * Port.
-     *
-     * This field can be blank if the `ClusterId` is provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * A builder for [RedshiftParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clusterId Cluster ID.
-       * This field can be blank if the `Host` and `Port` are provided.
-       */
-      public fun clusterId(clusterId: String)
-
-      /**
-       * @param database Database. 
-       */
-      public fun database(database: String)
-
-      /**
-       * @param host Host.
-       * This field can be blank if `ClusterId` is provided.
-       */
-      public fun host(host: String)
-
-      /**
-       * @param port Port.
-       * This field can be blank if the `ClusterId` is provided.
-       */
-      public fun port(port: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty.builder()
-
-      /**
-       * @param clusterId Cluster ID.
-       * This field can be blank if the `Host` and `Port` are provided.
-       */
-      override fun clusterId(clusterId: String) {
-        cdkBuilder.clusterId(clusterId)
-      }
-
-      /**
-       * @param database Database. 
-       */
-      override fun database(database: String) {
-        cdkBuilder.database(database)
-      }
-
-      /**
-       * @param host Host.
-       * This field can be blank if `ClusterId` is provided.
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param port Port.
-       * This field can be blank if the `ClusterId` is provided.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty,
-    ) : CdkObject(cdkObject), RedshiftParametersProperty {
-      /**
-       * Cluster ID.
-       *
-       * This field can be blank if the `Host` and `Port` are provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-clusterid)
-       */
-      override fun clusterId(): String? = unwrap(this).getClusterId()
-
-      /**
-       * Database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-database)
-       */
-      override fun database(): String = unwrap(this).getDatabase()
-
-      /**
-       * Host.
-       *
-       * This field can be blank if `ClusterId` is provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-host)
-       */
-      override fun host(): String? = unwrap(this).getHost()
-
-      /**
-       * Port.
-       *
-       * This field can be blank if the `ClusterId` is provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty):
-          RedshiftParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RedshiftParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedshiftParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty
-    }
-  }
-
-  /**
-   * The parameters for Teradata.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * TeradataParametersProperty teradataParametersProperty = TeradataParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html)
-   */
-  public interface TeradataParametersProperty {
-    /**
-     * Database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-database)
-     */
-    public fun database(): String
-
-    /**
-     * Host.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-host)
-     */
-    public fun host(): String
-
-    /**
-     * Port.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-port)
-     */
-    public fun port(): Number
-
-    /**
-     * A builder for [TeradataParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param database Database. 
-       */
-      public fun database(database: String)
-
-      /**
-       * @param host Host. 
-       */
-      public fun host(host: String)
-
-      /**
-       * @param port Port. 
-       */
-      public fun port(port: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty.builder()
-
-      /**
-       * @param database Database. 
-       */
-      override fun database(database: String) {
-        cdkBuilder.database(database)
-      }
-
-      /**
-       * @param host Host. 
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param port Port. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty,
-    ) : CdkObject(cdkObject), TeradataParametersProperty {
-      /**
-       * Database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-database)
-       */
-      override fun database(): String = unwrap(this).getDatabase()
-
-      /**
-       * Host.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-host)
-       */
-      override fun host(): String = unwrap(this).getHost()
-
-      /**
-       * Port.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TeradataParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty):
-          TeradataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TeradataParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TeradataParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty
-    }
-  }
-
-  /**
-   * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your
-   * underlying data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * SslPropertiesProperty sslPropertiesProperty = SslPropertiesProperty.builder()
-   * .disableSsl(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html)
-   */
-  public interface SslPropertiesProperty {
-    /**
-     * A Boolean option to control whether SSL should be disabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html#cfn-quicksight-datasource-sslproperties-disablessl)
-     */
-    public fun disableSsl(): Any? = unwrap(this).getDisableSsl()
-
-    /**
-     * A builder for [SslPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param disableSsl A Boolean option to control whether SSL should be disabled.
-       */
-      public fun disableSsl(disableSsl: Boolean)
-
-      /**
-       * @param disableSsl A Boolean option to control whether SSL should be disabled.
-       */
-      public fun disableSsl(disableSsl: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty.builder()
-
-      /**
-       * @param disableSsl A Boolean option to control whether SSL should be disabled.
-       */
-      override fun disableSsl(disableSsl: Boolean) {
-        cdkBuilder.disableSsl(disableSsl)
-      }
-
-      /**
-       * @param disableSsl A Boolean option to control whether SSL should be disabled.
-       */
-      override fun disableSsl(disableSsl: IResolvable) {
-        cdkBuilder.disableSsl(disableSsl.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty,
-    ) : CdkObject(cdkObject), SslPropertiesProperty {
-      /**
-       * A Boolean option to control whether SSL should be disabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html#cfn-quicksight-datasource-sslproperties-disablessl)
-       */
-      override fun disableSsl(): Any? = unwrap(this).getDisableSsl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SslPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty):
-          SslPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? SslPropertiesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SslPropertiesProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty
-    }
-  }
-
-  /**
-   * Oracle parameters.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * OracleParametersProperty oracleParametersProperty = OracleParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html)
-   */
-  public interface OracleParametersProperty {
-    /**
-     * Database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-database)
-     */
-    public fun database(): String
-
-    /**
-     * Host.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-host)
-     */
-    public fun host(): String
-
-    /**
-     * Port.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-port)
-     */
-    public fun port(): Number
-
-    /**
-     * A builder for [OracleParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param database Database. 
-       */
-      public fun database(database: String)
-
-      /**
-       * @param host Host. 
-       */
-      public fun host(host: String)
-
-      /**
-       * @param port Port. 
-       */
-      public fun port(port: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty.builder()
-
-      /**
-       * @param database Database. 
-       */
-      override fun database(database: String) {
-        cdkBuilder.database(database)
-      }
-
-      /**
-       * @param host Host. 
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param port Port. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty,
-    ) : CdkObject(cdkObject), OracleParametersProperty {
-      /**
-       * Database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-database)
-       */
-      override fun database(): String = unwrap(this).getDatabase()
-
-      /**
-       * Host.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-host)
-       */
-      override fun host(): String = unwrap(this).getHost()
-
-      /**
-       * Port.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OracleParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty):
-          OracleParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? OracleParametersProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OracleParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty
-    }
-  }
-
-  /**
-   * VPC connection properties.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * VpcConnectionPropertiesProperty vpcConnectionPropertiesProperty =
-   * VpcConnectionPropertiesProperty.builder()
-   * .vpcConnectionArn("vpcConnectionArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-vpcconnectionproperties.html)
-   */
-  public interface VpcConnectionPropertiesProperty {
-    /**
-     * The Amazon Resource Name (ARN) for the VPC connection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-vpcconnectionproperties.html#cfn-quicksight-datasource-vpcconnectionproperties-vpcconnectionarn)
-     */
-    public fun vpcConnectionArn(): String
-
-    /**
-     * A builder for [VpcConnectionPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param vpcConnectionArn The Amazon Resource Name (ARN) for the VPC connection. 
-       */
-      public fun vpcConnectionArn(vpcConnectionArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty.builder()
-
-      /**
-       * @param vpcConnectionArn The Amazon Resource Name (ARN) for the VPC connection. 
-       */
-      override fun vpcConnectionArn(vpcConnectionArn: String) {
-        cdkBuilder.vpcConnectionArn(vpcConnectionArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty,
-    ) : CdkObject(cdkObject), VpcConnectionPropertiesProperty {
-      /**
-       * The Amazon Resource Name (ARN) for the VPC connection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-vpcconnectionproperties.html#cfn-quicksight-datasource-vpcconnectionproperties-vpcconnectionarn)
-       */
-      override fun vpcConnectionArn(): String = unwrap(this).getVpcConnectionArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConnectionPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty):
-          VpcConnectionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VpcConnectionPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcConnectionPropertiesProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty
-    }
-  }
-
-  /**
-   * The parameters for S3.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * S3ParametersProperty s3ParametersProperty = S3ParametersProperty.builder()
-   * .manifestFileLocation(ManifestFileLocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * .build())
-   * // the properties below are optional
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html)
-   */
-  public interface S3ParametersProperty {
-    /**
-     * Location of the Amazon S3 manifest file.
-     *
-     * This is NULL if the manifest file was uploaded into Amazon QuickSight.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html#cfn-quicksight-datasource-s3parameters-manifestfilelocation)
-     */
-    public fun manifestFileLocation(): Any
-
-    /**
-     * Use the `RoleArn` structure to override an account-wide role for a specific S3 data source.
-     *
-     * For example, say an account administrator has turned off all S3 access with an account-wide
-     * role. The administrator can then use `RoleArn` to bypass the account-wide role and allow S3
-     * access for the single S3 data source that is specified in the structure, even if the
-     * account-wide role forbidding S3 access is still active.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html#cfn-quicksight-datasource-s3parameters-rolearn)
-     */
-    public fun roleArn(): String? = unwrap(this).getRoleArn()
-
-    /**
-     * A builder for [S3ParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
-       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
-       */
-      public fun manifestFileLocation(manifestFileLocation: IResolvable)
-
-      /**
-       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
-       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
-       */
-      public fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty)
-
-      /**
-       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
-       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d401bd5d60fc3f30f93f9b08f35377bfd666a889a4f66dc9c5e18ae4d64e6540")
-      public
-          fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty.Builder.() -> Unit)
-
-      /**
-       * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
-       * S3 data source.
-       * For example, say an account administrator has turned off all S3 access with an account-wide
-       * role. The administrator can then use `RoleArn` to bypass the account-wide role and allow S3
-       * access for the single S3 data source that is specified in the structure, even if the
-       * account-wide role forbidding S3 access is still active.
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty.builder()
-
-      /**
-       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
-       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
-       */
-      override fun manifestFileLocation(manifestFileLocation: IResolvable) {
-        cdkBuilder.manifestFileLocation(manifestFileLocation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
-       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
-       */
-      override fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty) {
-        cdkBuilder.manifestFileLocation(manifestFileLocation.let(ManifestFileLocationProperty::unwrap))
-      }
-
-      /**
-       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
-       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d401bd5d60fc3f30f93f9b08f35377bfd666a889a4f66dc9c5e18ae4d64e6540")
-      override
-          fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty.Builder.() -> Unit):
-          Unit = manifestFileLocation(ManifestFileLocationProperty(manifestFileLocation))
-
-      /**
-       * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
-       * S3 data source.
-       * For example, say an account administrator has turned off all S3 access with an account-wide
-       * role. The administrator can then use `RoleArn` to bypass the account-wide role and allow S3
-       * access for the single S3 data source that is specified in the structure, even if the
-       * account-wide role forbidding S3 access is still active.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty,
-    ) : CdkObject(cdkObject), S3ParametersProperty {
-      /**
-       * Location of the Amazon S3 manifest file.
-       *
-       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html#cfn-quicksight-datasource-s3parameters-manifestfilelocation)
-       */
-      override fun manifestFileLocation(): Any = unwrap(this).getManifestFileLocation()
-
-      /**
-       * Use the `RoleArn` structure to override an account-wide role for a specific S3 data source.
-       *
-       * For example, say an account administrator has turned off all S3 access with an account-wide
-       * role. The administrator can then use `RoleArn` to bypass the account-wide role and allow S3
-       * access for the single S3 data source that is specified in the structure, even if the
-       * account-wide role forbidding S3 access is still active.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html#cfn-quicksight-datasource-s3parameters-rolearn)
-       */
-      override fun roleArn(): String? = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3ParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty):
-          S3ParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ParametersProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3ParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty
-    }
-  }
-
-  /**
    * Parameters for Amazon Aurora PostgreSQL-Compatible Edition.
    *
    * Example:
@@ -2556,430 +1938,6 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraPostgreSqlParametersProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraPostgreSqlParametersProperty
-    }
-  }
-
-  /**
-   * The parameters that are required to connect to a Trino data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * TrinoParametersProperty trinoParametersProperty = TrinoParametersProperty.builder()
-   * .catalog("catalog")
-   * .host("host")
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html)
-   */
-  public interface TrinoParametersProperty {
-    /**
-     * The catalog name for the Trino data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-catalog)
-     */
-    public fun catalog(): String
-
-    /**
-     * The host name of the Trino data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-host)
-     */
-    public fun host(): String
-
-    /**
-     * The port for the Trino data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-port)
-     */
-    public fun port(): Number
-
-    /**
-     * A builder for [TrinoParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalog The catalog name for the Trino data source. 
-       */
-      public fun catalog(catalog: String)
-
-      /**
-       * @param host The host name of the Trino data source. 
-       */
-      public fun host(host: String)
-
-      /**
-       * @param port The port for the Trino data source. 
-       */
-      public fun port(port: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty.builder()
-
-      /**
-       * @param catalog The catalog name for the Trino data source. 
-       */
-      override fun catalog(catalog: String) {
-        cdkBuilder.catalog(catalog)
-      }
-
-      /**
-       * @param host The host name of the Trino data source. 
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param port The port for the Trino data source. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty,
-    ) : CdkObject(cdkObject), TrinoParametersProperty {
-      /**
-       * The catalog name for the Trino data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-catalog)
-       */
-      override fun catalog(): String = unwrap(this).getCatalog()
-
-      /**
-       * The host name of the Trino data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-host)
-       */
-      override fun host(): String = unwrap(this).getHost()
-
-      /**
-       * The port for the Trino data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TrinoParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty):
-          TrinoParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? TrinoParametersProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TrinoParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty
-    }
-  }
-
-  /**
-   * Permission for the resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * ResourcePermissionProperty resourcePermissionProperty = ResourcePermissionProperty.builder()
-   * .actions(List.of("actions"))
-   * .principal("principal")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html)
-   */
-  public interface ResourcePermissionProperty {
-    /**
-     * The IAM action to grant or revoke permissions on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-actions)
-     */
-    public fun actions(): List<String>
-
-    /**
-     * The Amazon Resource Name (ARN) of the principal. This can be one of the following:.
-     *
-     * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
-     * (This is common.)
-     * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-     * dashboard, template, or theme. (This is common.)
-     * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
-     * this option only to share resources (templates) across AWS accounts . (This is less common.)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-principal)
-     */
-    public fun principal(): String
-
-    /**
-     * A builder for [ResourcePermissionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actions The IAM action to grant or revoke permissions on. 
-       */
-      public fun actions(actions: List<String>)
-
-      /**
-       * @param actions The IAM action to grant or revoke permissions on. 
-       */
-      public fun actions(vararg actions: String)
-
-      /**
-       * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
-       * following:. 
-       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
-       * (This is common.)
-       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-       * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
-       */
-      public fun principal(principal: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty.builder()
-
-      /**
-       * @param actions The IAM action to grant or revoke permissions on. 
-       */
-      override fun actions(actions: List<String>) {
-        cdkBuilder.actions(actions)
-      }
-
-      /**
-       * @param actions The IAM action to grant or revoke permissions on. 
-       */
-      override fun actions(vararg actions: String): Unit = actions(actions.toList())
-
-      /**
-       * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
-       * following:. 
-       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
-       * (This is common.)
-       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-       * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
-       */
-      override fun principal(principal: String) {
-        cdkBuilder.principal(principal)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty,
-    ) : CdkObject(cdkObject), ResourcePermissionProperty {
-      /**
-       * The IAM action to grant or revoke permissions on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-actions)
-       */
-      override fun actions(): List<String> = unwrap(this).getActions()
-
-      /**
-       * The Amazon Resource Name (ARN) of the principal. This can be one of the following:.
-       *
-       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
-       * (This is common.)
-       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-       * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-principal)
-       */
-      override fun principal(): String = unwrap(this).getPrincipal()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourcePermissionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty):
-          ResourcePermissionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResourcePermissionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourcePermissionProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty
-    }
-  }
-
-  /**
-   * The parameters for Presto.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * PrestoParametersProperty prestoParametersProperty = PrestoParametersProperty.builder()
-   * .catalog("catalog")
-   * .host("host")
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html)
-   */
-  public interface PrestoParametersProperty {
-    /**
-     * Catalog.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-catalog)
-     */
-    public fun catalog(): String
-
-    /**
-     * Host.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-host)
-     */
-    public fun host(): String
-
-    /**
-     * Port.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-port)
-     */
-    public fun port(): Number
-
-    /**
-     * A builder for [PrestoParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalog Catalog. 
-       */
-      public fun catalog(catalog: String)
-
-      /**
-       * @param host Host. 
-       */
-      public fun host(host: String)
-
-      /**
-       * @param port Port. 
-       */
-      public fun port(port: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty.builder()
-
-      /**
-       * @param catalog Catalog. 
-       */
-      override fun catalog(catalog: String) {
-        cdkBuilder.catalog(catalog)
-      }
-
-      /**
-       * @param host Host. 
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param port Port. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty,
-    ) : CdkObject(cdkObject), PrestoParametersProperty {
-      /**
-       * Catalog.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-catalog)
-       */
-      override fun catalog(): String = unwrap(this).getCatalog()
-
-      /**
-       * Host.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-host)
-       */
-      override fun host(): String = unwrap(this).getHost()
-
-      /**
-       * Port.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrestoParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty):
-          PrestoParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? PrestoParametersProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrestoParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty
     }
   }
 
@@ -3311,7 +2269,10 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * The parameters for OpenSearch.
+   * Data source credentials.
+   *
+   * This is a variant type structure. For this structure to be valid, only one of the attributes
+   * can be non-null.
    *
    * Example:
    *
@@ -3319,79 +2280,419 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * AmazonOpenSearchParametersProperty amazonOpenSearchParametersProperty =
-   * AmazonOpenSearchParametersProperty.builder()
+   * DataSourceCredentialsProperty dataSourceCredentialsProperty =
+   * DataSourceCredentialsProperty.builder()
+   * .copySourceArn("copySourceArn")
+   * .credentialPair(CredentialPairProperty.builder()
+   * .password("password")
+   * .username("username")
+   * // the properties below are optional
+   * .alternateDataSourceParameters(List.of(DataSourceParametersProperty.builder()
+   * .amazonElasticsearchParameters(AmazonElasticsearchParametersProperty.builder()
    * .domain("domain")
+   * .build())
+   * .amazonOpenSearchParameters(AmazonOpenSearchParametersProperty.builder()
+   * .domain("domain")
+   * .build())
+   * .athenaParameters(AthenaParametersProperty.builder()
+   * .roleArn("roleArn")
+   * .workGroup("workGroup")
+   * .build())
+   * .auroraParameters(AuroraParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .auroraPostgreSqlParameters(AuroraPostgreSqlParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .databricksParameters(DatabricksParametersProperty.builder()
+   * .host("host")
+   * .port(123)
+   * .sqlEndpointPath("sqlEndpointPath")
+   * .build())
+   * .mariaDbParameters(MariaDbParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .mySqlParameters(MySqlParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .oracleParameters(OracleParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .prestoParameters(PrestoParametersProperty.builder()
+   * .catalog("catalog")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .rdsParameters(RdsParametersProperty.builder()
+   * .database("database")
+   * .instanceId("instanceId")
+   * .build())
+   * .redshiftParameters(RedshiftParametersProperty.builder()
+   * .database("database")
+   * // the properties below are optional
+   * .clusterId("clusterId")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .s3Parameters(S3ParametersProperty.builder()
+   * .manifestFileLocation(ManifestFileLocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * .build())
+   * // the properties below are optional
+   * .roleArn("roleArn")
+   * .build())
+   * .snowflakeParameters(SnowflakeParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .warehouse("warehouse")
+   * .build())
+   * .sparkParameters(SparkParametersProperty.builder()
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .sqlServerParameters(SqlServerParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .starburstParameters(StarburstParametersProperty.builder()
+   * .catalog("catalog")
+   * .host("host")
+   * .port(123)
+   * // the properties below are optional
+   * .productType("productType")
+   * .build())
+   * .teradataParameters(TeradataParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .trinoParameters(TrinoParametersProperty.builder()
+   * .catalog("catalog")
+   * .host("host")
+   * .port(123)
+   * .build())
+   * .build()))
+   * .build())
+   * .secretArn("secretArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonopensearchparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html)
    */
-  public interface AmazonOpenSearchParametersProperty {
+  public interface DataSourceCredentialsProperty {
     /**
-     * The OpenSearch domain.
+     * The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to
+     * use.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonopensearchparameters.html#cfn-quicksight-datasource-amazonopensearchparameters-domain)
+     * When `CopySourceArn` is not null, the credential pair from the data source in the ARN is used
+     * as the credentials for the `DataSourceCredentials` structure.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-copysourcearn)
      */
-    public fun domain(): String
+    public fun copySourceArn(): String? = unwrap(this).getCopySourceArn()
 
     /**
-     * A builder for [AmazonOpenSearchParametersProperty]
+     * Credential pair.
+     *
+     * For more information, see
+     * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-credentialpair)
+     */
+    public fun credentialPair(): Any? = unwrap(this).getCredentialPair()
+
+    /**
+     * The Amazon Resource Name (ARN) of the secret associated with the data source in AWS Secrets
+     * Manager .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-secretarn)
+     */
+    public fun secretArn(): String? = unwrap(this).getSecretArn()
+
+    /**
+     * A builder for [DataSourceCredentialsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param domain The OpenSearch domain. 
+       * @param copySourceArn The Amazon Resource Name (ARN) of a data source that has the
+       * credential pair that you want to use.
+       * When `CopySourceArn` is not null, the credential pair from the data source in the ARN is
+       * used as the credentials for the `DataSourceCredentials` structure.
        */
-      public fun domain(domain: String)
+      public fun copySourceArn(copySourceArn: String)
+
+      /**
+       * @param credentialPair Credential pair.
+       * For more information, see
+       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
+       * .
+       */
+      public fun credentialPair(credentialPair: IResolvable)
+
+      /**
+       * @param credentialPair Credential pair.
+       * For more information, see
+       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
+       * .
+       */
+      public fun credentialPair(credentialPair: CredentialPairProperty)
+
+      /**
+       * @param credentialPair Credential pair.
+       * For more information, see
+       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("315871381c49148e355518ab9833e78ced1546740cad061b89e892cea02829dc")
+      public fun credentialPair(credentialPair: CredentialPairProperty.Builder.() -> Unit)
+
+      /**
+       * @param secretArn The Amazon Resource Name (ARN) of the secret associated with the data
+       * source in AWS Secrets Manager .
+       */
+      public fun secretArn(secretArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty.Builder
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty.Builder
           =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty.builder()
 
       /**
-       * @param domain The OpenSearch domain. 
+       * @param copySourceArn The Amazon Resource Name (ARN) of a data source that has the
+       * credential pair that you want to use.
+       * When `CopySourceArn` is not null, the credential pair from the data source in the ARN is
+       * used as the credentials for the `DataSourceCredentials` structure.
        */
-      override fun domain(domain: String) {
-        cdkBuilder.domain(domain)
+      override fun copySourceArn(copySourceArn: String) {
+        cdkBuilder.copySourceArn(copySourceArn)
+      }
+
+      /**
+       * @param credentialPair Credential pair.
+       * For more information, see
+       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
+       * .
+       */
+      override fun credentialPair(credentialPair: IResolvable) {
+        cdkBuilder.credentialPair(credentialPair.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param credentialPair Credential pair.
+       * For more information, see
+       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
+       * .
+       */
+      override fun credentialPair(credentialPair: CredentialPairProperty) {
+        cdkBuilder.credentialPair(credentialPair.let(CredentialPairProperty::unwrap))
+      }
+
+      /**
+       * @param credentialPair Credential pair.
+       * For more information, see
+       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("315871381c49148e355518ab9833e78ced1546740cad061b89e892cea02829dc")
+      override fun credentialPair(credentialPair: CredentialPairProperty.Builder.() -> Unit): Unit =
+          credentialPair(CredentialPairProperty(credentialPair))
+
+      /**
+       * @param secretArn The Amazon Resource Name (ARN) of the secret associated with the data
+       * source in AWS Secrets Manager .
+       */
+      override fun secretArn(secretArn: String) {
+        cdkBuilder.secretArn(secretArn)
       }
 
       public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty,
-    ) : CdkObject(cdkObject), AmazonOpenSearchParametersProperty {
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty,
+    ) : CdkObject(cdkObject), DataSourceCredentialsProperty {
       /**
-       * The OpenSearch domain.
+       * The Amazon Resource Name (ARN) of a data source that has the credential pair that you want
+       * to use.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonopensearchparameters.html#cfn-quicksight-datasource-amazonopensearchparameters-domain)
+       * When `CopySourceArn` is not null, the credential pair from the data source in the ARN is
+       * used as the credentials for the `DataSourceCredentials` structure.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-copysourcearn)
        */
-      override fun domain(): String = unwrap(this).getDomain()
+      override fun copySourceArn(): String? = unwrap(this).getCopySourceArn()
+
+      /**
+       * Credential pair.
+       *
+       * For more information, see
+       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-credentialpair)
+       */
+      override fun credentialPair(): Any? = unwrap(this).getCredentialPair()
+
+      /**
+       * The Amazon Resource Name (ARN) of the secret associated with the data source in AWS Secrets
+       * Manager .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-secretarn)
+       */
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AmazonOpenSearchParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceCredentialsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty):
-          AmazonOpenSearchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AmazonOpenSearchParametersProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty):
+          DataSourceCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceCredentialsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AmazonOpenSearchParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty
+      internal fun unwrap(wrapped: DataSourceCredentialsProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty
+    }
+  }
+
+  /**
+   * Error information for the data source creation or update.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * DataSourceErrorInfoProperty dataSourceErrorInfoProperty = DataSourceErrorInfoProperty.builder()
+   * .message("message")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html)
+   */
+  public interface DataSourceErrorInfoProperty {
+    /**
+     * Error message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html#cfn-quicksight-datasource-datasourceerrorinfo-message)
+     */
+    public fun message(): String? = unwrap(this).getMessage()
+
+    /**
+     * Error type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html#cfn-quicksight-datasource-datasourceerrorinfo-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [DataSourceErrorInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param message Error message.
+       */
+      public fun message(message: String)
+
+      /**
+       * @param type Error type.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty.builder()
+
+      /**
+       * @param message Error message.
+       */
+      override fun message(message: String) {
+        cdkBuilder.message(message)
+      }
+
+      /**
+       * @param type Error type.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty,
+    ) : CdkObject(cdkObject), DataSourceErrorInfoProperty {
+      /**
+       * Error message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html#cfn-quicksight-datasource-datasourceerrorinfo-message)
+       */
+      override fun message(): String? = unwrap(this).getMessage()
+
+      /**
+       * Error type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html#cfn-quicksight-datasource-datasourceerrorinfo-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceErrorInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty):
+          DataSourceErrorInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceErrorInfoProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataSourceErrorInfoProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty
     }
   }
 
@@ -4660,7 +3961,7 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * Error information for the data source creation or update.
+   * The required parameters that are needed to connect to a Databricks data source.
    *
    * Example:
    *
@@ -4668,109 +3969,137 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * DataSourceErrorInfoProperty dataSourceErrorInfoProperty = DataSourceErrorInfoProperty.builder()
-   * .message("message")
-   * .type("type")
+   * DatabricksParametersProperty databricksParametersProperty =
+   * DatabricksParametersProperty.builder()
+   * .host("host")
+   * .port(123)
+   * .sqlEndpointPath("sqlEndpointPath")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html)
    */
-  public interface DataSourceErrorInfoProperty {
+  public interface DatabricksParametersProperty {
     /**
-     * Error message.
+     * The host name of the Databricks data source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html#cfn-quicksight-datasource-datasourceerrorinfo-message)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-host)
      */
-    public fun message(): String? = unwrap(this).getMessage()
+    public fun host(): String
 
     /**
-     * Error type.
+     * The port for the Databricks data source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html#cfn-quicksight-datasource-datasourceerrorinfo-type)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-port)
      */
-    public fun type(): String? = unwrap(this).getType()
+    public fun port(): Number
 
     /**
-     * A builder for [DataSourceErrorInfoProperty]
+     * The HTTP path of the Databricks data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-sqlendpointpath)
+     */
+    public fun sqlEndpointPath(): String
+
+    /**
+     * A builder for [DatabricksParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param message Error message.
+       * @param host The host name of the Databricks data source. 
        */
-      public fun message(message: String)
+      public fun host(host: String)
 
       /**
-       * @param type Error type.
+       * @param port The port for the Databricks data source. 
        */
-      public fun type(type: String)
+      public fun port(port: Number)
+
+      /**
+       * @param sqlEndpointPath The HTTP path of the Databricks data source. 
+       */
+      public fun sqlEndpointPath(sqlEndpointPath: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty.Builder
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty.Builder
           =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty.builder()
 
       /**
-       * @param message Error message.
+       * @param host The host name of the Databricks data source. 
        */
-      override fun message(message: String) {
-        cdkBuilder.message(message)
+      override fun host(host: String) {
+        cdkBuilder.host(host)
       }
 
       /**
-       * @param type Error type.
+       * @param port The port for the Databricks data source. 
        */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param sqlEndpointPath The HTTP path of the Databricks data source. 
+       */
+      override fun sqlEndpointPath(sqlEndpointPath: String) {
+        cdkBuilder.sqlEndpointPath(sqlEndpointPath)
       }
 
       public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty,
-    ) : CdkObject(cdkObject), DataSourceErrorInfoProperty {
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty,
+    ) : CdkObject(cdkObject), DatabricksParametersProperty {
       /**
-       * Error message.
+       * The host name of the Databricks data source.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html#cfn-quicksight-datasource-datasourceerrorinfo-message)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-host)
        */
-      override fun message(): String? = unwrap(this).getMessage()
+      override fun host(): String = unwrap(this).getHost()
 
       /**
-       * Error type.
+       * The port for the Databricks data source.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html#cfn-quicksight-datasource-datasourceerrorinfo-type)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-port)
        */
-      override fun type(): String? = unwrap(this).getType()
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * The HTTP path of the Databricks data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-sqlendpointpath)
+       */
+      override fun sqlEndpointPath(): String = unwrap(this).getSqlEndpointPath()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceErrorInfoProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatabricksParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty):
-          DataSourceErrorInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataSourceErrorInfoProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty):
+          DatabricksParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabricksParametersProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DataSourceErrorInfoProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty =
+      internal fun unwrap(wrapped: DatabricksParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty
+          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty
     }
   }
 
   /**
-   * The parameters for SQL Server.
+   * Amazon S3 manifest file location.
    *
    * Example:
    *
@@ -4778,39 +4107,150 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * SqlServerParametersProperty sqlServerParametersProperty = SqlServerParametersProperty.builder()
+   * ManifestFileLocationProperty manifestFileLocationProperty =
+   * ManifestFileLocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html)
+   */
+  public interface ManifestFileLocationProperty {
+    /**
+     * Amazon S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html#cfn-quicksight-datasource-manifestfilelocation-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * Amazon S3 key that identifies an object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html#cfn-quicksight-datasource-manifestfilelocation-key)
+     */
+    public fun key(): String
+
+    /**
+     * A builder for [ManifestFileLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket Amazon S3 bucket. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param key Amazon S3 key that identifies an object. 
+       */
+      public fun key(key: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty.builder()
+
+      /**
+       * @param bucket Amazon S3 bucket. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param key Amazon S3 key that identifies an object. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty,
+    ) : CdkObject(cdkObject), ManifestFileLocationProperty {
+      /**
+       * Amazon S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html#cfn-quicksight-datasource-manifestfilelocation-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * Amazon S3 key that identifies an object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html#cfn-quicksight-datasource-manifestfilelocation-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ManifestFileLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty):
+          ManifestFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManifestFileLocationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManifestFileLocationProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty
+    }
+  }
+
+  /**
+   * The parameters for MariaDB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * MariaDbParametersProperty mariaDbParametersProperty = MariaDbParametersProperty.builder()
    * .database("database")
    * .host("host")
    * .port(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html)
    */
-  public interface SqlServerParametersProperty {
+  public interface MariaDbParametersProperty {
     /**
      * Database.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-database)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-database)
      */
     public fun database(): String
 
     /**
      * Host.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-host)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-host)
      */
     public fun host(): String
 
     /**
      * Port.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-port)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-port)
      */
     public fun port(): Number
 
     /**
-     * A builder for [SqlServerParametersProperty]
+     * A builder for [MariaDbParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
@@ -4832,9 +4272,9 @@ public open class CfnDataSource internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty.Builder
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty.Builder
           =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty.builder()
 
       /**
        * @param database Database. 
@@ -4858,56 +4298,56 @@ public open class CfnDataSource internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty,
-    ) : CdkObject(cdkObject), SqlServerParametersProperty {
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty,
+    ) : CdkObject(cdkObject), MariaDbParametersProperty {
       /**
        * Database.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-database)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-database)
        */
       override fun database(): String = unwrap(this).getDatabase()
 
       /**
        * Host.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-host)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-host)
        */
       override fun host(): String = unwrap(this).getHost()
 
       /**
        * Port.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-port)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-port)
        */
       override fun port(): Number = unwrap(this).getPort()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SqlServerParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MariaDbParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty):
-          SqlServerParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SqlServerParametersProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty):
+          MariaDbParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MariaDbParametersProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SqlServerParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty =
+      internal fun unwrap(wrapped: MariaDbParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty
     }
   }
 
   /**
-   * Parameters for Amazon Athena.
+   * The parameters for MySQL.
    *
    * Example:
    *
@@ -4915,126 +4355,1160 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * AthenaParametersProperty athenaParametersProperty = AthenaParametersProperty.builder()
-   * .roleArn("roleArn")
-   * .workGroup("workGroup")
+   * MySqlParametersProperty mySqlParametersProperty = MySqlParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html)
    */
-  public interface AthenaParametersProperty {
+  public interface MySqlParametersProperty {
     /**
-     * Use the `RoleArn` structure to override an account-wide role for a specific Athena data
-     * source.
+     * Database.
      *
-     * For example, say an account administrator has turned off all Athena access with an
-     * account-wide role. The administrator can then use `RoleArn` to bypass the account-wide role and
-     * allow Athena access for the single Athena data source that is specified in the structure, even
-     * if the account-wide role forbidding Athena access is still active.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-rolearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-database)
      */
-    public fun roleArn(): String? = unwrap(this).getRoleArn()
+    public fun database(): String
 
     /**
-     * The workgroup that Amazon Athena uses.
+     * Host.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-workgroup)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-host)
      */
-    public fun workGroup(): String? = unwrap(this).getWorkGroup()
+    public fun host(): String
 
     /**
-     * A builder for [AthenaParametersProperty]
+     * Port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-port)
+     */
+    public fun port(): Number
+
+    /**
+     * A builder for [MySqlParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
-       * Athena data source.
-       * For example, say an account administrator has turned off all Athena access with an
-       * account-wide role. The administrator can then use `RoleArn` to bypass the account-wide role
-       * and allow Athena access for the single Athena data source that is specified in the structure,
-       * even if the account-wide role forbidding Athena access is still active.
+       * @param database Database. 
        */
-      public fun roleArn(roleArn: String)
+      public fun database(database: String)
 
       /**
-       * @param workGroup The workgroup that Amazon Athena uses.
+       * @param host Host. 
        */
-      public fun workGroup(workGroup: String)
+      public fun host(host: String)
+
+      /**
+       * @param port Port. 
+       */
+      public fun port(port: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty.builder()
 
       /**
-       * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
-       * Athena data source.
-       * For example, say an account administrator has turned off all Athena access with an
-       * account-wide role. The administrator can then use `RoleArn` to bypass the account-wide role
-       * and allow Athena access for the single Athena data source that is specified in the structure,
-       * even if the account-wide role forbidding Athena access is still active.
+       * @param database Database. 
        */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
+      override fun database(database: String) {
+        cdkBuilder.database(database)
       }
 
       /**
-       * @param workGroup The workgroup that Amazon Athena uses.
+       * @param host Host. 
        */
-      override fun workGroup(workGroup: String) {
-        cdkBuilder.workGroup(workGroup)
+      override fun host(host: String) {
+        cdkBuilder.host(host)
+      }
+
+      /**
+       * @param port Port. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
       }
 
       public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty,
-    ) : CdkObject(cdkObject), AthenaParametersProperty {
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty,
+    ) : CdkObject(cdkObject), MySqlParametersProperty {
       /**
-       * Use the `RoleArn` structure to override an account-wide role for a specific Athena data
-       * source.
+       * Database.
        *
-       * For example, say an account administrator has turned off all Athena access with an
-       * account-wide role. The administrator can then use `RoleArn` to bypass the account-wide role
-       * and allow Athena access for the single Athena data source that is specified in the structure,
-       * even if the account-wide role forbidding Athena access is still active.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-rolearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-database)
        */
-      override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun database(): String = unwrap(this).getDatabase()
 
       /**
-       * The workgroup that Amazon Athena uses.
+       * Host.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-workgroup)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-host)
        */
-      override fun workGroup(): String? = unwrap(this).getWorkGroup()
+      override fun host(): String = unwrap(this).getHost()
+
+      /**
+       * Port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AthenaParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MySqlParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty):
-          AthenaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? AthenaParametersProperty
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty):
+          MySqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? MySqlParametersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MySqlParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty
+    }
+  }
+
+  /**
+   * Oracle parameters.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * OracleParametersProperty oracleParametersProperty = OracleParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html)
+   */
+  public interface OracleParametersProperty {
+    /**
+     * Database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-database)
+     */
+    public fun database(): String
+
+    /**
+     * Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-host)
+     */
+    public fun host(): String
+
+    /**
+     * Port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-port)
+     */
+    public fun port(): Number
+
+    /**
+     * A builder for [OracleParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param database Database. 
+       */
+      public fun database(database: String)
+
+      /**
+       * @param host Host. 
+       */
+      public fun host(host: String)
+
+      /**
+       * @param port Port. 
+       */
+      public fun port(port: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty.builder()
+
+      /**
+       * @param database Database. 
+       */
+      override fun database(database: String) {
+        cdkBuilder.database(database)
+      }
+
+      /**
+       * @param host Host. 
+       */
+      override fun host(host: String) {
+        cdkBuilder.host(host)
+      }
+
+      /**
+       * @param port Port. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty,
+    ) : CdkObject(cdkObject), OracleParametersProperty {
+      /**
+       * Database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-database)
+       */
+      override fun database(): String = unwrap(this).getDatabase()
+
+      /**
+       * Host.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-host)
+       */
+      override fun host(): String = unwrap(this).getHost()
+
+      /**
+       * Port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OracleParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty):
+          OracleParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? OracleParametersProperty
           ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AthenaParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty =
+      internal fun unwrap(wrapped: OracleParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty
+    }
+  }
+
+  /**
+   * The parameters for PostgreSQL.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * PostgreSqlParametersProperty postgreSqlParametersProperty =
+   * PostgreSqlParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html)
+   */
+  public interface PostgreSqlParametersProperty {
+    /**
+     * Database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-database)
+     */
+    public fun database(): String
+
+    /**
+     * Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-host)
+     */
+    public fun host(): String
+
+    /**
+     * Port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-port)
+     */
+    public fun port(): Number
+
+    /**
+     * A builder for [PostgreSqlParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param database Database. 
+       */
+      public fun database(database: String)
+
+      /**
+       * @param host Host. 
+       */
+      public fun host(host: String)
+
+      /**
+       * @param port Port. 
+       */
+      public fun port(port: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty.builder()
+
+      /**
+       * @param database Database. 
+       */
+      override fun database(database: String) {
+        cdkBuilder.database(database)
+      }
+
+      /**
+       * @param host Host. 
+       */
+      override fun host(host: String) {
+        cdkBuilder.host(host)
+      }
+
+      /**
+       * @param port Port. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty,
+    ) : CdkObject(cdkObject), PostgreSqlParametersProperty {
+      /**
+       * Database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-database)
+       */
+      override fun database(): String = unwrap(this).getDatabase()
+
+      /**
+       * Host.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-host)
+       */
+      override fun host(): String = unwrap(this).getHost()
+
+      /**
+       * Port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PostgreSqlParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty):
+          PostgreSqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PostgreSqlParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PostgreSqlParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty
+    }
+  }
+
+  /**
+   * The parameters for Presto.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * PrestoParametersProperty prestoParametersProperty = PrestoParametersProperty.builder()
+   * .catalog("catalog")
+   * .host("host")
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html)
+   */
+  public interface PrestoParametersProperty {
+    /**
+     * Catalog.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-catalog)
+     */
+    public fun catalog(): String
+
+    /**
+     * Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-host)
+     */
+    public fun host(): String
+
+    /**
+     * Port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-port)
+     */
+    public fun port(): Number
+
+    /**
+     * A builder for [PrestoParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalog Catalog. 
+       */
+      public fun catalog(catalog: String)
+
+      /**
+       * @param host Host. 
+       */
+      public fun host(host: String)
+
+      /**
+       * @param port Port. 
+       */
+      public fun port(port: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty.builder()
+
+      /**
+       * @param catalog Catalog. 
+       */
+      override fun catalog(catalog: String) {
+        cdkBuilder.catalog(catalog)
+      }
+
+      /**
+       * @param host Host. 
+       */
+      override fun host(host: String) {
+        cdkBuilder.host(host)
+      }
+
+      /**
+       * @param port Port. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty,
+    ) : CdkObject(cdkObject), PrestoParametersProperty {
+      /**
+       * Catalog.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-catalog)
+       */
+      override fun catalog(): String = unwrap(this).getCatalog()
+
+      /**
+       * Host.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-host)
+       */
+      override fun host(): String = unwrap(this).getHost()
+
+      /**
+       * Port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrestoParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty):
+          PrestoParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? PrestoParametersProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrestoParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty
+    }
+  }
+
+  /**
+   * The parameters for Amazon RDS.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * RdsParametersProperty rdsParametersProperty = RdsParametersProperty.builder()
+   * .database("database")
+   * .instanceId("instanceId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html)
+   */
+  public interface RdsParametersProperty {
+    /**
+     * Database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html#cfn-quicksight-datasource-rdsparameters-database)
+     */
+    public fun database(): String
+
+    /**
+     * Instance ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html#cfn-quicksight-datasource-rdsparameters-instanceid)
+     */
+    public fun instanceId(): String
+
+    /**
+     * A builder for [RdsParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param database Database. 
+       */
+      public fun database(database: String)
+
+      /**
+       * @param instanceId Instance ID. 
+       */
+      public fun instanceId(instanceId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty.builder()
+
+      /**
+       * @param database Database. 
+       */
+      override fun database(database: String) {
+        cdkBuilder.database(database)
+      }
+
+      /**
+       * @param instanceId Instance ID. 
+       */
+      override fun instanceId(instanceId: String) {
+        cdkBuilder.instanceId(instanceId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty,
+    ) : CdkObject(cdkObject), RdsParametersProperty {
+      /**
+       * Database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html#cfn-quicksight-datasource-rdsparameters-database)
+       */
+      override fun database(): String = unwrap(this).getDatabase()
+
+      /**
+       * Instance ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-rdsparameters.html#cfn-quicksight-datasource-rdsparameters-instanceid)
+       */
+      override fun instanceId(): String = unwrap(this).getInstanceId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RdsParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty):
+          RdsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? RdsParametersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RdsParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty
+    }
+  }
+
+  /**
+   * The parameters for Amazon Redshift.
+   *
+   * The `ClusterId` field can be blank if `Host` and `Port` are both set. The `Host` and `Port`
+   * fields can be blank if the `ClusterId` field is set.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * RedshiftParametersProperty redshiftParametersProperty = RedshiftParametersProperty.builder()
+   * .database("database")
+   * // the properties below are optional
+   * .clusterId("clusterId")
+   * .host("host")
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html)
+   */
+  public interface RedshiftParametersProperty {
+    /**
+     * Cluster ID.
+     *
+     * This field can be blank if the `Host` and `Port` are provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-clusterid)
+     */
+    public fun clusterId(): String? = unwrap(this).getClusterId()
+
+    /**
+     * Database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-database)
+     */
+    public fun database(): String
+
+    /**
+     * Host.
+     *
+     * This field can be blank if `ClusterId` is provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-host)
+     */
+    public fun host(): String? = unwrap(this).getHost()
+
+    /**
+     * Port.
+     *
+     * This field can be blank if the `ClusterId` is provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * A builder for [RedshiftParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clusterId Cluster ID.
+       * This field can be blank if the `Host` and `Port` are provided.
+       */
+      public fun clusterId(clusterId: String)
+
+      /**
+       * @param database Database. 
+       */
+      public fun database(database: String)
+
+      /**
+       * @param host Host.
+       * This field can be blank if `ClusterId` is provided.
+       */
+      public fun host(host: String)
+
+      /**
+       * @param port Port.
+       * This field can be blank if the `ClusterId` is provided.
+       */
+      public fun port(port: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty.builder()
+
+      /**
+       * @param clusterId Cluster ID.
+       * This field can be blank if the `Host` and `Port` are provided.
+       */
+      override fun clusterId(clusterId: String) {
+        cdkBuilder.clusterId(clusterId)
+      }
+
+      /**
+       * @param database Database. 
+       */
+      override fun database(database: String) {
+        cdkBuilder.database(database)
+      }
+
+      /**
+       * @param host Host.
+       * This field can be blank if `ClusterId` is provided.
+       */
+      override fun host(host: String) {
+        cdkBuilder.host(host)
+      }
+
+      /**
+       * @param port Port.
+       * This field can be blank if the `ClusterId` is provided.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty,
+    ) : CdkObject(cdkObject), RedshiftParametersProperty {
+      /**
+       * Cluster ID.
+       *
+       * This field can be blank if the `Host` and `Port` are provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-clusterid)
+       */
+      override fun clusterId(): String? = unwrap(this).getClusterId()
+
+      /**
+       * Database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-database)
+       */
+      override fun database(): String = unwrap(this).getDatabase()
+
+      /**
+       * Host.
+       *
+       * This field can be blank if `ClusterId` is provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-host)
+       */
+      override fun host(): String? = unwrap(this).getHost()
+
+      /**
+       * Port.
+       *
+       * This field can be blank if the `ClusterId` is provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty):
+          RedshiftParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty
+    }
+  }
+
+  /**
+   * Permission for the resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * ResourcePermissionProperty resourcePermissionProperty = ResourcePermissionProperty.builder()
+   * .actions(List.of("actions"))
+   * .principal("principal")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html)
+   */
+  public interface ResourcePermissionProperty {
+    /**
+     * The IAM action to grant or revoke permissions on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-actions)
+     */
+    public fun actions(): List<String>
+
+    /**
+     * The Amazon Resource Name (ARN) of the principal. This can be one of the following:.
+     *
+     * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+     * (This is common.)
+     * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+     * dashboard, template, or theme. (This is common.)
+     * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
+     * this option only to share resources (templates) across AWS accounts . (This is less common.)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-principal)
+     */
+    public fun principal(): String
+
+    /**
+     * A builder for [ResourcePermissionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actions The IAM action to grant or revoke permissions on. 
+       */
+      public fun actions(actions: List<String>)
+
+      /**
+       * @param actions The IAM action to grant or revoke permissions on. 
+       */
+      public fun actions(vararg actions: String)
+
+      /**
+       * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
+       * following:. 
+       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+       * (This is common.)
+       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+       * dashboard, template, or theme. (This is common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
+       * Use this option only to share resources (templates) across AWS accounts . (This is less
+       * common.)
+       */
+      public fun principal(principal: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty.builder()
+
+      /**
+       * @param actions The IAM action to grant or revoke permissions on. 
+       */
+      override fun actions(actions: List<String>) {
+        cdkBuilder.actions(actions)
+      }
+
+      /**
+       * @param actions The IAM action to grant or revoke permissions on. 
+       */
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
+
+      /**
+       * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
+       * following:. 
+       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+       * (This is common.)
+       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+       * dashboard, template, or theme. (This is common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
+       * Use this option only to share resources (templates) across AWS accounts . (This is less
+       * common.)
+       */
+      override fun principal(principal: String) {
+        cdkBuilder.principal(principal)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty,
+    ) : CdkObject(cdkObject), ResourcePermissionProperty {
+      /**
+       * The IAM action to grant or revoke permissions on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-actions)
+       */
+      override fun actions(): List<String> = unwrap(this).getActions()
+
+      /**
+       * The Amazon Resource Name (ARN) of the principal. This can be one of the following:.
+       *
+       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+       * (This is common.)
+       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+       * dashboard, template, or theme. (This is common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
+       * Use this option only to share resources (templates) across AWS accounts . (This is less
+       * common.)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-principal)
+       */
+      override fun principal(): String = unwrap(this).getPrincipal()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourcePermissionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty):
+          ResourcePermissionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourcePermissionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourcePermissionProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty
+    }
+  }
+
+  /**
+   * The parameters for S3.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * S3ParametersProperty s3ParametersProperty = S3ParametersProperty.builder()
+   * .manifestFileLocation(ManifestFileLocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * .build())
+   * // the properties below are optional
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html)
+   */
+  public interface S3ParametersProperty {
+    /**
+     * Location of the Amazon S3 manifest file.
+     *
+     * This is NULL if the manifest file was uploaded into Amazon QuickSight.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html#cfn-quicksight-datasource-s3parameters-manifestfilelocation)
+     */
+    public fun manifestFileLocation(): Any
+
+    /**
+     * Use the `RoleArn` structure to override an account-wide role for a specific S3 data source.
+     *
+     * For example, say an account administrator has turned off all S3 access with an account-wide
+     * role. The administrator can then use `RoleArn` to bypass the account-wide role and allow S3
+     * access for the single S3 data source that is specified in the structure, even if the
+     * account-wide role forbidding S3 access is still active.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html#cfn-quicksight-datasource-s3parameters-rolearn)
+     */
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * A builder for [S3ParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
+       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
+       */
+      public fun manifestFileLocation(manifestFileLocation: IResolvable)
+
+      /**
+       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
+       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
+       */
+      public fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty)
+
+      /**
+       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
+       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d401bd5d60fc3f30f93f9b08f35377bfd666a889a4f66dc9c5e18ae4d64e6540")
+      public
+          fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty.Builder.() -> Unit)
+
+      /**
+       * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
+       * S3 data source.
+       * For example, say an account administrator has turned off all S3 access with an account-wide
+       * role. The administrator can then use `RoleArn` to bypass the account-wide role and allow S3
+       * access for the single S3 data source that is specified in the structure, even if the
+       * account-wide role forbidding S3 access is still active.
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty.builder()
+
+      /**
+       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
+       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
+       */
+      override fun manifestFileLocation(manifestFileLocation: IResolvable) {
+        cdkBuilder.manifestFileLocation(manifestFileLocation.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
+       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
+       */
+      override fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty) {
+        cdkBuilder.manifestFileLocation(manifestFileLocation.let(ManifestFileLocationProperty::unwrap))
+      }
+
+      /**
+       * @param manifestFileLocation Location of the Amazon S3 manifest file. 
+       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d401bd5d60fc3f30f93f9b08f35377bfd666a889a4f66dc9c5e18ae4d64e6540")
+      override
+          fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty.Builder.() -> Unit):
+          Unit = manifestFileLocation(ManifestFileLocationProperty(manifestFileLocation))
+
+      /**
+       * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
+       * S3 data source.
+       * For example, say an account administrator has turned off all S3 access with an account-wide
+       * role. The administrator can then use `RoleArn` to bypass the account-wide role and allow S3
+       * access for the single S3 data source that is specified in the structure, even if the
+       * account-wide role forbidding S3 access is still active.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty,
+    ) : CdkObject(cdkObject), S3ParametersProperty {
+      /**
+       * Location of the Amazon S3 manifest file.
+       *
+       * This is NULL if the manifest file was uploaded into Amazon QuickSight.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html#cfn-quicksight-datasource-s3parameters-manifestfilelocation)
+       */
+      override fun manifestFileLocation(): Any = unwrap(this).getManifestFileLocation()
+
+      /**
+       * Use the `RoleArn` structure to override an account-wide role for a specific S3 data source.
+       *
+       * For example, say an account administrator has turned off all S3 access with an account-wide
+       * role. The administrator can then use `RoleArn` to bypass the account-wide role and allow S3
+       * access for the single S3 data source that is specified in the structure, even if the
+       * account-wide role forbidding S3 access is still active.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html#cfn-quicksight-datasource-s3parameters-rolearn)
+       */
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3ParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty):
+          S3ParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ParametersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3ParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty
     }
   }
 
@@ -5285,6 +5759,238 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
+   * The parameters for SQL Server.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * SqlServerParametersProperty sqlServerParametersProperty = SqlServerParametersProperty.builder()
+   * .database("database")
+   * .host("host")
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html)
+   */
+  public interface SqlServerParametersProperty {
+    /**
+     * Database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-database)
+     */
+    public fun database(): String
+
+    /**
+     * Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-host)
+     */
+    public fun host(): String
+
+    /**
+     * Port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-port)
+     */
+    public fun port(): Number
+
+    /**
+     * A builder for [SqlServerParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param database Database. 
+       */
+      public fun database(database: String)
+
+      /**
+       * @param host Host. 
+       */
+      public fun host(host: String)
+
+      /**
+       * @param port Port. 
+       */
+      public fun port(port: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty.builder()
+
+      /**
+       * @param database Database. 
+       */
+      override fun database(database: String) {
+        cdkBuilder.database(database)
+      }
+
+      /**
+       * @param host Host. 
+       */
+      override fun host(host: String) {
+        cdkBuilder.host(host)
+      }
+
+      /**
+       * @param port Port. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty,
+    ) : CdkObject(cdkObject), SqlServerParametersProperty {
+      /**
+       * Database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-database)
+       */
+      override fun database(): String = unwrap(this).getDatabase()
+
+      /**
+       * Host.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-host)
+       */
+      override fun host(): String = unwrap(this).getHost()
+
+      /**
+       * Port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SqlServerParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty):
+          SqlServerParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SqlServerParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SqlServerParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty
+    }
+  }
+
+  /**
+   * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your
+   * underlying data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * SslPropertiesProperty sslPropertiesProperty = SslPropertiesProperty.builder()
+   * .disableSsl(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html)
+   */
+  public interface SslPropertiesProperty {
+    /**
+     * A Boolean option to control whether SSL should be disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html#cfn-quicksight-datasource-sslproperties-disablessl)
+     */
+    public fun disableSsl(): Any? = unwrap(this).getDisableSsl()
+
+    /**
+     * A builder for [SslPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param disableSsl A Boolean option to control whether SSL should be disabled.
+       */
+      public fun disableSsl(disableSsl: Boolean)
+
+      /**
+       * @param disableSsl A Boolean option to control whether SSL should be disabled.
+       */
+      public fun disableSsl(disableSsl: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty.builder()
+
+      /**
+       * @param disableSsl A Boolean option to control whether SSL should be disabled.
+       */
+      override fun disableSsl(disableSsl: Boolean) {
+        cdkBuilder.disableSsl(disableSsl)
+      }
+
+      /**
+       * @param disableSsl A Boolean option to control whether SSL should be disabled.
+       */
+      override fun disableSsl(disableSsl: IResolvable) {
+        cdkBuilder.disableSsl(disableSsl.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty,
+    ) : CdkObject(cdkObject), SslPropertiesProperty {
+      /**
+       * A Boolean option to control whether SSL should be disabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html#cfn-quicksight-datasource-sslproperties-disablessl)
+       */
+      override fun disableSsl(): Any? = unwrap(this).getDisableSsl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SslPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty):
+          SslPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? SslPropertiesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SslPropertiesProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty
+    }
+  }
+
+  /**
    * The parameters that are required to connect to a Starburst data source.
    *
    * Example:
@@ -5450,7 +6156,7 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * Amazon S3 manifest file location.
+   * The parameters for Teradata.
    *
    * Example:
    *
@@ -5458,468 +6164,39 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * ManifestFileLocationProperty manifestFileLocationProperty =
-   * ManifestFileLocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html)
-   */
-  public interface ManifestFileLocationProperty {
-    /**
-     * Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html#cfn-quicksight-datasource-manifestfilelocation-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * Amazon S3 key that identifies an object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html#cfn-quicksight-datasource-manifestfilelocation-key)
-     */
-    public fun key(): String
-
-    /**
-     * A builder for [ManifestFileLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket Amazon S3 bucket. 
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param key Amazon S3 key that identifies an object. 
-       */
-      public fun key(key: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty.builder()
-
-      /**
-       * @param bucket Amazon S3 bucket. 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param key Amazon S3 key that identifies an object. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty,
-    ) : CdkObject(cdkObject), ManifestFileLocationProperty {
-      /**
-       * Amazon S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html#cfn-quicksight-datasource-manifestfilelocation-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * Amazon S3 key that identifies an object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-manifestfilelocation.html#cfn-quicksight-datasource-manifestfilelocation-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ManifestFileLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty):
-          ManifestFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ManifestFileLocationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ManifestFileLocationProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty
-    }
-  }
-
-  /**
-   * Data source credentials.
-   *
-   * This is a variant type structure. For this structure to be valid, only one of the attributes
-   * can be non-null.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * DataSourceCredentialsProperty dataSourceCredentialsProperty =
-   * DataSourceCredentialsProperty.builder()
-   * .copySourceArn("copySourceArn")
-   * .credentialPair(CredentialPairProperty.builder()
-   * .password("password")
-   * .username("username")
-   * // the properties below are optional
-   * .alternateDataSourceParameters(List.of(DataSourceParametersProperty.builder()
-   * .amazonElasticsearchParameters(AmazonElasticsearchParametersProperty.builder()
-   * .domain("domain")
-   * .build())
-   * .amazonOpenSearchParameters(AmazonOpenSearchParametersProperty.builder()
-   * .domain("domain")
-   * .build())
-   * .athenaParameters(AthenaParametersProperty.builder()
-   * .roleArn("roleArn")
-   * .workGroup("workGroup")
-   * .build())
-   * .auroraParameters(AuroraParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .auroraPostgreSqlParameters(AuroraPostgreSqlParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .databricksParameters(DatabricksParametersProperty.builder()
-   * .host("host")
-   * .port(123)
-   * .sqlEndpointPath("sqlEndpointPath")
-   * .build())
-   * .mariaDbParameters(MariaDbParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .mySqlParameters(MySqlParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .oracleParameters(OracleParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .prestoParameters(PrestoParametersProperty.builder()
-   * .catalog("catalog")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .rdsParameters(RdsParametersProperty.builder()
-   * .database("database")
-   * .instanceId("instanceId")
-   * .build())
-   * .redshiftParameters(RedshiftParametersProperty.builder()
-   * .database("database")
-   * // the properties below are optional
-   * .clusterId("clusterId")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .s3Parameters(S3ParametersProperty.builder()
-   * .manifestFileLocation(ManifestFileLocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * .build())
-   * // the properties below are optional
-   * .roleArn("roleArn")
-   * .build())
-   * .snowflakeParameters(SnowflakeParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .warehouse("warehouse")
-   * .build())
-   * .sparkParameters(SparkParametersProperty.builder()
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .sqlServerParameters(SqlServerParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .starburstParameters(StarburstParametersProperty.builder()
-   * .catalog("catalog")
-   * .host("host")
-   * .port(123)
-   * // the properties below are optional
-   * .productType("productType")
-   * .build())
-   * .teradataParameters(TeradataParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .trinoParameters(TrinoParametersProperty.builder()
-   * .catalog("catalog")
-   * .host("host")
-   * .port(123)
-   * .build())
-   * .build()))
-   * .build())
-   * .secretArn("secretArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html)
-   */
-  public interface DataSourceCredentialsProperty {
-    /**
-     * The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to
-     * use.
-     *
-     * When `CopySourceArn` is not null, the credential pair from the data source in the ARN is used
-     * as the credentials for the `DataSourceCredentials` structure.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-copysourcearn)
-     */
-    public fun copySourceArn(): String? = unwrap(this).getCopySourceArn()
-
-    /**
-     * Credential pair.
-     *
-     * For more information, see
-     * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-credentialpair)
-     */
-    public fun credentialPair(): Any? = unwrap(this).getCredentialPair()
-
-    /**
-     * The Amazon Resource Name (ARN) of the secret associated with the data source in AWS Secrets
-     * Manager .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-secretarn)
-     */
-    public fun secretArn(): String? = unwrap(this).getSecretArn()
-
-    /**
-     * A builder for [DataSourceCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param copySourceArn The Amazon Resource Name (ARN) of a data source that has the
-       * credential pair that you want to use.
-       * When `CopySourceArn` is not null, the credential pair from the data source in the ARN is
-       * used as the credentials for the `DataSourceCredentials` structure.
-       */
-      public fun copySourceArn(copySourceArn: String)
-
-      /**
-       * @param credentialPair Credential pair.
-       * For more information, see
-       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
-       * .
-       */
-      public fun credentialPair(credentialPair: IResolvable)
-
-      /**
-       * @param credentialPair Credential pair.
-       * For more information, see
-       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
-       * .
-       */
-      public fun credentialPair(credentialPair: CredentialPairProperty)
-
-      /**
-       * @param credentialPair Credential pair.
-       * For more information, see
-       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("315871381c49148e355518ab9833e78ced1546740cad061b89e892cea02829dc")
-      public fun credentialPair(credentialPair: CredentialPairProperty.Builder.() -> Unit)
-
-      /**
-       * @param secretArn The Amazon Resource Name (ARN) of the secret associated with the data
-       * source in AWS Secrets Manager .
-       */
-      public fun secretArn(secretArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty.builder()
-
-      /**
-       * @param copySourceArn The Amazon Resource Name (ARN) of a data source that has the
-       * credential pair that you want to use.
-       * When `CopySourceArn` is not null, the credential pair from the data source in the ARN is
-       * used as the credentials for the `DataSourceCredentials` structure.
-       */
-      override fun copySourceArn(copySourceArn: String) {
-        cdkBuilder.copySourceArn(copySourceArn)
-      }
-
-      /**
-       * @param credentialPair Credential pair.
-       * For more information, see
-       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
-       * .
-       */
-      override fun credentialPair(credentialPair: IResolvable) {
-        cdkBuilder.credentialPair(credentialPair.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param credentialPair Credential pair.
-       * For more information, see
-       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
-       * .
-       */
-      override fun credentialPair(credentialPair: CredentialPairProperty) {
-        cdkBuilder.credentialPair(credentialPair.let(CredentialPairProperty::unwrap))
-      }
-
-      /**
-       * @param credentialPair Credential pair.
-       * For more information, see
-       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("315871381c49148e355518ab9833e78ced1546740cad061b89e892cea02829dc")
-      override fun credentialPair(credentialPair: CredentialPairProperty.Builder.() -> Unit): Unit =
-          credentialPair(CredentialPairProperty(credentialPair))
-
-      /**
-       * @param secretArn The Amazon Resource Name (ARN) of the secret associated with the data
-       * source in AWS Secrets Manager .
-       */
-      override fun secretArn(secretArn: String) {
-        cdkBuilder.secretArn(secretArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty,
-    ) : CdkObject(cdkObject), DataSourceCredentialsProperty {
-      /**
-       * The Amazon Resource Name (ARN) of a data source that has the credential pair that you want
-       * to use.
-       *
-       * When `CopySourceArn` is not null, the credential pair from the data source in the ARN is
-       * used as the credentials for the `DataSourceCredentials` structure.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-copysourcearn)
-       */
-      override fun copySourceArn(): String? = unwrap(this).getCopySourceArn()
-
-      /**
-       * Credential pair.
-       *
-       * For more information, see
-       * `[CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html)`
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-credentialpair)
-       */
-      override fun credentialPair(): Any? = unwrap(this).getCredentialPair()
-
-      /**
-       * The Amazon Resource Name (ARN) of the secret associated with the data source in AWS Secrets
-       * Manager .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-secretarn)
-       */
-      override fun secretArn(): String? = unwrap(this).getSecretArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty):
-          DataSourceCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataSourceCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataSourceCredentialsProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty
-    }
-  }
-
-  /**
-   * The parameters for MySQL.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * MySqlParametersProperty mySqlParametersProperty = MySqlParametersProperty.builder()
+   * TeradataParametersProperty teradataParametersProperty = TeradataParametersProperty.builder()
    * .database("database")
    * .host("host")
    * .port(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html)
    */
-  public interface MySqlParametersProperty {
+  public interface TeradataParametersProperty {
     /**
      * Database.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-database)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-database)
      */
     public fun database(): String
 
     /**
      * Host.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-host)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-host)
      */
     public fun host(): String
 
     /**
      * Port.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-port)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-port)
      */
     public fun port(): Number
 
     /**
-     * A builder for [MySqlParametersProperty]
+     * A builder for [TeradataParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
@@ -5941,8 +6218,9 @@ public open class CfnDataSource internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty.builder()
 
       /**
        * @param database Database. 
@@ -5966,56 +6244,192 @@ public open class CfnDataSource internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty,
-    ) : CdkObject(cdkObject), MySqlParametersProperty {
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty,
+    ) : CdkObject(cdkObject), TeradataParametersProperty {
       /**
        * Database.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-database)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-database)
        */
       override fun database(): String = unwrap(this).getDatabase()
 
       /**
        * Host.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-host)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-host)
        */
       override fun host(): String = unwrap(this).getHost()
 
       /**
        * Port.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-port)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-port)
        */
       override fun port(): Number = unwrap(this).getPort()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MySqlParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TeradataParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty):
-          MySqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? MySqlParametersProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty):
+          TeradataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TeradataParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TeradataParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty
+    }
+  }
+
+  /**
+   * The parameters that are required to connect to a Trino data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * TrinoParametersProperty trinoParametersProperty = TrinoParametersProperty.builder()
+   * .catalog("catalog")
+   * .host("host")
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html)
+   */
+  public interface TrinoParametersProperty {
+    /**
+     * The catalog name for the Trino data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-catalog)
+     */
+    public fun catalog(): String
+
+    /**
+     * The host name of the Trino data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-host)
+     */
+    public fun host(): String
+
+    /**
+     * The port for the Trino data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-port)
+     */
+    public fun port(): Number
+
+    /**
+     * A builder for [TrinoParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalog The catalog name for the Trino data source. 
+       */
+      public fun catalog(catalog: String)
+
+      /**
+       * @param host The host name of the Trino data source. 
+       */
+      public fun host(host: String)
+
+      /**
+       * @param port The port for the Trino data source. 
+       */
+      public fun port(port: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty.builder()
+
+      /**
+       * @param catalog The catalog name for the Trino data source. 
+       */
+      override fun catalog(catalog: String) {
+        cdkBuilder.catalog(catalog)
+      }
+
+      /**
+       * @param host The host name of the Trino data source. 
+       */
+      override fun host(host: String) {
+        cdkBuilder.host(host)
+      }
+
+      /**
+       * @param port The port for the Trino data source. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty,
+    ) : CdkObject(cdkObject), TrinoParametersProperty {
+      /**
+       * The catalog name for the Trino data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-catalog)
+       */
+      override fun catalog(): String = unwrap(this).getCatalog()
+
+      /**
+       * The host name of the Trino data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-host)
+       */
+      override fun host(): String = unwrap(this).getHost()
+
+      /**
+       * The port for the Trino data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TrinoParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty):
+          TrinoParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? TrinoParametersProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MySqlParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty =
+      internal fun unwrap(wrapped: TrinoParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty
+          software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty
     }
   }
 
   /**
-   * The parameters for OpenSearch.
+   * VPC connection properties.
    *
    * Example:
    *
@@ -6023,492 +6437,78 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * AmazonElasticsearchParametersProperty amazonElasticsearchParametersProperty =
-   * AmazonElasticsearchParametersProperty.builder()
-   * .domain("domain")
+   * VpcConnectionPropertiesProperty vpcConnectionPropertiesProperty =
+   * VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonelasticsearchparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-vpcconnectionproperties.html)
    */
-  public interface AmazonElasticsearchParametersProperty {
+  public interface VpcConnectionPropertiesProperty {
     /**
-     * The OpenSearch domain.
+     * The Amazon Resource Name (ARN) for the VPC connection.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonelasticsearchparameters.html#cfn-quicksight-datasource-amazonelasticsearchparameters-domain)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-vpcconnectionproperties.html#cfn-quicksight-datasource-vpcconnectionproperties-vpcconnectionarn)
      */
-    public fun domain(): String
+    public fun vpcConnectionArn(): String
 
     /**
-     * A builder for [AmazonElasticsearchParametersProperty]
+     * A builder for [VpcConnectionPropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param domain The OpenSearch domain. 
+       * @param vpcConnectionArn The Amazon Resource Name (ARN) for the VPC connection. 
        */
-      public fun domain(domain: String)
+      public fun vpcConnectionArn(vpcConnectionArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty.Builder
+          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty.builder()
 
       /**
-       * @param domain The OpenSearch domain. 
+       * @param vpcConnectionArn The Amazon Resource Name (ARN) for the VPC connection. 
        */
-      override fun domain(domain: String) {
-        cdkBuilder.domain(domain)
+      override fun vpcConnectionArn(vpcConnectionArn: String) {
+        cdkBuilder.vpcConnectionArn(vpcConnectionArn)
       }
 
       public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty,
-    ) : CdkObject(cdkObject), AmazonElasticsearchParametersProperty {
-      /**
-       * The OpenSearch domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-amazonelasticsearchparameters.html#cfn-quicksight-datasource-amazonelasticsearchparameters-domain)
-       */
-      override fun domain(): String = unwrap(this).getDomain()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AmazonElasticsearchParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty):
-          AmazonElasticsearchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AmazonElasticsearchParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AmazonElasticsearchParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty
-    }
-  }
-
-  /**
-   * The required parameters that are needed to connect to a Databricks data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * DatabricksParametersProperty databricksParametersProperty =
-   * DatabricksParametersProperty.builder()
-   * .host("host")
-   * .port(123)
-   * .sqlEndpointPath("sqlEndpointPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html)
-   */
-  public interface DatabricksParametersProperty {
-    /**
-     * The host name of the Databricks data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-host)
-     */
-    public fun host(): String
-
-    /**
-     * The port for the Databricks data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-port)
-     */
-    public fun port(): Number
-
-    /**
-     * The HTTP path of the Databricks data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-sqlendpointpath)
-     */
-    public fun sqlEndpointPath(): String
-
-    /**
-     * A builder for [DatabricksParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param host The host name of the Databricks data source. 
-       */
-      public fun host(host: String)
-
-      /**
-       * @param port The port for the Databricks data source. 
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param sqlEndpointPath The HTTP path of the Databricks data source. 
-       */
-      public fun sqlEndpointPath(sqlEndpointPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty.builder()
-
-      /**
-       * @param host The host name of the Databricks data source. 
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param port The port for the Databricks data source. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param sqlEndpointPath The HTTP path of the Databricks data source. 
-       */
-      override fun sqlEndpointPath(sqlEndpointPath: String) {
-        cdkBuilder.sqlEndpointPath(sqlEndpointPath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty,
-    ) : CdkObject(cdkObject), DatabricksParametersProperty {
+          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty,
+    ) : CdkObject(cdkObject), VpcConnectionPropertiesProperty {
       /**
-       * The host name of the Databricks data source.
+       * The Amazon Resource Name (ARN) for the VPC connection.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-host)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-vpcconnectionproperties.html#cfn-quicksight-datasource-vpcconnectionproperties-vpcconnectionarn)
        */
-      override fun host(): String = unwrap(this).getHost()
-
-      /**
-       * The port for the Databricks data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-
-      /**
-       * The HTTP path of the Databricks data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-sqlendpointpath)
-       */
-      override fun sqlEndpointPath(): String = unwrap(this).getSqlEndpointPath()
+      override fun vpcConnectionArn(): String = unwrap(this).getVpcConnectionArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatabricksParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConnectionPropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty):
-          DatabricksParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DatabricksParametersProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty):
+          VpcConnectionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcConnectionPropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DatabricksParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty =
+      internal fun unwrap(wrapped: VpcConnectionPropertiesProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty
-    }
-  }
-
-  /**
-   * The parameters for PostgreSQL.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * PostgreSqlParametersProperty postgreSqlParametersProperty =
-   * PostgreSqlParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html)
-   */
-  public interface PostgreSqlParametersProperty {
-    /**
-     * Database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-database)
-     */
-    public fun database(): String
-
-    /**
-     * Host.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-host)
-     */
-    public fun host(): String
-
-    /**
-     * Port.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-port)
-     */
-    public fun port(): Number
-
-    /**
-     * A builder for [PostgreSqlParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param database Database. 
-       */
-      public fun database(database: String)
-
-      /**
-       * @param host Host. 
-       */
-      public fun host(host: String)
-
-      /**
-       * @param port Port. 
-       */
-      public fun port(port: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty.builder()
-
-      /**
-       * @param database Database. 
-       */
-      override fun database(database: String) {
-        cdkBuilder.database(database)
-      }
-
-      /**
-       * @param host Host. 
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param port Port. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty,
-    ) : CdkObject(cdkObject), PostgreSqlParametersProperty {
-      /**
-       * Database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-database)
-       */
-      override fun database(): String = unwrap(this).getDatabase()
-
-      /**
-       * Host.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-host)
-       */
-      override fun host(): String = unwrap(this).getHost()
-
-      /**
-       * Port.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PostgreSqlParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty):
-          PostgreSqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PostgreSqlParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PostgreSqlParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty
-    }
-  }
-
-  /**
-   * The parameters for MariaDB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * MariaDbParametersProperty mariaDbParametersProperty = MariaDbParametersProperty.builder()
-   * .database("database")
-   * .host("host")
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html)
-   */
-  public interface MariaDbParametersProperty {
-    /**
-     * Database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-database)
-     */
-    public fun database(): String
-
-    /**
-     * Host.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-host)
-     */
-    public fun host(): String
-
-    /**
-     * Port.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-port)
-     */
-    public fun port(): Number
-
-    /**
-     * A builder for [MariaDbParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param database Database. 
-       */
-      public fun database(database: String)
-
-      /**
-       * @param host Host. 
-       */
-      public fun host(host: String)
-
-      /**
-       * @param port Port. 
-       */
-      public fun port(port: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty.builder()
-
-      /**
-       * @param database Database. 
-       */
-      override fun database(database: String) {
-        cdkBuilder.database(database)
-      }
-
-      /**
-       * @param host Host. 
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param port Port. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty,
-    ) : CdkObject(cdkObject), MariaDbParametersProperty {
-      /**
-       * Database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-database)
-       */
-      override fun database(): String = unwrap(this).getDatabase()
-
-      /**
-       * Host.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-host)
-       */
-      override fun host(): String = unwrap(this).getHost()
-
-      /**
-       * Port.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MariaDbParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty):
-          MariaDbParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MariaDbParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MariaDbParametersProperty):
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty
+          software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty
     }
   }
 }

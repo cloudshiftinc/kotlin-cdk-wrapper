@@ -460,115 +460,6 @@ public open class CfnRotation internal constructor(
   }
 
   /**
-   * Information about on-call rotations that recur monthly.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
-   * MonthlySettingProperty monthlySettingProperty = MonthlySettingProperty.builder()
-   * .dayOfMonth(123)
-   * .handOffTime("handOffTime")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html)
-   */
-  public interface MonthlySettingProperty {
-    /**
-     * The day of the month when monthly recurring on-call rotations begin.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html#cfn-ssmcontacts-rotation-monthlysetting-dayofmonth)
-     */
-    public fun dayOfMonth(): Number
-
-    /**
-     * The time of day when a monthly recurring on-call shift rotation begins.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html#cfn-ssmcontacts-rotation-monthlysetting-handofftime)
-     */
-    public fun handOffTime(): String
-
-    /**
-     * A builder for [MonthlySettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dayOfMonth The day of the month when monthly recurring on-call rotations begin. 
-       */
-      public fun dayOfMonth(dayOfMonth: Number)
-
-      /**
-       * @param handOffTime The time of day when a monthly recurring on-call shift rotation begins. 
-       */
-      public fun handOffTime(handOffTime: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty.Builder =
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty.builder()
-
-      /**
-       * @param dayOfMonth The day of the month when monthly recurring on-call rotations begin. 
-       */
-      override fun dayOfMonth(dayOfMonth: Number) {
-        cdkBuilder.dayOfMonth(dayOfMonth)
-      }
-
-      /**
-       * @param handOffTime The time of day when a monthly recurring on-call shift rotation begins. 
-       */
-      override fun handOffTime(handOffTime: String) {
-        cdkBuilder.handOffTime(handOffTime)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty,
-    ) : CdkObject(cdkObject), MonthlySettingProperty {
-      /**
-       * The day of the month when monthly recurring on-call rotations begin.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html#cfn-ssmcontacts-rotation-monthlysetting-dayofmonth)
-       */
-      override fun dayOfMonth(): Number = unwrap(this).getDayOfMonth()
-
-      /**
-       * The time of day when a monthly recurring on-call shift rotation begins.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html#cfn-ssmcontacts-rotation-monthlysetting-handofftime)
-       */
-      override fun handOffTime(): String = unwrap(this).getHandOffTime()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonthlySettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty):
-          MonthlySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? MonthlySettingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonthlySettingProperty):
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty
-    }
-  }
-
-  /**
    * Information about when an on-call shift begins and ends.
    *
    * Example:
@@ -678,7 +569,7 @@ public open class CfnRotation internal constructor(
   }
 
   /**
-   * Information about rotations that recur weekly.
+   * Information about on-call rotations that recur monthly.
    *
    * Example:
    *
@@ -686,103 +577,103 @@ public open class CfnRotation internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
-   * WeeklySettingProperty weeklySettingProperty = WeeklySettingProperty.builder()
-   * .dayOfWeek("dayOfWeek")
+   * MonthlySettingProperty monthlySettingProperty = MonthlySettingProperty.builder()
+   * .dayOfMonth(123)
    * .handOffTime("handOffTime")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html)
    */
-  public interface WeeklySettingProperty {
+  public interface MonthlySettingProperty {
     /**
-     * The day of the week when weekly recurring on-call shift rotations begins.
+     * The day of the month when monthly recurring on-call rotations begin.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html#cfn-ssmcontacts-rotation-weeklysetting-dayofweek)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html#cfn-ssmcontacts-rotation-monthlysetting-dayofmonth)
      */
-    public fun dayOfWeek(): String
+    public fun dayOfMonth(): Number
 
     /**
-     * The time of day when a weekly recurring on-call shift rotation begins.
+     * The time of day when a monthly recurring on-call shift rotation begins.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html#cfn-ssmcontacts-rotation-weeklysetting-handofftime)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html#cfn-ssmcontacts-rotation-monthlysetting-handofftime)
      */
     public fun handOffTime(): String
 
     /**
-     * A builder for [WeeklySettingProperty]
+     * A builder for [MonthlySettingProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dayOfWeek The day of the week when weekly recurring on-call shift rotations begins. 
+       * @param dayOfMonth The day of the month when monthly recurring on-call rotations begin. 
        */
-      public fun dayOfWeek(dayOfWeek: String)
+      public fun dayOfMonth(dayOfMonth: Number)
 
       /**
-       * @param handOffTime The time of day when a weekly recurring on-call shift rotation begins. 
+       * @param handOffTime The time of day when a monthly recurring on-call shift rotation begins. 
        */
       public fun handOffTime(handOffTime: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty.Builder =
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty.builder()
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty.Builder =
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty.builder()
 
       /**
-       * @param dayOfWeek The day of the week when weekly recurring on-call shift rotations begins. 
+       * @param dayOfMonth The day of the month when monthly recurring on-call rotations begin. 
        */
-      override fun dayOfWeek(dayOfWeek: String) {
-        cdkBuilder.dayOfWeek(dayOfWeek)
+      override fun dayOfMonth(dayOfMonth: Number) {
+        cdkBuilder.dayOfMonth(dayOfMonth)
       }
 
       /**
-       * @param handOffTime The time of day when a weekly recurring on-call shift rotation begins. 
+       * @param handOffTime The time of day when a monthly recurring on-call shift rotation begins. 
        */
       override fun handOffTime(handOffTime: String) {
         cdkBuilder.handOffTime(handOffTime)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty =
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty,
-    ) : CdkObject(cdkObject), WeeklySettingProperty {
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty,
+    ) : CdkObject(cdkObject), MonthlySettingProperty {
       /**
-       * The day of the week when weekly recurring on-call shift rotations begins.
+       * The day of the month when monthly recurring on-call rotations begin.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html#cfn-ssmcontacts-rotation-weeklysetting-dayofweek)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html#cfn-ssmcontacts-rotation-monthlysetting-dayofmonth)
        */
-      override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
+      override fun dayOfMonth(): Number = unwrap(this).getDayOfMonth()
 
       /**
-       * The time of day when a weekly recurring on-call shift rotation begins.
+       * The time of day when a monthly recurring on-call shift rotation begins.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html#cfn-ssmcontacts-rotation-weeklysetting-handofftime)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html#cfn-ssmcontacts-rotation-monthlysetting-handofftime)
        */
       override fun handOffTime(): String = unwrap(this).getHandOffTime()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WeeklySettingProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonthlySettingProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty):
-          WeeklySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? WeeklySettingProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty):
+          MonthlySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? MonthlySettingProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: WeeklySettingProperty):
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty = (wrapped
+      internal fun unwrap(wrapped: MonthlySettingProperty):
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty
     }
   }
 
@@ -1249,6 +1140,115 @@ public open class CfnRotation internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.ShiftCoverageProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.ShiftCoverageProperty
+    }
+  }
+
+  /**
+   * Information about rotations that recur weekly.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
+   * WeeklySettingProperty weeklySettingProperty = WeeklySettingProperty.builder()
+   * .dayOfWeek("dayOfWeek")
+   * .handOffTime("handOffTime")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html)
+   */
+  public interface WeeklySettingProperty {
+    /**
+     * The day of the week when weekly recurring on-call shift rotations begins.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html#cfn-ssmcontacts-rotation-weeklysetting-dayofweek)
+     */
+    public fun dayOfWeek(): String
+
+    /**
+     * The time of day when a weekly recurring on-call shift rotation begins.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html#cfn-ssmcontacts-rotation-weeklysetting-handofftime)
+     */
+    public fun handOffTime(): String
+
+    /**
+     * A builder for [WeeklySettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dayOfWeek The day of the week when weekly recurring on-call shift rotations begins. 
+       */
+      public fun dayOfWeek(dayOfWeek: String)
+
+      /**
+       * @param handOffTime The time of day when a weekly recurring on-call shift rotation begins. 
+       */
+      public fun handOffTime(handOffTime: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty.Builder =
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty.builder()
+
+      /**
+       * @param dayOfWeek The day of the week when weekly recurring on-call shift rotations begins. 
+       */
+      override fun dayOfWeek(dayOfWeek: String) {
+        cdkBuilder.dayOfWeek(dayOfWeek)
+      }
+
+      /**
+       * @param handOffTime The time of day when a weekly recurring on-call shift rotation begins. 
+       */
+      override fun handOffTime(handOffTime: String) {
+        cdkBuilder.handOffTime(handOffTime)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty,
+    ) : CdkObject(cdkObject), WeeklySettingProperty {
+      /**
+       * The day of the week when weekly recurring on-call shift rotations begins.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html#cfn-ssmcontacts-rotation-weeklysetting-dayofweek)
+       */
+      override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
+
+      /**
+       * The time of day when a weekly recurring on-call shift rotation begins.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html#cfn-ssmcontacts-rotation-weeklysetting-handofftime)
+       */
+      override fun handOffTime(): String = unwrap(this).getHandOffTime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WeeklySettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty):
+          WeeklySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? WeeklySettingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WeeklySettingProperty):
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty
     }
   }
 }

@@ -1309,7 +1309,8 @@ public open class CfnFileSystem internal constructor(
   }
 
   /**
-   * The Microsoft Windows configuration for the file system that's being created.
+   * The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses
+   * of files, folders, and file shares on the Amazon FSx for Windows File Server file system.
    *
    * Example:
    *
@@ -1317,932 +1318,564 @@ public open class CfnFileSystem internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * WindowsConfigurationProperty windowsConfigurationProperty =
-   * WindowsConfigurationProperty.builder()
-   * .throughputCapacity(123)
-   * // the properties below are optional
-   * .activeDirectoryId("activeDirectoryId")
-   * .aliases(List.of("aliases"))
-   * .auditLogConfiguration(AuditLogConfigurationProperty.builder()
+   * AuditLogConfigurationProperty auditLogConfigurationProperty =
+   * AuditLogConfigurationProperty.builder()
    * .fileAccessAuditLogLevel("fileAccessAuditLogLevel")
    * .fileShareAccessAuditLogLevel("fileShareAccessAuditLogLevel")
    * // the properties below are optional
    * .auditLogDestination("auditLogDestination")
-   * .build())
-   * .automaticBackupRetentionDays(123)
-   * .copyTagsToBackups(false)
-   * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
-   * .deploymentType("deploymentType")
-   * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
-   * .iops(123)
-   * .mode("mode")
-   * .build())
-   * .preferredSubnetId("preferredSubnetId")
-   * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
-   * .dnsIps(List.of("dnsIps"))
-   * .domainName("domainName")
-   * .fileSystemAdministratorsGroup("fileSystemAdministratorsGroup")
-   * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
-   * .password("password")
-   * .userName("userName")
-   * .build())
-   * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html)
    */
-  public interface WindowsConfigurationProperty {
+  public interface AuditLogConfigurationProperty {
     /**
-     * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file
-     * system should join when it's created.
+     * The Amazon Resource Name (ARN) for the destination of the audit logs.
      *
-     * Required if you are joining the file system to an existing AWS Managed Microsoft AD.
+     * The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data
+     * Firehose delivery stream ARN.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid)
-     */
-    public fun activeDirectoryId(): String? = unwrap(this).getActiveDirectoryId()
-
-    /**
-     * An array of one or more DNS alias names that you want to associate with the Amazon FSx file
+     * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
+     * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix.
+     *
+     * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery
+     * stream) must be in the same AWS partition, AWS Region , and AWS account as your Amazon FSx file
      * system.
      *
-     * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
-     * system. You can associate up to 50 aliases with a file system at any time.
-     *
-     * For more information, see [Working with DNS
-     * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
-     * [Walkthrough 5: Using DNS aliases to access your file
-     * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
-     * , including additional steps you must take to be able to access your file system using a DNS
-     * alias.
-     *
-     * An alias name has to meet the following requirements:
-     *
-     * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
-     * `accounting.example.com` .
-     * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
-     * * Cannot start or end with a hyphen.
-     * * Can start with a numeric.
-     *
-     * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
-     * regardless of how you specify them: as uppercase letters, lowercase letters, or the
-     * corresponding letters in escape codes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-aliases)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-auditlogdestination)
      */
-    public fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+    public fun auditLogDestination(): String? = unwrap(this).getAuditLogDestination()
 
     /**
-     * The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses
-     * of files, folders, and file shares on the Amazon FSx for Windows File Server file system.
+     * Sets which attempt type is logged by Amazon FSx for file and folder accesses.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration)
+     * * `SUCCESS_ONLY` - only successful attempts to access files or folders are logged.
+     * * `FAILURE_ONLY` - only failed attempts to access files or folders are logged.
+     * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access files or
+     * folders are logged.
+     * * `DISABLED` - access auditing of files and folders is turned off.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-fileaccessauditloglevel)
      */
-    public fun auditLogConfiguration(): Any? = unwrap(this).getAuditLogConfiguration()
+    public fun fileAccessAuditLogLevel(): String
 
     /**
-     * The number of days to retain automatic backups.
+     * Sets which attempt type is logged by Amazon FSx for file share accesses.
      *
-     * Setting this property to `0` disables automatic backups. You can retain automatic backups for
-     * a maximum of 90 days. The default is `30` .
+     * * `SUCCESS_ONLY` - only successful attempts to access file shares are logged.
+     * * `FAILURE_ONLY` - only failed attempts to access file shares are logged.
+     * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access file shares
+     * are logged.
+     * * `DISABLED` - access auditing of file shares is turned off.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-fileshareaccessauditloglevel)
      */
-    public fun automaticBackupRetentionDays(): Number? =
-        unwrap(this).getAutomaticBackupRetentionDays()
+    public fun fileShareAccessAuditLogLevel(): String
 
     /**
-     * A boolean flag indicating whether tags for the file system should be copied to backups.
-     *
-     * This value defaults to false. If it's set to true, all tags for the file system are copied to
-     * all automatic and user-initiated backups where the user doesn't specify tags. If this value is
-     * true, and you specify one or more tags, only the specified tags are copied to backups. If you
-     * specify one or more tags when creating a user-initiated backup, no tags are copied from the file
-     * system, regardless of this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups)
-     */
-    public fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
-
-    /**
-     * A recurring daily time, in the format `HH:MM` .
-     *
-     * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-     * hour. For example, `05:00` specifies 5 AM daily.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)
-     */
-    public fun dailyAutomaticBackupStartTime(): String? =
-        unwrap(this).getDailyAutomaticBackupStartTime()
-
-    /**
-     * Specifies the file system deployment type, valid values are the following:.
-     *
-     * * `MULTI_AZ_1` - Deploys a high availability file system that is configured for Multi-AZ
-     * redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a
-     * Multi-AZ file system in AWS Regions that have a minimum of three Availability Zones. Also
-     * supports HDD storage type
-     * * `SINGLE_AZ_1` - (Default) Choose to deploy a file system that is configured for single AZ
-     * redundancy.
-     * * `SINGLE_AZ_2` - The latest generation Single AZ file system. Specifies a file system that
-     * is configured for single AZ redundancy and supports HDD storage type.
-     *
-     * For more information, see [Availability and Durability: Single-AZ and Multi-AZ File
-     * Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-deploymenttype)
-     */
-    public fun deploymentType(): String? = unwrap(this).getDeploymentType()
-
-    /**
-     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows
-     * file system.
-     *
-     * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
-     * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
-     * chosen throughput capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-diskiopsconfiguration)
-     */
-    public fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
-
-    /**
-     * Required when `DeploymentType` is set to `MULTI_AZ_1` .
-     *
-     * This specifies the subnet in which you want the preferred file server to be located. For in-
-     * AWS applications, we recommend that you launch your clients in the same availability zone as
-     * your preferred file server to reduce cross-availability zone data transfer costs and minimize
-     * latency.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid)
-     */
-    public fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
-
-    /**
-     * The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or
-     * an FSx for ONTAP storage virtual machine (SVM) to a self-managed (including on-premises)
-     * Microsoft Active Directory (AD) directory.
-     *
-     * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
-     * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
-     * [Managing FSx for ONTAP
-     * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)
-     */
-    public fun selfManagedActiveDirectoryConfiguration(): Any? =
-        unwrap(this).getSelfManagedActiveDirectoryConfiguration()
-
-    /**
-     * Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second
-     * (MB/s), in 2 to the *n* th increments, between 2^3 (8) and 2^11 (2048).
-     *
-     *
-     * To increase storage capacity, a file system must have a minimum throughput capacity of 16
-     * MB/s.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity)
-     */
-    public fun throughputCapacity(): Number
-
-    /**
-     * A recurring weekly time, in the format `D:HH:MM` .
-     *
-     * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-     * further details, see [the ISO-8601 spec as described on
-     * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-     *
-     * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-     * hour.
-     *
-     * For example, `1:05:00` specifies maintenance at 5 AM Monday.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime)
-     */
-    public fun weeklyMaintenanceStartTime(): String? = unwrap(this).getWeeklyMaintenanceStartTime()
-
-    /**
-     * A builder for [WindowsConfigurationProperty]
+     * A builder for [AuditLogConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param activeDirectoryId The ID for an existing AWS Managed Microsoft Active Directory (AD)
-       * instance that the file system should join when it's created.
-       * Required if you are joining the file system to an existing AWS Managed Microsoft AD.
-       */
-      public fun activeDirectoryId(activeDirectoryId: String)
-
-      /**
-       * @param aliases An array of one or more DNS alias names that you want to associate with the
-       * Amazon FSx file system.
-       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
-       * system. You can associate up to 50 aliases with a file system at any time.
+       * @param auditLogDestination The Amazon Resource Name (ARN) for the destination of the audit
+       * logs.
+       * The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data
+       * Firehose delivery stream ARN.
        *
-       * For more information, see [Working with DNS
-       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
-       * [Walkthrough 5: Using DNS aliases to access your file
-       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
-       * , including additional steps you must take to be able to access your file system using a DNS
-       * alias.
+       * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
+       * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix.
        *
-       * An alias name has to meet the following requirements:
-       *
-       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
-       * `accounting.example.com` .
-       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
-       * * Cannot start or end with a hyphen.
-       * * Can start with a numeric.
-       *
-       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
-       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
-       * corresponding letters in escape codes.
+       * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery
+       * stream) must be in the same AWS partition, AWS Region , and AWS account as your Amazon FSx
+       * file system.
        */
-      public fun aliases(aliases: List<String>)
+      public fun auditLogDestination(auditLogDestination: String)
 
       /**
-       * @param aliases An array of one or more DNS alias names that you want to associate with the
-       * Amazon FSx file system.
-       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
-       * system. You can associate up to 50 aliases with a file system at any time.
-       *
-       * For more information, see [Working with DNS
-       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
-       * [Walkthrough 5: Using DNS aliases to access your file
-       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
-       * , including additional steps you must take to be able to access your file system using a DNS
-       * alias.
-       *
-       * An alias name has to meet the following requirements:
-       *
-       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
-       * `accounting.example.com` .
-       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
-       * * Cannot start or end with a hyphen.
-       * * Can start with a numeric.
-       *
-       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
-       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
-       * corresponding letters in escape codes.
+       * @param fileAccessAuditLogLevel Sets which attempt type is logged by Amazon FSx for file and
+       * folder accesses. 
+       * * `SUCCESS_ONLY` - only successful attempts to access files or folders are logged.
+       * * `FAILURE_ONLY` - only failed attempts to access files or folders are logged.
+       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access files or
+       * folders are logged.
+       * * `DISABLED` - access auditing of files and folders is turned off.
        */
-      public fun aliases(vararg aliases: String)
+      public fun fileAccessAuditLogLevel(fileAccessAuditLogLevel: String)
 
       /**
-       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
-       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
-       * Windows File Server file system.
+       * @param fileShareAccessAuditLogLevel Sets which attempt type is logged by Amazon FSx for
+       * file share accesses. 
+       * * `SUCCESS_ONLY` - only successful attempts to access file shares are logged.
+       * * `FAILURE_ONLY` - only failed attempts to access file shares are logged.
+       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access file
+       * shares are logged.
+       * * `DISABLED` - access auditing of file shares is turned off.
        */
-      public fun auditLogConfiguration(auditLogConfiguration: IResolvable)
-
-      /**
-       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
-       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
-       * Windows File Server file system.
-       */
-      public fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty)
-
-      /**
-       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
-       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
-       * Windows File Server file system.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e3607c85da94b03db39fd8d5195dc2332a907b139d68ddcb6e4bfb47fe033a4f")
-      public
-          fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param automaticBackupRetentionDays The number of days to retain automatic backups.
-       * Setting this property to `0` disables automatic backups. You can retain automatic backups
-       * for a maximum of 90 days. The default is `30` .
-       */
-      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number)
-
-      /**
-       * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should
-       * be copied to backups.
-       * This value defaults to false. If it's set to true, all tags for the file system are copied
-       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
-       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
-       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
-       * the file system, regardless of this value.
-       */
-      public fun copyTagsToBackups(copyTagsToBackups: Boolean)
-
-      /**
-       * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should
-       * be copied to backups.
-       * This value defaults to false. If it's set to true, all tags for the file system are copied
-       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
-       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
-       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
-       * the file system, regardless of this value.
-       */
-      public fun copyTagsToBackups(copyTagsToBackups: IResolvable)
-
-      /**
-       * @param dailyAutomaticBackupStartTime A recurring daily time, in the format `HH:MM` .
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour. For example, `05:00` specifies 5 AM daily.
-       */
-      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String)
-
-      /**
-       * @param deploymentType Specifies the file system deployment type, valid values are the
-       * following:.
-       * * `MULTI_AZ_1` - Deploys a high availability file system that is configured for Multi-AZ
-       * redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a
-       * Multi-AZ file system in AWS Regions that have a minimum of three Availability Zones. Also
-       * supports HDD storage type
-       * * `SINGLE_AZ_1` - (Default) Choose to deploy a file system that is configured for single AZ
-       * redundancy.
-       * * `SINGLE_AZ_2` - The latest generation Single AZ file system. Specifies a file system that
-       * is configured for single AZ redundancy and supports HDD storage type.
-       *
-       * For more information, see [Availability and Durability: Single-AZ and Multi-AZ File
-       * Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) .
-       */
-      public fun deploymentType(deploymentType: String)
-
-      /**
-       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
-       * configuration for an Amazon FSx for Windows file system.
-       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
-       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
-       * chosen throughput capacity.
-       */
-      public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable)
-
-      /**
-       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
-       * configuration for an Amazon FSx for Windows file system.
-       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
-       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
-       * chosen throughput capacity.
-       */
-      public fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty)
-
-      /**
-       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
-       * configuration for an Amazon FSx for Windows file system.
-       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
-       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
-       * chosen throughput capacity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("629a73cb1184c8d8e6e1aeee2e1a17222f7701a575244823c03d524616c7c576")
-      public
-          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` .
-       * This specifies the subnet in which you want the preferred file server to be located. For
-       * in- AWS applications, we recommend that you launch your clients in the same availability zone
-       * as your preferred file server to reduce cross-availability zone data transfer costs and
-       * minimize latency.
-       */
-      public fun preferredSubnetId(preferredSubnetId: String)
-
-      /**
-       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
-       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
-       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
-       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
-       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
-       * [Managing FSx for ONTAP
-       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
-       */
-      public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable)
-
-      /**
-       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
-       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
-       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
-       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
-       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
-       * [Managing FSx for ONTAP
-       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
-       */
-      public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty)
-
-      /**
-       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
-       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
-       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
-       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
-       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
-       * [Managing FSx for ONTAP
-       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bfc424b18d560f4ccb1d00ec2edf493cf56bd33b079c038bcdeeb7e29a499969")
-      public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param throughputCapacity Sets the throughput capacity of an Amazon FSx file system,
-       * measured in megabytes per second (MB/s), in 2 to the *n* th increments, between 2^3 (8) and
-       * 2^11 (2048). 
-       *
-       * To increase storage capacity, a file system must have a minimum throughput capacity of 16
-       * MB/s.
-       */
-      public fun throughputCapacity(throughputCapacity: Number)
-
-      /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
-       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
-       */
-      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
+      public fun fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty.builder()
+          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty.builder()
 
       /**
-       * @param activeDirectoryId The ID for an existing AWS Managed Microsoft Active Directory (AD)
-       * instance that the file system should join when it's created.
-       * Required if you are joining the file system to an existing AWS Managed Microsoft AD.
-       */
-      override fun activeDirectoryId(activeDirectoryId: String) {
-        cdkBuilder.activeDirectoryId(activeDirectoryId)
-      }
-
-      /**
-       * @param aliases An array of one or more DNS alias names that you want to associate with the
-       * Amazon FSx file system.
-       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
-       * system. You can associate up to 50 aliases with a file system at any time.
+       * @param auditLogDestination The Amazon Resource Name (ARN) for the destination of the audit
+       * logs.
+       * The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data
+       * Firehose delivery stream ARN.
        *
-       * For more information, see [Working with DNS
-       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
-       * [Walkthrough 5: Using DNS aliases to access your file
-       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
-       * , including additional steps you must take to be able to access your file system using a DNS
-       * alias.
+       * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
+       * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix.
        *
-       * An alias name has to meet the following requirements:
-       *
-       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
-       * `accounting.example.com` .
-       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
-       * * Cannot start or end with a hyphen.
-       * * Can start with a numeric.
-       *
-       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
-       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
-       * corresponding letters in escape codes.
+       * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery
+       * stream) must be in the same AWS partition, AWS Region , and AWS account as your Amazon FSx
+       * file system.
        */
-      override fun aliases(aliases: List<String>) {
-        cdkBuilder.aliases(aliases)
+      override fun auditLogDestination(auditLogDestination: String) {
+        cdkBuilder.auditLogDestination(auditLogDestination)
       }
 
       /**
-       * @param aliases An array of one or more DNS alias names that you want to associate with the
-       * Amazon FSx file system.
-       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
-       * system. You can associate up to 50 aliases with a file system at any time.
-       *
-       * For more information, see [Working with DNS
-       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
-       * [Walkthrough 5: Using DNS aliases to access your file
-       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
-       * , including additional steps you must take to be able to access your file system using a DNS
-       * alias.
-       *
-       * An alias name has to meet the following requirements:
-       *
-       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
-       * `accounting.example.com` .
-       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
-       * * Cannot start or end with a hyphen.
-       * * Can start with a numeric.
-       *
-       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
-       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
-       * corresponding letters in escape codes.
+       * @param fileAccessAuditLogLevel Sets which attempt type is logged by Amazon FSx for file and
+       * folder accesses. 
+       * * `SUCCESS_ONLY` - only successful attempts to access files or folders are logged.
+       * * `FAILURE_ONLY` - only failed attempts to access files or folders are logged.
+       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access files or
+       * folders are logged.
+       * * `DISABLED` - access auditing of files and folders is turned off.
        */
-      override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
-
-      /**
-       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
-       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
-       * Windows File Server file system.
-       */
-      override fun auditLogConfiguration(auditLogConfiguration: IResolvable) {
-        cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(IResolvable::unwrap))
+      override fun fileAccessAuditLogLevel(fileAccessAuditLogLevel: String) {
+        cdkBuilder.fileAccessAuditLogLevel(fileAccessAuditLogLevel)
       }
 
       /**
-       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
-       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
-       * Windows File Server file system.
+       * @param fileShareAccessAuditLogLevel Sets which attempt type is logged by Amazon FSx for
+       * file share accesses. 
+       * * `SUCCESS_ONLY` - only successful attempts to access file shares are logged.
+       * * `FAILURE_ONLY` - only failed attempts to access file shares are logged.
+       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access file
+       * shares are logged.
+       * * `DISABLED` - access auditing of file shares is turned off.
        */
-      override fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty) {
-        cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(AuditLogConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
-       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
-       * Windows File Server file system.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e3607c85da94b03db39fd8d5195dc2332a907b139d68ddcb6e4bfb47fe033a4f")
-      override
-          fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty.Builder.() -> Unit):
-          Unit = auditLogConfiguration(AuditLogConfigurationProperty(auditLogConfiguration))
-
-      /**
-       * @param automaticBackupRetentionDays The number of days to retain automatic backups.
-       * Setting this property to `0` disables automatic backups. You can retain automatic backups
-       * for a maximum of 90 days. The default is `30` .
-       */
-      override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
-        cdkBuilder.automaticBackupRetentionDays(automaticBackupRetentionDays)
-      }
-
-      /**
-       * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should
-       * be copied to backups.
-       * This value defaults to false. If it's set to true, all tags for the file system are copied
-       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
-       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
-       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
-       * the file system, regardless of this value.
-       */
-      override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
-        cdkBuilder.copyTagsToBackups(copyTagsToBackups)
-      }
-
-      /**
-       * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should
-       * be copied to backups.
-       * This value defaults to false. If it's set to true, all tags for the file system are copied
-       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
-       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
-       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
-       * the file system, regardless of this value.
-       */
-      override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
-        cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dailyAutomaticBackupStartTime A recurring daily time, in the format `HH:MM` .
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour. For example, `05:00` specifies 5 AM daily.
-       */
-      override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
-        cdkBuilder.dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime)
-      }
-
-      /**
-       * @param deploymentType Specifies the file system deployment type, valid values are the
-       * following:.
-       * * `MULTI_AZ_1` - Deploys a high availability file system that is configured for Multi-AZ
-       * redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a
-       * Multi-AZ file system in AWS Regions that have a minimum of three Availability Zones. Also
-       * supports HDD storage type
-       * * `SINGLE_AZ_1` - (Default) Choose to deploy a file system that is configured for single AZ
-       * redundancy.
-       * * `SINGLE_AZ_2` - The latest generation Single AZ file system. Specifies a file system that
-       * is configured for single AZ redundancy and supports HDD storage type.
-       *
-       * For more information, see [Availability and Durability: Single-AZ and Multi-AZ File
-       * Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) .
-       */
-      override fun deploymentType(deploymentType: String) {
-        cdkBuilder.deploymentType(deploymentType)
-      }
-
-      /**
-       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
-       * configuration for an Amazon FSx for Windows file system.
-       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
-       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
-       * chosen throughput capacity.
-       */
-      override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
-        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
-       * configuration for an Amazon FSx for Windows file system.
-       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
-       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
-       * chosen throughput capacity.
-       */
-      override fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
-        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
-       * configuration for an Amazon FSx for Windows file system.
-       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
-       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
-       * chosen throughput capacity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("629a73cb1184c8d8e6e1aeee2e1a17222f7701a575244823c03d524616c7c576")
-      override
-          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit):
-          Unit = diskIopsConfiguration(DiskIopsConfigurationProperty(diskIopsConfiguration))
-
-      /**
-       * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` .
-       * This specifies the subnet in which you want the preferred file server to be located. For
-       * in- AWS applications, we recommend that you launch your clients in the same availability zone
-       * as your preferred file server to reduce cross-availability zone data transfer costs and
-       * minimize latency.
-       */
-      override fun preferredSubnetId(preferredSubnetId: String) {
-        cdkBuilder.preferredSubnetId(preferredSubnetId)
-      }
-
-      /**
-       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
-       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
-       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
-       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
-       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
-       * [Managing FSx for ONTAP
-       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
-       */
-      override
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
-        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
-       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
-       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
-       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
-       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
-       * [Managing FSx for ONTAP
-       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
-       */
-      override
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty) {
-        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(SelfManagedActiveDirectoryConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
-       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
-       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
-       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
-       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
-       * [Managing FSx for ONTAP
-       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bfc424b18d560f4ccb1d00ec2edf493cf56bd33b079c038bcdeeb7e29a499969")
-      override
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty(selfManagedActiveDirectoryConfiguration))
-
-      /**
-       * @param throughputCapacity Sets the throughput capacity of an Amazon FSx file system,
-       * measured in megabytes per second (MB/s), in 2 to the *n* th increments, between 2^3 (8) and
-       * 2^11 (2048). 
-       *
-       * To increase storage capacity, a file system must have a minimum throughput capacity of 16
-       * MB/s.
-       */
-      override fun throughputCapacity(throughputCapacity: Number) {
-        cdkBuilder.throughputCapacity(throughputCapacity)
-      }
-
-      /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
-       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
-       */
-      override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
-        cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime)
+      override fun fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel: String) {
+        cdkBuilder.fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel)
       }
 
       public fun build():
-          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty,
-    ) : CdkObject(cdkObject), WindowsConfigurationProperty {
+          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty,
+    ) : CdkObject(cdkObject), AuditLogConfigurationProperty {
       /**
-       * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file
-       * system should join when it's created.
+       * The Amazon Resource Name (ARN) for the destination of the audit logs.
        *
-       * Required if you are joining the file system to an existing AWS Managed Microsoft AD.
+       * The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data
+       * Firehose delivery stream ARN.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid)
+       * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
+       * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix.
+       *
+       * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery
+       * stream) must be in the same AWS partition, AWS Region , and AWS account as your Amazon FSx
+       * file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-auditlogdestination)
        */
-      override fun activeDirectoryId(): String? = unwrap(this).getActiveDirectoryId()
+      override fun auditLogDestination(): String? = unwrap(this).getAuditLogDestination()
 
       /**
-       * An array of one or more DNS alias names that you want to associate with the Amazon FSx file
-       * system.
+       * Sets which attempt type is logged by Amazon FSx for file and folder accesses.
        *
-       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
-       * system. You can associate up to 50 aliases with a file system at any time.
+       * * `SUCCESS_ONLY` - only successful attempts to access files or folders are logged.
+       * * `FAILURE_ONLY` - only failed attempts to access files or folders are logged.
+       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access files or
+       * folders are logged.
+       * * `DISABLED` - access auditing of files and folders is turned off.
        *
-       * For more information, see [Working with DNS
-       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
-       * [Walkthrough 5: Using DNS aliases to access your file
-       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
-       * , including additional steps you must take to be able to access your file system using a DNS
-       * alias.
-       *
-       * An alias name has to meet the following requirements:
-       *
-       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
-       * `accounting.example.com` .
-       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
-       * * Cannot start or end with a hyphen.
-       * * Can start with a numeric.
-       *
-       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
-       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
-       * corresponding letters in escape codes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-aliases)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-fileaccessauditloglevel)
        */
-      override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+      override fun fileAccessAuditLogLevel(): String = unwrap(this).getFileAccessAuditLogLevel()
 
       /**
-       * The configuration that Amazon FSx for Windows File Server uses to audit and log user
-       * accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file
-       * system.
+       * Sets which attempt type is logged by Amazon FSx for file share accesses.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration)
+       * * `SUCCESS_ONLY` - only successful attempts to access file shares are logged.
+       * * `FAILURE_ONLY` - only failed attempts to access file shares are logged.
+       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access file
+       * shares are logged.
+       * * `DISABLED` - access auditing of file shares is turned off.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-fileshareaccessauditloglevel)
        */
-      override fun auditLogConfiguration(): Any? = unwrap(this).getAuditLogConfiguration()
-
-      /**
-       * The number of days to retain automatic backups.
-       *
-       * Setting this property to `0` disables automatic backups. You can retain automatic backups
-       * for a maximum of 90 days. The default is `30` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays)
-       */
-      override fun automaticBackupRetentionDays(): Number? =
-          unwrap(this).getAutomaticBackupRetentionDays()
-
-      /**
-       * A boolean flag indicating whether tags for the file system should be copied to backups.
-       *
-       * This value defaults to false. If it's set to true, all tags for the file system are copied
-       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
-       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
-       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
-       * the file system, regardless of this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups)
-       */
-      override fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
-
-      /**
-       * A recurring daily time, in the format `HH:MM` .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour. For example, `05:00` specifies 5 AM daily.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)
-       */
-      override fun dailyAutomaticBackupStartTime(): String? =
-          unwrap(this).getDailyAutomaticBackupStartTime()
-
-      /**
-       * Specifies the file system deployment type, valid values are the following:.
-       *
-       * * `MULTI_AZ_1` - Deploys a high availability file system that is configured for Multi-AZ
-       * redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a
-       * Multi-AZ file system in AWS Regions that have a minimum of three Availability Zones. Also
-       * supports HDD storage type
-       * * `SINGLE_AZ_1` - (Default) Choose to deploy a file system that is configured for single AZ
-       * redundancy.
-       * * `SINGLE_AZ_2` - The latest generation Single AZ file system. Specifies a file system that
-       * is configured for single AZ redundancy and supports HDD storage type.
-       *
-       * For more information, see [Availability and Durability: Single-AZ and Multi-AZ File
-       * Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-deploymenttype)
-       */
-      override fun deploymentType(): String? = unwrap(this).getDeploymentType()
-
-      /**
-       * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for
-       * Windows file system.
-       *
-       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
-       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
-       * chosen throughput capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-diskiopsconfiguration)
-       */
-      override fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
-
-      /**
-       * Required when `DeploymentType` is set to `MULTI_AZ_1` .
-       *
-       * This specifies the subnet in which you want the preferred file server to be located. For
-       * in- AWS applications, we recommend that you launch your clients in the same availability zone
-       * as your preferred file server to reduce cross-availability zone data transfer costs and
-       * minimize latency.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid)
-       */
-      override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
-
-      /**
-       * The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or
-       * an FSx for ONTAP storage virtual machine (SVM) to a self-managed (including on-premises)
-       * Microsoft Active Directory (AD) directory.
-       *
-       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
-       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
-       * [Managing FSx for ONTAP
-       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)
-       */
-      override fun selfManagedActiveDirectoryConfiguration(): Any? =
-          unwrap(this).getSelfManagedActiveDirectoryConfiguration()
-
-      /**
-       * Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second
-       * (MB/s), in 2 to the *n* th increments, between 2^3 (8) and 2^11 (2048).
-       *
-       *
-       * To increase storage capacity, a file system must have a minimum throughput capacity of 16
-       * MB/s.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity)
-       */
-      override fun throughputCapacity(): Number = unwrap(this).getThroughputCapacity()
-
-      /**
-       * A recurring weekly time, in the format `D:HH:MM` .
-       *
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
-       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime)
-       */
-      override fun weeklyMaintenanceStartTime(): String? =
-          unwrap(this).getWeeklyMaintenanceStartTime()
+      override fun fileShareAccessAuditLogLevel(): String =
+          unwrap(this).getFileShareAccessAuditLogLevel()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WindowsConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AuditLogConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty):
-          WindowsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WindowsConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty):
+          AuditLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuditLogConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: WindowsConfigurationProperty):
-          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty = (wrapped
+      internal fun unwrap(wrapped: AuditLogConfigurationProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty
+          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies who can mount an OpenZFS file system and the options available while mounting the
+   * file system.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * ClientConfigurationsProperty clientConfigurationsProperty =
+   * ClientConfigurationsProperty.builder()
+   * .clients("clients")
+   * .options(List.of("options"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html)
+   */
+  public interface ClientConfigurationsProperty {
+    /**
+     * A value that specifies who can mount the file system.
+     *
+     * You can provide a wildcard character ( `*` ), an IP address ( `0.0.0.0` ), or a CIDR address
+     * ( `192.0.2.0/24` ). By default, Amazon FSx uses the wildcard character when specifying the
+     * client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html#cfn-fsx-filesystem-clientconfigurations-clients)
+     */
+    public fun clients(): String? = unwrap(this).getClients()
+
+    /**
+     * The options to use when mounting the file system.
+     *
+     * For a list of options that you can use with Network File System (NFS), see the [exports(5) -
+     * Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports) . When choosing
+     * your options, consider the following:
+     *
+     * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
+     * configuration, you won't be able to see or access snapshots in your file system's snapshot
+     * directory.
+     * * `sync` is used by default. If you instead specify `async` , the system acknowledges writes
+     * before writing to disk. If the system crashes before the writes are finished, you lose the
+     * unwritten data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html#cfn-fsx-filesystem-clientconfigurations-options)
+     */
+    public fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
+
+    /**
+     * A builder for [ClientConfigurationsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clients A value that specifies who can mount the file system.
+       * You can provide a wildcard character ( `*` ), an IP address ( `0.0.0.0` ), or a CIDR
+       * address ( `192.0.2.0/24` ). By default, Amazon FSx uses the wildcard character when specifying
+       * the client.
+       */
+      public fun clients(clients: String)
+
+      /**
+       * @param options The options to use when mounting the file system.
+       * For a list of options that you can use with Network File System (NFS), see the
+       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
+       * . When choosing your options, consider the following:
+       *
+       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
+       * configuration, you won't be able to see or access snapshots in your file system's snapshot
+       * directory.
+       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
+       * writes before writing to disk. If the system crashes before the writes are finished, you lose
+       * the unwritten data.
+       */
+      public fun options(options: List<String>)
+
+      /**
+       * @param options The options to use when mounting the file system.
+       * For a list of options that you can use with Network File System (NFS), see the
+       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
+       * . When choosing your options, consider the following:
+       *
+       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
+       * configuration, you won't be able to see or access snapshots in your file system's snapshot
+       * directory.
+       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
+       * writes before writing to disk. If the system crashes before the writes are finished, you lose
+       * the unwritten data.
+       */
+      public fun options(vararg options: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty.builder()
+
+      /**
+       * @param clients A value that specifies who can mount the file system.
+       * You can provide a wildcard character ( `*` ), an IP address ( `0.0.0.0` ), or a CIDR
+       * address ( `192.0.2.0/24` ). By default, Amazon FSx uses the wildcard character when specifying
+       * the client.
+       */
+      override fun clients(clients: String) {
+        cdkBuilder.clients(clients)
+      }
+
+      /**
+       * @param options The options to use when mounting the file system.
+       * For a list of options that you can use with Network File System (NFS), see the
+       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
+       * . When choosing your options, consider the following:
+       *
+       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
+       * configuration, you won't be able to see or access snapshots in your file system's snapshot
+       * directory.
+       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
+       * writes before writing to disk. If the system crashes before the writes are finished, you lose
+       * the unwritten data.
+       */
+      override fun options(options: List<String>) {
+        cdkBuilder.options(options)
+      }
+
+      /**
+       * @param options The options to use when mounting the file system.
+       * For a list of options that you can use with Network File System (NFS), see the
+       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
+       * . When choosing your options, consider the following:
+       *
+       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
+       * configuration, you won't be able to see or access snapshots in your file system's snapshot
+       * directory.
+       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
+       * writes before writing to disk. If the system crashes before the writes are finished, you lose
+       * the unwritten data.
+       */
+      override fun options(vararg options: String): Unit = options(options.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty,
+    ) : CdkObject(cdkObject), ClientConfigurationsProperty {
+      /**
+       * A value that specifies who can mount the file system.
+       *
+       * You can provide a wildcard character ( `*` ), an IP address ( `0.0.0.0` ), or a CIDR
+       * address ( `192.0.2.0/24` ). By default, Amazon FSx uses the wildcard character when specifying
+       * the client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html#cfn-fsx-filesystem-clientconfigurations-clients)
+       */
+      override fun clients(): String? = unwrap(this).getClients()
+
+      /**
+       * The options to use when mounting the file system.
+       *
+       * For a list of options that you can use with Network File System (NFS), see the
+       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
+       * . When choosing your options, consider the following:
+       *
+       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
+       * configuration, you won't be able to see or access snapshots in your file system's snapshot
+       * directory.
+       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
+       * writes before writing to disk. If the system crashes before the writes are finished, you lose
+       * the unwritten data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html#cfn-fsx-filesystem-clientconfigurations-options)
+       */
+      override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClientConfigurationsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty):
+          ClientConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientConfigurationsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClientConfigurationsProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty
+    }
+  }
+
+  /**
+   * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp
+   * ONTAP, Amazon FSx for Windows File Server, or FSx for OpenZFS file system.
+   *
+   * By default, Amazon FSx automatically provisions 3 IOPS per GB of storage capacity. You can
+   * provision additional IOPS per GB of storage. The configuration consists of the total number of
+   * provisioned SSD IOPS and how it is was provisioned, or the mode (by the customer or by Amazon
+   * FSx).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * DiskIopsConfigurationProperty diskIopsConfigurationProperty =
+   * DiskIopsConfigurationProperty.builder()
+   * .iops(123)
+   * .mode("mode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html)
+   */
+  public interface DiskIopsConfigurationProperty {
+    /**
+     * The total number of SSD IOPS provisioned for the file system.
+     *
+     * The minimum and maximum values for this property depend on the value of `HAPairs` and
+     * `StorageCapacity` . The minimum value is calculated as `StorageCapacity` * 3 * `HAPairs` (3 IOPS
+     * per GB of `StorageCapacity` ). The maximum value is calculated as 200,000 * `HAPairs` .
+     *
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of `Iops` is
+     * outside of the minimum or maximum values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS of 3 IOPS per
+     * GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-mode)
+     */
+    public fun mode(): String? = unwrap(this).getMode()
+
+    /**
+     * A builder for [DiskIopsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param iops The total number of SSD IOPS provisioned for the file system.
+       * The minimum and maximum values for this property depend on the value of `HAPairs` and
+       * `StorageCapacity` . The minimum value is calculated as `StorageCapacity` * 3 * `HAPairs` (3
+       * IOPS per GB of `StorageCapacity` ). The maximum value is calculated as 200,000 * `HAPairs` .
+       *
+       * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of `Iops` is
+       * outside of the minimum or maximum values.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param mode Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS
+       * of 3 IOPS per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+       */
+      public fun mode(mode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty.builder()
+
+      /**
+       * @param iops The total number of SSD IOPS provisioned for the file system.
+       * The minimum and maximum values for this property depend on the value of `HAPairs` and
+       * `StorageCapacity` . The minimum value is calculated as `StorageCapacity` * 3 * `HAPairs` (3
+       * IOPS per GB of `StorageCapacity` ). The maximum value is calculated as 200,000 * `HAPairs` .
+       *
+       * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of `Iops` is
+       * outside of the minimum or maximum values.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param mode Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS
+       * of 3 IOPS per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty,
+    ) : CdkObject(cdkObject), DiskIopsConfigurationProperty {
+      /**
+       * The total number of SSD IOPS provisioned for the file system.
+       *
+       * The minimum and maximum values for this property depend on the value of `HAPairs` and
+       * `StorageCapacity` . The minimum value is calculated as `StorageCapacity` * 3 * `HAPairs` (3
+       * IOPS per GB of `StorageCapacity` ). The maximum value is calculated as 200,000 * `HAPairs` .
+       *
+       * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of `Iops` is
+       * outside of the minimum or maximum values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS of 3 IOPS
+       * per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-mode)
+       */
+      override fun mode(): String? = unwrap(this).getMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DiskIopsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty):
+          DiskIopsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DiskIopsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DiskIopsConfigurationProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty
     }
   }
 
@@ -3241,8 +2874,7 @@ public open class CfnFileSystem internal constructor(
   }
 
   /**
-   * The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses
-   * of files, folders, and file shares on the Amazon FSx for Windows File Server file system.
+   * The configuration object for mounting a file system.
    *
    * Example:
    *
@@ -3250,418 +2882,108 @@ public open class CfnFileSystem internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * AuditLogConfigurationProperty auditLogConfigurationProperty =
-   * AuditLogConfigurationProperty.builder()
-   * .fileAccessAuditLogLevel("fileAccessAuditLogLevel")
-   * .fileShareAccessAuditLogLevel("fileShareAccessAuditLogLevel")
-   * // the properties below are optional
-   * .auditLogDestination("auditLogDestination")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html)
-   */
-  public interface AuditLogConfigurationProperty {
-    /**
-     * The Amazon Resource Name (ARN) for the destination of the audit logs.
-     *
-     * The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data
-     * Firehose delivery stream ARN.
-     *
-     * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
-     * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix.
-     *
-     * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery
-     * stream) must be in the same AWS partition, AWS Region , and AWS account as your Amazon FSx file
-     * system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-auditlogdestination)
-     */
-    public fun auditLogDestination(): String? = unwrap(this).getAuditLogDestination()
-
-    /**
-     * Sets which attempt type is logged by Amazon FSx for file and folder accesses.
-     *
-     * * `SUCCESS_ONLY` - only successful attempts to access files or folders are logged.
-     * * `FAILURE_ONLY` - only failed attempts to access files or folders are logged.
-     * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access files or
-     * folders are logged.
-     * * `DISABLED` - access auditing of files and folders is turned off.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-fileaccessauditloglevel)
-     */
-    public fun fileAccessAuditLogLevel(): String
-
-    /**
-     * Sets which attempt type is logged by Amazon FSx for file share accesses.
-     *
-     * * `SUCCESS_ONLY` - only successful attempts to access file shares are logged.
-     * * `FAILURE_ONLY` - only failed attempts to access file shares are logged.
-     * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access file shares
-     * are logged.
-     * * `DISABLED` - access auditing of file shares is turned off.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-fileshareaccessauditloglevel)
-     */
-    public fun fileShareAccessAuditLogLevel(): String
-
-    /**
-     * A builder for [AuditLogConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param auditLogDestination The Amazon Resource Name (ARN) for the destination of the audit
-       * logs.
-       * The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data
-       * Firehose delivery stream ARN.
-       *
-       * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
-       * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix.
-       *
-       * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery
-       * stream) must be in the same AWS partition, AWS Region , and AWS account as your Amazon FSx
-       * file system.
-       */
-      public fun auditLogDestination(auditLogDestination: String)
-
-      /**
-       * @param fileAccessAuditLogLevel Sets which attempt type is logged by Amazon FSx for file and
-       * folder accesses. 
-       * * `SUCCESS_ONLY` - only successful attempts to access files or folders are logged.
-       * * `FAILURE_ONLY` - only failed attempts to access files or folders are logged.
-       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access files or
-       * folders are logged.
-       * * `DISABLED` - access auditing of files and folders is turned off.
-       */
-      public fun fileAccessAuditLogLevel(fileAccessAuditLogLevel: String)
-
-      /**
-       * @param fileShareAccessAuditLogLevel Sets which attempt type is logged by Amazon FSx for
-       * file share accesses. 
-       * * `SUCCESS_ONLY` - only successful attempts to access file shares are logged.
-       * * `FAILURE_ONLY` - only failed attempts to access file shares are logged.
-       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access file
-       * shares are logged.
-       * * `DISABLED` - access auditing of file shares is turned off.
-       */
-      public fun fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty.builder()
-
-      /**
-       * @param auditLogDestination The Amazon Resource Name (ARN) for the destination of the audit
-       * logs.
-       * The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data
-       * Firehose delivery stream ARN.
-       *
-       * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
-       * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix.
-       *
-       * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery
-       * stream) must be in the same AWS partition, AWS Region , and AWS account as your Amazon FSx
-       * file system.
-       */
-      override fun auditLogDestination(auditLogDestination: String) {
-        cdkBuilder.auditLogDestination(auditLogDestination)
-      }
-
-      /**
-       * @param fileAccessAuditLogLevel Sets which attempt type is logged by Amazon FSx for file and
-       * folder accesses. 
-       * * `SUCCESS_ONLY` - only successful attempts to access files or folders are logged.
-       * * `FAILURE_ONLY` - only failed attempts to access files or folders are logged.
-       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access files or
-       * folders are logged.
-       * * `DISABLED` - access auditing of files and folders is turned off.
-       */
-      override fun fileAccessAuditLogLevel(fileAccessAuditLogLevel: String) {
-        cdkBuilder.fileAccessAuditLogLevel(fileAccessAuditLogLevel)
-      }
-
-      /**
-       * @param fileShareAccessAuditLogLevel Sets which attempt type is logged by Amazon FSx for
-       * file share accesses. 
-       * * `SUCCESS_ONLY` - only successful attempts to access file shares are logged.
-       * * `FAILURE_ONLY` - only failed attempts to access file shares are logged.
-       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access file
-       * shares are logged.
-       * * `DISABLED` - access auditing of file shares is turned off.
-       */
-      override fun fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel: String) {
-        cdkBuilder.fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty,
-    ) : CdkObject(cdkObject), AuditLogConfigurationProperty {
-      /**
-       * The Amazon Resource Name (ARN) for the destination of the audit logs.
-       *
-       * The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data
-       * Firehose delivery stream ARN.
-       *
-       * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
-       * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx` prefix.
-       *
-       * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery
-       * stream) must be in the same AWS partition, AWS Region , and AWS account as your Amazon FSx
-       * file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-auditlogdestination)
-       */
-      override fun auditLogDestination(): String? = unwrap(this).getAuditLogDestination()
-
-      /**
-       * Sets which attempt type is logged by Amazon FSx for file and folder accesses.
-       *
-       * * `SUCCESS_ONLY` - only successful attempts to access files or folders are logged.
-       * * `FAILURE_ONLY` - only failed attempts to access files or folders are logged.
-       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access files or
-       * folders are logged.
-       * * `DISABLED` - access auditing of files and folders is turned off.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-fileaccessauditloglevel)
-       */
-      override fun fileAccessAuditLogLevel(): String = unwrap(this).getFileAccessAuditLogLevel()
-
-      /**
-       * Sets which attempt type is logged by Amazon FSx for file share accesses.
-       *
-       * * `SUCCESS_ONLY` - only successful attempts to access file shares are logged.
-       * * `FAILURE_ONLY` - only failed attempts to access file shares are logged.
-       * * `SUCCESS_AND_FAILURE` - both successful attempts and failed attempts to access file
-       * shares are logged.
-       * * `DISABLED` - access auditing of file shares is turned off.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html#cfn-fsx-filesystem-auditlogconfiguration-fileshareaccessauditloglevel)
-       */
-      override fun fileShareAccessAuditLogLevel(): String =
-          unwrap(this).getFileShareAccessAuditLogLevel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AuditLogConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty):
-          AuditLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AuditLogConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuditLogConfigurationProperty):
-          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies who can mount an OpenZFS file system and the options available while mounting the
-   * file system.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * ClientConfigurationsProperty clientConfigurationsProperty =
-   * ClientConfigurationsProperty.builder()
+   * NfsExportsProperty nfsExportsProperty = NfsExportsProperty.builder()
+   * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
    * .clients("clients")
    * .options(List.of("options"))
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-nfsexports.html)
    */
-  public interface ClientConfigurationsProperty {
+  public interface NfsExportsProperty {
     /**
-     * A value that specifies who can mount the file system.
+     * A list of configuration objects that contain the client and options for mounting the OpenZFS
+     * file system.
      *
-     * You can provide a wildcard character ( `*` ), an IP address ( `0.0.0.0` ), or a CIDR address
-     * ( `192.0.2.0/24` ). By default, Amazon FSx uses the wildcard character when specifying the
-     * client.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html#cfn-fsx-filesystem-clientconfigurations-clients)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-nfsexports.html#cfn-fsx-filesystem-nfsexports-clientconfigurations)
      */
-    public fun clients(): String? = unwrap(this).getClients()
+    public fun clientConfigurations(): Any? = unwrap(this).getClientConfigurations()
 
     /**
-     * The options to use when mounting the file system.
-     *
-     * For a list of options that you can use with Network File System (NFS), see the [exports(5) -
-     * Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports) . When choosing
-     * your options, consider the following:
-     *
-     * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
-     * configuration, you won't be able to see or access snapshots in your file system's snapshot
-     * directory.
-     * * `sync` is used by default. If you instead specify `async` , the system acknowledges writes
-     * before writing to disk. If the system crashes before the writes are finished, you lose the
-     * unwritten data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html#cfn-fsx-filesystem-clientconfigurations-options)
-     */
-    public fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
-
-    /**
-     * A builder for [ClientConfigurationsProperty]
+     * A builder for [NfsExportsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param clients A value that specifies who can mount the file system.
-       * You can provide a wildcard character ( `*` ), an IP address ( `0.0.0.0` ), or a CIDR
-       * address ( `192.0.2.0/24` ). By default, Amazon FSx uses the wildcard character when specifying
-       * the client.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system.
        */
-      public fun clients(clients: String)
+      public fun clientConfigurations(clientConfigurations: IResolvable)
 
       /**
-       * @param options The options to use when mounting the file system.
-       * For a list of options that you can use with Network File System (NFS), see the
-       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
-       * . When choosing your options, consider the following:
-       *
-       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
-       * configuration, you won't be able to see or access snapshots in your file system's snapshot
-       * directory.
-       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
-       * writes before writing to disk. If the system crashes before the writes are finished, you lose
-       * the unwritten data.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system.
        */
-      public fun options(options: List<String>)
+      public fun clientConfigurations(clientConfigurations: List<Any>)
 
       /**
-       * @param options The options to use when mounting the file system.
-       * For a list of options that you can use with Network File System (NFS), see the
-       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
-       * . When choosing your options, consider the following:
-       *
-       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
-       * configuration, you won't be able to see or access snapshots in your file system's snapshot
-       * directory.
-       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
-       * writes before writing to disk. If the system crashes before the writes are finished, you lose
-       * the unwritten data.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system.
        */
-      public fun options(vararg options: String)
+      public fun clientConfigurations(vararg clientConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty.builder()
+          software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty.builder()
 
       /**
-       * @param clients A value that specifies who can mount the file system.
-       * You can provide a wildcard character ( `*` ), an IP address ( `0.0.0.0` ), or a CIDR
-       * address ( `192.0.2.0/24` ). By default, Amazon FSx uses the wildcard character when specifying
-       * the client.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system.
        */
-      override fun clients(clients: String) {
-        cdkBuilder.clients(clients)
+      override fun clientConfigurations(clientConfigurations: IResolvable) {
+        cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable::unwrap))
       }
 
       /**
-       * @param options The options to use when mounting the file system.
-       * For a list of options that you can use with Network File System (NFS), see the
-       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
-       * . When choosing your options, consider the following:
-       *
-       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
-       * configuration, you won't be able to see or access snapshots in your file system's snapshot
-       * directory.
-       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
-       * writes before writing to disk. If the system crashes before the writes are finished, you lose
-       * the unwritten data.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system.
        */
-      override fun options(options: List<String>) {
-        cdkBuilder.options(options)
+      override fun clientConfigurations(clientConfigurations: List<Any>) {
+        cdkBuilder.clientConfigurations(clientConfigurations)
       }
 
       /**
-       * @param options The options to use when mounting the file system.
-       * For a list of options that you can use with Network File System (NFS), see the
-       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
-       * . When choosing your options, consider the following:
-       *
-       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
-       * configuration, you won't be able to see or access snapshots in your file system's snapshot
-       * directory.
-       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
-       * writes before writing to disk. If the system crashes before the writes are finished, you lose
-       * the unwritten data.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system.
        */
-      override fun options(vararg options: String): Unit = options(options.toList())
+      override fun clientConfigurations(vararg clientConfigurations: Any): Unit =
+          clientConfigurations(clientConfigurations.toList())
 
-      public fun build():
-          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty =
+      public fun build(): software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty,
-    ) : CdkObject(cdkObject), ClientConfigurationsProperty {
+      override val cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty,
+    ) : CdkObject(cdkObject), NfsExportsProperty {
       /**
-       * A value that specifies who can mount the file system.
+       * A list of configuration objects that contain the client and options for mounting the
+       * OpenZFS file system.
        *
-       * You can provide a wildcard character ( `*` ), an IP address ( `0.0.0.0` ), or a CIDR
-       * address ( `192.0.2.0/24` ). By default, Amazon FSx uses the wildcard character when specifying
-       * the client.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html#cfn-fsx-filesystem-clientconfigurations-clients)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-nfsexports.html#cfn-fsx-filesystem-nfsexports-clientconfigurations)
        */
-      override fun clients(): String? = unwrap(this).getClients()
-
-      /**
-       * The options to use when mounting the file system.
-       *
-       * For a list of options that you can use with Network File System (NFS), see the
-       * [exports(5) - Linux man page](https://docs.aws.amazon.com/https://linux.die.net/man/5/exports)
-       * . When choosing your options, consider the following:
-       *
-       * * `crossmnt` is used by default. If you don't specify `crossmnt` when changing the client
-       * configuration, you won't be able to see or access snapshots in your file system's snapshot
-       * directory.
-       * * `sync` is used by default. If you instead specify `async` , the system acknowledges
-       * writes before writing to disk. If the system crashes before the writes are finished, you lose
-       * the unwritten data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html#cfn-fsx-filesystem-clientconfigurations-options)
-       */
-      override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
+      override fun clientConfigurations(): Any? = unwrap(this).getClientConfigurations()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClientConfigurationsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NfsExportsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty):
-          ClientConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClientConfigurationsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty):
+          NfsExportsProperty = CdkObjectWrappers.wrap(cdkObject) as? NfsExportsProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ClientConfigurationsProperty):
-          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty
+      internal fun unwrap(wrapped: NfsExportsProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty
     }
   }
 
@@ -4466,120 +3788,6 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty
-    }
-  }
-
-  /**
-   * The configuration object for mounting a file system.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * NfsExportsProperty nfsExportsProperty = NfsExportsProperty.builder()
-   * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
-   * .clients("clients")
-   * .options(List.of("options"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-nfsexports.html)
-   */
-  public interface NfsExportsProperty {
-    /**
-     * A list of configuration objects that contain the client and options for mounting the OpenZFS
-     * file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-nfsexports.html#cfn-fsx-filesystem-nfsexports-clientconfigurations)
-     */
-    public fun clientConfigurations(): Any? = unwrap(this).getClientConfigurations()
-
-    /**
-     * A builder for [NfsExportsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system.
-       */
-      public fun clientConfigurations(clientConfigurations: IResolvable)
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system.
-       */
-      public fun clientConfigurations(clientConfigurations: List<Any>)
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system.
-       */
-      public fun clientConfigurations(vararg clientConfigurations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty.builder()
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system.
-       */
-      override fun clientConfigurations(clientConfigurations: IResolvable) {
-        cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system.
-       */
-      override fun clientConfigurations(clientConfigurations: List<Any>) {
-        cdkBuilder.clientConfigurations(clientConfigurations)
-      }
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system.
-       */
-      override fun clientConfigurations(vararg clientConfigurations: Any): Unit =
-          clientConfigurations(clientConfigurations.toList())
-
-      public fun build(): software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty,
-    ) : CdkObject(cdkObject), NfsExportsProperty {
-      /**
-       * A list of configuration objects that contain the client and options for mounting the
-       * OpenZFS file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-nfsexports.html#cfn-fsx-filesystem-nfsexports-clientconfigurations)
-       */
-      override fun clientConfigurations(): Any? = unwrap(this).getClientConfigurations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NfsExportsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty):
-          NfsExportsProperty = CdkObjectWrappers.wrap(cdkObject) as? NfsExportsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NfsExportsProperty):
-          software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty
     }
   }
 
@@ -5900,293 +5108,6 @@ public open class CfnFileSystem internal constructor(
   }
 
   /**
-   * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp
-   * ONTAP, Amazon FSx for Windows File Server, or FSx for OpenZFS file system.
-   *
-   * By default, Amazon FSx automatically provisions 3 IOPS per GB of storage capacity. You can
-   * provision additional IOPS per GB of storage. The configuration consists of the total number of
-   * provisioned SSD IOPS and how it is was provisioned, or the mode (by the customer or by Amazon
-   * FSx).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * DiskIopsConfigurationProperty diskIopsConfigurationProperty =
-   * DiskIopsConfigurationProperty.builder()
-   * .iops(123)
-   * .mode("mode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html)
-   */
-  public interface DiskIopsConfigurationProperty {
-    /**
-     * The total number of SSD IOPS provisioned for the file system.
-     *
-     * The minimum and maximum values for this property depend on the value of `HAPairs` and
-     * `StorageCapacity` . The minimum value is calculated as `StorageCapacity` * 3 * `HAPairs` (3 IOPS
-     * per GB of `StorageCapacity` ). The maximum value is calculated as 200,000 * `HAPairs` .
-     *
-     * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of `Iops` is
-     * outside of the minimum or maximum values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-iops)
-     */
-    public fun iops(): Number? = unwrap(this).getIops()
-
-    /**
-     * Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS of 3 IOPS per
-     * GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-mode)
-     */
-    public fun mode(): String? = unwrap(this).getMode()
-
-    /**
-     * A builder for [DiskIopsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param iops The total number of SSD IOPS provisioned for the file system.
-       * The minimum and maximum values for this property depend on the value of `HAPairs` and
-       * `StorageCapacity` . The minimum value is calculated as `StorageCapacity` * 3 * `HAPairs` (3
-       * IOPS per GB of `StorageCapacity` ). The maximum value is calculated as 200,000 * `HAPairs` .
-       *
-       * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of `Iops` is
-       * outside of the minimum or maximum values.
-       */
-      public fun iops(iops: Number)
-
-      /**
-       * @param mode Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS
-       * of 3 IOPS per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
-       */
-      public fun mode(mode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty.builder()
-
-      /**
-       * @param iops The total number of SSD IOPS provisioned for the file system.
-       * The minimum and maximum values for this property depend on the value of `HAPairs` and
-       * `StorageCapacity` . The minimum value is calculated as `StorageCapacity` * 3 * `HAPairs` (3
-       * IOPS per GB of `StorageCapacity` ). The maximum value is calculated as 200,000 * `HAPairs` .
-       *
-       * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of `Iops` is
-       * outside of the minimum or maximum values.
-       */
-      override fun iops(iops: Number) {
-        cdkBuilder.iops(iops)
-      }
-
-      /**
-       * @param mode Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS
-       * of 3 IOPS per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty,
-    ) : CdkObject(cdkObject), DiskIopsConfigurationProperty {
-      /**
-       * The total number of SSD IOPS provisioned for the file system.
-       *
-       * The minimum and maximum values for this property depend on the value of `HAPairs` and
-       * `StorageCapacity` . The minimum value is calculated as `StorageCapacity` * 3 * `HAPairs` (3
-       * IOPS per GB of `StorageCapacity` ). The maximum value is calculated as 200,000 * `HAPairs` .
-       *
-       * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of `Iops` is
-       * outside of the minimum or maximum values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-iops)
-       */
-      override fun iops(): Number? = unwrap(this).getIops()
-
-      /**
-       * Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS of 3 IOPS
-       * per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html#cfn-fsx-filesystem-diskiopsconfiguration-mode)
-       */
-      override fun mode(): String? = unwrap(this).getMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DiskIopsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty):
-          DiskIopsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DiskIopsConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DiskIopsConfigurationProperty):
-          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty
-    }
-  }
-
-  /**
-   * Used to configure quotas that define how much storage a user or group can use on an FSx for
-   * OpenZFS volume.
-   *
-   * For more information, see [Volume
-   * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-   * in the FSx for OpenZFS User Guide.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * UserAndGroupQuotasProperty userAndGroupQuotasProperty = UserAndGroupQuotasProperty.builder()
-   * .id(123)
-   * .storageCapacityQuotaGiB(123)
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html)
-   */
-  public interface UserAndGroupQuotasProperty {
-    /**
-     * The ID of the user or group that the quota applies to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-id)
-     */
-    public fun id(): Number? = unwrap(this).getId()
-
-    /**
-     * The user or group's storage quota, in gibibytes (GiB).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-storagecapacityquotagib)
-     */
-    public fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
-
-    /**
-     * Specifies whether the quota applies to a user or group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [UserAndGroupQuotasProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The ID of the user or group that the quota applies to.
-       */
-      public fun id(id: Number)
-
-      /**
-       * @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB).
-       */
-      public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number)
-
-      /**
-       * @param type Specifies whether the quota applies to a user or group.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty.builder()
-
-      /**
-       * @param id The ID of the user or group that the quota applies to.
-       */
-      override fun id(id: Number) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB).
-       */
-      override fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
-        cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
-      }
-
-      /**
-       * @param type Specifies whether the quota applies to a user or group.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty,
-    ) : CdkObject(cdkObject), UserAndGroupQuotasProperty {
-      /**
-       * The ID of the user or group that the quota applies to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-id)
-       */
-      override fun id(): Number? = unwrap(this).getId()
-
-      /**
-       * The user or group's storage quota, in gibibytes (GiB).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-storagecapacityquotagib)
-       */
-      override fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
-
-      /**
-       * Specifies whether the quota applies to a user or group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UserAndGroupQuotasProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty):
-          UserAndGroupQuotasProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          UserAndGroupQuotasProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UserAndGroupQuotasProperty):
-          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty
-    }
-  }
-
-  /**
    * The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an
    * FSx for ONTAP storage virtual machine (SVM) to a self-managed (including on-premises) Microsoft
    * Active Directory (AD) directory.
@@ -6518,6 +5439,1085 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty
+    }
+  }
+
+  /**
+   * Used to configure quotas that define how much storage a user or group can use on an FSx for
+   * OpenZFS volume.
+   *
+   * For more information, see [Volume
+   * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+   * in the FSx for OpenZFS User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * UserAndGroupQuotasProperty userAndGroupQuotasProperty = UserAndGroupQuotasProperty.builder()
+   * .id(123)
+   * .storageCapacityQuotaGiB(123)
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html)
+   */
+  public interface UserAndGroupQuotasProperty {
+    /**
+     * The ID of the user or group that the quota applies to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-id)
+     */
+    public fun id(): Number? = unwrap(this).getId()
+
+    /**
+     * The user or group's storage quota, in gibibytes (GiB).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-storagecapacityquotagib)
+     */
+    public fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
+
+    /**
+     * Specifies whether the quota applies to a user or group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [UserAndGroupQuotasProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The ID of the user or group that the quota applies to.
+       */
+      public fun id(id: Number)
+
+      /**
+       * @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB).
+       */
+      public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number)
+
+      /**
+       * @param type Specifies whether the quota applies to a user or group.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty.builder()
+
+      /**
+       * @param id The ID of the user or group that the quota applies to.
+       */
+      override fun id(id: Number) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB).
+       */
+      override fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
+        cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
+      }
+
+      /**
+       * @param type Specifies whether the quota applies to a user or group.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty,
+    ) : CdkObject(cdkObject), UserAndGroupQuotasProperty {
+      /**
+       * The ID of the user or group that the quota applies to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-id)
+       */
+      override fun id(): Number? = unwrap(this).getId()
+
+      /**
+       * The user or group's storage quota, in gibibytes (GiB).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-storagecapacityquotagib)
+       */
+      override fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
+
+      /**
+       * Specifies whether the quota applies to a user or group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html#cfn-fsx-filesystem-userandgroupquotas-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UserAndGroupQuotasProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty):
+          UserAndGroupQuotasProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserAndGroupQuotasProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UserAndGroupQuotasProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty
+    }
+  }
+
+  /**
+   * The Microsoft Windows configuration for the file system that's being created.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * WindowsConfigurationProperty windowsConfigurationProperty =
+   * WindowsConfigurationProperty.builder()
+   * .throughputCapacity(123)
+   * // the properties below are optional
+   * .activeDirectoryId("activeDirectoryId")
+   * .aliases(List.of("aliases"))
+   * .auditLogConfiguration(AuditLogConfigurationProperty.builder()
+   * .fileAccessAuditLogLevel("fileAccessAuditLogLevel")
+   * .fileShareAccessAuditLogLevel("fileShareAccessAuditLogLevel")
+   * // the properties below are optional
+   * .auditLogDestination("auditLogDestination")
+   * .build())
+   * .automaticBackupRetentionDays(123)
+   * .copyTagsToBackups(false)
+   * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+   * .deploymentType("deploymentType")
+   * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+   * .iops(123)
+   * .mode("mode")
+   * .build())
+   * .preferredSubnetId("preferredSubnetId")
+   * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
+   * .dnsIps(List.of("dnsIps"))
+   * .domainName("domainName")
+   * .fileSystemAdministratorsGroup("fileSystemAdministratorsGroup")
+   * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+   * .password("password")
+   * .userName("userName")
+   * .build())
+   * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html)
+   */
+  public interface WindowsConfigurationProperty {
+    /**
+     * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file
+     * system should join when it's created.
+     *
+     * Required if you are joining the file system to an existing AWS Managed Microsoft AD.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid)
+     */
+    public fun activeDirectoryId(): String? = unwrap(this).getActiveDirectoryId()
+
+    /**
+     * An array of one or more DNS alias names that you want to associate with the Amazon FSx file
+     * system.
+     *
+     * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
+     * system. You can associate up to 50 aliases with a file system at any time.
+     *
+     * For more information, see [Working with DNS
+     * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
+     * [Walkthrough 5: Using DNS aliases to access your file
+     * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
+     * , including additional steps you must take to be able to access your file system using a DNS
+     * alias.
+     *
+     * An alias name has to meet the following requirements:
+     *
+     * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
+     * `accounting.example.com` .
+     * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
+     * * Cannot start or end with a hyphen.
+     * * Can start with a numeric.
+     *
+     * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
+     * regardless of how you specify them: as uppercase letters, lowercase letters, or the
+     * corresponding letters in escape codes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-aliases)
+     */
+    public fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+
+    /**
+     * The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses
+     * of files, folders, and file shares on the Amazon FSx for Windows File Server file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration)
+     */
+    public fun auditLogConfiguration(): Any? = unwrap(this).getAuditLogConfiguration()
+
+    /**
+     * The number of days to retain automatic backups.
+     *
+     * Setting this property to `0` disables automatic backups. You can retain automatic backups for
+     * a maximum of 90 days. The default is `30` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays)
+     */
+    public fun automaticBackupRetentionDays(): Number? =
+        unwrap(this).getAutomaticBackupRetentionDays()
+
+    /**
+     * A boolean flag indicating whether tags for the file system should be copied to backups.
+     *
+     * This value defaults to false. If it's set to true, all tags for the file system are copied to
+     * all automatic and user-initiated backups where the user doesn't specify tags. If this value is
+     * true, and you specify one or more tags, only the specified tags are copied to backups. If you
+     * specify one or more tags when creating a user-initiated backup, no tags are copied from the file
+     * system, regardless of this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups)
+     */
+    public fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
+
+    /**
+     * A recurring daily time, in the format `HH:MM` .
+     *
+     * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
+     * hour. For example, `05:00` specifies 5 AM daily.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)
+     */
+    public fun dailyAutomaticBackupStartTime(): String? =
+        unwrap(this).getDailyAutomaticBackupStartTime()
+
+    /**
+     * Specifies the file system deployment type, valid values are the following:.
+     *
+     * * `MULTI_AZ_1` - Deploys a high availability file system that is configured for Multi-AZ
+     * redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a
+     * Multi-AZ file system in AWS Regions that have a minimum of three Availability Zones. Also
+     * supports HDD storage type
+     * * `SINGLE_AZ_1` - (Default) Choose to deploy a file system that is configured for single AZ
+     * redundancy.
+     * * `SINGLE_AZ_2` - The latest generation Single AZ file system. Specifies a file system that
+     * is configured for single AZ redundancy and supports HDD storage type.
+     *
+     * For more information, see [Availability and Durability: Single-AZ and Multi-AZ File
+     * Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-deploymenttype)
+     */
+    public fun deploymentType(): String? = unwrap(this).getDeploymentType()
+
+    /**
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows
+     * file system.
+     *
+     * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+     * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
+     * chosen throughput capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-diskiopsconfiguration)
+     */
+    public fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
+
+    /**
+     * Required when `DeploymentType` is set to `MULTI_AZ_1` .
+     *
+     * This specifies the subnet in which you want the preferred file server to be located. For in-
+     * AWS applications, we recommend that you launch your clients in the same availability zone as
+     * your preferred file server to reduce cross-availability zone data transfer costs and minimize
+     * latency.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid)
+     */
+    public fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
+
+    /**
+     * The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or
+     * an FSx for ONTAP storage virtual machine (SVM) to a self-managed (including on-premises)
+     * Microsoft Active Directory (AD) directory.
+     *
+     * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
+     * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
+     * [Managing FSx for ONTAP
+     * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)
+     */
+    public fun selfManagedActiveDirectoryConfiguration(): Any? =
+        unwrap(this).getSelfManagedActiveDirectoryConfiguration()
+
+    /**
+     * Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second
+     * (MB/s), in 2 to the *n* th increments, between 2^3 (8) and 2^11 (2048).
+     *
+     *
+     * To increase storage capacity, a file system must have a minimum throughput capacity of 16
+     * MB/s.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity)
+     */
+    public fun throughputCapacity(): Number
+
+    /**
+     * A recurring weekly time, in the format `D:HH:MM` .
+     *
+     * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
+     * further details, see [the ISO-8601 spec as described on
+     * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
+     *
+     * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
+     * hour.
+     *
+     * For example, `1:05:00` specifies maintenance at 5 AM Monday.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime)
+     */
+    public fun weeklyMaintenanceStartTime(): String? = unwrap(this).getWeeklyMaintenanceStartTime()
+
+    /**
+     * A builder for [WindowsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param activeDirectoryId The ID for an existing AWS Managed Microsoft Active Directory (AD)
+       * instance that the file system should join when it's created.
+       * Required if you are joining the file system to an existing AWS Managed Microsoft AD.
+       */
+      public fun activeDirectoryId(activeDirectoryId: String)
+
+      /**
+       * @param aliases An array of one or more DNS alias names that you want to associate with the
+       * Amazon FSx file system.
+       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
+       * system. You can associate up to 50 aliases with a file system at any time.
+       *
+       * For more information, see [Working with DNS
+       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
+       * [Walkthrough 5: Using DNS aliases to access your file
+       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
+       * , including additional steps you must take to be able to access your file system using a DNS
+       * alias.
+       *
+       * An alias name has to meet the following requirements:
+       *
+       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
+       * `accounting.example.com` .
+       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
+       * * Cannot start or end with a hyphen.
+       * * Can start with a numeric.
+       *
+       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
+       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
+       * corresponding letters in escape codes.
+       */
+      public fun aliases(aliases: List<String>)
+
+      /**
+       * @param aliases An array of one or more DNS alias names that you want to associate with the
+       * Amazon FSx file system.
+       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
+       * system. You can associate up to 50 aliases with a file system at any time.
+       *
+       * For more information, see [Working with DNS
+       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
+       * [Walkthrough 5: Using DNS aliases to access your file
+       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
+       * , including additional steps you must take to be able to access your file system using a DNS
+       * alias.
+       *
+       * An alias name has to meet the following requirements:
+       *
+       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
+       * `accounting.example.com` .
+       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
+       * * Cannot start or end with a hyphen.
+       * * Can start with a numeric.
+       *
+       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
+       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
+       * corresponding letters in escape codes.
+       */
+      public fun aliases(vararg aliases: String)
+
+      /**
+       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
+       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
+       * Windows File Server file system.
+       */
+      public fun auditLogConfiguration(auditLogConfiguration: IResolvable)
+
+      /**
+       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
+       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
+       * Windows File Server file system.
+       */
+      public fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty)
+
+      /**
+       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
+       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
+       * Windows File Server file system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e3607c85da94b03db39fd8d5195dc2332a907b139d68ddcb6e4bfb47fe033a4f")
+      public
+          fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param automaticBackupRetentionDays The number of days to retain automatic backups.
+       * Setting this property to `0` disables automatic backups. You can retain automatic backups
+       * for a maximum of 90 days. The default is `30` .
+       */
+      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number)
+
+      /**
+       * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should
+       * be copied to backups.
+       * This value defaults to false. If it's set to true, all tags for the file system are copied
+       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
+       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
+       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
+       * the file system, regardless of this value.
+       */
+      public fun copyTagsToBackups(copyTagsToBackups: Boolean)
+
+      /**
+       * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should
+       * be copied to backups.
+       * This value defaults to false. If it's set to true, all tags for the file system are copied
+       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
+       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
+       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
+       * the file system, regardless of this value.
+       */
+      public fun copyTagsToBackups(copyTagsToBackups: IResolvable)
+
+      /**
+       * @param dailyAutomaticBackupStartTime A recurring daily time, in the format `HH:MM` .
+       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
+       * hour. For example, `05:00` specifies 5 AM daily.
+       */
+      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String)
+
+      /**
+       * @param deploymentType Specifies the file system deployment type, valid values are the
+       * following:.
+       * * `MULTI_AZ_1` - Deploys a high availability file system that is configured for Multi-AZ
+       * redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a
+       * Multi-AZ file system in AWS Regions that have a minimum of three Availability Zones. Also
+       * supports HDD storage type
+       * * `SINGLE_AZ_1` - (Default) Choose to deploy a file system that is configured for single AZ
+       * redundancy.
+       * * `SINGLE_AZ_2` - The latest generation Single AZ file system. Specifies a file system that
+       * is configured for single AZ redundancy and supports HDD storage type.
+       *
+       * For more information, see [Availability and Durability: Single-AZ and Multi-AZ File
+       * Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) .
+       */
+      public fun deploymentType(deploymentType: String)
+
+      /**
+       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
+       * configuration for an Amazon FSx for Windows file system.
+       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
+       * chosen throughput capacity.
+       */
+      public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable)
+
+      /**
+       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
+       * configuration for an Amazon FSx for Windows file system.
+       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
+       * chosen throughput capacity.
+       */
+      public fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty)
+
+      /**
+       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
+       * configuration for an Amazon FSx for Windows file system.
+       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
+       * chosen throughput capacity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("629a73cb1184c8d8e6e1aeee2e1a17222f7701a575244823c03d524616c7c576")
+      public
+          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` .
+       * This specifies the subnet in which you want the preferred file server to be located. For
+       * in- AWS applications, we recommend that you launch your clients in the same availability zone
+       * as your preferred file server to reduce cross-availability zone data transfer costs and
+       * minimize latency.
+       */
+      public fun preferredSubnetId(preferredSubnetId: String)
+
+      /**
+       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
+       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
+       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
+       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
+       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
+       * [Managing FSx for ONTAP
+       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+       */
+      public
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable)
+
+      /**
+       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
+       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
+       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
+       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
+       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
+       * [Managing FSx for ONTAP
+       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+       */
+      public
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty)
+
+      /**
+       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
+       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
+       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
+       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
+       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
+       * [Managing FSx for ONTAP
+       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bfc424b18d560f4ccb1d00ec2edf493cf56bd33b079c038bcdeeb7e29a499969")
+      public
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param throughputCapacity Sets the throughput capacity of an Amazon FSx file system,
+       * measured in megabytes per second (MB/s), in 2 to the *n* th increments, between 2^3 (8) and
+       * 2^11 (2048). 
+       *
+       * To increase storage capacity, a file system must have a minimum throughput capacity of 16
+       * MB/s.
+       */
+      public fun throughputCapacity(throughputCapacity: Number)
+
+      /**
+       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
+       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
+       * further details, see [the ISO-8601 spec as described on
+       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
+       *
+       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
+       * hour.
+       *
+       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
+       */
+      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty.builder()
+
+      /**
+       * @param activeDirectoryId The ID for an existing AWS Managed Microsoft Active Directory (AD)
+       * instance that the file system should join when it's created.
+       * Required if you are joining the file system to an existing AWS Managed Microsoft AD.
+       */
+      override fun activeDirectoryId(activeDirectoryId: String) {
+        cdkBuilder.activeDirectoryId(activeDirectoryId)
+      }
+
+      /**
+       * @param aliases An array of one or more DNS alias names that you want to associate with the
+       * Amazon FSx file system.
+       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
+       * system. You can associate up to 50 aliases with a file system at any time.
+       *
+       * For more information, see [Working with DNS
+       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
+       * [Walkthrough 5: Using DNS aliases to access your file
+       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
+       * , including additional steps you must take to be able to access your file system using a DNS
+       * alias.
+       *
+       * An alias name has to meet the following requirements:
+       *
+       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
+       * `accounting.example.com` .
+       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
+       * * Cannot start or end with a hyphen.
+       * * Can start with a numeric.
+       *
+       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
+       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
+       * corresponding letters in escape codes.
+       */
+      override fun aliases(aliases: List<String>) {
+        cdkBuilder.aliases(aliases)
+      }
+
+      /**
+       * @param aliases An array of one or more DNS alias names that you want to associate with the
+       * Amazon FSx file system.
+       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
+       * system. You can associate up to 50 aliases with a file system at any time.
+       *
+       * For more information, see [Working with DNS
+       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
+       * [Walkthrough 5: Using DNS aliases to access your file
+       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
+       * , including additional steps you must take to be able to access your file system using a DNS
+       * alias.
+       *
+       * An alias name has to meet the following requirements:
+       *
+       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
+       * `accounting.example.com` .
+       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
+       * * Cannot start or end with a hyphen.
+       * * Can start with a numeric.
+       *
+       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
+       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
+       * corresponding letters in escape codes.
+       */
+      override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
+
+      /**
+       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
+       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
+       * Windows File Server file system.
+       */
+      override fun auditLogConfiguration(auditLogConfiguration: IResolvable) {
+        cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
+       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
+       * Windows File Server file system.
+       */
+      override fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty) {
+        cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(AuditLogConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param auditLogConfiguration The configuration that Amazon FSx for Windows File Server uses
+       * to audit and log user accesses of files, folders, and file shares on the Amazon FSx for
+       * Windows File Server file system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e3607c85da94b03db39fd8d5195dc2332a907b139d68ddcb6e4bfb47fe033a4f")
+      override
+          fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty.Builder.() -> Unit):
+          Unit = auditLogConfiguration(AuditLogConfigurationProperty(auditLogConfiguration))
+
+      /**
+       * @param automaticBackupRetentionDays The number of days to retain automatic backups.
+       * Setting this property to `0` disables automatic backups. You can retain automatic backups
+       * for a maximum of 90 days. The default is `30` .
+       */
+      override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
+        cdkBuilder.automaticBackupRetentionDays(automaticBackupRetentionDays)
+      }
+
+      /**
+       * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should
+       * be copied to backups.
+       * This value defaults to false. If it's set to true, all tags for the file system are copied
+       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
+       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
+       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
+       * the file system, regardless of this value.
+       */
+      override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
+        cdkBuilder.copyTagsToBackups(copyTagsToBackups)
+      }
+
+      /**
+       * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should
+       * be copied to backups.
+       * This value defaults to false. If it's set to true, all tags for the file system are copied
+       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
+       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
+       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
+       * the file system, regardless of this value.
+       */
+      override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
+        cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dailyAutomaticBackupStartTime A recurring daily time, in the format `HH:MM` .
+       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
+       * hour. For example, `05:00` specifies 5 AM daily.
+       */
+      override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
+        cdkBuilder.dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime)
+      }
+
+      /**
+       * @param deploymentType Specifies the file system deployment type, valid values are the
+       * following:.
+       * * `MULTI_AZ_1` - Deploys a high availability file system that is configured for Multi-AZ
+       * redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a
+       * Multi-AZ file system in AWS Regions that have a minimum of three Availability Zones. Also
+       * supports HDD storage type
+       * * `SINGLE_AZ_1` - (Default) Choose to deploy a file system that is configured for single AZ
+       * redundancy.
+       * * `SINGLE_AZ_2` - The latest generation Single AZ file system. Specifies a file system that
+       * is configured for single AZ redundancy and supports HDD storage type.
+       *
+       * For more information, see [Availability and Durability: Single-AZ and Multi-AZ File
+       * Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) .
+       */
+      override fun deploymentType(deploymentType: String) {
+        cdkBuilder.deploymentType(deploymentType)
+      }
+
+      /**
+       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
+       * configuration for an Amazon FSx for Windows file system.
+       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
+       * chosen throughput capacity.
+       */
+      override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
+       * configuration for an Amazon FSx for Windows file system.
+       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
+       * chosen throughput capacity.
+       */
+      override fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param diskIopsConfiguration The SSD IOPS (input/output operations per second)
+       * configuration for an Amazon FSx for Windows file system.
+       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
+       * chosen throughput capacity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("629a73cb1184c8d8e6e1aeee2e1a17222f7701a575244823c03d524616c7c576")
+      override
+          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit):
+          Unit = diskIopsConfiguration(DiskIopsConfigurationProperty(diskIopsConfiguration))
+
+      /**
+       * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` .
+       * This specifies the subnet in which you want the preferred file server to be located. For
+       * in- AWS applications, we recommend that you launch your clients in the same availability zone
+       * as your preferred file server to reduce cross-availability zone data transfer costs and
+       * minimize latency.
+       */
+      override fun preferredSubnetId(preferredSubnetId: String) {
+        cdkBuilder.preferredSubnetId(preferredSubnetId)
+      }
+
+      /**
+       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
+       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
+       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
+       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
+       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
+       * [Managing FSx for ONTAP
+       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+       */
+      override
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
+        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
+       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
+       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
+       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
+       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
+       * [Managing FSx for ONTAP
+       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+       */
+      override
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty) {
+        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(SelfManagedActiveDirectoryConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to
+       * join a FSx for Windows File Server file system or an FSx for ONTAP storage virtual machine
+       * (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory.
+       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
+       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
+       * [Managing FSx for ONTAP
+       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bfc424b18d560f4ccb1d00ec2edf493cf56bd33b079c038bcdeeb7e29a499969")
+      override
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty(selfManagedActiveDirectoryConfiguration))
+
+      /**
+       * @param throughputCapacity Sets the throughput capacity of an Amazon FSx file system,
+       * measured in megabytes per second (MB/s), in 2 to the *n* th increments, between 2^3 (8) and
+       * 2^11 (2048). 
+       *
+       * To increase storage capacity, a file system must have a minimum throughput capacity of 16
+       * MB/s.
+       */
+      override fun throughputCapacity(throughputCapacity: Number) {
+        cdkBuilder.throughputCapacity(throughputCapacity)
+      }
+
+      /**
+       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
+       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
+       * further details, see [the ISO-8601 spec as described on
+       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
+       *
+       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
+       * hour.
+       *
+       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
+       */
+      override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
+        cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty,
+    ) : CdkObject(cdkObject), WindowsConfigurationProperty {
+      /**
+       * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file
+       * system should join when it's created.
+       *
+       * Required if you are joining the file system to an existing AWS Managed Microsoft AD.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid)
+       */
+      override fun activeDirectoryId(): String? = unwrap(this).getActiveDirectoryId()
+
+      /**
+       * An array of one or more DNS alias names that you want to associate with the Amazon FSx file
+       * system.
+       *
+       * Aliases allow you to use existing DNS names to access the data in your Amazon FSx file
+       * system. You can associate up to 50 aliases with a file system at any time.
+       *
+       * For more information, see [Working with DNS
+       * Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and
+       * [Walkthrough 5: Using DNS aliases to access your file
+       * system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html)
+       * , including additional steps you must take to be able to access your file system using a DNS
+       * alias.
+       *
+       * An alias name has to meet the following requirements:
+       *
+       * * Formatted as a fully-qualified domain name (FQDN), `hostname.domain` , for example,
+       * `accounting.example.com` .
+       * * Can contain alphanumeric characters, the underscore (_), and the hyphen (-).
+       * * Cannot start or end with a hyphen.
+       * * Can start with a numeric.
+       *
+       * For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters (a-z),
+       * regardless of how you specify them: as uppercase letters, lowercase letters, or the
+       * corresponding letters in escape codes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-aliases)
+       */
+      override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+
+      /**
+       * The configuration that Amazon FSx for Windows File Server uses to audit and log user
+       * accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file
+       * system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration)
+       */
+      override fun auditLogConfiguration(): Any? = unwrap(this).getAuditLogConfiguration()
+
+      /**
+       * The number of days to retain automatic backups.
+       *
+       * Setting this property to `0` disables automatic backups. You can retain automatic backups
+       * for a maximum of 90 days. The default is `30` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays)
+       */
+      override fun automaticBackupRetentionDays(): Number? =
+          unwrap(this).getAutomaticBackupRetentionDays()
+
+      /**
+       * A boolean flag indicating whether tags for the file system should be copied to backups.
+       *
+       * This value defaults to false. If it's set to true, all tags for the file system are copied
+       * to all automatic and user-initiated backups where the user doesn't specify tags. If this value
+       * is true, and you specify one or more tags, only the specified tags are copied to backups. If
+       * you specify one or more tags when creating a user-initiated backup, no tags are copied from
+       * the file system, regardless of this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups)
+       */
+      override fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
+
+      /**
+       * A recurring daily time, in the format `HH:MM` .
+       *
+       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
+       * hour. For example, `05:00` specifies 5 AM daily.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)
+       */
+      override fun dailyAutomaticBackupStartTime(): String? =
+          unwrap(this).getDailyAutomaticBackupStartTime()
+
+      /**
+       * Specifies the file system deployment type, valid values are the following:.
+       *
+       * * `MULTI_AZ_1` - Deploys a high availability file system that is configured for Multi-AZ
+       * redundancy to tolerate temporary Availability Zone (AZ) unavailability. You can only deploy a
+       * Multi-AZ file system in AWS Regions that have a minimum of three Availability Zones. Also
+       * supports HDD storage type
+       * * `SINGLE_AZ_1` - (Default) Choose to deploy a file system that is configured for single AZ
+       * redundancy.
+       * * `SINGLE_AZ_2` - The latest generation Single AZ file system. Specifies a file system that
+       * is configured for single AZ redundancy and supports HDD storage type.
+       *
+       * For more information, see [Availability and Durability: Single-AZ and Multi-AZ File
+       * Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-deploymenttype)
+       */
+      override fun deploymentType(): String? = unwrap(this).getDeploymentType()
+
+      /**
+       * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for
+       * Windows file system.
+       *
+       * By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+       * provision additional IOPS per GiB of storage, up to the maximum limit associated with your
+       * chosen throughput capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-diskiopsconfiguration)
+       */
+      override fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
+
+      /**
+       * Required when `DeploymentType` is set to `MULTI_AZ_1` .
+       *
+       * This specifies the subnet in which you want the preferred file server to be located. For
+       * in- AWS applications, we recommend that you launch your clients in the same availability zone
+       * as your preferred file server to reduce cross-availability zone data transfer costs and
+       * minimize latency.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid)
+       */
+      override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
+
+      /**
+       * The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or
+       * an FSx for ONTAP storage virtual machine (SVM) to a self-managed (including on-premises)
+       * Microsoft Active Directory (AD) directory.
+       *
+       * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft
+       * Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or
+       * [Managing FSx for ONTAP
+       * SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)
+       */
+      override fun selfManagedActiveDirectoryConfiguration(): Any? =
+          unwrap(this).getSelfManagedActiveDirectoryConfiguration()
+
+      /**
+       * Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second
+       * (MB/s), in 2 to the *n* th increments, between 2^3 (8) and 2^11 (2048).
+       *
+       *
+       * To increase storage capacity, a file system must have a minimum throughput capacity of 16
+       * MB/s.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity)
+       */
+      override fun throughputCapacity(): Number = unwrap(this).getThroughputCapacity()
+
+      /**
+       * A recurring weekly time, in the format `D:HH:MM` .
+       *
+       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
+       * further details, see [the ISO-8601 spec as described on
+       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
+       *
+       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
+       * hour.
+       *
+       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime)
+       */
+      override fun weeklyMaintenanceStartTime(): String? =
+          unwrap(this).getWeeklyMaintenanceStartTime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WindowsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty):
+          WindowsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WindowsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WindowsConfigurationProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty
     }
   }
 }

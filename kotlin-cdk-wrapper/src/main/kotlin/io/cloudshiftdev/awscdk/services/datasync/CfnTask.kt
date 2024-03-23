@@ -1113,6 +1113,117 @@ public open class CfnTask internal constructor(
   }
 
   /**
+   * Specifies where DataSync uploads your [task
+   * report](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * DestinationProperty destinationProperty = DestinationProperty.builder()
+   * .s3(S3Property.builder()
+   * .bucketAccessRoleArn("bucketAccessRoleArn")
+   * .s3BucketArn("s3BucketArn")
+   * .subdirectory("subdirectory")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-destination.html)
+   */
+  public interface DestinationProperty {
+    /**
+     * Specifies the Amazon S3 bucket where DataSync uploads your task report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-destination.html#cfn-datasync-task-destination-s3)
+     */
+    public fun s3(): Any? = unwrap(this).getS3()
+
+    /**
+     * A builder for [DestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
+       */
+      public fun s3(s3: IResolvable)
+
+      /**
+       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
+       */
+      public fun s3(s3: S3Property)
+
+      /**
+       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("feeda5b4004520bfe4b68bdf0e8efea7feea712d87baf6b70181bdd6ffd01dc2")
+      public fun s3(s3: S3Property.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty.builder()
+
+      /**
+       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
+       */
+      override fun s3(s3: IResolvable) {
+        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
+       */
+      override fun s3(s3: S3Property) {
+        cdkBuilder.s3(s3.let(S3Property::unwrap))
+      }
+
+      /**
+       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("feeda5b4004520bfe4b68bdf0e8efea7feea712d87baf6b70181bdd6ffd01dc2")
+      override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
+
+      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty,
+    ) : CdkObject(cdkObject), DestinationProperty {
+      /**
+       * Specifies the Amazon S3 bucket where DataSync uploads your task report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-destination.html#cfn-datasync-task-destination-s3)
+       */
+      override fun s3(): Any? = unwrap(this).getS3()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty):
+          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? DestinationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DestinationProperty):
+          software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty
+    }
+  }
+
+  /**
    * Specifies which files, folders, and objects to include or exclude when transferring files from
    * source to destination.
    *
@@ -1229,687 +1340,6 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty
-    }
-  }
-
-  /**
-   * Customizes the reporting level for aspects of your task report.
-   *
-   * For example, your report might generally only include errors, but you could specify that you
-   * want a list of successes and errors just for the files that DataSync attempted to delete in your
-   * destination location.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * OverridesProperty overridesProperty = OverridesProperty.builder()
-   * .deleted(DeletedProperty.builder()
-   * .reportLevel("reportLevel")
-   * .build())
-   * .skipped(SkippedProperty.builder()
-   * .reportLevel("reportLevel")
-   * .build())
-   * .transferred(TransferredProperty.builder()
-   * .reportLevel("reportLevel")
-   * .build())
-   * .verified(VerifiedProperty.builder()
-   * .reportLevel("reportLevel")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html)
-   */
-  public interface OverridesProperty {
-    /**
-     * Specifies the level of reporting for the files, objects, and directories that DataSync
-     * attempted to delete in your destination location.
-     *
-     * This only applies if you [configure your
-     * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-     * data in the destination that isn't in the source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-deleted)
-     */
-    public fun deleted(): Any? = unwrap(this).getDeleted()
-
-    /**
-     * Specifies the level of reporting for the files, objects, and directories that DataSync
-     * attempted to skip during your transfer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-skipped)
-     */
-    public fun skipped(): Any? = unwrap(this).getSkipped()
-
-    /**
-     * Specifies the level of reporting for the files, objects, and directories that DataSync
-     * attempted to transfer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-transferred)
-     */
-    public fun transferred(): Any? = unwrap(this).getTransferred()
-
-    /**
-     * Specifies the level of reporting for the files, objects, and directories that DataSync
-     * attempted to verify during your transfer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-verified)
-     */
-    public fun verified(): Any? = unwrap(this).getVerified()
-
-    /**
-     * A builder for [OverridesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
-       */
-      public fun deleted(deleted: IResolvable)
-
-      /**
-       * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
-       */
-      public fun deleted(deleted: DeletedProperty)
-
-      /**
-       * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("178ba2b5cf2ea2064355ea97986f3eb26a133c25410c0cd8a534e038d634e103")
-      public fun deleted(deleted: DeletedProperty.Builder.() -> Unit)
-
-      /**
-       * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
-       */
-      public fun skipped(skipped: IResolvable)
-
-      /**
-       * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
-       */
-      public fun skipped(skipped: SkippedProperty)
-
-      /**
-       * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7a8634100c7e7679d1298a9e8c62ef0e782009db9965eb037d9f30f19f4dec76")
-      public fun skipped(skipped: SkippedProperty.Builder.() -> Unit)
-
-      /**
-       * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
-       */
-      public fun transferred(transferred: IResolvable)
-
-      /**
-       * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
-       */
-      public fun transferred(transferred: TransferredProperty)
-
-      /**
-       * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("867ccf2419e9301cde6a783a341d38eb0896e2ac7c58c19f1fb9e34a7bc656f3")
-      public fun transferred(transferred: TransferredProperty.Builder.() -> Unit)
-
-      /**
-       * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
-       */
-      public fun verified(verified: IResolvable)
-
-      /**
-       * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
-       */
-      public fun verified(verified: VerifiedProperty)
-
-      /**
-       * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6de5119e7772a304c44a8d224fb786e3b2b3c6fb013deaf42c69720fd3212640")
-      public fun verified(verified: VerifiedProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty.Builder =
-          software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty.builder()
-
-      /**
-       * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
-       */
-      override fun deleted(deleted: IResolvable) {
-        cdkBuilder.deleted(deleted.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
-       */
-      override fun deleted(deleted: DeletedProperty) {
-        cdkBuilder.deleted(deleted.let(DeletedProperty::unwrap))
-      }
-
-      /**
-       * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("178ba2b5cf2ea2064355ea97986f3eb26a133c25410c0cd8a534e038d634e103")
-      override fun deleted(deleted: DeletedProperty.Builder.() -> Unit): Unit =
-          deleted(DeletedProperty(deleted))
-
-      /**
-       * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
-       */
-      override fun skipped(skipped: IResolvable) {
-        cdkBuilder.skipped(skipped.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
-       */
-      override fun skipped(skipped: SkippedProperty) {
-        cdkBuilder.skipped(skipped.let(SkippedProperty::unwrap))
-      }
-
-      /**
-       * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7a8634100c7e7679d1298a9e8c62ef0e782009db9965eb037d9f30f19f4dec76")
-      override fun skipped(skipped: SkippedProperty.Builder.() -> Unit): Unit =
-          skipped(SkippedProperty(skipped))
-
-      /**
-       * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
-       */
-      override fun transferred(transferred: IResolvable) {
-        cdkBuilder.transferred(transferred.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
-       */
-      override fun transferred(transferred: TransferredProperty) {
-        cdkBuilder.transferred(transferred.let(TransferredProperty::unwrap))
-      }
-
-      /**
-       * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("867ccf2419e9301cde6a783a341d38eb0896e2ac7c58c19f1fb9e34a7bc656f3")
-      override fun transferred(transferred: TransferredProperty.Builder.() -> Unit): Unit =
-          transferred(TransferredProperty(transferred))
-
-      /**
-       * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
-       */
-      override fun verified(verified: IResolvable) {
-        cdkBuilder.verified(verified.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
-       */
-      override fun verified(verified: VerifiedProperty) {
-        cdkBuilder.verified(verified.let(VerifiedProperty::unwrap))
-      }
-
-      /**
-       * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6de5119e7772a304c44a8d224fb786e3b2b3c6fb013deaf42c69720fd3212640")
-      override fun verified(verified: VerifiedProperty.Builder.() -> Unit): Unit =
-          verified(VerifiedProperty(verified))
-
-      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty,
-    ) : CdkObject(cdkObject), OverridesProperty {
-      /**
-       * Specifies the level of reporting for the files, objects, and directories that DataSync
-       * attempted to delete in your destination location.
-       *
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-deleted)
-       */
-      override fun deleted(): Any? = unwrap(this).getDeleted()
-
-      /**
-       * Specifies the level of reporting for the files, objects, and directories that DataSync
-       * attempted to skip during your transfer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-skipped)
-       */
-      override fun skipped(): Any? = unwrap(this).getSkipped()
-
-      /**
-       * Specifies the level of reporting for the files, objects, and directories that DataSync
-       * attempted to transfer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-transferred)
-       */
-      override fun transferred(): Any? = unwrap(this).getTransferred()
-
-      /**
-       * Specifies the level of reporting for the files, objects, and directories that DataSync
-       * attempted to verify during your transfer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-verified)
-       */
-      override fun verified(): Any? = unwrap(this).getVerified()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OverridesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty):
-          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as? OverridesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OverridesProperty):
-          software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty
-    }
-  }
-
-  /**
-   * Specifies the schedule you want your task to use for repeated executions.
-   *
-   * For more information, see [Schedule Expressions for
-   * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * TaskScheduleProperty taskScheduleProperty = TaskScheduleProperty.builder()
-   * .scheduleExpression("scheduleExpression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html)
-   */
-  public interface TaskScheduleProperty {
-    /**
-     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a
-     * source to a destination location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression)
-     */
-    public fun scheduleExpression(): String
-
-    /**
-     * A builder for [TaskScheduleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param scheduleExpression A cron expression that specifies when AWS DataSync initiates a
-       * scheduled transfer from a source to a destination location. 
-       */
-      public fun scheduleExpression(scheduleExpression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty.Builder =
-          software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty.builder()
-
-      /**
-       * @param scheduleExpression A cron expression that specifies when AWS DataSync initiates a
-       * scheduled transfer from a source to a destination location. 
-       */
-      override fun scheduleExpression(scheduleExpression: String) {
-        cdkBuilder.scheduleExpression(scheduleExpression)
-      }
-
-      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty,
-    ) : CdkObject(cdkObject), TaskScheduleProperty {
-      /**
-       * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a
-       * source to a destination location.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression)
-       */
-      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TaskScheduleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty):
-          TaskScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskScheduleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TaskScheduleProperty):
-          software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty
-    }
-  }
-
-  /**
-   * Specifies the Amazon S3 bucket where DataSync uploads your [task
-   * report](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * S3Property s3Property = S3Property.builder()
-   * .bucketAccessRoleArn("bucketAccessRoleArn")
-   * .s3BucketArn("s3BucketArn")
-   * .subdirectory("subdirectory")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html)
-   */
-  public interface S3Property {
-    /**
-     * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a
-     * task report to your S3 bucket.
-     *
-     * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
-     * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-bucketaccessrolearn)
-     */
-    public fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
-
-    /**
-     * Specifies the ARN of the S3 bucket where DataSync uploads your report.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-s3bucketarn)
-     */
-    public fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
-
-    /**
-     * Specifies a bucket prefix for your report.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-subdirectory)
-     */
-    public fun subdirectory(): String? = unwrap(this).getSubdirectory()
-
-    /**
-     * A builder for [S3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketAccessRoleArn Specifies the Amazon Resource Name (ARN) of the IAM policy that
-       * allows DataSync to upload a task report to your S3 bucket.
-       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
-       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
-       */
-      public fun bucketAccessRoleArn(bucketAccessRoleArn: String)
-
-      /**
-       * @param s3BucketArn Specifies the ARN of the S3 bucket where DataSync uploads your report.
-       */
-      public fun s3BucketArn(s3BucketArn: String)
-
-      /**
-       * @param subdirectory Specifies a bucket prefix for your report.
-       */
-      public fun subdirectory(subdirectory: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnTask.S3Property.Builder =
-          software.amazon.awscdk.services.datasync.CfnTask.S3Property.builder()
-
-      /**
-       * @param bucketAccessRoleArn Specifies the Amazon Resource Name (ARN) of the IAM policy that
-       * allows DataSync to upload a task report to your S3 bucket.
-       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
-       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
-       */
-      override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
-        cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
-      }
-
-      /**
-       * @param s3BucketArn Specifies the ARN of the S3 bucket where DataSync uploads your report.
-       */
-      override fun s3BucketArn(s3BucketArn: String) {
-        cdkBuilder.s3BucketArn(s3BucketArn)
-      }
-
-      /**
-       * @param subdirectory Specifies a bucket prefix for your report.
-       */
-      override fun subdirectory(subdirectory: String) {
-        cdkBuilder.subdirectory(subdirectory)
-      }
-
-      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.S3Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
-      /**
-       * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a
-       * task report to your S3 bucket.
-       *
-       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
-       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-bucketaccessrolearn)
-       */
-      override fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
-
-      /**
-       * Specifies the ARN of the S3 bucket where DataSync uploads your report.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-s3bucketarn)
-       */
-      override fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
-
-      /**
-       * Specifies a bucket prefix for your report.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-subdirectory)
-       */
-      override fun subdirectory(): String? = unwrap(this).getSubdirectory()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property):
-          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3Property):
-          software.amazon.awscdk.services.datasync.CfnTask.S3Property = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.S3Property
-    }
-  }
-
-  /**
-   * Specifies where DataSync uploads your [task
-   * report](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * DestinationProperty destinationProperty = DestinationProperty.builder()
-   * .s3(S3Property.builder()
-   * .bucketAccessRoleArn("bucketAccessRoleArn")
-   * .s3BucketArn("s3BucketArn")
-   * .subdirectory("subdirectory")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-destination.html)
-   */
-  public interface DestinationProperty {
-    /**
-     * Specifies the Amazon S3 bucket where DataSync uploads your task report.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-destination.html#cfn-datasync-task-destination-s3)
-     */
-    public fun s3(): Any? = unwrap(this).getS3()
-
-    /**
-     * A builder for [DestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
-       */
-      public fun s3(s3: IResolvable)
-
-      /**
-       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
-       */
-      public fun s3(s3: S3Property)
-
-      /**
-       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("feeda5b4004520bfe4b68bdf0e8efea7feea712d87baf6b70181bdd6ffd01dc2")
-      public fun s3(s3: S3Property.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty.Builder =
-          software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty.builder()
-
-      /**
-       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
-       */
-      override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
-       */
-      override fun s3(s3: S3Property) {
-        cdkBuilder.s3(s3.let(S3Property::unwrap))
-      }
-
-      /**
-       * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("feeda5b4004520bfe4b68bdf0e8efea7feea712d87baf6b70181bdd6ffd01dc2")
-      override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
-
-      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty,
-    ) : CdkObject(cdkObject), DestinationProperty {
-      /**
-       * Specifies the Amazon S3 bucket where DataSync uploads your task report.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-destination.html#cfn-datasync-task-destination-s3)
-       */
-      override fun s3(): Any? = unwrap(this).getS3()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty):
-          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? DestinationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DestinationProperty):
-          software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty
     }
   }
 
@@ -3096,6 +2526,582 @@ public open class CfnTask internal constructor(
   }
 
   /**
+   * Customizes the reporting level for aspects of your task report.
+   *
+   * For example, your report might generally only include errors, but you could specify that you
+   * want a list of successes and errors just for the files that DataSync attempted to delete in your
+   * destination location.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * OverridesProperty overridesProperty = OverridesProperty.builder()
+   * .deleted(DeletedProperty.builder()
+   * .reportLevel("reportLevel")
+   * .build())
+   * .skipped(SkippedProperty.builder()
+   * .reportLevel("reportLevel")
+   * .build())
+   * .transferred(TransferredProperty.builder()
+   * .reportLevel("reportLevel")
+   * .build())
+   * .verified(VerifiedProperty.builder()
+   * .reportLevel("reportLevel")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html)
+   */
+  public interface OverridesProperty {
+    /**
+     * Specifies the level of reporting for the files, objects, and directories that DataSync
+     * attempted to delete in your destination location.
+     *
+     * This only applies if you [configure your
+     * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
+     * data in the destination that isn't in the source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-deleted)
+     */
+    public fun deleted(): Any? = unwrap(this).getDeleted()
+
+    /**
+     * Specifies the level of reporting for the files, objects, and directories that DataSync
+     * attempted to skip during your transfer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-skipped)
+     */
+    public fun skipped(): Any? = unwrap(this).getSkipped()
+
+    /**
+     * Specifies the level of reporting for the files, objects, and directories that DataSync
+     * attempted to transfer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-transferred)
+     */
+    public fun transferred(): Any? = unwrap(this).getTransferred()
+
+    /**
+     * Specifies the level of reporting for the files, objects, and directories that DataSync
+     * attempted to verify during your transfer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-verified)
+     */
+    public fun verified(): Any? = unwrap(this).getVerified()
+
+    /**
+     * A builder for [OverridesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deleted Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to delete in your destination location.
+       * This only applies if you [configure your
+       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
+       * data in the destination that isn't in the source.
+       */
+      public fun deleted(deleted: IResolvable)
+
+      /**
+       * @param deleted Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to delete in your destination location.
+       * This only applies if you [configure your
+       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
+       * data in the destination that isn't in the source.
+       */
+      public fun deleted(deleted: DeletedProperty)
+
+      /**
+       * @param deleted Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to delete in your destination location.
+       * This only applies if you [configure your
+       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
+       * data in the destination that isn't in the source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("178ba2b5cf2ea2064355ea97986f3eb26a133c25410c0cd8a534e038d634e103")
+      public fun deleted(deleted: DeletedProperty.Builder.() -> Unit)
+
+      /**
+       * @param skipped Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to skip during your transfer.
+       */
+      public fun skipped(skipped: IResolvable)
+
+      /**
+       * @param skipped Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to skip during your transfer.
+       */
+      public fun skipped(skipped: SkippedProperty)
+
+      /**
+       * @param skipped Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to skip during your transfer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7a8634100c7e7679d1298a9e8c62ef0e782009db9965eb037d9f30f19f4dec76")
+      public fun skipped(skipped: SkippedProperty.Builder.() -> Unit)
+
+      /**
+       * @param transferred Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to transfer.
+       */
+      public fun transferred(transferred: IResolvable)
+
+      /**
+       * @param transferred Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to transfer.
+       */
+      public fun transferred(transferred: TransferredProperty)
+
+      /**
+       * @param transferred Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to transfer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("867ccf2419e9301cde6a783a341d38eb0896e2ac7c58c19f1fb9e34a7bc656f3")
+      public fun transferred(transferred: TransferredProperty.Builder.() -> Unit)
+
+      /**
+       * @param verified Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to verify during your transfer.
+       */
+      public fun verified(verified: IResolvable)
+
+      /**
+       * @param verified Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to verify during your transfer.
+       */
+      public fun verified(verified: VerifiedProperty)
+
+      /**
+       * @param verified Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to verify during your transfer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6de5119e7772a304c44a8d224fb786e3b2b3c6fb013deaf42c69720fd3212640")
+      public fun verified(verified: VerifiedProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty.builder()
+
+      /**
+       * @param deleted Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to delete in your destination location.
+       * This only applies if you [configure your
+       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
+       * data in the destination that isn't in the source.
+       */
+      override fun deleted(deleted: IResolvable) {
+        cdkBuilder.deleted(deleted.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param deleted Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to delete in your destination location.
+       * This only applies if you [configure your
+       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
+       * data in the destination that isn't in the source.
+       */
+      override fun deleted(deleted: DeletedProperty) {
+        cdkBuilder.deleted(deleted.let(DeletedProperty::unwrap))
+      }
+
+      /**
+       * @param deleted Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to delete in your destination location.
+       * This only applies if you [configure your
+       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
+       * data in the destination that isn't in the source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("178ba2b5cf2ea2064355ea97986f3eb26a133c25410c0cd8a534e038d634e103")
+      override fun deleted(deleted: DeletedProperty.Builder.() -> Unit): Unit =
+          deleted(DeletedProperty(deleted))
+
+      /**
+       * @param skipped Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to skip during your transfer.
+       */
+      override fun skipped(skipped: IResolvable) {
+        cdkBuilder.skipped(skipped.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param skipped Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to skip during your transfer.
+       */
+      override fun skipped(skipped: SkippedProperty) {
+        cdkBuilder.skipped(skipped.let(SkippedProperty::unwrap))
+      }
+
+      /**
+       * @param skipped Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to skip during your transfer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7a8634100c7e7679d1298a9e8c62ef0e782009db9965eb037d9f30f19f4dec76")
+      override fun skipped(skipped: SkippedProperty.Builder.() -> Unit): Unit =
+          skipped(SkippedProperty(skipped))
+
+      /**
+       * @param transferred Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to transfer.
+       */
+      override fun transferred(transferred: IResolvable) {
+        cdkBuilder.transferred(transferred.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param transferred Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to transfer.
+       */
+      override fun transferred(transferred: TransferredProperty) {
+        cdkBuilder.transferred(transferred.let(TransferredProperty::unwrap))
+      }
+
+      /**
+       * @param transferred Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to transfer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("867ccf2419e9301cde6a783a341d38eb0896e2ac7c58c19f1fb9e34a7bc656f3")
+      override fun transferred(transferred: TransferredProperty.Builder.() -> Unit): Unit =
+          transferred(TransferredProperty(transferred))
+
+      /**
+       * @param verified Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to verify during your transfer.
+       */
+      override fun verified(verified: IResolvable) {
+        cdkBuilder.verified(verified.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param verified Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to verify during your transfer.
+       */
+      override fun verified(verified: VerifiedProperty) {
+        cdkBuilder.verified(verified.let(VerifiedProperty::unwrap))
+      }
+
+      /**
+       * @param verified Specifies the level of reporting for the files, objects, and directories
+       * that DataSync attempted to verify during your transfer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6de5119e7772a304c44a8d224fb786e3b2b3c6fb013deaf42c69720fd3212640")
+      override fun verified(verified: VerifiedProperty.Builder.() -> Unit): Unit =
+          verified(VerifiedProperty(verified))
+
+      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty,
+    ) : CdkObject(cdkObject), OverridesProperty {
+      /**
+       * Specifies the level of reporting for the files, objects, and directories that DataSync
+       * attempted to delete in your destination location.
+       *
+       * This only applies if you [configure your
+       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
+       * data in the destination that isn't in the source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-deleted)
+       */
+      override fun deleted(): Any? = unwrap(this).getDeleted()
+
+      /**
+       * Specifies the level of reporting for the files, objects, and directories that DataSync
+       * attempted to skip during your transfer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-skipped)
+       */
+      override fun skipped(): Any? = unwrap(this).getSkipped()
+
+      /**
+       * Specifies the level of reporting for the files, objects, and directories that DataSync
+       * attempted to transfer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-transferred)
+       */
+      override fun transferred(): Any? = unwrap(this).getTransferred()
+
+      /**
+       * Specifies the level of reporting for the files, objects, and directories that DataSync
+       * attempted to verify during your transfer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-verified)
+       */
+      override fun verified(): Any? = unwrap(this).getVerified()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OverridesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty):
+          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as? OverridesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OverridesProperty):
+          software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty
+    }
+  }
+
+  /**
+   * Specifies the Amazon S3 bucket where DataSync uploads your [task
+   * report](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * S3Property s3Property = S3Property.builder()
+   * .bucketAccessRoleArn("bucketAccessRoleArn")
+   * .s3BucketArn("s3BucketArn")
+   * .subdirectory("subdirectory")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html)
+   */
+  public interface S3Property {
+    /**
+     * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a
+     * task report to your S3 bucket.
+     *
+     * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
+     * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-bucketaccessrolearn)
+     */
+    public fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
+
+    /**
+     * Specifies the ARN of the S3 bucket where DataSync uploads your report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-s3bucketarn)
+     */
+    public fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
+
+    /**
+     * Specifies a bucket prefix for your report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-subdirectory)
+     */
+    public fun subdirectory(): String? = unwrap(this).getSubdirectory()
+
+    /**
+     * A builder for [S3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketAccessRoleArn Specifies the Amazon Resource Name (ARN) of the IAM policy that
+       * allows DataSync to upload a task report to your S3 bucket.
+       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
+       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
+       */
+      public fun bucketAccessRoleArn(bucketAccessRoleArn: String)
+
+      /**
+       * @param s3BucketArn Specifies the ARN of the S3 bucket where DataSync uploads your report.
+       */
+      public fun s3BucketArn(s3BucketArn: String)
+
+      /**
+       * @param subdirectory Specifies a bucket prefix for your report.
+       */
+      public fun subdirectory(subdirectory: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnTask.S3Property.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.S3Property.builder()
+
+      /**
+       * @param bucketAccessRoleArn Specifies the Amazon Resource Name (ARN) of the IAM policy that
+       * allows DataSync to upload a task report to your S3 bucket.
+       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
+       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
+       */
+      override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
+        cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
+      }
+
+      /**
+       * @param s3BucketArn Specifies the ARN of the S3 bucket where DataSync uploads your report.
+       */
+      override fun s3BucketArn(s3BucketArn: String) {
+        cdkBuilder.s3BucketArn(s3BucketArn)
+      }
+
+      /**
+       * @param subdirectory Specifies a bucket prefix for your report.
+       */
+      override fun subdirectory(subdirectory: String) {
+        cdkBuilder.subdirectory(subdirectory)
+      }
+
+      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.S3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property,
+    ) : CdkObject(cdkObject), S3Property {
+      /**
+       * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a
+       * task report to your S3 bucket.
+       *
+       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
+       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-bucketaccessrolearn)
+       */
+      override fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
+
+      /**
+       * Specifies the ARN of the S3 bucket where DataSync uploads your report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-s3bucketarn)
+       */
+      override fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
+
+      /**
+       * Specifies a bucket prefix for your report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-subdirectory)
+       */
+      override fun subdirectory(): String? = unwrap(this).getSubdirectory()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property):
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3Property):
+          software.amazon.awscdk.services.datasync.CfnTask.S3Property = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.S3Property
+    }
+  }
+
+  /**
+   * The reporting level for the skipped section of your DataSync task report.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * SkippedProperty skippedProperty = SkippedProperty.builder()
+   * .reportLevel("reportLevel")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html)
+   */
+  public interface SkippedProperty {
+    /**
+     * Specifies whether you want your task report to include only what went wrong with your
+     * transfer or a list of what succeeded and didn't.
+     *
+     * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
+     * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html#cfn-datasync-task-skipped-reportlevel)
+     */
+    public fun reportLevel(): String? = unwrap(this).getReportLevel()
+
+    /**
+     * A builder for [SkippedProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param reportLevel Specifies whether you want your task report to include only what went
+       * wrong with your transfer or a list of what succeeded and didn't.
+       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
+       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
+       */
+      public fun reportLevel(reportLevel: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty.builder()
+
+      /**
+       * @param reportLevel Specifies whether you want your task report to include only what went
+       * wrong with your transfer or a list of what succeeded and didn't.
+       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
+       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
+       */
+      override fun reportLevel(reportLevel: String) {
+        cdkBuilder.reportLevel(reportLevel)
+      }
+
+      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty,
+    ) : CdkObject(cdkObject), SkippedProperty {
+      /**
+       * Specifies whether you want your task report to include only what went wrong with your
+       * transfer or a list of what succeeded and didn't.
+       *
+       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
+       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html#cfn-datasync-task-skipped-reportlevel)
+       */
+      override fun reportLevel(): String? = unwrap(this).getReportLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SkippedProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty):
+          SkippedProperty = CdkObjectWrappers.wrap(cdkObject) as? SkippedProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SkippedProperty):
+          software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty
+    }
+  }
+
+  /**
    * Specifies how you want to configure a task report, which provides detailed information about
    * for your AWS DataSync transfer.
    *
@@ -3476,7 +3482,10 @@ public open class CfnTask internal constructor(
   }
 
   /**
-   * The reporting level for the skipped section of your DataSync task report.
+   * Specifies the schedule you want your task to use for repeated executions.
+   *
+   * For more information, see [Schedule Expressions for
+   * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) .
    *
    * Example:
    *
@@ -3484,180 +3493,78 @@ public open class CfnTask internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * SkippedProperty skippedProperty = SkippedProperty.builder()
-   * .reportLevel("reportLevel")
+   * TaskScheduleProperty taskScheduleProperty = TaskScheduleProperty.builder()
+   * .scheduleExpression("scheduleExpression")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html)
    */
-  public interface SkippedProperty {
+  public interface TaskScheduleProperty {
     /**
-     * Specifies whether you want your task report to include only what went wrong with your
-     * transfer or a list of what succeeded and didn't.
+     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a
+     * source to a destination location.
      *
-     * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
-     * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html#cfn-datasync-task-skipped-reportlevel)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression)
      */
-    public fun reportLevel(): String? = unwrap(this).getReportLevel()
+    public fun scheduleExpression(): String
 
     /**
-     * A builder for [SkippedProperty]
+     * A builder for [TaskScheduleProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param reportLevel Specifies whether you want your task report to include only what went
-       * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
+       * @param scheduleExpression A cron expression that specifies when AWS DataSync initiates a
+       * scheduled transfer from a source to a destination location. 
        */
-      public fun reportLevel(reportLevel: String)
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty.Builder =
-          software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty.builder()
+          software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty.builder()
 
       /**
-       * @param reportLevel Specifies whether you want your task report to include only what went
-       * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
+       * @param scheduleExpression A cron expression that specifies when AWS DataSync initiates a
+       * scheduled transfer from a source to a destination location. 
        */
-      override fun reportLevel(reportLevel: String) {
-        cdkBuilder.reportLevel(reportLevel)
+      override fun scheduleExpression(scheduleExpression: String) {
+        cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
-      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty =
+      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty,
-    ) : CdkObject(cdkObject), SkippedProperty {
+      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty,
+    ) : CdkObject(cdkObject), TaskScheduleProperty {
       /**
-       * Specifies whether you want your task report to include only what went wrong with your
-       * transfer or a list of what succeeded and didn't.
+       * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a
+       * source to a destination location.
        *
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html#cfn-datasync-task-skipped-reportlevel)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression)
        */
-      override fun reportLevel(): String? = unwrap(this).getReportLevel()
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SkippedProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TaskScheduleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty):
-          SkippedProperty = CdkObjectWrappers.wrap(cdkObject) as? SkippedProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty):
+          TaskScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskScheduleProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SkippedProperty):
-          software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty
-    }
-  }
-
-  /**
-   * The reporting level for the verified section of your DataSync task report.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * VerifiedProperty verifiedProperty = VerifiedProperty.builder()
-   * .reportLevel("reportLevel")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html)
-   */
-  public interface VerifiedProperty {
-    /**
-     * Specifies whether you want your task report to include only what went wrong with your
-     * transfer or a list of what succeeded and didn't.
-     *
-     * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
-     * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html#cfn-datasync-task-verified-reportlevel)
-     */
-    public fun reportLevel(): String? = unwrap(this).getReportLevel()
-
-    /**
-     * A builder for [VerifiedProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param reportLevel Specifies whether you want your task report to include only what went
-       * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
-       */
-      public fun reportLevel(reportLevel: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty.Builder =
-          software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty.builder()
-
-      /**
-       * @param reportLevel Specifies whether you want your task report to include only what went
-       * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
-       */
-      override fun reportLevel(reportLevel: String) {
-        cdkBuilder.reportLevel(reportLevel)
-      }
-
-      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty,
-    ) : CdkObject(cdkObject), VerifiedProperty {
-      /**
-       * Specifies whether you want your task report to include only what went wrong with your
-       * transfer or a list of what succeeded and didn't.
-       *
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html#cfn-datasync-task-verified-reportlevel)
-       */
-      override fun reportLevel(): String? = unwrap(this).getReportLevel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VerifiedProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty):
-          VerifiedProperty = CdkObjectWrappers.wrap(cdkObject) as? VerifiedProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VerifiedProperty):
-          software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty
+      internal fun unwrap(wrapped: TaskScheduleProperty):
+          software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty
     }
   }
 
@@ -3752,6 +3659,99 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty
+    }
+  }
+
+  /**
+   * The reporting level for the verified section of your DataSync task report.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * VerifiedProperty verifiedProperty = VerifiedProperty.builder()
+   * .reportLevel("reportLevel")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html)
+   */
+  public interface VerifiedProperty {
+    /**
+     * Specifies whether you want your task report to include only what went wrong with your
+     * transfer or a list of what succeeded and didn't.
+     *
+     * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
+     * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html#cfn-datasync-task-verified-reportlevel)
+     */
+    public fun reportLevel(): String? = unwrap(this).getReportLevel()
+
+    /**
+     * A builder for [VerifiedProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param reportLevel Specifies whether you want your task report to include only what went
+       * wrong with your transfer or a list of what succeeded and didn't.
+       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
+       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
+       */
+      public fun reportLevel(reportLevel: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty.builder()
+
+      /**
+       * @param reportLevel Specifies whether you want your task report to include only what went
+       * wrong with your transfer or a list of what succeeded and didn't.
+       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
+       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
+       */
+      override fun reportLevel(reportLevel: String) {
+        cdkBuilder.reportLevel(reportLevel)
+      }
+
+      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty,
+    ) : CdkObject(cdkObject), VerifiedProperty {
+      /**
+       * Specifies whether you want your task report to include only what went wrong with your
+       * transfer or a list of what succeeded and didn't.
+       *
+       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
+       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html#cfn-datasync-task-verified-reportlevel)
+       */
+      override fun reportLevel(): String? = unwrap(this).getReportLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VerifiedProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty):
+          VerifiedProperty = CdkObjectWrappers.wrap(cdkObject) as? VerifiedProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VerifiedProperty):
+          software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty
     }
   }
 }

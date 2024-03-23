@@ -732,6 +732,144 @@ public open class CfnPermissionSet internal constructor(
   }
 
   /**
+   * Specifies the name and path of a customer managed policy.
+   *
+   * You must have an IAM policy that matches the name and path in each AWS account where you want
+   * to deploy your permission set.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sso.*;
+   * CustomerManagedPolicyReferenceProperty customerManagedPolicyReferenceProperty =
+   * CustomerManagedPolicyReferenceProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .path("path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html)
+   */
+  public interface CustomerManagedPolicyReferenceProperty {
+    /**
+     * The name of the IAM policy that you have configured in each account where you want to deploy
+     * your permission set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html#cfn-sso-permissionset-customermanagedpolicyreference-name)
+     */
+    public fun name(): String
+
+    /**
+     * The path to the IAM policy that you have configured in each account where you want to deploy
+     * your permission set.
+     *
+     * The default is `/` . For more information, see [Friendly names and
+     * paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names)
+     * in the *IAM User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html#cfn-sso-permissionset-customermanagedpolicyreference-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * A builder for [CustomerManagedPolicyReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the IAM policy that you have configured in each account where you
+       * want to deploy your permission set. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param path The path to the IAM policy that you have configured in each account where you
+       * want to deploy your permission set.
+       * The default is `/` . For more information, see [Friendly names and
+       * paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names)
+       * in the *IAM User Guide* .
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty.Builder
+          =
+          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty.builder()
+
+      /**
+       * @param name The name of the IAM policy that you have configured in each account where you
+       * want to deploy your permission set. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param path The path to the IAM policy that you have configured in each account where you
+       * want to deploy your permission set.
+       * The default is `/` . For more information, see [Friendly names and
+       * paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names)
+       * in the *IAM User Guide* .
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty,
+    ) : CdkObject(cdkObject), CustomerManagedPolicyReferenceProperty {
+      /**
+       * The name of the IAM policy that you have configured in each account where you want to
+       * deploy your permission set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html#cfn-sso-permissionset-customermanagedpolicyreference-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The path to the IAM policy that you have configured in each account where you want to
+       * deploy your permission set.
+       *
+       * The default is `/` . For more information, see [Friendly names and
+       * paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names)
+       * in the *IAM User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html#cfn-sso-permissionset-customermanagedpolicyreference-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CustomerManagedPolicyReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty):
+          CustomerManagedPolicyReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerManagedPolicyReferenceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomerManagedPolicyReferenceProperty):
+          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty
+    }
+  }
+
+  /**
    * Specifies the configuration of the AWS managed or customer managed policy that you want to set
    * as a permissions boundary.
    *
@@ -919,144 +1057,6 @@ public open class CfnPermissionSet internal constructor(
           software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty
-    }
-  }
-
-  /**
-   * Specifies the name and path of a customer managed policy.
-   *
-   * You must have an IAM policy that matches the name and path in each AWS account where you want
-   * to deploy your permission set.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sso.*;
-   * CustomerManagedPolicyReferenceProperty customerManagedPolicyReferenceProperty =
-   * CustomerManagedPolicyReferenceProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .path("path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html)
-   */
-  public interface CustomerManagedPolicyReferenceProperty {
-    /**
-     * The name of the IAM policy that you have configured in each account where you want to deploy
-     * your permission set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html#cfn-sso-permissionset-customermanagedpolicyreference-name)
-     */
-    public fun name(): String
-
-    /**
-     * The path to the IAM policy that you have configured in each account where you want to deploy
-     * your permission set.
-     *
-     * The default is `/` . For more information, see [Friendly names and
-     * paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names)
-     * in the *IAM User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html#cfn-sso-permissionset-customermanagedpolicyreference-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * A builder for [CustomerManagedPolicyReferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the IAM policy that you have configured in each account where you
-       * want to deploy your permission set. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param path The path to the IAM policy that you have configured in each account where you
-       * want to deploy your permission set.
-       * The default is `/` . For more information, see [Friendly names and
-       * paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names)
-       * in the *IAM User Guide* .
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty.Builder
-          =
-          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty.builder()
-
-      /**
-       * @param name The name of the IAM policy that you have configured in each account where you
-       * want to deploy your permission set. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param path The path to the IAM policy that you have configured in each account where you
-       * want to deploy your permission set.
-       * The default is `/` . For more information, see [Friendly names and
-       * paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names)
-       * in the *IAM User Guide* .
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty,
-    ) : CdkObject(cdkObject), CustomerManagedPolicyReferenceProperty {
-      /**
-       * The name of the IAM policy that you have configured in each account where you want to
-       * deploy your permission set.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html#cfn-sso-permissionset-customermanagedpolicyreference-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The path to the IAM policy that you have configured in each account where you want to
-       * deploy your permission set.
-       *
-       * The default is `/` . For more information, see [Friendly names and
-       * paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names)
-       * in the *IAM User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html#cfn-sso-permissionset-customermanagedpolicyreference-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CustomerManagedPolicyReferenceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty):
-          CustomerManagedPolicyReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomerManagedPolicyReferenceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomerManagedPolicyReferenceProperty):
-          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty
     }
   }
 }

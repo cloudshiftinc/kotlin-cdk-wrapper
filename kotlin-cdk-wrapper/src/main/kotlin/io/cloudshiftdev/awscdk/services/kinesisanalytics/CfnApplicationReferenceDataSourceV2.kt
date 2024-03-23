@@ -315,219 +315,6 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the format of the data
-   * in the streaming source, and how each data element maps to corresponding columns created in the
-   * in-application stream.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * ReferenceSchemaProperty referenceSchemaProperty = ReferenceSchemaProperty.builder()
-   * .recordColumns(List.of(RecordColumnProperty.builder()
-   * .name("name")
-   * .sqlType("sqlType")
-   * // the properties below are optional
-   * .mapping("mapping")
-   * .build()))
-   * .recordFormat(RecordFormatProperty.builder()
-   * .recordFormatType("recordFormatType")
-   * // the properties below are optional
-   * .mappingParameters(MappingParametersProperty.builder()
-   * .csvMappingParameters(CSVMappingParametersProperty.builder()
-   * .recordColumnDelimiter("recordColumnDelimiter")
-   * .recordRowDelimiter("recordRowDelimiter")
-   * .build())
-   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build())
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .recordEncoding("recordEncoding")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html)
-   */
-  public interface ReferenceSchemaProperty {
-    /**
-     * A list of `RecordColumn` objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns)
-     */
-    public fun recordColumns(): Any
-
-    /**
-     * Specifies the encoding of the records in the streaming source.
-     *
-     * For example, UTF-8.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding)
-     */
-    public fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
-
-    /**
-     * Specifies the format of the records on the streaming source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat)
-     */
-    public fun recordFormat(): Any
-
-    /**
-     * A builder for [ReferenceSchemaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(recordColumns: IResolvable)
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(recordColumns: List<Any>)
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(vararg recordColumns: Any)
-
-      /**
-       * @param recordEncoding Specifies the encoding of the records in the streaming source.
-       * For example, UTF-8.
-       */
-      public fun recordEncoding(recordEncoding: String)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      public fun recordFormat(recordFormat: IResolvable)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      public fun recordFormat(recordFormat: RecordFormatProperty)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("dde604734a23a49df990e10c9bee2231c25e647050edeb6e8abcb6f6b01b38c0")
-      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.builder()
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(recordColumns: IResolvable) {
-        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(recordColumns: List<Any>) {
-        cdkBuilder.recordColumns(recordColumns)
-      }
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(vararg recordColumns: Any): Unit =
-          recordColumns(recordColumns.toList())
-
-      /**
-       * @param recordEncoding Specifies the encoding of the records in the streaming source.
-       * For example, UTF-8.
-       */
-      override fun recordEncoding(recordEncoding: String) {
-        cdkBuilder.recordEncoding(recordEncoding)
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      override fun recordFormat(recordFormat: IResolvable) {
-        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      override fun recordFormat(recordFormat: RecordFormatProperty) {
-        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("dde604734a23a49df990e10c9bee2231c25e647050edeb6e8abcb6f6b01b38c0")
-      override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit =
-          recordFormat(RecordFormatProperty(recordFormat))
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty,
-    ) : CdkObject(cdkObject), ReferenceSchemaProperty {
-      /**
-       * A list of `RecordColumn` objects.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns)
-       */
-      override fun recordColumns(): Any = unwrap(this).getRecordColumns()
-
-      /**
-       * Specifies the encoding of the records in the streaming source.
-       *
-       * For example, UTF-8.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding)
-       */
-      override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
-
-      /**
-       * Specifies the format of the records on the streaming source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat)
-       */
-      override fun recordFormat(): Any = unwrap(this).getRecordFormat()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReferenceSchemaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty):
-          ReferenceSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceSchemaProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReferenceSchemaProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty
-    }
-  }
-
-  /**
    * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
    * information when the record format uses delimiters, such as CSV.
    *
@@ -740,287 +527,6 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty
-    }
-  }
-
-  /**
-   * For an SQL-based Amazon Kinesis Data Analytics application, identifies the Amazon S3 bucket and
-   * object that contains the reference data.
-   *
-   * A Kinesis Data Analytics application loads reference data only once. If the data changes, you
-   * call the
-   * [UpdateApplication](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_UpdateApplication.html)
-   * operation to trigger reloading of data into your application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * S3ReferenceDataSourceProperty s3ReferenceDataSourceProperty =
-   * S3ReferenceDataSourceProperty.builder()
-   * .bucketArn("bucketArn")
-   * .fileKey("fileKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html)
-   */
-  public interface S3ReferenceDataSourceProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-bucketarn)
-     */
-    public fun bucketArn(): String
-
-    /**
-     * The object key name containing the reference data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey)
-     */
-    public fun fileKey(): String
-
-    /**
-     * A builder for [S3ReferenceDataSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
-       */
-      public fun bucketArn(bucketArn: String)
-
-      /**
-       * @param fileKey The object key name containing the reference data. 
-       */
-      public fun fileKey(fileKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty.builder()
-
-      /**
-       * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
-       */
-      override fun bucketArn(bucketArn: String) {
-        cdkBuilder.bucketArn(bucketArn)
-      }
-
-      /**
-       * @param fileKey The object key name containing the reference data. 
-       */
-      override fun fileKey(fileKey: String) {
-        cdkBuilder.fileKey(fileKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty,
-    ) : CdkObject(cdkObject), S3ReferenceDataSourceProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-bucketarn)
-       */
-      override fun bucketArn(): String = unwrap(this).getBucketArn()
-
-      /**
-       * The object key name containing the reference data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey)
-       */
-      override fun fileKey(): String = unwrap(this).getFileKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3ReferenceDataSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty):
-          S3ReferenceDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3ReferenceDataSourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3ReferenceDataSourceProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty
-    }
-  }
-
-  /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the record format and
-   * relevant mapping information that should be applied to schematize the records on the stream.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * RecordFormatProperty recordFormatProperty = RecordFormatProperty.builder()
-   * .recordFormatType("recordFormatType")
-   * // the properties below are optional
-   * .mappingParameters(MappingParametersProperty.builder()
-   * .csvMappingParameters(CSVMappingParametersProperty.builder()
-   * .recordColumnDelimiter("recordColumnDelimiter")
-   * .recordRowDelimiter("recordRowDelimiter")
-   * .build())
-   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html)
-   */
-  public interface RecordFormatProperty {
-    /**
-     * When you configure application input at the time of creating or updating an application,
-     * provides additional mapping information specific to the record format (such as JSON, CSV, or
-     * record fields delimited by some delimiter) on the streaming source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-mappingparameters)
-     */
-    public fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
-
-    /**
-     * The type of record format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-recordformattype)
-     */
-    public fun recordFormatType(): String
-
-    /**
-     * A builder for [RecordFormatProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-       */
-      public fun mappingParameters(mappingParameters: IResolvable)
-
-      /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-       */
-      public fun mappingParameters(mappingParameters: MappingParametersProperty)
-
-      /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9355f01168aa04c8b14aaddc97622ba12495bb03768ec9fc390df24b14aef14a")
-      public fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit)
-
-      /**
-       * @param recordFormatType The type of record format. 
-       */
-      public fun recordFormatType(recordFormatType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty.builder()
-
-      /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-       */
-      override fun mappingParameters(mappingParameters: IResolvable) {
-        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-       */
-      override fun mappingParameters(mappingParameters: MappingParametersProperty) {
-        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
-      }
-
-      /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9355f01168aa04c8b14aaddc97622ba12495bb03768ec9fc390df24b14aef14a")
-      override
-          fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit):
-          Unit = mappingParameters(MappingParametersProperty(mappingParameters))
-
-      /**
-       * @param recordFormatType The type of record format. 
-       */
-      override fun recordFormatType(recordFormatType: String) {
-        cdkBuilder.recordFormatType(recordFormatType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty,
-    ) : CdkObject(cdkObject), RecordFormatProperty {
-      /**
-       * When you configure application input at the time of creating or updating an application,
-       * provides additional mapping information specific to the record format (such as JSON, CSV, or
-       * record fields delimited by some delimiter) on the streaming source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-mappingparameters)
-       */
-      override fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
-
-      /**
-       * The type of record format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-recordformattype)
-       */
-      override fun recordFormatType(): String = unwrap(this).getRecordFormatType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecordFormatProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty):
-          RecordFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordFormatProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RecordFormatProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty
     }
   }
 
@@ -1365,6 +871,170 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
   }
 
   /**
+   * For a SQL-based Managed Service for Apache Flink application, describes the record format and
+   * relevant mapping information that should be applied to schematize the records on the stream.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * RecordFormatProperty recordFormatProperty = RecordFormatProperty.builder()
+   * .recordFormatType("recordFormatType")
+   * // the properties below are optional
+   * .mappingParameters(MappingParametersProperty.builder()
+   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * .recordColumnDelimiter("recordColumnDelimiter")
+   * .recordRowDelimiter("recordRowDelimiter")
+   * .build())
+   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html)
+   */
+  public interface RecordFormatProperty {
+    /**
+     * When you configure application input at the time of creating or updating an application,
+     * provides additional mapping information specific to the record format (such as JSON, CSV, or
+     * record fields delimited by some delimiter) on the streaming source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-mappingparameters)
+     */
+    public fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
+
+    /**
+     * The type of record format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-recordformattype)
+     */
+    public fun recordFormatType(): String
+
+    /**
+     * A builder for [RecordFormatProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      public fun mappingParameters(mappingParameters: IResolvable)
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      public fun mappingParameters(mappingParameters: MappingParametersProperty)
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9355f01168aa04c8b14aaddc97622ba12495bb03768ec9fc390df24b14aef14a")
+      public fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit)
+
+      /**
+       * @param recordFormatType The type of record format. 
+       */
+      public fun recordFormatType(recordFormatType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty.builder()
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      override fun mappingParameters(mappingParameters: IResolvable) {
+        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      override fun mappingParameters(mappingParameters: MappingParametersProperty) {
+        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
+      }
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9355f01168aa04c8b14aaddc97622ba12495bb03768ec9fc390df24b14aef14a")
+      override
+          fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit):
+          Unit = mappingParameters(MappingParametersProperty(mappingParameters))
+
+      /**
+       * @param recordFormatType The type of record format. 
+       */
+      override fun recordFormatType(recordFormatType: String) {
+        cdkBuilder.recordFormatType(recordFormatType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty,
+    ) : CdkObject(cdkObject), RecordFormatProperty {
+      /**
+       * When you configure application input at the time of creating or updating an application,
+       * provides additional mapping information specific to the record format (such as JSON, CSV, or
+       * record fields delimited by some delimiter) on the streaming source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-mappingparameters)
+       */
+      override fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
+
+      /**
+       * The type of record format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-recordformattype)
+       */
+      override fun recordFormatType(): String = unwrap(this).getRecordFormatType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecordFormatProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty):
+          RecordFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordFormatProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecordFormatProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty
+    }
+  }
+
+  /**
    * For a SQL-based Managed Service for Apache Flink application, describes the reference data
    * source by providing the source information (Amazon S3 bucket name and object key name), the
    * resulting in-application table name that is created, and the necessary schema to map the data
@@ -1631,6 +1301,336 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty
+    }
+  }
+
+  /**
+   * For a SQL-based Managed Service for Apache Flink application, describes the format of the data
+   * in the streaming source, and how each data element maps to corresponding columns created in the
+   * in-application stream.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * ReferenceSchemaProperty referenceSchemaProperty = ReferenceSchemaProperty.builder()
+   * .recordColumns(List.of(RecordColumnProperty.builder()
+   * .name("name")
+   * .sqlType("sqlType")
+   * // the properties below are optional
+   * .mapping("mapping")
+   * .build()))
+   * .recordFormat(RecordFormatProperty.builder()
+   * .recordFormatType("recordFormatType")
+   * // the properties below are optional
+   * .mappingParameters(MappingParametersProperty.builder()
+   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * .recordColumnDelimiter("recordColumnDelimiter")
+   * .recordRowDelimiter("recordRowDelimiter")
+   * .build())
+   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build())
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .recordEncoding("recordEncoding")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html)
+   */
+  public interface ReferenceSchemaProperty {
+    /**
+     * A list of `RecordColumn` objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns)
+     */
+    public fun recordColumns(): Any
+
+    /**
+     * Specifies the encoding of the records in the streaming source.
+     *
+     * For example, UTF-8.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding)
+     */
+    public fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
+
+    /**
+     * Specifies the format of the records on the streaming source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat)
+     */
+    public fun recordFormat(): Any
+
+    /**
+     * A builder for [ReferenceSchemaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      public fun recordColumns(recordColumns: IResolvable)
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      public fun recordColumns(recordColumns: List<Any>)
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      public fun recordColumns(vararg recordColumns: Any)
+
+      /**
+       * @param recordEncoding Specifies the encoding of the records in the streaming source.
+       * For example, UTF-8.
+       */
+      public fun recordEncoding(recordEncoding: String)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      public fun recordFormat(recordFormat: IResolvable)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      public fun recordFormat(recordFormat: RecordFormatProperty)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dde604734a23a49df990e10c9bee2231c25e647050edeb6e8abcb6f6b01b38c0")
+      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.builder()
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      override fun recordColumns(recordColumns: IResolvable) {
+        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      override fun recordColumns(recordColumns: List<Any>) {
+        cdkBuilder.recordColumns(recordColumns)
+      }
+
+      /**
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      override fun recordColumns(vararg recordColumns: Any): Unit =
+          recordColumns(recordColumns.toList())
+
+      /**
+       * @param recordEncoding Specifies the encoding of the records in the streaming source.
+       * For example, UTF-8.
+       */
+      override fun recordEncoding(recordEncoding: String) {
+        cdkBuilder.recordEncoding(recordEncoding)
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      override fun recordFormat(recordFormat: IResolvable) {
+        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      override fun recordFormat(recordFormat: RecordFormatProperty) {
+        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dde604734a23a49df990e10c9bee2231c25e647050edeb6e8abcb6f6b01b38c0")
+      override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit =
+          recordFormat(RecordFormatProperty(recordFormat))
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty,
+    ) : CdkObject(cdkObject), ReferenceSchemaProperty {
+      /**
+       * A list of `RecordColumn` objects.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns)
+       */
+      override fun recordColumns(): Any = unwrap(this).getRecordColumns()
+
+      /**
+       * Specifies the encoding of the records in the streaming source.
+       *
+       * For example, UTF-8.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding)
+       */
+      override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
+
+      /**
+       * Specifies the format of the records on the streaming source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat)
+       */
+      override fun recordFormat(): Any = unwrap(this).getRecordFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReferenceSchemaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty):
+          ReferenceSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceSchemaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReferenceSchemaProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty
+    }
+  }
+
+  /**
+   * For an SQL-based Amazon Kinesis Data Analytics application, identifies the Amazon S3 bucket and
+   * object that contains the reference data.
+   *
+   * A Kinesis Data Analytics application loads reference data only once. If the data changes, you
+   * call the
+   * [UpdateApplication](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_UpdateApplication.html)
+   * operation to trigger reloading of data into your application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * S3ReferenceDataSourceProperty s3ReferenceDataSourceProperty =
+   * S3ReferenceDataSourceProperty.builder()
+   * .bucketArn("bucketArn")
+   * .fileKey("fileKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html)
+   */
+  public interface S3ReferenceDataSourceProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-bucketarn)
+     */
+    public fun bucketArn(): String
+
+    /**
+     * The object key name containing the reference data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey)
+     */
+    public fun fileKey(): String
+
+    /**
+     * A builder for [S3ReferenceDataSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
+       */
+      public fun bucketArn(bucketArn: String)
+
+      /**
+       * @param fileKey The object key name containing the reference data. 
+       */
+      public fun fileKey(fileKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty.builder()
+
+      /**
+       * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
+       */
+      override fun bucketArn(bucketArn: String) {
+        cdkBuilder.bucketArn(bucketArn)
+      }
+
+      /**
+       * @param fileKey The object key name containing the reference data. 
+       */
+      override fun fileKey(fileKey: String) {
+        cdkBuilder.fileKey(fileKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty,
+    ) : CdkObject(cdkObject), S3ReferenceDataSourceProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-bucketarn)
+       */
+      override fun bucketArn(): String = unwrap(this).getBucketArn()
+
+      /**
+       * The object key name containing the reference data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey)
+       */
+      override fun fileKey(): String = unwrap(this).getFileKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3ReferenceDataSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty):
+          S3ReferenceDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3ReferenceDataSourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3ReferenceDataSourceProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty
     }
   }
 }

@@ -4338,6 +4338,142 @@ public open class CfnDBCluster internal constructor(
   }
 
   /**
+   * Describes an AWS Identity and Access Management (IAM) role that is associated with a DB
+   * cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rds.*;
+   * DBClusterRoleProperty dBClusterRoleProperty = DBClusterRoleProperty.builder()
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .featureName("featureName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html)
+   */
+  public interface DBClusterRoleProperty {
+    /**
+     * The name of the feature associated with the AWS Identity and Access Management (IAM) role.
+     *
+     * IAM roles that are associated with a DB cluster grant permission for the DB cluster to access
+     * other AWS services on your behalf. For the list of supported feature names, see the
+     * `SupportedFeatureNames` description in
+     * [DBEngineVersion](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBEngineVersion.html)
+     * in the *Amazon RDS API Reference* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-featurename)
+     */
+    public fun featureName(): String? = unwrap(this).getFeatureName()
+
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that is associated with the DB cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [DBClusterRoleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param featureName The name of the feature associated with the AWS Identity and Access
+       * Management (IAM) role.
+       * IAM roles that are associated with a DB cluster grant permission for the DB cluster to
+       * access other AWS services on your behalf. For the list of supported feature names, see the
+       * `SupportedFeatureNames` description in
+       * [DBEngineVersion](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBEngineVersion.html)
+       * in the *Amazon RDS API Reference* .
+       */
+      public fun featureName(featureName: String)
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that is associated with the
+       * DB cluster. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty.Builder =
+          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty.builder()
+
+      /**
+       * @param featureName The name of the feature associated with the AWS Identity and Access
+       * Management (IAM) role.
+       * IAM roles that are associated with a DB cluster grant permission for the DB cluster to
+       * access other AWS services on your behalf. For the list of supported feature names, see the
+       * `SupportedFeatureNames` description in
+       * [DBEngineVersion](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBEngineVersion.html)
+       * in the *Amazon RDS API Reference* .
+       */
+      override fun featureName(featureName: String) {
+        cdkBuilder.featureName(featureName)
+      }
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that is associated with the
+       * DB cluster. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty,
+    ) : CdkObject(cdkObject), DBClusterRoleProperty {
+      /**
+       * The name of the feature associated with the AWS Identity and Access Management (IAM) role.
+       *
+       * IAM roles that are associated with a DB cluster grant permission for the DB cluster to
+       * access other AWS services on your behalf. For the list of supported feature names, see the
+       * `SupportedFeatureNames` description in
+       * [DBEngineVersion](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBEngineVersion.html)
+       * in the *Amazon RDS API Reference* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-featurename)
+       */
+      override fun featureName(): String? = unwrap(this).getFeatureName()
+
+      /**
+       * The Amazon Resource Name (ARN) of the IAM role that is associated with the DB cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DBClusterRoleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty):
+          DBClusterRoleProperty = CdkObjectWrappers.wrap(cdkObject) as? DBClusterRoleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DBClusterRoleProperty):
+          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty
+    }
+  }
+
+  /**
    * The `Endpoint` return value specifies the connection endpoint for the primary instance of the
    * DB cluster.
    *
@@ -4443,180 +4579,6 @@ public open class CfnDBCluster internal constructor(
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.rds.CfnDBCluster.EndpointProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.rds.CfnDBCluster.EndpointProperty
-    }
-  }
-
-  /**
-   * The `ServerlessV2ScalingConfiguration` property type specifies the scaling configuration of an
-   * Aurora Serverless V2 DB cluster.
-   *
-   * For more information, see [Using Amazon Aurora Serverless
-   * v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html) in the
-   * *Amazon Aurora User Guide* .
-   *
-   * If you have an Aurora cluster, you must set the `ScalingConfigurationInfo` attribute before you
-   * add a DB instance that uses the `db.serverless` DB instance class. For more information, see
-   * [Clusters that use Aurora Serverless v2 must have a capacity range
-   * specified](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html#aurora-serverless-v2.requirements.capacity-range)
-   * in the *Amazon Aurora User Guide* .
-   *
-   * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
-   * `ScalingConfiguration` property.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rds.*;
-   * ServerlessV2ScalingConfigurationProperty serverlessV2ScalingConfigurationProperty =
-   * ServerlessV2ScalingConfigurationProperty.builder()
-   * .maxCapacity(123)
-   * .minCapacity(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html)
-   */
-  public interface ServerlessV2ScalingConfigurationProperty {
-    /**
-     * The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless
-     * v2 cluster.
-     *
-     * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The
-     * largest value that you can use is 128.
-     *
-     * The maximum capacity must be higher than 0.5 ACUs. For more information, see [Choosing the
-     * maximum Aurora Serverless v2 capacity setting for a
-     * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
-     * in the *Amazon Aurora User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-maxcapacity)
-     */
-    public fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
-
-    /**
-     * The minimum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless
-     * v2 cluster.
-     *
-     * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
-     * smallest value that you can use is 0.5.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-mincapacity)
-     */
-    public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
-
-    /**
-     * A builder for [ServerlessV2ScalingConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxCapacity The maximum number of Aurora capacity units (ACUs) for a DB instance in
-       * an Aurora Serverless v2 cluster.
-       * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The
-       * largest value that you can use is 128.
-       *
-       * The maximum capacity must be higher than 0.5 ACUs. For more information, see [Choosing the
-       * maximum Aurora Serverless v2 capacity setting for a
-       * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
-       * in the *Amazon Aurora User Guide* .
-       */
-      public fun maxCapacity(maxCapacity: Number)
-
-      /**
-       * @param minCapacity The minimum number of Aurora capacity units (ACUs) for a DB instance in
-       * an Aurora Serverless v2 cluster.
-       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
-       * smallest value that you can use is 0.5.
-       */
-      public fun minCapacity(minCapacity: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty.builder()
-
-      /**
-       * @param maxCapacity The maximum number of Aurora capacity units (ACUs) for a DB instance in
-       * an Aurora Serverless v2 cluster.
-       * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The
-       * largest value that you can use is 128.
-       *
-       * The maximum capacity must be higher than 0.5 ACUs. For more information, see [Choosing the
-       * maximum Aurora Serverless v2 capacity setting for a
-       * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
-       * in the *Amazon Aurora User Guide* .
-       */
-      override fun maxCapacity(maxCapacity: Number) {
-        cdkBuilder.maxCapacity(maxCapacity)
-      }
-
-      /**
-       * @param minCapacity The minimum number of Aurora capacity units (ACUs) for a DB instance in
-       * an Aurora Serverless v2 cluster.
-       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
-       * smallest value that you can use is 0.5.
-       */
-      override fun minCapacity(minCapacity: Number) {
-        cdkBuilder.minCapacity(minCapacity)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerlessV2ScalingConfigurationProperty {
-      /**
-       * The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora
-       * Serverless v2 cluster.
-       *
-       * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The
-       * largest value that you can use is 128.
-       *
-       * The maximum capacity must be higher than 0.5 ACUs. For more information, see [Choosing the
-       * maximum Aurora Serverless v2 capacity setting for a
-       * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
-       * in the *Amazon Aurora User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-maxcapacity)
-       */
-      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
-
-      /**
-       * The minimum number of Aurora capacity units (ACUs) for a DB instance in an Aurora
-       * Serverless v2 cluster.
-       *
-       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
-       * smallest value that you can use is 0.5.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-mincapacity)
-       */
-      override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServerlessV2ScalingConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty):
-          ServerlessV2ScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServerlessV2ScalingConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServerlessV2ScalingConfigurationProperty):
-          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
     }
   }
 
@@ -4732,6 +4694,100 @@ public open class CfnDBCluster internal constructor(
           software.amazon.awscdk.services.rds.CfnDBCluster.MasterUserSecretProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.rds.CfnDBCluster.MasterUserSecretProperty
+    }
+  }
+
+  /**
+   * The `ReadEndpoint` return value specifies the reader endpoint for the DB cluster.
+   *
+   * The reader endpoint for a DB cluster load-balances connections across the Aurora Replicas that
+   * are available in a DB cluster. As clients request new connections to the reader endpoint, Aurora
+   * distributes the connection requests among the Aurora Replicas in the DB cluster. This
+   * functionality can help balance your read workload across multiple Aurora Replicas in your DB
+   * cluster.
+   *
+   * If a failover occurs, and the Aurora Replica that you are connected to is promoted to be the
+   * primary instance, your connection is dropped. To continue sending your read workload to other
+   * Aurora Replicas in the cluster, you can then reconnect to the reader endpoint.
+   *
+   * For more information about Aurora endpoints, see [Amazon Aurora connection
+   * management](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html)
+   * in the *Amazon Aurora User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rds.*;
+   * ReadEndpointProperty readEndpointProperty = ReadEndpointProperty.builder()
+   * .address("address")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-readendpoint.html)
+   */
+  public interface ReadEndpointProperty {
+    /**
+     * The host address of the reader endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-readendpoint.html#cfn-rds-dbcluster-readendpoint-address)
+     */
+    public fun address(): String? = unwrap(this).getAddress()
+
+    /**
+     * A builder for [ReadEndpointProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param address The host address of the reader endpoint.
+       */
+      public fun address(address: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty.Builder =
+          software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty.builder()
+
+      /**
+       * @param address The host address of the reader endpoint.
+       */
+      override fun address(address: String) {
+        cdkBuilder.address(address)
+      }
+
+      public fun build(): software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty,
+    ) : CdkObject(cdkObject), ReadEndpointProperty {
+      /**
+       * The host address of the reader endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-readendpoint.html#cfn-rds-dbcluster-readendpoint-address)
+       */
+      override fun address(): String? = unwrap(this).getAddress()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReadEndpointProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty):
+          ReadEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? ReadEndpointProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReadEndpointProperty):
+          software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty
     }
   }
 
@@ -5164,8 +5220,21 @@ public open class CfnDBCluster internal constructor(
   }
 
   /**
-   * Describes an AWS Identity and Access Management (IAM) role that is associated with a DB
-   * cluster.
+   * The `ServerlessV2ScalingConfiguration` property type specifies the scaling configuration of an
+   * Aurora Serverless V2 DB cluster.
+   *
+   * For more information, see [Using Amazon Aurora Serverless
+   * v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html) in the
+   * *Amazon Aurora User Guide* .
+   *
+   * If you have an Aurora cluster, you must set the `ScalingConfigurationInfo` attribute before you
+   * add a DB instance that uses the `db.serverless` DB instance class. For more information, see
+   * [Clusters that use Aurora Serverless v2 must have a capacity range
+   * specified](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html#aurora-serverless-v2.requirements.capacity-range)
+   * in the *Amazon Aurora User Guide* .
+   *
+   * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
+   * `ScalingConfiguration` property.
    *
    * Example:
    *
@@ -5173,223 +5242,154 @@ public open class CfnDBCluster internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.rds.*;
-   * DBClusterRoleProperty dBClusterRoleProperty = DBClusterRoleProperty.builder()
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .featureName("featureName")
+   * ServerlessV2ScalingConfigurationProperty serverlessV2ScalingConfigurationProperty =
+   * ServerlessV2ScalingConfigurationProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html)
    */
-  public interface DBClusterRoleProperty {
+  public interface ServerlessV2ScalingConfigurationProperty {
     /**
-     * The name of the feature associated with the AWS Identity and Access Management (IAM) role.
+     * The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless
+     * v2 cluster.
      *
-     * IAM roles that are associated with a DB cluster grant permission for the DB cluster to access
-     * other AWS services on your behalf. For the list of supported feature names, see the
-     * `SupportedFeatureNames` description in
-     * [DBEngineVersion](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBEngineVersion.html)
-     * in the *Amazon RDS API Reference* .
+     * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The
+     * largest value that you can use is 128.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-featurename)
+     * The maximum capacity must be higher than 0.5 ACUs. For more information, see [Choosing the
+     * maximum Aurora Serverless v2 capacity setting for a
+     * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
+     * in the *Amazon Aurora User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-maxcapacity)
      */
-    public fun featureName(): String? = unwrap(this).getFeatureName()
+    public fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
 
     /**
-     * The Amazon Resource Name (ARN) of the IAM role that is associated with the DB cluster.
+     * The minimum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless
+     * v2 cluster.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-rolearn)
+     * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
+     * smallest value that you can use is 0.5.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-mincapacity)
      */
-    public fun roleArn(): String
+    public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
 
     /**
-     * A builder for [DBClusterRoleProperty]
+     * A builder for [ServerlessV2ScalingConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param featureName The name of the feature associated with the AWS Identity and Access
-       * Management (IAM) role.
-       * IAM roles that are associated with a DB cluster grant permission for the DB cluster to
-       * access other AWS services on your behalf. For the list of supported feature names, see the
-       * `SupportedFeatureNames` description in
-       * [DBEngineVersion](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBEngineVersion.html)
-       * in the *Amazon RDS API Reference* .
+       * @param maxCapacity The maximum number of Aurora capacity units (ACUs) for a DB instance in
+       * an Aurora Serverless v2 cluster.
+       * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The
+       * largest value that you can use is 128.
+       *
+       * The maximum capacity must be higher than 0.5 ACUs. For more information, see [Choosing the
+       * maximum Aurora Serverless v2 capacity setting for a
+       * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
+       * in the *Amazon Aurora User Guide* .
        */
-      public fun featureName(featureName: String)
+      public fun maxCapacity(maxCapacity: Number)
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that is associated with the
-       * DB cluster. 
+       * @param minCapacity The minimum number of Aurora capacity units (ACUs) for a DB instance in
+       * an Aurora Serverless v2 cluster.
+       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
+       * smallest value that you can use is 0.5.
        */
-      public fun roleArn(roleArn: String)
+      public fun minCapacity(minCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty.Builder =
-          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty.builder()
+          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty.builder()
 
       /**
-       * @param featureName The name of the feature associated with the AWS Identity and Access
-       * Management (IAM) role.
-       * IAM roles that are associated with a DB cluster grant permission for the DB cluster to
-       * access other AWS services on your behalf. For the list of supported feature names, see the
-       * `SupportedFeatureNames` description in
-       * [DBEngineVersion](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBEngineVersion.html)
-       * in the *Amazon RDS API Reference* .
+       * @param maxCapacity The maximum number of Aurora capacity units (ACUs) for a DB instance in
+       * an Aurora Serverless v2 cluster.
+       * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The
+       * largest value that you can use is 128.
+       *
+       * The maximum capacity must be higher than 0.5 ACUs. For more information, see [Choosing the
+       * maximum Aurora Serverless v2 capacity setting for a
+       * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
+       * in the *Amazon Aurora User Guide* .
        */
-      override fun featureName(featureName: String) {
-        cdkBuilder.featureName(featureName)
+      override fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
       }
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that is associated with the
-       * DB cluster. 
+       * @param minCapacity The minimum number of Aurora capacity units (ACUs) for a DB instance in
+       * an Aurora Serverless v2 cluster.
+       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
+       * smallest value that you can use is 0.5.
        */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
+      override fun minCapacity(minCapacity: Number) {
+        cdkBuilder.minCapacity(minCapacity)
       }
 
-      public fun build(): software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty =
-          cdkBuilder.build()
+      public fun build():
+          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty,
-    ) : CdkObject(cdkObject), DBClusterRoleProperty {
+          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty,
+    ) : CdkObject(cdkObject), ServerlessV2ScalingConfigurationProperty {
       /**
-       * The name of the feature associated with the AWS Identity and Access Management (IAM) role.
+       * The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora
+       * Serverless v2 cluster.
        *
-       * IAM roles that are associated with a DB cluster grant permission for the DB cluster to
-       * access other AWS services on your behalf. For the list of supported feature names, see the
-       * `SupportedFeatureNames` description in
-       * [DBEngineVersion](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBEngineVersion.html)
-       * in the *Amazon RDS API Reference* .
+       * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The
+       * largest value that you can use is 128.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-featurename)
+       * The maximum capacity must be higher than 0.5 ACUs. For more information, see [Choosing the
+       * maximum Aurora Serverless v2 capacity setting for a
+       * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
+       * in the *Amazon Aurora User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-maxcapacity)
        */
-      override fun featureName(): String? = unwrap(this).getFeatureName()
+      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
 
       /**
-       * The Amazon Resource Name (ARN) of the IAM role that is associated with the DB cluster.
+       * The minimum number of Aurora capacity units (ACUs) for a DB instance in an Aurora
+       * Serverless v2 cluster.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-dbclusterrole.html#cfn-rds-dbcluster-dbclusterrole-rolearn)
+       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
+       * smallest value that you can use is 0.5.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-mincapacity)
        */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DBClusterRoleProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServerlessV2ScalingConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty):
-          DBClusterRoleProperty = CdkObjectWrappers.wrap(cdkObject) as? DBClusterRoleProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty):
+          ServerlessV2ScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerlessV2ScalingConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DBClusterRoleProperty):
-          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty
-    }
-  }
-
-  /**
-   * The `ReadEndpoint` return value specifies the reader endpoint for the DB cluster.
-   *
-   * The reader endpoint for a DB cluster load-balances connections across the Aurora Replicas that
-   * are available in a DB cluster. As clients request new connections to the reader endpoint, Aurora
-   * distributes the connection requests among the Aurora Replicas in the DB cluster. This
-   * functionality can help balance your read workload across multiple Aurora Replicas in your DB
-   * cluster.
-   *
-   * If a failover occurs, and the Aurora Replica that you are connected to is promoted to be the
-   * primary instance, your connection is dropped. To continue sending your read workload to other
-   * Aurora Replicas in the cluster, you can then reconnect to the reader endpoint.
-   *
-   * For more information about Aurora endpoints, see [Amazon Aurora connection
-   * management](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html)
-   * in the *Amazon Aurora User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rds.*;
-   * ReadEndpointProperty readEndpointProperty = ReadEndpointProperty.builder()
-   * .address("address")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-readendpoint.html)
-   */
-  public interface ReadEndpointProperty {
-    /**
-     * The host address of the reader endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-readendpoint.html#cfn-rds-dbcluster-readendpoint-address)
-     */
-    public fun address(): String? = unwrap(this).getAddress()
-
-    /**
-     * A builder for [ReadEndpointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param address The host address of the reader endpoint.
-       */
-      public fun address(address: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty.Builder =
-          software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty.builder()
-
-      /**
-       * @param address The host address of the reader endpoint.
-       */
-      override fun address(address: String) {
-        cdkBuilder.address(address)
-      }
-
-      public fun build(): software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty,
-    ) : CdkObject(cdkObject), ReadEndpointProperty {
-      /**
-       * The host address of the reader endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-readendpoint.html#cfn-rds-dbcluster-readendpoint-address)
-       */
-      override fun address(): String? = unwrap(this).getAddress()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReadEndpointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty):
-          ReadEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? ReadEndpointProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReadEndpointProperty):
-          software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty
+      internal fun unwrap(wrapped: ServerlessV2ScalingConfigurationProperty):
+          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
     }
   }
 }

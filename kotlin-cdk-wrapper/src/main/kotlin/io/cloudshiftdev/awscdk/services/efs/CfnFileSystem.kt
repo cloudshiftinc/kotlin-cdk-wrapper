@@ -1161,6 +1161,216 @@ public open class CfnFileSystem internal constructor(
   }
 
   /**
+   * The backup policy turns automatic backups for the file system on or off.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * BackupPolicyProperty backupPolicyProperty = BackupPolicyProperty.builder()
+   * .status("status")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html)
+   */
+  public interface BackupPolicyProperty {
+    /**
+     * Set the backup policy status for the file system.
+     *
+     * * *`ENABLED`* - Turns automatic backups on for the file system.
+     * * *`DISABLED`* - Turns automatic backups off for the file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html#cfn-efs-filesystem-backuppolicy-status)
+     */
+    public fun status(): String
+
+    /**
+     * A builder for [BackupPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param status Set the backup policy status for the file system. 
+       * * *`ENABLED`* - Turns automatic backups on for the file system.
+       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       */
+      public fun status(status: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.builder()
+
+      /**
+       * @param status Set the backup policy status for the file system. 
+       * * *`ENABLED`* - Turns automatic backups on for the file system.
+       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      public fun build(): software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty,
+    ) : CdkObject(cdkObject), BackupPolicyProperty {
+      /**
+       * Set the backup policy status for the file system.
+       *
+       * * *`ENABLED`* - Turns automatic backups on for the file system.
+       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html#cfn-efs-filesystem-backuppolicy-status)
+       */
+      override fun status(): String = unwrap(this).getStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BackupPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty):
+          BackupPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? BackupPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BackupPolicyProperty):
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty
+    }
+  }
+
+  /**
+   * A tag is a key-value pair attached to a file system.
+   *
+   * Allowed characters in the `Key` and `Value` properties are letters, white space, and numbers
+   * that can be represented in UTF-8, and the following characters: `+ - = . _ : /`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * ElasticFileSystemTagProperty elasticFileSystemTagProperty =
+   * ElasticFileSystemTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html)
+   */
+  public interface ElasticFileSystemTagProperty {
+    /**
+     * The tag key (String).
+     *
+     * The key can't start with `aws:` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of the tag key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [ElasticFileSystemTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The tag key (String). 
+       * The key can't start with `aws:` .
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the tag key. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.builder()
+
+      /**
+       * @param key The tag key (String). 
+       * The key can't start with `aws:` .
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the tag key. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty,
+    ) : CdkObject(cdkObject), ElasticFileSystemTagProperty {
+      /**
+       * The tag key (String).
+       *
+       * The key can't start with `aws:` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of the tag key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticFileSystemTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty):
+          ElasticFileSystemTagProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticFileSystemTagProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticFileSystemTagProperty):
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty
+    }
+  }
+
+  /**
    * Describes the protection on the file system.
    *
    * Example:
@@ -1290,347 +1500,6 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty
-    }
-  }
-
-  /**
-   * A tag is a key-value pair attached to a file system.
-   *
-   * Allowed characters in the `Key` and `Value` properties are letters, white space, and numbers
-   * that can be represented in UTF-8, and the following characters: `+ - = . _ : /`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * ElasticFileSystemTagProperty elasticFileSystemTagProperty =
-   * ElasticFileSystemTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html)
-   */
-  public interface ElasticFileSystemTagProperty {
-    /**
-     * The tag key (String).
-     *
-     * The key can't start with `aws:` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value of the tag key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [ElasticFileSystemTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The tag key (String). 
-       * The key can't start with `aws:` .
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of the tag key. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.builder()
-
-      /**
-       * @param key The tag key (String). 
-       * The key can't start with `aws:` .
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of the tag key. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty,
-    ) : CdkObject(cdkObject), ElasticFileSystemTagProperty {
-      /**
-       * The tag key (String).
-       *
-       * The key can't start with `aws:` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value of the tag key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticFileSystemTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty):
-          ElasticFileSystemTagProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ElasticFileSystemTagProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ElasticFileSystemTagProperty):
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty
-    }
-  }
-
-  /**
-   * Describes the destination file system in the replication configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * ReplicationDestinationProperty replicationDestinationProperty =
-   * ReplicationDestinationProperty.builder()
-   * .availabilityZoneName("availabilityZoneName")
-   * .fileSystemId("fileSystemId")
-   * .kmsKeyId("kmsKeyId")
-   * .region("region")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html)
-   */
-  public interface ReplicationDestinationProperty {
-    /**
-     * The AWS For One Zone file systems, the replication configuration must specify the
-     * Availability Zone in which the destination file system is located.
-     *
-     * Use the format `us-east-1a` to specify the Availability Zone. For more information about One
-     * Zone file systems, see [EFS file system
-     * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
-     * Guide* .
-     *
-     *
-     * One Zone file system type is not available in all Availability Zones in AWS Regions where
-     * Amazon EFS is available.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-availabilityzonename)
-     */
-    public fun availabilityZoneName(): String? = unwrap(this).getAvailabilityZoneName()
-
-    /**
-     * The ID of the destination Amazon EFS file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-filesystemid)
-     */
-    public fun fileSystemId(): String? = unwrap(this).getFileSystemId()
-
-    /**
-     * The ID of an AWS KMS key used to protect the encrypted file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * The AWS Region in which the destination file system is located.
-     *
-     *
-     * For One Zone file systems, the replication configuration must specify the AWS Region in which
-     * the destination file system is located.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-region)
-     */
-    public fun region(): String? = unwrap(this).getRegion()
-
-    /**
-     * A builder for [ReplicationDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param availabilityZoneName The AWS For One Zone file systems, the replication
-       * configuration must specify the Availability Zone in which the destination file system is
-       * located.
-       * Use the format `us-east-1a` to specify the Availability Zone. For more information about
-       * One Zone file systems, see [EFS file system
-       * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
-       * Guide* .
-       *
-       *
-       * One Zone file system type is not available in all Availability Zones in AWS Regions where
-       * Amazon EFS is available.
-       */
-      public fun availabilityZoneName(availabilityZoneName: String)
-
-      /**
-       * @param fileSystemId The ID of the destination Amazon EFS file system.
-       */
-      public fun fileSystemId(fileSystemId: String)
-
-      /**
-       * @param kmsKeyId The ID of an AWS KMS key used to protect the encrypted file system.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param region The AWS Region in which the destination file system is located.
-       *
-       * For One Zone file systems, the replication configuration must specify the AWS Region in
-       * which the destination file system is located.
-       */
-      public fun region(region: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty.builder()
-
-      /**
-       * @param availabilityZoneName The AWS For One Zone file systems, the replication
-       * configuration must specify the Availability Zone in which the destination file system is
-       * located.
-       * Use the format `us-east-1a` to specify the Availability Zone. For more information about
-       * One Zone file systems, see [EFS file system
-       * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
-       * Guide* .
-       *
-       *
-       * One Zone file system type is not available in all Availability Zones in AWS Regions where
-       * Amazon EFS is available.
-       */
-      override fun availabilityZoneName(availabilityZoneName: String) {
-        cdkBuilder.availabilityZoneName(availabilityZoneName)
-      }
-
-      /**
-       * @param fileSystemId The ID of the destination Amazon EFS file system.
-       */
-      override fun fileSystemId(fileSystemId: String) {
-        cdkBuilder.fileSystemId(fileSystemId)
-      }
-
-      /**
-       * @param kmsKeyId The ID of an AWS KMS key used to protect the encrypted file system.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param region The AWS Region in which the destination file system is located.
-       *
-       * For One Zone file systems, the replication configuration must specify the AWS Region in
-       * which the destination file system is located.
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
-    ) : CdkObject(cdkObject), ReplicationDestinationProperty {
-      /**
-       * The AWS For One Zone file systems, the replication configuration must specify the
-       * Availability Zone in which the destination file system is located.
-       *
-       * Use the format `us-east-1a` to specify the Availability Zone. For more information about
-       * One Zone file systems, see [EFS file system
-       * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
-       * Guide* .
-       *
-       *
-       * One Zone file system type is not available in all Availability Zones in AWS Regions where
-       * Amazon EFS is available.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-availabilityzonename)
-       */
-      override fun availabilityZoneName(): String? = unwrap(this).getAvailabilityZoneName()
-
-      /**
-       * The ID of the destination Amazon EFS file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-filesystemid)
-       */
-      override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
-
-      /**
-       * The ID of an AWS KMS key used to protect the encrypted file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * The AWS Region in which the destination file system is located.
-       *
-       *
-       * For One Zone file systems, the replication configuration must specify the AWS Region in
-       * which the destination file system is located.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-region)
-       */
-      override fun region(): String? = unwrap(this).getRegion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty):
-          ReplicationDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReplicationDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplicationDestinationProperty):
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty
     }
   }
 
@@ -1949,7 +1818,7 @@ public open class CfnFileSystem internal constructor(
   }
 
   /**
-   * The backup policy turns automatic backups for the file system on or off.
+   * Describes the destination file system in the replication configuration.
    *
    * Example:
    *
@@ -1957,85 +1826,216 @@ public open class CfnFileSystem internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.efs.*;
-   * BackupPolicyProperty backupPolicyProperty = BackupPolicyProperty.builder()
-   * .status("status")
+   * ReplicationDestinationProperty replicationDestinationProperty =
+   * ReplicationDestinationProperty.builder()
+   * .availabilityZoneName("availabilityZoneName")
+   * .fileSystemId("fileSystemId")
+   * .kmsKeyId("kmsKeyId")
+   * .region("region")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html)
    */
-  public interface BackupPolicyProperty {
+  public interface ReplicationDestinationProperty {
     /**
-     * Set the backup policy status for the file system.
+     * The AWS For One Zone file systems, the replication configuration must specify the
+     * Availability Zone in which the destination file system is located.
      *
-     * * *`ENABLED`* - Turns automatic backups on for the file system.
-     * * *`DISABLED`* - Turns automatic backups off for the file system.
+     * Use the format `us-east-1a` to specify the Availability Zone. For more information about One
+     * Zone file systems, see [EFS file system
+     * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
+     * Guide* .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html#cfn-efs-filesystem-backuppolicy-status)
+     *
+     * One Zone file system type is not available in all Availability Zones in AWS Regions where
+     * Amazon EFS is available.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-availabilityzonename)
      */
-    public fun status(): String
+    public fun availabilityZoneName(): String? = unwrap(this).getAvailabilityZoneName()
 
     /**
-     * A builder for [BackupPolicyProperty]
+     * The ID of the destination Amazon EFS file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-filesystemid)
+     */
+    public fun fileSystemId(): String? = unwrap(this).getFileSystemId()
+
+    /**
+     * The ID of an AWS KMS key used to protect the encrypted file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * The AWS Region in which the destination file system is located.
+     *
+     *
+     * For One Zone file systems, the replication configuration must specify the AWS Region in which
+     * the destination file system is located.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-region)
+     */
+    public fun region(): String? = unwrap(this).getRegion()
+
+    /**
+     * A builder for [ReplicationDestinationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param status Set the backup policy status for the file system. 
-       * * *`ENABLED`* - Turns automatic backups on for the file system.
-       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       * @param availabilityZoneName The AWS For One Zone file systems, the replication
+       * configuration must specify the Availability Zone in which the destination file system is
+       * located.
+       * Use the format `us-east-1a` to specify the Availability Zone. For more information about
+       * One Zone file systems, see [EFS file system
+       * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
+       * Guide* .
+       *
+       *
+       * One Zone file system type is not available in all Availability Zones in AWS Regions where
+       * Amazon EFS is available.
        */
-      public fun status(status: String)
+      public fun availabilityZoneName(availabilityZoneName: String)
+
+      /**
+       * @param fileSystemId The ID of the destination Amazon EFS file system.
+       */
+      public fun fileSystemId(fileSystemId: String)
+
+      /**
+       * @param kmsKeyId The ID of an AWS KMS key used to protect the encrypted file system.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param region The AWS Region in which the destination file system is located.
+       *
+       * For One Zone file systems, the replication configuration must specify the AWS Region in
+       * which the destination file system is located.
+       */
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.builder()
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty.builder()
 
       /**
-       * @param status Set the backup policy status for the file system. 
-       * * *`ENABLED`* - Turns automatic backups on for the file system.
-       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       * @param availabilityZoneName The AWS For One Zone file systems, the replication
+       * configuration must specify the Availability Zone in which the destination file system is
+       * located.
+       * Use the format `us-east-1a` to specify the Availability Zone. For more information about
+       * One Zone file systems, see [EFS file system
+       * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
+       * Guide* .
+       *
+       *
+       * One Zone file system type is not available in all Availability Zones in AWS Regions where
+       * Amazon EFS is available.
        */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
+      override fun availabilityZoneName(availabilityZoneName: String) {
+        cdkBuilder.availabilityZoneName(availabilityZoneName)
       }
 
-      public fun build(): software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty =
+      /**
+       * @param fileSystemId The ID of the destination Amazon EFS file system.
+       */
+      override fun fileSystemId(fileSystemId: String) {
+        cdkBuilder.fileSystemId(fileSystemId)
+      }
+
+      /**
+       * @param kmsKeyId The ID of an AWS KMS key used to protect the encrypted file system.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param region The AWS Region in which the destination file system is located.
+       *
+       * For One Zone file systems, the replication configuration must specify the AWS Region in
+       * which the destination file system is located.
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty,
-    ) : CdkObject(cdkObject), BackupPolicyProperty {
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
+    ) : CdkObject(cdkObject), ReplicationDestinationProperty {
       /**
-       * Set the backup policy status for the file system.
+       * The AWS For One Zone file systems, the replication configuration must specify the
+       * Availability Zone in which the destination file system is located.
        *
-       * * *`ENABLED`* - Turns automatic backups on for the file system.
-       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       * Use the format `us-east-1a` to specify the Availability Zone. For more information about
+       * One Zone file systems, see [EFS file system
+       * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
+       * Guide* .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html#cfn-efs-filesystem-backuppolicy-status)
+       *
+       * One Zone file system type is not available in all Availability Zones in AWS Regions where
+       * Amazon EFS is available.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-availabilityzonename)
        */
-      override fun status(): String = unwrap(this).getStatus()
+      override fun availabilityZoneName(): String? = unwrap(this).getAvailabilityZoneName()
+
+      /**
+       * The ID of the destination Amazon EFS file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-filesystemid)
+       */
+      override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
+
+      /**
+       * The ID of an AWS KMS key used to protect the encrypted file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * The AWS Region in which the destination file system is located.
+       *
+       *
+       * For One Zone file systems, the replication configuration must specify the AWS Region in
+       * which the destination file system is located.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-region)
+       */
+      override fun region(): String? = unwrap(this).getRegion()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BackupPolicyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationDestinationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty):
-          BackupPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? BackupPolicyProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty):
+          ReplicationDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationDestinationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BackupPolicyProperty):
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty
+      internal fun unwrap(wrapped: ReplicationDestinationProperty):
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty
     }
   }
 }

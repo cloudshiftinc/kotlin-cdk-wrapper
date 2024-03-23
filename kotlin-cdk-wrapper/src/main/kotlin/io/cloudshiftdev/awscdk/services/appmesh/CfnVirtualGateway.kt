@@ -546,6 +546,2829 @@ public open class CfnVirtualGateway internal constructor(
   }
 
   /**
+   * An object that represents the key value pairs for the JSON.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * JsonFormatRefProperty jsonFormatRefProperty = JsonFormatRefProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html)
+   */
+  public interface JsonFormatRefProperty {
+    /**
+     * The specified key for the JSON.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html#cfn-appmesh-virtualgateway-jsonformatref-key)
+     */
+    public fun key(): String
+
+    /**
+     * The specified value for the JSON.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html#cfn-appmesh-virtualgateway-jsonformatref-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [JsonFormatRefProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The specified key for the JSON. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The specified value for the JSON. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty.Builder =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty.builder()
+
+      /**
+       * @param key The specified key for the JSON. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The specified value for the JSON. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty,
+    ) : CdkObject(cdkObject), JsonFormatRefProperty {
+      /**
+       * The specified key for the JSON.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html#cfn-appmesh-virtualgateway-jsonformatref-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The specified value for the JSON.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html#cfn-appmesh-virtualgateway-jsonformatref-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JsonFormatRefProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty):
+          JsonFormatRefProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonFormatRefProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JsonFormatRefProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty
+    }
+  }
+
+  /**
+   * An object that represents the format for the logs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * LoggingFormatProperty loggingFormatProperty = LoggingFormatProperty.builder()
+   * .json(List.of(JsonFormatRefProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .text("text")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html)
+   */
+  public interface LoggingFormatProperty {
+    /**
+     * The logging format for JSON.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html#cfn-appmesh-virtualgateway-loggingformat-json)
+     */
+    public fun json(): Any? = unwrap(this).getJson()
+
+    /**
+     * The logging format for text.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html#cfn-appmesh-virtualgateway-loggingformat-text)
+     */
+    public fun text(): String? = unwrap(this).getText()
+
+    /**
+     * A builder for [LoggingFormatProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param json The logging format for JSON.
+       */
+      public fun json(json: IResolvable)
+
+      /**
+       * @param json The logging format for JSON.
+       */
+      public fun json(json: List<Any>)
+
+      /**
+       * @param json The logging format for JSON.
+       */
+      public fun json(vararg json: Any)
+
+      /**
+       * @param text The logging format for text.
+       */
+      public fun text(text: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty.Builder =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty.builder()
+
+      /**
+       * @param json The logging format for JSON.
+       */
+      override fun json(json: IResolvable) {
+        cdkBuilder.json(json.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param json The logging format for JSON.
+       */
+      override fun json(json: List<Any>) {
+        cdkBuilder.json(json)
+      }
+
+      /**
+       * @param json The logging format for JSON.
+       */
+      override fun json(vararg json: Any): Unit = json(json.toList())
+
+      /**
+       * @param text The logging format for text.
+       */
+      override fun text(text: String) {
+        cdkBuilder.text(text)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty,
+    ) : CdkObject(cdkObject), LoggingFormatProperty {
+      /**
+       * The logging format for JSON.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html#cfn-appmesh-virtualgateway-loggingformat-json)
+       */
+      override fun json(): Any? = unwrap(this).getJson()
+
+      /**
+       * The logging format for text.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html#cfn-appmesh-virtualgateway-loggingformat-text)
+       */
+      override fun text(): String? = unwrap(this).getText()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingFormatProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty):
+          LoggingFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingFormatProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoggingFormatProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty
+    }
+  }
+
+  /**
+   * An object that represents the methods by which a subject alternative name on a peer Transport
+   * Layer Security (TLS) certificate can be matched.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * SubjectAlternativeNameMatchersProperty subjectAlternativeNameMatchersProperty =
+   * SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenamematchers.html)
+   */
+  public interface SubjectAlternativeNameMatchersProperty {
+    /**
+     * The values sent must match the specified values exactly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenamematchers.html#cfn-appmesh-virtualgateway-subjectalternativenamematchers-exact)
+     */
+    public fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
+
+    /**
+     * A builder for [SubjectAlternativeNameMatchersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exact The values sent must match the specified values exactly.
+       */
+      public fun exact(exact: List<String>)
+
+      /**
+       * @param exact The values sent must match the specified values exactly.
+       */
+      public fun exact(vararg exact: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty.builder()
+
+      /**
+       * @param exact The values sent must match the specified values exactly.
+       */
+      override fun exact(exact: List<String>) {
+        cdkBuilder.exact(exact)
+      }
+
+      /**
+       * @param exact The values sent must match the specified values exactly.
+       */
+      override fun exact(vararg exact: String): Unit = exact(exact.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty,
+    ) : CdkObject(cdkObject), SubjectAlternativeNameMatchersProperty {
+      /**
+       * The values sent must match the specified values exactly.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenamematchers.html#cfn-appmesh-virtualgateway-subjectalternativenamematchers-exact)
+       */
+      override fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SubjectAlternativeNameMatchersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty):
+          SubjectAlternativeNameMatchersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubjectAlternativeNameMatchersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubjectAlternativeNameMatchersProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty
+    }
+  }
+
+  /**
+   * An object that represents the subject alternative names secured by the certificate.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * SubjectAlternativeNamesProperty subjectAlternativeNamesProperty =
+   * SubjectAlternativeNamesProperty.builder()
+   * .match(SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenames.html)
+   */
+  public interface SubjectAlternativeNamesProperty {
+    /**
+     * An object that represents the criteria for determining a SANs match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenames.html#cfn-appmesh-virtualgateway-subjectalternativenames-match)
+     */
+    public fun match(): Any
+
+    /**
+     * A builder for [SubjectAlternativeNamesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param match An object that represents the criteria for determining a SANs match. 
+       */
+      public fun match(match: IResolvable)
+
+      /**
+       * @param match An object that represents the criteria for determining a SANs match. 
+       */
+      public fun match(match: SubjectAlternativeNameMatchersProperty)
+
+      /**
+       * @param match An object that represents the criteria for determining a SANs match. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2c5ca1739420154623a0d64dc8ce13e81856585fdf6194b0f04e7299c9efc05")
+      public fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty.builder()
+
+      /**
+       * @param match An object that represents the criteria for determining a SANs match. 
+       */
+      override fun match(match: IResolvable) {
+        cdkBuilder.match(match.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param match An object that represents the criteria for determining a SANs match. 
+       */
+      override fun match(match: SubjectAlternativeNameMatchersProperty) {
+        cdkBuilder.match(match.let(SubjectAlternativeNameMatchersProperty::unwrap))
+      }
+
+      /**
+       * @param match An object that represents the criteria for determining a SANs match. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2c5ca1739420154623a0d64dc8ce13e81856585fdf6194b0f04e7299c9efc05")
+      override fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit): Unit =
+          match(SubjectAlternativeNameMatchersProperty(match))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty,
+    ) : CdkObject(cdkObject), SubjectAlternativeNamesProperty {
+      /**
+       * An object that represents the criteria for determining a SANs match.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenames.html#cfn-appmesh-virtualgateway-subjectalternativenames-match)
+       */
+      override fun match(): Any = unwrap(this).getMatch()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubjectAlternativeNamesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty):
+          SubjectAlternativeNamesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubjectAlternativeNamesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubjectAlternativeNamesProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty
+    }
+  }
+
+  /**
+   * The access log configuration for a virtual gateway.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayAccessLogProperty virtualGatewayAccessLogProperty =
+   * VirtualGatewayAccessLogProperty.builder()
+   * .file(VirtualGatewayFileAccessLogProperty.builder()
+   * .path("path")
+   * // the properties below are optional
+   * .format(LoggingFormatProperty.builder()
+   * .json(List.of(JsonFormatRefProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .text("text")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayaccesslog.html)
+   */
+  public interface VirtualGatewayAccessLogProperty {
+    /**
+     * The file object to send virtual gateway access logs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayaccesslog-file)
+     */
+    public fun `file`(): Any? = unwrap(this).getFile()
+
+    /**
+     * A builder for [VirtualGatewayAccessLogProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param file The file object to send virtual gateway access logs to.
+       */
+      public fun `file`(`file`: IResolvable)
+
+      /**
+       * @param file The file object to send virtual gateway access logs to.
+       */
+      public fun `file`(`file`: VirtualGatewayFileAccessLogProperty)
+
+      /**
+       * @param file The file object to send virtual gateway access logs to.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6f3121bb369a8d15cefa43e3b6240a991fbdfa32882bb1e89c72730747fbbe49")
+      public fun `file`(`file`: VirtualGatewayFileAccessLogProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty.builder()
+
+      /**
+       * @param file The file object to send virtual gateway access logs to.
+       */
+      override fun `file`(`file`: IResolvable) {
+        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param file The file object to send virtual gateway access logs to.
+       */
+      override fun `file`(`file`: VirtualGatewayFileAccessLogProperty) {
+        cdkBuilder.`file`(`file`.let(VirtualGatewayFileAccessLogProperty::unwrap))
+      }
+
+      /**
+       * @param file The file object to send virtual gateway access logs to.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6f3121bb369a8d15cefa43e3b6240a991fbdfa32882bb1e89c72730747fbbe49")
+      override fun `file`(`file`: VirtualGatewayFileAccessLogProperty.Builder.() -> Unit): Unit =
+          `file`(VirtualGatewayFileAccessLogProperty(`file`))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayAccessLogProperty {
+      /**
+       * The file object to send virtual gateway access logs to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayaccesslog-file)
+       */
+      override fun `file`(): Any? = unwrap(this).getFile()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualGatewayAccessLogProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty):
+          VirtualGatewayAccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayAccessLogProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayAccessLogProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty
+    }
+  }
+
+  /**
+   * An object that represents the default properties for a backend.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayBackendDefaultsProperty virtualGatewayBackendDefaultsProperty =
+   * VirtualGatewayBackendDefaultsProperty.builder()
+   * .clientPolicy(VirtualGatewayClientPolicyProperty.builder()
+   * .tls(VirtualGatewayClientPolicyTlsProperty.builder()
+   * .validation(VirtualGatewayTlsValidationContextProperty.builder()
+   * .trust(VirtualGatewayTlsValidationContextTrustProperty.builder()
+   * .acm(VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
+   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+   * .build())
+   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build())
+   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+   * .match(SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build())
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .certificate(VirtualGatewayClientTlsCertificateProperty.builder()
+   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
+   * .certificateChain("certificateChain")
+   * .privateKey("privateKey")
+   * .build())
+   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * .enforce(false)
+   * .ports(List.of(123))
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaybackenddefaults.html)
+   */
+  public interface VirtualGatewayBackendDefaultsProperty {
+    /**
+     * A reference to an object that represents a client policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaybackenddefaults.html#cfn-appmesh-virtualgateway-virtualgatewaybackenddefaults-clientpolicy)
+     */
+    public fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
+
+    /**
+     * A builder for [VirtualGatewayBackendDefaultsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientPolicy A reference to an object that represents a client policy.
+       */
+      public fun clientPolicy(clientPolicy: IResolvable)
+
+      /**
+       * @param clientPolicy A reference to an object that represents a client policy.
+       */
+      public fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty)
+
+      /**
+       * @param clientPolicy A reference to an object that represents a client policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3a690241443363f80e1ed79e901ce310d93493a7b7f0c7575c6724a892480cf7")
+      public fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty.builder()
+
+      /**
+       * @param clientPolicy A reference to an object that represents a client policy.
+       */
+      override fun clientPolicy(clientPolicy: IResolvable) {
+        cdkBuilder.clientPolicy(clientPolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param clientPolicy A reference to an object that represents a client policy.
+       */
+      override fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty) {
+        cdkBuilder.clientPolicy(clientPolicy.let(VirtualGatewayClientPolicyProperty::unwrap))
+      }
+
+      /**
+       * @param clientPolicy A reference to an object that represents a client policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3a690241443363f80e1ed79e901ce310d93493a7b7f0c7575c6724a892480cf7")
+      override
+          fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty.Builder.() -> Unit):
+          Unit = clientPolicy(VirtualGatewayClientPolicyProperty(clientPolicy))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayBackendDefaultsProperty {
+      /**
+       * A reference to an object that represents a client policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaybackenddefaults.html#cfn-appmesh-virtualgateway-virtualgatewaybackenddefaults-clientpolicy)
+       */
+      override fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayBackendDefaultsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty):
+          VirtualGatewayBackendDefaultsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayBackendDefaultsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayBackendDefaultsProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty
+    }
+  }
+
+  /**
+   * An object that represents a client policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayClientPolicyProperty virtualGatewayClientPolicyProperty =
+   * VirtualGatewayClientPolicyProperty.builder()
+   * .tls(VirtualGatewayClientPolicyTlsProperty.builder()
+   * .validation(VirtualGatewayTlsValidationContextProperty.builder()
+   * .trust(VirtualGatewayTlsValidationContextTrustProperty.builder()
+   * .acm(VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
+   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+   * .build())
+   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build())
+   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+   * .match(SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build())
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .certificate(VirtualGatewayClientTlsCertificateProperty.builder()
+   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
+   * .certificateChain("certificateChain")
+   * .privateKey("privateKey")
+   * .build())
+   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * .enforce(false)
+   * .ports(List.of(123))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicy.html)
+   */
+  public interface VirtualGatewayClientPolicyProperty {
+    /**
+     * A reference to an object that represents a Transport Layer Security (TLS) client policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicy-tls)
+     */
+    public fun tls(): Any? = unwrap(this).getTls()
+
+    /**
+     * A builder for [VirtualGatewayClientPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+       * policy.
+       */
+      public fun tls(tls: IResolvable)
+
+      /**
+       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+       * policy.
+       */
+      public fun tls(tls: VirtualGatewayClientPolicyTlsProperty)
+
+      /**
+       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+       * policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a90df689980811315d993811a1c8a499a4caddedf7d36096cf2b83ab791594d2")
+      public fun tls(tls: VirtualGatewayClientPolicyTlsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty.builder()
+
+      /**
+       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+       * policy.
+       */
+      override fun tls(tls: IResolvable) {
+        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+       * policy.
+       */
+      override fun tls(tls: VirtualGatewayClientPolicyTlsProperty) {
+        cdkBuilder.tls(tls.let(VirtualGatewayClientPolicyTlsProperty::unwrap))
+      }
+
+      /**
+       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+       * policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a90df689980811315d993811a1c8a499a4caddedf7d36096cf2b83ab791594d2")
+      override fun tls(tls: VirtualGatewayClientPolicyTlsProperty.Builder.() -> Unit): Unit =
+          tls(VirtualGatewayClientPolicyTlsProperty(tls))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayClientPolicyProperty {
+      /**
+       * A reference to an object that represents a Transport Layer Security (TLS) client policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicy-tls)
+       */
+      override fun tls(): Any? = unwrap(this).getTls()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayClientPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty):
+          VirtualGatewayClientPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayClientPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayClientPolicyProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty
+    }
+  }
+
+  /**
+   * An object that represents a Transport Layer Security (TLS) client policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayClientPolicyTlsProperty virtualGatewayClientPolicyTlsProperty =
+   * VirtualGatewayClientPolicyTlsProperty.builder()
+   * .validation(VirtualGatewayTlsValidationContextProperty.builder()
+   * .trust(VirtualGatewayTlsValidationContextTrustProperty.builder()
+   * .acm(VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
+   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+   * .build())
+   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build())
+   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+   * .match(SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build())
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .certificate(VirtualGatewayClientTlsCertificateProperty.builder()
+   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
+   * .certificateChain("certificateChain")
+   * .privateKey("privateKey")
+   * .build())
+   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * .enforce(false)
+   * .ports(List.of(123))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html)
+   */
+  public interface VirtualGatewayClientPolicyTlsProperty {
+    /**
+     * A reference to an object that represents a virtual gateway's client's Transport Layer
+     * Security (TLS) certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-certificate)
+     */
+    public fun certificate(): Any? = unwrap(this).getCertificate()
+
+    /**
+     * Whether the policy is enforced.
+     *
+     * The default is `True` , if a value isn't specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce)
+     */
+    public fun enforce(): Any? = unwrap(this).getEnforce()
+
+    /**
+     * One or more ports that the policy is enforced for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-ports)
+     */
+    public fun ports(): Any? = unwrap(this).getPorts()
+
+    /**
+     * A reference to an object that represents a Transport Layer Security (TLS) validation context.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-validation)
+     */
+    public fun validation(): Any
+
+    /**
+     * A builder for [VirtualGatewayClientPolicyTlsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificate A reference to an object that represents a virtual gateway's client's
+       * Transport Layer Security (TLS) certificate.
+       */
+      public fun certificate(certificate: IResolvable)
+
+      /**
+       * @param certificate A reference to an object that represents a virtual gateway's client's
+       * Transport Layer Security (TLS) certificate.
+       */
+      public fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty)
+
+      /**
+       * @param certificate A reference to an object that represents a virtual gateway's client's
+       * Transport Layer Security (TLS) certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9d120604ee5d384b9e8738c9093a173c24626571e32d3c7dc3b55eb74631d86e")
+      public
+          fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty.Builder.() -> Unit)
+
+      /**
+       * @param enforce Whether the policy is enforced.
+       * The default is `True` , if a value isn't specified.
+       */
+      public fun enforce(enforce: Boolean)
+
+      /**
+       * @param enforce Whether the policy is enforced.
+       * The default is `True` , if a value isn't specified.
+       */
+      public fun enforce(enforce: IResolvable)
+
+      /**
+       * @param ports One or more ports that the policy is enforced for.
+       */
+      public fun ports(ports: IResolvable)
+
+      /**
+       * @param ports One or more ports that the policy is enforced for.
+       */
+      public fun ports(ports: List<Number>)
+
+      /**
+       * @param ports One or more ports that the policy is enforced for.
+       */
+      public fun ports(vararg ports: Number)
+
+      /**
+       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
+       * validation context. 
+       */
+      public fun validation(validation: IResolvable)
+
+      /**
+       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
+       * validation context. 
+       */
+      public fun validation(validation: VirtualGatewayTlsValidationContextProperty)
+
+      /**
+       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
+       * validation context. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1eb2e0a02d82d061ee3111c6eb4c399e8eae838b0aef535fa010973ed97daacc")
+      public
+          fun validation(validation: VirtualGatewayTlsValidationContextProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty.builder()
+
+      /**
+       * @param certificate A reference to an object that represents a virtual gateway's client's
+       * Transport Layer Security (TLS) certificate.
+       */
+      override fun certificate(certificate: IResolvable) {
+        cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param certificate A reference to an object that represents a virtual gateway's client's
+       * Transport Layer Security (TLS) certificate.
+       */
+      override fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty) {
+        cdkBuilder.certificate(certificate.let(VirtualGatewayClientTlsCertificateProperty::unwrap))
+      }
+
+      /**
+       * @param certificate A reference to an object that represents a virtual gateway's client's
+       * Transport Layer Security (TLS) certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9d120604ee5d384b9e8738c9093a173c24626571e32d3c7dc3b55eb74631d86e")
+      override
+          fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty.Builder.() -> Unit):
+          Unit = certificate(VirtualGatewayClientTlsCertificateProperty(certificate))
+
+      /**
+       * @param enforce Whether the policy is enforced.
+       * The default is `True` , if a value isn't specified.
+       */
+      override fun enforce(enforce: Boolean) {
+        cdkBuilder.enforce(enforce)
+      }
+
+      /**
+       * @param enforce Whether the policy is enforced.
+       * The default is `True` , if a value isn't specified.
+       */
+      override fun enforce(enforce: IResolvable) {
+        cdkBuilder.enforce(enforce.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ports One or more ports that the policy is enforced for.
+       */
+      override fun ports(ports: IResolvable) {
+        cdkBuilder.ports(ports.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ports One or more ports that the policy is enforced for.
+       */
+      override fun ports(ports: List<Number>) {
+        cdkBuilder.ports(ports)
+      }
+
+      /**
+       * @param ports One or more ports that the policy is enforced for.
+       */
+      override fun ports(vararg ports: Number): Unit = ports(ports.toList())
+
+      /**
+       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
+       * validation context. 
+       */
+      override fun validation(validation: IResolvable) {
+        cdkBuilder.validation(validation.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
+       * validation context. 
+       */
+      override fun validation(validation: VirtualGatewayTlsValidationContextProperty) {
+        cdkBuilder.validation(validation.let(VirtualGatewayTlsValidationContextProperty::unwrap))
+      }
+
+      /**
+       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
+       * validation context. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1eb2e0a02d82d061ee3111c6eb4c399e8eae838b0aef535fa010973ed97daacc")
+      override
+          fun validation(validation: VirtualGatewayTlsValidationContextProperty.Builder.() -> Unit):
+          Unit = validation(VirtualGatewayTlsValidationContextProperty(validation))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayClientPolicyTlsProperty {
+      /**
+       * A reference to an object that represents a virtual gateway's client's Transport Layer
+       * Security (TLS) certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-certificate)
+       */
+      override fun certificate(): Any? = unwrap(this).getCertificate()
+
+      /**
+       * Whether the policy is enforced.
+       *
+       * The default is `True` , if a value isn't specified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce)
+       */
+      override fun enforce(): Any? = unwrap(this).getEnforce()
+
+      /**
+       * One or more ports that the policy is enforced for.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-ports)
+       */
+      override fun ports(): Any? = unwrap(this).getPorts()
+
+      /**
+       * A reference to an object that represents a Transport Layer Security (TLS) validation
+       * context.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-validation)
+       */
+      override fun validation(): Any = unwrap(this).getValidation()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayClientPolicyTlsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty):
+          VirtualGatewayClientPolicyTlsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayClientPolicyTlsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayClientPolicyTlsProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty
+    }
+  }
+
+  /**
+   * An object that represents the virtual gateway's client's Transport Layer Security (TLS)
+   * certificate.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayClientTlsCertificateProperty virtualGatewayClientTlsCertificateProperty =
+   * VirtualGatewayClientTlsCertificateProperty.builder()
+   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
+   * .certificateChain("certificateChain")
+   * .privateKey("privateKey")
+   * .build())
+   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html)
+   */
+  public interface VirtualGatewayClientTlsCertificateProperty {
+    /**
+     * An object that represents a local file certificate.
+     *
+     * The certificate must meet specific requirements and you must have proxy authorization
+     * enabled. For more information, see [Transport Layer Security
+     * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-file)
+     */
+    public fun `file`(): Any? = unwrap(this).getFile()
+
+    /**
+     * A reference to an object that represents a virtual gateway's client's Secret Discovery
+     * Service certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-sds)
+     */
+    public fun sds(): Any? = unwrap(this).getSds()
+
+    /**
+     * A builder for [VirtualGatewayClientTlsCertificateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param file An object that represents a local file certificate.
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
+       */
+      public fun `file`(`file`: IResolvable)
+
+      /**
+       * @param file An object that represents a local file certificate.
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
+       */
+      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty)
+
+      /**
+       * @param file An object that represents a local file certificate.
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5ca69fac264b48ac447be901cf3db1123d068a277af2769cd36232d3b1f2cf70")
+      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit)
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's client's Secret
+       * Discovery Service certificate.
+       */
+      public fun sds(sds: IResolvable)
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's client's Secret
+       * Discovery Service certificate.
+       */
+      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty)
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's client's Secret
+       * Discovery Service certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("003675a5f0d1468a62b543a888053eef80c314e2965bdebad6ba4731b1e844fa")
+      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty.builder()
+
+      /**
+       * @param file An object that represents a local file certificate.
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
+       */
+      override fun `file`(`file`: IResolvable) {
+        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param file An object that represents a local file certificate.
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
+       */
+      override fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
+        cdkBuilder.`file`(`file`.let(VirtualGatewayListenerTlsFileCertificateProperty::unwrap))
+      }
+
+      /**
+       * @param file An object that represents a local file certificate.
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5ca69fac264b48ac447be901cf3db1123d068a277af2769cd36232d3b1f2cf70")
+      override
+          fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit):
+          Unit = `file`(VirtualGatewayListenerTlsFileCertificateProperty(`file`))
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's client's Secret
+       * Discovery Service certificate.
+       */
+      override fun sds(sds: IResolvable) {
+        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's client's Secret
+       * Discovery Service certificate.
+       */
+      override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
+        cdkBuilder.sds(sds.let(VirtualGatewayListenerTlsSdsCertificateProperty::unwrap))
+      }
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's client's Secret
+       * Discovery Service certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("003675a5f0d1468a62b543a888053eef80c314e2965bdebad6ba4731b1e844fa")
+      override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit):
+          Unit = sds(VirtualGatewayListenerTlsSdsCertificateProperty(sds))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayClientTlsCertificateProperty {
+      /**
+       * An object that represents a local file certificate.
+       *
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-file)
+       */
+      override fun `file`(): Any? = unwrap(this).getFile()
+
+      /**
+       * A reference to an object that represents a virtual gateway's client's Secret Discovery
+       * Service certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-sds)
+       */
+      override fun sds(): Any? = unwrap(this).getSds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayClientTlsCertificateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty):
+          VirtualGatewayClientTlsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayClientTlsCertificateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayClientTlsCertificateProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty
+    }
+  }
+
+  /**
+   * An object that represents the type of virtual gateway connection pool.
+   *
+   * Only one protocol is used at a time and should be the same protocol as the one chosen under
+   * port mapping.
+   *
+   * If not present the default value for `maxPendingRequests` is `2147483647` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayConnectionPoolProperty virtualGatewayConnectionPoolProperty =
+   * VirtualGatewayConnectionPoolProperty.builder()
+   * .grpc(VirtualGatewayGrpcConnectionPoolProperty.builder()
+   * .maxRequests(123)
+   * .build())
+   * .http(VirtualGatewayHttpConnectionPoolProperty.builder()
+   * .maxConnections(123)
+   * // the properties below are optional
+   * .maxPendingRequests(123)
+   * .build())
+   * .http2(VirtualGatewayHttp2ConnectionPoolProperty.builder()
+   * .maxRequests(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html)
+   */
+  public interface VirtualGatewayConnectionPoolProperty {
+    /**
+     * An object that represents a type of connection pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-grpc)
+     */
+    public fun grpc(): Any? = unwrap(this).getGrpc()
+
+    /**
+     * An object that represents a type of connection pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http)
+     */
+    public fun http(): Any? = unwrap(this).getHttp()
+
+    /**
+     * An object that represents a type of connection pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http2)
+     */
+    public fun http2(): Any? = unwrap(this).getHttp2()
+
+    /**
+     * A builder for [VirtualGatewayConnectionPoolProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param grpc An object that represents a type of connection pool.
+       */
+      public fun grpc(grpc: IResolvable)
+
+      /**
+       * @param grpc An object that represents a type of connection pool.
+       */
+      public fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty)
+
+      /**
+       * @param grpc An object that represents a type of connection pool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a25f48a5ee10f30339abbee65b6c6e07b9f1f003e8da5e78cb6c4c6d327a91b5")
+      public fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty.Builder.() -> Unit)
+
+      /**
+       * @param http An object that represents a type of connection pool.
+       */
+      public fun http(http: IResolvable)
+
+      /**
+       * @param http An object that represents a type of connection pool.
+       */
+      public fun http(http: VirtualGatewayHttpConnectionPoolProperty)
+
+      /**
+       * @param http An object that represents a type of connection pool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5c70cd067c2e83ae385dfcd845e6cb49427e9df5d911a20d6365bad3f5341667")
+      public fun http(http: VirtualGatewayHttpConnectionPoolProperty.Builder.() -> Unit)
+
+      /**
+       * @param http2 An object that represents a type of connection pool.
+       */
+      public fun http2(http2: IResolvable)
+
+      /**
+       * @param http2 An object that represents a type of connection pool.
+       */
+      public fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty)
+
+      /**
+       * @param http2 An object that represents a type of connection pool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f65d3e5bc347b419e2c7219eb4760135c7cee1a447515c55cf6d2fec7e51724d")
+      public fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty.builder()
+
+      /**
+       * @param grpc An object that represents a type of connection pool.
+       */
+      override fun grpc(grpc: IResolvable) {
+        cdkBuilder.grpc(grpc.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param grpc An object that represents a type of connection pool.
+       */
+      override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty) {
+        cdkBuilder.grpc(grpc.let(VirtualGatewayGrpcConnectionPoolProperty::unwrap))
+      }
+
+      /**
+       * @param grpc An object that represents a type of connection pool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a25f48a5ee10f30339abbee65b6c6e07b9f1f003e8da5e78cb6c4c6d327a91b5")
+      override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty.Builder.() -> Unit): Unit =
+          grpc(VirtualGatewayGrpcConnectionPoolProperty(grpc))
+
+      /**
+       * @param http An object that represents a type of connection pool.
+       */
+      override fun http(http: IResolvable) {
+        cdkBuilder.http(http.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param http An object that represents a type of connection pool.
+       */
+      override fun http(http: VirtualGatewayHttpConnectionPoolProperty) {
+        cdkBuilder.http(http.let(VirtualGatewayHttpConnectionPoolProperty::unwrap))
+      }
+
+      /**
+       * @param http An object that represents a type of connection pool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5c70cd067c2e83ae385dfcd845e6cb49427e9df5d911a20d6365bad3f5341667")
+      override fun http(http: VirtualGatewayHttpConnectionPoolProperty.Builder.() -> Unit): Unit =
+          http(VirtualGatewayHttpConnectionPoolProperty(http))
+
+      /**
+       * @param http2 An object that represents a type of connection pool.
+       */
+      override fun http2(http2: IResolvable) {
+        cdkBuilder.http2(http2.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param http2 An object that represents a type of connection pool.
+       */
+      override fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty) {
+        cdkBuilder.http2(http2.let(VirtualGatewayHttp2ConnectionPoolProperty::unwrap))
+      }
+
+      /**
+       * @param http2 An object that represents a type of connection pool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f65d3e5bc347b419e2c7219eb4760135c7cee1a447515c55cf6d2fec7e51724d")
+      override fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty.Builder.() -> Unit): Unit
+          = http2(VirtualGatewayHttp2ConnectionPoolProperty(http2))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayConnectionPoolProperty {
+      /**
+       * An object that represents a type of connection pool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-grpc)
+       */
+      override fun grpc(): Any? = unwrap(this).getGrpc()
+
+      /**
+       * An object that represents a type of connection pool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http)
+       */
+      override fun http(): Any? = unwrap(this).getHttp()
+
+      /**
+       * An object that represents a type of connection pool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http2)
+       */
+      override fun http2(): Any? = unwrap(this).getHttp2()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayConnectionPoolProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty):
+          VirtualGatewayConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayConnectionPoolProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayConnectionPoolProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty
+    }
+  }
+
+  /**
+   * An object that represents an access log file.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayFileAccessLogProperty virtualGatewayFileAccessLogProperty =
+   * VirtualGatewayFileAccessLogProperty.builder()
+   * .path("path")
+   * // the properties below are optional
+   * .format(LoggingFormatProperty.builder()
+   * .json(List.of(JsonFormatRefProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .text("text")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html)
+   */
+  public interface VirtualGatewayFileAccessLogProperty {
+    /**
+     * The specified format for the virtual gateway access logs.
+     *
+     * It can be either `json_format` or `text_format` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-format)
+     */
+    public fun format(): Any? = unwrap(this).getFormat()
+
+    /**
+     * The file path to write access logs to.
+     *
+     * You can use `/dev/stdout` to send access logs to standard out and configure your Envoy
+     * container to use a log driver, such as `awslogs` , to export the access logs to a log storage
+     * service such as Amazon CloudWatch Logs. You can also specify a path in the Envoy container's
+     * file system to write the files to disk.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-path)
+     */
+    public fun path(): String
+
+    /**
+     * A builder for [VirtualGatewayFileAccessLogProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param format The specified format for the virtual gateway access logs.
+       * It can be either `json_format` or `text_format` .
+       */
+      public fun format(format: IResolvable)
+
+      /**
+       * @param format The specified format for the virtual gateway access logs.
+       * It can be either `json_format` or `text_format` .
+       */
+      public fun format(format: LoggingFormatProperty)
+
+      /**
+       * @param format The specified format for the virtual gateway access logs.
+       * It can be either `json_format` or `text_format` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f0af80698308ec03c64f1fe49c0b1bf8419e8c41c1f1ca3588c2e5ef6b79f803")
+      public fun format(format: LoggingFormatProperty.Builder.() -> Unit)
+
+      /**
+       * @param path The file path to write access logs to. 
+       * You can use `/dev/stdout` to send access logs to standard out and configure your Envoy
+       * container to use a log driver, such as `awslogs` , to export the access logs to a log storage
+       * service such as Amazon CloudWatch Logs. You can also specify a path in the Envoy container's
+       * file system to write the files to disk.
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty.builder()
+
+      /**
+       * @param format The specified format for the virtual gateway access logs.
+       * It can be either `json_format` or `text_format` .
+       */
+      override fun format(format: IResolvable) {
+        cdkBuilder.format(format.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param format The specified format for the virtual gateway access logs.
+       * It can be either `json_format` or `text_format` .
+       */
+      override fun format(format: LoggingFormatProperty) {
+        cdkBuilder.format(format.let(LoggingFormatProperty::unwrap))
+      }
+
+      /**
+       * @param format The specified format for the virtual gateway access logs.
+       * It can be either `json_format` or `text_format` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f0af80698308ec03c64f1fe49c0b1bf8419e8c41c1f1ca3588c2e5ef6b79f803")
+      override fun format(format: LoggingFormatProperty.Builder.() -> Unit): Unit =
+          format(LoggingFormatProperty(format))
+
+      /**
+       * @param path The file path to write access logs to. 
+       * You can use `/dev/stdout` to send access logs to standard out and configure your Envoy
+       * container to use a log driver, such as `awslogs` , to export the access logs to a log storage
+       * service such as Amazon CloudWatch Logs. You can also specify a path in the Envoy container's
+       * file system to write the files to disk.
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayFileAccessLogProperty {
+      /**
+       * The specified format for the virtual gateway access logs.
+       *
+       * It can be either `json_format` or `text_format` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-format)
+       */
+      override fun format(): Any? = unwrap(this).getFormat()
+
+      /**
+       * The file path to write access logs to.
+       *
+       * You can use `/dev/stdout` to send access logs to standard out and configure your Envoy
+       * container to use a log driver, such as `awslogs` , to export the access logs to a log storage
+       * service such as Amazon CloudWatch Logs. You can also specify a path in the Envoy container's
+       * file system to write the files to disk.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-path)
+       */
+      override fun path(): String = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayFileAccessLogProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty):
+          VirtualGatewayFileAccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayFileAccessLogProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayFileAccessLogProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty
+    }
+  }
+
+  /**
+   * An object that represents a type of connection pool.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayGrpcConnectionPoolProperty virtualGatewayGrpcConnectionPoolProperty =
+   * VirtualGatewayGrpcConnectionPoolProperty.builder()
+   * .maxRequests(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.html)
+   */
+  public interface VirtualGatewayGrpcConnectionPoolProperty {
+    /**
+     * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
+     * cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool-maxrequests)
+     */
+    public fun maxRequests(): Number
+
+    /**
+     * A builder for [VirtualGatewayGrpcConnectionPoolProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxRequests Maximum number of inflight requests Envoy can concurrently support
+       * across hosts in upstream cluster. 
+       */
+      public fun maxRequests(maxRequests: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty.builder()
+
+      /**
+       * @param maxRequests Maximum number of inflight requests Envoy can concurrently support
+       * across hosts in upstream cluster. 
+       */
+      override fun maxRequests(maxRequests: Number) {
+        cdkBuilder.maxRequests(maxRequests)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayGrpcConnectionPoolProperty {
+      /**
+       * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
+       * cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool-maxrequests)
+       */
+      override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayGrpcConnectionPoolProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty):
+          VirtualGatewayGrpcConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayGrpcConnectionPoolProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayGrpcConnectionPoolProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty
+    }
+  }
+
+  /**
+   * An object that represents the health check policy for a virtual gateway's listener.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayHealthCheckPolicyProperty virtualGatewayHealthCheckPolicyProperty =
+   * VirtualGatewayHealthCheckPolicyProperty.builder()
+   * .healthyThreshold(123)
+   * .intervalMillis(123)
+   * .protocol("protocol")
+   * .timeoutMillis(123)
+   * .unhealthyThreshold(123)
+   * // the properties below are optional
+   * .path("path")
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html)
+   */
+  public interface VirtualGatewayHealthCheckPolicyProperty {
+    /**
+     * The number of consecutive successful health checks that must occur before declaring the
+     * listener healthy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-healthythreshold)
+     */
+    public fun healthyThreshold(): Number
+
+    /**
+     * The time period in milliseconds between each health check execution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-intervalmillis)
+     */
+    public fun intervalMillis(): Number
+
+    /**
+     * The destination path for the health check request.
+     *
+     * This value is only used if the specified protocol is HTTP or HTTP/2. For any other protocol,
+     * this value is ignored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * The destination port for the health check request.
+     *
+     * This port must match the port defined in the `PortMapping` for the listener.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * The protocol for the health check request.
+     *
+     * If you specify `grpc` , then your service must conform to the [GRPC Health Checking
+     * Protocol](https://docs.aws.amazon.com/https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-protocol)
+     */
+    public fun protocol(): String
+
+    /**
+     * The amount of time to wait when receiving a response from the health check, in milliseconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-timeoutmillis)
+     */
+    public fun timeoutMillis(): Number
+
+    /**
+     * The number of consecutive failed health checks that must occur before declaring a virtual
+     * gateway unhealthy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-unhealthythreshold)
+     */
+    public fun unhealthyThreshold(): Number
+
+    /**
+     * A builder for [VirtualGatewayHealthCheckPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param healthyThreshold The number of consecutive successful health checks that must occur
+       * before declaring the listener healthy. 
+       */
+      public fun healthyThreshold(healthyThreshold: Number)
+
+      /**
+       * @param intervalMillis The time period in milliseconds between each health check execution. 
+       */
+      public fun intervalMillis(intervalMillis: Number)
+
+      /**
+       * @param path The destination path for the health check request.
+       * This value is only used if the specified protocol is HTTP or HTTP/2. For any other
+       * protocol, this value is ignored.
+       */
+      public fun path(path: String)
+
+      /**
+       * @param port The destination port for the health check request.
+       * This port must match the port defined in the `PortMapping` for the listener.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param protocol The protocol for the health check request. 
+       * If you specify `grpc` , then your service must conform to the [GRPC Health Checking
+       * Protocol](https://docs.aws.amazon.com/https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
+       * .
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param timeoutMillis The amount of time to wait when receiving a response from the health
+       * check, in milliseconds. 
+       */
+      public fun timeoutMillis(timeoutMillis: Number)
+
+      /**
+       * @param unhealthyThreshold The number of consecutive failed health checks that must occur
+       * before declaring a virtual gateway unhealthy. 
+       */
+      public fun unhealthyThreshold(unhealthyThreshold: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.builder()
+
+      /**
+       * @param healthyThreshold The number of consecutive successful health checks that must occur
+       * before declaring the listener healthy. 
+       */
+      override fun healthyThreshold(healthyThreshold: Number) {
+        cdkBuilder.healthyThreshold(healthyThreshold)
+      }
+
+      /**
+       * @param intervalMillis The time period in milliseconds between each health check execution. 
+       */
+      override fun intervalMillis(intervalMillis: Number) {
+        cdkBuilder.intervalMillis(intervalMillis)
+      }
+
+      /**
+       * @param path The destination path for the health check request.
+       * This value is only used if the specified protocol is HTTP or HTTP/2. For any other
+       * protocol, this value is ignored.
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      /**
+       * @param port The destination port for the health check request.
+       * This port must match the port defined in the `PortMapping` for the listener.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param protocol The protocol for the health check request. 
+       * If you specify `grpc` , then your service must conform to the [GRPC Health Checking
+       * Protocol](https://docs.aws.amazon.com/https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
+       * .
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param timeoutMillis The amount of time to wait when receiving a response from the health
+       * check, in milliseconds. 
+       */
+      override fun timeoutMillis(timeoutMillis: Number) {
+        cdkBuilder.timeoutMillis(timeoutMillis)
+      }
+
+      /**
+       * @param unhealthyThreshold The number of consecutive failed health checks that must occur
+       * before declaring a virtual gateway unhealthy. 
+       */
+      override fun unhealthyThreshold(unhealthyThreshold: Number) {
+        cdkBuilder.unhealthyThreshold(unhealthyThreshold)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayHealthCheckPolicyProperty {
+      /**
+       * The number of consecutive successful health checks that must occur before declaring the
+       * listener healthy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-healthythreshold)
+       */
+      override fun healthyThreshold(): Number = unwrap(this).getHealthyThreshold()
+
+      /**
+       * The time period in milliseconds between each health check execution.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-intervalmillis)
+       */
+      override fun intervalMillis(): Number = unwrap(this).getIntervalMillis()
+
+      /**
+       * The destination path for the health check request.
+       *
+       * This value is only used if the specified protocol is HTTP or HTTP/2. For any other
+       * protocol, this value is ignored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+
+      /**
+       * The destination port for the health check request.
+       *
+       * This port must match the port defined in the `PortMapping` for the listener.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+
+      /**
+       * The protocol for the health check request.
+       *
+       * If you specify `grpc` , then your service must conform to the [GRPC Health Checking
+       * Protocol](https://docs.aws.amazon.com/https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-protocol)
+       */
+      override fun protocol(): String = unwrap(this).getProtocol()
+
+      /**
+       * The amount of time to wait when receiving a response from the health check, in
+       * milliseconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-timeoutmillis)
+       */
+      override fun timeoutMillis(): Number = unwrap(this).getTimeoutMillis()
+
+      /**
+       * The number of consecutive failed health checks that must occur before declaring a virtual
+       * gateway unhealthy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-unhealthythreshold)
+       */
+      override fun unhealthyThreshold(): Number = unwrap(this).getUnhealthyThreshold()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayHealthCheckPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty):
+          VirtualGatewayHealthCheckPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayHealthCheckPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayHealthCheckPolicyProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty
+    }
+  }
+
+  /**
+   * An object that represents a type of connection pool.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayHttp2ConnectionPoolProperty virtualGatewayHttp2ConnectionPoolProperty =
+   * VirtualGatewayHttp2ConnectionPoolProperty.builder()
+   * .maxRequests(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.html)
+   */
+  public interface VirtualGatewayHttp2ConnectionPoolProperty {
+    /**
+     * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
+     * cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttp2connectionpool-maxrequests)
+     */
+    public fun maxRequests(): Number
+
+    /**
+     * A builder for [VirtualGatewayHttp2ConnectionPoolProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxRequests Maximum number of inflight requests Envoy can concurrently support
+       * across hosts in upstream cluster. 
+       */
+      public fun maxRequests(maxRequests: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty.builder()
+
+      /**
+       * @param maxRequests Maximum number of inflight requests Envoy can concurrently support
+       * across hosts in upstream cluster. 
+       */
+      override fun maxRequests(maxRequests: Number) {
+        cdkBuilder.maxRequests(maxRequests)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayHttp2ConnectionPoolProperty {
+      /**
+       * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
+       * cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttp2connectionpool-maxrequests)
+       */
+      override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayHttp2ConnectionPoolProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty):
+          VirtualGatewayHttp2ConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayHttp2ConnectionPoolProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayHttp2ConnectionPoolProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty
+    }
+  }
+
+  /**
+   * An object that represents a type of connection pool.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayHttpConnectionPoolProperty virtualGatewayHttpConnectionPoolProperty =
+   * VirtualGatewayHttpConnectionPoolProperty.builder()
+   * .maxConnections(123)
+   * // the properties below are optional
+   * .maxPendingRequests(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html)
+   */
+  public interface VirtualGatewayHttpConnectionPoolProperty {
+    /**
+     * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in
+     * upstream cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxconnections)
+     */
+    public fun maxConnections(): Number
+
+    /**
+     * Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxpendingrequests)
+     */
+    public fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
+
+    /**
+     * A builder for [VirtualGatewayHttpConnectionPoolProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxConnections Maximum number of outbound TCP connections Envoy can establish
+       * concurrently with all hosts in upstream cluster. 
+       */
+      public fun maxConnections(maxConnections: Number)
+
+      /**
+       * @param maxPendingRequests Number of overflowing requests after `max_connections` Envoy will
+       * queue to upstream cluster.
+       */
+      public fun maxPendingRequests(maxPendingRequests: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty.builder()
+
+      /**
+       * @param maxConnections Maximum number of outbound TCP connections Envoy can establish
+       * concurrently with all hosts in upstream cluster. 
+       */
+      override fun maxConnections(maxConnections: Number) {
+        cdkBuilder.maxConnections(maxConnections)
+      }
+
+      /**
+       * @param maxPendingRequests Number of overflowing requests after `max_connections` Envoy will
+       * queue to upstream cluster.
+       */
+      override fun maxPendingRequests(maxPendingRequests: Number) {
+        cdkBuilder.maxPendingRequests(maxPendingRequests)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayHttpConnectionPoolProperty {
+      /**
+       * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts
+       * in upstream cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxconnections)
+       */
+      override fun maxConnections(): Number = unwrap(this).getMaxConnections()
+
+      /**
+       * Number of overflowing requests after `max_connections` Envoy will queue to upstream
+       * cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxpendingrequests)
+       */
+      override fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayHttpConnectionPoolProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty):
+          VirtualGatewayHttpConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayHttpConnectionPoolProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayHttpConnectionPoolProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty
+    }
+  }
+
+  /**
+   * An object that represents a listener for a virtual gateway.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayListenerProperty virtualGatewayListenerProperty =
+   * VirtualGatewayListenerProperty.builder()
+   * .portMapping(VirtualGatewayPortMappingProperty.builder()
+   * .port(123)
+   * .protocol("protocol")
+   * .build())
+   * // the properties below are optional
+   * .connectionPool(VirtualGatewayConnectionPoolProperty.builder()
+   * .grpc(VirtualGatewayGrpcConnectionPoolProperty.builder()
+   * .maxRequests(123)
+   * .build())
+   * .http(VirtualGatewayHttpConnectionPoolProperty.builder()
+   * .maxConnections(123)
+   * // the properties below are optional
+   * .maxPendingRequests(123)
+   * .build())
+   * .http2(VirtualGatewayHttp2ConnectionPoolProperty.builder()
+   * .maxRequests(123)
+   * .build())
+   * .build())
+   * .healthCheck(VirtualGatewayHealthCheckPolicyProperty.builder()
+   * .healthyThreshold(123)
+   * .intervalMillis(123)
+   * .protocol("protocol")
+   * .timeoutMillis(123)
+   * .unhealthyThreshold(123)
+   * // the properties below are optional
+   * .path("path")
+   * .port(123)
+   * .build())
+   * .tls(VirtualGatewayListenerTlsProperty.builder()
+   * .certificate(VirtualGatewayListenerTlsCertificateProperty.builder()
+   * .acm(VirtualGatewayListenerTlsAcmCertificateProperty.builder()
+   * .certificateArn("certificateArn")
+   * .build())
+   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
+   * .certificateChain("certificateChain")
+   * .privateKey("privateKey")
+   * .build())
+   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * .mode("mode")
+   * // the properties below are optional
+   * .validation(VirtualGatewayListenerTlsValidationContextProperty.builder()
+   * .trust(VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
+   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build())
+   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+   * .match(SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build())
+   * .build())
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html)
+   */
+  public interface VirtualGatewayListenerProperty {
+    /**
+     * The connection pool information for the listener.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-connectionpool)
+     */
+    public fun connectionPool(): Any? = unwrap(this).getConnectionPool()
+
+    /**
+     * The health check information for the listener.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-healthcheck)
+     */
+    public fun healthCheck(): Any? = unwrap(this).getHealthCheck()
+
+    /**
+     * The port mapping information for the listener.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-portmapping)
+     */
+    public fun portMapping(): Any
+
+    /**
+     * A reference to an object that represents the Transport Layer Security (TLS) properties for
+     * the listener.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-tls)
+     */
+    public fun tls(): Any? = unwrap(this).getTls()
+
+    /**
+     * A builder for [VirtualGatewayListenerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectionPool The connection pool information for the listener.
+       */
+      public fun connectionPool(connectionPool: IResolvable)
+
+      /**
+       * @param connectionPool The connection pool information for the listener.
+       */
+      public fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty)
+
+      /**
+       * @param connectionPool The connection pool information for the listener.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c5cada049a248eeb43391db32e3ebef2974b4bea2bbca850ab09fd507f39aa1d")
+      public
+          fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty.Builder.() -> Unit)
+
+      /**
+       * @param healthCheck The health check information for the listener.
+       */
+      public fun healthCheck(healthCheck: IResolvable)
+
+      /**
+       * @param healthCheck The health check information for the listener.
+       */
+      public fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty)
+
+      /**
+       * @param healthCheck The health check information for the listener.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3b2c7143fe6682175577fe24f6600fd4ed58d4b409e5ae64d20cb47851922c6a")
+      public
+          fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit)
+
+      /**
+       * @param portMapping The port mapping information for the listener. 
+       */
+      public fun portMapping(portMapping: IResolvable)
+
+      /**
+       * @param portMapping The port mapping information for the listener. 
+       */
+      public fun portMapping(portMapping: VirtualGatewayPortMappingProperty)
+
+      /**
+       * @param portMapping The port mapping information for the listener. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("657e1415a121679f54184b01da35c8125c99f3fe79fe4c2ca31228f05c022c2f")
+      public fun portMapping(portMapping: VirtualGatewayPortMappingProperty.Builder.() -> Unit)
+
+      /**
+       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
+       * properties for the listener.
+       */
+      public fun tls(tls: IResolvable)
+
+      /**
+       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
+       * properties for the listener.
+       */
+      public fun tls(tls: VirtualGatewayListenerTlsProperty)
+
+      /**
+       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
+       * properties for the listener.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d474295a8d3ce631a448df4daacc876d7efbbc32b6a303fcdf045c661c58ad0b")
+      public fun tls(tls: VirtualGatewayListenerTlsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty.builder()
+
+      /**
+       * @param connectionPool The connection pool information for the listener.
+       */
+      override fun connectionPool(connectionPool: IResolvable) {
+        cdkBuilder.connectionPool(connectionPool.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectionPool The connection pool information for the listener.
+       */
+      override fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty) {
+        cdkBuilder.connectionPool(connectionPool.let(VirtualGatewayConnectionPoolProperty::unwrap))
+      }
+
+      /**
+       * @param connectionPool The connection pool information for the listener.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c5cada049a248eeb43391db32e3ebef2974b4bea2bbca850ab09fd507f39aa1d")
+      override
+          fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty.Builder.() -> Unit):
+          Unit = connectionPool(VirtualGatewayConnectionPoolProperty(connectionPool))
+
+      /**
+       * @param healthCheck The health check information for the listener.
+       */
+      override fun healthCheck(healthCheck: IResolvable) {
+        cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param healthCheck The health check information for the listener.
+       */
+      override fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty) {
+        cdkBuilder.healthCheck(healthCheck.let(VirtualGatewayHealthCheckPolicyProperty::unwrap))
+      }
+
+      /**
+       * @param healthCheck The health check information for the listener.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3b2c7143fe6682175577fe24f6600fd4ed58d4b409e5ae64d20cb47851922c6a")
+      override
+          fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit):
+          Unit = healthCheck(VirtualGatewayHealthCheckPolicyProperty(healthCheck))
+
+      /**
+       * @param portMapping The port mapping information for the listener. 
+       */
+      override fun portMapping(portMapping: IResolvable) {
+        cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param portMapping The port mapping information for the listener. 
+       */
+      override fun portMapping(portMapping: VirtualGatewayPortMappingProperty) {
+        cdkBuilder.portMapping(portMapping.let(VirtualGatewayPortMappingProperty::unwrap))
+      }
+
+      /**
+       * @param portMapping The port mapping information for the listener. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("657e1415a121679f54184b01da35c8125c99f3fe79fe4c2ca31228f05c022c2f")
+      override fun portMapping(portMapping: VirtualGatewayPortMappingProperty.Builder.() -> Unit):
+          Unit = portMapping(VirtualGatewayPortMappingProperty(portMapping))
+
+      /**
+       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
+       * properties for the listener.
+       */
+      override fun tls(tls: IResolvable) {
+        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
+       * properties for the listener.
+       */
+      override fun tls(tls: VirtualGatewayListenerTlsProperty) {
+        cdkBuilder.tls(tls.let(VirtualGatewayListenerTlsProperty::unwrap))
+      }
+
+      /**
+       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
+       * properties for the listener.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d474295a8d3ce631a448df4daacc876d7efbbc32b6a303fcdf045c661c58ad0b")
+      override fun tls(tls: VirtualGatewayListenerTlsProperty.Builder.() -> Unit): Unit =
+          tls(VirtualGatewayListenerTlsProperty(tls))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayListenerProperty {
+      /**
+       * The connection pool information for the listener.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-connectionpool)
+       */
+      override fun connectionPool(): Any? = unwrap(this).getConnectionPool()
+
+      /**
+       * The health check information for the listener.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-healthcheck)
+       */
+      override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
+
+      /**
+       * The port mapping information for the listener.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-portmapping)
+       */
+      override fun portMapping(): Any = unwrap(this).getPortMapping()
+
+      /**
+       * A reference to an object that represents the Transport Layer Security (TLS) properties for
+       * the listener.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-tls)
+       */
+      override fun tls(): Any? = unwrap(this).getTls()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualGatewayListenerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty):
+          VirtualGatewayListenerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayListenerProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayListenerProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty
+    }
+  }
+
+  /**
+   * An object that represents an AWS Certificate Manager certificate.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayListenerTlsAcmCertificateProperty virtualGatewayListenerTlsAcmCertificateProperty
+   * = VirtualGatewayListenerTlsAcmCertificateProperty.builder()
+   * .certificateArn("certificateArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate.html)
+   */
+  public interface VirtualGatewayListenerTlsAcmCertificateProperty {
+    /**
+     * The Amazon Resource Name (ARN) for the certificate.
+     *
+     * The certificate must meet specific requirements and you must have proxy authorization
+     * enabled. For more information, see [Transport Layer Security
+     * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate-certificatearn)
+     */
+    public fun certificateArn(): String
+
+    /**
+     * A builder for [VirtualGatewayListenerTlsAcmCertificateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateArn The Amazon Resource Name (ARN) for the certificate. 
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
+       * .
+       */
+      public fun certificateArn(certificateArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty.builder()
+
+      /**
+       * @param certificateArn The Amazon Resource Name (ARN) for the certificate. 
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
+       * .
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsAcmCertificateProperty {
+      /**
+       * The Amazon Resource Name (ARN) for the certificate.
+       *
+       * The certificate must meet specific requirements and you must have proxy authorization
+       * enabled. For more information, see [Transport Layer Security
+       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate-certificatearn)
+       */
+      override fun certificateArn(): String = unwrap(this).getCertificateArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayListenerTlsAcmCertificateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty):
+          VirtualGatewayListenerTlsAcmCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayListenerTlsAcmCertificateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayListenerTlsAcmCertificateProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty
+    }
+  }
+
+  /**
    * An object that represents a listener's Transport Layer Security (TLS) certificate.
    *
    * Example:
@@ -778,6 +3601,1103 @@ public open class CfnVirtualGateway internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty
+    }
+  }
+
+  /**
+   * An object that represents a local file certificate.
+   *
+   * The certificate must meet specific requirements and you must have proxy authorization enabled.
+   * For more information, see [Transport Layer Security
+   * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayListenerTlsFileCertificateProperty
+   * virtualGatewayListenerTlsFileCertificateProperty =
+   * VirtualGatewayListenerTlsFileCertificateProperty.builder()
+   * .certificateChain("certificateChain")
+   * .privateKey("privateKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html)
+   */
+  public interface VirtualGatewayListenerTlsFileCertificateProperty {
+    /**
+     * The certificate chain for the certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-certificatechain)
+     */
+    public fun certificateChain(): String
+
+    /**
+     * The private key for a certificate stored on the file system of the mesh endpoint that the
+     * proxy is running on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-privatekey)
+     */
+    public fun privateKey(): String
+
+    /**
+     * A builder for [VirtualGatewayListenerTlsFileCertificateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateChain The certificate chain for the certificate. 
+       */
+      public fun certificateChain(certificateChain: String)
+
+      /**
+       * @param privateKey The private key for a certificate stored on the file system of the mesh
+       * endpoint that the proxy is running on. 
+       */
+      public fun privateKey(privateKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty.builder()
+
+      /**
+       * @param certificateChain The certificate chain for the certificate. 
+       */
+      override fun certificateChain(certificateChain: String) {
+        cdkBuilder.certificateChain(certificateChain)
+      }
+
+      /**
+       * @param privateKey The private key for a certificate stored on the file system of the mesh
+       * endpoint that the proxy is running on. 
+       */
+      override fun privateKey(privateKey: String) {
+        cdkBuilder.privateKey(privateKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsFileCertificateProperty {
+      /**
+       * The certificate chain for the certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-certificatechain)
+       */
+      override fun certificateChain(): String = unwrap(this).getCertificateChain()
+
+      /**
+       * The private key for a certificate stored on the file system of the mesh endpoint that the
+       * proxy is running on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-privatekey)
+       */
+      override fun privateKey(): String = unwrap(this).getPrivateKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayListenerTlsFileCertificateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty):
+          VirtualGatewayListenerTlsFileCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayListenerTlsFileCertificateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayListenerTlsFileCertificateProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty
+    }
+  }
+
+  /**
+   * An object that represents the Transport Layer Security (TLS) properties for a listener.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayListenerTlsProperty virtualGatewayListenerTlsProperty =
+   * VirtualGatewayListenerTlsProperty.builder()
+   * .certificate(VirtualGatewayListenerTlsCertificateProperty.builder()
+   * .acm(VirtualGatewayListenerTlsAcmCertificateProperty.builder()
+   * .certificateArn("certificateArn")
+   * .build())
+   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
+   * .certificateChain("certificateChain")
+   * .privateKey("privateKey")
+   * .build())
+   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * .mode("mode")
+   * // the properties below are optional
+   * .validation(VirtualGatewayListenerTlsValidationContextProperty.builder()
+   * .trust(VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
+   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build())
+   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+   * .match(SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build())
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html)
+   */
+  public interface VirtualGatewayListenerTlsProperty {
+    /**
+     * An object that represents a Transport Layer Security (TLS) certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate)
+     */
+    public fun certificate(): Any
+
+    /**
+     * Specify one of the following modes.
+     *
+     * * ** STRICT – Listener only accepts connections with TLS enabled.
+     * * ** PERMISSIVE – Listener accepts connections with or without TLS enabled.
+     * * ** DISABLED – Listener only accepts connections without TLS.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode)
+     */
+    public fun mode(): String
+
+    /**
+     * A reference to an object that represents a virtual gateway's listener's Transport Layer
+     * Security (TLS) validation context.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation)
+     */
+    public fun validation(): Any? = unwrap(this).getValidation()
+
+    /**
+     * A builder for [VirtualGatewayListenerTlsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
+       */
+      public fun certificate(certificate: IResolvable)
+
+      /**
+       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
+       */
+      public fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty)
+
+      /**
+       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f22287334a0f1622f27c197f3d7fc9f6db3366876f9d04e39a24753b4a9c965c")
+      public
+          fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty.Builder.() -> Unit)
+
+      /**
+       * @param mode Specify one of the following modes. 
+       * * ** STRICT – Listener only accepts connections with TLS enabled.
+       * * ** PERMISSIVE – Listener accepts connections with or without TLS enabled.
+       * * ** DISABLED – Listener only accepts connections without TLS.
+       */
+      public fun mode(mode: String)
+
+      /**
+       * @param validation A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) validation context.
+       */
+      public fun validation(validation: IResolvable)
+
+      /**
+       * @param validation A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) validation context.
+       */
+      public fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty)
+
+      /**
+       * @param validation A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) validation context.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("49804e56c344e5028b80553eeac2c64d3adb322daa597e1e029053463ab8bef4")
+      public
+          fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty.builder()
+
+      /**
+       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
+       */
+      override fun certificate(certificate: IResolvable) {
+        cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
+       */
+      override fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty) {
+        cdkBuilder.certificate(certificate.let(VirtualGatewayListenerTlsCertificateProperty::unwrap))
+      }
+
+      /**
+       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f22287334a0f1622f27c197f3d7fc9f6db3366876f9d04e39a24753b4a9c965c")
+      override
+          fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty.Builder.() -> Unit):
+          Unit = certificate(VirtualGatewayListenerTlsCertificateProperty(certificate))
+
+      /**
+       * @param mode Specify one of the following modes. 
+       * * ** STRICT – Listener only accepts connections with TLS enabled.
+       * * ** PERMISSIVE – Listener accepts connections with or without TLS enabled.
+       * * ** DISABLED – Listener only accepts connections without TLS.
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      /**
+       * @param validation A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) validation context.
+       */
+      override fun validation(validation: IResolvable) {
+        cdkBuilder.validation(validation.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param validation A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) validation context.
+       */
+      override fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty) {
+        cdkBuilder.validation(validation.let(VirtualGatewayListenerTlsValidationContextProperty::unwrap))
+      }
+
+      /**
+       * @param validation A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) validation context.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("49804e56c344e5028b80553eeac2c64d3adb322daa597e1e029053463ab8bef4")
+      override
+          fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty.Builder.() -> Unit):
+          Unit = validation(VirtualGatewayListenerTlsValidationContextProperty(validation))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsProperty {
+      /**
+       * An object that represents a Transport Layer Security (TLS) certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate)
+       */
+      override fun certificate(): Any = unwrap(this).getCertificate()
+
+      /**
+       * Specify one of the following modes.
+       *
+       * * ** STRICT – Listener only accepts connections with TLS enabled.
+       * * ** PERMISSIVE – Listener accepts connections with or without TLS enabled.
+       * * ** DISABLED – Listener only accepts connections without TLS.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode)
+       */
+      override fun mode(): String = unwrap(this).getMode()
+
+      /**
+       * A reference to an object that represents a virtual gateway's listener's Transport Layer
+       * Security (TLS) validation context.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation)
+       */
+      override fun validation(): Any? = unwrap(this).getValidation()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayListenerTlsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty):
+          VirtualGatewayListenerTlsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayListenerTlsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayListenerTlsProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty
+    }
+  }
+
+  /**
+   * An object that represents the virtual gateway's listener's Secret Discovery Service
+   * certificate.The proxy must be configured with a local SDS provider via a Unix Domain Socket. See
+   * App Mesh [TLS documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) for
+   * more info.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayListenerTlsSdsCertificateProperty virtualGatewayListenerTlsSdsCertificateProperty
+   * = VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+   * .secretName("secretName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate.html)
+   */
+  public interface VirtualGatewayListenerTlsSdsCertificateProperty {
+    /**
+     * A reference to an object that represents the name of the secret secret requested from the
+     * Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a
+     * certificate or certificate chain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate-secretname)
+     */
+    public fun secretName(): String
+
+    /**
+     * A builder for [VirtualGatewayListenerTlsSdsCertificateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param secretName A reference to an object that represents the name of the secret secret
+       * requested from the Secret Discovery Service provider representing Transport Layer Security
+       * (TLS) materials like a certificate or certificate chain. 
+       */
+      public fun secretName(secretName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+
+      /**
+       * @param secretName A reference to an object that represents the name of the secret secret
+       * requested from the Secret Discovery Service provider representing Transport Layer Security
+       * (TLS) materials like a certificate or certificate chain. 
+       */
+      override fun secretName(secretName: String) {
+        cdkBuilder.secretName(secretName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsSdsCertificateProperty {
+      /**
+       * A reference to an object that represents the name of the secret secret requested from the
+       * Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a
+       * certificate or certificate chain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate-secretname)
+       */
+      override fun secretName(): String = unwrap(this).getSecretName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayListenerTlsSdsCertificateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty):
+          VirtualGatewayListenerTlsSdsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayListenerTlsSdsCertificateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayListenerTlsSdsCertificateProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty
+    }
+  }
+
+  /**
+   * An object that represents a virtual gateway's listener's Transport Layer Security (TLS)
+   * validation context.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayListenerTlsValidationContextProperty
+   * virtualGatewayListenerTlsValidationContextProperty =
+   * VirtualGatewayListenerTlsValidationContextProperty.builder()
+   * .trust(VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
+   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build())
+   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+   * .match(SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html)
+   */
+  public interface VirtualGatewayListenerTlsValidationContextProperty {
+    /**
+     * A reference to an object that represents the SANs for a virtual gateway listener's Transport
+     * Layer Security (TLS) validation context.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-subjectalternativenames)
+     */
+    public fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
+
+    /**
+     * A reference to where to retrieve the trust chain when validating a peer’s Transport Layer
+     * Security (TLS) certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-trust)
+     */
+    public fun trust(): Any
+
+    /**
+     * A builder for [VirtualGatewayListenerTlsValidationContextProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway listener's Transport Layer Security (TLS) validation context.
+       */
+      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway listener's Transport Layer Security (TLS) validation context.
+       */
+      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty)
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway listener's Transport Layer Security (TLS) validation context.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d86a964ec948a76a692ee81b044ffab0a1f298dc0cf139e8ff41cea0d5c6e56b")
+      public
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit)
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      public fun trust(trust: IResolvable)
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      public fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty)
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c148b9e3778a689288c963548b5350d16829a1dacc1b95ccc54a944f2dbde3db")
+      public
+          fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty.builder()
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway listener's Transport Layer Security (TLS) validation context.
+       */
+      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway listener's Transport Layer Security (TLS) validation context.
+       */
+      override
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
+      }
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway listener's Transport Layer Security (TLS) validation context.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d86a964ec948a76a692ee81b044ffab0a1f298dc0cf139e8ff41cea0d5c6e56b")
+      override
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit):
+          Unit = subjectAlternativeNames(SubjectAlternativeNamesProperty(subjectAlternativeNames))
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      override fun trust(trust: IResolvable) {
+        cdkBuilder.trust(trust.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      override fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty) {
+        cdkBuilder.trust(trust.let(VirtualGatewayListenerTlsValidationContextTrustProperty::unwrap))
+      }
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c148b9e3778a689288c963548b5350d16829a1dacc1b95ccc54a944f2dbde3db")
+      override
+          fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty.Builder.() -> Unit):
+          Unit = trust(VirtualGatewayListenerTlsValidationContextTrustProperty(trust))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsValidationContextProperty {
+      /**
+       * A reference to an object that represents the SANs for a virtual gateway listener's
+       * Transport Layer Security (TLS) validation context.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-subjectalternativenames)
+       */
+      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
+
+      /**
+       * A reference to where to retrieve the trust chain when validating a peer’s Transport Layer
+       * Security (TLS) certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-trust)
+       */
+      override fun trust(): Any = unwrap(this).getTrust()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayListenerTlsValidationContextProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty):
+          VirtualGatewayListenerTlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayListenerTlsValidationContextProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayListenerTlsValidationContextProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty
+    }
+  }
+
+  /**
+   * An object that represents a virtual gateway's listener's Transport Layer Security (TLS)
+   * validation context trust.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayListenerTlsValidationContextTrustProperty
+   * virtualGatewayListenerTlsValidationContextTrustProperty =
+   * VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
+   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build())
+   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html)
+   */
+  public interface VirtualGatewayListenerTlsValidationContextTrustProperty {
+    /**
+     * An object that represents a Transport Layer Security (TLS) validation context trust for a
+     * local file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-file)
+     */
+    public fun `file`(): Any? = unwrap(this).getFile()
+
+    /**
+     * A reference to an object that represents a virtual gateway's listener's Transport Layer
+     * Security (TLS) Secret Discovery Service validation context trust.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-sds)
+     */
+    public fun sds(): Any? = unwrap(this).getSds()
+
+    /**
+     * A builder for [VirtualGatewayListenerTlsValidationContextTrustProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param file An object that represents a Transport Layer Security (TLS) validation context
+       * trust for a local file.
+       */
+      public fun `file`(`file`: IResolvable)
+
+      /**
+       * @param file An object that represents a Transport Layer Security (TLS) validation context
+       * trust for a local file.
+       */
+      public fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty)
+
+      /**
+       * @param file An object that represents a Transport Layer Security (TLS) validation context
+       * trust for a local file.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b4de2ecb488740d08277bc1fa4e871749734532dcb1227e56489e327a130b12a")
+      public
+          fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit)
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+       */
+      public fun sds(sds: IResolvable)
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+       */
+      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty)
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4f1cfe943aebbb2e614f42b76e13c96552308637e185c7db165b6bb01900f2a4")
+      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
+
+      /**
+       * @param file An object that represents a Transport Layer Security (TLS) validation context
+       * trust for a local file.
+       */
+      override fun `file`(`file`: IResolvable) {
+        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param file An object that represents a Transport Layer Security (TLS) validation context
+       * trust for a local file.
+       */
+      override fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
+        cdkBuilder.`file`(`file`.let(VirtualGatewayTlsValidationContextFileTrustProperty::unwrap))
+      }
+
+      /**
+       * @param file An object that represents a Transport Layer Security (TLS) validation context
+       * trust for a local file.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b4de2ecb488740d08277bc1fa4e871749734532dcb1227e56489e327a130b12a")
+      override
+          fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit):
+          Unit = `file`(VirtualGatewayTlsValidationContextFileTrustProperty(`file`))
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+       */
+      override fun sds(sds: IResolvable) {
+        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+       */
+      override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
+        cdkBuilder.sds(sds.let(VirtualGatewayTlsValidationContextSdsTrustProperty::unwrap))
+      }
+
+      /**
+       * @param sds A reference to an object that represents a virtual gateway's listener's
+       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4f1cfe943aebbb2e614f42b76e13c96552308637e185c7db165b6bb01900f2a4")
+      override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit):
+          Unit = sds(VirtualGatewayTlsValidationContextSdsTrustProperty(sds))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsValidationContextTrustProperty {
+      /**
+       * An object that represents a Transport Layer Security (TLS) validation context trust for a
+       * local file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-file)
+       */
+      override fun `file`(): Any? = unwrap(this).getFile()
+
+      /**
+       * A reference to an object that represents a virtual gateway's listener's Transport Layer
+       * Security (TLS) Secret Discovery Service validation context trust.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-sds)
+       */
+      override fun sds(): Any? = unwrap(this).getSds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayListenerTlsValidationContextTrustProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty):
+          VirtualGatewayListenerTlsValidationContextTrustProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayListenerTlsValidationContextTrustProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayListenerTlsValidationContextTrustProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty
+    }
+  }
+
+  /**
+   * An object that represents logging information.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayLoggingProperty virtualGatewayLoggingProperty =
+   * VirtualGatewayLoggingProperty.builder()
+   * .accessLog(VirtualGatewayAccessLogProperty.builder()
+   * .file(VirtualGatewayFileAccessLogProperty.builder()
+   * .path("path")
+   * // the properties below are optional
+   * .format(LoggingFormatProperty.builder()
+   * .json(List.of(JsonFormatRefProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .text("text")
+   * .build())
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylogging.html)
+   */
+  public interface VirtualGatewayLoggingProperty {
+    /**
+     * The access log configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylogging.html#cfn-appmesh-virtualgateway-virtualgatewaylogging-accesslog)
+     */
+    public fun accessLog(): Any? = unwrap(this).getAccessLog()
+
+    /**
+     * A builder for [VirtualGatewayLoggingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessLog The access log configuration.
+       */
+      public fun accessLog(accessLog: IResolvable)
+
+      /**
+       * @param accessLog The access log configuration.
+       */
+      public fun accessLog(accessLog: VirtualGatewayAccessLogProperty)
+
+      /**
+       * @param accessLog The access log configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d556fd726fd3953f33b7516a900555f84c031a98b200a68c6567b23bcc5e8a2b")
+      public fun accessLog(accessLog: VirtualGatewayAccessLogProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty.builder()
+
+      /**
+       * @param accessLog The access log configuration.
+       */
+      override fun accessLog(accessLog: IResolvable) {
+        cdkBuilder.accessLog(accessLog.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param accessLog The access log configuration.
+       */
+      override fun accessLog(accessLog: VirtualGatewayAccessLogProperty) {
+        cdkBuilder.accessLog(accessLog.let(VirtualGatewayAccessLogProperty::unwrap))
+      }
+
+      /**
+       * @param accessLog The access log configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d556fd726fd3953f33b7516a900555f84c031a98b200a68c6567b23bcc5e8a2b")
+      override fun accessLog(accessLog: VirtualGatewayAccessLogProperty.Builder.() -> Unit): Unit =
+          accessLog(VirtualGatewayAccessLogProperty(accessLog))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayLoggingProperty {
+      /**
+       * The access log configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylogging.html#cfn-appmesh-virtualgateway-virtualgatewaylogging-accesslog)
+       */
+      override fun accessLog(): Any? = unwrap(this).getAccessLog()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualGatewayLoggingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty):
+          VirtualGatewayLoggingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayLoggingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayLoggingProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty
+    }
+  }
+
+  /**
+   * An object that represents a port mapping.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayPortMappingProperty virtualGatewayPortMappingProperty =
+   * VirtualGatewayPortMappingProperty.builder()
+   * .port(123)
+   * .protocol("protocol")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html)
+   */
+  public interface VirtualGatewayPortMappingProperty {
+    /**
+     * The port used for the port mapping.
+     *
+     * Specify one protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-port)
+     */
+    public fun port(): Number
+
+    /**
+     * The protocol used for the port mapping.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-protocol)
+     */
+    public fun protocol(): String
+
+    /**
+     * A builder for [VirtualGatewayPortMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param port The port used for the port mapping. 
+       * Specify one protocol.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param protocol The protocol used for the port mapping. 
+       */
+      public fun protocol(protocol: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty.builder()
+
+      /**
+       * @param port The port used for the port mapping. 
+       * Specify one protocol.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param protocol The protocol used for the port mapping. 
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayPortMappingProperty {
+      /**
+       * The port used for the port mapping.
+       *
+       * Specify one protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * The protocol used for the port mapping.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-protocol)
+       */
+      override fun protocol(): String = unwrap(this).getProtocol()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayPortMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty):
+          VirtualGatewayPortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayPortMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayPortMappingProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty
     }
   }
 
@@ -1125,7 +5045,8 @@ public open class CfnVirtualGateway internal constructor(
   }
 
   /**
-   * An object that represents the format for the logs.
+   * An object that represents a Transport Layer Security (TLS) validation context trust for an AWS
+   * Certificate Manager certificate.
    *
    * Example:
    *
@@ -1133,248 +5054,479 @@ public open class CfnVirtualGateway internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * LoggingFormatProperty loggingFormatProperty = LoggingFormatProperty.builder()
-   * .json(List.of(JsonFormatRefProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .text("text")
+   * VirtualGatewayTlsValidationContextAcmTrustProperty
+   * virtualGatewayTlsValidationContextAcmTrustProperty =
+   * VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
+   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.html)
    */
-  public interface LoggingFormatProperty {
+  public interface VirtualGatewayTlsValidationContextAcmTrustProperty {
     /**
-     * The logging format for JSON.
+     * One or more ACM Amazon Resource Name (ARN)s.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html#cfn-appmesh-virtualgateway-loggingformat-json)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust-certificateauthorityarns)
      */
-    public fun json(): Any? = unwrap(this).getJson()
+    public fun certificateAuthorityArns(): List<String>
 
     /**
-     * The logging format for text.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html#cfn-appmesh-virtualgateway-loggingformat-text)
-     */
-    public fun text(): String? = unwrap(this).getText()
-
-    /**
-     * A builder for [LoggingFormatProperty]
+     * A builder for [VirtualGatewayTlsValidationContextAcmTrustProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param json The logging format for JSON.
+       * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
        */
-      public fun json(json: IResolvable)
+      public fun certificateAuthorityArns(certificateAuthorityArns: List<String>)
 
       /**
-       * @param json The logging format for JSON.
+       * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
        */
-      public fun json(json: List<Any>)
-
-      /**
-       * @param json The logging format for JSON.
-       */
-      public fun json(vararg json: Any)
-
-      /**
-       * @param text The logging format for text.
-       */
-      public fun text(text: String)
+      public fun certificateAuthorityArns(vararg certificateAuthorityArns: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty.Builder =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty.builder()
-
-      /**
-       * @param json The logging format for JSON.
-       */
-      override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param json The logging format for JSON.
-       */
-      override fun json(json: List<Any>) {
-        cdkBuilder.json(json)
-      }
-
-      /**
-       * @param json The logging format for JSON.
-       */
-      override fun json(vararg json: Any): Unit = json(json.toList())
-
-      /**
-       * @param text The logging format for text.
-       */
-      override fun text(text: String) {
-        cdkBuilder.text(text)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty,
-    ) : CdkObject(cdkObject), LoggingFormatProperty {
-      /**
-       * The logging format for JSON.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html#cfn-appmesh-virtualgateway-loggingformat-json)
-       */
-      override fun json(): Any? = unwrap(this).getJson()
-
-      /**
-       * The logging format for text.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-loggingformat.html#cfn-appmesh-virtualgateway-loggingformat-text)
-       */
-      override fun text(): String? = unwrap(this).getText()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingFormatProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty):
-          LoggingFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingFormatProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggingFormatProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty
-    }
-  }
-
-  /**
-   * An object that represents a type of connection pool.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayHttpConnectionPoolProperty virtualGatewayHttpConnectionPoolProperty =
-   * VirtualGatewayHttpConnectionPoolProperty.builder()
-   * .maxConnections(123)
-   * // the properties below are optional
-   * .maxPendingRequests(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html)
-   */
-  public interface VirtualGatewayHttpConnectionPoolProperty {
-    /**
-     * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in
-     * upstream cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxconnections)
-     */
-    public fun maxConnections(): Number
-
-    /**
-     * Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxpendingrequests)
-     */
-    public fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
-
-    /**
-     * A builder for [VirtualGatewayHttpConnectionPoolProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxConnections Maximum number of outbound TCP connections Envoy can establish
-       * concurrently with all hosts in upstream cluster. 
-       */
-      public fun maxConnections(maxConnections: Number)
-
-      /**
-       * @param maxPendingRequests Number of overflowing requests after `max_connections` Envoy will
-       * queue to upstream cluster.
-       */
-      public fun maxPendingRequests(maxPendingRequests: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty.Builder
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty.Builder
           =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty.builder()
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
 
       /**
-       * @param maxConnections Maximum number of outbound TCP connections Envoy can establish
-       * concurrently with all hosts in upstream cluster. 
+       * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
        */
-      override fun maxConnections(maxConnections: Number) {
-        cdkBuilder.maxConnections(maxConnections)
+      override fun certificateAuthorityArns(certificateAuthorityArns: List<String>) {
+        cdkBuilder.certificateAuthorityArns(certificateAuthorityArns)
       }
 
       /**
-       * @param maxPendingRequests Number of overflowing requests after `max_connections` Envoy will
-       * queue to upstream cluster.
+       * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
        */
-      override fun maxPendingRequests(maxPendingRequests: Number) {
-        cdkBuilder.maxPendingRequests(maxPendingRequests)
-      }
+      override fun certificateAuthorityArns(vararg certificateAuthorityArns: String): Unit =
+          certificateAuthorityArns(certificateAuthorityArns.toList())
 
       public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayHttpConnectionPoolProperty {
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextAcmTrustProperty {
       /**
-       * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts
-       * in upstream cluster.
+       * One or more ACM Amazon Resource Name (ARN)s.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxconnections)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust-certificateauthorityarns)
        */
-      override fun maxConnections(): Number = unwrap(this).getMaxConnections()
-
-      /**
-       * Number of overflowing requests after `max_connections` Envoy will queue to upstream
-       * cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxpendingrequests)
-       */
-      override fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
+      override fun certificateAuthorityArns(): List<String> =
+          unwrap(this).getCertificateAuthorityArns()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayHttpConnectionPoolProperty {
+          VirtualGatewayTlsValidationContextAcmTrustProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty):
-          VirtualGatewayHttpConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayHttpConnectionPoolProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty):
+          VirtualGatewayTlsValidationContextAcmTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayTlsValidationContextAcmTrustProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VirtualGatewayHttpConnectionPoolProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty
+      internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextAcmTrustProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty
+    }
+  }
+
+  /**
+   * An object that represents a Transport Layer Security (TLS) validation context trust for a local
+   * file.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayTlsValidationContextFileTrustProperty
+   * virtualGatewayTlsValidationContextFileTrustProperty =
+   * VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.html)
+   */
+  public interface VirtualGatewayTlsValidationContextFileTrustProperty {
+    /**
+     * The certificate trust chain for a certificate stored on the file system of the virtual node
+     * that the proxy is running on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust-certificatechain)
+     */
+    public fun certificateChain(): String
+
+    /**
+     * A builder for [VirtualGatewayTlsValidationContextFileTrustProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateChain The certificate trust chain for a certificate stored on the file
+       * system of the virtual node that the proxy is running on. 
+       */
+      public fun certificateChain(certificateChain: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+
+      /**
+       * @param certificateChain The certificate trust chain for a certificate stored on the file
+       * system of the virtual node that the proxy is running on. 
+       */
+      override fun certificateChain(certificateChain: String) {
+        cdkBuilder.certificateChain(certificateChain)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextFileTrustProperty {
+      /**
+       * The certificate trust chain for a certificate stored on the file system of the virtual node
+       * that the proxy is running on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust-certificatechain)
+       */
+      override fun certificateChain(): String = unwrap(this).getCertificateChain()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayTlsValidationContextFileTrustProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty):
+          VirtualGatewayTlsValidationContextFileTrustProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? VirtualGatewayTlsValidationContextFileTrustProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextFileTrustProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty
+    }
+  }
+
+  /**
+   * An object that represents a Transport Layer Security (TLS) validation context.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayTlsValidationContextProperty virtualGatewayTlsValidationContextProperty =
+   * VirtualGatewayTlsValidationContextProperty.builder()
+   * .trust(VirtualGatewayTlsValidationContextTrustProperty.builder()
+   * .acm(VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
+   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+   * .build())
+   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+   * .certificateChain("certificateChain")
+   * .build())
+   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+   * .match(SubjectAlternativeNameMatchersProperty.builder()
+   * .exact(List.of("exact"))
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html)
+   */
+  public interface VirtualGatewayTlsValidationContextProperty {
+    /**
+     * A reference to an object that represents the SANs for a virtual gateway's listener's
+     * Transport Layer Security (TLS) validation context.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-subjectalternativenames)
+     */
+    public fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
+
+    /**
+     * A reference to where to retrieve the trust chain when validating a peer’s Transport Layer
+     * Security (TLS) certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-trust)
+     */
+    public fun trust(): Any
+
+    /**
+     * A builder for [VirtualGatewayTlsValidationContextProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
+       */
+      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
+       */
+      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty)
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("edaf23f43617162815f82a930a2a301f6c99b891800fb28eaa8887babfe2ccba")
+      public
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit)
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      public fun trust(trust: IResolvable)
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      public fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty)
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cbcc999aee919483ce3fa632feef20067653951c342ca9eff59c026f4655f5dc")
+      public fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty.builder()
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
+       */
+      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
+       */
+      override
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
+      }
+
+      /**
+       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("edaf23f43617162815f82a930a2a301f6c99b891800fb28eaa8887babfe2ccba")
+      override
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit):
+          Unit = subjectAlternativeNames(SubjectAlternativeNamesProperty(subjectAlternativeNames))
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      override fun trust(trust: IResolvable) {
+        cdkBuilder.trust(trust.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      override fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty) {
+        cdkBuilder.trust(trust.let(VirtualGatewayTlsValidationContextTrustProperty::unwrap))
+      }
+
+      /**
+       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+       * Transport Layer Security (TLS) certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cbcc999aee919483ce3fa632feef20067653951c342ca9eff59c026f4655f5dc")
+      override fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty.Builder.() -> Unit):
+          Unit = trust(VirtualGatewayTlsValidationContextTrustProperty(trust))
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextProperty {
+      /**
+       * A reference to an object that represents the SANs for a virtual gateway's listener's
+       * Transport Layer Security (TLS) validation context.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-subjectalternativenames)
+       */
+      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
+
+      /**
+       * A reference to where to retrieve the trust chain when validating a peer’s Transport Layer
+       * Security (TLS) certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-trust)
+       */
+      override fun trust(): Any = unwrap(this).getTrust()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayTlsValidationContextProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty):
+          VirtualGatewayTlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayTlsValidationContextProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty
+    }
+  }
+
+  /**
+   * An object that represents a virtual gateway's listener's Transport Layer Security (TLS) Secret
+   * Discovery Service validation context trust.
+   *
+   * The proxy must be configured with a local SDS provider via a Unix Domain Socket. See App Mesh
+   * [TLS documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) for more info.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualGatewayTlsValidationContextSdsTrustProperty
+   * virtualGatewayTlsValidationContextSdsTrustProperty =
+   * VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+   * .secretName("secretName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust.html)
+   */
+  public interface VirtualGatewayTlsValidationContextSdsTrustProperty {
+    /**
+     * A reference to an object that represents the name of the secret for a virtual gateway's
+     * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust-secretname)
+     */
+    public fun secretName(): String
+
+    /**
+     * A builder for [VirtualGatewayTlsValidationContextSdsTrustProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param secretName A reference to an object that represents the name of the secret for a
+       * virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context
+       * trust. 
+       */
+      public fun secretName(secretName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+
+      /**
+       * @param secretName A reference to an object that represents the name of the secret for a
+       * virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context
+       * trust. 
+       */
+      override fun secretName(secretName: String) {
+        cdkBuilder.secretName(secretName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty,
+    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextSdsTrustProperty {
+      /**
+       * A reference to an object that represents the name of the secret for a virtual gateway's
+       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust-secretname)
+       */
+      override fun secretName(): String = unwrap(this).getSecretName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualGatewayTlsValidationContextSdsTrustProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty):
+          VirtualGatewayTlsValidationContextSdsTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualGatewayTlsValidationContextSdsTrustProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextSdsTrustProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty
     }
   }
 
@@ -1627,4158 +5779,6 @@ public open class CfnVirtualGateway internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextTrustProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextTrustProperty
-    }
-  }
-
-  /**
-   * An object that represents a virtual gateway's listener's Transport Layer Security (TLS) Secret
-   * Discovery Service validation context trust.
-   *
-   * The proxy must be configured with a local SDS provider via a Unix Domain Socket. See App Mesh
-   * [TLS documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) for more info.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayTlsValidationContextSdsTrustProperty
-   * virtualGatewayTlsValidationContextSdsTrustProperty =
-   * VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust.html)
-   */
-  public interface VirtualGatewayTlsValidationContextSdsTrustProperty {
-    /**
-     * A reference to an object that represents the name of the secret for a virtual gateway's
-     * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust-secretname)
-     */
-    public fun secretName(): String
-
-    /**
-     * A builder for [VirtualGatewayTlsValidationContextSdsTrustProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param secretName A reference to an object that represents the name of the secret for a
-       * virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context
-       * trust. 
-       */
-      public fun secretName(secretName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-
-      /**
-       * @param secretName A reference to an object that represents the name of the secret for a
-       * virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context
-       * trust. 
-       */
-      override fun secretName(secretName: String) {
-        cdkBuilder.secretName(secretName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextSdsTrustProperty {
-      /**
-       * A reference to an object that represents the name of the secret for a virtual gateway's
-       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust-secretname)
-       */
-      override fun secretName(): String = unwrap(this).getSecretName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayTlsValidationContextSdsTrustProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty):
-          VirtualGatewayTlsValidationContextSdsTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayTlsValidationContextSdsTrustProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextSdsTrustProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty
-    }
-  }
-
-  /**
-   * The access log configuration for a virtual gateway.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayAccessLogProperty virtualGatewayAccessLogProperty =
-   * VirtualGatewayAccessLogProperty.builder()
-   * .file(VirtualGatewayFileAccessLogProperty.builder()
-   * .path("path")
-   * // the properties below are optional
-   * .format(LoggingFormatProperty.builder()
-   * .json(List.of(JsonFormatRefProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .text("text")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayaccesslog.html)
-   */
-  public interface VirtualGatewayAccessLogProperty {
-    /**
-     * The file object to send virtual gateway access logs to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayaccesslog-file)
-     */
-    public fun `file`(): Any? = unwrap(this).getFile()
-
-    /**
-     * A builder for [VirtualGatewayAccessLogProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param file The file object to send virtual gateway access logs to.
-       */
-      public fun `file`(`file`: IResolvable)
-
-      /**
-       * @param file The file object to send virtual gateway access logs to.
-       */
-      public fun `file`(`file`: VirtualGatewayFileAccessLogProperty)
-
-      /**
-       * @param file The file object to send virtual gateway access logs to.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6f3121bb369a8d15cefa43e3b6240a991fbdfa32882bb1e89c72730747fbbe49")
-      public fun `file`(`file`: VirtualGatewayFileAccessLogProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty.builder()
-
-      /**
-       * @param file The file object to send virtual gateway access logs to.
-       */
-      override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param file The file object to send virtual gateway access logs to.
-       */
-      override fun `file`(`file`: VirtualGatewayFileAccessLogProperty) {
-        cdkBuilder.`file`(`file`.let(VirtualGatewayFileAccessLogProperty::unwrap))
-      }
-
-      /**
-       * @param file The file object to send virtual gateway access logs to.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6f3121bb369a8d15cefa43e3b6240a991fbdfa32882bb1e89c72730747fbbe49")
-      override fun `file`(`file`: VirtualGatewayFileAccessLogProperty.Builder.() -> Unit): Unit =
-          `file`(VirtualGatewayFileAccessLogProperty(`file`))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayAccessLogProperty {
-      /**
-       * The file object to send virtual gateway access logs to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayaccesslog-file)
-       */
-      override fun `file`(): Any? = unwrap(this).getFile()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualGatewayAccessLogProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty):
-          VirtualGatewayAccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayAccessLogProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayAccessLogProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty
-    }
-  }
-
-  /**
-   * An object that represents the health check policy for a virtual gateway's listener.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayHealthCheckPolicyProperty virtualGatewayHealthCheckPolicyProperty =
-   * VirtualGatewayHealthCheckPolicyProperty.builder()
-   * .healthyThreshold(123)
-   * .intervalMillis(123)
-   * .protocol("protocol")
-   * .timeoutMillis(123)
-   * .unhealthyThreshold(123)
-   * // the properties below are optional
-   * .path("path")
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html)
-   */
-  public interface VirtualGatewayHealthCheckPolicyProperty {
-    /**
-     * The number of consecutive successful health checks that must occur before declaring the
-     * listener healthy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-healthythreshold)
-     */
-    public fun healthyThreshold(): Number
-
-    /**
-     * The time period in milliseconds between each health check execution.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-intervalmillis)
-     */
-    public fun intervalMillis(): Number
-
-    /**
-     * The destination path for the health check request.
-     *
-     * This value is only used if the specified protocol is HTTP or HTTP/2. For any other protocol,
-     * this value is ignored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * The destination port for the health check request.
-     *
-     * This port must match the port defined in the `PortMapping` for the listener.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * The protocol for the health check request.
-     *
-     * If you specify `grpc` , then your service must conform to the [GRPC Health Checking
-     * Protocol](https://docs.aws.amazon.com/https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-protocol)
-     */
-    public fun protocol(): String
-
-    /**
-     * The amount of time to wait when receiving a response from the health check, in milliseconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-timeoutmillis)
-     */
-    public fun timeoutMillis(): Number
-
-    /**
-     * The number of consecutive failed health checks that must occur before declaring a virtual
-     * gateway unhealthy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-unhealthythreshold)
-     */
-    public fun unhealthyThreshold(): Number
-
-    /**
-     * A builder for [VirtualGatewayHealthCheckPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param healthyThreshold The number of consecutive successful health checks that must occur
-       * before declaring the listener healthy. 
-       */
-      public fun healthyThreshold(healthyThreshold: Number)
-
-      /**
-       * @param intervalMillis The time period in milliseconds between each health check execution. 
-       */
-      public fun intervalMillis(intervalMillis: Number)
-
-      /**
-       * @param path The destination path for the health check request.
-       * This value is only used if the specified protocol is HTTP or HTTP/2. For any other
-       * protocol, this value is ignored.
-       */
-      public fun path(path: String)
-
-      /**
-       * @param port The destination port for the health check request.
-       * This port must match the port defined in the `PortMapping` for the listener.
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param protocol The protocol for the health check request. 
-       * If you specify `grpc` , then your service must conform to the [GRPC Health Checking
-       * Protocol](https://docs.aws.amazon.com/https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
-       * .
-       */
-      public fun protocol(protocol: String)
-
-      /**
-       * @param timeoutMillis The amount of time to wait when receiving a response from the health
-       * check, in milliseconds. 
-       */
-      public fun timeoutMillis(timeoutMillis: Number)
-
-      /**
-       * @param unhealthyThreshold The number of consecutive failed health checks that must occur
-       * before declaring a virtual gateway unhealthy. 
-       */
-      public fun unhealthyThreshold(unhealthyThreshold: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.builder()
-
-      /**
-       * @param healthyThreshold The number of consecutive successful health checks that must occur
-       * before declaring the listener healthy. 
-       */
-      override fun healthyThreshold(healthyThreshold: Number) {
-        cdkBuilder.healthyThreshold(healthyThreshold)
-      }
-
-      /**
-       * @param intervalMillis The time period in milliseconds between each health check execution. 
-       */
-      override fun intervalMillis(intervalMillis: Number) {
-        cdkBuilder.intervalMillis(intervalMillis)
-      }
-
-      /**
-       * @param path The destination path for the health check request.
-       * This value is only used if the specified protocol is HTTP or HTTP/2. For any other
-       * protocol, this value is ignored.
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      /**
-       * @param port The destination port for the health check request.
-       * This port must match the port defined in the `PortMapping` for the listener.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param protocol The protocol for the health check request. 
-       * If you specify `grpc` , then your service must conform to the [GRPC Health Checking
-       * Protocol](https://docs.aws.amazon.com/https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
-       * .
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param timeoutMillis The amount of time to wait when receiving a response from the health
-       * check, in milliseconds. 
-       */
-      override fun timeoutMillis(timeoutMillis: Number) {
-        cdkBuilder.timeoutMillis(timeoutMillis)
-      }
-
-      /**
-       * @param unhealthyThreshold The number of consecutive failed health checks that must occur
-       * before declaring a virtual gateway unhealthy. 
-       */
-      override fun unhealthyThreshold(unhealthyThreshold: Number) {
-        cdkBuilder.unhealthyThreshold(unhealthyThreshold)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayHealthCheckPolicyProperty {
-      /**
-       * The number of consecutive successful health checks that must occur before declaring the
-       * listener healthy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-healthythreshold)
-       */
-      override fun healthyThreshold(): Number = unwrap(this).getHealthyThreshold()
-
-      /**
-       * The time period in milliseconds between each health check execution.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-intervalmillis)
-       */
-      override fun intervalMillis(): Number = unwrap(this).getIntervalMillis()
-
-      /**
-       * The destination path for the health check request.
-       *
-       * This value is only used if the specified protocol is HTTP or HTTP/2. For any other
-       * protocol, this value is ignored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-
-      /**
-       * The destination port for the health check request.
-       *
-       * This port must match the port defined in the `PortMapping` for the listener.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-
-      /**
-       * The protocol for the health check request.
-       *
-       * If you specify `grpc` , then your service must conform to the [GRPC Health Checking
-       * Protocol](https://docs.aws.amazon.com/https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-protocol)
-       */
-      override fun protocol(): String = unwrap(this).getProtocol()
-
-      /**
-       * The amount of time to wait when receiving a response from the health check, in
-       * milliseconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-timeoutmillis)
-       */
-      override fun timeoutMillis(): Number = unwrap(this).getTimeoutMillis()
-
-      /**
-       * The number of consecutive failed health checks that must occur before declaring a virtual
-       * gateway unhealthy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-unhealthythreshold)
-       */
-      override fun unhealthyThreshold(): Number = unwrap(this).getUnhealthyThreshold()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayHealthCheckPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty):
-          VirtualGatewayHealthCheckPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayHealthCheckPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayHealthCheckPolicyProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty
-    }
-  }
-
-  /**
-   * An object that represents the default properties for a backend.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayBackendDefaultsProperty virtualGatewayBackendDefaultsProperty =
-   * VirtualGatewayBackendDefaultsProperty.builder()
-   * .clientPolicy(VirtualGatewayClientPolicyProperty.builder()
-   * .tls(VirtualGatewayClientPolicyTlsProperty.builder()
-   * .validation(VirtualGatewayTlsValidationContextProperty.builder()
-   * .trust(VirtualGatewayTlsValidationContextTrustProperty.builder()
-   * .acm(VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
-   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
-   * .build())
-   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build())
-   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
-   * .match(SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build())
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .certificate(VirtualGatewayClientTlsCertificateProperty.builder()
-   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
-   * .certificateChain("certificateChain")
-   * .privateKey("privateKey")
-   * .build())
-   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * .enforce(false)
-   * .ports(List.of(123))
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaybackenddefaults.html)
-   */
-  public interface VirtualGatewayBackendDefaultsProperty {
-    /**
-     * A reference to an object that represents a client policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaybackenddefaults.html#cfn-appmesh-virtualgateway-virtualgatewaybackenddefaults-clientpolicy)
-     */
-    public fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
-
-    /**
-     * A builder for [VirtualGatewayBackendDefaultsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientPolicy A reference to an object that represents a client policy.
-       */
-      public fun clientPolicy(clientPolicy: IResolvable)
-
-      /**
-       * @param clientPolicy A reference to an object that represents a client policy.
-       */
-      public fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty)
-
-      /**
-       * @param clientPolicy A reference to an object that represents a client policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3a690241443363f80e1ed79e901ce310d93493a7b7f0c7575c6724a892480cf7")
-      public fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty.builder()
-
-      /**
-       * @param clientPolicy A reference to an object that represents a client policy.
-       */
-      override fun clientPolicy(clientPolicy: IResolvable) {
-        cdkBuilder.clientPolicy(clientPolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param clientPolicy A reference to an object that represents a client policy.
-       */
-      override fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty) {
-        cdkBuilder.clientPolicy(clientPolicy.let(VirtualGatewayClientPolicyProperty::unwrap))
-      }
-
-      /**
-       * @param clientPolicy A reference to an object that represents a client policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3a690241443363f80e1ed79e901ce310d93493a7b7f0c7575c6724a892480cf7")
-      override
-          fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty.Builder.() -> Unit):
-          Unit = clientPolicy(VirtualGatewayClientPolicyProperty(clientPolicy))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayBackendDefaultsProperty {
-      /**
-       * A reference to an object that represents a client policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaybackenddefaults.html#cfn-appmesh-virtualgateway-virtualgatewaybackenddefaults-clientpolicy)
-       */
-      override fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayBackendDefaultsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty):
-          VirtualGatewayBackendDefaultsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayBackendDefaultsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayBackendDefaultsProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty
-    }
-  }
-
-  /**
-   * An object that represents a virtual gateway's listener's Transport Layer Security (TLS)
-   * validation context.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayListenerTlsValidationContextProperty
-   * virtualGatewayListenerTlsValidationContextProperty =
-   * VirtualGatewayListenerTlsValidationContextProperty.builder()
-   * .trust(VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
-   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build())
-   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
-   * .match(SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html)
-   */
-  public interface VirtualGatewayListenerTlsValidationContextProperty {
-    /**
-     * A reference to an object that represents the SANs for a virtual gateway listener's Transport
-     * Layer Security (TLS) validation context.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-subjectalternativenames)
-     */
-    public fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
-
-    /**
-     * A reference to where to retrieve the trust chain when validating a peer’s Transport Layer
-     * Security (TLS) certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-trust)
-     */
-    public fun trust(): Any
-
-    /**
-     * A builder for [VirtualGatewayListenerTlsValidationContextProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway listener's Transport Layer Security (TLS) validation context.
-       */
-      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway listener's Transport Layer Security (TLS) validation context.
-       */
-      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty)
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway listener's Transport Layer Security (TLS) validation context.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d86a964ec948a76a692ee81b044ffab0a1f298dc0cf139e8ff41cea0d5c6e56b")
-      public
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit)
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      public fun trust(trust: IResolvable)
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      public fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty)
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c148b9e3778a689288c963548b5350d16829a1dacc1b95ccc54a944f2dbde3db")
-      public
-          fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty.builder()
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway listener's Transport Layer Security (TLS) validation context.
-       */
-      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway listener's Transport Layer Security (TLS) validation context.
-       */
-      override
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
-      }
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway listener's Transport Layer Security (TLS) validation context.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d86a964ec948a76a692ee81b044ffab0a1f298dc0cf139e8ff41cea0d5c6e56b")
-      override
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit):
-          Unit = subjectAlternativeNames(SubjectAlternativeNamesProperty(subjectAlternativeNames))
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      override fun trust(trust: IResolvable) {
-        cdkBuilder.trust(trust.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      override fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty) {
-        cdkBuilder.trust(trust.let(VirtualGatewayListenerTlsValidationContextTrustProperty::unwrap))
-      }
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c148b9e3778a689288c963548b5350d16829a1dacc1b95ccc54a944f2dbde3db")
-      override
-          fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty.Builder.() -> Unit):
-          Unit = trust(VirtualGatewayListenerTlsValidationContextTrustProperty(trust))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsValidationContextProperty {
-      /**
-       * A reference to an object that represents the SANs for a virtual gateway listener's
-       * Transport Layer Security (TLS) validation context.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-subjectalternativenames)
-       */
-      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
-
-      /**
-       * A reference to where to retrieve the trust chain when validating a peer’s Transport Layer
-       * Security (TLS) certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-trust)
-       */
-      override fun trust(): Any = unwrap(this).getTrust()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayListenerTlsValidationContextProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty):
-          VirtualGatewayListenerTlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayListenerTlsValidationContextProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayListenerTlsValidationContextProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty
-    }
-  }
-
-  /**
-   * An object that represents an access log file.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayFileAccessLogProperty virtualGatewayFileAccessLogProperty =
-   * VirtualGatewayFileAccessLogProperty.builder()
-   * .path("path")
-   * // the properties below are optional
-   * .format(LoggingFormatProperty.builder()
-   * .json(List.of(JsonFormatRefProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .text("text")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html)
-   */
-  public interface VirtualGatewayFileAccessLogProperty {
-    /**
-     * The specified format for the virtual gateway access logs.
-     *
-     * It can be either `json_format` or `text_format` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-format)
-     */
-    public fun format(): Any? = unwrap(this).getFormat()
-
-    /**
-     * The file path to write access logs to.
-     *
-     * You can use `/dev/stdout` to send access logs to standard out and configure your Envoy
-     * container to use a log driver, such as `awslogs` , to export the access logs to a log storage
-     * service such as Amazon CloudWatch Logs. You can also specify a path in the Envoy container's
-     * file system to write the files to disk.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-path)
-     */
-    public fun path(): String
-
-    /**
-     * A builder for [VirtualGatewayFileAccessLogProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param format The specified format for the virtual gateway access logs.
-       * It can be either `json_format` or `text_format` .
-       */
-      public fun format(format: IResolvable)
-
-      /**
-       * @param format The specified format for the virtual gateway access logs.
-       * It can be either `json_format` or `text_format` .
-       */
-      public fun format(format: LoggingFormatProperty)
-
-      /**
-       * @param format The specified format for the virtual gateway access logs.
-       * It can be either `json_format` or `text_format` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f0af80698308ec03c64f1fe49c0b1bf8419e8c41c1f1ca3588c2e5ef6b79f803")
-      public fun format(format: LoggingFormatProperty.Builder.() -> Unit)
-
-      /**
-       * @param path The file path to write access logs to. 
-       * You can use `/dev/stdout` to send access logs to standard out and configure your Envoy
-       * container to use a log driver, such as `awslogs` , to export the access logs to a log storage
-       * service such as Amazon CloudWatch Logs. You can also specify a path in the Envoy container's
-       * file system to write the files to disk.
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty.builder()
-
-      /**
-       * @param format The specified format for the virtual gateway access logs.
-       * It can be either `json_format` or `text_format` .
-       */
-      override fun format(format: IResolvable) {
-        cdkBuilder.format(format.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param format The specified format for the virtual gateway access logs.
-       * It can be either `json_format` or `text_format` .
-       */
-      override fun format(format: LoggingFormatProperty) {
-        cdkBuilder.format(format.let(LoggingFormatProperty::unwrap))
-      }
-
-      /**
-       * @param format The specified format for the virtual gateway access logs.
-       * It can be either `json_format` or `text_format` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f0af80698308ec03c64f1fe49c0b1bf8419e8c41c1f1ca3588c2e5ef6b79f803")
-      override fun format(format: LoggingFormatProperty.Builder.() -> Unit): Unit =
-          format(LoggingFormatProperty(format))
-
-      /**
-       * @param path The file path to write access logs to. 
-       * You can use `/dev/stdout` to send access logs to standard out and configure your Envoy
-       * container to use a log driver, such as `awslogs` , to export the access logs to a log storage
-       * service such as Amazon CloudWatch Logs. You can also specify a path in the Envoy container's
-       * file system to write the files to disk.
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayFileAccessLogProperty {
-      /**
-       * The specified format for the virtual gateway access logs.
-       *
-       * It can be either `json_format` or `text_format` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-format)
-       */
-      override fun format(): Any? = unwrap(this).getFormat()
-
-      /**
-       * The file path to write access logs to.
-       *
-       * You can use `/dev/stdout` to send access logs to standard out and configure your Envoy
-       * container to use a log driver, such as `awslogs` , to export the access logs to a log storage
-       * service such as Amazon CloudWatch Logs. You can also specify a path in the Envoy container's
-       * file system to write the files to disk.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-path)
-       */
-      override fun path(): String = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayFileAccessLogProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty):
-          VirtualGatewayFileAccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayFileAccessLogProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayFileAccessLogProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty
-    }
-  }
-
-  /**
-   * An object that represents a listener for a virtual gateway.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayListenerProperty virtualGatewayListenerProperty =
-   * VirtualGatewayListenerProperty.builder()
-   * .portMapping(VirtualGatewayPortMappingProperty.builder()
-   * .port(123)
-   * .protocol("protocol")
-   * .build())
-   * // the properties below are optional
-   * .connectionPool(VirtualGatewayConnectionPoolProperty.builder()
-   * .grpc(VirtualGatewayGrpcConnectionPoolProperty.builder()
-   * .maxRequests(123)
-   * .build())
-   * .http(VirtualGatewayHttpConnectionPoolProperty.builder()
-   * .maxConnections(123)
-   * // the properties below are optional
-   * .maxPendingRequests(123)
-   * .build())
-   * .http2(VirtualGatewayHttp2ConnectionPoolProperty.builder()
-   * .maxRequests(123)
-   * .build())
-   * .build())
-   * .healthCheck(VirtualGatewayHealthCheckPolicyProperty.builder()
-   * .healthyThreshold(123)
-   * .intervalMillis(123)
-   * .protocol("protocol")
-   * .timeoutMillis(123)
-   * .unhealthyThreshold(123)
-   * // the properties below are optional
-   * .path("path")
-   * .port(123)
-   * .build())
-   * .tls(VirtualGatewayListenerTlsProperty.builder()
-   * .certificate(VirtualGatewayListenerTlsCertificateProperty.builder()
-   * .acm(VirtualGatewayListenerTlsAcmCertificateProperty.builder()
-   * .certificateArn("certificateArn")
-   * .build())
-   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
-   * .certificateChain("certificateChain")
-   * .privateKey("privateKey")
-   * .build())
-   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * .mode("mode")
-   * // the properties below are optional
-   * .validation(VirtualGatewayListenerTlsValidationContextProperty.builder()
-   * .trust(VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
-   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build())
-   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
-   * .match(SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build())
-   * .build())
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html)
-   */
-  public interface VirtualGatewayListenerProperty {
-    /**
-     * The connection pool information for the listener.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-connectionpool)
-     */
-    public fun connectionPool(): Any? = unwrap(this).getConnectionPool()
-
-    /**
-     * The health check information for the listener.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-healthcheck)
-     */
-    public fun healthCheck(): Any? = unwrap(this).getHealthCheck()
-
-    /**
-     * The port mapping information for the listener.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-portmapping)
-     */
-    public fun portMapping(): Any
-
-    /**
-     * A reference to an object that represents the Transport Layer Security (TLS) properties for
-     * the listener.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-tls)
-     */
-    public fun tls(): Any? = unwrap(this).getTls()
-
-    /**
-     * A builder for [VirtualGatewayListenerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectionPool The connection pool information for the listener.
-       */
-      public fun connectionPool(connectionPool: IResolvable)
-
-      /**
-       * @param connectionPool The connection pool information for the listener.
-       */
-      public fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty)
-
-      /**
-       * @param connectionPool The connection pool information for the listener.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c5cada049a248eeb43391db32e3ebef2974b4bea2bbca850ab09fd507f39aa1d")
-      public
-          fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty.Builder.() -> Unit)
-
-      /**
-       * @param healthCheck The health check information for the listener.
-       */
-      public fun healthCheck(healthCheck: IResolvable)
-
-      /**
-       * @param healthCheck The health check information for the listener.
-       */
-      public fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty)
-
-      /**
-       * @param healthCheck The health check information for the listener.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3b2c7143fe6682175577fe24f6600fd4ed58d4b409e5ae64d20cb47851922c6a")
-      public
-          fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit)
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      public fun portMapping(portMapping: IResolvable)
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      public fun portMapping(portMapping: VirtualGatewayPortMappingProperty)
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("657e1415a121679f54184b01da35c8125c99f3fe79fe4c2ca31228f05c022c2f")
-      public fun portMapping(portMapping: VirtualGatewayPortMappingProperty.Builder.() -> Unit)
-
-      /**
-       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
-       * properties for the listener.
-       */
-      public fun tls(tls: IResolvable)
-
-      /**
-       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
-       * properties for the listener.
-       */
-      public fun tls(tls: VirtualGatewayListenerTlsProperty)
-
-      /**
-       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
-       * properties for the listener.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d474295a8d3ce631a448df4daacc876d7efbbc32b6a303fcdf045c661c58ad0b")
-      public fun tls(tls: VirtualGatewayListenerTlsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty.builder()
-
-      /**
-       * @param connectionPool The connection pool information for the listener.
-       */
-      override fun connectionPool(connectionPool: IResolvable) {
-        cdkBuilder.connectionPool(connectionPool.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectionPool The connection pool information for the listener.
-       */
-      override fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty) {
-        cdkBuilder.connectionPool(connectionPool.let(VirtualGatewayConnectionPoolProperty::unwrap))
-      }
-
-      /**
-       * @param connectionPool The connection pool information for the listener.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c5cada049a248eeb43391db32e3ebef2974b4bea2bbca850ab09fd507f39aa1d")
-      override
-          fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty.Builder.() -> Unit):
-          Unit = connectionPool(VirtualGatewayConnectionPoolProperty(connectionPool))
-
-      /**
-       * @param healthCheck The health check information for the listener.
-       */
-      override fun healthCheck(healthCheck: IResolvable) {
-        cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param healthCheck The health check information for the listener.
-       */
-      override fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty) {
-        cdkBuilder.healthCheck(healthCheck.let(VirtualGatewayHealthCheckPolicyProperty::unwrap))
-      }
-
-      /**
-       * @param healthCheck The health check information for the listener.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3b2c7143fe6682175577fe24f6600fd4ed58d4b409e5ae64d20cb47851922c6a")
-      override
-          fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit):
-          Unit = healthCheck(VirtualGatewayHealthCheckPolicyProperty(healthCheck))
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      override fun portMapping(portMapping: IResolvable) {
-        cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      override fun portMapping(portMapping: VirtualGatewayPortMappingProperty) {
-        cdkBuilder.portMapping(portMapping.let(VirtualGatewayPortMappingProperty::unwrap))
-      }
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("657e1415a121679f54184b01da35c8125c99f3fe79fe4c2ca31228f05c022c2f")
-      override fun portMapping(portMapping: VirtualGatewayPortMappingProperty.Builder.() -> Unit):
-          Unit = portMapping(VirtualGatewayPortMappingProperty(portMapping))
-
-      /**
-       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
-       * properties for the listener.
-       */
-      override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
-       * properties for the listener.
-       */
-      override fun tls(tls: VirtualGatewayListenerTlsProperty) {
-        cdkBuilder.tls(tls.let(VirtualGatewayListenerTlsProperty::unwrap))
-      }
-
-      /**
-       * @param tls A reference to an object that represents the Transport Layer Security (TLS)
-       * properties for the listener.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d474295a8d3ce631a448df4daacc876d7efbbc32b6a303fcdf045c661c58ad0b")
-      override fun tls(tls: VirtualGatewayListenerTlsProperty.Builder.() -> Unit): Unit =
-          tls(VirtualGatewayListenerTlsProperty(tls))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerProperty {
-      /**
-       * The connection pool information for the listener.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-connectionpool)
-       */
-      override fun connectionPool(): Any? = unwrap(this).getConnectionPool()
-
-      /**
-       * The health check information for the listener.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-healthcheck)
-       */
-      override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
-
-      /**
-       * The port mapping information for the listener.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-portmapping)
-       */
-      override fun portMapping(): Any = unwrap(this).getPortMapping()
-
-      /**
-       * A reference to an object that represents the Transport Layer Security (TLS) properties for
-       * the listener.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-tls)
-       */
-      override fun tls(): Any? = unwrap(this).getTls()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualGatewayListenerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty):
-          VirtualGatewayListenerProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayListenerProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayListenerProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty
-    }
-  }
-
-  /**
-   * An object that represents the virtual gateway's listener's Secret Discovery Service
-   * certificate.The proxy must be configured with a local SDS provider via a Unix Domain Socket. See
-   * App Mesh [TLS documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) for
-   * more info.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayListenerTlsSdsCertificateProperty virtualGatewayListenerTlsSdsCertificateProperty
-   * = VirtualGatewayListenerTlsSdsCertificateProperty.builder()
-   * .secretName("secretName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate.html)
-   */
-  public interface VirtualGatewayListenerTlsSdsCertificateProperty {
-    /**
-     * A reference to an object that represents the name of the secret secret requested from the
-     * Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a
-     * certificate or certificate chain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate-secretname)
-     */
-    public fun secretName(): String
-
-    /**
-     * A builder for [VirtualGatewayListenerTlsSdsCertificateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param secretName A reference to an object that represents the name of the secret secret
-       * requested from the Secret Discovery Service provider representing Transport Layer Security
-       * (TLS) materials like a certificate or certificate chain. 
-       */
-      public fun secretName(secretName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty.builder()
-
-      /**
-       * @param secretName A reference to an object that represents the name of the secret secret
-       * requested from the Secret Discovery Service provider representing Transport Layer Security
-       * (TLS) materials like a certificate or certificate chain. 
-       */
-      override fun secretName(secretName: String) {
-        cdkBuilder.secretName(secretName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsSdsCertificateProperty {
-      /**
-       * A reference to an object that represents the name of the secret secret requested from the
-       * Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a
-       * certificate or certificate chain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate-secretname)
-       */
-      override fun secretName(): String = unwrap(this).getSecretName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayListenerTlsSdsCertificateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty):
-          VirtualGatewayListenerTlsSdsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayListenerTlsSdsCertificateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayListenerTlsSdsCertificateProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty
-    }
-  }
-
-  /**
-   * An object that represents a Transport Layer Security (TLS) validation context trust for an AWS
-   * Certificate Manager certificate.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayTlsValidationContextAcmTrustProperty
-   * virtualGatewayTlsValidationContextAcmTrustProperty =
-   * VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
-   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.html)
-   */
-  public interface VirtualGatewayTlsValidationContextAcmTrustProperty {
-    /**
-     * One or more ACM Amazon Resource Name (ARN)s.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust-certificateauthorityarns)
-     */
-    public fun certificateAuthorityArns(): List<String>
-
-    /**
-     * A builder for [VirtualGatewayTlsValidationContextAcmTrustProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
-       */
-      public fun certificateAuthorityArns(certificateAuthorityArns: List<String>)
-
-      /**
-       * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
-       */
-      public fun certificateAuthorityArns(vararg certificateAuthorityArns: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
-
-      /**
-       * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
-       */
-      override fun certificateAuthorityArns(certificateAuthorityArns: List<String>) {
-        cdkBuilder.certificateAuthorityArns(certificateAuthorityArns)
-      }
-
-      /**
-       * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
-       */
-      override fun certificateAuthorityArns(vararg certificateAuthorityArns: String): Unit =
-          certificateAuthorityArns(certificateAuthorityArns.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextAcmTrustProperty {
-      /**
-       * One or more ACM Amazon Resource Name (ARN)s.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust-certificateauthorityarns)
-       */
-      override fun certificateAuthorityArns(): List<String> =
-          unwrap(this).getCertificateAuthorityArns()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayTlsValidationContextAcmTrustProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty):
-          VirtualGatewayTlsValidationContextAcmTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayTlsValidationContextAcmTrustProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextAcmTrustProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty
-    }
-  }
-
-  /**
-   * An object that represents a port mapping.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayPortMappingProperty virtualGatewayPortMappingProperty =
-   * VirtualGatewayPortMappingProperty.builder()
-   * .port(123)
-   * .protocol("protocol")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html)
-   */
-  public interface VirtualGatewayPortMappingProperty {
-    /**
-     * The port used for the port mapping.
-     *
-     * Specify one protocol.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-port)
-     */
-    public fun port(): Number
-
-    /**
-     * The protocol used for the port mapping.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-protocol)
-     */
-    public fun protocol(): String
-
-    /**
-     * A builder for [VirtualGatewayPortMappingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param port The port used for the port mapping. 
-       * Specify one protocol.
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param protocol The protocol used for the port mapping. 
-       */
-      public fun protocol(protocol: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty.builder()
-
-      /**
-       * @param port The port used for the port mapping. 
-       * Specify one protocol.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param protocol The protocol used for the port mapping. 
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayPortMappingProperty {
-      /**
-       * The port used for the port mapping.
-       *
-       * Specify one protocol.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-
-      /**
-       * The protocol used for the port mapping.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-protocol)
-       */
-      override fun protocol(): String = unwrap(this).getProtocol()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayPortMappingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty):
-          VirtualGatewayPortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayPortMappingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayPortMappingProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty
-    }
-  }
-
-  /**
-   * An object that represents a type of connection pool.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayGrpcConnectionPoolProperty virtualGatewayGrpcConnectionPoolProperty =
-   * VirtualGatewayGrpcConnectionPoolProperty.builder()
-   * .maxRequests(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.html)
-   */
-  public interface VirtualGatewayGrpcConnectionPoolProperty {
-    /**
-     * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
-     * cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool-maxrequests)
-     */
-    public fun maxRequests(): Number
-
-    /**
-     * A builder for [VirtualGatewayGrpcConnectionPoolProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxRequests Maximum number of inflight requests Envoy can concurrently support
-       * across hosts in upstream cluster. 
-       */
-      public fun maxRequests(maxRequests: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty.builder()
-
-      /**
-       * @param maxRequests Maximum number of inflight requests Envoy can concurrently support
-       * across hosts in upstream cluster. 
-       */
-      override fun maxRequests(maxRequests: Number) {
-        cdkBuilder.maxRequests(maxRequests)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayGrpcConnectionPoolProperty {
-      /**
-       * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
-       * cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool-maxrequests)
-       */
-      override fun maxRequests(): Number = unwrap(this).getMaxRequests()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayGrpcConnectionPoolProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty):
-          VirtualGatewayGrpcConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayGrpcConnectionPoolProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayGrpcConnectionPoolProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty
-    }
-  }
-
-  /**
-   * An object that represents a Transport Layer Security (TLS) client policy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayClientPolicyTlsProperty virtualGatewayClientPolicyTlsProperty =
-   * VirtualGatewayClientPolicyTlsProperty.builder()
-   * .validation(VirtualGatewayTlsValidationContextProperty.builder()
-   * .trust(VirtualGatewayTlsValidationContextTrustProperty.builder()
-   * .acm(VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
-   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
-   * .build())
-   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build())
-   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
-   * .match(SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build())
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .certificate(VirtualGatewayClientTlsCertificateProperty.builder()
-   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
-   * .certificateChain("certificateChain")
-   * .privateKey("privateKey")
-   * .build())
-   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * .enforce(false)
-   * .ports(List.of(123))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html)
-   */
-  public interface VirtualGatewayClientPolicyTlsProperty {
-    /**
-     * A reference to an object that represents a virtual gateway's client's Transport Layer
-     * Security (TLS) certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-certificate)
-     */
-    public fun certificate(): Any? = unwrap(this).getCertificate()
-
-    /**
-     * Whether the policy is enforced.
-     *
-     * The default is `True` , if a value isn't specified.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce)
-     */
-    public fun enforce(): Any? = unwrap(this).getEnforce()
-
-    /**
-     * One or more ports that the policy is enforced for.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-ports)
-     */
-    public fun ports(): Any? = unwrap(this).getPorts()
-
-    /**
-     * A reference to an object that represents a Transport Layer Security (TLS) validation context.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-validation)
-     */
-    public fun validation(): Any
-
-    /**
-     * A builder for [VirtualGatewayClientPolicyTlsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificate A reference to an object that represents a virtual gateway's client's
-       * Transport Layer Security (TLS) certificate.
-       */
-      public fun certificate(certificate: IResolvable)
-
-      /**
-       * @param certificate A reference to an object that represents a virtual gateway's client's
-       * Transport Layer Security (TLS) certificate.
-       */
-      public fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty)
-
-      /**
-       * @param certificate A reference to an object that represents a virtual gateway's client's
-       * Transport Layer Security (TLS) certificate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9d120604ee5d384b9e8738c9093a173c24626571e32d3c7dc3b55eb74631d86e")
-      public
-          fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty.Builder.() -> Unit)
-
-      /**
-       * @param enforce Whether the policy is enforced.
-       * The default is `True` , if a value isn't specified.
-       */
-      public fun enforce(enforce: Boolean)
-
-      /**
-       * @param enforce Whether the policy is enforced.
-       * The default is `True` , if a value isn't specified.
-       */
-      public fun enforce(enforce: IResolvable)
-
-      /**
-       * @param ports One or more ports that the policy is enforced for.
-       */
-      public fun ports(ports: IResolvable)
-
-      /**
-       * @param ports One or more ports that the policy is enforced for.
-       */
-      public fun ports(ports: List<Number>)
-
-      /**
-       * @param ports One or more ports that the policy is enforced for.
-       */
-      public fun ports(vararg ports: Number)
-
-      /**
-       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
-       * validation context. 
-       */
-      public fun validation(validation: IResolvable)
-
-      /**
-       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
-       * validation context. 
-       */
-      public fun validation(validation: VirtualGatewayTlsValidationContextProperty)
-
-      /**
-       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
-       * validation context. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1eb2e0a02d82d061ee3111c6eb4c399e8eae838b0aef535fa010973ed97daacc")
-      public
-          fun validation(validation: VirtualGatewayTlsValidationContextProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty.builder()
-
-      /**
-       * @param certificate A reference to an object that represents a virtual gateway's client's
-       * Transport Layer Security (TLS) certificate.
-       */
-      override fun certificate(certificate: IResolvable) {
-        cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param certificate A reference to an object that represents a virtual gateway's client's
-       * Transport Layer Security (TLS) certificate.
-       */
-      override fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty) {
-        cdkBuilder.certificate(certificate.let(VirtualGatewayClientTlsCertificateProperty::unwrap))
-      }
-
-      /**
-       * @param certificate A reference to an object that represents a virtual gateway's client's
-       * Transport Layer Security (TLS) certificate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9d120604ee5d384b9e8738c9093a173c24626571e32d3c7dc3b55eb74631d86e")
-      override
-          fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty.Builder.() -> Unit):
-          Unit = certificate(VirtualGatewayClientTlsCertificateProperty(certificate))
-
-      /**
-       * @param enforce Whether the policy is enforced.
-       * The default is `True` , if a value isn't specified.
-       */
-      override fun enforce(enforce: Boolean) {
-        cdkBuilder.enforce(enforce)
-      }
-
-      /**
-       * @param enforce Whether the policy is enforced.
-       * The default is `True` , if a value isn't specified.
-       */
-      override fun enforce(enforce: IResolvable) {
-        cdkBuilder.enforce(enforce.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ports One or more ports that the policy is enforced for.
-       */
-      override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ports One or more ports that the policy is enforced for.
-       */
-      override fun ports(ports: List<Number>) {
-        cdkBuilder.ports(ports)
-      }
-
-      /**
-       * @param ports One or more ports that the policy is enforced for.
-       */
-      override fun ports(vararg ports: Number): Unit = ports(ports.toList())
-
-      /**
-       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
-       * validation context. 
-       */
-      override fun validation(validation: IResolvable) {
-        cdkBuilder.validation(validation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
-       * validation context. 
-       */
-      override fun validation(validation: VirtualGatewayTlsValidationContextProperty) {
-        cdkBuilder.validation(validation.let(VirtualGatewayTlsValidationContextProperty::unwrap))
-      }
-
-      /**
-       * @param validation A reference to an object that represents a Transport Layer Security (TLS)
-       * validation context. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1eb2e0a02d82d061ee3111c6eb4c399e8eae838b0aef535fa010973ed97daacc")
-      override
-          fun validation(validation: VirtualGatewayTlsValidationContextProperty.Builder.() -> Unit):
-          Unit = validation(VirtualGatewayTlsValidationContextProperty(validation))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayClientPolicyTlsProperty {
-      /**
-       * A reference to an object that represents a virtual gateway's client's Transport Layer
-       * Security (TLS) certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-certificate)
-       */
-      override fun certificate(): Any? = unwrap(this).getCertificate()
-
-      /**
-       * Whether the policy is enforced.
-       *
-       * The default is `True` , if a value isn't specified.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce)
-       */
-      override fun enforce(): Any? = unwrap(this).getEnforce()
-
-      /**
-       * One or more ports that the policy is enforced for.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-ports)
-       */
-      override fun ports(): Any? = unwrap(this).getPorts()
-
-      /**
-       * A reference to an object that represents a Transport Layer Security (TLS) validation
-       * context.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-validation)
-       */
-      override fun validation(): Any = unwrap(this).getValidation()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayClientPolicyTlsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty):
-          VirtualGatewayClientPolicyTlsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayClientPolicyTlsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayClientPolicyTlsProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty
-    }
-  }
-
-  /**
-   * An object that represents logging information.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayLoggingProperty virtualGatewayLoggingProperty =
-   * VirtualGatewayLoggingProperty.builder()
-   * .accessLog(VirtualGatewayAccessLogProperty.builder()
-   * .file(VirtualGatewayFileAccessLogProperty.builder()
-   * .path("path")
-   * // the properties below are optional
-   * .format(LoggingFormatProperty.builder()
-   * .json(List.of(JsonFormatRefProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .text("text")
-   * .build())
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylogging.html)
-   */
-  public interface VirtualGatewayLoggingProperty {
-    /**
-     * The access log configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylogging.html#cfn-appmesh-virtualgateway-virtualgatewaylogging-accesslog)
-     */
-    public fun accessLog(): Any? = unwrap(this).getAccessLog()
-
-    /**
-     * A builder for [VirtualGatewayLoggingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessLog The access log configuration.
-       */
-      public fun accessLog(accessLog: IResolvable)
-
-      /**
-       * @param accessLog The access log configuration.
-       */
-      public fun accessLog(accessLog: VirtualGatewayAccessLogProperty)
-
-      /**
-       * @param accessLog The access log configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d556fd726fd3953f33b7516a900555f84c031a98b200a68c6567b23bcc5e8a2b")
-      public fun accessLog(accessLog: VirtualGatewayAccessLogProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty.builder()
-
-      /**
-       * @param accessLog The access log configuration.
-       */
-      override fun accessLog(accessLog: IResolvable) {
-        cdkBuilder.accessLog(accessLog.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param accessLog The access log configuration.
-       */
-      override fun accessLog(accessLog: VirtualGatewayAccessLogProperty) {
-        cdkBuilder.accessLog(accessLog.let(VirtualGatewayAccessLogProperty::unwrap))
-      }
-
-      /**
-       * @param accessLog The access log configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d556fd726fd3953f33b7516a900555f84c031a98b200a68c6567b23bcc5e8a2b")
-      override fun accessLog(accessLog: VirtualGatewayAccessLogProperty.Builder.() -> Unit): Unit =
-          accessLog(VirtualGatewayAccessLogProperty(accessLog))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayLoggingProperty {
-      /**
-       * The access log configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylogging.html#cfn-appmesh-virtualgateway-virtualgatewaylogging-accesslog)
-       */
-      override fun accessLog(): Any? = unwrap(this).getAccessLog()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualGatewayLoggingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty):
-          VirtualGatewayLoggingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayLoggingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayLoggingProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty
-    }
-  }
-
-  /**
-   * An object that represents the key value pairs for the JSON.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * JsonFormatRefProperty jsonFormatRefProperty = JsonFormatRefProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html)
-   */
-  public interface JsonFormatRefProperty {
-    /**
-     * The specified key for the JSON.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html#cfn-appmesh-virtualgateway-jsonformatref-key)
-     */
-    public fun key(): String
-
-    /**
-     * The specified value for the JSON.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html#cfn-appmesh-virtualgateway-jsonformatref-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [JsonFormatRefProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The specified key for the JSON. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The specified value for the JSON. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty.Builder =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty.builder()
-
-      /**
-       * @param key The specified key for the JSON. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The specified value for the JSON. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty,
-    ) : CdkObject(cdkObject), JsonFormatRefProperty {
-      /**
-       * The specified key for the JSON.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html#cfn-appmesh-virtualgateway-jsonformatref-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The specified value for the JSON.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-jsonformatref.html#cfn-appmesh-virtualgateway-jsonformatref-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JsonFormatRefProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty):
-          JsonFormatRefProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonFormatRefProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JsonFormatRefProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty
-    }
-  }
-
-  /**
-   * An object that represents a type of connection pool.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayHttp2ConnectionPoolProperty virtualGatewayHttp2ConnectionPoolProperty =
-   * VirtualGatewayHttp2ConnectionPoolProperty.builder()
-   * .maxRequests(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.html)
-   */
-  public interface VirtualGatewayHttp2ConnectionPoolProperty {
-    /**
-     * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
-     * cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttp2connectionpool-maxrequests)
-     */
-    public fun maxRequests(): Number
-
-    /**
-     * A builder for [VirtualGatewayHttp2ConnectionPoolProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxRequests Maximum number of inflight requests Envoy can concurrently support
-       * across hosts in upstream cluster. 
-       */
-      public fun maxRequests(maxRequests: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty.builder()
-
-      /**
-       * @param maxRequests Maximum number of inflight requests Envoy can concurrently support
-       * across hosts in upstream cluster. 
-       */
-      override fun maxRequests(maxRequests: Number) {
-        cdkBuilder.maxRequests(maxRequests)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayHttp2ConnectionPoolProperty {
-      /**
-       * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
-       * cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttp2connectionpool-maxrequests)
-       */
-      override fun maxRequests(): Number = unwrap(this).getMaxRequests()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayHttp2ConnectionPoolProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty):
-          VirtualGatewayHttp2ConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayHttp2ConnectionPoolProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayHttp2ConnectionPoolProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty
-    }
-  }
-
-  /**
-   * An object that represents a client policy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayClientPolicyProperty virtualGatewayClientPolicyProperty =
-   * VirtualGatewayClientPolicyProperty.builder()
-   * .tls(VirtualGatewayClientPolicyTlsProperty.builder()
-   * .validation(VirtualGatewayTlsValidationContextProperty.builder()
-   * .trust(VirtualGatewayTlsValidationContextTrustProperty.builder()
-   * .acm(VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
-   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
-   * .build())
-   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build())
-   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
-   * .match(SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build())
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .certificate(VirtualGatewayClientTlsCertificateProperty.builder()
-   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
-   * .certificateChain("certificateChain")
-   * .privateKey("privateKey")
-   * .build())
-   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * .enforce(false)
-   * .ports(List.of(123))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicy.html)
-   */
-  public interface VirtualGatewayClientPolicyProperty {
-    /**
-     * A reference to an object that represents a Transport Layer Security (TLS) client policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicy-tls)
-     */
-    public fun tls(): Any? = unwrap(this).getTls()
-
-    /**
-     * A builder for [VirtualGatewayClientPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
-       * policy.
-       */
-      public fun tls(tls: IResolvable)
-
-      /**
-       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
-       * policy.
-       */
-      public fun tls(tls: VirtualGatewayClientPolicyTlsProperty)
-
-      /**
-       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
-       * policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a90df689980811315d993811a1c8a499a4caddedf7d36096cf2b83ab791594d2")
-      public fun tls(tls: VirtualGatewayClientPolicyTlsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty.builder()
-
-      /**
-       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
-       * policy.
-       */
-      override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
-       * policy.
-       */
-      override fun tls(tls: VirtualGatewayClientPolicyTlsProperty) {
-        cdkBuilder.tls(tls.let(VirtualGatewayClientPolicyTlsProperty::unwrap))
-      }
-
-      /**
-       * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
-       * policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a90df689980811315d993811a1c8a499a4caddedf7d36096cf2b83ab791594d2")
-      override fun tls(tls: VirtualGatewayClientPolicyTlsProperty.Builder.() -> Unit): Unit =
-          tls(VirtualGatewayClientPolicyTlsProperty(tls))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayClientPolicyProperty {
-      /**
-       * A reference to an object that represents a Transport Layer Security (TLS) client policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicy-tls)
-       */
-      override fun tls(): Any? = unwrap(this).getTls()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayClientPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty):
-          VirtualGatewayClientPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayClientPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayClientPolicyProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty
-    }
-  }
-
-  /**
-   * An object that represents the methods by which a subject alternative name on a peer Transport
-   * Layer Security (TLS) certificate can be matched.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * SubjectAlternativeNameMatchersProperty subjectAlternativeNameMatchersProperty =
-   * SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenamematchers.html)
-   */
-  public interface SubjectAlternativeNameMatchersProperty {
-    /**
-     * The values sent must match the specified values exactly.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenamematchers.html#cfn-appmesh-virtualgateway-subjectalternativenamematchers-exact)
-     */
-    public fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
-
-    /**
-     * A builder for [SubjectAlternativeNameMatchersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param exact The values sent must match the specified values exactly.
-       */
-      public fun exact(exact: List<String>)
-
-      /**
-       * @param exact The values sent must match the specified values exactly.
-       */
-      public fun exact(vararg exact: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty.builder()
-
-      /**
-       * @param exact The values sent must match the specified values exactly.
-       */
-      override fun exact(exact: List<String>) {
-        cdkBuilder.exact(exact)
-      }
-
-      /**
-       * @param exact The values sent must match the specified values exactly.
-       */
-      override fun exact(vararg exact: String): Unit = exact(exact.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty,
-    ) : CdkObject(cdkObject), SubjectAlternativeNameMatchersProperty {
-      /**
-       * The values sent must match the specified values exactly.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenamematchers.html#cfn-appmesh-virtualgateway-subjectalternativenamematchers-exact)
-       */
-      override fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SubjectAlternativeNameMatchersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty):
-          SubjectAlternativeNameMatchersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SubjectAlternativeNameMatchersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubjectAlternativeNameMatchersProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty
-    }
-  }
-
-  /**
-   * An object that represents the type of virtual gateway connection pool.
-   *
-   * Only one protocol is used at a time and should be the same protocol as the one chosen under
-   * port mapping.
-   *
-   * If not present the default value for `maxPendingRequests` is `2147483647` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayConnectionPoolProperty virtualGatewayConnectionPoolProperty =
-   * VirtualGatewayConnectionPoolProperty.builder()
-   * .grpc(VirtualGatewayGrpcConnectionPoolProperty.builder()
-   * .maxRequests(123)
-   * .build())
-   * .http(VirtualGatewayHttpConnectionPoolProperty.builder()
-   * .maxConnections(123)
-   * // the properties below are optional
-   * .maxPendingRequests(123)
-   * .build())
-   * .http2(VirtualGatewayHttp2ConnectionPoolProperty.builder()
-   * .maxRequests(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html)
-   */
-  public interface VirtualGatewayConnectionPoolProperty {
-    /**
-     * An object that represents a type of connection pool.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-grpc)
-     */
-    public fun grpc(): Any? = unwrap(this).getGrpc()
-
-    /**
-     * An object that represents a type of connection pool.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http)
-     */
-    public fun http(): Any? = unwrap(this).getHttp()
-
-    /**
-     * An object that represents a type of connection pool.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http2)
-     */
-    public fun http2(): Any? = unwrap(this).getHttp2()
-
-    /**
-     * A builder for [VirtualGatewayConnectionPoolProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param grpc An object that represents a type of connection pool.
-       */
-      public fun grpc(grpc: IResolvable)
-
-      /**
-       * @param grpc An object that represents a type of connection pool.
-       */
-      public fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty)
-
-      /**
-       * @param grpc An object that represents a type of connection pool.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a25f48a5ee10f30339abbee65b6c6e07b9f1f003e8da5e78cb6c4c6d327a91b5")
-      public fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty.Builder.() -> Unit)
-
-      /**
-       * @param http An object that represents a type of connection pool.
-       */
-      public fun http(http: IResolvable)
-
-      /**
-       * @param http An object that represents a type of connection pool.
-       */
-      public fun http(http: VirtualGatewayHttpConnectionPoolProperty)
-
-      /**
-       * @param http An object that represents a type of connection pool.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5c70cd067c2e83ae385dfcd845e6cb49427e9df5d911a20d6365bad3f5341667")
-      public fun http(http: VirtualGatewayHttpConnectionPoolProperty.Builder.() -> Unit)
-
-      /**
-       * @param http2 An object that represents a type of connection pool.
-       */
-      public fun http2(http2: IResolvable)
-
-      /**
-       * @param http2 An object that represents a type of connection pool.
-       */
-      public fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty)
-
-      /**
-       * @param http2 An object that represents a type of connection pool.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f65d3e5bc347b419e2c7219eb4760135c7cee1a447515c55cf6d2fec7e51724d")
-      public fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty.builder()
-
-      /**
-       * @param grpc An object that represents a type of connection pool.
-       */
-      override fun grpc(grpc: IResolvable) {
-        cdkBuilder.grpc(grpc.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param grpc An object that represents a type of connection pool.
-       */
-      override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty) {
-        cdkBuilder.grpc(grpc.let(VirtualGatewayGrpcConnectionPoolProperty::unwrap))
-      }
-
-      /**
-       * @param grpc An object that represents a type of connection pool.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a25f48a5ee10f30339abbee65b6c6e07b9f1f003e8da5e78cb6c4c6d327a91b5")
-      override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty.Builder.() -> Unit): Unit =
-          grpc(VirtualGatewayGrpcConnectionPoolProperty(grpc))
-
-      /**
-       * @param http An object that represents a type of connection pool.
-       */
-      override fun http(http: IResolvable) {
-        cdkBuilder.http(http.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param http An object that represents a type of connection pool.
-       */
-      override fun http(http: VirtualGatewayHttpConnectionPoolProperty) {
-        cdkBuilder.http(http.let(VirtualGatewayHttpConnectionPoolProperty::unwrap))
-      }
-
-      /**
-       * @param http An object that represents a type of connection pool.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5c70cd067c2e83ae385dfcd845e6cb49427e9df5d911a20d6365bad3f5341667")
-      override fun http(http: VirtualGatewayHttpConnectionPoolProperty.Builder.() -> Unit): Unit =
-          http(VirtualGatewayHttpConnectionPoolProperty(http))
-
-      /**
-       * @param http2 An object that represents a type of connection pool.
-       */
-      override fun http2(http2: IResolvable) {
-        cdkBuilder.http2(http2.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param http2 An object that represents a type of connection pool.
-       */
-      override fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty) {
-        cdkBuilder.http2(http2.let(VirtualGatewayHttp2ConnectionPoolProperty::unwrap))
-      }
-
-      /**
-       * @param http2 An object that represents a type of connection pool.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f65d3e5bc347b419e2c7219eb4760135c7cee1a447515c55cf6d2fec7e51724d")
-      override fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty.Builder.() -> Unit): Unit
-          = http2(VirtualGatewayHttp2ConnectionPoolProperty(http2))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayConnectionPoolProperty {
-      /**
-       * An object that represents a type of connection pool.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-grpc)
-       */
-      override fun grpc(): Any? = unwrap(this).getGrpc()
-
-      /**
-       * An object that represents a type of connection pool.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http)
-       */
-      override fun http(): Any? = unwrap(this).getHttp()
-
-      /**
-       * An object that represents a type of connection pool.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http2)
-       */
-      override fun http2(): Any? = unwrap(this).getHttp2()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayConnectionPoolProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty):
-          VirtualGatewayConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayConnectionPoolProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayConnectionPoolProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty
-    }
-  }
-
-  /**
-   * An object that represents a Transport Layer Security (TLS) validation context trust for a local
-   * file.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayTlsValidationContextFileTrustProperty
-   * virtualGatewayTlsValidationContextFileTrustProperty =
-   * VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.html)
-   */
-  public interface VirtualGatewayTlsValidationContextFileTrustProperty {
-    /**
-     * The certificate trust chain for a certificate stored on the file system of the virtual node
-     * that the proxy is running on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust-certificatechain)
-     */
-    public fun certificateChain(): String
-
-    /**
-     * A builder for [VirtualGatewayTlsValidationContextFileTrustProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificateChain The certificate trust chain for a certificate stored on the file
-       * system of the virtual node that the proxy is running on. 
-       */
-      public fun certificateChain(certificateChain: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-
-      /**
-       * @param certificateChain The certificate trust chain for a certificate stored on the file
-       * system of the virtual node that the proxy is running on. 
-       */
-      override fun certificateChain(certificateChain: String) {
-        cdkBuilder.certificateChain(certificateChain)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextFileTrustProperty {
-      /**
-       * The certificate trust chain for a certificate stored on the file system of the virtual node
-       * that the proxy is running on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust-certificatechain)
-       */
-      override fun certificateChain(): String = unwrap(this).getCertificateChain()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayTlsValidationContextFileTrustProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty):
-          VirtualGatewayTlsValidationContextFileTrustProperty = CdkObjectWrappers.wrap(cdkObject)
-          as? VirtualGatewayTlsValidationContextFileTrustProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextFileTrustProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty
-    }
-  }
-
-  /**
-   * An object that represents a virtual gateway's listener's Transport Layer Security (TLS)
-   * validation context trust.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayListenerTlsValidationContextTrustProperty
-   * virtualGatewayListenerTlsValidationContextTrustProperty =
-   * VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
-   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build())
-   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html)
-   */
-  public interface VirtualGatewayListenerTlsValidationContextTrustProperty {
-    /**
-     * An object that represents a Transport Layer Security (TLS) validation context trust for a
-     * local file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-file)
-     */
-    public fun `file`(): Any? = unwrap(this).getFile()
-
-    /**
-     * A reference to an object that represents a virtual gateway's listener's Transport Layer
-     * Security (TLS) Secret Discovery Service validation context trust.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-sds)
-     */
-    public fun sds(): Any? = unwrap(this).getSds()
-
-    /**
-     * A builder for [VirtualGatewayListenerTlsValidationContextTrustProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param file An object that represents a Transport Layer Security (TLS) validation context
-       * trust for a local file.
-       */
-      public fun `file`(`file`: IResolvable)
-
-      /**
-       * @param file An object that represents a Transport Layer Security (TLS) validation context
-       * trust for a local file.
-       */
-      public fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty)
-
-      /**
-       * @param file An object that represents a Transport Layer Security (TLS) validation context
-       * trust for a local file.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b4de2ecb488740d08277bc1fa4e871749734532dcb1227e56489e327a130b12a")
-      public
-          fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit)
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
-       */
-      public fun sds(sds: IResolvable)
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
-       */
-      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty)
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4f1cfe943aebbb2e614f42b76e13c96552308637e185c7db165b6bb01900f2a4")
-      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
-
-      /**
-       * @param file An object that represents a Transport Layer Security (TLS) validation context
-       * trust for a local file.
-       */
-      override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param file An object that represents a Transport Layer Security (TLS) validation context
-       * trust for a local file.
-       */
-      override fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
-        cdkBuilder.`file`(`file`.let(VirtualGatewayTlsValidationContextFileTrustProperty::unwrap))
-      }
-
-      /**
-       * @param file An object that represents a Transport Layer Security (TLS) validation context
-       * trust for a local file.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b4de2ecb488740d08277bc1fa4e871749734532dcb1227e56489e327a130b12a")
-      override
-          fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit):
-          Unit = `file`(VirtualGatewayTlsValidationContextFileTrustProperty(`file`))
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
-       */
-      override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
-       */
-      override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
-        cdkBuilder.sds(sds.let(VirtualGatewayTlsValidationContextSdsTrustProperty::unwrap))
-      }
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4f1cfe943aebbb2e614f42b76e13c96552308637e185c7db165b6bb01900f2a4")
-      override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit):
-          Unit = sds(VirtualGatewayTlsValidationContextSdsTrustProperty(sds))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsValidationContextTrustProperty {
-      /**
-       * An object that represents a Transport Layer Security (TLS) validation context trust for a
-       * local file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-file)
-       */
-      override fun `file`(): Any? = unwrap(this).getFile()
-
-      /**
-       * A reference to an object that represents a virtual gateway's listener's Transport Layer
-       * Security (TLS) Secret Discovery Service validation context trust.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-sds)
-       */
-      override fun sds(): Any? = unwrap(this).getSds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayListenerTlsValidationContextTrustProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty):
-          VirtualGatewayListenerTlsValidationContextTrustProperty =
-          CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayListenerTlsValidationContextTrustProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayListenerTlsValidationContextTrustProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty
-    }
-  }
-
-  /**
-   * An object that represents the subject alternative names secured by the certificate.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * SubjectAlternativeNamesProperty subjectAlternativeNamesProperty =
-   * SubjectAlternativeNamesProperty.builder()
-   * .match(SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenames.html)
-   */
-  public interface SubjectAlternativeNamesProperty {
-    /**
-     * An object that represents the criteria for determining a SANs match.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenames.html#cfn-appmesh-virtualgateway-subjectalternativenames-match)
-     */
-    public fun match(): Any
-
-    /**
-     * A builder for [SubjectAlternativeNamesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param match An object that represents the criteria for determining a SANs match. 
-       */
-      public fun match(match: IResolvable)
-
-      /**
-       * @param match An object that represents the criteria for determining a SANs match. 
-       */
-      public fun match(match: SubjectAlternativeNameMatchersProperty)
-
-      /**
-       * @param match An object that represents the criteria for determining a SANs match. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e2c5ca1739420154623a0d64dc8ce13e81856585fdf6194b0f04e7299c9efc05")
-      public fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty.builder()
-
-      /**
-       * @param match An object that represents the criteria for determining a SANs match. 
-       */
-      override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param match An object that represents the criteria for determining a SANs match. 
-       */
-      override fun match(match: SubjectAlternativeNameMatchersProperty) {
-        cdkBuilder.match(match.let(SubjectAlternativeNameMatchersProperty::unwrap))
-      }
-
-      /**
-       * @param match An object that represents the criteria for determining a SANs match. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e2c5ca1739420154623a0d64dc8ce13e81856585fdf6194b0f04e7299c9efc05")
-      override fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit): Unit =
-          match(SubjectAlternativeNameMatchersProperty(match))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty,
-    ) : CdkObject(cdkObject), SubjectAlternativeNamesProperty {
-      /**
-       * An object that represents the criteria for determining a SANs match.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenames.html#cfn-appmesh-virtualgateway-subjectalternativenames-match)
-       */
-      override fun match(): Any = unwrap(this).getMatch()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubjectAlternativeNamesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty):
-          SubjectAlternativeNamesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SubjectAlternativeNamesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubjectAlternativeNamesProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty
-    }
-  }
-
-  /**
-   * An object that represents the Transport Layer Security (TLS) properties for a listener.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayListenerTlsProperty virtualGatewayListenerTlsProperty =
-   * VirtualGatewayListenerTlsProperty.builder()
-   * .certificate(VirtualGatewayListenerTlsCertificateProperty.builder()
-   * .acm(VirtualGatewayListenerTlsAcmCertificateProperty.builder()
-   * .certificateArn("certificateArn")
-   * .build())
-   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
-   * .certificateChain("certificateChain")
-   * .privateKey("privateKey")
-   * .build())
-   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * .mode("mode")
-   * // the properties below are optional
-   * .validation(VirtualGatewayListenerTlsValidationContextProperty.builder()
-   * .trust(VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
-   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build())
-   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
-   * .match(SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build())
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html)
-   */
-  public interface VirtualGatewayListenerTlsProperty {
-    /**
-     * An object that represents a Transport Layer Security (TLS) certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate)
-     */
-    public fun certificate(): Any
-
-    /**
-     * Specify one of the following modes.
-     *
-     * * ** STRICT – Listener only accepts connections with TLS enabled.
-     * * ** PERMISSIVE – Listener accepts connections with or without TLS enabled.
-     * * ** DISABLED – Listener only accepts connections without TLS.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode)
-     */
-    public fun mode(): String
-
-    /**
-     * A reference to an object that represents a virtual gateway's listener's Transport Layer
-     * Security (TLS) validation context.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation)
-     */
-    public fun validation(): Any? = unwrap(this).getValidation()
-
-    /**
-     * A builder for [VirtualGatewayListenerTlsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
-       */
-      public fun certificate(certificate: IResolvable)
-
-      /**
-       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
-       */
-      public fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty)
-
-      /**
-       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f22287334a0f1622f27c197f3d7fc9f6db3366876f9d04e39a24753b4a9c965c")
-      public
-          fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty.Builder.() -> Unit)
-
-      /**
-       * @param mode Specify one of the following modes. 
-       * * ** STRICT – Listener only accepts connections with TLS enabled.
-       * * ** PERMISSIVE – Listener accepts connections with or without TLS enabled.
-       * * ** DISABLED – Listener only accepts connections without TLS.
-       */
-      public fun mode(mode: String)
-
-      /**
-       * @param validation A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) validation context.
-       */
-      public fun validation(validation: IResolvable)
-
-      /**
-       * @param validation A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) validation context.
-       */
-      public fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty)
-
-      /**
-       * @param validation A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) validation context.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("49804e56c344e5028b80553eeac2c64d3adb322daa597e1e029053463ab8bef4")
-      public
-          fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty.builder()
-
-      /**
-       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
-       */
-      override fun certificate(certificate: IResolvable) {
-        cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
-       */
-      override fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty) {
-        cdkBuilder.certificate(certificate.let(VirtualGatewayListenerTlsCertificateProperty::unwrap))
-      }
-
-      /**
-       * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f22287334a0f1622f27c197f3d7fc9f6db3366876f9d04e39a24753b4a9c965c")
-      override
-          fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty.Builder.() -> Unit):
-          Unit = certificate(VirtualGatewayListenerTlsCertificateProperty(certificate))
-
-      /**
-       * @param mode Specify one of the following modes. 
-       * * ** STRICT – Listener only accepts connections with TLS enabled.
-       * * ** PERMISSIVE – Listener accepts connections with or without TLS enabled.
-       * * ** DISABLED – Listener only accepts connections without TLS.
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      /**
-       * @param validation A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) validation context.
-       */
-      override fun validation(validation: IResolvable) {
-        cdkBuilder.validation(validation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param validation A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) validation context.
-       */
-      override fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty) {
-        cdkBuilder.validation(validation.let(VirtualGatewayListenerTlsValidationContextProperty::unwrap))
-      }
-
-      /**
-       * @param validation A reference to an object that represents a virtual gateway's listener's
-       * Transport Layer Security (TLS) validation context.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("49804e56c344e5028b80553eeac2c64d3adb322daa597e1e029053463ab8bef4")
-      override
-          fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty.Builder.() -> Unit):
-          Unit = validation(VirtualGatewayListenerTlsValidationContextProperty(validation))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsProperty {
-      /**
-       * An object that represents a Transport Layer Security (TLS) certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate)
-       */
-      override fun certificate(): Any = unwrap(this).getCertificate()
-
-      /**
-       * Specify one of the following modes.
-       *
-       * * ** STRICT – Listener only accepts connections with TLS enabled.
-       * * ** PERMISSIVE – Listener accepts connections with or without TLS enabled.
-       * * ** DISABLED – Listener only accepts connections without TLS.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode)
-       */
-      override fun mode(): String = unwrap(this).getMode()
-
-      /**
-       * A reference to an object that represents a virtual gateway's listener's Transport Layer
-       * Security (TLS) validation context.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation)
-       */
-      override fun validation(): Any? = unwrap(this).getValidation()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayListenerTlsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty):
-          VirtualGatewayListenerTlsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayListenerTlsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayListenerTlsProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty
-    }
-  }
-
-  /**
-   * An object that represents the virtual gateway's client's Transport Layer Security (TLS)
-   * certificate.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayClientTlsCertificateProperty virtualGatewayClientTlsCertificateProperty =
-   * VirtualGatewayClientTlsCertificateProperty.builder()
-   * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
-   * .certificateChain("certificateChain")
-   * .privateKey("privateKey")
-   * .build())
-   * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html)
-   */
-  public interface VirtualGatewayClientTlsCertificateProperty {
-    /**
-     * An object that represents a local file certificate.
-     *
-     * The certificate must meet specific requirements and you must have proxy authorization
-     * enabled. For more information, see [Transport Layer Security
-     * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-file)
-     */
-    public fun `file`(): Any? = unwrap(this).getFile()
-
-    /**
-     * A reference to an object that represents a virtual gateway's client's Secret Discovery
-     * Service certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-sds)
-     */
-    public fun sds(): Any? = unwrap(this).getSds()
-
-    /**
-     * A builder for [VirtualGatewayClientTlsCertificateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param file An object that represents a local file certificate.
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
-       */
-      public fun `file`(`file`: IResolvable)
-
-      /**
-       * @param file An object that represents a local file certificate.
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
-       */
-      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty)
-
-      /**
-       * @param file An object that represents a local file certificate.
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5ca69fac264b48ac447be901cf3db1123d068a277af2769cd36232d3b1f2cf70")
-      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit)
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's client's Secret
-       * Discovery Service certificate.
-       */
-      public fun sds(sds: IResolvable)
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's client's Secret
-       * Discovery Service certificate.
-       */
-      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty)
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's client's Secret
-       * Discovery Service certificate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("003675a5f0d1468a62b543a888053eef80c314e2965bdebad6ba4731b1e844fa")
-      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty.builder()
-
-      /**
-       * @param file An object that represents a local file certificate.
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
-       */
-      override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param file An object that represents a local file certificate.
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
-       */
-      override fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
-        cdkBuilder.`file`(`file`.let(VirtualGatewayListenerTlsFileCertificateProperty::unwrap))
-      }
-
-      /**
-       * @param file An object that represents a local file certificate.
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5ca69fac264b48ac447be901cf3db1123d068a277af2769cd36232d3b1f2cf70")
-      override
-          fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit):
-          Unit = `file`(VirtualGatewayListenerTlsFileCertificateProperty(`file`))
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's client's Secret
-       * Discovery Service certificate.
-       */
-      override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's client's Secret
-       * Discovery Service certificate.
-       */
-      override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
-        cdkBuilder.sds(sds.let(VirtualGatewayListenerTlsSdsCertificateProperty::unwrap))
-      }
-
-      /**
-       * @param sds A reference to an object that represents a virtual gateway's client's Secret
-       * Discovery Service certificate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("003675a5f0d1468a62b543a888053eef80c314e2965bdebad6ba4731b1e844fa")
-      override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit):
-          Unit = sds(VirtualGatewayListenerTlsSdsCertificateProperty(sds))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayClientTlsCertificateProperty {
-      /**
-       * An object that represents a local file certificate.
-       *
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-file)
-       */
-      override fun `file`(): Any? = unwrap(this).getFile()
-
-      /**
-       * A reference to an object that represents a virtual gateway's client's Secret Discovery
-       * Service certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-sds)
-       */
-      override fun sds(): Any? = unwrap(this).getSds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayClientTlsCertificateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty):
-          VirtualGatewayClientTlsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayClientTlsCertificateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayClientTlsCertificateProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty
-    }
-  }
-
-  /**
-   * An object that represents a Transport Layer Security (TLS) validation context.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayTlsValidationContextProperty virtualGatewayTlsValidationContextProperty =
-   * VirtualGatewayTlsValidationContextProperty.builder()
-   * .trust(VirtualGatewayTlsValidationContextTrustProperty.builder()
-   * .acm(VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
-   * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
-   * .build())
-   * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
-   * .certificateChain("certificateChain")
-   * .build())
-   * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
-   * .secretName("secretName")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
-   * .match(SubjectAlternativeNameMatchersProperty.builder()
-   * .exact(List.of("exact"))
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html)
-   */
-  public interface VirtualGatewayTlsValidationContextProperty {
-    /**
-     * A reference to an object that represents the SANs for a virtual gateway's listener's
-     * Transport Layer Security (TLS) validation context.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-subjectalternativenames)
-     */
-    public fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
-
-    /**
-     * A reference to where to retrieve the trust chain when validating a peer’s Transport Layer
-     * Security (TLS) certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-trust)
-     */
-    public fun trust(): Any
-
-    /**
-     * A builder for [VirtualGatewayTlsValidationContextProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
-       */
-      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
-       */
-      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty)
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("edaf23f43617162815f82a930a2a301f6c99b891800fb28eaa8887babfe2ccba")
-      public
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit)
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      public fun trust(trust: IResolvable)
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      public fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty)
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cbcc999aee919483ce3fa632feef20067653951c342ca9eff59c026f4655f5dc")
-      public fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty.builder()
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
-       */
-      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
-       */
-      override
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
-      }
-
-      /**
-       * @param subjectAlternativeNames A reference to an object that represents the SANs for a
-       * virtual gateway's listener's Transport Layer Security (TLS) validation context.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("edaf23f43617162815f82a930a2a301f6c99b891800fb28eaa8887babfe2ccba")
-      override
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit):
-          Unit = subjectAlternativeNames(SubjectAlternativeNamesProperty(subjectAlternativeNames))
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      override fun trust(trust: IResolvable) {
-        cdkBuilder.trust(trust.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      override fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty) {
-        cdkBuilder.trust(trust.let(VirtualGatewayTlsValidationContextTrustProperty::unwrap))
-      }
-
-      /**
-       * @param trust A reference to where to retrieve the trust chain when validating a peer’s
-       * Transport Layer Security (TLS) certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cbcc999aee919483ce3fa632feef20067653951c342ca9eff59c026f4655f5dc")
-      override fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty.Builder.() -> Unit):
-          Unit = trust(VirtualGatewayTlsValidationContextTrustProperty(trust))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextProperty {
-      /**
-       * A reference to an object that represents the SANs for a virtual gateway's listener's
-       * Transport Layer Security (TLS) validation context.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-subjectalternativenames)
-       */
-      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
-
-      /**
-       * A reference to where to retrieve the trust chain when validating a peer’s Transport Layer
-       * Security (TLS) certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-trust)
-       */
-      override fun trust(): Any = unwrap(this).getTrust()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayTlsValidationContextProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty):
-          VirtualGatewayTlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayTlsValidationContextProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty
-    }
-  }
-
-  /**
-   * An object that represents an AWS Certificate Manager certificate.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayListenerTlsAcmCertificateProperty virtualGatewayListenerTlsAcmCertificateProperty
-   * = VirtualGatewayListenerTlsAcmCertificateProperty.builder()
-   * .certificateArn("certificateArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate.html)
-   */
-  public interface VirtualGatewayListenerTlsAcmCertificateProperty {
-    /**
-     * The Amazon Resource Name (ARN) for the certificate.
-     *
-     * The certificate must meet specific requirements and you must have proxy authorization
-     * enabled. For more information, see [Transport Layer Security
-     * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate-certificatearn)
-     */
-    public fun certificateArn(): String
-
-    /**
-     * A builder for [VirtualGatewayListenerTlsAcmCertificateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificateArn The Amazon Resource Name (ARN) for the certificate. 
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
-       * .
-       */
-      public fun certificateArn(certificateArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty.builder()
-
-      /**
-       * @param certificateArn The Amazon Resource Name (ARN) for the certificate. 
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
-       * .
-       */
-      override fun certificateArn(certificateArn: String) {
-        cdkBuilder.certificateArn(certificateArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsAcmCertificateProperty {
-      /**
-       * The Amazon Resource Name (ARN) for the certificate.
-       *
-       * The certificate must meet specific requirements and you must have proxy authorization
-       * enabled. For more information, see [Transport Layer Security
-       * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate-certificatearn)
-       */
-      override fun certificateArn(): String = unwrap(this).getCertificateArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayListenerTlsAcmCertificateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty):
-          VirtualGatewayListenerTlsAcmCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayListenerTlsAcmCertificateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayListenerTlsAcmCertificateProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty
-    }
-  }
-
-  /**
-   * An object that represents a local file certificate.
-   *
-   * The certificate must meet specific requirements and you must have proxy authorization enabled.
-   * For more information, see [Transport Layer Security
-   * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualGatewayListenerTlsFileCertificateProperty
-   * virtualGatewayListenerTlsFileCertificateProperty =
-   * VirtualGatewayListenerTlsFileCertificateProperty.builder()
-   * .certificateChain("certificateChain")
-   * .privateKey("privateKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html)
-   */
-  public interface VirtualGatewayListenerTlsFileCertificateProperty {
-    /**
-     * The certificate chain for the certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-certificatechain)
-     */
-    public fun certificateChain(): String
-
-    /**
-     * The private key for a certificate stored on the file system of the mesh endpoint that the
-     * proxy is running on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-privatekey)
-     */
-    public fun privateKey(): String
-
-    /**
-     * A builder for [VirtualGatewayListenerTlsFileCertificateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificateChain The certificate chain for the certificate. 
-       */
-      public fun certificateChain(certificateChain: String)
-
-      /**
-       * @param privateKey The private key for a certificate stored on the file system of the mesh
-       * endpoint that the proxy is running on. 
-       */
-      public fun privateKey(privateKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty.builder()
-
-      /**
-       * @param certificateChain The certificate chain for the certificate. 
-       */
-      override fun certificateChain(certificateChain: String) {
-        cdkBuilder.certificateChain(certificateChain)
-      }
-
-      /**
-       * @param privateKey The private key for a certificate stored on the file system of the mesh
-       * endpoint that the proxy is running on. 
-       */
-      override fun privateKey(privateKey: String) {
-        cdkBuilder.privateKey(privateKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsFileCertificateProperty {
-      /**
-       * The certificate chain for the certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-certificatechain)
-       */
-      override fun certificateChain(): String = unwrap(this).getCertificateChain()
-
-      /**
-       * The private key for a certificate stored on the file system of the mesh endpoint that the
-       * proxy is running on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-privatekey)
-       */
-      override fun privateKey(): String = unwrap(this).getPrivateKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualGatewayListenerTlsFileCertificateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty):
-          VirtualGatewayListenerTlsFileCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualGatewayListenerTlsFileCertificateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualGatewayListenerTlsFileCertificateProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty
     }
   }
 }

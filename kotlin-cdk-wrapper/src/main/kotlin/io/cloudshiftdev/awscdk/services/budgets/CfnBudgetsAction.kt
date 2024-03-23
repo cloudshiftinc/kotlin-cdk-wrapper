@@ -549,153 +549,6 @@ public open class CfnBudgetsAction internal constructor(
   }
 
   /**
-   * The Amazon EC2 Systems Manager ( SSM ) action definition details.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * SsmActionDefinitionProperty ssmActionDefinitionProperty = SsmActionDefinitionProperty.builder()
-   * .instanceIds(List.of("instanceIds"))
-   * .region("region")
-   * .subtype("subtype")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html)
-   */
-  public interface SsmActionDefinitionProperty {
-    /**
-     * The EC2 and RDS instance IDs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-instanceids)
-     */
-    public fun instanceIds(): List<String>
-
-    /**
-     * The Region to run the ( SSM ) document.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-region)
-     */
-    public fun region(): String
-
-    /**
-     * The action subType.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-subtype)
-     */
-    public fun subtype(): String
-
-    /**
-     * A builder for [SsmActionDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceIds The EC2 and RDS instance IDs. 
-       */
-      public fun instanceIds(instanceIds: List<String>)
-
-      /**
-       * @param instanceIds The EC2 and RDS instance IDs. 
-       */
-      public fun instanceIds(vararg instanceIds: String)
-
-      /**
-       * @param region The Region to run the ( SSM ) document. 
-       */
-      public fun region(region: String)
-
-      /**
-       * @param subtype The action subType. 
-       */
-      public fun subtype(subtype: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty.builder()
-
-      /**
-       * @param instanceIds The EC2 and RDS instance IDs. 
-       */
-      override fun instanceIds(instanceIds: List<String>) {
-        cdkBuilder.instanceIds(instanceIds)
-      }
-
-      /**
-       * @param instanceIds The EC2 and RDS instance IDs. 
-       */
-      override fun instanceIds(vararg instanceIds: String): Unit = instanceIds(instanceIds.toList())
-
-      /**
-       * @param region The Region to run the ( SSM ) document. 
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      /**
-       * @param subtype The action subType. 
-       */
-      override fun subtype(subtype: String) {
-        cdkBuilder.subtype(subtype)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty,
-    ) : CdkObject(cdkObject), SsmActionDefinitionProperty {
-      /**
-       * The EC2 and RDS instance IDs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-instanceids)
-       */
-      override fun instanceIds(): List<String> = unwrap(this).getInstanceIds()
-
-      /**
-       * The Region to run the ( SSM ) document.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-region)
-       */
-      override fun region(): String = unwrap(this).getRegion()
-
-      /**
-       * The action subType.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-subtype)
-       */
-      override fun subtype(): String = unwrap(this).getSubtype()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SsmActionDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty):
-          SsmActionDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SsmActionDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SsmActionDefinitionProperty):
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty
-    }
-  }
-
-  /**
    * The trigger threshold of the action.
    *
    * Example:
@@ -1053,131 +906,6 @@ public open class CfnBudgetsAction internal constructor(
   }
 
   /**
-   * The subscriber to a budget notification.
-   *
-   * The subscriber consists of a subscription type and either an Amazon SNS topic or an email
-   * address.
-   *
-   * For example, an email subscriber has the following parameters:
-   *
-   * * A `subscriptionType` of `EMAIL`
-   * * An `address` of `example&#64;example.com`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.budgets.*;
-   * SubscriberProperty subscriberProperty = SubscriberProperty.builder()
-   * .address("address")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html)
-   */
-  public interface SubscriberProperty {
-    /**
-     * The address that AWS sends budget notifications to, either an SNS topic or an email.
-     *
-     * When you create a subscriber, the value of `Address` can't contain line breaks.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-address)
-     */
-    public fun address(): String
-
-    /**
-     * The type of notification that AWS sends to a subscriber.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [SubscriberProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param address The address that AWS sends budget notifications to, either an SNS topic or
-       * an email. 
-       * When you create a subscriber, the value of `Address` can't contain line breaks.
-       */
-      public fun address(address: String)
-
-      /**
-       * @param type The type of notification that AWS sends to a subscriber. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty.Builder =
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty.builder()
-
-      /**
-       * @param address The address that AWS sends budget notifications to, either an SNS topic or
-       * an email. 
-       * When you create a subscriber, the value of `Address` can't contain line breaks.
-       */
-      override fun address(address: String) {
-        cdkBuilder.address(address)
-      }
-
-      /**
-       * @param type The type of notification that AWS sends to a subscriber. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty,
-    ) : CdkObject(cdkObject), SubscriberProperty {
-      /**
-       * The address that AWS sends budget notifications to, either an SNS topic or an email.
-       *
-       * When you create a subscriber, the value of `Address` can't contain line breaks.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-address)
-       */
-      override fun address(): String = unwrap(this).getAddress()
-
-      /**
-       * The type of notification that AWS sends to a subscriber.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubscriberProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty):
-          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriberProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubscriberProperty):
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty
-    }
-  }
-
-  /**
    * The AWS Identity and Access Management ( IAM ) action definition details.
    *
    * Example:
@@ -1513,6 +1241,278 @@ public open class CfnBudgetsAction internal constructor(
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty
+    }
+  }
+
+  /**
+   * The Amazon EC2 Systems Manager ( SSM ) action definition details.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * SsmActionDefinitionProperty ssmActionDefinitionProperty = SsmActionDefinitionProperty.builder()
+   * .instanceIds(List.of("instanceIds"))
+   * .region("region")
+   * .subtype("subtype")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html)
+   */
+  public interface SsmActionDefinitionProperty {
+    /**
+     * The EC2 and RDS instance IDs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-instanceids)
+     */
+    public fun instanceIds(): List<String>
+
+    /**
+     * The Region to run the ( SSM ) document.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-region)
+     */
+    public fun region(): String
+
+    /**
+     * The action subType.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-subtype)
+     */
+    public fun subtype(): String
+
+    /**
+     * A builder for [SsmActionDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceIds The EC2 and RDS instance IDs. 
+       */
+      public fun instanceIds(instanceIds: List<String>)
+
+      /**
+       * @param instanceIds The EC2 and RDS instance IDs. 
+       */
+      public fun instanceIds(vararg instanceIds: String)
+
+      /**
+       * @param region The Region to run the ( SSM ) document. 
+       */
+      public fun region(region: String)
+
+      /**
+       * @param subtype The action subType. 
+       */
+      public fun subtype(subtype: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty.builder()
+
+      /**
+       * @param instanceIds The EC2 and RDS instance IDs. 
+       */
+      override fun instanceIds(instanceIds: List<String>) {
+        cdkBuilder.instanceIds(instanceIds)
+      }
+
+      /**
+       * @param instanceIds The EC2 and RDS instance IDs. 
+       */
+      override fun instanceIds(vararg instanceIds: String): Unit = instanceIds(instanceIds.toList())
+
+      /**
+       * @param region The Region to run the ( SSM ) document. 
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      /**
+       * @param subtype The action subType. 
+       */
+      override fun subtype(subtype: String) {
+        cdkBuilder.subtype(subtype)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty,
+    ) : CdkObject(cdkObject), SsmActionDefinitionProperty {
+      /**
+       * The EC2 and RDS instance IDs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-instanceids)
+       */
+      override fun instanceIds(): List<String> = unwrap(this).getInstanceIds()
+
+      /**
+       * The Region to run the ( SSM ) document.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-region)
+       */
+      override fun region(): String = unwrap(this).getRegion()
+
+      /**
+       * The action subType.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-subtype)
+       */
+      override fun subtype(): String = unwrap(this).getSubtype()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SsmActionDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty):
+          SsmActionDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SsmActionDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SsmActionDefinitionProperty):
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty
+    }
+  }
+
+  /**
+   * The subscriber to a budget notification.
+   *
+   * The subscriber consists of a subscription type and either an Amazon SNS topic or an email
+   * address.
+   *
+   * For example, an email subscriber has the following parameters:
+   *
+   * * A `subscriptionType` of `EMAIL`
+   * * An `address` of `example&#64;example.com`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * SubscriberProperty subscriberProperty = SubscriberProperty.builder()
+   * .address("address")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html)
+   */
+  public interface SubscriberProperty {
+    /**
+     * The address that AWS sends budget notifications to, either an SNS topic or an email.
+     *
+     * When you create a subscriber, the value of `Address` can't contain line breaks.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-address)
+     */
+    public fun address(): String
+
+    /**
+     * The type of notification that AWS sends to a subscriber.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [SubscriberProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param address The address that AWS sends budget notifications to, either an SNS topic or
+       * an email. 
+       * When you create a subscriber, the value of `Address` can't contain line breaks.
+       */
+      public fun address(address: String)
+
+      /**
+       * @param type The type of notification that AWS sends to a subscriber. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty.builder()
+
+      /**
+       * @param address The address that AWS sends budget notifications to, either an SNS topic or
+       * an email. 
+       * When you create a subscriber, the value of `Address` can't contain line breaks.
+       */
+      override fun address(address: String) {
+        cdkBuilder.address(address)
+      }
+
+      /**
+       * @param type The type of notification that AWS sends to a subscriber. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty,
+    ) : CdkObject(cdkObject), SubscriberProperty {
+      /**
+       * The address that AWS sends budget notifications to, either an SNS topic or an email.
+       *
+       * When you create a subscriber, the value of `Address` can't contain line breaks.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-address)
+       */
+      override fun address(): String = unwrap(this).getAddress()
+
+      /**
+       * The type of notification that AWS sends to a subscriber.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubscriberProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty):
+          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriberProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubscriberProperty):
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty
     }
   }
 }

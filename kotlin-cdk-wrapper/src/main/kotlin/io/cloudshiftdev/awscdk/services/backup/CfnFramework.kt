@@ -377,9 +377,11 @@ public open class CfnFramework internal constructor(
   }
 
   /**
-   * Contains detailed information about all of the controls of a framework.
+   * A list of parameters for a control.
    *
-   * Each framework must contain at least one control.
+   * A control can have zero, one, or more than one parameter. An example of a control with two
+   * parameters is: "backup plan frequency is at least `daily` and the retention period is at least `1
+   * year` ". The first parameter is `daily` . The second parameter is `1 year` .
    *
    * Example:
    *
@@ -387,186 +389,105 @@ public open class CfnFramework internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.backup.*;
-   * Object controlScope;
-   * FrameworkControlProperty frameworkControlProperty = FrameworkControlProperty.builder()
-   * .controlName("controlName")
-   * // the properties below are optional
-   * .controlInputParameters(List.of(ControlInputParameterProperty.builder()
+   * ControlInputParameterProperty controlInputParameterProperty =
+   * ControlInputParameterProperty.builder()
    * .parameterName("parameterName")
    * .parameterValue("parameterValue")
-   * .build()))
-   * .controlScope(controlScope)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html)
    */
-  public interface FrameworkControlProperty {
+  public interface ControlInputParameterProperty {
     /**
-     * A list of `ParameterName` and `ParameterValue` pairs.
+     * The name of a parameter, for example, `BackupPlanFrequency` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername)
      */
-    public fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
+    public fun parameterName(): String
 
     /**
-     * The name of a control.
+     * The value of parameter, for example, `hourly` .
      *
-     * This name is between 1 and 256 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue)
      */
-    public fun controlName(): String
+    public fun parameterValue(): String
 
     /**
-     * The scope of a control.
-     *
-     * The control scope defines what the control will evaluate. Three examples of control scopes
-     * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-     *
-     * For more information, see [`ControlScope`
-     * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope)
-     */
-    public fun controlScope(): Any? = unwrap(this).getControlScope()
-
-    /**
-     * A builder for [FrameworkControlProperty]
+     * A builder for [ControlInputParameterProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` . 
        */
-      public fun controlInputParameters(controlInputParameters: IResolvable)
+      public fun parameterName(parameterName: String)
 
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param parameterValue The value of parameter, for example, `hourly` . 
        */
-      public fun controlInputParameters(controlInputParameters: List<Any>)
-
-      /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
-       */
-      public fun controlInputParameters(vararg controlInputParameters: Any)
-
-      /**
-       * @param controlName The name of a control. 
-       * This name is between 1 and 256 characters.
-       */
-      public fun controlName(controlName: String)
-
-      /**
-       * @param controlScope The scope of a control.
-       * The control scope defines what the control will evaluate. Three examples of control scopes
-       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-       *
-       * For more information, see [`ControlScope`
-       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
-       */
-      public fun controlScope(controlScope: Any)
+      public fun parameterValue(parameterValue: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.Builder =
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.builder()
+          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty.Builder
+          =
+          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty.builder()
 
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` . 
        */
-      override fun controlInputParameters(controlInputParameters: IResolvable) {
-        cdkBuilder.controlInputParameters(controlInputParameters.let(IResolvable::unwrap))
+      override fun parameterName(parameterName: String) {
+        cdkBuilder.parameterName(parameterName)
       }
 
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param parameterValue The value of parameter, for example, `hourly` . 
        */
-      override fun controlInputParameters(controlInputParameters: List<Any>) {
-        cdkBuilder.controlInputParameters(controlInputParameters)
-      }
-
-      /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
-       */
-      override fun controlInputParameters(vararg controlInputParameters: Any): Unit =
-          controlInputParameters(controlInputParameters.toList())
-
-      /**
-       * @param controlName The name of a control. 
-       * This name is between 1 and 256 characters.
-       */
-      override fun controlName(controlName: String) {
-        cdkBuilder.controlName(controlName)
-      }
-
-      /**
-       * @param controlScope The scope of a control.
-       * The control scope defines what the control will evaluate. Three examples of control scopes
-       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-       *
-       * For more information, see [`ControlScope`
-       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
-       */
-      override fun controlScope(controlScope: Any) {
-        cdkBuilder.controlScope(controlScope)
+      override fun parameterValue(parameterValue: String) {
+        cdkBuilder.parameterValue(parameterValue)
       }
 
       public fun build():
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty =
+          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
-    ) : CdkObject(cdkObject), FrameworkControlProperty {
+          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty,
+    ) : CdkObject(cdkObject), ControlInputParameterProperty {
       /**
-       * A list of `ParameterName` and `ParameterValue` pairs.
+       * The name of a parameter, for example, `BackupPlanFrequency` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername)
        */
-      override fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
+      override fun parameterName(): String = unwrap(this).getParameterName()
 
       /**
-       * The name of a control.
+       * The value of parameter, for example, `hourly` .
        *
-       * This name is between 1 and 256 characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue)
        */
-      override fun controlName(): String = unwrap(this).getControlName()
-
-      /**
-       * The scope of a control.
-       *
-       * The control scope defines what the control will evaluate. Three examples of control scopes
-       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-       *
-       * For more information, see [`ControlScope`
-       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope)
-       */
-      override fun controlScope(): Any? = unwrap(this).getControlScope()
+      override fun parameterValue(): String = unwrap(this).getParameterValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FrameworkControlProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ControlInputParameterProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty):
-          FrameworkControlProperty = CdkObjectWrappers.wrap(cdkObject) as? FrameworkControlProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty):
+          ControlInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ControlInputParameterProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FrameworkControlProperty):
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty
+      internal fun unwrap(wrapped: ControlInputParameterProperty):
+          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty
     }
   }
 
@@ -803,11 +724,9 @@ public open class CfnFramework internal constructor(
   }
 
   /**
-   * A list of parameters for a control.
+   * Contains detailed information about all of the controls of a framework.
    *
-   * A control can have zero, one, or more than one parameter. An example of a control with two
-   * parameters is: "backup plan frequency is at least `daily` and the retention period is at least `1
-   * year` ". The first parameter is `daily` . The second parameter is `1 year` .
+   * Each framework must contain at least one control.
    *
    * Example:
    *
@@ -815,105 +734,186 @@ public open class CfnFramework internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.backup.*;
-   * ControlInputParameterProperty controlInputParameterProperty =
-   * ControlInputParameterProperty.builder()
+   * Object controlScope;
+   * FrameworkControlProperty frameworkControlProperty = FrameworkControlProperty.builder()
+   * .controlName("controlName")
+   * // the properties below are optional
+   * .controlInputParameters(List.of(ControlInputParameterProperty.builder()
    * .parameterName("parameterName")
    * .parameterValue("parameterValue")
+   * .build()))
+   * .controlScope(controlScope)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html)
    */
-  public interface ControlInputParameterProperty {
+  public interface FrameworkControlProperty {
     /**
-     * The name of a parameter, for example, `BackupPlanFrequency` .
+     * A list of `ParameterName` and `ParameterValue` pairs.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
      */
-    public fun parameterName(): String
+    public fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
 
     /**
-     * The value of parameter, for example, `hourly` .
+     * The name of a control.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue)
+     * This name is between 1 and 256 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname)
      */
-    public fun parameterValue(): String
+    public fun controlName(): String
 
     /**
-     * A builder for [ControlInputParameterProperty]
+     * The scope of a control.
+     *
+     * The control scope defines what the control will evaluate. Three examples of control scopes
+     * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+     *
+     * For more information, see [`ControlScope`
+     * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope)
+     */
+    public fun controlScope(): Any? = unwrap(this).getControlScope()
+
+    /**
+     * A builder for [FrameworkControlProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` . 
+       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
        */
-      public fun parameterName(parameterName: String)
+      public fun controlInputParameters(controlInputParameters: IResolvable)
 
       /**
-       * @param parameterValue The value of parameter, for example, `hourly` . 
+       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
        */
-      public fun parameterValue(parameterValue: String)
+      public fun controlInputParameters(controlInputParameters: List<Any>)
+
+      /**
+       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       */
+      public fun controlInputParameters(vararg controlInputParameters: Any)
+
+      /**
+       * @param controlName The name of a control. 
+       * This name is between 1 and 256 characters.
+       */
+      public fun controlName(controlName: String)
+
+      /**
+       * @param controlScope The scope of a control.
+       * The control scope defines what the control will evaluate. Three examples of control scopes
+       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+       *
+       * For more information, see [`ControlScope`
+       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+       */
+      public fun controlScope(controlScope: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty.builder()
+          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.Builder =
+          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.builder()
 
       /**
-       * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` . 
+       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
        */
-      override fun parameterName(parameterName: String) {
-        cdkBuilder.parameterName(parameterName)
+      override fun controlInputParameters(controlInputParameters: IResolvable) {
+        cdkBuilder.controlInputParameters(controlInputParameters.let(IResolvable::unwrap))
       }
 
       /**
-       * @param parameterValue The value of parameter, for example, `hourly` . 
+       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
        */
-      override fun parameterValue(parameterValue: String) {
-        cdkBuilder.parameterValue(parameterValue)
+      override fun controlInputParameters(controlInputParameters: List<Any>) {
+        cdkBuilder.controlInputParameters(controlInputParameters)
+      }
+
+      /**
+       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       */
+      override fun controlInputParameters(vararg controlInputParameters: Any): Unit =
+          controlInputParameters(controlInputParameters.toList())
+
+      /**
+       * @param controlName The name of a control. 
+       * This name is between 1 and 256 characters.
+       */
+      override fun controlName(controlName: String) {
+        cdkBuilder.controlName(controlName)
+      }
+
+      /**
+       * @param controlScope The scope of a control.
+       * The control scope defines what the control will evaluate. Three examples of control scopes
+       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+       *
+       * For more information, see [`ControlScope`
+       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+       */
+      override fun controlScope(controlScope: Any) {
+        cdkBuilder.controlScope(controlScope)
       }
 
       public fun build():
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =
+          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty,
-    ) : CdkObject(cdkObject), ControlInputParameterProperty {
+          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
+    ) : CdkObject(cdkObject), FrameworkControlProperty {
       /**
-       * The name of a parameter, for example, `BackupPlanFrequency` .
+       * A list of `ParameterName` and `ParameterValue` pairs.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
        */
-      override fun parameterName(): String = unwrap(this).getParameterName()
+      override fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
 
       /**
-       * The value of parameter, for example, `hourly` .
+       * The name of a control.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue)
+       * This name is between 1 and 256 characters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname)
        */
-      override fun parameterValue(): String = unwrap(this).getParameterValue()
+      override fun controlName(): String = unwrap(this).getControlName()
+
+      /**
+       * The scope of a control.
+       *
+       * The control scope defines what the control will evaluate. Three examples of control scopes
+       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+       *
+       * For more information, see [`ControlScope`
+       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope)
+       */
+      override fun controlScope(): Any? = unwrap(this).getControlScope()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ControlInputParameterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FrameworkControlProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty):
-          ControlInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ControlInputParameterProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty):
+          FrameworkControlProperty = CdkObjectWrappers.wrap(cdkObject) as? FrameworkControlProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ControlInputParameterProperty):
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty
+      internal fun unwrap(wrapped: FrameworkControlProperty):
+          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty
     }
   }
 }

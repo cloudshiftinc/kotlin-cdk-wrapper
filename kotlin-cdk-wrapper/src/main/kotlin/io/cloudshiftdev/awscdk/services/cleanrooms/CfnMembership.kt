@@ -616,7 +616,7 @@ public open class CfnMembership internal constructor(
   }
 
   /**
-   * Contains the configuration to write the query results to S3.
+   * Contains configurations for protected query results.
    *
    * Example:
    *
@@ -624,291 +624,112 @@ public open class CfnMembership internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * ProtectedQueryS3OutputConfigurationProperty protectedQueryS3OutputConfigurationProperty =
-   * ProtectedQueryS3OutputConfigurationProperty.builder()
+   * MembershipProtectedQueryOutputConfigurationProperty
+   * membershipProtectedQueryOutputConfigurationProperty =
+   * MembershipProtectedQueryOutputConfigurationProperty.builder()
+   * .s3(ProtectedQueryS3OutputConfigurationProperty.builder()
    * .bucket("bucket")
    * .resultFormat("resultFormat")
    * // the properties below are optional
    * .keyPrefix("keyPrefix")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedqueryoutputconfiguration.html)
    */
-  public interface ProtectedQueryS3OutputConfigurationProperty {
+  public interface MembershipProtectedQueryOutputConfigurationProperty {
     /**
-     * The S3 bucket to unload the protected query results.
+     * Required configuration for a protected query with an `S3` output type.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-bucket)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedqueryoutputconfiguration.html#cfn-cleanrooms-membership-membershipprotectedqueryoutputconfiguration-s3)
      */
-    public fun bucket(): String
+    public fun s3(): Any
 
     /**
-     * The S3 prefix to unload the protected query results.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-keyprefix)
-     */
-    public fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
-
-    /**
-     * Intended file format of the result.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-resultformat)
-     */
-    public fun resultFormat(): String
-
-    /**
-     * A builder for [ProtectedQueryS3OutputConfigurationProperty]
+     * A builder for [MembershipProtectedQueryOutputConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucket The S3 bucket to unload the protected query results. 
+       * @param s3 Required configuration for a protected query with an `S3` output type. 
        */
-      public fun bucket(bucket: String)
+      public fun s3(s3: IResolvable)
 
       /**
-       * @param keyPrefix The S3 prefix to unload the protected query results.
+       * @param s3 Required configuration for a protected query with an `S3` output type. 
        */
-      public fun keyPrefix(keyPrefix: String)
+      public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty)
 
       /**
-       * @param resultFormat Intended file format of the result. 
+       * @param s3 Required configuration for a protected query with an `S3` output type. 
        */
-      public fun resultFormat(resultFormat: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b2597a2165549dafd127ba9eee175ac3ddd48f847c4150eae23d54c4edf57e86")
+      public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty.Builder
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty.builder()
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty.builder()
 
       /**
-       * @param bucket The S3 bucket to unload the protected query results. 
+       * @param s3 Required configuration for a protected query with an `S3` output type. 
        */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
+      override fun s3(s3: IResolvable) {
+        cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
       /**
-       * @param keyPrefix The S3 prefix to unload the protected query results.
+       * @param s3 Required configuration for a protected query with an `S3` output type. 
        */
-      override fun keyPrefix(keyPrefix: String) {
-        cdkBuilder.keyPrefix(keyPrefix)
+      override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty) {
+        cdkBuilder.s3(s3.let(ProtectedQueryS3OutputConfigurationProperty::unwrap))
       }
 
       /**
-       * @param resultFormat Intended file format of the result. 
+       * @param s3 Required configuration for a protected query with an `S3` output type. 
        */
-      override fun resultFormat(resultFormat: String) {
-        cdkBuilder.resultFormat(resultFormat)
-      }
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b2597a2165549dafd127ba9eee175ac3ddd48f847c4150eae23d54c4edf57e86")
+      override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty.Builder.() -> Unit): Unit =
+          s3(ProtectedQueryS3OutputConfigurationProperty(s3))
 
       public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty,
-    ) : CdkObject(cdkObject), ProtectedQueryS3OutputConfigurationProperty {
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty,
+    ) : CdkObject(cdkObject), MembershipProtectedQueryOutputConfigurationProperty {
       /**
-       * The S3 bucket to unload the protected query results.
+       * Required configuration for a protected query with an `S3` output type.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-bucket)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedqueryoutputconfiguration.html#cfn-cleanrooms-membership-membershipprotectedqueryoutputconfiguration-s3)
        */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * The S3 prefix to unload the protected query results.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-keyprefix)
-       */
-      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
-
-      /**
-       * Intended file format of the result.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-resultformat)
-       */
-      override fun resultFormat(): String = unwrap(this).getResultFormat()
+      override fun s3(): Any = unwrap(this).getS3()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          ProtectedQueryS3OutputConfigurationProperty {
+          MembershipProtectedQueryOutputConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty):
-          ProtectedQueryS3OutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProtectedQueryS3OutputConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty):
+          MembershipProtectedQueryOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? MembershipProtectedQueryOutputConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ProtectedQueryS3OutputConfigurationProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty
+      internal fun unwrap(wrapped: MembershipProtectedQueryOutputConfigurationProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty
-    }
-  }
-
-  /**
-   * An object representing the payment responsibilities accepted by the collaboration member for
-   * query compute costs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * MembershipQueryComputePaymentConfigProperty membershipQueryComputePaymentConfigProperty =
-   * MembershipQueryComputePaymentConfigProperty.builder()
-   * .isResponsible(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipquerycomputepaymentconfig.html)
-   */
-  public interface MembershipQueryComputePaymentConfigProperty {
-    /**
-     * Indicates whether the collaboration member has accepted to pay for query compute costs (
-     * `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
-     *
-     * If the collaboration creator has not specified anyone to pay for query compute costs, then
-     * the member who can query is the default payer.
-     *
-     * An error message is returned for the following reasons:
-     *
-     * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
-     * * If you set the value to `TRUE` but you are not responsible to pay for query compute costs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipquerycomputepaymentconfig.html#cfn-cleanrooms-membership-membershipquerycomputepaymentconfig-isresponsible)
-     */
-    public fun isResponsible(): Any
-
-    /**
-     * A builder for [MembershipQueryComputePaymentConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
-       * query compute costs ( `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
-       * 
-       * If the collaboration creator has not specified anyone to pay for query compute costs, then
-       * the member who can query is the default payer.
-       *
-       * An error message is returned for the following reasons:
-       *
-       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
-       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
-       * costs.
-       */
-      public fun isResponsible(isResponsible: Boolean)
-
-      /**
-       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
-       * query compute costs ( `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
-       * 
-       * If the collaboration creator has not specified anyone to pay for query compute costs, then
-       * the member who can query is the default payer.
-       *
-       * An error message is returned for the following reasons:
-       *
-       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
-       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
-       * costs.
-       */
-      public fun isResponsible(isResponsible: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty.builder()
-
-      /**
-       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
-       * query compute costs ( `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
-       * 
-       * If the collaboration creator has not specified anyone to pay for query compute costs, then
-       * the member who can query is the default payer.
-       *
-       * An error message is returned for the following reasons:
-       *
-       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
-       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
-       * costs.
-       */
-      override fun isResponsible(isResponsible: Boolean) {
-        cdkBuilder.isResponsible(isResponsible)
-      }
-
-      /**
-       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
-       * query compute costs ( `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
-       * 
-       * If the collaboration creator has not specified anyone to pay for query compute costs, then
-       * the member who can query is the default payer.
-       *
-       * An error message is returned for the following reasons:
-       *
-       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
-       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
-       * costs.
-       */
-      override fun isResponsible(isResponsible: IResolvable) {
-        cdkBuilder.isResponsible(isResponsible.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty,
-    ) : CdkObject(cdkObject), MembershipQueryComputePaymentConfigProperty {
-      /**
-       * Indicates whether the collaboration member has accepted to pay for query compute costs (
-       * `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
-       *
-       * If the collaboration creator has not specified anyone to pay for query compute costs, then
-       * the member who can query is the default payer.
-       *
-       * An error message is returned for the following reasons:
-       *
-       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
-       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
-       * costs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipquerycomputepaymentconfig.html#cfn-cleanrooms-membership-membershipquerycomputepaymentconfig-isresponsible)
-       */
-      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MembershipQueryComputePaymentConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty):
-          MembershipQueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MembershipQueryComputePaymentConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MembershipQueryComputePaymentConfigProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty
     }
   }
 
@@ -1070,7 +891,8 @@ public open class CfnMembership internal constructor(
   }
 
   /**
-   * Contains configurations for protected query results.
+   * An object representing the payment responsibilities accepted by the collaboration member for
+   * query compute costs.
    *
    * Example:
    *
@@ -1078,112 +900,290 @@ public open class CfnMembership internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * MembershipProtectedQueryOutputConfigurationProperty
-   * membershipProtectedQueryOutputConfigurationProperty =
-   * MembershipProtectedQueryOutputConfigurationProperty.builder()
-   * .s3(ProtectedQueryS3OutputConfigurationProperty.builder()
-   * .bucket("bucket")
-   * .resultFormat("resultFormat")
-   * // the properties below are optional
-   * .keyPrefix("keyPrefix")
-   * .build())
+   * MembershipQueryComputePaymentConfigProperty membershipQueryComputePaymentConfigProperty =
+   * MembershipQueryComputePaymentConfigProperty.builder()
+   * .isResponsible(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedqueryoutputconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipquerycomputepaymentconfig.html)
    */
-  public interface MembershipProtectedQueryOutputConfigurationProperty {
+  public interface MembershipQueryComputePaymentConfigProperty {
     /**
-     * Required configuration for a protected query with an `S3` output type.
+     * Indicates whether the collaboration member has accepted to pay for query compute costs (
+     * `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedqueryoutputconfiguration.html#cfn-cleanrooms-membership-membershipprotectedqueryoutputconfiguration-s3)
+     * If the collaboration creator has not specified anyone to pay for query compute costs, then
+     * the member who can query is the default payer.
+     *
+     * An error message is returned for the following reasons:
+     *
+     * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
+     * * If you set the value to `TRUE` but you are not responsible to pay for query compute costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipquerycomputepaymentconfig.html#cfn-cleanrooms-membership-membershipquerycomputepaymentconfig-isresponsible)
      */
-    public fun s3(): Any
+    public fun isResponsible(): Any
 
     /**
-     * A builder for [MembershipProtectedQueryOutputConfigurationProperty]
+     * A builder for [MembershipQueryComputePaymentConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * query compute costs ( `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
+       * 
+       * If the collaboration creator has not specified anyone to pay for query compute costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
+       * costs.
        */
-      public fun s3(s3: IResolvable)
+      public fun isResponsible(isResponsible: Boolean)
 
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * query compute costs ( `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
+       * 
+       * If the collaboration creator has not specified anyone to pay for query compute costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
+       * costs.
        */
-      public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty)
-
-      /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b2597a2165549dafd127ba9eee175ac3ddd48f847c4150eae23d54c4edf57e86")
-      public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty.Builder.() -> Unit)
+      public fun isResponsible(isResponsible: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty.Builder
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty.Builder
           =
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty.builder()
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty.builder()
 
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * query compute costs ( `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
+       * 
+       * If the collaboration creator has not specified anyone to pay for query compute costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
+       * costs.
        */
-      override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      override fun isResponsible(isResponsible: Boolean) {
+        cdkBuilder.isResponsible(isResponsible)
       }
 
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * query compute costs ( `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
+       * 
+       * If the collaboration creator has not specified anyone to pay for query compute costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
+       * costs.
        */
-      override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty) {
-        cdkBuilder.s3(s3.let(ProtectedQueryS3OutputConfigurationProperty::unwrap))
+      override fun isResponsible(isResponsible: IResolvable) {
+        cdkBuilder.isResponsible(isResponsible.let(IResolvable::unwrap))
       }
-
-      /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b2597a2165549dafd127ba9eee175ac3ddd48f847c4150eae23d54c4edf57e86")
-      override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty.Builder.() -> Unit): Unit =
-          s3(ProtectedQueryS3OutputConfigurationProperty(s3))
 
       public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty,
-    ) : CdkObject(cdkObject), MembershipProtectedQueryOutputConfigurationProperty {
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty,
+    ) : CdkObject(cdkObject), MembershipQueryComputePaymentConfigProperty {
       /**
-       * Required configuration for a protected query with an `S3` output type.
+       * Indicates whether the collaboration member has accepted to pay for query compute costs (
+       * `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedqueryoutputconfiguration.html#cfn-cleanrooms-membership-membershipprotectedqueryoutputconfiguration-s3)
+       * If the collaboration creator has not specified anyone to pay for query compute costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query compute costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query compute
+       * costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipquerycomputepaymentconfig.html#cfn-cleanrooms-membership-membershipquerycomputepaymentconfig-isresponsible)
        */
-      override fun s3(): Any = unwrap(this).getS3()
+      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          MembershipProtectedQueryOutputConfigurationProperty {
+          MembershipQueryComputePaymentConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty):
-          MembershipProtectedQueryOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
-          as? MembershipProtectedQueryOutputConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty):
+          MembershipQueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipQueryComputePaymentConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MembershipProtectedQueryOutputConfigurationProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty
+      internal fun unwrap(wrapped: MembershipQueryComputePaymentConfigProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
+    }
+  }
+
+  /**
+   * Contains the configuration to write the query results to S3.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * ProtectedQueryS3OutputConfigurationProperty protectedQueryS3OutputConfigurationProperty =
+   * ProtectedQueryS3OutputConfigurationProperty.builder()
+   * .bucket("bucket")
+   * .resultFormat("resultFormat")
+   * // the properties below are optional
+   * .keyPrefix("keyPrefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html)
+   */
+  public interface ProtectedQueryS3OutputConfigurationProperty {
+    /**
+     * The S3 bucket to unload the protected query results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * The S3 prefix to unload the protected query results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-keyprefix)
+     */
+    public fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+
+    /**
+     * Intended file format of the result.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-resultformat)
+     */
+    public fun resultFormat(): String
+
+    /**
+     * A builder for [ProtectedQueryS3OutputConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The S3 bucket to unload the protected query results. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param keyPrefix The S3 prefix to unload the protected query results.
+       */
+      public fun keyPrefix(keyPrefix: String)
+
+      /**
+       * @param resultFormat Intended file format of the result. 
+       */
+      public fun resultFormat(resultFormat: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty.builder()
+
+      /**
+       * @param bucket The S3 bucket to unload the protected query results. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param keyPrefix The S3 prefix to unload the protected query results.
+       */
+      override fun keyPrefix(keyPrefix: String) {
+        cdkBuilder.keyPrefix(keyPrefix)
+      }
+
+      /**
+       * @param resultFormat Intended file format of the result. 
+       */
+      override fun resultFormat(resultFormat: String) {
+        cdkBuilder.resultFormat(resultFormat)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty,
+    ) : CdkObject(cdkObject), ProtectedQueryS3OutputConfigurationProperty {
+      /**
+       * The S3 bucket to unload the protected query results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * The S3 prefix to unload the protected query results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-keyprefix)
+       */
+      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+
+      /**
+       * Intended file format of the result.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-resultformat)
+       */
+      override fun resultFormat(): String = unwrap(this).getResultFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ProtectedQueryS3OutputConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty):
+          ProtectedQueryS3OutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProtectedQueryS3OutputConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProtectedQueryS3OutputConfigurationProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty
     }
   }
 }

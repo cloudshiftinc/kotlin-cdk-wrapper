@@ -587,6 +587,141 @@ public open class CfnDataset internal constructor(
   }
 
   /**
+   * Represents a set of options that define how DataBrew will read a comma-separated value (CSV)
+   * file when creating a dataset from that file.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * CsvOptionsProperty csvOptionsProperty = CsvOptionsProperty.builder()
+   * .delimiter("delimiter")
+   * .headerRow(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html)
+   */
+  public interface CsvOptionsProperty {
+    /**
+     * A single character that specifies the delimiter being used in the CSV file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-delimiter)
+     */
+    public fun delimiter(): String? = unwrap(this).getDelimiter()
+
+    /**
+     * A variable that specifies whether the first row in the file is parsed as the header.
+     *
+     * If this value is false, column names are auto-generated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-headerrow)
+     */
+    public fun headerRow(): Any? = unwrap(this).getHeaderRow()
+
+    /**
+     * A builder for [CsvOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param delimiter A single character that specifies the delimiter being used in the CSV
+       * file.
+       */
+      public fun delimiter(delimiter: String)
+
+      /**
+       * @param headerRow A variable that specifies whether the first row in the file is parsed as
+       * the header.
+       * If this value is false, column names are auto-generated.
+       */
+      public fun headerRow(headerRow: Boolean)
+
+      /**
+       * @param headerRow A variable that specifies whether the first row in the file is parsed as
+       * the header.
+       * If this value is false, column names are auto-generated.
+       */
+      public fun headerRow(headerRow: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty.builder()
+
+      /**
+       * @param delimiter A single character that specifies the delimiter being used in the CSV
+       * file.
+       */
+      override fun delimiter(delimiter: String) {
+        cdkBuilder.delimiter(delimiter)
+      }
+
+      /**
+       * @param headerRow A variable that specifies whether the first row in the file is parsed as
+       * the header.
+       * If this value is false, column names are auto-generated.
+       */
+      override fun headerRow(headerRow: Boolean) {
+        cdkBuilder.headerRow(headerRow)
+      }
+
+      /**
+       * @param headerRow A variable that specifies whether the first row in the file is parsed as
+       * the header.
+       * If this value is false, column names are auto-generated.
+       */
+      override fun headerRow(headerRow: IResolvable) {
+        cdkBuilder.headerRow(headerRow.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty,
+    ) : CdkObject(cdkObject), CsvOptionsProperty {
+      /**
+       * A single character that specifies the delimiter being used in the CSV file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-delimiter)
+       */
+      override fun delimiter(): String? = unwrap(this).getDelimiter()
+
+      /**
+       * A variable that specifies whether the first row in the file is parsed as the header.
+       *
+       * If this value is false, column names are auto-generated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-headerrow)
+       */
+      override fun headerRow(): Any? = unwrap(this).getHeaderRow()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CsvOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty):
+          CsvOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CsvOptionsProperty):
+          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty
+    }
+  }
+
+  /**
    * Represents how metadata stored in the AWS Glue Data Catalog is defined in a DataBrew dataset.
    *
    * Example:
@@ -1009,8 +1144,8 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * Represents information on how DataBrew can find data, in either the AWS Glue Data Catalog or
-   * Amazon S3.
+   * Represents a dataset paramater that defines type and conditions for a parameter in the Amazon
+   * S3 path of the dataset.
    *
    * Example:
    *
@@ -1018,300 +1153,288 @@ public open class CfnDataset internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * InputProperty inputProperty = InputProperty.builder()
-   * .databaseInputDefinition(DatabaseInputDefinitionProperty.builder()
-   * .glueConnectionName("glueConnectionName")
+   * DatasetParameterProperty datasetParameterProperty = DatasetParameterProperty.builder()
+   * .name("name")
+   * .type("type")
    * // the properties below are optional
-   * .databaseTableName("databaseTableName")
-   * .queryString("queryString")
-   * .tempDirectory(S3LocationProperty.builder()
-   * .bucket("bucket")
+   * .createColumn(false)
+   * .datetimeOptions(DatetimeOptionsProperty.builder()
+   * .format("format")
    * // the properties below are optional
-   * .key("key")
+   * .localeCode("localeCode")
+   * .timezoneOffset("timezoneOffset")
    * .build())
-   * .build())
-   * .dataCatalogInputDefinition(DataCatalogInputDefinitionProperty.builder()
-   * .catalogId("catalogId")
-   * .databaseName("databaseName")
-   * .tableName("tableName")
-   * .tempDirectory(S3LocationProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .key("key")
-   * .build())
-   * .build())
-   * .metadata(MetadataProperty.builder()
-   * .sourceArn("sourceArn")
-   * .build())
-   * .s3InputDefinition(S3LocationProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .key("key")
+   * .filter(FilterExpressionProperty.builder()
+   * .expression("expression")
+   * .valuesMap(List.of(FilterValueProperty.builder()
+   * .value("value")
+   * .valueReference("valueReference")
+   * .build()))
    * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html)
    */
-  public interface InputProperty {
+  public interface DatasetParameterProperty {
     /**
-     * The AWS Glue Data Catalog parameters for the data.
+     * Optional boolean value that defines whether the captured value of this parameter should be
+     * loaded as an additional column in the dataset.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-datacataloginputdefinition)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-createcolumn)
      */
-    public fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
+    public fun createColumn(): Any? = unwrap(this).getCreateColumn()
 
     /**
-     * Connection information for dataset input files stored in a database.
+     * Additional parameter options such as a format and a timezone.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-databaseinputdefinition)
+     * Required for datetime parameters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-datetimeoptions)
      */
-    public fun databaseInputDefinition(): Any? = unwrap(this).getDatabaseInputDefinition()
+    public fun datetimeOptions(): Any? = unwrap(this).getDatetimeOptions()
 
     /**
-     * Contains additional resource information needed for specific datasets.
+     * The optional filter expression structure to apply additional matching criteria to the
+     * parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-metadata)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-filter)
      */
-    public fun metadata(): Any? = unwrap(this).getMetadata()
+    public fun filter(): Any? = unwrap(this).getFilter()
 
     /**
-     * The Amazon S3 location where the data is stored.
+     * The name of the parameter that is used in the dataset's Amazon S3 path.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-s3inputdefinition)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-name)
      */
-    public fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
+    public fun name(): String
 
     /**
-     * A builder for [InputProperty]
+     * The type of the dataset parameter, can be one of a 'String', 'Number' or 'Datetime'.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [DatasetParameterProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       * @param createColumn Optional boolean value that defines whether the captured value of this
+       * parameter should be loaded as an additional column in the dataset.
        */
-      public fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable)
+      public fun createColumn(createColumn: Boolean)
 
       /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       * @param createColumn Optional boolean value that defines whether the captured value of this
+       * parameter should be loaded as an additional column in the dataset.
        */
-      public
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty)
+      public fun createColumn(createColumn: IResolvable)
 
       /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       * @param datetimeOptions Additional parameter options such as a format and a timezone.
+       * Required for datetime parameters.
+       */
+      public fun datetimeOptions(datetimeOptions: IResolvable)
+
+      /**
+       * @param datetimeOptions Additional parameter options such as a format and a timezone.
+       * Required for datetime parameters.
+       */
+      public fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty)
+
+      /**
+       * @param datetimeOptions Additional parameter options such as a format and a timezone.
+       * Required for datetime parameters.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e8566d49d0da6d5e3c7dae41867fa0417df919b5a9a9cbe8fb3e02dd69f77448")
-      public
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit)
+      @JvmName("65a6693a7649a5bea13eff57488531548e480e904d0e34b14bccc2e10bfe22a1")
+      public fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty.Builder.() -> Unit)
 
       /**
-       * @param databaseInputDefinition Connection information for dataset input files stored in a
-       * database.
+       * @param filter The optional filter expression structure to apply additional matching
+       * criteria to the parameter.
        */
-      public fun databaseInputDefinition(databaseInputDefinition: IResolvable)
+      public fun filter(filter: IResolvable)
 
       /**
-       * @param databaseInputDefinition Connection information for dataset input files stored in a
-       * database.
+       * @param filter The optional filter expression structure to apply additional matching
+       * criteria to the parameter.
        */
-      public fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty)
+      public fun filter(filter: FilterExpressionProperty)
 
       /**
-       * @param databaseInputDefinition Connection information for dataset input files stored in a
-       * database.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("20cc6c2cb67cf12e5153173813edf5a1f135894874e3ec92e723e02fa5999d7b")
-      public
-          fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty.Builder.() -> Unit)
-
-      /**
-       * @param metadata Contains additional resource information needed for specific datasets.
-       */
-      public fun metadata(metadata: IResolvable)
-
-      /**
-       * @param metadata Contains additional resource information needed for specific datasets.
-       */
-      public fun metadata(metadata: MetadataProperty)
-
-      /**
-       * @param metadata Contains additional resource information needed for specific datasets.
+       * @param filter The optional filter expression structure to apply additional matching
+       * criteria to the parameter.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ebc2eecbbafc42972874374b2ff846e2fdf8dc1e0ebd9e1fa459c63dc026f334")
-      public fun metadata(metadata: MetadataProperty.Builder.() -> Unit)
+      @JvmName("060097b92684df8d43ad40538370f633df18b34aab4452e06dbe5e5f69c7955f")
+      public fun filter(filter: FilterExpressionProperty.Builder.() -> Unit)
 
       /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       * @param name The name of the parameter that is used in the dataset's Amazon S3 path. 
        */
-      public fun s3InputDefinition(s3InputDefinition: IResolvable)
+      public fun name(name: String)
 
       /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       * @param type The type of the dataset parameter, can be one of a 'String', 'Number' or
+       * 'Datetime'. 
        */
-      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty)
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("941083a48d82f5dc84d462af94aa87336a198a841d72148455b37296db306422")
-      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit)
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnDataset.InputProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnDataset.InputProperty.builder()
+          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty.builder()
 
       /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       * @param createColumn Optional boolean value that defines whether the captured value of this
+       * parameter should be loaded as an additional column in the dataset.
        */
-      override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable::unwrap))
+      override fun createColumn(createColumn: Boolean) {
+        cdkBuilder.createColumn(createColumn)
       }
 
       /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       * @param createColumn Optional boolean value that defines whether the captured value of this
+       * parameter should be loaded as an additional column in the dataset.
        */
-      override
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty::unwrap))
+      override fun createColumn(createColumn: IResolvable) {
+        cdkBuilder.createColumn(createColumn.let(IResolvable::unwrap))
       }
 
       /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       * @param datetimeOptions Additional parameter options such as a format and a timezone.
+       * Required for datetime parameters.
+       */
+      override fun datetimeOptions(datetimeOptions: IResolvable) {
+        cdkBuilder.datetimeOptions(datetimeOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param datetimeOptions Additional parameter options such as a format and a timezone.
+       * Required for datetime parameters.
+       */
+      override fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty) {
+        cdkBuilder.datetimeOptions(datetimeOptions.let(DatetimeOptionsProperty::unwrap))
+      }
+
+      /**
+       * @param datetimeOptions Additional parameter options such as a format and a timezone.
+       * Required for datetime parameters.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e8566d49d0da6d5e3c7dae41867fa0417df919b5a9a9cbe8fb3e02dd69f77448")
-      override
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit):
-          Unit =
-          dataCatalogInputDefinition(DataCatalogInputDefinitionProperty(dataCatalogInputDefinition))
+      @JvmName("65a6693a7649a5bea13eff57488531548e480e904d0e34b14bccc2e10bfe22a1")
+      override fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty.Builder.() -> Unit):
+          Unit = datetimeOptions(DatetimeOptionsProperty(datetimeOptions))
 
       /**
-       * @param databaseInputDefinition Connection information for dataset input files stored in a
-       * database.
+       * @param filter The optional filter expression structure to apply additional matching
+       * criteria to the parameter.
        */
-      override fun databaseInputDefinition(databaseInputDefinition: IResolvable) {
-        cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(IResolvable::unwrap))
+      override fun filter(filter: IResolvable) {
+        cdkBuilder.filter(filter.let(IResolvable::unwrap))
       }
 
       /**
-       * @param databaseInputDefinition Connection information for dataset input files stored in a
-       * database.
+       * @param filter The optional filter expression structure to apply additional matching
+       * criteria to the parameter.
        */
-      override
-          fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty) {
-        cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(DatabaseInputDefinitionProperty::unwrap))
+      override fun filter(filter: FilterExpressionProperty) {
+        cdkBuilder.filter(filter.let(FilterExpressionProperty::unwrap))
       }
 
       /**
-       * @param databaseInputDefinition Connection information for dataset input files stored in a
-       * database.
+       * @param filter The optional filter expression structure to apply additional matching
+       * criteria to the parameter.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("20cc6c2cb67cf12e5153173813edf5a1f135894874e3ec92e723e02fa5999d7b")
-      override
-          fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty.Builder.() -> Unit):
-          Unit = databaseInputDefinition(DatabaseInputDefinitionProperty(databaseInputDefinition))
+      @JvmName("060097b92684df8d43ad40538370f633df18b34aab4452e06dbe5e5f69c7955f")
+      override fun filter(filter: FilterExpressionProperty.Builder.() -> Unit): Unit =
+          filter(FilterExpressionProperty(filter))
 
       /**
-       * @param metadata Contains additional resource information needed for specific datasets.
+       * @param name The name of the parameter that is used in the dataset's Amazon S3 path. 
        */
-      override fun metadata(metadata: IResolvable) {
-        cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param metadata Contains additional resource information needed for specific datasets.
+       * @param type The type of the dataset parameter, can be one of a 'String', 'Number' or
+       * 'Datetime'. 
        */
-      override fun metadata(metadata: MetadataProperty) {
-        cdkBuilder.metadata(metadata.let(MetadataProperty::unwrap))
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
-      /**
-       * @param metadata Contains additional resource information needed for specific datasets.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ebc2eecbbafc42972874374b2ff846e2fdf8dc1e0ebd9e1fa459c63dc026f334")
-      override fun metadata(metadata: MetadataProperty.Builder.() -> Unit): Unit =
-          metadata(MetadataProperty(metadata))
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      override fun s3InputDefinition(s3InputDefinition: IResolvable) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty::unwrap))
-      }
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("941083a48d82f5dc84d462af94aa87336a198a841d72148455b37296db306422")
-      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit): Unit
-          = s3InputDefinition(S3LocationProperty(s3InputDefinition))
-
-      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.InputProperty =
+      public fun build():
+          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty,
-    ) : CdkObject(cdkObject), InputProperty {
+      override val cdkObject:
+          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty,
+    ) : CdkObject(cdkObject), DatasetParameterProperty {
       /**
-       * The AWS Glue Data Catalog parameters for the data.
+       * Optional boolean value that defines whether the captured value of this parameter should be
+       * loaded as an additional column in the dataset.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-datacataloginputdefinition)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-createcolumn)
        */
-      override fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
+      override fun createColumn(): Any? = unwrap(this).getCreateColumn()
 
       /**
-       * Connection information for dataset input files stored in a database.
+       * Additional parameter options such as a format and a timezone.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-databaseinputdefinition)
+       * Required for datetime parameters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-datetimeoptions)
        */
-      override fun databaseInputDefinition(): Any? = unwrap(this).getDatabaseInputDefinition()
+      override fun datetimeOptions(): Any? = unwrap(this).getDatetimeOptions()
 
       /**
-       * Contains additional resource information needed for specific datasets.
+       * The optional filter expression structure to apply additional matching criteria to the
+       * parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-metadata)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-filter)
        */
-      override fun metadata(): Any? = unwrap(this).getMetadata()
+      override fun filter(): Any? = unwrap(this).getFilter()
 
       /**
-       * The Amazon S3 location where the data is stored.
+       * The name of the parameter that is used in the dataset's Amazon S3 path.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-s3inputdefinition)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-name)
        */
-      override fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The type of the dataset parameter, can be one of a 'String', 'Number' or 'Datetime'.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-type)
+       */
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatasetParameterProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty):
-          InputProperty = CdkObjectWrappers.wrap(cdkObject) as? InputProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty):
+          DatasetParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetParameterProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InputProperty):
-          software.amazon.awscdk.services.databrew.CfnDataset.InputProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.databrew.CfnDataset.InputProperty
+      internal fun unwrap(wrapped: DatasetParameterProperty):
+          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty
     }
   }
 
@@ -1687,8 +1810,8 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * Represents the JSON-specific options that define how input is to be interpreted by AWS Glue
-   * DataBrew .
+   * Represents a limit imposed on number of Amazon S3 files that should be selected for a dataset
+   * from a connected Amazon S3 path.
    *
    * Example:
    *
@@ -1696,97 +1819,155 @@ public open class CfnDataset internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * JsonOptionsProperty jsonOptionsProperty = JsonOptionsProperty.builder()
-   * .multiLine(false)
+   * FilesLimitProperty filesLimitProperty = FilesLimitProperty.builder()
+   * .maxFiles(123)
+   * // the properties below are optional
+   * .order("order")
+   * .orderedBy("orderedBy")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html)
    */
-  public interface JsonOptionsProperty {
+  public interface FilesLimitProperty {
     /**
-     * A value that specifies whether JSON input contains embedded new line characters.
+     * The number of Amazon S3 files to select.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html#cfn-databrew-dataset-jsonoptions-multiline)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-maxfiles)
      */
-    public fun multiLine(): Any? = unwrap(this).getMultiLine()
+    public fun maxFiles(): Number
 
     /**
-     * A builder for [JsonOptionsProperty]
+     * A criteria to use for Amazon S3 files sorting before their selection.
+     *
+     * By default uses DESCENDING order, i.e. most recent files are selected first. Anotherpossible
+     * value is ASCENDING.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-order)
+     */
+    public fun order(): String? = unwrap(this).getOrder()
+
+    /**
+     * A criteria to use for Amazon S3 files sorting before their selection.
+     *
+     * By default uses LAST_MODIFIED_DATE as a sorting criteria. Currently it's the only allowed
+     * value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-orderedby)
+     */
+    public fun orderedBy(): String? = unwrap(this).getOrderedBy()
+
+    /**
+     * A builder for [FilesLimitProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param multiLine A value that specifies whether JSON input contains embedded new line
-       * characters.
+       * @param maxFiles The number of Amazon S3 files to select. 
        */
-      public fun multiLine(multiLine: Boolean)
+      public fun maxFiles(maxFiles: Number)
 
       /**
-       * @param multiLine A value that specifies whether JSON input contains embedded new line
-       * characters.
+       * @param order A criteria to use for Amazon S3 files sorting before their selection.
+       * By default uses DESCENDING order, i.e. most recent files are selected first.
+       * Anotherpossible value is ASCENDING.
        */
-      public fun multiLine(multiLine: IResolvable)
+      public fun order(order: String)
+
+      /**
+       * @param orderedBy A criteria to use for Amazon S3 files sorting before their selection.
+       * By default uses LAST_MODIFIED_DATE as a sorting criteria. Currently it's the only allowed
+       * value.
+       */
+      public fun orderedBy(orderedBy: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty.builder()
+          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty.builder()
 
       /**
-       * @param multiLine A value that specifies whether JSON input contains embedded new line
-       * characters.
+       * @param maxFiles The number of Amazon S3 files to select. 
        */
-      override fun multiLine(multiLine: Boolean) {
-        cdkBuilder.multiLine(multiLine)
+      override fun maxFiles(maxFiles: Number) {
+        cdkBuilder.maxFiles(maxFiles)
       }
 
       /**
-       * @param multiLine A value that specifies whether JSON input contains embedded new line
-       * characters.
+       * @param order A criteria to use for Amazon S3 files sorting before their selection.
+       * By default uses DESCENDING order, i.e. most recent files are selected first.
+       * Anotherpossible value is ASCENDING.
        */
-      override fun multiLine(multiLine: IResolvable) {
-        cdkBuilder.multiLine(multiLine.let(IResolvable::unwrap))
+      override fun order(order: String) {
+        cdkBuilder.order(order)
       }
 
-      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty =
+      /**
+       * @param orderedBy A criteria to use for Amazon S3 files sorting before their selection.
+       * By default uses LAST_MODIFIED_DATE as a sorting criteria. Currently it's the only allowed
+       * value.
+       */
+      override fun orderedBy(orderedBy: String) {
+        cdkBuilder.orderedBy(orderedBy)
+      }
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty,
-    ) : CdkObject(cdkObject), JsonOptionsProperty {
+          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty,
+    ) : CdkObject(cdkObject), FilesLimitProperty {
       /**
-       * A value that specifies whether JSON input contains embedded new line characters.
+       * The number of Amazon S3 files to select.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html#cfn-databrew-dataset-jsonoptions-multiline)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-maxfiles)
        */
-      override fun multiLine(): Any? = unwrap(this).getMultiLine()
+      override fun maxFiles(): Number = unwrap(this).getMaxFiles()
+
+      /**
+       * A criteria to use for Amazon S3 files sorting before their selection.
+       *
+       * By default uses DESCENDING order, i.e. most recent files are selected first.
+       * Anotherpossible value is ASCENDING.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-order)
+       */
+      override fun order(): String? = unwrap(this).getOrder()
+
+      /**
+       * A criteria to use for Amazon S3 files sorting before their selection.
+       *
+       * By default uses LAST_MODIFIED_DATE as a sorting criteria. Currently it's the only allowed
+       * value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-orderedby)
+       */
+      override fun orderedBy(): String? = unwrap(this).getOrderedBy()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JsonOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilesLimitProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty):
-          JsonOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonOptionsProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty):
+          FilesLimitProperty = CdkObjectWrappers.wrap(cdkObject) as? FilesLimitProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: JsonOptionsProperty):
-          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty = (wrapped as
+      internal fun unwrap(wrapped: FilesLimitProperty):
+          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty
+          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty
     }
   }
 
   /**
-   * Represents an Amazon S3 location (bucket name, bucket owner, and object key) where DataBrew can
-   * read input data, or write output from a job.
+   * Represents a structure for defining parameter conditions.
    *
    * Example:
    *
@@ -1794,103 +1975,258 @@ public open class CfnDataset internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .key("key")
+   * FilterExpressionProperty filterExpressionProperty = FilterExpressionProperty.builder()
+   * .expression("expression")
+   * .valuesMap(List.of(FilterValueProperty.builder()
+   * .value("value")
+   * .valueReference("valueReference")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html)
    */
-  public interface S3LocationProperty {
+  public interface FilterExpressionProperty {
     /**
-     * The Amazon S3 bucket name.
+     * The expression which includes condition names followed by substitution variables, possibly
+     * grouped and combined with other conditions.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucket)
+     * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
+     * ends_with :suffix2)". Substitution variables should start with ':' symbol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-expression)
      */
-    public fun bucket(): String
+    public fun expression(): String
 
     /**
-     * The unique name of the object in the bucket.
+     * The map of substitution variable names to their values used in this filter expression.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-key)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-valuesmap)
      */
-    public fun key(): String? = unwrap(this).getKey()
+    public fun valuesMap(): Any
 
     /**
-     * A builder for [S3LocationProperty]
+     * A builder for [FilterExpressionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucket The Amazon S3 bucket name. 
+       * @param expression The expression which includes condition names followed by substitution
+       * variables, possibly grouped and combined with other conditions. 
+       * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
+       * ends_with :suffix2)". Substitution variables should start with ':' symbol.
        */
-      public fun bucket(bucket: String)
+      public fun expression(expression: String)
 
       /**
-       * @param key The unique name of the object in the bucket.
+       * @param valuesMap The map of substitution variable names to their values used in this filter
+       * expression. 
        */
-      public fun key(key: String)
+      public fun valuesMap(valuesMap: IResolvable)
+
+      /**
+       * @param valuesMap The map of substitution variable names to their values used in this filter
+       * expression. 
+       */
+      public fun valuesMap(valuesMap: List<Any>)
+
+      /**
+       * @param valuesMap The map of substitution variable names to their values used in this filter
+       * expression. 
+       */
+      public fun valuesMap(vararg valuesMap: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty.builder()
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty.builder()
 
       /**
-       * @param bucket The Amazon S3 bucket name. 
+       * @param expression The expression which includes condition names followed by substitution
+       * variables, possibly grouped and combined with other conditions. 
+       * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
+       * ends_with :suffix2)". Substitution variables should start with ':' symbol.
        */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
       }
 
       /**
-       * @param key The unique name of the object in the bucket.
+       * @param valuesMap The map of substitution variable names to their values used in this filter
+       * expression. 
        */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
+      override fun valuesMap(valuesMap: IResolvable) {
+        cdkBuilder.valuesMap(valuesMap.let(IResolvable::unwrap))
       }
 
-      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty =
+      /**
+       * @param valuesMap The map of substitution variable names to their values used in this filter
+       * expression. 
+       */
+      override fun valuesMap(valuesMap: List<Any>) {
+        cdkBuilder.valuesMap(valuesMap)
+      }
+
+      /**
+       * @param valuesMap The map of substitution variable names to their values used in this filter
+       * expression. 
+       */
+      override fun valuesMap(vararg valuesMap: Any): Unit = valuesMap(valuesMap.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty,
+    ) : CdkObject(cdkObject), FilterExpressionProperty {
       /**
-       * The Amazon S3 bucket name.
+       * The expression which includes condition names followed by substitution variables, possibly
+       * grouped and combined with other conditions.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucket)
+       * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
+       * ends_with :suffix2)". Substitution variables should start with ':' symbol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-expression)
        */
-      override fun bucket(): String = unwrap(this).getBucket()
+      override fun expression(): String = unwrap(this).getExpression()
 
       /**
-       * The unique name of the object in the bucket.
+       * The map of substitution variable names to their values used in this filter expression.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-key)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-valuesmap)
        */
-      override fun key(): String? = unwrap(this).getKey()
+      override fun valuesMap(): Any = unwrap(this).getValuesMap()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterExpressionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty):
+          FilterExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterExpressionProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterExpressionProperty):
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty
+    }
+  }
+
+  /**
+   * Represents a single entry in the `ValuesMap` of a `FilterExpression` .
+   *
+   * A `FilterValue` associates the name of a substitution variable in an expression to its value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * FilterValueProperty filterValueProperty = FilterValueProperty.builder()
+   * .value("value")
+   * .valueReference("valueReference")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html)
+   */
+  public interface FilterValueProperty {
+    /**
+     * The value to be associated with the substitution variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * The substitution variable reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-valuereference)
+     */
+    public fun valueReference(): String
+
+    /**
+     * A builder for [FilterValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param value The value to be associated with the substitution variable. 
+       */
+      public fun `value`(`value`: String)
+
+      /**
+       * @param valueReference The substitution variable reference. 
+       */
+      public fun valueReference(valueReference: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty.builder()
+
+      /**
+       * @param value The value to be associated with the substitution variable. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      /**
+       * @param valueReference The substitution variable reference. 
+       */
+      override fun valueReference(valueReference: String) {
+        cdkBuilder.valueReference(valueReference)
+      }
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty,
+    ) : CdkObject(cdkObject), FilterValueProperty {
+      /**
+       * The value to be associated with the substitution variable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+
+      /**
+       * The substitution variable reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-valuereference)
+       */
+      override fun valueReference(): String = unwrap(this).getValueReference()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty):
+          FilterValueProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterValueProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty = (wrapped as
+      internal fun unwrap(wrapped: FilterValueProperty):
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty
+          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty
     }
   }
 
@@ -2121,6 +2457,411 @@ public open class CfnDataset internal constructor(
   }
 
   /**
+   * Represents information on how DataBrew can find data, in either the AWS Glue Data Catalog or
+   * Amazon S3.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * InputProperty inputProperty = InputProperty.builder()
+   * .databaseInputDefinition(DatabaseInputDefinitionProperty.builder()
+   * .glueConnectionName("glueConnectionName")
+   * // the properties below are optional
+   * .databaseTableName("databaseTableName")
+   * .queryString("queryString")
+   * .tempDirectory(S3LocationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .key("key")
+   * .build())
+   * .build())
+   * .dataCatalogInputDefinition(DataCatalogInputDefinitionProperty.builder()
+   * .catalogId("catalogId")
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .tempDirectory(S3LocationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .key("key")
+   * .build())
+   * .build())
+   * .metadata(MetadataProperty.builder()
+   * .sourceArn("sourceArn")
+   * .build())
+   * .s3InputDefinition(S3LocationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .key("key")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html)
+   */
+  public interface InputProperty {
+    /**
+     * The AWS Glue Data Catalog parameters for the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-datacataloginputdefinition)
+     */
+    public fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
+
+    /**
+     * Connection information for dataset input files stored in a database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-databaseinputdefinition)
+     */
+    public fun databaseInputDefinition(): Any? = unwrap(this).getDatabaseInputDefinition()
+
+    /**
+     * Contains additional resource information needed for specific datasets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-metadata)
+     */
+    public fun metadata(): Any? = unwrap(this).getMetadata()
+
+    /**
+     * The Amazon S3 location where the data is stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-s3inputdefinition)
+     */
+    public fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
+
+    /**
+     * A builder for [InputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      public fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable)
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      public
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty)
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e8566d49d0da6d5e3c7dae41867fa0417df919b5a9a9cbe8fb3e02dd69f77448")
+      public
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit)
+
+      /**
+       * @param databaseInputDefinition Connection information for dataset input files stored in a
+       * database.
+       */
+      public fun databaseInputDefinition(databaseInputDefinition: IResolvable)
+
+      /**
+       * @param databaseInputDefinition Connection information for dataset input files stored in a
+       * database.
+       */
+      public fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty)
+
+      /**
+       * @param databaseInputDefinition Connection information for dataset input files stored in a
+       * database.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("20cc6c2cb67cf12e5153173813edf5a1f135894874e3ec92e723e02fa5999d7b")
+      public
+          fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty.Builder.() -> Unit)
+
+      /**
+       * @param metadata Contains additional resource information needed for specific datasets.
+       */
+      public fun metadata(metadata: IResolvable)
+
+      /**
+       * @param metadata Contains additional resource information needed for specific datasets.
+       */
+      public fun metadata(metadata: MetadataProperty)
+
+      /**
+       * @param metadata Contains additional resource information needed for specific datasets.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ebc2eecbbafc42972874374b2ff846e2fdf8dc1e0ebd9e1fa459c63dc026f334")
+      public fun metadata(metadata: MetadataProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      public fun s3InputDefinition(s3InputDefinition: IResolvable)
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty)
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("941083a48d82f5dc84d462af94aa87336a198a841d72148455b37296db306422")
+      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnDataset.InputProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnDataset.InputProperty.builder()
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      override
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty::unwrap))
+      }
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e8566d49d0da6d5e3c7dae41867fa0417df919b5a9a9cbe8fb3e02dd69f77448")
+      override
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit):
+          Unit =
+          dataCatalogInputDefinition(DataCatalogInputDefinitionProperty(dataCatalogInputDefinition))
+
+      /**
+       * @param databaseInputDefinition Connection information for dataset input files stored in a
+       * database.
+       */
+      override fun databaseInputDefinition(databaseInputDefinition: IResolvable) {
+        cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param databaseInputDefinition Connection information for dataset input files stored in a
+       * database.
+       */
+      override
+          fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty) {
+        cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(DatabaseInputDefinitionProperty::unwrap))
+      }
+
+      /**
+       * @param databaseInputDefinition Connection information for dataset input files stored in a
+       * database.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("20cc6c2cb67cf12e5153173813edf5a1f135894874e3ec92e723e02fa5999d7b")
+      override
+          fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty.Builder.() -> Unit):
+          Unit = databaseInputDefinition(DatabaseInputDefinitionProperty(databaseInputDefinition))
+
+      /**
+       * @param metadata Contains additional resource information needed for specific datasets.
+       */
+      override fun metadata(metadata: IResolvable) {
+        cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metadata Contains additional resource information needed for specific datasets.
+       */
+      override fun metadata(metadata: MetadataProperty) {
+        cdkBuilder.metadata(metadata.let(MetadataProperty::unwrap))
+      }
+
+      /**
+       * @param metadata Contains additional resource information needed for specific datasets.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ebc2eecbbafc42972874374b2ff846e2fdf8dc1e0ebd9e1fa459c63dc026f334")
+      override fun metadata(metadata: MetadataProperty.Builder.() -> Unit): Unit =
+          metadata(MetadataProperty(metadata))
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      override fun s3InputDefinition(s3InputDefinition: IResolvable) {
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty::unwrap))
+      }
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("941083a48d82f5dc84d462af94aa87336a198a841d72148455b37296db306422")
+      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit): Unit
+          = s3InputDefinition(S3LocationProperty(s3InputDefinition))
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.InputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty,
+    ) : CdkObject(cdkObject), InputProperty {
+      /**
+       * The AWS Glue Data Catalog parameters for the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-datacataloginputdefinition)
+       */
+      override fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
+
+      /**
+       * Connection information for dataset input files stored in a database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-databaseinputdefinition)
+       */
+      override fun databaseInputDefinition(): Any? = unwrap(this).getDatabaseInputDefinition()
+
+      /**
+       * Contains additional resource information needed for specific datasets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-metadata)
+       */
+      override fun metadata(): Any? = unwrap(this).getMetadata()
+
+      /**
+       * The Amazon S3 location where the data is stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html#cfn-databrew-dataset-input-s3inputdefinition)
+       */
+      override fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty):
+          InputProperty = CdkObjectWrappers.wrap(cdkObject) as? InputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputProperty):
+          software.amazon.awscdk.services.databrew.CfnDataset.InputProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.databrew.CfnDataset.InputProperty
+    }
+  }
+
+  /**
+   * Represents the JSON-specific options that define how input is to be interpreted by AWS Glue
+   * DataBrew .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * JsonOptionsProperty jsonOptionsProperty = JsonOptionsProperty.builder()
+   * .multiLine(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html)
+   */
+  public interface JsonOptionsProperty {
+    /**
+     * A value that specifies whether JSON input contains embedded new line characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html#cfn-databrew-dataset-jsonoptions-multiline)
+     */
+    public fun multiLine(): Any? = unwrap(this).getMultiLine()
+
+    /**
+     * A builder for [JsonOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param multiLine A value that specifies whether JSON input contains embedded new line
+       * characters.
+       */
+      public fun multiLine(multiLine: Boolean)
+
+      /**
+       * @param multiLine A value that specifies whether JSON input contains embedded new line
+       * characters.
+       */
+      public fun multiLine(multiLine: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty.builder()
+
+      /**
+       * @param multiLine A value that specifies whether JSON input contains embedded new line
+       * characters.
+       */
+      override fun multiLine(multiLine: Boolean) {
+        cdkBuilder.multiLine(multiLine)
+      }
+
+      /**
+       * @param multiLine A value that specifies whether JSON input contains embedded new line
+       * characters.
+       */
+      override fun multiLine(multiLine: IResolvable) {
+        cdkBuilder.multiLine(multiLine.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty,
+    ) : CdkObject(cdkObject), JsonOptionsProperty {
+      /**
+       * A value that specifies whether JSON input contains embedded new line characters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html#cfn-databrew-dataset-jsonoptions-multiline)
+       */
+      override fun multiLine(): Any? = unwrap(this).getMultiLine()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JsonOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty):
+          JsonOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JsonOptionsProperty):
+          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty
+    }
+  }
+
+  /**
    * Contains additional resource information needed for specific datasets.
    *
    * Example:
@@ -2203,301 +2944,6 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty
-    }
-  }
-
-  /**
-   * Represents a dataset paramater that defines type and conditions for a parameter in the Amazon
-   * S3 path of the dataset.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * DatasetParameterProperty datasetParameterProperty = DatasetParameterProperty.builder()
-   * .name("name")
-   * .type("type")
-   * // the properties below are optional
-   * .createColumn(false)
-   * .datetimeOptions(DatetimeOptionsProperty.builder()
-   * .format("format")
-   * // the properties below are optional
-   * .localeCode("localeCode")
-   * .timezoneOffset("timezoneOffset")
-   * .build())
-   * .filter(FilterExpressionProperty.builder()
-   * .expression("expression")
-   * .valuesMap(List.of(FilterValueProperty.builder()
-   * .value("value")
-   * .valueReference("valueReference")
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html)
-   */
-  public interface DatasetParameterProperty {
-    /**
-     * Optional boolean value that defines whether the captured value of this parameter should be
-     * loaded as an additional column in the dataset.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-createcolumn)
-     */
-    public fun createColumn(): Any? = unwrap(this).getCreateColumn()
-
-    /**
-     * Additional parameter options such as a format and a timezone.
-     *
-     * Required for datetime parameters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-datetimeoptions)
-     */
-    public fun datetimeOptions(): Any? = unwrap(this).getDatetimeOptions()
-
-    /**
-     * The optional filter expression structure to apply additional matching criteria to the
-     * parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-filter)
-     */
-    public fun filter(): Any? = unwrap(this).getFilter()
-
-    /**
-     * The name of the parameter that is used in the dataset's Amazon S3 path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-name)
-     */
-    public fun name(): String
-
-    /**
-     * The type of the dataset parameter, can be one of a 'String', 'Number' or 'Datetime'.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [DatasetParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param createColumn Optional boolean value that defines whether the captured value of this
-       * parameter should be loaded as an additional column in the dataset.
-       */
-      public fun createColumn(createColumn: Boolean)
-
-      /**
-       * @param createColumn Optional boolean value that defines whether the captured value of this
-       * parameter should be loaded as an additional column in the dataset.
-       */
-      public fun createColumn(createColumn: IResolvable)
-
-      /**
-       * @param datetimeOptions Additional parameter options such as a format and a timezone.
-       * Required for datetime parameters.
-       */
-      public fun datetimeOptions(datetimeOptions: IResolvable)
-
-      /**
-       * @param datetimeOptions Additional parameter options such as a format and a timezone.
-       * Required for datetime parameters.
-       */
-      public fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty)
-
-      /**
-       * @param datetimeOptions Additional parameter options such as a format and a timezone.
-       * Required for datetime parameters.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("65a6693a7649a5bea13eff57488531548e480e904d0e34b14bccc2e10bfe22a1")
-      public fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty.Builder.() -> Unit)
-
-      /**
-       * @param filter The optional filter expression structure to apply additional matching
-       * criteria to the parameter.
-       */
-      public fun filter(filter: IResolvable)
-
-      /**
-       * @param filter The optional filter expression structure to apply additional matching
-       * criteria to the parameter.
-       */
-      public fun filter(filter: FilterExpressionProperty)
-
-      /**
-       * @param filter The optional filter expression structure to apply additional matching
-       * criteria to the parameter.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("060097b92684df8d43ad40538370f633df18b34aab4452e06dbe5e5f69c7955f")
-      public fun filter(filter: FilterExpressionProperty.Builder.() -> Unit)
-
-      /**
-       * @param name The name of the parameter that is used in the dataset's Amazon S3 path. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param type The type of the dataset parameter, can be one of a 'String', 'Number' or
-       * 'Datetime'. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty.builder()
-
-      /**
-       * @param createColumn Optional boolean value that defines whether the captured value of this
-       * parameter should be loaded as an additional column in the dataset.
-       */
-      override fun createColumn(createColumn: Boolean) {
-        cdkBuilder.createColumn(createColumn)
-      }
-
-      /**
-       * @param createColumn Optional boolean value that defines whether the captured value of this
-       * parameter should be loaded as an additional column in the dataset.
-       */
-      override fun createColumn(createColumn: IResolvable) {
-        cdkBuilder.createColumn(createColumn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param datetimeOptions Additional parameter options such as a format and a timezone.
-       * Required for datetime parameters.
-       */
-      override fun datetimeOptions(datetimeOptions: IResolvable) {
-        cdkBuilder.datetimeOptions(datetimeOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param datetimeOptions Additional parameter options such as a format and a timezone.
-       * Required for datetime parameters.
-       */
-      override fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty) {
-        cdkBuilder.datetimeOptions(datetimeOptions.let(DatetimeOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param datetimeOptions Additional parameter options such as a format and a timezone.
-       * Required for datetime parameters.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("65a6693a7649a5bea13eff57488531548e480e904d0e34b14bccc2e10bfe22a1")
-      override fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty.Builder.() -> Unit):
-          Unit = datetimeOptions(DatetimeOptionsProperty(datetimeOptions))
-
-      /**
-       * @param filter The optional filter expression structure to apply additional matching
-       * criteria to the parameter.
-       */
-      override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filter The optional filter expression structure to apply additional matching
-       * criteria to the parameter.
-       */
-      override fun filter(filter: FilterExpressionProperty) {
-        cdkBuilder.filter(filter.let(FilterExpressionProperty::unwrap))
-      }
-
-      /**
-       * @param filter The optional filter expression structure to apply additional matching
-       * criteria to the parameter.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("060097b92684df8d43ad40538370f633df18b34aab4452e06dbe5e5f69c7955f")
-      override fun filter(filter: FilterExpressionProperty.Builder.() -> Unit): Unit =
-          filter(FilterExpressionProperty(filter))
-
-      /**
-       * @param name The name of the parameter that is used in the dataset's Amazon S3 path. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param type The type of the dataset parameter, can be one of a 'String', 'Number' or
-       * 'Datetime'. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty,
-    ) : CdkObject(cdkObject), DatasetParameterProperty {
-      /**
-       * Optional boolean value that defines whether the captured value of this parameter should be
-       * loaded as an additional column in the dataset.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-createcolumn)
-       */
-      override fun createColumn(): Any? = unwrap(this).getCreateColumn()
-
-      /**
-       * Additional parameter options such as a format and a timezone.
-       *
-       * Required for datetime parameters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-datetimeoptions)
-       */
-      override fun datetimeOptions(): Any? = unwrap(this).getDatetimeOptions()
-
-      /**
-       * The optional filter expression structure to apply additional matching criteria to the
-       * parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-filter)
-       */
-      override fun filter(): Any? = unwrap(this).getFilter()
-
-      /**
-       * The name of the parameter that is used in the dataset's Amazon S3 path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The type of the dataset parameter, can be one of a 'String', 'Number' or 'Datetime'.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatasetParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty):
-          DatasetParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetParameterProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatasetParameterProperty):
-          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty
     }
   }
 
@@ -2770,163 +3216,6 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * Represents a limit imposed on number of Amazon S3 files that should be selected for a dataset
-   * from a connected Amazon S3 path.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * FilesLimitProperty filesLimitProperty = FilesLimitProperty.builder()
-   * .maxFiles(123)
-   * // the properties below are optional
-   * .order("order")
-   * .orderedBy("orderedBy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html)
-   */
-  public interface FilesLimitProperty {
-    /**
-     * The number of Amazon S3 files to select.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-maxfiles)
-     */
-    public fun maxFiles(): Number
-
-    /**
-     * A criteria to use for Amazon S3 files sorting before their selection.
-     *
-     * By default uses DESCENDING order, i.e. most recent files are selected first. Anotherpossible
-     * value is ASCENDING.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-order)
-     */
-    public fun order(): String? = unwrap(this).getOrder()
-
-    /**
-     * A criteria to use for Amazon S3 files sorting before their selection.
-     *
-     * By default uses LAST_MODIFIED_DATE as a sorting criteria. Currently it's the only allowed
-     * value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-orderedby)
-     */
-    public fun orderedBy(): String? = unwrap(this).getOrderedBy()
-
-    /**
-     * A builder for [FilesLimitProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxFiles The number of Amazon S3 files to select. 
-       */
-      public fun maxFiles(maxFiles: Number)
-
-      /**
-       * @param order A criteria to use for Amazon S3 files sorting before their selection.
-       * By default uses DESCENDING order, i.e. most recent files are selected first.
-       * Anotherpossible value is ASCENDING.
-       */
-      public fun order(order: String)
-
-      /**
-       * @param orderedBy A criteria to use for Amazon S3 files sorting before their selection.
-       * By default uses LAST_MODIFIED_DATE as a sorting criteria. Currently it's the only allowed
-       * value.
-       */
-      public fun orderedBy(orderedBy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty.builder()
-
-      /**
-       * @param maxFiles The number of Amazon S3 files to select. 
-       */
-      override fun maxFiles(maxFiles: Number) {
-        cdkBuilder.maxFiles(maxFiles)
-      }
-
-      /**
-       * @param order A criteria to use for Amazon S3 files sorting before their selection.
-       * By default uses DESCENDING order, i.e. most recent files are selected first.
-       * Anotherpossible value is ASCENDING.
-       */
-      override fun order(order: String) {
-        cdkBuilder.order(order)
-      }
-
-      /**
-       * @param orderedBy A criteria to use for Amazon S3 files sorting before their selection.
-       * By default uses LAST_MODIFIED_DATE as a sorting criteria. Currently it's the only allowed
-       * value.
-       */
-      override fun orderedBy(orderedBy: String) {
-        cdkBuilder.orderedBy(orderedBy)
-      }
-
-      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty,
-    ) : CdkObject(cdkObject), FilesLimitProperty {
-      /**
-       * The number of Amazon S3 files to select.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-maxfiles)
-       */
-      override fun maxFiles(): Number = unwrap(this).getMaxFiles()
-
-      /**
-       * A criteria to use for Amazon S3 files sorting before their selection.
-       *
-       * By default uses DESCENDING order, i.e. most recent files are selected first.
-       * Anotherpossible value is ASCENDING.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-order)
-       */
-      override fun order(): String? = unwrap(this).getOrder()
-
-      /**
-       * A criteria to use for Amazon S3 files sorting before their selection.
-       *
-       * By default uses LAST_MODIFIED_DATE as a sorting criteria. Currently it's the only allowed
-       * value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-orderedby)
-       */
-      override fun orderedBy(): String? = unwrap(this).getOrderedBy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilesLimitProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty):
-          FilesLimitProperty = CdkObjectWrappers.wrap(cdkObject) as? FilesLimitProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilesLimitProperty):
-          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty
-    }
-  }
-
-  /**
    * Represents a single entry in the path parameters of a dataset.
    *
    * Each `PathParameter` consists of a name and a parameter definition.
@@ -3082,7 +3371,8 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * Represents a structure for defining parameter conditions.
+   * Represents an Amazon S3 location (bucket name, bucket owner, and object key) where DataBrew can
+   * read input data, or write output from a job.
    *
    * Example:
    *
@@ -3090,393 +3380,103 @@ public open class CfnDataset internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * FilterExpressionProperty filterExpressionProperty = FilterExpressionProperty.builder()
-   * .expression("expression")
-   * .valuesMap(List.of(FilterValueProperty.builder()
-   * .value("value")
-   * .valueReference("valueReference")
-   * .build()))
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .key("key")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html)
    */
-  public interface FilterExpressionProperty {
+  public interface S3LocationProperty {
     /**
-     * The expression which includes condition names followed by substitution variables, possibly
-     * grouped and combined with other conditions.
+     * The Amazon S3 bucket name.
      *
-     * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
-     * ends_with :suffix2)". Substitution variables should start with ':' symbol.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-expression)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucket)
      */
-    public fun expression(): String
+    public fun bucket(): String
 
     /**
-     * The map of substitution variable names to their values used in this filter expression.
+     * The unique name of the object in the bucket.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-valuesmap)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-key)
      */
-    public fun valuesMap(): Any
+    public fun key(): String? = unwrap(this).getKey()
 
     /**
-     * A builder for [FilterExpressionProperty]
+     * A builder for [S3LocationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param expression The expression which includes condition names followed by substitution
-       * variables, possibly grouped and combined with other conditions. 
-       * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
-       * ends_with :suffix2)". Substitution variables should start with ':' symbol.
+       * @param bucket The Amazon S3 bucket name. 
        */
-      public fun expression(expression: String)
+      public fun bucket(bucket: String)
 
       /**
-       * @param valuesMap The map of substitution variable names to their values used in this filter
-       * expression. 
+       * @param key The unique name of the object in the bucket.
        */
-      public fun valuesMap(valuesMap: IResolvable)
-
-      /**
-       * @param valuesMap The map of substitution variable names to their values used in this filter
-       * expression. 
-       */
-      public fun valuesMap(valuesMap: List<Any>)
-
-      /**
-       * @param valuesMap The map of substitution variable names to their values used in this filter
-       * expression. 
-       */
-      public fun valuesMap(vararg valuesMap: Any)
+      public fun key(key: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty.builder()
+          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty.builder()
 
       /**
-       * @param expression The expression which includes condition names followed by substitution
-       * variables, possibly grouped and combined with other conditions. 
-       * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
-       * ends_with :suffix2)". Substitution variables should start with ':' symbol.
+       * @param bucket The Amazon S3 bucket name. 
        */
-      override fun expression(expression: String) {
-        cdkBuilder.expression(expression)
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
       }
 
       /**
-       * @param valuesMap The map of substitution variable names to their values used in this filter
-       * expression. 
+       * @param key The unique name of the object in the bucket.
        */
-      override fun valuesMap(valuesMap: IResolvable) {
-        cdkBuilder.valuesMap(valuesMap.let(IResolvable::unwrap))
+      override fun key(key: String) {
+        cdkBuilder.key(key)
       }
 
-      /**
-       * @param valuesMap The map of substitution variable names to their values used in this filter
-       * expression. 
-       */
-      override fun valuesMap(valuesMap: List<Any>) {
-        cdkBuilder.valuesMap(valuesMap)
-      }
-
-      /**
-       * @param valuesMap The map of substitution variable names to their values used in this filter
-       * expression. 
-       */
-      override fun valuesMap(vararg valuesMap: Any): Unit = valuesMap(valuesMap.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty =
+      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty,
-    ) : CdkObject(cdkObject), FilterExpressionProperty {
+          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty,
+    ) : CdkObject(cdkObject), S3LocationProperty {
       /**
-       * The expression which includes condition names followed by substitution variables, possibly
-       * grouped and combined with other conditions.
+       * The Amazon S3 bucket name.
        *
-       * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
-       * ends_with :suffix2)". Substitution variables should start with ':' symbol.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-expression)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucket)
        */
-      override fun expression(): String = unwrap(this).getExpression()
+      override fun bucket(): String = unwrap(this).getBucket()
 
       /**
-       * The map of substitution variable names to their values used in this filter expression.
+       * The unique name of the object in the bucket.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-valuesmap)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-key)
        */
-      override fun valuesMap(): Any = unwrap(this).getValuesMap()
+      override fun key(): String? = unwrap(this).getKey()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterExpressionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty):
-          FilterExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterExpressionProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterExpressionProperty):
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty
-    }
-  }
-
-  /**
-   * Represents a set of options that define how DataBrew will read a comma-separated value (CSV)
-   * file when creating a dataset from that file.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * CsvOptionsProperty csvOptionsProperty = CsvOptionsProperty.builder()
-   * .delimiter("delimiter")
-   * .headerRow(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html)
-   */
-  public interface CsvOptionsProperty {
-    /**
-     * A single character that specifies the delimiter being used in the CSV file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-delimiter)
-     */
-    public fun delimiter(): String? = unwrap(this).getDelimiter()
-
-    /**
-     * A variable that specifies whether the first row in the file is parsed as the header.
-     *
-     * If this value is false, column names are auto-generated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-headerrow)
-     */
-    public fun headerRow(): Any? = unwrap(this).getHeaderRow()
-
-    /**
-     * A builder for [CsvOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param delimiter A single character that specifies the delimiter being used in the CSV
-       * file.
-       */
-      public fun delimiter(delimiter: String)
-
-      /**
-       * @param headerRow A variable that specifies whether the first row in the file is parsed as
-       * the header.
-       * If this value is false, column names are auto-generated.
-       */
-      public fun headerRow(headerRow: Boolean)
-
-      /**
-       * @param headerRow A variable that specifies whether the first row in the file is parsed as
-       * the header.
-       * If this value is false, column names are auto-generated.
-       */
-      public fun headerRow(headerRow: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty.builder()
-
-      /**
-       * @param delimiter A single character that specifies the delimiter being used in the CSV
-       * file.
-       */
-      override fun delimiter(delimiter: String) {
-        cdkBuilder.delimiter(delimiter)
-      }
-
-      /**
-       * @param headerRow A variable that specifies whether the first row in the file is parsed as
-       * the header.
-       * If this value is false, column names are auto-generated.
-       */
-      override fun headerRow(headerRow: Boolean) {
-        cdkBuilder.headerRow(headerRow)
-      }
-
-      /**
-       * @param headerRow A variable that specifies whether the first row in the file is parsed as
-       * the header.
-       * If this value is false, column names are auto-generated.
-       */
-      override fun headerRow(headerRow: IResolvable) {
-        cdkBuilder.headerRow(headerRow.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty,
-    ) : CdkObject(cdkObject), CsvOptionsProperty {
-      /**
-       * A single character that specifies the delimiter being used in the CSV file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-delimiter)
-       */
-      override fun delimiter(): String? = unwrap(this).getDelimiter()
-
-      /**
-       * A variable that specifies whether the first row in the file is parsed as the header.
-       *
-       * If this value is false, column names are auto-generated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-headerrow)
-       */
-      override fun headerRow(): Any? = unwrap(this).getHeaderRow()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CsvOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty):
-          CsvOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvOptionsProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CsvOptionsProperty):
-          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty = (wrapped as
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty
-    }
-  }
-
-  /**
-   * Represents a single entry in the `ValuesMap` of a `FilterExpression` .
-   *
-   * A `FilterValue` associates the name of a substitution variable in an expression to its value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * FilterValueProperty filterValueProperty = FilterValueProperty.builder()
-   * .value("value")
-   * .valueReference("valueReference")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html)
-   */
-  public interface FilterValueProperty {
-    /**
-     * The value to be associated with the substitution variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * The substitution variable reference.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-valuereference)
-     */
-    public fun valueReference(): String
-
-    /**
-     * A builder for [FilterValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value The value to be associated with the substitution variable. 
-       */
-      public fun `value`(`value`: String)
-
-      /**
-       * @param valueReference The substitution variable reference. 
-       */
-      public fun valueReference(valueReference: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty.builder()
-
-      /**
-       * @param value The value to be associated with the substitution variable. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      /**
-       * @param valueReference The substitution variable reference. 
-       */
-      override fun valueReference(valueReference: String) {
-        cdkBuilder.valueReference(valueReference)
-      }
-
-      public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty,
-    ) : CdkObject(cdkObject), FilterValueProperty {
-      /**
-       * The value to be associated with the substitution variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-
-      /**
-       * The substitution variable reference.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-valuereference)
-       */
-      override fun valueReference(): String = unwrap(this).getValueReference()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty):
-          FilterValueProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterValueProperty):
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty
+          software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty
     }
   }
 }

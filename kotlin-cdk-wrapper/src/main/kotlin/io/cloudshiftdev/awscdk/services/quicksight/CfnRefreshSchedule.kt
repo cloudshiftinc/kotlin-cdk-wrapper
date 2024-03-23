@@ -268,264 +268,6 @@ public open class CfnRefreshSchedule internal constructor(
   }
 
   /**
-   * The frequency for the refresh schedule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * ScheduleFrequencyProperty scheduleFrequencyProperty = ScheduleFrequencyProperty.builder()
-   * .interval("interval")
-   * .refreshOnDay(RefreshOnDayProperty.builder()
-   * .dayOfMonth("dayOfMonth")
-   * .dayOfWeek("dayOfWeek")
-   * .build())
-   * .timeOfTheDay("timeOfTheDay")
-   * .timeZone("timeZone")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html)
-   */
-  public interface ScheduleFrequencyProperty {
-    /**
-     * The interval between scheduled refreshes. Valid values are as follows:.
-     *
-     * * `MINUTE15` : The dataset refreshes every 15 minutes. This value is only supported for
-     * incremental refreshes. This interval can only be used for one schedule per dataset.
-     * * `MINUTE30` : The dataset refreshes every 30 minutes. This value is only supported for
-     * incremental refreshes. This interval can only be used for one schedule per dataset.
-     * * `HOURLY` : The dataset refreshes every hour. This interval can only be used for one
-     * schedule per dataset.
-     * * `DAILY` : The dataset refreshes every day.
-     * * `WEEKLY` : The dataset refreshes every week.
-     * * `MONTHLY` : The dataset refreshes every month.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-interval)
-     */
-    public fun interval(): String? = unwrap(this).getInterval()
-
-    /**
-     * The day of the week that you want to schedule the refresh on.
-     *
-     * This value is required for weekly and monthly refresh intervals.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-refreshonday)
-     */
-    public fun refreshOnDay(): Any? = unwrap(this).getRefreshOnDay()
-
-    /**
-     * The time of day that you want the dataset to refresh.
-     *
-     * This value is expressed in HH:MM format. This field is not required for schedules that
-     * refresh hourly.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-timeoftheday)
-     */
-    public fun timeOfTheDay(): String? = unwrap(this).getTimeOfTheDay()
-
-    /**
-     * The timezone that you want the refresh schedule to use.
-     *
-     * The timezone ID must match a corresponding ID found on `java.util.time.getAvailableIDs()` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-timezone)
-     */
-    public fun timeZone(): String? = unwrap(this).getTimeZone()
-
-    /**
-     * A builder for [ScheduleFrequencyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param interval The interval between scheduled refreshes. Valid values are as follows:.
-       * * `MINUTE15` : The dataset refreshes every 15 minutes. This value is only supported for
-       * incremental refreshes. This interval can only be used for one schedule per dataset.
-       * * `MINUTE30` : The dataset refreshes every 30 minutes. This value is only supported for
-       * incremental refreshes. This interval can only be used for one schedule per dataset.
-       * * `HOURLY` : The dataset refreshes every hour. This interval can only be used for one
-       * schedule per dataset.
-       * * `DAILY` : The dataset refreshes every day.
-       * * `WEEKLY` : The dataset refreshes every week.
-       * * `MONTHLY` : The dataset refreshes every month.
-       */
-      public fun interval(interval: String)
-
-      /**
-       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
-       * This value is required for weekly and monthly refresh intervals.
-       */
-      public fun refreshOnDay(refreshOnDay: IResolvable)
-
-      /**
-       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
-       * This value is required for weekly and monthly refresh intervals.
-       */
-      public fun refreshOnDay(refreshOnDay: RefreshOnDayProperty)
-
-      /**
-       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
-       * This value is required for weekly and monthly refresh intervals.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2aabefabd2b49635906ee287c73e7cab744c88a7bdfcfa93bfe65dda8f54d64e")
-      public fun refreshOnDay(refreshOnDay: RefreshOnDayProperty.Builder.() -> Unit)
-
-      /**
-       * @param timeOfTheDay The time of day that you want the dataset to refresh.
-       * This value is expressed in HH:MM format. This field is not required for schedules that
-       * refresh hourly.
-       */
-      public fun timeOfTheDay(timeOfTheDay: String)
-
-      /**
-       * @param timeZone The timezone that you want the refresh schedule to use.
-       * The timezone ID must match a corresponding ID found on `java.util.time.getAvailableIDs()` .
-       */
-      public fun timeZone(timeZone: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty.Builder
-          =
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty.builder()
-
-      /**
-       * @param interval The interval between scheduled refreshes. Valid values are as follows:.
-       * * `MINUTE15` : The dataset refreshes every 15 minutes. This value is only supported for
-       * incremental refreshes. This interval can only be used for one schedule per dataset.
-       * * `MINUTE30` : The dataset refreshes every 30 minutes. This value is only supported for
-       * incremental refreshes. This interval can only be used for one schedule per dataset.
-       * * `HOURLY` : The dataset refreshes every hour. This interval can only be used for one
-       * schedule per dataset.
-       * * `DAILY` : The dataset refreshes every day.
-       * * `WEEKLY` : The dataset refreshes every week.
-       * * `MONTHLY` : The dataset refreshes every month.
-       */
-      override fun interval(interval: String) {
-        cdkBuilder.interval(interval)
-      }
-
-      /**
-       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
-       * This value is required for weekly and monthly refresh intervals.
-       */
-      override fun refreshOnDay(refreshOnDay: IResolvable) {
-        cdkBuilder.refreshOnDay(refreshOnDay.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
-       * This value is required for weekly and monthly refresh intervals.
-       */
-      override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty) {
-        cdkBuilder.refreshOnDay(refreshOnDay.let(RefreshOnDayProperty::unwrap))
-      }
-
-      /**
-       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
-       * This value is required for weekly and monthly refresh intervals.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2aabefabd2b49635906ee287c73e7cab744c88a7bdfcfa93bfe65dda8f54d64e")
-      override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty.Builder.() -> Unit): Unit =
-          refreshOnDay(RefreshOnDayProperty(refreshOnDay))
-
-      /**
-       * @param timeOfTheDay The time of day that you want the dataset to refresh.
-       * This value is expressed in HH:MM format. This field is not required for schedules that
-       * refresh hourly.
-       */
-      override fun timeOfTheDay(timeOfTheDay: String) {
-        cdkBuilder.timeOfTheDay(timeOfTheDay)
-      }
-
-      /**
-       * @param timeZone The timezone that you want the refresh schedule to use.
-       * The timezone ID must match a corresponding ID found on `java.util.time.getAvailableIDs()` .
-       */
-      override fun timeZone(timeZone: String) {
-        cdkBuilder.timeZone(timeZone)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty,
-    ) : CdkObject(cdkObject), ScheduleFrequencyProperty {
-      /**
-       * The interval between scheduled refreshes. Valid values are as follows:.
-       *
-       * * `MINUTE15` : The dataset refreshes every 15 minutes. This value is only supported for
-       * incremental refreshes. This interval can only be used for one schedule per dataset.
-       * * `MINUTE30` : The dataset refreshes every 30 minutes. This value is only supported for
-       * incremental refreshes. This interval can only be used for one schedule per dataset.
-       * * `HOURLY` : The dataset refreshes every hour. This interval can only be used for one
-       * schedule per dataset.
-       * * `DAILY` : The dataset refreshes every day.
-       * * `WEEKLY` : The dataset refreshes every week.
-       * * `MONTHLY` : The dataset refreshes every month.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-interval)
-       */
-      override fun interval(): String? = unwrap(this).getInterval()
-
-      /**
-       * The day of the week that you want to schedule the refresh on.
-       *
-       * This value is required for weekly and monthly refresh intervals.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-refreshonday)
-       */
-      override fun refreshOnDay(): Any? = unwrap(this).getRefreshOnDay()
-
-      /**
-       * The time of day that you want the dataset to refresh.
-       *
-       * This value is expressed in HH:MM format. This field is not required for schedules that
-       * refresh hourly.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-timeoftheday)
-       */
-      override fun timeOfTheDay(): String? = unwrap(this).getTimeOfTheDay()
-
-      /**
-       * The timezone that you want the refresh schedule to use.
-       *
-       * The timezone ID must match a corresponding ID found on `java.util.time.getAvailableIDs()` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-timezone)
-       */
-      override fun timeZone(): String? = unwrap(this).getTimeZone()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleFrequencyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty):
-          ScheduleFrequencyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ScheduleFrequencyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduleFrequencyProperty):
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty
-    }
-  }
-
-  /**
    * The day that you want yout dataset to refresh.
    *
    * Example:
@@ -880,6 +622,264 @@ public open class CfnRefreshSchedule internal constructor(
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty
+    }
+  }
+
+  /**
+   * The frequency for the refresh schedule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * ScheduleFrequencyProperty scheduleFrequencyProperty = ScheduleFrequencyProperty.builder()
+   * .interval("interval")
+   * .refreshOnDay(RefreshOnDayProperty.builder()
+   * .dayOfMonth("dayOfMonth")
+   * .dayOfWeek("dayOfWeek")
+   * .build())
+   * .timeOfTheDay("timeOfTheDay")
+   * .timeZone("timeZone")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html)
+   */
+  public interface ScheduleFrequencyProperty {
+    /**
+     * The interval between scheduled refreshes. Valid values are as follows:.
+     *
+     * * `MINUTE15` : The dataset refreshes every 15 minutes. This value is only supported for
+     * incremental refreshes. This interval can only be used for one schedule per dataset.
+     * * `MINUTE30` : The dataset refreshes every 30 minutes. This value is only supported for
+     * incremental refreshes. This interval can only be used for one schedule per dataset.
+     * * `HOURLY` : The dataset refreshes every hour. This interval can only be used for one
+     * schedule per dataset.
+     * * `DAILY` : The dataset refreshes every day.
+     * * `WEEKLY` : The dataset refreshes every week.
+     * * `MONTHLY` : The dataset refreshes every month.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-interval)
+     */
+    public fun interval(): String? = unwrap(this).getInterval()
+
+    /**
+     * The day of the week that you want to schedule the refresh on.
+     *
+     * This value is required for weekly and monthly refresh intervals.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-refreshonday)
+     */
+    public fun refreshOnDay(): Any? = unwrap(this).getRefreshOnDay()
+
+    /**
+     * The time of day that you want the dataset to refresh.
+     *
+     * This value is expressed in HH:MM format. This field is not required for schedules that
+     * refresh hourly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-timeoftheday)
+     */
+    public fun timeOfTheDay(): String? = unwrap(this).getTimeOfTheDay()
+
+    /**
+     * The timezone that you want the refresh schedule to use.
+     *
+     * The timezone ID must match a corresponding ID found on `java.util.time.getAvailableIDs()` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-timezone)
+     */
+    public fun timeZone(): String? = unwrap(this).getTimeZone()
+
+    /**
+     * A builder for [ScheduleFrequencyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param interval The interval between scheduled refreshes. Valid values are as follows:.
+       * * `MINUTE15` : The dataset refreshes every 15 minutes. This value is only supported for
+       * incremental refreshes. This interval can only be used for one schedule per dataset.
+       * * `MINUTE30` : The dataset refreshes every 30 minutes. This value is only supported for
+       * incremental refreshes. This interval can only be used for one schedule per dataset.
+       * * `HOURLY` : The dataset refreshes every hour. This interval can only be used for one
+       * schedule per dataset.
+       * * `DAILY` : The dataset refreshes every day.
+       * * `WEEKLY` : The dataset refreshes every week.
+       * * `MONTHLY` : The dataset refreshes every month.
+       */
+      public fun interval(interval: String)
+
+      /**
+       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
+       * This value is required for weekly and monthly refresh intervals.
+       */
+      public fun refreshOnDay(refreshOnDay: IResolvable)
+
+      /**
+       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
+       * This value is required for weekly and monthly refresh intervals.
+       */
+      public fun refreshOnDay(refreshOnDay: RefreshOnDayProperty)
+
+      /**
+       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
+       * This value is required for weekly and monthly refresh intervals.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2aabefabd2b49635906ee287c73e7cab744c88a7bdfcfa93bfe65dda8f54d64e")
+      public fun refreshOnDay(refreshOnDay: RefreshOnDayProperty.Builder.() -> Unit)
+
+      /**
+       * @param timeOfTheDay The time of day that you want the dataset to refresh.
+       * This value is expressed in HH:MM format. This field is not required for schedules that
+       * refresh hourly.
+       */
+      public fun timeOfTheDay(timeOfTheDay: String)
+
+      /**
+       * @param timeZone The timezone that you want the refresh schedule to use.
+       * The timezone ID must match a corresponding ID found on `java.util.time.getAvailableIDs()` .
+       */
+      public fun timeZone(timeZone: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty.builder()
+
+      /**
+       * @param interval The interval between scheduled refreshes. Valid values are as follows:.
+       * * `MINUTE15` : The dataset refreshes every 15 minutes. This value is only supported for
+       * incremental refreshes. This interval can only be used for one schedule per dataset.
+       * * `MINUTE30` : The dataset refreshes every 30 minutes. This value is only supported for
+       * incremental refreshes. This interval can only be used for one schedule per dataset.
+       * * `HOURLY` : The dataset refreshes every hour. This interval can only be used for one
+       * schedule per dataset.
+       * * `DAILY` : The dataset refreshes every day.
+       * * `WEEKLY` : The dataset refreshes every week.
+       * * `MONTHLY` : The dataset refreshes every month.
+       */
+      override fun interval(interval: String) {
+        cdkBuilder.interval(interval)
+      }
+
+      /**
+       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
+       * This value is required for weekly and monthly refresh intervals.
+       */
+      override fun refreshOnDay(refreshOnDay: IResolvable) {
+        cdkBuilder.refreshOnDay(refreshOnDay.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
+       * This value is required for weekly and monthly refresh intervals.
+       */
+      override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty) {
+        cdkBuilder.refreshOnDay(refreshOnDay.let(RefreshOnDayProperty::unwrap))
+      }
+
+      /**
+       * @param refreshOnDay The day of the week that you want to schedule the refresh on.
+       * This value is required for weekly and monthly refresh intervals.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2aabefabd2b49635906ee287c73e7cab744c88a7bdfcfa93bfe65dda8f54d64e")
+      override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty.Builder.() -> Unit): Unit =
+          refreshOnDay(RefreshOnDayProperty(refreshOnDay))
+
+      /**
+       * @param timeOfTheDay The time of day that you want the dataset to refresh.
+       * This value is expressed in HH:MM format. This field is not required for schedules that
+       * refresh hourly.
+       */
+      override fun timeOfTheDay(timeOfTheDay: String) {
+        cdkBuilder.timeOfTheDay(timeOfTheDay)
+      }
+
+      /**
+       * @param timeZone The timezone that you want the refresh schedule to use.
+       * The timezone ID must match a corresponding ID found on `java.util.time.getAvailableIDs()` .
+       */
+      override fun timeZone(timeZone: String) {
+        cdkBuilder.timeZone(timeZone)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty,
+    ) : CdkObject(cdkObject), ScheduleFrequencyProperty {
+      /**
+       * The interval between scheduled refreshes. Valid values are as follows:.
+       *
+       * * `MINUTE15` : The dataset refreshes every 15 minutes. This value is only supported for
+       * incremental refreshes. This interval can only be used for one schedule per dataset.
+       * * `MINUTE30` : The dataset refreshes every 30 minutes. This value is only supported for
+       * incremental refreshes. This interval can only be used for one schedule per dataset.
+       * * `HOURLY` : The dataset refreshes every hour. This interval can only be used for one
+       * schedule per dataset.
+       * * `DAILY` : The dataset refreshes every day.
+       * * `WEEKLY` : The dataset refreshes every week.
+       * * `MONTHLY` : The dataset refreshes every month.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-interval)
+       */
+      override fun interval(): String? = unwrap(this).getInterval()
+
+      /**
+       * The day of the week that you want to schedule the refresh on.
+       *
+       * This value is required for weekly and monthly refresh intervals.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-refreshonday)
+       */
+      override fun refreshOnDay(): Any? = unwrap(this).getRefreshOnDay()
+
+      /**
+       * The time of day that you want the dataset to refresh.
+       *
+       * This value is expressed in HH:MM format. This field is not required for schedules that
+       * refresh hourly.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-timeoftheday)
+       */
+      override fun timeOfTheDay(): String? = unwrap(this).getTimeOfTheDay()
+
+      /**
+       * The timezone that you want the refresh schedule to use.
+       *
+       * The timezone ID must match a corresponding ID found on `java.util.time.getAvailableIDs()` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html#cfn-quicksight-refreshschedule-schedulefrequency-timezone)
+       */
+      override fun timeZone(): String? = unwrap(this).getTimeZone()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleFrequencyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty):
+          ScheduleFrequencyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduleFrequencyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScheduleFrequencyProperty):
+          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty
     }
   }
 }

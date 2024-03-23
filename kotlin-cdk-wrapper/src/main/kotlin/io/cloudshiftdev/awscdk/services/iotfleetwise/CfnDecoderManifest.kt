@@ -677,8 +677,14 @@ public open class CfnDecoderManifest internal constructor(
   }
 
   /**
-   * Information about signal messages using the on-board diagnostics (OBD) II protocol in a
-   * vehicle.
+   * Represents a node and its specifications in an in-vehicle communication network.
+   *
+   * All signal decoders must be associated with a network node.
+   *
+   * To return this information about all the network interfaces specified in a decoder manifest,
+   * use the
+   * [ListDecoderManifestNetworkInterfaces](https://docs.aws.amazon.com/iot-fleetwise/latest/APIReference/API_ListDecoderManifestNetworkInterfaces.html)
+   * in the *AWS IoT FleetWise API Reference* .
    *
    * Example:
    *
@@ -686,300 +692,1162 @@ public open class CfnDecoderManifest internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * ObdSignalProperty obdSignalProperty = ObdSignalProperty.builder()
-   * .byteLength("byteLength")
-   * .offset("offset")
-   * .pid("pid")
-   * .pidResponseLength("pidResponseLength")
-   * .scaling("scaling")
-   * .serviceMode("serviceMode")
-   * .startByte("startByte")
+   * CanNetworkInterfaceProperty canNetworkInterfaceProperty = CanNetworkInterfaceProperty.builder()
+   * .canInterface(CanInterfaceProperty.builder()
+   * .name("name")
    * // the properties below are optional
-   * .bitMaskLength("bitMaskLength")
-   * .bitRightShift("bitRightShift")
+   * .protocolName("protocolName")
+   * .protocolVersion("protocolVersion")
+   * .build())
+   * .interfaceId("interfaceId")
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html)
    */
-  public interface ObdSignalProperty {
+  public interface CanNetworkInterfaceProperty {
     /**
-     * (Optional) The number of bits to mask in a message.
+     * Information about a network interface specified by the Controller Area Network (CAN)
+     * protocol.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitmasklength)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-caninterface)
      */
-    public fun bitMaskLength(): String? = unwrap(this).getBitMaskLength()
+    public fun canInterface(): Any
 
     /**
-     * (Optional) The number of positions to shift bits in the message.
+     * The ID of the network interface.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitrightshift)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-interfaceid)
      */
-    public fun bitRightShift(): String? = unwrap(this).getBitRightShift()
+    public fun interfaceId(): String
 
     /**
-     * The length of a message.
+     * The network protocol for the vehicle.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bytelength)
+     * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated between
+     * electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+     * self-diagnostic data is communicated between ECUs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-type)
      */
-    public fun byteLength(): String
+    public fun type(): String
 
     /**
-     * The offset used to calculate the signal value.
-     *
-     * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-offset)
-     */
-    public fun offset(): String
-
-    /**
-     * The diagnostic code used to request data from a vehicle for this signal.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-pid)
-     */
-    public fun pid(): String
-
-    /**
-     * The length of the requested data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-pidresponselength)
-     */
-    public fun pidResponseLength(): String
-
-    /**
-     * A multiplier used to decode the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-scaling)
-     */
-    public fun scaling(): String
-
-    /**
-     * The mode of operation (diagnostic service) in a message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-servicemode)
-     */
-    public fun serviceMode(): String
-
-    /**
-     * Indicates the beginning of the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-startbyte)
-     */
-    public fun startByte(): String
-
-    /**
-     * A builder for [ObdSignalProperty]
+     * A builder for [CanNetworkInterfaceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bitMaskLength (Optional) The number of bits to mask in a message.
+       * @param canInterface Information about a network interface specified by the Controller Area
+       * Network (CAN) protocol. 
        */
-      public fun bitMaskLength(bitMaskLength: String)
+      public fun canInterface(canInterface: IResolvable)
 
       /**
-       * @param bitRightShift (Optional) The number of positions to shift bits in the message.
+       * @param canInterface Information about a network interface specified by the Controller Area
+       * Network (CAN) protocol. 
        */
-      public fun bitRightShift(bitRightShift: String)
+      public fun canInterface(canInterface: CanInterfaceProperty)
 
       /**
-       * @param byteLength The length of a message. 
+       * @param canInterface Information about a network interface specified by the Controller Area
+       * Network (CAN) protocol. 
        */
-      public fun byteLength(byteLength: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2bb3dae54526a244431924d675fa419eff6b69f0d87bbfe3ffc677046131a6f5")
+      public fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit)
 
       /**
-       * @param offset The offset used to calculate the signal value. 
-       * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
+       * @param interfaceId The ID of the network interface. 
        */
-      public fun offset(offset: String)
+      public fun interfaceId(interfaceId: String)
 
       /**
-       * @param pid The diagnostic code used to request data from a vehicle for this signal. 
+       * @param type The network protocol for the vehicle. 
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
        */
-      public fun pid(pid: String)
-
-      /**
-       * @param pidResponseLength The length of the requested data. 
-       */
-      public fun pidResponseLength(pidResponseLength: String)
-
-      /**
-       * @param scaling A multiplier used to decode the message. 
-       */
-      public fun scaling(scaling: String)
-
-      /**
-       * @param serviceMode The mode of operation (diagnostic service) in a message. 
-       */
-      public fun serviceMode(serviceMode: String)
-
-      /**
-       * @param startByte Indicates the beginning of the message. 
-       */
-      public fun startByte(startByte: String)
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty.Builder
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty.Builder
           =
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty.builder()
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty.builder()
 
       /**
-       * @param bitMaskLength (Optional) The number of bits to mask in a message.
+       * @param canInterface Information about a network interface specified by the Controller Area
+       * Network (CAN) protocol. 
        */
-      override fun bitMaskLength(bitMaskLength: String) {
-        cdkBuilder.bitMaskLength(bitMaskLength)
+      override fun canInterface(canInterface: IResolvable) {
+        cdkBuilder.canInterface(canInterface.let(IResolvable::unwrap))
       }
 
       /**
-       * @param bitRightShift (Optional) The number of positions to shift bits in the message.
+       * @param canInterface Information about a network interface specified by the Controller Area
+       * Network (CAN) protocol. 
        */
-      override fun bitRightShift(bitRightShift: String) {
-        cdkBuilder.bitRightShift(bitRightShift)
+      override fun canInterface(canInterface: CanInterfaceProperty) {
+        cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty::unwrap))
       }
 
       /**
-       * @param byteLength The length of a message. 
+       * @param canInterface Information about a network interface specified by the Controller Area
+       * Network (CAN) protocol. 
        */
-      override fun byteLength(byteLength: String) {
-        cdkBuilder.byteLength(byteLength)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2bb3dae54526a244431924d675fa419eff6b69f0d87bbfe3ffc677046131a6f5")
+      override fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit): Unit =
+          canInterface(CanInterfaceProperty(canInterface))
+
+      /**
+       * @param interfaceId The ID of the network interface. 
+       */
+      override fun interfaceId(interfaceId: String) {
+        cdkBuilder.interfaceId(interfaceId)
+      }
+
+      /**
+       * @param type The network protocol for the vehicle. 
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty,
+    ) : CdkObject(cdkObject), CanNetworkInterfaceProperty {
+      /**
+       * Information about a network interface specified by the Controller Area Network (CAN)
+       * protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-caninterface)
+       */
+      override fun canInterface(): Any = unwrap(this).getCanInterface()
+
+      /**
+       * The ID of the network interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-interfaceid)
+       */
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
+
+      /**
+       * The network protocol for the vehicle.
+       *
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CanNetworkInterfaceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty):
+          CanNetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CanNetworkInterfaceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CanNetworkInterfaceProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty
+    }
+  }
+
+  /**
+   * Information about signal decoder using the Controller Area Network (CAN) protocol.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * CanSignalDecoderProperty canSignalDecoderProperty = CanSignalDecoderProperty.builder()
+   * .canSignal(CanSignalProperty.builder()
+   * .factor("factor")
+   * .isBigEndian("isBigEndian")
+   * .isSigned("isSigned")
+   * .length("length")
+   * .messageId("messageId")
+   * .offset("offset")
+   * .startBit("startBit")
+   * // the properties below are optional
+   * .name("name")
+   * .build())
+   * .fullyQualifiedName("fullyQualifiedName")
+   * .interfaceId("interfaceId")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html)
+   */
+  public interface CanSignalDecoderProperty {
+    /**
+     * Information about a single controller area network (CAN) signal and the messages it receives
+     * and transmits.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-cansignal)
+     */
+    public fun canSignal(): Any
+
+    /**
+     * The fully qualified name of a signal decoder as defined in a vehicle model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-fullyqualifiedname)
+     */
+    public fun fullyQualifiedName(): String
+
+    /**
+     * The ID of a network interface that specifies what network protocol a vehicle follows.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-interfaceid)
+     */
+    public fun interfaceId(): String
+
+    /**
+     * The network protocol for the vehicle.
+     *
+     * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated between
+     * electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+     * self-diagnostic data is communicated between ECUs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [CanSignalDecoderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param canSignal Information about a single controller area network (CAN) signal and the
+       * messages it receives and transmits. 
+       */
+      public fun canSignal(canSignal: IResolvable)
+
+      /**
+       * @param canSignal Information about a single controller area network (CAN) signal and the
+       * messages it receives and transmits. 
+       */
+      public fun canSignal(canSignal: CanSignalProperty)
+
+      /**
+       * @param canSignal Information about a single controller area network (CAN) signal and the
+       * messages it receives and transmits. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1f2a1842cbcac4f2b866b161094e72b63d3112354f748ef6d99bc66cf3d200f3")
+      public fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit)
+
+      /**
+       * @param fullyQualifiedName The fully qualified name of a signal decoder as defined in a
+       * vehicle model. 
+       */
+      public fun fullyQualifiedName(fullyQualifiedName: String)
+
+      /**
+       * @param interfaceId The ID of a network interface that specifies what network protocol a
+       * vehicle follows. 
+       */
+      public fun interfaceId(interfaceId: String)
+
+      /**
+       * @param type The network protocol for the vehicle. 
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty.builder()
+
+      /**
+       * @param canSignal Information about a single controller area network (CAN) signal and the
+       * messages it receives and transmits. 
+       */
+      override fun canSignal(canSignal: IResolvable) {
+        cdkBuilder.canSignal(canSignal.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param canSignal Information about a single controller area network (CAN) signal and the
+       * messages it receives and transmits. 
+       */
+      override fun canSignal(canSignal: CanSignalProperty) {
+        cdkBuilder.canSignal(canSignal.let(CanSignalProperty::unwrap))
+      }
+
+      /**
+       * @param canSignal Information about a single controller area network (CAN) signal and the
+       * messages it receives and transmits. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1f2a1842cbcac4f2b866b161094e72b63d3112354f748ef6d99bc66cf3d200f3")
+      override fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit): Unit =
+          canSignal(CanSignalProperty(canSignal))
+
+      /**
+       * @param fullyQualifiedName The fully qualified name of a signal decoder as defined in a
+       * vehicle model. 
+       */
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
+        cdkBuilder.fullyQualifiedName(fullyQualifiedName)
+      }
+
+      /**
+       * @param interfaceId The ID of a network interface that specifies what network protocol a
+       * vehicle follows. 
+       */
+      override fun interfaceId(interfaceId: String) {
+        cdkBuilder.interfaceId(interfaceId)
+      }
+
+      /**
+       * @param type The network protocol for the vehicle. 
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty,
+    ) : CdkObject(cdkObject), CanSignalDecoderProperty {
+      /**
+       * Information about a single controller area network (CAN) signal and the messages it
+       * receives and transmits.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-cansignal)
+       */
+      override fun canSignal(): Any = unwrap(this).getCanSignal()
+
+      /**
+       * The fully qualified name of a signal decoder as defined in a vehicle model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-fullyqualifiedname)
+       */
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+
+      /**
+       * The ID of a network interface that specifies what network protocol a vehicle follows.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-interfaceid)
+       */
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
+
+      /**
+       * The network protocol for the vehicle.
+       *
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CanSignalDecoderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty):
+          CanSignalDecoderProperty = CdkObjectWrappers.wrap(cdkObject) as? CanSignalDecoderProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CanSignalDecoderProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty
+    }
+  }
+
+  /**
+   * (Optional) Information about a single controller area network (CAN) signal and the messages it
+   * receives and transmits.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * CanSignalProperty canSignalProperty = CanSignalProperty.builder()
+   * .factor("factor")
+   * .isBigEndian("isBigEndian")
+   * .isSigned("isSigned")
+   * .length("length")
+   * .messageId("messageId")
+   * .offset("offset")
+   * .startBit("startBit")
+   * // the properties below are optional
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html)
+   */
+  public interface CanSignalProperty {
+    /**
+     * A multiplier used to decode the CAN message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-factor)
+     */
+    public fun factor(): String
+
+    /**
+     * Whether the byte ordering of a CAN message is big-endian.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-isbigendian)
+     */
+    public fun isBigEndian(): String
+
+    /**
+     * Whether the message data is specified as a signed value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-issigned)
+     */
+    public fun isSigned(): String
+
+    /**
+     * How many bytes of data are in the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-length)
+     */
+    public fun length(): String
+
+    /**
+     * The ID of the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-messageid)
+     */
+    public fun messageId(): String
+
+    /**
+     * (Optional) The name of the signal.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The offset used to calculate the signal value.
+     *
+     * Combined with factor, the calculation is `value = raw_value * factor + offset` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-offset)
+     */
+    public fun offset(): String
+
+    /**
+     * Indicates the beginning of the CAN message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-startbit)
+     */
+    public fun startBit(): String
+
+    /**
+     * A builder for [CanSignalProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param factor A multiplier used to decode the CAN message. 
+       */
+      public fun factor(factor: String)
+
+      /**
+       * @param isBigEndian Whether the byte ordering of a CAN message is big-endian. 
+       */
+      public fun isBigEndian(isBigEndian: String)
+
+      /**
+       * @param isSigned Whether the message data is specified as a signed value. 
+       */
+      public fun isSigned(isSigned: String)
+
+      /**
+       * @param length How many bytes of data are in the message. 
+       */
+      public fun length(length: String)
+
+      /**
+       * @param messageId The ID of the message. 
+       */
+      public fun messageId(messageId: String)
+
+      /**
+       * @param name (Optional) The name of the signal.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param offset The offset used to calculate the signal value. 
+       * Combined with factor, the calculation is `value = raw_value * factor + offset` .
+       */
+      public fun offset(offset: String)
+
+      /**
+       * @param startBit Indicates the beginning of the CAN message. 
+       */
+      public fun startBit(startBit: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty.builder()
+
+      /**
+       * @param factor A multiplier used to decode the CAN message. 
+       */
+      override fun factor(factor: String) {
+        cdkBuilder.factor(factor)
+      }
+
+      /**
+       * @param isBigEndian Whether the byte ordering of a CAN message is big-endian. 
+       */
+      override fun isBigEndian(isBigEndian: String) {
+        cdkBuilder.isBigEndian(isBigEndian)
+      }
+
+      /**
+       * @param isSigned Whether the message data is specified as a signed value. 
+       */
+      override fun isSigned(isSigned: String) {
+        cdkBuilder.isSigned(isSigned)
+      }
+
+      /**
+       * @param length How many bytes of data are in the message. 
+       */
+      override fun length(length: String) {
+        cdkBuilder.length(length)
+      }
+
+      /**
+       * @param messageId The ID of the message. 
+       */
+      override fun messageId(messageId: String) {
+        cdkBuilder.messageId(messageId)
+      }
+
+      /**
+       * @param name (Optional) The name of the signal.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
        * @param offset The offset used to calculate the signal value. 
-       * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
+       * Combined with factor, the calculation is `value = raw_value * factor + offset` .
        */
       override fun offset(offset: String) {
         cdkBuilder.offset(offset)
       }
 
       /**
-       * @param pid The diagnostic code used to request data from a vehicle for this signal. 
+       * @param startBit Indicates the beginning of the CAN message. 
        */
-      override fun pid(pid: String) {
-        cdkBuilder.pid(pid)
-      }
-
-      /**
-       * @param pidResponseLength The length of the requested data. 
-       */
-      override fun pidResponseLength(pidResponseLength: String) {
-        cdkBuilder.pidResponseLength(pidResponseLength)
-      }
-
-      /**
-       * @param scaling A multiplier used to decode the message. 
-       */
-      override fun scaling(scaling: String) {
-        cdkBuilder.scaling(scaling)
-      }
-
-      /**
-       * @param serviceMode The mode of operation (diagnostic service) in a message. 
-       */
-      override fun serviceMode(serviceMode: String) {
-        cdkBuilder.serviceMode(serviceMode)
-      }
-
-      /**
-       * @param startByte Indicates the beginning of the message. 
-       */
-      override fun startByte(startByte: String) {
-        cdkBuilder.startByte(startByte)
+      override fun startBit(startBit: String) {
+        cdkBuilder.startBit(startBit)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty =
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty,
-    ) : CdkObject(cdkObject), ObdSignalProperty {
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty,
+    ) : CdkObject(cdkObject), CanSignalProperty {
       /**
-       * (Optional) The number of bits to mask in a message.
+       * A multiplier used to decode the CAN message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitmasklength)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-factor)
        */
-      override fun bitMaskLength(): String? = unwrap(this).getBitMaskLength()
+      override fun factor(): String = unwrap(this).getFactor()
 
       /**
-       * (Optional) The number of positions to shift bits in the message.
+       * Whether the byte ordering of a CAN message is big-endian.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitrightshift)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-isbigendian)
        */
-      override fun bitRightShift(): String? = unwrap(this).getBitRightShift()
+      override fun isBigEndian(): String = unwrap(this).getIsBigEndian()
 
       /**
-       * The length of a message.
+       * Whether the message data is specified as a signed value.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bytelength)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-issigned)
        */
-      override fun byteLength(): String = unwrap(this).getByteLength()
+      override fun isSigned(): String = unwrap(this).getIsSigned()
+
+      /**
+       * How many bytes of data are in the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-length)
+       */
+      override fun length(): String = unwrap(this).getLength()
+
+      /**
+       * The ID of the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-messageid)
+       */
+      override fun messageId(): String = unwrap(this).getMessageId()
+
+      /**
+       * (Optional) The name of the signal.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
 
       /**
        * The offset used to calculate the signal value.
        *
-       * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
+       * Combined with factor, the calculation is `value = raw_value * factor + offset` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-offset)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-offset)
        */
       override fun offset(): String = unwrap(this).getOffset()
 
       /**
-       * The diagnostic code used to request data from a vehicle for this signal.
+       * Indicates the beginning of the CAN message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-pid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-startbit)
        */
-      override fun pid(): String = unwrap(this).getPid()
-
-      /**
-       * The length of the requested data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-pidresponselength)
-       */
-      override fun pidResponseLength(): String = unwrap(this).getPidResponseLength()
-
-      /**
-       * A multiplier used to decode the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-scaling)
-       */
-      override fun scaling(): String = unwrap(this).getScaling()
-
-      /**
-       * The mode of operation (diagnostic service) in a message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-servicemode)
-       */
-      override fun serviceMode(): String = unwrap(this).getServiceMode()
-
-      /**
-       * Indicates the beginning of the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-startbyte)
-       */
-      override fun startByte(): String = unwrap(this).getStartByte()
+      override fun startBit(): String = unwrap(this).getStartBit()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ObdSignalProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CanSignalProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty):
-          ObdSignalProperty = CdkObjectWrappers.wrap(cdkObject) as? ObdSignalProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty):
+          CanSignalProperty = CdkObjectWrappers.wrap(cdkObject) as? CanSignalProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ObdSignalProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty =
+      internal fun unwrap(wrapped: CanSignalProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty
+    }
+  }
+
+  /**
+   * (Optional) A list of information about available network interfaces.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * NetworkInterfacesItemsProperty networkInterfacesItemsProperty =
+   * NetworkInterfacesItemsProperty.builder()
+   * .interfaceId("interfaceId")
+   * .type("type")
+   * // the properties below are optional
+   * .canInterface(CanInterfaceProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .protocolName("protocolName")
+   * .protocolVersion("protocolVersion")
+   * .build())
+   * .obdInterface(ObdInterfaceProperty.builder()
+   * .name("name")
+   * .requestMessageId("requestMessageId")
+   * // the properties below are optional
+   * .dtcRequestIntervalSeconds("dtcRequestIntervalSeconds")
+   * .hasTransmissionEcu("hasTransmissionEcu")
+   * .obdStandard("obdStandard")
+   * .pidRequestIntervalSeconds("pidRequestIntervalSeconds")
+   * .useExtendedIds("useExtendedIds")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html)
+   */
+  public interface NetworkInterfacesItemsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-caninterface)
+     */
+    public fun canInterface(): Any? = unwrap(this).getCanInterface()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-interfaceid)
+     */
+    public fun interfaceId(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-obdinterface)
+     */
+    public fun obdInterface(): Any? = unwrap(this).getObdInterface()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [NetworkInterfacesItemsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param canInterface the value to be set.
+       */
+      public fun canInterface(canInterface: IResolvable)
+
+      /**
+       * @param canInterface the value to be set.
+       */
+      public fun canInterface(canInterface: CanInterfaceProperty)
+
+      /**
+       * @param canInterface the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d8562fca49c5ff0d4d8b84f5158b802d27f9e743abe47c01088703b8768d205d")
+      public fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit)
+
+      /**
+       * @param interfaceId the value to be set. 
+       */
+      public fun interfaceId(interfaceId: String)
+
+      /**
+       * @param obdInterface the value to be set.
+       */
+      public fun obdInterface(obdInterface: IResolvable)
+
+      /**
+       * @param obdInterface the value to be set.
+       */
+      public fun obdInterface(obdInterface: ObdInterfaceProperty)
+
+      /**
+       * @param obdInterface the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2f2d33ddb6c1a7eb3c8b36cf64dc8a3941cd226a91a76c00910c2807f6d9ca34")
+      public fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit)
+
+      /**
+       * @param type the value to be set. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty.builder()
+
+      /**
+       * @param canInterface the value to be set.
+       */
+      override fun canInterface(canInterface: IResolvable) {
+        cdkBuilder.canInterface(canInterface.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param canInterface the value to be set.
+       */
+      override fun canInterface(canInterface: CanInterfaceProperty) {
+        cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty::unwrap))
+      }
+
+      /**
+       * @param canInterface the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d8562fca49c5ff0d4d8b84f5158b802d27f9e743abe47c01088703b8768d205d")
+      override fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit): Unit =
+          canInterface(CanInterfaceProperty(canInterface))
+
+      /**
+       * @param interfaceId the value to be set. 
+       */
+      override fun interfaceId(interfaceId: String) {
+        cdkBuilder.interfaceId(interfaceId)
+      }
+
+      /**
+       * @param obdInterface the value to be set.
+       */
+      override fun obdInterface(obdInterface: IResolvable) {
+        cdkBuilder.obdInterface(obdInterface.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param obdInterface the value to be set.
+       */
+      override fun obdInterface(obdInterface: ObdInterfaceProperty) {
+        cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty::unwrap))
+      }
+
+      /**
+       * @param obdInterface the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2f2d33ddb6c1a7eb3c8b36cf64dc8a3941cd226a91a76c00910c2807f6d9ca34")
+      override fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit): Unit =
+          obdInterface(ObdInterfaceProperty(obdInterface))
+
+      /**
+       * @param type the value to be set. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty,
+    ) : CdkObject(cdkObject), NetworkInterfacesItemsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-caninterface)
+       */
+      override fun canInterface(): Any? = unwrap(this).getCanInterface()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-interfaceid)
+       */
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-obdinterface)
+       */
+      override fun obdInterface(): Any? = unwrap(this).getObdInterface()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfacesItemsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty):
+          NetworkInterfacesItemsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkInterfacesItemsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkInterfacesItemsProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty
+    }
+  }
+
+  /**
+   * A network interface that specifies the On-board diagnostic (OBD) II network protocol.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * ObdInterfaceProperty obdInterfaceProperty = ObdInterfaceProperty.builder()
+   * .name("name")
+   * .requestMessageId("requestMessageId")
+   * // the properties below are optional
+   * .dtcRequestIntervalSeconds("dtcRequestIntervalSeconds")
+   * .hasTransmissionEcu("hasTransmissionEcu")
+   * .obdStandard("obdStandard")
+   * .pidRequestIntervalSeconds("pidRequestIntervalSeconds")
+   * .useExtendedIds("useExtendedIds")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html)
+   */
+  public interface ObdInterfaceProperty {
+    /**
+     * (Optional) The maximum number message requests per diagnostic trouble code per second.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-dtcrequestintervalseconds)
+     */
+    public fun dtcRequestIntervalSeconds(): String? = unwrap(this).getDtcRequestIntervalSeconds()
+
+    /**
+     * (Optional) Whether the vehicle has a transmission control module (TCM).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-hastransmissionecu)
+     */
+    public fun hasTransmissionEcu(): String? = unwrap(this).getHasTransmissionEcu()
+
+    /**
+     * The name of the interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-name)
+     */
+    public fun name(): String
+
+    /**
+     * (Optional) The standard OBD II PID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-obdstandard)
+     */
+    public fun obdStandard(): String? = unwrap(this).getObdStandard()
+
+    /**
+     * (Optional) The maximum number message requests per second.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-pidrequestintervalseconds)
+     */
+    public fun pidRequestIntervalSeconds(): String? = unwrap(this).getPidRequestIntervalSeconds()
+
+    /**
+     * The ID of the message requesting vehicle data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-requestmessageid)
+     */
+    public fun requestMessageId(): String
+
+    /**
+     * (Optional) Whether to use extended IDs in the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-useextendedids)
+     */
+    public fun useExtendedIds(): String? = unwrap(this).getUseExtendedIds()
+
+    /**
+     * A builder for [ObdInterfaceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dtcRequestIntervalSeconds (Optional) The maximum number message requests per
+       * diagnostic trouble code per second.
+       */
+      public fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String)
+
+      /**
+       * @param hasTransmissionEcu (Optional) Whether the vehicle has a transmission control module
+       * (TCM).
+       */
+      public fun hasTransmissionEcu(hasTransmissionEcu: String)
+
+      /**
+       * @param name The name of the interface. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param obdStandard (Optional) The standard OBD II PID.
+       */
+      public fun obdStandard(obdStandard: String)
+
+      /**
+       * @param pidRequestIntervalSeconds (Optional) The maximum number message requests per second.
+       */
+      public fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String)
+
+      /**
+       * @param requestMessageId The ID of the message requesting vehicle data. 
+       */
+      public fun requestMessageId(requestMessageId: String)
+
+      /**
+       * @param useExtendedIds (Optional) Whether to use extended IDs in the message.
+       */
+      public fun useExtendedIds(useExtendedIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty.builder()
+
+      /**
+       * @param dtcRequestIntervalSeconds (Optional) The maximum number message requests per
+       * diagnostic trouble code per second.
+       */
+      override fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String) {
+        cdkBuilder.dtcRequestIntervalSeconds(dtcRequestIntervalSeconds)
+      }
+
+      /**
+       * @param hasTransmissionEcu (Optional) Whether the vehicle has a transmission control module
+       * (TCM).
+       */
+      override fun hasTransmissionEcu(hasTransmissionEcu: String) {
+        cdkBuilder.hasTransmissionEcu(hasTransmissionEcu)
+      }
+
+      /**
+       * @param name The name of the interface. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param obdStandard (Optional) The standard OBD II PID.
+       */
+      override fun obdStandard(obdStandard: String) {
+        cdkBuilder.obdStandard(obdStandard)
+      }
+
+      /**
+       * @param pidRequestIntervalSeconds (Optional) The maximum number message requests per second.
+       */
+      override fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String) {
+        cdkBuilder.pidRequestIntervalSeconds(pidRequestIntervalSeconds)
+      }
+
+      /**
+       * @param requestMessageId The ID of the message requesting vehicle data. 
+       */
+      override fun requestMessageId(requestMessageId: String) {
+        cdkBuilder.requestMessageId(requestMessageId)
+      }
+
+      /**
+       * @param useExtendedIds (Optional) Whether to use extended IDs in the message.
+       */
+      override fun useExtendedIds(useExtendedIds: String) {
+        cdkBuilder.useExtendedIds(useExtendedIds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty,
+    ) : CdkObject(cdkObject), ObdInterfaceProperty {
+      /**
+       * (Optional) The maximum number message requests per diagnostic trouble code per second.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-dtcrequestintervalseconds)
+       */
+      override fun dtcRequestIntervalSeconds(): String? =
+          unwrap(this).getDtcRequestIntervalSeconds()
+
+      /**
+       * (Optional) Whether the vehicle has a transmission control module (TCM).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-hastransmissionecu)
+       */
+      override fun hasTransmissionEcu(): String? = unwrap(this).getHasTransmissionEcu()
+
+      /**
+       * The name of the interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * (Optional) The standard OBD II PID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-obdstandard)
+       */
+      override fun obdStandard(): String? = unwrap(this).getObdStandard()
+
+      /**
+       * (Optional) The maximum number message requests per second.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-pidrequestintervalseconds)
+       */
+      override fun pidRequestIntervalSeconds(): String? =
+          unwrap(this).getPidRequestIntervalSeconds()
+
+      /**
+       * The ID of the message requesting vehicle data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-requestmessageid)
+       */
+      override fun requestMessageId(): String = unwrap(this).getRequestMessageId()
+
+      /**
+       * (Optional) Whether to use extended IDs in the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-useextendedids)
+       */
+      override fun useExtendedIds(): String? = unwrap(this).getUseExtendedIds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ObdInterfaceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty):
+          ObdInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? ObdInterfaceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ObdInterfaceProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty
     }
   }
 
@@ -1377,7 +2245,8 @@ public open class CfnDecoderManifest internal constructor(
   }
 
   /**
-   * A network interface that specifies the On-board diagnostic (OBD) II network protocol.
+   * Information about signal messages using the on-board diagnostics (OBD) II protocol in a
+   * vehicle.
    *
    * Example:
    *
@@ -1385,971 +2254,300 @@ public open class CfnDecoderManifest internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * ObdInterfaceProperty obdInterfaceProperty = ObdInterfaceProperty.builder()
-   * .name("name")
-   * .requestMessageId("requestMessageId")
-   * // the properties below are optional
-   * .dtcRequestIntervalSeconds("dtcRequestIntervalSeconds")
-   * .hasTransmissionEcu("hasTransmissionEcu")
-   * .obdStandard("obdStandard")
-   * .pidRequestIntervalSeconds("pidRequestIntervalSeconds")
-   * .useExtendedIds("useExtendedIds")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html)
-   */
-  public interface ObdInterfaceProperty {
-    /**
-     * (Optional) The maximum number message requests per diagnostic trouble code per second.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-dtcrequestintervalseconds)
-     */
-    public fun dtcRequestIntervalSeconds(): String? = unwrap(this).getDtcRequestIntervalSeconds()
-
-    /**
-     * (Optional) Whether the vehicle has a transmission control module (TCM).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-hastransmissionecu)
-     */
-    public fun hasTransmissionEcu(): String? = unwrap(this).getHasTransmissionEcu()
-
-    /**
-     * The name of the interface.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-name)
-     */
-    public fun name(): String
-
-    /**
-     * (Optional) The standard OBD II PID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-obdstandard)
-     */
-    public fun obdStandard(): String? = unwrap(this).getObdStandard()
-
-    /**
-     * (Optional) The maximum number message requests per second.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-pidrequestintervalseconds)
-     */
-    public fun pidRequestIntervalSeconds(): String? = unwrap(this).getPidRequestIntervalSeconds()
-
-    /**
-     * The ID of the message requesting vehicle data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-requestmessageid)
-     */
-    public fun requestMessageId(): String
-
-    /**
-     * (Optional) Whether to use extended IDs in the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-useextendedids)
-     */
-    public fun useExtendedIds(): String? = unwrap(this).getUseExtendedIds()
-
-    /**
-     * A builder for [ObdInterfaceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dtcRequestIntervalSeconds (Optional) The maximum number message requests per
-       * diagnostic trouble code per second.
-       */
-      public fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String)
-
-      /**
-       * @param hasTransmissionEcu (Optional) Whether the vehicle has a transmission control module
-       * (TCM).
-       */
-      public fun hasTransmissionEcu(hasTransmissionEcu: String)
-
-      /**
-       * @param name The name of the interface. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param obdStandard (Optional) The standard OBD II PID.
-       */
-      public fun obdStandard(obdStandard: String)
-
-      /**
-       * @param pidRequestIntervalSeconds (Optional) The maximum number message requests per second.
-       */
-      public fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String)
-
-      /**
-       * @param requestMessageId The ID of the message requesting vehicle data. 
-       */
-      public fun requestMessageId(requestMessageId: String)
-
-      /**
-       * @param useExtendedIds (Optional) Whether to use extended IDs in the message.
-       */
-      public fun useExtendedIds(useExtendedIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty.Builder
-          =
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty.builder()
-
-      /**
-       * @param dtcRequestIntervalSeconds (Optional) The maximum number message requests per
-       * diagnostic trouble code per second.
-       */
-      override fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String) {
-        cdkBuilder.dtcRequestIntervalSeconds(dtcRequestIntervalSeconds)
-      }
-
-      /**
-       * @param hasTransmissionEcu (Optional) Whether the vehicle has a transmission control module
-       * (TCM).
-       */
-      override fun hasTransmissionEcu(hasTransmissionEcu: String) {
-        cdkBuilder.hasTransmissionEcu(hasTransmissionEcu)
-      }
-
-      /**
-       * @param name The name of the interface. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param obdStandard (Optional) The standard OBD II PID.
-       */
-      override fun obdStandard(obdStandard: String) {
-        cdkBuilder.obdStandard(obdStandard)
-      }
-
-      /**
-       * @param pidRequestIntervalSeconds (Optional) The maximum number message requests per second.
-       */
-      override fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String) {
-        cdkBuilder.pidRequestIntervalSeconds(pidRequestIntervalSeconds)
-      }
-
-      /**
-       * @param requestMessageId The ID of the message requesting vehicle data. 
-       */
-      override fun requestMessageId(requestMessageId: String) {
-        cdkBuilder.requestMessageId(requestMessageId)
-      }
-
-      /**
-       * @param useExtendedIds (Optional) Whether to use extended IDs in the message.
-       */
-      override fun useExtendedIds(useExtendedIds: String) {
-        cdkBuilder.useExtendedIds(useExtendedIds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty,
-    ) : CdkObject(cdkObject), ObdInterfaceProperty {
-      /**
-       * (Optional) The maximum number message requests per diagnostic trouble code per second.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-dtcrequestintervalseconds)
-       */
-      override fun dtcRequestIntervalSeconds(): String? =
-          unwrap(this).getDtcRequestIntervalSeconds()
-
-      /**
-       * (Optional) Whether the vehicle has a transmission control module (TCM).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-hastransmissionecu)
-       */
-      override fun hasTransmissionEcu(): String? = unwrap(this).getHasTransmissionEcu()
-
-      /**
-       * The name of the interface.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * (Optional) The standard OBD II PID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-obdstandard)
-       */
-      override fun obdStandard(): String? = unwrap(this).getObdStandard()
-
-      /**
-       * (Optional) The maximum number message requests per second.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-pidrequestintervalseconds)
-       */
-      override fun pidRequestIntervalSeconds(): String? =
-          unwrap(this).getPidRequestIntervalSeconds()
-
-      /**
-       * The ID of the message requesting vehicle data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-requestmessageid)
-       */
-      override fun requestMessageId(): String = unwrap(this).getRequestMessageId()
-
-      /**
-       * (Optional) Whether to use extended IDs in the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-useextendedids)
-       */
-      override fun useExtendedIds(): String? = unwrap(this).getUseExtendedIds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ObdInterfaceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty):
-          ObdInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? ObdInterfaceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ObdInterfaceProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty
-    }
-  }
-
-  /**
-   * Information about signal decoder using the Controller Area Network (CAN) protocol.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * CanSignalDecoderProperty canSignalDecoderProperty = CanSignalDecoderProperty.builder()
-   * .canSignal(CanSignalProperty.builder()
-   * .factor("factor")
-   * .isBigEndian("isBigEndian")
-   * .isSigned("isSigned")
-   * .length("length")
-   * .messageId("messageId")
+   * ObdSignalProperty obdSignalProperty = ObdSignalProperty.builder()
+   * .byteLength("byteLength")
    * .offset("offset")
-   * .startBit("startBit")
+   * .pid("pid")
+   * .pidResponseLength("pidResponseLength")
+   * .scaling("scaling")
+   * .serviceMode("serviceMode")
+   * .startByte("startByte")
    * // the properties below are optional
-   * .name("name")
-   * .build())
-   * .fullyQualifiedName("fullyQualifiedName")
-   * .interfaceId("interfaceId")
-   * .type("type")
+   * .bitMaskLength("bitMaskLength")
+   * .bitRightShift("bitRightShift")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html)
    */
-  public interface CanSignalDecoderProperty {
+  public interface ObdSignalProperty {
     /**
-     * Information about a single controller area network (CAN) signal and the messages it receives
-     * and transmits.
+     * (Optional) The number of bits to mask in a message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-cansignal)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitmasklength)
      */
-    public fun canSignal(): Any
+    public fun bitMaskLength(): String? = unwrap(this).getBitMaskLength()
 
     /**
-     * The fully qualified name of a signal decoder as defined in a vehicle model.
+     * (Optional) The number of positions to shift bits in the message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-fullyqualifiedname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitrightshift)
      */
-    public fun fullyQualifiedName(): String
+    public fun bitRightShift(): String? = unwrap(this).getBitRightShift()
 
     /**
-     * The ID of a network interface that specifies what network protocol a vehicle follows.
+     * The length of a message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-interfaceid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bytelength)
      */
-    public fun interfaceId(): String
-
-    /**
-     * The network protocol for the vehicle.
-     *
-     * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated between
-     * electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
-     * self-diagnostic data is communicated between ECUs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [CanSignalDecoderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param canSignal Information about a single controller area network (CAN) signal and the
-       * messages it receives and transmits. 
-       */
-      public fun canSignal(canSignal: IResolvable)
-
-      /**
-       * @param canSignal Information about a single controller area network (CAN) signal and the
-       * messages it receives and transmits. 
-       */
-      public fun canSignal(canSignal: CanSignalProperty)
-
-      /**
-       * @param canSignal Information about a single controller area network (CAN) signal and the
-       * messages it receives and transmits. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1f2a1842cbcac4f2b866b161094e72b63d3112354f748ef6d99bc66cf3d200f3")
-      public fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit)
-
-      /**
-       * @param fullyQualifiedName The fully qualified name of a signal decoder as defined in a
-       * vehicle model. 
-       */
-      public fun fullyQualifiedName(fullyQualifiedName: String)
-
-      /**
-       * @param interfaceId The ID of a network interface that specifies what network protocol a
-       * vehicle follows. 
-       */
-      public fun interfaceId(interfaceId: String)
-
-      /**
-       * @param type The network protocol for the vehicle. 
-       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
-       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
-       * self-diagnostic data is communicated between ECUs.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty.Builder
-          =
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty.builder()
-
-      /**
-       * @param canSignal Information about a single controller area network (CAN) signal and the
-       * messages it receives and transmits. 
-       */
-      override fun canSignal(canSignal: IResolvable) {
-        cdkBuilder.canSignal(canSignal.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param canSignal Information about a single controller area network (CAN) signal and the
-       * messages it receives and transmits. 
-       */
-      override fun canSignal(canSignal: CanSignalProperty) {
-        cdkBuilder.canSignal(canSignal.let(CanSignalProperty::unwrap))
-      }
-
-      /**
-       * @param canSignal Information about a single controller area network (CAN) signal and the
-       * messages it receives and transmits. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1f2a1842cbcac4f2b866b161094e72b63d3112354f748ef6d99bc66cf3d200f3")
-      override fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit): Unit =
-          canSignal(CanSignalProperty(canSignal))
-
-      /**
-       * @param fullyQualifiedName The fully qualified name of a signal decoder as defined in a
-       * vehicle model. 
-       */
-      override fun fullyQualifiedName(fullyQualifiedName: String) {
-        cdkBuilder.fullyQualifiedName(fullyQualifiedName)
-      }
-
-      /**
-       * @param interfaceId The ID of a network interface that specifies what network protocol a
-       * vehicle follows. 
-       */
-      override fun interfaceId(interfaceId: String) {
-        cdkBuilder.interfaceId(interfaceId)
-      }
-
-      /**
-       * @param type The network protocol for the vehicle. 
-       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
-       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
-       * self-diagnostic data is communicated between ECUs.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty,
-    ) : CdkObject(cdkObject), CanSignalDecoderProperty {
-      /**
-       * Information about a single controller area network (CAN) signal and the messages it
-       * receives and transmits.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-cansignal)
-       */
-      override fun canSignal(): Any = unwrap(this).getCanSignal()
-
-      /**
-       * The fully qualified name of a signal decoder as defined in a vehicle model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-fullyqualifiedname)
-       */
-      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
-
-      /**
-       * The ID of a network interface that specifies what network protocol a vehicle follows.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-interfaceid)
-       */
-      override fun interfaceId(): String = unwrap(this).getInterfaceId()
-
-      /**
-       * The network protocol for the vehicle.
-       *
-       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
-       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
-       * self-diagnostic data is communicated between ECUs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignaldecoder.html#cfn-iotfleetwise-decodermanifest-cansignaldecoder-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CanSignalDecoderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty):
-          CanSignalDecoderProperty = CdkObjectWrappers.wrap(cdkObject) as? CanSignalDecoderProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CanSignalDecoderProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty
-    }
-  }
-
-  /**
-   * (Optional) A list of information about available network interfaces.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * NetworkInterfacesItemsProperty networkInterfacesItemsProperty =
-   * NetworkInterfacesItemsProperty.builder()
-   * .interfaceId("interfaceId")
-   * .type("type")
-   * // the properties below are optional
-   * .canInterface(CanInterfaceProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .protocolName("protocolName")
-   * .protocolVersion("protocolVersion")
-   * .build())
-   * .obdInterface(ObdInterfaceProperty.builder()
-   * .name("name")
-   * .requestMessageId("requestMessageId")
-   * // the properties below are optional
-   * .dtcRequestIntervalSeconds("dtcRequestIntervalSeconds")
-   * .hasTransmissionEcu("hasTransmissionEcu")
-   * .obdStandard("obdStandard")
-   * .pidRequestIntervalSeconds("pidRequestIntervalSeconds")
-   * .useExtendedIds("useExtendedIds")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html)
-   */
-  public interface NetworkInterfacesItemsProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-caninterface)
-     */
-    public fun canInterface(): Any? = unwrap(this).getCanInterface()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-interfaceid)
-     */
-    public fun interfaceId(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-obdinterface)
-     */
-    public fun obdInterface(): Any? = unwrap(this).getObdInterface()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [NetworkInterfacesItemsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param canInterface the value to be set.
-       */
-      public fun canInterface(canInterface: IResolvable)
-
-      /**
-       * @param canInterface the value to be set.
-       */
-      public fun canInterface(canInterface: CanInterfaceProperty)
-
-      /**
-       * @param canInterface the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d8562fca49c5ff0d4d8b84f5158b802d27f9e743abe47c01088703b8768d205d")
-      public fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit)
-
-      /**
-       * @param interfaceId the value to be set. 
-       */
-      public fun interfaceId(interfaceId: String)
-
-      /**
-       * @param obdInterface the value to be set.
-       */
-      public fun obdInterface(obdInterface: IResolvable)
-
-      /**
-       * @param obdInterface the value to be set.
-       */
-      public fun obdInterface(obdInterface: ObdInterfaceProperty)
-
-      /**
-       * @param obdInterface the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2f2d33ddb6c1a7eb3c8b36cf64dc8a3941cd226a91a76c00910c2807f6d9ca34")
-      public fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit)
-
-      /**
-       * @param type the value to be set. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty.Builder
-          =
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty.builder()
-
-      /**
-       * @param canInterface the value to be set.
-       */
-      override fun canInterface(canInterface: IResolvable) {
-        cdkBuilder.canInterface(canInterface.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param canInterface the value to be set.
-       */
-      override fun canInterface(canInterface: CanInterfaceProperty) {
-        cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty::unwrap))
-      }
-
-      /**
-       * @param canInterface the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d8562fca49c5ff0d4d8b84f5158b802d27f9e743abe47c01088703b8768d205d")
-      override fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit): Unit =
-          canInterface(CanInterfaceProperty(canInterface))
-
-      /**
-       * @param interfaceId the value to be set. 
-       */
-      override fun interfaceId(interfaceId: String) {
-        cdkBuilder.interfaceId(interfaceId)
-      }
-
-      /**
-       * @param obdInterface the value to be set.
-       */
-      override fun obdInterface(obdInterface: IResolvable) {
-        cdkBuilder.obdInterface(obdInterface.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param obdInterface the value to be set.
-       */
-      override fun obdInterface(obdInterface: ObdInterfaceProperty) {
-        cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty::unwrap))
-      }
-
-      /**
-       * @param obdInterface the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2f2d33ddb6c1a7eb3c8b36cf64dc8a3941cd226a91a76c00910c2807f6d9ca34")
-      override fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit): Unit =
-          obdInterface(ObdInterfaceProperty(obdInterface))
-
-      /**
-       * @param type the value to be set. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty,
-    ) : CdkObject(cdkObject), NetworkInterfacesItemsProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-caninterface)
-       */
-      override fun canInterface(): Any? = unwrap(this).getCanInterface()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-interfaceid)
-       */
-      override fun interfaceId(): String = unwrap(this).getInterfaceId()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-obdinterface)
-       */
-      override fun obdInterface(): Any? = unwrap(this).getObdInterface()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-networkinterfacesitems.html#cfn-iotfleetwise-decodermanifest-networkinterfacesitems-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfacesItemsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty):
-          NetworkInterfacesItemsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkInterfacesItemsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkInterfacesItemsProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty
-    }
-  }
-
-  /**
-   * (Optional) Information about a single controller area network (CAN) signal and the messages it
-   * receives and transmits.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * CanSignalProperty canSignalProperty = CanSignalProperty.builder()
-   * .factor("factor")
-   * .isBigEndian("isBigEndian")
-   * .isSigned("isSigned")
-   * .length("length")
-   * .messageId("messageId")
-   * .offset("offset")
-   * .startBit("startBit")
-   * // the properties below are optional
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html)
-   */
-  public interface CanSignalProperty {
-    /**
-     * A multiplier used to decode the CAN message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-factor)
-     */
-    public fun factor(): String
-
-    /**
-     * Whether the byte ordering of a CAN message is big-endian.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-isbigendian)
-     */
-    public fun isBigEndian(): String
-
-    /**
-     * Whether the message data is specified as a signed value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-issigned)
-     */
-    public fun isSigned(): String
-
-    /**
-     * How many bytes of data are in the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-length)
-     */
-    public fun length(): String
-
-    /**
-     * The ID of the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-messageid)
-     */
-    public fun messageId(): String
-
-    /**
-     * (Optional) The name of the signal.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+    public fun byteLength(): String
 
     /**
      * The offset used to calculate the signal value.
      *
-     * Combined with factor, the calculation is `value = raw_value * factor + offset` .
+     * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-offset)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-offset)
      */
     public fun offset(): String
 
     /**
-     * Indicates the beginning of the CAN message.
+     * The diagnostic code used to request data from a vehicle for this signal.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-startbit)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-pid)
      */
-    public fun startBit(): String
+    public fun pid(): String
 
     /**
-     * A builder for [CanSignalProperty]
+     * The length of the requested data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-pidresponselength)
+     */
+    public fun pidResponseLength(): String
+
+    /**
+     * A multiplier used to decode the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-scaling)
+     */
+    public fun scaling(): String
+
+    /**
+     * The mode of operation (diagnostic service) in a message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-servicemode)
+     */
+    public fun serviceMode(): String
+
+    /**
+     * Indicates the beginning of the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-startbyte)
+     */
+    public fun startByte(): String
+
+    /**
+     * A builder for [ObdSignalProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param factor A multiplier used to decode the CAN message. 
+       * @param bitMaskLength (Optional) The number of bits to mask in a message.
        */
-      public fun factor(factor: String)
+      public fun bitMaskLength(bitMaskLength: String)
 
       /**
-       * @param isBigEndian Whether the byte ordering of a CAN message is big-endian. 
+       * @param bitRightShift (Optional) The number of positions to shift bits in the message.
        */
-      public fun isBigEndian(isBigEndian: String)
+      public fun bitRightShift(bitRightShift: String)
 
       /**
-       * @param isSigned Whether the message data is specified as a signed value. 
+       * @param byteLength The length of a message. 
        */
-      public fun isSigned(isSigned: String)
-
-      /**
-       * @param length How many bytes of data are in the message. 
-       */
-      public fun length(length: String)
-
-      /**
-       * @param messageId The ID of the message. 
-       */
-      public fun messageId(messageId: String)
-
-      /**
-       * @param name (Optional) The name of the signal.
-       */
-      public fun name(name: String)
+      public fun byteLength(byteLength: String)
 
       /**
        * @param offset The offset used to calculate the signal value. 
-       * Combined with factor, the calculation is `value = raw_value * factor + offset` .
+       * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
        */
       public fun offset(offset: String)
 
       /**
-       * @param startBit Indicates the beginning of the CAN message. 
+       * @param pid The diagnostic code used to request data from a vehicle for this signal. 
        */
-      public fun startBit(startBit: String)
+      public fun pid(pid: String)
+
+      /**
+       * @param pidResponseLength The length of the requested data. 
+       */
+      public fun pidResponseLength(pidResponseLength: String)
+
+      /**
+       * @param scaling A multiplier used to decode the message. 
+       */
+      public fun scaling(scaling: String)
+
+      /**
+       * @param serviceMode The mode of operation (diagnostic service) in a message. 
+       */
+      public fun serviceMode(serviceMode: String)
+
+      /**
+       * @param startByte Indicates the beginning of the message. 
+       */
+      public fun startByte(startByte: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty.Builder
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty.Builder
           =
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty.builder()
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty.builder()
 
       /**
-       * @param factor A multiplier used to decode the CAN message. 
+       * @param bitMaskLength (Optional) The number of bits to mask in a message.
        */
-      override fun factor(factor: String) {
-        cdkBuilder.factor(factor)
+      override fun bitMaskLength(bitMaskLength: String) {
+        cdkBuilder.bitMaskLength(bitMaskLength)
       }
 
       /**
-       * @param isBigEndian Whether the byte ordering of a CAN message is big-endian. 
+       * @param bitRightShift (Optional) The number of positions to shift bits in the message.
        */
-      override fun isBigEndian(isBigEndian: String) {
-        cdkBuilder.isBigEndian(isBigEndian)
+      override fun bitRightShift(bitRightShift: String) {
+        cdkBuilder.bitRightShift(bitRightShift)
       }
 
       /**
-       * @param isSigned Whether the message data is specified as a signed value. 
+       * @param byteLength The length of a message. 
        */
-      override fun isSigned(isSigned: String) {
-        cdkBuilder.isSigned(isSigned)
-      }
-
-      /**
-       * @param length How many bytes of data are in the message. 
-       */
-      override fun length(length: String) {
-        cdkBuilder.length(length)
-      }
-
-      /**
-       * @param messageId The ID of the message. 
-       */
-      override fun messageId(messageId: String) {
-        cdkBuilder.messageId(messageId)
-      }
-
-      /**
-       * @param name (Optional) The name of the signal.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun byteLength(byteLength: String) {
+        cdkBuilder.byteLength(byteLength)
       }
 
       /**
        * @param offset The offset used to calculate the signal value. 
-       * Combined with factor, the calculation is `value = raw_value * factor + offset` .
+       * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
        */
       override fun offset(offset: String) {
         cdkBuilder.offset(offset)
       }
 
       /**
-       * @param startBit Indicates the beginning of the CAN message. 
+       * @param pid The diagnostic code used to request data from a vehicle for this signal. 
        */
-      override fun startBit(startBit: String) {
-        cdkBuilder.startBit(startBit)
+      override fun pid(pid: String) {
+        cdkBuilder.pid(pid)
+      }
+
+      /**
+       * @param pidResponseLength The length of the requested data. 
+       */
+      override fun pidResponseLength(pidResponseLength: String) {
+        cdkBuilder.pidResponseLength(pidResponseLength)
+      }
+
+      /**
+       * @param scaling A multiplier used to decode the message. 
+       */
+      override fun scaling(scaling: String) {
+        cdkBuilder.scaling(scaling)
+      }
+
+      /**
+       * @param serviceMode The mode of operation (diagnostic service) in a message. 
+       */
+      override fun serviceMode(serviceMode: String) {
+        cdkBuilder.serviceMode(serviceMode)
+      }
+
+      /**
+       * @param startByte Indicates the beginning of the message. 
+       */
+      override fun startByte(startByte: String) {
+        cdkBuilder.startByte(startByte)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty =
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty,
-    ) : CdkObject(cdkObject), CanSignalProperty {
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty,
+    ) : CdkObject(cdkObject), ObdSignalProperty {
       /**
-       * A multiplier used to decode the CAN message.
+       * (Optional) The number of bits to mask in a message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-factor)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitmasklength)
        */
-      override fun factor(): String = unwrap(this).getFactor()
+      override fun bitMaskLength(): String? = unwrap(this).getBitMaskLength()
 
       /**
-       * Whether the byte ordering of a CAN message is big-endian.
+       * (Optional) The number of positions to shift bits in the message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-isbigendian)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitrightshift)
        */
-      override fun isBigEndian(): String = unwrap(this).getIsBigEndian()
+      override fun bitRightShift(): String? = unwrap(this).getBitRightShift()
 
       /**
-       * Whether the message data is specified as a signed value.
+       * The length of a message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-issigned)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bytelength)
        */
-      override fun isSigned(): String = unwrap(this).getIsSigned()
-
-      /**
-       * How many bytes of data are in the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-length)
-       */
-      override fun length(): String = unwrap(this).getLength()
-
-      /**
-       * The ID of the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-messageid)
-       */
-      override fun messageId(): String = unwrap(this).getMessageId()
-
-      /**
-       * (Optional) The name of the signal.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+      override fun byteLength(): String = unwrap(this).getByteLength()
 
       /**
        * The offset used to calculate the signal value.
        *
-       * Combined with factor, the calculation is `value = raw_value * factor + offset` .
+       * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-offset)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-offset)
        */
       override fun offset(): String = unwrap(this).getOffset()
 
       /**
-       * Indicates the beginning of the CAN message.
+       * The diagnostic code used to request data from a vehicle for this signal.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-startbit)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-pid)
        */
-      override fun startBit(): String = unwrap(this).getStartBit()
+      override fun pid(): String = unwrap(this).getPid()
+
+      /**
+       * The length of the requested data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-pidresponselength)
+       */
+      override fun pidResponseLength(): String = unwrap(this).getPidResponseLength()
+
+      /**
+       * A multiplier used to decode the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-scaling)
+       */
+      override fun scaling(): String = unwrap(this).getScaling()
+
+      /**
+       * The mode of operation (diagnostic service) in a message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-servicemode)
+       */
+      override fun serviceMode(): String = unwrap(this).getServiceMode()
+
+      /**
+       * Indicates the beginning of the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-startbyte)
+       */
+      override fun startByte(): String = unwrap(this).getStartByte()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CanSignalProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ObdSignalProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty):
-          CanSignalProperty = CdkObjectWrappers.wrap(cdkObject) as? CanSignalProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty):
+          ObdSignalProperty = CdkObjectWrappers.wrap(cdkObject) as? ObdSignalProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CanSignalProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty =
+      internal fun unwrap(wrapped: ObdSignalProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty
+          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty
     }
   }
 
@@ -2597,204 +2795,6 @@ public open class CfnDecoderManifest internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.SignalDecodersItemsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.SignalDecodersItemsProperty
-    }
-  }
-
-  /**
-   * Represents a node and its specifications in an in-vehicle communication network.
-   *
-   * All signal decoders must be associated with a network node.
-   *
-   * To return this information about all the network interfaces specified in a decoder manifest,
-   * use the
-   * [ListDecoderManifestNetworkInterfaces](https://docs.aws.amazon.com/iot-fleetwise/latest/APIReference/API_ListDecoderManifestNetworkInterfaces.html)
-   * in the *AWS IoT FleetWise API Reference* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * CanNetworkInterfaceProperty canNetworkInterfaceProperty = CanNetworkInterfaceProperty.builder()
-   * .canInterface(CanInterfaceProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .protocolName("protocolName")
-   * .protocolVersion("protocolVersion")
-   * .build())
-   * .interfaceId("interfaceId")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html)
-   */
-  public interface CanNetworkInterfaceProperty {
-    /**
-     * Information about a network interface specified by the Controller Area Network (CAN)
-     * protocol.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-caninterface)
-     */
-    public fun canInterface(): Any
-
-    /**
-     * The ID of the network interface.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-interfaceid)
-     */
-    public fun interfaceId(): String
-
-    /**
-     * The network protocol for the vehicle.
-     *
-     * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated between
-     * electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
-     * self-diagnostic data is communicated between ECUs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [CanNetworkInterfaceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param canInterface Information about a network interface specified by the Controller Area
-       * Network (CAN) protocol. 
-       */
-      public fun canInterface(canInterface: IResolvable)
-
-      /**
-       * @param canInterface Information about a network interface specified by the Controller Area
-       * Network (CAN) protocol. 
-       */
-      public fun canInterface(canInterface: CanInterfaceProperty)
-
-      /**
-       * @param canInterface Information about a network interface specified by the Controller Area
-       * Network (CAN) protocol. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2bb3dae54526a244431924d675fa419eff6b69f0d87bbfe3ffc677046131a6f5")
-      public fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit)
-
-      /**
-       * @param interfaceId The ID of the network interface. 
-       */
-      public fun interfaceId(interfaceId: String)
-
-      /**
-       * @param type The network protocol for the vehicle. 
-       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
-       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
-       * self-diagnostic data is communicated between ECUs.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty.Builder
-          =
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty.builder()
-
-      /**
-       * @param canInterface Information about a network interface specified by the Controller Area
-       * Network (CAN) protocol. 
-       */
-      override fun canInterface(canInterface: IResolvable) {
-        cdkBuilder.canInterface(canInterface.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param canInterface Information about a network interface specified by the Controller Area
-       * Network (CAN) protocol. 
-       */
-      override fun canInterface(canInterface: CanInterfaceProperty) {
-        cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty::unwrap))
-      }
-
-      /**
-       * @param canInterface Information about a network interface specified by the Controller Area
-       * Network (CAN) protocol. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2bb3dae54526a244431924d675fa419eff6b69f0d87bbfe3ffc677046131a6f5")
-      override fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit): Unit =
-          canInterface(CanInterfaceProperty(canInterface))
-
-      /**
-       * @param interfaceId The ID of the network interface. 
-       */
-      override fun interfaceId(interfaceId: String) {
-        cdkBuilder.interfaceId(interfaceId)
-      }
-
-      /**
-       * @param type The network protocol for the vehicle. 
-       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
-       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
-       * self-diagnostic data is communicated between ECUs.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), CanNetworkInterfaceProperty {
-      /**
-       * Information about a network interface specified by the Controller Area Network (CAN)
-       * protocol.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-caninterface)
-       */
-      override fun canInterface(): Any = unwrap(this).getCanInterface()
-
-      /**
-       * The ID of the network interface.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-interfaceid)
-       */
-      override fun interfaceId(): String = unwrap(this).getInterfaceId()
-
-      /**
-       * The network protocol for the vehicle.
-       *
-       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
-       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
-       * self-diagnostic data is communicated between ECUs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cannetworkinterface.html#cfn-iotfleetwise-decodermanifest-cannetworkinterface-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CanNetworkInterfaceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty):
-          CanNetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CanNetworkInterfaceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CanNetworkInterfaceProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty
     }
   }
 }

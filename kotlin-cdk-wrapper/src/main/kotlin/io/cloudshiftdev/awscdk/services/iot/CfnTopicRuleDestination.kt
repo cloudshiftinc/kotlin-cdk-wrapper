@@ -352,6 +352,91 @@ public open class CfnTopicRuleDestination internal constructor(
   }
 
   /**
+   * HTTP URL destination properties.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * HttpUrlDestinationSummaryProperty httpUrlDestinationSummaryProperty =
+   * HttpUrlDestinationSummaryProperty.builder()
+   * .confirmationUrl("confirmationUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-httpurldestinationsummary.html)
+   */
+  public interface HttpUrlDestinationSummaryProperty {
+    /**
+     * The URL used to confirm the HTTP topic rule destination URL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-httpurldestinationsummary.html#cfn-iot-topicruledestination-httpurldestinationsummary-confirmationurl)
+     */
+    public fun confirmationUrl(): String? = unwrap(this).getConfirmationUrl()
+
+    /**
+     * A builder for [HttpUrlDestinationSummaryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param confirmationUrl The URL used to confirm the HTTP topic rule destination URL.
+       */
+      public fun confirmationUrl(confirmationUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty.builder()
+
+      /**
+       * @param confirmationUrl The URL used to confirm the HTTP topic rule destination URL.
+       */
+      override fun confirmationUrl(confirmationUrl: String) {
+        cdkBuilder.confirmationUrl(confirmationUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty,
+    ) : CdkObject(cdkObject), HttpUrlDestinationSummaryProperty {
+      /**
+       * The URL used to confirm the HTTP topic rule destination URL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-httpurldestinationsummary.html#cfn-iot-topicruledestination-httpurldestinationsummary-confirmationurl)
+       */
+      override fun confirmationUrl(): String? = unwrap(this).getConfirmationUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          HttpUrlDestinationSummaryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty):
+          HttpUrlDestinationSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpUrlDestinationSummaryProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HttpUrlDestinationSummaryProperty):
+          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty
+    }
+  }
+
+  /**
    * The properties of a virtual private cloud (VPC) destination.
    *
    * Example:
@@ -538,91 +623,6 @@ public open class CfnTopicRuleDestination internal constructor(
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty
-    }
-  }
-
-  /**
-   * HTTP URL destination properties.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * HttpUrlDestinationSummaryProperty httpUrlDestinationSummaryProperty =
-   * HttpUrlDestinationSummaryProperty.builder()
-   * .confirmationUrl("confirmationUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-httpurldestinationsummary.html)
-   */
-  public interface HttpUrlDestinationSummaryProperty {
-    /**
-     * The URL used to confirm the HTTP topic rule destination URL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-httpurldestinationsummary.html#cfn-iot-topicruledestination-httpurldestinationsummary-confirmationurl)
-     */
-    public fun confirmationUrl(): String? = unwrap(this).getConfirmationUrl()
-
-    /**
-     * A builder for [HttpUrlDestinationSummaryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param confirmationUrl The URL used to confirm the HTTP topic rule destination URL.
-       */
-      public fun confirmationUrl(confirmationUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty.builder()
-
-      /**
-       * @param confirmationUrl The URL used to confirm the HTTP topic rule destination URL.
-       */
-      override fun confirmationUrl(confirmationUrl: String) {
-        cdkBuilder.confirmationUrl(confirmationUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty,
-    ) : CdkObject(cdkObject), HttpUrlDestinationSummaryProperty {
-      /**
-       * The URL used to confirm the HTTP topic rule destination URL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-httpurldestinationsummary.html#cfn-iot-topicruledestination-httpurldestinationsummary-confirmationurl)
-       */
-      override fun confirmationUrl(): String? = unwrap(this).getConfirmationUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          HttpUrlDestinationSummaryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty):
-          HttpUrlDestinationSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HttpUrlDestinationSummaryProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HttpUrlDestinationSummaryProperty):
-          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty
     }
   }
 }

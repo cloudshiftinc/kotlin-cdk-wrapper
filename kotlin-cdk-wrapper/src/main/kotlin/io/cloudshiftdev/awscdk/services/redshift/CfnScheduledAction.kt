@@ -548,6 +548,91 @@ public open class CfnScheduledAction internal constructor(
   }
 
   /**
+   * Describes a pause cluster operation.
+   *
+   * For example, a scheduled action to run the `PauseCluster` API operation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.redshift.*;
+   * PauseClusterMessageProperty pauseClusterMessageProperty = PauseClusterMessageProperty.builder()
+   * .clusterIdentifier("clusterIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-pauseclustermessage.html)
+   */
+  public interface PauseClusterMessageProperty {
+    /**
+     * The identifier of the cluster to be paused.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-pauseclustermessage.html#cfn-redshift-scheduledaction-pauseclustermessage-clusteridentifier)
+     */
+    public fun clusterIdentifier(): String
+
+    /**
+     * A builder for [PauseClusterMessageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clusterIdentifier The identifier of the cluster to be paused. 
+       */
+      public fun clusterIdentifier(clusterIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty.Builder
+          =
+          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty.builder()
+
+      /**
+       * @param clusterIdentifier The identifier of the cluster to be paused. 
+       */
+      override fun clusterIdentifier(clusterIdentifier: String) {
+        cdkBuilder.clusterIdentifier(clusterIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty,
+    ) : CdkObject(cdkObject), PauseClusterMessageProperty {
+      /**
+       * The identifier of the cluster to be paused.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-pauseclustermessage.html#cfn-redshift-scheduledaction-pauseclustermessage-clusteridentifier)
+       */
+      override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PauseClusterMessageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty):
+          PauseClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PauseClusterMessageProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PauseClusterMessageProperty):
+          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty
+    }
+  }
+
+  /**
    * Describes a resize cluster operation.
    *
    * For example, a scheduled action to run the `ResizeCluster` API operation.
@@ -867,91 +952,6 @@ public open class CfnScheduledAction internal constructor(
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty
-    }
-  }
-
-  /**
-   * Describes a pause cluster operation.
-   *
-   * For example, a scheduled action to run the `PauseCluster` API operation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.redshift.*;
-   * PauseClusterMessageProperty pauseClusterMessageProperty = PauseClusterMessageProperty.builder()
-   * .clusterIdentifier("clusterIdentifier")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-pauseclustermessage.html)
-   */
-  public interface PauseClusterMessageProperty {
-    /**
-     * The identifier of the cluster to be paused.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-pauseclustermessage.html#cfn-redshift-scheduledaction-pauseclustermessage-clusteridentifier)
-     */
-    public fun clusterIdentifier(): String
-
-    /**
-     * A builder for [PauseClusterMessageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clusterIdentifier The identifier of the cluster to be paused. 
-       */
-      public fun clusterIdentifier(clusterIdentifier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty.Builder
-          =
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty.builder()
-
-      /**
-       * @param clusterIdentifier The identifier of the cluster to be paused. 
-       */
-      override fun clusterIdentifier(clusterIdentifier: String) {
-        cdkBuilder.clusterIdentifier(clusterIdentifier)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty,
-    ) : CdkObject(cdkObject), PauseClusterMessageProperty {
-      /**
-       * The identifier of the cluster to be paused.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-pauseclustermessage.html#cfn-redshift-scheduledaction-pauseclustermessage-clusteridentifier)
-       */
-      override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PauseClusterMessageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty):
-          PauseClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PauseClusterMessageProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PauseClusterMessageProperty):
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty
     }
   }
 

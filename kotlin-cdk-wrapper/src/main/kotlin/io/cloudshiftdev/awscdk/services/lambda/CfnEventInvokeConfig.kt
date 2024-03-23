@@ -388,150 +388,6 @@ public open class CfnEventInvokeConfig internal constructor(
   }
 
   /**
-   * A destination for events that failed processing.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * OnFailureProperty onFailureProperty = OnFailureProperty.builder()
-   * .destination("destination")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-onfailure.html)
-   */
-  public interface OnFailureProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the destination resource.
-     *
-     * To retain records of [asynchronous
-     * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-     * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-     * EventBridge event bus as the destination.
-     *
-     * To retain records of failed invocations from [Kinesis and DynamoDB event
-     * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-     * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-     *
-     * To retain records of failed invocations from [self-managed
-     * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
-     * or [Amazon
-     * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
-     * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
-     * destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-onfailure.html#cfn-lambda-eventinvokeconfig-onfailure-destination)
-     */
-    public fun destination(): String
-
-    /**
-     * A builder for [OnFailureProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destination The Amazon Resource Name (ARN) of the destination resource. 
-       * To retain records of [asynchronous
-       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
-       *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
-       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
-       * or [Amazon
-       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
-       * destination.
-       */
-      public fun destination(destination: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty.builder()
-
-      /**
-       * @param destination The Amazon Resource Name (ARN) of the destination resource. 
-       * To retain records of [asynchronous
-       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
-       *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
-       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
-       * or [Amazon
-       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
-       * destination.
-       */
-      override fun destination(destination: String) {
-        cdkBuilder.destination(destination)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty,
-    ) : CdkObject(cdkObject), OnFailureProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the destination resource.
-       *
-       * To retain records of [asynchronous
-       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
-       *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
-       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
-       * or [Amazon
-       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
-       * destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-onfailure.html#cfn-lambda-eventinvokeconfig-onfailure-destination)
-       */
-      override fun destination(): String = unwrap(this).getDestination()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OnFailureProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty):
-          OnFailureProperty = CdkObjectWrappers.wrap(cdkObject) as? OnFailureProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnFailureProperty):
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty
-    }
-  }
-
-  /**
    * A configuration object that specifies the destination of an event after Lambda processes it.
    *
    * Example:
@@ -696,6 +552,150 @@ public open class CfnEventInvokeConfig internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty
+    }
+  }
+
+  /**
+   * A destination for events that failed processing.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * OnFailureProperty onFailureProperty = OnFailureProperty.builder()
+   * .destination("destination")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-onfailure.html)
+   */
+  public interface OnFailureProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the destination resource.
+     *
+     * To retain records of [asynchronous
+     * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+     * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
+     * EventBridge event bus as the destination.
+     *
+     * To retain records of failed invocations from [Kinesis and DynamoDB event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
+     * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     *
+     * To retain records of failed invocations from [self-managed
+     * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
+     * or [Amazon
+     * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
+     * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+     * destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-onfailure.html#cfn-lambda-eventinvokeconfig-onfailure-destination)
+     */
+    public fun destination(): String
+
+    /**
+     * A builder for [OnFailureProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destination The Amazon Resource Name (ARN) of the destination resource. 
+       * To retain records of [asynchronous
+       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
+       * EventBridge event bus as the destination.
+       *
+       * To retain records of failed invocations from [Kinesis and DynamoDB event
+       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
+       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+       *
+       * To retain records of failed invocations from [self-managed
+       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
+       * or [Amazon
+       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+       * destination.
+       */
+      public fun destination(destination: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty.builder()
+
+      /**
+       * @param destination The Amazon Resource Name (ARN) of the destination resource. 
+       * To retain records of [asynchronous
+       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
+       * EventBridge event bus as the destination.
+       *
+       * To retain records of failed invocations from [Kinesis and DynamoDB event
+       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
+       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+       *
+       * To retain records of failed invocations from [self-managed
+       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
+       * or [Amazon
+       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+       * destination.
+       */
+      override fun destination(destination: String) {
+        cdkBuilder.destination(destination)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty,
+    ) : CdkObject(cdkObject), OnFailureProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the destination resource.
+       *
+       * To retain records of [asynchronous
+       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
+       * EventBridge event bus as the destination.
+       *
+       * To retain records of failed invocations from [Kinesis and DynamoDB event
+       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
+       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+       *
+       * To retain records of failed invocations from [self-managed
+       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
+       * or [Amazon
+       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+       * destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-onfailure.html#cfn-lambda-eventinvokeconfig-onfailure-destination)
+       */
+      override fun destination(): String = unwrap(this).getDestination()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OnFailureProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty):
+          OnFailureProperty = CdkObjectWrappers.wrap(cdkObject) as? OnFailureProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnFailureProperty):
+          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty
     }
   }
 

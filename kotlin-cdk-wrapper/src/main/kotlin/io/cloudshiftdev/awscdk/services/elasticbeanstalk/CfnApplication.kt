@@ -311,182 +311,6 @@ public open class CfnApplication internal constructor(
   }
 
   /**
-   * Use the `MaxAgeRule` property type to specify a max count rule to restrict the number of
-   * application versions that are retained for an AWS Elastic Beanstalk application when defining an
-   * AWS::ElasticBeanstalk::Application resource in an AWS CloudFormation template.
-   *
-   * A lifecycle rule that deletes the oldest application version when the maximum count is
-   * exceeded.
-   *
-   * `MaxCountRule` is a property of the
-   * [ApplicationVersionLifecycleConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticbeanstalk.*;
-   * MaxCountRuleProperty maxCountRuleProperty = MaxCountRuleProperty.builder()
-   * .deleteSourceFromS3(false)
-   * .enabled(false)
-   * .maxCount(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html)
-   */
-  public interface MaxCountRuleProperty {
-    /**
-     * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
-     * deletes the application version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)
-     */
-    public fun deleteSourceFromS3(): Any? = unwrap(this).getDeleteSourceFromS3()
-
-    /**
-     * Specify `true` to apply the rule, or `false` to disable it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * Specify the maximum number of application versions to retain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount)
-     */
-    public fun maxCount(): Number? = unwrap(this).getMaxCount()
-
-    /**
-     * A builder for [MaxCountRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
-       * when Elastic Beanstalk deletes the application version.
-       */
-      public fun deleteSourceFromS3(deleteSourceFromS3: Boolean)
-
-      /**
-       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
-       * when Elastic Beanstalk deletes the application version.
-       */
-      public fun deleteSourceFromS3(deleteSourceFromS3: IResolvable)
-
-      /**
-       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param maxCount Specify the maximum number of application versions to retain.
-       */
-      public fun maxCount(maxCount: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty.builder()
-
-      /**
-       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
-       * when Elastic Beanstalk deletes the application version.
-       */
-      override fun deleteSourceFromS3(deleteSourceFromS3: Boolean) {
-        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3)
-      }
-
-      /**
-       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
-       * when Elastic Beanstalk deletes the application version.
-       */
-      override fun deleteSourceFromS3(deleteSourceFromS3: IResolvable) {
-        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxCount Specify the maximum number of application versions to retain.
-       */
-      override fun maxCount(maxCount: Number) {
-        cdkBuilder.maxCount(maxCount)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty,
-    ) : CdkObject(cdkObject), MaxCountRuleProperty {
-      /**
-       * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
-       * deletes the application version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)
-       */
-      override fun deleteSourceFromS3(): Any? = unwrap(this).getDeleteSourceFromS3()
-
-      /**
-       * Specify `true` to apply the rule, or `false` to disable it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * Specify the maximum number of application versions to retain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount)
-       */
-      override fun maxCount(): Number? = unwrap(this).getMaxCount()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MaxCountRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty):
-          MaxCountRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MaxCountRuleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MaxCountRuleProperty):
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty
-    }
-  }
-
-  /**
    * Use the `ApplicationResourceLifecycleConfig` property type to specify lifecycle settings for
    * resources that belong to an AWS Elastic Beanstalk application when defining an
    * AWS::ElasticBeanstalk::Application resource in an AWS CloudFormation template.
@@ -669,181 +493,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationResourceLifecycleConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationResourceLifecycleConfigProperty
-    }
-  }
-
-  /**
-   * Use the `MaxAgeRule` property type to specify a max age rule to restrict the length of time
-   * that application versions are retained for an AWS Elastic Beanstalk application when defining an
-   * AWS::ElasticBeanstalk::Application resource in an AWS CloudFormation template.
-   *
-   * A lifecycle rule that deletes application versions after the specified number of days.
-   *
-   * `MaxAgeRule` is a property of the
-   * [ApplicationVersionLifecycleConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticbeanstalk.*;
-   * MaxAgeRuleProperty maxAgeRuleProperty = MaxAgeRuleProperty.builder()
-   * .deleteSourceFromS3(false)
-   * .enabled(false)
-   * .maxAgeInDays(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html)
-   */
-  public interface MaxAgeRuleProperty {
-    /**
-     * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
-     * deletes the application version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)
-     */
-    public fun deleteSourceFromS3(): Any? = unwrap(this).getDeleteSourceFromS3()
-
-    /**
-     * Specify `true` to apply the rule, or `false` to disable it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * Specify the number of days to retain an application versions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays)
-     */
-    public fun maxAgeInDays(): Number? = unwrap(this).getMaxAgeInDays()
-
-    /**
-     * A builder for [MaxAgeRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
-       * when Elastic Beanstalk deletes the application version.
-       */
-      public fun deleteSourceFromS3(deleteSourceFromS3: Boolean)
-
-      /**
-       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
-       * when Elastic Beanstalk deletes the application version.
-       */
-      public fun deleteSourceFromS3(deleteSourceFromS3: IResolvable)
-
-      /**
-       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param maxAgeInDays Specify the number of days to retain an application versions.
-       */
-      public fun maxAgeInDays(maxAgeInDays: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty.builder()
-
-      /**
-       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
-       * when Elastic Beanstalk deletes the application version.
-       */
-      override fun deleteSourceFromS3(deleteSourceFromS3: Boolean) {
-        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3)
-      }
-
-      /**
-       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
-       * when Elastic Beanstalk deletes the application version.
-       */
-      override fun deleteSourceFromS3(deleteSourceFromS3: IResolvable) {
-        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxAgeInDays Specify the number of days to retain an application versions.
-       */
-      override fun maxAgeInDays(maxAgeInDays: Number) {
-        cdkBuilder.maxAgeInDays(maxAgeInDays)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty,
-    ) : CdkObject(cdkObject), MaxAgeRuleProperty {
-      /**
-       * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
-       * deletes the application version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)
-       */
-      override fun deleteSourceFromS3(): Any? = unwrap(this).getDeleteSourceFromS3()
-
-      /**
-       * Specify `true` to apply the rule, or `false` to disable it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * Specify the number of days to retain an application versions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays)
-       */
-      override fun maxAgeInDays(): Number? = unwrap(this).getMaxAgeInDays()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MaxAgeRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty):
-          MaxAgeRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MaxAgeRuleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MaxAgeRuleProperty):
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty
     }
   }
 
@@ -1048,6 +697,357 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationVersionLifecycleConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationVersionLifecycleConfigProperty
+    }
+  }
+
+  /**
+   * Use the `MaxAgeRule` property type to specify a max age rule to restrict the length of time
+   * that application versions are retained for an AWS Elastic Beanstalk application when defining an
+   * AWS::ElasticBeanstalk::Application resource in an AWS CloudFormation template.
+   *
+   * A lifecycle rule that deletes application versions after the specified number of days.
+   *
+   * `MaxAgeRule` is a property of the
+   * [ApplicationVersionLifecycleConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticbeanstalk.*;
+   * MaxAgeRuleProperty maxAgeRuleProperty = MaxAgeRuleProperty.builder()
+   * .deleteSourceFromS3(false)
+   * .enabled(false)
+   * .maxAgeInDays(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html)
+   */
+  public interface MaxAgeRuleProperty {
+    /**
+     * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
+     * deletes the application version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)
+     */
+    public fun deleteSourceFromS3(): Any? = unwrap(this).getDeleteSourceFromS3()
+
+    /**
+     * Specify `true` to apply the rule, or `false` to disable it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * Specify the number of days to retain an application versions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays)
+     */
+    public fun maxAgeInDays(): Number? = unwrap(this).getMaxAgeInDays()
+
+    /**
+     * A builder for [MaxAgeRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
+       * when Elastic Beanstalk deletes the application version.
+       */
+      public fun deleteSourceFromS3(deleteSourceFromS3: Boolean)
+
+      /**
+       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
+       * when Elastic Beanstalk deletes the application version.
+       */
+      public fun deleteSourceFromS3(deleteSourceFromS3: IResolvable)
+
+      /**
+       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param maxAgeInDays Specify the number of days to retain an application versions.
+       */
+      public fun maxAgeInDays(maxAgeInDays: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty.builder()
+
+      /**
+       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
+       * when Elastic Beanstalk deletes the application version.
+       */
+      override fun deleteSourceFromS3(deleteSourceFromS3: Boolean) {
+        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3)
+      }
+
+      /**
+       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
+       * when Elastic Beanstalk deletes the application version.
+       */
+      override fun deleteSourceFromS3(deleteSourceFromS3: IResolvable) {
+        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxAgeInDays Specify the number of days to retain an application versions.
+       */
+      override fun maxAgeInDays(maxAgeInDays: Number) {
+        cdkBuilder.maxAgeInDays(maxAgeInDays)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty,
+    ) : CdkObject(cdkObject), MaxAgeRuleProperty {
+      /**
+       * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
+       * deletes the application version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3)
+       */
+      override fun deleteSourceFromS3(): Any? = unwrap(this).getDeleteSourceFromS3()
+
+      /**
+       * Specify `true` to apply the rule, or `false` to disable it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * Specify the number of days to retain an application versions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays)
+       */
+      override fun maxAgeInDays(): Number? = unwrap(this).getMaxAgeInDays()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MaxAgeRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty):
+          MaxAgeRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MaxAgeRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MaxAgeRuleProperty):
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty
+    }
+  }
+
+  /**
+   * Use the `MaxAgeRule` property type to specify a max count rule to restrict the number of
+   * application versions that are retained for an AWS Elastic Beanstalk application when defining an
+   * AWS::ElasticBeanstalk::Application resource in an AWS CloudFormation template.
+   *
+   * A lifecycle rule that deletes the oldest application version when the maximum count is
+   * exceeded.
+   *
+   * `MaxCountRule` is a property of the
+   * [ApplicationVersionLifecycleConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticbeanstalk.*;
+   * MaxCountRuleProperty maxCountRuleProperty = MaxCountRuleProperty.builder()
+   * .deleteSourceFromS3(false)
+   * .enabled(false)
+   * .maxCount(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html)
+   */
+  public interface MaxCountRuleProperty {
+    /**
+     * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
+     * deletes the application version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)
+     */
+    public fun deleteSourceFromS3(): Any? = unwrap(this).getDeleteSourceFromS3()
+
+    /**
+     * Specify `true` to apply the rule, or `false` to disable it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * Specify the maximum number of application versions to retain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount)
+     */
+    public fun maxCount(): Number? = unwrap(this).getMaxCount()
+
+    /**
+     * A builder for [MaxCountRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
+       * when Elastic Beanstalk deletes the application version.
+       */
+      public fun deleteSourceFromS3(deleteSourceFromS3: Boolean)
+
+      /**
+       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
+       * when Elastic Beanstalk deletes the application version.
+       */
+      public fun deleteSourceFromS3(deleteSourceFromS3: IResolvable)
+
+      /**
+       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param maxCount Specify the maximum number of application versions to retain.
+       */
+      public fun maxCount(maxCount: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty.builder()
+
+      /**
+       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
+       * when Elastic Beanstalk deletes the application version.
+       */
+      override fun deleteSourceFromS3(deleteSourceFromS3: Boolean) {
+        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3)
+      }
+
+      /**
+       * @param deleteSourceFromS3 Set to `true` to delete a version's source bundle from Amazon S3
+       * when Elastic Beanstalk deletes the application version.
+       */
+      override fun deleteSourceFromS3(deleteSourceFromS3: IResolvable) {
+        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specify `true` to apply the rule, or `false` to disable it.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxCount Specify the maximum number of application versions to retain.
+       */
+      override fun maxCount(maxCount: Number) {
+        cdkBuilder.maxCount(maxCount)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty,
+    ) : CdkObject(cdkObject), MaxCountRuleProperty {
+      /**
+       * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
+       * deletes the application version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)
+       */
+      override fun deleteSourceFromS3(): Any? = unwrap(this).getDeleteSourceFromS3()
+
+      /**
+       * Specify `true` to apply the rule, or `false` to disable it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * Specify the maximum number of application versions to retain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount)
+       */
+      override fun maxCount(): Number? = unwrap(this).getMaxCount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MaxCountRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty):
+          MaxCountRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MaxCountRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MaxCountRuleProperty):
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty
     }
   }
 }

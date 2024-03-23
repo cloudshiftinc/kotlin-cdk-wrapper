@@ -1353,202 +1353,6 @@ public open class CfnGraphQLApi internal constructor(
   }
 
   /**
-   * The `LogConfig` property type specifies the logging configuration when writing GraphQL
-   * operations and tracing to Amazon CloudWatch for an AWS AppSync GraphQL API.
-   *
-   * `LogConfig` is a property of the
-   * [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * LogConfigProperty logConfigProperty = LogConfigProperty.builder()
-   * .cloudWatchLogsRoleArn("cloudWatchLogsRoleArn")
-   * .excludeVerboseContent(false)
-   * .fieldLogLevel("fieldLogLevel")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html)
-   */
-  public interface LogConfigProperty {
-    /**
-     * The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your
-     * account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)
-     */
-    public fun cloudWatchLogsRoleArn(): String? = unwrap(this).getCloudWatchLogsRoleArn()
-
-    /**
-     * Set to TRUE to exclude sections that contain information such as headers, context, and
-     * evaluated mapping templates, regardless of logging level.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-excludeverbosecontent)
-     */
-    public fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
-
-    /**
-     * The field logging level. Values can be NONE, ERROR, or ALL.
-     *
-     * * *NONE* : No field-level logs are captured.
-     * * *ERROR* : Logs the following information only for the fields that are in error:
-     * * The error section in the server response.
-     * * Field-level errors.
-     * * The generated request/response functions that got resolved for error fields.
-     * * *ALL* : The following information is logged for all fields in the query:
-     * * Field-level tracing information.
-     * * The generated request/response functions that got resolved for each field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
-     */
-    public fun fieldLogLevel(): String? = unwrap(this).getFieldLogLevel()
-
-    /**
-     * A builder for [LogConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogsRoleArn The service role that AWS AppSync will assume to publish to
-       * Amazon CloudWatch Logs in your account.
-       */
-      public fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String)
-
-      /**
-       * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such
-       * as headers, context, and evaluated mapping templates, regardless of logging level.
-       */
-      public fun excludeVerboseContent(excludeVerboseContent: Boolean)
-
-      /**
-       * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such
-       * as headers, context, and evaluated mapping templates, regardless of logging level.
-       */
-      public fun excludeVerboseContent(excludeVerboseContent: IResolvable)
-
-      /**
-       * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, or ALL.
-       * * *NONE* : No field-level logs are captured.
-       * * *ERROR* : Logs the following information only for the fields that are in error:
-       * * The error section in the server response.
-       * * Field-level errors.
-       * * The generated request/response functions that got resolved for error fields.
-       * * *ALL* : The following information is logged for all fields in the query:
-       * * Field-level tracing information.
-       * * The generated request/response functions that got resolved for each field.
-       */
-      public fun fieldLogLevel(fieldLogLevel: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty.Builder =
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty.builder()
-
-      /**
-       * @param cloudWatchLogsRoleArn The service role that AWS AppSync will assume to publish to
-       * Amazon CloudWatch Logs in your account.
-       */
-      override fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
-        cdkBuilder.cloudWatchLogsRoleArn(cloudWatchLogsRoleArn)
-      }
-
-      /**
-       * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such
-       * as headers, context, and evaluated mapping templates, regardless of logging level.
-       */
-      override fun excludeVerboseContent(excludeVerboseContent: Boolean) {
-        cdkBuilder.excludeVerboseContent(excludeVerboseContent)
-      }
-
-      /**
-       * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such
-       * as headers, context, and evaluated mapping templates, regardless of logging level.
-       */
-      override fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
-        cdkBuilder.excludeVerboseContent(excludeVerboseContent.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, or ALL.
-       * * *NONE* : No field-level logs are captured.
-       * * *ERROR* : Logs the following information only for the fields that are in error:
-       * * The error section in the server response.
-       * * Field-level errors.
-       * * The generated request/response functions that got resolved for error fields.
-       * * *ALL* : The following information is logged for all fields in the query:
-       * * Field-level tracing information.
-       * * The generated request/response functions that got resolved for each field.
-       */
-      override fun fieldLogLevel(fieldLogLevel: String) {
-        cdkBuilder.fieldLogLevel(fieldLogLevel)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty,
-    ) : CdkObject(cdkObject), LogConfigProperty {
-      /**
-       * The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your
-       * account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)
-       */
-      override fun cloudWatchLogsRoleArn(): String? = unwrap(this).getCloudWatchLogsRoleArn()
-
-      /**
-       * Set to TRUE to exclude sections that contain information such as headers, context, and
-       * evaluated mapping templates, regardless of logging level.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-excludeverbosecontent)
-       */
-      override fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
-
-      /**
-       * The field logging level. Values can be NONE, ERROR, or ALL.
-       *
-       * * *NONE* : No field-level logs are captured.
-       * * *ERROR* : Logs the following information only for the fields that are in error:
-       * * The error section in the server response.
-       * * Field-level errors.
-       * * The generated request/response functions that got resolved for error fields.
-       * * *ALL* : The following information is logged for all fields in the query:
-       * * Field-level tracing information.
-       * * The generated request/response functions that got resolved for each field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
-       */
-      override fun fieldLogLevel(): String? = unwrap(this).getFieldLogLevel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty):
-          LogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty
-    }
-  }
-
-  /**
    * Describes an additional authentication provider.
    *
    * Example:
@@ -1828,396 +1632,6 @@ public open class CfnGraphQLApi internal constructor(
   }
 
   /**
-   * Configuration for AWS Lambda function authorization.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * LambdaAuthorizerConfigProperty lambdaAuthorizerConfigProperty =
-   * LambdaAuthorizerConfigProperty.builder()
-   * .authorizerResultTtlInSeconds(123)
-   * .authorizerUri("authorizerUri")
-   * .identityValidationExpression("identityValidationExpression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html)
-   */
-  public interface LambdaAuthorizerConfigProperty {
-    /**
-     * The number of seconds a response should be cached for.
-     *
-     * The default is 0 seconds, which disables caching. If you don't specify a value for
-     * `authorizerResultTtlInSeconds` , the default value is used. The maximum value is one hour (3600
-     * seconds). The Lambda function can override this by returning a `ttlOverride` key in its
-     * response.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizerresultttlinseconds)
-     */
-    public fun authorizerResultTtlInSeconds(): Number? =
-        unwrap(this).getAuthorizerResultTtlInSeconds()
-
-    /**
-     * The ARN of the Lambda function to be called for authorization.
-     *
-     * This may be a standard Lambda ARN, a version ARN ( `.../v3` ) or alias ARN.
-     *
-     * *Note* : This Lambda function must have the following resource-based policy assigned to it.
-     * When configuring Lambda authorizers in the console, this is done for you. To do so with the AWS
-     * CLI , run the following:
-     *
-     * `aws lambda add-permission --function-name
-     * "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id
-     * "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizeruri)
-     */
-    public fun authorizerUri(): String? = unwrap(this).getAuthorizerUri()
-
-    /**
-     * A regular expression for validation of tokens before the Lambda function is called.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-identityvalidationexpression)
-     */
-    public fun identityValidationExpression(): String? =
-        unwrap(this).getIdentityValidationExpression()
-
-    /**
-     * A builder for [LambdaAuthorizerConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authorizerResultTtlInSeconds The number of seconds a response should be cached for.
-       * The default is 0 seconds, which disables caching. If you don't specify a value for
-       * `authorizerResultTtlInSeconds` , the default value is used. The maximum value is one hour
-       * (3600 seconds). The Lambda function can override this by returning a `ttlOverride` key in its
-       * response.
-       */
-      public fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number)
-
-      /**
-       * @param authorizerUri The ARN of the Lambda function to be called for authorization.
-       * This may be a standard Lambda ARN, a version ARN ( `.../v3` ) or alias ARN.
-       *
-       * *Note* : This Lambda function must have the following resource-based policy assigned to it.
-       * When configuring Lambda authorizers in the console, this is done for you. To do so with the
-       * AWS CLI , run the following:
-       *
-       * `aws lambda add-permission --function-name
-       * "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id
-       * "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction`
-       */
-      public fun authorizerUri(authorizerUri: String)
-
-      /**
-       * @param identityValidationExpression A regular expression for validation of tokens before
-       * the Lambda function is called.
-       */
-      public fun identityValidationExpression(identityValidationExpression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty.builder()
-
-      /**
-       * @param authorizerResultTtlInSeconds The number of seconds a response should be cached for.
-       * The default is 0 seconds, which disables caching. If you don't specify a value for
-       * `authorizerResultTtlInSeconds` , the default value is used. The maximum value is one hour
-       * (3600 seconds). The Lambda function can override this by returning a `ttlOverride` key in its
-       * response.
-       */
-      override fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
-        cdkBuilder.authorizerResultTtlInSeconds(authorizerResultTtlInSeconds)
-      }
-
-      /**
-       * @param authorizerUri The ARN of the Lambda function to be called for authorization.
-       * This may be a standard Lambda ARN, a version ARN ( `.../v3` ) or alias ARN.
-       *
-       * *Note* : This Lambda function must have the following resource-based policy assigned to it.
-       * When configuring Lambda authorizers in the console, this is done for you. To do so with the
-       * AWS CLI , run the following:
-       *
-       * `aws lambda add-permission --function-name
-       * "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id
-       * "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction`
-       */
-      override fun authorizerUri(authorizerUri: String) {
-        cdkBuilder.authorizerUri(authorizerUri)
-      }
-
-      /**
-       * @param identityValidationExpression A regular expression for validation of tokens before
-       * the Lambda function is called.
-       */
-      override fun identityValidationExpression(identityValidationExpression: String) {
-        cdkBuilder.identityValidationExpression(identityValidationExpression)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty,
-    ) : CdkObject(cdkObject), LambdaAuthorizerConfigProperty {
-      /**
-       * The number of seconds a response should be cached for.
-       *
-       * The default is 0 seconds, which disables caching. If you don't specify a value for
-       * `authorizerResultTtlInSeconds` , the default value is used. The maximum value is one hour
-       * (3600 seconds). The Lambda function can override this by returning a `ttlOverride` key in its
-       * response.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizerresultttlinseconds)
-       */
-      override fun authorizerResultTtlInSeconds(): Number? =
-          unwrap(this).getAuthorizerResultTtlInSeconds()
-
-      /**
-       * The ARN of the Lambda function to be called for authorization.
-       *
-       * This may be a standard Lambda ARN, a version ARN ( `.../v3` ) or alias ARN.
-       *
-       * *Note* : This Lambda function must have the following resource-based policy assigned to it.
-       * When configuring Lambda authorizers in the console, this is done for you. To do so with the
-       * AWS CLI , run the following:
-       *
-       * `aws lambda add-permission --function-name
-       * "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id
-       * "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizeruri)
-       */
-      override fun authorizerUri(): String? = unwrap(this).getAuthorizerUri()
-
-      /**
-       * A regular expression for validation of tokens before the Lambda function is called.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-identityvalidationexpression)
-       */
-      override fun identityValidationExpression(): String? =
-          unwrap(this).getIdentityValidationExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaAuthorizerConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty):
-          LambdaAuthorizerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LambdaAuthorizerConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaAuthorizerConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty
-    }
-  }
-
-  /**
-   * The `OpenIDConnectConfig` property type specifies the optional authorization configuration for
-   * using an OpenID Connect compliant service with your GraphQL endpoint for an AWS AppSync GraphQL
-   * API.
-   *
-   * `OpenIDConnectConfig` is a property of the
-   * [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * OpenIDConnectConfigProperty openIDConnectConfigProperty = OpenIDConnectConfigProperty.builder()
-   * .authTtl(123)
-   * .clientId("clientId")
-   * .iatTtl(123)
-   * .issuer("issuer")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html)
-   */
-  public interface OpenIDConnectConfigProperty {
-    /**
-     * The number of milliseconds that a token is valid after being authenticated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
-     */
-    public fun authTtl(): Number? = unwrap(this).getAuthTtl()
-
-    /**
-     * The client identifier of the Relying party at the OpenID identity provider.
-     *
-     * This identifier is typically obtained when the Relying party is registered with the OpenID
-     * identity provider. You can specify a regular expression so that AWS AppSync can validate against
-     * multiple client identifiers at a time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
-     */
-    public fun clientId(): String? = unwrap(this).getClientId()
-
-    /**
-     * The number of milliseconds that a token is valid after it's issued to a user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
-     */
-    public fun iatTtl(): Number? = unwrap(this).getIatTtl()
-
-    /**
-     * The issuer for the OIDC configuration.
-     *
-     * The issuer returned by discovery must exactly match the value of `iss` in the ID token.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
-     */
-    public fun issuer(): String? = unwrap(this).getIssuer()
-
-    /**
-     * A builder for [OpenIDConnectConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authTtl The number of milliseconds that a token is valid after being authenticated.
-       */
-      public fun authTtl(authTtl: Number)
-
-      /**
-       * @param clientId The client identifier of the Relying party at the OpenID identity provider.
-       * This identifier is typically obtained when the Relying party is registered with the OpenID
-       * identity provider. You can specify a regular expression so that AWS AppSync can validate
-       * against multiple client identifiers at a time.
-       */
-      public fun clientId(clientId: String)
-
-      /**
-       * @param iatTtl The number of milliseconds that a token is valid after it's issued to a user.
-       */
-      public fun iatTtl(iatTtl: Number)
-
-      /**
-       * @param issuer The issuer for the OIDC configuration.
-       * The issuer returned by discovery must exactly match the value of `iss` in the ID token.
-       */
-      public fun issuer(issuer: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty.builder()
-
-      /**
-       * @param authTtl The number of milliseconds that a token is valid after being authenticated.
-       */
-      override fun authTtl(authTtl: Number) {
-        cdkBuilder.authTtl(authTtl)
-      }
-
-      /**
-       * @param clientId The client identifier of the Relying party at the OpenID identity provider.
-       * This identifier is typically obtained when the Relying party is registered with the OpenID
-       * identity provider. You can specify a regular expression so that AWS AppSync can validate
-       * against multiple client identifiers at a time.
-       */
-      override fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-      }
-
-      /**
-       * @param iatTtl The number of milliseconds that a token is valid after it's issued to a user.
-       */
-      override fun iatTtl(iatTtl: Number) {
-        cdkBuilder.iatTtl(iatTtl)
-      }
-
-      /**
-       * @param issuer The issuer for the OIDC configuration.
-       * The issuer returned by discovery must exactly match the value of `iss` in the ID token.
-       */
-      override fun issuer(issuer: String) {
-        cdkBuilder.issuer(issuer)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty,
-    ) : CdkObject(cdkObject), OpenIDConnectConfigProperty {
-      /**
-       * The number of milliseconds that a token is valid after being authenticated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
-       */
-      override fun authTtl(): Number? = unwrap(this).getAuthTtl()
-
-      /**
-       * The client identifier of the Relying party at the OpenID identity provider.
-       *
-       * This identifier is typically obtained when the Relying party is registered with the OpenID
-       * identity provider. You can specify a regular expression so that AWS AppSync can validate
-       * against multiple client identifiers at a time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
-       */
-      override fun clientId(): String? = unwrap(this).getClientId()
-
-      /**
-       * The number of milliseconds that a token is valid after it's issued to a user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
-       */
-      override fun iatTtl(): Number? = unwrap(this).getIatTtl()
-
-      /**
-       * The issuer for the OIDC configuration.
-       *
-       * The issuer returned by discovery must exactly match the value of `iss` in the ID token.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
-       */
-      override fun issuer(): String? = unwrap(this).getIssuer()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OpenIDConnectConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty):
-          OpenIDConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OpenIDConnectConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OpenIDConnectConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty
-    }
-  }
-
-  /**
    * Describes an Amazon Cognito user pool configuration.
    *
    * Example:
@@ -2360,194 +1774,6 @@ public open class CfnGraphQLApi internal constructor(
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty
-    }
-  }
-
-  /**
-   * The `UserPoolConfig` property type specifies the optional authorization configuration for using
-   * Amazon Cognito user pools with your GraphQL endpoint for an AWS AppSync GraphQL API.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * UserPoolConfigProperty userPoolConfigProperty = UserPoolConfigProperty.builder()
-   * .appIdClientRegex("appIdClientRegex")
-   * .awsRegion("awsRegion")
-   * .defaultAction("defaultAction")
-   * .userPoolId("userPoolId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html)
-   */
-  public interface UserPoolConfigProperty {
-    /**
-     * A regular expression for validating the incoming Amazon Cognito user pool app client ID.
-     *
-     * If this value isn't set, no filtering is applied.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex)
-     */
-    public fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
-
-    /**
-     * The AWS Region in which the user pool was created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion)
-     */
-    public fun awsRegion(): String? = unwrap(this).getAwsRegion()
-
-    /**
-     * The action that you want your GraphQL API to take when a request that uses Amazon Cognito
-     * user pool authentication doesn't match the Amazon Cognito user pool configuration.
-     *
-     * When specifying Amazon Cognito user pools as the default authentication, you must set the
-     * value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction)
-     */
-    public fun defaultAction(): String? = unwrap(this).getDefaultAction()
-
-    /**
-     * The user pool ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid)
-     */
-    public fun userPoolId(): String? = unwrap(this).getUserPoolId()
-
-    /**
-     * A builder for [UserPoolConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito
-       * user pool app client ID.
-       * If this value isn't set, no filtering is applied.
-       */
-      public fun appIdClientRegex(appIdClientRegex: String)
-
-      /**
-       * @param awsRegion The AWS Region in which the user pool was created.
-       */
-      public fun awsRegion(awsRegion: String)
-
-      /**
-       * @param defaultAction The action that you want your GraphQL API to take when a request that
-       * uses Amazon Cognito user pool authentication doesn't match the Amazon Cognito user pool
-       * configuration.
-       * When specifying Amazon Cognito user pools as the default authentication, you must set the
-       * value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
-       */
-      public fun defaultAction(defaultAction: String)
-
-      /**
-       * @param userPoolId The user pool ID.
-       */
-      public fun userPoolId(userPoolId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty.Builder =
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty.builder()
-
-      /**
-       * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito
-       * user pool app client ID.
-       * If this value isn't set, no filtering is applied.
-       */
-      override fun appIdClientRegex(appIdClientRegex: String) {
-        cdkBuilder.appIdClientRegex(appIdClientRegex)
-      }
-
-      /**
-       * @param awsRegion The AWS Region in which the user pool was created.
-       */
-      override fun awsRegion(awsRegion: String) {
-        cdkBuilder.awsRegion(awsRegion)
-      }
-
-      /**
-       * @param defaultAction The action that you want your GraphQL API to take when a request that
-       * uses Amazon Cognito user pool authentication doesn't match the Amazon Cognito user pool
-       * configuration.
-       * When specifying Amazon Cognito user pools as the default authentication, you must set the
-       * value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
-       */
-      override fun defaultAction(defaultAction: String) {
-        cdkBuilder.defaultAction(defaultAction)
-      }
-
-      /**
-       * @param userPoolId The user pool ID.
-       */
-      override fun userPoolId(userPoolId: String) {
-        cdkBuilder.userPoolId(userPoolId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty,
-    ) : CdkObject(cdkObject), UserPoolConfigProperty {
-      /**
-       * A regular expression for validating the incoming Amazon Cognito user pool app client ID.
-       *
-       * If this value isn't set, no filtering is applied.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex)
-       */
-      override fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
-
-      /**
-       * The AWS Region in which the user pool was created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion)
-       */
-      override fun awsRegion(): String? = unwrap(this).getAwsRegion()
-
-      /**
-       * The action that you want your GraphQL API to take when a request that uses Amazon Cognito
-       * user pool authentication doesn't match the Amazon Cognito user pool configuration.
-       *
-       * When specifying Amazon Cognito user pools as the default authentication, you must set the
-       * value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction)
-       */
-      override fun defaultAction(): String? = unwrap(this).getDefaultAction()
-
-      /**
-       * The user pool ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid)
-       */
-      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UserPoolConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty):
-          UserPoolConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? UserPoolConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UserPoolConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty
     }
   }
 
@@ -2830,6 +2056,780 @@ public open class CfnGraphQLApi internal constructor(
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty
+    }
+  }
+
+  /**
+   * Configuration for AWS Lambda function authorization.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * LambdaAuthorizerConfigProperty lambdaAuthorizerConfigProperty =
+   * LambdaAuthorizerConfigProperty.builder()
+   * .authorizerResultTtlInSeconds(123)
+   * .authorizerUri("authorizerUri")
+   * .identityValidationExpression("identityValidationExpression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html)
+   */
+  public interface LambdaAuthorizerConfigProperty {
+    /**
+     * The number of seconds a response should be cached for.
+     *
+     * The default is 0 seconds, which disables caching. If you don't specify a value for
+     * `authorizerResultTtlInSeconds` , the default value is used. The maximum value is one hour (3600
+     * seconds). The Lambda function can override this by returning a `ttlOverride` key in its
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizerresultttlinseconds)
+     */
+    public fun authorizerResultTtlInSeconds(): Number? =
+        unwrap(this).getAuthorizerResultTtlInSeconds()
+
+    /**
+     * The ARN of the Lambda function to be called for authorization.
+     *
+     * This may be a standard Lambda ARN, a version ARN ( `.../v3` ) or alias ARN.
+     *
+     * *Note* : This Lambda function must have the following resource-based policy assigned to it.
+     * When configuring Lambda authorizers in the console, this is done for you. To do so with the AWS
+     * CLI , run the following:
+     *
+     * `aws lambda add-permission --function-name
+     * "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id
+     * "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizeruri)
+     */
+    public fun authorizerUri(): String? = unwrap(this).getAuthorizerUri()
+
+    /**
+     * A regular expression for validation of tokens before the Lambda function is called.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-identityvalidationexpression)
+     */
+    public fun identityValidationExpression(): String? =
+        unwrap(this).getIdentityValidationExpression()
+
+    /**
+     * A builder for [LambdaAuthorizerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authorizerResultTtlInSeconds The number of seconds a response should be cached for.
+       * The default is 0 seconds, which disables caching. If you don't specify a value for
+       * `authorizerResultTtlInSeconds` , the default value is used. The maximum value is one hour
+       * (3600 seconds). The Lambda function can override this by returning a `ttlOverride` key in its
+       * response.
+       */
+      public fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number)
+
+      /**
+       * @param authorizerUri The ARN of the Lambda function to be called for authorization.
+       * This may be a standard Lambda ARN, a version ARN ( `.../v3` ) or alias ARN.
+       *
+       * *Note* : This Lambda function must have the following resource-based policy assigned to it.
+       * When configuring Lambda authorizers in the console, this is done for you. To do so with the
+       * AWS CLI , run the following:
+       *
+       * `aws lambda add-permission --function-name
+       * "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id
+       * "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction`
+       */
+      public fun authorizerUri(authorizerUri: String)
+
+      /**
+       * @param identityValidationExpression A regular expression for validation of tokens before
+       * the Lambda function is called.
+       */
+      public fun identityValidationExpression(identityValidationExpression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty.builder()
+
+      /**
+       * @param authorizerResultTtlInSeconds The number of seconds a response should be cached for.
+       * The default is 0 seconds, which disables caching. If you don't specify a value for
+       * `authorizerResultTtlInSeconds` , the default value is used. The maximum value is one hour
+       * (3600 seconds). The Lambda function can override this by returning a `ttlOverride` key in its
+       * response.
+       */
+      override fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
+        cdkBuilder.authorizerResultTtlInSeconds(authorizerResultTtlInSeconds)
+      }
+
+      /**
+       * @param authorizerUri The ARN of the Lambda function to be called for authorization.
+       * This may be a standard Lambda ARN, a version ARN ( `.../v3` ) or alias ARN.
+       *
+       * *Note* : This Lambda function must have the following resource-based policy assigned to it.
+       * When configuring Lambda authorizers in the console, this is done for you. To do so with the
+       * AWS CLI , run the following:
+       *
+       * `aws lambda add-permission --function-name
+       * "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id
+       * "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction`
+       */
+      override fun authorizerUri(authorizerUri: String) {
+        cdkBuilder.authorizerUri(authorizerUri)
+      }
+
+      /**
+       * @param identityValidationExpression A regular expression for validation of tokens before
+       * the Lambda function is called.
+       */
+      override fun identityValidationExpression(identityValidationExpression: String) {
+        cdkBuilder.identityValidationExpression(identityValidationExpression)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty,
+    ) : CdkObject(cdkObject), LambdaAuthorizerConfigProperty {
+      /**
+       * The number of seconds a response should be cached for.
+       *
+       * The default is 0 seconds, which disables caching. If you don't specify a value for
+       * `authorizerResultTtlInSeconds` , the default value is used. The maximum value is one hour
+       * (3600 seconds). The Lambda function can override this by returning a `ttlOverride` key in its
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizerresultttlinseconds)
+       */
+      override fun authorizerResultTtlInSeconds(): Number? =
+          unwrap(this).getAuthorizerResultTtlInSeconds()
+
+      /**
+       * The ARN of the Lambda function to be called for authorization.
+       *
+       * This may be a standard Lambda ARN, a version ARN ( `.../v3` ) or alias ARN.
+       *
+       * *Note* : This Lambda function must have the following resource-based policy assigned to it.
+       * When configuring Lambda authorizers in the console, this is done for you. To do so with the
+       * AWS CLI , run the following:
+       *
+       * `aws lambda add-permission --function-name
+       * "arn:aws:lambda:us-east-2:111122223333:function:my-function" --statement-id
+       * "appsync" --principal appsync.amazonaws.com --action lambda:InvokeFunction`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizeruri)
+       */
+      override fun authorizerUri(): String? = unwrap(this).getAuthorizerUri()
+
+      /**
+       * A regular expression for validation of tokens before the Lambda function is called.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html#cfn-appsync-graphqlapi-lambdaauthorizerconfig-identityvalidationexpression)
+       */
+      override fun identityValidationExpression(): String? =
+          unwrap(this).getIdentityValidationExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaAuthorizerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty):
+          LambdaAuthorizerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaAuthorizerConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaAuthorizerConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty
+    }
+  }
+
+  /**
+   * The `LogConfig` property type specifies the logging configuration when writing GraphQL
+   * operations and tracing to Amazon CloudWatch for an AWS AppSync GraphQL API.
+   *
+   * `LogConfig` is a property of the
+   * [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * LogConfigProperty logConfigProperty = LogConfigProperty.builder()
+   * .cloudWatchLogsRoleArn("cloudWatchLogsRoleArn")
+   * .excludeVerboseContent(false)
+   * .fieldLogLevel("fieldLogLevel")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html)
+   */
+  public interface LogConfigProperty {
+    /**
+     * The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your
+     * account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)
+     */
+    public fun cloudWatchLogsRoleArn(): String? = unwrap(this).getCloudWatchLogsRoleArn()
+
+    /**
+     * Set to TRUE to exclude sections that contain information such as headers, context, and
+     * evaluated mapping templates, regardless of logging level.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-excludeverbosecontent)
+     */
+    public fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
+
+    /**
+     * The field logging level. Values can be NONE, ERROR, or ALL.
+     *
+     * * *NONE* : No field-level logs are captured.
+     * * *ERROR* : Logs the following information only for the fields that are in error:
+     * * The error section in the server response.
+     * * Field-level errors.
+     * * The generated request/response functions that got resolved for error fields.
+     * * *ALL* : The following information is logged for all fields in the query:
+     * * Field-level tracing information.
+     * * The generated request/response functions that got resolved for each field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
+     */
+    public fun fieldLogLevel(): String? = unwrap(this).getFieldLogLevel()
+
+    /**
+     * A builder for [LogConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogsRoleArn The service role that AWS AppSync will assume to publish to
+       * Amazon CloudWatch Logs in your account.
+       */
+      public fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String)
+
+      /**
+       * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such
+       * as headers, context, and evaluated mapping templates, regardless of logging level.
+       */
+      public fun excludeVerboseContent(excludeVerboseContent: Boolean)
+
+      /**
+       * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such
+       * as headers, context, and evaluated mapping templates, regardless of logging level.
+       */
+      public fun excludeVerboseContent(excludeVerboseContent: IResolvable)
+
+      /**
+       * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, or ALL.
+       * * *NONE* : No field-level logs are captured.
+       * * *ERROR* : Logs the following information only for the fields that are in error:
+       * * The error section in the server response.
+       * * Field-level errors.
+       * * The generated request/response functions that got resolved for error fields.
+       * * *ALL* : The following information is logged for all fields in the query:
+       * * Field-level tracing information.
+       * * The generated request/response functions that got resolved for each field.
+       */
+      public fun fieldLogLevel(fieldLogLevel: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty.Builder =
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty.builder()
+
+      /**
+       * @param cloudWatchLogsRoleArn The service role that AWS AppSync will assume to publish to
+       * Amazon CloudWatch Logs in your account.
+       */
+      override fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
+        cdkBuilder.cloudWatchLogsRoleArn(cloudWatchLogsRoleArn)
+      }
+
+      /**
+       * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such
+       * as headers, context, and evaluated mapping templates, regardless of logging level.
+       */
+      override fun excludeVerboseContent(excludeVerboseContent: Boolean) {
+        cdkBuilder.excludeVerboseContent(excludeVerboseContent)
+      }
+
+      /**
+       * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such
+       * as headers, context, and evaluated mapping templates, regardless of logging level.
+       */
+      override fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
+        cdkBuilder.excludeVerboseContent(excludeVerboseContent.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, or ALL.
+       * * *NONE* : No field-level logs are captured.
+       * * *ERROR* : Logs the following information only for the fields that are in error:
+       * * The error section in the server response.
+       * * Field-level errors.
+       * * The generated request/response functions that got resolved for error fields.
+       * * *ALL* : The following information is logged for all fields in the query:
+       * * Field-level tracing information.
+       * * The generated request/response functions that got resolved for each field.
+       */
+      override fun fieldLogLevel(fieldLogLevel: String) {
+        cdkBuilder.fieldLogLevel(fieldLogLevel)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty,
+    ) : CdkObject(cdkObject), LogConfigProperty {
+      /**
+       * The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your
+       * account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn)
+       */
+      override fun cloudWatchLogsRoleArn(): String? = unwrap(this).getCloudWatchLogsRoleArn()
+
+      /**
+       * Set to TRUE to exclude sections that contain information such as headers, context, and
+       * evaluated mapping templates, regardless of logging level.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-excludeverbosecontent)
+       */
+      override fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
+
+      /**
+       * The field logging level. Values can be NONE, ERROR, or ALL.
+       *
+       * * *NONE* : No field-level logs are captured.
+       * * *ERROR* : Logs the following information only for the fields that are in error:
+       * * The error section in the server response.
+       * * Field-level errors.
+       * * The generated request/response functions that got resolved for error fields.
+       * * *ALL* : The following information is logged for all fields in the query:
+       * * Field-level tracing information.
+       * * The generated request/response functions that got resolved for each field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
+       */
+      override fun fieldLogLevel(): String? = unwrap(this).getFieldLogLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty):
+          LogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty
+    }
+  }
+
+  /**
+   * The `OpenIDConnectConfig` property type specifies the optional authorization configuration for
+   * using an OpenID Connect compliant service with your GraphQL endpoint for an AWS AppSync GraphQL
+   * API.
+   *
+   * `OpenIDConnectConfig` is a property of the
+   * [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * OpenIDConnectConfigProperty openIDConnectConfigProperty = OpenIDConnectConfigProperty.builder()
+   * .authTtl(123)
+   * .clientId("clientId")
+   * .iatTtl(123)
+   * .issuer("issuer")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html)
+   */
+  public interface OpenIDConnectConfigProperty {
+    /**
+     * The number of milliseconds that a token is valid after being authenticated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
+     */
+    public fun authTtl(): Number? = unwrap(this).getAuthTtl()
+
+    /**
+     * The client identifier of the Relying party at the OpenID identity provider.
+     *
+     * This identifier is typically obtained when the Relying party is registered with the OpenID
+     * identity provider. You can specify a regular expression so that AWS AppSync can validate against
+     * multiple client identifiers at a time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
+     */
+    public fun clientId(): String? = unwrap(this).getClientId()
+
+    /**
+     * The number of milliseconds that a token is valid after it's issued to a user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
+     */
+    public fun iatTtl(): Number? = unwrap(this).getIatTtl()
+
+    /**
+     * The issuer for the OIDC configuration.
+     *
+     * The issuer returned by discovery must exactly match the value of `iss` in the ID token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
+     */
+    public fun issuer(): String? = unwrap(this).getIssuer()
+
+    /**
+     * A builder for [OpenIDConnectConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authTtl The number of milliseconds that a token is valid after being authenticated.
+       */
+      public fun authTtl(authTtl: Number)
+
+      /**
+       * @param clientId The client identifier of the Relying party at the OpenID identity provider.
+       * This identifier is typically obtained when the Relying party is registered with the OpenID
+       * identity provider. You can specify a regular expression so that AWS AppSync can validate
+       * against multiple client identifiers at a time.
+       */
+      public fun clientId(clientId: String)
+
+      /**
+       * @param iatTtl The number of milliseconds that a token is valid after it's issued to a user.
+       */
+      public fun iatTtl(iatTtl: Number)
+
+      /**
+       * @param issuer The issuer for the OIDC configuration.
+       * The issuer returned by discovery must exactly match the value of `iss` in the ID token.
+       */
+      public fun issuer(issuer: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty.builder()
+
+      /**
+       * @param authTtl The number of milliseconds that a token is valid after being authenticated.
+       */
+      override fun authTtl(authTtl: Number) {
+        cdkBuilder.authTtl(authTtl)
+      }
+
+      /**
+       * @param clientId The client identifier of the Relying party at the OpenID identity provider.
+       * This identifier is typically obtained when the Relying party is registered with the OpenID
+       * identity provider. You can specify a regular expression so that AWS AppSync can validate
+       * against multiple client identifiers at a time.
+       */
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param iatTtl The number of milliseconds that a token is valid after it's issued to a user.
+       */
+      override fun iatTtl(iatTtl: Number) {
+        cdkBuilder.iatTtl(iatTtl)
+      }
+
+      /**
+       * @param issuer The issuer for the OIDC configuration.
+       * The issuer returned by discovery must exactly match the value of `iss` in the ID token.
+       */
+      override fun issuer(issuer: String) {
+        cdkBuilder.issuer(issuer)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty,
+    ) : CdkObject(cdkObject), OpenIDConnectConfigProperty {
+      /**
+       * The number of milliseconds that a token is valid after being authenticated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl)
+       */
+      override fun authTtl(): Number? = unwrap(this).getAuthTtl()
+
+      /**
+       * The client identifier of the Relying party at the OpenID identity provider.
+       *
+       * This identifier is typically obtained when the Relying party is registered with the OpenID
+       * identity provider. You can specify a regular expression so that AWS AppSync can validate
+       * against multiple client identifiers at a time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid)
+       */
+      override fun clientId(): String? = unwrap(this).getClientId()
+
+      /**
+       * The number of milliseconds that a token is valid after it's issued to a user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)
+       */
+      override fun iatTtl(): Number? = unwrap(this).getIatTtl()
+
+      /**
+       * The issuer for the OIDC configuration.
+       *
+       * The issuer returned by discovery must exactly match the value of `iss` in the ID token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer)
+       */
+      override fun issuer(): String? = unwrap(this).getIssuer()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OpenIDConnectConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty):
+          OpenIDConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenIDConnectConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenIDConnectConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty
+    }
+  }
+
+  /**
+   * The `UserPoolConfig` property type specifies the optional authorization configuration for using
+   * Amazon Cognito user pools with your GraphQL endpoint for an AWS AppSync GraphQL API.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * UserPoolConfigProperty userPoolConfigProperty = UserPoolConfigProperty.builder()
+   * .appIdClientRegex("appIdClientRegex")
+   * .awsRegion("awsRegion")
+   * .defaultAction("defaultAction")
+   * .userPoolId("userPoolId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html)
+   */
+  public interface UserPoolConfigProperty {
+    /**
+     * A regular expression for validating the incoming Amazon Cognito user pool app client ID.
+     *
+     * If this value isn't set, no filtering is applied.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex)
+     */
+    public fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
+
+    /**
+     * The AWS Region in which the user pool was created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion)
+     */
+    public fun awsRegion(): String? = unwrap(this).getAwsRegion()
+
+    /**
+     * The action that you want your GraphQL API to take when a request that uses Amazon Cognito
+     * user pool authentication doesn't match the Amazon Cognito user pool configuration.
+     *
+     * When specifying Amazon Cognito user pools as the default authentication, you must set the
+     * value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction)
+     */
+    public fun defaultAction(): String? = unwrap(this).getDefaultAction()
+
+    /**
+     * The user pool ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid)
+     */
+    public fun userPoolId(): String? = unwrap(this).getUserPoolId()
+
+    /**
+     * A builder for [UserPoolConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito
+       * user pool app client ID.
+       * If this value isn't set, no filtering is applied.
+       */
+      public fun appIdClientRegex(appIdClientRegex: String)
+
+      /**
+       * @param awsRegion The AWS Region in which the user pool was created.
+       */
+      public fun awsRegion(awsRegion: String)
+
+      /**
+       * @param defaultAction The action that you want your GraphQL API to take when a request that
+       * uses Amazon Cognito user pool authentication doesn't match the Amazon Cognito user pool
+       * configuration.
+       * When specifying Amazon Cognito user pools as the default authentication, you must set the
+       * value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
+       */
+      public fun defaultAction(defaultAction: String)
+
+      /**
+       * @param userPoolId The user pool ID.
+       */
+      public fun userPoolId(userPoolId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty.Builder =
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty.builder()
+
+      /**
+       * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito
+       * user pool app client ID.
+       * If this value isn't set, no filtering is applied.
+       */
+      override fun appIdClientRegex(appIdClientRegex: String) {
+        cdkBuilder.appIdClientRegex(appIdClientRegex)
+      }
+
+      /**
+       * @param awsRegion The AWS Region in which the user pool was created.
+       */
+      override fun awsRegion(awsRegion: String) {
+        cdkBuilder.awsRegion(awsRegion)
+      }
+
+      /**
+       * @param defaultAction The action that you want your GraphQL API to take when a request that
+       * uses Amazon Cognito user pool authentication doesn't match the Amazon Cognito user pool
+       * configuration.
+       * When specifying Amazon Cognito user pools as the default authentication, you must set the
+       * value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
+       */
+      override fun defaultAction(defaultAction: String) {
+        cdkBuilder.defaultAction(defaultAction)
+      }
+
+      /**
+       * @param userPoolId The user pool ID.
+       */
+      override fun userPoolId(userPoolId: String) {
+        cdkBuilder.userPoolId(userPoolId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty,
+    ) : CdkObject(cdkObject), UserPoolConfigProperty {
+      /**
+       * A regular expression for validating the incoming Amazon Cognito user pool app client ID.
+       *
+       * If this value isn't set, no filtering is applied.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex)
+       */
+      override fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
+
+      /**
+       * The AWS Region in which the user pool was created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion)
+       */
+      override fun awsRegion(): String? = unwrap(this).getAwsRegion()
+
+      /**
+       * The action that you want your GraphQL API to take when a request that uses Amazon Cognito
+       * user pool authentication doesn't match the Amazon Cognito user pool configuration.
+       *
+       * When specifying Amazon Cognito user pools as the default authentication, you must set the
+       * value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction)
+       */
+      override fun defaultAction(): String? = unwrap(this).getDefaultAction()
+
+      /**
+       * The user pool ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid)
+       */
+      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UserPoolConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty):
+          UserPoolConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? UserPoolConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UserPoolConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty
     }
   }
 }

@@ -433,6 +433,92 @@ public open class CfnCampaign internal constructor(
   }
 
   /**
+   * Contains agentless dialer configuration for an outbound campaign.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connectcampaigns.*;
+   * AgentlessDialerConfigProperty agentlessDialerConfigProperty =
+   * AgentlessDialerConfigProperty.builder()
+   * .dialingCapacity(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-agentlessdialerconfig.html)
+   */
+  public interface AgentlessDialerConfigProperty {
+    /**
+     * The allocation of dialing capacity between multiple active campaigns.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-agentlessdialerconfig.html#cfn-connectcampaigns-campaign-agentlessdialerconfig-dialingcapacity)
+     */
+    public fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
+
+    /**
+     * A builder for [AgentlessDialerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dialingCapacity The allocation of dialing capacity between multiple active
+       * campaigns.
+       */
+      public fun dialingCapacity(dialingCapacity: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty.builder()
+
+      /**
+       * @param dialingCapacity The allocation of dialing capacity between multiple active
+       * campaigns.
+       */
+      override fun dialingCapacity(dialingCapacity: Number) {
+        cdkBuilder.dialingCapacity(dialingCapacity)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty,
+    ) : CdkObject(cdkObject), AgentlessDialerConfigProperty {
+      /**
+       * The allocation of dialing capacity between multiple active campaigns.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-agentlessdialerconfig.html#cfn-connectcampaigns-campaign-agentlessdialerconfig-dialingcapacity)
+       */
+      override fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AgentlessDialerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty):
+          AgentlessDialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AgentlessDialerConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AgentlessDialerConfigProperty):
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty
+    }
+  }
+
+  /**
    * Contains information about answering machine detection.
    *
    * Example:
@@ -527,298 +613,6 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty
-    }
-  }
-
-  /**
-   * Contains agentless dialer configuration for an outbound campaign.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connectcampaigns.*;
-   * AgentlessDialerConfigProperty agentlessDialerConfigProperty =
-   * AgentlessDialerConfigProperty.builder()
-   * .dialingCapacity(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-agentlessdialerconfig.html)
-   */
-  public interface AgentlessDialerConfigProperty {
-    /**
-     * The allocation of dialing capacity between multiple active campaigns.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-agentlessdialerconfig.html#cfn-connectcampaigns-campaign-agentlessdialerconfig-dialingcapacity)
-     */
-    public fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
-
-    /**
-     * A builder for [AgentlessDialerConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dialingCapacity The allocation of dialing capacity between multiple active
-       * campaigns.
-       */
-      public fun dialingCapacity(dialingCapacity: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty.builder()
-
-      /**
-       * @param dialingCapacity The allocation of dialing capacity between multiple active
-       * campaigns.
-       */
-      override fun dialingCapacity(dialingCapacity: Number) {
-        cdkBuilder.dialingCapacity(dialingCapacity)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty,
-    ) : CdkObject(cdkObject), AgentlessDialerConfigProperty {
-      /**
-       * The allocation of dialing capacity between multiple active campaigns.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-agentlessdialerconfig.html#cfn-connectcampaigns-campaign-agentlessdialerconfig-dialingcapacity)
-       */
-      override fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AgentlessDialerConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty):
-          AgentlessDialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AgentlessDialerConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AgentlessDialerConfigProperty):
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty
-    }
-  }
-
-  /**
-   * Contains outbound call configuration for an outbound campaign.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connectcampaigns.*;
-   * OutboundCallConfigProperty outboundCallConfigProperty = OutboundCallConfigProperty.builder()
-   * .connectContactFlowArn("connectContactFlowArn")
-   * // the properties below are optional
-   * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
-   * .enableAnswerMachineDetection(false)
-   * .build())
-   * .connectQueueArn("connectQueueArn")
-   * .connectSourcePhoneNumber("connectSourcePhoneNumber")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html)
-   */
-  public interface OutboundCallConfigProperty {
-    /**
-     * Whether answering machine detection has been enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-answermachinedetectionconfig)
-     */
-    public fun answerMachineDetectionConfig(): Any? = unwrap(this).getAnswerMachineDetectionConfig()
-
-    /**
-     * The Amazon Resource Name (ARN) of the flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectcontactflowarn)
-     */
-    public fun connectContactFlowArn(): String
-
-    /**
-     * The Amazon Resource Name (ARN) of the queue.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectqueuearn)
-     */
-    public fun connectQueueArn(): String? = unwrap(this).getConnectQueueArn()
-
-    /**
-     * The phone number associated with the outbound call.
-     *
-     * This is the caller ID that is displayed to customers when an agent calls them.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectsourcephonenumber)
-     */
-    public fun connectSourcePhoneNumber(): String? = unwrap(this).getConnectSourcePhoneNumber()
-
-    /**
-     * A builder for [OutboundCallConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
-       */
-      public fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable)
-
-      /**
-       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
-       */
-      public
-          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty)
-
-      /**
-       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("30b5821eb58e3395cd2d600c69a1fc9ca3fbab80d0f64fe4265499bbfaf82784")
-      public
-          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param connectContactFlowArn The Amazon Resource Name (ARN) of the flow. 
-       */
-      public fun connectContactFlowArn(connectContactFlowArn: String)
-
-      /**
-       * @param connectQueueArn The Amazon Resource Name (ARN) of the queue.
-       */
-      public fun connectQueueArn(connectQueueArn: String)
-
-      /**
-       * @param connectSourcePhoneNumber The phone number associated with the outbound call.
-       * This is the caller ID that is displayed to customers when an agent calls them.
-       */
-      public fun connectSourcePhoneNumber(connectSourcePhoneNumber: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty.builder()
-
-      /**
-       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
-       */
-      override fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable) {
-        cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
-       */
-      override
-          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty) {
-        cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(AnswerMachineDetectionConfigProperty::unwrap))
-      }
-
-      /**
-       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("30b5821eb58e3395cd2d600c69a1fc9ca3fbab80d0f64fe4265499bbfaf82784")
-      override
-          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty.Builder.() -> Unit):
-          Unit =
-          answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty(answerMachineDetectionConfig))
-
-      /**
-       * @param connectContactFlowArn The Amazon Resource Name (ARN) of the flow. 
-       */
-      override fun connectContactFlowArn(connectContactFlowArn: String) {
-        cdkBuilder.connectContactFlowArn(connectContactFlowArn)
-      }
-
-      /**
-       * @param connectQueueArn The Amazon Resource Name (ARN) of the queue.
-       */
-      override fun connectQueueArn(connectQueueArn: String) {
-        cdkBuilder.connectQueueArn(connectQueueArn)
-      }
-
-      /**
-       * @param connectSourcePhoneNumber The phone number associated with the outbound call.
-       * This is the caller ID that is displayed to customers when an agent calls them.
-       */
-      override fun connectSourcePhoneNumber(connectSourcePhoneNumber: String) {
-        cdkBuilder.connectSourcePhoneNumber(connectSourcePhoneNumber)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty,
-    ) : CdkObject(cdkObject), OutboundCallConfigProperty {
-      /**
-       * Whether answering machine detection has been enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-answermachinedetectionconfig)
-       */
-      override fun answerMachineDetectionConfig(): Any? =
-          unwrap(this).getAnswerMachineDetectionConfig()
-
-      /**
-       * The Amazon Resource Name (ARN) of the flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectcontactflowarn)
-       */
-      override fun connectContactFlowArn(): String = unwrap(this).getConnectContactFlowArn()
-
-      /**
-       * The Amazon Resource Name (ARN) of the queue.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectqueuearn)
-       */
-      override fun connectQueueArn(): String? = unwrap(this).getConnectQueueArn()
-
-      /**
-       * The phone number associated with the outbound call.
-       *
-       * This is the caller ID that is displayed to customers when an agent calls them.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectsourcephonenumber)
-       */
-      override fun connectSourcePhoneNumber(): String? = unwrap(this).getConnectSourcePhoneNumber()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OutboundCallConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty):
-          OutboundCallConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OutboundCallConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OutboundCallConfigProperty):
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty
     }
   }
 
@@ -1054,6 +848,212 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.DialerConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.DialerConfigProperty
+    }
+  }
+
+  /**
+   * Contains outbound call configuration for an outbound campaign.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connectcampaigns.*;
+   * OutboundCallConfigProperty outboundCallConfigProperty = OutboundCallConfigProperty.builder()
+   * .connectContactFlowArn("connectContactFlowArn")
+   * // the properties below are optional
+   * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
+   * .enableAnswerMachineDetection(false)
+   * .build())
+   * .connectQueueArn("connectQueueArn")
+   * .connectSourcePhoneNumber("connectSourcePhoneNumber")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html)
+   */
+  public interface OutboundCallConfigProperty {
+    /**
+     * Whether answering machine detection has been enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-answermachinedetectionconfig)
+     */
+    public fun answerMachineDetectionConfig(): Any? = unwrap(this).getAnswerMachineDetectionConfig()
+
+    /**
+     * The Amazon Resource Name (ARN) of the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectcontactflowarn)
+     */
+    public fun connectContactFlowArn(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectqueuearn)
+     */
+    public fun connectQueueArn(): String? = unwrap(this).getConnectQueueArn()
+
+    /**
+     * The phone number associated with the outbound call.
+     *
+     * This is the caller ID that is displayed to customers when an agent calls them.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectsourcephonenumber)
+     */
+    public fun connectSourcePhoneNumber(): String? = unwrap(this).getConnectSourcePhoneNumber()
+
+    /**
+     * A builder for [OutboundCallConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
+       */
+      public fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable)
+
+      /**
+       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
+       */
+      public
+          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty)
+
+      /**
+       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30b5821eb58e3395cd2d600c69a1fc9ca3fbab80d0f64fe4265499bbfaf82784")
+      public
+          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param connectContactFlowArn The Amazon Resource Name (ARN) of the flow. 
+       */
+      public fun connectContactFlowArn(connectContactFlowArn: String)
+
+      /**
+       * @param connectQueueArn The Amazon Resource Name (ARN) of the queue.
+       */
+      public fun connectQueueArn(connectQueueArn: String)
+
+      /**
+       * @param connectSourcePhoneNumber The phone number associated with the outbound call.
+       * This is the caller ID that is displayed to customers when an agent calls them.
+       */
+      public fun connectSourcePhoneNumber(connectSourcePhoneNumber: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty.builder()
+
+      /**
+       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
+       */
+      override fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable) {
+        cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
+       */
+      override
+          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty) {
+        cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(AnswerMachineDetectionConfigProperty::unwrap))
+      }
+
+      /**
+       * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30b5821eb58e3395cd2d600c69a1fc9ca3fbab80d0f64fe4265499bbfaf82784")
+      override
+          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty.Builder.() -> Unit):
+          Unit =
+          answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty(answerMachineDetectionConfig))
+
+      /**
+       * @param connectContactFlowArn The Amazon Resource Name (ARN) of the flow. 
+       */
+      override fun connectContactFlowArn(connectContactFlowArn: String) {
+        cdkBuilder.connectContactFlowArn(connectContactFlowArn)
+      }
+
+      /**
+       * @param connectQueueArn The Amazon Resource Name (ARN) of the queue.
+       */
+      override fun connectQueueArn(connectQueueArn: String) {
+        cdkBuilder.connectQueueArn(connectQueueArn)
+      }
+
+      /**
+       * @param connectSourcePhoneNumber The phone number associated with the outbound call.
+       * This is the caller ID that is displayed to customers when an agent calls them.
+       */
+      override fun connectSourcePhoneNumber(connectSourcePhoneNumber: String) {
+        cdkBuilder.connectSourcePhoneNumber(connectSourcePhoneNumber)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty,
+    ) : CdkObject(cdkObject), OutboundCallConfigProperty {
+      /**
+       * Whether answering machine detection has been enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-answermachinedetectionconfig)
+       */
+      override fun answerMachineDetectionConfig(): Any? =
+          unwrap(this).getAnswerMachineDetectionConfig()
+
+      /**
+       * The Amazon Resource Name (ARN) of the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectcontactflowarn)
+       */
+      override fun connectContactFlowArn(): String = unwrap(this).getConnectContactFlowArn()
+
+      /**
+       * The Amazon Resource Name (ARN) of the queue.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectqueuearn)
+       */
+      override fun connectQueueArn(): String? = unwrap(this).getConnectQueueArn()
+
+      /**
+       * The phone number associated with the outbound call.
+       *
+       * This is the caller ID that is displayed to customers when an agent calls them.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html#cfn-connectcampaigns-campaign-outboundcallconfig-connectsourcephonenumber)
+       */
+      override fun connectSourcePhoneNumber(): String? = unwrap(this).getConnectSourcePhoneNumber()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OutboundCallConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty):
+          OutboundCallConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutboundCallConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutboundCallConfigProperty):
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty
     }
   }
 

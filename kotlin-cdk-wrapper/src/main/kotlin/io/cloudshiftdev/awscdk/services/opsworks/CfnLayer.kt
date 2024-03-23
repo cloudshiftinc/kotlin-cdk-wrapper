@@ -1789,6 +1789,243 @@ public open class CfnLayer internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opsworks.*;
+   * LoadBasedAutoScalingProperty loadBasedAutoScalingProperty =
+   * LoadBasedAutoScalingProperty.builder()
+   * .downScaling(AutoScalingThresholdsProperty.builder()
+   * .cpuThreshold(123)
+   * .ignoreMetricsTime(123)
+   * .instanceCount(123)
+   * .loadThreshold(123)
+   * .memoryThreshold(123)
+   * .thresholdsWaitTime(123)
+   * .build())
+   * .enable(false)
+   * .upScaling(AutoScalingThresholdsProperty.builder()
+   * .cpuThreshold(123)
+   * .ignoreMetricsTime(123)
+   * .instanceCount(123)
+   * .loadThreshold(123)
+   * .memoryThreshold(123)
+   * .thresholdsWaitTime(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html)
+   */
+  public interface LoadBasedAutoScalingProperty {
+    /**
+     * An `AutoScalingThresholds` object that describes the downscaling configuration, which defines
+     * how and when AWS OpsWorks Stacks reduces the number of instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling)
+     */
+    public fun downScaling(): Any? = unwrap(this).getDownScaling()
+
+    /**
+     * Whether load-based auto scaling is enabled for the layer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable)
+     */
+    public fun enable(): Any? = unwrap(this).getEnable()
+
+    /**
+     * An `AutoScalingThresholds` object that describes the upscaling configuration, which defines
+     * how and when AWS OpsWorks Stacks increases the number of instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling)
+     */
+    public fun upScaling(): Any? = unwrap(this).getUpScaling()
+
+    /**
+     * A builder for [LoadBasedAutoScalingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       */
+      public fun downScaling(downScaling: IResolvable)
+
+      /**
+       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       */
+      public fun downScaling(downScaling: AutoScalingThresholdsProperty)
+
+      /**
+       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f9cda7a5b9775e3f009d9a6d189c785654f2ecd2ae9d640b1d53e089103a9535")
+      public fun downScaling(downScaling: AutoScalingThresholdsProperty.Builder.() -> Unit)
+
+      /**
+       * @param enable Whether load-based auto scaling is enabled for the layer.
+       */
+      public fun enable(enable: Boolean)
+
+      /**
+       * @param enable Whether load-based auto scaling is enabled for the layer.
+       */
+      public fun enable(enable: IResolvable)
+
+      /**
+       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
+       * instances.
+       */
+      public fun upScaling(upScaling: IResolvable)
+
+      /**
+       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
+       * instances.
+       */
+      public fun upScaling(upScaling: AutoScalingThresholdsProperty)
+
+      /**
+       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
+       * instances.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e98bf6335bbca94e6f468a1b112e8bd884eff09cac00c5118212d2e46a79fce4")
+      public fun upScaling(upScaling: AutoScalingThresholdsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty.Builder =
+          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty.builder()
+
+      /**
+       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       */
+      override fun downScaling(downScaling: IResolvable) {
+        cdkBuilder.downScaling(downScaling.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       */
+      override fun downScaling(downScaling: AutoScalingThresholdsProperty) {
+        cdkBuilder.downScaling(downScaling.let(AutoScalingThresholdsProperty::unwrap))
+      }
+
+      /**
+       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f9cda7a5b9775e3f009d9a6d189c785654f2ecd2ae9d640b1d53e089103a9535")
+      override fun downScaling(downScaling: AutoScalingThresholdsProperty.Builder.() -> Unit): Unit
+          = downScaling(AutoScalingThresholdsProperty(downScaling))
+
+      /**
+       * @param enable Whether load-based auto scaling is enabled for the layer.
+       */
+      override fun enable(enable: Boolean) {
+        cdkBuilder.enable(enable)
+      }
+
+      /**
+       * @param enable Whether load-based auto scaling is enabled for the layer.
+       */
+      override fun enable(enable: IResolvable) {
+        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
+       * instances.
+       */
+      override fun upScaling(upScaling: IResolvable) {
+        cdkBuilder.upScaling(upScaling.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
+       * instances.
+       */
+      override fun upScaling(upScaling: AutoScalingThresholdsProperty) {
+        cdkBuilder.upScaling(upScaling.let(AutoScalingThresholdsProperty::unwrap))
+      }
+
+      /**
+       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
+       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
+       * instances.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e98bf6335bbca94e6f468a1b112e8bd884eff09cac00c5118212d2e46a79fce4")
+      override fun upScaling(upScaling: AutoScalingThresholdsProperty.Builder.() -> Unit): Unit =
+          upScaling(AutoScalingThresholdsProperty(upScaling))
+
+      public fun build():
+          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty,
+    ) : CdkObject(cdkObject), LoadBasedAutoScalingProperty {
+      /**
+       * An `AutoScalingThresholds` object that describes the downscaling configuration, which
+       * defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling)
+       */
+      override fun downScaling(): Any? = unwrap(this).getDownScaling()
+
+      /**
+       * Whether load-based auto scaling is enabled for the layer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable)
+       */
+      override fun enable(): Any? = unwrap(this).getEnable()
+
+      /**
+       * An `AutoScalingThresholds` object that describes the upscaling configuration, which defines
+       * how and when AWS OpsWorks Stacks increases the number of instances.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling)
+       */
+      override fun upScaling(): Any? = unwrap(this).getUpScaling()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoadBasedAutoScalingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty):
+          LoadBasedAutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoadBasedAutoScalingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoadBasedAutoScalingProperty):
+          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opsworks.*;
    * RecipesProperty recipesProperty = RecipesProperty.builder()
    * .configure(List.of("configure"))
    * .deploy(List.of("deploy"))
@@ -2024,233 +2261,142 @@ public open class CfnLayer internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * LoadBasedAutoScalingProperty loadBasedAutoScalingProperty =
-   * LoadBasedAutoScalingProperty.builder()
-   * .downScaling(AutoScalingThresholdsProperty.builder()
-   * .cpuThreshold(123)
-   * .ignoreMetricsTime(123)
-   * .instanceCount(123)
-   * .loadThreshold(123)
-   * .memoryThreshold(123)
-   * .thresholdsWaitTime(123)
-   * .build())
-   * .enable(false)
-   * .upScaling(AutoScalingThresholdsProperty.builder()
-   * .cpuThreshold(123)
-   * .ignoreMetricsTime(123)
-   * .instanceCount(123)
-   * .loadThreshold(123)
-   * .memoryThreshold(123)
-   * .thresholdsWaitTime(123)
-   * .build())
+   * ShutdownEventConfigurationProperty shutdownEventConfigurationProperty =
+   * ShutdownEventConfigurationProperty.builder()
+   * .delayUntilElbConnectionsDrained(false)
+   * .executionTimeout(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html)
    */
-  public interface LoadBasedAutoScalingProperty {
+  public interface ShutdownEventConfigurationProperty {
     /**
-     * An `AutoScalingThresholds` object that describes the downscaling configuration, which defines
-     * how and when AWS OpsWorks Stacks reduces the number of instances.
+     * Whether to enable Elastic Load Balancing connection draining.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling)
+     * For more information, see [Connection
+     * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
      */
-    public fun downScaling(): Any? = unwrap(this).getDownScaling()
+    public fun delayUntilElbConnectionsDrained(): Any? =
+        unwrap(this).getDelayUntilElbConnectionsDrained()
 
     /**
-     * Whether load-based auto scaling is enabled for the layer.
+     * The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event before
+     * shutting down an instance.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-executiontimeout)
      */
-    public fun enable(): Any? = unwrap(this).getEnable()
+    public fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
 
     /**
-     * An `AutoScalingThresholds` object that describes the upscaling configuration, which defines
-     * how and when AWS OpsWorks Stacks increases the number of instances.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling)
-     */
-    public fun upScaling(): Any? = unwrap(this).getUpScaling()
-
-    /**
-     * A builder for [LoadBasedAutoScalingProperty]
+     * A builder for [ShutdownEventConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+       * draining.
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
        */
-      public fun downScaling(downScaling: IResolvable)
+      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean)
 
       /**
-       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+       * draining.
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
        */
-      public fun downScaling(downScaling: AutoScalingThresholdsProperty)
+      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable)
 
       /**
-       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after
+       * triggering a Shutdown event before shutting down an instance.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f9cda7a5b9775e3f009d9a6d189c785654f2ecd2ae9d640b1d53e089103a9535")
-      public fun downScaling(downScaling: AutoScalingThresholdsProperty.Builder.() -> Unit)
-
-      /**
-       * @param enable Whether load-based auto scaling is enabled for the layer.
-       */
-      public fun enable(enable: Boolean)
-
-      /**
-       * @param enable Whether load-based auto scaling is enabled for the layer.
-       */
-      public fun enable(enable: IResolvable)
-
-      /**
-       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
-       * instances.
-       */
-      public fun upScaling(upScaling: IResolvable)
-
-      /**
-       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
-       * instances.
-       */
-      public fun upScaling(upScaling: AutoScalingThresholdsProperty)
-
-      /**
-       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
-       * instances.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e98bf6335bbca94e6f468a1b112e8bd884eff09cac00c5118212d2e46a79fce4")
-      public fun upScaling(upScaling: AutoScalingThresholdsProperty.Builder.() -> Unit)
+      public fun executionTimeout(executionTimeout: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty.Builder =
-          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty.builder()
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.builder()
 
       /**
-       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+       * draining.
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
        */
-      override fun downScaling(downScaling: IResolvable) {
-        cdkBuilder.downScaling(downScaling.let(IResolvable::unwrap))
+      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean) {
+        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained)
       }
 
       /**
-       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+       * draining.
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
        */
-      override fun downScaling(downScaling: AutoScalingThresholdsProperty) {
-        cdkBuilder.downScaling(downScaling.let(AutoScalingThresholdsProperty::unwrap))
+      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
+        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained.let(IResolvable::unwrap))
       }
 
       /**
-       * @param downScaling An `AutoScalingThresholds` object that describes the downscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after
+       * triggering a Shutdown event before shutting down an instance.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f9cda7a5b9775e3f009d9a6d189c785654f2ecd2ae9d640b1d53e089103a9535")
-      override fun downScaling(downScaling: AutoScalingThresholdsProperty.Builder.() -> Unit): Unit
-          = downScaling(AutoScalingThresholdsProperty(downScaling))
-
-      /**
-       * @param enable Whether load-based auto scaling is enabled for the layer.
-       */
-      override fun enable(enable: Boolean) {
-        cdkBuilder.enable(enable)
+      override fun executionTimeout(executionTimeout: Number) {
+        cdkBuilder.executionTimeout(executionTimeout)
       }
-
-      /**
-       * @param enable Whether load-based auto scaling is enabled for the layer.
-       */
-      override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
-       * instances.
-       */
-      override fun upScaling(upScaling: IResolvable) {
-        cdkBuilder.upScaling(upScaling.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
-       * instances.
-       */
-      override fun upScaling(upScaling: AutoScalingThresholdsProperty) {
-        cdkBuilder.upScaling(upScaling.let(AutoScalingThresholdsProperty::unwrap))
-      }
-
-      /**
-       * @param upScaling An `AutoScalingThresholds` object that describes the upscaling
-       * configuration, which defines how and when AWS OpsWorks Stacks increases the number of
-       * instances.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e98bf6335bbca94e6f468a1b112e8bd884eff09cac00c5118212d2e46a79fce4")
-      override fun upScaling(upScaling: AutoScalingThresholdsProperty.Builder.() -> Unit): Unit =
-          upScaling(AutoScalingThresholdsProperty(upScaling))
 
       public fun build():
-          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty =
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty,
-    ) : CdkObject(cdkObject), LoadBasedAutoScalingProperty {
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty,
+    ) : CdkObject(cdkObject), ShutdownEventConfigurationProperty {
       /**
-       * An `AutoScalingThresholds` object that describes the downscaling configuration, which
-       * defines how and when AWS OpsWorks Stacks reduces the number of instances.
+       * Whether to enable Elastic Load Balancing connection draining.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling)
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
        */
-      override fun downScaling(): Any? = unwrap(this).getDownScaling()
+      override fun delayUntilElbConnectionsDrained(): Any? =
+          unwrap(this).getDelayUntilElbConnectionsDrained()
 
       /**
-       * Whether load-based auto scaling is enabled for the layer.
+       * The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event
+       * before shutting down an instance.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-executiontimeout)
        */
-      override fun enable(): Any? = unwrap(this).getEnable()
-
-      /**
-       * An `AutoScalingThresholds` object that describes the upscaling configuration, which defines
-       * how and when AWS OpsWorks Stacks increases the number of instances.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling)
-       */
-      override fun upScaling(): Any? = unwrap(this).getUpScaling()
+      override fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoadBasedAutoScalingProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ShutdownEventConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty):
-          LoadBasedAutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LoadBasedAutoScalingProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty):
+          ShutdownEventConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ShutdownEventConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LoadBasedAutoScalingProperty):
-          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty
+      internal fun unwrap(wrapped: ShutdownEventConfigurationProperty):
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty
     }
   }
 
@@ -2589,152 +2735,6 @@ public open class CfnLayer internal constructor(
           software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * ShutdownEventConfigurationProperty shutdownEventConfigurationProperty =
-   * ShutdownEventConfigurationProperty.builder()
-   * .delayUntilElbConnectionsDrained(false)
-   * .executionTimeout(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html)
-   */
-  public interface ShutdownEventConfigurationProperty {
-    /**
-     * Whether to enable Elastic Load Balancing connection draining.
-     *
-     * For more information, see [Connection
-     * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
-     */
-    public fun delayUntilElbConnectionsDrained(): Any? =
-        unwrap(this).getDelayUntilElbConnectionsDrained()
-
-    /**
-     * The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event before
-     * shutting down an instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-executiontimeout)
-     */
-    public fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
-
-    /**
-     * A builder for [ShutdownEventConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
-       * draining.
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       */
-      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean)
-
-      /**
-       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
-       * draining.
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       */
-      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable)
-
-      /**
-       * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after
-       * triggering a Shutdown event before shutting down an instance.
-       */
-      public fun executionTimeout(executionTimeout: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.builder()
-
-      /**
-       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
-       * draining.
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       */
-      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean) {
-        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained)
-      }
-
-      /**
-       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
-       * draining.
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       */
-      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
-        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after
-       * triggering a Shutdown event before shutting down an instance.
-       */
-      override fun executionTimeout(executionTimeout: Number) {
-        cdkBuilder.executionTimeout(executionTimeout)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty,
-    ) : CdkObject(cdkObject), ShutdownEventConfigurationProperty {
-      /**
-       * Whether to enable Elastic Load Balancing connection draining.
-       *
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
-       */
-      override fun delayUntilElbConnectionsDrained(): Any? =
-          unwrap(this).getDelayUntilElbConnectionsDrained()
-
-      /**
-       * The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event
-       * before shutting down an instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-executiontimeout)
-       */
-      override fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ShutdownEventConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty):
-          ShutdownEventConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ShutdownEventConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ShutdownEventConfigurationProperty):
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty
     }
   }
 }

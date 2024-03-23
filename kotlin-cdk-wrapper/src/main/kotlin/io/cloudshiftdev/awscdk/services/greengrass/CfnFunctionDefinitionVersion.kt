@@ -378,6 +378,442 @@ public open class CfnFunctionDefinitionVersion internal constructor(
   }
 
   /**
+   * The default configuration that applies to all Lambda functions in the function definition
+   * version.
+   *
+   * Individual Lambda functions can override these settings.
+   *
+   * In an AWS CloudFormation template, `DefaultConfig` is a property of the
+   * [`AWS::Greengrass::FunctionDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * DefaultConfigProperty defaultConfigProperty = DefaultConfigProperty.builder()
+   * .execution(ExecutionProperty.builder()
+   * .isolationMode("isolationMode")
+   * .runAs(RunAsProperty.builder()
+   * .gid(123)
+   * .uid(123)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html)
+   */
+  public interface DefaultConfigProperty {
+    /**
+     * Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)
+     */
+    public fun execution(): Any
+
+    /**
+     * A builder for [DefaultConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+       * Greengrass core. 
+       */
+      public fun execution(execution: IResolvable)
+
+      /**
+       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+       * Greengrass core. 
+       */
+      public fun execution(execution: ExecutionProperty)
+
+      /**
+       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+       * Greengrass core. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ab209a2e03d21862e10902f454c3fb314447a1fbf2f24169b400dcf856b22465")
+      public fun execution(execution: ExecutionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty.builder()
+
+      /**
+       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+       * Greengrass core. 
+       */
+      override fun execution(execution: IResolvable) {
+        cdkBuilder.execution(execution.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+       * Greengrass core. 
+       */
+      override fun execution(execution: ExecutionProperty) {
+        cdkBuilder.execution(execution.let(ExecutionProperty::unwrap))
+      }
+
+      /**
+       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+       * Greengrass core. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ab209a2e03d21862e10902f454c3fb314447a1fbf2f24169b400dcf856b22465")
+      override fun execution(execution: ExecutionProperty.Builder.() -> Unit): Unit =
+          execution(ExecutionProperty(execution))
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty,
+    ) : CdkObject(cdkObject), DefaultConfigProperty {
+      /**
+       * Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)
+       */
+      override fun execution(): Any = unwrap(this).getExecution()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DefaultConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty):
+          DefaultConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DefaultConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DefaultConfigProperty):
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty
+    }
+  }
+
+  /**
+   * The environment configuration for a Lambda function on the AWS IoT Greengrass core.
+   *
+   * In an AWS CloudFormation template, `Environment` is a property of the
+   * [`FunctionConfiguration`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * Object variables;
+   * EnvironmentProperty environmentProperty = EnvironmentProperty.builder()
+   * .accessSysfs(false)
+   * .execution(ExecutionProperty.builder()
+   * .isolationMode("isolationMode")
+   * .runAs(RunAsProperty.builder()
+   * .gid(123)
+   * .uid(123)
+   * .build())
+   * .build())
+   * .resourceAccessPolicies(List.of(ResourceAccessPolicyProperty.builder()
+   * .resourceId("resourceId")
+   * // the properties below are optional
+   * .permission("permission")
+   * .build()))
+   * .variables(variables)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html)
+   */
+  public interface EnvironmentProperty {
+    /**
+     * Indicates whether the function is allowed to access the `/sys` directory on the core device,
+     * which allows the read device information from `/sys` .
+     *
+     *
+     * This property applies only to Lambda functions that run in a Greengrass container.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-accesssysfs)
+     */
+    public fun accessSysfs(): Any? = unwrap(this).getAccessSysfs()
+
+    /**
+     * Settings for the Lambda execution environment in AWS IoT Greengrass .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-execution)
+     */
+    public fun execution(): Any? = unwrap(this).getExecution()
+
+    /**
+     * A list of the
+     * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+     * in the group that the function can access, with the corresponding read-only or read-write
+     * permissions. The maximum is 10 resources.
+     *
+     *
+     * This property applies only to Lambda functions that run in a Greengrass container.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies)
+     */
+    public fun resourceAccessPolicies(): Any? = unwrap(this).getResourceAccessPolicies()
+
+    /**
+     * Environment variables for the Lambda function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-variables)
+     */
+    public fun variables(): Any? = unwrap(this).getVariables()
+
+    /**
+     * A builder for [EnvironmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessSysfs Indicates whether the function is allowed to access the `/sys` directory
+       * on the core device, which allows the read device information from `/sys` .
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      public fun accessSysfs(accessSysfs: Boolean)
+
+      /**
+       * @param accessSysfs Indicates whether the function is allowed to access the `/sys` directory
+       * on the core device, which allows the read device information from `/sys` .
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      public fun accessSysfs(accessSysfs: IResolvable)
+
+      /**
+       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       */
+      public fun execution(execution: IResolvable)
+
+      /**
+       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       */
+      public fun execution(execution: ExecutionProperty)
+
+      /**
+       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d5eb0289413331ee1a13511f29f86627b3364b0c1f246a611a4480965fbae462")
+      public fun execution(execution: ExecutionProperty.Builder.() -> Unit)
+
+      /**
+       * @param resourceAccessPolicies A list of the
+       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+       * in the group that the function can access, with the corresponding read-only or read-write
+       * permissions. The maximum is 10 resources.
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      public fun resourceAccessPolicies(resourceAccessPolicies: IResolvable)
+
+      /**
+       * @param resourceAccessPolicies A list of the
+       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+       * in the group that the function can access, with the corresponding read-only or read-write
+       * permissions. The maximum is 10 resources.
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      public fun resourceAccessPolicies(resourceAccessPolicies: List<Any>)
+
+      /**
+       * @param resourceAccessPolicies A list of the
+       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+       * in the group that the function can access, with the corresponding read-only or read-write
+       * permissions. The maximum is 10 resources.
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      public fun resourceAccessPolicies(vararg resourceAccessPolicies: Any)
+
+      /**
+       * @param variables Environment variables for the Lambda function.
+       */
+      public fun variables(variables: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty.builder()
+
+      /**
+       * @param accessSysfs Indicates whether the function is allowed to access the `/sys` directory
+       * on the core device, which allows the read device information from `/sys` .
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      override fun accessSysfs(accessSysfs: Boolean) {
+        cdkBuilder.accessSysfs(accessSysfs)
+      }
+
+      /**
+       * @param accessSysfs Indicates whether the function is allowed to access the `/sys` directory
+       * on the core device, which allows the read device information from `/sys` .
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      override fun accessSysfs(accessSysfs: IResolvable) {
+        cdkBuilder.accessSysfs(accessSysfs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       */
+      override fun execution(execution: IResolvable) {
+        cdkBuilder.execution(execution.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       */
+      override fun execution(execution: ExecutionProperty) {
+        cdkBuilder.execution(execution.let(ExecutionProperty::unwrap))
+      }
+
+      /**
+       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d5eb0289413331ee1a13511f29f86627b3364b0c1f246a611a4480965fbae462")
+      override fun execution(execution: ExecutionProperty.Builder.() -> Unit): Unit =
+          execution(ExecutionProperty(execution))
+
+      /**
+       * @param resourceAccessPolicies A list of the
+       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+       * in the group that the function can access, with the corresponding read-only or read-write
+       * permissions. The maximum is 10 resources.
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      override fun resourceAccessPolicies(resourceAccessPolicies: IResolvable) {
+        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resourceAccessPolicies A list of the
+       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+       * in the group that the function can access, with the corresponding read-only or read-write
+       * permissions. The maximum is 10 resources.
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      override fun resourceAccessPolicies(resourceAccessPolicies: List<Any>) {
+        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies)
+      }
+
+      /**
+       * @param resourceAccessPolicies A list of the
+       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+       * in the group that the function can access, with the corresponding read-only or read-write
+       * permissions. The maximum is 10 resources.
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       */
+      override fun resourceAccessPolicies(vararg resourceAccessPolicies: Any): Unit =
+          resourceAccessPolicies(resourceAccessPolicies.toList())
+
+      /**
+       * @param variables Environment variables for the Lambda function.
+       */
+      override fun variables(variables: Any) {
+        cdkBuilder.variables(variables)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty,
+    ) : CdkObject(cdkObject), EnvironmentProperty {
+      /**
+       * Indicates whether the function is allowed to access the `/sys` directory on the core
+       * device, which allows the read device information from `/sys` .
+       *
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-accesssysfs)
+       */
+      override fun accessSysfs(): Any? = unwrap(this).getAccessSysfs()
+
+      /**
+       * Settings for the Lambda execution environment in AWS IoT Greengrass .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-execution)
+       */
+      override fun execution(): Any? = unwrap(this).getExecution()
+
+      /**
+       * A list of the
+       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+       * in the group that the function can access, with the corresponding read-only or read-write
+       * permissions. The maximum is 10 resources.
+       *
+       *
+       * This property applies only to Lambda functions that run in a Greengrass container.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies)
+       */
+      override fun resourceAccessPolicies(): Any? = unwrap(this).getResourceAccessPolicies()
+
+      /**
+       * Environment variables for the Lambda function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-variables)
+       */
+      override fun variables(): Any? = unwrap(this).getVariables()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty):
+          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnvironmentProperty):
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty
+    }
+  }
+
+  /**
    * Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core.
    *
    * In an AWS CloudFormation template, `Execution` is a property of the
@@ -760,633 +1196,6 @@ public open class CfnFunctionDefinitionVersion internal constructor(
   }
 
   /**
-   * A list of the
-   * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-   * in the group that the function can access, with the corresponding read-only or read-write
-   * permissions. The maximum is 10 resources.
-   *
-   *
-   * This property applies only to Lambda functions that run in a Greengrass container.
-   *
-   *
-   * In an AWS CloudFormation template, `ResourceAccessPolicy` is a property of the
-   * [`Environment`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * ResourceAccessPolicyProperty resourceAccessPolicyProperty =
-   * ResourceAccessPolicyProperty.builder()
-   * .resourceId("resourceId")
-   * // the properties below are optional
-   * .permission("permission")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html)
-   */
-  public interface ResourceAccessPolicyProperty {
-    /**
-     * The read-only or read-write access that the Lambda function has to the resource.
-     *
-     * Valid values are `ro` or `rw` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-permission)
-     */
-    public fun permission(): String? = unwrap(this).getPermission()
-
-    /**
-     * The ID of the resource.
-     *
-     * This ID is assigned to the resource when you create the resource definition.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-resourceid)
-     */
-    public fun resourceId(): String
-
-    /**
-     * A builder for [ResourceAccessPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param permission The read-only or read-write access that the Lambda function has to the
-       * resource.
-       * Valid values are `ro` or `rw` .
-       */
-      public fun permission(permission: String)
-
-      /**
-       * @param resourceId The ID of the resource. 
-       * This ID is assigned to the resource when you create the resource definition.
-       */
-      public fun resourceId(resourceId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty.builder()
-
-      /**
-       * @param permission The read-only or read-write access that the Lambda function has to the
-       * resource.
-       * Valid values are `ro` or `rw` .
-       */
-      override fun permission(permission: String) {
-        cdkBuilder.permission(permission)
-      }
-
-      /**
-       * @param resourceId The ID of the resource. 
-       * This ID is assigned to the resource when you create the resource definition.
-       */
-      override fun resourceId(resourceId: String) {
-        cdkBuilder.resourceId(resourceId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty,
-    ) : CdkObject(cdkObject), ResourceAccessPolicyProperty {
-      /**
-       * The read-only or read-write access that the Lambda function has to the resource.
-       *
-       * Valid values are `ro` or `rw` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-permission)
-       */
-      override fun permission(): String? = unwrap(this).getPermission()
-
-      /**
-       * The ID of the resource.
-       *
-       * This ID is assigned to the resource when you create the resource definition.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-resourceid)
-       */
-      override fun resourceId(): String = unwrap(this).getResourceId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceAccessPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty):
-          ResourceAccessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResourceAccessPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourceAccessPolicyProperty):
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty
-    }
-  }
-
-  /**
-   * The default configuration that applies to all Lambda functions in the function definition
-   * version.
-   *
-   * Individual Lambda functions can override these settings.
-   *
-   * In an AWS CloudFormation template, `DefaultConfig` is a property of the
-   * [`AWS::Greengrass::FunctionDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * DefaultConfigProperty defaultConfigProperty = DefaultConfigProperty.builder()
-   * .execution(ExecutionProperty.builder()
-   * .isolationMode("isolationMode")
-   * .runAs(RunAsProperty.builder()
-   * .gid(123)
-   * .uid(123)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html)
-   */
-  public interface DefaultConfigProperty {
-    /**
-     * Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)
-     */
-    public fun execution(): Any
-
-    /**
-     * A builder for [DefaultConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-       * Greengrass core. 
-       */
-      public fun execution(execution: IResolvable)
-
-      /**
-       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-       * Greengrass core. 
-       */
-      public fun execution(execution: ExecutionProperty)
-
-      /**
-       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-       * Greengrass core. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ab209a2e03d21862e10902f454c3fb314447a1fbf2f24169b400dcf856b22465")
-      public fun execution(execution: ExecutionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty.builder()
-
-      /**
-       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-       * Greengrass core. 
-       */
-      override fun execution(execution: IResolvable) {
-        cdkBuilder.execution(execution.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-       * Greengrass core. 
-       */
-      override fun execution(execution: ExecutionProperty) {
-        cdkBuilder.execution(execution.let(ExecutionProperty::unwrap))
-      }
-
-      /**
-       * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-       * Greengrass core. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ab209a2e03d21862e10902f454c3fb314447a1fbf2f24169b400dcf856b22465")
-      override fun execution(execution: ExecutionProperty.Builder.() -> Unit): Unit =
-          execution(ExecutionProperty(execution))
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty,
-    ) : CdkObject(cdkObject), DefaultConfigProperty {
-      /**
-       * Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)
-       */
-      override fun execution(): Any = unwrap(this).getExecution()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DefaultConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty):
-          DefaultConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DefaultConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DefaultConfigProperty):
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty
-    }
-  }
-
-  /**
-   * The user and group permissions used to run the Lambda function.
-   *
-   * This setting overrides the default access identity that's specified for the group (by default,
-   * ggc_user and ggc_group). You can override the user, group, or both. For more information, see [Run
-   * as](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-access-identity.html)
-   * in the *Developer Guide* .
-   *
-   *
-   * Running as the root user increases risks to your data and device. Do not run as root
-   * (UID/GID=0) unless your business case requires it. For more information and requirements, see
-   * [Running a Lambda Function as
-   * Root](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-running-as-root)
-   * .
-   *
-   *
-   * In an AWS CloudFormation template, `RunAs` is a property of the
-   * [`Execution`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-execution.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * RunAsProperty runAsProperty = RunAsProperty.builder()
-   * .gid(123)
-   * .uid(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html)
-   */
-  public interface RunAsProperty {
-    /**
-     * The group ID whose permissions are used to run the Lambda function.
-     *
-     * You can use the `getent group` command on your core device to look up the group ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-gid)
-     */
-    public fun gid(): Number? = unwrap(this).getGid()
-
-    /**
-     * The user ID whose permissions are used to run the Lambda function.
-     *
-     * You can use the `getent passwd` command on your core device to look up the user ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-uid)
-     */
-    public fun uid(): Number? = unwrap(this).getUid()
-
-    /**
-     * A builder for [RunAsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param gid The group ID whose permissions are used to run the Lambda function.
-       * You can use the `getent group` command on your core device to look up the group ID.
-       */
-      public fun gid(gid: Number)
-
-      /**
-       * @param uid The user ID whose permissions are used to run the Lambda function.
-       * You can use the `getent passwd` command on your core device to look up the user ID.
-       */
-      public fun uid(uid: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty.builder()
-
-      /**
-       * @param gid The group ID whose permissions are used to run the Lambda function.
-       * You can use the `getent group` command on your core device to look up the group ID.
-       */
-      override fun gid(gid: Number) {
-        cdkBuilder.gid(gid)
-      }
-
-      /**
-       * @param uid The user ID whose permissions are used to run the Lambda function.
-       * You can use the `getent passwd` command on your core device to look up the user ID.
-       */
-      override fun uid(uid: Number) {
-        cdkBuilder.uid(uid)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty,
-    ) : CdkObject(cdkObject), RunAsProperty {
-      /**
-       * The group ID whose permissions are used to run the Lambda function.
-       *
-       * You can use the `getent group` command on your core device to look up the group ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-gid)
-       */
-      override fun gid(): Number? = unwrap(this).getGid()
-
-      /**
-       * The user ID whose permissions are used to run the Lambda function.
-       *
-       * You can use the `getent passwd` command on your core device to look up the user ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-uid)
-       */
-      override fun uid(): Number? = unwrap(this).getUid()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RunAsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty):
-          RunAsProperty = CdkObjectWrappers.wrap(cdkObject) as? RunAsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RunAsProperty):
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty
-    }
-  }
-
-  /**
-   * A function is a Lambda function that's referenced from an AWS IoT Greengrass group.
-   *
-   * The function is deployed to a Greengrass core where it runs locally. For more information, see
-   * [Run Lambda Functions on the AWS IoT Greengrass
-   * Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-functions.html) in the
-   * *Developer Guide* .
-   *
-   * In an AWS CloudFormation template, the `Functions` property of the
-   * [`AWS::Greengrass::FunctionDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html)
-   * resource contains a list of `Function` property types.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * Object variables;
-   * FunctionProperty functionProperty = FunctionProperty.builder()
-   * .functionArn("functionArn")
-   * .functionConfiguration(FunctionConfigurationProperty.builder()
-   * .encodingType("encodingType")
-   * .environment(EnvironmentProperty.builder()
-   * .accessSysfs(false)
-   * .execution(ExecutionProperty.builder()
-   * .isolationMode("isolationMode")
-   * .runAs(RunAsProperty.builder()
-   * .gid(123)
-   * .uid(123)
-   * .build())
-   * .build())
-   * .resourceAccessPolicies(List.of(ResourceAccessPolicyProperty.builder()
-   * .resourceId("resourceId")
-   * // the properties below are optional
-   * .permission("permission")
-   * .build()))
-   * .variables(variables)
-   * .build())
-   * .execArgs("execArgs")
-   * .executable("executable")
-   * .memorySize(123)
-   * .pinned(false)
-   * .timeout(123)
-   * .build())
-   * .id("id")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html)
-   */
-  public interface FunctionProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the alias (recommended) or version of the referenced Lambda
-     * function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionarn)
-     */
-    public fun functionArn(): String
-
-    /**
-     * The group-specific settings of the Lambda function.
-     *
-     * These settings configure the function's behavior in the Greengrass group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionconfiguration)
-     */
-    public fun functionConfiguration(): Any
-
-    /**
-     * A descriptive or arbitrary ID for the function.
-     *
-     * This value must be unique within the function definition version. Maximum length is 128
-     * characters with pattern `[a-zA-Z0-9:_-]+` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-id)
-     */
-    public fun id(): String
-
-    /**
-     * A builder for [FunctionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param functionArn The Amazon Resource Name (ARN) of the alias (recommended) or version of
-       * the referenced Lambda function. 
-       */
-      public fun functionArn(functionArn: String)
-
-      /**
-       * @param functionConfiguration The group-specific settings of the Lambda function. 
-       * These settings configure the function's behavior in the Greengrass group.
-       */
-      public fun functionConfiguration(functionConfiguration: IResolvable)
-
-      /**
-       * @param functionConfiguration The group-specific settings of the Lambda function. 
-       * These settings configure the function's behavior in the Greengrass group.
-       */
-      public fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty)
-
-      /**
-       * @param functionConfiguration The group-specific settings of the Lambda function. 
-       * These settings configure the function's behavior in the Greengrass group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2c2168400448b4a6908898625dbcd08ebc3550cb295a3a9a6f56aea1149fdbce")
-      public
-          fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param id A descriptive or arbitrary ID for the function. 
-       * This value must be unique within the function definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       */
-      public fun id(id: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty.builder()
-
-      /**
-       * @param functionArn The Amazon Resource Name (ARN) of the alias (recommended) or version of
-       * the referenced Lambda function. 
-       */
-      override fun functionArn(functionArn: String) {
-        cdkBuilder.functionArn(functionArn)
-      }
-
-      /**
-       * @param functionConfiguration The group-specific settings of the Lambda function. 
-       * These settings configure the function's behavior in the Greengrass group.
-       */
-      override fun functionConfiguration(functionConfiguration: IResolvable) {
-        cdkBuilder.functionConfiguration(functionConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param functionConfiguration The group-specific settings of the Lambda function. 
-       * These settings configure the function's behavior in the Greengrass group.
-       */
-      override fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty) {
-        cdkBuilder.functionConfiguration(functionConfiguration.let(FunctionConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param functionConfiguration The group-specific settings of the Lambda function. 
-       * These settings configure the function's behavior in the Greengrass group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2c2168400448b4a6908898625dbcd08ebc3550cb295a3a9a6f56aea1149fdbce")
-      override
-          fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty.Builder.() -> Unit):
-          Unit = functionConfiguration(FunctionConfigurationProperty(functionConfiguration))
-
-      /**
-       * @param id A descriptive or arbitrary ID for the function. 
-       * This value must be unique within the function definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty,
-    ) : CdkObject(cdkObject), FunctionProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the alias (recommended) or version of the referenced
-       * Lambda function.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionarn)
-       */
-      override fun functionArn(): String = unwrap(this).getFunctionArn()
-
-      /**
-       * The group-specific settings of the Lambda function.
-       *
-       * These settings configure the function's behavior in the Greengrass group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionconfiguration)
-       */
-      override fun functionConfiguration(): Any = unwrap(this).getFunctionConfiguration()
-
-      /**
-       * A descriptive or arbitrary ID for the function.
-       *
-       * This value must be unique within the function definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FunctionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty):
-          FunctionProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FunctionProperty):
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty
-    }
-  }
-
-  /**
    * The group-specific configuration settings for a Lambda function.
    *
    * These settings configure the function's behavior in the Greengrass group. For more information,
@@ -1737,11 +1546,16 @@ public open class CfnFunctionDefinitionVersion internal constructor(
   }
 
   /**
-   * The environment configuration for a Lambda function on the AWS IoT Greengrass core.
+   * A function is a Lambda function that's referenced from an AWS IoT Greengrass group.
    *
-   * In an AWS CloudFormation template, `Environment` is a property of the
-   * [`FunctionConfiguration`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html)
-   * property type.
+   * The function is deployed to a Greengrass core where it runs locally. For more information, see
+   * [Run Lambda Functions on the AWS IoT Greengrass
+   * Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-functions.html) in the
+   * *Developer Guide* .
+   *
+   * In an AWS CloudFormation template, the `Functions` property of the
+   * [`AWS::Greengrass::FunctionDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html)
+   * resource contains a list of `Function` property types.
    *
    * Example:
    *
@@ -1750,7 +1564,11 @@ public open class CfnFunctionDefinitionVersion internal constructor(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.greengrass.*;
    * Object variables;
-   * EnvironmentProperty environmentProperty = EnvironmentProperty.builder()
+   * FunctionProperty functionProperty = FunctionProperty.builder()
+   * .functionArn("functionArn")
+   * .functionConfiguration(FunctionConfigurationProperty.builder()
+   * .encodingType("encodingType")
+   * .environment(EnvironmentProperty.builder()
    * .accessSysfs(false)
    * .execution(ExecutionProperty.builder()
    * .isolationMode("isolationMode")
@@ -1765,281 +1583,463 @@ public open class CfnFunctionDefinitionVersion internal constructor(
    * .permission("permission")
    * .build()))
    * .variables(variables)
+   * .build())
+   * .execArgs("execArgs")
+   * .executable("executable")
+   * .memorySize(123)
+   * .pinned(false)
+   * .timeout(123)
+   * .build())
+   * .id("id")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html)
    */
-  public interface EnvironmentProperty {
+  public interface FunctionProperty {
     /**
-     * Indicates whether the function is allowed to access the `/sys` directory on the core device,
-     * which allows the read device information from `/sys` .
+     * The Amazon Resource Name (ARN) of the alias (recommended) or version of the referenced Lambda
+     * function.
      *
-     *
-     * This property applies only to Lambda functions that run in a Greengrass container.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-accesssysfs)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionarn)
      */
-    public fun accessSysfs(): Any? = unwrap(this).getAccessSysfs()
+    public fun functionArn(): String
 
     /**
-     * Settings for the Lambda execution environment in AWS IoT Greengrass .
+     * The group-specific settings of the Lambda function.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-execution)
+     * These settings configure the function's behavior in the Greengrass group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionconfiguration)
      */
-    public fun execution(): Any? = unwrap(this).getExecution()
+    public fun functionConfiguration(): Any
 
     /**
-     * A list of the
-     * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-     * in the group that the function can access, with the corresponding read-only or read-write
-     * permissions. The maximum is 10 resources.
+     * A descriptive or arbitrary ID for the function.
      *
+     * This value must be unique within the function definition version. Maximum length is 128
+     * characters with pattern `[a-zA-Z0-9:_-]+` .
      *
-     * This property applies only to Lambda functions that run in a Greengrass container.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-id)
      */
-    public fun resourceAccessPolicies(): Any? = unwrap(this).getResourceAccessPolicies()
+    public fun id(): String
 
     /**
-     * Environment variables for the Lambda function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-variables)
-     */
-    public fun variables(): Any? = unwrap(this).getVariables()
-
-    /**
-     * A builder for [EnvironmentProperty]
+     * A builder for [FunctionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accessSysfs Indicates whether the function is allowed to access the `/sys` directory
-       * on the core device, which allows the read device information from `/sys` .
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
+       * @param functionArn The Amazon Resource Name (ARN) of the alias (recommended) or version of
+       * the referenced Lambda function. 
        */
-      public fun accessSysfs(accessSysfs: Boolean)
+      public fun functionArn(functionArn: String)
 
       /**
-       * @param accessSysfs Indicates whether the function is allowed to access the `/sys` directory
-       * on the core device, which allows the read device information from `/sys` .
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
+       * @param functionConfiguration The group-specific settings of the Lambda function. 
+       * These settings configure the function's behavior in the Greengrass group.
        */
-      public fun accessSysfs(accessSysfs: IResolvable)
+      public fun functionConfiguration(functionConfiguration: IResolvable)
 
       /**
-       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       * @param functionConfiguration The group-specific settings of the Lambda function. 
+       * These settings configure the function's behavior in the Greengrass group.
        */
-      public fun execution(execution: IResolvable)
+      public fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty)
 
       /**
-       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
-       */
-      public fun execution(execution: ExecutionProperty)
-
-      /**
-       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       * @param functionConfiguration The group-specific settings of the Lambda function. 
+       * These settings configure the function's behavior in the Greengrass group.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d5eb0289413331ee1a13511f29f86627b3364b0c1f246a611a4480965fbae462")
-      public fun execution(execution: ExecutionProperty.Builder.() -> Unit)
+      @JvmName("2c2168400448b4a6908898625dbcd08ebc3550cb295a3a9a6f56aea1149fdbce")
+      public
+          fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param resourceAccessPolicies A list of the
-       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-       * in the group that the function can access, with the corresponding read-only or read-write
-       * permissions. The maximum is 10 resources.
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
+       * @param id A descriptive or arbitrary ID for the function. 
+       * This value must be unique within the function definition version. Maximum length is 128
+       * characters with pattern `[a-zA-Z0-9:_-]+` .
        */
-      public fun resourceAccessPolicies(resourceAccessPolicies: IResolvable)
-
-      /**
-       * @param resourceAccessPolicies A list of the
-       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-       * in the group that the function can access, with the corresponding read-only or read-write
-       * permissions. The maximum is 10 resources.
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
-       */
-      public fun resourceAccessPolicies(resourceAccessPolicies: List<Any>)
-
-      /**
-       * @param resourceAccessPolicies A list of the
-       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-       * in the group that the function can access, with the corresponding read-only or read-write
-       * permissions. The maximum is 10 resources.
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
-       */
-      public fun resourceAccessPolicies(vararg resourceAccessPolicies: Any)
-
-      /**
-       * @param variables Environment variables for the Lambda function.
-       */
-      public fun variables(variables: Any)
+      public fun id(id: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty.Builder
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty.Builder
           =
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty.builder()
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty.builder()
 
       /**
-       * @param accessSysfs Indicates whether the function is allowed to access the `/sys` directory
-       * on the core device, which allows the read device information from `/sys` .
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
+       * @param functionArn The Amazon Resource Name (ARN) of the alias (recommended) or version of
+       * the referenced Lambda function. 
        */
-      override fun accessSysfs(accessSysfs: Boolean) {
-        cdkBuilder.accessSysfs(accessSysfs)
+      override fun functionArn(functionArn: String) {
+        cdkBuilder.functionArn(functionArn)
       }
 
       /**
-       * @param accessSysfs Indicates whether the function is allowed to access the `/sys` directory
-       * on the core device, which allows the read device information from `/sys` .
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
+       * @param functionConfiguration The group-specific settings of the Lambda function. 
+       * These settings configure the function's behavior in the Greengrass group.
        */
-      override fun accessSysfs(accessSysfs: IResolvable) {
-        cdkBuilder.accessSysfs(accessSysfs.let(IResolvable::unwrap))
+      override fun functionConfiguration(functionConfiguration: IResolvable) {
+        cdkBuilder.functionConfiguration(functionConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       * @param functionConfiguration The group-specific settings of the Lambda function. 
+       * These settings configure the function's behavior in the Greengrass group.
        */
-      override fun execution(execution: IResolvable) {
-        cdkBuilder.execution(execution.let(IResolvable::unwrap))
+      override fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty) {
+        cdkBuilder.functionConfiguration(functionConfiguration.let(FunctionConfigurationProperty::unwrap))
       }
 
       /**
-       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
-       */
-      override fun execution(execution: ExecutionProperty) {
-        cdkBuilder.execution(execution.let(ExecutionProperty::unwrap))
-      }
-
-      /**
-       * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
+       * @param functionConfiguration The group-specific settings of the Lambda function. 
+       * These settings configure the function's behavior in the Greengrass group.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d5eb0289413331ee1a13511f29f86627b3364b0c1f246a611a4480965fbae462")
-      override fun execution(execution: ExecutionProperty.Builder.() -> Unit): Unit =
-          execution(ExecutionProperty(execution))
+      @JvmName("2c2168400448b4a6908898625dbcd08ebc3550cb295a3a9a6f56aea1149fdbce")
+      override
+          fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty.Builder.() -> Unit):
+          Unit = functionConfiguration(FunctionConfigurationProperty(functionConfiguration))
 
       /**
-       * @param resourceAccessPolicies A list of the
-       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-       * in the group that the function can access, with the corresponding read-only or read-write
-       * permissions. The maximum is 10 resources.
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
+       * @param id A descriptive or arbitrary ID for the function. 
+       * This value must be unique within the function definition version. Maximum length is 128
+       * characters with pattern `[a-zA-Z0-9:_-]+` .
        */
-      override fun resourceAccessPolicies(resourceAccessPolicies: IResolvable) {
-        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resourceAccessPolicies A list of the
-       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-       * in the group that the function can access, with the corresponding read-only or read-write
-       * permissions. The maximum is 10 resources.
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
-       */
-      override fun resourceAccessPolicies(resourceAccessPolicies: List<Any>) {
-        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies)
-      }
-
-      /**
-       * @param resourceAccessPolicies A list of the
-       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-       * in the group that the function can access, with the corresponding read-only or read-write
-       * permissions. The maximum is 10 resources.
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
-       */
-      override fun resourceAccessPolicies(vararg resourceAccessPolicies: Any): Unit =
-          resourceAccessPolicies(resourceAccessPolicies.toList())
-
-      /**
-       * @param variables Environment variables for the Lambda function.
-       */
-      override fun variables(variables: Any) {
-        cdkBuilder.variables(variables)
+      override fun id(id: String) {
+        cdkBuilder.id(id)
       }
 
       public fun build():
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty,
-    ) : CdkObject(cdkObject), EnvironmentProperty {
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty,
+    ) : CdkObject(cdkObject), FunctionProperty {
       /**
-       * Indicates whether the function is allowed to access the `/sys` directory on the core
-       * device, which allows the read device information from `/sys` .
+       * The Amazon Resource Name (ARN) of the alias (recommended) or version of the referenced
+       * Lambda function.
        *
-       *
-       * This property applies only to Lambda functions that run in a Greengrass container.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-accesssysfs)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionarn)
        */
-      override fun accessSysfs(): Any? = unwrap(this).getAccessSysfs()
+      override fun functionArn(): String = unwrap(this).getFunctionArn()
 
       /**
-       * Settings for the Lambda execution environment in AWS IoT Greengrass .
+       * The group-specific settings of the Lambda function.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-execution)
+       * These settings configure the function's behavior in the Greengrass group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionconfiguration)
        */
-      override fun execution(): Any? = unwrap(this).getExecution()
+      override fun functionConfiguration(): Any = unwrap(this).getFunctionConfiguration()
 
       /**
-       * A list of the
-       * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
-       * in the group that the function can access, with the corresponding read-only or read-write
-       * permissions. The maximum is 10 resources.
+       * A descriptive or arbitrary ID for the function.
        *
+       * This value must be unique within the function definition version. Maximum length is 128
+       * characters with pattern `[a-zA-Z0-9:_-]+` .
        *
-       * This property applies only to Lambda functions that run in a Greengrass container.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-id)
        */
-      override fun resourceAccessPolicies(): Any? = unwrap(this).getResourceAccessPolicies()
-
-      /**
-       * Environment variables for the Lambda function.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-variables)
-       */
-      override fun variables(): Any? = unwrap(this).getVariables()
+      override fun id(): String = unwrap(this).getId()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FunctionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty):
-          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty):
+          FunctionProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EnvironmentProperty):
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty
+      internal fun unwrap(wrapped: FunctionProperty):
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty
+    }
+  }
+
+  /**
+   * A list of the
+   * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+   * in the group that the function can access, with the corresponding read-only or read-write
+   * permissions. The maximum is 10 resources.
+   *
+   *
+   * This property applies only to Lambda functions that run in a Greengrass container.
+   *
+   *
+   * In an AWS CloudFormation template, `ResourceAccessPolicy` is a property of the
+   * [`Environment`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * ResourceAccessPolicyProperty resourceAccessPolicyProperty =
+   * ResourceAccessPolicyProperty.builder()
+   * .resourceId("resourceId")
+   * // the properties below are optional
+   * .permission("permission")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html)
+   */
+  public interface ResourceAccessPolicyProperty {
+    /**
+     * The read-only or read-write access that the Lambda function has to the resource.
+     *
+     * Valid values are `ro` or `rw` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-permission)
+     */
+    public fun permission(): String? = unwrap(this).getPermission()
+
+    /**
+     * The ID of the resource.
+     *
+     * This ID is assigned to the resource when you create the resource definition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-resourceid)
+     */
+    public fun resourceId(): String
+
+    /**
+     * A builder for [ResourceAccessPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param permission The read-only or read-write access that the Lambda function has to the
+       * resource.
+       * Valid values are `ro` or `rw` .
+       */
+      public fun permission(permission: String)
+
+      /**
+       * @param resourceId The ID of the resource. 
+       * This ID is assigned to the resource when you create the resource definition.
+       */
+      public fun resourceId(resourceId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty.builder()
+
+      /**
+       * @param permission The read-only or read-write access that the Lambda function has to the
+       * resource.
+       * Valid values are `ro` or `rw` .
+       */
+      override fun permission(permission: String) {
+        cdkBuilder.permission(permission)
+      }
+
+      /**
+       * @param resourceId The ID of the resource. 
+       * This ID is assigned to the resource when you create the resource definition.
+       */
+      override fun resourceId(resourceId: String) {
+        cdkBuilder.resourceId(resourceId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty,
+    ) : CdkObject(cdkObject), ResourceAccessPolicyProperty {
+      /**
+       * The read-only or read-write access that the Lambda function has to the resource.
+       *
+       * Valid values are `ro` or `rw` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-permission)
+       */
+      override fun permission(): String? = unwrap(this).getPermission()
+
+      /**
+       * The ID of the resource.
+       *
+       * This ID is assigned to the resource when you create the resource definition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-resourceid)
+       */
+      override fun resourceId(): String = unwrap(this).getResourceId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceAccessPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty):
+          ResourceAccessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceAccessPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceAccessPolicyProperty):
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty
+    }
+  }
+
+  /**
+   * The user and group permissions used to run the Lambda function.
+   *
+   * This setting overrides the default access identity that's specified for the group (by default,
+   * ggc_user and ggc_group). You can override the user, group, or both. For more information, see [Run
+   * as](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-access-identity.html)
+   * in the *Developer Guide* .
+   *
+   *
+   * Running as the root user increases risks to your data and device. Do not run as root
+   * (UID/GID=0) unless your business case requires it. For more information and requirements, see
+   * [Running a Lambda Function as
+   * Root](https://docs.aws.amazon.com/greengrass/v1/developerguide/lambda-group-config.html#lambda-running-as-root)
+   * .
+   *
+   *
+   * In an AWS CloudFormation template, `RunAs` is a property of the
+   * [`Execution`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-execution.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * RunAsProperty runAsProperty = RunAsProperty.builder()
+   * .gid(123)
+   * .uid(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html)
+   */
+  public interface RunAsProperty {
+    /**
+     * The group ID whose permissions are used to run the Lambda function.
+     *
+     * You can use the `getent group` command on your core device to look up the group ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-gid)
+     */
+    public fun gid(): Number? = unwrap(this).getGid()
+
+    /**
+     * The user ID whose permissions are used to run the Lambda function.
+     *
+     * You can use the `getent passwd` command on your core device to look up the user ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-uid)
+     */
+    public fun uid(): Number? = unwrap(this).getUid()
+
+    /**
+     * A builder for [RunAsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param gid The group ID whose permissions are used to run the Lambda function.
+       * You can use the `getent group` command on your core device to look up the group ID.
+       */
+      public fun gid(gid: Number)
+
+      /**
+       * @param uid The user ID whose permissions are used to run the Lambda function.
+       * You can use the `getent passwd` command on your core device to look up the user ID.
+       */
+      public fun uid(uid: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty.builder()
+
+      /**
+       * @param gid The group ID whose permissions are used to run the Lambda function.
+       * You can use the `getent group` command on your core device to look up the group ID.
+       */
+      override fun gid(gid: Number) {
+        cdkBuilder.gid(gid)
+      }
+
+      /**
+       * @param uid The user ID whose permissions are used to run the Lambda function.
+       * You can use the `getent passwd` command on your core device to look up the user ID.
+       */
+      override fun uid(uid: Number) {
+        cdkBuilder.uid(uid)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty,
+    ) : CdkObject(cdkObject), RunAsProperty {
+      /**
+       * The group ID whose permissions are used to run the Lambda function.
+       *
+       * You can use the `getent group` command on your core device to look up the group ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-gid)
+       */
+      override fun gid(): Number? = unwrap(this).getGid()
+
+      /**
+       * The user ID whose permissions are used to run the Lambda function.
+       *
+       * You can use the `getent passwd` command on your core device to look up the user ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-uid)
+       */
+      override fun uid(): Number? = unwrap(this).getUid()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RunAsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty):
+          RunAsProperty = CdkObjectWrappers.wrap(cdkObject) as? RunAsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RunAsProperty):
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty
     }
   }
 }

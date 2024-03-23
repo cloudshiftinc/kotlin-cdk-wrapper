@@ -1068,155 +1068,6 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * Use the `HttpConfig` property type to specify `HttpConfig` for an AWS AppSync data source.
-   *
-   * `HttpConfig` is a property of the
-   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * HttpConfigProperty httpConfigProperty = HttpConfigProperty.builder()
-   * .endpoint("endpoint")
-   * // the properties below are optional
-   * .authorizationConfig(AuthorizationConfigProperty.builder()
-   * .authorizationType("authorizationType")
-   * // the properties below are optional
-   * .awsIamConfig(AwsIamConfigProperty.builder()
-   * .signingRegion("signingRegion")
-   * .signingServiceName("signingServiceName")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html)
-   */
-  public interface HttpConfigProperty {
-    /**
-     * The authorization configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-authorizationconfig)
-     */
-    public fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
-
-    /**
-     * The endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
-     */
-    public fun endpoint(): String
-
-    /**
-     * A builder for [HttpConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authorizationConfig The authorization configuration.
-       */
-      public fun authorizationConfig(authorizationConfig: IResolvable)
-
-      /**
-       * @param authorizationConfig The authorization configuration.
-       */
-      public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty)
-
-      /**
-       * @param authorizationConfig The authorization configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9900f5245e9541abfe09c6a72be99e3d73b35739de732b27e104b26649a924fd")
-      public
-          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param endpoint The endpoint. 
-       */
-      public fun endpoint(endpoint: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty.Builder =
-          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty.builder()
-
-      /**
-       * @param authorizationConfig The authorization configuration.
-       */
-      override fun authorizationConfig(authorizationConfig: IResolvable) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param authorizationConfig The authorization configuration.
-       */
-      override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
-      }
-
-      /**
-       * @param authorizationConfig The authorization configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9900f5245e9541abfe09c6a72be99e3d73b35739de732b27e104b26649a924fd")
-      override
-          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit):
-          Unit = authorizationConfig(AuthorizationConfigProperty(authorizationConfig))
-
-      /**
-       * @param endpoint The endpoint. 
-       */
-      override fun endpoint(endpoint: String) {
-        cdkBuilder.endpoint(endpoint)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty,
-    ) : CdkObject(cdkObject), HttpConfigProperty {
-      /**
-       * The authorization configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-authorizationconfig)
-       */
-      override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
-
-      /**
-       * The endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
-       */
-      override fun endpoint(): String = unwrap(this).getEndpoint()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HttpConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty):
-          HttpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HttpConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty
-    }
-  }
-
-  /**
    * The `AuthorizationConfig` property type specifies the authorization type and configuration for
    * an AWS AppSync http data source.
    *
@@ -1369,370 +1220,6 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * The data source.
-   *
-   * This can be an API destination, resource, or AWS service.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * EventBridgeConfigProperty eventBridgeConfigProperty = EventBridgeConfigProperty.builder()
-   * .eventBusArn("eventBusArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-eventbridgeconfig.html)
-   */
-  public interface EventBridgeConfigProperty {
-    /**
-     * The event bus pipeline's ARN.
-     *
-     * For more information about event buses, see [EventBridge event
-     * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-eventbridgeconfig.html#cfn-appsync-datasource-eventbridgeconfig-eventbusarn)
-     */
-    public fun eventBusArn(): String
-
-    /**
-     * A builder for [EventBridgeConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param eventBusArn The event bus pipeline's ARN. 
-       * For more information about event buses, see [EventBridge event
-       * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
-       */
-      public fun eventBusArn(eventBusArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty.Builder =
-          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty.builder()
-
-      /**
-       * @param eventBusArn The event bus pipeline's ARN. 
-       * For more information about event buses, see [EventBridge event
-       * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
-       */
-      override fun eventBusArn(eventBusArn: String) {
-        cdkBuilder.eventBusArn(eventBusArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty,
-    ) : CdkObject(cdkObject), EventBridgeConfigProperty {
-      /**
-       * The event bus pipeline's ARN.
-       *
-       * For more information about event buses, see [EventBridge event
-       * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-eventbridgeconfig.html#cfn-appsync-datasource-eventbridgeconfig-eventbusarn)
-       */
-      override fun eventBusArn(): String = unwrap(this).getEventBusArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventBridgeConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty):
-          EventBridgeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EventBridgeConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventBridgeConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty
-    }
-  }
-
-  /**
-   * Use the `RelationalDatabaseConfig` property type to specify `RelationalDatabaseConfig` for an
-   * AWS AppSync data source.
-   *
-   * `RelationalDatabaseConfig` is a property of the
-   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * RelationalDatabaseConfigProperty relationalDatabaseConfigProperty =
-   * RelationalDatabaseConfigProperty.builder()
-   * .relationalDatabaseSourceType("relationalDatabaseSourceType")
-   * // the properties below are optional
-   * .rdsHttpEndpointConfig(RdsHttpEndpointConfigProperty.builder()
-   * .awsRegion("awsRegion")
-   * .awsSecretStoreArn("awsSecretStoreArn")
-   * .dbClusterIdentifier("dbClusterIdentifier")
-   * // the properties below are optional
-   * .databaseName("databaseName")
-   * .schema("schema")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html)
-   */
-  public interface RelationalDatabaseConfigProperty {
-    /**
-     * Information about the Amazon RDS resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig)
-     */
-    public fun rdsHttpEndpointConfig(): Any? = unwrap(this).getRdsHttpEndpointConfig()
-
-    /**
-     * The type of relational data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype)
-     */
-    public fun relationalDatabaseSourceType(): String
-
-    /**
-     * A builder for [RelationalDatabaseConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
-       */
-      public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable)
-
-      /**
-       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
-       */
-      public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty)
-
-      /**
-       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0c0e1a030f7709ef41b4271ecea3609f7962dfd162d9b4ff87849ef4d907eab")
-      public
-          fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param relationalDatabaseSourceType The type of relational data source. 
-       */
-      public fun relationalDatabaseSourceType(relationalDatabaseSourceType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty.builder()
-
-      /**
-       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
-       */
-      override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable) {
-        cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
-       */
-      override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty) {
-        cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(RdsHttpEndpointConfigProperty::unwrap))
-      }
-
-      /**
-       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0c0e1a030f7709ef41b4271ecea3609f7962dfd162d9b4ff87849ef4d907eab")
-      override
-          fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty.Builder.() -> Unit):
-          Unit = rdsHttpEndpointConfig(RdsHttpEndpointConfigProperty(rdsHttpEndpointConfig))
-
-      /**
-       * @param relationalDatabaseSourceType The type of relational data source. 
-       */
-      override fun relationalDatabaseSourceType(relationalDatabaseSourceType: String) {
-        cdkBuilder.relationalDatabaseSourceType(relationalDatabaseSourceType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty,
-    ) : CdkObject(cdkObject), RelationalDatabaseConfigProperty {
-      /**
-       * Information about the Amazon RDS resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig)
-       */
-      override fun rdsHttpEndpointConfig(): Any? = unwrap(this).getRdsHttpEndpointConfig()
-
-      /**
-       * The type of relational data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype)
-       */
-      override fun relationalDatabaseSourceType(): String =
-          unwrap(this).getRelationalDatabaseSourceType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RelationalDatabaseConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty):
-          RelationalDatabaseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RelationalDatabaseConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RelationalDatabaseConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty
-    }
-  }
-
-  /**
-   * The `OpenSearchServiceConfig` property type specifies the `AwsRegion` and `Endpoints` for an
-   * Amazon OpenSearch Service domain in your account for an AWS AppSync data source.
-   *
-   * `OpenSearchServiceConfig` is a property of the
-   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * OpenSearchServiceConfigProperty openSearchServiceConfigProperty =
-   * OpenSearchServiceConfigProperty.builder()
-   * .awsRegion("awsRegion")
-   * .endpoint("endpoint")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html)
-   */
-  public interface OpenSearchServiceConfigProperty {
-    /**
-     * The AWS Region.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html#cfn-appsync-datasource-opensearchserviceconfig-awsregion)
-     */
-    public fun awsRegion(): String
-
-    /**
-     * The endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html#cfn-appsync-datasource-opensearchserviceconfig-endpoint)
-     */
-    public fun endpoint(): String
-
-    /**
-     * A builder for [OpenSearchServiceConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param awsRegion The AWS Region. 
-       */
-      public fun awsRegion(awsRegion: String)
-
-      /**
-       * @param endpoint The endpoint. 
-       */
-      public fun endpoint(endpoint: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty.builder()
-
-      /**
-       * @param awsRegion The AWS Region. 
-       */
-      override fun awsRegion(awsRegion: String) {
-        cdkBuilder.awsRegion(awsRegion)
-      }
-
-      /**
-       * @param endpoint The endpoint. 
-       */
-      override fun endpoint(endpoint: String) {
-        cdkBuilder.endpoint(endpoint)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty,
-    ) : CdkObject(cdkObject), OpenSearchServiceConfigProperty {
-      /**
-       * The AWS Region.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html#cfn-appsync-datasource-opensearchserviceconfig-awsregion)
-       */
-      override fun awsRegion(): String = unwrap(this).getAwsRegion()
-
-      /**
-       * The endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html#cfn-appsync-datasource-opensearchserviceconfig-endpoint)
-       */
-      override fun endpoint(): String = unwrap(this).getEndpoint()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OpenSearchServiceConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty):
-          OpenSearchServiceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OpenSearchServiceConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OpenSearchServiceConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty
-    }
-  }
-
-  /**
    * Use the `AwsIamConfig` property type to specify `AwsIamConfig` for a AWS AppSync authorizaton.
    *
    * `AwsIamConfig` is a property of the [AWS AppSync DataSource
@@ -1845,125 +1332,6 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty
-    }
-  }
-
-  /**
-   * The `ElasticsearchConfig` property type specifies the `AwsRegion` and `Endpoints` for an Amazon
-   * OpenSearch Service domain in your account for an AWS AppSync data source.
-   *
-   * ElasticsearchConfig is a property of the
-   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
-   * property type.
-   *
-   * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This property
-   * is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an OpenSearch
-   * Service data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * ElasticsearchConfigProperty elasticsearchConfigProperty = ElasticsearchConfigProperty.builder()
-   * .awsRegion("awsRegion")
-   * .endpoint("endpoint")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html)
-   */
-  public interface ElasticsearchConfigProperty {
-    /**
-     * The AWS Region.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-awsregion)
-     */
-    public fun awsRegion(): String
-
-    /**
-     * The endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
-     */
-    public fun endpoint(): String
-
-    /**
-     * A builder for [ElasticsearchConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param awsRegion The AWS Region. 
-       */
-      public fun awsRegion(awsRegion: String)
-
-      /**
-       * @param endpoint The endpoint. 
-       */
-      public fun endpoint(endpoint: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty.builder()
-
-      /**
-       * @param awsRegion The AWS Region. 
-       */
-      override fun awsRegion(awsRegion: String) {
-        cdkBuilder.awsRegion(awsRegion)
-      }
-
-      /**
-       * @param endpoint The endpoint. 
-       */
-      override fun endpoint(endpoint: String) {
-        cdkBuilder.endpoint(endpoint)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty,
-    ) : CdkObject(cdkObject), ElasticsearchConfigProperty {
-      /**
-       * The AWS Region.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-awsregion)
-       */
-      override fun awsRegion(): String = unwrap(this).getAwsRegion()
-
-      /**
-       * The endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
-       */
-      override fun endpoint(): String = unwrap(this).getEndpoint()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticsearchConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty):
-          ElasticsearchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ElasticsearchConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ElasticsearchConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty
     }
   }
 
@@ -2365,6 +1733,368 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
+   * The `ElasticsearchConfig` property type specifies the `AwsRegion` and `Endpoints` for an Amazon
+   * OpenSearch Service domain in your account for an AWS AppSync data source.
+   *
+   * ElasticsearchConfig is a property of the
+   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
+   * property type.
+   *
+   * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This property
+   * is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an OpenSearch
+   * Service data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * ElasticsearchConfigProperty elasticsearchConfigProperty = ElasticsearchConfigProperty.builder()
+   * .awsRegion("awsRegion")
+   * .endpoint("endpoint")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html)
+   */
+  public interface ElasticsearchConfigProperty {
+    /**
+     * The AWS Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-awsregion)
+     */
+    public fun awsRegion(): String
+
+    /**
+     * The endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
+     */
+    public fun endpoint(): String
+
+    /**
+     * A builder for [ElasticsearchConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param awsRegion The AWS Region. 
+       */
+      public fun awsRegion(awsRegion: String)
+
+      /**
+       * @param endpoint The endpoint. 
+       */
+      public fun endpoint(endpoint: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty.builder()
+
+      /**
+       * @param awsRegion The AWS Region. 
+       */
+      override fun awsRegion(awsRegion: String) {
+        cdkBuilder.awsRegion(awsRegion)
+      }
+
+      /**
+       * @param endpoint The endpoint. 
+       */
+      override fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty,
+    ) : CdkObject(cdkObject), ElasticsearchConfigProperty {
+      /**
+       * The AWS Region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-awsregion)
+       */
+      override fun awsRegion(): String = unwrap(this).getAwsRegion()
+
+      /**
+       * The endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint)
+       */
+      override fun endpoint(): String = unwrap(this).getEndpoint()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticsearchConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty):
+          ElasticsearchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticsearchConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticsearchConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty
+    }
+  }
+
+  /**
+   * The data source.
+   *
+   * This can be an API destination, resource, or AWS service.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * EventBridgeConfigProperty eventBridgeConfigProperty = EventBridgeConfigProperty.builder()
+   * .eventBusArn("eventBusArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-eventbridgeconfig.html)
+   */
+  public interface EventBridgeConfigProperty {
+    /**
+     * The event bus pipeline's ARN.
+     *
+     * For more information about event buses, see [EventBridge event
+     * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-eventbridgeconfig.html#cfn-appsync-datasource-eventbridgeconfig-eventbusarn)
+     */
+    public fun eventBusArn(): String
+
+    /**
+     * A builder for [EventBridgeConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param eventBusArn The event bus pipeline's ARN. 
+       * For more information about event buses, see [EventBridge event
+       * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
+       */
+      public fun eventBusArn(eventBusArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty.Builder =
+          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty.builder()
+
+      /**
+       * @param eventBusArn The event bus pipeline's ARN. 
+       * For more information about event buses, see [EventBridge event
+       * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
+       */
+      override fun eventBusArn(eventBusArn: String) {
+        cdkBuilder.eventBusArn(eventBusArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty,
+    ) : CdkObject(cdkObject), EventBridgeConfigProperty {
+      /**
+       * The event bus pipeline's ARN.
+       *
+       * For more information about event buses, see [EventBridge event
+       * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-eventbridgeconfig.html#cfn-appsync-datasource-eventbridgeconfig-eventbusarn)
+       */
+      override fun eventBusArn(): String = unwrap(this).getEventBusArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventBridgeConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty):
+          EventBridgeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventBridgeConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty
+    }
+  }
+
+  /**
+   * Use the `HttpConfig` property type to specify `HttpConfig` for an AWS AppSync data source.
+   *
+   * `HttpConfig` is a property of the
+   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * HttpConfigProperty httpConfigProperty = HttpConfigProperty.builder()
+   * .endpoint("endpoint")
+   * // the properties below are optional
+   * .authorizationConfig(AuthorizationConfigProperty.builder()
+   * .authorizationType("authorizationType")
+   * // the properties below are optional
+   * .awsIamConfig(AwsIamConfigProperty.builder()
+   * .signingRegion("signingRegion")
+   * .signingServiceName("signingServiceName")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html)
+   */
+  public interface HttpConfigProperty {
+    /**
+     * The authorization configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-authorizationconfig)
+     */
+    public fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
+
+    /**
+     * The endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
+     */
+    public fun endpoint(): String
+
+    /**
+     * A builder for [HttpConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authorizationConfig The authorization configuration.
+       */
+      public fun authorizationConfig(authorizationConfig: IResolvable)
+
+      /**
+       * @param authorizationConfig The authorization configuration.
+       */
+      public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty)
+
+      /**
+       * @param authorizationConfig The authorization configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9900f5245e9541abfe09c6a72be99e3d73b35739de732b27e104b26649a924fd")
+      public
+          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param endpoint The endpoint. 
+       */
+      public fun endpoint(endpoint: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty.Builder =
+          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty.builder()
+
+      /**
+       * @param authorizationConfig The authorization configuration.
+       */
+      override fun authorizationConfig(authorizationConfig: IResolvable) {
+        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param authorizationConfig The authorization configuration.
+       */
+      override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
+        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
+      }
+
+      /**
+       * @param authorizationConfig The authorization configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9900f5245e9541abfe09c6a72be99e3d73b35739de732b27e104b26649a924fd")
+      override
+          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit):
+          Unit = authorizationConfig(AuthorizationConfigProperty(authorizationConfig))
+
+      /**
+       * @param endpoint The endpoint. 
+       */
+      override fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty,
+    ) : CdkObject(cdkObject), HttpConfigProperty {
+      /**
+       * The authorization configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-authorizationconfig)
+       */
+      override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
+
+      /**
+       * The endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint)
+       */
+      override fun endpoint(): String = unwrap(this).getEndpoint()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HttpConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty):
+          HttpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HttpConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty
+    }
+  }
+
+  /**
    * The `LambdaConfig` property type specifies the Lambda function ARN for an AWS AppSync data
    * source.
    *
@@ -2447,6 +2177,122 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty
+    }
+  }
+
+  /**
+   * The `OpenSearchServiceConfig` property type specifies the `AwsRegion` and `Endpoints` for an
+   * Amazon OpenSearch Service domain in your account for an AWS AppSync data source.
+   *
+   * `OpenSearchServiceConfig` is a property of the
+   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * OpenSearchServiceConfigProperty openSearchServiceConfigProperty =
+   * OpenSearchServiceConfigProperty.builder()
+   * .awsRegion("awsRegion")
+   * .endpoint("endpoint")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html)
+   */
+  public interface OpenSearchServiceConfigProperty {
+    /**
+     * The AWS Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html#cfn-appsync-datasource-opensearchserviceconfig-awsregion)
+     */
+    public fun awsRegion(): String
+
+    /**
+     * The endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html#cfn-appsync-datasource-opensearchserviceconfig-endpoint)
+     */
+    public fun endpoint(): String
+
+    /**
+     * A builder for [OpenSearchServiceConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param awsRegion The AWS Region. 
+       */
+      public fun awsRegion(awsRegion: String)
+
+      /**
+       * @param endpoint The endpoint. 
+       */
+      public fun endpoint(endpoint: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty.builder()
+
+      /**
+       * @param awsRegion The AWS Region. 
+       */
+      override fun awsRegion(awsRegion: String) {
+        cdkBuilder.awsRegion(awsRegion)
+      }
+
+      /**
+       * @param endpoint The endpoint. 
+       */
+      override fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty,
+    ) : CdkObject(cdkObject), OpenSearchServiceConfigProperty {
+      /**
+       * The AWS Region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html#cfn-appsync-datasource-opensearchserviceconfig-awsregion)
+       */
+      override fun awsRegion(): String = unwrap(this).getAwsRegion()
+
+      /**
+       * The endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-opensearchserviceconfig.html#cfn-appsync-datasource-opensearchserviceconfig-endpoint)
+       */
+      override fun endpoint(): String = unwrap(this).getEndpoint()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OpenSearchServiceConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty):
+          OpenSearchServiceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenSearchServiceConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenSearchServiceConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty
     }
   }
 
@@ -2645,6 +2491,160 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.RdsHttpEndpointConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appsync.CfnDataSource.RdsHttpEndpointConfigProperty
+    }
+  }
+
+  /**
+   * Use the `RelationalDatabaseConfig` property type to specify `RelationalDatabaseConfig` for an
+   * AWS AppSync data source.
+   *
+   * `RelationalDatabaseConfig` is a property of the
+   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * RelationalDatabaseConfigProperty relationalDatabaseConfigProperty =
+   * RelationalDatabaseConfigProperty.builder()
+   * .relationalDatabaseSourceType("relationalDatabaseSourceType")
+   * // the properties below are optional
+   * .rdsHttpEndpointConfig(RdsHttpEndpointConfigProperty.builder()
+   * .awsRegion("awsRegion")
+   * .awsSecretStoreArn("awsSecretStoreArn")
+   * .dbClusterIdentifier("dbClusterIdentifier")
+   * // the properties below are optional
+   * .databaseName("databaseName")
+   * .schema("schema")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html)
+   */
+  public interface RelationalDatabaseConfigProperty {
+    /**
+     * Information about the Amazon RDS resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig)
+     */
+    public fun rdsHttpEndpointConfig(): Any? = unwrap(this).getRdsHttpEndpointConfig()
+
+    /**
+     * The type of relational data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype)
+     */
+    public fun relationalDatabaseSourceType(): String
+
+    /**
+     * A builder for [RelationalDatabaseConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
+       */
+      public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable)
+
+      /**
+       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
+       */
+      public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty)
+
+      /**
+       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0c0e1a030f7709ef41b4271ecea3609f7962dfd162d9b4ff87849ef4d907eab")
+      public
+          fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param relationalDatabaseSourceType The type of relational data source. 
+       */
+      public fun relationalDatabaseSourceType(relationalDatabaseSourceType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty.builder()
+
+      /**
+       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
+       */
+      override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable) {
+        cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
+       */
+      override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty) {
+        cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(RdsHttpEndpointConfigProperty::unwrap))
+      }
+
+      /**
+       * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0c0e1a030f7709ef41b4271ecea3609f7962dfd162d9b4ff87849ef4d907eab")
+      override
+          fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty.Builder.() -> Unit):
+          Unit = rdsHttpEndpointConfig(RdsHttpEndpointConfigProperty(rdsHttpEndpointConfig))
+
+      /**
+       * @param relationalDatabaseSourceType The type of relational data source. 
+       */
+      override fun relationalDatabaseSourceType(relationalDatabaseSourceType: String) {
+        cdkBuilder.relationalDatabaseSourceType(relationalDatabaseSourceType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty,
+    ) : CdkObject(cdkObject), RelationalDatabaseConfigProperty {
+      /**
+       * Information about the Amazon RDS resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig)
+       */
+      override fun rdsHttpEndpointConfig(): Any? = unwrap(this).getRdsHttpEndpointConfig()
+
+      /**
+       * The type of relational data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype)
+       */
+      override fun relationalDatabaseSourceType(): String =
+          unwrap(this).getRelationalDatabaseSourceType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RelationalDatabaseConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty):
+          RelationalDatabaseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RelationalDatabaseConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RelationalDatabaseConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty
     }
   }
 }

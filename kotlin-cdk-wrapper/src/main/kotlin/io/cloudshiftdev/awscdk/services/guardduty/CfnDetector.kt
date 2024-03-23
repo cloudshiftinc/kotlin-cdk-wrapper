@@ -480,103 +480,6 @@ public open class CfnDetector internal constructor(
   }
 
   /**
-   * Describes whether S3 data event logs will be enabled as a data source when the detector is
-   * created.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.guardduty.*;
-   * CFNS3LogsConfigurationProperty cFNS3LogsConfigurationProperty =
-   * CFNS3LogsConfigurationProperty.builder()
-   * .enable(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfns3logsconfiguration.html)
-   */
-  public interface CFNS3LogsConfigurationProperty {
-    /**
-     * The status of S3 data event logs as a data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfns3logsconfiguration.html#cfn-guardduty-detector-cfns3logsconfiguration-enable)
-     */
-    public fun enable(): Any
-
-    /**
-     * A builder for [CFNS3LogsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enable The status of S3 data event logs as a data source. 
-       */
-      public fun enable(enable: Boolean)
-
-      /**
-       * @param enable The status of S3 data event logs as a data source. 
-       */
-      public fun enable(enable: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty.builder()
-
-      /**
-       * @param enable The status of S3 data event logs as a data source. 
-       */
-      override fun enable(enable: Boolean) {
-        cdkBuilder.enable(enable)
-      }
-
-      /**
-       * @param enable The status of S3 data event logs as a data source. 
-       */
-      override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNS3LogsConfigurationProperty {
-      /**
-       * The status of S3 data event logs as a data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfns3logsconfiguration.html#cfn-guardduty-detector-cfns3logsconfiguration-enable)
-       */
-      override fun enable(): Any = unwrap(this).getEnable()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CFNS3LogsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty):
-          CFNS3LogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CFNS3LogsConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CFNS3LogsConfigurationProperty):
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty
-    }
-  }
-
-  /**
    * Describes whether S3 data event logs, Kubernetes audit logs, or Malware Protection will be
    * enabled as a data source when the detector is created.
    *
@@ -816,8 +719,7 @@ public open class CfnDetector internal constructor(
   }
 
   /**
-   * Describes whether Malware Protection for EC2 instances with findings will be enabled as a data
-   * source.
+   * Information about the additional configuration of a feature in your account.
    *
    * Example:
    *
@@ -825,199 +727,106 @@ public open class CfnDetector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.guardduty.*;
-   * CFNScanEc2InstanceWithFindingsConfigurationProperty
-   * cFNScanEc2InstanceWithFindingsConfigurationProperty =
-   * CFNScanEc2InstanceWithFindingsConfigurationProperty.builder()
-   * .ebsVolumes(false)
+   * CFNFeatureAdditionalConfigurationProperty cFNFeatureAdditionalConfigurationProperty =
+   * CFNFeatureAdditionalConfigurationProperty.builder()
+   * .name("name")
+   * .status("status")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnscanec2instancewithfindingsconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html)
    */
-  public interface CFNScanEc2InstanceWithFindingsConfigurationProperty {
+  public interface CFNFeatureAdditionalConfigurationProperty {
     /**
-     * Describes the configuration for scanning EBS volumes as data source.
+     * Name of the additional configuration.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnscanec2instancewithfindingsconfiguration.html#cfn-guardduty-detector-cfnscanec2instancewithfindingsconfiguration-ebsvolumes)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html#cfn-guardduty-detector-cfnfeatureadditionalconfiguration-name)
      */
-    public fun ebsVolumes(): Any? = unwrap(this).getEbsVolumes()
+    public fun name(): String? = unwrap(this).getName()
 
     /**
-     * A builder for [CFNScanEc2InstanceWithFindingsConfigurationProperty]
+     * Status of the additional configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html#cfn-guardduty-detector-cfnfeatureadditionalconfiguration-status)
+     */
+    public fun status(): String? = unwrap(this).getStatus()
+
+    /**
+     * A builder for [CFNFeatureAdditionalConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
+       * @param name Name of the additional configuration.
        */
-      public fun ebsVolumes(ebsVolumes: Boolean)
+      public fun name(name: String)
 
       /**
-       * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
+       * @param status Status of the additional configuration.
        */
-      public fun ebsVolumes(ebsVolumes: IResolvable)
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty.Builder
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty.builder()
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty.builder()
 
       /**
-       * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
+       * @param name Name of the additional configuration.
        */
-      override fun ebsVolumes(ebsVolumes: Boolean) {
-        cdkBuilder.ebsVolumes(ebsVolumes)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
+       * @param status Status of the additional configuration.
        */
-      override fun ebsVolumes(ebsVolumes: IResolvable) {
-        cdkBuilder.ebsVolumes(ebsVolumes.let(IResolvable::unwrap))
+      override fun status(status: String) {
+        cdkBuilder.status(status)
       }
 
       public fun build():
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNScanEc2InstanceWithFindingsConfigurationProperty {
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty,
+    ) : CdkObject(cdkObject), CFNFeatureAdditionalConfigurationProperty {
       /**
-       * Describes the configuration for scanning EBS volumes as data source.
+       * Name of the additional configuration.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnscanec2instancewithfindingsconfiguration.html#cfn-guardduty-detector-cfnscanec2instancewithfindingsconfiguration-ebsvolumes)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html#cfn-guardduty-detector-cfnfeatureadditionalconfiguration-name)
        */
-      override fun ebsVolumes(): Any? = unwrap(this).getEbsVolumes()
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * Status of the additional configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html#cfn-guardduty-detector-cfnfeatureadditionalconfiguration-status)
+       */
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          CFNScanEc2InstanceWithFindingsConfigurationProperty {
+          CFNFeatureAdditionalConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty):
-          CFNScanEc2InstanceWithFindingsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
-          as? CFNScanEc2InstanceWithFindingsConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty):
+          CFNFeatureAdditionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNFeatureAdditionalConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CFNScanEc2InstanceWithFindingsConfigurationProperty):
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty
+      internal fun unwrap(wrapped: CFNFeatureAdditionalConfigurationProperty):
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes a tag.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.guardduty.*;
-   * TagItemProperty tagItemProperty = TagItemProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html)
-   */
-  public interface TagItemProperty {
-    /**
-     * The tag value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-key)
-     */
-    public fun key(): String
-
-    /**
-     * The tag key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [TagItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The tag value. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The tag key. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty.Builder =
-          software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty.builder()
-
-      /**
-       * @param key The tag value. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The tag key. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty,
-    ) : CdkObject(cdkObject), TagItemProperty {
-      /**
-       * The tag value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The tag key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty):
-          TagItemProperty = CdkObjectWrappers.wrap(cdkObject) as? TagItemProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TagItemProperty):
-          software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty
     }
   }
 
@@ -1189,6 +998,107 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes which optional data sources are enabled for a detector.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.guardduty.*;
+   * CFNKubernetesAuditLogsConfigurationProperty cFNKubernetesAuditLogsConfigurationProperty =
+   * CFNKubernetesAuditLogsConfigurationProperty.builder()
+   * .enable(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnkubernetesauditlogsconfiguration.html)
+   */
+  public interface CFNKubernetesAuditLogsConfigurationProperty {
+    /**
+     * Describes whether Kubernetes audit logs are enabled as a data source for the detector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnkubernetesauditlogsconfiguration.html#cfn-guardduty-detector-cfnkubernetesauditlogsconfiguration-enable)
+     */
+    public fun enable(): Any
+
+    /**
+     * A builder for [CFNKubernetesAuditLogsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enable Describes whether Kubernetes audit logs are enabled as a data source for the
+       * detector. 
+       */
+      public fun enable(enable: Boolean)
+
+      /**
+       * @param enable Describes whether Kubernetes audit logs are enabled as a data source for the
+       * detector. 
+       */
+      public fun enable(enable: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty.builder()
+
+      /**
+       * @param enable Describes whether Kubernetes audit logs are enabled as a data source for the
+       * detector. 
+       */
+      override fun enable(enable: Boolean) {
+        cdkBuilder.enable(enable)
+      }
+
+      /**
+       * @param enable Describes whether Kubernetes audit logs are enabled as a data source for the
+       * detector. 
+       */
+      override fun enable(enable: IResolvable) {
+        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty,
+    ) : CdkObject(cdkObject), CFNKubernetesAuditLogsConfigurationProperty {
+      /**
+       * Describes whether Kubernetes audit logs are enabled as a data source for the detector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnkubernetesauditlogsconfiguration.html#cfn-guardduty-detector-cfnkubernetesauditlogsconfiguration-enable)
+       */
+      override fun enable(): Any = unwrap(this).getEnable()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CFNKubernetesAuditLogsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty):
+          CFNKubernetesAuditLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNKubernetesAuditLogsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CFNKubernetesAuditLogsConfigurationProperty):
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty
     }
   }
 
@@ -1441,7 +1351,8 @@ public open class CfnDetector internal constructor(
   }
 
   /**
-   * Describes which optional data sources are enabled for a detector.
+   * Describes whether S3 data event logs will be enabled as a data source when the detector is
+   * created.
    *
    * Example:
    *
@@ -1449,100 +1360,96 @@ public open class CfnDetector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.guardduty.*;
-   * CFNKubernetesAuditLogsConfigurationProperty cFNKubernetesAuditLogsConfigurationProperty =
-   * CFNKubernetesAuditLogsConfigurationProperty.builder()
+   * CFNS3LogsConfigurationProperty cFNS3LogsConfigurationProperty =
+   * CFNS3LogsConfigurationProperty.builder()
    * .enable(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnkubernetesauditlogsconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfns3logsconfiguration.html)
    */
-  public interface CFNKubernetesAuditLogsConfigurationProperty {
+  public interface CFNS3LogsConfigurationProperty {
     /**
-     * Describes whether Kubernetes audit logs are enabled as a data source for the detector.
+     * The status of S3 data event logs as a data source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnkubernetesauditlogsconfiguration.html#cfn-guardduty-detector-cfnkubernetesauditlogsconfiguration-enable)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfns3logsconfiguration.html#cfn-guardduty-detector-cfns3logsconfiguration-enable)
      */
     public fun enable(): Any
 
     /**
-     * A builder for [CFNKubernetesAuditLogsConfigurationProperty]
+     * A builder for [CFNS3LogsConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enable Describes whether Kubernetes audit logs are enabled as a data source for the
-       * detector. 
+       * @param enable The status of S3 data event logs as a data source. 
        */
       public fun enable(enable: Boolean)
 
       /**
-       * @param enable Describes whether Kubernetes audit logs are enabled as a data source for the
-       * detector. 
+       * @param enable The status of S3 data event logs as a data source. 
        */
       public fun enable(enable: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty.Builder
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty.builder()
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty.builder()
 
       /**
-       * @param enable Describes whether Kubernetes audit logs are enabled as a data source for the
-       * detector. 
+       * @param enable The status of S3 data event logs as a data source. 
        */
       override fun enable(enable: Boolean) {
         cdkBuilder.enable(enable)
       }
 
       /**
-       * @param enable Describes whether Kubernetes audit logs are enabled as a data source for the
-       * detector. 
+       * @param enable The status of S3 data event logs as a data source. 
        */
       override fun enable(enable: IResolvable) {
         cdkBuilder.enable(enable.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNKubernetesAuditLogsConfigurationProperty {
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty,
+    ) : CdkObject(cdkObject), CFNS3LogsConfigurationProperty {
       /**
-       * Describes whether Kubernetes audit logs are enabled as a data source for the detector.
+       * The status of S3 data event logs as a data source.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnkubernetesauditlogsconfiguration.html#cfn-guardduty-detector-cfnkubernetesauditlogsconfiguration-enable)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfns3logsconfiguration.html#cfn-guardduty-detector-cfns3logsconfiguration-enable)
        */
       override fun enable(): Any = unwrap(this).getEnable()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CFNKubernetesAuditLogsConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CFNS3LogsConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty):
-          CFNKubernetesAuditLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CFNKubernetesAuditLogsConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty):
+          CFNS3LogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNS3LogsConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CFNKubernetesAuditLogsConfigurationProperty):
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty
+      internal fun unwrap(wrapped: CFNS3LogsConfigurationProperty):
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty
     }
   }
 
   /**
-   * Information about the additional configuration of a feature in your account.
+   * Describes whether Malware Protection for EC2 instances with findings will be enabled as a data
+   * source.
    *
    * Example:
    *
@@ -1550,106 +1457,199 @@ public open class CfnDetector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.guardduty.*;
-   * CFNFeatureAdditionalConfigurationProperty cFNFeatureAdditionalConfigurationProperty =
-   * CFNFeatureAdditionalConfigurationProperty.builder()
-   * .name("name")
-   * .status("status")
+   * CFNScanEc2InstanceWithFindingsConfigurationProperty
+   * cFNScanEc2InstanceWithFindingsConfigurationProperty =
+   * CFNScanEc2InstanceWithFindingsConfigurationProperty.builder()
+   * .ebsVolumes(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnscanec2instancewithfindingsconfiguration.html)
    */
-  public interface CFNFeatureAdditionalConfigurationProperty {
+  public interface CFNScanEc2InstanceWithFindingsConfigurationProperty {
     /**
-     * Name of the additional configuration.
+     * Describes the configuration for scanning EBS volumes as data source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html#cfn-guardduty-detector-cfnfeatureadditionalconfiguration-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnscanec2instancewithfindingsconfiguration.html#cfn-guardduty-detector-cfnscanec2instancewithfindingsconfiguration-ebsvolumes)
      */
-    public fun name(): String? = unwrap(this).getName()
+    public fun ebsVolumes(): Any? = unwrap(this).getEbsVolumes()
 
     /**
-     * Status of the additional configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html#cfn-guardduty-detector-cfnfeatureadditionalconfiguration-status)
-     */
-    public fun status(): String? = unwrap(this).getStatus()
-
-    /**
-     * A builder for [CFNFeatureAdditionalConfigurationProperty]
+     * A builder for [CFNScanEc2InstanceWithFindingsConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name Name of the additional configuration.
+       * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
        */
-      public fun name(name: String)
+      public fun ebsVolumes(ebsVolumes: Boolean)
 
       /**
-       * @param status Status of the additional configuration.
+       * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
        */
-      public fun status(status: String)
+      public fun ebsVolumes(ebsVolumes: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty.Builder
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty.builder()
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty.builder()
 
       /**
-       * @param name Name of the additional configuration.
+       * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
        */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun ebsVolumes(ebsVolumes: Boolean) {
+        cdkBuilder.ebsVolumes(ebsVolumes)
       }
 
       /**
-       * @param status Status of the additional configuration.
+       * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
        */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
+      override fun ebsVolumes(ebsVolumes: IResolvable) {
+        cdkBuilder.ebsVolumes(ebsVolumes.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNFeatureAdditionalConfigurationProperty {
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty,
+    ) : CdkObject(cdkObject), CFNScanEc2InstanceWithFindingsConfigurationProperty {
       /**
-       * Name of the additional configuration.
+       * Describes the configuration for scanning EBS volumes as data source.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html#cfn-guardduty-detector-cfnfeatureadditionalconfiguration-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnscanec2instancewithfindingsconfiguration.html#cfn-guardduty-detector-cfnscanec2instancewithfindingsconfiguration-ebsvolumes)
        */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * Status of the additional configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureadditionalconfiguration.html#cfn-guardduty-detector-cfnfeatureadditionalconfiguration-status)
-       */
-      override fun status(): String? = unwrap(this).getStatus()
+      override fun ebsVolumes(): Any? = unwrap(this).getEbsVolumes()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          CFNFeatureAdditionalConfigurationProperty {
+          CFNScanEc2InstanceWithFindingsConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty):
-          CFNFeatureAdditionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CFNFeatureAdditionalConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty):
+          CFNScanEc2InstanceWithFindingsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? CFNScanEc2InstanceWithFindingsConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CFNFeatureAdditionalConfigurationProperty):
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty
+      internal fun unwrap(wrapped: CFNScanEc2InstanceWithFindingsConfigurationProperty):
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty
+          software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes a tag.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.guardduty.*;
+   * TagItemProperty tagItemProperty = TagItemProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html)
+   */
+  public interface TagItemProperty {
+    /**
+     * The tag value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-key)
+     */
+    public fun key(): String
+
+    /**
+     * The tag key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [TagItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The tag value. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The tag key. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty.Builder =
+          software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty.builder()
+
+      /**
+       * @param key The tag value. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The tag key. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty,
+    ) : CdkObject(cdkObject), TagItemProperty {
+      /**
+       * The tag value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The tag key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty):
+          TagItemProperty = CdkObjectWrappers.wrap(cdkObject) as? TagItemProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TagItemProperty):
+          software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty
     }
   }
 }

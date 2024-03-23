@@ -530,7 +530,7 @@ public open class CfnTaskDefinition internal constructor(
   }
 
   /**
-   * UpdateWirelessGatewayTaskCreate object.
+   * LoRaWANGatewayVersion object.
    *
    * Example:
    *
@@ -538,173 +538,132 @@ public open class CfnTaskDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * UpdateWirelessGatewayTaskCreateProperty updateWirelessGatewayTaskCreateProperty =
-   * UpdateWirelessGatewayTaskCreateProperty.builder()
-   * .loRaWan(LoRaWANUpdateGatewayTaskCreateProperty.builder()
-   * .currentVersion(LoRaWANGatewayVersionProperty.builder()
+   * LoRaWANGatewayVersionProperty loRaWANGatewayVersionProperty =
+   * LoRaWANGatewayVersionProperty.builder()
    * .model("model")
    * .packageVersion("packageVersion")
    * .station("station")
-   * .build())
-   * .sigKeyCrc(123)
-   * .updateSignature("updateSignature")
-   * .updateVersion(LoRaWANGatewayVersionProperty.builder()
-   * .model("model")
-   * .packageVersion("packageVersion")
-   * .station("station")
-   * .build())
-   * .build())
-   * .updateDataRole("updateDataRole")
-   * .updateDataSource("updateDataSource")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html)
    */
-  public interface UpdateWirelessGatewayTaskCreateProperty {
+  public interface LoRaWANGatewayVersionProperty {
     /**
-     * The properties that relate to the LoRaWAN wireless gateway.
+     * The model number of the wireless gateway.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-lorawan)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-model)
      */
-    public fun loRaWan(): Any? = unwrap(this).getLoRaWan()
+    public fun model(): String? = unwrap(this).getModel()
 
     /**
-     * The IAM role used to read data from the S3 bucket.
+     * The version of the wireless gateway firmware.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatarole)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-packageversion)
      */
-    public fun updateDataRole(): String? = unwrap(this).getUpdateDataRole()
+    public fun packageVersion(): String? = unwrap(this).getPackageVersion()
 
     /**
-     * The link to the S3 bucket.
+     * The basic station version of the wireless gateway.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatasource)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-station)
      */
-    public fun updateDataSource(): String? = unwrap(this).getUpdateDataSource()
+    public fun station(): String? = unwrap(this).getStation()
 
     /**
-     * A builder for [UpdateWirelessGatewayTaskCreateProperty]
+     * A builder for [LoRaWANGatewayVersionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
+       * @param model The model number of the wireless gateway.
        */
-      public fun loRaWan(loRaWan: IResolvable)
+      public fun model(model: String)
 
       /**
-       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
+       * @param packageVersion The version of the wireless gateway firmware.
        */
-      public fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty)
+      public fun packageVersion(packageVersion: String)
 
       /**
-       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
+       * @param station The basic station version of the wireless gateway.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c9e1b2e9bb716c698778bb5a59a337f75a51f4015d1aee0f4516f361f7795069")
-      public fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty.Builder.() -> Unit)
-
-      /**
-       * @param updateDataRole The IAM role used to read data from the S3 bucket.
-       */
-      public fun updateDataRole(updateDataRole: String)
-
-      /**
-       * @param updateDataSource The link to the S3 bucket.
-       */
-      public fun updateDataSource(updateDataSource: String)
+      public fun station(station: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty.Builder
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty.Builder
           =
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty.builder()
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty.builder()
 
       /**
-       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
+       * @param model The model number of the wireless gateway.
        */
-      override fun loRaWan(loRaWan: IResolvable) {
-        cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      override fun model(model: String) {
+        cdkBuilder.model(model)
       }
 
       /**
-       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
+       * @param packageVersion The version of the wireless gateway firmware.
        */
-      override fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty) {
-        cdkBuilder.loRaWan(loRaWan.let(LoRaWANUpdateGatewayTaskCreateProperty::unwrap))
+      override fun packageVersion(packageVersion: String) {
+        cdkBuilder.packageVersion(packageVersion)
       }
 
       /**
-       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
+       * @param station The basic station version of the wireless gateway.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c9e1b2e9bb716c698778bb5a59a337f75a51f4015d1aee0f4516f361f7795069")
-      override fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty.Builder.() -> Unit): Unit
-          = loRaWan(LoRaWANUpdateGatewayTaskCreateProperty(loRaWan))
-
-      /**
-       * @param updateDataRole The IAM role used to read data from the S3 bucket.
-       */
-      override fun updateDataRole(updateDataRole: String) {
-        cdkBuilder.updateDataRole(updateDataRole)
-      }
-
-      /**
-       * @param updateDataSource The link to the S3 bucket.
-       */
-      override fun updateDataSource(updateDataSource: String) {
-        cdkBuilder.updateDataSource(updateDataSource)
+      override fun station(station: String) {
+        cdkBuilder.station(station)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty,
-    ) : CdkObject(cdkObject), UpdateWirelessGatewayTaskCreateProperty {
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty,
+    ) : CdkObject(cdkObject), LoRaWANGatewayVersionProperty {
       /**
-       * The properties that relate to the LoRaWAN wireless gateway.
+       * The model number of the wireless gateway.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-lorawan)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-model)
        */
-      override fun loRaWan(): Any? = unwrap(this).getLoRaWan()
+      override fun model(): String? = unwrap(this).getModel()
 
       /**
-       * The IAM role used to read data from the S3 bucket.
+       * The version of the wireless gateway firmware.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatarole)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-packageversion)
        */
-      override fun updateDataRole(): String? = unwrap(this).getUpdateDataRole()
+      override fun packageVersion(): String? = unwrap(this).getPackageVersion()
 
       /**
-       * The link to the S3 bucket.
+       * The basic station version of the wireless gateway.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatasource)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-station)
        */
-      override fun updateDataSource(): String? = unwrap(this).getUpdateDataSource()
+      override fun station(): String? = unwrap(this).getStation()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          UpdateWirelessGatewayTaskCreateProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoRaWANGatewayVersionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty):
-          UpdateWirelessGatewayTaskCreateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          UpdateWirelessGatewayTaskCreateProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty):
+          LoRaWANGatewayVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoRaWANGatewayVersionProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: UpdateWirelessGatewayTaskCreateProperty):
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty
+      internal fun unwrap(wrapped: LoRaWANGatewayVersionProperty):
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty
     }
   }
 
@@ -1111,7 +1070,7 @@ public open class CfnTaskDefinition internal constructor(
   }
 
   /**
-   * LoRaWANGatewayVersion object.
+   * UpdateWirelessGatewayTaskCreate object.
    *
    * Example:
    *
@@ -1119,132 +1078,173 @@ public open class CfnTaskDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * LoRaWANGatewayVersionProperty loRaWANGatewayVersionProperty =
-   * LoRaWANGatewayVersionProperty.builder()
+   * UpdateWirelessGatewayTaskCreateProperty updateWirelessGatewayTaskCreateProperty =
+   * UpdateWirelessGatewayTaskCreateProperty.builder()
+   * .loRaWan(LoRaWANUpdateGatewayTaskCreateProperty.builder()
+   * .currentVersion(LoRaWANGatewayVersionProperty.builder()
    * .model("model")
    * .packageVersion("packageVersion")
    * .station("station")
+   * .build())
+   * .sigKeyCrc(123)
+   * .updateSignature("updateSignature")
+   * .updateVersion(LoRaWANGatewayVersionProperty.builder()
+   * .model("model")
+   * .packageVersion("packageVersion")
+   * .station("station")
+   * .build())
+   * .build())
+   * .updateDataRole("updateDataRole")
+   * .updateDataSource("updateDataSource")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html)
    */
-  public interface LoRaWANGatewayVersionProperty {
+  public interface UpdateWirelessGatewayTaskCreateProperty {
     /**
-     * The model number of the wireless gateway.
+     * The properties that relate to the LoRaWAN wireless gateway.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-model)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-lorawan)
      */
-    public fun model(): String? = unwrap(this).getModel()
+    public fun loRaWan(): Any? = unwrap(this).getLoRaWan()
 
     /**
-     * The version of the wireless gateway firmware.
+     * The IAM role used to read data from the S3 bucket.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-packageversion)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatarole)
      */
-    public fun packageVersion(): String? = unwrap(this).getPackageVersion()
+    public fun updateDataRole(): String? = unwrap(this).getUpdateDataRole()
 
     /**
-     * The basic station version of the wireless gateway.
+     * The link to the S3 bucket.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-station)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatasource)
      */
-    public fun station(): String? = unwrap(this).getStation()
+    public fun updateDataSource(): String? = unwrap(this).getUpdateDataSource()
 
     /**
-     * A builder for [LoRaWANGatewayVersionProperty]
+     * A builder for [UpdateWirelessGatewayTaskCreateProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param model The model number of the wireless gateway.
+       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
        */
-      public fun model(model: String)
+      public fun loRaWan(loRaWan: IResolvable)
 
       /**
-       * @param packageVersion The version of the wireless gateway firmware.
+       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
        */
-      public fun packageVersion(packageVersion: String)
+      public fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty)
 
       /**
-       * @param station The basic station version of the wireless gateway.
+       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
        */
-      public fun station(station: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c9e1b2e9bb716c698778bb5a59a337f75a51f4015d1aee0f4516f361f7795069")
+      public fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty.Builder.() -> Unit)
+
+      /**
+       * @param updateDataRole The IAM role used to read data from the S3 bucket.
+       */
+      public fun updateDataRole(updateDataRole: String)
+
+      /**
+       * @param updateDataSource The link to the S3 bucket.
+       */
+      public fun updateDataSource(updateDataSource: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty.Builder
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty.Builder
           =
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty.builder()
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty.builder()
 
       /**
-       * @param model The model number of the wireless gateway.
+       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
        */
-      override fun model(model: String) {
-        cdkBuilder.model(model)
+      override fun loRaWan(loRaWan: IResolvable) {
+        cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
       }
 
       /**
-       * @param packageVersion The version of the wireless gateway firmware.
+       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
        */
-      override fun packageVersion(packageVersion: String) {
-        cdkBuilder.packageVersion(packageVersion)
+      override fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty) {
+        cdkBuilder.loRaWan(loRaWan.let(LoRaWANUpdateGatewayTaskCreateProperty::unwrap))
       }
 
       /**
-       * @param station The basic station version of the wireless gateway.
+       * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
        */
-      override fun station(station: String) {
-        cdkBuilder.station(station)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c9e1b2e9bb716c698778bb5a59a337f75a51f4015d1aee0f4516f361f7795069")
+      override fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty.Builder.() -> Unit): Unit
+          = loRaWan(LoRaWANUpdateGatewayTaskCreateProperty(loRaWan))
+
+      /**
+       * @param updateDataRole The IAM role used to read data from the S3 bucket.
+       */
+      override fun updateDataRole(updateDataRole: String) {
+        cdkBuilder.updateDataRole(updateDataRole)
+      }
+
+      /**
+       * @param updateDataSource The link to the S3 bucket.
+       */
+      override fun updateDataSource(updateDataSource: String) {
+        cdkBuilder.updateDataSource(updateDataSource)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty,
-    ) : CdkObject(cdkObject), LoRaWANGatewayVersionProperty {
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty,
+    ) : CdkObject(cdkObject), UpdateWirelessGatewayTaskCreateProperty {
       /**
-       * The model number of the wireless gateway.
+       * The properties that relate to the LoRaWAN wireless gateway.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-model)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-lorawan)
        */
-      override fun model(): String? = unwrap(this).getModel()
+      override fun loRaWan(): Any? = unwrap(this).getLoRaWan()
 
       /**
-       * The version of the wireless gateway firmware.
+       * The IAM role used to read data from the S3 bucket.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-packageversion)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatarole)
        */
-      override fun packageVersion(): String? = unwrap(this).getPackageVersion()
+      override fun updateDataRole(): String? = unwrap(this).getUpdateDataRole()
 
       /**
-       * The basic station version of the wireless gateway.
+       * The link to the S3 bucket.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-station)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatasource)
        */
-      override fun station(): String? = unwrap(this).getStation()
+      override fun updateDataSource(): String? = unwrap(this).getUpdateDataSource()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoRaWANGatewayVersionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          UpdateWirelessGatewayTaskCreateProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty):
-          LoRaWANGatewayVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LoRaWANGatewayVersionProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty):
+          UpdateWirelessGatewayTaskCreateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UpdateWirelessGatewayTaskCreateProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LoRaWANGatewayVersionProperty):
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty
+      internal fun unwrap(wrapped: UpdateWirelessGatewayTaskCreateProperty):
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty
+          software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty
     }
   }
 }

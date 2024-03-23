@@ -876,8 +876,7 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * Configuration information for coordination with AWS Glue , a fully managed extract, transform
-   * and load (ETL) service.
+   * Information needed to run the "containerAction" to produce data set contents.
    *
    * Example:
    *
@@ -885,639 +884,241 @@ public open class CfnDataset internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * GlueConfigurationProperty glueConfigurationProperty = GlueConfigurationProperty.builder()
-   * .databaseName("databaseName")
-   * .tableName("tableName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html)
-   */
-  public interface GlueConfigurationProperty {
-    /**
-     * The name of the database in your AWS Glue Data Catalog in which the table is located.
-     *
-     * An AWS Glue Data Catalog database contains metadata tables.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-databasename)
-     */
-    public fun databaseName(): String
-
-    /**
-     * The name of the table in your AWS Glue Data Catalog that is used to perform the ETL
-     * operations.
-     *
-     * An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources and
-     * targets.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-tablename)
-     */
-    public fun tableName(): String
-
-    /**
-     * A builder for [GlueConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param databaseName The name of the database in your AWS Glue Data Catalog in which the
-       * table is located. 
-       * An AWS Glue Data Catalog database contains metadata tables.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param tableName The name of the table in your AWS Glue Data Catalog that is used to
-       * perform the ETL operations. 
-       * An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources
-       * and targets.
-       */
-      public fun tableName(tableName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty.builder()
-
-      /**
-       * @param databaseName The name of the database in your AWS Glue Data Catalog in which the
-       * table is located. 
-       * An AWS Glue Data Catalog database contains metadata tables.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param tableName The name of the table in your AWS Glue Data Catalog that is used to
-       * perform the ETL operations. 
-       * An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources
-       * and targets.
-       */
-      override fun tableName(tableName: String) {
-        cdkBuilder.tableName(tableName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty,
-    ) : CdkObject(cdkObject), GlueConfigurationProperty {
-      /**
-       * The name of the database in your AWS Glue Data Catalog in which the table is located.
-       *
-       * An AWS Glue Data Catalog database contains metadata tables.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-databasename)
-       */
-      override fun databaseName(): String = unwrap(this).getDatabaseName()
-
-      /**
-       * The name of the table in your AWS Glue Data Catalog that is used to perform the ETL
-       * operations.
-       *
-       * An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources
-       * and targets.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-tablename)
-       */
-      override fun tableName(): String = unwrap(this).getTableName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GlueConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty):
-          GlueConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GlueConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GlueConfigurationProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty
-    }
-  }
-
-  /**
-   * Used to limit data to that which has arrived since the last execution of the action.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * DeltaTimeProperty deltaTimeProperty = DeltaTimeProperty.builder()
+   * ActionProperty actionProperty = ActionProperty.builder()
+   * .actionName("actionName")
+   * // the properties below are optional
+   * .containerAction(ContainerActionProperty.builder()
+   * .executionRoleArn("executionRoleArn")
+   * .image("image")
+   * .resourceConfiguration(ResourceConfigurationProperty.builder()
+   * .computeType("computeType")
+   * .volumeSizeInGb(123)
+   * .build())
+   * // the properties below are optional
+   * .variables(List.of(VariableProperty.builder()
+   * .variableName("variableName")
+   * // the properties below are optional
+   * .datasetContentVersionValue(DatasetContentVersionValueProperty.builder()
+   * .datasetName("datasetName")
+   * .build())
+   * .doubleValue(123)
+   * .outputFileUriValue(OutputFileUriValueProperty.builder()
+   * .fileName("fileName")
+   * .build())
+   * .stringValue("stringValue")
+   * .build()))
+   * .build())
+   * .queryAction(QueryActionProperty.builder()
+   * .sqlQuery("sqlQuery")
+   * // the properties below are optional
+   * .filters(List.of(FilterProperty.builder()
+   * .deltaTime(DeltaTimeProperty.builder()
    * .offsetSeconds(123)
    * .timeExpression("timeExpression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html)
-   */
-  public interface DeltaTimeProperty {
-    /**
-     * The number of seconds of estimated in-flight lag time of message data.
-     *
-     * When you create dataset contents using message data from a specified timeframe, some message
-     * data might still be in flight when processing begins, and so do not arrive in time to be
-     * processed. Use this field to make allowances for the in flight time of your message data, so
-     * that data not processed from a previous timeframe is included with the next timeframe.
-     * Otherwise, missed message data would be excluded from processing during the next timeframe too,
-     * because its timestamp places it within the previous timeframe.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html#cfn-iotanalytics-dataset-deltatime-offsetseconds)
-     */
-    public fun offsetSeconds(): Number
-
-    /**
-     * An expression by which the time of the message data might be determined.
-     *
-     * This can be the name of a timestamp field or a SQL expression that is used to derive the time
-     * the message data was generated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html#cfn-iotanalytics-dataset-deltatime-timeexpression)
-     */
-    public fun timeExpression(): String
-
-    /**
-     * A builder for [DeltaTimeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param offsetSeconds The number of seconds of estimated in-flight lag time of message data.
-       * 
-       * When you create dataset contents using message data from a specified timeframe, some
-       * message data might still be in flight when processing begins, and so do not arrive in time to
-       * be processed. Use this field to make allowances for the in flight time of your message data,
-       * so that data not processed from a previous timeframe is included with the next timeframe.
-       * Otherwise, missed message data would be excluded from processing during the next timeframe
-       * too, because its timestamp places it within the previous timeframe.
-       */
-      public fun offsetSeconds(offsetSeconds: Number)
-
-      /**
-       * @param timeExpression An expression by which the time of the message data might be
-       * determined. 
-       * This can be the name of a timestamp field or a SQL expression that is used to derive the
-       * time the message data was generated.
-       */
-      public fun timeExpression(timeExpression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty.Builder =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty.builder()
-
-      /**
-       * @param offsetSeconds The number of seconds of estimated in-flight lag time of message data.
-       * 
-       * When you create dataset contents using message data from a specified timeframe, some
-       * message data might still be in flight when processing begins, and so do not arrive in time to
-       * be processed. Use this field to make allowances for the in flight time of your message data,
-       * so that data not processed from a previous timeframe is included with the next timeframe.
-       * Otherwise, missed message data would be excluded from processing during the next timeframe
-       * too, because its timestamp places it within the previous timeframe.
-       */
-      override fun offsetSeconds(offsetSeconds: Number) {
-        cdkBuilder.offsetSeconds(offsetSeconds)
-      }
-
-      /**
-       * @param timeExpression An expression by which the time of the message data might be
-       * determined. 
-       * This can be the name of a timestamp field or a SQL expression that is used to derive the
-       * time the message data was generated.
-       */
-      override fun timeExpression(timeExpression: String) {
-        cdkBuilder.timeExpression(timeExpression)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty,
-    ) : CdkObject(cdkObject), DeltaTimeProperty {
-      /**
-       * The number of seconds of estimated in-flight lag time of message data.
-       *
-       * When you create dataset contents using message data from a specified timeframe, some
-       * message data might still be in flight when processing begins, and so do not arrive in time to
-       * be processed. Use this field to make allowances for the in flight time of your message data,
-       * so that data not processed from a previous timeframe is included with the next timeframe.
-       * Otherwise, missed message data would be excluded from processing during the next timeframe
-       * too, because its timestamp places it within the previous timeframe.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html#cfn-iotanalytics-dataset-deltatime-offsetseconds)
-       */
-      override fun offsetSeconds(): Number = unwrap(this).getOffsetSeconds()
-
-      /**
-       * An expression by which the time of the message data might be determined.
-       *
-       * This can be the name of a timestamp field or a SQL expression that is used to derive the
-       * time the message data was generated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html#cfn-iotanalytics-dataset-deltatime-timeexpression)
-       */
-      override fun timeExpression(): String = unwrap(this).getTimeExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeltaTimeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty):
-          DeltaTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? DeltaTimeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeltaTimeProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty
-    }
-  }
-
-  /**
-   * Configuration information for delivery of dataset contents to Amazon Simple Storage Service
-   * (Amazon S3).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * S3DestinationConfigurationProperty s3DestinationConfigurationProperty =
-   * S3DestinationConfigurationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .glueConfiguration(GlueConfigurationProperty.builder()
-   * .databaseName("databaseName")
-   * .tableName("tableName")
+   * .build())
+   * .build()))
    * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html)
    */
-  public interface S3DestinationConfigurationProperty {
+  public interface ActionProperty {
     /**
-     * The name of the S3 bucket to which dataset contents are delivered.
+     * The name of the data set action by which data set contents are automatically created.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-bucket)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-actionname)
      */
-    public fun bucket(): String
+    public fun actionName(): String
 
     /**
-     * Configuration information for coordination with AWS Glue , a fully managed extract, transform
-     * and load (ETL) service.
+     * Information which allows the system to run a containerized application in order to create the
+     * data set contents.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-glueconfiguration)
+     * The application must be in a Docker container along with any needed support libraries.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-containeraction)
      */
-    public fun glueConfiguration(): Any? = unwrap(this).getGlueConfiguration()
+    public fun containerAction(): Any? = unwrap(this).getContainerAction()
 
     /**
-     * The key of the dataset contents object in an S3 bucket.
+     * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
+     * contents.
      *
-     * Each object has a key that is a unique identifier. Each object has exactly one key.
-     *
-     * You can create a unique key with the following options:
-     *
-     * * Use `!{iotanalytics:scheduleTime}` to insert the time of a scheduled SQL query run.
-     * * Use `!{iotanalytics:versionId}` to insert a unique hash that identifies a dataset content.
-     * * Use `!{iotanalytics:creationTime}` to insert the creation time of a dataset content.
-     *
-     * The following example creates a unique key for a CSV file:
-     * `dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv`
-     *
-     *
-     * If you don't use `!{iotanalytics:versionId}` to specify the key, you might get duplicate
-     * keys. For example, you might have two dataset contents with the same `scheduleTime` but
-     * different `versionId` s. This means that one dataset content overwrites the other.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-key)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-queryaction)
      */
-    public fun key(): String
+    public fun queryAction(): Any? = unwrap(this).getQueryAction()
 
     /**
-     * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon S3
-     * and AWS Glue resources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [S3DestinationConfigurationProperty]
+     * A builder for [ActionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucket The name of the S3 bucket to which dataset contents are delivered. 
+       * @param actionName The name of the data set action by which data set contents are
+       * automatically created. 
        */
-      public fun bucket(bucket: String)
+      public fun actionName(actionName: String)
 
       /**
-       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
-       * managed extract, transform and load (ETL) service.
+       * @param containerAction Information which allows the system to run a containerized
+       * application in order to create the data set contents.
+       * The application must be in a Docker container along with any needed support libraries.
        */
-      public fun glueConfiguration(glueConfiguration: IResolvable)
+      public fun containerAction(containerAction: IResolvable)
 
       /**
-       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
-       * managed extract, transform and load (ETL) service.
+       * @param containerAction Information which allows the system to run a containerized
+       * application in order to create the data set contents.
+       * The application must be in a Docker container along with any needed support libraries.
        */
-      public fun glueConfiguration(glueConfiguration: GlueConfigurationProperty)
+      public fun containerAction(containerAction: ContainerActionProperty)
 
       /**
-       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
-       * managed extract, transform and load (ETL) service.
+       * @param containerAction Information which allows the system to run a containerized
+       * application in order to create the data set contents.
+       * The application must be in a Docker container along with any needed support libraries.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8d986fc3b747807a579f2262617d81f0c53cbf1ab91bc6b0b387b4db40f60623")
-      public fun glueConfiguration(glueConfiguration: GlueConfigurationProperty.Builder.() -> Unit)
+      @JvmName("7fb0b2b4600952a7a3c76e021204da23616aea133683262928c645a6b64097d5")
+      public fun containerAction(containerAction: ContainerActionProperty.Builder.() -> Unit)
 
       /**
-       * @param key The key of the dataset contents object in an S3 bucket. 
-       * Each object has a key that is a unique identifier. Each object has exactly one key.
-       *
-       * You can create a unique key with the following options:
-       *
-       * * Use `!{iotanalytics:scheduleTime}` to insert the time of a scheduled SQL query run.
-       * * Use `!{iotanalytics:versionId}` to insert a unique hash that identifies a dataset
-       * content.
-       * * Use `!{iotanalytics:creationTime}` to insert the creation time of a dataset content.
-       *
-       * The following example creates a unique key for a CSV file:
-       * `dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv`
-       *
-       *
-       * If you don't use `!{iotanalytics:versionId}` to specify the key, you might get duplicate
-       * keys. For example, you might have two dataset contents with the same `scheduleTime` but
-       * different `versionId` s. This means that one dataset content overwrites the other.
+       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
+       * automatically create data set contents.
        */
-      public fun key(key: String)
+      public fun queryAction(queryAction: IResolvable)
 
       /**
-       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact
-       * with your Amazon S3 and AWS Glue resources. 
+       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
+       * automatically create data set contents.
        */
-      public fun roleArn(roleArn: String)
+      public fun queryAction(queryAction: QueryActionProperty)
+
+      /**
+       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
+       * automatically create data set contents.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("209643db6aef748be34590f8f172d702dfc98b6d584c2242f0f32d2150c0bf0e")
+      public fun queryAction(queryAction: QueryActionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty.builder()
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty.Builder =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty.builder()
 
       /**
-       * @param bucket The name of the S3 bucket to which dataset contents are delivered. 
+       * @param actionName The name of the data set action by which data set contents are
+       * automatically created. 
        */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
+      override fun actionName(actionName: String) {
+        cdkBuilder.actionName(actionName)
       }
 
       /**
-       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
-       * managed extract, transform and load (ETL) service.
+       * @param containerAction Information which allows the system to run a containerized
+       * application in order to create the data set contents.
+       * The application must be in a Docker container along with any needed support libraries.
        */
-      override fun glueConfiguration(glueConfiguration: IResolvable) {
-        cdkBuilder.glueConfiguration(glueConfiguration.let(IResolvable::unwrap))
+      override fun containerAction(containerAction: IResolvable) {
+        cdkBuilder.containerAction(containerAction.let(IResolvable::unwrap))
       }
 
       /**
-       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
-       * managed extract, transform and load (ETL) service.
+       * @param containerAction Information which allows the system to run a containerized
+       * application in order to create the data set contents.
+       * The application must be in a Docker container along with any needed support libraries.
        */
-      override fun glueConfiguration(glueConfiguration: GlueConfigurationProperty) {
-        cdkBuilder.glueConfiguration(glueConfiguration.let(GlueConfigurationProperty::unwrap))
+      override fun containerAction(containerAction: ContainerActionProperty) {
+        cdkBuilder.containerAction(containerAction.let(ContainerActionProperty::unwrap))
       }
 
       /**
-       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
-       * managed extract, transform and load (ETL) service.
+       * @param containerAction Information which allows the system to run a containerized
+       * application in order to create the data set contents.
+       * The application must be in a Docker container along with any needed support libraries.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8d986fc3b747807a579f2262617d81f0c53cbf1ab91bc6b0b387b4db40f60623")
-      override
-          fun glueConfiguration(glueConfiguration: GlueConfigurationProperty.Builder.() -> Unit):
-          Unit = glueConfiguration(GlueConfigurationProperty(glueConfiguration))
+      @JvmName("7fb0b2b4600952a7a3c76e021204da23616aea133683262928c645a6b64097d5")
+      override fun containerAction(containerAction: ContainerActionProperty.Builder.() -> Unit):
+          Unit = containerAction(ContainerActionProperty(containerAction))
 
       /**
-       * @param key The key of the dataset contents object in an S3 bucket. 
-       * Each object has a key that is a unique identifier. Each object has exactly one key.
-       *
-       * You can create a unique key with the following options:
-       *
-       * * Use `!{iotanalytics:scheduleTime}` to insert the time of a scheduled SQL query run.
-       * * Use `!{iotanalytics:versionId}` to insert a unique hash that identifies a dataset
-       * content.
-       * * Use `!{iotanalytics:creationTime}` to insert the creation time of a dataset content.
-       *
-       * The following example creates a unique key for a CSV file:
-       * `dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv`
-       *
-       *
-       * If you don't use `!{iotanalytics:versionId}` to specify the key, you might get duplicate
-       * keys. For example, you might have two dataset contents with the same `scheduleTime` but
-       * different `versionId` s. This means that one dataset content overwrites the other.
+       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
+       * automatically create data set contents.
        */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
+      override fun queryAction(queryAction: IResolvable) {
+        cdkBuilder.queryAction(queryAction.let(IResolvable::unwrap))
       }
 
       /**
-       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact
-       * with your Amazon S3 and AWS Glue resources. 
+       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
+       * automatically create data set contents.
        */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
+      override fun queryAction(queryAction: QueryActionProperty) {
+        cdkBuilder.queryAction(queryAction.let(QueryActionProperty::unwrap))
       }
 
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
       /**
-       * The name of the S3 bucket to which dataset contents are delivered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-bucket)
+       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
+       * automatically create data set contents.
        */
-      override fun bucket(): String = unwrap(this).getBucket()
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("209643db6aef748be34590f8f172d702dfc98b6d584c2242f0f32d2150c0bf0e")
+      override fun queryAction(queryAction: QueryActionProperty.Builder.() -> Unit): Unit =
+          queryAction(QueryActionProperty(queryAction))
 
-      /**
-       * Configuration information for coordination with AWS Glue , a fully managed extract,
-       * transform and load (ETL) service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-glueconfiguration)
-       */
-      override fun glueConfiguration(): Any? = unwrap(this).getGlueConfiguration()
-
-      /**
-       * The key of the dataset contents object in an S3 bucket.
-       *
-       * Each object has a key that is a unique identifier. Each object has exactly one key.
-       *
-       * You can create a unique key with the following options:
-       *
-       * * Use `!{iotanalytics:scheduleTime}` to insert the time of a scheduled SQL query run.
-       * * Use `!{iotanalytics:versionId}` to insert a unique hash that identifies a dataset
-       * content.
-       * * Use `!{iotanalytics:creationTime}` to insert the creation time of a dataset content.
-       *
-       * The following example creates a unique key for a CSV file:
-       * `dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv`
-       *
-       *
-       * If you don't use `!{iotanalytics:versionId}` to specify the key, you might get duplicate
-       * keys. For example, you might have two dataset contents with the same `scheduleTime` but
-       * different `versionId` s. This means that one dataset content overwrites the other.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon
-       * S3 and AWS Glue resources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          S3DestinationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty):
-          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3DestinationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty
-    }
-  }
-
-  /**
-   * The value of the variable as a structure that specifies an output file URI.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * OutputFileUriValueProperty outputFileUriValueProperty = OutputFileUriValueProperty.builder()
-   * .fileName("fileName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-outputfileurivalue.html)
-   */
-  public interface OutputFileUriValueProperty {
-    /**
-     * The URI of the location where dataset contents are stored, usually the URI of a file in an S3
-     * bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-outputfileurivalue.html#cfn-iotanalytics-dataset-outputfileurivalue-filename)
-     */
-    public fun fileName(): String
-
-    /**
-     * A builder for [OutputFileUriValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fileName The URI of the location where dataset contents are stored, usually the URI
-       * of a file in an S3 bucket. 
-       */
-      public fun fileName(fileName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty.builder()
-
-      /**
-       * @param fileName The URI of the location where dataset contents are stored, usually the URI
-       * of a file in an S3 bucket. 
-       */
-      override fun fileName(fileName: String) {
-        cdkBuilder.fileName(fileName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty =
+      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty,
-    ) : CdkObject(cdkObject), OutputFileUriValueProperty {
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty,
+    ) : CdkObject(cdkObject), ActionProperty {
       /**
-       * The URI of the location where dataset contents are stored, usually the URI of a file in an
-       * S3 bucket.
+       * The name of the data set action by which data set contents are automatically created.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-outputfileurivalue.html#cfn-iotanalytics-dataset-outputfileurivalue-filename)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-actionname)
        */
-      override fun fileName(): String = unwrap(this).getFileName()
+      override fun actionName(): String = unwrap(this).getActionName()
+
+      /**
+       * Information which allows the system to run a containerized application in order to create
+       * the data set contents.
+       *
+       * The application must be in a Docker container along with any needed support libraries.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-containeraction)
+       */
+      override fun containerAction(): Any? = unwrap(this).getContainerAction()
+
+      /**
+       * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
+       * contents.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-queryaction)
+       */
+      override fun queryAction(): Any? = unwrap(this).getQueryAction()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OutputFileUriValueProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ActionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty):
-          OutputFileUriValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OutputFileUriValueProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty):
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: OutputFileUriValueProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty
+      internal fun unwrap(wrapped: ActionProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty
     }
   }
 
@@ -1807,339 +1408,6 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * The dataset whose latest contents are used as input to the notebook or application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * DatasetContentVersionValueProperty datasetContentVersionValueProperty =
-   * DatasetContentVersionValueProperty.builder()
-   * .datasetName("datasetName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentversionvalue.html)
-   */
-  public interface DatasetContentVersionValueProperty {
-    /**
-     * The name of the dataset whose latest contents are used as input to the notebook or
-     * application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentversionvalue.html#cfn-iotanalytics-dataset-datasetcontentversionvalue-datasetname)
-     */
-    public fun datasetName(): String
-
-    /**
-     * A builder for [DatasetContentVersionValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param datasetName The name of the dataset whose latest contents are used as input to the
-       * notebook or application. 
-       */
-      public fun datasetName(datasetName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty.builder()
-
-      /**
-       * @param datasetName The name of the dataset whose latest contents are used as input to the
-       * notebook or application. 
-       */
-      override fun datasetName(datasetName: String) {
-        cdkBuilder.datasetName(datasetName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty,
-    ) : CdkObject(cdkObject), DatasetContentVersionValueProperty {
-      /**
-       * The name of the dataset whose latest contents are used as input to the notebook or
-       * application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentversionvalue.html#cfn-iotanalytics-dataset-datasetcontentversionvalue-datasetname)
-       */
-      override fun datasetName(): String = unwrap(this).getDatasetName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DatasetContentVersionValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty):
-          DatasetContentVersionValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DatasetContentVersionValueProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatasetContentVersionValueProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty
-    }
-  }
-
-  /**
-   * Information which is used to filter message data, to segregate it according to the time frame
-   * in which it arrives.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * FilterProperty filterProperty = FilterProperty.builder()
-   * .deltaTime(DeltaTimeProperty.builder()
-   * .offsetSeconds(123)
-   * .timeExpression("timeExpression")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-filter.html)
-   */
-  public interface FilterProperty {
-    /**
-     * Used to limit data to that which has arrived since the last execution of the action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-filter.html#cfn-iotanalytics-dataset-filter-deltatime)
-     */
-    public fun deltaTime(): Any? = unwrap(this).getDeltaTime()
-
-    /**
-     * A builder for [FilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deltaTime Used to limit data to that which has arrived since the last execution of
-       * the action.
-       */
-      public fun deltaTime(deltaTime: IResolvable)
-
-      /**
-       * @param deltaTime Used to limit data to that which has arrived since the last execution of
-       * the action.
-       */
-      public fun deltaTime(deltaTime: DeltaTimeProperty)
-
-      /**
-       * @param deltaTime Used to limit data to that which has arrived since the last execution of
-       * the action.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("292b1a57aa57aee4937f19c951a48b9710aa5a181672b7d5d6d32846b1e2af24")
-      public fun deltaTime(deltaTime: DeltaTimeProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty.Builder =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty.builder()
-
-      /**
-       * @param deltaTime Used to limit data to that which has arrived since the last execution of
-       * the action.
-       */
-      override fun deltaTime(deltaTime: IResolvable) {
-        cdkBuilder.deltaTime(deltaTime.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param deltaTime Used to limit data to that which has arrived since the last execution of
-       * the action.
-       */
-      override fun deltaTime(deltaTime: DeltaTimeProperty) {
-        cdkBuilder.deltaTime(deltaTime.let(DeltaTimeProperty::unwrap))
-      }
-
-      /**
-       * @param deltaTime Used to limit data to that which has arrived since the last execution of
-       * the action.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("292b1a57aa57aee4937f19c951a48b9710aa5a181672b7d5d6d32846b1e2af24")
-      override fun deltaTime(deltaTime: DeltaTimeProperty.Builder.() -> Unit): Unit =
-          deltaTime(DeltaTimeProperty(deltaTime))
-
-      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
-      /**
-       * Used to limit data to that which has arrived since the last execution of the action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-filter.html#cfn-iotanalytics-dataset-filter-deltatime)
-       */
-      override fun deltaTime(): Any? = unwrap(this).getDeltaTime()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty
-    }
-  }
-
-  /**
-   * A structure that contains the configuration information of a delta time session window.
-   *
-   * [`DeltaTime`](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_DeltaTime.html)
-   * specifies a time interval. You can use `DeltaTime` to create dataset contents with data that has
-   * arrived in the data store since the last execution. For an example of `DeltaTime` , see [Creating
-   * a SQL dataset with a delta window
-   * (CLI)](https://docs.aws.amazon.com/iotanalytics/latest/userguide/automate-create-dataset.html#automate-example6)
-   * in the *AWS IoT Analytics User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * DeltaTimeSessionWindowConfigurationProperty deltaTimeSessionWindowConfigurationProperty =
-   * DeltaTimeSessionWindowConfigurationProperty.builder()
-   * .timeoutInMinutes(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatimesessionwindowconfiguration.html)
-   */
-  public interface DeltaTimeSessionWindowConfigurationProperty {
-    /**
-     * A time interval.
-     *
-     * You can use `timeoutInMinutes` so that AWS IoT Analytics can batch up late data notifications
-     * that have been generated since the last execution. AWS IoT Analytics sends one batch of
-     * notifications to Amazon CloudWatch Events at one time.
-     *
-     * For more information about how to write a timestamp expression, see [Date and Time Functions
-     * and
-     * Operators](https://docs.aws.amazon.com/https://prestodb.io/docs/current/functions/datetime.html)
-     * , in the *Presto 0.172 Documentation* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatimesessionwindowconfiguration.html#cfn-iotanalytics-dataset-deltatimesessionwindowconfiguration-timeoutinminutes)
-     */
-    public fun timeoutInMinutes(): Number
-
-    /**
-     * A builder for [DeltaTimeSessionWindowConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param timeoutInMinutes A time interval. 
-       * You can use `timeoutInMinutes` so that AWS IoT Analytics can batch up late data
-       * notifications that have been generated since the last execution. AWS IoT Analytics sends one
-       * batch of notifications to Amazon CloudWatch Events at one time.
-       *
-       * For more information about how to write a timestamp expression, see [Date and Time
-       * Functions and
-       * Operators](https://docs.aws.amazon.com/https://prestodb.io/docs/current/functions/datetime.html)
-       * , in the *Presto 0.172 Documentation* .
-       */
-      public fun timeoutInMinutes(timeoutInMinutes: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty.builder()
-
-      /**
-       * @param timeoutInMinutes A time interval. 
-       * You can use `timeoutInMinutes` so that AWS IoT Analytics can batch up late data
-       * notifications that have been generated since the last execution. AWS IoT Analytics sends one
-       * batch of notifications to Amazon CloudWatch Events at one time.
-       *
-       * For more information about how to write a timestamp expression, see [Date and Time
-       * Functions and
-       * Operators](https://docs.aws.amazon.com/https://prestodb.io/docs/current/functions/datetime.html)
-       * , in the *Presto 0.172 Documentation* .
-       */
-      override fun timeoutInMinutes(timeoutInMinutes: Number) {
-        cdkBuilder.timeoutInMinutes(timeoutInMinutes)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty,
-    ) : CdkObject(cdkObject), DeltaTimeSessionWindowConfigurationProperty {
-      /**
-       * A time interval.
-       *
-       * You can use `timeoutInMinutes` so that AWS IoT Analytics can batch up late data
-       * notifications that have been generated since the last execution. AWS IoT Analytics sends one
-       * batch of notifications to Amazon CloudWatch Events at one time.
-       *
-       * For more information about how to write a timestamp expression, see [Date and Time
-       * Functions and
-       * Operators](https://docs.aws.amazon.com/https://prestodb.io/docs/current/functions/datetime.html)
-       * , in the *Presto 0.172 Documentation* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatimesessionwindowconfiguration.html#cfn-iotanalytics-dataset-deltatimesessionwindowconfiguration-timeoutinminutes)
-       */
-      override fun timeoutInMinutes(): Number = unwrap(this).getTimeoutInMinutes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DeltaTimeSessionWindowConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty):
-          DeltaTimeSessionWindowConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeltaTimeSessionWindowConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeltaTimeSessionWindowConfigurationProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty
-    }
-  }
-
-  /**
    * The destination to which dataset contents are delivered.
    *
    * Example:
@@ -2343,7 +1611,7 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * The configuration of the resource used to execute the `containerAction` .
+   * When dataset contents are created, they are delivered to destination specified here.
    *
    * Example:
    *
@@ -2351,117 +1619,1012 @@ public open class CfnDataset internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * ResourceConfigurationProperty resourceConfigurationProperty =
-   * ResourceConfigurationProperty.builder()
-   * .computeType("computeType")
-   * .volumeSizeInGb(123)
+   * DatasetContentDeliveryRuleProperty datasetContentDeliveryRuleProperty =
+   * DatasetContentDeliveryRuleProperty.builder()
+   * .destination(DatasetContentDeliveryRuleDestinationProperty.builder()
+   * .iotEventsDestinationConfiguration(IotEventsDestinationConfigurationProperty.builder()
+   * .inputName("inputName")
+   * .roleArn("roleArn")
+   * .build())
+   * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .glueConfiguration(GlueConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .build())
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .entryName("entryName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html)
    */
-  public interface ResourceConfigurationProperty {
+  public interface DatasetContentDeliveryRuleProperty {
     /**
-     * The type of the compute resource used to execute the `containerAction` .
+     * The destination to which dataset contents are delivered.
      *
-     * Possible values are: `ACU_1` (vCPU=4, memory=16 GiB) or `ACU_2` (vCPU=8, memory=32 GiB).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-computetype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination)
      */
-    public fun computeType(): String
+    public fun destination(): Any
 
     /**
-     * The size, in GB, of the persistent storage available to the resource instance used to execute
-     * the `containerAction` (min: 1, max: 50).
+     * The name of the dataset content delivery rules entry.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname)
      */
-    public fun volumeSizeInGb(): Number
+    public fun entryName(): String? = unwrap(this).getEntryName()
 
     /**
-     * A builder for [ResourceConfigurationProperty]
+     * A builder for [DatasetContentDeliveryRuleProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param computeType The type of the compute resource used to execute the `containerAction` .
-       * 
-       * Possible values are: `ACU_1` (vCPU=4, memory=16 GiB) or `ACU_2` (vCPU=8, memory=32 GiB).
+       * @param destination The destination to which dataset contents are delivered. 
        */
-      public fun computeType(computeType: String)
+      public fun destination(destination: IResolvable)
 
       /**
-       * @param volumeSizeInGb The size, in GB, of the persistent storage available to the resource
-       * instance used to execute the `containerAction` (min: 1, max: 50). 
+       * @param destination The destination to which dataset contents are delivered. 
        */
-      public fun volumeSizeInGb(volumeSizeInGb: Number)
+      public fun destination(destination: DatasetContentDeliveryRuleDestinationProperty)
+
+      /**
+       * @param destination The destination to which dataset contents are delivered. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7002a69a78fa0a8d9c60b7eaf42ecee41d1f3761d56ad36c4cd9b8976df45abc")
+      public
+          fun destination(destination: DatasetContentDeliveryRuleDestinationProperty.Builder.() -> Unit)
+
+      /**
+       * @param entryName The name of the dataset content delivery rules entry.
+       */
+      public fun entryName(entryName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty.Builder
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty.Builder
           =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty.builder()
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty.builder()
 
       /**
-       * @param computeType The type of the compute resource used to execute the `containerAction` .
-       * 
-       * Possible values are: `ACU_1` (vCPU=4, memory=16 GiB) or `ACU_2` (vCPU=8, memory=32 GiB).
+       * @param destination The destination to which dataset contents are delivered. 
        */
-      override fun computeType(computeType: String) {
-        cdkBuilder.computeType(computeType)
+      override fun destination(destination: IResolvable) {
+        cdkBuilder.destination(destination.let(IResolvable::unwrap))
       }
 
       /**
-       * @param volumeSizeInGb The size, in GB, of the persistent storage available to the resource
-       * instance used to execute the `containerAction` (min: 1, max: 50). 
+       * @param destination The destination to which dataset contents are delivered. 
        */
-      override fun volumeSizeInGb(volumeSizeInGb: Number) {
-        cdkBuilder.volumeSizeInGb(volumeSizeInGb)
+      override fun destination(destination: DatasetContentDeliveryRuleDestinationProperty) {
+        cdkBuilder.destination(destination.let(DatasetContentDeliveryRuleDestinationProperty::unwrap))
+      }
+
+      /**
+       * @param destination The destination to which dataset contents are delivered. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7002a69a78fa0a8d9c60b7eaf42ecee41d1f3761d56ad36c4cd9b8976df45abc")
+      override
+          fun destination(destination: DatasetContentDeliveryRuleDestinationProperty.Builder.() -> Unit):
+          Unit = destination(DatasetContentDeliveryRuleDestinationProperty(destination))
+
+      /**
+       * @param entryName The name of the dataset content delivery rules entry.
+       */
+      override fun entryName(entryName: String) {
+        cdkBuilder.entryName(entryName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty,
-    ) : CdkObject(cdkObject), ResourceConfigurationProperty {
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty,
+    ) : CdkObject(cdkObject), DatasetContentDeliveryRuleProperty {
       /**
-       * The type of the compute resource used to execute the `containerAction` .
+       * The destination to which dataset contents are delivered.
        *
-       * Possible values are: `ACU_1` (vCPU=4, memory=16 GiB) or `ACU_2` (vCPU=8, memory=32 GiB).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-computetype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination)
        */
-      override fun computeType(): String = unwrap(this).getComputeType()
+      override fun destination(): Any = unwrap(this).getDestination()
 
       /**
-       * The size, in GB, of the persistent storage available to the resource instance used to
-       * execute the `containerAction` (min: 1, max: 50).
+       * The name of the dataset content delivery rules entry.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname)
        */
-      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
+      override fun entryName(): String? = unwrap(this).getEntryName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DatasetContentDeliveryRuleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty):
-          ResourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResourceConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty):
+          DatasetContentDeliveryRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatasetContentDeliveryRuleProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ResourceConfigurationProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty =
+      internal fun unwrap(wrapped: DatasetContentDeliveryRuleProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty
+    }
+  }
+
+  /**
+   * The dataset whose latest contents are used as input to the notebook or application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * DatasetContentVersionValueProperty datasetContentVersionValueProperty =
+   * DatasetContentVersionValueProperty.builder()
+   * .datasetName("datasetName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentversionvalue.html)
+   */
+  public interface DatasetContentVersionValueProperty {
+    /**
+     * The name of the dataset whose latest contents are used as input to the notebook or
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentversionvalue.html#cfn-iotanalytics-dataset-datasetcontentversionvalue-datasetname)
+     */
+    public fun datasetName(): String
+
+    /**
+     * A builder for [DatasetContentVersionValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param datasetName The name of the dataset whose latest contents are used as input to the
+       * notebook or application. 
+       */
+      public fun datasetName(datasetName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty.builder()
+
+      /**
+       * @param datasetName The name of the dataset whose latest contents are used as input to the
+       * notebook or application. 
+       */
+      override fun datasetName(datasetName: String) {
+        cdkBuilder.datasetName(datasetName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty,
+    ) : CdkObject(cdkObject), DatasetContentVersionValueProperty {
+      /**
+       * The name of the dataset whose latest contents are used as input to the notebook or
+       * application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentversionvalue.html#cfn-iotanalytics-dataset-datasetcontentversionvalue-datasetname)
+       */
+      override fun datasetName(): String = unwrap(this).getDatasetName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DatasetContentVersionValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty):
+          DatasetContentVersionValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatasetContentVersionValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatasetContentVersionValueProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty
+    }
+  }
+
+  /**
+   * Used to limit data to that which has arrived since the last execution of the action.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * DeltaTimeProperty deltaTimeProperty = DeltaTimeProperty.builder()
+   * .offsetSeconds(123)
+   * .timeExpression("timeExpression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html)
+   */
+  public interface DeltaTimeProperty {
+    /**
+     * The number of seconds of estimated in-flight lag time of message data.
+     *
+     * When you create dataset contents using message data from a specified timeframe, some message
+     * data might still be in flight when processing begins, and so do not arrive in time to be
+     * processed. Use this field to make allowances for the in flight time of your message data, so
+     * that data not processed from a previous timeframe is included with the next timeframe.
+     * Otherwise, missed message data would be excluded from processing during the next timeframe too,
+     * because its timestamp places it within the previous timeframe.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html#cfn-iotanalytics-dataset-deltatime-offsetseconds)
+     */
+    public fun offsetSeconds(): Number
+
+    /**
+     * An expression by which the time of the message data might be determined.
+     *
+     * This can be the name of a timestamp field or a SQL expression that is used to derive the time
+     * the message data was generated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html#cfn-iotanalytics-dataset-deltatime-timeexpression)
+     */
+    public fun timeExpression(): String
+
+    /**
+     * A builder for [DeltaTimeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param offsetSeconds The number of seconds of estimated in-flight lag time of message data.
+       * 
+       * When you create dataset contents using message data from a specified timeframe, some
+       * message data might still be in flight when processing begins, and so do not arrive in time to
+       * be processed. Use this field to make allowances for the in flight time of your message data,
+       * so that data not processed from a previous timeframe is included with the next timeframe.
+       * Otherwise, missed message data would be excluded from processing during the next timeframe
+       * too, because its timestamp places it within the previous timeframe.
+       */
+      public fun offsetSeconds(offsetSeconds: Number)
+
+      /**
+       * @param timeExpression An expression by which the time of the message data might be
+       * determined. 
+       * This can be the name of a timestamp field or a SQL expression that is used to derive the
+       * time the message data was generated.
+       */
+      public fun timeExpression(timeExpression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty.Builder =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty.builder()
+
+      /**
+       * @param offsetSeconds The number of seconds of estimated in-flight lag time of message data.
+       * 
+       * When you create dataset contents using message data from a specified timeframe, some
+       * message data might still be in flight when processing begins, and so do not arrive in time to
+       * be processed. Use this field to make allowances for the in flight time of your message data,
+       * so that data not processed from a previous timeframe is included with the next timeframe.
+       * Otherwise, missed message data would be excluded from processing during the next timeframe
+       * too, because its timestamp places it within the previous timeframe.
+       */
+      override fun offsetSeconds(offsetSeconds: Number) {
+        cdkBuilder.offsetSeconds(offsetSeconds)
+      }
+
+      /**
+       * @param timeExpression An expression by which the time of the message data might be
+       * determined. 
+       * This can be the name of a timestamp field or a SQL expression that is used to derive the
+       * time the message data was generated.
+       */
+      override fun timeExpression(timeExpression: String) {
+        cdkBuilder.timeExpression(timeExpression)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty,
+    ) : CdkObject(cdkObject), DeltaTimeProperty {
+      /**
+       * The number of seconds of estimated in-flight lag time of message data.
+       *
+       * When you create dataset contents using message data from a specified timeframe, some
+       * message data might still be in flight when processing begins, and so do not arrive in time to
+       * be processed. Use this field to make allowances for the in flight time of your message data,
+       * so that data not processed from a previous timeframe is included with the next timeframe.
+       * Otherwise, missed message data would be excluded from processing during the next timeframe
+       * too, because its timestamp places it within the previous timeframe.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html#cfn-iotanalytics-dataset-deltatime-offsetseconds)
+       */
+      override fun offsetSeconds(): Number = unwrap(this).getOffsetSeconds()
+
+      /**
+       * An expression by which the time of the message data might be determined.
+       *
+       * This can be the name of a timestamp field or a SQL expression that is used to derive the
+       * time the message data was generated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html#cfn-iotanalytics-dataset-deltatime-timeexpression)
+       */
+      override fun timeExpression(): String = unwrap(this).getTimeExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeltaTimeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty):
+          DeltaTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? DeltaTimeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeltaTimeProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty
+    }
+  }
+
+  /**
+   * A structure that contains the configuration information of a delta time session window.
+   *
+   * [`DeltaTime`](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_DeltaTime.html)
+   * specifies a time interval. You can use `DeltaTime` to create dataset contents with data that has
+   * arrived in the data store since the last execution. For an example of `DeltaTime` , see [Creating
+   * a SQL dataset with a delta window
+   * (CLI)](https://docs.aws.amazon.com/iotanalytics/latest/userguide/automate-create-dataset.html#automate-example6)
+   * in the *AWS IoT Analytics User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * DeltaTimeSessionWindowConfigurationProperty deltaTimeSessionWindowConfigurationProperty =
+   * DeltaTimeSessionWindowConfigurationProperty.builder()
+   * .timeoutInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatimesessionwindowconfiguration.html)
+   */
+  public interface DeltaTimeSessionWindowConfigurationProperty {
+    /**
+     * A time interval.
+     *
+     * You can use `timeoutInMinutes` so that AWS IoT Analytics can batch up late data notifications
+     * that have been generated since the last execution. AWS IoT Analytics sends one batch of
+     * notifications to Amazon CloudWatch Events at one time.
+     *
+     * For more information about how to write a timestamp expression, see [Date and Time Functions
+     * and
+     * Operators](https://docs.aws.amazon.com/https://prestodb.io/docs/current/functions/datetime.html)
+     * , in the *Presto 0.172 Documentation* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatimesessionwindowconfiguration.html#cfn-iotanalytics-dataset-deltatimesessionwindowconfiguration-timeoutinminutes)
+     */
+    public fun timeoutInMinutes(): Number
+
+    /**
+     * A builder for [DeltaTimeSessionWindowConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param timeoutInMinutes A time interval. 
+       * You can use `timeoutInMinutes` so that AWS IoT Analytics can batch up late data
+       * notifications that have been generated since the last execution. AWS IoT Analytics sends one
+       * batch of notifications to Amazon CloudWatch Events at one time.
+       *
+       * For more information about how to write a timestamp expression, see [Date and Time
+       * Functions and
+       * Operators](https://docs.aws.amazon.com/https://prestodb.io/docs/current/functions/datetime.html)
+       * , in the *Presto 0.172 Documentation* .
+       */
+      public fun timeoutInMinutes(timeoutInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty.builder()
+
+      /**
+       * @param timeoutInMinutes A time interval. 
+       * You can use `timeoutInMinutes` so that AWS IoT Analytics can batch up late data
+       * notifications that have been generated since the last execution. AWS IoT Analytics sends one
+       * batch of notifications to Amazon CloudWatch Events at one time.
+       *
+       * For more information about how to write a timestamp expression, see [Date and Time
+       * Functions and
+       * Operators](https://docs.aws.amazon.com/https://prestodb.io/docs/current/functions/datetime.html)
+       * , in the *Presto 0.172 Documentation* .
+       */
+      override fun timeoutInMinutes(timeoutInMinutes: Number) {
+        cdkBuilder.timeoutInMinutes(timeoutInMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty,
+    ) : CdkObject(cdkObject), DeltaTimeSessionWindowConfigurationProperty {
+      /**
+       * A time interval.
+       *
+       * You can use `timeoutInMinutes` so that AWS IoT Analytics can batch up late data
+       * notifications that have been generated since the last execution. AWS IoT Analytics sends one
+       * batch of notifications to Amazon CloudWatch Events at one time.
+       *
+       * For more information about how to write a timestamp expression, see [Date and Time
+       * Functions and
+       * Operators](https://docs.aws.amazon.com/https://prestodb.io/docs/current/functions/datetime.html)
+       * , in the *Presto 0.172 Documentation* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatimesessionwindowconfiguration.html#cfn-iotanalytics-dataset-deltatimesessionwindowconfiguration-timeoutinminutes)
+       */
+      override fun timeoutInMinutes(): Number = unwrap(this).getTimeoutInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DeltaTimeSessionWindowConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty):
+          DeltaTimeSessionWindowConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeltaTimeSessionWindowConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeltaTimeSessionWindowConfigurationProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty
+    }
+  }
+
+  /**
+   * Information which is used to filter message data, to segregate it according to the time frame
+   * in which it arrives.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * FilterProperty filterProperty = FilterProperty.builder()
+   * .deltaTime(DeltaTimeProperty.builder()
+   * .offsetSeconds(123)
+   * .timeExpression("timeExpression")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-filter.html)
+   */
+  public interface FilterProperty {
+    /**
+     * Used to limit data to that which has arrived since the last execution of the action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-filter.html#cfn-iotanalytics-dataset-filter-deltatime)
+     */
+    public fun deltaTime(): Any? = unwrap(this).getDeltaTime()
+
+    /**
+     * A builder for [FilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deltaTime Used to limit data to that which has arrived since the last execution of
+       * the action.
+       */
+      public fun deltaTime(deltaTime: IResolvable)
+
+      /**
+       * @param deltaTime Used to limit data to that which has arrived since the last execution of
+       * the action.
+       */
+      public fun deltaTime(deltaTime: DeltaTimeProperty)
+
+      /**
+       * @param deltaTime Used to limit data to that which has arrived since the last execution of
+       * the action.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("292b1a57aa57aee4937f19c951a48b9710aa5a181672b7d5d6d32846b1e2af24")
+      public fun deltaTime(deltaTime: DeltaTimeProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty.Builder =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty.builder()
+
+      /**
+       * @param deltaTime Used to limit data to that which has arrived since the last execution of
+       * the action.
+       */
+      override fun deltaTime(deltaTime: IResolvable) {
+        cdkBuilder.deltaTime(deltaTime.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param deltaTime Used to limit data to that which has arrived since the last execution of
+       * the action.
+       */
+      override fun deltaTime(deltaTime: DeltaTimeProperty) {
+        cdkBuilder.deltaTime(deltaTime.let(DeltaTimeProperty::unwrap))
+      }
+
+      /**
+       * @param deltaTime Used to limit data to that which has arrived since the last execution of
+       * the action.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("292b1a57aa57aee4937f19c951a48b9710aa5a181672b7d5d6d32846b1e2af24")
+      override fun deltaTime(deltaTime: DeltaTimeProperty.Builder.() -> Unit): Unit =
+          deltaTime(DeltaTimeProperty(deltaTime))
+
+      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty,
+    ) : CdkObject(cdkObject), FilterProperty {
+      /**
+       * Used to limit data to that which has arrived since the last execution of the action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-filter.html#cfn-iotanalytics-dataset-filter-deltatime)
+       */
+      override fun deltaTime(): Any? = unwrap(this).getDeltaTime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty):
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty
+    }
+  }
+
+  /**
+   * Configuration information for coordination with AWS Glue , a fully managed extract, transform
+   * and load (ETL) service.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * GlueConfigurationProperty glueConfigurationProperty = GlueConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html)
+   */
+  public interface GlueConfigurationProperty {
+    /**
+     * The name of the database in your AWS Glue Data Catalog in which the table is located.
+     *
+     * An AWS Glue Data Catalog database contains metadata tables.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * The name of the table in your AWS Glue Data Catalog that is used to perform the ETL
+     * operations.
+     *
+     * An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources and
+     * targets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * A builder for [GlueConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseName The name of the database in your AWS Glue Data Catalog in which the
+       * table is located. 
+       * An AWS Glue Data Catalog database contains metadata tables.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param tableName The name of the table in your AWS Glue Data Catalog that is used to
+       * perform the ETL operations. 
+       * An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources
+       * and targets.
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty.builder()
+
+      /**
+       * @param databaseName The name of the database in your AWS Glue Data Catalog in which the
+       * table is located. 
+       * An AWS Glue Data Catalog database contains metadata tables.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param tableName The name of the table in your AWS Glue Data Catalog that is used to
+       * perform the ETL operations. 
+       * An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources
+       * and targets.
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty,
+    ) : CdkObject(cdkObject), GlueConfigurationProperty {
+      /**
+       * The name of the database in your AWS Glue Data Catalog in which the table is located.
+       *
+       * An AWS Glue Data Catalog database contains metadata tables.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The name of the table in your AWS Glue Data Catalog that is used to perform the ETL
+       * operations.
+       *
+       * An AWS Glue Data Catalog table contains partitioned data and descriptions of data sources
+       * and targets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GlueConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty):
+          GlueConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlueConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GlueConfigurationProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration information for delivery of dataset contents to AWS IoT Events .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * IotEventsDestinationConfigurationProperty iotEventsDestinationConfigurationProperty =
+   * IotEventsDestinationConfigurationProperty.builder()
+   * .inputName("inputName")
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html)
+   */
+  public interface IotEventsDestinationConfigurationProperty {
+    /**
+     * The name of the AWS IoT Events input to which dataset contents are delivered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-inputname)
+     */
+    public fun inputName(): String
+
+    /**
+     * The ARN of the role that grants AWS IoT Analytics permission to deliver dataset contents to
+     * an AWS IoT Events input.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [IotEventsDestinationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inputName The name of the AWS IoT Events input to which dataset contents are
+       * delivered. 
+       */
+      public fun inputName(inputName: String)
+
+      /**
+       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to deliver
+       * dataset contents to an AWS IoT Events input. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty.builder()
+
+      /**
+       * @param inputName The name of the AWS IoT Events input to which dataset contents are
+       * delivered. 
+       */
+      override fun inputName(inputName: String) {
+        cdkBuilder.inputName(inputName)
+      }
+
+      /**
+       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to deliver
+       * dataset contents to an AWS IoT Events input. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty,
+    ) : CdkObject(cdkObject), IotEventsDestinationConfigurationProperty {
+      /**
+       * The name of the AWS IoT Events input to which dataset contents are delivered.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-inputname)
+       */
+      override fun inputName(): String = unwrap(this).getInputName()
+
+      /**
+       * The ARN of the role that grants AWS IoT Analytics permission to deliver dataset contents to
+       * an AWS IoT Events input.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IotEventsDestinationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty):
+          IotEventsDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IotEventsDestinationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IotEventsDestinationConfigurationProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty
+    }
+  }
+
+  /**
+   * The information needed to configure a delta time session window.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * LateDataRuleConfigurationProperty lateDataRuleConfigurationProperty =
+   * LateDataRuleConfigurationProperty.builder()
+   * .deltaTimeSessionWindowConfiguration(DeltaTimeSessionWindowConfigurationProperty.builder()
+   * .timeoutInMinutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-latedataruleconfiguration.html)
+   */
+  public interface LateDataRuleConfigurationProperty {
+    /**
+     * The information needed to configure a delta time session window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-latedataruleconfiguration.html#cfn-iotanalytics-dataset-latedataruleconfiguration-deltatimesessionwindowconfiguration)
+     */
+    public fun deltaTimeSessionWindowConfiguration(): Any? =
+        unwrap(this).getDeltaTimeSessionWindowConfiguration()
+
+    /**
+     * A builder for [LateDataRuleConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
+       * session window.
+       */
+      public
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable)
+
+      /**
+       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
+       * session window.
+       */
+      public
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty)
+
+      /**
+       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
+       * session window.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a9d87bc4aa9b49a152d09288df1a27a69707702fb08a386436e141051109adc4")
+      public
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty.builder()
+
+      /**
+       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
+       * session window.
+       */
+      override
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable) {
+        cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
+       * session window.
+       */
+      override
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty) {
+        cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(DeltaTimeSessionWindowConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
+       * session window.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a9d87bc4aa9b49a152d09288df1a27a69707702fb08a386436e141051109adc4")
+      override
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          deltaTimeSessionWindowConfiguration(DeltaTimeSessionWindowConfigurationProperty(deltaTimeSessionWindowConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty,
+    ) : CdkObject(cdkObject), LateDataRuleConfigurationProperty {
+      /**
+       * The information needed to configure a delta time session window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-latedataruleconfiguration.html#cfn-iotanalytics-dataset-latedataruleconfiguration-deltatimesessionwindowconfiguration)
+       */
+      override fun deltaTimeSessionWindowConfiguration(): Any? =
+          unwrap(this).getDeltaTimeSessionWindowConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LateDataRuleConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty):
+          LateDataRuleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LateDataRuleConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LateDataRuleConfigurationProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty
     }
   }
 
@@ -2605,6 +2768,858 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty
+    }
+  }
+
+  /**
+   * The value of the variable as a structure that specifies an output file URI.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * OutputFileUriValueProperty outputFileUriValueProperty = OutputFileUriValueProperty.builder()
+   * .fileName("fileName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-outputfileurivalue.html)
+   */
+  public interface OutputFileUriValueProperty {
+    /**
+     * The URI of the location where dataset contents are stored, usually the URI of a file in an S3
+     * bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-outputfileurivalue.html#cfn-iotanalytics-dataset-outputfileurivalue-filename)
+     */
+    public fun fileName(): String
+
+    /**
+     * A builder for [OutputFileUriValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fileName The URI of the location where dataset contents are stored, usually the URI
+       * of a file in an S3 bucket. 
+       */
+      public fun fileName(fileName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty.builder()
+
+      /**
+       * @param fileName The URI of the location where dataset contents are stored, usually the URI
+       * of a file in an S3 bucket. 
+       */
+      override fun fileName(fileName: String) {
+        cdkBuilder.fileName(fileName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty,
+    ) : CdkObject(cdkObject), OutputFileUriValueProperty {
+      /**
+       * The URI of the location where dataset contents are stored, usually the URI of a file in an
+       * S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-outputfileurivalue.html#cfn-iotanalytics-dataset-outputfileurivalue-filename)
+       */
+      override fun fileName(): String = unwrap(this).getFileName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OutputFileUriValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty):
+          OutputFileUriValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputFileUriValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutputFileUriValueProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty
+    }
+  }
+
+  /**
+   * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
+   * contents.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * QueryActionProperty queryActionProperty = QueryActionProperty.builder()
+   * .sqlQuery("sqlQuery")
+   * // the properties below are optional
+   * .filters(List.of(FilterProperty.builder()
+   * .deltaTime(DeltaTimeProperty.builder()
+   * .offsetSeconds(123)
+   * .timeExpression("timeExpression")
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html)
+   */
+  public interface QueryActionProperty {
+    /**
+     * Pre-filters applied to message data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-filters)
+     */
+    public fun filters(): Any? = unwrap(this).getFilters()
+
+    /**
+     * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
+     * contents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-sqlquery)
+     */
+    public fun sqlQuery(): String
+
+    /**
+     * A builder for [QueryActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param filters Pre-filters applied to message data.
+       */
+      public fun filters(filters: IResolvable)
+
+      /**
+       * @param filters Pre-filters applied to message data.
+       */
+      public fun filters(filters: List<Any>)
+
+      /**
+       * @param filters Pre-filters applied to message data.
+       */
+      public fun filters(vararg filters: Any)
+
+      /**
+       * @param sqlQuery An "SqlQueryDatasetAction" object that uses an SQL query to automatically
+       * create data set contents. 
+       */
+      public fun sqlQuery(sqlQuery: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty.Builder =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty.builder()
+
+      /**
+       * @param filters Pre-filters applied to message data.
+       */
+      override fun filters(filters: IResolvable) {
+        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param filters Pre-filters applied to message data.
+       */
+      override fun filters(filters: List<Any>) {
+        cdkBuilder.filters(filters)
+      }
+
+      /**
+       * @param filters Pre-filters applied to message data.
+       */
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
+
+      /**
+       * @param sqlQuery An "SqlQueryDatasetAction" object that uses an SQL query to automatically
+       * create data set contents. 
+       */
+      override fun sqlQuery(sqlQuery: String) {
+        cdkBuilder.sqlQuery(sqlQuery)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty,
+    ) : CdkObject(cdkObject), QueryActionProperty {
+      /**
+       * Pre-filters applied to message data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-filters)
+       */
+      override fun filters(): Any? = unwrap(this).getFilters()
+
+      /**
+       * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
+       * contents.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-sqlquery)
+       */
+      override fun sqlQuery(): String = unwrap(this).getSqlQuery()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QueryActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty):
+          QueryActionProperty = CdkObjectWrappers.wrap(cdkObject) as? QueryActionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QueryActionProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty
+    }
+  }
+
+  /**
+   * The configuration of the resource used to execute the `containerAction` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * ResourceConfigurationProperty resourceConfigurationProperty =
+   * ResourceConfigurationProperty.builder()
+   * .computeType("computeType")
+   * .volumeSizeInGb(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html)
+   */
+  public interface ResourceConfigurationProperty {
+    /**
+     * The type of the compute resource used to execute the `containerAction` .
+     *
+     * Possible values are: `ACU_1` (vCPU=4, memory=16 GiB) or `ACU_2` (vCPU=8, memory=32 GiB).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-computetype)
+     */
+    public fun computeType(): String
+
+    /**
+     * The size, in GB, of the persistent storage available to the resource instance used to execute
+     * the `containerAction` (min: 1, max: 50).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb)
+     */
+    public fun volumeSizeInGb(): Number
+
+    /**
+     * A builder for [ResourceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param computeType The type of the compute resource used to execute the `containerAction` .
+       * 
+       * Possible values are: `ACU_1` (vCPU=4, memory=16 GiB) or `ACU_2` (vCPU=8, memory=32 GiB).
+       */
+      public fun computeType(computeType: String)
+
+      /**
+       * @param volumeSizeInGb The size, in GB, of the persistent storage available to the resource
+       * instance used to execute the `containerAction` (min: 1, max: 50). 
+       */
+      public fun volumeSizeInGb(volumeSizeInGb: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty.builder()
+
+      /**
+       * @param computeType The type of the compute resource used to execute the `containerAction` .
+       * 
+       * Possible values are: `ACU_1` (vCPU=4, memory=16 GiB) or `ACU_2` (vCPU=8, memory=32 GiB).
+       */
+      override fun computeType(computeType: String) {
+        cdkBuilder.computeType(computeType)
+      }
+
+      /**
+       * @param volumeSizeInGb The size, in GB, of the persistent storage available to the resource
+       * instance used to execute the `containerAction` (min: 1, max: 50). 
+       */
+      override fun volumeSizeInGb(volumeSizeInGb: Number) {
+        cdkBuilder.volumeSizeInGb(volumeSizeInGb)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty,
+    ) : CdkObject(cdkObject), ResourceConfigurationProperty {
+      /**
+       * The type of the compute resource used to execute the `containerAction` .
+       *
+       * Possible values are: `ACU_1` (vCPU=4, memory=16 GiB) or `ACU_2` (vCPU=8, memory=32 GiB).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-computetype)
+       */
+      override fun computeType(): String = unwrap(this).getComputeType()
+
+      /**
+       * The size, in GB, of the persistent storage available to the resource instance used to
+       * execute the `containerAction` (min: 1, max: 50).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb)
+       */
+      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty):
+          ResourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceConfigurationProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty
+    }
+  }
+
+  /**
+   * How long, in days, message data is kept.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * RetentionPeriodProperty retentionPeriodProperty = RetentionPeriodProperty.builder()
+   * .numberOfDays(123)
+   * .unlimited(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html)
+   */
+  public interface RetentionPeriodProperty {
+    /**
+     * The number of days that message data is kept.
+     *
+     * The `unlimited` parameter must be false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-numberofdays)
+     */
+    public fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
+
+    /**
+     * If true, message data is kept indefinitely.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-unlimited)
+     */
+    public fun unlimited(): Any? = unwrap(this).getUnlimited()
+
+    /**
+     * A builder for [RetentionPeriodProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param numberOfDays The number of days that message data is kept.
+       * The `unlimited` parameter must be false.
+       */
+      public fun numberOfDays(numberOfDays: Number)
+
+      /**
+       * @param unlimited If true, message data is kept indefinitely.
+       */
+      public fun unlimited(unlimited: Boolean)
+
+      /**
+       * @param unlimited If true, message data is kept indefinitely.
+       */
+      public fun unlimited(unlimited: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty.Builder =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty.builder()
+
+      /**
+       * @param numberOfDays The number of days that message data is kept.
+       * The `unlimited` parameter must be false.
+       */
+      override fun numberOfDays(numberOfDays: Number) {
+        cdkBuilder.numberOfDays(numberOfDays)
+      }
+
+      /**
+       * @param unlimited If true, message data is kept indefinitely.
+       */
+      override fun unlimited(unlimited: Boolean) {
+        cdkBuilder.unlimited(unlimited)
+      }
+
+      /**
+       * @param unlimited If true, message data is kept indefinitely.
+       */
+      override fun unlimited(unlimited: IResolvable) {
+        cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty,
+    ) : CdkObject(cdkObject), RetentionPeriodProperty {
+      /**
+       * The number of days that message data is kept.
+       *
+       * The `unlimited` parameter must be false.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-numberofdays)
+       */
+      override fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
+
+      /**
+       * If true, message data is kept indefinitely.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-unlimited)
+       */
+      override fun unlimited(): Any? = unwrap(this).getUnlimited()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetentionPeriodProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty):
+          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RetentionPeriodProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty
+    }
+  }
+
+  /**
+   * Configuration information for delivery of dataset contents to Amazon Simple Storage Service
+   * (Amazon S3).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * S3DestinationConfigurationProperty s3DestinationConfigurationProperty =
+   * S3DestinationConfigurationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .glueConfiguration(GlueConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html)
+   */
+  public interface S3DestinationConfigurationProperty {
+    /**
+     * The name of the S3 bucket to which dataset contents are delivered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * Configuration information for coordination with AWS Glue , a fully managed extract, transform
+     * and load (ETL) service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-glueconfiguration)
+     */
+    public fun glueConfiguration(): Any? = unwrap(this).getGlueConfiguration()
+
+    /**
+     * The key of the dataset contents object in an S3 bucket.
+     *
+     * Each object has a key that is a unique identifier. Each object has exactly one key.
+     *
+     * You can create a unique key with the following options:
+     *
+     * * Use `!{iotanalytics:scheduleTime}` to insert the time of a scheduled SQL query run.
+     * * Use `!{iotanalytics:versionId}` to insert a unique hash that identifies a dataset content.
+     * * Use `!{iotanalytics:creationTime}` to insert the creation time of a dataset content.
+     *
+     * The following example creates a unique key for a CSV file:
+     * `dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv`
+     *
+     *
+     * If you don't use `!{iotanalytics:versionId}` to specify the key, you might get duplicate
+     * keys. For example, you might have two dataset contents with the same `scheduleTime` but
+     * different `versionId` s. This means that one dataset content overwrites the other.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-key)
+     */
+    public fun key(): String
+
+    /**
+     * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon S3
+     * and AWS Glue resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [S3DestinationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The name of the S3 bucket to which dataset contents are delivered. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
+       * managed extract, transform and load (ETL) service.
+       */
+      public fun glueConfiguration(glueConfiguration: IResolvable)
+
+      /**
+       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
+       * managed extract, transform and load (ETL) service.
+       */
+      public fun glueConfiguration(glueConfiguration: GlueConfigurationProperty)
+
+      /**
+       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
+       * managed extract, transform and load (ETL) service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8d986fc3b747807a579f2262617d81f0c53cbf1ab91bc6b0b387b4db40f60623")
+      public fun glueConfiguration(glueConfiguration: GlueConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param key The key of the dataset contents object in an S3 bucket. 
+       * Each object has a key that is a unique identifier. Each object has exactly one key.
+       *
+       * You can create a unique key with the following options:
+       *
+       * * Use `!{iotanalytics:scheduleTime}` to insert the time of a scheduled SQL query run.
+       * * Use `!{iotanalytics:versionId}` to insert a unique hash that identifies a dataset
+       * content.
+       * * Use `!{iotanalytics:creationTime}` to insert the creation time of a dataset content.
+       *
+       * The following example creates a unique key for a CSV file:
+       * `dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv`
+       *
+       *
+       * If you don't use `!{iotanalytics:versionId}` to specify the key, you might get duplicate
+       * keys. For example, you might have two dataset contents with the same `scheduleTime` but
+       * different `versionId` s. This means that one dataset content overwrites the other.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact
+       * with your Amazon S3 and AWS Glue resources. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty.builder()
+
+      /**
+       * @param bucket The name of the S3 bucket to which dataset contents are delivered. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
+       * managed extract, transform and load (ETL) service.
+       */
+      override fun glueConfiguration(glueConfiguration: IResolvable) {
+        cdkBuilder.glueConfiguration(glueConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
+       * managed extract, transform and load (ETL) service.
+       */
+      override fun glueConfiguration(glueConfiguration: GlueConfigurationProperty) {
+        cdkBuilder.glueConfiguration(glueConfiguration.let(GlueConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param glueConfiguration Configuration information for coordination with AWS Glue , a fully
+       * managed extract, transform and load (ETL) service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8d986fc3b747807a579f2262617d81f0c53cbf1ab91bc6b0b387b4db40f60623")
+      override
+          fun glueConfiguration(glueConfiguration: GlueConfigurationProperty.Builder.() -> Unit):
+          Unit = glueConfiguration(GlueConfigurationProperty(glueConfiguration))
+
+      /**
+       * @param key The key of the dataset contents object in an S3 bucket. 
+       * Each object has a key that is a unique identifier. Each object has exactly one key.
+       *
+       * You can create a unique key with the following options:
+       *
+       * * Use `!{iotanalytics:scheduleTime}` to insert the time of a scheduled SQL query run.
+       * * Use `!{iotanalytics:versionId}` to insert a unique hash that identifies a dataset
+       * content.
+       * * Use `!{iotanalytics:creationTime}` to insert the creation time of a dataset content.
+       *
+       * The following example creates a unique key for a CSV file:
+       * `dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv`
+       *
+       *
+       * If you don't use `!{iotanalytics:versionId}` to specify the key, you might get duplicate
+       * keys. For example, you might have two dataset contents with the same `scheduleTime` but
+       * different `versionId` s. This means that one dataset content overwrites the other.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact
+       * with your Amazon S3 and AWS Glue resources. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty,
+    ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
+      /**
+       * The name of the S3 bucket to which dataset contents are delivered.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * Configuration information for coordination with AWS Glue , a fully managed extract,
+       * transform and load (ETL) service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-glueconfiguration)
+       */
+      override fun glueConfiguration(): Any? = unwrap(this).getGlueConfiguration()
+
+      /**
+       * The key of the dataset contents object in an S3 bucket.
+       *
+       * Each object has a key that is a unique identifier. Each object has exactly one key.
+       *
+       * You can create a unique key with the following options:
+       *
+       * * Use `!{iotanalytics:scheduleTime}` to insert the time of a scheduled SQL query run.
+       * * Use `!{iotanalytics:versionId}` to insert a unique hash that identifies a dataset
+       * content.
+       * * Use `!{iotanalytics:creationTime}` to insert the creation time of a dataset content.
+       *
+       * The following example creates a unique key for a CSV file:
+       * `dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv`
+       *
+       *
+       * If you don't use `!{iotanalytics:versionId}` to specify the key, you might get duplicate
+       * keys. For example, you might have two dataset contents with the same `scheduleTime` but
+       * different `versionId` s. This means that one dataset content overwrites the other.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon
+       * S3 and AWS Glue resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          S3DestinationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty):
+          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3DestinationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty
+    }
+  }
+
+  /**
+   * The schedule for when to trigger an update.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+   * .scheduleExpression("scheduleExpression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-schedule.html)
+   */
+  public interface ScheduleProperty {
+    /**
+     * The expression that defines when to trigger an update.
+     *
+     * For more information, see [Schedule Expressions for
+     * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
+     * Amazon CloudWatch documentation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-schedule.html#cfn-iotanalytics-dataset-schedule-scheduleexpression)
+     */
+    public fun scheduleExpression(): String
+
+    /**
+     * A builder for [ScheduleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param scheduleExpression The expression that defines when to trigger an update. 
+       * For more information, see [Schedule Expressions for
+       * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
+       * Amazon CloudWatch documentation.
+       */
+      public fun scheduleExpression(scheduleExpression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty.Builder =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty.builder()
+
+      /**
+       * @param scheduleExpression The expression that defines when to trigger an update. 
+       * For more information, see [Schedule Expressions for
+       * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
+       * Amazon CloudWatch documentation.
+       */
+      override fun scheduleExpression(scheduleExpression: String) {
+        cdkBuilder.scheduleExpression(scheduleExpression)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty,
+    ) : CdkObject(cdkObject), ScheduleProperty {
+      /**
+       * The expression that defines when to trigger an update.
+       *
+       * For more information, see [Schedule Expressions for
+       * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
+       * Amazon CloudWatch documentation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-schedule.html#cfn-iotanalytics-dataset-schedule-scheduleexpression)
+       */
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty):
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScheduleProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty
     }
   }
 
@@ -2784,7 +3799,8 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * When dataset contents are created, they are delivered to destination specified here.
+   * Information about the dataset whose content generation triggers the new dataset content
+   * generation.
    *
    * Example:
    *
@@ -2792,635 +3808,81 @@ public open class CfnDataset internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * DatasetContentDeliveryRuleProperty datasetContentDeliveryRuleProperty =
-   * DatasetContentDeliveryRuleProperty.builder()
-   * .destination(DatasetContentDeliveryRuleDestinationProperty.builder()
-   * .iotEventsDestinationConfiguration(IotEventsDestinationConfigurationProperty.builder()
-   * .inputName("inputName")
-   * .roleArn("roleArn")
-   * .build())
-   * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .glueConfiguration(GlueConfigurationProperty.builder()
-   * .databaseName("databaseName")
-   * .tableName("tableName")
-   * .build())
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .entryName("entryName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html)
-   */
-  public interface DatasetContentDeliveryRuleProperty {
-    /**
-     * The destination to which dataset contents are delivered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination)
-     */
-    public fun destination(): Any
-
-    /**
-     * The name of the dataset content delivery rules entry.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname)
-     */
-    public fun entryName(): String? = unwrap(this).getEntryName()
-
-    /**
-     * A builder for [DatasetContentDeliveryRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destination The destination to which dataset contents are delivered. 
-       */
-      public fun destination(destination: IResolvable)
-
-      /**
-       * @param destination The destination to which dataset contents are delivered. 
-       */
-      public fun destination(destination: DatasetContentDeliveryRuleDestinationProperty)
-
-      /**
-       * @param destination The destination to which dataset contents are delivered. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7002a69a78fa0a8d9c60b7eaf42ecee41d1f3761d56ad36c4cd9b8976df45abc")
-      public
-          fun destination(destination: DatasetContentDeliveryRuleDestinationProperty.Builder.() -> Unit)
-
-      /**
-       * @param entryName The name of the dataset content delivery rules entry.
-       */
-      public fun entryName(entryName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty.builder()
-
-      /**
-       * @param destination The destination to which dataset contents are delivered. 
-       */
-      override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param destination The destination to which dataset contents are delivered. 
-       */
-      override fun destination(destination: DatasetContentDeliveryRuleDestinationProperty) {
-        cdkBuilder.destination(destination.let(DatasetContentDeliveryRuleDestinationProperty::unwrap))
-      }
-
-      /**
-       * @param destination The destination to which dataset contents are delivered. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7002a69a78fa0a8d9c60b7eaf42ecee41d1f3761d56ad36c4cd9b8976df45abc")
-      override
-          fun destination(destination: DatasetContentDeliveryRuleDestinationProperty.Builder.() -> Unit):
-          Unit = destination(DatasetContentDeliveryRuleDestinationProperty(destination))
-
-      /**
-       * @param entryName The name of the dataset content delivery rules entry.
-       */
-      override fun entryName(entryName: String) {
-        cdkBuilder.entryName(entryName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty,
-    ) : CdkObject(cdkObject), DatasetContentDeliveryRuleProperty {
-      /**
-       * The destination to which dataset contents are delivered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination)
-       */
-      override fun destination(): Any = unwrap(this).getDestination()
-
-      /**
-       * The name of the dataset content delivery rules entry.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname)
-       */
-      override fun entryName(): String? = unwrap(this).getEntryName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DatasetContentDeliveryRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty):
-          DatasetContentDeliveryRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DatasetContentDeliveryRuleProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatasetContentDeliveryRuleProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty
-    }
-  }
-
-  /**
-   * Information needed to run the "containerAction" to produce data set contents.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * ActionProperty actionProperty = ActionProperty.builder()
-   * .actionName("actionName")
-   * // the properties below are optional
-   * .containerAction(ContainerActionProperty.builder()
-   * .executionRoleArn("executionRoleArn")
-   * .image("image")
-   * .resourceConfiguration(ResourceConfigurationProperty.builder()
-   * .computeType("computeType")
-   * .volumeSizeInGb(123)
-   * .build())
-   * // the properties below are optional
-   * .variables(List.of(VariableProperty.builder()
-   * .variableName("variableName")
-   * // the properties below are optional
-   * .datasetContentVersionValue(DatasetContentVersionValueProperty.builder()
+   * TriggeringDatasetProperty triggeringDatasetProperty = TriggeringDatasetProperty.builder()
    * .datasetName("datasetName")
-   * .build())
-   * .doubleValue(123)
-   * .outputFileUriValue(OutputFileUriValueProperty.builder()
-   * .fileName("fileName")
-   * .build())
-   * .stringValue("stringValue")
-   * .build()))
-   * .build())
-   * .queryAction(QueryActionProperty.builder()
-   * .sqlQuery("sqlQuery")
-   * // the properties below are optional
-   * .filters(List.of(FilterProperty.builder()
-   * .deltaTime(DeltaTimeProperty.builder()
-   * .offsetSeconds(123)
-   * .timeExpression("timeExpression")
-   * .build())
-   * .build()))
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-triggeringdataset.html)
    */
-  public interface ActionProperty {
+  public interface TriggeringDatasetProperty {
     /**
-     * The name of the data set action by which data set contents are automatically created.
+     * The name of the data set whose content generation triggers the new data set content
+     * generation.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-actionname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-triggeringdataset.html#cfn-iotanalytics-dataset-triggeringdataset-datasetname)
      */
-    public fun actionName(): String
+    public fun datasetName(): String
 
     /**
-     * Information which allows the system to run a containerized application in order to create the
-     * data set contents.
-     *
-     * The application must be in a Docker container along with any needed support libraries.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-containeraction)
-     */
-    public fun containerAction(): Any? = unwrap(this).getContainerAction()
-
-    /**
-     * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
-     * contents.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-queryaction)
-     */
-    public fun queryAction(): Any? = unwrap(this).getQueryAction()
-
-    /**
-     * A builder for [ActionProperty]
+     * A builder for [TriggeringDatasetProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param actionName The name of the data set action by which data set contents are
-       * automatically created. 
+       * @param datasetName The name of the data set whose content generation triggers the new data
+       * set content generation. 
        */
-      public fun actionName(actionName: String)
-
-      /**
-       * @param containerAction Information which allows the system to run a containerized
-       * application in order to create the data set contents.
-       * The application must be in a Docker container along with any needed support libraries.
-       */
-      public fun containerAction(containerAction: IResolvable)
-
-      /**
-       * @param containerAction Information which allows the system to run a containerized
-       * application in order to create the data set contents.
-       * The application must be in a Docker container along with any needed support libraries.
-       */
-      public fun containerAction(containerAction: ContainerActionProperty)
-
-      /**
-       * @param containerAction Information which allows the system to run a containerized
-       * application in order to create the data set contents.
-       * The application must be in a Docker container along with any needed support libraries.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7fb0b2b4600952a7a3c76e021204da23616aea133683262928c645a6b64097d5")
-      public fun containerAction(containerAction: ContainerActionProperty.Builder.() -> Unit)
-
-      /**
-       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
-       * automatically create data set contents.
-       */
-      public fun queryAction(queryAction: IResolvable)
-
-      /**
-       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
-       * automatically create data set contents.
-       */
-      public fun queryAction(queryAction: QueryActionProperty)
-
-      /**
-       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
-       * automatically create data set contents.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("209643db6aef748be34590f8f172d702dfc98b6d584c2242f0f32d2150c0bf0e")
-      public fun queryAction(queryAction: QueryActionProperty.Builder.() -> Unit)
+      public fun datasetName(datasetName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty.Builder =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty.builder()
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty.builder()
 
       /**
-       * @param actionName The name of the data set action by which data set contents are
-       * automatically created. 
+       * @param datasetName The name of the data set whose content generation triggers the new data
+       * set content generation. 
        */
-      override fun actionName(actionName: String) {
-        cdkBuilder.actionName(actionName)
-      }
-
-      /**
-       * @param containerAction Information which allows the system to run a containerized
-       * application in order to create the data set contents.
-       * The application must be in a Docker container along with any needed support libraries.
-       */
-      override fun containerAction(containerAction: IResolvable) {
-        cdkBuilder.containerAction(containerAction.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param containerAction Information which allows the system to run a containerized
-       * application in order to create the data set contents.
-       * The application must be in a Docker container along with any needed support libraries.
-       */
-      override fun containerAction(containerAction: ContainerActionProperty) {
-        cdkBuilder.containerAction(containerAction.let(ContainerActionProperty::unwrap))
-      }
-
-      /**
-       * @param containerAction Information which allows the system to run a containerized
-       * application in order to create the data set contents.
-       * The application must be in a Docker container along with any needed support libraries.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7fb0b2b4600952a7a3c76e021204da23616aea133683262928c645a6b64097d5")
-      override fun containerAction(containerAction: ContainerActionProperty.Builder.() -> Unit):
-          Unit = containerAction(ContainerActionProperty(containerAction))
-
-      /**
-       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
-       * automatically create data set contents.
-       */
-      override fun queryAction(queryAction: IResolvable) {
-        cdkBuilder.queryAction(queryAction.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
-       * automatically create data set contents.
-       */
-      override fun queryAction(queryAction: QueryActionProperty) {
-        cdkBuilder.queryAction(queryAction.let(QueryActionProperty::unwrap))
-      }
-
-      /**
-       * @param queryAction An "SqlQueryDatasetAction" object that uses an SQL query to
-       * automatically create data set contents.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("209643db6aef748be34590f8f172d702dfc98b6d584c2242f0f32d2150c0bf0e")
-      override fun queryAction(queryAction: QueryActionProperty.Builder.() -> Unit): Unit =
-          queryAction(QueryActionProperty(queryAction))
-
-      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
-      /**
-       * The name of the data set action by which data set contents are automatically created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-actionname)
-       */
-      override fun actionName(): String = unwrap(this).getActionName()
-
-      /**
-       * Information which allows the system to run a containerized application in order to create
-       * the data set contents.
-       *
-       * The application must be in a Docker container along with any needed support libraries.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-containeraction)
-       */
-      override fun containerAction(): Any? = unwrap(this).getContainerAction()
-
-      /**
-       * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
-       * contents.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html#cfn-iotanalytics-dataset-action-queryaction)
-       */
-      override fun queryAction(): Any? = unwrap(this).getQueryAction()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ActionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActionProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty
-    }
-  }
-
-  /**
-   * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
-   * contents.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * QueryActionProperty queryActionProperty = QueryActionProperty.builder()
-   * .sqlQuery("sqlQuery")
-   * // the properties below are optional
-   * .filters(List.of(FilterProperty.builder()
-   * .deltaTime(DeltaTimeProperty.builder()
-   * .offsetSeconds(123)
-   * .timeExpression("timeExpression")
-   * .build())
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html)
-   */
-  public interface QueryActionProperty {
-    /**
-     * Pre-filters applied to message data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-filters)
-     */
-    public fun filters(): Any? = unwrap(this).getFilters()
-
-    /**
-     * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
-     * contents.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-sqlquery)
-     */
-    public fun sqlQuery(): String
-
-    /**
-     * A builder for [QueryActionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param filters Pre-filters applied to message data.
-       */
-      public fun filters(filters: IResolvable)
-
-      /**
-       * @param filters Pre-filters applied to message data.
-       */
-      public fun filters(filters: List<Any>)
-
-      /**
-       * @param filters Pre-filters applied to message data.
-       */
-      public fun filters(vararg filters: Any)
-
-      /**
-       * @param sqlQuery An "SqlQueryDatasetAction" object that uses an SQL query to automatically
-       * create data set contents. 
-       */
-      public fun sqlQuery(sqlQuery: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty.Builder =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty.builder()
-
-      /**
-       * @param filters Pre-filters applied to message data.
-       */
-      override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filters Pre-filters applied to message data.
-       */
-      override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
-      }
-
-      /**
-       * @param filters Pre-filters applied to message data.
-       */
-      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
-
-      /**
-       * @param sqlQuery An "SqlQueryDatasetAction" object that uses an SQL query to automatically
-       * create data set contents. 
-       */
-      override fun sqlQuery(sqlQuery: String) {
-        cdkBuilder.sqlQuery(sqlQuery)
+      override fun datasetName(datasetName: String) {
+        cdkBuilder.datasetName(datasetName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty =
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty,
-    ) : CdkObject(cdkObject), QueryActionProperty {
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty,
+    ) : CdkObject(cdkObject), TriggeringDatasetProperty {
       /**
-       * Pre-filters applied to message data.
+       * The name of the data set whose content generation triggers the new data set content
+       * generation.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-filters)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-triggeringdataset.html#cfn-iotanalytics-dataset-triggeringdataset-datasetname)
        */
-      override fun filters(): Any? = unwrap(this).getFilters()
-
-      /**
-       * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
-       * contents.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-sqlquery)
-       */
-      override fun sqlQuery(): String = unwrap(this).getSqlQuery()
+      override fun datasetName(): String = unwrap(this).getDatasetName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): QueryActionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TriggeringDatasetProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty):
-          QueryActionProperty = CdkObjectWrappers.wrap(cdkObject) as? QueryActionProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty):
+          TriggeringDatasetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TriggeringDatasetProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: QueryActionProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty
-    }
-  }
-
-  /**
-   * The schedule for when to trigger an update.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
-   * .scheduleExpression("scheduleExpression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-schedule.html)
-   */
-  public interface ScheduleProperty {
-    /**
-     * The expression that defines when to trigger an update.
-     *
-     * For more information, see [Schedule Expressions for
-     * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
-     * Amazon CloudWatch documentation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-schedule.html#cfn-iotanalytics-dataset-schedule-scheduleexpression)
-     */
-    public fun scheduleExpression(): String
-
-    /**
-     * A builder for [ScheduleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param scheduleExpression The expression that defines when to trigger an update. 
-       * For more information, see [Schedule Expressions for
-       * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
-       * Amazon CloudWatch documentation.
-       */
-      public fun scheduleExpression(scheduleExpression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty.Builder =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty.builder()
-
-      /**
-       * @param scheduleExpression The expression that defines when to trigger an update. 
-       * For more information, see [Schedule Expressions for
-       * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
-       * Amazon CloudWatch documentation.
-       */
-      override fun scheduleExpression(scheduleExpression: String) {
-        cdkBuilder.scheduleExpression(scheduleExpression)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty,
-    ) : CdkObject(cdkObject), ScheduleProperty {
-      /**
-       * The expression that defines when to trigger an update.
-       *
-       * For more information, see [Schedule Expressions for
-       * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
-       * Amazon CloudWatch documentation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-schedule.html#cfn-iotanalytics-dataset-schedule-scheduleexpression)
-       */
-      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty):
-          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduleProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty
+      internal fun unwrap(wrapped: TriggeringDatasetProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty
     }
   }
 
@@ -3695,262 +4157,6 @@ public open class CfnDataset internal constructor(
   }
 
   /**
-   * The information needed to configure a delta time session window.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * LateDataRuleConfigurationProperty lateDataRuleConfigurationProperty =
-   * LateDataRuleConfigurationProperty.builder()
-   * .deltaTimeSessionWindowConfiguration(DeltaTimeSessionWindowConfigurationProperty.builder()
-   * .timeoutInMinutes(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-latedataruleconfiguration.html)
-   */
-  public interface LateDataRuleConfigurationProperty {
-    /**
-     * The information needed to configure a delta time session window.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-latedataruleconfiguration.html#cfn-iotanalytics-dataset-latedataruleconfiguration-deltatimesessionwindowconfiguration)
-     */
-    public fun deltaTimeSessionWindowConfiguration(): Any? =
-        unwrap(this).getDeltaTimeSessionWindowConfiguration()
-
-    /**
-     * A builder for [LateDataRuleConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
-       * session window.
-       */
-      public
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable)
-
-      /**
-       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
-       * session window.
-       */
-      public
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty)
-
-      /**
-       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
-       * session window.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a9d87bc4aa9b49a152d09288df1a27a69707702fb08a386436e141051109adc4")
-      public
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty.builder()
-
-      /**
-       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
-       * session window.
-       */
-      override
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable) {
-        cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
-       * session window.
-       */
-      override
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty) {
-        cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(DeltaTimeSessionWindowConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
-       * session window.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a9d87bc4aa9b49a152d09288df1a27a69707702fb08a386436e141051109adc4")
-      override
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          deltaTimeSessionWindowConfiguration(DeltaTimeSessionWindowConfigurationProperty(deltaTimeSessionWindowConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty,
-    ) : CdkObject(cdkObject), LateDataRuleConfigurationProperty {
-      /**
-       * The information needed to configure a delta time session window.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-latedataruleconfiguration.html#cfn-iotanalytics-dataset-latedataruleconfiguration-deltatimesessionwindowconfiguration)
-       */
-      override fun deltaTimeSessionWindowConfiguration(): Any? =
-          unwrap(this).getDeltaTimeSessionWindowConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LateDataRuleConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty):
-          LateDataRuleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LateDataRuleConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LateDataRuleConfigurationProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty
-    }
-  }
-
-  /**
-   * How long, in days, message data is kept.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * RetentionPeriodProperty retentionPeriodProperty = RetentionPeriodProperty.builder()
-   * .numberOfDays(123)
-   * .unlimited(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html)
-   */
-  public interface RetentionPeriodProperty {
-    /**
-     * The number of days that message data is kept.
-     *
-     * The `unlimited` parameter must be false.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-numberofdays)
-     */
-    public fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
-
-    /**
-     * If true, message data is kept indefinitely.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-unlimited)
-     */
-    public fun unlimited(): Any? = unwrap(this).getUnlimited()
-
-    /**
-     * A builder for [RetentionPeriodProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param numberOfDays The number of days that message data is kept.
-       * The `unlimited` parameter must be false.
-       */
-      public fun numberOfDays(numberOfDays: Number)
-
-      /**
-       * @param unlimited If true, message data is kept indefinitely.
-       */
-      public fun unlimited(unlimited: Boolean)
-
-      /**
-       * @param unlimited If true, message data is kept indefinitely.
-       */
-      public fun unlimited(unlimited: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty.Builder =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty.builder()
-
-      /**
-       * @param numberOfDays The number of days that message data is kept.
-       * The `unlimited` parameter must be false.
-       */
-      override fun numberOfDays(numberOfDays: Number) {
-        cdkBuilder.numberOfDays(numberOfDays)
-      }
-
-      /**
-       * @param unlimited If true, message data is kept indefinitely.
-       */
-      override fun unlimited(unlimited: Boolean) {
-        cdkBuilder.unlimited(unlimited)
-      }
-
-      /**
-       * @param unlimited If true, message data is kept indefinitely.
-       */
-      override fun unlimited(unlimited: IResolvable) {
-        cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty,
-    ) : CdkObject(cdkObject), RetentionPeriodProperty {
-      /**
-       * The number of days that message data is kept.
-       *
-       * The `unlimited` parameter must be false.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-numberofdays)
-       */
-      override fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
-
-      /**
-       * If true, message data is kept indefinitely.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-unlimited)
-       */
-      override fun unlimited(): Any? = unwrap(this).getUnlimited()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RetentionPeriodProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty):
-          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RetentionPeriodProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty
-    }
-  }
-
-  /**
    * Information about the versioning of dataset contents.
    *
    * Example:
@@ -4076,212 +4282,6 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VersioningConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VersioningConfigurationProperty
-    }
-  }
-
-  /**
-   * Configuration information for delivery of dataset contents to AWS IoT Events .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * IotEventsDestinationConfigurationProperty iotEventsDestinationConfigurationProperty =
-   * IotEventsDestinationConfigurationProperty.builder()
-   * .inputName("inputName")
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html)
-   */
-  public interface IotEventsDestinationConfigurationProperty {
-    /**
-     * The name of the AWS IoT Events input to which dataset contents are delivered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-inputname)
-     */
-    public fun inputName(): String
-
-    /**
-     * The ARN of the role that grants AWS IoT Analytics permission to deliver dataset contents to
-     * an AWS IoT Events input.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [IotEventsDestinationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param inputName The name of the AWS IoT Events input to which dataset contents are
-       * delivered. 
-       */
-      public fun inputName(inputName: String)
-
-      /**
-       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to deliver
-       * dataset contents to an AWS IoT Events input. 
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty.builder()
-
-      /**
-       * @param inputName The name of the AWS IoT Events input to which dataset contents are
-       * delivered. 
-       */
-      override fun inputName(inputName: String) {
-        cdkBuilder.inputName(inputName)
-      }
-
-      /**
-       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to deliver
-       * dataset contents to an AWS IoT Events input. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), IotEventsDestinationConfigurationProperty {
-      /**
-       * The name of the AWS IoT Events input to which dataset contents are delivered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-inputname)
-       */
-      override fun inputName(): String = unwrap(this).getInputName()
-
-      /**
-       * The ARN of the role that grants AWS IoT Analytics permission to deliver dataset contents to
-       * an AWS IoT Events input.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          IotEventsDestinationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty):
-          IotEventsDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IotEventsDestinationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IotEventsDestinationConfigurationProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty
-    }
-  }
-
-  /**
-   * Information about the dataset whose content generation triggers the new dataset content
-   * generation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * TriggeringDatasetProperty triggeringDatasetProperty = TriggeringDatasetProperty.builder()
-   * .datasetName("datasetName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-triggeringdataset.html)
-   */
-  public interface TriggeringDatasetProperty {
-    /**
-     * The name of the data set whose content generation triggers the new data set content
-     * generation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-triggeringdataset.html#cfn-iotanalytics-dataset-triggeringdataset-datasetname)
-     */
-    public fun datasetName(): String
-
-    /**
-     * A builder for [TriggeringDatasetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param datasetName The name of the data set whose content generation triggers the new data
-       * set content generation. 
-       */
-      public fun datasetName(datasetName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty.builder()
-
-      /**
-       * @param datasetName The name of the data set whose content generation triggers the new data
-       * set content generation. 
-       */
-      override fun datasetName(datasetName: String) {
-        cdkBuilder.datasetName(datasetName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty,
-    ) : CdkObject(cdkObject), TriggeringDatasetProperty {
-      /**
-       * The name of the data set whose content generation triggers the new data set content
-       * generation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-triggeringdataset.html#cfn-iotanalytics-dataset-triggeringdataset-datasetname)
-       */
-      override fun datasetName(): String = unwrap(this).getDatasetName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TriggeringDatasetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty):
-          TriggeringDatasetProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TriggeringDatasetProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TriggeringDatasetProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty
     }
   }
 }

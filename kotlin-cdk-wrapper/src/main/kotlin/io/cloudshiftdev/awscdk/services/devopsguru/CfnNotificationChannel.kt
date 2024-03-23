@@ -229,181 +229,6 @@ public open class CfnNotificationChannel internal constructor(
   }
 
   /**
-   * The filter configurations for the Amazon SNS notification topic you use with DevOps Guru.
-   *
-   * You can choose to specify which events or message types to receive notifications for. You can
-   * also choose to specify which severity levels to receive notifications for.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.devopsguru.*;
-   * NotificationFilterConfigProperty notificationFilterConfigProperty =
-   * NotificationFilterConfigProperty.builder()
-   * .messageTypes(List.of("messageTypes"))
-   * .severities(List.of("severities"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html)
-   */
-  public interface NotificationFilterConfigProperty {
-    /**
-     * The events that you want to receive notifications for.
-     *
-     * For example, you can choose to receive notifications only when the severity level is upgraded
-     * or a new insight is created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html#cfn-devopsguru-notificationchannel-notificationfilterconfig-messagetypes)
-     */
-    public fun messageTypes(): List<String> = unwrap(this).getMessageTypes() ?: emptyList()
-
-    /**
-     * The severity levels that you want to receive notifications for.
-     *
-     * For example, you can choose to receive notifications only for insights with `HIGH` and
-     * `MEDIUM` severity levels. For more information, see [Understanding insight
-     * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html#cfn-devopsguru-notificationchannel-notificationfilterconfig-severities)
-     */
-    public fun severities(): List<String> = unwrap(this).getSeverities() ?: emptyList()
-
-    /**
-     * A builder for [NotificationFilterConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param messageTypes The events that you want to receive notifications for.
-       * For example, you can choose to receive notifications only when the severity level is
-       * upgraded or a new insight is created.
-       */
-      public fun messageTypes(messageTypes: List<String>)
-
-      /**
-       * @param messageTypes The events that you want to receive notifications for.
-       * For example, you can choose to receive notifications only when the severity level is
-       * upgraded or a new insight is created.
-       */
-      public fun messageTypes(vararg messageTypes: String)
-
-      /**
-       * @param severities The severity levels that you want to receive notifications for.
-       * For example, you can choose to receive notifications only for insights with `HIGH` and
-       * `MEDIUM` severity levels. For more information, see [Understanding insight
-       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
-       * .
-       */
-      public fun severities(severities: List<String>)
-
-      /**
-       * @param severities The severity levels that you want to receive notifications for.
-       * For example, you can choose to receive notifications only for insights with `HIGH` and
-       * `MEDIUM` severity levels. For more information, see [Understanding insight
-       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
-       * .
-       */
-      public fun severities(vararg severities: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty.builder()
-
-      /**
-       * @param messageTypes The events that you want to receive notifications for.
-       * For example, you can choose to receive notifications only when the severity level is
-       * upgraded or a new insight is created.
-       */
-      override fun messageTypes(messageTypes: List<String>) {
-        cdkBuilder.messageTypes(messageTypes)
-      }
-
-      /**
-       * @param messageTypes The events that you want to receive notifications for.
-       * For example, you can choose to receive notifications only when the severity level is
-       * upgraded or a new insight is created.
-       */
-      override fun messageTypes(vararg messageTypes: String): Unit =
-          messageTypes(messageTypes.toList())
-
-      /**
-       * @param severities The severity levels that you want to receive notifications for.
-       * For example, you can choose to receive notifications only for insights with `HIGH` and
-       * `MEDIUM` severity levels. For more information, see [Understanding insight
-       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
-       * .
-       */
-      override fun severities(severities: List<String>) {
-        cdkBuilder.severities(severities)
-      }
-
-      /**
-       * @param severities The severity levels that you want to receive notifications for.
-       * For example, you can choose to receive notifications only for insights with `HIGH` and
-       * `MEDIUM` severity levels. For more information, see [Understanding insight
-       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
-       * .
-       */
-      override fun severities(vararg severities: String): Unit = severities(severities.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty,
-    ) : CdkObject(cdkObject), NotificationFilterConfigProperty {
-      /**
-       * The events that you want to receive notifications for.
-       *
-       * For example, you can choose to receive notifications only when the severity level is
-       * upgraded or a new insight is created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html#cfn-devopsguru-notificationchannel-notificationfilterconfig-messagetypes)
-       */
-      override fun messageTypes(): List<String> = unwrap(this).getMessageTypes() ?: emptyList()
-
-      /**
-       * The severity levels that you want to receive notifications for.
-       *
-       * For example, you can choose to receive notifications only for insights with `HIGH` and
-       * `MEDIUM` severity levels. For more information, see [Understanding insight
-       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html#cfn-devopsguru-notificationchannel-notificationfilterconfig-severities)
-       */
-      override fun severities(): List<String> = unwrap(this).getSeverities() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationFilterConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty):
-          NotificationFilterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationFilterConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationFilterConfigProperty):
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty
-    }
-  }
-
-  /**
    * Information about notification channels you have configured with DevOps Guru.
    *
    * The one supported notification channel is Amazon Simple Notification Service (Amazon SNS).
@@ -695,6 +520,181 @@ public open class CfnNotificationChannel internal constructor(
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty
+    }
+  }
+
+  /**
+   * The filter configurations for the Amazon SNS notification topic you use with DevOps Guru.
+   *
+   * You can choose to specify which events or message types to receive notifications for. You can
+   * also choose to specify which severity levels to receive notifications for.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.devopsguru.*;
+   * NotificationFilterConfigProperty notificationFilterConfigProperty =
+   * NotificationFilterConfigProperty.builder()
+   * .messageTypes(List.of("messageTypes"))
+   * .severities(List.of("severities"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html)
+   */
+  public interface NotificationFilterConfigProperty {
+    /**
+     * The events that you want to receive notifications for.
+     *
+     * For example, you can choose to receive notifications only when the severity level is upgraded
+     * or a new insight is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html#cfn-devopsguru-notificationchannel-notificationfilterconfig-messagetypes)
+     */
+    public fun messageTypes(): List<String> = unwrap(this).getMessageTypes() ?: emptyList()
+
+    /**
+     * The severity levels that you want to receive notifications for.
+     *
+     * For example, you can choose to receive notifications only for insights with `HIGH` and
+     * `MEDIUM` severity levels. For more information, see [Understanding insight
+     * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html#cfn-devopsguru-notificationchannel-notificationfilterconfig-severities)
+     */
+    public fun severities(): List<String> = unwrap(this).getSeverities() ?: emptyList()
+
+    /**
+     * A builder for [NotificationFilterConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param messageTypes The events that you want to receive notifications for.
+       * For example, you can choose to receive notifications only when the severity level is
+       * upgraded or a new insight is created.
+       */
+      public fun messageTypes(messageTypes: List<String>)
+
+      /**
+       * @param messageTypes The events that you want to receive notifications for.
+       * For example, you can choose to receive notifications only when the severity level is
+       * upgraded or a new insight is created.
+       */
+      public fun messageTypes(vararg messageTypes: String)
+
+      /**
+       * @param severities The severity levels that you want to receive notifications for.
+       * For example, you can choose to receive notifications only for insights with `HIGH` and
+       * `MEDIUM` severity levels. For more information, see [Understanding insight
+       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
+       * .
+       */
+      public fun severities(severities: List<String>)
+
+      /**
+       * @param severities The severity levels that you want to receive notifications for.
+       * For example, you can choose to receive notifications only for insights with `HIGH` and
+       * `MEDIUM` severity levels. For more information, see [Understanding insight
+       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
+       * .
+       */
+      public fun severities(vararg severities: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty.builder()
+
+      /**
+       * @param messageTypes The events that you want to receive notifications for.
+       * For example, you can choose to receive notifications only when the severity level is
+       * upgraded or a new insight is created.
+       */
+      override fun messageTypes(messageTypes: List<String>) {
+        cdkBuilder.messageTypes(messageTypes)
+      }
+
+      /**
+       * @param messageTypes The events that you want to receive notifications for.
+       * For example, you can choose to receive notifications only when the severity level is
+       * upgraded or a new insight is created.
+       */
+      override fun messageTypes(vararg messageTypes: String): Unit =
+          messageTypes(messageTypes.toList())
+
+      /**
+       * @param severities The severity levels that you want to receive notifications for.
+       * For example, you can choose to receive notifications only for insights with `HIGH` and
+       * `MEDIUM` severity levels. For more information, see [Understanding insight
+       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
+       * .
+       */
+      override fun severities(severities: List<String>) {
+        cdkBuilder.severities(severities)
+      }
+
+      /**
+       * @param severities The severity levels that you want to receive notifications for.
+       * For example, you can choose to receive notifications only for insights with `HIGH` and
+       * `MEDIUM` severity levels. For more information, see [Understanding insight
+       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
+       * .
+       */
+      override fun severities(vararg severities: String): Unit = severities(severities.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty,
+    ) : CdkObject(cdkObject), NotificationFilterConfigProperty {
+      /**
+       * The events that you want to receive notifications for.
+       *
+       * For example, you can choose to receive notifications only when the severity level is
+       * upgraded or a new insight is created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html#cfn-devopsguru-notificationchannel-notificationfilterconfig-messagetypes)
+       */
+      override fun messageTypes(): List<String> = unwrap(this).getMessageTypes() ?: emptyList()
+
+      /**
+       * The severity levels that you want to receive notifications for.
+       *
+       * For example, you can choose to receive notifications only for insights with `HIGH` and
+       * `MEDIUM` severity levels. For more information, see [Understanding insight
+       * severities](https://docs.aws.amazon.com/devops-guru/latest/userguide/working-with-insights.html#understanding-insights-severities)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html#cfn-devopsguru-notificationchannel-notificationfilterconfig-severities)
+       */
+      override fun severities(): List<String> = unwrap(this).getSeverities() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationFilterConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty):
+          NotificationFilterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationFilterConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationFilterConfigProperty):
+          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty
     }
   }
 

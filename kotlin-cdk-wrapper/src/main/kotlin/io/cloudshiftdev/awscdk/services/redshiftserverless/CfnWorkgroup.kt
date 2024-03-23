@@ -906,171 +906,6 @@ public open class CfnWorkgroup internal constructor(
   }
 
   /**
-   * Contains information about a network interface in an Amazon Redshift Serverless managed VPC
-   * endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.redshiftserverless.*;
-   * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
-   * .availabilityZone("availabilityZone")
-   * .networkInterfaceId("networkInterfaceId")
-   * .privateIpAddress("privateIpAddress")
-   * .subnetId("subnetId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html)
-   */
-  public interface NetworkInterfaceProperty {
-    /**
-     * The availability Zone.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-availabilityzone)
-     */
-    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
-
-    /**
-     * The unique identifier of the network interface.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-networkinterfaceid)
-     */
-    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
-
-    /**
-     * The IPv4 address of the network interface within the subnet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-privateipaddress)
-     */
-    public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
-
-    /**
-     * The unique identifier of the subnet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-subnetid)
-     */
-    public fun subnetId(): String? = unwrap(this).getSubnetId()
-
-    /**
-     * A builder for [NetworkInterfaceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param availabilityZone The availability Zone.
-       */
-      public fun availabilityZone(availabilityZone: String)
-
-      /**
-       * @param networkInterfaceId The unique identifier of the network interface.
-       */
-      public fun networkInterfaceId(networkInterfaceId: String)
-
-      /**
-       * @param privateIpAddress The IPv4 address of the network interface within the subnet.
-       */
-      public fun privateIpAddress(privateIpAddress: String)
-
-      /**
-       * @param subnetId The unique identifier of the subnet.
-       */
-      public fun subnetId(subnetId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty.Builder
-          =
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty.builder()
-
-      /**
-       * @param availabilityZone The availability Zone.
-       */
-      override fun availabilityZone(availabilityZone: String) {
-        cdkBuilder.availabilityZone(availabilityZone)
-      }
-
-      /**
-       * @param networkInterfaceId The unique identifier of the network interface.
-       */
-      override fun networkInterfaceId(networkInterfaceId: String) {
-        cdkBuilder.networkInterfaceId(networkInterfaceId)
-      }
-
-      /**
-       * @param privateIpAddress The IPv4 address of the network interface within the subnet.
-       */
-      override fun privateIpAddress(privateIpAddress: String) {
-        cdkBuilder.privateIpAddress(privateIpAddress)
-      }
-
-      /**
-       * @param subnetId The unique identifier of the subnet.
-       */
-      override fun subnetId(subnetId: String) {
-        cdkBuilder.subnetId(subnetId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
-      /**
-       * The availability Zone.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-availabilityzone)
-       */
-      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
-
-      /**
-       * The unique identifier of the network interface.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-networkinterfaceid)
-       */
-      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
-
-      /**
-       * The IPv4 address of the network interface within the subnet.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-privateipaddress)
-       */
-      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
-
-      /**
-       * The unique identifier of the subnet.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-subnetid)
-       */
-      override fun subnetId(): String? = unwrap(this).getSubnetId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfaceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty):
-          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkInterfaceProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkInterfaceProperty):
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty
-    }
-  }
-
-  /**
    * The VPC endpoint object.
    *
    * Example:
@@ -1235,6 +1070,171 @@ public open class CfnWorkgroup internal constructor(
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty
+    }
+  }
+
+  /**
+   * Contains information about a network interface in an Amazon Redshift Serverless managed VPC
+   * endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.redshiftserverless.*;
+   * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
+   * .availabilityZone("availabilityZone")
+   * .networkInterfaceId("networkInterfaceId")
+   * .privateIpAddress("privateIpAddress")
+   * .subnetId("subnetId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html)
+   */
+  public interface NetworkInterfaceProperty {
+    /**
+     * The availability Zone.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-availabilityzone)
+     */
+    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+    /**
+     * The unique identifier of the network interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-networkinterfaceid)
+     */
+    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+    /**
+     * The IPv4 address of the network interface within the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-privateipaddress)
+     */
+    public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+
+    /**
+     * The unique identifier of the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-subnetid)
+     */
+    public fun subnetId(): String? = unwrap(this).getSubnetId()
+
+    /**
+     * A builder for [NetworkInterfaceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param availabilityZone The availability Zone.
+       */
+      public fun availabilityZone(availabilityZone: String)
+
+      /**
+       * @param networkInterfaceId The unique identifier of the network interface.
+       */
+      public fun networkInterfaceId(networkInterfaceId: String)
+
+      /**
+       * @param privateIpAddress The IPv4 address of the network interface within the subnet.
+       */
+      public fun privateIpAddress(privateIpAddress: String)
+
+      /**
+       * @param subnetId The unique identifier of the subnet.
+       */
+      public fun subnetId(subnetId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty.Builder
+          =
+          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty.builder()
+
+      /**
+       * @param availabilityZone The availability Zone.
+       */
+      override fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
+      }
+
+      /**
+       * @param networkInterfaceId The unique identifier of the network interface.
+       */
+      override fun networkInterfaceId(networkInterfaceId: String) {
+        cdkBuilder.networkInterfaceId(networkInterfaceId)
+      }
+
+      /**
+       * @param privateIpAddress The IPv4 address of the network interface within the subnet.
+       */
+      override fun privateIpAddress(privateIpAddress: String) {
+        cdkBuilder.privateIpAddress(privateIpAddress)
+      }
+
+      /**
+       * @param subnetId The unique identifier of the subnet.
+       */
+      override fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty,
+    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
+      /**
+       * The availability Zone.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-availabilityzone)
+       */
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+      /**
+       * The unique identifier of the network interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-networkinterfaceid)
+       */
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+      /**
+       * The IPv4 address of the network interface within the subnet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-privateipaddress)
+       */
+      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+
+      /**
+       * The unique identifier of the subnet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html#cfn-redshiftserverless-workgroup-networkinterface-subnetid)
+       */
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfaceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty):
+          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkInterfaceProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkInterfaceProperty):
+          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty
     }
   }
 

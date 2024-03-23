@@ -849,234 +849,7 @@ public open class CfnForm internal constructor(
   }
 
   /**
-   * The `FormStyle` property specifies the configuration for the form's style.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormStyleProperty formStyleProperty = FormStyleProperty.builder()
-   * .horizontalGap(FormStyleConfigProperty.builder()
-   * .tokenReference("tokenReference")
-   * .value("value")
-   * .build())
-   * .outerPadding(FormStyleConfigProperty.builder()
-   * .tokenReference("tokenReference")
-   * .value("value")
-   * .build())
-   * .verticalGap(FormStyleConfigProperty.builder()
-   * .tokenReference("tokenReference")
-   * .value("value")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html)
-   */
-  public interface FormStyleProperty {
-    /**
-     * The spacing for the horizontal gap.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-horizontalgap)
-     */
-    public fun horizontalGap(): Any? = unwrap(this).getHorizontalGap()
-
-    /**
-     * The size of the outer padding for the form.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-outerpadding)
-     */
-    public fun outerPadding(): Any? = unwrap(this).getOuterPadding()
-
-    /**
-     * The spacing for the vertical gap.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-verticalgap)
-     */
-    public fun verticalGap(): Any? = unwrap(this).getVerticalGap()
-
-    /**
-     * A builder for [FormStyleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param horizontalGap The spacing for the horizontal gap.
-       */
-      public fun horizontalGap(horizontalGap: IResolvable)
-
-      /**
-       * @param horizontalGap The spacing for the horizontal gap.
-       */
-      public fun horizontalGap(horizontalGap: FormStyleConfigProperty)
-
-      /**
-       * @param horizontalGap The spacing for the horizontal gap.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e8a12023b55a24b6429e79c0814ac53caaf170936f4d8368e65dff1446a4d3b6")
-      public fun horizontalGap(horizontalGap: FormStyleConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param outerPadding The size of the outer padding for the form.
-       */
-      public fun outerPadding(outerPadding: IResolvable)
-
-      /**
-       * @param outerPadding The size of the outer padding for the form.
-       */
-      public fun outerPadding(outerPadding: FormStyleConfigProperty)
-
-      /**
-       * @param outerPadding The size of the outer padding for the form.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ce45d7f38411ba695c26d1741ceb0e0d065e1c6077f4fd619309a3ca38008f19")
-      public fun outerPadding(outerPadding: FormStyleConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param verticalGap The spacing for the vertical gap.
-       */
-      public fun verticalGap(verticalGap: IResolvable)
-
-      /**
-       * @param verticalGap The spacing for the vertical gap.
-       */
-      public fun verticalGap(verticalGap: FormStyleConfigProperty)
-
-      /**
-       * @param verticalGap The spacing for the vertical gap.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f105ff7e1666f9fc3e9461df44db047b2bf72dcd40425ca3d5e5224856a53e57")
-      public fun verticalGap(verticalGap: FormStyleConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty.builder()
-
-      /**
-       * @param horizontalGap The spacing for the horizontal gap.
-       */
-      override fun horizontalGap(horizontalGap: IResolvable) {
-        cdkBuilder.horizontalGap(horizontalGap.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param horizontalGap The spacing for the horizontal gap.
-       */
-      override fun horizontalGap(horizontalGap: FormStyleConfigProperty) {
-        cdkBuilder.horizontalGap(horizontalGap.let(FormStyleConfigProperty::unwrap))
-      }
-
-      /**
-       * @param horizontalGap The spacing for the horizontal gap.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e8a12023b55a24b6429e79c0814ac53caaf170936f4d8368e65dff1446a4d3b6")
-      override fun horizontalGap(horizontalGap: FormStyleConfigProperty.Builder.() -> Unit): Unit =
-          horizontalGap(FormStyleConfigProperty(horizontalGap))
-
-      /**
-       * @param outerPadding The size of the outer padding for the form.
-       */
-      override fun outerPadding(outerPadding: IResolvable) {
-        cdkBuilder.outerPadding(outerPadding.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param outerPadding The size of the outer padding for the form.
-       */
-      override fun outerPadding(outerPadding: FormStyleConfigProperty) {
-        cdkBuilder.outerPadding(outerPadding.let(FormStyleConfigProperty::unwrap))
-      }
-
-      /**
-       * @param outerPadding The size of the outer padding for the form.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ce45d7f38411ba695c26d1741ceb0e0d065e1c6077f4fd619309a3ca38008f19")
-      override fun outerPadding(outerPadding: FormStyleConfigProperty.Builder.() -> Unit): Unit =
-          outerPadding(FormStyleConfigProperty(outerPadding))
-
-      /**
-       * @param verticalGap The spacing for the vertical gap.
-       */
-      override fun verticalGap(verticalGap: IResolvable) {
-        cdkBuilder.verticalGap(verticalGap.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param verticalGap The spacing for the vertical gap.
-       */
-      override fun verticalGap(verticalGap: FormStyleConfigProperty) {
-        cdkBuilder.verticalGap(verticalGap.let(FormStyleConfigProperty::unwrap))
-      }
-
-      /**
-       * @param verticalGap The spacing for the vertical gap.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f105ff7e1666f9fc3e9461df44db047b2bf72dcd40425ca3d5e5224856a53e57")
-      override fun verticalGap(verticalGap: FormStyleConfigProperty.Builder.() -> Unit): Unit =
-          verticalGap(FormStyleConfigProperty(verticalGap))
-
-      public fun build(): software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty,
-    ) : CdkObject(cdkObject), FormStyleProperty {
-      /**
-       * The spacing for the horizontal gap.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-horizontalgap)
-       */
-      override fun horizontalGap(): Any? = unwrap(this).getHorizontalGap()
-
-      /**
-       * The size of the outer padding for the form.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-outerpadding)
-       */
-      override fun outerPadding(): Any? = unwrap(this).getOuterPadding()
-
-      /**
-       * The spacing for the vertical gap.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-verticalgap)
-       */
-      override fun verticalGap(): Any? = unwrap(this).getVerticalGap()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FormStyleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty):
-          FormStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? FormStyleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormStyleProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty
-    }
-  }
-
-  /**
-   * The `FormInputValueProperty` property specifies the configuration for an input field on a form.
-   *
-   * Use `FormInputValueProperty` to specify the values to render or bind by default.
+   * The `FieldConfig` property specifies the configuration information for a field in a table.
    *
    * Example:
    *
@@ -1085,417 +858,16 @@ public open class CfnForm internal constructor(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
    * FormInputValuePropertyProperty formInputValuePropertyProperty_;
-   * FormInputValuePropertyProperty formInputValuePropertyProperty =
-   * FormInputValuePropertyProperty.builder()
-   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .concat(List.of(formInputValuePropertyProperty_))
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html)
-   */
-  public interface FormInputValuePropertyProperty {
-    /**
-     * The information to bind fields to data at runtime.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-bindingproperties)
-     */
-    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-    /**
-     * A list of form properties to concatenate to create the value to assign to this field
-     * property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-concat)
-     */
-    public fun concat(): Any? = unwrap(this).getConcat()
-
-    /**
-     * The value to assign to the input field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [FormInputValuePropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      public fun bindingProperties(bindingProperties: IResolvable)
-
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      public
-          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty)
-
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f07939339dd165ac82ec59948a81aac59321a5986d4f3ed9a39e58c1b5f19abc")
-      public
-          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param concat A list of form properties to concatenate to create the value to assign to
-       * this field property.
-       */
-      public fun concat(concat: IResolvable)
-
-      /**
-       * @param concat A list of form properties to concatenate to create the value to assign to
-       * this field property.
-       */
-      public fun concat(concat: List<Any>)
-
-      /**
-       * @param concat A list of form properties to concatenate to create the value to assign to
-       * this field property.
-       */
-      public fun concat(vararg concat: Any)
-
-      /**
-       * @param value The value to assign to the input field.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty.builder()
-
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      override
-          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty) {
-        cdkBuilder.bindingProperties(bindingProperties.let(FormInputValuePropertyBindingPropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f07939339dd165ac82ec59948a81aac59321a5986d4f3ed9a39e58c1b5f19abc")
-      override
-          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty.Builder.() -> Unit):
-          Unit =
-          bindingProperties(FormInputValuePropertyBindingPropertiesProperty(bindingProperties))
-
-      /**
-       * @param concat A list of form properties to concatenate to create the value to assign to
-       * this field property.
-       */
-      override fun concat(concat: IResolvable) {
-        cdkBuilder.concat(concat.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param concat A list of form properties to concatenate to create the value to assign to
-       * this field property.
-       */
-      override fun concat(concat: List<Any>) {
-        cdkBuilder.concat(concat)
-      }
-
-      /**
-       * @param concat A list of form properties to concatenate to create the value to assign to
-       * this field property.
-       */
-      override fun concat(vararg concat: Any): Unit = concat(concat.toList())
-
-      /**
-       * @param value The value to assign to the input field.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty,
-    ) : CdkObject(cdkObject), FormInputValuePropertyProperty {
-      /**
-       * The information to bind fields to data at runtime.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-bindingproperties)
-       */
-      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-      /**
-       * A list of form properties to concatenate to create the value to assign to this field
-       * property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-concat)
-       */
-      override fun concat(): Any? = unwrap(this).getConcat()
-
-      /**
-       * The value to assign to the input field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FormInputValuePropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty):
-          FormInputValuePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FormInputValuePropertyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormInputValuePropertyProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty
-    }
-  }
-
-  /**
-   * The `FieldValidationConfiguration` property specifies the validation configuration for a field.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FieldValidationConfigurationProperty fieldValidationConfigurationProperty =
-   * FieldValidationConfigurationProperty.builder()
+   * FieldConfigProperty fieldConfigProperty = FieldConfigProperty.builder()
+   * .excluded(false)
+   * .inputType(FieldInputConfigProperty.builder()
    * .type("type")
    * // the properties below are optional
-   * .numValues(List.of(123))
-   * .strValues(List.of("strValues"))
-   * .validationMessage("validationMessage")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html)
-   */
-  public interface FieldValidationConfigurationProperty {
-    /**
-     * The validation to perform on a number value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-numvalues)
-     */
-    public fun numValues(): Any? = unwrap(this).getNumValues()
-
-    /**
-     * The validation to perform on a string value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-strvalues)
-     */
-    public fun strValues(): List<String> = unwrap(this).getStrValues() ?: emptyList()
-
-    /**
-     * The validation to perform on an object type.
-     *
-     * ``
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-type)
-     */
-    public fun type(): String
-
-    /**
-     * The validation message to display.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-validationmessage)
-     */
-    public fun validationMessage(): String? = unwrap(this).getValidationMessage()
-
-    /**
-     * A builder for [FieldValidationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param numValues The validation to perform on a number value.
-       */
-      public fun numValues(numValues: IResolvable)
-
-      /**
-       * @param numValues The validation to perform on a number value.
-       */
-      public fun numValues(numValues: List<Number>)
-
-      /**
-       * @param numValues The validation to perform on a number value.
-       */
-      public fun numValues(vararg numValues: Number)
-
-      /**
-       * @param strValues The validation to perform on a string value.
-       */
-      public fun strValues(strValues: List<String>)
-
-      /**
-       * @param strValues The validation to perform on a string value.
-       */
-      public fun strValues(vararg strValues: String)
-
-      /**
-       * @param type The validation to perform on an object type. 
-       * ``
-       */
-      public fun type(type: String)
-
-      /**
-       * @param validationMessage The validation message to display.
-       */
-      public fun validationMessage(validationMessage: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty.builder()
-
-      /**
-       * @param numValues The validation to perform on a number value.
-       */
-      override fun numValues(numValues: IResolvable) {
-        cdkBuilder.numValues(numValues.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param numValues The validation to perform on a number value.
-       */
-      override fun numValues(numValues: List<Number>) {
-        cdkBuilder.numValues(numValues)
-      }
-
-      /**
-       * @param numValues The validation to perform on a number value.
-       */
-      override fun numValues(vararg numValues: Number): Unit = numValues(numValues.toList())
-
-      /**
-       * @param strValues The validation to perform on a string value.
-       */
-      override fun strValues(strValues: List<String>) {
-        cdkBuilder.strValues(strValues)
-      }
-
-      /**
-       * @param strValues The validation to perform on a string value.
-       */
-      override fun strValues(vararg strValues: String): Unit = strValues(strValues.toList())
-
-      /**
-       * @param type The validation to perform on an object type. 
-       * ``
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param validationMessage The validation message to display.
-       */
-      override fun validationMessage(validationMessage: String) {
-        cdkBuilder.validationMessage(validationMessage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty,
-    ) : CdkObject(cdkObject), FieldValidationConfigurationProperty {
-      /**
-       * The validation to perform on a number value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-numvalues)
-       */
-      override fun numValues(): Any? = unwrap(this).getNumValues()
-
-      /**
-       * The validation to perform on a string value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-strvalues)
-       */
-      override fun strValues(): List<String> = unwrap(this).getStrValues() ?: emptyList()
-
-      /**
-       * The validation to perform on an object type.
-       *
-       * ``
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-
-      /**
-       * The validation message to display.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-validationmessage)
-       */
-      override fun validationMessage(): String? = unwrap(this).getValidationMessage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FieldValidationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty):
-          FieldValidationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FieldValidationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FieldValidationConfigurationProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes the configuration for the file uploader field.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FileUploaderFieldConfigProperty fileUploaderFieldConfigProperty =
-   * FileUploaderFieldConfigProperty.builder()
+   * .defaultChecked(false)
+   * .defaultCountryCode("defaultCountryCode")
+   * .defaultValue("defaultValue")
+   * .descriptiveText("descriptiveText")
+   * .fileUploaderConfig(FileUploaderFieldConfigProperty.builder()
    * .acceptedFileTypes(List.of("acceptedFileTypes"))
    * .accessLevel("accessLevel")
    * // the properties below are optional
@@ -1503,1147 +875,327 @@ public open class CfnForm internal constructor(
    * .maxFileCount(123)
    * .maxSize(123)
    * .showThumbnails(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html)
-   */
-  public interface FileUploaderFieldConfigProperty {
-    /**
-     * The file types that are allowed to be uploaded by the file uploader.
-     *
-     * Provide this information in an array of strings specifying the valid file extensions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-acceptedfiletypes)
-     */
-    public fun acceptedFileTypes(): List<String>
-
-    /**
-     * The access level to assign to the uploaded files in the Amazon S3 bucket where they are
-     * stored.
-     *
-     * The valid values for this property are `private` , `protected` , or `public` . For detailed
-     * information about the permissions associated with each access level, see [File access
-     * levels](https://docs.aws.amazon.com/https://docs.amplify.aws/lib/storage/configureaccess/q/platform/js/)
-     * in the *Amplify documentation* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-accesslevel)
-     */
-    public fun accessLevel(): String
-
-    /**
-     * Allows the file upload operation to be paused and resumed. The default value is `false` .
-     *
-     * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break the
-     * files into chunks before upload. The progress of the upload isn't continuous, because the file
-     * uploader uploads a chunk at a time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-isresumable)
-     */
-    public fun isResumable(): Any? = unwrap(this).getIsResumable()
-
-    /**
-     * Specifies the maximum number of files that can be selected to upload.
-     *
-     * The default value is an unlimited number of files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-maxfilecount)
-     */
-    public fun maxFileCount(): Number? = unwrap(this).getMaxFileCount()
-
-    /**
-     * The maximum file size in bytes that the file uploader will accept.
-     *
-     * The default value is an unlimited file size.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-maxsize)
-     */
-    public fun maxSize(): Number? = unwrap(this).getMaxSize()
-
-    /**
-     * Specifies whether to display or hide the image preview after selecting a file for upload.
-     *
-     * The default value is `true` to display the image preview.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-showthumbnails)
-     */
-    public fun showThumbnails(): Any? = unwrap(this).getShowThumbnails()
-
-    /**
-     * A builder for [FileUploaderFieldConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param acceptedFileTypes The file types that are allowed to be uploaded by the file
-       * uploader. 
-       * Provide this information in an array of strings specifying the valid file extensions.
-       */
-      public fun acceptedFileTypes(acceptedFileTypes: List<String>)
-
-      /**
-       * @param acceptedFileTypes The file types that are allowed to be uploaded by the file
-       * uploader. 
-       * Provide this information in an array of strings specifying the valid file extensions.
-       */
-      public fun acceptedFileTypes(vararg acceptedFileTypes: String)
-
-      /**
-       * @param accessLevel The access level to assign to the uploaded files in the Amazon S3 bucket
-       * where they are stored. 
-       * The valid values for this property are `private` , `protected` , or `public` . For detailed
-       * information about the permissions associated with each access level, see [File access
-       * levels](https://docs.aws.amazon.com/https://docs.amplify.aws/lib/storage/configureaccess/q/platform/js/)
-       * in the *Amplify documentation* .
-       */
-      public fun accessLevel(accessLevel: String)
-
-      /**
-       * @param isResumable Allows the file upload operation to be paused and resumed. The default
-       * value is `false` .
-       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
-       * the files into chunks before upload. The progress of the upload isn't continuous, because the
-       * file uploader uploads a chunk at a time.
-       */
-      public fun isResumable(isResumable: Boolean)
-
-      /**
-       * @param isResumable Allows the file upload operation to be paused and resumed. The default
-       * value is `false` .
-       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
-       * the files into chunks before upload. The progress of the upload isn't continuous, because the
-       * file uploader uploads a chunk at a time.
-       */
-      public fun isResumable(isResumable: IResolvable)
-
-      /**
-       * @param maxFileCount Specifies the maximum number of files that can be selected to upload.
-       * The default value is an unlimited number of files.
-       */
-      public fun maxFileCount(maxFileCount: Number)
-
-      /**
-       * @param maxSize The maximum file size in bytes that the file uploader will accept.
-       * The default value is an unlimited file size.
-       */
-      public fun maxSize(maxSize: Number)
-
-      /**
-       * @param showThumbnails Specifies whether to display or hide the image preview after
-       * selecting a file for upload.
-       * The default value is `true` to display the image preview.
-       */
-      public fun showThumbnails(showThumbnails: Boolean)
-
-      /**
-       * @param showThumbnails Specifies whether to display or hide the image preview after
-       * selecting a file for upload.
-       * The default value is `true` to display the image preview.
-       */
-      public fun showThumbnails(showThumbnails: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty.builder()
-
-      /**
-       * @param acceptedFileTypes The file types that are allowed to be uploaded by the file
-       * uploader. 
-       * Provide this information in an array of strings specifying the valid file extensions.
-       */
-      override fun acceptedFileTypes(acceptedFileTypes: List<String>) {
-        cdkBuilder.acceptedFileTypes(acceptedFileTypes)
-      }
-
-      /**
-       * @param acceptedFileTypes The file types that are allowed to be uploaded by the file
-       * uploader. 
-       * Provide this information in an array of strings specifying the valid file extensions.
-       */
-      override fun acceptedFileTypes(vararg acceptedFileTypes: String): Unit =
-          acceptedFileTypes(acceptedFileTypes.toList())
-
-      /**
-       * @param accessLevel The access level to assign to the uploaded files in the Amazon S3 bucket
-       * where they are stored. 
-       * The valid values for this property are `private` , `protected` , or `public` . For detailed
-       * information about the permissions associated with each access level, see [File access
-       * levels](https://docs.aws.amazon.com/https://docs.amplify.aws/lib/storage/configureaccess/q/platform/js/)
-       * in the *Amplify documentation* .
-       */
-      override fun accessLevel(accessLevel: String) {
-        cdkBuilder.accessLevel(accessLevel)
-      }
-
-      /**
-       * @param isResumable Allows the file upload operation to be paused and resumed. The default
-       * value is `false` .
-       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
-       * the files into chunks before upload. The progress of the upload isn't continuous, because the
-       * file uploader uploads a chunk at a time.
-       */
-      override fun isResumable(isResumable: Boolean) {
-        cdkBuilder.isResumable(isResumable)
-      }
-
-      /**
-       * @param isResumable Allows the file upload operation to be paused and resumed. The default
-       * value is `false` .
-       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
-       * the files into chunks before upload. The progress of the upload isn't continuous, because the
-       * file uploader uploads a chunk at a time.
-       */
-      override fun isResumable(isResumable: IResolvable) {
-        cdkBuilder.isResumable(isResumable.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxFileCount Specifies the maximum number of files that can be selected to upload.
-       * The default value is an unlimited number of files.
-       */
-      override fun maxFileCount(maxFileCount: Number) {
-        cdkBuilder.maxFileCount(maxFileCount)
-      }
-
-      /**
-       * @param maxSize The maximum file size in bytes that the file uploader will accept.
-       * The default value is an unlimited file size.
-       */
-      override fun maxSize(maxSize: Number) {
-        cdkBuilder.maxSize(maxSize)
-      }
-
-      /**
-       * @param showThumbnails Specifies whether to display or hide the image preview after
-       * selecting a file for upload.
-       * The default value is `true` to display the image preview.
-       */
-      override fun showThumbnails(showThumbnails: Boolean) {
-        cdkBuilder.showThumbnails(showThumbnails)
-      }
-
-      /**
-       * @param showThumbnails Specifies whether to display or hide the image preview after
-       * selecting a file for upload.
-       * The default value is `true` to display the image preview.
-       */
-      override fun showThumbnails(showThumbnails: IResolvable) {
-        cdkBuilder.showThumbnails(showThumbnails.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty,
-    ) : CdkObject(cdkObject), FileUploaderFieldConfigProperty {
-      /**
-       * The file types that are allowed to be uploaded by the file uploader.
-       *
-       * Provide this information in an array of strings specifying the valid file extensions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-acceptedfiletypes)
-       */
-      override fun acceptedFileTypes(): List<String> = unwrap(this).getAcceptedFileTypes()
-
-      /**
-       * The access level to assign to the uploaded files in the Amazon S3 bucket where they are
-       * stored.
-       *
-       * The valid values for this property are `private` , `protected` , or `public` . For detailed
-       * information about the permissions associated with each access level, see [File access
-       * levels](https://docs.aws.amazon.com/https://docs.amplify.aws/lib/storage/configureaccess/q/platform/js/)
-       * in the *Amplify documentation* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-accesslevel)
-       */
-      override fun accessLevel(): String = unwrap(this).getAccessLevel()
-
-      /**
-       * Allows the file upload operation to be paused and resumed. The default value is `false` .
-       *
-       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
-       * the files into chunks before upload. The progress of the upload isn't continuous, because the
-       * file uploader uploads a chunk at a time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-isresumable)
-       */
-      override fun isResumable(): Any? = unwrap(this).getIsResumable()
-
-      /**
-       * Specifies the maximum number of files that can be selected to upload.
-       *
-       * The default value is an unlimited number of files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-maxfilecount)
-       */
-      override fun maxFileCount(): Number? = unwrap(this).getMaxFileCount()
-
-      /**
-       * The maximum file size in bytes that the file uploader will accept.
-       *
-       * The default value is an unlimited file size.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-maxsize)
-       */
-      override fun maxSize(): Number? = unwrap(this).getMaxSize()
-
-      /**
-       * Specifies whether to display or hide the image preview after selecting a file for upload.
-       *
-       * The default value is `true` to display the image preview.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-showthumbnails)
-       */
-      override fun showThumbnails(): Any? = unwrap(this).getShowThumbnails()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FileUploaderFieldConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty):
-          FileUploaderFieldConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FileUploaderFieldConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FileUploaderFieldConfigProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty
-    }
-  }
-
-  /**
-   * Represents the data binding configuration for a form's input fields at runtime.You can use
-   * `FormInputBindingPropertiesValue` to add exposed properties to a form to allow different values to
-   * be entered when a form is reused in different places in an app.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormInputBindingPropertiesValueProperty formInputBindingPropertiesValueProperty =
-   * FormInputBindingPropertiesValueProperty.builder()
+   * .build())
+   * .isArray(false)
+   * .maxValue(123)
+   * .minValue(123)
+   * .name("name")
+   * .placeholder("placeholder")
+   * .readOnly(false)
+   * .required(false)
+   * .step(123)
+   * .value("value")
+   * .valueMappings(ValueMappingsProperty.builder()
+   * .values(List.of(ValueMappingProperty.builder()
+   * .value(FormInputValuePropertyProperty.builder()
+   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .concat(List.of(formInputValuePropertyProperty_))
+   * .value("value")
+   * .build())
+   * // the properties below are optional
+   * .displayValue(FormInputValuePropertyProperty.builder()
+   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .concat(List.of(formInputValuePropertyProperty_))
+   * .value("value")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .bindingProperties(Map.of(
+   * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
    * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
    * .model("model")
    * .build())
    * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html)
-   */
-  public interface FormInputBindingPropertiesValueProperty {
-    /**
-     * Describes the properties to customize with data at runtime.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalue-bindingproperties)
-     */
-    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-    /**
-     * The property type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalue-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [FormInputBindingPropertiesValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      public fun bindingProperties(bindingProperties: IResolvable)
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      public
-          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty)
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("068d8d4bfa9fce6e7705c4e49fec73461aa875f27d186222db7d59a13f9c65ae")
-      public
-          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param type The property type.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty.builder()
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      override
-          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty) {
-        cdkBuilder.bindingProperties(bindingProperties.let(FormInputBindingPropertiesValuePropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("068d8d4bfa9fce6e7705c4e49fec73461aa875f27d186222db7d59a13f9c65ae")
-      override
-          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty.Builder.() -> Unit):
-          Unit =
-          bindingProperties(FormInputBindingPropertiesValuePropertiesProperty(bindingProperties))
-
-      /**
-       * @param type The property type.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty,
-    ) : CdkObject(cdkObject), FormInputBindingPropertiesValueProperty {
-      /**
-       * Describes the properties to customize with data at runtime.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalue-bindingproperties)
-       */
-      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-      /**
-       * The property type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalue-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FormInputBindingPropertiesValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty):
-          FormInputBindingPropertiesValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FormInputBindingPropertiesValueProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormInputBindingPropertiesValueProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty
-    }
-  }
-
-  /**
-   * The `FormCTA` property specifies the call to action button configuration for the form.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormCTAProperty formCTAProperty = FormCTAProperty.builder()
-   * .cancel(FormButtonProperty.builder()
-   * .children("children")
-   * .excluded(false)
+   * .build()))
+   * .build())
+   * .build())
+   * .label("label")
    * .position(FieldPositionProperty.builder()
    * .below("below")
    * .fixed("fixed")
    * .rightOf("rightOf")
    * .build())
-   * .build())
-   * .clear(FormButtonProperty.builder()
-   * .children("children")
-   * .excluded(false)
-   * .position(FieldPositionProperty.builder()
-   * .below("below")
-   * .fixed("fixed")
-   * .rightOf("rightOf")
-   * .build())
-   * .build())
-   * .position("position")
-   * .submit(FormButtonProperty.builder()
-   * .children("children")
-   * .excluded(false)
-   * .position(FieldPositionProperty.builder()
-   * .below("below")
-   * .fixed("fixed")
-   * .rightOf("rightOf")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html)
-   */
-  public interface FormCTAProperty {
-    /**
-     * Displays a cancel button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-cancel)
-     */
-    public fun cancel(): Any? = unwrap(this).getCancel()
-
-    /**
-     * Displays a clear button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-clear)
-     */
-    public fun clear(): Any? = unwrap(this).getClear()
-
-    /**
-     * The position of the button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-position)
-     */
-    public fun position(): String? = unwrap(this).getPosition()
-
-    /**
-     * Displays a submit button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-submit)
-     */
-    public fun submit(): Any? = unwrap(this).getSubmit()
-
-    /**
-     * A builder for [FormCTAProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cancel Displays a cancel button.
-       */
-      public fun cancel(cancel: IResolvable)
-
-      /**
-       * @param cancel Displays a cancel button.
-       */
-      public fun cancel(cancel: FormButtonProperty)
-
-      /**
-       * @param cancel Displays a cancel button.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e10ffc6077cfdea59b4b69d4aba771b4edabf72c7e985b24a609acb520ad0c29")
-      public fun cancel(cancel: FormButtonProperty.Builder.() -> Unit)
-
-      /**
-       * @param clear Displays a clear button.
-       */
-      public fun clear(clear: IResolvable)
-
-      /**
-       * @param clear Displays a clear button.
-       */
-      public fun clear(clear: FormButtonProperty)
-
-      /**
-       * @param clear Displays a clear button.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2a2368f12872aac3777c653e431f7b0f7aec0c02dae3f26efd5c2947552f2c9f")
-      public fun clear(clear: FormButtonProperty.Builder.() -> Unit)
-
-      /**
-       * @param position The position of the button.
-       */
-      public fun position(position: String)
-
-      /**
-       * @param submit Displays a submit button.
-       */
-      public fun submit(submit: IResolvable)
-
-      /**
-       * @param submit Displays a submit button.
-       */
-      public fun submit(submit: FormButtonProperty)
-
-      /**
-       * @param submit Displays a submit button.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("32f04f26d3e185a85d2564ea012630e118c35b0d78826c61679dabad9da7f557")
-      public fun submit(submit: FormButtonProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty.builder()
-
-      /**
-       * @param cancel Displays a cancel button.
-       */
-      override fun cancel(cancel: IResolvable) {
-        cdkBuilder.cancel(cancel.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cancel Displays a cancel button.
-       */
-      override fun cancel(cancel: FormButtonProperty) {
-        cdkBuilder.cancel(cancel.let(FormButtonProperty::unwrap))
-      }
-
-      /**
-       * @param cancel Displays a cancel button.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e10ffc6077cfdea59b4b69d4aba771b4edabf72c7e985b24a609acb520ad0c29")
-      override fun cancel(cancel: FormButtonProperty.Builder.() -> Unit): Unit =
-          cancel(FormButtonProperty(cancel))
-
-      /**
-       * @param clear Displays a clear button.
-       */
-      override fun clear(clear: IResolvable) {
-        cdkBuilder.clear(clear.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param clear Displays a clear button.
-       */
-      override fun clear(clear: FormButtonProperty) {
-        cdkBuilder.clear(clear.let(FormButtonProperty::unwrap))
-      }
-
-      /**
-       * @param clear Displays a clear button.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2a2368f12872aac3777c653e431f7b0f7aec0c02dae3f26efd5c2947552f2c9f")
-      override fun clear(clear: FormButtonProperty.Builder.() -> Unit): Unit =
-          clear(FormButtonProperty(clear))
-
-      /**
-       * @param position The position of the button.
-       */
-      override fun position(position: String) {
-        cdkBuilder.position(position)
-      }
-
-      /**
-       * @param submit Displays a submit button.
-       */
-      override fun submit(submit: IResolvable) {
-        cdkBuilder.submit(submit.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param submit Displays a submit button.
-       */
-      override fun submit(submit: FormButtonProperty) {
-        cdkBuilder.submit(submit.let(FormButtonProperty::unwrap))
-      }
-
-      /**
-       * @param submit Displays a submit button.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("32f04f26d3e185a85d2564ea012630e118c35b0d78826c61679dabad9da7f557")
-      override fun submit(submit: FormButtonProperty.Builder.() -> Unit): Unit =
-          submit(FormButtonProperty(submit))
-
-      public fun build(): software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty,
-    ) : CdkObject(cdkObject), FormCTAProperty {
-      /**
-       * Displays a cancel button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-cancel)
-       */
-      override fun cancel(): Any? = unwrap(this).getCancel()
-
-      /**
-       * Displays a clear button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-clear)
-       */
-      override fun clear(): Any? = unwrap(this).getClear()
-
-      /**
-       * The position of the button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-position)
-       */
-      override fun position(): String? = unwrap(this).getPosition()
-
-      /**
-       * Displays a submit button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-submit)
-       */
-      override fun submit(): Any? = unwrap(this).getSubmit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FormCTAProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty):
-          FormCTAProperty = CdkObjectWrappers.wrap(cdkObject) as? FormCTAProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormCTAProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty
-    }
-  }
-
-  /**
-   * Associates a form property to a binding property.
-   *
-   * This enables exposed properties on the top level form to propagate data to the form's property
-   * values.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormInputValuePropertyBindingPropertiesProperty formInputValuePropertyBindingPropertiesProperty
-   * = FormInputValuePropertyBindingPropertiesProperty.builder()
-   * .property("property")
+   * .validations(List.of(FieldValidationConfigurationProperty.builder()
+   * .type("type")
    * // the properties below are optional
-   * .field("field")
+   * .numValues(List.of(123))
+   * .strValues(List.of("strValues"))
+   * .validationMessage("validationMessage")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html)
    */
-  public interface FormInputValuePropertyBindingPropertiesProperty {
+  public interface FieldConfigProperty {
     /**
-     * The data field to bind the property to.
+     * Specifies whether to hide a field.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html#cfn-amplifyuibuilder-form-forminputvaluepropertybindingproperties-field)
-     */
-    public fun `field`(): String? = unwrap(this).getField()
-
-    /**
-     * The form property to bind to the data field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html#cfn-amplifyuibuilder-form-forminputvaluepropertybindingproperties-property)
-     */
-    public fun `property`(): String
-
-    /**
-     * A builder for [FormInputValuePropertyBindingPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param field The data field to bind the property to.
-       */
-      public fun `field`(`field`: String)
-
-      /**
-       * @param property The form property to bind to the data field. 
-       */
-      public fun `property`(`property`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty.builder()
-
-      /**
-       * @param field The data field to bind the property to.
-       */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
-      }
-
-      /**
-       * @param property The form property to bind to the data field. 
-       */
-      override fun `property`(`property`: String) {
-        cdkBuilder.`property`(`property`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty,
-    ) : CdkObject(cdkObject), FormInputValuePropertyBindingPropertiesProperty {
-      /**
-       * The data field to bind the property to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html#cfn-amplifyuibuilder-form-forminputvaluepropertybindingproperties-field)
-       */
-      override fun `field`(): String? = unwrap(this).getField()
-
-      /**
-       * The form property to bind to the data field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html#cfn-amplifyuibuilder-form-forminputvaluepropertybindingproperties-property)
-       */
-      override fun `property`(): String = unwrap(this).getProperty()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FormInputValuePropertyBindingPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty):
-          FormInputValuePropertyBindingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FormInputValuePropertyBindingPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormInputValuePropertyBindingPropertiesProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty
-    }
-  }
-
-  /**
-   * The `FormButton` property specifies the configuration for a button UI element that is a part of
-   * a form.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormButtonProperty formButtonProperty = FormButtonProperty.builder()
-   * .children("children")
-   * .excluded(false)
-   * .position(FieldPositionProperty.builder()
-   * .below("below")
-   * .fixed("fixed")
-   * .rightOf("rightOf")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html)
-   */
-  public interface FormButtonProperty {
-    /**
-     * Describes the button's properties.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-children)
-     */
-    public fun children(): String? = unwrap(this).getChildren()
-
-    /**
-     * Specifies whether the button is visible on the form.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-excluded)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-excluded)
      */
     public fun excluded(): Any? = unwrap(this).getExcluded()
 
     /**
-     * The position of the button.
+     * Describes the configuration for the default input value to display for a field.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-position)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-inputtype)
+     */
+    public fun inputType(): Any? = unwrap(this).getInputType()
+
+    /**
+     * The label for the field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-label)
+     */
+    public fun label(): String? = unwrap(this).getLabel()
+
+    /**
+     * Specifies the field position.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-position)
      */
     public fun position(): Any? = unwrap(this).getPosition()
 
     /**
-     * A builder for [FormButtonProperty]
+     * The validations to perform on the value in the field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-validations)
+     */
+    public fun validations(): Any? = unwrap(this).getValidations()
+
+    /**
+     * A builder for [FieldConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param children Describes the button's properties.
-       */
-      public fun children(children: String)
-
-      /**
-       * @param excluded Specifies whether the button is visible on the form.
+       * @param excluded Specifies whether to hide a field.
        */
       public fun excluded(excluded: Boolean)
 
       /**
-       * @param excluded Specifies whether the button is visible on the form.
+       * @param excluded Specifies whether to hide a field.
        */
       public fun excluded(excluded: IResolvable)
 
       /**
-       * @param position The position of the button.
+       * @param inputType Describes the configuration for the default input value to display for a
+       * field.
+       */
+      public fun inputType(inputType: IResolvable)
+
+      /**
+       * @param inputType Describes the configuration for the default input value to display for a
+       * field.
+       */
+      public fun inputType(inputType: FieldInputConfigProperty)
+
+      /**
+       * @param inputType Describes the configuration for the default input value to display for a
+       * field.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c64032d2e345e9547d0f3723ea7d0e92e4b928e6587669dd5bb3f6dc3742b141")
+      public fun inputType(inputType: FieldInputConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param label The label for the field.
+       */
+      public fun label(label: String)
+
+      /**
+       * @param position Specifies the field position.
        */
       public fun position(position: IResolvable)
 
       /**
-       * @param position The position of the button.
+       * @param position Specifies the field position.
        */
       public fun position(position: FieldPositionProperty)
 
       /**
-       * @param position The position of the button.
+       * @param position Specifies the field position.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3dd5d47f0a18ebc35782bbd119ab231637ce6f836228b583012f274916f67995")
+      @JvmName("4d0acb41da5497eb76185a9fa1f05138d22a493616d0de6fdae657e8289e1d15")
       public fun position(position: FieldPositionProperty.Builder.() -> Unit)
+
+      /**
+       * @param validations The validations to perform on the value in the field.
+       */
+      public fun validations(validations: IResolvable)
+
+      /**
+       * @param validations The validations to perform on the value in the field.
+       */
+      public fun validations(validations: List<Any>)
+
+      /**
+       * @param validations The validations to perform on the value in the field.
+       */
+      public fun validations(vararg validations: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty.builder()
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty.builder()
 
       /**
-       * @param children Describes the button's properties.
-       */
-      override fun children(children: String) {
-        cdkBuilder.children(children)
-      }
-
-      /**
-       * @param excluded Specifies whether the button is visible on the form.
+       * @param excluded Specifies whether to hide a field.
        */
       override fun excluded(excluded: Boolean) {
         cdkBuilder.excluded(excluded)
       }
 
       /**
-       * @param excluded Specifies whether the button is visible on the form.
+       * @param excluded Specifies whether to hide a field.
        */
       override fun excluded(excluded: IResolvable) {
         cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
       }
 
       /**
-       * @param position The position of the button.
+       * @param inputType Describes the configuration for the default input value to display for a
+       * field.
+       */
+      override fun inputType(inputType: IResolvable) {
+        cdkBuilder.inputType(inputType.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param inputType Describes the configuration for the default input value to display for a
+       * field.
+       */
+      override fun inputType(inputType: FieldInputConfigProperty) {
+        cdkBuilder.inputType(inputType.let(FieldInputConfigProperty::unwrap))
+      }
+
+      /**
+       * @param inputType Describes the configuration for the default input value to display for a
+       * field.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c64032d2e345e9547d0f3723ea7d0e92e4b928e6587669dd5bb3f6dc3742b141")
+      override fun inputType(inputType: FieldInputConfigProperty.Builder.() -> Unit): Unit =
+          inputType(FieldInputConfigProperty(inputType))
+
+      /**
+       * @param label The label for the field.
+       */
+      override fun label(label: String) {
+        cdkBuilder.label(label)
+      }
+
+      /**
+       * @param position Specifies the field position.
        */
       override fun position(position: IResolvable) {
         cdkBuilder.position(position.let(IResolvable::unwrap))
       }
 
       /**
-       * @param position The position of the button.
+       * @param position Specifies the field position.
        */
       override fun position(position: FieldPositionProperty) {
         cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
       }
 
       /**
-       * @param position The position of the button.
+       * @param position Specifies the field position.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3dd5d47f0a18ebc35782bbd119ab231637ce6f836228b583012f274916f67995")
+      @JvmName("4d0acb41da5497eb76185a9fa1f05138d22a493616d0de6fdae657e8289e1d15")
       override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
           position(FieldPositionProperty(position))
 
+      /**
+       * @param validations The validations to perform on the value in the field.
+       */
+      override fun validations(validations: IResolvable) {
+        cdkBuilder.validations(validations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param validations The validations to perform on the value in the field.
+       */
+      override fun validations(validations: List<Any>) {
+        cdkBuilder.validations(validations)
+      }
+
+      /**
+       * @param validations The validations to perform on the value in the field.
+       */
+      override fun validations(vararg validations: Any): Unit = validations(validations.toList())
+
       public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty,
-    ) : CdkObject(cdkObject), FormButtonProperty {
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty,
+    ) : CdkObject(cdkObject), FieldConfigProperty {
       /**
-       * Describes the button's properties.
+       * Specifies whether to hide a field.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-children)
-       */
-      override fun children(): String? = unwrap(this).getChildren()
-
-      /**
-       * Specifies whether the button is visible on the form.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-excluded)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-excluded)
        */
       override fun excluded(): Any? = unwrap(this).getExcluded()
 
       /**
-       * The position of the button.
+       * Describes the configuration for the default input value to display for a field.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-position)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-inputtype)
+       */
+      override fun inputType(): Any? = unwrap(this).getInputType()
+
+      /**
+       * The label for the field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-label)
+       */
+      override fun label(): String? = unwrap(this).getLabel()
+
+      /**
+       * Specifies the field position.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-position)
        */
       override fun position(): Any? = unwrap(this).getPosition()
+
+      /**
+       * The validations to perform on the value in the field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-validations)
+       */
+      override fun validations(): Any? = unwrap(this).getValidations()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FormButtonProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FieldConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty):
-          FormButtonProperty = CdkObjectWrappers.wrap(cdkObject) as? FormButtonProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty):
+          FieldConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FormButtonProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty = (wrapped as
+      internal fun unwrap(wrapped: FieldConfigProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty
-    }
-  }
-
-  /**
-   * The `FormStyleConfig` property specifies the configuration settings for the form's style
-   * properties.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormStyleConfigProperty formStyleConfigProperty = FormStyleConfigProperty.builder()
-   * .tokenReference("tokenReference")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html)
-   */
-  public interface FormStyleConfigProperty {
-    /**
-     * A reference to a design token to use to bind the form's style properties to an existing
-     * theme.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html#cfn-amplifyuibuilder-form-formstyleconfig-tokenreference)
-     */
-    public fun tokenReference(): String? = unwrap(this).getTokenReference()
-
-    /**
-     * The value of the style setting.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html#cfn-amplifyuibuilder-form-formstyleconfig-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [FormStyleConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param tokenReference A reference to a design token to use to bind the form's style
-       * properties to an existing theme.
-       */
-      public fun tokenReference(tokenReference: String)
-
-      /**
-       * @param value The value of the style setting.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty.builder()
-
-      /**
-       * @param tokenReference A reference to a design token to use to bind the form's style
-       * properties to an existing theme.
-       */
-      override fun tokenReference(tokenReference: String) {
-        cdkBuilder.tokenReference(tokenReference)
-      }
-
-      /**
-       * @param value The value of the style setting.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty,
-    ) : CdkObject(cdkObject), FormStyleConfigProperty {
-      /**
-       * A reference to a design token to use to bind the form's style properties to an existing
-       * theme.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html#cfn-amplifyuibuilder-form-formstyleconfig-tokenreference)
-       */
-      override fun tokenReference(): String? = unwrap(this).getTokenReference()
-
-      /**
-       * The value of the style setting.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html#cfn-amplifyuibuilder-form-formstyleconfig-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FormStyleConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty):
-          FormStyleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FormStyleConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormStyleConfigProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty
     }
   }
 
@@ -3295,6 +1847,2145 @@ public open class CfnForm internal constructor(
   }
 
   /**
+   * The `FieldPosition` property specifies the field position.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FieldPositionProperty fieldPositionProperty = FieldPositionProperty.builder()
+   * .below("below")
+   * .fixed("fixed")
+   * .rightOf("rightOf")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html)
+   */
+  public interface FieldPositionProperty {
+    /**
+     * The field position is below the field specified by the string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-below)
+     */
+    public fun below(): String? = unwrap(this).getBelow()
+
+    /**
+     * The field position is fixed and doesn't change in relation to other fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-fixed)
+     */
+    public fun fixed(): String? = unwrap(this).getFixed()
+
+    /**
+     * The field position is to the right of the field specified by the string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-rightof)
+     */
+    public fun rightOf(): String? = unwrap(this).getRightOf()
+
+    /**
+     * A builder for [FieldPositionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param below The field position is below the field specified by the string.
+       */
+      public fun below(below: String)
+
+      /**
+       * @param fixed The field position is fixed and doesn't change in relation to other fields.
+       */
+      public fun fixed(fixed: String)
+
+      /**
+       * @param rightOf The field position is to the right of the field specified by the string.
+       */
+      public fun rightOf(rightOf: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty.builder()
+
+      /**
+       * @param below The field position is below the field specified by the string.
+       */
+      override fun below(below: String) {
+        cdkBuilder.below(below)
+      }
+
+      /**
+       * @param fixed The field position is fixed and doesn't change in relation to other fields.
+       */
+      override fun fixed(fixed: String) {
+        cdkBuilder.fixed(fixed)
+      }
+
+      /**
+       * @param rightOf The field position is to the right of the field specified by the string.
+       */
+      override fun rightOf(rightOf: String) {
+        cdkBuilder.rightOf(rightOf)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty,
+    ) : CdkObject(cdkObject), FieldPositionProperty {
+      /**
+       * The field position is below the field specified by the string.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-below)
+       */
+      override fun below(): String? = unwrap(this).getBelow()
+
+      /**
+       * The field position is fixed and doesn't change in relation to other fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-fixed)
+       */
+      override fun fixed(): String? = unwrap(this).getFixed()
+
+      /**
+       * The field position is to the right of the field specified by the string.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-rightof)
+       */
+      override fun rightOf(): String? = unwrap(this).getRightOf()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FieldPositionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty):
+          FieldPositionProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldPositionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FieldPositionProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty
+    }
+  }
+
+  /**
+   * The `FieldValidationConfiguration` property specifies the validation configuration for a field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FieldValidationConfigurationProperty fieldValidationConfigurationProperty =
+   * FieldValidationConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .numValues(List.of(123))
+   * .strValues(List.of("strValues"))
+   * .validationMessage("validationMessage")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html)
+   */
+  public interface FieldValidationConfigurationProperty {
+    /**
+     * The validation to perform on a number value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-numvalues)
+     */
+    public fun numValues(): Any? = unwrap(this).getNumValues()
+
+    /**
+     * The validation to perform on a string value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-strvalues)
+     */
+    public fun strValues(): List<String> = unwrap(this).getStrValues() ?: emptyList()
+
+    /**
+     * The validation to perform on an object type.
+     *
+     * ``
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * The validation message to display.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-validationmessage)
+     */
+    public fun validationMessage(): String? = unwrap(this).getValidationMessage()
+
+    /**
+     * A builder for [FieldValidationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param numValues The validation to perform on a number value.
+       */
+      public fun numValues(numValues: IResolvable)
+
+      /**
+       * @param numValues The validation to perform on a number value.
+       */
+      public fun numValues(numValues: List<Number>)
+
+      /**
+       * @param numValues The validation to perform on a number value.
+       */
+      public fun numValues(vararg numValues: Number)
+
+      /**
+       * @param strValues The validation to perform on a string value.
+       */
+      public fun strValues(strValues: List<String>)
+
+      /**
+       * @param strValues The validation to perform on a string value.
+       */
+      public fun strValues(vararg strValues: String)
+
+      /**
+       * @param type The validation to perform on an object type. 
+       * ``
+       */
+      public fun type(type: String)
+
+      /**
+       * @param validationMessage The validation message to display.
+       */
+      public fun validationMessage(validationMessage: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty.builder()
+
+      /**
+       * @param numValues The validation to perform on a number value.
+       */
+      override fun numValues(numValues: IResolvable) {
+        cdkBuilder.numValues(numValues.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param numValues The validation to perform on a number value.
+       */
+      override fun numValues(numValues: List<Number>) {
+        cdkBuilder.numValues(numValues)
+      }
+
+      /**
+       * @param numValues The validation to perform on a number value.
+       */
+      override fun numValues(vararg numValues: Number): Unit = numValues(numValues.toList())
+
+      /**
+       * @param strValues The validation to perform on a string value.
+       */
+      override fun strValues(strValues: List<String>) {
+        cdkBuilder.strValues(strValues)
+      }
+
+      /**
+       * @param strValues The validation to perform on a string value.
+       */
+      override fun strValues(vararg strValues: String): Unit = strValues(strValues.toList())
+
+      /**
+       * @param type The validation to perform on an object type. 
+       * ``
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param validationMessage The validation message to display.
+       */
+      override fun validationMessage(validationMessage: String) {
+        cdkBuilder.validationMessage(validationMessage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty,
+    ) : CdkObject(cdkObject), FieldValidationConfigurationProperty {
+      /**
+       * The validation to perform on a number value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-numvalues)
+       */
+      override fun numValues(): Any? = unwrap(this).getNumValues()
+
+      /**
+       * The validation to perform on a string value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-strvalues)
+       */
+      override fun strValues(): List<String> = unwrap(this).getStrValues() ?: emptyList()
+
+      /**
+       * The validation to perform on an object type.
+       *
+       * ``
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+
+      /**
+       * The validation message to display.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html#cfn-amplifyuibuilder-form-fieldvalidationconfiguration-validationmessage)
+       */
+      override fun validationMessage(): String? = unwrap(this).getValidationMessage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FieldValidationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty):
+          FieldValidationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FieldValidationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FieldValidationConfigurationProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the configuration for the file uploader field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FileUploaderFieldConfigProperty fileUploaderFieldConfigProperty =
+   * FileUploaderFieldConfigProperty.builder()
+   * .acceptedFileTypes(List.of("acceptedFileTypes"))
+   * .accessLevel("accessLevel")
+   * // the properties below are optional
+   * .isResumable(false)
+   * .maxFileCount(123)
+   * .maxSize(123)
+   * .showThumbnails(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html)
+   */
+  public interface FileUploaderFieldConfigProperty {
+    /**
+     * The file types that are allowed to be uploaded by the file uploader.
+     *
+     * Provide this information in an array of strings specifying the valid file extensions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-acceptedfiletypes)
+     */
+    public fun acceptedFileTypes(): List<String>
+
+    /**
+     * The access level to assign to the uploaded files in the Amazon S3 bucket where they are
+     * stored.
+     *
+     * The valid values for this property are `private` , `protected` , or `public` . For detailed
+     * information about the permissions associated with each access level, see [File access
+     * levels](https://docs.aws.amazon.com/https://docs.amplify.aws/lib/storage/configureaccess/q/platform/js/)
+     * in the *Amplify documentation* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-accesslevel)
+     */
+    public fun accessLevel(): String
+
+    /**
+     * Allows the file upload operation to be paused and resumed. The default value is `false` .
+     *
+     * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break the
+     * files into chunks before upload. The progress of the upload isn't continuous, because the file
+     * uploader uploads a chunk at a time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-isresumable)
+     */
+    public fun isResumable(): Any? = unwrap(this).getIsResumable()
+
+    /**
+     * Specifies the maximum number of files that can be selected to upload.
+     *
+     * The default value is an unlimited number of files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-maxfilecount)
+     */
+    public fun maxFileCount(): Number? = unwrap(this).getMaxFileCount()
+
+    /**
+     * The maximum file size in bytes that the file uploader will accept.
+     *
+     * The default value is an unlimited file size.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-maxsize)
+     */
+    public fun maxSize(): Number? = unwrap(this).getMaxSize()
+
+    /**
+     * Specifies whether to display or hide the image preview after selecting a file for upload.
+     *
+     * The default value is `true` to display the image preview.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-showthumbnails)
+     */
+    public fun showThumbnails(): Any? = unwrap(this).getShowThumbnails()
+
+    /**
+     * A builder for [FileUploaderFieldConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param acceptedFileTypes The file types that are allowed to be uploaded by the file
+       * uploader. 
+       * Provide this information in an array of strings specifying the valid file extensions.
+       */
+      public fun acceptedFileTypes(acceptedFileTypes: List<String>)
+
+      /**
+       * @param acceptedFileTypes The file types that are allowed to be uploaded by the file
+       * uploader. 
+       * Provide this information in an array of strings specifying the valid file extensions.
+       */
+      public fun acceptedFileTypes(vararg acceptedFileTypes: String)
+
+      /**
+       * @param accessLevel The access level to assign to the uploaded files in the Amazon S3 bucket
+       * where they are stored. 
+       * The valid values for this property are `private` , `protected` , or `public` . For detailed
+       * information about the permissions associated with each access level, see [File access
+       * levels](https://docs.aws.amazon.com/https://docs.amplify.aws/lib/storage/configureaccess/q/platform/js/)
+       * in the *Amplify documentation* .
+       */
+      public fun accessLevel(accessLevel: String)
+
+      /**
+       * @param isResumable Allows the file upload operation to be paused and resumed. The default
+       * value is `false` .
+       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
+       * the files into chunks before upload. The progress of the upload isn't continuous, because the
+       * file uploader uploads a chunk at a time.
+       */
+      public fun isResumable(isResumable: Boolean)
+
+      /**
+       * @param isResumable Allows the file upload operation to be paused and resumed. The default
+       * value is `false` .
+       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
+       * the files into chunks before upload. The progress of the upload isn't continuous, because the
+       * file uploader uploads a chunk at a time.
+       */
+      public fun isResumable(isResumable: IResolvable)
+
+      /**
+       * @param maxFileCount Specifies the maximum number of files that can be selected to upload.
+       * The default value is an unlimited number of files.
+       */
+      public fun maxFileCount(maxFileCount: Number)
+
+      /**
+       * @param maxSize The maximum file size in bytes that the file uploader will accept.
+       * The default value is an unlimited file size.
+       */
+      public fun maxSize(maxSize: Number)
+
+      /**
+       * @param showThumbnails Specifies whether to display or hide the image preview after
+       * selecting a file for upload.
+       * The default value is `true` to display the image preview.
+       */
+      public fun showThumbnails(showThumbnails: Boolean)
+
+      /**
+       * @param showThumbnails Specifies whether to display or hide the image preview after
+       * selecting a file for upload.
+       * The default value is `true` to display the image preview.
+       */
+      public fun showThumbnails(showThumbnails: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty.builder()
+
+      /**
+       * @param acceptedFileTypes The file types that are allowed to be uploaded by the file
+       * uploader. 
+       * Provide this information in an array of strings specifying the valid file extensions.
+       */
+      override fun acceptedFileTypes(acceptedFileTypes: List<String>) {
+        cdkBuilder.acceptedFileTypes(acceptedFileTypes)
+      }
+
+      /**
+       * @param acceptedFileTypes The file types that are allowed to be uploaded by the file
+       * uploader. 
+       * Provide this information in an array of strings specifying the valid file extensions.
+       */
+      override fun acceptedFileTypes(vararg acceptedFileTypes: String): Unit =
+          acceptedFileTypes(acceptedFileTypes.toList())
+
+      /**
+       * @param accessLevel The access level to assign to the uploaded files in the Amazon S3 bucket
+       * where they are stored. 
+       * The valid values for this property are `private` , `protected` , or `public` . For detailed
+       * information about the permissions associated with each access level, see [File access
+       * levels](https://docs.aws.amazon.com/https://docs.amplify.aws/lib/storage/configureaccess/q/platform/js/)
+       * in the *Amplify documentation* .
+       */
+      override fun accessLevel(accessLevel: String) {
+        cdkBuilder.accessLevel(accessLevel)
+      }
+
+      /**
+       * @param isResumable Allows the file upload operation to be paused and resumed. The default
+       * value is `false` .
+       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
+       * the files into chunks before upload. The progress of the upload isn't continuous, because the
+       * file uploader uploads a chunk at a time.
+       */
+      override fun isResumable(isResumable: Boolean) {
+        cdkBuilder.isResumable(isResumable)
+      }
+
+      /**
+       * @param isResumable Allows the file upload operation to be paused and resumed. The default
+       * value is `false` .
+       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
+       * the files into chunks before upload. The progress of the upload isn't continuous, because the
+       * file uploader uploads a chunk at a time.
+       */
+      override fun isResumable(isResumable: IResolvable) {
+        cdkBuilder.isResumable(isResumable.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxFileCount Specifies the maximum number of files that can be selected to upload.
+       * The default value is an unlimited number of files.
+       */
+      override fun maxFileCount(maxFileCount: Number) {
+        cdkBuilder.maxFileCount(maxFileCount)
+      }
+
+      /**
+       * @param maxSize The maximum file size in bytes that the file uploader will accept.
+       * The default value is an unlimited file size.
+       */
+      override fun maxSize(maxSize: Number) {
+        cdkBuilder.maxSize(maxSize)
+      }
+
+      /**
+       * @param showThumbnails Specifies whether to display or hide the image preview after
+       * selecting a file for upload.
+       * The default value is `true` to display the image preview.
+       */
+      override fun showThumbnails(showThumbnails: Boolean) {
+        cdkBuilder.showThumbnails(showThumbnails)
+      }
+
+      /**
+       * @param showThumbnails Specifies whether to display or hide the image preview after
+       * selecting a file for upload.
+       * The default value is `true` to display the image preview.
+       */
+      override fun showThumbnails(showThumbnails: IResolvable) {
+        cdkBuilder.showThumbnails(showThumbnails.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty,
+    ) : CdkObject(cdkObject), FileUploaderFieldConfigProperty {
+      /**
+       * The file types that are allowed to be uploaded by the file uploader.
+       *
+       * Provide this information in an array of strings specifying the valid file extensions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-acceptedfiletypes)
+       */
+      override fun acceptedFileTypes(): List<String> = unwrap(this).getAcceptedFileTypes()
+
+      /**
+       * The access level to assign to the uploaded files in the Amazon S3 bucket where they are
+       * stored.
+       *
+       * The valid values for this property are `private` , `protected` , or `public` . For detailed
+       * information about the permissions associated with each access level, see [File access
+       * levels](https://docs.aws.amazon.com/https://docs.amplify.aws/lib/storage/configureaccess/q/platform/js/)
+       * in the *Amplify documentation* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-accesslevel)
+       */
+      override fun accessLevel(): String = unwrap(this).getAccessLevel()
+
+      /**
+       * Allows the file upload operation to be paused and resumed. The default value is `false` .
+       *
+       * When `isResumable` is set to `true` , the file uploader uses a multipart upload to break
+       * the files into chunks before upload. The progress of the upload isn't continuous, because the
+       * file uploader uploads a chunk at a time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-isresumable)
+       */
+      override fun isResumable(): Any? = unwrap(this).getIsResumable()
+
+      /**
+       * Specifies the maximum number of files that can be selected to upload.
+       *
+       * The default value is an unlimited number of files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-maxfilecount)
+       */
+      override fun maxFileCount(): Number? = unwrap(this).getMaxFileCount()
+
+      /**
+       * The maximum file size in bytes that the file uploader will accept.
+       *
+       * The default value is an unlimited file size.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-maxsize)
+       */
+      override fun maxSize(): Number? = unwrap(this).getMaxSize()
+
+      /**
+       * Specifies whether to display or hide the image preview after selecting a file for upload.
+       *
+       * The default value is `true` to display the image preview.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html#cfn-amplifyuibuilder-form-fileuploaderfieldconfig-showthumbnails)
+       */
+      override fun showThumbnails(): Any? = unwrap(this).getShowThumbnails()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FileUploaderFieldConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty):
+          FileUploaderFieldConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FileUploaderFieldConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FileUploaderFieldConfigProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty
+    }
+  }
+
+  /**
+   * The `FormButton` property specifies the configuration for a button UI element that is a part of
+   * a form.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormButtonProperty formButtonProperty = FormButtonProperty.builder()
+   * .children("children")
+   * .excluded(false)
+   * .position(FieldPositionProperty.builder()
+   * .below("below")
+   * .fixed("fixed")
+   * .rightOf("rightOf")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html)
+   */
+  public interface FormButtonProperty {
+    /**
+     * Describes the button's properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-children)
+     */
+    public fun children(): String? = unwrap(this).getChildren()
+
+    /**
+     * Specifies whether the button is visible on the form.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-excluded)
+     */
+    public fun excluded(): Any? = unwrap(this).getExcluded()
+
+    /**
+     * The position of the button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-position)
+     */
+    public fun position(): Any? = unwrap(this).getPosition()
+
+    /**
+     * A builder for [FormButtonProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param children Describes the button's properties.
+       */
+      public fun children(children: String)
+
+      /**
+       * @param excluded Specifies whether the button is visible on the form.
+       */
+      public fun excluded(excluded: Boolean)
+
+      /**
+       * @param excluded Specifies whether the button is visible on the form.
+       */
+      public fun excluded(excluded: IResolvable)
+
+      /**
+       * @param position The position of the button.
+       */
+      public fun position(position: IResolvable)
+
+      /**
+       * @param position The position of the button.
+       */
+      public fun position(position: FieldPositionProperty)
+
+      /**
+       * @param position The position of the button.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3dd5d47f0a18ebc35782bbd119ab231637ce6f836228b583012f274916f67995")
+      public fun position(position: FieldPositionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty.builder()
+
+      /**
+       * @param children Describes the button's properties.
+       */
+      override fun children(children: String) {
+        cdkBuilder.children(children)
+      }
+
+      /**
+       * @param excluded Specifies whether the button is visible on the form.
+       */
+      override fun excluded(excluded: Boolean) {
+        cdkBuilder.excluded(excluded)
+      }
+
+      /**
+       * @param excluded Specifies whether the button is visible on the form.
+       */
+      override fun excluded(excluded: IResolvable) {
+        cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param position The position of the button.
+       */
+      override fun position(position: IResolvable) {
+        cdkBuilder.position(position.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param position The position of the button.
+       */
+      override fun position(position: FieldPositionProperty) {
+        cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
+      }
+
+      /**
+       * @param position The position of the button.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3dd5d47f0a18ebc35782bbd119ab231637ce6f836228b583012f274916f67995")
+      override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
+          position(FieldPositionProperty(position))
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty,
+    ) : CdkObject(cdkObject), FormButtonProperty {
+      /**
+       * Describes the button's properties.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-children)
+       */
+      override fun children(): String? = unwrap(this).getChildren()
+
+      /**
+       * Specifies whether the button is visible on the form.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-excluded)
+       */
+      override fun excluded(): Any? = unwrap(this).getExcluded()
+
+      /**
+       * The position of the button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html#cfn-amplifyuibuilder-form-formbutton-position)
+       */
+      override fun position(): Any? = unwrap(this).getPosition()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormButtonProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty):
+          FormButtonProperty = CdkObjectWrappers.wrap(cdkObject) as? FormButtonProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormButtonProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty
+    }
+  }
+
+  /**
+   * The `FormCTA` property specifies the call to action button configuration for the form.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormCTAProperty formCTAProperty = FormCTAProperty.builder()
+   * .cancel(FormButtonProperty.builder()
+   * .children("children")
+   * .excluded(false)
+   * .position(FieldPositionProperty.builder()
+   * .below("below")
+   * .fixed("fixed")
+   * .rightOf("rightOf")
+   * .build())
+   * .build())
+   * .clear(FormButtonProperty.builder()
+   * .children("children")
+   * .excluded(false)
+   * .position(FieldPositionProperty.builder()
+   * .below("below")
+   * .fixed("fixed")
+   * .rightOf("rightOf")
+   * .build())
+   * .build())
+   * .position("position")
+   * .submit(FormButtonProperty.builder()
+   * .children("children")
+   * .excluded(false)
+   * .position(FieldPositionProperty.builder()
+   * .below("below")
+   * .fixed("fixed")
+   * .rightOf("rightOf")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html)
+   */
+  public interface FormCTAProperty {
+    /**
+     * Displays a cancel button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-cancel)
+     */
+    public fun cancel(): Any? = unwrap(this).getCancel()
+
+    /**
+     * Displays a clear button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-clear)
+     */
+    public fun clear(): Any? = unwrap(this).getClear()
+
+    /**
+     * The position of the button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-position)
+     */
+    public fun position(): String? = unwrap(this).getPosition()
+
+    /**
+     * Displays a submit button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-submit)
+     */
+    public fun submit(): Any? = unwrap(this).getSubmit()
+
+    /**
+     * A builder for [FormCTAProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cancel Displays a cancel button.
+       */
+      public fun cancel(cancel: IResolvable)
+
+      /**
+       * @param cancel Displays a cancel button.
+       */
+      public fun cancel(cancel: FormButtonProperty)
+
+      /**
+       * @param cancel Displays a cancel button.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e10ffc6077cfdea59b4b69d4aba771b4edabf72c7e985b24a609acb520ad0c29")
+      public fun cancel(cancel: FormButtonProperty.Builder.() -> Unit)
+
+      /**
+       * @param clear Displays a clear button.
+       */
+      public fun clear(clear: IResolvable)
+
+      /**
+       * @param clear Displays a clear button.
+       */
+      public fun clear(clear: FormButtonProperty)
+
+      /**
+       * @param clear Displays a clear button.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2a2368f12872aac3777c653e431f7b0f7aec0c02dae3f26efd5c2947552f2c9f")
+      public fun clear(clear: FormButtonProperty.Builder.() -> Unit)
+
+      /**
+       * @param position The position of the button.
+       */
+      public fun position(position: String)
+
+      /**
+       * @param submit Displays a submit button.
+       */
+      public fun submit(submit: IResolvable)
+
+      /**
+       * @param submit Displays a submit button.
+       */
+      public fun submit(submit: FormButtonProperty)
+
+      /**
+       * @param submit Displays a submit button.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("32f04f26d3e185a85d2564ea012630e118c35b0d78826c61679dabad9da7f557")
+      public fun submit(submit: FormButtonProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty.builder()
+
+      /**
+       * @param cancel Displays a cancel button.
+       */
+      override fun cancel(cancel: IResolvable) {
+        cdkBuilder.cancel(cancel.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cancel Displays a cancel button.
+       */
+      override fun cancel(cancel: FormButtonProperty) {
+        cdkBuilder.cancel(cancel.let(FormButtonProperty::unwrap))
+      }
+
+      /**
+       * @param cancel Displays a cancel button.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e10ffc6077cfdea59b4b69d4aba771b4edabf72c7e985b24a609acb520ad0c29")
+      override fun cancel(cancel: FormButtonProperty.Builder.() -> Unit): Unit =
+          cancel(FormButtonProperty(cancel))
+
+      /**
+       * @param clear Displays a clear button.
+       */
+      override fun clear(clear: IResolvable) {
+        cdkBuilder.clear(clear.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param clear Displays a clear button.
+       */
+      override fun clear(clear: FormButtonProperty) {
+        cdkBuilder.clear(clear.let(FormButtonProperty::unwrap))
+      }
+
+      /**
+       * @param clear Displays a clear button.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2a2368f12872aac3777c653e431f7b0f7aec0c02dae3f26efd5c2947552f2c9f")
+      override fun clear(clear: FormButtonProperty.Builder.() -> Unit): Unit =
+          clear(FormButtonProperty(clear))
+
+      /**
+       * @param position The position of the button.
+       */
+      override fun position(position: String) {
+        cdkBuilder.position(position)
+      }
+
+      /**
+       * @param submit Displays a submit button.
+       */
+      override fun submit(submit: IResolvable) {
+        cdkBuilder.submit(submit.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param submit Displays a submit button.
+       */
+      override fun submit(submit: FormButtonProperty) {
+        cdkBuilder.submit(submit.let(FormButtonProperty::unwrap))
+      }
+
+      /**
+       * @param submit Displays a submit button.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("32f04f26d3e185a85d2564ea012630e118c35b0d78826c61679dabad9da7f557")
+      override fun submit(submit: FormButtonProperty.Builder.() -> Unit): Unit =
+          submit(FormButtonProperty(submit))
+
+      public fun build(): software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty,
+    ) : CdkObject(cdkObject), FormCTAProperty {
+      /**
+       * Displays a cancel button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-cancel)
+       */
+      override fun cancel(): Any? = unwrap(this).getCancel()
+
+      /**
+       * Displays a clear button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-clear)
+       */
+      override fun clear(): Any? = unwrap(this).getClear()
+
+      /**
+       * The position of the button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-position)
+       */
+      override fun position(): String? = unwrap(this).getPosition()
+
+      /**
+       * Displays a submit button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formcta.html#cfn-amplifyuibuilder-form-formcta-submit)
+       */
+      override fun submit(): Any? = unwrap(this).getSubmit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormCTAProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty):
+          FormCTAProperty = CdkObjectWrappers.wrap(cdkObject) as? FormCTAProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormCTAProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty
+    }
+  }
+
+  /**
+   * The `FormDataTypeConfig` property specifies the data type configuration for the data source
+   * associated with a form.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormDataTypeConfigProperty formDataTypeConfigProperty = FormDataTypeConfigProperty.builder()
+   * .dataSourceType("dataSourceType")
+   * .dataTypeName("dataTypeName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html)
+   */
+  public interface FormDataTypeConfigProperty {
+    /**
+     * The data source type, either an Amplify DataStore model or a custom data type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html#cfn-amplifyuibuilder-form-formdatatypeconfig-datasourcetype)
+     */
+    public fun dataSourceType(): String
+
+    /**
+     * The unique name of the data type you are using as the data source for the form.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html#cfn-amplifyuibuilder-form-formdatatypeconfig-datatypename)
+     */
+    public fun dataTypeName(): String
+
+    /**
+     * A builder for [FormDataTypeConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataSourceType The data source type, either an Amplify DataStore model or a custom
+       * data type. 
+       */
+      public fun dataSourceType(dataSourceType: String)
+
+      /**
+       * @param dataTypeName The unique name of the data type you are using as the data source for
+       * the form. 
+       */
+      public fun dataTypeName(dataTypeName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty.builder()
+
+      /**
+       * @param dataSourceType The data source type, either an Amplify DataStore model or a custom
+       * data type. 
+       */
+      override fun dataSourceType(dataSourceType: String) {
+        cdkBuilder.dataSourceType(dataSourceType)
+      }
+
+      /**
+       * @param dataTypeName The unique name of the data type you are using as the data source for
+       * the form. 
+       */
+      override fun dataTypeName(dataTypeName: String) {
+        cdkBuilder.dataTypeName(dataTypeName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty,
+    ) : CdkObject(cdkObject), FormDataTypeConfigProperty {
+      /**
+       * The data source type, either an Amplify DataStore model or a custom data type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html#cfn-amplifyuibuilder-form-formdatatypeconfig-datasourcetype)
+       */
+      override fun dataSourceType(): String = unwrap(this).getDataSourceType()
+
+      /**
+       * The unique name of the data type you are using as the data source for the form.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html#cfn-amplifyuibuilder-form-formdatatypeconfig-datatypename)
+       */
+      override fun dataTypeName(): String = unwrap(this).getDataTypeName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormDataTypeConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty):
+          FormDataTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormDataTypeConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormDataTypeConfigProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty
+    }
+  }
+
+  /**
+   * Represents the data binding configuration for a specific property using data stored in AWS .
+   *
+   * For AWS connected properties, you can bind a property to data stored in an Amplify DataStore
+   * model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormInputBindingPropertiesValuePropertiesProperty
+   * formInputBindingPropertiesValuePropertiesProperty =
+   * FormInputBindingPropertiesValuePropertiesProperty.builder()
+   * .model("model")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties.html)
+   */
+  public interface FormInputBindingPropertiesValuePropertiesProperty {
+    /**
+     * An Amplify DataStore model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties-model)
+     */
+    public fun model(): String? = unwrap(this).getModel()
+
+    /**
+     * A builder for [FormInputBindingPropertiesValuePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param model An Amplify DataStore model.
+       */
+      public fun model(model: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty.builder()
+
+      /**
+       * @param model An Amplify DataStore model.
+       */
+      override fun model(model: String) {
+        cdkBuilder.model(model)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty,
+    ) : CdkObject(cdkObject), FormInputBindingPropertiesValuePropertiesProperty {
+      /**
+       * An Amplify DataStore model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties-model)
+       */
+      override fun model(): String? = unwrap(this).getModel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FormInputBindingPropertiesValuePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty):
+          FormInputBindingPropertiesValuePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormInputBindingPropertiesValuePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormInputBindingPropertiesValuePropertiesProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty
+    }
+  }
+
+  /**
+   * Represents the data binding configuration for a form's input fields at runtime.You can use
+   * `FormInputBindingPropertiesValue` to add exposed properties to a form to allow different values to
+   * be entered when a form is reused in different places in an app.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormInputBindingPropertiesValueProperty formInputBindingPropertiesValueProperty =
+   * FormInputBindingPropertiesValueProperty.builder()
+   * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+   * .model("model")
+   * .build())
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html)
+   */
+  public interface FormInputBindingPropertiesValueProperty {
+    /**
+     * Describes the properties to customize with data at runtime.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalue-bindingproperties)
+     */
+    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+    /**
+     * The property type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalue-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [FormInputBindingPropertiesValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      public fun bindingProperties(bindingProperties: IResolvable)
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      public
+          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty)
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("068d8d4bfa9fce6e7705c4e49fec73461aa875f27d186222db7d59a13f9c65ae")
+      public
+          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The property type.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty.builder()
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      override fun bindingProperties(bindingProperties: IResolvable) {
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      override
+          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty) {
+        cdkBuilder.bindingProperties(bindingProperties.let(FormInputBindingPropertiesValuePropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("068d8d4bfa9fce6e7705c4e49fec73461aa875f27d186222db7d59a13f9c65ae")
+      override
+          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty.Builder.() -> Unit):
+          Unit =
+          bindingProperties(FormInputBindingPropertiesValuePropertiesProperty(bindingProperties))
+
+      /**
+       * @param type The property type.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty,
+    ) : CdkObject(cdkObject), FormInputBindingPropertiesValueProperty {
+      /**
+       * Describes the properties to customize with data at runtime.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalue-bindingproperties)
+       */
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+      /**
+       * The property type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalue.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalue-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FormInputBindingPropertiesValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty):
+          FormInputBindingPropertiesValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormInputBindingPropertiesValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormInputBindingPropertiesValueProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty
+    }
+  }
+
+  /**
+   * Associates a form property to a binding property.
+   *
+   * This enables exposed properties on the top level form to propagate data to the form's property
+   * values.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormInputValuePropertyBindingPropertiesProperty formInputValuePropertyBindingPropertiesProperty
+   * = FormInputValuePropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html)
+   */
+  public interface FormInputValuePropertyBindingPropertiesProperty {
+    /**
+     * The data field to bind the property to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html#cfn-amplifyuibuilder-form-forminputvaluepropertybindingproperties-field)
+     */
+    public fun `field`(): String? = unwrap(this).getField()
+
+    /**
+     * The form property to bind to the data field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html#cfn-amplifyuibuilder-form-forminputvaluepropertybindingproperties-property)
+     */
+    public fun `property`(): String
+
+    /**
+     * A builder for [FormInputValuePropertyBindingPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param field The data field to bind the property to.
+       */
+      public fun `field`(`field`: String)
+
+      /**
+       * @param property The form property to bind to the data field. 
+       */
+      public fun `property`(`property`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty.builder()
+
+      /**
+       * @param field The data field to bind the property to.
+       */
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+      }
+
+      /**
+       * @param property The form property to bind to the data field. 
+       */
+      override fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty,
+    ) : CdkObject(cdkObject), FormInputValuePropertyBindingPropertiesProperty {
+      /**
+       * The data field to bind the property to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html#cfn-amplifyuibuilder-form-forminputvaluepropertybindingproperties-field)
+       */
+      override fun `field`(): String? = unwrap(this).getField()
+
+      /**
+       * The form property to bind to the data field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvaluepropertybindingproperties.html#cfn-amplifyuibuilder-form-forminputvaluepropertybindingproperties-property)
+       */
+      override fun `property`(): String = unwrap(this).getProperty()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FormInputValuePropertyBindingPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty):
+          FormInputValuePropertyBindingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormInputValuePropertyBindingPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormInputValuePropertyBindingPropertiesProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty
+    }
+  }
+
+  /**
+   * The `FormInputValueProperty` property specifies the configuration for an input field on a form.
+   *
+   * Use `FormInputValueProperty` to specify the values to render or bind by default.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormInputValuePropertyProperty formInputValuePropertyProperty_;
+   * FormInputValuePropertyProperty formInputValuePropertyProperty =
+   * FormInputValuePropertyProperty.builder()
+   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .concat(List.of(formInputValuePropertyProperty_))
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html)
+   */
+  public interface FormInputValuePropertyProperty {
+    /**
+     * The information to bind fields to data at runtime.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-bindingproperties)
+     */
+    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+    /**
+     * A list of form properties to concatenate to create the value to assign to this field
+     * property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-concat)
+     */
+    public fun concat(): Any? = unwrap(this).getConcat()
+
+    /**
+     * The value to assign to the input field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [FormInputValuePropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      public fun bindingProperties(bindingProperties: IResolvable)
+
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      public
+          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty)
+
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f07939339dd165ac82ec59948a81aac59321a5986d4f3ed9a39e58c1b5f19abc")
+      public
+          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param concat A list of form properties to concatenate to create the value to assign to
+       * this field property.
+       */
+      public fun concat(concat: IResolvable)
+
+      /**
+       * @param concat A list of form properties to concatenate to create the value to assign to
+       * this field property.
+       */
+      public fun concat(concat: List<Any>)
+
+      /**
+       * @param concat A list of form properties to concatenate to create the value to assign to
+       * this field property.
+       */
+      public fun concat(vararg concat: Any)
+
+      /**
+       * @param value The value to assign to the input field.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty.builder()
+
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      override fun bindingProperties(bindingProperties: IResolvable) {
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      override
+          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty) {
+        cdkBuilder.bindingProperties(bindingProperties.let(FormInputValuePropertyBindingPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f07939339dd165ac82ec59948a81aac59321a5986d4f3ed9a39e58c1b5f19abc")
+      override
+          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty.Builder.() -> Unit):
+          Unit =
+          bindingProperties(FormInputValuePropertyBindingPropertiesProperty(bindingProperties))
+
+      /**
+       * @param concat A list of form properties to concatenate to create the value to assign to
+       * this field property.
+       */
+      override fun concat(concat: IResolvable) {
+        cdkBuilder.concat(concat.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param concat A list of form properties to concatenate to create the value to assign to
+       * this field property.
+       */
+      override fun concat(concat: List<Any>) {
+        cdkBuilder.concat(concat)
+      }
+
+      /**
+       * @param concat A list of form properties to concatenate to create the value to assign to
+       * this field property.
+       */
+      override fun concat(vararg concat: Any): Unit = concat(concat.toList())
+
+      /**
+       * @param value The value to assign to the input field.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty,
+    ) : CdkObject(cdkObject), FormInputValuePropertyProperty {
+      /**
+       * The information to bind fields to data at runtime.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-bindingproperties)
+       */
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+      /**
+       * A list of form properties to concatenate to create the value to assign to this field
+       * property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-concat)
+       */
+      override fun concat(): Any? = unwrap(this).getConcat()
+
+      /**
+       * The value to assign to the input field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputvalueproperty.html#cfn-amplifyuibuilder-form-forminputvalueproperty-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormInputValuePropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty):
+          FormInputValuePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormInputValuePropertyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormInputValuePropertyProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty
+    }
+  }
+
+  /**
+   * The `FormStyleConfig` property specifies the configuration settings for the form's style
+   * properties.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormStyleConfigProperty formStyleConfigProperty = FormStyleConfigProperty.builder()
+   * .tokenReference("tokenReference")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html)
+   */
+  public interface FormStyleConfigProperty {
+    /**
+     * A reference to a design token to use to bind the form's style properties to an existing
+     * theme.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html#cfn-amplifyuibuilder-form-formstyleconfig-tokenreference)
+     */
+    public fun tokenReference(): String? = unwrap(this).getTokenReference()
+
+    /**
+     * The value of the style setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html#cfn-amplifyuibuilder-form-formstyleconfig-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [FormStyleConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tokenReference A reference to a design token to use to bind the form's style
+       * properties to an existing theme.
+       */
+      public fun tokenReference(tokenReference: String)
+
+      /**
+       * @param value The value of the style setting.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty.builder()
+
+      /**
+       * @param tokenReference A reference to a design token to use to bind the form's style
+       * properties to an existing theme.
+       */
+      override fun tokenReference(tokenReference: String) {
+        cdkBuilder.tokenReference(tokenReference)
+      }
+
+      /**
+       * @param value The value of the style setting.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty,
+    ) : CdkObject(cdkObject), FormStyleConfigProperty {
+      /**
+       * A reference to a design token to use to bind the form's style properties to an existing
+       * theme.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html#cfn-amplifyuibuilder-form-formstyleconfig-tokenreference)
+       */
+      override fun tokenReference(): String? = unwrap(this).getTokenReference()
+
+      /**
+       * The value of the style setting.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html#cfn-amplifyuibuilder-form-formstyleconfig-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormStyleConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty):
+          FormStyleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FormStyleConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormStyleConfigProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty
+    }
+  }
+
+  /**
+   * The `FormStyle` property specifies the configuration for the form's style.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormStyleProperty formStyleProperty = FormStyleProperty.builder()
+   * .horizontalGap(FormStyleConfigProperty.builder()
+   * .tokenReference("tokenReference")
+   * .value("value")
+   * .build())
+   * .outerPadding(FormStyleConfigProperty.builder()
+   * .tokenReference("tokenReference")
+   * .value("value")
+   * .build())
+   * .verticalGap(FormStyleConfigProperty.builder()
+   * .tokenReference("tokenReference")
+   * .value("value")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html)
+   */
+  public interface FormStyleProperty {
+    /**
+     * The spacing for the horizontal gap.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-horizontalgap)
+     */
+    public fun horizontalGap(): Any? = unwrap(this).getHorizontalGap()
+
+    /**
+     * The size of the outer padding for the form.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-outerpadding)
+     */
+    public fun outerPadding(): Any? = unwrap(this).getOuterPadding()
+
+    /**
+     * The spacing for the vertical gap.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-verticalgap)
+     */
+    public fun verticalGap(): Any? = unwrap(this).getVerticalGap()
+
+    /**
+     * A builder for [FormStyleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param horizontalGap The spacing for the horizontal gap.
+       */
+      public fun horizontalGap(horizontalGap: IResolvable)
+
+      /**
+       * @param horizontalGap The spacing for the horizontal gap.
+       */
+      public fun horizontalGap(horizontalGap: FormStyleConfigProperty)
+
+      /**
+       * @param horizontalGap The spacing for the horizontal gap.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e8a12023b55a24b6429e79c0814ac53caaf170936f4d8368e65dff1446a4d3b6")
+      public fun horizontalGap(horizontalGap: FormStyleConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param outerPadding The size of the outer padding for the form.
+       */
+      public fun outerPadding(outerPadding: IResolvable)
+
+      /**
+       * @param outerPadding The size of the outer padding for the form.
+       */
+      public fun outerPadding(outerPadding: FormStyleConfigProperty)
+
+      /**
+       * @param outerPadding The size of the outer padding for the form.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ce45d7f38411ba695c26d1741ceb0e0d065e1c6077f4fd619309a3ca38008f19")
+      public fun outerPadding(outerPadding: FormStyleConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param verticalGap The spacing for the vertical gap.
+       */
+      public fun verticalGap(verticalGap: IResolvable)
+
+      /**
+       * @param verticalGap The spacing for the vertical gap.
+       */
+      public fun verticalGap(verticalGap: FormStyleConfigProperty)
+
+      /**
+       * @param verticalGap The spacing for the vertical gap.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f105ff7e1666f9fc3e9461df44db047b2bf72dcd40425ca3d5e5224856a53e57")
+      public fun verticalGap(verticalGap: FormStyleConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty.builder()
+
+      /**
+       * @param horizontalGap The spacing for the horizontal gap.
+       */
+      override fun horizontalGap(horizontalGap: IResolvable) {
+        cdkBuilder.horizontalGap(horizontalGap.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param horizontalGap The spacing for the horizontal gap.
+       */
+      override fun horizontalGap(horizontalGap: FormStyleConfigProperty) {
+        cdkBuilder.horizontalGap(horizontalGap.let(FormStyleConfigProperty::unwrap))
+      }
+
+      /**
+       * @param horizontalGap The spacing for the horizontal gap.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e8a12023b55a24b6429e79c0814ac53caaf170936f4d8368e65dff1446a4d3b6")
+      override fun horizontalGap(horizontalGap: FormStyleConfigProperty.Builder.() -> Unit): Unit =
+          horizontalGap(FormStyleConfigProperty(horizontalGap))
+
+      /**
+       * @param outerPadding The size of the outer padding for the form.
+       */
+      override fun outerPadding(outerPadding: IResolvable) {
+        cdkBuilder.outerPadding(outerPadding.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param outerPadding The size of the outer padding for the form.
+       */
+      override fun outerPadding(outerPadding: FormStyleConfigProperty) {
+        cdkBuilder.outerPadding(outerPadding.let(FormStyleConfigProperty::unwrap))
+      }
+
+      /**
+       * @param outerPadding The size of the outer padding for the form.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ce45d7f38411ba695c26d1741ceb0e0d065e1c6077f4fd619309a3ca38008f19")
+      override fun outerPadding(outerPadding: FormStyleConfigProperty.Builder.() -> Unit): Unit =
+          outerPadding(FormStyleConfigProperty(outerPadding))
+
+      /**
+       * @param verticalGap The spacing for the vertical gap.
+       */
+      override fun verticalGap(verticalGap: IResolvable) {
+        cdkBuilder.verticalGap(verticalGap.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param verticalGap The spacing for the vertical gap.
+       */
+      override fun verticalGap(verticalGap: FormStyleConfigProperty) {
+        cdkBuilder.verticalGap(verticalGap.let(FormStyleConfigProperty::unwrap))
+      }
+
+      /**
+       * @param verticalGap The spacing for the vertical gap.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f105ff7e1666f9fc3e9461df44db047b2bf72dcd40425ca3d5e5224856a53e57")
+      override fun verticalGap(verticalGap: FormStyleConfigProperty.Builder.() -> Unit): Unit =
+          verticalGap(FormStyleConfigProperty(verticalGap))
+
+      public fun build(): software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty,
+    ) : CdkObject(cdkObject), FormStyleProperty {
+      /**
+       * The spacing for the horizontal gap.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-horizontalgap)
+       */
+      override fun horizontalGap(): Any? = unwrap(this).getHorizontalGap()
+
+      /**
+       * The size of the outer padding for the form.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-outerpadding)
+       */
+      override fun outerPadding(): Any? = unwrap(this).getOuterPadding()
+
+      /**
+       * The spacing for the vertical gap.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyle.html#cfn-amplifyuibuilder-form-formstyle-verticalgap)
+       */
+      override fun verticalGap(): Any? = unwrap(this).getVerticalGap()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormStyleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty):
+          FormStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? FormStyleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormStyleProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty
+    }
+  }
+
+  /**
    * The `SectionalElement` property specifies the configuration information for a visual helper
    * element for a form.
    *
@@ -3589,868 +4280,6 @@ public open class CfnForm internal constructor(
   }
 
   /**
-   * Represents the data binding configuration for a specific property using data stored in AWS .
-   *
-   * For AWS connected properties, you can bind a property to data stored in an Amplify DataStore
-   * model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormInputBindingPropertiesValuePropertiesProperty
-   * formInputBindingPropertiesValuePropertiesProperty =
-   * FormInputBindingPropertiesValuePropertiesProperty.builder()
-   * .model("model")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties.html)
-   */
-  public interface FormInputBindingPropertiesValuePropertiesProperty {
-    /**
-     * An Amplify DataStore model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties-model)
-     */
-    public fun model(): String? = unwrap(this).getModel()
-
-    /**
-     * A builder for [FormInputBindingPropertiesValuePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param model An Amplify DataStore model.
-       */
-      public fun model(model: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty.builder()
-
-      /**
-       * @param model An Amplify DataStore model.
-       */
-      override fun model(model: String) {
-        cdkBuilder.model(model)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty,
-    ) : CdkObject(cdkObject), FormInputBindingPropertiesValuePropertiesProperty {
-      /**
-       * An Amplify DataStore model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-form-forminputbindingpropertiesvalueproperties-model)
-       */
-      override fun model(): String? = unwrap(this).getModel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FormInputBindingPropertiesValuePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty):
-          FormInputBindingPropertiesValuePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FormInputBindingPropertiesValuePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormInputBindingPropertiesValuePropertiesProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty
-    }
-  }
-
-  /**
-   * The `FormDataTypeConfig` property specifies the data type configuration for the data source
-   * associated with a form.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormDataTypeConfigProperty formDataTypeConfigProperty = FormDataTypeConfigProperty.builder()
-   * .dataSourceType("dataSourceType")
-   * .dataTypeName("dataTypeName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html)
-   */
-  public interface FormDataTypeConfigProperty {
-    /**
-     * The data source type, either an Amplify DataStore model or a custom data type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html#cfn-amplifyuibuilder-form-formdatatypeconfig-datasourcetype)
-     */
-    public fun dataSourceType(): String
-
-    /**
-     * The unique name of the data type you are using as the data source for the form.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html#cfn-amplifyuibuilder-form-formdatatypeconfig-datatypename)
-     */
-    public fun dataTypeName(): String
-
-    /**
-     * A builder for [FormDataTypeConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataSourceType The data source type, either an Amplify DataStore model or a custom
-       * data type. 
-       */
-      public fun dataSourceType(dataSourceType: String)
-
-      /**
-       * @param dataTypeName The unique name of the data type you are using as the data source for
-       * the form. 
-       */
-      public fun dataTypeName(dataTypeName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty.builder()
-
-      /**
-       * @param dataSourceType The data source type, either an Amplify DataStore model or a custom
-       * data type. 
-       */
-      override fun dataSourceType(dataSourceType: String) {
-        cdkBuilder.dataSourceType(dataSourceType)
-      }
-
-      /**
-       * @param dataTypeName The unique name of the data type you are using as the data source for
-       * the form. 
-       */
-      override fun dataTypeName(dataTypeName: String) {
-        cdkBuilder.dataTypeName(dataTypeName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty,
-    ) : CdkObject(cdkObject), FormDataTypeConfigProperty {
-      /**
-       * The data source type, either an Amplify DataStore model or a custom data type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html#cfn-amplifyuibuilder-form-formdatatypeconfig-datasourcetype)
-       */
-      override fun dataSourceType(): String = unwrap(this).getDataSourceType()
-
-      /**
-       * The unique name of the data type you are using as the data source for the form.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html#cfn-amplifyuibuilder-form-formdatatypeconfig-datatypename)
-       */
-      override fun dataTypeName(): String = unwrap(this).getDataTypeName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FormDataTypeConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty):
-          FormDataTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FormDataTypeConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormDataTypeConfigProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty
-    }
-  }
-
-  /**
-   * The `FieldPosition` property specifies the field position.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FieldPositionProperty fieldPositionProperty = FieldPositionProperty.builder()
-   * .below("below")
-   * .fixed("fixed")
-   * .rightOf("rightOf")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html)
-   */
-  public interface FieldPositionProperty {
-    /**
-     * The field position is below the field specified by the string.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-below)
-     */
-    public fun below(): String? = unwrap(this).getBelow()
-
-    /**
-     * The field position is fixed and doesn't change in relation to other fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-fixed)
-     */
-    public fun fixed(): String? = unwrap(this).getFixed()
-
-    /**
-     * The field position is to the right of the field specified by the string.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-rightof)
-     */
-    public fun rightOf(): String? = unwrap(this).getRightOf()
-
-    /**
-     * A builder for [FieldPositionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param below The field position is below the field specified by the string.
-       */
-      public fun below(below: String)
-
-      /**
-       * @param fixed The field position is fixed and doesn't change in relation to other fields.
-       */
-      public fun fixed(fixed: String)
-
-      /**
-       * @param rightOf The field position is to the right of the field specified by the string.
-       */
-      public fun rightOf(rightOf: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty.builder()
-
-      /**
-       * @param below The field position is below the field specified by the string.
-       */
-      override fun below(below: String) {
-        cdkBuilder.below(below)
-      }
-
-      /**
-       * @param fixed The field position is fixed and doesn't change in relation to other fields.
-       */
-      override fun fixed(fixed: String) {
-        cdkBuilder.fixed(fixed)
-      }
-
-      /**
-       * @param rightOf The field position is to the right of the field specified by the string.
-       */
-      override fun rightOf(rightOf: String) {
-        cdkBuilder.rightOf(rightOf)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty,
-    ) : CdkObject(cdkObject), FieldPositionProperty {
-      /**
-       * The field position is below the field specified by the string.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-below)
-       */
-      override fun below(): String? = unwrap(this).getBelow()
-
-      /**
-       * The field position is fixed and doesn't change in relation to other fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-fixed)
-       */
-      override fun fixed(): String? = unwrap(this).getFixed()
-
-      /**
-       * The field position is to the right of the field specified by the string.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldposition.html#cfn-amplifyuibuilder-form-fieldposition-rightof)
-       */
-      override fun rightOf(): String? = unwrap(this).getRightOf()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FieldPositionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty):
-          FieldPositionProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldPositionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FieldPositionProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty
-    }
-  }
-
-  /**
-   * The `ValueMappings` property specifies the data binding configuration for a value map.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormInputValuePropertyProperty formInputValuePropertyProperty_;
-   * ValueMappingsProperty valueMappingsProperty = ValueMappingsProperty.builder()
-   * .values(List.of(ValueMappingProperty.builder()
-   * .value(FormInputValuePropertyProperty.builder()
-   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .concat(List.of(formInputValuePropertyProperty_))
-   * .value("value")
-   * .build())
-   * // the properties below are optional
-   * .displayValue(FormInputValuePropertyProperty.builder()
-   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .concat(List.of(formInputValuePropertyProperty_))
-   * .value("value")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .bindingProperties(Map.of(
-   * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
-   * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
-   * .model("model")
-   * .build())
-   * .type("type")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html)
-   */
-  public interface ValueMappingsProperty {
-    /**
-     * The information to bind fields to data at runtime.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html#cfn-amplifyuibuilder-form-valuemappings-bindingproperties)
-     */
-    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-    /**
-     * The value and display value pairs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html#cfn-amplifyuibuilder-form-valuemappings-values)
-     */
-    public fun values(): Any
-
-    /**
-     * A builder for [ValueMappingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      public fun bindingProperties(bindingProperties: IResolvable)
-
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      public fun bindingProperties(bindingProperties: Map<String, Any>)
-
-      /**
-       * @param values The value and display value pairs. 
-       */
-      public fun values(values: IResolvable)
-
-      /**
-       * @param values The value and display value pairs. 
-       */
-      public fun values(values: List<Any>)
-
-      /**
-       * @param values The value and display value pairs. 
-       */
-      public fun values(vararg values: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty.builder()
-
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param bindingProperties The information to bind fields to data at runtime.
-       */
-      override fun bindingProperties(bindingProperties: Map<String, Any>) {
-        cdkBuilder.bindingProperties(bindingProperties)
-      }
-
-      /**
-       * @param values The value and display value pairs. 
-       */
-      override fun values(values: IResolvable) {
-        cdkBuilder.values(values.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param values The value and display value pairs. 
-       */
-      override fun values(values: List<Any>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The value and display value pairs. 
-       */
-      override fun values(vararg values: Any): Unit = values(values.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty,
-    ) : CdkObject(cdkObject), ValueMappingsProperty {
-      /**
-       * The information to bind fields to data at runtime.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html#cfn-amplifyuibuilder-form-valuemappings-bindingproperties)
-       */
-      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-      /**
-       * The value and display value pairs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html#cfn-amplifyuibuilder-form-valuemappings-values)
-       */
-      override fun values(): Any = unwrap(this).getValues()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ValueMappingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty):
-          ValueMappingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ValueMappingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ValueMappingsProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty
-    }
-  }
-
-  /**
-   * The `FieldConfig` property specifies the configuration information for a field in a table.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormInputValuePropertyProperty formInputValuePropertyProperty_;
-   * FieldConfigProperty fieldConfigProperty = FieldConfigProperty.builder()
-   * .excluded(false)
-   * .inputType(FieldInputConfigProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .defaultChecked(false)
-   * .defaultCountryCode("defaultCountryCode")
-   * .defaultValue("defaultValue")
-   * .descriptiveText("descriptiveText")
-   * .fileUploaderConfig(FileUploaderFieldConfigProperty.builder()
-   * .acceptedFileTypes(List.of("acceptedFileTypes"))
-   * .accessLevel("accessLevel")
-   * // the properties below are optional
-   * .isResumable(false)
-   * .maxFileCount(123)
-   * .maxSize(123)
-   * .showThumbnails(false)
-   * .build())
-   * .isArray(false)
-   * .maxValue(123)
-   * .minValue(123)
-   * .name("name")
-   * .placeholder("placeholder")
-   * .readOnly(false)
-   * .required(false)
-   * .step(123)
-   * .value("value")
-   * .valueMappings(ValueMappingsProperty.builder()
-   * .values(List.of(ValueMappingProperty.builder()
-   * .value(FormInputValuePropertyProperty.builder()
-   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .concat(List.of(formInputValuePropertyProperty_))
-   * .value("value")
-   * .build())
-   * // the properties below are optional
-   * .displayValue(FormInputValuePropertyProperty.builder()
-   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .concat(List.of(formInputValuePropertyProperty_))
-   * .value("value")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .bindingProperties(Map.of(
-   * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
-   * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
-   * .model("model")
-   * .build())
-   * .type("type")
-   * .build()))
-   * .build())
-   * .build())
-   * .label("label")
-   * .position(FieldPositionProperty.builder()
-   * .below("below")
-   * .fixed("fixed")
-   * .rightOf("rightOf")
-   * .build())
-   * .validations(List.of(FieldValidationConfigurationProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .numValues(List.of(123))
-   * .strValues(List.of("strValues"))
-   * .validationMessage("validationMessage")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html)
-   */
-  public interface FieldConfigProperty {
-    /**
-     * Specifies whether to hide a field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-excluded)
-     */
-    public fun excluded(): Any? = unwrap(this).getExcluded()
-
-    /**
-     * Describes the configuration for the default input value to display for a field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-inputtype)
-     */
-    public fun inputType(): Any? = unwrap(this).getInputType()
-
-    /**
-     * The label for the field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-label)
-     */
-    public fun label(): String? = unwrap(this).getLabel()
-
-    /**
-     * Specifies the field position.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-position)
-     */
-    public fun position(): Any? = unwrap(this).getPosition()
-
-    /**
-     * The validations to perform on the value in the field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-validations)
-     */
-    public fun validations(): Any? = unwrap(this).getValidations()
-
-    /**
-     * A builder for [FieldConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param excluded Specifies whether to hide a field.
-       */
-      public fun excluded(excluded: Boolean)
-
-      /**
-       * @param excluded Specifies whether to hide a field.
-       */
-      public fun excluded(excluded: IResolvable)
-
-      /**
-       * @param inputType Describes the configuration for the default input value to display for a
-       * field.
-       */
-      public fun inputType(inputType: IResolvable)
-
-      /**
-       * @param inputType Describes the configuration for the default input value to display for a
-       * field.
-       */
-      public fun inputType(inputType: FieldInputConfigProperty)
-
-      /**
-       * @param inputType Describes the configuration for the default input value to display for a
-       * field.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c64032d2e345e9547d0f3723ea7d0e92e4b928e6587669dd5bb3f6dc3742b141")
-      public fun inputType(inputType: FieldInputConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param label The label for the field.
-       */
-      public fun label(label: String)
-
-      /**
-       * @param position Specifies the field position.
-       */
-      public fun position(position: IResolvable)
-
-      /**
-       * @param position Specifies the field position.
-       */
-      public fun position(position: FieldPositionProperty)
-
-      /**
-       * @param position Specifies the field position.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4d0acb41da5497eb76185a9fa1f05138d22a493616d0de6fdae657e8289e1d15")
-      public fun position(position: FieldPositionProperty.Builder.() -> Unit)
-
-      /**
-       * @param validations The validations to perform on the value in the field.
-       */
-      public fun validations(validations: IResolvable)
-
-      /**
-       * @param validations The validations to perform on the value in the field.
-       */
-      public fun validations(validations: List<Any>)
-
-      /**
-       * @param validations The validations to perform on the value in the field.
-       */
-      public fun validations(vararg validations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty.builder()
-
-      /**
-       * @param excluded Specifies whether to hide a field.
-       */
-      override fun excluded(excluded: Boolean) {
-        cdkBuilder.excluded(excluded)
-      }
-
-      /**
-       * @param excluded Specifies whether to hide a field.
-       */
-      override fun excluded(excluded: IResolvable) {
-        cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param inputType Describes the configuration for the default input value to display for a
-       * field.
-       */
-      override fun inputType(inputType: IResolvable) {
-        cdkBuilder.inputType(inputType.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param inputType Describes the configuration for the default input value to display for a
-       * field.
-       */
-      override fun inputType(inputType: FieldInputConfigProperty) {
-        cdkBuilder.inputType(inputType.let(FieldInputConfigProperty::unwrap))
-      }
-
-      /**
-       * @param inputType Describes the configuration for the default input value to display for a
-       * field.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c64032d2e345e9547d0f3723ea7d0e92e4b928e6587669dd5bb3f6dc3742b141")
-      override fun inputType(inputType: FieldInputConfigProperty.Builder.() -> Unit): Unit =
-          inputType(FieldInputConfigProperty(inputType))
-
-      /**
-       * @param label The label for the field.
-       */
-      override fun label(label: String) {
-        cdkBuilder.label(label)
-      }
-
-      /**
-       * @param position Specifies the field position.
-       */
-      override fun position(position: IResolvable) {
-        cdkBuilder.position(position.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param position Specifies the field position.
-       */
-      override fun position(position: FieldPositionProperty) {
-        cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
-      }
-
-      /**
-       * @param position Specifies the field position.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4d0acb41da5497eb76185a9fa1f05138d22a493616d0de6fdae657e8289e1d15")
-      override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
-          position(FieldPositionProperty(position))
-
-      /**
-       * @param validations The validations to perform on the value in the field.
-       */
-      override fun validations(validations: IResolvable) {
-        cdkBuilder.validations(validations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param validations The validations to perform on the value in the field.
-       */
-      override fun validations(validations: List<Any>) {
-        cdkBuilder.validations(validations)
-      }
-
-      /**
-       * @param validations The validations to perform on the value in the field.
-       */
-      override fun validations(vararg validations: Any): Unit = validations(validations.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty,
-    ) : CdkObject(cdkObject), FieldConfigProperty {
-      /**
-       * Specifies whether to hide a field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-excluded)
-       */
-      override fun excluded(): Any? = unwrap(this).getExcluded()
-
-      /**
-       * Describes the configuration for the default input value to display for a field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-inputtype)
-       */
-      override fun inputType(): Any? = unwrap(this).getInputType()
-
-      /**
-       * The label for the field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-label)
-       */
-      override fun label(): String? = unwrap(this).getLabel()
-
-      /**
-       * Specifies the field position.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-position)
-       */
-      override fun position(): Any? = unwrap(this).getPosition()
-
-      /**
-       * The validations to perform on the value in the field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldconfig.html#cfn-amplifyuibuilder-form-fieldconfig-validations)
-       */
-      override fun validations(): Any? = unwrap(this).getValidations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FieldConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty):
-          FieldConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FieldConfigProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty
-    }
-  }
-
-  /**
    * The `ValueMapping` property specifies the association between a complex object and a display
    * value.
    *
@@ -4631,6 +4460,177 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty
+    }
+  }
+
+  /**
+   * The `ValueMappings` property specifies the data binding configuration for a value map.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormInputValuePropertyProperty formInputValuePropertyProperty_;
+   * ValueMappingsProperty valueMappingsProperty = ValueMappingsProperty.builder()
+   * .values(List.of(ValueMappingProperty.builder()
+   * .value(FormInputValuePropertyProperty.builder()
+   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .concat(List.of(formInputValuePropertyProperty_))
+   * .value("value")
+   * .build())
+   * // the properties below are optional
+   * .displayValue(FormInputValuePropertyProperty.builder()
+   * .bindingProperties(FormInputValuePropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .concat(List.of(formInputValuePropertyProperty_))
+   * .value("value")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .bindingProperties(Map.of(
+   * "bindingPropertiesKey", FormInputBindingPropertiesValueProperty.builder()
+   * .bindingProperties(FormInputBindingPropertiesValuePropertiesProperty.builder()
+   * .model("model")
+   * .build())
+   * .type("type")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html)
+   */
+  public interface ValueMappingsProperty {
+    /**
+     * The information to bind fields to data at runtime.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html#cfn-amplifyuibuilder-form-valuemappings-bindingproperties)
+     */
+    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+    /**
+     * The value and display value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html#cfn-amplifyuibuilder-form-valuemappings-values)
+     */
+    public fun values(): Any
+
+    /**
+     * A builder for [ValueMappingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      public fun bindingProperties(bindingProperties: IResolvable)
+
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      public fun bindingProperties(bindingProperties: Map<String, Any>)
+
+      /**
+       * @param values The value and display value pairs. 
+       */
+      public fun values(values: IResolvable)
+
+      /**
+       * @param values The value and display value pairs. 
+       */
+      public fun values(values: List<Any>)
+
+      /**
+       * @param values The value and display value pairs. 
+       */
+      public fun values(vararg values: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty.builder()
+
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      override fun bindingProperties(bindingProperties: IResolvable) {
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param bindingProperties The information to bind fields to data at runtime.
+       */
+      override fun bindingProperties(bindingProperties: Map<String, Any>) {
+        cdkBuilder.bindingProperties(bindingProperties)
+      }
+
+      /**
+       * @param values The value and display value pairs. 
+       */
+      override fun values(values: IResolvable) {
+        cdkBuilder.values(values.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param values The value and display value pairs. 
+       */
+      override fun values(values: List<Any>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The value and display value pairs. 
+       */
+      override fun values(vararg values: Any): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty,
+    ) : CdkObject(cdkObject), ValueMappingsProperty {
+      /**
+       * The information to bind fields to data at runtime.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html#cfn-amplifyuibuilder-form-valuemappings-bindingproperties)
+       */
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+      /**
+       * The value and display value pairs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-valuemappings.html#cfn-amplifyuibuilder-form-valuemappings-values)
+       */
+      override fun values(): Any = unwrap(this).getValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ValueMappingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty):
+          ValueMappingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ValueMappingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ValueMappingsProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty
     }
   }
 }

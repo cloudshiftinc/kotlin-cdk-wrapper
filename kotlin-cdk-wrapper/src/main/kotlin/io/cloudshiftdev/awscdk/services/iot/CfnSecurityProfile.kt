@@ -688,9 +688,7 @@ public open class CfnSecurityProfile internal constructor(
   }
 
   /**
-   * The metric you want to retain.
-   *
-   * Dimensions are optional.
+   * A structure containing the alert target ARN and the role ARN.
    *
    * Example:
    *
@@ -698,1290 +696,106 @@ public open class CfnSecurityProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iot.*;
-   * MetricToRetainProperty metricToRetainProperty = MetricToRetainProperty.builder()
-   * .metric("metric")
-   * // the properties below are optional
-   * .exportMetric(false)
-   * .metricDimension(MetricDimensionProperty.builder()
-   * .dimensionName("dimensionName")
-   * // the properties below are optional
-   * .operator("operator")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html)
-   */
-  public interface MetricToRetainProperty {
-    /**
-     * The value indicates exporting metrics related to the `MetricToRetain` when it's true.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-exportmetric)
-     */
-    public fun exportMetric(): Any? = unwrap(this).getExportMetric()
-
-    /**
-     * A standard of measurement.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metric)
-     */
-    public fun metric(): String
-
-    /**
-     * The dimension of the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metricdimension)
-     */
-    public fun metricDimension(): Any? = unwrap(this).getMetricDimension()
-
-    /**
-     * A builder for [MetricToRetainProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
-       * when it's true.
-       */
-      public fun exportMetric(exportMetric: Boolean)
-
-      /**
-       * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
-       * when it's true.
-       */
-      public fun exportMetric(exportMetric: IResolvable)
-
-      /**
-       * @param metric A standard of measurement. 
-       */
-      public fun metric(metric: String)
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      public fun metricDimension(metricDimension: IResolvable)
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      public fun metricDimension(metricDimension: MetricDimensionProperty)
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f42fbcc014135a946c198cee5e55192f746f1dab620d0f495364fd034d5a9fee")
-      public fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty.builder()
-
-      /**
-       * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
-       * when it's true.
-       */
-      override fun exportMetric(exportMetric: Boolean) {
-        cdkBuilder.exportMetric(exportMetric)
-      }
-
-      /**
-       * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
-       * when it's true.
-       */
-      override fun exportMetric(exportMetric: IResolvable) {
-        cdkBuilder.exportMetric(exportMetric.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metric A standard of measurement. 
-       */
-      override fun metric(metric: String) {
-        cdkBuilder.metric(metric)
-      }
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      override fun metricDimension(metricDimension: IResolvable) {
-        cdkBuilder.metricDimension(metricDimension.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      override fun metricDimension(metricDimension: MetricDimensionProperty) {
-        cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty::unwrap))
-      }
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f42fbcc014135a946c198cee5e55192f746f1dab620d0f495364fd034d5a9fee")
-      override fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit):
-          Unit = metricDimension(MetricDimensionProperty(metricDimension))
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty,
-    ) : CdkObject(cdkObject), MetricToRetainProperty {
-      /**
-       * The value indicates exporting metrics related to the `MetricToRetain` when it's true.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-exportmetric)
-       */
-      override fun exportMetric(): Any? = unwrap(this).getExportMetric()
-
-      /**
-       * A standard of measurement.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metric)
-       */
-      override fun metric(): String = unwrap(this).getMetric()
-
-      /**
-       * The dimension of the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metricdimension)
-       */
-      override fun metricDimension(): Any? = unwrap(this).getMetricDimension()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricToRetainProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty):
-          MetricToRetainProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricToRetainProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricToRetainProperty):
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty
-    }
-  }
-
-  /**
-   * Specifies the MQTT topic and role ARN required for metric export.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * MetricsExportConfigProperty metricsExportConfigProperty = MetricsExportConfigProperty.builder()
-   * .mqttTopic("mqttTopic")
+   * AlertTargetProperty alertTargetProperty = AlertTargetProperty.builder()
+   * .alertTargetArn("alertTargetArn")
    * .roleArn("roleArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html)
    */
-  public interface MetricsExportConfigProperty {
+  public interface AlertTargetProperty {
     /**
-     * The MQTT topic that Device Defender Detect should publish messages to for metrics export.
+     * The Amazon Resource Name (ARN) of the notification target to which alerts are sent.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html#cfn-iot-securityprofile-metricsexportconfig-mqtttopic)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-alerttargetarn)
      */
-    public fun mqttTopic(): String
+    public fun alertTargetArn(): String
 
     /**
-     * This role ARN has permission to publish MQTT messages, after which Device Defender Detect can
-     * assume the role and publish messages on your behalf.
+     * The ARN of the role that grants permission to send alerts to the notification target.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html#cfn-iot-securityprofile-metricsexportconfig-rolearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-rolearn)
      */
     public fun roleArn(): String
 
     /**
-     * A builder for [MetricsExportConfigProperty]
+     * A builder for [AlertTargetProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param mqttTopic The MQTT topic that Device Defender Detect should publish messages to for
-       * metrics export. 
+       * @param alertTargetArn The Amazon Resource Name (ARN) of the notification target to which
+       * alerts are sent. 
        */
-      public fun mqttTopic(mqttTopic: String)
+      public fun alertTargetArn(alertTargetArn: String)
 
       /**
-       * @param roleArn This role ARN has permission to publish MQTT messages, after which Device
-       * Defender Detect can assume the role and publish messages on your behalf. 
+       * @param roleArn The ARN of the role that grants permission to send alerts to the
+       * notification target. 
        */
       public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty.builder()
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty.builder()
 
       /**
-       * @param mqttTopic The MQTT topic that Device Defender Detect should publish messages to for
-       * metrics export. 
+       * @param alertTargetArn The Amazon Resource Name (ARN) of the notification target to which
+       * alerts are sent. 
        */
-      override fun mqttTopic(mqttTopic: String) {
-        cdkBuilder.mqttTopic(mqttTopic)
+      override fun alertTargetArn(alertTargetArn: String) {
+        cdkBuilder.alertTargetArn(alertTargetArn)
       }
 
       /**
-       * @param roleArn This role ARN has permission to publish MQTT messages, after which Device
-       * Defender Detect can assume the role and publish messages on your behalf. 
+       * @param roleArn The ARN of the role that grants permission to send alerts to the
+       * notification target. 
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty =
-          cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty,
-    ) : CdkObject(cdkObject), MetricsExportConfigProperty {
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty,
+    ) : CdkObject(cdkObject), AlertTargetProperty {
       /**
-       * The MQTT topic that Device Defender Detect should publish messages to for metrics export.
+       * The Amazon Resource Name (ARN) of the notification target to which alerts are sent.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html#cfn-iot-securityprofile-metricsexportconfig-mqtttopic)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-alerttargetarn)
        */
-      override fun mqttTopic(): String = unwrap(this).getMqttTopic()
+      override fun alertTargetArn(): String = unwrap(this).getAlertTargetArn()
 
       /**
-       * This role ARN has permission to publish MQTT messages, after which Device Defender Detect
-       * can assume the role and publish messages on your behalf.
+       * The ARN of the role that grants permission to send alerts to the notification target.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html#cfn-iot-securityprofile-metricsexportconfig-rolearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-rolearn)
        */
       override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricsExportConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AlertTargetProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty):
-          MetricsExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetricsExportConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricsExportConfigProperty):
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty
-    }
-  }
-
-  /**
-   * The `MachineLearningDetectionConfig` property type controls confidence of the machine learning
-   * model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * MachineLearningDetectionConfigProperty machineLearningDetectionConfigProperty =
-   * MachineLearningDetectionConfigProperty.builder()
-   * .confidenceLevel("confidenceLevel")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-machinelearningdetectionconfig.html)
-   */
-  public interface MachineLearningDetectionConfigProperty {
-    /**
-     * The model confidence level.
-     *
-     * There are three levels of confidence, `"high"` , `"medium"` , and `"low"` .
-     *
-     * The higher the confidence level, the lower the sensitivity, and the lower the alarm frequency
-     * will be.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-machinelearningdetectionconfig.html#cfn-iot-securityprofile-machinelearningdetectionconfig-confidencelevel)
-     */
-    public fun confidenceLevel(): String? = unwrap(this).getConfidenceLevel()
-
-    /**
-     * A builder for [MachineLearningDetectionConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param confidenceLevel The model confidence level.
-       * There are three levels of confidence, `"high"` , `"medium"` , and `"low"` .
-       *
-       * The higher the confidence level, the lower the sensitivity, and the lower the alarm
-       * frequency will be.
-       */
-      public fun confidenceLevel(confidenceLevel: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty.builder()
-
-      /**
-       * @param confidenceLevel The model confidence level.
-       * There are three levels of confidence, `"high"` , `"medium"` , and `"low"` .
-       *
-       * The higher the confidence level, the lower the sensitivity, and the lower the alarm
-       * frequency will be.
-       */
-      override fun confidenceLevel(confidenceLevel: String) {
-        cdkBuilder.confidenceLevel(confidenceLevel)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty,
-    ) : CdkObject(cdkObject), MachineLearningDetectionConfigProperty {
-      /**
-       * The model confidence level.
-       *
-       * There are three levels of confidence, `"high"` , `"medium"` , and `"low"` .
-       *
-       * The higher the confidence level, the lower the sensitivity, and the lower the alarm
-       * frequency will be.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-machinelearningdetectionconfig.html#cfn-iot-securityprofile-machinelearningdetectionconfig-confidencelevel)
-       */
-      override fun confidenceLevel(): String? = unwrap(this).getConfidenceLevel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MachineLearningDetectionConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty):
-          MachineLearningDetectionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MachineLearningDetectionConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MachineLearningDetectionConfigProperty):
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty
-    }
-  }
-
-  /**
-   * A statistical ranking (percentile) that indicates a threshold value by which a behavior is
-   * determined to be in compliance or in violation of the behavior.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * StatisticalThresholdProperty statisticalThresholdProperty =
-   * StatisticalThresholdProperty.builder()
-   * .statistic("statistic")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-statisticalthreshold.html)
-   */
-  public interface StatisticalThresholdProperty {
-    /**
-     * The percentile that resolves to a threshold value by which compliance with a behavior is
-     * determined.
-     *
-     * Metrics are collected over the specified period ( `durationSeconds` ) from all reporting
-     * devices in your account and statistical ranks are calculated. Then, the measurements from a
-     * device are collected over the same period. If the accumulated measurements from the device fall
-     * above or below ( `comparisonOperator` ) the value associated with the percentile specified, then
-     * the device is considered to be in compliance with the behavior, otherwise a violation occurs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-statisticalthreshold.html#cfn-iot-securityprofile-statisticalthreshold-statistic)
-     */
-    public fun statistic(): String? = unwrap(this).getStatistic()
-
-    /**
-     * A builder for [StatisticalThresholdProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param statistic The percentile that resolves to a threshold value by which compliance with
-       * a behavior is determined.
-       * Metrics are collected over the specified period ( `durationSeconds` ) from all reporting
-       * devices in your account and statistical ranks are calculated. Then, the measurements from a
-       * device are collected over the same period. If the accumulated measurements from the device
-       * fall above or below ( `comparisonOperator` ) the value associated with the percentile
-       * specified, then the device is considered to be in compliance with the behavior, otherwise a
-       * violation occurs.
-       */
-      public fun statistic(statistic: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty.builder()
-
-      /**
-       * @param statistic The percentile that resolves to a threshold value by which compliance with
-       * a behavior is determined.
-       * Metrics are collected over the specified period ( `durationSeconds` ) from all reporting
-       * devices in your account and statistical ranks are calculated. Then, the measurements from a
-       * device are collected over the same period. If the accumulated measurements from the device
-       * fall above or below ( `comparisonOperator` ) the value associated with the percentile
-       * specified, then the device is considered to be in compliance with the behavior, otherwise a
-       * violation occurs.
-       */
-      override fun statistic(statistic: String) {
-        cdkBuilder.statistic(statistic)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty,
-    ) : CdkObject(cdkObject), StatisticalThresholdProperty {
-      /**
-       * The percentile that resolves to a threshold value by which compliance with a behavior is
-       * determined.
-       *
-       * Metrics are collected over the specified period ( `durationSeconds` ) from all reporting
-       * devices in your account and statistical ranks are calculated. Then, the measurements from a
-       * device are collected over the same period. If the accumulated measurements from the device
-       * fall above or below ( `comparisonOperator` ) the value associated with the percentile
-       * specified, then the device is considered to be in compliance with the behavior, otherwise a
-       * violation occurs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-statisticalthreshold.html#cfn-iot-securityprofile-statisticalthreshold-statistic)
-       */
-      override fun statistic(): String? = unwrap(this).getStatistic()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StatisticalThresholdProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty):
-          StatisticalThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StatisticalThresholdProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StatisticalThresholdProperty):
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty
-    }
-  }
-
-  /**
-   * A Device Defender security profile behavior.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * BehaviorProperty behaviorProperty = BehaviorProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .criteria(BehaviorCriteriaProperty.builder()
-   * .comparisonOperator("comparisonOperator")
-   * .consecutiveDatapointsToAlarm(123)
-   * .consecutiveDatapointsToClear(123)
-   * .durationSeconds(123)
-   * .mlDetectionConfig(MachineLearningDetectionConfigProperty.builder()
-   * .confidenceLevel("confidenceLevel")
-   * .build())
-   * .statisticalThreshold(StatisticalThresholdProperty.builder()
-   * .statistic("statistic")
-   * .build())
-   * .value(MetricValueProperty.builder()
-   * .cidrs(List.of("cidrs"))
-   * .count("count")
-   * .number(123)
-   * .numbers(List.of(123))
-   * .ports(List.of(123))
-   * .strings(List.of("strings"))
-   * .build())
-   * .build())
-   * .exportMetric(false)
-   * .metric("metric")
-   * .metricDimension(MetricDimensionProperty.builder()
-   * .dimensionName("dimensionName")
-   * // the properties below are optional
-   * .operator("operator")
-   * .build())
-   * .suppressAlerts(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html)
-   */
-  public interface BehaviorProperty {
-    /**
-     * The criteria that determine if a device is behaving normally in regard to the `metric` .
-     *
-     *
-     * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
-     * Device Defender detects that a device is behaving anomalously.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-criteria)
-     */
-    public fun criteria(): Any? = unwrap(this).getCriteria()
-
-    /**
-     * Value indicates exporting metrics related to the behavior when it is true.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-exportmetric)
-     */
-    public fun exportMetric(): Any? = unwrap(this).getExportMetric()
-
-    /**
-     * What is measured by the behavior.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metric)
-     */
-    public fun metric(): String? = unwrap(this).getMetric()
-
-    /**
-     * The dimension of the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metricdimension)
-     */
-    public fun metricDimension(): Any? = unwrap(this).getMetricDimension()
-
-    /**
-     * The name you've given to the behavior.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-name)
-     */
-    public fun name(): String
-
-    /**
-     * The alert status.
-     *
-     * If you set the value to `true` , alerts will be suppressed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-suppressalerts)
-     */
-    public fun suppressAlerts(): Any? = unwrap(this).getSuppressAlerts()
-
-    /**
-     * A builder for [BehaviorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param criteria The criteria that determine if a device is behaving normally in regard to
-       * the `metric` .
-       *
-       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
-       * Device Defender detects that a device is behaving anomalously.
-       */
-      public fun criteria(criteria: IResolvable)
-
-      /**
-       * @param criteria The criteria that determine if a device is behaving normally in regard to
-       * the `metric` .
-       *
-       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
-       * Device Defender detects that a device is behaving anomalously.
-       */
-      public fun criteria(criteria: BehaviorCriteriaProperty)
-
-      /**
-       * @param criteria The criteria that determine if a device is behaving normally in regard to
-       * the `metric` .
-       *
-       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
-       * Device Defender detects that a device is behaving anomalously.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("923295a66c6b757449cc7bbeccf2bc2b5809f43996a2f210cfa2621272a0a723")
-      public fun criteria(criteria: BehaviorCriteriaProperty.Builder.() -> Unit)
-
-      /**
-       * @param exportMetric Value indicates exporting metrics related to the behavior when it is
-       * true.
-       */
-      public fun exportMetric(exportMetric: Boolean)
-
-      /**
-       * @param exportMetric Value indicates exporting metrics related to the behavior when it is
-       * true.
-       */
-      public fun exportMetric(exportMetric: IResolvable)
-
-      /**
-       * @param metric What is measured by the behavior.
-       */
-      public fun metric(metric: String)
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      public fun metricDimension(metricDimension: IResolvable)
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      public fun metricDimension(metricDimension: MetricDimensionProperty)
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("868af0845e1172ec28d523bceb97a29abc045a639a9b0846a7e8318b271c74e2")
-      public fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit)
-
-      /**
-       * @param name The name you've given to the behavior. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param suppressAlerts The alert status.
-       * If you set the value to `true` , alerts will be suppressed.
-       */
-      public fun suppressAlerts(suppressAlerts: Boolean)
-
-      /**
-       * @param suppressAlerts The alert status.
-       * If you set the value to `true` , alerts will be suppressed.
-       */
-      public fun suppressAlerts(suppressAlerts: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty.builder()
-
-      /**
-       * @param criteria The criteria that determine if a device is behaving normally in regard to
-       * the `metric` .
-       *
-       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
-       * Device Defender detects that a device is behaving anomalously.
-       */
-      override fun criteria(criteria: IResolvable) {
-        cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param criteria The criteria that determine if a device is behaving normally in regard to
-       * the `metric` .
-       *
-       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
-       * Device Defender detects that a device is behaving anomalously.
-       */
-      override fun criteria(criteria: BehaviorCriteriaProperty) {
-        cdkBuilder.criteria(criteria.let(BehaviorCriteriaProperty::unwrap))
-      }
-
-      /**
-       * @param criteria The criteria that determine if a device is behaving normally in regard to
-       * the `metric` .
-       *
-       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
-       * Device Defender detects that a device is behaving anomalously.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("923295a66c6b757449cc7bbeccf2bc2b5809f43996a2f210cfa2621272a0a723")
-      override fun criteria(criteria: BehaviorCriteriaProperty.Builder.() -> Unit): Unit =
-          criteria(BehaviorCriteriaProperty(criteria))
-
-      /**
-       * @param exportMetric Value indicates exporting metrics related to the behavior when it is
-       * true.
-       */
-      override fun exportMetric(exportMetric: Boolean) {
-        cdkBuilder.exportMetric(exportMetric)
-      }
-
-      /**
-       * @param exportMetric Value indicates exporting metrics related to the behavior when it is
-       * true.
-       */
-      override fun exportMetric(exportMetric: IResolvable) {
-        cdkBuilder.exportMetric(exportMetric.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metric What is measured by the behavior.
-       */
-      override fun metric(metric: String) {
-        cdkBuilder.metric(metric)
-      }
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      override fun metricDimension(metricDimension: IResolvable) {
-        cdkBuilder.metricDimension(metricDimension.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      override fun metricDimension(metricDimension: MetricDimensionProperty) {
-        cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty::unwrap))
-      }
-
-      /**
-       * @param metricDimension The dimension of the metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("868af0845e1172ec28d523bceb97a29abc045a639a9b0846a7e8318b271c74e2")
-      override fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit):
-          Unit = metricDimension(MetricDimensionProperty(metricDimension))
-
-      /**
-       * @param name The name you've given to the behavior. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param suppressAlerts The alert status.
-       * If you set the value to `true` , alerts will be suppressed.
-       */
-      override fun suppressAlerts(suppressAlerts: Boolean) {
-        cdkBuilder.suppressAlerts(suppressAlerts)
-      }
-
-      /**
-       * @param suppressAlerts The alert status.
-       * If you set the value to `true` , alerts will be suppressed.
-       */
-      override fun suppressAlerts(suppressAlerts: IResolvable) {
-        cdkBuilder.suppressAlerts(suppressAlerts.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty,
-    ) : CdkObject(cdkObject), BehaviorProperty {
-      /**
-       * The criteria that determine if a device is behaving normally in regard to the `metric` .
-       *
-       *
-       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
-       * Device Defender detects that a device is behaving anomalously.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-criteria)
-       */
-      override fun criteria(): Any? = unwrap(this).getCriteria()
-
-      /**
-       * Value indicates exporting metrics related to the behavior when it is true.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-exportmetric)
-       */
-      override fun exportMetric(): Any? = unwrap(this).getExportMetric()
-
-      /**
-       * What is measured by the behavior.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metric)
-       */
-      override fun metric(): String? = unwrap(this).getMetric()
-
-      /**
-       * The dimension of the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metricdimension)
-       */
-      override fun metricDimension(): Any? = unwrap(this).getMetricDimension()
-
-      /**
-       * The name you've given to the behavior.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The alert status.
-       *
-       * If you set the value to `true` , alerts will be suppressed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-suppressalerts)
-       */
-      override fun suppressAlerts(): Any? = unwrap(this).getSuppressAlerts()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BehaviorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty):
-          BehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as? BehaviorProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty):
+          AlertTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? AlertTargetProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BehaviorProperty):
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty = (wrapped as
+      internal fun unwrap(wrapped: AlertTargetProperty):
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty
-    }
-  }
-
-  /**
-   * The dimension of the metric.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
-   * .dimensionName("dimensionName")
-   * // the properties below are optional
-   * .operator("operator")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html)
-   */
-  public interface MetricDimensionProperty {
-    /**
-     * The name of the dimension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-dimensionname)
-     */
-    public fun dimensionName(): String
-
-    /**
-     * Operators are constructs that perform logical operations.
-     *
-     * Valid values are `IN` and `NOT_IN` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-operator)
-     */
-    public fun `operator`(): String? = unwrap(this).getOperator()
-
-    /**
-     * A builder for [MetricDimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensionName The name of the dimension. 
-       */
-      public fun dimensionName(dimensionName: String)
-
-      /**
-       * @param operator Operators are constructs that perform logical operations.
-       * Valid values are `IN` and `NOT_IN` .
-       */
-      public fun `operator`(`operator`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty.builder()
-
-      /**
-       * @param dimensionName The name of the dimension. 
-       */
-      override fun dimensionName(dimensionName: String) {
-        cdkBuilder.dimensionName(dimensionName)
-      }
-
-      /**
-       * @param operator Operators are constructs that perform logical operations.
-       * Valid values are `IN` and `NOT_IN` .
-       */
-      override fun `operator`(`operator`: String) {
-        cdkBuilder.`operator`(`operator`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
-      /**
-       * The name of the dimension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-dimensionname)
-       */
-      override fun dimensionName(): String = unwrap(this).getDimensionName()
-
-      /**
-       * Operators are constructs that perform logical operations.
-       *
-       * Valid values are `IN` and `NOT_IN` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-operator)
-       */
-      override fun `operator`(): String? = unwrap(this).getOperator()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty):
-          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricDimensionProperty):
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty
-    }
-  }
-
-  /**
-   * The value to be compared with the `metric` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * MetricValueProperty metricValueProperty = MetricValueProperty.builder()
-   * .cidrs(List.of("cidrs"))
-   * .count("count")
-   * .number(123)
-   * .numbers(List.of(123))
-   * .ports(List.of(123))
-   * .strings(List.of("strings"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html)
-   */
-  public interface MetricValueProperty {
-    /**
-     * If the `comparisonOperator` calls for a set of CIDRs, use this to specify that set to be
-     * compared with the `metric` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-cidrs)
-     */
-    public fun cidrs(): List<String> = unwrap(this).getCidrs() ?: emptyList()
-
-    /**
-     * If the `comparisonOperator` calls for a numeric value, use this to specify that numeric value
-     * to be compared with the `metric` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-count)
-     */
-    public fun count(): String? = unwrap(this).getCount()
-
-    /**
-     * The numeric values of a metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-number)
-     */
-    public fun number(): Number? = unwrap(this).getNumber()
-
-    /**
-     * The numeric value of a metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-numbers)
-     */
-    public fun numbers(): Any? = unwrap(this).getNumbers()
-
-    /**
-     * If the `comparisonOperator` calls for a set of ports, use this to specify that set to be
-     * compared with the `metric` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-ports)
-     */
-    public fun ports(): Any? = unwrap(this).getPorts()
-
-    /**
-     * The string values of a metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-strings)
-     */
-    public fun strings(): List<String> = unwrap(this).getStrings() ?: emptyList()
-
-    /**
-     * A builder for [MetricValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cidrs If the `comparisonOperator` calls for a set of CIDRs, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      public fun cidrs(cidrs: List<String>)
-
-      /**
-       * @param cidrs If the `comparisonOperator` calls for a set of CIDRs, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      public fun cidrs(vararg cidrs: String)
-
-      /**
-       * @param count If the `comparisonOperator` calls for a numeric value, use this to specify
-       * that numeric value to be compared with the `metric` .
-       */
-      public fun count(count: String)
-
-      /**
-       * @param number The numeric values of a metric.
-       */
-      public fun number(number: Number)
-
-      /**
-       * @param numbers The numeric value of a metric.
-       */
-      public fun numbers(numbers: IResolvable)
-
-      /**
-       * @param numbers The numeric value of a metric.
-       */
-      public fun numbers(numbers: List<Number>)
-
-      /**
-       * @param numbers The numeric value of a metric.
-       */
-      public fun numbers(vararg numbers: Number)
-
-      /**
-       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      public fun ports(ports: IResolvable)
-
-      /**
-       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      public fun ports(ports: List<Number>)
-
-      /**
-       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      public fun ports(vararg ports: Number)
-
-      /**
-       * @param strings The string values of a metric.
-       */
-      public fun strings(strings: List<String>)
-
-      /**
-       * @param strings The string values of a metric.
-       */
-      public fun strings(vararg strings: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty.builder()
-
-      /**
-       * @param cidrs If the `comparisonOperator` calls for a set of CIDRs, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      override fun cidrs(cidrs: List<String>) {
-        cdkBuilder.cidrs(cidrs)
-      }
-
-      /**
-       * @param cidrs If the `comparisonOperator` calls for a set of CIDRs, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      override fun cidrs(vararg cidrs: String): Unit = cidrs(cidrs.toList())
-
-      /**
-       * @param count If the `comparisonOperator` calls for a numeric value, use this to specify
-       * that numeric value to be compared with the `metric` .
-       */
-      override fun count(count: String) {
-        cdkBuilder.count(count)
-      }
-
-      /**
-       * @param number The numeric values of a metric.
-       */
-      override fun number(number: Number) {
-        cdkBuilder.number(number)
-      }
-
-      /**
-       * @param numbers The numeric value of a metric.
-       */
-      override fun numbers(numbers: IResolvable) {
-        cdkBuilder.numbers(numbers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param numbers The numeric value of a metric.
-       */
-      override fun numbers(numbers: List<Number>) {
-        cdkBuilder.numbers(numbers)
-      }
-
-      /**
-       * @param numbers The numeric value of a metric.
-       */
-      override fun numbers(vararg numbers: Number): Unit = numbers(numbers.toList())
-
-      /**
-       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      override fun ports(ports: List<Number>) {
-        cdkBuilder.ports(ports)
-      }
-
-      /**
-       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
-       * set to be compared with the `metric` .
-       */
-      override fun ports(vararg ports: Number): Unit = ports(ports.toList())
-
-      /**
-       * @param strings The string values of a metric.
-       */
-      override fun strings(strings: List<String>) {
-        cdkBuilder.strings(strings)
-      }
-
-      /**
-       * @param strings The string values of a metric.
-       */
-      override fun strings(vararg strings: String): Unit = strings(strings.toList())
-
-      public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty,
-    ) : CdkObject(cdkObject), MetricValueProperty {
-      /**
-       * If the `comparisonOperator` calls for a set of CIDRs, use this to specify that set to be
-       * compared with the `metric` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-cidrs)
-       */
-      override fun cidrs(): List<String> = unwrap(this).getCidrs() ?: emptyList()
-
-      /**
-       * If the `comparisonOperator` calls for a numeric value, use this to specify that numeric
-       * value to be compared with the `metric` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-count)
-       */
-      override fun count(): String? = unwrap(this).getCount()
-
-      /**
-       * The numeric values of a metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-number)
-       */
-      override fun number(): Number? = unwrap(this).getNumber()
-
-      /**
-       * The numeric value of a metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-numbers)
-       */
-      override fun numbers(): Any? = unwrap(this).getNumbers()
-
-      /**
-       * If the `comparisonOperator` calls for a set of ports, use this to specify that set to be
-       * compared with the `metric` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-ports)
-       */
-      override fun ports(): Any? = unwrap(this).getPorts()
-
-      /**
-       * The string values of a metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-strings)
-       */
-      override fun strings(): List<String> = unwrap(this).getStrings() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty):
-          MetricValueProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricValueProperty):
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty
     }
   }
 
@@ -2412,7 +1226,7 @@ public open class CfnSecurityProfile internal constructor(
   }
 
   /**
-   * A structure containing the alert target ARN and the role ARN.
+   * A Device Defender security profile behavior.
    *
    * Example:
    *
@@ -2420,106 +1234,1292 @@ public open class CfnSecurityProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iot.*;
-   * AlertTargetProperty alertTargetProperty = AlertTargetProperty.builder()
-   * .alertTargetArn("alertTargetArn")
-   * .roleArn("roleArn")
+   * BehaviorProperty behaviorProperty = BehaviorProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .criteria(BehaviorCriteriaProperty.builder()
+   * .comparisonOperator("comparisonOperator")
+   * .consecutiveDatapointsToAlarm(123)
+   * .consecutiveDatapointsToClear(123)
+   * .durationSeconds(123)
+   * .mlDetectionConfig(MachineLearningDetectionConfigProperty.builder()
+   * .confidenceLevel("confidenceLevel")
+   * .build())
+   * .statisticalThreshold(StatisticalThresholdProperty.builder()
+   * .statistic("statistic")
+   * .build())
+   * .value(MetricValueProperty.builder()
+   * .cidrs(List.of("cidrs"))
+   * .count("count")
+   * .number(123)
+   * .numbers(List.of(123))
+   * .ports(List.of(123))
+   * .strings(List.of("strings"))
+   * .build())
+   * .build())
+   * .exportMetric(false)
+   * .metric("metric")
+   * .metricDimension(MetricDimensionProperty.builder()
+   * .dimensionName("dimensionName")
+   * // the properties below are optional
+   * .operator("operator")
+   * .build())
+   * .suppressAlerts(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html)
    */
-  public interface AlertTargetProperty {
+  public interface BehaviorProperty {
     /**
-     * The Amazon Resource Name (ARN) of the notification target to which alerts are sent.
+     * The criteria that determine if a device is behaving normally in regard to the `metric` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-alerttargetarn)
+     *
+     * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+     * Device Defender detects that a device is behaving anomalously.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-criteria)
      */
-    public fun alertTargetArn(): String
+    public fun criteria(): Any? = unwrap(this).getCriteria()
 
     /**
-     * The ARN of the role that grants permission to send alerts to the notification target.
+     * Value indicates exporting metrics related to the behavior when it is true.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-rolearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-exportmetric)
      */
-    public fun roleArn(): String
+    public fun exportMetric(): Any? = unwrap(this).getExportMetric()
 
     /**
-     * A builder for [AlertTargetProperty]
+     * What is measured by the behavior.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metric)
+     */
+    public fun metric(): String? = unwrap(this).getMetric()
+
+    /**
+     * The dimension of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metricdimension)
+     */
+    public fun metricDimension(): Any? = unwrap(this).getMetricDimension()
+
+    /**
+     * The name you've given to the behavior.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-name)
+     */
+    public fun name(): String
+
+    /**
+     * The alert status.
+     *
+     * If you set the value to `true` , alerts will be suppressed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-suppressalerts)
+     */
+    public fun suppressAlerts(): Any? = unwrap(this).getSuppressAlerts()
+
+    /**
+     * A builder for [BehaviorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param alertTargetArn The Amazon Resource Name (ARN) of the notification target to which
-       * alerts are sent. 
+       * @param criteria The criteria that determine if a device is behaving normally in regard to
+       * the `metric` .
+       *
+       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+       * Device Defender detects that a device is behaving anomalously.
        */
-      public fun alertTargetArn(alertTargetArn: String)
+      public fun criteria(criteria: IResolvable)
 
       /**
-       * @param roleArn The ARN of the role that grants permission to send alerts to the
-       * notification target. 
+       * @param criteria The criteria that determine if a device is behaving normally in regard to
+       * the `metric` .
+       *
+       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+       * Device Defender detects that a device is behaving anomalously.
+       */
+      public fun criteria(criteria: BehaviorCriteriaProperty)
+
+      /**
+       * @param criteria The criteria that determine if a device is behaving normally in regard to
+       * the `metric` .
+       *
+       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+       * Device Defender detects that a device is behaving anomalously.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("923295a66c6b757449cc7bbeccf2bc2b5809f43996a2f210cfa2621272a0a723")
+      public fun criteria(criteria: BehaviorCriteriaProperty.Builder.() -> Unit)
+
+      /**
+       * @param exportMetric Value indicates exporting metrics related to the behavior when it is
+       * true.
+       */
+      public fun exportMetric(exportMetric: Boolean)
+
+      /**
+       * @param exportMetric Value indicates exporting metrics related to the behavior when it is
+       * true.
+       */
+      public fun exportMetric(exportMetric: IResolvable)
+
+      /**
+       * @param metric What is measured by the behavior.
+       */
+      public fun metric(metric: String)
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      public fun metricDimension(metricDimension: IResolvable)
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      public fun metricDimension(metricDimension: MetricDimensionProperty)
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("868af0845e1172ec28d523bceb97a29abc045a639a9b0846a7e8318b271c74e2")
+      public fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit)
+
+      /**
+       * @param name The name you've given to the behavior. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param suppressAlerts The alert status.
+       * If you set the value to `true` , alerts will be suppressed.
+       */
+      public fun suppressAlerts(suppressAlerts: Boolean)
+
+      /**
+       * @param suppressAlerts The alert status.
+       * If you set the value to `true` , alerts will be suppressed.
+       */
+      public fun suppressAlerts(suppressAlerts: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty.builder()
+
+      /**
+       * @param criteria The criteria that determine if a device is behaving normally in regard to
+       * the `metric` .
+       *
+       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+       * Device Defender detects that a device is behaving anomalously.
+       */
+      override fun criteria(criteria: IResolvable) {
+        cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param criteria The criteria that determine if a device is behaving normally in regard to
+       * the `metric` .
+       *
+       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+       * Device Defender detects that a device is behaving anomalously.
+       */
+      override fun criteria(criteria: BehaviorCriteriaProperty) {
+        cdkBuilder.criteria(criteria.let(BehaviorCriteriaProperty::unwrap))
+      }
+
+      /**
+       * @param criteria The criteria that determine if a device is behaving normally in regard to
+       * the `metric` .
+       *
+       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+       * Device Defender detects that a device is behaving anomalously.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("923295a66c6b757449cc7bbeccf2bc2b5809f43996a2f210cfa2621272a0a723")
+      override fun criteria(criteria: BehaviorCriteriaProperty.Builder.() -> Unit): Unit =
+          criteria(BehaviorCriteriaProperty(criteria))
+
+      /**
+       * @param exportMetric Value indicates exporting metrics related to the behavior when it is
+       * true.
+       */
+      override fun exportMetric(exportMetric: Boolean) {
+        cdkBuilder.exportMetric(exportMetric)
+      }
+
+      /**
+       * @param exportMetric Value indicates exporting metrics related to the behavior when it is
+       * true.
+       */
+      override fun exportMetric(exportMetric: IResolvable) {
+        cdkBuilder.exportMetric(exportMetric.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metric What is measured by the behavior.
+       */
+      override fun metric(metric: String) {
+        cdkBuilder.metric(metric)
+      }
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      override fun metricDimension(metricDimension: IResolvable) {
+        cdkBuilder.metricDimension(metricDimension.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      override fun metricDimension(metricDimension: MetricDimensionProperty) {
+        cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty::unwrap))
+      }
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("868af0845e1172ec28d523bceb97a29abc045a639a9b0846a7e8318b271c74e2")
+      override fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit):
+          Unit = metricDimension(MetricDimensionProperty(metricDimension))
+
+      /**
+       * @param name The name you've given to the behavior. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param suppressAlerts The alert status.
+       * If you set the value to `true` , alerts will be suppressed.
+       */
+      override fun suppressAlerts(suppressAlerts: Boolean) {
+        cdkBuilder.suppressAlerts(suppressAlerts)
+      }
+
+      /**
+       * @param suppressAlerts The alert status.
+       * If you set the value to `true` , alerts will be suppressed.
+       */
+      override fun suppressAlerts(suppressAlerts: IResolvable) {
+        cdkBuilder.suppressAlerts(suppressAlerts.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty,
+    ) : CdkObject(cdkObject), BehaviorProperty {
+      /**
+       * The criteria that determine if a device is behaving normally in regard to the `metric` .
+       *
+       *
+       * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+       * Device Defender detects that a device is behaving anomalously.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-criteria)
+       */
+      override fun criteria(): Any? = unwrap(this).getCriteria()
+
+      /**
+       * Value indicates exporting metrics related to the behavior when it is true.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-exportmetric)
+       */
+      override fun exportMetric(): Any? = unwrap(this).getExportMetric()
+
+      /**
+       * What is measured by the behavior.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metric)
+       */
+      override fun metric(): String? = unwrap(this).getMetric()
+
+      /**
+       * The dimension of the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metricdimension)
+       */
+      override fun metricDimension(): Any? = unwrap(this).getMetricDimension()
+
+      /**
+       * The name you've given to the behavior.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The alert status.
+       *
+       * If you set the value to `true` , alerts will be suppressed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-suppressalerts)
+       */
+      override fun suppressAlerts(): Any? = unwrap(this).getSuppressAlerts()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BehaviorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty):
+          BehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as? BehaviorProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BehaviorProperty):
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty
+    }
+  }
+
+  /**
+   * The `MachineLearningDetectionConfig` property type controls confidence of the machine learning
+   * model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * MachineLearningDetectionConfigProperty machineLearningDetectionConfigProperty =
+   * MachineLearningDetectionConfigProperty.builder()
+   * .confidenceLevel("confidenceLevel")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-machinelearningdetectionconfig.html)
+   */
+  public interface MachineLearningDetectionConfigProperty {
+    /**
+     * The model confidence level.
+     *
+     * There are three levels of confidence, `"high"` , `"medium"` , and `"low"` .
+     *
+     * The higher the confidence level, the lower the sensitivity, and the lower the alarm frequency
+     * will be.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-machinelearningdetectionconfig.html#cfn-iot-securityprofile-machinelearningdetectionconfig-confidencelevel)
+     */
+    public fun confidenceLevel(): String? = unwrap(this).getConfidenceLevel()
+
+    /**
+     * A builder for [MachineLearningDetectionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param confidenceLevel The model confidence level.
+       * There are three levels of confidence, `"high"` , `"medium"` , and `"low"` .
+       *
+       * The higher the confidence level, the lower the sensitivity, and the lower the alarm
+       * frequency will be.
+       */
+      public fun confidenceLevel(confidenceLevel: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty.builder()
+
+      /**
+       * @param confidenceLevel The model confidence level.
+       * There are three levels of confidence, `"high"` , `"medium"` , and `"low"` .
+       *
+       * The higher the confidence level, the lower the sensitivity, and the lower the alarm
+       * frequency will be.
+       */
+      override fun confidenceLevel(confidenceLevel: String) {
+        cdkBuilder.confidenceLevel(confidenceLevel)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty,
+    ) : CdkObject(cdkObject), MachineLearningDetectionConfigProperty {
+      /**
+       * The model confidence level.
+       *
+       * There are three levels of confidence, `"high"` , `"medium"` , and `"low"` .
+       *
+       * The higher the confidence level, the lower the sensitivity, and the lower the alarm
+       * frequency will be.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-machinelearningdetectionconfig.html#cfn-iot-securityprofile-machinelearningdetectionconfig-confidencelevel)
+       */
+      override fun confidenceLevel(): String? = unwrap(this).getConfidenceLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MachineLearningDetectionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty):
+          MachineLearningDetectionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MachineLearningDetectionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MachineLearningDetectionConfigProperty):
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty
+    }
+  }
+
+  /**
+   * The dimension of the metric.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
+   * .dimensionName("dimensionName")
+   * // the properties below are optional
+   * .operator("operator")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html)
+   */
+  public interface MetricDimensionProperty {
+    /**
+     * The name of the dimension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-dimensionname)
+     */
+    public fun dimensionName(): String
+
+    /**
+     * Operators are constructs that perform logical operations.
+     *
+     * Valid values are `IN` and `NOT_IN` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-operator)
+     */
+    public fun `operator`(): String? = unwrap(this).getOperator()
+
+    /**
+     * A builder for [MetricDimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensionName The name of the dimension. 
+       */
+      public fun dimensionName(dimensionName: String)
+
+      /**
+       * @param operator Operators are constructs that perform logical operations.
+       * Valid values are `IN` and `NOT_IN` .
+       */
+      public fun `operator`(`operator`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty.builder()
+
+      /**
+       * @param dimensionName The name of the dimension. 
+       */
+      override fun dimensionName(dimensionName: String) {
+        cdkBuilder.dimensionName(dimensionName)
+      }
+
+      /**
+       * @param operator Operators are constructs that perform logical operations.
+       * Valid values are `IN` and `NOT_IN` .
+       */
+      override fun `operator`(`operator`: String) {
+        cdkBuilder.`operator`(`operator`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty,
+    ) : CdkObject(cdkObject), MetricDimensionProperty {
+      /**
+       * The name of the dimension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-dimensionname)
+       */
+      override fun dimensionName(): String = unwrap(this).getDimensionName()
+
+      /**
+       * Operators are constructs that perform logical operations.
+       *
+       * Valid values are `IN` and `NOT_IN` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-operator)
+       */
+      override fun `operator`(): String? = unwrap(this).getOperator()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty):
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricDimensionProperty):
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty
+    }
+  }
+
+  /**
+   * The metric you want to retain.
+   *
+   * Dimensions are optional.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * MetricToRetainProperty metricToRetainProperty = MetricToRetainProperty.builder()
+   * .metric("metric")
+   * // the properties below are optional
+   * .exportMetric(false)
+   * .metricDimension(MetricDimensionProperty.builder()
+   * .dimensionName("dimensionName")
+   * // the properties below are optional
+   * .operator("operator")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html)
+   */
+  public interface MetricToRetainProperty {
+    /**
+     * The value indicates exporting metrics related to the `MetricToRetain` when it's true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-exportmetric)
+     */
+    public fun exportMetric(): Any? = unwrap(this).getExportMetric()
+
+    /**
+     * A standard of measurement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metric)
+     */
+    public fun metric(): String
+
+    /**
+     * The dimension of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metricdimension)
+     */
+    public fun metricDimension(): Any? = unwrap(this).getMetricDimension()
+
+    /**
+     * A builder for [MetricToRetainProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
+       * when it's true.
+       */
+      public fun exportMetric(exportMetric: Boolean)
+
+      /**
+       * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
+       * when it's true.
+       */
+      public fun exportMetric(exportMetric: IResolvable)
+
+      /**
+       * @param metric A standard of measurement. 
+       */
+      public fun metric(metric: String)
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      public fun metricDimension(metricDimension: IResolvable)
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      public fun metricDimension(metricDimension: MetricDimensionProperty)
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f42fbcc014135a946c198cee5e55192f746f1dab620d0f495364fd034d5a9fee")
+      public fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty.builder()
+
+      /**
+       * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
+       * when it's true.
+       */
+      override fun exportMetric(exportMetric: Boolean) {
+        cdkBuilder.exportMetric(exportMetric)
+      }
+
+      /**
+       * @param exportMetric The value indicates exporting metrics related to the `MetricToRetain`
+       * when it's true.
+       */
+      override fun exportMetric(exportMetric: IResolvable) {
+        cdkBuilder.exportMetric(exportMetric.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metric A standard of measurement. 
+       */
+      override fun metric(metric: String) {
+        cdkBuilder.metric(metric)
+      }
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      override fun metricDimension(metricDimension: IResolvable) {
+        cdkBuilder.metricDimension(metricDimension.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      override fun metricDimension(metricDimension: MetricDimensionProperty) {
+        cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty::unwrap))
+      }
+
+      /**
+       * @param metricDimension The dimension of the metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f42fbcc014135a946c198cee5e55192f746f1dab620d0f495364fd034d5a9fee")
+      override fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit):
+          Unit = metricDimension(MetricDimensionProperty(metricDimension))
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty,
+    ) : CdkObject(cdkObject), MetricToRetainProperty {
+      /**
+       * The value indicates exporting metrics related to the `MetricToRetain` when it's true.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-exportmetric)
+       */
+      override fun exportMetric(): Any? = unwrap(this).getExportMetric()
+
+      /**
+       * A standard of measurement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metric)
+       */
+      override fun metric(): String = unwrap(this).getMetric()
+
+      /**
+       * The dimension of the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metricdimension)
+       */
+      override fun metricDimension(): Any? = unwrap(this).getMetricDimension()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricToRetainProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty):
+          MetricToRetainProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricToRetainProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricToRetainProperty):
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty
+    }
+  }
+
+  /**
+   * The value to be compared with the `metric` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * MetricValueProperty metricValueProperty = MetricValueProperty.builder()
+   * .cidrs(List.of("cidrs"))
+   * .count("count")
+   * .number(123)
+   * .numbers(List.of(123))
+   * .ports(List.of(123))
+   * .strings(List.of("strings"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html)
+   */
+  public interface MetricValueProperty {
+    /**
+     * If the `comparisonOperator` calls for a set of CIDRs, use this to specify that set to be
+     * compared with the `metric` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-cidrs)
+     */
+    public fun cidrs(): List<String> = unwrap(this).getCidrs() ?: emptyList()
+
+    /**
+     * If the `comparisonOperator` calls for a numeric value, use this to specify that numeric value
+     * to be compared with the `metric` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-count)
+     */
+    public fun count(): String? = unwrap(this).getCount()
+
+    /**
+     * The numeric values of a metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-number)
+     */
+    public fun number(): Number? = unwrap(this).getNumber()
+
+    /**
+     * The numeric value of a metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-numbers)
+     */
+    public fun numbers(): Any? = unwrap(this).getNumbers()
+
+    /**
+     * If the `comparisonOperator` calls for a set of ports, use this to specify that set to be
+     * compared with the `metric` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-ports)
+     */
+    public fun ports(): Any? = unwrap(this).getPorts()
+
+    /**
+     * The string values of a metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-strings)
+     */
+    public fun strings(): List<String> = unwrap(this).getStrings() ?: emptyList()
+
+    /**
+     * A builder for [MetricValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidrs If the `comparisonOperator` calls for a set of CIDRs, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      public fun cidrs(cidrs: List<String>)
+
+      /**
+       * @param cidrs If the `comparisonOperator` calls for a set of CIDRs, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      public fun cidrs(vararg cidrs: String)
+
+      /**
+       * @param count If the `comparisonOperator` calls for a numeric value, use this to specify
+       * that numeric value to be compared with the `metric` .
+       */
+      public fun count(count: String)
+
+      /**
+       * @param number The numeric values of a metric.
+       */
+      public fun number(number: Number)
+
+      /**
+       * @param numbers The numeric value of a metric.
+       */
+      public fun numbers(numbers: IResolvable)
+
+      /**
+       * @param numbers The numeric value of a metric.
+       */
+      public fun numbers(numbers: List<Number>)
+
+      /**
+       * @param numbers The numeric value of a metric.
+       */
+      public fun numbers(vararg numbers: Number)
+
+      /**
+       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      public fun ports(ports: IResolvable)
+
+      /**
+       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      public fun ports(ports: List<Number>)
+
+      /**
+       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      public fun ports(vararg ports: Number)
+
+      /**
+       * @param strings The string values of a metric.
+       */
+      public fun strings(strings: List<String>)
+
+      /**
+       * @param strings The string values of a metric.
+       */
+      public fun strings(vararg strings: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty.builder()
+
+      /**
+       * @param cidrs If the `comparisonOperator` calls for a set of CIDRs, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      override fun cidrs(cidrs: List<String>) {
+        cdkBuilder.cidrs(cidrs)
+      }
+
+      /**
+       * @param cidrs If the `comparisonOperator` calls for a set of CIDRs, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      override fun cidrs(vararg cidrs: String): Unit = cidrs(cidrs.toList())
+
+      /**
+       * @param count If the `comparisonOperator` calls for a numeric value, use this to specify
+       * that numeric value to be compared with the `metric` .
+       */
+      override fun count(count: String) {
+        cdkBuilder.count(count)
+      }
+
+      /**
+       * @param number The numeric values of a metric.
+       */
+      override fun number(number: Number) {
+        cdkBuilder.number(number)
+      }
+
+      /**
+       * @param numbers The numeric value of a metric.
+       */
+      override fun numbers(numbers: IResolvable) {
+        cdkBuilder.numbers(numbers.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param numbers The numeric value of a metric.
+       */
+      override fun numbers(numbers: List<Number>) {
+        cdkBuilder.numbers(numbers)
+      }
+
+      /**
+       * @param numbers The numeric value of a metric.
+       */
+      override fun numbers(vararg numbers: Number): Unit = numbers(numbers.toList())
+
+      /**
+       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      override fun ports(ports: IResolvable) {
+        cdkBuilder.ports(ports.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      override fun ports(ports: List<Number>) {
+        cdkBuilder.ports(ports)
+      }
+
+      /**
+       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      override fun ports(vararg ports: Number): Unit = ports(ports.toList())
+
+      /**
+       * @param strings The string values of a metric.
+       */
+      override fun strings(strings: List<String>) {
+        cdkBuilder.strings(strings)
+      }
+
+      /**
+       * @param strings The string values of a metric.
+       */
+      override fun strings(vararg strings: String): Unit = strings(strings.toList())
+
+      public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty,
+    ) : CdkObject(cdkObject), MetricValueProperty {
+      /**
+       * If the `comparisonOperator` calls for a set of CIDRs, use this to specify that set to be
+       * compared with the `metric` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-cidrs)
+       */
+      override fun cidrs(): List<String> = unwrap(this).getCidrs() ?: emptyList()
+
+      /**
+       * If the `comparisonOperator` calls for a numeric value, use this to specify that numeric
+       * value to be compared with the `metric` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-count)
+       */
+      override fun count(): String? = unwrap(this).getCount()
+
+      /**
+       * The numeric values of a metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-number)
+       */
+      override fun number(): Number? = unwrap(this).getNumber()
+
+      /**
+       * The numeric value of a metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-numbers)
+       */
+      override fun numbers(): Any? = unwrap(this).getNumbers()
+
+      /**
+       * If the `comparisonOperator` calls for a set of ports, use this to specify that set to be
+       * compared with the `metric` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-ports)
+       */
+      override fun ports(): Any? = unwrap(this).getPorts()
+
+      /**
+       * The string values of a metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-strings)
+       */
+      override fun strings(): List<String> = unwrap(this).getStrings() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty):
+          MetricValueProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricValueProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricValueProperty):
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty
+    }
+  }
+
+  /**
+   * Specifies the MQTT topic and role ARN required for metric export.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * MetricsExportConfigProperty metricsExportConfigProperty = MetricsExportConfigProperty.builder()
+   * .mqttTopic("mqttTopic")
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html)
+   */
+  public interface MetricsExportConfigProperty {
+    /**
+     * The MQTT topic that Device Defender Detect should publish messages to for metrics export.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html#cfn-iot-securityprofile-metricsexportconfig-mqtttopic)
+     */
+    public fun mqttTopic(): String
+
+    /**
+     * This role ARN has permission to publish MQTT messages, after which Device Defender Detect can
+     * assume the role and publish messages on your behalf.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html#cfn-iot-securityprofile-metricsexportconfig-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [MetricsExportConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mqttTopic The MQTT topic that Device Defender Detect should publish messages to for
+       * metrics export. 
+       */
+      public fun mqttTopic(mqttTopic: String)
+
+      /**
+       * @param roleArn This role ARN has permission to publish MQTT messages, after which Device
+       * Defender Detect can assume the role and publish messages on your behalf. 
        */
       public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty.builder()
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty.builder()
 
       /**
-       * @param alertTargetArn The Amazon Resource Name (ARN) of the notification target to which
-       * alerts are sent. 
+       * @param mqttTopic The MQTT topic that Device Defender Detect should publish messages to for
+       * metrics export. 
        */
-      override fun alertTargetArn(alertTargetArn: String) {
-        cdkBuilder.alertTargetArn(alertTargetArn)
+      override fun mqttTopic(mqttTopic: String) {
+        cdkBuilder.mqttTopic(mqttTopic)
       }
 
       /**
-       * @param roleArn The ARN of the role that grants permission to send alerts to the
-       * notification target. 
+       * @param roleArn This role ARN has permission to publish MQTT messages, after which Device
+       * Defender Detect can assume the role and publish messages on your behalf. 
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty
-          = cdkBuilder.build()
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty,
-    ) : CdkObject(cdkObject), AlertTargetProperty {
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty,
+    ) : CdkObject(cdkObject), MetricsExportConfigProperty {
       /**
-       * The Amazon Resource Name (ARN) of the notification target to which alerts are sent.
+       * The MQTT topic that Device Defender Detect should publish messages to for metrics export.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-alerttargetarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html#cfn-iot-securityprofile-metricsexportconfig-mqtttopic)
        */
-      override fun alertTargetArn(): String = unwrap(this).getAlertTargetArn()
+      override fun mqttTopic(): String = unwrap(this).getMqttTopic()
 
       /**
-       * The ARN of the role that grants permission to send alerts to the notification target.
+       * This role ARN has permission to publish MQTT messages, after which Device Defender Detect
+       * can assume the role and publish messages on your behalf.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-rolearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricsexportconfig.html#cfn-iot-securityprofile-metricsexportconfig-rolearn)
        */
       override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AlertTargetProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricsExportConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty):
-          AlertTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? AlertTargetProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty):
+          MetricsExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricsExportConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AlertTargetProperty):
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty
+      internal fun unwrap(wrapped: MetricsExportConfigProperty):
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty
+    }
+  }
+
+  /**
+   * A statistical ranking (percentile) that indicates a threshold value by which a behavior is
+   * determined to be in compliance or in violation of the behavior.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * StatisticalThresholdProperty statisticalThresholdProperty =
+   * StatisticalThresholdProperty.builder()
+   * .statistic("statistic")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-statisticalthreshold.html)
+   */
+  public interface StatisticalThresholdProperty {
+    /**
+     * The percentile that resolves to a threshold value by which compliance with a behavior is
+     * determined.
+     *
+     * Metrics are collected over the specified period ( `durationSeconds` ) from all reporting
+     * devices in your account and statistical ranks are calculated. Then, the measurements from a
+     * device are collected over the same period. If the accumulated measurements from the device fall
+     * above or below ( `comparisonOperator` ) the value associated with the percentile specified, then
+     * the device is considered to be in compliance with the behavior, otherwise a violation occurs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-statisticalthreshold.html#cfn-iot-securityprofile-statisticalthreshold-statistic)
+     */
+    public fun statistic(): String? = unwrap(this).getStatistic()
+
+    /**
+     * A builder for [StatisticalThresholdProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param statistic The percentile that resolves to a threshold value by which compliance with
+       * a behavior is determined.
+       * Metrics are collected over the specified period ( `durationSeconds` ) from all reporting
+       * devices in your account and statistical ranks are calculated. Then, the measurements from a
+       * device are collected over the same period. If the accumulated measurements from the device
+       * fall above or below ( `comparisonOperator` ) the value associated with the percentile
+       * specified, then the device is considered to be in compliance with the behavior, otherwise a
+       * violation occurs.
+       */
+      public fun statistic(statistic: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty.builder()
+
+      /**
+       * @param statistic The percentile that resolves to a threshold value by which compliance with
+       * a behavior is determined.
+       * Metrics are collected over the specified period ( `durationSeconds` ) from all reporting
+       * devices in your account and statistical ranks are calculated. Then, the measurements from a
+       * device are collected over the same period. If the accumulated measurements from the device
+       * fall above or below ( `comparisonOperator` ) the value associated with the percentile
+       * specified, then the device is considered to be in compliance with the behavior, otherwise a
+       * violation occurs.
+       */
+      override fun statistic(statistic: String) {
+        cdkBuilder.statistic(statistic)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty,
+    ) : CdkObject(cdkObject), StatisticalThresholdProperty {
+      /**
+       * The percentile that resolves to a threshold value by which compliance with a behavior is
+       * determined.
+       *
+       * Metrics are collected over the specified period ( `durationSeconds` ) from all reporting
+       * devices in your account and statistical ranks are calculated. Then, the measurements from a
+       * device are collected over the same period. If the accumulated measurements from the device
+       * fall above or below ( `comparisonOperator` ) the value associated with the percentile
+       * specified, then the device is considered to be in compliance with the behavior, otherwise a
+       * violation occurs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-statisticalthreshold.html#cfn-iot-securityprofile-statisticalthreshold-statistic)
+       */
+      override fun statistic(): String? = unwrap(this).getStatistic()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StatisticalThresholdProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty):
+          StatisticalThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatisticalThresholdProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatisticalThresholdProperty):
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty
     }
   }
 }

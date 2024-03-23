@@ -1135,102 +1135,6 @@ public open class CfnCampaign internal constructor(
   }
 
   /**
-   * Information about a collection scheme that uses a time period to decide how often to collect
-   * data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * TimeBasedCollectionSchemeProperty timeBasedCollectionSchemeProperty =
-   * TimeBasedCollectionSchemeProperty.builder()
-   * .periodMs(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedcollectionscheme.html)
-   */
-  public interface TimeBasedCollectionSchemeProperty {
-    /**
-     * The time period (in milliseconds) to decide how often to collect data.
-     *
-     * For example, if the time period is `60000` , the Edge Agent software collects data once every
-     * minute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedcollectionscheme.html#cfn-iotfleetwise-campaign-timebasedcollectionscheme-periodms)
-     */
-    public fun periodMs(): Number
-
-    /**
-     * A builder for [TimeBasedCollectionSchemeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param periodMs The time period (in milliseconds) to decide how often to collect data. 
-       * For example, if the time period is `60000` , the Edge Agent software collects data once
-       * every minute.
-       */
-      public fun periodMs(periodMs: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty.Builder
-          =
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty.builder()
-
-      /**
-       * @param periodMs The time period (in milliseconds) to decide how often to collect data. 
-       * For example, if the time period is `60000` , the Edge Agent software collects data once
-       * every minute.
-       */
-      override fun periodMs(periodMs: Number) {
-        cdkBuilder.periodMs(periodMs)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty,
-    ) : CdkObject(cdkObject), TimeBasedCollectionSchemeProperty {
-      /**
-       * The time period (in milliseconds) to decide how often to collect data.
-       *
-       * For example, if the time period is `60000` , the Edge Agent software collects data once
-       * every minute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedcollectionscheme.html#cfn-iotfleetwise-campaign-timebasedcollectionscheme-periodms)
-       */
-      override fun periodMs(): Number = unwrap(this).getPeriodMs()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TimeBasedCollectionSchemeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty):
-          TimeBasedCollectionSchemeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TimeBasedCollectionSchemeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TimeBasedCollectionSchemeProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
-    }
-  }
-
-  /**
    * Specifies what data to collect and how often or when to collect it.
    *
    * Example:
@@ -1427,468 +1331,6 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.CollectionSchemeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.CollectionSchemeProperty
-    }
-  }
-
-  /**
-   * Information about a signal.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * SignalInformationProperty signalInformationProperty = SignalInformationProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .maxSampleCount(123)
-   * .minimumSamplingIntervalMs(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html)
-   */
-  public interface SignalInformationProperty {
-    /**
-     * (Optional) The maximum number of samples to collect.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-maxsamplecount)
-     */
-    public fun maxSampleCount(): Number? = unwrap(this).getMaxSampleCount()
-
-    /**
-     * (Optional) The minimum duration of time (in milliseconds) between two triggering events to
-     * collect data.
-     *
-     *
-     * If a signal changes often, you might want to collect data at a slower rate.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-minimumsamplingintervalms)
-     */
-    public fun minimumSamplingIntervalMs(): Number? = unwrap(this).getMinimumSamplingIntervalMs()
-
-    /**
-     * The name of the signal.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [SignalInformationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxSampleCount (Optional) The maximum number of samples to collect.
-       */
-      public fun maxSampleCount(maxSampleCount: Number)
-
-      /**
-       * @param minimumSamplingIntervalMs (Optional) The minimum duration of time (in milliseconds)
-       * between two triggering events to collect data.
-       *
-       * If a signal changes often, you might want to collect data at a slower rate.
-       */
-      public fun minimumSamplingIntervalMs(minimumSamplingIntervalMs: Number)
-
-      /**
-       * @param name The name of the signal. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty.Builder
-          =
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty.builder()
-
-      /**
-       * @param maxSampleCount (Optional) The maximum number of samples to collect.
-       */
-      override fun maxSampleCount(maxSampleCount: Number) {
-        cdkBuilder.maxSampleCount(maxSampleCount)
-      }
-
-      /**
-       * @param minimumSamplingIntervalMs (Optional) The minimum duration of time (in milliseconds)
-       * between two triggering events to collect data.
-       *
-       * If a signal changes often, you might want to collect data at a slower rate.
-       */
-      override fun minimumSamplingIntervalMs(minimumSamplingIntervalMs: Number) {
-        cdkBuilder.minimumSamplingIntervalMs(minimumSamplingIntervalMs)
-      }
-
-      /**
-       * @param name The name of the signal. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty,
-    ) : CdkObject(cdkObject), SignalInformationProperty {
-      /**
-       * (Optional) The maximum number of samples to collect.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-maxsamplecount)
-       */
-      override fun maxSampleCount(): Number? = unwrap(this).getMaxSampleCount()
-
-      /**
-       * (Optional) The minimum duration of time (in milliseconds) between two triggering events to
-       * collect data.
-       *
-       *
-       * If a signal changes often, you might want to collect data at a slower rate.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-minimumsamplingintervalms)
-       */
-      override fun minimumSamplingIntervalMs(): Number? =
-          unwrap(this).getMinimumSamplingIntervalMs()
-
-      /**
-       * The name of the signal.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SignalInformationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty):
-          SignalInformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SignalInformationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SignalInformationProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty
-    }
-  }
-
-  /**
-   * The Amazon Timestream table where the AWS IoT FleetWise campaign sends data.
-   *
-   * Timestream stores and organizes data to optimize query processing time and to reduce storage
-   * costs. For more information, see [Data
-   * modeling](https://docs.aws.amazon.com/timestream/latest/developerguide/data-modeling.html) in the
-   * *Amazon Timestream Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * TimestreamConfigProperty timestreamConfigProperty = TimestreamConfigProperty.builder()
-   * .executionRoleArn("executionRoleArn")
-   * .timestreamTableArn("timestreamTableArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html)
-   */
-  public interface TimestreamConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the task execution role that grants AWS IoT FleetWise
-     * permission to deliver data to the Amazon Timestream table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html#cfn-iotfleetwise-campaign-timestreamconfig-executionrolearn)
-     */
-    public fun executionRoleArn(): String
-
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon Timestream table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html#cfn-iotfleetwise-campaign-timestreamconfig-timestreamtablearn)
-     */
-    public fun timestreamTableArn(): String
-
-    /**
-     * A builder for [TimestreamConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that
-       * grants AWS IoT FleetWise permission to deliver data to the Amazon Timestream table. 
-       */
-      public fun executionRoleArn(executionRoleArn: String)
-
-      /**
-       * @param timestreamTableArn The Amazon Resource Name (ARN) of the Amazon Timestream table. 
-       */
-      public fun timestreamTableArn(timestreamTableArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty.builder()
-
-      /**
-       * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that
-       * grants AWS IoT FleetWise permission to deliver data to the Amazon Timestream table. 
-       */
-      override fun executionRoleArn(executionRoleArn: String) {
-        cdkBuilder.executionRoleArn(executionRoleArn)
-      }
-
-      /**
-       * @param timestreamTableArn The Amazon Resource Name (ARN) of the Amazon Timestream table. 
-       */
-      override fun timestreamTableArn(timestreamTableArn: String) {
-        cdkBuilder.timestreamTableArn(timestreamTableArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty,
-    ) : CdkObject(cdkObject), TimestreamConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the task execution role that grants AWS IoT FleetWise
-       * permission to deliver data to the Amazon Timestream table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html#cfn-iotfleetwise-campaign-timestreamconfig-executionrolearn)
-       */
-      override fun executionRoleArn(): String = unwrap(this).getExecutionRoleArn()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon Timestream table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html#cfn-iotfleetwise-campaign-timestreamconfig-timestreamtablearn)
-       */
-      override fun timestreamTableArn(): String = unwrap(this).getTimestreamTableArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimestreamConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty):
-          TimestreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TimestreamConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TimestreamConfigProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty
-    }
-  }
-
-  /**
-   * The destination where the AWS IoT FleetWise campaign sends data.
-   *
-   * You can send data to be stored in Amazon S3 or Amazon Timestream .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * DataDestinationConfigProperty dataDestinationConfigProperty =
-   * DataDestinationConfigProperty.builder()
-   * .s3Config(S3ConfigProperty.builder()
-   * .bucketArn("bucketArn")
-   * // the properties below are optional
-   * .dataFormat("dataFormat")
-   * .prefix("prefix")
-   * .storageCompressionFormat("storageCompressionFormat")
-   * .build())
-   * .timestreamConfig(TimestreamConfigProperty.builder()
-   * .executionRoleArn("executionRoleArn")
-   * .timestreamTableArn("timestreamTableArn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html)
-   */
-  public interface DataDestinationConfigProperty {
-    /**
-     * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-s3config)
-     */
-    public fun s3Config(): Any? = unwrap(this).getS3Config()
-
-    /**
-     * (Optional) The Amazon Timestream table where the campaign sends data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-timestreamconfig)
-     */
-    public fun timestreamConfig(): Any? = unwrap(this).getTimestreamConfig()
-
-    /**
-     * A builder for [DataDestinationConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
-       */
-      public fun s3Config(s3Config: IResolvable)
-
-      /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
-       */
-      public fun s3Config(s3Config: S3ConfigProperty)
-
-      /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aa0827b0454fc9c29afa4ccc11da06ed4a232455f4ac9194e6f07ac3800cd503")
-      public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
-       */
-      public fun timestreamConfig(timestreamConfig: IResolvable)
-
-      /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
-       */
-      public fun timestreamConfig(timestreamConfig: TimestreamConfigProperty)
-
-      /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3e05a80e07ddd9ec9c84f411b8d0482847c9fa86797ac250f5483a620132e716")
-      public fun timestreamConfig(timestreamConfig: TimestreamConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty.builder()
-
-      /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
-       */
-      override fun s3Config(s3Config: IResolvable) {
-        cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
-       */
-      override fun s3Config(s3Config: S3ConfigProperty) {
-        cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
-      }
-
-      /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aa0827b0454fc9c29afa4ccc11da06ed4a232455f4ac9194e6f07ac3800cd503")
-      override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
-          s3Config(S3ConfigProperty(s3Config))
-
-      /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
-       */
-      override fun timestreamConfig(timestreamConfig: IResolvable) {
-        cdkBuilder.timestreamConfig(timestreamConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
-       */
-      override fun timestreamConfig(timestreamConfig: TimestreamConfigProperty) {
-        cdkBuilder.timestreamConfig(timestreamConfig.let(TimestreamConfigProperty::unwrap))
-      }
-
-      /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3e05a80e07ddd9ec9c84f411b8d0482847c9fa86797ac250f5483a620132e716")
-      override fun timestreamConfig(timestreamConfig: TimestreamConfigProperty.Builder.() -> Unit):
-          Unit = timestreamConfig(TimestreamConfigProperty(timestreamConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty,
-    ) : CdkObject(cdkObject), DataDestinationConfigProperty {
-      /**
-       * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-s3config)
-       */
-      override fun s3Config(): Any? = unwrap(this).getS3Config()
-
-      /**
-       * (Optional) The Amazon Timestream table where the campaign sends data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-timestreamconfig)
-       */
-      override fun timestreamConfig(): Any? = unwrap(this).getTimestreamConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataDestinationConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty):
-          DataDestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataDestinationConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataDestinationConfigProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty
     }
   }
 
@@ -2097,6 +1539,194 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedCollectionSchemeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedCollectionSchemeProperty
+    }
+  }
+
+  /**
+   * The destination where the AWS IoT FleetWise campaign sends data.
+   *
+   * You can send data to be stored in Amazon S3 or Amazon Timestream .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * DataDestinationConfigProperty dataDestinationConfigProperty =
+   * DataDestinationConfigProperty.builder()
+   * .s3Config(S3ConfigProperty.builder()
+   * .bucketArn("bucketArn")
+   * // the properties below are optional
+   * .dataFormat("dataFormat")
+   * .prefix("prefix")
+   * .storageCompressionFormat("storageCompressionFormat")
+   * .build())
+   * .timestreamConfig(TimestreamConfigProperty.builder()
+   * .executionRoleArn("executionRoleArn")
+   * .timestreamTableArn("timestreamTableArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html)
+   */
+  public interface DataDestinationConfigProperty {
+    /**
+     * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-s3config)
+     */
+    public fun s3Config(): Any? = unwrap(this).getS3Config()
+
+    /**
+     * (Optional) The Amazon Timestream table where the campaign sends data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-timestreamconfig)
+     */
+    public fun timestreamConfig(): Any? = unwrap(this).getTimestreamConfig()
+
+    /**
+     * A builder for [DataDestinationConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
+       * data.
+       */
+      public fun s3Config(s3Config: IResolvable)
+
+      /**
+       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
+       * data.
+       */
+      public fun s3Config(s3Config: S3ConfigProperty)
+
+      /**
+       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
+       * data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa0827b0454fc9c29afa4ccc11da06ed4a232455f4ac9194e6f07ac3800cd503")
+      public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
+       * data.
+       */
+      public fun timestreamConfig(timestreamConfig: IResolvable)
+
+      /**
+       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
+       * data.
+       */
+      public fun timestreamConfig(timestreamConfig: TimestreamConfigProperty)
+
+      /**
+       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
+       * data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3e05a80e07ddd9ec9c84f411b8d0482847c9fa86797ac250f5483a620132e716")
+      public fun timestreamConfig(timestreamConfig: TimestreamConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty.builder()
+
+      /**
+       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
+       * data.
+       */
+      override fun s3Config(s3Config: IResolvable) {
+        cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
+       * data.
+       */
+      override fun s3Config(s3Config: S3ConfigProperty) {
+        cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
+      }
+
+      /**
+       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
+       * data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa0827b0454fc9c29afa4ccc11da06ed4a232455f4ac9194e6f07ac3800cd503")
+      override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
+          s3Config(S3ConfigProperty(s3Config))
+
+      /**
+       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
+       * data.
+       */
+      override fun timestreamConfig(timestreamConfig: IResolvable) {
+        cdkBuilder.timestreamConfig(timestreamConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
+       * data.
+       */
+      override fun timestreamConfig(timestreamConfig: TimestreamConfigProperty) {
+        cdkBuilder.timestreamConfig(timestreamConfig.let(TimestreamConfigProperty::unwrap))
+      }
+
+      /**
+       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
+       * data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3e05a80e07ddd9ec9c84f411b8d0482847c9fa86797ac250f5483a620132e716")
+      override fun timestreamConfig(timestreamConfig: TimestreamConfigProperty.Builder.() -> Unit):
+          Unit = timestreamConfig(TimestreamConfigProperty(timestreamConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty,
+    ) : CdkObject(cdkObject), DataDestinationConfigProperty {
+      /**
+       * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-s3config)
+       */
+      override fun s3Config(): Any? = unwrap(this).getS3Config()
+
+      /**
+       * (Optional) The Amazon Timestream table where the campaign sends data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-timestreamconfig)
+       */
+      override fun timestreamConfig(): Any? = unwrap(this).getTimestreamConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataDestinationConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty):
+          DataDestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataDestinationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataDestinationConfigProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty
     }
   }
 
@@ -2338,6 +1968,376 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty
+    }
+  }
+
+  /**
+   * Information about a signal.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * SignalInformationProperty signalInformationProperty = SignalInformationProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .maxSampleCount(123)
+   * .minimumSamplingIntervalMs(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html)
+   */
+  public interface SignalInformationProperty {
+    /**
+     * (Optional) The maximum number of samples to collect.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-maxsamplecount)
+     */
+    public fun maxSampleCount(): Number? = unwrap(this).getMaxSampleCount()
+
+    /**
+     * (Optional) The minimum duration of time (in milliseconds) between two triggering events to
+     * collect data.
+     *
+     *
+     * If a signal changes often, you might want to collect data at a slower rate.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-minimumsamplingintervalms)
+     */
+    public fun minimumSamplingIntervalMs(): Number? = unwrap(this).getMinimumSamplingIntervalMs()
+
+    /**
+     * The name of the signal.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [SignalInformationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxSampleCount (Optional) The maximum number of samples to collect.
+       */
+      public fun maxSampleCount(maxSampleCount: Number)
+
+      /**
+       * @param minimumSamplingIntervalMs (Optional) The minimum duration of time (in milliseconds)
+       * between two triggering events to collect data.
+       *
+       * If a signal changes often, you might want to collect data at a slower rate.
+       */
+      public fun minimumSamplingIntervalMs(minimumSamplingIntervalMs: Number)
+
+      /**
+       * @param name The name of the signal. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty.builder()
+
+      /**
+       * @param maxSampleCount (Optional) The maximum number of samples to collect.
+       */
+      override fun maxSampleCount(maxSampleCount: Number) {
+        cdkBuilder.maxSampleCount(maxSampleCount)
+      }
+
+      /**
+       * @param minimumSamplingIntervalMs (Optional) The minimum duration of time (in milliseconds)
+       * between two triggering events to collect data.
+       *
+       * If a signal changes often, you might want to collect data at a slower rate.
+       */
+      override fun minimumSamplingIntervalMs(minimumSamplingIntervalMs: Number) {
+        cdkBuilder.minimumSamplingIntervalMs(minimumSamplingIntervalMs)
+      }
+
+      /**
+       * @param name The name of the signal. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty,
+    ) : CdkObject(cdkObject), SignalInformationProperty {
+      /**
+       * (Optional) The maximum number of samples to collect.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-maxsamplecount)
+       */
+      override fun maxSampleCount(): Number? = unwrap(this).getMaxSampleCount()
+
+      /**
+       * (Optional) The minimum duration of time (in milliseconds) between two triggering events to
+       * collect data.
+       *
+       *
+       * If a signal changes often, you might want to collect data at a slower rate.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-minimumsamplingintervalms)
+       */
+      override fun minimumSamplingIntervalMs(): Number? =
+          unwrap(this).getMinimumSamplingIntervalMs()
+
+      /**
+       * The name of the signal.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SignalInformationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty):
+          SignalInformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SignalInformationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SignalInformationProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty
+    }
+  }
+
+  /**
+   * Information about a collection scheme that uses a time period to decide how often to collect
+   * data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * TimeBasedCollectionSchemeProperty timeBasedCollectionSchemeProperty =
+   * TimeBasedCollectionSchemeProperty.builder()
+   * .periodMs(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedcollectionscheme.html)
+   */
+  public interface TimeBasedCollectionSchemeProperty {
+    /**
+     * The time period (in milliseconds) to decide how often to collect data.
+     *
+     * For example, if the time period is `60000` , the Edge Agent software collects data once every
+     * minute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedcollectionscheme.html#cfn-iotfleetwise-campaign-timebasedcollectionscheme-periodms)
+     */
+    public fun periodMs(): Number
+
+    /**
+     * A builder for [TimeBasedCollectionSchemeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param periodMs The time period (in milliseconds) to decide how often to collect data. 
+       * For example, if the time period is `60000` , the Edge Agent software collects data once
+       * every minute.
+       */
+      public fun periodMs(periodMs: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty.builder()
+
+      /**
+       * @param periodMs The time period (in milliseconds) to decide how often to collect data. 
+       * For example, if the time period is `60000` , the Edge Agent software collects data once
+       * every minute.
+       */
+      override fun periodMs(periodMs: Number) {
+        cdkBuilder.periodMs(periodMs)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty,
+    ) : CdkObject(cdkObject), TimeBasedCollectionSchemeProperty {
+      /**
+       * The time period (in milliseconds) to decide how often to collect data.
+       *
+       * For example, if the time period is `60000` , the Edge Agent software collects data once
+       * every minute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedcollectionscheme.html#cfn-iotfleetwise-campaign-timebasedcollectionscheme-periodms)
+       */
+      override fun periodMs(): Number = unwrap(this).getPeriodMs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TimeBasedCollectionSchemeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty):
+          TimeBasedCollectionSchemeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeBasedCollectionSchemeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimeBasedCollectionSchemeProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
+    }
+  }
+
+  /**
+   * The Amazon Timestream table where the AWS IoT FleetWise campaign sends data.
+   *
+   * Timestream stores and organizes data to optimize query processing time and to reduce storage
+   * costs. For more information, see [Data
+   * modeling](https://docs.aws.amazon.com/timestream/latest/developerguide/data-modeling.html) in the
+   * *Amazon Timestream Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * TimestreamConfigProperty timestreamConfigProperty = TimestreamConfigProperty.builder()
+   * .executionRoleArn("executionRoleArn")
+   * .timestreamTableArn("timestreamTableArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html)
+   */
+  public interface TimestreamConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the task execution role that grants AWS IoT FleetWise
+     * permission to deliver data to the Amazon Timestream table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html#cfn-iotfleetwise-campaign-timestreamconfig-executionrolearn)
+     */
+    public fun executionRoleArn(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Timestream table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html#cfn-iotfleetwise-campaign-timestreamconfig-timestreamtablearn)
+     */
+    public fun timestreamTableArn(): String
+
+    /**
+     * A builder for [TimestreamConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that
+       * grants AWS IoT FleetWise permission to deliver data to the Amazon Timestream table. 
+       */
+      public fun executionRoleArn(executionRoleArn: String)
+
+      /**
+       * @param timestreamTableArn The Amazon Resource Name (ARN) of the Amazon Timestream table. 
+       */
+      public fun timestreamTableArn(timestreamTableArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty.builder()
+
+      /**
+       * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that
+       * grants AWS IoT FleetWise permission to deliver data to the Amazon Timestream table. 
+       */
+      override fun executionRoleArn(executionRoleArn: String) {
+        cdkBuilder.executionRoleArn(executionRoleArn)
+      }
+
+      /**
+       * @param timestreamTableArn The Amazon Resource Name (ARN) of the Amazon Timestream table. 
+       */
+      override fun timestreamTableArn(timestreamTableArn: String) {
+        cdkBuilder.timestreamTableArn(timestreamTableArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty,
+    ) : CdkObject(cdkObject), TimestreamConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the task execution role that grants AWS IoT FleetWise
+       * permission to deliver data to the Amazon Timestream table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html#cfn-iotfleetwise-campaign-timestreamconfig-executionrolearn)
+       */
+      override fun executionRoleArn(): String = unwrap(this).getExecutionRoleArn()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon Timestream table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timestreamconfig.html#cfn-iotfleetwise-campaign-timestreamconfig-timestreamtablearn)
+       */
+      override fun timestreamTableArn(): String = unwrap(this).getTimestreamTableArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimestreamConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty):
+          TimestreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TimestreamConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimestreamConfigProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty
     }
   }
 }

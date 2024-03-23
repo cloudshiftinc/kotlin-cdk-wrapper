@@ -399,6 +399,127 @@ public open class CfnPrivateDnsNamespace internal constructor(
   }
 
   /**
+   * DNS properties for the private DNS namespace.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
+   * PrivateDnsPropertiesMutableProperty privateDnsPropertiesMutableProperty =
+   * PrivateDnsPropertiesMutableProperty.builder()
+   * .soa(SOAProperty.builder()
+   * .ttl(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html)
+   */
+  public interface PrivateDnsPropertiesMutableProperty {
+    /**
+     * Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS
+     * namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html#cfn-servicediscovery-privatednsnamespace-privatednspropertiesmutable-soa)
+     */
+    public fun soa(): Any? = unwrap(this).getSoa()
+
+    /**
+     * A builder for [PrivateDnsPropertiesMutableProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      public fun soa(soa: IResolvable)
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      public fun soa(soa: SOAProperty)
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
+      public fun soa(soa: SOAProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.Builder
+          =
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.builder()
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      override fun soa(soa: IResolvable) {
+        cdkBuilder.soa(soa.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      override fun soa(soa: SOAProperty) {
+        cdkBuilder.soa(soa.let(SOAProperty::unwrap))
+      }
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
+      override fun soa(soa: SOAProperty.Builder.() -> Unit): Unit = soa(SOAProperty(soa))
+
+      public fun build():
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty,
+    ) : CdkObject(cdkObject), PrivateDnsPropertiesMutableProperty {
+      /**
+       * Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS
+       * namespace.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html#cfn-servicediscovery-privatednsnamespace-privatednspropertiesmutable-soa)
+       */
+      override fun soa(): Any? = unwrap(this).getSoa()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrivateDnsPropertiesMutableProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty):
+          PrivateDnsPropertiesMutableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateDnsPropertiesMutableProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateDnsPropertiesMutableProperty):
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
+    }
+  }
+
+  /**
    * Properties for the private DNS namespace.
    *
    * Example:
@@ -593,127 +714,6 @@ public open class CfnPrivateDnsNamespace internal constructor(
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty
-    }
-  }
-
-  /**
-   * DNS properties for the private DNS namespace.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
-   * PrivateDnsPropertiesMutableProperty privateDnsPropertiesMutableProperty =
-   * PrivateDnsPropertiesMutableProperty.builder()
-   * .soa(SOAProperty.builder()
-   * .ttl(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html)
-   */
-  public interface PrivateDnsPropertiesMutableProperty {
-    /**
-     * Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS
-     * namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html#cfn-servicediscovery-privatednsnamespace-privatednspropertiesmutable-soa)
-     */
-    public fun soa(): Any? = unwrap(this).getSoa()
-
-    /**
-     * A builder for [PrivateDnsPropertiesMutableProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-       * private DNS namespace.
-       */
-      public fun soa(soa: IResolvable)
-
-      /**
-       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-       * private DNS namespace.
-       */
-      public fun soa(soa: SOAProperty)
-
-      /**
-       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-       * private DNS namespace.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
-      public fun soa(soa: SOAProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.Builder
-          =
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.builder()
-
-      /**
-       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-       * private DNS namespace.
-       */
-      override fun soa(soa: IResolvable) {
-        cdkBuilder.soa(soa.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-       * private DNS namespace.
-       */
-      override fun soa(soa: SOAProperty) {
-        cdkBuilder.soa(soa.let(SOAProperty::unwrap))
-      }
-
-      /**
-       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-       * private DNS namespace.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
-      override fun soa(soa: SOAProperty.Builder.() -> Unit): Unit = soa(SOAProperty(soa))
-
-      public fun build():
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty,
-    ) : CdkObject(cdkObject), PrivateDnsPropertiesMutableProperty {
-      /**
-       * Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS
-       * namespace.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html#cfn-servicediscovery-privatednsnamespace-privatednspropertiesmutable-soa)
-       */
-      override fun soa(): Any? = unwrap(this).getSoa()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PrivateDnsPropertiesMutableProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty):
-          PrivateDnsPropertiesMutableProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateDnsPropertiesMutableProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateDnsPropertiesMutableProperty):
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
     }
   }
 }

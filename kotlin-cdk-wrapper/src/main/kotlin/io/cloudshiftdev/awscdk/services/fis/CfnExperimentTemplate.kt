@@ -625,6 +625,711 @@ public open class CfnExperimentTemplate internal constructor(
   }
 
   /**
+   * Specifies the configuration for experiment logging to CloudWatch Logs .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * CloudWatchLogsConfigurationProperty cloudWatchLogsConfigurationProperty =
+   * CloudWatchLogsConfigurationProperty.builder()
+   * .logGroupArn("logGroupArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchlogsconfiguration.html)
+   */
+  public interface CloudWatchLogsConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchlogsconfiguration.html#cfn-fis-experimenttemplate-cloudwatchlogsconfiguration-loggrouparn)
+     */
+    public fun logGroupArn(): String
+
+    /**
+     * A builder for [CloudWatchLogsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logGroupArn The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs
+       * log group. 
+       */
+      public fun logGroupArn(logGroupArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty.builder()
+
+      /**
+       * @param logGroupArn The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs
+       * log group. 
+       */
+      override fun logGroupArn(logGroupArn: String) {
+        cdkBuilder.logGroupArn(logGroupArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogsConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchlogsconfiguration.html#cfn-fis-experimenttemplate-cloudwatchlogsconfiguration-loggrouparn)
+       */
+      override fun logGroupArn(): String = unwrap(this).getLogGroupArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CloudWatchLogsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty):
+          CloudWatchLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchLogsConfigurationProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies an action for an experiment template.
+   *
+   * For more information, see
+   * [Actions](https://docs.aws.amazon.com/fis/latest/userguide/actions.html) in the *AWS Fault
+   * Injection Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * ExperimentTemplateActionProperty experimentTemplateActionProperty =
+   * ExperimentTemplateActionProperty.builder()
+   * .actionId("actionId")
+   * // the properties below are optional
+   * .description("description")
+   * .parameters(Map.of(
+   * "parametersKey", "parameters"))
+   * .startAfter(List.of("startAfter"))
+   * .targets(Map.of(
+   * "targetsKey", "targets"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html)
+   */
+  public interface ExperimentTemplateActionProperty {
+    /**
+     * The ID of the action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-actionid)
+     */
+    public fun actionId(): String
+
+    /**
+     * A description for the action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The parameters for the action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * The name of the action that must be completed before the current action starts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-startafter)
+     */
+    public fun startAfter(): List<String> = unwrap(this).getStartAfter() ?: emptyList()
+
+    /**
+     * The targets for the action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-targets)
+     */
+    public fun targets(): Any? = unwrap(this).getTargets()
+
+    /**
+     * A builder for [ExperimentTemplateActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actionId The ID of the action. 
+       */
+      public fun actionId(actionId: String)
+
+      /**
+       * @param description A description for the action.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param parameters The parameters for the action.
+       */
+      public fun parameters(parameters: IResolvable)
+
+      /**
+       * @param parameters The parameters for the action.
+       */
+      public fun parameters(parameters: Map<String, String>)
+
+      /**
+       * @param startAfter The name of the action that must be completed before the current action
+       * starts.
+       */
+      public fun startAfter(startAfter: List<String>)
+
+      /**
+       * @param startAfter The name of the action that must be completed before the current action
+       * starts.
+       */
+      public fun startAfter(vararg startAfter: String)
+
+      /**
+       * @param targets The targets for the action.
+       */
+      public fun targets(targets: IResolvable)
+
+      /**
+       * @param targets The targets for the action.
+       */
+      public fun targets(targets: Map<String, String>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty.Builder
+          =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty.builder()
+
+      /**
+       * @param actionId The ID of the action. 
+       */
+      override fun actionId(actionId: String) {
+        cdkBuilder.actionId(actionId)
+      }
+
+      /**
+       * @param description A description for the action.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param parameters The parameters for the action.
+       */
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parameters The parameters for the action.
+       */
+      override fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      /**
+       * @param startAfter The name of the action that must be completed before the current action
+       * starts.
+       */
+      override fun startAfter(startAfter: List<String>) {
+        cdkBuilder.startAfter(startAfter)
+      }
+
+      /**
+       * @param startAfter The name of the action that must be completed before the current action
+       * starts.
+       */
+      override fun startAfter(vararg startAfter: String): Unit = startAfter(startAfter.toList())
+
+      /**
+       * @param targets The targets for the action.
+       */
+      override fun targets(targets: IResolvable) {
+        cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targets The targets for the action.
+       */
+      override fun targets(targets: Map<String, String>) {
+        cdkBuilder.targets(targets)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty,
+    ) : CdkObject(cdkObject), ExperimentTemplateActionProperty {
+      /**
+       * The ID of the action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-actionid)
+       */
+      override fun actionId(): String = unwrap(this).getActionId()
+
+      /**
+       * A description for the action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * The parameters for the action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+
+      /**
+       * The name of the action that must be completed before the current action starts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-startafter)
+       */
+      override fun startAfter(): List<String> = unwrap(this).getStartAfter() ?: emptyList()
+
+      /**
+       * The targets for the action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-targets)
+       */
+      override fun targets(): Any? = unwrap(this).getTargets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExperimentTemplateActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty):
+          ExperimentTemplateActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExperimentTemplateActionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExperimentTemplateActionProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty
+    }
+  }
+
+  /**
+   * Describes the experiment options for an experiment template.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * ExperimentTemplateExperimentOptionsProperty experimentTemplateExperimentOptionsProperty =
+   * ExperimentTemplateExperimentOptionsProperty.builder()
+   * .accountTargeting("accountTargeting")
+   * .emptyTargetResolutionMode("emptyTargetResolutionMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html)
+   */
+  public interface ExperimentTemplateExperimentOptionsProperty {
+    /**
+     * The account targeting setting for an experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html#cfn-fis-experimenttemplate-experimenttemplateexperimentoptions-accounttargeting)
+     */
+    public fun accountTargeting(): String? = unwrap(this).getAccountTargeting()
+
+    /**
+     * The empty target resolution mode for an experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html#cfn-fis-experimenttemplate-experimenttemplateexperimentoptions-emptytargetresolutionmode)
+     */
+    public fun emptyTargetResolutionMode(): String? = unwrap(this).getEmptyTargetResolutionMode()
+
+    /**
+     * A builder for [ExperimentTemplateExperimentOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountTargeting The account targeting setting for an experiment template.
+       */
+      public fun accountTargeting(accountTargeting: String)
+
+      /**
+       * @param emptyTargetResolutionMode The empty target resolution mode for an experiment
+       * template.
+       */
+      public fun emptyTargetResolutionMode(emptyTargetResolutionMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty.builder()
+
+      /**
+       * @param accountTargeting The account targeting setting for an experiment template.
+       */
+      override fun accountTargeting(accountTargeting: String) {
+        cdkBuilder.accountTargeting(accountTargeting)
+      }
+
+      /**
+       * @param emptyTargetResolutionMode The empty target resolution mode for an experiment
+       * template.
+       */
+      override fun emptyTargetResolutionMode(emptyTargetResolutionMode: String) {
+        cdkBuilder.emptyTargetResolutionMode(emptyTargetResolutionMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty,
+    ) : CdkObject(cdkObject), ExperimentTemplateExperimentOptionsProperty {
+      /**
+       * The account targeting setting for an experiment template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html#cfn-fis-experimenttemplate-experimenttemplateexperimentoptions-accounttargeting)
+       */
+      override fun accountTargeting(): String? = unwrap(this).getAccountTargeting()
+
+      /**
+       * The empty target resolution mode for an experiment template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html#cfn-fis-experimenttemplate-experimenttemplateexperimentoptions-emptytargetresolutionmode)
+       */
+      override fun emptyTargetResolutionMode(): String? =
+          unwrap(this).getEmptyTargetResolutionMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ExperimentTemplateExperimentOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty):
+          ExperimentTemplateExperimentOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExperimentTemplateExperimentOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExperimentTemplateExperimentOptionsProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration for experiment logging.
+   *
+   * For more information, see [Experiment
+   * logging](https://docs.aws.amazon.com/fis/latest/userguide/monitoring-logging.html) in the *AWS
+   * Fault Injection Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * Object cloudWatchLogsConfiguration;
+   * Object s3Configuration;
+   * ExperimentTemplateLogConfigurationProperty experimentTemplateLogConfigurationProperty =
+   * ExperimentTemplateLogConfigurationProperty.builder()
+   * .logSchemaVersion(123)
+   * // the properties below are optional
+   * .cloudWatchLogsConfiguration(cloudWatchLogsConfiguration)
+   * .s3Configuration(s3Configuration)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html)
+   */
+  public interface ExperimentTemplateLogConfigurationProperty {
+    /**
+     * The configuration for experiment logging to CloudWatch Logs .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-cloudwatchlogsconfiguration)
+     */
+    public fun cloudWatchLogsConfiguration(): Any? = unwrap(this).getCloudWatchLogsConfiguration()
+
+    /**
+     * The schema version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-logschemaversion)
+     */
+    public fun logSchemaVersion(): Number
+
+    /**
+     * The configuration for experiment logging to Amazon S3 .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-s3configuration)
+     */
+    public fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
+
+    /**
+     * A builder for [ExperimentTemplateLogConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogsConfiguration The configuration for experiment logging to CloudWatch
+       * Logs .
+       */
+      public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any)
+
+      /**
+       * @param logSchemaVersion The schema version. 
+       */
+      public fun logSchemaVersion(logSchemaVersion: Number)
+
+      /**
+       * @param s3Configuration The configuration for experiment logging to Amazon S3 .
+       */
+      public fun s3Configuration(s3Configuration: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.builder()
+
+      /**
+       * @param cloudWatchLogsConfiguration The configuration for experiment logging to CloudWatch
+       * Logs .
+       */
+      override fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any) {
+        cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration)
+      }
+
+      /**
+       * @param logSchemaVersion The schema version. 
+       */
+      override fun logSchemaVersion(logSchemaVersion: Number) {
+        cdkBuilder.logSchemaVersion(logSchemaVersion)
+      }
+
+      /**
+       * @param s3Configuration The configuration for experiment logging to Amazon S3 .
+       */
+      override fun s3Configuration(s3Configuration: Any) {
+        cdkBuilder.s3Configuration(s3Configuration)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty,
+    ) : CdkObject(cdkObject), ExperimentTemplateLogConfigurationProperty {
+      /**
+       * The configuration for experiment logging to CloudWatch Logs .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-cloudwatchlogsconfiguration)
+       */
+      override fun cloudWatchLogsConfiguration(): Any? =
+          unwrap(this).getCloudWatchLogsConfiguration()
+
+      /**
+       * The schema version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-logschemaversion)
+       */
+      override fun logSchemaVersion(): Number = unwrap(this).getLogSchemaVersion()
+
+      /**
+       * The configuration for experiment logging to Amazon S3 .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-s3configuration)
+       */
+      override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ExperimentTemplateLogConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty):
+          ExperimentTemplateLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExperimentTemplateLogConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExperimentTemplateLogConfigurationProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies a stop condition for an experiment template.
+   *
+   * For more information, see [Stop
+   * conditions](https://docs.aws.amazon.com/fis/latest/userguide/stop-conditions.html) in the *AWS
+   * Fault Injection Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * ExperimentTemplateStopConditionProperty experimentTemplateStopConditionProperty =
+   * ExperimentTemplateStopConditionProperty.builder()
+   * .source("source")
+   * // the properties below are optional
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html)
+   */
+  public interface ExperimentTemplateStopConditionProperty {
+    /**
+     * The source for the stop condition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html#cfn-fis-experimenttemplate-experimenttemplatestopcondition-source)
+     */
+    public fun source(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the CloudWatch alarm, if applicable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html#cfn-fis-experimenttemplate-experimenttemplatestopcondition-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ExperimentTemplateStopConditionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param source The source for the stop condition. 
+       */
+      public fun source(source: String)
+
+      /**
+       * @param value The Amazon Resource Name (ARN) of the CloudWatch alarm, if applicable.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty.Builder
+          =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty.builder()
+
+      /**
+       * @param source The source for the stop condition. 
+       */
+      override fun source(source: String) {
+        cdkBuilder.source(source)
+      }
+
+      /**
+       * @param value The Amazon Resource Name (ARN) of the CloudWatch alarm, if applicable.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty,
+    ) : CdkObject(cdkObject), ExperimentTemplateStopConditionProperty {
+      /**
+       * The source for the stop condition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html#cfn-fis-experimenttemplate-experimenttemplatestopcondition-source)
+       */
+      override fun source(): String = unwrap(this).getSource()
+
+      /**
+       * The Amazon Resource Name (ARN) of the CloudWatch alarm, if applicable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html#cfn-fis-experimenttemplate-experimenttemplatestopcondition-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ExperimentTemplateStopConditionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty):
+          ExperimentTemplateStopConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExperimentTemplateStopConditionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExperimentTemplateStopConditionProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty
+    }
+  }
+
+  /**
    * Specifies a filter used for the target resource input in an experiment template.
    *
    * For more information, see [Resource
@@ -1040,270 +1745,6 @@ public open class CfnExperimentTemplate internal constructor(
   }
 
   /**
-   * Specifies the configuration for experiment logging.
-   *
-   * For more information, see [Experiment
-   * logging](https://docs.aws.amazon.com/fis/latest/userguide/monitoring-logging.html) in the *AWS
-   * Fault Injection Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fis.*;
-   * Object cloudWatchLogsConfiguration;
-   * Object s3Configuration;
-   * ExperimentTemplateLogConfigurationProperty experimentTemplateLogConfigurationProperty =
-   * ExperimentTemplateLogConfigurationProperty.builder()
-   * .logSchemaVersion(123)
-   * // the properties below are optional
-   * .cloudWatchLogsConfiguration(cloudWatchLogsConfiguration)
-   * .s3Configuration(s3Configuration)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html)
-   */
-  public interface ExperimentTemplateLogConfigurationProperty {
-    /**
-     * The configuration for experiment logging to CloudWatch Logs .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-cloudwatchlogsconfiguration)
-     */
-    public fun cloudWatchLogsConfiguration(): Any? = unwrap(this).getCloudWatchLogsConfiguration()
-
-    /**
-     * The schema version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-logschemaversion)
-     */
-    public fun logSchemaVersion(): Number
-
-    /**
-     * The configuration for experiment logging to Amazon S3 .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-s3configuration)
-     */
-    public fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
-
-    /**
-     * A builder for [ExperimentTemplateLogConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogsConfiguration The configuration for experiment logging to CloudWatch
-       * Logs .
-       */
-      public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any)
-
-      /**
-       * @param logSchemaVersion The schema version. 
-       */
-      public fun logSchemaVersion(logSchemaVersion: Number)
-
-      /**
-       * @param s3Configuration The configuration for experiment logging to Amazon S3 .
-       */
-      public fun s3Configuration(s3Configuration: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.builder()
-
-      /**
-       * @param cloudWatchLogsConfiguration The configuration for experiment logging to CloudWatch
-       * Logs .
-       */
-      override fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any) {
-        cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration)
-      }
-
-      /**
-       * @param logSchemaVersion The schema version. 
-       */
-      override fun logSchemaVersion(logSchemaVersion: Number) {
-        cdkBuilder.logSchemaVersion(logSchemaVersion)
-      }
-
-      /**
-       * @param s3Configuration The configuration for experiment logging to Amazon S3 .
-       */
-      override fun s3Configuration(s3Configuration: Any) {
-        cdkBuilder.s3Configuration(s3Configuration)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateLogConfigurationProperty {
-      /**
-       * The configuration for experiment logging to CloudWatch Logs .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-cloudwatchlogsconfiguration)
-       */
-      override fun cloudWatchLogsConfiguration(): Any? =
-          unwrap(this).getCloudWatchLogsConfiguration()
-
-      /**
-       * The schema version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-logschemaversion)
-       */
-      override fun logSchemaVersion(): Number = unwrap(this).getLogSchemaVersion()
-
-      /**
-       * The configuration for experiment logging to Amazon S3 .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html#cfn-fis-experimenttemplate-experimenttemplatelogconfiguration-s3configuration)
-       */
-      override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ExperimentTemplateLogConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty):
-          ExperimentTemplateLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ExperimentTemplateLogConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExperimentTemplateLogConfigurationProperty):
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes the experiment options for an experiment template.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fis.*;
-   * ExperimentTemplateExperimentOptionsProperty experimentTemplateExperimentOptionsProperty =
-   * ExperimentTemplateExperimentOptionsProperty.builder()
-   * .accountTargeting("accountTargeting")
-   * .emptyTargetResolutionMode("emptyTargetResolutionMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html)
-   */
-  public interface ExperimentTemplateExperimentOptionsProperty {
-    /**
-     * The account targeting setting for an experiment template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html#cfn-fis-experimenttemplate-experimenttemplateexperimentoptions-accounttargeting)
-     */
-    public fun accountTargeting(): String? = unwrap(this).getAccountTargeting()
-
-    /**
-     * The empty target resolution mode for an experiment template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html#cfn-fis-experimenttemplate-experimenttemplateexperimentoptions-emptytargetresolutionmode)
-     */
-    public fun emptyTargetResolutionMode(): String? = unwrap(this).getEmptyTargetResolutionMode()
-
-    /**
-     * A builder for [ExperimentTemplateExperimentOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accountTargeting The account targeting setting for an experiment template.
-       */
-      public fun accountTargeting(accountTargeting: String)
-
-      /**
-       * @param emptyTargetResolutionMode The empty target resolution mode for an experiment
-       * template.
-       */
-      public fun emptyTargetResolutionMode(emptyTargetResolutionMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty.builder()
-
-      /**
-       * @param accountTargeting The account targeting setting for an experiment template.
-       */
-      override fun accountTargeting(accountTargeting: String) {
-        cdkBuilder.accountTargeting(accountTargeting)
-      }
-
-      /**
-       * @param emptyTargetResolutionMode The empty target resolution mode for an experiment
-       * template.
-       */
-      override fun emptyTargetResolutionMode(emptyTargetResolutionMode: String) {
-        cdkBuilder.emptyTargetResolutionMode(emptyTargetResolutionMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateExperimentOptionsProperty {
-      /**
-       * The account targeting setting for an experiment template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html#cfn-fis-experimenttemplate-experimenttemplateexperimentoptions-accounttargeting)
-       */
-      override fun accountTargeting(): String? = unwrap(this).getAccountTargeting()
-
-      /**
-       * The empty target resolution mode for an experiment template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentoptions.html#cfn-fis-experimenttemplate-experimenttemplateexperimentoptions-emptytargetresolutionmode)
-       */
-      override fun emptyTargetResolutionMode(): String? =
-          unwrap(this).getEmptyTargetResolutionMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ExperimentTemplateExperimentOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty):
-          ExperimentTemplateExperimentOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ExperimentTemplateExperimentOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExperimentTemplateExperimentOptionsProperty):
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
-    }
-  }
-
-  /**
    * Specifies the configuration for experiment logging to Amazon S3 .
    *
    * Example:
@@ -1411,447 +1852,6 @@ public open class CfnExperimentTemplate internal constructor(
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies a stop condition for an experiment template.
-   *
-   * For more information, see [Stop
-   * conditions](https://docs.aws.amazon.com/fis/latest/userguide/stop-conditions.html) in the *AWS
-   * Fault Injection Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fis.*;
-   * ExperimentTemplateStopConditionProperty experimentTemplateStopConditionProperty =
-   * ExperimentTemplateStopConditionProperty.builder()
-   * .source("source")
-   * // the properties below are optional
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html)
-   */
-  public interface ExperimentTemplateStopConditionProperty {
-    /**
-     * The source for the stop condition.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html#cfn-fis-experimenttemplate-experimenttemplatestopcondition-source)
-     */
-    public fun source(): String
-
-    /**
-     * The Amazon Resource Name (ARN) of the CloudWatch alarm, if applicable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html#cfn-fis-experimenttemplate-experimenttemplatestopcondition-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ExperimentTemplateStopConditionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param source The source for the stop condition. 
-       */
-      public fun source(source: String)
-
-      /**
-       * @param value The Amazon Resource Name (ARN) of the CloudWatch alarm, if applicable.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty.Builder
-          =
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty.builder()
-
-      /**
-       * @param source The source for the stop condition. 
-       */
-      override fun source(source: String) {
-        cdkBuilder.source(source)
-      }
-
-      /**
-       * @param value The Amazon Resource Name (ARN) of the CloudWatch alarm, if applicable.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateStopConditionProperty {
-      /**
-       * The source for the stop condition.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html#cfn-fis-experimenttemplate-experimenttemplatestopcondition-source)
-       */
-      override fun source(): String = unwrap(this).getSource()
-
-      /**
-       * The Amazon Resource Name (ARN) of the CloudWatch alarm, if applicable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatestopcondition.html#cfn-fis-experimenttemplate-experimenttemplatestopcondition-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ExperimentTemplateStopConditionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty):
-          ExperimentTemplateStopConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ExperimentTemplateStopConditionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExperimentTemplateStopConditionProperty):
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty
-    }
-  }
-
-  /**
-   * Specifies an action for an experiment template.
-   *
-   * For more information, see
-   * [Actions](https://docs.aws.amazon.com/fis/latest/userguide/actions.html) in the *AWS Fault
-   * Injection Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fis.*;
-   * ExperimentTemplateActionProperty experimentTemplateActionProperty =
-   * ExperimentTemplateActionProperty.builder()
-   * .actionId("actionId")
-   * // the properties below are optional
-   * .description("description")
-   * .parameters(Map.of(
-   * "parametersKey", "parameters"))
-   * .startAfter(List.of("startAfter"))
-   * .targets(Map.of(
-   * "targetsKey", "targets"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html)
-   */
-  public interface ExperimentTemplateActionProperty {
-    /**
-     * The ID of the action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-actionid)
-     */
-    public fun actionId(): String
-
-    /**
-     * A description for the action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The parameters for the action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * The name of the action that must be completed before the current action starts.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-startafter)
-     */
-    public fun startAfter(): List<String> = unwrap(this).getStartAfter() ?: emptyList()
-
-    /**
-     * The targets for the action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-targets)
-     */
-    public fun targets(): Any? = unwrap(this).getTargets()
-
-    /**
-     * A builder for [ExperimentTemplateActionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actionId The ID of the action. 
-       */
-      public fun actionId(actionId: String)
-
-      /**
-       * @param description A description for the action.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param parameters The parameters for the action.
-       */
-      public fun parameters(parameters: IResolvable)
-
-      /**
-       * @param parameters The parameters for the action.
-       */
-      public fun parameters(parameters: Map<String, String>)
-
-      /**
-       * @param startAfter The name of the action that must be completed before the current action
-       * starts.
-       */
-      public fun startAfter(startAfter: List<String>)
-
-      /**
-       * @param startAfter The name of the action that must be completed before the current action
-       * starts.
-       */
-      public fun startAfter(vararg startAfter: String)
-
-      /**
-       * @param targets The targets for the action.
-       */
-      public fun targets(targets: IResolvable)
-
-      /**
-       * @param targets The targets for the action.
-       */
-      public fun targets(targets: Map<String, String>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty.Builder
-          =
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty.builder()
-
-      /**
-       * @param actionId The ID of the action. 
-       */
-      override fun actionId(actionId: String) {
-        cdkBuilder.actionId(actionId)
-      }
-
-      /**
-       * @param description A description for the action.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param parameters The parameters for the action.
-       */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parameters The parameters for the action.
-       */
-      override fun parameters(parameters: Map<String, String>) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      /**
-       * @param startAfter The name of the action that must be completed before the current action
-       * starts.
-       */
-      override fun startAfter(startAfter: List<String>) {
-        cdkBuilder.startAfter(startAfter)
-      }
-
-      /**
-       * @param startAfter The name of the action that must be completed before the current action
-       * starts.
-       */
-      override fun startAfter(vararg startAfter: String): Unit = startAfter(startAfter.toList())
-
-      /**
-       * @param targets The targets for the action.
-       */
-      override fun targets(targets: IResolvable) {
-        cdkBuilder.targets(targets.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targets The targets for the action.
-       */
-      override fun targets(targets: Map<String, String>) {
-        cdkBuilder.targets(targets)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateActionProperty {
-      /**
-       * The ID of the action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-actionid)
-       */
-      override fun actionId(): String = unwrap(this).getActionId()
-
-      /**
-       * A description for the action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The parameters for the action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-
-      /**
-       * The name of the action that must be completed before the current action starts.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-startafter)
-       */
-      override fun startAfter(): List<String> = unwrap(this).getStartAfter() ?: emptyList()
-
-      /**
-       * The targets for the action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html#cfn-fis-experimenttemplate-experimenttemplateaction-targets)
-       */
-      override fun targets(): Any? = unwrap(this).getTargets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExperimentTemplateActionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty):
-          ExperimentTemplateActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ExperimentTemplateActionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExperimentTemplateActionProperty):
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration for experiment logging to CloudWatch Logs .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fis.*;
-   * CloudWatchLogsConfigurationProperty cloudWatchLogsConfigurationProperty =
-   * CloudWatchLogsConfigurationProperty.builder()
-   * .logGroupArn("logGroupArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchlogsconfiguration.html)
-   */
-  public interface CloudWatchLogsConfigurationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchlogsconfiguration.html#cfn-fis-experimenttemplate-cloudwatchlogsconfiguration-loggrouparn)
-     */
-    public fun logGroupArn(): String
-
-    /**
-     * A builder for [CloudWatchLogsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param logGroupArn The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs
-       * log group. 
-       */
-      public fun logGroupArn(logGroupArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty.builder()
-
-      /**
-       * @param logGroupArn The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs
-       * log group. 
-       */
-      override fun logGroupArn(logGroupArn: String) {
-        cdkBuilder.logGroupArn(logGroupArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsConfigurationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchlogsconfiguration.html#cfn-fis-experimenttemplate-cloudwatchlogsconfiguration-loggrouparn)
-       */
-      override fun logGroupArn(): String = unwrap(this).getLogGroupArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CloudWatchLogsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty):
-          CloudWatchLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogsConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogsConfigurationProperty):
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty
     }
   }
 }

@@ -403,173 +403,6 @@ public open class CfnConfigurationAggregator internal constructor(
   }
 
   /**
-   * This object contains regions to set up the aggregator and an IAM role to retrieve organization
-   * details.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * OrganizationAggregationSourceProperty organizationAggregationSourceProperty =
-   * OrganizationAggregationSourceProperty.builder()
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .allAwsRegions(false)
-   * .awsRegions(List.of("awsRegions"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html)
-   */
-  public interface OrganizationAggregationSourceProperty {
-    /**
-     * If true, aggregate existing AWS Config regions and future regions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-allawsregions)
-     */
-    public fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
-
-    /**
-     * The source regions being aggregated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-awsregions)
-     */
-    public fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
-
-    /**
-     * ARN of the IAM role used to retrieve AWS Organizations details associated with the aggregator
-     * account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [OrganizationAggregationSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
-       */
-      public fun allAwsRegions(allAwsRegions: Boolean)
-
-      /**
-       * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
-       */
-      public fun allAwsRegions(allAwsRegions: IResolvable)
-
-      /**
-       * @param awsRegions The source regions being aggregated.
-       */
-      public fun awsRegions(awsRegions: List<String>)
-
-      /**
-       * @param awsRegions The source regions being aggregated.
-       */
-      public fun awsRegions(vararg awsRegions: String)
-
-      /**
-       * @param roleArn ARN of the IAM role used to retrieve AWS Organizations details associated
-       * with the aggregator account. 
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty.builder()
-
-      /**
-       * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
-       */
-      override fun allAwsRegions(allAwsRegions: Boolean) {
-        cdkBuilder.allAwsRegions(allAwsRegions)
-      }
-
-      /**
-       * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
-       */
-      override fun allAwsRegions(allAwsRegions: IResolvable) {
-        cdkBuilder.allAwsRegions(allAwsRegions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param awsRegions The source regions being aggregated.
-       */
-      override fun awsRegions(awsRegions: List<String>) {
-        cdkBuilder.awsRegions(awsRegions)
-      }
-
-      /**
-       * @param awsRegions The source regions being aggregated.
-       */
-      override fun awsRegions(vararg awsRegions: String): Unit = awsRegions(awsRegions.toList())
-
-      /**
-       * @param roleArn ARN of the IAM role used to retrieve AWS Organizations details associated
-       * with the aggregator account. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty,
-    ) : CdkObject(cdkObject), OrganizationAggregationSourceProperty {
-      /**
-       * If true, aggregate existing AWS Config regions and future regions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-allawsregions)
-       */
-      override fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
-
-      /**
-       * The source regions being aggregated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-awsregions)
-       */
-      override fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
-
-      /**
-       * ARN of the IAM role used to retrieve AWS Organizations details associated with the
-       * aggregator account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          OrganizationAggregationSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty):
-          OrganizationAggregationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OrganizationAggregationSourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OrganizationAggregationSourceProperty):
-          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty
-    }
-  }
-
-  /**
    * A collection of accounts and regions.
    *
    * Example:
@@ -737,6 +570,173 @@ public open class CfnConfigurationAggregator internal constructor(
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty
+    }
+  }
+
+  /**
+   * This object contains regions to set up the aggregator and an IAM role to retrieve organization
+   * details.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * OrganizationAggregationSourceProperty organizationAggregationSourceProperty =
+   * OrganizationAggregationSourceProperty.builder()
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .allAwsRegions(false)
+   * .awsRegions(List.of("awsRegions"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html)
+   */
+  public interface OrganizationAggregationSourceProperty {
+    /**
+     * If true, aggregate existing AWS Config regions and future regions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-allawsregions)
+     */
+    public fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
+
+    /**
+     * The source regions being aggregated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-awsregions)
+     */
+    public fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
+
+    /**
+     * ARN of the IAM role used to retrieve AWS Organizations details associated with the aggregator
+     * account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [OrganizationAggregationSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
+       */
+      public fun allAwsRegions(allAwsRegions: Boolean)
+
+      /**
+       * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
+       */
+      public fun allAwsRegions(allAwsRegions: IResolvable)
+
+      /**
+       * @param awsRegions The source regions being aggregated.
+       */
+      public fun awsRegions(awsRegions: List<String>)
+
+      /**
+       * @param awsRegions The source regions being aggregated.
+       */
+      public fun awsRegions(vararg awsRegions: String)
+
+      /**
+       * @param roleArn ARN of the IAM role used to retrieve AWS Organizations details associated
+       * with the aggregator account. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty.builder()
+
+      /**
+       * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
+       */
+      override fun allAwsRegions(allAwsRegions: Boolean) {
+        cdkBuilder.allAwsRegions(allAwsRegions)
+      }
+
+      /**
+       * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
+       */
+      override fun allAwsRegions(allAwsRegions: IResolvable) {
+        cdkBuilder.allAwsRegions(allAwsRegions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param awsRegions The source regions being aggregated.
+       */
+      override fun awsRegions(awsRegions: List<String>) {
+        cdkBuilder.awsRegions(awsRegions)
+      }
+
+      /**
+       * @param awsRegions The source regions being aggregated.
+       */
+      override fun awsRegions(vararg awsRegions: String): Unit = awsRegions(awsRegions.toList())
+
+      /**
+       * @param roleArn ARN of the IAM role used to retrieve AWS Organizations details associated
+       * with the aggregator account. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty,
+    ) : CdkObject(cdkObject), OrganizationAggregationSourceProperty {
+      /**
+       * If true, aggregate existing AWS Config regions and future regions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-allawsregions)
+       */
+      override fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
+
+      /**
+       * The source regions being aggregated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-awsregions)
+       */
+      override fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
+
+      /**
+       * ARN of the IAM role used to retrieve AWS Organizations details associated with the
+       * aggregator account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OrganizationAggregationSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty):
+          OrganizationAggregationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OrganizationAggregationSourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OrganizationAggregationSourceProperty):
+          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty
     }
   }
 }

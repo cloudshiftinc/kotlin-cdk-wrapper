@@ -824,676 +824,6 @@ public open class CfnAssetModel internal constructor(
   }
 
   /**
-   * Contains a tumbling window, which is a repeating fixed-sized, non-overlapping, and contiguous
-   * time window.
-   *
-   * You can use this window in metrics to aggregate data from properties and other assets.
-   *
-   * You can use `m` , `h` , `d` , and `w` when you specify an interval or offset. Note that `m`
-   * represents minutes, `h` represents hours, `d` represents days, and `w` represents weeks. You can
-   * also use `s` to represent seconds in `offset` .
-   *
-   * The `interval` and `offset` parameters support the [ISO 8601
-   * format](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_8601) . For example, `PT5S`
-   * represents 5 seconds, `PT5M` represents 5 minutes, and `PT5H` represents 5 hours.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * TumblingWindowProperty tumblingWindowProperty = TumblingWindowProperty.builder()
-   * .interval("interval")
-   * // the properties below are optional
-   * .offset("offset")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html)
-   */
-  public interface TumblingWindowProperty {
-    /**
-     * The time interval for the tumbling window. The interval time must be between 1 minute and 1
-     * week.
-     *
-     * AWS IoT SiteWise computes the `1w` interval the end of Sunday at midnight each week (UTC),
-     * the `1d` interval at the end of each day at midnight (UTC), the `1h` interval at the end of each
-     * hour, and so on.
-     *
-     * When AWS IoT SiteWise aggregates data points for metric computations, the start of each
-     * interval is exclusive and the end of each interval is inclusive. AWS IoT SiteWise places the
-     * computed data point at the end of the interval.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html#cfn-iotsitewise-assetmodel-tumblingwindow-interval)
-     */
-    public fun interval(): String
-
-    /**
-     * The offset for the tumbling window. The `offset` parameter accepts the following:.
-     *
-     * * The offset time.
-     *
-     * For example, if you specify `18h` for `offset` and `1d` for `interval` , AWS IoT SiteWise
-     * aggregates data in one of the following ways:
-     *
-     * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at 6
-     * PM (UTC) on the day when you create the metric.
-     * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
-     * (UTC) the next day.
-     * * The ISO 8601 format.
-     *
-     * For example, if you specify `PT18H` for `offset` and `1d` for `interval` , AWS IoT SiteWise
-     * aggregates data in one of the following ways:
-     *
-     * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at 6
-     * PM (UTC) on the day when you create the metric.
-     * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
-     * (UTC) the next day.
-     * * The 24-hour clock.
-     *
-     * For example, if you specify `00:03:00` for `offset` , `5m` for `interval` , and you create
-     * the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM (UTC). You get the
-     * second aggregation result at 2:08 PM (UTC).
-     *
-     * * The offset time zone.
-     *
-     * For example, if you specify `2021-07-23T18:00-08` for `offset` and `1d` for `interval` , AWS
-     * IoT SiteWise aggregates data in one of the following ways:
-     *
-     * * If you create the metric before or at 6 PM (PST), you get the first aggregation result at 6
-     * PM (PST) on the day when you create the metric.
-     * * If you create the metric after 6 PM (PST), you get the first aggregation result at 6 PM
-     * (PST) the next day.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html#cfn-iotsitewise-assetmodel-tumblingwindow-offset)
-     */
-    public fun offset(): String? = unwrap(this).getOffset()
-
-    /**
-     * A builder for [TumblingWindowProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param interval The time interval for the tumbling window. The interval time must be
-       * between 1 minute and 1 week. 
-       * AWS IoT SiteWise computes the `1w` interval the end of Sunday at midnight each week (UTC),
-       * the `1d` interval at the end of each day at midnight (UTC), the `1h` interval at the end of
-       * each hour, and so on.
-       *
-       * When AWS IoT SiteWise aggregates data points for metric computations, the start of each
-       * interval is exclusive and the end of each interval is inclusive. AWS IoT SiteWise places the
-       * computed data point at the end of the interval.
-       */
-      public fun interval(interval: String)
-
-      /**
-       * @param offset The offset for the tumbling window. The `offset` parameter accepts the
-       * following:.
-       * * The offset time.
-       *
-       * For example, if you specify `18h` for `offset` and `1d` for `interval` , AWS IoT SiteWise
-       * aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
-       * 6 PM (UTC) on the day when you create the metric.
-       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
-       * (UTC) the next day.
-       * * The ISO 8601 format.
-       *
-       * For example, if you specify `PT18H` for `offset` and `1d` for `interval` , AWS IoT SiteWise
-       * aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
-       * 6 PM (UTC) on the day when you create the metric.
-       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
-       * (UTC) the next day.
-       * * The 24-hour clock.
-       *
-       * For example, if you specify `00:03:00` for `offset` , `5m` for `interval` , and you create
-       * the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM (UTC). You get the
-       * second aggregation result at 2:08 PM (UTC).
-       *
-       * * The offset time zone.
-       *
-       * For example, if you specify `2021-07-23T18:00-08` for `offset` and `1d` for `interval` ,
-       * AWS IoT SiteWise aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (PST), you get the first aggregation result at
-       * 6 PM (PST) on the day when you create the metric.
-       * * If you create the metric after 6 PM (PST), you get the first aggregation result at 6 PM
-       * (PST) the next day.
-       */
-      public fun offset(offset: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty.Builder =
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty.builder()
-
-      /**
-       * @param interval The time interval for the tumbling window. The interval time must be
-       * between 1 minute and 1 week. 
-       * AWS IoT SiteWise computes the `1w` interval the end of Sunday at midnight each week (UTC),
-       * the `1d` interval at the end of each day at midnight (UTC), the `1h` interval at the end of
-       * each hour, and so on.
-       *
-       * When AWS IoT SiteWise aggregates data points for metric computations, the start of each
-       * interval is exclusive and the end of each interval is inclusive. AWS IoT SiteWise places the
-       * computed data point at the end of the interval.
-       */
-      override fun interval(interval: String) {
-        cdkBuilder.interval(interval)
-      }
-
-      /**
-       * @param offset The offset for the tumbling window. The `offset` parameter accepts the
-       * following:.
-       * * The offset time.
-       *
-       * For example, if you specify `18h` for `offset` and `1d` for `interval` , AWS IoT SiteWise
-       * aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
-       * 6 PM (UTC) on the day when you create the metric.
-       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
-       * (UTC) the next day.
-       * * The ISO 8601 format.
-       *
-       * For example, if you specify `PT18H` for `offset` and `1d` for `interval` , AWS IoT SiteWise
-       * aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
-       * 6 PM (UTC) on the day when you create the metric.
-       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
-       * (UTC) the next day.
-       * * The 24-hour clock.
-       *
-       * For example, if you specify `00:03:00` for `offset` , `5m` for `interval` , and you create
-       * the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM (UTC). You get the
-       * second aggregation result at 2:08 PM (UTC).
-       *
-       * * The offset time zone.
-       *
-       * For example, if you specify `2021-07-23T18:00-08` for `offset` and `1d` for `interval` ,
-       * AWS IoT SiteWise aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (PST), you get the first aggregation result at
-       * 6 PM (PST) on the day when you create the metric.
-       * * If you create the metric after 6 PM (PST), you get the first aggregation result at 6 PM
-       * (PST) the next day.
-       */
-      override fun offset(offset: String) {
-        cdkBuilder.offset(offset)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty,
-    ) : CdkObject(cdkObject), TumblingWindowProperty {
-      /**
-       * The time interval for the tumbling window. The interval time must be between 1 minute and 1
-       * week.
-       *
-       * AWS IoT SiteWise computes the `1w` interval the end of Sunday at midnight each week (UTC),
-       * the `1d` interval at the end of each day at midnight (UTC), the `1h` interval at the end of
-       * each hour, and so on.
-       *
-       * When AWS IoT SiteWise aggregates data points for metric computations, the start of each
-       * interval is exclusive and the end of each interval is inclusive. AWS IoT SiteWise places the
-       * computed data point at the end of the interval.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html#cfn-iotsitewise-assetmodel-tumblingwindow-interval)
-       */
-      override fun interval(): String = unwrap(this).getInterval()
-
-      /**
-       * The offset for the tumbling window. The `offset` parameter accepts the following:.
-       *
-       * * The offset time.
-       *
-       * For example, if you specify `18h` for `offset` and `1d` for `interval` , AWS IoT SiteWise
-       * aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
-       * 6 PM (UTC) on the day when you create the metric.
-       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
-       * (UTC) the next day.
-       * * The ISO 8601 format.
-       *
-       * For example, if you specify `PT18H` for `offset` and `1d` for `interval` , AWS IoT SiteWise
-       * aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
-       * 6 PM (UTC) on the day when you create the metric.
-       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
-       * (UTC) the next day.
-       * * The 24-hour clock.
-       *
-       * For example, if you specify `00:03:00` for `offset` , `5m` for `interval` , and you create
-       * the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM (UTC). You get the
-       * second aggregation result at 2:08 PM (UTC).
-       *
-       * * The offset time zone.
-       *
-       * For example, if you specify `2021-07-23T18:00-08` for `offset` and `1d` for `interval` ,
-       * AWS IoT SiteWise aggregates data in one of the following ways:
-       *
-       * * If you create the metric before or at 6 PM (PST), you get the first aggregation result at
-       * 6 PM (PST) on the day when you create the metric.
-       * * If you create the metric after 6 PM (PST), you get the first aggregation result at 6 PM
-       * (PST) the next day.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html#cfn-iotsitewise-assetmodel-tumblingwindow-offset)
-       */
-      override fun offset(): String? = unwrap(this).getOffset()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TumblingWindowProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty):
-          TumblingWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? TumblingWindowProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TumblingWindowProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty
-    }
-  }
-
-  /**
-   * Contains information about an asset model property.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * AssetModelPropertyProperty assetModelPropertyProperty = AssetModelPropertyProperty.builder()
-   * .dataType("dataType")
-   * .name("name")
-   * .type(PropertyTypeProperty.builder()
-   * .typeName("typeName")
-   * // the properties below are optional
-   * .attribute(AttributeProperty.builder()
-   * .defaultValue("defaultValue")
-   * .build())
-   * .metric(MetricProperty.builder()
-   * .expression("expression")
-   * .variables(List.of(ExpressionVariableProperty.builder()
-   * .name("name")
-   * .value(VariableValueProperty.builder()
-   * .hierarchyExternalId("hierarchyExternalId")
-   * .hierarchyId("hierarchyId")
-   * .hierarchyLogicalId("hierarchyLogicalId")
-   * .propertyExternalId("propertyExternalId")
-   * .propertyId("propertyId")
-   * .propertyLogicalId("propertyLogicalId")
-   * .propertyPath(List.of(PropertyPathDefinitionProperty.builder()
-   * .name("name")
-   * .build()))
-   * .build())
-   * .build()))
-   * .window(MetricWindowProperty.builder()
-   * .tumbling(TumblingWindowProperty.builder()
-   * .interval("interval")
-   * // the properties below are optional
-   * .offset("offset")
-   * .build())
-   * .build())
-   * .build())
-   * .transform(TransformProperty.builder()
-   * .expression("expression")
-   * .variables(List.of(ExpressionVariableProperty.builder()
-   * .name("name")
-   * .value(VariableValueProperty.builder()
-   * .hierarchyExternalId("hierarchyExternalId")
-   * .hierarchyId("hierarchyId")
-   * .hierarchyLogicalId("hierarchyLogicalId")
-   * .propertyExternalId("propertyExternalId")
-   * .propertyId("propertyId")
-   * .propertyLogicalId("propertyLogicalId")
-   * .propertyPath(List.of(PropertyPathDefinitionProperty.builder()
-   * .name("name")
-   * .build()))
-   * .build())
-   * .build()))
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .dataTypeSpec("dataTypeSpec")
-   * .externalId("externalId")
-   * .id("id")
-   * .logicalId("logicalId")
-   * .unit("unit")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html)
-   */
-  public interface AssetModelPropertyProperty {
-    /**
-     * The data type of the asset model property.
-     *
-     * The value can be `STRING` , `INTEGER` , `DOUBLE` , `BOOLEAN` , or `STRUCT` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatype)
-     */
-    public fun dataType(): String
-
-    /**
-     * The data type of the structure for this property.
-     *
-     * This parameter exists on properties that have the `STRUCT` data type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatypespec)
-     */
-    public fun dataTypeSpec(): String? = unwrap(this).getDataTypeSpec()
-
-    /**
-     * The External ID of the Asset Model Property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-externalid)
-     */
-    public fun externalId(): String? = unwrap(this).getExternalId()
-
-    /**
-     * The ID of the Asset Model Property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-id)
-     */
-    public fun id(): String? = unwrap(this).getId()
-
-    /**
-     * The `LogicalID` of the asset model property.
-     *
-     * The maximum length is 256 characters, with the pattern `[^\\u0000-\\u001F\\u007F]+` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-logicalid)
-     */
-    public fun logicalId(): String? = unwrap(this).getLogicalId()
-
-    /**
-     * The name of the asset model property.
-     *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-name)
-     */
-    public fun name(): String
-
-    /**
-     * Contains a property type, which can be one of `Attribute` , `Measurement` , `Metric` , or
-     * `Transform` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-type)
-     */
-    public fun type(): Any
-
-    /**
-     * The unit of the asset model property, such as `Newtons` or `RPM` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-unit)
-     */
-    public fun unit(): String? = unwrap(this).getUnit()
-
-    /**
-     * A builder for [AssetModelPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataType The data type of the asset model property. 
-       * The value can be `STRING` , `INTEGER` , `DOUBLE` , `BOOLEAN` , or `STRUCT` .
-       */
-      public fun dataType(dataType: String)
-
-      /**
-       * @param dataTypeSpec The data type of the structure for this property.
-       * This parameter exists on properties that have the `STRUCT` data type.
-       */
-      public fun dataTypeSpec(dataTypeSpec: String)
-
-      /**
-       * @param externalId The External ID of the Asset Model Property.
-       */
-      public fun externalId(externalId: String)
-
-      /**
-       * @param id The ID of the Asset Model Property.
-       */
-      public fun id(id: String)
-
-      /**
-       * @param logicalId The `LogicalID` of the asset model property.
-       * The maximum length is 256 characters, with the pattern `[^\\u0000-\\u001F\\u007F]+` .
-       */
-      public fun logicalId(logicalId: String)
-
-      /**
-       * @param name The name of the asset model property. 
-       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-       */
-      public fun name(name: String)
-
-      /**
-       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
-       * `Metric` , or `Transform` . 
-       */
-      public fun type(type: IResolvable)
-
-      /**
-       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
-       * `Metric` , or `Transform` . 
-       */
-      public fun type(type: PropertyTypeProperty)
-
-      /**
-       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
-       * `Metric` , or `Transform` . 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1b02bf400fd48dbd96fc4dc77d6dbf6839b0ec880462bf2bab2a6626dd1ae860")
-      public fun type(type: PropertyTypeProperty.Builder.() -> Unit)
-
-      /**
-       * @param unit The unit of the asset model property, such as `Newtons` or `RPM` .
-       */
-      public fun unit(unit: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty.Builder
-          =
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty.builder()
-
-      /**
-       * @param dataType The data type of the asset model property. 
-       * The value can be `STRING` , `INTEGER` , `DOUBLE` , `BOOLEAN` , or `STRUCT` .
-       */
-      override fun dataType(dataType: String) {
-        cdkBuilder.dataType(dataType)
-      }
-
-      /**
-       * @param dataTypeSpec The data type of the structure for this property.
-       * This parameter exists on properties that have the `STRUCT` data type.
-       */
-      override fun dataTypeSpec(dataTypeSpec: String) {
-        cdkBuilder.dataTypeSpec(dataTypeSpec)
-      }
-
-      /**
-       * @param externalId The External ID of the Asset Model Property.
-       */
-      override fun externalId(externalId: String) {
-        cdkBuilder.externalId(externalId)
-      }
-
-      /**
-       * @param id The ID of the Asset Model Property.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param logicalId The `LogicalID` of the asset model property.
-       * The maximum length is 256 characters, with the pattern `[^\\u0000-\\u001F\\u007F]+` .
-       */
-      override fun logicalId(logicalId: String) {
-        cdkBuilder.logicalId(logicalId)
-      }
-
-      /**
-       * @param name The name of the asset model property. 
-       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
-       * `Metric` , or `Transform` . 
-       */
-      override fun type(type: IResolvable) {
-        cdkBuilder.type(type.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
-       * `Metric` , or `Transform` . 
-       */
-      override fun type(type: PropertyTypeProperty) {
-        cdkBuilder.type(type.let(PropertyTypeProperty::unwrap))
-      }
-
-      /**
-       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
-       * `Metric` , or `Transform` . 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1b02bf400fd48dbd96fc4dc77d6dbf6839b0ec880462bf2bab2a6626dd1ae860")
-      override fun type(type: PropertyTypeProperty.Builder.() -> Unit): Unit =
-          type(PropertyTypeProperty(type))
-
-      /**
-       * @param unit The unit of the asset model property, such as `Newtons` or `RPM` .
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty,
-    ) : CdkObject(cdkObject), AssetModelPropertyProperty {
-      /**
-       * The data type of the asset model property.
-       *
-       * The value can be `STRING` , `INTEGER` , `DOUBLE` , `BOOLEAN` , or `STRUCT` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatype)
-       */
-      override fun dataType(): String = unwrap(this).getDataType()
-
-      /**
-       * The data type of the structure for this property.
-       *
-       * This parameter exists on properties that have the `STRUCT` data type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatypespec)
-       */
-      override fun dataTypeSpec(): String? = unwrap(this).getDataTypeSpec()
-
-      /**
-       * The External ID of the Asset Model Property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-externalid)
-       */
-      override fun externalId(): String? = unwrap(this).getExternalId()
-
-      /**
-       * The ID of the Asset Model Property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-id)
-       */
-      override fun id(): String? = unwrap(this).getId()
-
-      /**
-       * The `LogicalID` of the asset model property.
-       *
-       * The maximum length is 256 characters, with the pattern `[^\\u0000-\\u001F\\u007F]+` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-logicalid)
-       */
-      override fun logicalId(): String? = unwrap(this).getLogicalId()
-
-      /**
-       * The name of the asset model property.
-       *
-       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Contains a property type, which can be one of `Attribute` , `Measurement` , `Metric` , or
-       * `Transform` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-type)
-       */
-      override fun type(): Any = unwrap(this).getType()
-
-      /**
-       * The unit of the asset model property, such as `Newtons` or `RPM` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-unit)
-       */
-      override fun unit(): String? = unwrap(this).getUnit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AssetModelPropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty):
-          AssetModelPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AssetModelPropertyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AssetModelPropertyProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty
-    }
-  }
-
-  /**
    * Contains information about a composite model in an asset model.
    *
    * This object contains the asset property definitions that you define in the composite model. You
@@ -1945,6 +1275,699 @@ public open class CfnAssetModel internal constructor(
   }
 
   /**
+   * Describes an asset hierarchy that contains a hierarchy's name, `LogicalID` , and child asset
+   * model ID that specifies the type of asset that can be in this hierarchy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * AssetModelHierarchyProperty assetModelHierarchyProperty = AssetModelHierarchyProperty.builder()
+   * .childAssetModelId("childAssetModelId")
+   * .name("name")
+   * // the properties below are optional
+   * .externalId("externalId")
+   * .id("id")
+   * .logicalId("logicalId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html)
+   */
+  public interface AssetModelHierarchyProperty {
+    /**
+     * The Id of the asset model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-childassetmodelid)
+     */
+    public fun childAssetModelId(): String
+
+    /**
+     * Customer provided external ID for hierarchy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-externalid)
+     */
+    public fun externalId(): String? = unwrap(this).getExternalId()
+
+    /**
+     * Customer provided actual ID for hierarchy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-id)
+     */
+    public fun id(): String? = unwrap(this).getId()
+
+    /**
+     * The `LogicalID` of the asset model hierarchy. This ID is a `hierarchyLogicalId` .
+     *
+     * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-logicalid)
+     */
+    public fun logicalId(): String? = unwrap(this).getLogicalId()
+
+    /**
+     * The name of the asset model hierarchy.
+     *
+     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [AssetModelHierarchyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param childAssetModelId The Id of the asset model. 
+       */
+      public fun childAssetModelId(childAssetModelId: String)
+
+      /**
+       * @param externalId Customer provided external ID for hierarchy.
+       */
+      public fun externalId(externalId: String)
+
+      /**
+       * @param id Customer provided actual ID for hierarchy.
+       */
+      public fun id(id: String)
+
+      /**
+       * @param logicalId The `LogicalID` of the asset model hierarchy. This ID is a
+       * `hierarchyLogicalId` .
+       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
+       */
+      public fun logicalId(logicalId: String)
+
+      /**
+       * @param name The name of the asset model hierarchy. 
+       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty.Builder
+          =
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty.builder()
+
+      /**
+       * @param childAssetModelId The Id of the asset model. 
+       */
+      override fun childAssetModelId(childAssetModelId: String) {
+        cdkBuilder.childAssetModelId(childAssetModelId)
+      }
+
+      /**
+       * @param externalId Customer provided external ID for hierarchy.
+       */
+      override fun externalId(externalId: String) {
+        cdkBuilder.externalId(externalId)
+      }
+
+      /**
+       * @param id Customer provided actual ID for hierarchy.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param logicalId The `LogicalID` of the asset model hierarchy. This ID is a
+       * `hierarchyLogicalId` .
+       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
+       */
+      override fun logicalId(logicalId: String) {
+        cdkBuilder.logicalId(logicalId)
+      }
+
+      /**
+       * @param name The name of the asset model hierarchy. 
+       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty,
+    ) : CdkObject(cdkObject), AssetModelHierarchyProperty {
+      /**
+       * The Id of the asset model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-childassetmodelid)
+       */
+      override fun childAssetModelId(): String = unwrap(this).getChildAssetModelId()
+
+      /**
+       * Customer provided external ID for hierarchy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-externalid)
+       */
+      override fun externalId(): String? = unwrap(this).getExternalId()
+
+      /**
+       * Customer provided actual ID for hierarchy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-id)
+       */
+      override fun id(): String? = unwrap(this).getId()
+
+      /**
+       * The `LogicalID` of the asset model hierarchy. This ID is a `hierarchyLogicalId` .
+       *
+       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-logicalid)
+       */
+      override fun logicalId(): String? = unwrap(this).getLogicalId()
+
+      /**
+       * The name of the asset model hierarchy.
+       *
+       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AssetModelHierarchyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty):
+          AssetModelHierarchyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetModelHierarchyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AssetModelHierarchyProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty
+    }
+  }
+
+  /**
+   * Contains information about an asset model property.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * AssetModelPropertyProperty assetModelPropertyProperty = AssetModelPropertyProperty.builder()
+   * .dataType("dataType")
+   * .name("name")
+   * .type(PropertyTypeProperty.builder()
+   * .typeName("typeName")
+   * // the properties below are optional
+   * .attribute(AttributeProperty.builder()
+   * .defaultValue("defaultValue")
+   * .build())
+   * .metric(MetricProperty.builder()
+   * .expression("expression")
+   * .variables(List.of(ExpressionVariableProperty.builder()
+   * .name("name")
+   * .value(VariableValueProperty.builder()
+   * .hierarchyExternalId("hierarchyExternalId")
+   * .hierarchyId("hierarchyId")
+   * .hierarchyLogicalId("hierarchyLogicalId")
+   * .propertyExternalId("propertyExternalId")
+   * .propertyId("propertyId")
+   * .propertyLogicalId("propertyLogicalId")
+   * .propertyPath(List.of(PropertyPathDefinitionProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build())
+   * .build()))
+   * .window(MetricWindowProperty.builder()
+   * .tumbling(TumblingWindowProperty.builder()
+   * .interval("interval")
+   * // the properties below are optional
+   * .offset("offset")
+   * .build())
+   * .build())
+   * .build())
+   * .transform(TransformProperty.builder()
+   * .expression("expression")
+   * .variables(List.of(ExpressionVariableProperty.builder()
+   * .name("name")
+   * .value(VariableValueProperty.builder()
+   * .hierarchyExternalId("hierarchyExternalId")
+   * .hierarchyId("hierarchyId")
+   * .hierarchyLogicalId("hierarchyLogicalId")
+   * .propertyExternalId("propertyExternalId")
+   * .propertyId("propertyId")
+   * .propertyLogicalId("propertyLogicalId")
+   * .propertyPath(List.of(PropertyPathDefinitionProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build())
+   * .build()))
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .dataTypeSpec("dataTypeSpec")
+   * .externalId("externalId")
+   * .id("id")
+   * .logicalId("logicalId")
+   * .unit("unit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html)
+   */
+  public interface AssetModelPropertyProperty {
+    /**
+     * The data type of the asset model property.
+     *
+     * The value can be `STRING` , `INTEGER` , `DOUBLE` , `BOOLEAN` , or `STRUCT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatype)
+     */
+    public fun dataType(): String
+
+    /**
+     * The data type of the structure for this property.
+     *
+     * This parameter exists on properties that have the `STRUCT` data type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatypespec)
+     */
+    public fun dataTypeSpec(): String? = unwrap(this).getDataTypeSpec()
+
+    /**
+     * The External ID of the Asset Model Property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-externalid)
+     */
+    public fun externalId(): String? = unwrap(this).getExternalId()
+
+    /**
+     * The ID of the Asset Model Property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-id)
+     */
+    public fun id(): String? = unwrap(this).getId()
+
+    /**
+     * The `LogicalID` of the asset model property.
+     *
+     * The maximum length is 256 characters, with the pattern `[^\\u0000-\\u001F\\u007F]+` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-logicalid)
+     */
+    public fun logicalId(): String? = unwrap(this).getLogicalId()
+
+    /**
+     * The name of the asset model property.
+     *
+     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-name)
+     */
+    public fun name(): String
+
+    /**
+     * Contains a property type, which can be one of `Attribute` , `Measurement` , `Metric` , or
+     * `Transform` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-type)
+     */
+    public fun type(): Any
+
+    /**
+     * The unit of the asset model property, such as `Newtons` or `RPM` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-unit)
+     */
+    public fun unit(): String? = unwrap(this).getUnit()
+
+    /**
+     * A builder for [AssetModelPropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataType The data type of the asset model property. 
+       * The value can be `STRING` , `INTEGER` , `DOUBLE` , `BOOLEAN` , or `STRUCT` .
+       */
+      public fun dataType(dataType: String)
+
+      /**
+       * @param dataTypeSpec The data type of the structure for this property.
+       * This parameter exists on properties that have the `STRUCT` data type.
+       */
+      public fun dataTypeSpec(dataTypeSpec: String)
+
+      /**
+       * @param externalId The External ID of the Asset Model Property.
+       */
+      public fun externalId(externalId: String)
+
+      /**
+       * @param id The ID of the Asset Model Property.
+       */
+      public fun id(id: String)
+
+      /**
+       * @param logicalId The `LogicalID` of the asset model property.
+       * The maximum length is 256 characters, with the pattern `[^\\u0000-\\u001F\\u007F]+` .
+       */
+      public fun logicalId(logicalId: String)
+
+      /**
+       * @param name The name of the asset model property. 
+       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+       */
+      public fun name(name: String)
+
+      /**
+       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
+       * `Metric` , or `Transform` . 
+       */
+      public fun type(type: IResolvable)
+
+      /**
+       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
+       * `Metric` , or `Transform` . 
+       */
+      public fun type(type: PropertyTypeProperty)
+
+      /**
+       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
+       * `Metric` , or `Transform` . 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1b02bf400fd48dbd96fc4dc77d6dbf6839b0ec880462bf2bab2a6626dd1ae860")
+      public fun type(type: PropertyTypeProperty.Builder.() -> Unit)
+
+      /**
+       * @param unit The unit of the asset model property, such as `Newtons` or `RPM` .
+       */
+      public fun unit(unit: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty.Builder
+          =
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty.builder()
+
+      /**
+       * @param dataType The data type of the asset model property. 
+       * The value can be `STRING` , `INTEGER` , `DOUBLE` , `BOOLEAN` , or `STRUCT` .
+       */
+      override fun dataType(dataType: String) {
+        cdkBuilder.dataType(dataType)
+      }
+
+      /**
+       * @param dataTypeSpec The data type of the structure for this property.
+       * This parameter exists on properties that have the `STRUCT` data type.
+       */
+      override fun dataTypeSpec(dataTypeSpec: String) {
+        cdkBuilder.dataTypeSpec(dataTypeSpec)
+      }
+
+      /**
+       * @param externalId The External ID of the Asset Model Property.
+       */
+      override fun externalId(externalId: String) {
+        cdkBuilder.externalId(externalId)
+      }
+
+      /**
+       * @param id The ID of the Asset Model Property.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param logicalId The `LogicalID` of the asset model property.
+       * The maximum length is 256 characters, with the pattern `[^\\u0000-\\u001F\\u007F]+` .
+       */
+      override fun logicalId(logicalId: String) {
+        cdkBuilder.logicalId(logicalId)
+      }
+
+      /**
+       * @param name The name of the asset model property. 
+       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
+       * `Metric` , or `Transform` . 
+       */
+      override fun type(type: IResolvable) {
+        cdkBuilder.type(type.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
+       * `Metric` , or `Transform` . 
+       */
+      override fun type(type: PropertyTypeProperty) {
+        cdkBuilder.type(type.let(PropertyTypeProperty::unwrap))
+      }
+
+      /**
+       * @param type Contains a property type, which can be one of `Attribute` , `Measurement` ,
+       * `Metric` , or `Transform` . 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1b02bf400fd48dbd96fc4dc77d6dbf6839b0ec880462bf2bab2a6626dd1ae860")
+      override fun type(type: PropertyTypeProperty.Builder.() -> Unit): Unit =
+          type(PropertyTypeProperty(type))
+
+      /**
+       * @param unit The unit of the asset model property, such as `Newtons` or `RPM` .
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty,
+    ) : CdkObject(cdkObject), AssetModelPropertyProperty {
+      /**
+       * The data type of the asset model property.
+       *
+       * The value can be `STRING` , `INTEGER` , `DOUBLE` , `BOOLEAN` , or `STRUCT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatype)
+       */
+      override fun dataType(): String = unwrap(this).getDataType()
+
+      /**
+       * The data type of the structure for this property.
+       *
+       * This parameter exists on properties that have the `STRUCT` data type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatypespec)
+       */
+      override fun dataTypeSpec(): String? = unwrap(this).getDataTypeSpec()
+
+      /**
+       * The External ID of the Asset Model Property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-externalid)
+       */
+      override fun externalId(): String? = unwrap(this).getExternalId()
+
+      /**
+       * The ID of the Asset Model Property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-id)
+       */
+      override fun id(): String? = unwrap(this).getId()
+
+      /**
+       * The `LogicalID` of the asset model property.
+       *
+       * The maximum length is 256 characters, with the pattern `[^\\u0000-\\u001F\\u007F]+` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-logicalid)
+       */
+      override fun logicalId(): String? = unwrap(this).getLogicalId()
+
+      /**
+       * The name of the asset model property.
+       *
+       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Contains a property type, which can be one of `Attribute` , `Measurement` , `Metric` , or
+       * `Transform` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-type)
+       */
+      override fun type(): Any = unwrap(this).getType()
+
+      /**
+       * The unit of the asset model property, such as `Newtons` or `RPM` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-unit)
+       */
+      override fun unit(): String? = unwrap(this).getUnit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AssetModelPropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty):
+          AssetModelPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetModelPropertyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AssetModelPropertyProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty
+    }
+  }
+
+  /**
+   * Contains an asset attribute property.
+   *
+   * For more information, see [Defining data
+   * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html#attributes)
+   * in the *AWS IoT SiteWise User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * AttributeProperty attributeProperty = AttributeProperty.builder()
+   * .defaultValue("defaultValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-attribute.html)
+   */
+  public interface AttributeProperty {
+    /**
+     * The default value of the asset model property attribute.
+     *
+     * All assets that you create from the asset model contain this attribute value. You can update
+     * an attribute's value after you create an asset. For more information, see [Updating attribute
+     * values](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-attribute-values.html)
+     * in the *AWS IoT SiteWise User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-attribute.html#cfn-iotsitewise-assetmodel-attribute-defaultvalue)
+     */
+    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+    /**
+     * A builder for [AttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultValue The default value of the asset model property attribute.
+       * All assets that you create from the asset model contain this attribute value. You can
+       * update an attribute's value after you create an asset. For more information, see [Updating
+       * attribute
+       * values](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-attribute-values.html)
+       * in the *AWS IoT SiteWise User Guide* .
+       */
+      public fun defaultValue(defaultValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty.builder()
+
+      /**
+       * @param defaultValue The default value of the asset model property attribute.
+       * All assets that you create from the asset model contain this attribute value. You can
+       * update an attribute's value after you create an asset. For more information, see [Updating
+       * attribute
+       * values](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-attribute-values.html)
+       * in the *AWS IoT SiteWise User Guide* .
+       */
+      override fun defaultValue(defaultValue: String) {
+        cdkBuilder.defaultValue(defaultValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty,
+    ) : CdkObject(cdkObject), AttributeProperty {
+      /**
+       * The default value of the asset model property attribute.
+       *
+       * All assets that you create from the asset model contain this attribute value. You can
+       * update an attribute's value after you create an asset. For more information, see [Updating
+       * attribute
+       * values](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-attribute-values.html)
+       * in the *AWS IoT SiteWise User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-attribute.html#cfn-iotsitewise-assetmodel-attribute-defaultvalue)
+       */
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty):
+          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AttributeProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty
+    }
+  }
+
+  /**
    * Contains expression variable information.
    *
    * Example:
@@ -2356,6 +2379,120 @@ public open class CfnAssetModel internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty
+    }
+  }
+
+  /**
+   * Contains a time interval window used for data aggregate computations (for example, average,
+   * sum, count, and so on).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * MetricWindowProperty metricWindowProperty = MetricWindowProperty.builder()
+   * .tumbling(TumblingWindowProperty.builder()
+   * .interval("interval")
+   * // the properties below are optional
+   * .offset("offset")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-metricwindow.html)
+   */
+  public interface MetricWindowProperty {
+    /**
+     * The tumbling time interval window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-metricwindow.html#cfn-iotsitewise-assetmodel-metricwindow-tumbling)
+     */
+    public fun tumbling(): Any? = unwrap(this).getTumbling()
+
+    /**
+     * A builder for [MetricWindowProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tumbling The tumbling time interval window.
+       */
+      public fun tumbling(tumbling: IResolvable)
+
+      /**
+       * @param tumbling The tumbling time interval window.
+       */
+      public fun tumbling(tumbling: TumblingWindowProperty)
+
+      /**
+       * @param tumbling The tumbling time interval window.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ab07695551b582b00f816c66a7f2576b947182c36f6a83dfe16e32b8ea5ebfa2")
+      public fun tumbling(tumbling: TumblingWindowProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty.builder()
+
+      /**
+       * @param tumbling The tumbling time interval window.
+       */
+      override fun tumbling(tumbling: IResolvable) {
+        cdkBuilder.tumbling(tumbling.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tumbling The tumbling time interval window.
+       */
+      override fun tumbling(tumbling: TumblingWindowProperty) {
+        cdkBuilder.tumbling(tumbling.let(TumblingWindowProperty::unwrap))
+      }
+
+      /**
+       * @param tumbling The tumbling time interval window.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ab07695551b582b00f816c66a7f2576b947182c36f6a83dfe16e32b8ea5ebfa2")
+      override fun tumbling(tumbling: TumblingWindowProperty.Builder.() -> Unit): Unit =
+          tumbling(TumblingWindowProperty(tumbling))
+
+      public fun build():
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty,
+    ) : CdkObject(cdkObject), MetricWindowProperty {
+      /**
+       * The tumbling time interval window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-metricwindow.html#cfn-iotsitewise-assetmodel-metricwindow-tumbling)
+       */
+      override fun tumbling(): Any? = unwrap(this).getTumbling()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricWindowProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty):
+          MetricWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricWindowProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricWindowProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty
     }
   }
 
@@ -2861,120 +2998,6 @@ public open class CfnAssetModel internal constructor(
   }
 
   /**
-   * Contains a time interval window used for data aggregate computations (for example, average,
-   * sum, count, and so on).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * MetricWindowProperty metricWindowProperty = MetricWindowProperty.builder()
-   * .tumbling(TumblingWindowProperty.builder()
-   * .interval("interval")
-   * // the properties below are optional
-   * .offset("offset")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-metricwindow.html)
-   */
-  public interface MetricWindowProperty {
-    /**
-     * The tumbling time interval window.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-metricwindow.html#cfn-iotsitewise-assetmodel-metricwindow-tumbling)
-     */
-    public fun tumbling(): Any? = unwrap(this).getTumbling()
-
-    /**
-     * A builder for [MetricWindowProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param tumbling The tumbling time interval window.
-       */
-      public fun tumbling(tumbling: IResolvable)
-
-      /**
-       * @param tumbling The tumbling time interval window.
-       */
-      public fun tumbling(tumbling: TumblingWindowProperty)
-
-      /**
-       * @param tumbling The tumbling time interval window.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ab07695551b582b00f816c66a7f2576b947182c36f6a83dfe16e32b8ea5ebfa2")
-      public fun tumbling(tumbling: TumblingWindowProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty.Builder =
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty.builder()
-
-      /**
-       * @param tumbling The tumbling time interval window.
-       */
-      override fun tumbling(tumbling: IResolvable) {
-        cdkBuilder.tumbling(tumbling.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tumbling The tumbling time interval window.
-       */
-      override fun tumbling(tumbling: TumblingWindowProperty) {
-        cdkBuilder.tumbling(tumbling.let(TumblingWindowProperty::unwrap))
-      }
-
-      /**
-       * @param tumbling The tumbling time interval window.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ab07695551b582b00f816c66a7f2576b947182c36f6a83dfe16e32b8ea5ebfa2")
-      override fun tumbling(tumbling: TumblingWindowProperty.Builder.() -> Unit): Unit =
-          tumbling(TumblingWindowProperty(tumbling))
-
-      public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty,
-    ) : CdkObject(cdkObject), MetricWindowProperty {
-      /**
-       * The tumbling time interval window.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-metricwindow.html#cfn-iotsitewise-assetmodel-metricwindow-tumbling)
-       */
-      override fun tumbling(): Any? = unwrap(this).getTumbling()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricWindowProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty):
-          MetricWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricWindowProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricWindowProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty
-    }
-  }
-
-  /**
    * Contains an asset transform property.
    *
    * A transform is a one-to-one mapping of a property's data points from one form to another. For
@@ -3155,11 +3178,18 @@ public open class CfnAssetModel internal constructor(
   }
 
   /**
-   * Contains an asset attribute property.
+   * Contains a tumbling window, which is a repeating fixed-sized, non-overlapping, and contiguous
+   * time window.
    *
-   * For more information, see [Defining data
-   * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html#attributes)
-   * in the *AWS IoT SiteWise User Guide* .
+   * You can use this window in metrics to aggregate data from properties and other assets.
+   *
+   * You can use `m` , `h` , `d` , and `w` when you specify an interval or offset. Note that `m`
+   * represents minutes, `h` represents hours, `d` represents days, and `w` represents weeks. You can
+   * also use `s` to represent seconds in `offset` .
+   *
+   * The `interval` and `offset` parameters support the [ISO 8601
+   * format](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_8601) . For example, `PT5S`
+   * represents 5 seconds, `PT5M` represents 5 minutes, and `PT5H` represents 5 hours.
    *
    * Example:
    *
@@ -3167,304 +3197,274 @@ public open class CfnAssetModel internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * AttributeProperty attributeProperty = AttributeProperty.builder()
-   * .defaultValue("defaultValue")
+   * TumblingWindowProperty tumblingWindowProperty = TumblingWindowProperty.builder()
+   * .interval("interval")
+   * // the properties below are optional
+   * .offset("offset")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-attribute.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html)
    */
-  public interface AttributeProperty {
+  public interface TumblingWindowProperty {
     /**
-     * The default value of the asset model property attribute.
+     * The time interval for the tumbling window. The interval time must be between 1 minute and 1
+     * week.
      *
-     * All assets that you create from the asset model contain this attribute value. You can update
-     * an attribute's value after you create an asset. For more information, see [Updating attribute
-     * values](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-attribute-values.html)
-     * in the *AWS IoT SiteWise User Guide* .
+     * AWS IoT SiteWise computes the `1w` interval the end of Sunday at midnight each week (UTC),
+     * the `1d` interval at the end of each day at midnight (UTC), the `1h` interval at the end of each
+     * hour, and so on.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-attribute.html#cfn-iotsitewise-assetmodel-attribute-defaultvalue)
+     * When AWS IoT SiteWise aggregates data points for metric computations, the start of each
+     * interval is exclusive and the end of each interval is inclusive. AWS IoT SiteWise places the
+     * computed data point at the end of the interval.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html#cfn-iotsitewise-assetmodel-tumblingwindow-interval)
      */
-    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
+    public fun interval(): String
 
     /**
-     * A builder for [AttributeProperty]
+     * The offset for the tumbling window. The `offset` parameter accepts the following:.
+     *
+     * * The offset time.
+     *
+     * For example, if you specify `18h` for `offset` and `1d` for `interval` , AWS IoT SiteWise
+     * aggregates data in one of the following ways:
+     *
+     * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at 6
+     * PM (UTC) on the day when you create the metric.
+     * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
+     * (UTC) the next day.
+     * * The ISO 8601 format.
+     *
+     * For example, if you specify `PT18H` for `offset` and `1d` for `interval` , AWS IoT SiteWise
+     * aggregates data in one of the following ways:
+     *
+     * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at 6
+     * PM (UTC) on the day when you create the metric.
+     * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
+     * (UTC) the next day.
+     * * The 24-hour clock.
+     *
+     * For example, if you specify `00:03:00` for `offset` , `5m` for `interval` , and you create
+     * the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM (UTC). You get the
+     * second aggregation result at 2:08 PM (UTC).
+     *
+     * * The offset time zone.
+     *
+     * For example, if you specify `2021-07-23T18:00-08` for `offset` and `1d` for `interval` , AWS
+     * IoT SiteWise aggregates data in one of the following ways:
+     *
+     * * If you create the metric before or at 6 PM (PST), you get the first aggregation result at 6
+     * PM (PST) on the day when you create the metric.
+     * * If you create the metric after 6 PM (PST), you get the first aggregation result at 6 PM
+     * (PST) the next day.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html#cfn-iotsitewise-assetmodel-tumblingwindow-offset)
+     */
+    public fun offset(): String? = unwrap(this).getOffset()
+
+    /**
+     * A builder for [TumblingWindowProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultValue The default value of the asset model property attribute.
-       * All assets that you create from the asset model contain this attribute value. You can
-       * update an attribute's value after you create an asset. For more information, see [Updating
-       * attribute
-       * values](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-attribute-values.html)
-       * in the *AWS IoT SiteWise User Guide* .
+       * @param interval The time interval for the tumbling window. The interval time must be
+       * between 1 minute and 1 week. 
+       * AWS IoT SiteWise computes the `1w` interval the end of Sunday at midnight each week (UTC),
+       * the `1d` interval at the end of each day at midnight (UTC), the `1h` interval at the end of
+       * each hour, and so on.
+       *
+       * When AWS IoT SiteWise aggregates data points for metric computations, the start of each
+       * interval is exclusive and the end of each interval is inclusive. AWS IoT SiteWise places the
+       * computed data point at the end of the interval.
        */
-      public fun defaultValue(defaultValue: String)
+      public fun interval(interval: String)
+
+      /**
+       * @param offset The offset for the tumbling window. The `offset` parameter accepts the
+       * following:.
+       * * The offset time.
+       *
+       * For example, if you specify `18h` for `offset` and `1d` for `interval` , AWS IoT SiteWise
+       * aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
+       * 6 PM (UTC) on the day when you create the metric.
+       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
+       * (UTC) the next day.
+       * * The ISO 8601 format.
+       *
+       * For example, if you specify `PT18H` for `offset` and `1d` for `interval` , AWS IoT SiteWise
+       * aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
+       * 6 PM (UTC) on the day when you create the metric.
+       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
+       * (UTC) the next day.
+       * * The 24-hour clock.
+       *
+       * For example, if you specify `00:03:00` for `offset` , `5m` for `interval` , and you create
+       * the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM (UTC). You get the
+       * second aggregation result at 2:08 PM (UTC).
+       *
+       * * The offset time zone.
+       *
+       * For example, if you specify `2021-07-23T18:00-08` for `offset` and `1d` for `interval` ,
+       * AWS IoT SiteWise aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (PST), you get the first aggregation result at
+       * 6 PM (PST) on the day when you create the metric.
+       * * If you create the metric after 6 PM (PST), you get the first aggregation result at 6 PM
+       * (PST) the next day.
+       */
+      public fun offset(offset: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty.Builder =
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty.builder()
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty.builder()
 
       /**
-       * @param defaultValue The default value of the asset model property attribute.
-       * All assets that you create from the asset model contain this attribute value. You can
-       * update an attribute's value after you create an asset. For more information, see [Updating
-       * attribute
-       * values](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-attribute-values.html)
-       * in the *AWS IoT SiteWise User Guide* .
+       * @param interval The time interval for the tumbling window. The interval time must be
+       * between 1 minute and 1 week. 
+       * AWS IoT SiteWise computes the `1w` interval the end of Sunday at midnight each week (UTC),
+       * the `1d` interval at the end of each day at midnight (UTC), the `1h` interval at the end of
+       * each hour, and so on.
+       *
+       * When AWS IoT SiteWise aggregates data points for metric computations, the start of each
+       * interval is exclusive and the end of each interval is inclusive. AWS IoT SiteWise places the
+       * computed data point at the end of the interval.
        */
-      override fun defaultValue(defaultValue: String) {
-        cdkBuilder.defaultValue(defaultValue)
+      override fun interval(interval: String) {
+        cdkBuilder.interval(interval)
+      }
+
+      /**
+       * @param offset The offset for the tumbling window. The `offset` parameter accepts the
+       * following:.
+       * * The offset time.
+       *
+       * For example, if you specify `18h` for `offset` and `1d` for `interval` , AWS IoT SiteWise
+       * aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
+       * 6 PM (UTC) on the day when you create the metric.
+       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
+       * (UTC) the next day.
+       * * The ISO 8601 format.
+       *
+       * For example, if you specify `PT18H` for `offset` and `1d` for `interval` , AWS IoT SiteWise
+       * aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
+       * 6 PM (UTC) on the day when you create the metric.
+       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
+       * (UTC) the next day.
+       * * The 24-hour clock.
+       *
+       * For example, if you specify `00:03:00` for `offset` , `5m` for `interval` , and you create
+       * the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM (UTC). You get the
+       * second aggregation result at 2:08 PM (UTC).
+       *
+       * * The offset time zone.
+       *
+       * For example, if you specify `2021-07-23T18:00-08` for `offset` and `1d` for `interval` ,
+       * AWS IoT SiteWise aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (PST), you get the first aggregation result at
+       * 6 PM (PST) on the day when you create the metric.
+       * * If you create the metric after 6 PM (PST), you get the first aggregation result at 6 PM
+       * (PST) the next day.
+       */
+      override fun offset(offset: String) {
+        cdkBuilder.offset(offset)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty =
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty,
-    ) : CdkObject(cdkObject), AttributeProperty {
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty,
+    ) : CdkObject(cdkObject), TumblingWindowProperty {
       /**
-       * The default value of the asset model property attribute.
+       * The time interval for the tumbling window. The interval time must be between 1 minute and 1
+       * week.
        *
-       * All assets that you create from the asset model contain this attribute value. You can
-       * update an attribute's value after you create an asset. For more information, see [Updating
-       * attribute
-       * values](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-attribute-values.html)
-       * in the *AWS IoT SiteWise User Guide* .
+       * AWS IoT SiteWise computes the `1w` interval the end of Sunday at midnight each week (UTC),
+       * the `1d` interval at the end of each day at midnight (UTC), the `1h` interval at the end of
+       * each hour, and so on.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-attribute.html#cfn-iotsitewise-assetmodel-attribute-defaultvalue)
+       * When AWS IoT SiteWise aggregates data points for metric computations, the start of each
+       * interval is exclusive and the end of each interval is inclusive. AWS IoT SiteWise places the
+       * computed data point at the end of the interval.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html#cfn-iotsitewise-assetmodel-tumblingwindow-interval)
        */
-      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun interval(): String = unwrap(this).getInterval()
+
+      /**
+       * The offset for the tumbling window. The `offset` parameter accepts the following:.
+       *
+       * * The offset time.
+       *
+       * For example, if you specify `18h` for `offset` and `1d` for `interval` , AWS IoT SiteWise
+       * aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
+       * 6 PM (UTC) on the day when you create the metric.
+       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
+       * (UTC) the next day.
+       * * The ISO 8601 format.
+       *
+       * For example, if you specify `PT18H` for `offset` and `1d` for `interval` , AWS IoT SiteWise
+       * aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (UTC), you get the first aggregation result at
+       * 6 PM (UTC) on the day when you create the metric.
+       * * If you create the metric after 6 PM (UTC), you get the first aggregation result at 6 PM
+       * (UTC) the next day.
+       * * The 24-hour clock.
+       *
+       * For example, if you specify `00:03:00` for `offset` , `5m` for `interval` , and you create
+       * the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM (UTC). You get the
+       * second aggregation result at 2:08 PM (UTC).
+       *
+       * * The offset time zone.
+       *
+       * For example, if you specify `2021-07-23T18:00-08` for `offset` and `1d` for `interval` ,
+       * AWS IoT SiteWise aggregates data in one of the following ways:
+       *
+       * * If you create the metric before or at 6 PM (PST), you get the first aggregation result at
+       * 6 PM (PST) on the day when you create the metric.
+       * * If you create the metric after 6 PM (PST), you get the first aggregation result at 6 PM
+       * (PST) the next day.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-tumblingwindow.html#cfn-iotsitewise-assetmodel-tumblingwindow-offset)
+       */
+      override fun offset(): String? = unwrap(this).getOffset()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TumblingWindowProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty):
-          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty):
+          TumblingWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? TumblingWindowProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AttributeProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty
-    }
-  }
-
-  /**
-   * Describes an asset hierarchy that contains a hierarchy's name, `LogicalID` , and child asset
-   * model ID that specifies the type of asset that can be in this hierarchy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
-   * AssetModelHierarchyProperty assetModelHierarchyProperty = AssetModelHierarchyProperty.builder()
-   * .childAssetModelId("childAssetModelId")
-   * .name("name")
-   * // the properties below are optional
-   * .externalId("externalId")
-   * .id("id")
-   * .logicalId("logicalId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html)
-   */
-  public interface AssetModelHierarchyProperty {
-    /**
-     * The Id of the asset model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-childassetmodelid)
-     */
-    public fun childAssetModelId(): String
-
-    /**
-     * Customer provided external ID for hierarchy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-externalid)
-     */
-    public fun externalId(): String? = unwrap(this).getExternalId()
-
-    /**
-     * Customer provided actual ID for hierarchy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-id)
-     */
-    public fun id(): String? = unwrap(this).getId()
-
-    /**
-     * The `LogicalID` of the asset model hierarchy. This ID is a `hierarchyLogicalId` .
-     *
-     * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-logicalid)
-     */
-    public fun logicalId(): String? = unwrap(this).getLogicalId()
-
-    /**
-     * The name of the asset model hierarchy.
-     *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [AssetModelHierarchyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param childAssetModelId The Id of the asset model. 
-       */
-      public fun childAssetModelId(childAssetModelId: String)
-
-      /**
-       * @param externalId Customer provided external ID for hierarchy.
-       */
-      public fun externalId(externalId: String)
-
-      /**
-       * @param id Customer provided actual ID for hierarchy.
-       */
-      public fun id(id: String)
-
-      /**
-       * @param logicalId The `LogicalID` of the asset model hierarchy. This ID is a
-       * `hierarchyLogicalId` .
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
-       */
-      public fun logicalId(logicalId: String)
-
-      /**
-       * @param name The name of the asset model hierarchy. 
-       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty.Builder
-          =
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty.builder()
-
-      /**
-       * @param childAssetModelId The Id of the asset model. 
-       */
-      override fun childAssetModelId(childAssetModelId: String) {
-        cdkBuilder.childAssetModelId(childAssetModelId)
-      }
-
-      /**
-       * @param externalId Customer provided external ID for hierarchy.
-       */
-      override fun externalId(externalId: String) {
-        cdkBuilder.externalId(externalId)
-      }
-
-      /**
-       * @param id Customer provided actual ID for hierarchy.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param logicalId The `LogicalID` of the asset model hierarchy. This ID is a
-       * `hierarchyLogicalId` .
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
-       */
-      override fun logicalId(logicalId: String) {
-        cdkBuilder.logicalId(logicalId)
-      }
-
-      /**
-       * @param name The name of the asset model hierarchy. 
-       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty,
-    ) : CdkObject(cdkObject), AssetModelHierarchyProperty {
-      /**
-       * The Id of the asset model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-childassetmodelid)
-       */
-      override fun childAssetModelId(): String = unwrap(this).getChildAssetModelId()
-
-      /**
-       * Customer provided external ID for hierarchy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-externalid)
-       */
-      override fun externalId(): String? = unwrap(this).getExternalId()
-
-      /**
-       * Customer provided actual ID for hierarchy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-id)
-       */
-      override fun id(): String? = unwrap(this).getId()
-
-      /**
-       * The `LogicalID` of the asset model hierarchy. This ID is a `hierarchyLogicalId` .
-       *
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-logicalid)
-       */
-      override fun logicalId(): String? = unwrap(this).getLogicalId()
-
-      /**
-       * The name of the asset model hierarchy.
-       *
-       * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.html#cfn-iotsitewise-assetmodel-assetmodelhierarchy-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AssetModelHierarchyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty):
-          AssetModelHierarchyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AssetModelHierarchyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AssetModelHierarchyProperty):
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty =
+      internal fun unwrap(wrapped: TumblingWindowProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty
+          software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty
     }
   }
 

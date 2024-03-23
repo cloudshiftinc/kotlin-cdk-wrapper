@@ -1276,6 +1276,114 @@ public open class CfnApplication internal constructor(
   }
 
   /**
+   * Configuration for Auto Start of Application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * AutoStartConfigurationProperty autoStartConfigurationProperty =
+   * AutoStartConfigurationProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-autostartconfiguration.html)
+   */
+  public interface AutoStartConfigurationProperty {
+    /**
+     * If set to true, the Application will automatically start.
+     *
+     * Defaults to true.
+     *
+     * Default: - true
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-autostartconfiguration.html#cfn-emrserverless-application-autostartconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [AutoStartConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled If set to true, the Application will automatically start.
+       * Defaults to true.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled If set to true, the Application will automatically start.
+       * Defaults to true.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty.builder()
+
+      /**
+       * @param enabled If set to true, the Application will automatically start.
+       * Defaults to true.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled If set to true, the Application will automatically start.
+       * Defaults to true.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty,
+    ) : CdkObject(cdkObject), AutoStartConfigurationProperty {
+      /**
+       * If set to true, the Application will automatically start.
+       *
+       * Defaults to true.
+       *
+       * Default: - true
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-autostartconfiguration.html#cfn-emrserverless-application-autostartconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoStartConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty):
+          AutoStartConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoStartConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoStartConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty
+    }
+  }
+
+  /**
    * Configuration for Auto Stop of Application.
    *
    * Example:
@@ -1415,424 +1523,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty
-    }
-  }
-
-  /**
-   * The configuration setting for monitoring.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
-   * MonitoringConfigurationProperty monitoringConfigurationProperty =
-   * MonitoringConfigurationProperty.builder()
-   * .cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty.builder()
-   * .enabled(false)
-   * .encryptionKeyArn("encryptionKeyArn")
-   * .logGroupName("logGroupName")
-   * .logStreamNamePrefix("logStreamNamePrefix")
-   * .logTypeMap(List.of(LogTypeMapKeyValuePairProperty.builder()
-   * .key("key")
-   * .value(List.of("value"))
-   * .build()))
-   * .build())
-   * .managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty.builder()
-   * .enabled(false)
-   * .encryptionKeyArn("encryptionKeyArn")
-   * .build())
-   * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
-   * .encryptionKeyArn("encryptionKeyArn")
-   * .logUri("logUri")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html)
-   */
-  public interface MonitoringConfigurationProperty {
-    /**
-     * The Amazon CloudWatch configuration for monitoring logs.
-     *
-     * You can configure your jobs to send log information to CloudWatch .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-cloudwatchloggingconfiguration)
-     */
-    public fun cloudWatchLoggingConfiguration(): Any? =
-        unwrap(this).getCloudWatchLoggingConfiguration()
-
-    /**
-     * The managed log persistence configuration for a job run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-managedpersistencemonitoringconfiguration)
-     */
-    public fun managedPersistenceMonitoringConfiguration(): Any? =
-        unwrap(this).getManagedPersistenceMonitoringConfiguration()
-
-    /**
-     * The Amazon S3 configuration for monitoring log publishing.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-s3monitoringconfiguration)
-     */
-    public fun s3MonitoringConfiguration(): Any? = unwrap(this).getS3MonitoringConfiguration()
-
-    /**
-     * A builder for [MonitoringConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
-       * logs.
-       * You can configure your jobs to send log information to CloudWatch .
-       */
-      public fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable)
-
-      /**
-       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
-       * logs.
-       * You can configure your jobs to send log information to CloudWatch .
-       */
-      public
-          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty)
-
-      /**
-       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
-       * logs.
-       * You can configure your jobs to send log information to CloudWatch .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ad1153ab61aa5057aecd5d7cafa7e097b24d047ba2769ca788886319ec68472f")
-      public
-          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
-       * for a job run.
-       */
-      public
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: IResolvable)
-
-      /**
-       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
-       * for a job run.
-       */
-      public
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty)
-
-      /**
-       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
-       * for a job run.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bf88f1af2e44e51488e14d43737bb7f0119c63c83cdbc1fccbd5493652d82ad4")
-      public
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
-       */
-      public fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable)
-
-      /**
-       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
-       */
-      public
-          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty)
-
-      /**
-       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("51e2ce2ff6b1aa9a20811f234f00a3bfd3472a639d524b2a3c765f488d3ab36b")
-      public
-          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty.builder()
-
-      /**
-       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
-       * logs.
-       * You can configure your jobs to send log information to CloudWatch .
-       */
-      override fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable) {
-        cdkBuilder.cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
-       * logs.
-       * You can configure your jobs to send log information to CloudWatch .
-       */
-      override
-          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty) {
-        cdkBuilder.cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration.let(CloudWatchLoggingConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
-       * logs.
-       * You can configure your jobs to send log information to CloudWatch .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ad1153ab61aa5057aecd5d7cafa7e097b24d047ba2769ca788886319ec68472f")
-      override
-          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty(cloudWatchLoggingConfiguration))
-
-      /**
-       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
-       * for a job run.
-       */
-      override
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: IResolvable) {
-        cdkBuilder.managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
-       * for a job run.
-       */
-      override
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty) {
-        cdkBuilder.managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration.let(ManagedPersistenceMonitoringConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
-       * for a job run.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bf88f1af2e44e51488e14d43737bb7f0119c63c83cdbc1fccbd5493652d82ad4")
-      override
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty(managedPersistenceMonitoringConfiguration))
-
-      /**
-       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
-       */
-      override fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable) {
-        cdkBuilder.s3MonitoringConfiguration(s3MonitoringConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
-       */
-      override
-          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty) {
-        cdkBuilder.s3MonitoringConfiguration(s3MonitoringConfiguration.let(S3MonitoringConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("51e2ce2ff6b1aa9a20811f234f00a3bfd3472a639d524b2a3c765f488d3ab36b")
-      override
-          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          s3MonitoringConfiguration(S3MonitoringConfigurationProperty(s3MonitoringConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty,
-    ) : CdkObject(cdkObject), MonitoringConfigurationProperty {
-      /**
-       * The Amazon CloudWatch configuration for monitoring logs.
-       *
-       * You can configure your jobs to send log information to CloudWatch .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-cloudwatchloggingconfiguration)
-       */
-      override fun cloudWatchLoggingConfiguration(): Any? =
-          unwrap(this).getCloudWatchLoggingConfiguration()
-
-      /**
-       * The managed log persistence configuration for a job run.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-managedpersistencemonitoringconfiguration)
-       */
-      override fun managedPersistenceMonitoringConfiguration(): Any? =
-          unwrap(this).getManagedPersistenceMonitoringConfiguration()
-
-      /**
-       * The Amazon S3 configuration for monitoring log publishing.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-s3monitoringconfiguration)
-       */
-      override fun s3MonitoringConfiguration(): Any? = unwrap(this).getS3MonitoringConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty):
-          MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MonitoringConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringConfigurationProperty):
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty
-    }
-  }
-
-  /**
-   * The maximum allowed cumulative resources for an application.
-   *
-   * No new resources will be created once the limit is hit.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
-   * MaximumAllowedResourcesProperty maximumAllowedResourcesProperty =
-   * MaximumAllowedResourcesProperty.builder()
-   * .cpu("cpu")
-   * .memory("memory")
-   * // the properties below are optional
-   * .disk("disk")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html)
-   */
-  public interface MaximumAllowedResourcesProperty {
-    /**
-     * The maximum allowed CPU for an application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-cpu)
-     */
-    public fun cpu(): String
-
-    /**
-     * The maximum allowed disk for an application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-disk)
-     */
-    public fun disk(): String? = unwrap(this).getDisk()
-
-    /**
-     * The maximum allowed resources for an application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-memory)
-     */
-    public fun memory(): String
-
-    /**
-     * A builder for [MaximumAllowedResourcesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpu The maximum allowed CPU for an application. 
-       */
-      public fun cpu(cpu: String)
-
-      /**
-       * @param disk The maximum allowed disk for an application.
-       */
-      public fun disk(disk: String)
-
-      /**
-       * @param memory The maximum allowed resources for an application. 
-       */
-      public fun memory(memory: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty.Builder
-          =
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty.builder()
-
-      /**
-       * @param cpu The maximum allowed CPU for an application. 
-       */
-      override fun cpu(cpu: String) {
-        cdkBuilder.cpu(cpu)
-      }
-
-      /**
-       * @param disk The maximum allowed disk for an application.
-       */
-      override fun disk(disk: String) {
-        cdkBuilder.disk(disk)
-      }
-
-      /**
-       * @param memory The maximum allowed resources for an application. 
-       */
-      override fun memory(memory: String) {
-        cdkBuilder.memory(memory)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty,
-    ) : CdkObject(cdkObject), MaximumAllowedResourcesProperty {
-      /**
-       * The maximum allowed CPU for an application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-cpu)
-       */
-      override fun cpu(): String = unwrap(this).getCpu()
-
-      /**
-       * The maximum allowed disk for an application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-disk)
-       */
-      override fun disk(): String? = unwrap(this).getDisk()
-
-      /**
-       * The maximum allowed resources for an application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-memory)
-       */
-      override fun memory(): String = unwrap(this).getMemory()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MaximumAllowedResourcesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty):
-          MaximumAllowedResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MaximumAllowedResourcesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MaximumAllowedResourcesProperty):
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty
     }
   }
 
@@ -2079,139 +1769,6 @@ public open class CfnApplication internal constructor(
   }
 
   /**
-   * The network configuration for customer VPC connectivity.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
-   * NetworkConfigurationProperty networkConfigurationProperty =
-   * NetworkConfigurationProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnetIds(List.of("subnetIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html)
-   */
-  public interface NetworkConfigurationProperty {
-    /**
-     * The array of security group Ids for customer VPC connectivity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html#cfn-emrserverless-application-networkconfiguration-securitygroupids)
-     */
-    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
-
-    /**
-     * The array of subnet Ids for customer VPC connectivity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html#cfn-emrserverless-application-networkconfiguration-subnetids)
-     */
-    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
-
-    /**
-     * A builder for [NetworkConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
-       */
-      public fun securityGroupIds(securityGroupIds: List<String>)
-
-      /**
-       * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
-       */
-      public fun securityGroupIds(vararg securityGroupIds: String)
-
-      /**
-       * @param subnetIds The array of subnet Ids for customer VPC connectivity.
-       */
-      public fun subnetIds(subnetIds: List<String>)
-
-      /**
-       * @param subnetIds The array of subnet Ids for customer VPC connectivity.
-       */
-      public fun subnetIds(vararg subnetIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty.builder()
-
-      /**
-       * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
-       */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
-      }
-
-      /**
-       * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
-       */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnetIds The array of subnet Ids for customer VPC connectivity.
-       */
-      override fun subnetIds(subnetIds: List<String>) {
-        cdkBuilder.subnetIds(subnetIds)
-      }
-
-      /**
-       * @param subnetIds The array of subnet Ids for customer VPC connectivity.
-       */
-      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
-      /**
-       * The array of security group Ids for customer VPC connectivity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html#cfn-emrserverless-application-networkconfiguration-securitygroupids)
-       */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
-
-      /**
-       * The array of subnet Ids for customer VPC connectivity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html#cfn-emrserverless-application-networkconfiguration-subnetids)
-       */
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkConfigurationProperty):
-          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty
-    }
-  }
-
-  /**
    * Configuration for a JobRun.
    *
    * Example:
@@ -2371,160 +1928,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
-   * WorkerConfigurationProperty workerConfigurationProperty = WorkerConfigurationProperty.builder()
-   * .cpu("cpu")
-   * .memory("memory")
-   * // the properties below are optional
-   * .disk("disk")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html)
-   */
-  public interface WorkerConfigurationProperty {
-    /**
-     * Per worker CPU resource.
-     *
-     * vCPU is the only supported unit and specifying vCPU is optional.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-cpu)
-     */
-    public fun cpu(): String
-
-    /**
-     * Per worker Disk resource.
-     *
-     * GB is the only supported unit and specifying GB is optional
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disk)
-     */
-    public fun disk(): String? = unwrap(this).getDisk()
-
-    /**
-     * Per worker memory resource.
-     *
-     * GB is the only supported unit and specifying GB is optional.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-memory)
-     */
-    public fun memory(): String
-
-    /**
-     * A builder for [WorkerConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpu Per worker CPU resource. 
-       * vCPU is the only supported unit and specifying vCPU is optional.
-       */
-      public fun cpu(cpu: String)
-
-      /**
-       * @param disk Per worker Disk resource.
-       * GB is the only supported unit and specifying GB is optional
-       */
-      public fun disk(disk: String)
-
-      /**
-       * @param memory Per worker memory resource. 
-       * GB is the only supported unit and specifying GB is optional.
-       */
-      public fun memory(memory: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty.builder()
-
-      /**
-       * @param cpu Per worker CPU resource. 
-       * vCPU is the only supported unit and specifying vCPU is optional.
-       */
-      override fun cpu(cpu: String) {
-        cdkBuilder.cpu(cpu)
-      }
-
-      /**
-       * @param disk Per worker Disk resource.
-       * GB is the only supported unit and specifying GB is optional
-       */
-      override fun disk(disk: String) {
-        cdkBuilder.disk(disk)
-      }
-
-      /**
-       * @param memory Per worker memory resource. 
-       * GB is the only supported unit and specifying GB is optional.
-       */
-      override fun memory(memory: String) {
-        cdkBuilder.memory(memory)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty,
-    ) : CdkObject(cdkObject), WorkerConfigurationProperty {
-      /**
-       * Per worker CPU resource.
-       *
-       * vCPU is the only supported unit and specifying vCPU is optional.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-cpu)
-       */
-      override fun cpu(): String = unwrap(this).getCpu()
-
-      /**
-       * Per worker Disk resource.
-       *
-       * GB is the only supported unit and specifying GB is optional
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disk)
-       */
-      override fun disk(): String? = unwrap(this).getDisk()
-
-      /**
-       * Per worker memory resource.
-       *
-       * GB is the only supported unit and specifying GB is optional.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-memory)
-       */
-      override fun memory(): String = unwrap(this).getMemory()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkerConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty):
-          WorkerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WorkerConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WorkerConfigurationProperty):
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty
     }
   }
 
@@ -2915,342 +2318,117 @@ public open class CfnApplication internal constructor(
   }
 
   /**
-   * The Amazon S3 configuration for monitoring log publishing.
-   *
-   * You can configure your jobs to send log information to Amazon S3.
-   *
    * Example:
    *
    * ```
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.emrserverless.*;
-   * S3MonitoringConfigurationProperty s3MonitoringConfigurationProperty =
-   * S3MonitoringConfigurationProperty.builder()
-   * .encryptionKeyArn("encryptionKeyArn")
-   * .logUri("logUri")
+   * LogTypeMapKeyValuePairProperty logTypeMapKeyValuePairProperty =
+   * LogTypeMapKeyValuePairProperty.builder()
+   * .key("key")
+   * .value(List.of("value"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html)
    */
-  public interface S3MonitoringConfigurationProperty {
+  public interface LogTypeMapKeyValuePairProperty {
     /**
-     * The KMS key ARN to encrypt the logs published to the given Amazon S3 destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html#cfn-emrserverless-application-s3monitoringconfiguration-encryptionkeyarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-key)
      */
-    public fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
+    public fun key(): String
 
     /**
-     * The Amazon S3 destination URI for log publishing.
+     * List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS].
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html#cfn-emrserverless-application-s3monitoringconfiguration-loguri)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-value)
      */
-    public fun logUri(): String? = unwrap(this).getLogUri()
+    public fun `value`(): List<String>
 
     /**
-     * A builder for [S3MonitoringConfigurationProperty]
+     * A builder for [LogTypeMapKeyValuePairProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param encryptionKeyArn The KMS key ARN to encrypt the logs published to the given Amazon
-       * S3 destination.
+       * @param key the value to be set. 
        */
-      public fun encryptionKeyArn(encryptionKeyArn: String)
+      public fun key(key: String)
 
       /**
-       * @param logUri The Amazon S3 destination URI for log publishing.
+       * @param value List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS]. 
        */
-      public fun logUri(logUri: String)
+      public fun `value`(`value`: List<String>)
+
+      /**
+       * @param value List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS]. 
+       */
+      public fun `value`(vararg `value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty.Builder
+          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty.Builder
           =
-          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty.builder()
+          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty.builder()
 
       /**
-       * @param encryptionKeyArn The KMS key ARN to encrypt the logs published to the given Amazon
-       * S3 destination.
+       * @param key the value to be set. 
        */
-      override fun encryptionKeyArn(encryptionKeyArn: String) {
-        cdkBuilder.encryptionKeyArn(encryptionKeyArn)
+      override fun key(key: String) {
+        cdkBuilder.key(key)
       }
 
       /**
-       * @param logUri The Amazon S3 destination URI for log publishing.
+       * @param value List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS]. 
        */
-      override fun logUri(logUri: String) {
-        cdkBuilder.logUri(logUri)
+      override fun `value`(`value`: List<String>) {
+        cdkBuilder.`value`(`value`)
       }
+
+      /**
+       * @param value List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS]. 
+       */
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
 
       public fun build():
-          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
+          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty,
-    ) : CdkObject(cdkObject), S3MonitoringConfigurationProperty {
+          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty,
+    ) : CdkObject(cdkObject), LogTypeMapKeyValuePairProperty {
       /**
-       * The KMS key ARN to encrypt the logs published to the given Amazon S3 destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html#cfn-emrserverless-application-s3monitoringconfiguration-encryptionkeyarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-key)
        */
-      override fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
+      override fun key(): String = unwrap(this).getKey()
 
       /**
-       * The Amazon S3 destination URI for log publishing.
+       * List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS].
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html#cfn-emrserverless-application-s3monitoringconfiguration-loguri)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-value)
        */
-      override fun logUri(): String? = unwrap(this).getLogUri()
+      override fun `value`(): List<String> = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          S3MonitoringConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogTypeMapKeyValuePairProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty):
-          S3MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3MonitoringConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty):
+          LogTypeMapKeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogTypeMapKeyValuePairProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: S3MonitoringConfigurationProperty):
-          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
+      internal fun unwrap(wrapped: LogTypeMapKeyValuePairProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
-    }
-  }
-
-  /**
-   * The specifications for a worker type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
-   * WorkerTypeSpecificationInputProperty workerTypeSpecificationInputProperty =
-   * WorkerTypeSpecificationInputProperty.builder()
-   * .imageConfiguration(ImageConfigurationInputProperty.builder()
-   * .imageUri("imageUri")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workertypespecificationinput.html)
-   */
-  public interface WorkerTypeSpecificationInputProperty {
-    /**
-     * The image configuration for a worker type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workertypespecificationinput.html#cfn-emrserverless-application-workertypespecificationinput-imageconfiguration)
-     */
-    public fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
-
-    /**
-     * A builder for [WorkerTypeSpecificationInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param imageConfiguration The image configuration for a worker type.
-       */
-      public fun imageConfiguration(imageConfiguration: IResolvable)
-
-      /**
-       * @param imageConfiguration The image configuration for a worker type.
-       */
-      public fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty)
-
-      /**
-       * @param imageConfiguration The image configuration for a worker type.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("dbfe53c6500fcc361b32ac969288665449377160edc69d9c75529b54801c000d")
-      public
-          fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty.Builder
-          =
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty.builder()
-
-      /**
-       * @param imageConfiguration The image configuration for a worker type.
-       */
-      override fun imageConfiguration(imageConfiguration: IResolvable) {
-        cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param imageConfiguration The image configuration for a worker type.
-       */
-      override fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty) {
-        cdkBuilder.imageConfiguration(imageConfiguration.let(ImageConfigurationInputProperty::unwrap))
-      }
-
-      /**
-       * @param imageConfiguration The image configuration for a worker type.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("dbfe53c6500fcc361b32ac969288665449377160edc69d9c75529b54801c000d")
-      override
-          fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit):
-          Unit = imageConfiguration(ImageConfigurationInputProperty(imageConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty,
-    ) : CdkObject(cdkObject), WorkerTypeSpecificationInputProperty {
-      /**
-       * The image configuration for a worker type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workertypespecificationinput.html#cfn-emrserverless-application-workertypespecificationinput-imageconfiguration)
-       */
-      override fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          WorkerTypeSpecificationInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty):
-          WorkerTypeSpecificationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WorkerTypeSpecificationInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WorkerTypeSpecificationInputProperty):
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty
-    }
-  }
-
-  /**
-   * Configuration for Auto Start of Application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
-   * AutoStartConfigurationProperty autoStartConfigurationProperty =
-   * AutoStartConfigurationProperty.builder()
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-autostartconfiguration.html)
-   */
-  public interface AutoStartConfigurationProperty {
-    /**
-     * If set to true, the Application will automatically start.
-     *
-     * Defaults to true.
-     *
-     * Default: - true
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-autostartconfiguration.html#cfn-emrserverless-application-autostartconfiguration-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [AutoStartConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled If set to true, the Application will automatically start.
-       * Defaults to true.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled If set to true, the Application will automatically start.
-       * Defaults to true.
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty.builder()
-
-      /**
-       * @param enabled If set to true, the Application will automatically start.
-       * Defaults to true.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled If set to true, the Application will automatically start.
-       * Defaults to true.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty,
-    ) : CdkObject(cdkObject), AutoStartConfigurationProperty {
-      /**
-       * If set to true, the Application will automatically start.
-       *
-       * Defaults to true.
-       *
-       * Default: - true
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-autostartconfiguration.html#cfn-emrserverless-application-autostartconfiguration-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoStartConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty):
-          AutoStartConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutoStartConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoStartConfigurationProperty):
-          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty
+          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty
     }
   }
 
@@ -3394,117 +2572,939 @@ public open class CfnApplication internal constructor(
   }
 
   /**
+   * The maximum allowed cumulative resources for an application.
+   *
+   * No new resources will be created once the limit is hit.
+   *
    * Example:
    *
    * ```
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.emrserverless.*;
-   * LogTypeMapKeyValuePairProperty logTypeMapKeyValuePairProperty =
-   * LogTypeMapKeyValuePairProperty.builder()
-   * .key("key")
-   * .value(List.of("value"))
+   * MaximumAllowedResourcesProperty maximumAllowedResourcesProperty =
+   * MaximumAllowedResourcesProperty.builder()
+   * .cpu("cpu")
+   * .memory("memory")
+   * // the properties below are optional
+   * .disk("disk")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html)
    */
-  public interface LogTypeMapKeyValuePairProperty {
+  public interface MaximumAllowedResourcesProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-key)
-     */
-    public fun key(): String
-
-    /**
-     * List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS].
+     * The maximum allowed CPU for an application.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-value)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-cpu)
      */
-    public fun `value`(): List<String>
+    public fun cpu(): String
 
     /**
-     * A builder for [LogTypeMapKeyValuePairProperty]
+     * The maximum allowed disk for an application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-disk)
+     */
+    public fun disk(): String? = unwrap(this).getDisk()
+
+    /**
+     * The maximum allowed resources for an application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-memory)
+     */
+    public fun memory(): String
+
+    /**
+     * A builder for [MaximumAllowedResourcesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key the value to be set. 
+       * @param cpu The maximum allowed CPU for an application. 
        */
-      public fun key(key: String)
+      public fun cpu(cpu: String)
 
       /**
-       * @param value List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS]. 
+       * @param disk The maximum allowed disk for an application.
        */
-      public fun `value`(`value`: List<String>)
+      public fun disk(disk: String)
 
       /**
-       * @param value List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS]. 
+       * @param memory The maximum allowed resources for an application. 
        */
-      public fun `value`(vararg `value`: String)
+      public fun memory(memory: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty.Builder
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty.Builder
           =
-          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty.builder()
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty.builder()
 
       /**
-       * @param key the value to be set. 
+       * @param cpu The maximum allowed CPU for an application. 
        */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
+      override fun cpu(cpu: String) {
+        cdkBuilder.cpu(cpu)
       }
 
       /**
-       * @param value List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS]. 
+       * @param disk The maximum allowed disk for an application.
        */
-      override fun `value`(`value`: List<String>) {
-        cdkBuilder.`value`(`value`)
+      override fun disk(disk: String) {
+        cdkBuilder.disk(disk)
       }
 
       /**
-       * @param value List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS]. 
+       * @param memory The maximum allowed resources for an application. 
        */
-      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+      override fun memory(memory: String) {
+        cdkBuilder.memory(memory)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty,
-    ) : CdkObject(cdkObject), LogTypeMapKeyValuePairProperty {
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty,
+    ) : CdkObject(cdkObject), MaximumAllowedResourcesProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-key)
+       * The maximum allowed CPU for an application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-cpu)
        */
-      override fun key(): String = unwrap(this).getKey()
+      override fun cpu(): String = unwrap(this).getCpu()
 
       /**
-       * List of Applicable values: [STDOUT, STDERR, HIVE_LOG, TEZ_AM, SYSTEM_LOGS].
+       * The maximum allowed disk for an application.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-value)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-disk)
        */
-      override fun `value`(): List<String> = unwrap(this).getValue()
+      override fun disk(): String? = unwrap(this).getDisk()
+
+      /**
+       * The maximum allowed resources for an application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html#cfn-emrserverless-application-maximumallowedresources-memory)
+       */
+      override fun memory(): String = unwrap(this).getMemory()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogTypeMapKeyValuePairProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MaximumAllowedResourcesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty):
-          LogTypeMapKeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LogTypeMapKeyValuePairProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty):
+          MaximumAllowedResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaximumAllowedResourcesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LogTypeMapKeyValuePairProperty):
-          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty
+      internal fun unwrap(wrapped: MaximumAllowedResourcesProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty
+    }
+  }
+
+  /**
+   * The configuration setting for monitoring.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * MonitoringConfigurationProperty monitoringConfigurationProperty =
+   * MonitoringConfigurationProperty.builder()
+   * .cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty.builder()
+   * .enabled(false)
+   * .encryptionKeyArn("encryptionKeyArn")
+   * .logGroupName("logGroupName")
+   * .logStreamNamePrefix("logStreamNamePrefix")
+   * .logTypeMap(List.of(LogTypeMapKeyValuePairProperty.builder()
+   * .key("key")
+   * .value(List.of("value"))
+   * .build()))
+   * .build())
+   * .managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty.builder()
+   * .enabled(false)
+   * .encryptionKeyArn("encryptionKeyArn")
+   * .build())
+   * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
+   * .encryptionKeyArn("encryptionKeyArn")
+   * .logUri("logUri")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html)
+   */
+  public interface MonitoringConfigurationProperty {
+    /**
+     * The Amazon CloudWatch configuration for monitoring logs.
+     *
+     * You can configure your jobs to send log information to CloudWatch .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-cloudwatchloggingconfiguration)
+     */
+    public fun cloudWatchLoggingConfiguration(): Any? =
+        unwrap(this).getCloudWatchLoggingConfiguration()
+
+    /**
+     * The managed log persistence configuration for a job run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-managedpersistencemonitoringconfiguration)
+     */
+    public fun managedPersistenceMonitoringConfiguration(): Any? =
+        unwrap(this).getManagedPersistenceMonitoringConfiguration()
+
+    /**
+     * The Amazon S3 configuration for monitoring log publishing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-s3monitoringconfiguration)
+     */
+    public fun s3MonitoringConfiguration(): Any? = unwrap(this).getS3MonitoringConfiguration()
+
+    /**
+     * A builder for [MonitoringConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
+       * logs.
+       * You can configure your jobs to send log information to CloudWatch .
+       */
+      public fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable)
+
+      /**
+       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
+       * logs.
+       * You can configure your jobs to send log information to CloudWatch .
+       */
+      public
+          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty)
+
+      /**
+       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
+       * logs.
+       * You can configure your jobs to send log information to CloudWatch .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ad1153ab61aa5057aecd5d7cafa7e097b24d047ba2769ca788886319ec68472f")
+      public
+          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
+       * for a job run.
+       */
+      public
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: IResolvable)
+
+      /**
+       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
+       * for a job run.
+       */
+      public
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty)
+
+      /**
+       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
+       * for a job run.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bf88f1af2e44e51488e14d43737bb7f0119c63c83cdbc1fccbd5493652d82ad4")
+      public
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
+       */
+      public fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable)
+
+      /**
+       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
+       */
+      public
+          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty)
+
+      /**
+       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("51e2ce2ff6b1aa9a20811f234f00a3bfd3472a639d524b2a3c765f488d3ab36b")
+      public
+          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty.builder()
+
+      /**
+       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
+       * logs.
+       * You can configure your jobs to send log information to CloudWatch .
+       */
+      override fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable) {
+        cdkBuilder.cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
+       * logs.
+       * You can configure your jobs to send log information to CloudWatch .
+       */
+      override
+          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty) {
+        cdkBuilder.cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration.let(CloudWatchLoggingConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
+       * logs.
+       * You can configure your jobs to send log information to CloudWatch .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ad1153ab61aa5057aecd5d7cafa7e097b24d047ba2769ca788886319ec68472f")
+      override
+          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty(cloudWatchLoggingConfiguration))
+
+      /**
+       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
+       * for a job run.
+       */
+      override
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: IResolvable) {
+        cdkBuilder.managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
+       * for a job run.
+       */
+      override
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty) {
+        cdkBuilder.managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration.let(ManagedPersistenceMonitoringConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param managedPersistenceMonitoringConfiguration The managed log persistence configuration
+       * for a job run.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bf88f1af2e44e51488e14d43737bb7f0119c63c83cdbc1fccbd5493652d82ad4")
+      override
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty(managedPersistenceMonitoringConfiguration))
+
+      /**
+       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
+       */
+      override fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable) {
+        cdkBuilder.s3MonitoringConfiguration(s3MonitoringConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
+       */
+      override
+          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty) {
+        cdkBuilder.s3MonitoringConfiguration(s3MonitoringConfiguration.let(S3MonitoringConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("51e2ce2ff6b1aa9a20811f234f00a3bfd3472a639d524b2a3c765f488d3ab36b")
+      override
+          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          s3MonitoringConfiguration(S3MonitoringConfigurationProperty(s3MonitoringConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty,
+    ) : CdkObject(cdkObject), MonitoringConfigurationProperty {
+      /**
+       * The Amazon CloudWatch configuration for monitoring logs.
+       *
+       * You can configure your jobs to send log information to CloudWatch .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-cloudwatchloggingconfiguration)
+       */
+      override fun cloudWatchLoggingConfiguration(): Any? =
+          unwrap(this).getCloudWatchLoggingConfiguration()
+
+      /**
+       * The managed log persistence configuration for a job run.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-managedpersistencemonitoringconfiguration)
+       */
+      override fun managedPersistenceMonitoringConfiguration(): Any? =
+          unwrap(this).getManagedPersistenceMonitoringConfiguration()
+
+      /**
+       * The Amazon S3 configuration for monitoring log publishing.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-s3monitoringconfiguration)
+       */
+      override fun s3MonitoringConfiguration(): Any? = unwrap(this).getS3MonitoringConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty):
+          MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty
+    }
+  }
+
+  /**
+   * The network configuration for customer VPC connectivity.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * NetworkConfigurationProperty networkConfigurationProperty =
+   * NetworkConfigurationProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnetIds(List.of("subnetIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html)
+   */
+  public interface NetworkConfigurationProperty {
+    /**
+     * The array of security group Ids for customer VPC connectivity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html#cfn-emrserverless-application-networkconfiguration-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
+
+    /**
+     * The array of subnet Ids for customer VPC connectivity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html#cfn-emrserverless-application-networkconfiguration-subnetids)
+     */
+    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+
+    /**
+     * A builder for [NetworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnetIds The array of subnet Ids for customer VPC connectivity.
+       */
+      public fun subnetIds(subnetIds: List<String>)
+
+      /**
+       * @param subnetIds The array of subnet Ids for customer VPC connectivity.
+       */
+      public fun subnetIds(vararg subnetIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty.builder()
+
+      /**
+       * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnetIds The array of subnet Ids for customer VPC connectivity.
+       */
+      override fun subnetIds(subnetIds: List<String>) {
+        cdkBuilder.subnetIds(subnetIds)
+      }
+
+      /**
+       * @param subnetIds The array of subnet Ids for customer VPC connectivity.
+       */
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty,
+    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+      /**
+       * The array of security group Ids for customer VPC connectivity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html#cfn-emrserverless-application-networkconfiguration-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+          emptyList()
+
+      /**
+       * The array of subnet Ids for customer VPC connectivity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html#cfn-emrserverless-application-networkconfiguration-subnetids)
+       */
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty):
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty
+    }
+  }
+
+  /**
+   * The Amazon S3 configuration for monitoring log publishing.
+   *
+   * You can configure your jobs to send log information to Amazon S3.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * S3MonitoringConfigurationProperty s3MonitoringConfigurationProperty =
+   * S3MonitoringConfigurationProperty.builder()
+   * .encryptionKeyArn("encryptionKeyArn")
+   * .logUri("logUri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html)
+   */
+  public interface S3MonitoringConfigurationProperty {
+    /**
+     * The KMS key ARN to encrypt the logs published to the given Amazon S3 destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html#cfn-emrserverless-application-s3monitoringconfiguration-encryptionkeyarn)
+     */
+    public fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
+
+    /**
+     * The Amazon S3 destination URI for log publishing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html#cfn-emrserverless-application-s3monitoringconfiguration-loguri)
+     */
+    public fun logUri(): String? = unwrap(this).getLogUri()
+
+    /**
+     * A builder for [S3MonitoringConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encryptionKeyArn The KMS key ARN to encrypt the logs published to the given Amazon
+       * S3 destination.
+       */
+      public fun encryptionKeyArn(encryptionKeyArn: String)
+
+      /**
+       * @param logUri The Amazon S3 destination URI for log publishing.
+       */
+      public fun logUri(logUri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty.builder()
+
+      /**
+       * @param encryptionKeyArn The KMS key ARN to encrypt the logs published to the given Amazon
+       * S3 destination.
+       */
+      override fun encryptionKeyArn(encryptionKeyArn: String) {
+        cdkBuilder.encryptionKeyArn(encryptionKeyArn)
+      }
+
+      /**
+       * @param logUri The Amazon S3 destination URI for log publishing.
+       */
+      override fun logUri(logUri: String) {
+        cdkBuilder.logUri(logUri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty,
+    ) : CdkObject(cdkObject), S3MonitoringConfigurationProperty {
+      /**
+       * The KMS key ARN to encrypt the logs published to the given Amazon S3 destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html#cfn-emrserverless-application-s3monitoringconfiguration-encryptionkeyarn)
+       */
+      override fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
+
+      /**
+       * The Amazon S3 destination URI for log publishing.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-s3monitoringconfiguration.html#cfn-emrserverless-application-s3monitoringconfiguration-loguri)
+       */
+      override fun logUri(): String? = unwrap(this).getLogUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          S3MonitoringConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty):
+          S3MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3MonitoringConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3MonitoringConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * WorkerConfigurationProperty workerConfigurationProperty = WorkerConfigurationProperty.builder()
+   * .cpu("cpu")
+   * .memory("memory")
+   * // the properties below are optional
+   * .disk("disk")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html)
+   */
+  public interface WorkerConfigurationProperty {
+    /**
+     * Per worker CPU resource.
+     *
+     * vCPU is the only supported unit and specifying vCPU is optional.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-cpu)
+     */
+    public fun cpu(): String
+
+    /**
+     * Per worker Disk resource.
+     *
+     * GB is the only supported unit and specifying GB is optional
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disk)
+     */
+    public fun disk(): String? = unwrap(this).getDisk()
+
+    /**
+     * Per worker memory resource.
+     *
+     * GB is the only supported unit and specifying GB is optional.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-memory)
+     */
+    public fun memory(): String
+
+    /**
+     * A builder for [WorkerConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpu Per worker CPU resource. 
+       * vCPU is the only supported unit and specifying vCPU is optional.
+       */
+      public fun cpu(cpu: String)
+
+      /**
+       * @param disk Per worker Disk resource.
+       * GB is the only supported unit and specifying GB is optional
+       */
+      public fun disk(disk: String)
+
+      /**
+       * @param memory Per worker memory resource. 
+       * GB is the only supported unit and specifying GB is optional.
+       */
+      public fun memory(memory: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty.builder()
+
+      /**
+       * @param cpu Per worker CPU resource. 
+       * vCPU is the only supported unit and specifying vCPU is optional.
+       */
+      override fun cpu(cpu: String) {
+        cdkBuilder.cpu(cpu)
+      }
+
+      /**
+       * @param disk Per worker Disk resource.
+       * GB is the only supported unit and specifying GB is optional
+       */
+      override fun disk(disk: String) {
+        cdkBuilder.disk(disk)
+      }
+
+      /**
+       * @param memory Per worker memory resource. 
+       * GB is the only supported unit and specifying GB is optional.
+       */
+      override fun memory(memory: String) {
+        cdkBuilder.memory(memory)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty,
+    ) : CdkObject(cdkObject), WorkerConfigurationProperty {
+      /**
+       * Per worker CPU resource.
+       *
+       * vCPU is the only supported unit and specifying vCPU is optional.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-cpu)
+       */
+      override fun cpu(): String = unwrap(this).getCpu()
+
+      /**
+       * Per worker Disk resource.
+       *
+       * GB is the only supported unit and specifying GB is optional
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disk)
+       */
+      override fun disk(): String? = unwrap(this).getDisk()
+
+      /**
+       * Per worker memory resource.
+       *
+       * GB is the only supported unit and specifying GB is optional.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-memory)
+       */
+      override fun memory(): String = unwrap(this).getMemory()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WorkerConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty):
+          WorkerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkerConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WorkerConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty
+    }
+  }
+
+  /**
+   * The specifications for a worker type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * WorkerTypeSpecificationInputProperty workerTypeSpecificationInputProperty =
+   * WorkerTypeSpecificationInputProperty.builder()
+   * .imageConfiguration(ImageConfigurationInputProperty.builder()
+   * .imageUri("imageUri")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workertypespecificationinput.html)
+   */
+  public interface WorkerTypeSpecificationInputProperty {
+    /**
+     * The image configuration for a worker type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workertypespecificationinput.html#cfn-emrserverless-application-workertypespecificationinput-imageconfiguration)
+     */
+    public fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
+
+    /**
+     * A builder for [WorkerTypeSpecificationInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param imageConfiguration The image configuration for a worker type.
+       */
+      public fun imageConfiguration(imageConfiguration: IResolvable)
+
+      /**
+       * @param imageConfiguration The image configuration for a worker type.
+       */
+      public fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty)
+
+      /**
+       * @param imageConfiguration The image configuration for a worker type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dbfe53c6500fcc361b32ac969288665449377160edc69d9c75529b54801c000d")
+      public
+          fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty.builder()
+
+      /**
+       * @param imageConfiguration The image configuration for a worker type.
+       */
+      override fun imageConfiguration(imageConfiguration: IResolvable) {
+        cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param imageConfiguration The image configuration for a worker type.
+       */
+      override fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty) {
+        cdkBuilder.imageConfiguration(imageConfiguration.let(ImageConfigurationInputProperty::unwrap))
+      }
+
+      /**
+       * @param imageConfiguration The image configuration for a worker type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dbfe53c6500fcc361b32ac969288665449377160edc69d9c75529b54801c000d")
+      override
+          fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit):
+          Unit = imageConfiguration(ImageConfigurationInputProperty(imageConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty,
+    ) : CdkObject(cdkObject), WorkerTypeSpecificationInputProperty {
+      /**
+       * The image configuration for a worker type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workertypespecificationinput.html#cfn-emrserverless-application-workertypespecificationinput-imageconfiguration)
+       */
+      override fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          WorkerTypeSpecificationInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty):
+          WorkerTypeSpecificationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkerTypeSpecificationInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WorkerTypeSpecificationInputProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty
     }
   }
 }

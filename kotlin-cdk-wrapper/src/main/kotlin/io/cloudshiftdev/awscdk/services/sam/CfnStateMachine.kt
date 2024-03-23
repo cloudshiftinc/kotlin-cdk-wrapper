@@ -773,72 +773,343 @@ public open class CfnStateMachine internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sam.*;
-   * StateMachineSAMPTProperty stateMachineSAMPTProperty = StateMachineSAMPTProperty.builder()
-   * .stateMachineName("stateMachineName")
+   * ApiEventProperty apiEventProperty = ApiEventProperty.builder()
+   * .method("method")
+   * .path("path")
+   * // the properties below are optional
+   * .restApiId("restApiId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-statemachinesampt.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html)
    */
-  public interface StateMachineSAMPTProperty {
+  public interface ApiEventProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-statemachinesampt.html#cfn-serverless-statemachine-statemachinesampt-statemachinename)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-method)
      */
-    public fun stateMachineName(): String
+    public fun method(): String
 
     /**
-     * A builder for [StateMachineSAMPTProperty]
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-path)
+     */
+    public fun path(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-restapiid)
+     */
+    public fun restApiId(): String? = unwrap(this).getRestApiId()
+
+    /**
+     * A builder for [ApiEventProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param stateMachineName the value to be set. 
+       * @param method the value to be set. 
        */
-      public fun stateMachineName(stateMachineName: String)
+      public fun method(method: String)
+
+      /**
+       * @param path the value to be set. 
+       */
+      public fun path(path: String)
+
+      /**
+       * @param restApiId the value to be set.
+       */
+      public fun restApiId(restApiId: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty.builder()
+          software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty.builder()
 
       /**
-       * @param stateMachineName the value to be set. 
+       * @param method the value to be set. 
        */
-      override fun stateMachineName(stateMachineName: String) {
-        cdkBuilder.stateMachineName(stateMachineName)
+      override fun method(method: String) {
+        cdkBuilder.method(method)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty =
+      /**
+       * @param path the value to be set. 
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      /**
+       * @param restApiId the value to be set.
+       */
+      override fun restApiId(restApiId: String) {
+        cdkBuilder.restApiId(restApiId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty,
-    ) : CdkObject(cdkObject), StateMachineSAMPTProperty {
+      override val cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty,
+    ) : CdkObject(cdkObject), ApiEventProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-statemachinesampt.html#cfn-serverless-statemachine-statemachinesampt-statemachinename)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-method)
        */
-      override fun stateMachineName(): String = unwrap(this).getStateMachineName()
+      override fun method(): String = unwrap(this).getMethod()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-path)
+       */
+      override fun path(): String = unwrap(this).getPath()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-restapiid)
+       */
+      override fun restApiId(): String? = unwrap(this).getRestApiId()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StateMachineSAMPTProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApiEventProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty):
-          StateMachineSAMPTProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StateMachineSAMPTProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty):
+          ApiEventProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiEventProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StateMachineSAMPTProperty):
-          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty
+      internal fun unwrap(wrapped: ApiEventProperty):
+          software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * Object pattern;
+   * CloudWatchEventEventProperty cloudWatchEventEventProperty =
+   * CloudWatchEventEventProperty.builder()
+   * .pattern(pattern)
+   * // the properties below are optional
+   * .eventBusName("eventBusName")
+   * .input("input")
+   * .inputPath("inputPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html)
+   */
+  public interface CloudWatchEventEventProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-eventbusname)
+     */
+    public fun eventBusName(): String? = unwrap(this).getEventBusName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-input)
+     */
+    public fun input(): String? = unwrap(this).getInput()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-inputpath)
+     */
+    public fun inputPath(): String? = unwrap(this).getInputPath()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-pattern)
+     */
+    public fun pattern(): Any
+
+    /**
+     * A builder for [CloudWatchEventEventProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param eventBusName the value to be set.
+       */
+      public fun eventBusName(eventBusName: String)
+
+      /**
+       * @param input the value to be set.
+       */
+      public fun input(input: String)
+
+      /**
+       * @param inputPath the value to be set.
+       */
+      public fun inputPath(inputPath: String)
+
+      /**
+       * @param pattern the value to be set. 
+       */
+      public fun pattern(pattern: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty.builder()
+
+      /**
+       * @param eventBusName the value to be set.
+       */
+      override fun eventBusName(eventBusName: String) {
+        cdkBuilder.eventBusName(eventBusName)
+      }
+
+      /**
+       * @param input the value to be set.
+       */
+      override fun input(input: String) {
+        cdkBuilder.input(input)
+      }
+
+      /**
+       * @param inputPath the value to be set.
+       */
+      override fun inputPath(inputPath: String) {
+        cdkBuilder.inputPath(inputPath)
+      }
+
+      /**
+       * @param pattern the value to be set. 
+       */
+      override fun pattern(pattern: Any) {
+        cdkBuilder.pattern(pattern)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty,
+    ) : CdkObject(cdkObject), CloudWatchEventEventProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-eventbusname)
+       */
+      override fun eventBusName(): String? = unwrap(this).getEventBusName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-input)
+       */
+      override fun input(): String? = unwrap(this).getInput()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-inputpath)
+       */
+      override fun inputPath(): String? = unwrap(this).getInputPath()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-pattern)
+       */
+      override fun pattern(): Any = unwrap(this).getPattern()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchEventEventProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty):
+          CloudWatchEventEventProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchEventEventProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchEventEventProperty):
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * CloudWatchLogsLogGroupProperty cloudWatchLogsLogGroupProperty =
+   * CloudWatchLogsLogGroupProperty.builder()
+   * .logGroupArn("logGroupArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatchlogsloggroup.html)
+   */
+  public interface CloudWatchLogsLogGroupProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatchlogsloggroup.html#cfn-serverless-statemachine-cloudwatchlogsloggroup-loggrouparn)
+     */
+    public fun logGroupArn(): String
+
+    /**
+     * A builder for [CloudWatchLogsLogGroupProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logGroupArn the value to be set. 
+       */
+      public fun logGroupArn(logGroupArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty.Builder
+          =
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty.builder()
+
+      /**
+       * @param logGroupArn the value to be set. 
+       */
+      override fun logGroupArn(logGroupArn: String) {
+        cdkBuilder.logGroupArn(logGroupArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogsLogGroupProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatchlogsloggroup.html#cfn-serverless-statemachine-cloudwatchlogsloggroup-loggrouparn)
+       */
+      override fun logGroupArn(): String = unwrap(this).getLogGroupArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogsLogGroupProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty):
+          CloudWatchLogsLogGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsLogGroupProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchLogsLogGroupProperty):
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty
     }
   }
 
@@ -997,144 +1268,487 @@ public open class CfnStateMachine internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sam.*;
-   * Object pattern;
-   * CloudWatchEventEventProperty cloudWatchEventEventProperty =
-   * CloudWatchEventEventProperty.builder()
-   * .pattern(pattern)
+   * EventSourceProperty eventSourceProperty = EventSourceProperty.builder()
+   * .properties(ApiEventProperty.builder()
+   * .method("method")
+   * .path("path")
    * // the properties below are optional
-   * .eventBusName("eventBusName")
-   * .input("input")
-   * .inputPath("inputPath")
+   * .restApiId("restApiId")
+   * .build())
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html)
    */
-  public interface CloudWatchEventEventProperty {
+  public interface EventSourceProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-eventbusname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-properties)
      */
-    public fun eventBusName(): String? = unwrap(this).getEventBusName()
+    public fun properties(): Any
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-input)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-type)
      */
-    public fun input(): String? = unwrap(this).getInput()
+    public fun type(): String
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-inputpath)
-     */
-    public fun inputPath(): String? = unwrap(this).getInputPath()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-pattern)
-     */
-    public fun pattern(): Any
-
-    /**
-     * A builder for [CloudWatchEventEventProperty]
+     * A builder for [EventSourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param eventBusName the value to be set.
+       * @param properties the value to be set. 
        */
-      public fun eventBusName(eventBusName: String)
+      public fun properties(properties: IResolvable)
 
       /**
-       * @param input the value to be set.
+       * @param properties the value to be set. 
        */
-      public fun input(input: String)
+      public fun properties(properties: ApiEventProperty)
 
       /**
-       * @param inputPath the value to be set.
+       * @param properties the value to be set. 
        */
-      public fun inputPath(inputPath: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("40e79479ca1fe3df64b7aafeedb6c40fa3d2d53993be4ba2a5d1daec72831ea1")
+      public fun properties(properties: ApiEventProperty.Builder.() -> Unit)
 
       /**
-       * @param pattern the value to be set. 
+       * @param properties the value to be set. 
        */
-      public fun pattern(pattern: Any)
+      public fun properties(properties: CloudWatchEventEventProperty)
+
+      /**
+       * @param properties the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3e05cbdb421d6a3f300c28f5c4d41a4bb4a147ef563c23289793f11c465fa3b0")
+      public fun properties(properties: CloudWatchEventEventProperty.Builder.() -> Unit)
+
+      /**
+       * @param properties the value to be set. 
+       */
+      public fun properties(properties: EventBridgeRuleEventProperty)
+
+      /**
+       * @param properties the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("33a29f15107863a2f15d8a7b6575885d8bc6f17fd60f76e71047c3b115623532")
+      public fun properties(properties: EventBridgeRuleEventProperty.Builder.() -> Unit)
+
+      /**
+       * @param properties the value to be set. 
+       */
+      public fun properties(properties: ScheduleEventProperty)
+
+      /**
+       * @param properties the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ea07d398ece309f929e477bdd3715abb5bb855bb108e225dc59923fd888dca52")
+      public fun properties(properties: ScheduleEventProperty.Builder.() -> Unit)
+
+      /**
+       * @param type the value to be set. 
+       */
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty.builder()
+          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty.builder()
 
       /**
-       * @param eventBusName the value to be set.
+       * @param properties the value to be set. 
        */
-      override fun eventBusName(eventBusName: String) {
-        cdkBuilder.eventBusName(eventBusName)
+      override fun properties(properties: IResolvable) {
+        cdkBuilder.properties(properties.let(IResolvable::unwrap))
       }
 
       /**
-       * @param input the value to be set.
+       * @param properties the value to be set. 
        */
-      override fun input(input: String) {
-        cdkBuilder.input(input)
+      override fun properties(properties: ApiEventProperty) {
+        cdkBuilder.properties(properties.let(ApiEventProperty::unwrap))
       }
 
       /**
-       * @param inputPath the value to be set.
+       * @param properties the value to be set. 
        */
-      override fun inputPath(inputPath: String) {
-        cdkBuilder.inputPath(inputPath)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("40e79479ca1fe3df64b7aafeedb6c40fa3d2d53993be4ba2a5d1daec72831ea1")
+      override fun properties(properties: ApiEventProperty.Builder.() -> Unit): Unit =
+          properties(ApiEventProperty(properties))
+
+      /**
+       * @param properties the value to be set. 
+       */
+      override fun properties(properties: CloudWatchEventEventProperty) {
+        cdkBuilder.properties(properties.let(CloudWatchEventEventProperty::unwrap))
       }
 
       /**
-       * @param pattern the value to be set. 
+       * @param properties the value to be set. 
        */
-      override fun pattern(pattern: Any) {
-        cdkBuilder.pattern(pattern)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3e05cbdb421d6a3f300c28f5c4d41a4bb4a147ef563c23289793f11c465fa3b0")
+      override fun properties(properties: CloudWatchEventEventProperty.Builder.() -> Unit): Unit =
+          properties(CloudWatchEventEventProperty(properties))
+
+      /**
+       * @param properties the value to be set. 
+       */
+      override fun properties(properties: EventBridgeRuleEventProperty) {
+        cdkBuilder.properties(properties.let(EventBridgeRuleEventProperty::unwrap))
       }
 
-      public fun build():
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty =
+      /**
+       * @param properties the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("33a29f15107863a2f15d8a7b6575885d8bc6f17fd60f76e71047c3b115623532")
+      override fun properties(properties: EventBridgeRuleEventProperty.Builder.() -> Unit): Unit =
+          properties(EventBridgeRuleEventProperty(properties))
+
+      /**
+       * @param properties the value to be set. 
+       */
+      override fun properties(properties: ScheduleEventProperty) {
+        cdkBuilder.properties(properties.let(ScheduleEventProperty::unwrap))
+      }
+
+      /**
+       * @param properties the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ea07d398ece309f929e477bdd3715abb5bb855bb108e225dc59923fd888dca52")
+      override fun properties(properties: ScheduleEventProperty.Builder.() -> Unit): Unit =
+          properties(ScheduleEventProperty(properties))
+
+      /**
+       * @param type the value to be set. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty,
-    ) : CdkObject(cdkObject), CloudWatchEventEventProperty {
+          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty,
+    ) : CdkObject(cdkObject), EventSourceProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-eventbusname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-properties)
        */
-      override fun eventBusName(): String? = unwrap(this).getEventBusName()
+      override fun properties(): Any = unwrap(this).getProperties()
 
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-input)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-type)
        */
-      override fun input(): String? = unwrap(this).getInput()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-inputpath)
-       */
-      override fun inputPath(): String? = unwrap(this).getInputPath()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html#cfn-serverless-statemachine-cloudwatcheventevent-pattern)
-       */
-      override fun pattern(): Any = unwrap(this).getPattern()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchEventEventProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventSourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty):
-          CloudWatchEventEventProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchEventEventProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty):
+          EventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? EventSourceProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CloudWatchEventEventProperty):
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty
+      internal fun unwrap(wrapped: EventSourceProperty):
+          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * FunctionSAMPTProperty functionSAMPTProperty = FunctionSAMPTProperty.builder()
+   * .functionName("functionName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-functionsampt.html)
+   */
+  public interface FunctionSAMPTProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-functionsampt.html#cfn-serverless-statemachine-functionsampt-functionname)
+     */
+    public fun functionName(): String
+
+    /**
+     * A builder for [FunctionSAMPTProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param functionName the value to be set. 
+       */
+      public fun functionName(functionName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty.builder()
+
+      /**
+       * @param functionName the value to be set. 
+       */
+      override fun functionName(functionName: String) {
+        cdkBuilder.functionName(functionName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty,
+    ) : CdkObject(cdkObject), FunctionSAMPTProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-functionsampt.html#cfn-serverless-statemachine-functionsampt-functionname)
+       */
+      override fun functionName(): String = unwrap(this).getFunctionName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FunctionSAMPTProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty):
+          FunctionSAMPTProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionSAMPTProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FunctionSAMPTProperty):
+          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * Object statement;
+   * IAMPolicyDocumentProperty iAMPolicyDocumentProperty = Map.of(
+   * "statement", statement,
+   * "version", "version");
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html)
+   */
+  public interface IAMPolicyDocumentProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-statement)
+     */
+    public fun statement(): Any
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-version)
+     */
+    public fun version(): String
+
+    /**
+     * A builder for [IAMPolicyDocumentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param statement the value to be set. 
+       */
+      public fun statement(statement: Any)
+
+      /**
+       * @param version the value to be set. 
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty.builder()
+
+      /**
+       * @param statement the value to be set. 
+       */
+      override fun statement(statement: Any) {
+        cdkBuilder.statement(statement)
+      }
+
+      /**
+       * @param version the value to be set. 
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty,
+    ) : CdkObject(cdkObject), IAMPolicyDocumentProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-statement)
+       */
+      override fun statement(): Any = unwrap(this).getStatement()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-version)
+       */
+      override fun version(): String = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IAMPolicyDocumentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty):
+          IAMPolicyDocumentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IAMPolicyDocumentProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IAMPolicyDocumentProperty):
+          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * LogDestinationProperty logDestinationProperty = LogDestinationProperty.builder()
+   * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
+   * .logGroupArn("logGroupArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-logdestination.html)
+   */
+  public interface LogDestinationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-logdestination.html#cfn-serverless-statemachine-logdestination-cloudwatchlogsloggroup)
+     */
+    public fun cloudWatchLogsLogGroup(): Any
+
+    /**
+     * A builder for [LogDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogsLogGroup the value to be set. 
+       */
+      public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable)
+
+      /**
+       * @param cloudWatchLogsLogGroup the value to be set. 
+       */
+      public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty)
+
+      /**
+       * @param cloudWatchLogsLogGroup the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0ac7753aad5c0b8baf4a728c093bbd62ef4d34db391fc69a6b081de72c8a4f85")
+      public
+          fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty.builder()
+
+      /**
+       * @param cloudWatchLogsLogGroup the value to be set. 
+       */
+      override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLogsLogGroup the value to be set. 
+       */
+      override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty) {
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(CloudWatchLogsLogGroupProperty::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLogsLogGroup the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0ac7753aad5c0b8baf4a728c093bbd62ef4d34db391fc69a6b081de72c8a4f85")
+      override
+          fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty.Builder.() -> Unit):
+          Unit = cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty(cloudWatchLogsLogGroup))
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty,
+    ) : CdkObject(cdkObject), LogDestinationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-logdestination.html#cfn-serverless-statemachine-logdestination-cloudwatchlogsloggroup)
+       */
+      override fun cloudWatchLogsLogGroup(): Any = unwrap(this).getCloudWatchLogsLogGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty):
+          LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogDestinationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogDestinationProperty):
+          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty
     }
   }
 
@@ -1429,187 +2043,6 @@ public open class CfnStateMachine internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sam.*;
-   * LogDestinationProperty logDestinationProperty = LogDestinationProperty.builder()
-   * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
-   * .logGroupArn("logGroupArn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-logdestination.html)
-   */
-  public interface LogDestinationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-logdestination.html#cfn-serverless-statemachine-logdestination-cloudwatchlogsloggroup)
-     */
-    public fun cloudWatchLogsLogGroup(): Any
-
-    /**
-     * A builder for [LogDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogsLogGroup the value to be set. 
-       */
-      public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable)
-
-      /**
-       * @param cloudWatchLogsLogGroup the value to be set. 
-       */
-      public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty)
-
-      /**
-       * @param cloudWatchLogsLogGroup the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0ac7753aad5c0b8baf4a728c093bbd62ef4d34db391fc69a6b081de72c8a4f85")
-      public
-          fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty.builder()
-
-      /**
-       * @param cloudWatchLogsLogGroup the value to be set. 
-       */
-      override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
-        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLogsLogGroup the value to be set. 
-       */
-      override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty) {
-        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(CloudWatchLogsLogGroupProperty::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLogsLogGroup the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0ac7753aad5c0b8baf4a728c093bbd62ef4d34db391fc69a6b081de72c8a4f85")
-      override
-          fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty.Builder.() -> Unit):
-          Unit = cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty(cloudWatchLogsLogGroup))
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty,
-    ) : CdkObject(cdkObject), LogDestinationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-logdestination.html#cfn-serverless-statemachine-logdestination-cloudwatchlogsloggroup)
-       */
-      override fun cloudWatchLogsLogGroup(): Any = unwrap(this).getCloudWatchLogsLogGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty):
-          LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogDestinationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogDestinationProperty):
-          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * FunctionSAMPTProperty functionSAMPTProperty = FunctionSAMPTProperty.builder()
-   * .functionName("functionName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-functionsampt.html)
-   */
-  public interface FunctionSAMPTProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-functionsampt.html#cfn-serverless-statemachine-functionsampt-functionname)
-     */
-    public fun functionName(): String
-
-    /**
-     * A builder for [FunctionSAMPTProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param functionName the value to be set. 
-       */
-      public fun functionName(functionName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty.builder()
-
-      /**
-       * @param functionName the value to be set. 
-       */
-      override fun functionName(functionName: String) {
-        cdkBuilder.functionName(functionName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty,
-    ) : CdkObject(cdkObject), FunctionSAMPTProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-functionsampt.html#cfn-serverless-statemachine-functionsampt-functionname)
-       */
-      override fun functionName(): String = unwrap(this).getFunctionName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FunctionSAMPTProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty):
-          FunctionSAMPTProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionSAMPTProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FunctionSAMPTProperty):
-          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
    * SAMPolicyTemplateProperty sAMPolicyTemplateProperty = SAMPolicyTemplateProperty.builder()
    * .lambdaInvokePolicy(FunctionSAMPTProperty.builder()
    * .functionName("functionName")
@@ -1872,74 +2305,72 @@ public open class CfnStateMachine internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sam.*;
-   * CloudWatchLogsLogGroupProperty cloudWatchLogsLogGroupProperty =
-   * CloudWatchLogsLogGroupProperty.builder()
-   * .logGroupArn("logGroupArn")
+   * StateMachineSAMPTProperty stateMachineSAMPTProperty = StateMachineSAMPTProperty.builder()
+   * .stateMachineName("stateMachineName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatchlogsloggroup.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-statemachinesampt.html)
    */
-  public interface CloudWatchLogsLogGroupProperty {
+  public interface StateMachineSAMPTProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatchlogsloggroup.html#cfn-serverless-statemachine-cloudwatchlogsloggroup-loggrouparn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-statemachinesampt.html#cfn-serverless-statemachine-statemachinesampt-statemachinename)
      */
-    public fun logGroupArn(): String
+    public fun stateMachineName(): String
 
     /**
-     * A builder for [CloudWatchLogsLogGroupProperty]
+     * A builder for [StateMachineSAMPTProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param logGroupArn the value to be set. 
+       * @param stateMachineName the value to be set. 
        */
-      public fun logGroupArn(logGroupArn: String)
+      public fun stateMachineName(stateMachineName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty.Builder
-          =
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty.builder()
+          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty.builder()
 
       /**
-       * @param logGroupArn the value to be set. 
+       * @param stateMachineName the value to be set. 
        */
-      override fun logGroupArn(logGroupArn: String) {
-        cdkBuilder.logGroupArn(logGroupArn)
+      override fun stateMachineName(stateMachineName: String) {
+        cdkBuilder.stateMachineName(stateMachineName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty =
+          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsLogGroupProperty {
+          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty,
+    ) : CdkObject(cdkObject), StateMachineSAMPTProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatchlogsloggroup.html#cfn-serverless-statemachine-cloudwatchlogsloggroup-loggrouparn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-statemachinesampt.html#cfn-serverless-statemachine-statemachinesampt-statemachinename)
        */
-      override fun logGroupArn(): String = unwrap(this).getLogGroupArn()
+      override fun stateMachineName(): String = unwrap(this).getStateMachineName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogsLogGroupProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StateMachineSAMPTProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty):
-          CloudWatchLogsLogGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogsLogGroupProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty):
+          StateMachineSAMPTProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StateMachineSAMPTProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CloudWatchLogsLogGroupProperty):
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty
+      internal fun unwrap(wrapped: StateMachineSAMPTProperty):
+          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty
     }
   }
 
@@ -2029,437 +2460,6 @@ public open class CfnStateMachine internal constructor(
           software.amazon.awscdk.services.sam.CfnStateMachine.TracingConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sam.CfnStateMachine.TracingConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * EventSourceProperty eventSourceProperty = EventSourceProperty.builder()
-   * .properties(ApiEventProperty.builder()
-   * .method("method")
-   * .path("path")
-   * // the properties below are optional
-   * .restApiId("restApiId")
-   * .build())
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html)
-   */
-  public interface EventSourceProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-properties)
-     */
-    public fun properties(): Any
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [EventSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param properties the value to be set. 
-       */
-      public fun properties(properties: IResolvable)
-
-      /**
-       * @param properties the value to be set. 
-       */
-      public fun properties(properties: ApiEventProperty)
-
-      /**
-       * @param properties the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("40e79479ca1fe3df64b7aafeedb6c40fa3d2d53993be4ba2a5d1daec72831ea1")
-      public fun properties(properties: ApiEventProperty.Builder.() -> Unit)
-
-      /**
-       * @param properties the value to be set. 
-       */
-      public fun properties(properties: CloudWatchEventEventProperty)
-
-      /**
-       * @param properties the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3e05cbdb421d6a3f300c28f5c4d41a4bb4a147ef563c23289793f11c465fa3b0")
-      public fun properties(properties: CloudWatchEventEventProperty.Builder.() -> Unit)
-
-      /**
-       * @param properties the value to be set. 
-       */
-      public fun properties(properties: EventBridgeRuleEventProperty)
-
-      /**
-       * @param properties the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("33a29f15107863a2f15d8a7b6575885d8bc6f17fd60f76e71047c3b115623532")
-      public fun properties(properties: EventBridgeRuleEventProperty.Builder.() -> Unit)
-
-      /**
-       * @param properties the value to be set. 
-       */
-      public fun properties(properties: ScheduleEventProperty)
-
-      /**
-       * @param properties the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ea07d398ece309f929e477bdd3715abb5bb855bb108e225dc59923fd888dca52")
-      public fun properties(properties: ScheduleEventProperty.Builder.() -> Unit)
-
-      /**
-       * @param type the value to be set. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty.builder()
-
-      /**
-       * @param properties the value to be set. 
-       */
-      override fun properties(properties: IResolvable) {
-        cdkBuilder.properties(properties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param properties the value to be set. 
-       */
-      override fun properties(properties: ApiEventProperty) {
-        cdkBuilder.properties(properties.let(ApiEventProperty::unwrap))
-      }
-
-      /**
-       * @param properties the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("40e79479ca1fe3df64b7aafeedb6c40fa3d2d53993be4ba2a5d1daec72831ea1")
-      override fun properties(properties: ApiEventProperty.Builder.() -> Unit): Unit =
-          properties(ApiEventProperty(properties))
-
-      /**
-       * @param properties the value to be set. 
-       */
-      override fun properties(properties: CloudWatchEventEventProperty) {
-        cdkBuilder.properties(properties.let(CloudWatchEventEventProperty::unwrap))
-      }
-
-      /**
-       * @param properties the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3e05cbdb421d6a3f300c28f5c4d41a4bb4a147ef563c23289793f11c465fa3b0")
-      override fun properties(properties: CloudWatchEventEventProperty.Builder.() -> Unit): Unit =
-          properties(CloudWatchEventEventProperty(properties))
-
-      /**
-       * @param properties the value to be set. 
-       */
-      override fun properties(properties: EventBridgeRuleEventProperty) {
-        cdkBuilder.properties(properties.let(EventBridgeRuleEventProperty::unwrap))
-      }
-
-      /**
-       * @param properties the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("33a29f15107863a2f15d8a7b6575885d8bc6f17fd60f76e71047c3b115623532")
-      override fun properties(properties: EventBridgeRuleEventProperty.Builder.() -> Unit): Unit =
-          properties(EventBridgeRuleEventProperty(properties))
-
-      /**
-       * @param properties the value to be set. 
-       */
-      override fun properties(properties: ScheduleEventProperty) {
-        cdkBuilder.properties(properties.let(ScheduleEventProperty::unwrap))
-      }
-
-      /**
-       * @param properties the value to be set. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ea07d398ece309f929e477bdd3715abb5bb855bb108e225dc59923fd888dca52")
-      override fun properties(properties: ScheduleEventProperty.Builder.() -> Unit): Unit =
-          properties(ScheduleEventProperty(properties))
-
-      /**
-       * @param type the value to be set. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty,
-    ) : CdkObject(cdkObject), EventSourceProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-properties)
-       */
-      override fun properties(): Any = unwrap(this).getProperties()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventsource.html#cfn-serverless-statemachine-eventsource-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty):
-          EventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? EventSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventSourceProperty):
-          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * Object statement;
-   * IAMPolicyDocumentProperty iAMPolicyDocumentProperty = Map.of(
-   * "statement", statement,
-   * "version", "version");
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html)
-   */
-  public interface IAMPolicyDocumentProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-statement)
-     */
-    public fun statement(): Any
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-version)
-     */
-    public fun version(): String
-
-    /**
-     * A builder for [IAMPolicyDocumentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param statement the value to be set. 
-       */
-      public fun statement(statement: Any)
-
-      /**
-       * @param version the value to be set. 
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty.builder()
-
-      /**
-       * @param statement the value to be set. 
-       */
-      override fun statement(statement: Any) {
-        cdkBuilder.statement(statement)
-      }
-
-      /**
-       * @param version the value to be set. 
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty,
-    ) : CdkObject(cdkObject), IAMPolicyDocumentProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-statement)
-       */
-      override fun statement(): Any = unwrap(this).getStatement()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-iampolicydocument.html#cfn-serverless-statemachine-iampolicydocument-version)
-       */
-      override fun version(): String = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IAMPolicyDocumentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty):
-          IAMPolicyDocumentProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IAMPolicyDocumentProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IAMPolicyDocumentProperty):
-          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * ApiEventProperty apiEventProperty = ApiEventProperty.builder()
-   * .method("method")
-   * .path("path")
-   * // the properties below are optional
-   * .restApiId("restApiId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html)
-   */
-  public interface ApiEventProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-method)
-     */
-    public fun method(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-path)
-     */
-    public fun path(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-restapiid)
-     */
-    public fun restApiId(): String? = unwrap(this).getRestApiId()
-
-    /**
-     * A builder for [ApiEventProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param method the value to be set. 
-       */
-      public fun method(method: String)
-
-      /**
-       * @param path the value to be set. 
-       */
-      public fun path(path: String)
-
-      /**
-       * @param restApiId the value to be set.
-       */
-      public fun restApiId(restApiId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty.builder()
-
-      /**
-       * @param method the value to be set. 
-       */
-      override fun method(method: String) {
-        cdkBuilder.method(method)
-      }
-
-      /**
-       * @param path the value to be set. 
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      /**
-       * @param restApiId the value to be set.
-       */
-      override fun restApiId(restApiId: String) {
-        cdkBuilder.restApiId(restApiId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty,
-    ) : CdkObject(cdkObject), ApiEventProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-method)
-       */
-      override fun method(): String = unwrap(this).getMethod()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-path)
-       */
-      override fun path(): String = unwrap(this).getPath()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-apievent.html#cfn-serverless-statemachine-apievent-restapiid)
-       */
-      override fun restApiId(): String? = unwrap(this).getRestApiId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ApiEventProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty):
-          ApiEventProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiEventProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ApiEventProperty):
-          software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty
     }
   }
 }

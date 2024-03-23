@@ -1450,730 +1450,6 @@ public open class CfnApi internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sam.*;
-   * Route53ConfigurationProperty route53ConfigurationProperty =
-   * Route53ConfigurationProperty.builder()
-   * .distributedDomainName("distributedDomainName")
-   * .evaluateTargetHealth(false)
-   * .hostedZoneId("hostedZoneId")
-   * .hostedZoneName("hostedZoneName")
-   * .ipV6(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html)
-   */
-  public interface Route53ConfigurationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-distributeddomainname)
-     */
-    public fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-evaluatetargethealth)
-     */
-    public fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzoneid)
-     */
-    public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzonename)
-     */
-    public fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-ipv6)
-     */
-    public fun ipV6(): Any? = unwrap(this).getIpV6()
-
-    /**
-     * A builder for [Route53ConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param distributedDomainName the value to be set.
-       */
-      public fun distributedDomainName(distributedDomainName: String)
-
-      /**
-       * @param evaluateTargetHealth the value to be set.
-       */
-      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
-
-      /**
-       * @param evaluateTargetHealth the value to be set.
-       */
-      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable)
-
-      /**
-       * @param hostedZoneId the value to be set.
-       */
-      public fun hostedZoneId(hostedZoneId: String)
-
-      /**
-       * @param hostedZoneName the value to be set.
-       */
-      public fun hostedZoneName(hostedZoneName: String)
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      public fun ipV6(ipV6: Boolean)
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      public fun ipV6(ipV6: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty.builder()
-
-      /**
-       * @param distributedDomainName the value to be set.
-       */
-      override fun distributedDomainName(distributedDomainName: String) {
-        cdkBuilder.distributedDomainName(distributedDomainName)
-      }
-
-      /**
-       * @param evaluateTargetHealth the value to be set.
-       */
-      override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
-      }
-
-      /**
-       * @param evaluateTargetHealth the value to be set.
-       */
-      override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param hostedZoneId the value to be set.
-       */
-      override fun hostedZoneId(hostedZoneId: String) {
-        cdkBuilder.hostedZoneId(hostedZoneId)
-      }
-
-      /**
-       * @param hostedZoneName the value to be set.
-       */
-      override fun hostedZoneName(hostedZoneName: String) {
-        cdkBuilder.hostedZoneName(hostedZoneName)
-      }
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      override fun ipV6(ipV6: Boolean) {
-        cdkBuilder.ipV6(ipV6)
-      }
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      override fun ipV6(ipV6: IResolvable) {
-        cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty,
-    ) : CdkObject(cdkObject), Route53ConfigurationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-distributeddomainname)
-       */
-      override fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-evaluatetargethealth)
-       */
-      override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzoneid)
-       */
-      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzonename)
-       */
-      override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-ipv6)
-       */
-      override fun ipV6(): Any? = unwrap(this).getIpV6()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): Route53ConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty):
-          Route53ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          Route53ConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: Route53ConfigurationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * MutualTlsAuthenticationProperty mutualTlsAuthenticationProperty =
-   * MutualTlsAuthenticationProperty.builder()
-   * .truststoreUri("truststoreUri")
-   * .truststoreVersion("truststoreVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html)
-   */
-  public interface MutualTlsAuthenticationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreuri)
-     */
-    public fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreversion)
-     */
-    public fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
-
-    /**
-     * A builder for [MutualTlsAuthenticationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param truststoreUri the value to be set.
-       */
-      public fun truststoreUri(truststoreUri: String)
-
-      /**
-       * @param truststoreVersion the value to be set.
-       */
-      public fun truststoreVersion(truststoreVersion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty.builder()
-
-      /**
-       * @param truststoreUri the value to be set.
-       */
-      override fun truststoreUri(truststoreUri: String) {
-        cdkBuilder.truststoreUri(truststoreUri)
-      }
-
-      /**
-       * @param truststoreVersion the value to be set.
-       */
-      override fun truststoreVersion(truststoreVersion: String) {
-        cdkBuilder.truststoreVersion(truststoreVersion)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty,
-    ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreuri)
-       */
-      override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreversion)
-       */
-      override fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MutualTlsAuthenticationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty):
-          MutualTlsAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MutualTlsAuthenticationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MutualTlsAuthenticationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * DomainConfigurationProperty domainConfigurationProperty = DomainConfigurationProperty.builder()
-   * .certificateArn("certificateArn")
-   * .domainName("domainName")
-   * // the properties below are optional
-   * .basePath(List.of("basePath"))
-   * .endpointConfiguration("endpointConfiguration")
-   * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
-   * .truststoreUri("truststoreUri")
-   * .truststoreVersion("truststoreVersion")
-   * .build())
-   * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
-   * .route53(Route53ConfigurationProperty.builder()
-   * .distributedDomainName("distributedDomainName")
-   * .evaluateTargetHealth(false)
-   * .hostedZoneId("hostedZoneId")
-   * .hostedZoneName("hostedZoneName")
-   * .ipV6(false)
-   * .build())
-   * .securityPolicy("securityPolicy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html)
-   */
-  public interface DomainConfigurationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-basepath)
-     */
-    public fun basePath(): List<String> = unwrap(this).getBasePath() ?: emptyList()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-certificatearn)
-     */
-    public fun certificateArn(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-domainname)
-     */
-    public fun domainName(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-endpointconfiguration)
-     */
-    public fun endpointConfiguration(): String? = unwrap(this).getEndpointConfiguration()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-mutualtlsauthentication)
-     */
-    public fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-ownershipverificationcertificatearn)
-     */
-    public fun ownershipVerificationCertificateArn(): String? =
-        unwrap(this).getOwnershipVerificationCertificateArn()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-route53)
-     */
-    public fun route53(): Any? = unwrap(this).getRoute53()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-securitypolicy)
-     */
-    public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
-
-    /**
-     * A builder for [DomainConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param basePath the value to be set.
-       */
-      public fun basePath(basePath: List<String>)
-
-      /**
-       * @param basePath the value to be set.
-       */
-      public fun basePath(vararg basePath: String)
-
-      /**
-       * @param certificateArn the value to be set. 
-       */
-      public fun certificateArn(certificateArn: String)
-
-      /**
-       * @param domainName the value to be set. 
-       */
-      public fun domainName(domainName: String)
-
-      /**
-       * @param endpointConfiguration the value to be set.
-       */
-      public fun endpointConfiguration(endpointConfiguration: String)
-
-      /**
-       * @param mutualTlsAuthentication the value to be set.
-       */
-      public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable)
-
-      /**
-       * @param mutualTlsAuthentication the value to be set.
-       */
-      public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty)
-
-      /**
-       * @param mutualTlsAuthentication the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e98b91cdf6bf8e8932ae29581c539462801dd64c0b8669126f2ce3a0bec6ab56")
-      public
-          fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit)
-
-      /**
-       * @param ownershipVerificationCertificateArn the value to be set.
-       */
-      public fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String)
-
-      /**
-       * @param route53 the value to be set.
-       */
-      public fun route53(route53: IResolvable)
-
-      /**
-       * @param route53 the value to be set.
-       */
-      public fun route53(route53: Route53ConfigurationProperty)
-
-      /**
-       * @param route53 the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bdc6e2cd94fa58960127282245e89433069839b2a24d3a6fdcbea9fb73d6295f")
-      public fun route53(route53: Route53ConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param securityPolicy the value to be set.
-       */
-      public fun securityPolicy(securityPolicy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty.builder()
-
-      /**
-       * @param basePath the value to be set.
-       */
-      override fun basePath(basePath: List<String>) {
-        cdkBuilder.basePath(basePath)
-      }
-
-      /**
-       * @param basePath the value to be set.
-       */
-      override fun basePath(vararg basePath: String): Unit = basePath(basePath.toList())
-
-      /**
-       * @param certificateArn the value to be set. 
-       */
-      override fun certificateArn(certificateArn: String) {
-        cdkBuilder.certificateArn(certificateArn)
-      }
-
-      /**
-       * @param domainName the value to be set. 
-       */
-      override fun domainName(domainName: String) {
-        cdkBuilder.domainName(domainName)
-      }
-
-      /**
-       * @param endpointConfiguration the value to be set.
-       */
-      override fun endpointConfiguration(endpointConfiguration: String) {
-        cdkBuilder.endpointConfiguration(endpointConfiguration)
-      }
-
-      /**
-       * @param mutualTlsAuthentication the value to be set.
-       */
-      override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param mutualTlsAuthentication the value to be set.
-       */
-      override
-          fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
-        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
-      }
-
-      /**
-       * @param mutualTlsAuthentication the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e98b91cdf6bf8e8932ae29581c539462801dd64c0b8669126f2ce3a0bec6ab56")
-      override
-          fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit):
-          Unit = mutualTlsAuthentication(MutualTlsAuthenticationProperty(mutualTlsAuthentication))
-
-      /**
-       * @param ownershipVerificationCertificateArn the value to be set.
-       */
-      override
-          fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String) {
-        cdkBuilder.ownershipVerificationCertificateArn(ownershipVerificationCertificateArn)
-      }
-
-      /**
-       * @param route53 the value to be set.
-       */
-      override fun route53(route53: IResolvable) {
-        cdkBuilder.route53(route53.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param route53 the value to be set.
-       */
-      override fun route53(route53: Route53ConfigurationProperty) {
-        cdkBuilder.route53(route53.let(Route53ConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param route53 the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bdc6e2cd94fa58960127282245e89433069839b2a24d3a6fdcbea9fb73d6295f")
-      override fun route53(route53: Route53ConfigurationProperty.Builder.() -> Unit): Unit =
-          route53(Route53ConfigurationProperty(route53))
-
-      /**
-       * @param securityPolicy the value to be set.
-       */
-      override fun securityPolicy(securityPolicy: String) {
-        cdkBuilder.securityPolicy(securityPolicy)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty,
-    ) : CdkObject(cdkObject), DomainConfigurationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-basepath)
-       */
-      override fun basePath(): List<String> = unwrap(this).getBasePath() ?: emptyList()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-certificatearn)
-       */
-      override fun certificateArn(): String = unwrap(this).getCertificateArn()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-domainname)
-       */
-      override fun domainName(): String = unwrap(this).getDomainName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-endpointconfiguration)
-       */
-      override fun endpointConfiguration(): String? = unwrap(this).getEndpointConfiguration()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-mutualtlsauthentication)
-       */
-      override fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-ownershipverificationcertificatearn)
-       */
-      override fun ownershipVerificationCertificateArn(): String? =
-          unwrap(this).getOwnershipVerificationCertificateArn()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-route53)
-       */
-      override fun route53(): Any? = unwrap(this).getRoute53()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-securitypolicy)
-       */
-      override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DomainConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty):
-          DomainConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DomainConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DomainConfigurationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * .version(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html)
-   */
-  public interface S3LocationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-key)
-     */
-    public fun key(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-version)
-     */
-    public fun version(): Number
-
-    /**
-     * A builder for [S3LocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket the value to be set. 
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param key the value to be set. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param version the value to be set. 
-       */
-      public fun version(version: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty.Builder
-          = software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty.builder()
-
-      /**
-       * @param bucket the value to be set. 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param key the value to be set. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param version the value to be set. 
-       */
-      override fun version(version: Number) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-version)
-       */
-      override fun version(): Number = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
    * Object authorizers;
    * AuthProperty authProperty = AuthProperty.builder()
    * .addDefaultAuthorizerToCorsPreflight(false)
@@ -2298,116 +1574,6 @@ public open class CfnApi internal constructor(
       internal fun unwrap(wrapped: AuthProperty):
           software.amazon.awscdk.services.sam.CfnApi.AuthProperty = (wrapped as CdkObject).cdkObject
           as software.amazon.awscdk.services.sam.CfnApi.AuthProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * EndpointConfigurationProperty endpointConfigurationProperty =
-   * EndpointConfigurationProperty.builder()
-   * .type("type")
-   * .vpcEndpointIds(List.of("vpcEndpointIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html)
-   */
-  public interface EndpointConfigurationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-vpcendpointids)
-     */
-    public fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
-
-    /**
-     * A builder for [EndpointConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type the value to be set.
-       */
-      public fun type(type: String)
-
-      /**
-       * @param vpcEndpointIds the value to be set.
-       */
-      public fun vpcEndpointIds(vpcEndpointIds: List<String>)
-
-      /**
-       * @param vpcEndpointIds the value to be set.
-       */
-      public fun vpcEndpointIds(vararg vpcEndpointIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty.builder()
-
-      /**
-       * @param type the value to be set.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param vpcEndpointIds the value to be set.
-       */
-      override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
-        cdkBuilder.vpcEndpointIds(vpcEndpointIds)
-      }
-
-      /**
-       * @param vpcEndpointIds the value to be set.
-       */
-      override fun vpcEndpointIds(vararg vpcEndpointIds: String): Unit =
-          vpcEndpointIds(vpcEndpointIds.toList())
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty,
-    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-vpcendpointids)
-       */
-      override fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EndpointConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EndpointConfigurationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty
     }
   }
 
@@ -2754,6 +1920,840 @@ public open class CfnApi internal constructor(
           software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * DomainConfigurationProperty domainConfigurationProperty = DomainConfigurationProperty.builder()
+   * .certificateArn("certificateArn")
+   * .domainName("domainName")
+   * // the properties below are optional
+   * .basePath(List.of("basePath"))
+   * .endpointConfiguration("endpointConfiguration")
+   * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
+   * .truststoreUri("truststoreUri")
+   * .truststoreVersion("truststoreVersion")
+   * .build())
+   * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
+   * .route53(Route53ConfigurationProperty.builder()
+   * .distributedDomainName("distributedDomainName")
+   * .evaluateTargetHealth(false)
+   * .hostedZoneId("hostedZoneId")
+   * .hostedZoneName("hostedZoneName")
+   * .ipV6(false)
+   * .build())
+   * .securityPolicy("securityPolicy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html)
+   */
+  public interface DomainConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-basepath)
+     */
+    public fun basePath(): List<String> = unwrap(this).getBasePath() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-certificatearn)
+     */
+    public fun certificateArn(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-domainname)
+     */
+    public fun domainName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-endpointconfiguration)
+     */
+    public fun endpointConfiguration(): String? = unwrap(this).getEndpointConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-mutualtlsauthentication)
+     */
+    public fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-ownershipverificationcertificatearn)
+     */
+    public fun ownershipVerificationCertificateArn(): String? =
+        unwrap(this).getOwnershipVerificationCertificateArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-route53)
+     */
+    public fun route53(): Any? = unwrap(this).getRoute53()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-securitypolicy)
+     */
+    public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+
+    /**
+     * A builder for [DomainConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param basePath the value to be set.
+       */
+      public fun basePath(basePath: List<String>)
+
+      /**
+       * @param basePath the value to be set.
+       */
+      public fun basePath(vararg basePath: String)
+
+      /**
+       * @param certificateArn the value to be set. 
+       */
+      public fun certificateArn(certificateArn: String)
+
+      /**
+       * @param domainName the value to be set. 
+       */
+      public fun domainName(domainName: String)
+
+      /**
+       * @param endpointConfiguration the value to be set.
+       */
+      public fun endpointConfiguration(endpointConfiguration: String)
+
+      /**
+       * @param mutualTlsAuthentication the value to be set.
+       */
+      public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable)
+
+      /**
+       * @param mutualTlsAuthentication the value to be set.
+       */
+      public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty)
+
+      /**
+       * @param mutualTlsAuthentication the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e98b91cdf6bf8e8932ae29581c539462801dd64c0b8669126f2ce3a0bec6ab56")
+      public
+          fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit)
+
+      /**
+       * @param ownershipVerificationCertificateArn the value to be set.
+       */
+      public fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String)
+
+      /**
+       * @param route53 the value to be set.
+       */
+      public fun route53(route53: IResolvable)
+
+      /**
+       * @param route53 the value to be set.
+       */
+      public fun route53(route53: Route53ConfigurationProperty)
+
+      /**
+       * @param route53 the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bdc6e2cd94fa58960127282245e89433069839b2a24d3a6fdcbea9fb73d6295f")
+      public fun route53(route53: Route53ConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param securityPolicy the value to be set.
+       */
+      public fun securityPolicy(securityPolicy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty.builder()
+
+      /**
+       * @param basePath the value to be set.
+       */
+      override fun basePath(basePath: List<String>) {
+        cdkBuilder.basePath(basePath)
+      }
+
+      /**
+       * @param basePath the value to be set.
+       */
+      override fun basePath(vararg basePath: String): Unit = basePath(basePath.toList())
+
+      /**
+       * @param certificateArn the value to be set. 
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      /**
+       * @param domainName the value to be set. 
+       */
+      override fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+      }
+
+      /**
+       * @param endpointConfiguration the value to be set.
+       */
+      override fun endpointConfiguration(endpointConfiguration: String) {
+        cdkBuilder.endpointConfiguration(endpointConfiguration)
+      }
+
+      /**
+       * @param mutualTlsAuthentication the value to be set.
+       */
+      override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
+        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param mutualTlsAuthentication the value to be set.
+       */
+      override
+          fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
+        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
+      }
+
+      /**
+       * @param mutualTlsAuthentication the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e98b91cdf6bf8e8932ae29581c539462801dd64c0b8669126f2ce3a0bec6ab56")
+      override
+          fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit):
+          Unit = mutualTlsAuthentication(MutualTlsAuthenticationProperty(mutualTlsAuthentication))
+
+      /**
+       * @param ownershipVerificationCertificateArn the value to be set.
+       */
+      override
+          fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String) {
+        cdkBuilder.ownershipVerificationCertificateArn(ownershipVerificationCertificateArn)
+      }
+
+      /**
+       * @param route53 the value to be set.
+       */
+      override fun route53(route53: IResolvable) {
+        cdkBuilder.route53(route53.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param route53 the value to be set.
+       */
+      override fun route53(route53: Route53ConfigurationProperty) {
+        cdkBuilder.route53(route53.let(Route53ConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param route53 the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bdc6e2cd94fa58960127282245e89433069839b2a24d3a6fdcbea9fb73d6295f")
+      override fun route53(route53: Route53ConfigurationProperty.Builder.() -> Unit): Unit =
+          route53(Route53ConfigurationProperty(route53))
+
+      /**
+       * @param securityPolicy the value to be set.
+       */
+      override fun securityPolicy(securityPolicy: String) {
+        cdkBuilder.securityPolicy(securityPolicy)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty,
+    ) : CdkObject(cdkObject), DomainConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-basepath)
+       */
+      override fun basePath(): List<String> = unwrap(this).getBasePath() ?: emptyList()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-certificatearn)
+       */
+      override fun certificateArn(): String = unwrap(this).getCertificateArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-domainname)
+       */
+      override fun domainName(): String = unwrap(this).getDomainName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-endpointconfiguration)
+       */
+      override fun endpointConfiguration(): String? = unwrap(this).getEndpointConfiguration()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-mutualtlsauthentication)
+       */
+      override fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-ownershipverificationcertificatearn)
+       */
+      override fun ownershipVerificationCertificateArn(): String? =
+          unwrap(this).getOwnershipVerificationCertificateArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-route53)
+       */
+      override fun route53(): Any? = unwrap(this).getRoute53()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-securitypolicy)
+       */
+      override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DomainConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty):
+          DomainConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DomainConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DomainConfigurationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * EndpointConfigurationProperty endpointConfigurationProperty =
+   * EndpointConfigurationProperty.builder()
+   * .type("type")
+   * .vpcEndpointIds(List.of("vpcEndpointIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html)
+   */
+  public interface EndpointConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-vpcendpointids)
+     */
+    public fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
+
+    /**
+     * A builder for [EndpointConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type the value to be set.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param vpcEndpointIds the value to be set.
+       */
+      public fun vpcEndpointIds(vpcEndpointIds: List<String>)
+
+      /**
+       * @param vpcEndpointIds the value to be set.
+       */
+      public fun vpcEndpointIds(vararg vpcEndpointIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty.builder()
+
+      /**
+       * @param type the value to be set.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param vpcEndpointIds the value to be set.
+       */
+      override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
+        cdkBuilder.vpcEndpointIds(vpcEndpointIds)
+      }
+
+      /**
+       * @param vpcEndpointIds the value to be set.
+       */
+      override fun vpcEndpointIds(vararg vpcEndpointIds: String): Unit =
+          vpcEndpointIds(vpcEndpointIds.toList())
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty,
+    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-vpcendpointids)
+       */
+      override fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty):
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EndpointConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EndpointConfigurationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * MutualTlsAuthenticationProperty mutualTlsAuthenticationProperty =
+   * MutualTlsAuthenticationProperty.builder()
+   * .truststoreUri("truststoreUri")
+   * .truststoreVersion("truststoreVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html)
+   */
+  public interface MutualTlsAuthenticationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreuri)
+     */
+    public fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreversion)
+     */
+    public fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
+
+    /**
+     * A builder for [MutualTlsAuthenticationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param truststoreUri the value to be set.
+       */
+      public fun truststoreUri(truststoreUri: String)
+
+      /**
+       * @param truststoreVersion the value to be set.
+       */
+      public fun truststoreVersion(truststoreVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty.builder()
+
+      /**
+       * @param truststoreUri the value to be set.
+       */
+      override fun truststoreUri(truststoreUri: String) {
+        cdkBuilder.truststoreUri(truststoreUri)
+      }
+
+      /**
+       * @param truststoreVersion the value to be set.
+       */
+      override fun truststoreVersion(truststoreVersion: String) {
+        cdkBuilder.truststoreVersion(truststoreVersion)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty,
+    ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreuri)
+       */
+      override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreversion)
+       */
+      override fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MutualTlsAuthenticationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty):
+          MutualTlsAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MutualTlsAuthenticationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MutualTlsAuthenticationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * Route53ConfigurationProperty route53ConfigurationProperty =
+   * Route53ConfigurationProperty.builder()
+   * .distributedDomainName("distributedDomainName")
+   * .evaluateTargetHealth(false)
+   * .hostedZoneId("hostedZoneId")
+   * .hostedZoneName("hostedZoneName")
+   * .ipV6(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html)
+   */
+  public interface Route53ConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-distributeddomainname)
+     */
+    public fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-evaluatetargethealth)
+     */
+    public fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzoneid)
+     */
+    public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzonename)
+     */
+    public fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-ipv6)
+     */
+    public fun ipV6(): Any? = unwrap(this).getIpV6()
+
+    /**
+     * A builder for [Route53ConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param distributedDomainName the value to be set.
+       */
+      public fun distributedDomainName(distributedDomainName: String)
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable)
+
+      /**
+       * @param hostedZoneId the value to be set.
+       */
+      public fun hostedZoneId(hostedZoneId: String)
+
+      /**
+       * @param hostedZoneName the value to be set.
+       */
+      public fun hostedZoneName(hostedZoneName: String)
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      public fun ipV6(ipV6: Boolean)
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      public fun ipV6(ipV6: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty.builder()
+
+      /**
+       * @param distributedDomainName the value to be set.
+       */
+      override fun distributedDomainName(distributedDomainName: String) {
+        cdkBuilder.distributedDomainName(distributedDomainName)
+      }
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
+      }
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param hostedZoneId the value to be set.
+       */
+      override fun hostedZoneId(hostedZoneId: String) {
+        cdkBuilder.hostedZoneId(hostedZoneId)
+      }
+
+      /**
+       * @param hostedZoneName the value to be set.
+       */
+      override fun hostedZoneName(hostedZoneName: String) {
+        cdkBuilder.hostedZoneName(hostedZoneName)
+      }
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      override fun ipV6(ipV6: Boolean) {
+        cdkBuilder.ipV6(ipV6)
+      }
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      override fun ipV6(ipV6: IResolvable) {
+        cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty,
+    ) : CdkObject(cdkObject), Route53ConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-distributeddomainname)
+       */
+      override fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-evaluatetargethealth)
+       */
+      override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzoneid)
+       */
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzonename)
+       */
+      override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-ipv6)
+       */
+      override fun ipV6(): Any? = unwrap(this).getIpV6()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Route53ConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty):
+          Route53ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Route53ConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Route53ConfigurationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * .version(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html)
+   */
+  public interface S3LocationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-key)
+     */
+    public fun key(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-version)
+     */
+    public fun version(): Number
+
+    /**
+     * A builder for [S3LocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket the value to be set. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param key the value to be set. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param version the value to be set. 
+       */
+      public fun version(version: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty.Builder
+          = software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty.builder()
+
+      /**
+       * @param bucket the value to be set. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param key the value to be set. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param version the value to be set. 
+       */
+      override fun version(version: Number) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty,
+    ) : CdkObject(cdkObject), S3LocationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-version)
+       */
+      override fun version(): Number = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty
     }
   }
 }

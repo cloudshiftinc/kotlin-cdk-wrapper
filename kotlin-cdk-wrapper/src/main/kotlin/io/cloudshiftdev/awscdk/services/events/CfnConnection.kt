@@ -372,226 +372,6 @@ public open class CfnConnection internal constructor(
   }
 
   /**
-   * Contains the Basic authorization parameters for the connection.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * BasicAuthParametersProperty basicAuthParametersProperty = BasicAuthParametersProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html)
-   */
-  public interface BasicAuthParametersProperty {
-    /**
-     * The password associated with the user name to use for Basic authorization.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html#cfn-events-connection-basicauthparameters-password)
-     */
-    public fun password(): String
-
-    /**
-     * The user name to use for Basic authorization.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html#cfn-events-connection-basicauthparameters-username)
-     */
-    public fun username(): String
-
-    /**
-     * A builder for [BasicAuthParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param password The password associated with the user name to use for Basic authorization. 
-       */
-      public fun password(password: String)
-
-      /**
-       * @param username The user name to use for Basic authorization. 
-       */
-      public fun username(username: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty.builder()
-
-      /**
-       * @param password The password associated with the user name to use for Basic authorization. 
-       */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
-      }
-
-      /**
-       * @param username The user name to use for Basic authorization. 
-       */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty,
-    ) : CdkObject(cdkObject), BasicAuthParametersProperty {
-      /**
-       * The password associated with the user name to use for Basic authorization.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html#cfn-events-connection-basicauthparameters-password)
-       */
-      override fun password(): String = unwrap(this).getPassword()
-
-      /**
-       * The user name to use for Basic authorization.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html#cfn-events-connection-basicauthparameters-username)
-       */
-      override fun username(): String = unwrap(this).getUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BasicAuthParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty):
-          BasicAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BasicAuthParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BasicAuthParametersProperty):
-          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty
-    }
-  }
-
-  /**
-   * Contains the OAuth authorization parameters to use for the connection.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * ClientParametersProperty clientParametersProperty = ClientParametersProperty.builder()
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html)
-   */
-  public interface ClientParametersProperty {
-    /**
-     * The client ID to use for OAuth authorization.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html#cfn-events-connection-clientparameters-clientid)
-     */
-    public fun clientId(): String
-
-    /**
-     * The client secret assciated with the client ID to use for OAuth authorization.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html#cfn-events-connection-clientparameters-clientsecret)
-     */
-    public fun clientSecret(): String
-
-    /**
-     * A builder for [ClientParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientId The client ID to use for OAuth authorization. 
-       */
-      public fun clientId(clientId: String)
-
-      /**
-       * @param clientSecret The client secret assciated with the client ID to use for OAuth
-       * authorization. 
-       */
-      public fun clientSecret(clientSecret: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty.builder()
-
-      /**
-       * @param clientId The client ID to use for OAuth authorization. 
-       */
-      override fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-      }
-
-      /**
-       * @param clientSecret The client secret assciated with the client ID to use for OAuth
-       * authorization. 
-       */
-      override fun clientSecret(clientSecret: String) {
-        cdkBuilder.clientSecret(clientSecret)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty,
-    ) : CdkObject(cdkObject), ClientParametersProperty {
-      /**
-       * The client ID to use for OAuth authorization.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html#cfn-events-connection-clientparameters-clientid)
-       */
-      override fun clientId(): String = unwrap(this).getClientId()
-
-      /**
-       * The client secret assciated with the client ID to use for OAuth authorization.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html#cfn-events-connection-clientparameters-clientsecret)
-       */
-      override fun clientSecret(): String = unwrap(this).getClientSecret()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClientParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty):
-          ClientParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? ClientParametersProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClientParametersProperty):
-          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty
-    }
-  }
-
-  /**
    * Contains the API key authorization parameters for the connection.
    *
    * Example:
@@ -699,385 +479,6 @@ public open class CfnConnection internal constructor(
           software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty
-    }
-  }
-
-  /**
-   * Additional query string parameter for the connection.
-   *
-   * You can include up to 100 additional query string parameters per request. Each additional
-   * parameter counts towards the event payload size, which cannot exceed 64 KB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * ParameterProperty parameterProperty = ParameterProperty.builder()
-   * .key("key")
-   * .value("value")
-   * // the properties below are optional
-   * .isValueSecret(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html)
-   */
-  public interface ParameterProperty {
-    /**
-     * Specifies whether the value is secret.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-isvaluesecret)
-     */
-    public fun isValueSecret(): Any? = unwrap(this).getIsValueSecret()
-
-    /**
-     * The key for a query string parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value associated with the key for the query string parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [ParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isValueSecret Specifies whether the value is secret.
-       */
-      public fun isValueSecret(isValueSecret: Boolean)
-
-      /**
-       * @param isValueSecret Specifies whether the value is secret.
-       */
-      public fun isValueSecret(isValueSecret: IResolvable)
-
-      /**
-       * @param key The key for a query string parameter. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value associated with the key for the query string parameter. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty.Builder =
-          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty.builder()
-
-      /**
-       * @param isValueSecret Specifies whether the value is secret.
-       */
-      override fun isValueSecret(isValueSecret: Boolean) {
-        cdkBuilder.isValueSecret(isValueSecret)
-      }
-
-      /**
-       * @param isValueSecret Specifies whether the value is secret.
-       */
-      override fun isValueSecret(isValueSecret: IResolvable) {
-        cdkBuilder.isValueSecret(isValueSecret.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param key The key for a query string parameter. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value associated with the key for the query string parameter. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnConnection.ParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty,
-    ) : CdkObject(cdkObject), ParameterProperty {
-      /**
-       * Specifies whether the value is secret.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-isvaluesecret)
-       */
-      override fun isValueSecret(): Any? = unwrap(this).getIsValueSecret()
-
-      /**
-       * The key for a query string parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value associated with the key for the query string parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ParameterProperty):
-          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ParameterProperty):
-          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty
-    }
-  }
-
-  /**
-   * Contains additional parameters for the connection.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * ConnectionHttpParametersProperty connectionHttpParametersProperty =
-   * ConnectionHttpParametersProperty.builder()
-   * .bodyParameters(List.of(ParameterProperty.builder()
-   * .key("key")
-   * .value("value")
-   * // the properties below are optional
-   * .isValueSecret(false)
-   * .build()))
-   * .headerParameters(List.of(ParameterProperty.builder()
-   * .key("key")
-   * .value("value")
-   * // the properties below are optional
-   * .isValueSecret(false)
-   * .build()))
-   * .queryStringParameters(List.of(ParameterProperty.builder()
-   * .key("key")
-   * .value("value")
-   * // the properties below are optional
-   * .isValueSecret(false)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html)
-   */
-  public interface ConnectionHttpParametersProperty {
-    /**
-     * Contains additional body string parameters for the connection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-bodyparameters)
-     */
-    public fun bodyParameters(): Any? = unwrap(this).getBodyParameters()
-
-    /**
-     * Contains additional header parameters for the connection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-headerparameters)
-     */
-    public fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
-
-    /**
-     * Contains additional query string parameters for the connection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-querystringparameters)
-     */
-    public fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
-
-    /**
-     * A builder for [ConnectionHttpParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
-       */
-      public fun bodyParameters(bodyParameters: IResolvable)
-
-      /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
-       */
-      public fun bodyParameters(bodyParameters: List<Any>)
-
-      /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
-       */
-      public fun bodyParameters(vararg bodyParameters: Any)
-
-      /**
-       * @param headerParameters Contains additional header parameters for the connection.
-       */
-      public fun headerParameters(headerParameters: IResolvable)
-
-      /**
-       * @param headerParameters Contains additional header parameters for the connection.
-       */
-      public fun headerParameters(headerParameters: List<Any>)
-
-      /**
-       * @param headerParameters Contains additional header parameters for the connection.
-       */
-      public fun headerParameters(vararg headerParameters: Any)
-
-      /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
-       */
-      public fun queryStringParameters(queryStringParameters: IResolvable)
-
-      /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
-       */
-      public fun queryStringParameters(queryStringParameters: List<Any>)
-
-      /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
-       */
-      public fun queryStringParameters(vararg queryStringParameters: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty.builder()
-
-      /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
-       */
-      override fun bodyParameters(bodyParameters: IResolvable) {
-        cdkBuilder.bodyParameters(bodyParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
-       */
-      override fun bodyParameters(bodyParameters: List<Any>) {
-        cdkBuilder.bodyParameters(bodyParameters)
-      }
-
-      /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
-       */
-      override fun bodyParameters(vararg bodyParameters: Any): Unit =
-          bodyParameters(bodyParameters.toList())
-
-      /**
-       * @param headerParameters Contains additional header parameters for the connection.
-       */
-      override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param headerParameters Contains additional header parameters for the connection.
-       */
-      override fun headerParameters(headerParameters: List<Any>) {
-        cdkBuilder.headerParameters(headerParameters)
-      }
-
-      /**
-       * @param headerParameters Contains additional header parameters for the connection.
-       */
-      override fun headerParameters(vararg headerParameters: Any): Unit =
-          headerParameters(headerParameters.toList())
-
-      /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
-       */
-      override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
-       */
-      override fun queryStringParameters(queryStringParameters: List<Any>) {
-        cdkBuilder.queryStringParameters(queryStringParameters)
-      }
-
-      /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
-       */
-      override fun queryStringParameters(vararg queryStringParameters: Any): Unit =
-          queryStringParameters(queryStringParameters.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty,
-    ) : CdkObject(cdkObject), ConnectionHttpParametersProperty {
-      /**
-       * Contains additional body string parameters for the connection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-bodyparameters)
-       */
-      override fun bodyParameters(): Any? = unwrap(this).getBodyParameters()
-
-      /**
-       * Contains additional header parameters for the connection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-headerparameters)
-       */
-      override fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
-
-      /**
-       * Contains additional query string parameters for the connection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-querystringparameters)
-       */
-      override fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionHttpParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty):
-          ConnectionHttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectionHttpParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConnectionHttpParametersProperty):
-          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty
     }
   }
 
@@ -1423,6 +824,454 @@ public open class CfnConnection internal constructor(
   }
 
   /**
+   * Contains the Basic authorization parameters for the connection.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * BasicAuthParametersProperty basicAuthParametersProperty = BasicAuthParametersProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html)
+   */
+  public interface BasicAuthParametersProperty {
+    /**
+     * The password associated with the user name to use for Basic authorization.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html#cfn-events-connection-basicauthparameters-password)
+     */
+    public fun password(): String
+
+    /**
+     * The user name to use for Basic authorization.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html#cfn-events-connection-basicauthparameters-username)
+     */
+    public fun username(): String
+
+    /**
+     * A builder for [BasicAuthParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param password The password associated with the user name to use for Basic authorization. 
+       */
+      public fun password(password: String)
+
+      /**
+       * @param username The user name to use for Basic authorization. 
+       */
+      public fun username(username: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty.builder()
+
+      /**
+       * @param password The password associated with the user name to use for Basic authorization. 
+       */
+      override fun password(password: String) {
+        cdkBuilder.password(password)
+      }
+
+      /**
+       * @param username The user name to use for Basic authorization. 
+       */
+      override fun username(username: String) {
+        cdkBuilder.username(username)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty,
+    ) : CdkObject(cdkObject), BasicAuthParametersProperty {
+      /**
+       * The password associated with the user name to use for Basic authorization.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html#cfn-events-connection-basicauthparameters-password)
+       */
+      override fun password(): String = unwrap(this).getPassword()
+
+      /**
+       * The user name to use for Basic authorization.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-basicauthparameters.html#cfn-events-connection-basicauthparameters-username)
+       */
+      override fun username(): String = unwrap(this).getUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BasicAuthParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty):
+          BasicAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BasicAuthParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BasicAuthParametersProperty):
+          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty
+    }
+  }
+
+  /**
+   * Contains the OAuth authorization parameters to use for the connection.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * ClientParametersProperty clientParametersProperty = ClientParametersProperty.builder()
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html)
+   */
+  public interface ClientParametersProperty {
+    /**
+     * The client ID to use for OAuth authorization.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html#cfn-events-connection-clientparameters-clientid)
+     */
+    public fun clientId(): String
+
+    /**
+     * The client secret assciated with the client ID to use for OAuth authorization.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html#cfn-events-connection-clientparameters-clientsecret)
+     */
+    public fun clientSecret(): String
+
+    /**
+     * A builder for [ClientParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientId The client ID to use for OAuth authorization. 
+       */
+      public fun clientId(clientId: String)
+
+      /**
+       * @param clientSecret The client secret assciated with the client ID to use for OAuth
+       * authorization. 
+       */
+      public fun clientSecret(clientSecret: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty.builder()
+
+      /**
+       * @param clientId The client ID to use for OAuth authorization. 
+       */
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param clientSecret The client secret assciated with the client ID to use for OAuth
+       * authorization. 
+       */
+      override fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty,
+    ) : CdkObject(cdkObject), ClientParametersProperty {
+      /**
+       * The client ID to use for OAuth authorization.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html#cfn-events-connection-clientparameters-clientid)
+       */
+      override fun clientId(): String = unwrap(this).getClientId()
+
+      /**
+       * The client secret assciated with the client ID to use for OAuth authorization.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-clientparameters.html#cfn-events-connection-clientparameters-clientsecret)
+       */
+      override fun clientSecret(): String = unwrap(this).getClientSecret()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClientParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty):
+          ClientParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? ClientParametersProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClientParametersProperty):
+          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty
+    }
+  }
+
+  /**
+   * Contains additional parameters for the connection.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * ConnectionHttpParametersProperty connectionHttpParametersProperty =
+   * ConnectionHttpParametersProperty.builder()
+   * .bodyParameters(List.of(ParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * // the properties below are optional
+   * .isValueSecret(false)
+   * .build()))
+   * .headerParameters(List.of(ParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * // the properties below are optional
+   * .isValueSecret(false)
+   * .build()))
+   * .queryStringParameters(List.of(ParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * // the properties below are optional
+   * .isValueSecret(false)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html)
+   */
+  public interface ConnectionHttpParametersProperty {
+    /**
+     * Contains additional body string parameters for the connection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-bodyparameters)
+     */
+    public fun bodyParameters(): Any? = unwrap(this).getBodyParameters()
+
+    /**
+     * Contains additional header parameters for the connection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-headerparameters)
+     */
+    public fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
+
+    /**
+     * Contains additional query string parameters for the connection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-querystringparameters)
+     */
+    public fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
+
+    /**
+     * A builder for [ConnectionHttpParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bodyParameters Contains additional body string parameters for the connection.
+       */
+      public fun bodyParameters(bodyParameters: IResolvable)
+
+      /**
+       * @param bodyParameters Contains additional body string parameters for the connection.
+       */
+      public fun bodyParameters(bodyParameters: List<Any>)
+
+      /**
+       * @param bodyParameters Contains additional body string parameters for the connection.
+       */
+      public fun bodyParameters(vararg bodyParameters: Any)
+
+      /**
+       * @param headerParameters Contains additional header parameters for the connection.
+       */
+      public fun headerParameters(headerParameters: IResolvable)
+
+      /**
+       * @param headerParameters Contains additional header parameters for the connection.
+       */
+      public fun headerParameters(headerParameters: List<Any>)
+
+      /**
+       * @param headerParameters Contains additional header parameters for the connection.
+       */
+      public fun headerParameters(vararg headerParameters: Any)
+
+      /**
+       * @param queryStringParameters Contains additional query string parameters for the
+       * connection.
+       */
+      public fun queryStringParameters(queryStringParameters: IResolvable)
+
+      /**
+       * @param queryStringParameters Contains additional query string parameters for the
+       * connection.
+       */
+      public fun queryStringParameters(queryStringParameters: List<Any>)
+
+      /**
+       * @param queryStringParameters Contains additional query string parameters for the
+       * connection.
+       */
+      public fun queryStringParameters(vararg queryStringParameters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty.builder()
+
+      /**
+       * @param bodyParameters Contains additional body string parameters for the connection.
+       */
+      override fun bodyParameters(bodyParameters: IResolvable) {
+        cdkBuilder.bodyParameters(bodyParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param bodyParameters Contains additional body string parameters for the connection.
+       */
+      override fun bodyParameters(bodyParameters: List<Any>) {
+        cdkBuilder.bodyParameters(bodyParameters)
+      }
+
+      /**
+       * @param bodyParameters Contains additional body string parameters for the connection.
+       */
+      override fun bodyParameters(vararg bodyParameters: Any): Unit =
+          bodyParameters(bodyParameters.toList())
+
+      /**
+       * @param headerParameters Contains additional header parameters for the connection.
+       */
+      override fun headerParameters(headerParameters: IResolvable) {
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param headerParameters Contains additional header parameters for the connection.
+       */
+      override fun headerParameters(headerParameters: List<Any>) {
+        cdkBuilder.headerParameters(headerParameters)
+      }
+
+      /**
+       * @param headerParameters Contains additional header parameters for the connection.
+       */
+      override fun headerParameters(vararg headerParameters: Any): Unit =
+          headerParameters(headerParameters.toList())
+
+      /**
+       * @param queryStringParameters Contains additional query string parameters for the
+       * connection.
+       */
+      override fun queryStringParameters(queryStringParameters: IResolvable) {
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param queryStringParameters Contains additional query string parameters for the
+       * connection.
+       */
+      override fun queryStringParameters(queryStringParameters: List<Any>) {
+        cdkBuilder.queryStringParameters(queryStringParameters)
+      }
+
+      /**
+       * @param queryStringParameters Contains additional query string parameters for the
+       * connection.
+       */
+      override fun queryStringParameters(vararg queryStringParameters: Any): Unit =
+          queryStringParameters(queryStringParameters.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty,
+    ) : CdkObject(cdkObject), ConnectionHttpParametersProperty {
+      /**
+       * Contains additional body string parameters for the connection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-bodyparameters)
+       */
+      override fun bodyParameters(): Any? = unwrap(this).getBodyParameters()
+
+      /**
+       * Contains additional header parameters for the connection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-headerparameters)
+       */
+      override fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
+
+      /**
+       * Contains additional query string parameters for the connection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-querystringparameters)
+       */
+      override fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionHttpParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty):
+          ConnectionHttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionHttpParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectionHttpParametersProperty):
+          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty
+    }
+  }
+
+  /**
    * Contains the OAuth authorization parameters to use for the connection.
    *
    * Example:
@@ -1679,6 +1528,157 @@ public open class CfnConnection internal constructor(
           software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty
+    }
+  }
+
+  /**
+   * Additional query string parameter for the connection.
+   *
+   * You can include up to 100 additional query string parameters per request. Each additional
+   * parameter counts towards the event payload size, which cannot exceed 64 KB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * ParameterProperty parameterProperty = ParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * // the properties below are optional
+   * .isValueSecret(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html)
+   */
+  public interface ParameterProperty {
+    /**
+     * Specifies whether the value is secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-isvaluesecret)
+     */
+    public fun isValueSecret(): Any? = unwrap(this).getIsValueSecret()
+
+    /**
+     * The key for a query string parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value associated with the key for the query string parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [ParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isValueSecret Specifies whether the value is secret.
+       */
+      public fun isValueSecret(isValueSecret: Boolean)
+
+      /**
+       * @param isValueSecret Specifies whether the value is secret.
+       */
+      public fun isValueSecret(isValueSecret: IResolvable)
+
+      /**
+       * @param key The key for a query string parameter. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value associated with the key for the query string parameter. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty.Builder =
+          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty.builder()
+
+      /**
+       * @param isValueSecret Specifies whether the value is secret.
+       */
+      override fun isValueSecret(isValueSecret: Boolean) {
+        cdkBuilder.isValueSecret(isValueSecret)
+      }
+
+      /**
+       * @param isValueSecret Specifies whether the value is secret.
+       */
+      override fun isValueSecret(isValueSecret: IResolvable) {
+        cdkBuilder.isValueSecret(isValueSecret.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param key The key for a query string parameter. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value associated with the key for the query string parameter. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnConnection.ParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty,
+    ) : CdkObject(cdkObject), ParameterProperty {
+      /**
+       * Specifies whether the value is secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-isvaluesecret)
+       */
+      override fun isValueSecret(): Any? = unwrap(this).getIsValueSecret()
+
+      /**
+       * The key for a query string parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value associated with the key for the query string parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ParameterProperty):
+          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParameterProperty):
+          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnConnection.ParameterProperty
     }
   }
 }

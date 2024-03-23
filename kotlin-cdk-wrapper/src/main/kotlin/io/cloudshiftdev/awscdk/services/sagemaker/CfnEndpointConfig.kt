@@ -1072,7 +1072,8 @@ public open class CfnEndpointConfig internal constructor(
   }
 
   /**
-   * Specifies the serverless configuration for an endpoint variant.
+   * Configures the behavior of the client used by SageMaker to interact with the model container
+   * during asynchronous inference.
    *
    * Example:
    *
@@ -1080,330 +1081,92 @@ public open class CfnEndpointConfig internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ServerlessConfigProperty serverlessConfigProperty = ServerlessConfigProperty.builder()
-   * .maxConcurrency(123)
-   * .memorySizeInMb(123)
-   * // the properties below are optional
-   * .provisionedConcurrency(123)
+   * AsyncInferenceClientConfigProperty asyncInferenceClientConfigProperty =
+   * AsyncInferenceClientConfigProperty.builder()
+   * .maxConcurrentInvocationsPerInstance(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.html)
    */
-  public interface ServerlessConfigProperty {
+  public interface AsyncInferenceClientConfigProperty {
     /**
-     * The maximum number of concurrent invocations your serverless endpoint can process.
+     * The maximum number of concurrent requests sent by the SageMaker client to the model
+     * container.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-maxconcurrency)
+     * If no value is provided, SageMaker will choose an optimal value for you.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceclientconfig-maxconcurrentinvocationsperinstance)
      */
-    public fun maxConcurrency(): Number
+    public fun maxConcurrentInvocationsPerInstance(): Number? =
+        unwrap(this).getMaxConcurrentInvocationsPerInstance()
 
     /**
-     * The memory size of your serverless endpoint.
-     *
-     * Valid values are in 1 GB increments: 1024 MB, 2048 MB, 3072 MB, 4096 MB, 5120 MB, or 6144 MB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-memorysizeinmb)
-     */
-    public fun memorySizeInMb(): Number
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-provisionedconcurrency)
-     */
-    public fun provisionedConcurrency(): Number? = unwrap(this).getProvisionedConcurrency()
-
-    /**
-     * A builder for [ServerlessConfigProperty]
+     * A builder for [AsyncInferenceClientConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxConcurrency The maximum number of concurrent invocations your serverless endpoint
-       * can process. 
+       * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent
+       * by the SageMaker client to the model container.
+       * If no value is provided, SageMaker will choose an optimal value for you.
        */
-      public fun maxConcurrency(maxConcurrency: Number)
-
-      /**
-       * @param memorySizeInMb The memory size of your serverless endpoint. 
-       * Valid values are in 1 GB increments: 1024 MB, 2048 MB, 3072 MB, 4096 MB, 5120 MB, or 6144
-       * MB.
-       */
-      public fun memorySizeInMb(memorySizeInMb: Number)
-
-      /**
-       * @param provisionedConcurrency the value to be set.
-       */
-      public fun provisionedConcurrency(provisionedConcurrency: Number)
+      public fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty.builder()
 
       /**
-       * @param maxConcurrency The maximum number of concurrent invocations your serverless endpoint
-       * can process. 
+       * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent
+       * by the SageMaker client to the model container.
+       * If no value is provided, SageMaker will choose an optimal value for you.
        */
-      override fun maxConcurrency(maxConcurrency: Number) {
-        cdkBuilder.maxConcurrency(maxConcurrency)
-      }
-
-      /**
-       * @param memorySizeInMb The memory size of your serverless endpoint. 
-       * Valid values are in 1 GB increments: 1024 MB, 2048 MB, 3072 MB, 4096 MB, 5120 MB, or 6144
-       * MB.
-       */
-      override fun memorySizeInMb(memorySizeInMb: Number) {
-        cdkBuilder.memorySizeInMb(memorySizeInMb)
-      }
-
-      /**
-       * @param provisionedConcurrency the value to be set.
-       */
-      override fun provisionedConcurrency(provisionedConcurrency: Number) {
-        cdkBuilder.provisionedConcurrency(provisionedConcurrency)
+      override
+          fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number) {
+        cdkBuilder.maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty,
-    ) : CdkObject(cdkObject), ServerlessConfigProperty {
-      /**
-       * The maximum number of concurrent invocations your serverless endpoint can process.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-maxconcurrency)
-       */
-      override fun maxConcurrency(): Number = unwrap(this).getMaxConcurrency()
-
-      /**
-       * The memory size of your serverless endpoint.
-       *
-       * Valid values are in 1 GB increments: 1024 MB, 2048 MB, 3072 MB, 4096 MB, 5120 MB, or 6144
-       * MB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-memorysizeinmb)
-       */
-      override fun memorySizeInMb(): Number = unwrap(this).getMemorySizeInMb()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-provisionedconcurrency)
-       */
-      override fun provisionedConcurrency(): Number? = unwrap(this).getProvisionedConcurrency()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ServerlessConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty):
-          ServerlessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ServerlessConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServerlessConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration for notifications of inference results for asynchronous inference.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * AsyncInferenceNotificationConfigProperty asyncInferenceNotificationConfigProperty =
-   * AsyncInferenceNotificationConfigProperty.builder()
-   * .errorTopic("errorTopic")
-   * .includeInferenceResponseIn(List.of("includeInferenceResponseIn"))
-   * .successTopic("successTopic")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html)
-   */
-  public interface AsyncInferenceNotificationConfigProperty {
-    /**
-     * Amazon SNS topic to post a notification to when an inference fails.
-     *
-     * If no topic is provided, no notification is sent on failure.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-errortopic)
-     */
-    public fun errorTopic(): String? = unwrap(this).getErrorTopic()
-
-    /**
-     * The Amazon SNS topics where you want the inference response to be included.
-     *
-     *
-     * The inference response is included only if the response size is less than or equal to 128 KB.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-includeinferenceresponsein)
-     */
-    public fun includeInferenceResponseIn(): List<String> =
-        unwrap(this).getIncludeInferenceResponseIn() ?: emptyList()
-
-    /**
-     * Amazon SNS topic to post a notification to when an inference completes successfully.
-     *
-     * If no topic is provided, no notification is sent on success.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-successtopic)
-     */
-    public fun successTopic(): String? = unwrap(this).getSuccessTopic()
-
-    /**
-     * A builder for [AsyncInferenceNotificationConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param errorTopic Amazon SNS topic to post a notification to when an inference fails.
-       * If no topic is provided, no notification is sent on failure.
-       */
-      public fun errorTopic(errorTopic: String)
-
-      /**
-       * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference
-       * response to be included.
-       *
-       * The inference response is included only if the response size is less than or equal to 128
-       * KB.
-       */
-      public fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>)
-
-      /**
-       * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference
-       * response to be included.
-       *
-       * The inference response is included only if the response size is less than or equal to 128
-       * KB.
-       */
-      public fun includeInferenceResponseIn(vararg includeInferenceResponseIn: String)
-
-      /**
-       * @param successTopic Amazon SNS topic to post a notification to when an inference completes
-       * successfully.
-       * If no topic is provided, no notification is sent on success.
-       */
-      public fun successTopic(successTopic: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty.builder()
-
-      /**
-       * @param errorTopic Amazon SNS topic to post a notification to when an inference fails.
-       * If no topic is provided, no notification is sent on failure.
-       */
-      override fun errorTopic(errorTopic: String) {
-        cdkBuilder.errorTopic(errorTopic)
-      }
-
-      /**
-       * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference
-       * response to be included.
-       *
-       * The inference response is included only if the response size is less than or equal to 128
-       * KB.
-       */
-      override fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>) {
-        cdkBuilder.includeInferenceResponseIn(includeInferenceResponseIn)
-      }
-
-      /**
-       * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference
-       * response to be included.
-       *
-       * The inference response is included only if the response size is less than or equal to 128
-       * KB.
-       */
-      override fun includeInferenceResponseIn(vararg includeInferenceResponseIn: String): Unit =
-          includeInferenceResponseIn(includeInferenceResponseIn.toList())
-
-      /**
-       * @param successTopic Amazon SNS topic to post a notification to when an inference completes
-       * successfully.
-       * If no topic is provided, no notification is sent on success.
-       */
-      override fun successTopic(successTopic: String) {
-        cdkBuilder.successTopic(successTopic)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty,
-    ) : CdkObject(cdkObject), AsyncInferenceNotificationConfigProperty {
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty,
+    ) : CdkObject(cdkObject), AsyncInferenceClientConfigProperty {
       /**
-       * Amazon SNS topic to post a notification to when an inference fails.
+       * The maximum number of concurrent requests sent by the SageMaker client to the model
+       * container.
        *
-       * If no topic is provided, no notification is sent on failure.
+       * If no value is provided, SageMaker will choose an optimal value for you.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-errortopic)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceclientconfig-maxconcurrentinvocationsperinstance)
        */
-      override fun errorTopic(): String? = unwrap(this).getErrorTopic()
-
-      /**
-       * The Amazon SNS topics where you want the inference response to be included.
-       *
-       *
-       * The inference response is included only if the response size is less than or equal to 128
-       * KB.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-includeinferenceresponsein)
-       */
-      override fun includeInferenceResponseIn(): List<String> =
-          unwrap(this).getIncludeInferenceResponseIn() ?: emptyList()
-
-      /**
-       * Amazon SNS topic to post a notification to when an inference completes successfully.
-       *
-       * If no topic is provided, no notification is sent on success.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-successtopic)
-       */
-      override fun successTopic(): String? = unwrap(this).getSuccessTopic()
+      override fun maxConcurrentInvocationsPerInstance(): Number? =
+          unwrap(this).getMaxConcurrentInvocationsPerInstance()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          AsyncInferenceNotificationConfigProperty {
+          AsyncInferenceClientConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty):
-          AsyncInferenceNotificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AsyncInferenceNotificationConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty):
+          AsyncInferenceClientConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsyncInferenceClientConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AsyncInferenceNotificationConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty
+      internal fun unwrap(wrapped: AsyncInferenceClientConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty
     }
   }
 
@@ -1601,10 +1364,7 @@ public open class CfnEndpointConfig internal constructor(
   }
 
   /**
-   * A parameter used to configure the SageMaker Clarify explainer to treat text features as text so
-   * that explanations are provided for individual units of text.
-   *
-   * Required only for natural language processing (NLP) explainability.
+   * Specifies the configuration for notifications of inference results for asynchronous inference.
    *
    * Example:
    *
@@ -1612,237 +1372,397 @@ public open class CfnEndpointConfig internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ClarifyTextConfigProperty clarifyTextConfigProperty = ClarifyTextConfigProperty.builder()
-   * .granularity("granularity")
-   * .language("language")
+   * AsyncInferenceNotificationConfigProperty asyncInferenceNotificationConfigProperty =
+   * AsyncInferenceNotificationConfigProperty.builder()
+   * .errorTopic("errorTopic")
+   * .includeInferenceResponseIn(List.of("includeInferenceResponseIn"))
+   * .successTopic("successTopic")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html)
    */
-  public interface ClarifyTextConfigProperty {
+  public interface AsyncInferenceNotificationConfigProperty {
     /**
-     * The unit of granularity for the analysis of text features.
+     * Amazon SNS topic to post a notification to when an inference fails.
      *
-     * For example, if the unit is `'token'` , then each token (like a word in English) of the text
-     * is treated as a feature. SHAP values are computed for each unit/feature.
+     * If no topic is provided, no notification is sent on failure.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html#cfn-sagemaker-endpointconfig-clarifytextconfig-granularity)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-errortopic)
      */
-    public fun granularity(): String
+    public fun errorTopic(): String? = unwrap(this).getErrorTopic()
 
     /**
-     * Specifies the language of the text features in [ISO 639-1](https://docs.aws.amazon.com/
-     * https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or [ISO
-     * 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a supported
-     * language.
+     * The Amazon SNS topics where you want the inference response to be included.
      *
      *
-     * For a mix of multiple languages, use code `'xx'` .
+     * The inference response is included only if the response size is less than or equal to 128 KB.
      *
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html#cfn-sagemaker-endpointconfig-clarifytextconfig-language)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-includeinferenceresponsein)
      */
-    public fun language(): String
+    public fun includeInferenceResponseIn(): List<String> =
+        unwrap(this).getIncludeInferenceResponseIn() ?: emptyList()
 
     /**
-     * A builder for [ClarifyTextConfigProperty]
+     * Amazon SNS topic to post a notification to when an inference completes successfully.
+     *
+     * If no topic is provided, no notification is sent on success.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-successtopic)
+     */
+    public fun successTopic(): String? = unwrap(this).getSuccessTopic()
+
+    /**
+     * A builder for [AsyncInferenceNotificationConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param granularity The unit of granularity for the analysis of text features. 
-       * For example, if the unit is `'token'` , then each token (like a word in English) of the
-       * text is treated as a feature. SHAP values are computed for each unit/feature.
+       * @param errorTopic Amazon SNS topic to post a notification to when an inference fails.
+       * If no topic is provided, no notification is sent on failure.
        */
-      public fun granularity(granularity: String)
+      public fun errorTopic(errorTopic: String)
 
       /**
-       * @param language Specifies the language of the text features in [ISO
-       * 639-1](https://docs.aws.amazon.com/ https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or
-       * [ISO 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a
-       * supported language. 
+       * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference
+       * response to be included.
        *
-       * For a mix of multiple languages, use code `'xx'` .
+       * The inference response is included only if the response size is less than or equal to 128
+       * KB.
        */
-      public fun language(language: String)
+      public fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>)
+
+      /**
+       * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference
+       * response to be included.
+       *
+       * The inference response is included only if the response size is less than or equal to 128
+       * KB.
+       */
+      public fun includeInferenceResponseIn(vararg includeInferenceResponseIn: String)
+
+      /**
+       * @param successTopic Amazon SNS topic to post a notification to when an inference completes
+       * successfully.
+       * If no topic is provided, no notification is sent on success.
+       */
+      public fun successTopic(successTopic: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty.builder()
 
       /**
-       * @param granularity The unit of granularity for the analysis of text features. 
-       * For example, if the unit is `'token'` , then each token (like a word in English) of the
-       * text is treated as a feature. SHAP values are computed for each unit/feature.
+       * @param errorTopic Amazon SNS topic to post a notification to when an inference fails.
+       * If no topic is provided, no notification is sent on failure.
        */
-      override fun granularity(granularity: String) {
-        cdkBuilder.granularity(granularity)
+      override fun errorTopic(errorTopic: String) {
+        cdkBuilder.errorTopic(errorTopic)
       }
 
       /**
-       * @param language Specifies the language of the text features in [ISO
-       * 639-1](https://docs.aws.amazon.com/ https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or
-       * [ISO 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a
-       * supported language. 
+       * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference
+       * response to be included.
        *
-       * For a mix of multiple languages, use code `'xx'` .
+       * The inference response is included only if the response size is less than or equal to 128
+       * KB.
        */
-      override fun language(language: String) {
-        cdkBuilder.language(language)
+      override fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>) {
+        cdkBuilder.includeInferenceResponseIn(includeInferenceResponseIn)
+      }
+
+      /**
+       * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference
+       * response to be included.
+       *
+       * The inference response is included only if the response size is less than or equal to 128
+       * KB.
+       */
+      override fun includeInferenceResponseIn(vararg includeInferenceResponseIn: String): Unit =
+          includeInferenceResponseIn(includeInferenceResponseIn.toList())
+
+      /**
+       * @param successTopic Amazon SNS topic to post a notification to when an inference completes
+       * successfully.
+       * If no topic is provided, no notification is sent on success.
+       */
+      override fun successTopic(successTopic: String) {
+        cdkBuilder.successTopic(successTopic)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyTextConfigProperty {
-      /**
-       * The unit of granularity for the analysis of text features.
-       *
-       * For example, if the unit is `'token'` , then each token (like a word in English) of the
-       * text is treated as a feature. SHAP values are computed for each unit/feature.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html#cfn-sagemaker-endpointconfig-clarifytextconfig-granularity)
-       */
-      override fun granularity(): String = unwrap(this).getGranularity()
-
-      /**
-       * Specifies the language of the text features in [ISO 639-1](https://docs.aws.amazon.com/
-       * https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or [ISO
-       * 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a
-       * supported language.
-       *
-       *
-       * For a mix of multiple languages, use code `'xx'` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html#cfn-sagemaker-endpointconfig-clarifytextconfig-language)
-       */
-      override fun language(): String = unwrap(this).getLanguage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClarifyTextConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty):
-          ClarifyTextConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClarifyTextConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClarifyTextConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty
-    }
-  }
-
-  /**
-   * Configures the behavior of the client used by SageMaker to interact with the model container
-   * during asynchronous inference.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * AsyncInferenceClientConfigProperty asyncInferenceClientConfigProperty =
-   * AsyncInferenceClientConfigProperty.builder()
-   * .maxConcurrentInvocationsPerInstance(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.html)
-   */
-  public interface AsyncInferenceClientConfigProperty {
-    /**
-     * The maximum number of concurrent requests sent by the SageMaker client to the model
-     * container.
-     *
-     * If no value is provided, SageMaker will choose an optimal value for you.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceclientconfig-maxconcurrentinvocationsperinstance)
-     */
-    public fun maxConcurrentInvocationsPerInstance(): Number? =
-        unwrap(this).getMaxConcurrentInvocationsPerInstance()
-
-    /**
-     * A builder for [AsyncInferenceClientConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent
-       * by the SageMaker client to the model container.
-       * If no value is provided, SageMaker will choose an optimal value for you.
-       */
-      public fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty.builder()
-
-      /**
-       * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent
-       * by the SageMaker client to the model container.
-       * If no value is provided, SageMaker will choose an optimal value for you.
-       */
-      override
-          fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number) {
-        cdkBuilder.maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty,
-    ) : CdkObject(cdkObject), AsyncInferenceClientConfigProperty {
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty,
+    ) : CdkObject(cdkObject), AsyncInferenceNotificationConfigProperty {
       /**
-       * The maximum number of concurrent requests sent by the SageMaker client to the model
-       * container.
+       * Amazon SNS topic to post a notification to when an inference fails.
        *
-       * If no value is provided, SageMaker will choose an optimal value for you.
+       * If no topic is provided, no notification is sent on failure.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceclientconfig-maxconcurrentinvocationsperinstance)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-errortopic)
        */
-      override fun maxConcurrentInvocationsPerInstance(): Number? =
-          unwrap(this).getMaxConcurrentInvocationsPerInstance()
+      override fun errorTopic(): String? = unwrap(this).getErrorTopic()
+
+      /**
+       * The Amazon SNS topics where you want the inference response to be included.
+       *
+       *
+       * The inference response is included only if the response size is less than or equal to 128
+       * KB.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-includeinferenceresponsein)
+       */
+      override fun includeInferenceResponseIn(): List<String> =
+          unwrap(this).getIncludeInferenceResponseIn() ?: emptyList()
+
+      /**
+       * Amazon SNS topic to post a notification to when an inference completes successfully.
+       *
+       * If no topic is provided, no notification is sent on success.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-successtopic)
+       */
+      override fun successTopic(): String? = unwrap(this).getSuccessTopic()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          AsyncInferenceClientConfigProperty {
+          AsyncInferenceNotificationConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty):
-          AsyncInferenceClientConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AsyncInferenceClientConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty):
+          AsyncInferenceNotificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsyncInferenceNotificationConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AsyncInferenceClientConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty
+      internal fun unwrap(wrapped: AsyncInferenceNotificationConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration for asynchronous inference invocation outputs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * AsyncInferenceOutputConfigProperty asyncInferenceOutputConfigProperty =
+   * AsyncInferenceOutputConfigProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .notificationConfig(AsyncInferenceNotificationConfigProperty.builder()
+   * .errorTopic("errorTopic")
+   * .includeInferenceResponseIn(List.of("includeInferenceResponseIn"))
+   * .successTopic("successTopic")
+   * .build())
+   * .s3FailurePath("s3FailurePath")
+   * .s3OutputPath("s3OutputPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html)
+   */
+  public interface AsyncInferenceOutputConfigProperty {
+    /**
+     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
+     * asynchronous inference output in Amazon S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * Specifies the configuration for notifications of inference results for asynchronous
+     * inference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-notificationconfig)
+     */
+    public fun notificationConfig(): Any? = unwrap(this).getNotificationConfig()
+
+    /**
+     * The Amazon S3 location to upload failure inference responses to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3failurepath)
+     */
+    public fun s3FailurePath(): String? = unwrap(this).getS3FailurePath()
+
+    /**
+     * The Amazon S3 location to upload inference responses to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3outputpath)
+     */
+    public fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
+
+    /**
+     * A builder for [AsyncInferenceOutputConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
+       * encrypt the asynchronous inference output in Amazon S3.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param notificationConfig Specifies the configuration for notifications of inference
+       * results for asynchronous inference.
+       */
+      public fun notificationConfig(notificationConfig: IResolvable)
+
+      /**
+       * @param notificationConfig Specifies the configuration for notifications of inference
+       * results for asynchronous inference.
+       */
+      public fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty)
+
+      /**
+       * @param notificationConfig Specifies the configuration for notifications of inference
+       * results for asynchronous inference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3338c4e7a789e490c929ebb44cd454a0619e9b7a124dc2800175ea742e577929")
+      public
+          fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3FailurePath The Amazon S3 location to upload failure inference responses to.
+       */
+      public fun s3FailurePath(s3FailurePath: String)
+
+      /**
+       * @param s3OutputPath The Amazon S3 location to upload inference responses to.
+       */
+      public fun s3OutputPath(s3OutputPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty.builder()
+
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
+       * encrypt the asynchronous inference output in Amazon S3.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param notificationConfig Specifies the configuration for notifications of inference
+       * results for asynchronous inference.
+       */
+      override fun notificationConfig(notificationConfig: IResolvable) {
+        cdkBuilder.notificationConfig(notificationConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param notificationConfig Specifies the configuration for notifications of inference
+       * results for asynchronous inference.
+       */
+      override
+          fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty) {
+        cdkBuilder.notificationConfig(notificationConfig.let(AsyncInferenceNotificationConfigProperty::unwrap))
+      }
+
+      /**
+       * @param notificationConfig Specifies the configuration for notifications of inference
+       * results for asynchronous inference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3338c4e7a789e490c929ebb44cd454a0619e9b7a124dc2800175ea742e577929")
+      override
+          fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty.Builder.() -> Unit):
+          Unit = notificationConfig(AsyncInferenceNotificationConfigProperty(notificationConfig))
+
+      /**
+       * @param s3FailurePath The Amazon S3 location to upload failure inference responses to.
+       */
+      override fun s3FailurePath(s3FailurePath: String) {
+        cdkBuilder.s3FailurePath(s3FailurePath)
+      }
+
+      /**
+       * @param s3OutputPath The Amazon S3 location to upload inference responses to.
+       */
+      override fun s3OutputPath(s3OutputPath: String) {
+        cdkBuilder.s3OutputPath(s3OutputPath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty,
+    ) : CdkObject(cdkObject), AsyncInferenceOutputConfigProperty {
+      /**
+       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
+       * asynchronous inference output in Amazon S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * Specifies the configuration for notifications of inference results for asynchronous
+       * inference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-notificationconfig)
+       */
+      override fun notificationConfig(): Any? = unwrap(this).getNotificationConfig()
+
+      /**
+       * The Amazon S3 location to upload failure inference responses to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3failurepath)
+       */
+      override fun s3FailurePath(): String? = unwrap(this).getS3FailurePath()
+
+      /**
+       * The Amazon S3 location to upload inference responses to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3outputpath)
+       */
+      override fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AsyncInferenceOutputConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty):
+          AsyncInferenceOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsyncInferenceOutputConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AsyncInferenceOutputConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty
     }
   }
 
@@ -2014,6 +1934,325 @@ public open class CfnEndpointConfig internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureContentTypeHeaderProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureContentTypeHeaderProperty
+    }
+  }
+
+  /**
+   * Specifies whether the endpoint captures input data or output data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CaptureOptionProperty captureOptionProperty = CaptureOptionProperty.builder()
+   * .captureMode("captureMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-captureoption.html)
+   */
+  public interface CaptureOptionProperty {
+    /**
+     * Specifies whether the endpoint captures input data or output data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-captureoption.html#cfn-sagemaker-endpointconfig-captureoption-capturemode)
+     */
+    public fun captureMode(): String
+
+    /**
+     * A builder for [CaptureOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param captureMode Specifies whether the endpoint captures input data or output data. 
+       */
+      public fun captureMode(captureMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty.builder()
+
+      /**
+       * @param captureMode Specifies whether the endpoint captures input data or output data. 
+       */
+      override fun captureMode(captureMode: String) {
+        cdkBuilder.captureMode(captureMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty,
+    ) : CdkObject(cdkObject), CaptureOptionProperty {
+      /**
+       * Specifies whether the endpoint captures input data or output data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-captureoption.html#cfn-sagemaker-endpointconfig-captureoption-capturemode)
+       */
+      override fun captureMode(): String = unwrap(this).getCaptureMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CaptureOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty):
+          CaptureOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? CaptureOptionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CaptureOptionProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty
+    }
+  }
+
+  /**
+   * The configuration parameters for the SageMaker Clarify explainer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ClarifyExplainerConfigProperty clarifyExplainerConfigProperty =
+   * ClarifyExplainerConfigProperty.builder()
+   * .shapConfig(ClarifyShapConfigProperty.builder()
+   * .shapBaselineConfig(ClarifyShapBaselineConfigProperty.builder()
+   * .mimeType("mimeType")
+   * .shapBaseline("shapBaseline")
+   * .shapBaselineUri("shapBaselineUri")
+   * .build())
+   * // the properties below are optional
+   * .numberOfSamples(123)
+   * .seed(123)
+   * .textConfig(ClarifyTextConfigProperty.builder()
+   * .granularity("granularity")
+   * .language("language")
+   * .build())
+   * .useLogit(false)
+   * .build())
+   * // the properties below are optional
+   * .enableExplanations("enableExplanations")
+   * .inferenceConfig(ClarifyInferenceConfigProperty.builder()
+   * .contentTemplate("contentTemplate")
+   * .featureHeaders(List.of("featureHeaders"))
+   * .featuresAttribute("featuresAttribute")
+   * .featureTypes(List.of("featureTypes"))
+   * .labelAttribute("labelAttribute")
+   * .labelHeaders(List.of("labelHeaders"))
+   * .labelIndex(123)
+   * .maxPayloadInMb(123)
+   * .maxRecordCount(123)
+   * .probabilityAttribute("probabilityAttribute")
+   * .probabilityIndex(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html)
+   */
+  public interface ClarifyExplainerConfigProperty {
+    /**
+     * A JMESPath boolean expression used to filter which records to explain.
+     *
+     * Explanations are activated by default. See
+     * [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
+     * for additional information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-enableexplanations)
+     */
+    public fun enableExplanations(): String? = unwrap(this).getEnableExplanations()
+
+    /**
+     * The inference configuration parameter for the model container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-inferenceconfig)
+     */
+    public fun inferenceConfig(): Any? = unwrap(this).getInferenceConfig()
+
+    /**
+     * The configuration for SHAP analysis.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-shapconfig)
+     */
+    public fun shapConfig(): Any
+
+    /**
+     * A builder for [ClarifyExplainerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableExplanations A JMESPath boolean expression used to filter which records to
+       * explain.
+       * Explanations are activated by default. See
+       * [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
+       * for additional information.
+       */
+      public fun enableExplanations(enableExplanations: String)
+
+      /**
+       * @param inferenceConfig The inference configuration parameter for the model container.
+       */
+      public fun inferenceConfig(inferenceConfig: IResolvable)
+
+      /**
+       * @param inferenceConfig The inference configuration parameter for the model container.
+       */
+      public fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty)
+
+      /**
+       * @param inferenceConfig The inference configuration parameter for the model container.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d3847dc1e89bbccd4521b78d7f69dfe3103728da680575e496f455e90b0ba64")
+      public fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param shapConfig The configuration for SHAP analysis. 
+       */
+      public fun shapConfig(shapConfig: IResolvable)
+
+      /**
+       * @param shapConfig The configuration for SHAP analysis. 
+       */
+      public fun shapConfig(shapConfig: ClarifyShapConfigProperty)
+
+      /**
+       * @param shapConfig The configuration for SHAP analysis. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6e18830621d5bb7e43df94655ffbe11f05a35ea31fe7a0d8210a2f1b7d359d47")
+      public fun shapConfig(shapConfig: ClarifyShapConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty.builder()
+
+      /**
+       * @param enableExplanations A JMESPath boolean expression used to filter which records to
+       * explain.
+       * Explanations are activated by default. See
+       * [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
+       * for additional information.
+       */
+      override fun enableExplanations(enableExplanations: String) {
+        cdkBuilder.enableExplanations(enableExplanations)
+      }
+
+      /**
+       * @param inferenceConfig The inference configuration parameter for the model container.
+       */
+      override fun inferenceConfig(inferenceConfig: IResolvable) {
+        cdkBuilder.inferenceConfig(inferenceConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param inferenceConfig The inference configuration parameter for the model container.
+       */
+      override fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty) {
+        cdkBuilder.inferenceConfig(inferenceConfig.let(ClarifyInferenceConfigProperty::unwrap))
+      }
+
+      /**
+       * @param inferenceConfig The inference configuration parameter for the model container.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d3847dc1e89bbccd4521b78d7f69dfe3103728da680575e496f455e90b0ba64")
+      override
+          fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty.Builder.() -> Unit):
+          Unit = inferenceConfig(ClarifyInferenceConfigProperty(inferenceConfig))
+
+      /**
+       * @param shapConfig The configuration for SHAP analysis. 
+       */
+      override fun shapConfig(shapConfig: IResolvable) {
+        cdkBuilder.shapConfig(shapConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param shapConfig The configuration for SHAP analysis. 
+       */
+      override fun shapConfig(shapConfig: ClarifyShapConfigProperty) {
+        cdkBuilder.shapConfig(shapConfig.let(ClarifyShapConfigProperty::unwrap))
+      }
+
+      /**
+       * @param shapConfig The configuration for SHAP analysis. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6e18830621d5bb7e43df94655ffbe11f05a35ea31fe7a0d8210a2f1b7d359d47")
+      override fun shapConfig(shapConfig: ClarifyShapConfigProperty.Builder.() -> Unit): Unit =
+          shapConfig(ClarifyShapConfigProperty(shapConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty,
+    ) : CdkObject(cdkObject), ClarifyExplainerConfigProperty {
+      /**
+       * A JMESPath boolean expression used to filter which records to explain.
+       *
+       * Explanations are activated by default. See
+       * [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
+       * for additional information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-enableexplanations)
+       */
+      override fun enableExplanations(): String? = unwrap(this).getEnableExplanations()
+
+      /**
+       * The inference configuration parameter for the model container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-inferenceconfig)
+       */
+      override fun inferenceConfig(): Any? = unwrap(this).getInferenceConfig()
+
+      /**
+       * The configuration for SHAP analysis.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-shapconfig)
+       */
+      override fun shapConfig(): Any = unwrap(this).getShapConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClarifyExplainerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty):
+          ClarifyExplainerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyExplainerConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClarifyExplainerConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty
     }
   }
 
@@ -2675,122 +2914,1359 @@ public open class CfnEndpointConfig internal constructor(
   }
 
   /**
+   * The configuration for the [SHAP
+   * baseline](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-feature-attribute-shap-baselines.html)
+   * (also called the background or reference dataset) of the Kernal SHAP algorithm.
+   *
+   *
+   * * The number of records in the baseline data determines the size of the synthetic dataset,
+   * which has an impact on latency of explainability requests. For more information, see the
+   * *Synthetic data* of [Configure and create an
+   * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
+   * .
+   * * `ShapBaseline` and `ShapBaselineUri` are mutually exclusive parameters. One or the either is
+   * required to configure a SHAP baseline.
+   *
+   *
    * Example:
    *
    * ```
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnets(List.of("subnets"))
+   * ClarifyShapBaselineConfigProperty clarifyShapBaselineConfigProperty =
+   * ClarifyShapBaselineConfigProperty.builder()
+   * .mimeType("mimeType")
+   * .shapBaseline("shapBaseline")
+   * .shapBaselineUri("shapBaselineUri")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html)
    */
-  public interface VpcConfigProperty {
+  public interface ClarifyShapBaselineConfigProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-securitygroupids)
+     * The MIME type of the baseline data.
+     *
+     * Choose from `'text/csv'` or `'application/jsonlines'` . Defaults to `'text/csv'` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-mimetype)
      */
-    public fun securityGroupIds(): List<String>
+    public fun mimeType(): String? = unwrap(this).getMimeType()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-subnets)
+     * The inline SHAP baseline data in string format.
+     *
+     * `ShapBaseline` can have one or multiple records to be used as the baseline dataset. The
+     * format of the SHAP baseline file should be the same format as the training dataset. For example,
+     * if the training dataset is in CSV format and each record contains four features, and all
+     * features are numerical, then the format of the baseline data should also share these
+     * characteristics. For natural language processing (NLP) of text columns, the baseline value
+     * should be the value used to replace the unit of text specified by the `Granularity` of the
+     * `TextConfig` parameter. The size limit for `ShapBasline` is 4 KB. Use the `ShapBaselineUri`
+     * parameter if you want to provide more than 4 KB of baseline data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-shapbaseline)
      */
-    public fun subnets(): List<String>
+    public fun shapBaseline(): String? = unwrap(this).getShapBaseline()
 
     /**
-     * A builder for [VpcConfigProperty]
+     * The uniform resource identifier (URI) of the S3 bucket where the SHAP baseline file is
+     * stored.
+     *
+     * The format of the SHAP baseline file should be the same format as the format of the training
+     * dataset. For example, if the training dataset is in CSV format, and each record in the training
+     * dataset has four features, and all features are numerical, then the baseline file should also
+     * have this same format. Each record should contain only the features. If you are using a virtual
+     * private cloud (VPC), the `ShapBaselineUri` should be accessible to the VPC. For more information
+     * about setting up endpoints with Amazon Virtual Private Cloud, see [Give SageMaker access to
+     * Resources in your Amazon Virtual Private
+     * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-shapbaselineuri)
+     */
+    public fun shapBaselineUri(): String? = unwrap(this).getShapBaselineUri()
+
+    /**
+     * A builder for [ClarifyShapBaselineConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param securityGroupIds the value to be set. 
+       * @param mimeType The MIME type of the baseline data.
+       * Choose from `'text/csv'` or `'application/jsonlines'` . Defaults to `'text/csv'` .
        */
-      public fun securityGroupIds(securityGroupIds: List<String>)
+      public fun mimeType(mimeType: String)
 
       /**
-       * @param securityGroupIds the value to be set. 
+       * @param shapBaseline The inline SHAP baseline data in string format.
+       * `ShapBaseline` can have one or multiple records to be used as the baseline dataset. The
+       * format of the SHAP baseline file should be the same format as the training dataset. For
+       * example, if the training dataset is in CSV format and each record contains four features, and
+       * all features are numerical, then the format of the baseline data should also share these
+       * characteristics. For natural language processing (NLP) of text columns, the baseline value
+       * should be the value used to replace the unit of text specified by the `Granularity` of the
+       * `TextConfig` parameter. The size limit for `ShapBasline` is 4 KB. Use the `ShapBaselineUri`
+       * parameter if you want to provide more than 4 KB of baseline data.
        */
-      public fun securityGroupIds(vararg securityGroupIds: String)
+      public fun shapBaseline(shapBaseline: String)
 
       /**
-       * @param subnets the value to be set. 
+       * @param shapBaselineUri The uniform resource identifier (URI) of the S3 bucket where the
+       * SHAP baseline file is stored.
+       * The format of the SHAP baseline file should be the same format as the format of the
+       * training dataset. For example, if the training dataset is in CSV format, and each record in
+       * the training dataset has four features, and all features are numerical, then the baseline file
+       * should also have this same format. Each record should contain only the features. If you are
+       * using a virtual private cloud (VPC), the `ShapBaselineUri` should be accessible to the VPC.
+       * For more information about setting up endpoints with Amazon Virtual Private Cloud, see [Give
+       * SageMaker access to Resources in your Amazon Virtual Private
+       * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
        */
-      public fun subnets(subnets: List<String>)
-
-      /**
-       * @param subnets the value to be set. 
-       */
-      public fun subnets(vararg subnets: String)
+      public fun shapBaselineUri(shapBaselineUri: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty.builder()
 
       /**
-       * @param securityGroupIds the value to be set. 
+       * @param mimeType The MIME type of the baseline data.
+       * Choose from `'text/csv'` or `'application/jsonlines'` . Defaults to `'text/csv'` .
        */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
+      override fun mimeType(mimeType: String) {
+        cdkBuilder.mimeType(mimeType)
       }
 
       /**
-       * @param securityGroupIds the value to be set. 
+       * @param shapBaseline The inline SHAP baseline data in string format.
+       * `ShapBaseline` can have one or multiple records to be used as the baseline dataset. The
+       * format of the SHAP baseline file should be the same format as the training dataset. For
+       * example, if the training dataset is in CSV format and each record contains four features, and
+       * all features are numerical, then the format of the baseline data should also share these
+       * characteristics. For natural language processing (NLP) of text columns, the baseline value
+       * should be the value used to replace the unit of text specified by the `Granularity` of the
+       * `TextConfig` parameter. The size limit for `ShapBasline` is 4 KB. Use the `ShapBaselineUri`
+       * parameter if you want to provide more than 4 KB of baseline data.
        */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnets the value to be set. 
-       */
-      override fun subnets(subnets: List<String>) {
-        cdkBuilder.subnets(subnets)
+      override fun shapBaseline(shapBaseline: String) {
+        cdkBuilder.shapBaseline(shapBaseline)
       }
 
       /**
-       * @param subnets the value to be set. 
+       * @param shapBaselineUri The uniform resource identifier (URI) of the S3 bucket where the
+       * SHAP baseline file is stored.
+       * The format of the SHAP baseline file should be the same format as the format of the
+       * training dataset. For example, if the training dataset is in CSV format, and each record in
+       * the training dataset has four features, and all features are numerical, then the baseline file
+       * should also have this same format. Each record should contain only the features. If you are
+       * using a virtual private cloud (VPC), the `ShapBaselineUri` should be accessible to the VPC.
+       * For more information about setting up endpoints with Amazon Virtual Private Cloud, see [Give
+       * SageMaker access to Resources in your Amazon Virtual Private
+       * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
        */
-      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+      override fun shapBaselineUri(shapBaselineUri: String) {
+        cdkBuilder.shapBaselineUri(shapBaselineUri)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty,
+    ) : CdkObject(cdkObject), ClarifyShapBaselineConfigProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-securitygroupids)
+       * The MIME type of the baseline data.
+       *
+       * Choose from `'text/csv'` or `'application/jsonlines'` . Defaults to `'text/csv'` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-mimetype)
        */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
+      override fun mimeType(): String? = unwrap(this).getMimeType()
 
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-subnets)
+       * The inline SHAP baseline data in string format.
+       *
+       * `ShapBaseline` can have one or multiple records to be used as the baseline dataset. The
+       * format of the SHAP baseline file should be the same format as the training dataset. For
+       * example, if the training dataset is in CSV format and each record contains four features, and
+       * all features are numerical, then the format of the baseline data should also share these
+       * characteristics. For natural language processing (NLP) of text columns, the baseline value
+       * should be the value used to replace the unit of text specified by the `Granularity` of the
+       * `TextConfig` parameter. The size limit for `ShapBasline` is 4 KB. Use the `ShapBaselineUri`
+       * parameter if you want to provide more than 4 KB of baseline data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-shapbaseline)
        */
-      override fun subnets(): List<String> = unwrap(this).getSubnets()
+      override fun shapBaseline(): String? = unwrap(this).getShapBaseline()
+
+      /**
+       * The uniform resource identifier (URI) of the S3 bucket where the SHAP baseline file is
+       * stored.
+       *
+       * The format of the SHAP baseline file should be the same format as the format of the
+       * training dataset. For example, if the training dataset is in CSV format, and each record in
+       * the training dataset has four features, and all features are numerical, then the baseline file
+       * should also have this same format. Each record should contain only the features. If you are
+       * using a virtual private cloud (VPC), the `ShapBaselineUri` should be accessible to the VPC.
+       * For more information about setting up endpoints with Amazon Virtual Private Cloud, see [Give
+       * SageMaker access to Resources in your Amazon Virtual Private
+       * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-shapbaselineuri)
+       */
+      override fun shapBaselineUri(): String? = unwrap(this).getShapBaselineUri()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ClarifyShapBaselineConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty):
+          ClarifyShapBaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyShapBaselineConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClarifyShapBaselineConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty
+    }
+  }
+
+  /**
+   * The configuration for SHAP analysis using SageMaker Clarify Explainer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ClarifyShapConfigProperty clarifyShapConfigProperty = ClarifyShapConfigProperty.builder()
+   * .shapBaselineConfig(ClarifyShapBaselineConfigProperty.builder()
+   * .mimeType("mimeType")
+   * .shapBaseline("shapBaseline")
+   * .shapBaselineUri("shapBaselineUri")
+   * .build())
+   * // the properties below are optional
+   * .numberOfSamples(123)
+   * .seed(123)
+   * .textConfig(ClarifyTextConfigProperty.builder()
+   * .granularity("granularity")
+   * .language("language")
+   * .build())
+   * .useLogit(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html)
+   */
+  public interface ClarifyShapConfigProperty {
+    /**
+     * The number of samples to be used for analysis by the Kernal SHAP algorithm.
+     *
+     *
+     * The number of samples determines the size of the synthetic dataset, which has an impact on
+     * latency of explainability requests. For more information, see the *Synthetic data* of [Configure
+     * and create an
+     * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-numberofsamples)
+     */
+    public fun numberOfSamples(): Number? = unwrap(this).getNumberOfSamples()
+
+    /**
+     * The starting value used to initialize the random number generator in the explainer.
+     *
+     * Provide a value for this parameter to obtain a deterministic SHAP result.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-seed)
+     */
+    public fun seed(): Number? = unwrap(this).getSeed()
+
+    /**
+     * The configuration for the SHAP baseline of the Kernal SHAP algorithm.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-shapbaselineconfig)
+     */
+    public fun shapBaselineConfig(): Any
+
+    /**
+     * A parameter that indicates if text features are treated as text and explanations are provided
+     * for individual units of text.
+     *
+     * Required for natural language processing (NLP) explainability only.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-textconfig)
+     */
+    public fun textConfig(): Any? = unwrap(this).getTextConfig()
+
+    /**
+     * A Boolean toggle to indicate if you want to use the logit function (true) or log-odds units
+     * (false) for model predictions.
+     *
+     * Defaults to false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-uselogit)
+     */
+    public fun useLogit(): Any? = unwrap(this).getUseLogit()
+
+    /**
+     * A builder for [ClarifyShapConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param numberOfSamples The number of samples to be used for analysis by the Kernal SHAP
+       * algorithm.
+       *
+       * The number of samples determines the size of the synthetic dataset, which has an impact on
+       * latency of explainability requests. For more information, see the *Synthetic data* of
+       * [Configure and create an
+       * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
+       * .
+       */
+      public fun numberOfSamples(numberOfSamples: Number)
+
+      /**
+       * @param seed The starting value used to initialize the random number generator in the
+       * explainer.
+       * Provide a value for this parameter to obtain a deterministic SHAP result.
+       */
+      public fun seed(seed: Number)
+
+      /**
+       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
+       * algorithm. 
+       */
+      public fun shapBaselineConfig(shapBaselineConfig: IResolvable)
+
+      /**
+       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
+       * algorithm. 
+       */
+      public fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty)
+
+      /**
+       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
+       * algorithm. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("44aefe325dc16ac11efdebc723e4ef1555d693949ab2ed27cb854537e5ad5c16")
+      public
+          fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param textConfig A parameter that indicates if text features are treated as text and
+       * explanations are provided for individual units of text.
+       * Required for natural language processing (NLP) explainability only.
+       */
+      public fun textConfig(textConfig: IResolvable)
+
+      /**
+       * @param textConfig A parameter that indicates if text features are treated as text and
+       * explanations are provided for individual units of text.
+       * Required for natural language processing (NLP) explainability only.
+       */
+      public fun textConfig(textConfig: ClarifyTextConfigProperty)
+
+      /**
+       * @param textConfig A parameter that indicates if text features are treated as text and
+       * explanations are provided for individual units of text.
+       * Required for natural language processing (NLP) explainability only.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b91c22d36031d535f6f206b20d3bc0e1f205b2edf557d1a5e89ad765b0363479")
+      public fun textConfig(textConfig: ClarifyTextConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param useLogit A Boolean toggle to indicate if you want to use the logit function (true)
+       * or log-odds units (false) for model predictions.
+       * Defaults to false.
+       */
+      public fun useLogit(useLogit: Boolean)
+
+      /**
+       * @param useLogit A Boolean toggle to indicate if you want to use the logit function (true)
+       * or log-odds units (false) for model predictions.
+       * Defaults to false.
+       */
+      public fun useLogit(useLogit: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty.builder()
+
+      /**
+       * @param numberOfSamples The number of samples to be used for analysis by the Kernal SHAP
+       * algorithm.
+       *
+       * The number of samples determines the size of the synthetic dataset, which has an impact on
+       * latency of explainability requests. For more information, see the *Synthetic data* of
+       * [Configure and create an
+       * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
+       * .
+       */
+      override fun numberOfSamples(numberOfSamples: Number) {
+        cdkBuilder.numberOfSamples(numberOfSamples)
+      }
+
+      /**
+       * @param seed The starting value used to initialize the random number generator in the
+       * explainer.
+       * Provide a value for this parameter to obtain a deterministic SHAP result.
+       */
+      override fun seed(seed: Number) {
+        cdkBuilder.seed(seed)
+      }
+
+      /**
+       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
+       * algorithm. 
+       */
+      override fun shapBaselineConfig(shapBaselineConfig: IResolvable) {
+        cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
+       * algorithm. 
+       */
+      override fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty) {
+        cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(ClarifyShapBaselineConfigProperty::unwrap))
+      }
+
+      /**
+       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
+       * algorithm. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("44aefe325dc16ac11efdebc723e4ef1555d693949ab2ed27cb854537e5ad5c16")
+      override
+          fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty.Builder.() -> Unit):
+          Unit = shapBaselineConfig(ClarifyShapBaselineConfigProperty(shapBaselineConfig))
+
+      /**
+       * @param textConfig A parameter that indicates if text features are treated as text and
+       * explanations are provided for individual units of text.
+       * Required for natural language processing (NLP) explainability only.
+       */
+      override fun textConfig(textConfig: IResolvable) {
+        cdkBuilder.textConfig(textConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param textConfig A parameter that indicates if text features are treated as text and
+       * explanations are provided for individual units of text.
+       * Required for natural language processing (NLP) explainability only.
+       */
+      override fun textConfig(textConfig: ClarifyTextConfigProperty) {
+        cdkBuilder.textConfig(textConfig.let(ClarifyTextConfigProperty::unwrap))
+      }
+
+      /**
+       * @param textConfig A parameter that indicates if text features are treated as text and
+       * explanations are provided for individual units of text.
+       * Required for natural language processing (NLP) explainability only.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b91c22d36031d535f6f206b20d3bc0e1f205b2edf557d1a5e89ad765b0363479")
+      override fun textConfig(textConfig: ClarifyTextConfigProperty.Builder.() -> Unit): Unit =
+          textConfig(ClarifyTextConfigProperty(textConfig))
+
+      /**
+       * @param useLogit A Boolean toggle to indicate if you want to use the logit function (true)
+       * or log-odds units (false) for model predictions.
+       * Defaults to false.
+       */
+      override fun useLogit(useLogit: Boolean) {
+        cdkBuilder.useLogit(useLogit)
+      }
+
+      /**
+       * @param useLogit A Boolean toggle to indicate if you want to use the logit function (true)
+       * or log-odds units (false) for model predictions.
+       * Defaults to false.
+       */
+      override fun useLogit(useLogit: IResolvable) {
+        cdkBuilder.useLogit(useLogit.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty,
+    ) : CdkObject(cdkObject), ClarifyShapConfigProperty {
+      /**
+       * The number of samples to be used for analysis by the Kernal SHAP algorithm.
+       *
+       *
+       * The number of samples determines the size of the synthetic dataset, which has an impact on
+       * latency of explainability requests. For more information, see the *Synthetic data* of
+       * [Configure and create an
+       * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
+       * .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-numberofsamples)
+       */
+      override fun numberOfSamples(): Number? = unwrap(this).getNumberOfSamples()
+
+      /**
+       * The starting value used to initialize the random number generator in the explainer.
+       *
+       * Provide a value for this parameter to obtain a deterministic SHAP result.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-seed)
+       */
+      override fun seed(): Number? = unwrap(this).getSeed()
+
+      /**
+       * The configuration for the SHAP baseline of the Kernal SHAP algorithm.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-shapbaselineconfig)
+       */
+      override fun shapBaselineConfig(): Any = unwrap(this).getShapBaselineConfig()
+
+      /**
+       * A parameter that indicates if text features are treated as text and explanations are
+       * provided for individual units of text.
+       *
+       * Required for natural language processing (NLP) explainability only.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-textconfig)
+       */
+      override fun textConfig(): Any? = unwrap(this).getTextConfig()
+
+      /**
+       * A Boolean toggle to indicate if you want to use the logit function (true) or log-odds units
+       * (false) for model predictions.
+       *
+       * Defaults to false.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-uselogit)
+       */
+      override fun useLogit(): Any? = unwrap(this).getUseLogit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClarifyShapConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty):
+          ClarifyShapConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyShapConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClarifyShapConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty
+    }
+  }
+
+  /**
+   * A parameter used to configure the SageMaker Clarify explainer to treat text features as text so
+   * that explanations are provided for individual units of text.
+   *
+   * Required only for natural language processing (NLP) explainability.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ClarifyTextConfigProperty clarifyTextConfigProperty = ClarifyTextConfigProperty.builder()
+   * .granularity("granularity")
+   * .language("language")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html)
+   */
+  public interface ClarifyTextConfigProperty {
+    /**
+     * The unit of granularity for the analysis of text features.
+     *
+     * For example, if the unit is `'token'` , then each token (like a word in English) of the text
+     * is treated as a feature. SHAP values are computed for each unit/feature.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html#cfn-sagemaker-endpointconfig-clarifytextconfig-granularity)
+     */
+    public fun granularity(): String
+
+    /**
+     * Specifies the language of the text features in [ISO 639-1](https://docs.aws.amazon.com/
+     * https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or [ISO
+     * 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a supported
+     * language.
+     *
+     *
+     * For a mix of multiple languages, use code `'xx'` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html#cfn-sagemaker-endpointconfig-clarifytextconfig-language)
+     */
+    public fun language(): String
+
+    /**
+     * A builder for [ClarifyTextConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param granularity The unit of granularity for the analysis of text features. 
+       * For example, if the unit is `'token'` , then each token (like a word in English) of the
+       * text is treated as a feature. SHAP values are computed for each unit/feature.
+       */
+      public fun granularity(granularity: String)
+
+      /**
+       * @param language Specifies the language of the text features in [ISO
+       * 639-1](https://docs.aws.amazon.com/ https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or
+       * [ISO 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a
+       * supported language. 
+       *
+       * For a mix of multiple languages, use code `'xx'` .
+       */
+      public fun language(language: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty.builder()
+
+      /**
+       * @param granularity The unit of granularity for the analysis of text features. 
+       * For example, if the unit is `'token'` , then each token (like a word in English) of the
+       * text is treated as a feature. SHAP values are computed for each unit/feature.
+       */
+      override fun granularity(granularity: String) {
+        cdkBuilder.granularity(granularity)
+      }
+
+      /**
+       * @param language Specifies the language of the text features in [ISO
+       * 639-1](https://docs.aws.amazon.com/ https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or
+       * [ISO 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a
+       * supported language. 
+       *
+       * For a mix of multiple languages, use code `'xx'` .
+       */
+      override fun language(language: String) {
+        cdkBuilder.language(language)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty,
+    ) : CdkObject(cdkObject), ClarifyTextConfigProperty {
+      /**
+       * The unit of granularity for the analysis of text features.
+       *
+       * For example, if the unit is `'token'` , then each token (like a word in English) of the
+       * text is treated as a feature. SHAP values are computed for each unit/feature.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html#cfn-sagemaker-endpointconfig-clarifytextconfig-granularity)
+       */
+      override fun granularity(): String = unwrap(this).getGranularity()
+
+      /**
+       * Specifies the language of the text features in [ISO 639-1](https://docs.aws.amazon.com/
+       * https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or [ISO
+       * 639-3](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_639-3) code of a
+       * supported language.
+       *
+       *
+       * For a mix of multiple languages, use code `'xx'` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifytextconfig.html#cfn-sagemaker-endpointconfig-clarifytextconfig-language)
+       */
+      override fun language(): String = unwrap(this).getLanguage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClarifyTextConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty):
+          ClarifyTextConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyTextConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClarifyTextConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration of your endpoint for model monitor data capture.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DataCaptureConfigProperty dataCaptureConfigProperty = DataCaptureConfigProperty.builder()
+   * .captureOptions(List.of(CaptureOptionProperty.builder()
+   * .captureMode("captureMode")
+   * .build()))
+   * .destinationS3Uri("destinationS3Uri")
+   * .initialSamplingPercentage(123)
+   * // the properties below are optional
+   * .captureContentTypeHeader(CaptureContentTypeHeaderProperty.builder()
+   * .csvContentTypes(List.of("csvContentTypes"))
+   * .jsonContentTypes(List.of("jsonContentTypes"))
+   * .build())
+   * .enableCapture(false)
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html)
+   */
+  public interface DataCaptureConfigProperty {
+    /**
+     * A list of the JSON and CSV content type that the endpoint captures.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader)
+     */
+    public fun captureContentTypeHeader(): Any? = unwrap(this).getCaptureContentTypeHeader()
+
+    /**
+     * Specifies whether the endpoint captures input data to your model, output data from your
+     * model, or both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-captureoptions)
+     */
+    public fun captureOptions(): Any
+
+    /**
+     * The S3 bucket where model monitor stores captured data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-destinations3uri)
+     */
+    public fun destinationS3Uri(): String
+
+    /**
+     * Set to `True` to enable data capture.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-enablecapture)
+     */
+    public fun enableCapture(): Any? = unwrap(this).getEnableCapture()
+
+    /**
+     * The percentage of data to capture.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-initialsamplingpercentage)
+     */
+    public fun initialSamplingPercentage(): Number
+
+    /**
+     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
+     * captured data at rest using Amazon S3 server-side encryption.
+     *
+     * The KmsKeyId can be any of the following formats: Key ID:
+     * 1234abcd-12ab-34cd-56ef-1234567890ab Key ARN:
+     * arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab Alias name:
+     * alias/ExampleAlias Alias name ARN: arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias If you
+     * don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your
+     * role's account. For more information, see KMS-Managed Encryption Keys
+     * (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the Amazon Simple
+     * Storage Service Developer Guide. The KMS key policy must grant permission to the IAM role that
+     * you specify in your CreateModel
+     * (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html) request. For
+     * more information, see Using Key Policies in AWS KMS
+     * (http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the AWS Key
+     * Management Service Developer Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * A builder for [DataCaptureConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
+       * captures.
+       */
+      public fun captureContentTypeHeader(captureContentTypeHeader: IResolvable)
+
+      /**
+       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
+       * captures.
+       */
+      public
+          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty)
+
+      /**
+       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
+       * captures.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("31a3df691231e3741b21575ed4957e82fdb752b2995392ce72f37435a3fbfd17")
+      public
+          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty.Builder.() -> Unit)
+
+      /**
+       * @param captureOptions Specifies whether the endpoint captures input data to your model,
+       * output data from your model, or both. 
+       */
+      public fun captureOptions(captureOptions: IResolvable)
+
+      /**
+       * @param captureOptions Specifies whether the endpoint captures input data to your model,
+       * output data from your model, or both. 
+       */
+      public fun captureOptions(captureOptions: List<Any>)
+
+      /**
+       * @param captureOptions Specifies whether the endpoint captures input data to your model,
+       * output data from your model, or both. 
+       */
+      public fun captureOptions(vararg captureOptions: Any)
+
+      /**
+       * @param destinationS3Uri The S3 bucket where model monitor stores captured data. 
+       */
+      public fun destinationS3Uri(destinationS3Uri: String)
+
+      /**
+       * @param enableCapture Set to `True` to enable data capture.
+       */
+      public fun enableCapture(enableCapture: Boolean)
+
+      /**
+       * @param enableCapture Set to `True` to enable data capture.
+       */
+      public fun enableCapture(enableCapture: IResolvable)
+
+      /**
+       * @param initialSamplingPercentage The percentage of data to capture. 
+       */
+      public fun initialSamplingPercentage(initialSamplingPercentage: Number)
+
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
+       * encrypt the captured data at rest using Amazon S3 server-side encryption.
+       * The KmsKeyId can be any of the following formats: Key ID:
+       * 1234abcd-12ab-34cd-56ef-1234567890ab Key ARN:
+       * arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab Alias name:
+       * alias/ExampleAlias Alias name ARN: arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias If
+       * you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for
+       * your role's account. For more information, see KMS-Managed Encryption Keys
+       * (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the Amazon Simple
+       * Storage Service Developer Guide. The KMS key policy must grant permission to the IAM role that
+       * you specify in your CreateModel
+       * (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html) request. For
+       * more information, see Using Key Policies in AWS KMS
+       * (http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the AWS Key
+       * Management Service Developer Guide.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty.builder()
+
+      /**
+       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
+       * captures.
+       */
+      override fun captureContentTypeHeader(captureContentTypeHeader: IResolvable) {
+        cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
+       * captures.
+       */
+      override
+          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty) {
+        cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(CaptureContentTypeHeaderProperty::unwrap))
+      }
+
+      /**
+       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
+       * captures.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("31a3df691231e3741b21575ed4957e82fdb752b2995392ce72f37435a3fbfd17")
+      override
+          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty.Builder.() -> Unit):
+          Unit =
+          captureContentTypeHeader(CaptureContentTypeHeaderProperty(captureContentTypeHeader))
+
+      /**
+       * @param captureOptions Specifies whether the endpoint captures input data to your model,
+       * output data from your model, or both. 
+       */
+      override fun captureOptions(captureOptions: IResolvable) {
+        cdkBuilder.captureOptions(captureOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param captureOptions Specifies whether the endpoint captures input data to your model,
+       * output data from your model, or both. 
+       */
+      override fun captureOptions(captureOptions: List<Any>) {
+        cdkBuilder.captureOptions(captureOptions)
+      }
+
+      /**
+       * @param captureOptions Specifies whether the endpoint captures input data to your model,
+       * output data from your model, or both. 
+       */
+      override fun captureOptions(vararg captureOptions: Any): Unit =
+          captureOptions(captureOptions.toList())
+
+      /**
+       * @param destinationS3Uri The S3 bucket where model monitor stores captured data. 
+       */
+      override fun destinationS3Uri(destinationS3Uri: String) {
+        cdkBuilder.destinationS3Uri(destinationS3Uri)
+      }
+
+      /**
+       * @param enableCapture Set to `True` to enable data capture.
+       */
+      override fun enableCapture(enableCapture: Boolean) {
+        cdkBuilder.enableCapture(enableCapture)
+      }
+
+      /**
+       * @param enableCapture Set to `True` to enable data capture.
+       */
+      override fun enableCapture(enableCapture: IResolvable) {
+        cdkBuilder.enableCapture(enableCapture.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param initialSamplingPercentage The percentage of data to capture. 
+       */
+      override fun initialSamplingPercentage(initialSamplingPercentage: Number) {
+        cdkBuilder.initialSamplingPercentage(initialSamplingPercentage)
+      }
+
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
+       * encrypt the captured data at rest using Amazon S3 server-side encryption.
+       * The KmsKeyId can be any of the following formats: Key ID:
+       * 1234abcd-12ab-34cd-56ef-1234567890ab Key ARN:
+       * arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab Alias name:
+       * alias/ExampleAlias Alias name ARN: arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias If
+       * you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for
+       * your role's account. For more information, see KMS-Managed Encryption Keys
+       * (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the Amazon Simple
+       * Storage Service Developer Guide. The KMS key policy must grant permission to the IAM role that
+       * you specify in your CreateModel
+       * (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html) request. For
+       * more information, see Using Key Policies in AWS KMS
+       * (http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the AWS Key
+       * Management Service Developer Guide.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty,
+    ) : CdkObject(cdkObject), DataCaptureConfigProperty {
+      /**
+       * A list of the JSON and CSV content type that the endpoint captures.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader)
+       */
+      override fun captureContentTypeHeader(): Any? = unwrap(this).getCaptureContentTypeHeader()
+
+      /**
+       * Specifies whether the endpoint captures input data to your model, output data from your
+       * model, or both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-captureoptions)
+       */
+      override fun captureOptions(): Any = unwrap(this).getCaptureOptions()
+
+      /**
+       * The S3 bucket where model monitor stores captured data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-destinations3uri)
+       */
+      override fun destinationS3Uri(): String = unwrap(this).getDestinationS3Uri()
+
+      /**
+       * Set to `True` to enable data capture.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-enablecapture)
+       */
+      override fun enableCapture(): Any? = unwrap(this).getEnableCapture()
+
+      /**
+       * The percentage of data to capture.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-initialsamplingpercentage)
+       */
+      override fun initialSamplingPercentage(): Number = unwrap(this).getInitialSamplingPercentage()
+
+      /**
+       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
+       * captured data at rest using Amazon S3 server-side encryption.
+       *
+       * The KmsKeyId can be any of the following formats: Key ID:
+       * 1234abcd-12ab-34cd-56ef-1234567890ab Key ARN:
+       * arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab Alias name:
+       * alias/ExampleAlias Alias name ARN: arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias If
+       * you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for
+       * your role's account. For more information, see KMS-Managed Encryption Keys
+       * (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the Amazon Simple
+       * Storage Service Developer Guide. The KMS key policy must grant permission to the IAM role that
+       * you specify in your CreateModel
+       * (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html) request. For
+       * more information, see Using Key Policies in AWS KMS
+       * (http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the AWS Key
+       * Management Service Developer Guide.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataCaptureConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty):
+          DataCaptureConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCaptureConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataCaptureConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty
+    }
+  }
+
+  /**
+   * A parameter to activate explainers.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ExplainerConfigProperty explainerConfigProperty = ExplainerConfigProperty.builder()
+   * .clarifyExplainerConfig(ClarifyExplainerConfigProperty.builder()
+   * .shapConfig(ClarifyShapConfigProperty.builder()
+   * .shapBaselineConfig(ClarifyShapBaselineConfigProperty.builder()
+   * .mimeType("mimeType")
+   * .shapBaseline("shapBaseline")
+   * .shapBaselineUri("shapBaselineUri")
+   * .build())
+   * // the properties below are optional
+   * .numberOfSamples(123)
+   * .seed(123)
+   * .textConfig(ClarifyTextConfigProperty.builder()
+   * .granularity("granularity")
+   * .language("language")
+   * .build())
+   * .useLogit(false)
+   * .build())
+   * // the properties below are optional
+   * .enableExplanations("enableExplanations")
+   * .inferenceConfig(ClarifyInferenceConfigProperty.builder()
+   * .contentTemplate("contentTemplate")
+   * .featureHeaders(List.of("featureHeaders"))
+   * .featuresAttribute("featuresAttribute")
+   * .featureTypes(List.of("featureTypes"))
+   * .labelAttribute("labelAttribute")
+   * .labelHeaders(List.of("labelHeaders"))
+   * .labelIndex(123)
+   * .maxPayloadInMb(123)
+   * .maxRecordCount(123)
+   * .probabilityAttribute("probabilityAttribute")
+   * .probabilityIndex(123)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-explainerconfig.html)
+   */
+  public interface ExplainerConfigProperty {
+    /**
+     * A member of `ExplainerConfig` that contains configuration parameters for the SageMaker
+     * Clarify explainer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-explainerconfig.html#cfn-sagemaker-endpointconfig-explainerconfig-clarifyexplainerconfig)
+     */
+    public fun clarifyExplainerConfig(): Any? = unwrap(this).getClarifyExplainerConfig()
+
+    /**
+     * A builder for [ExplainerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
+       * parameters for the SageMaker Clarify explainer.
+       */
+      public fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable)
+
+      /**
+       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
+       * parameters for the SageMaker Clarify explainer.
+       */
+      public fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty)
+
+      /**
+       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
+       * parameters for the SageMaker Clarify explainer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("61e075251fd9dec5d2e4d8a12c1f17e34e37cb8efce9a075355d11388bc99d53")
+      public
+          fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty.builder()
+
+      /**
+       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
+       * parameters for the SageMaker Clarify explainer.
+       */
+      override fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable) {
+        cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
+       * parameters for the SageMaker Clarify explainer.
+       */
+      override fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty) {
+        cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(ClarifyExplainerConfigProperty::unwrap))
+      }
+
+      /**
+       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
+       * parameters for the SageMaker Clarify explainer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("61e075251fd9dec5d2e4d8a12c1f17e34e37cb8efce9a075355d11388bc99d53")
+      override
+          fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty.Builder.() -> Unit):
+          Unit = clarifyExplainerConfig(ClarifyExplainerConfigProperty(clarifyExplainerConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty,
+    ) : CdkObject(cdkObject), ExplainerConfigProperty {
+      /**
+       * A member of `ExplainerConfig` that contains configuration parameters for the SageMaker
+       * Clarify explainer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-explainerconfig.html#cfn-sagemaker-endpointconfig-explainerconfig-clarifyexplainerconfig)
+       */
+      override fun clarifyExplainerConfig(): Any? = unwrap(this).getClarifyExplainerConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExplainerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty):
+          ExplainerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ExplainerConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VpcConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty
+      internal fun unwrap(wrapped: ExplainerConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ManagedInstanceScalingProperty managedInstanceScalingProperty =
+   * ManagedInstanceScalingProperty.builder()
+   * .maxInstanceCount(123)
+   * .minInstanceCount(123)
+   * .status("status")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html)
+   */
+  public interface ManagedInstanceScalingProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-maxinstancecount)
+     */
+    public fun maxInstanceCount(): Number? = unwrap(this).getMaxInstanceCount()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-mininstancecount)
+     */
+    public fun minInstanceCount(): Number? = unwrap(this).getMinInstanceCount()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-status)
+     */
+    public fun status(): String? = unwrap(this).getStatus()
+
+    /**
+     * A builder for [ManagedInstanceScalingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxInstanceCount the value to be set.
+       */
+      public fun maxInstanceCount(maxInstanceCount: Number)
+
+      /**
+       * @param minInstanceCount the value to be set.
+       */
+      public fun minInstanceCount(minInstanceCount: Number)
+
+      /**
+       * @param status the value to be set.
+       */
+      public fun status(status: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty.builder()
+
+      /**
+       * @param maxInstanceCount the value to be set.
+       */
+      override fun maxInstanceCount(maxInstanceCount: Number) {
+        cdkBuilder.maxInstanceCount(maxInstanceCount)
+      }
+
+      /**
+       * @param minInstanceCount the value to be set.
+       */
+      override fun minInstanceCount(minInstanceCount: Number) {
+        cdkBuilder.minInstanceCount(minInstanceCount)
+      }
+
+      /**
+       * @param status the value to be set.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty,
+    ) : CdkObject(cdkObject), ManagedInstanceScalingProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-maxinstancecount)
+       */
+      override fun maxInstanceCount(): Number? = unwrap(this).getMaxInstanceCount()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-mininstancecount)
+       */
+      override fun minInstanceCount(): Number? = unwrap(this).getMinInstanceCount()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-status)
+       */
+      override fun status(): String? = unwrap(this).getStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ManagedInstanceScalingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty):
+          ManagedInstanceScalingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManagedInstanceScalingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManagedInstanceScalingProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty
     }
   }
 
@@ -3516,131 +4992,7 @@ public open class CfnEndpointConfig internal constructor(
   }
 
   /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ManagedInstanceScalingProperty managedInstanceScalingProperty =
-   * ManagedInstanceScalingProperty.builder()
-   * .maxInstanceCount(123)
-   * .minInstanceCount(123)
-   * .status("status")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html)
-   */
-  public interface ManagedInstanceScalingProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-maxinstancecount)
-     */
-    public fun maxInstanceCount(): Number? = unwrap(this).getMaxInstanceCount()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-mininstancecount)
-     */
-    public fun minInstanceCount(): Number? = unwrap(this).getMinInstanceCount()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-status)
-     */
-    public fun status(): String? = unwrap(this).getStatus()
-
-    /**
-     * A builder for [ManagedInstanceScalingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxInstanceCount the value to be set.
-       */
-      public fun maxInstanceCount(maxInstanceCount: Number)
-
-      /**
-       * @param minInstanceCount the value to be set.
-       */
-      public fun minInstanceCount(minInstanceCount: Number)
-
-      /**
-       * @param status the value to be set.
-       */
-      public fun status(status: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty.builder()
-
-      /**
-       * @param maxInstanceCount the value to be set.
-       */
-      override fun maxInstanceCount(maxInstanceCount: Number) {
-        cdkBuilder.maxInstanceCount(maxInstanceCount)
-      }
-
-      /**
-       * @param minInstanceCount the value to be set.
-       */
-      override fun minInstanceCount(minInstanceCount: Number) {
-        cdkBuilder.minInstanceCount(minInstanceCount)
-      }
-
-      /**
-       * @param status the value to be set.
-       */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty,
-    ) : CdkObject(cdkObject), ManagedInstanceScalingProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-maxinstancecount)
-       */
-      override fun maxInstanceCount(): Number? = unwrap(this).getMaxInstanceCount()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-mininstancecount)
-       */
-      override fun minInstanceCount(): Number? = unwrap(this).getMinInstanceCount()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-status)
-       */
-      override fun status(): String? = unwrap(this).getStatus()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ManagedInstanceScalingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty):
-          ManagedInstanceScalingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ManagedInstanceScalingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ManagedInstanceScalingProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty
-    }
-  }
-
-  /**
-   * The configuration for SHAP analysis using SageMaker Clarify Explainer.
+   * Specifies the serverless configuration for an endpoint variant.
    *
    * Example:
    *
@@ -3648,1611 +5000,259 @@ public open class CfnEndpointConfig internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ClarifyShapConfigProperty clarifyShapConfigProperty = ClarifyShapConfigProperty.builder()
-   * .shapBaselineConfig(ClarifyShapBaselineConfigProperty.builder()
-   * .mimeType("mimeType")
-   * .shapBaseline("shapBaseline")
-   * .shapBaselineUri("shapBaselineUri")
-   * .build())
+   * ServerlessConfigProperty serverlessConfigProperty = ServerlessConfigProperty.builder()
+   * .maxConcurrency(123)
+   * .memorySizeInMb(123)
    * // the properties below are optional
-   * .numberOfSamples(123)
-   * .seed(123)
-   * .textConfig(ClarifyTextConfigProperty.builder()
-   * .granularity("granularity")
-   * .language("language")
-   * .build())
-   * .useLogit(false)
+   * .provisionedConcurrency(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html)
    */
-  public interface ClarifyShapConfigProperty {
+  public interface ServerlessConfigProperty {
     /**
-     * The number of samples to be used for analysis by the Kernal SHAP algorithm.
+     * The maximum number of concurrent invocations your serverless endpoint can process.
      *
-     *
-     * The number of samples determines the size of the synthetic dataset, which has an impact on
-     * latency of explainability requests. For more information, see the *Synthetic data* of [Configure
-     * and create an
-     * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
-     * .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-numberofsamples)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-maxconcurrency)
      */
-    public fun numberOfSamples(): Number? = unwrap(this).getNumberOfSamples()
+    public fun maxConcurrency(): Number
 
     /**
-     * The starting value used to initialize the random number generator in the explainer.
+     * The memory size of your serverless endpoint.
      *
-     * Provide a value for this parameter to obtain a deterministic SHAP result.
+     * Valid values are in 1 GB increments: 1024 MB, 2048 MB, 3072 MB, 4096 MB, 5120 MB, or 6144 MB.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-seed)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-memorysizeinmb)
      */
-    public fun seed(): Number? = unwrap(this).getSeed()
+    public fun memorySizeInMb(): Number
 
     /**
-     * The configuration for the SHAP baseline of the Kernal SHAP algorithm.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-shapbaselineconfig)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-provisionedconcurrency)
      */
-    public fun shapBaselineConfig(): Any
+    public fun provisionedConcurrency(): Number? = unwrap(this).getProvisionedConcurrency()
 
     /**
-     * A parameter that indicates if text features are treated as text and explanations are provided
-     * for individual units of text.
-     *
-     * Required for natural language processing (NLP) explainability only.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-textconfig)
-     */
-    public fun textConfig(): Any? = unwrap(this).getTextConfig()
-
-    /**
-     * A Boolean toggle to indicate if you want to use the logit function (true) or log-odds units
-     * (false) for model predictions.
-     *
-     * Defaults to false.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-uselogit)
-     */
-    public fun useLogit(): Any? = unwrap(this).getUseLogit()
-
-    /**
-     * A builder for [ClarifyShapConfigProperty]
+     * A builder for [ServerlessConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param numberOfSamples The number of samples to be used for analysis by the Kernal SHAP
-       * algorithm.
-       *
-       * The number of samples determines the size of the synthetic dataset, which has an impact on
-       * latency of explainability requests. For more information, see the *Synthetic data* of
-       * [Configure and create an
-       * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
-       * .
+       * @param maxConcurrency The maximum number of concurrent invocations your serverless endpoint
+       * can process. 
        */
-      public fun numberOfSamples(numberOfSamples: Number)
+      public fun maxConcurrency(maxConcurrency: Number)
 
       /**
-       * @param seed The starting value used to initialize the random number generator in the
-       * explainer.
-       * Provide a value for this parameter to obtain a deterministic SHAP result.
+       * @param memorySizeInMb The memory size of your serverless endpoint. 
+       * Valid values are in 1 GB increments: 1024 MB, 2048 MB, 3072 MB, 4096 MB, 5120 MB, or 6144
+       * MB.
        */
-      public fun seed(seed: Number)
+      public fun memorySizeInMb(memorySizeInMb: Number)
 
       /**
-       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
-       * algorithm. 
+       * @param provisionedConcurrency the value to be set.
        */
-      public fun shapBaselineConfig(shapBaselineConfig: IResolvable)
-
-      /**
-       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
-       * algorithm. 
-       */
-      public fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty)
-
-      /**
-       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
-       * algorithm. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("44aefe325dc16ac11efdebc723e4ef1555d693949ab2ed27cb854537e5ad5c16")
-      public
-          fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param textConfig A parameter that indicates if text features are treated as text and
-       * explanations are provided for individual units of text.
-       * Required for natural language processing (NLP) explainability only.
-       */
-      public fun textConfig(textConfig: IResolvable)
-
-      /**
-       * @param textConfig A parameter that indicates if text features are treated as text and
-       * explanations are provided for individual units of text.
-       * Required for natural language processing (NLP) explainability only.
-       */
-      public fun textConfig(textConfig: ClarifyTextConfigProperty)
-
-      /**
-       * @param textConfig A parameter that indicates if text features are treated as text and
-       * explanations are provided for individual units of text.
-       * Required for natural language processing (NLP) explainability only.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b91c22d36031d535f6f206b20d3bc0e1f205b2edf557d1a5e89ad765b0363479")
-      public fun textConfig(textConfig: ClarifyTextConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param useLogit A Boolean toggle to indicate if you want to use the logit function (true)
-       * or log-odds units (false) for model predictions.
-       * Defaults to false.
-       */
-      public fun useLogit(useLogit: Boolean)
-
-      /**
-       * @param useLogit A Boolean toggle to indicate if you want to use the logit function (true)
-       * or log-odds units (false) for model predictions.
-       * Defaults to false.
-       */
-      public fun useLogit(useLogit: IResolvable)
+      public fun provisionedConcurrency(provisionedConcurrency: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty.builder()
 
       /**
-       * @param numberOfSamples The number of samples to be used for analysis by the Kernal SHAP
-       * algorithm.
-       *
-       * The number of samples determines the size of the synthetic dataset, which has an impact on
-       * latency of explainability requests. For more information, see the *Synthetic data* of
-       * [Configure and create an
-       * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
-       * .
+       * @param maxConcurrency The maximum number of concurrent invocations your serverless endpoint
+       * can process. 
        */
-      override fun numberOfSamples(numberOfSamples: Number) {
-        cdkBuilder.numberOfSamples(numberOfSamples)
+      override fun maxConcurrency(maxConcurrency: Number) {
+        cdkBuilder.maxConcurrency(maxConcurrency)
       }
 
       /**
-       * @param seed The starting value used to initialize the random number generator in the
-       * explainer.
-       * Provide a value for this parameter to obtain a deterministic SHAP result.
+       * @param memorySizeInMb The memory size of your serverless endpoint. 
+       * Valid values are in 1 GB increments: 1024 MB, 2048 MB, 3072 MB, 4096 MB, 5120 MB, or 6144
+       * MB.
        */
-      override fun seed(seed: Number) {
-        cdkBuilder.seed(seed)
+      override fun memorySizeInMb(memorySizeInMb: Number) {
+        cdkBuilder.memorySizeInMb(memorySizeInMb)
       }
 
       /**
-       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
-       * algorithm. 
+       * @param provisionedConcurrency the value to be set.
        */
-      override fun shapBaselineConfig(shapBaselineConfig: IResolvable) {
-        cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
-       * algorithm. 
-       */
-      override fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty) {
-        cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(ClarifyShapBaselineConfigProperty::unwrap))
-      }
-
-      /**
-       * @param shapBaselineConfig The configuration for the SHAP baseline of the Kernal SHAP
-       * algorithm. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("44aefe325dc16ac11efdebc723e4ef1555d693949ab2ed27cb854537e5ad5c16")
-      override
-          fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty.Builder.() -> Unit):
-          Unit = shapBaselineConfig(ClarifyShapBaselineConfigProperty(shapBaselineConfig))
-
-      /**
-       * @param textConfig A parameter that indicates if text features are treated as text and
-       * explanations are provided for individual units of text.
-       * Required for natural language processing (NLP) explainability only.
-       */
-      override fun textConfig(textConfig: IResolvable) {
-        cdkBuilder.textConfig(textConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param textConfig A parameter that indicates if text features are treated as text and
-       * explanations are provided for individual units of text.
-       * Required for natural language processing (NLP) explainability only.
-       */
-      override fun textConfig(textConfig: ClarifyTextConfigProperty) {
-        cdkBuilder.textConfig(textConfig.let(ClarifyTextConfigProperty::unwrap))
-      }
-
-      /**
-       * @param textConfig A parameter that indicates if text features are treated as text and
-       * explanations are provided for individual units of text.
-       * Required for natural language processing (NLP) explainability only.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b91c22d36031d535f6f206b20d3bc0e1f205b2edf557d1a5e89ad765b0363479")
-      override fun textConfig(textConfig: ClarifyTextConfigProperty.Builder.() -> Unit): Unit =
-          textConfig(ClarifyTextConfigProperty(textConfig))
-
-      /**
-       * @param useLogit A Boolean toggle to indicate if you want to use the logit function (true)
-       * or log-odds units (false) for model predictions.
-       * Defaults to false.
-       */
-      override fun useLogit(useLogit: Boolean) {
-        cdkBuilder.useLogit(useLogit)
-      }
-
-      /**
-       * @param useLogit A Boolean toggle to indicate if you want to use the logit function (true)
-       * or log-odds units (false) for model predictions.
-       * Defaults to false.
-       */
-      override fun useLogit(useLogit: IResolvable) {
-        cdkBuilder.useLogit(useLogit.let(IResolvable::unwrap))
+      override fun provisionedConcurrency(provisionedConcurrency: Number) {
+        cdkBuilder.provisionedConcurrency(provisionedConcurrency)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyShapConfigProperty {
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty,
+    ) : CdkObject(cdkObject), ServerlessConfigProperty {
       /**
-       * The number of samples to be used for analysis by the Kernal SHAP algorithm.
+       * The maximum number of concurrent invocations your serverless endpoint can process.
        *
-       *
-       * The number of samples determines the size of the synthetic dataset, which has an impact on
-       * latency of explainability requests. For more information, see the *Synthetic data* of
-       * [Configure and create an
-       * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
-       * .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-numberofsamples)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-maxconcurrency)
        */
-      override fun numberOfSamples(): Number? = unwrap(this).getNumberOfSamples()
+      override fun maxConcurrency(): Number = unwrap(this).getMaxConcurrency()
 
       /**
-       * The starting value used to initialize the random number generator in the explainer.
+       * The memory size of your serverless endpoint.
        *
-       * Provide a value for this parameter to obtain a deterministic SHAP result.
+       * Valid values are in 1 GB increments: 1024 MB, 2048 MB, 3072 MB, 4096 MB, 5120 MB, or 6144
+       * MB.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-seed)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-memorysizeinmb)
        */
-      override fun seed(): Number? = unwrap(this).getSeed()
+      override fun memorySizeInMb(): Number = unwrap(this).getMemorySizeInMb()
 
       /**
-       * The configuration for the SHAP baseline of the Kernal SHAP algorithm.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-shapbaselineconfig)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html#cfn-sagemaker-endpointconfig-serverlessconfig-provisionedconcurrency)
        */
-      override fun shapBaselineConfig(): Any = unwrap(this).getShapBaselineConfig()
-
-      /**
-       * A parameter that indicates if text features are treated as text and explanations are
-       * provided for individual units of text.
-       *
-       * Required for natural language processing (NLP) explainability only.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-textconfig)
-       */
-      override fun textConfig(): Any? = unwrap(this).getTextConfig()
-
-      /**
-       * A Boolean toggle to indicate if you want to use the logit function (true) or log-odds units
-       * (false) for model predictions.
-       *
-       * Defaults to false.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html#cfn-sagemaker-endpointconfig-clarifyshapconfig-uselogit)
-       */
-      override fun useLogit(): Any? = unwrap(this).getUseLogit()
+      override fun provisionedConcurrency(): Number? = unwrap(this).getProvisionedConcurrency()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClarifyShapConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ServerlessConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty):
-          ClarifyShapConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClarifyShapConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty):
+          ServerlessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ServerlessConfigProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ClarifyShapConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty =
+      internal fun unwrap(wrapped: ServerlessConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty
     }
   }
 
   /**
-   * Specifies the configuration of your endpoint for model monitor data capture.
-   *
    * Example:
    *
    * ```
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DataCaptureConfigProperty dataCaptureConfigProperty = DataCaptureConfigProperty.builder()
-   * .captureOptions(List.of(CaptureOptionProperty.builder()
-   * .captureMode("captureMode")
-   * .build()))
-   * .destinationS3Uri("destinationS3Uri")
-   * .initialSamplingPercentage(123)
-   * // the properties below are optional
-   * .captureContentTypeHeader(CaptureContentTypeHeaderProperty.builder()
-   * .csvContentTypes(List.of("csvContentTypes"))
-   * .jsonContentTypes(List.of("jsonContentTypes"))
-   * .build())
-   * .enableCapture(false)
-   * .kmsKeyId("kmsKeyId")
+   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html)
    */
-  public interface DataCaptureConfigProperty {
+  public interface VpcConfigProperty {
     /**
-     * A list of the JSON and CSV content type that the endpoint captures.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-securitygroupids)
      */
-    public fun captureContentTypeHeader(): Any? = unwrap(this).getCaptureContentTypeHeader()
+    public fun securityGroupIds(): List<String>
 
     /**
-     * Specifies whether the endpoint captures input data to your model, output data from your
-     * model, or both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-captureoptions)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-subnets)
      */
-    public fun captureOptions(): Any
+    public fun subnets(): List<String>
 
     /**
-     * The S3 bucket where model monitor stores captured data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-destinations3uri)
-     */
-    public fun destinationS3Uri(): String
-
-    /**
-     * Set to `True` to enable data capture.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-enablecapture)
-     */
-    public fun enableCapture(): Any? = unwrap(this).getEnableCapture()
-
-    /**
-     * The percentage of data to capture.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-initialsamplingpercentage)
-     */
-    public fun initialSamplingPercentage(): Number
-
-    /**
-     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
-     * captured data at rest using Amazon S3 server-side encryption.
-     *
-     * The KmsKeyId can be any of the following formats: Key ID:
-     * 1234abcd-12ab-34cd-56ef-1234567890ab Key ARN:
-     * arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab Alias name:
-     * alias/ExampleAlias Alias name ARN: arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias If you
-     * don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your
-     * role's account. For more information, see KMS-Managed Encryption Keys
-     * (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the Amazon Simple
-     * Storage Service Developer Guide. The KMS key policy must grant permission to the IAM role that
-     * you specify in your CreateModel
-     * (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html) request. For
-     * more information, see Using Key Policies in AWS KMS
-     * (http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the AWS Key
-     * Management Service Developer Guide.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * A builder for [DataCaptureConfigProperty]
+     * A builder for [VpcConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
-       * captures.
+       * @param securityGroupIds the value to be set. 
        */
-      public fun captureContentTypeHeader(captureContentTypeHeader: IResolvable)
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
       /**
-       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
-       * captures.
+       * @param securityGroupIds the value to be set. 
        */
-      public
-          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty)
+      public fun securityGroupIds(vararg securityGroupIds: String)
 
       /**
-       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
-       * captures.
+       * @param subnets the value to be set. 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("31a3df691231e3741b21575ed4957e82fdb752b2995392ce72f37435a3fbfd17")
-      public
-          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty.Builder.() -> Unit)
+      public fun subnets(subnets: List<String>)
 
       /**
-       * @param captureOptions Specifies whether the endpoint captures input data to your model,
-       * output data from your model, or both. 
+       * @param subnets the value to be set. 
        */
-      public fun captureOptions(captureOptions: IResolvable)
-
-      /**
-       * @param captureOptions Specifies whether the endpoint captures input data to your model,
-       * output data from your model, or both. 
-       */
-      public fun captureOptions(captureOptions: List<Any>)
-
-      /**
-       * @param captureOptions Specifies whether the endpoint captures input data to your model,
-       * output data from your model, or both. 
-       */
-      public fun captureOptions(vararg captureOptions: Any)
-
-      /**
-       * @param destinationS3Uri The S3 bucket where model monitor stores captured data. 
-       */
-      public fun destinationS3Uri(destinationS3Uri: String)
-
-      /**
-       * @param enableCapture Set to `True` to enable data capture.
-       */
-      public fun enableCapture(enableCapture: Boolean)
-
-      /**
-       * @param enableCapture Set to `True` to enable data capture.
-       */
-      public fun enableCapture(enableCapture: IResolvable)
-
-      /**
-       * @param initialSamplingPercentage The percentage of data to capture. 
-       */
-      public fun initialSamplingPercentage(initialSamplingPercentage: Number)
-
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
-       * encrypt the captured data at rest using Amazon S3 server-side encryption.
-       * The KmsKeyId can be any of the following formats: Key ID:
-       * 1234abcd-12ab-34cd-56ef-1234567890ab Key ARN:
-       * arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab Alias name:
-       * alias/ExampleAlias Alias name ARN: arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias If
-       * you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for
-       * your role's account. For more information, see KMS-Managed Encryption Keys
-       * (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the Amazon Simple
-       * Storage Service Developer Guide. The KMS key policy must grant permission to the IAM role that
-       * you specify in your CreateModel
-       * (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html) request. For
-       * more information, see Using Key Policies in AWS KMS
-       * (http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the AWS Key
-       * Management Service Developer Guide.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty.builder()
 
       /**
-       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
-       * captures.
+       * @param securityGroupIds the value to be set. 
        */
-      override fun captureContentTypeHeader(captureContentTypeHeader: IResolvable) {
-        cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(IResolvable::unwrap))
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
       /**
-       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
-       * captures.
+       * @param securityGroupIds the value to be set. 
        */
-      override
-          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty) {
-        cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(CaptureContentTypeHeaderProperty::unwrap))
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnets the value to be set. 
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
       }
 
       /**
-       * @param captureContentTypeHeader A list of the JSON and CSV content type that the endpoint
-       * captures.
+       * @param subnets the value to be set. 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("31a3df691231e3741b21575ed4957e82fdb752b2995392ce72f37435a3fbfd17")
-      override
-          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty.Builder.() -> Unit):
-          Unit =
-          captureContentTypeHeader(CaptureContentTypeHeaderProperty(captureContentTypeHeader))
-
-      /**
-       * @param captureOptions Specifies whether the endpoint captures input data to your model,
-       * output data from your model, or both. 
-       */
-      override fun captureOptions(captureOptions: IResolvable) {
-        cdkBuilder.captureOptions(captureOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param captureOptions Specifies whether the endpoint captures input data to your model,
-       * output data from your model, or both. 
-       */
-      override fun captureOptions(captureOptions: List<Any>) {
-        cdkBuilder.captureOptions(captureOptions)
-      }
-
-      /**
-       * @param captureOptions Specifies whether the endpoint captures input data to your model,
-       * output data from your model, or both. 
-       */
-      override fun captureOptions(vararg captureOptions: Any): Unit =
-          captureOptions(captureOptions.toList())
-
-      /**
-       * @param destinationS3Uri The S3 bucket where model monitor stores captured data. 
-       */
-      override fun destinationS3Uri(destinationS3Uri: String) {
-        cdkBuilder.destinationS3Uri(destinationS3Uri)
-      }
-
-      /**
-       * @param enableCapture Set to `True` to enable data capture.
-       */
-      override fun enableCapture(enableCapture: Boolean) {
-        cdkBuilder.enableCapture(enableCapture)
-      }
-
-      /**
-       * @param enableCapture Set to `True` to enable data capture.
-       */
-      override fun enableCapture(enableCapture: IResolvable) {
-        cdkBuilder.enableCapture(enableCapture.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param initialSamplingPercentage The percentage of data to capture. 
-       */
-      override fun initialSamplingPercentage(initialSamplingPercentage: Number) {
-        cdkBuilder.initialSamplingPercentage(initialSamplingPercentage)
-      }
-
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
-       * encrypt the captured data at rest using Amazon S3 server-side encryption.
-       * The KmsKeyId can be any of the following formats: Key ID:
-       * 1234abcd-12ab-34cd-56ef-1234567890ab Key ARN:
-       * arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab Alias name:
-       * alias/ExampleAlias Alias name ARN: arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias If
-       * you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for
-       * your role's account. For more information, see KMS-Managed Encryption Keys
-       * (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the Amazon Simple
-       * Storage Service Developer Guide. The KMS key policy must grant permission to the IAM role that
-       * you specify in your CreateModel
-       * (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html) request. For
-       * more information, see Using Key Policies in AWS KMS
-       * (http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the AWS Key
-       * Management Service Developer Guide.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty =
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty,
-    ) : CdkObject(cdkObject), DataCaptureConfigProperty {
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty,
+    ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
-       * A list of the JSON and CSV content type that the endpoint captures.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-securitygroupids)
        */
-      override fun captureContentTypeHeader(): Any? = unwrap(this).getCaptureContentTypeHeader()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
       /**
-       * Specifies whether the endpoint captures input data to your model, output data from your
-       * model, or both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-captureoptions)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-subnets)
        */
-      override fun captureOptions(): Any = unwrap(this).getCaptureOptions()
-
-      /**
-       * The S3 bucket where model monitor stores captured data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-destinations3uri)
-       */
-      override fun destinationS3Uri(): String = unwrap(this).getDestinationS3Uri()
-
-      /**
-       * Set to `True` to enable data capture.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-enablecapture)
-       */
-      override fun enableCapture(): Any? = unwrap(this).getEnableCapture()
-
-      /**
-       * The percentage of data to capture.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-initialsamplingpercentage)
-       */
-      override fun initialSamplingPercentage(): Number = unwrap(this).getInitialSamplingPercentage()
-
-      /**
-       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
-       * captured data at rest using Amazon S3 server-side encryption.
-       *
-       * The KmsKeyId can be any of the following formats: Key ID:
-       * 1234abcd-12ab-34cd-56ef-1234567890ab Key ARN:
-       * arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab Alias name:
-       * alias/ExampleAlias Alias name ARN: arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias If
-       * you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for
-       * your role's account. For more information, see KMS-Managed Encryption Keys
-       * (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the Amazon Simple
-       * Storage Service Developer Guide. The KMS key policy must grant permission to the IAM role that
-       * you specify in your CreateModel
-       * (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html) request. For
-       * more information, see Using Key Policies in AWS KMS
-       * (http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) in the AWS Key
-       * Management Service Developer Guide.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html#cfn-sagemaker-endpointconfig-datacaptureconfig-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataCaptureConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty):
-          DataCaptureConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataCaptureConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataCaptureConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty
-    }
-  }
-
-  /**
-   * The configuration parameters for the SageMaker Clarify explainer.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ClarifyExplainerConfigProperty clarifyExplainerConfigProperty =
-   * ClarifyExplainerConfigProperty.builder()
-   * .shapConfig(ClarifyShapConfigProperty.builder()
-   * .shapBaselineConfig(ClarifyShapBaselineConfigProperty.builder()
-   * .mimeType("mimeType")
-   * .shapBaseline("shapBaseline")
-   * .shapBaselineUri("shapBaselineUri")
-   * .build())
-   * // the properties below are optional
-   * .numberOfSamples(123)
-   * .seed(123)
-   * .textConfig(ClarifyTextConfigProperty.builder()
-   * .granularity("granularity")
-   * .language("language")
-   * .build())
-   * .useLogit(false)
-   * .build())
-   * // the properties below are optional
-   * .enableExplanations("enableExplanations")
-   * .inferenceConfig(ClarifyInferenceConfigProperty.builder()
-   * .contentTemplate("contentTemplate")
-   * .featureHeaders(List.of("featureHeaders"))
-   * .featuresAttribute("featuresAttribute")
-   * .featureTypes(List.of("featureTypes"))
-   * .labelAttribute("labelAttribute")
-   * .labelHeaders(List.of("labelHeaders"))
-   * .labelIndex(123)
-   * .maxPayloadInMb(123)
-   * .maxRecordCount(123)
-   * .probabilityAttribute("probabilityAttribute")
-   * .probabilityIndex(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html)
-   */
-  public interface ClarifyExplainerConfigProperty {
-    /**
-     * A JMESPath boolean expression used to filter which records to explain.
-     *
-     * Explanations are activated by default. See
-     * [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
-     * for additional information.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-enableexplanations)
-     */
-    public fun enableExplanations(): String? = unwrap(this).getEnableExplanations()
-
-    /**
-     * The inference configuration parameter for the model container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-inferenceconfig)
-     */
-    public fun inferenceConfig(): Any? = unwrap(this).getInferenceConfig()
-
-    /**
-     * The configuration for SHAP analysis.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-shapconfig)
-     */
-    public fun shapConfig(): Any
-
-    /**
-     * A builder for [ClarifyExplainerConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableExplanations A JMESPath boolean expression used to filter which records to
-       * explain.
-       * Explanations are activated by default. See
-       * [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
-       * for additional information.
-       */
-      public fun enableExplanations(enableExplanations: String)
-
-      /**
-       * @param inferenceConfig The inference configuration parameter for the model container.
-       */
-      public fun inferenceConfig(inferenceConfig: IResolvable)
-
-      /**
-       * @param inferenceConfig The inference configuration parameter for the model container.
-       */
-      public fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty)
-
-      /**
-       * @param inferenceConfig The inference configuration parameter for the model container.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2d3847dc1e89bbccd4521b78d7f69dfe3103728da680575e496f455e90b0ba64")
-      public fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param shapConfig The configuration for SHAP analysis. 
-       */
-      public fun shapConfig(shapConfig: IResolvable)
-
-      /**
-       * @param shapConfig The configuration for SHAP analysis. 
-       */
-      public fun shapConfig(shapConfig: ClarifyShapConfigProperty)
-
-      /**
-       * @param shapConfig The configuration for SHAP analysis. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6e18830621d5bb7e43df94655ffbe11f05a35ea31fe7a0d8210a2f1b7d359d47")
-      public fun shapConfig(shapConfig: ClarifyShapConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty.builder()
-
-      /**
-       * @param enableExplanations A JMESPath boolean expression used to filter which records to
-       * explain.
-       * Explanations are activated by default. See
-       * [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
-       * for additional information.
-       */
-      override fun enableExplanations(enableExplanations: String) {
-        cdkBuilder.enableExplanations(enableExplanations)
-      }
-
-      /**
-       * @param inferenceConfig The inference configuration parameter for the model container.
-       */
-      override fun inferenceConfig(inferenceConfig: IResolvable) {
-        cdkBuilder.inferenceConfig(inferenceConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param inferenceConfig The inference configuration parameter for the model container.
-       */
-      override fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty) {
-        cdkBuilder.inferenceConfig(inferenceConfig.let(ClarifyInferenceConfigProperty::unwrap))
-      }
-
-      /**
-       * @param inferenceConfig The inference configuration parameter for the model container.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2d3847dc1e89bbccd4521b78d7f69dfe3103728da680575e496f455e90b0ba64")
-      override
-          fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty.Builder.() -> Unit):
-          Unit = inferenceConfig(ClarifyInferenceConfigProperty(inferenceConfig))
-
-      /**
-       * @param shapConfig The configuration for SHAP analysis. 
-       */
-      override fun shapConfig(shapConfig: IResolvable) {
-        cdkBuilder.shapConfig(shapConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param shapConfig The configuration for SHAP analysis. 
-       */
-      override fun shapConfig(shapConfig: ClarifyShapConfigProperty) {
-        cdkBuilder.shapConfig(shapConfig.let(ClarifyShapConfigProperty::unwrap))
-      }
-
-      /**
-       * @param shapConfig The configuration for SHAP analysis. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6e18830621d5bb7e43df94655ffbe11f05a35ea31fe7a0d8210a2f1b7d359d47")
-      override fun shapConfig(shapConfig: ClarifyShapConfigProperty.Builder.() -> Unit): Unit =
-          shapConfig(ClarifyShapConfigProperty(shapConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyExplainerConfigProperty {
-      /**
-       * A JMESPath boolean expression used to filter which records to explain.
-       *
-       * Explanations are activated by default. See
-       * [`EnableExplanations`](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable)
-       * for additional information.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-enableexplanations)
-       */
-      override fun enableExplanations(): String? = unwrap(this).getEnableExplanations()
-
-      /**
-       * The inference configuration parameter for the model container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-inferenceconfig)
-       */
-      override fun inferenceConfig(): Any? = unwrap(this).getInferenceConfig()
-
-      /**
-       * The configuration for SHAP analysis.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyexplainerconfig.html#cfn-sagemaker-endpointconfig-clarifyexplainerconfig-shapconfig)
-       */
-      override fun shapConfig(): Any = unwrap(this).getShapConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClarifyExplainerConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty):
-          ClarifyExplainerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClarifyExplainerConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClarifyExplainerConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty
-    }
-  }
-
-  /**
-   * A parameter to activate explainers.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ExplainerConfigProperty explainerConfigProperty = ExplainerConfigProperty.builder()
-   * .clarifyExplainerConfig(ClarifyExplainerConfigProperty.builder()
-   * .shapConfig(ClarifyShapConfigProperty.builder()
-   * .shapBaselineConfig(ClarifyShapBaselineConfigProperty.builder()
-   * .mimeType("mimeType")
-   * .shapBaseline("shapBaseline")
-   * .shapBaselineUri("shapBaselineUri")
-   * .build())
-   * // the properties below are optional
-   * .numberOfSamples(123)
-   * .seed(123)
-   * .textConfig(ClarifyTextConfigProperty.builder()
-   * .granularity("granularity")
-   * .language("language")
-   * .build())
-   * .useLogit(false)
-   * .build())
-   * // the properties below are optional
-   * .enableExplanations("enableExplanations")
-   * .inferenceConfig(ClarifyInferenceConfigProperty.builder()
-   * .contentTemplate("contentTemplate")
-   * .featureHeaders(List.of("featureHeaders"))
-   * .featuresAttribute("featuresAttribute")
-   * .featureTypes(List.of("featureTypes"))
-   * .labelAttribute("labelAttribute")
-   * .labelHeaders(List.of("labelHeaders"))
-   * .labelIndex(123)
-   * .maxPayloadInMb(123)
-   * .maxRecordCount(123)
-   * .probabilityAttribute("probabilityAttribute")
-   * .probabilityIndex(123)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-explainerconfig.html)
-   */
-  public interface ExplainerConfigProperty {
-    /**
-     * A member of `ExplainerConfig` that contains configuration parameters for the SageMaker
-     * Clarify explainer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-explainerconfig.html#cfn-sagemaker-endpointconfig-explainerconfig-clarifyexplainerconfig)
-     */
-    public fun clarifyExplainerConfig(): Any? = unwrap(this).getClarifyExplainerConfig()
-
-    /**
-     * A builder for [ExplainerConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
-       * parameters for the SageMaker Clarify explainer.
-       */
-      public fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable)
-
-      /**
-       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
-       * parameters for the SageMaker Clarify explainer.
-       */
-      public fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty)
-
-      /**
-       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
-       * parameters for the SageMaker Clarify explainer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("61e075251fd9dec5d2e4d8a12c1f17e34e37cb8efce9a075355d11388bc99d53")
-      public
-          fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty.builder()
-
-      /**
-       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
-       * parameters for the SageMaker Clarify explainer.
-       */
-      override fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable) {
-        cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
-       * parameters for the SageMaker Clarify explainer.
-       */
-      override fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty) {
-        cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(ClarifyExplainerConfigProperty::unwrap))
-      }
-
-      /**
-       * @param clarifyExplainerConfig A member of `ExplainerConfig` that contains configuration
-       * parameters for the SageMaker Clarify explainer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("61e075251fd9dec5d2e4d8a12c1f17e34e37cb8efce9a075355d11388bc99d53")
-      override
-          fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty.Builder.() -> Unit):
-          Unit = clarifyExplainerConfig(ClarifyExplainerConfigProperty(clarifyExplainerConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty,
-    ) : CdkObject(cdkObject), ExplainerConfigProperty {
-      /**
-       * A member of `ExplainerConfig` that contains configuration parameters for the SageMaker
-       * Clarify explainer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-explainerconfig.html#cfn-sagemaker-endpointconfig-explainerconfig-clarifyexplainerconfig)
-       */
-      override fun clarifyExplainerConfig(): Any? = unwrap(this).getClarifyExplainerConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExplainerConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty):
-          ExplainerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ExplainerConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty):
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ExplainerConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty
-    }
-  }
-
-  /**
-   * Specifies whether the endpoint captures input data or output data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CaptureOptionProperty captureOptionProperty = CaptureOptionProperty.builder()
-   * .captureMode("captureMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-captureoption.html)
-   */
-  public interface CaptureOptionProperty {
-    /**
-     * Specifies whether the endpoint captures input data or output data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-captureoption.html#cfn-sagemaker-endpointconfig-captureoption-capturemode)
-     */
-    public fun captureMode(): String
-
-    /**
-     * A builder for [CaptureOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param captureMode Specifies whether the endpoint captures input data or output data. 
-       */
-      public fun captureMode(captureMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty.builder()
-
-      /**
-       * @param captureMode Specifies whether the endpoint captures input data or output data. 
-       */
-      override fun captureMode(captureMode: String) {
-        cdkBuilder.captureMode(captureMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty,
-    ) : CdkObject(cdkObject), CaptureOptionProperty {
-      /**
-       * Specifies whether the endpoint captures input data or output data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-captureoption.html#cfn-sagemaker-endpointconfig-captureoption-capturemode)
-       */
-      override fun captureMode(): String = unwrap(this).getCaptureMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CaptureOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty):
-          CaptureOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? CaptureOptionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CaptureOptionProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty
-    }
-  }
-
-  /**
-   * The configuration for the [SHAP
-   * baseline](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-feature-attribute-shap-baselines.html)
-   * (also called the background or reference dataset) of the Kernal SHAP algorithm.
-   *
-   *
-   * * The number of records in the baseline data determines the size of the synthetic dataset,
-   * which has an impact on latency of explainability requests. For more information, see the
-   * *Synthetic data* of [Configure and create an
-   * endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html)
-   * .
-   * * `ShapBaseline` and `ShapBaselineUri` are mutually exclusive parameters. One or the either is
-   * required to configure a SHAP baseline.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ClarifyShapBaselineConfigProperty clarifyShapBaselineConfigProperty =
-   * ClarifyShapBaselineConfigProperty.builder()
-   * .mimeType("mimeType")
-   * .shapBaseline("shapBaseline")
-   * .shapBaselineUri("shapBaselineUri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html)
-   */
-  public interface ClarifyShapBaselineConfigProperty {
-    /**
-     * The MIME type of the baseline data.
-     *
-     * Choose from `'text/csv'` or `'application/jsonlines'` . Defaults to `'text/csv'` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-mimetype)
-     */
-    public fun mimeType(): String? = unwrap(this).getMimeType()
-
-    /**
-     * The inline SHAP baseline data in string format.
-     *
-     * `ShapBaseline` can have one or multiple records to be used as the baseline dataset. The
-     * format of the SHAP baseline file should be the same format as the training dataset. For example,
-     * if the training dataset is in CSV format and each record contains four features, and all
-     * features are numerical, then the format of the baseline data should also share these
-     * characteristics. For natural language processing (NLP) of text columns, the baseline value
-     * should be the value used to replace the unit of text specified by the `Granularity` of the
-     * `TextConfig` parameter. The size limit for `ShapBasline` is 4 KB. Use the `ShapBaselineUri`
-     * parameter if you want to provide more than 4 KB of baseline data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-shapbaseline)
-     */
-    public fun shapBaseline(): String? = unwrap(this).getShapBaseline()
-
-    /**
-     * The uniform resource identifier (URI) of the S3 bucket where the SHAP baseline file is
-     * stored.
-     *
-     * The format of the SHAP baseline file should be the same format as the format of the training
-     * dataset. For example, if the training dataset is in CSV format, and each record in the training
-     * dataset has four features, and all features are numerical, then the baseline file should also
-     * have this same format. Each record should contain only the features. If you are using a virtual
-     * private cloud (VPC), the `ShapBaselineUri` should be accessible to the VPC. For more information
-     * about setting up endpoints with Amazon Virtual Private Cloud, see [Give SageMaker access to
-     * Resources in your Amazon Virtual Private
-     * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-shapbaselineuri)
-     */
-    public fun shapBaselineUri(): String? = unwrap(this).getShapBaselineUri()
-
-    /**
-     * A builder for [ClarifyShapBaselineConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mimeType The MIME type of the baseline data.
-       * Choose from `'text/csv'` or `'application/jsonlines'` . Defaults to `'text/csv'` .
-       */
-      public fun mimeType(mimeType: String)
-
-      /**
-       * @param shapBaseline The inline SHAP baseline data in string format.
-       * `ShapBaseline` can have one or multiple records to be used as the baseline dataset. The
-       * format of the SHAP baseline file should be the same format as the training dataset. For
-       * example, if the training dataset is in CSV format and each record contains four features, and
-       * all features are numerical, then the format of the baseline data should also share these
-       * characteristics. For natural language processing (NLP) of text columns, the baseline value
-       * should be the value used to replace the unit of text specified by the `Granularity` of the
-       * `TextConfig` parameter. The size limit for `ShapBasline` is 4 KB. Use the `ShapBaselineUri`
-       * parameter if you want to provide more than 4 KB of baseline data.
-       */
-      public fun shapBaseline(shapBaseline: String)
-
-      /**
-       * @param shapBaselineUri The uniform resource identifier (URI) of the S3 bucket where the
-       * SHAP baseline file is stored.
-       * The format of the SHAP baseline file should be the same format as the format of the
-       * training dataset. For example, if the training dataset is in CSV format, and each record in
-       * the training dataset has four features, and all features are numerical, then the baseline file
-       * should also have this same format. Each record should contain only the features. If you are
-       * using a virtual private cloud (VPC), the `ShapBaselineUri` should be accessible to the VPC.
-       * For more information about setting up endpoints with Amazon Virtual Private Cloud, see [Give
-       * SageMaker access to Resources in your Amazon Virtual Private
-       * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
-       */
-      public fun shapBaselineUri(shapBaselineUri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty.builder()
-
-      /**
-       * @param mimeType The MIME type of the baseline data.
-       * Choose from `'text/csv'` or `'application/jsonlines'` . Defaults to `'text/csv'` .
-       */
-      override fun mimeType(mimeType: String) {
-        cdkBuilder.mimeType(mimeType)
-      }
-
-      /**
-       * @param shapBaseline The inline SHAP baseline data in string format.
-       * `ShapBaseline` can have one or multiple records to be used as the baseline dataset. The
-       * format of the SHAP baseline file should be the same format as the training dataset. For
-       * example, if the training dataset is in CSV format and each record contains four features, and
-       * all features are numerical, then the format of the baseline data should also share these
-       * characteristics. For natural language processing (NLP) of text columns, the baseline value
-       * should be the value used to replace the unit of text specified by the `Granularity` of the
-       * `TextConfig` parameter. The size limit for `ShapBasline` is 4 KB. Use the `ShapBaselineUri`
-       * parameter if you want to provide more than 4 KB of baseline data.
-       */
-      override fun shapBaseline(shapBaseline: String) {
-        cdkBuilder.shapBaseline(shapBaseline)
-      }
-
-      /**
-       * @param shapBaselineUri The uniform resource identifier (URI) of the S3 bucket where the
-       * SHAP baseline file is stored.
-       * The format of the SHAP baseline file should be the same format as the format of the
-       * training dataset. For example, if the training dataset is in CSV format, and each record in
-       * the training dataset has four features, and all features are numerical, then the baseline file
-       * should also have this same format. Each record should contain only the features. If you are
-       * using a virtual private cloud (VPC), the `ShapBaselineUri` should be accessible to the VPC.
-       * For more information about setting up endpoints with Amazon Virtual Private Cloud, see [Give
-       * SageMaker access to Resources in your Amazon Virtual Private
-       * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
-       */
-      override fun shapBaselineUri(shapBaselineUri: String) {
-        cdkBuilder.shapBaselineUri(shapBaselineUri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyShapBaselineConfigProperty {
-      /**
-       * The MIME type of the baseline data.
-       *
-       * Choose from `'text/csv'` or `'application/jsonlines'` . Defaults to `'text/csv'` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-mimetype)
-       */
-      override fun mimeType(): String? = unwrap(this).getMimeType()
-
-      /**
-       * The inline SHAP baseline data in string format.
-       *
-       * `ShapBaseline` can have one or multiple records to be used as the baseline dataset. The
-       * format of the SHAP baseline file should be the same format as the training dataset. For
-       * example, if the training dataset is in CSV format and each record contains four features, and
-       * all features are numerical, then the format of the baseline data should also share these
-       * characteristics. For natural language processing (NLP) of text columns, the baseline value
-       * should be the value used to replace the unit of text specified by the `Granularity` of the
-       * `TextConfig` parameter. The size limit for `ShapBasline` is 4 KB. Use the `ShapBaselineUri`
-       * parameter if you want to provide more than 4 KB of baseline data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-shapbaseline)
-       */
-      override fun shapBaseline(): String? = unwrap(this).getShapBaseline()
-
-      /**
-       * The uniform resource identifier (URI) of the S3 bucket where the SHAP baseline file is
-       * stored.
-       *
-       * The format of the SHAP baseline file should be the same format as the format of the
-       * training dataset. For example, if the training dataset is in CSV format, and each record in
-       * the training dataset has four features, and all features are numerical, then the baseline file
-       * should also have this same format. Each record should contain only the features. If you are
-       * using a virtual private cloud (VPC), the `ShapBaselineUri` should be accessible to the VPC.
-       * For more information about setting up endpoints with Amazon Virtual Private Cloud, see [Give
-       * SageMaker access to Resources in your Amazon Virtual Private
-       * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapbaselineconfig.html#cfn-sagemaker-endpointconfig-clarifyshapbaselineconfig-shapbaselineuri)
-       */
-      override fun shapBaselineUri(): String? = unwrap(this).getShapBaselineUri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ClarifyShapBaselineConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty):
-          ClarifyShapBaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClarifyShapBaselineConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClarifyShapBaselineConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration for asynchronous inference invocation outputs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * AsyncInferenceOutputConfigProperty asyncInferenceOutputConfigProperty =
-   * AsyncInferenceOutputConfigProperty.builder()
-   * .kmsKeyId("kmsKeyId")
-   * .notificationConfig(AsyncInferenceNotificationConfigProperty.builder()
-   * .errorTopic("errorTopic")
-   * .includeInferenceResponseIn(List.of("includeInferenceResponseIn"))
-   * .successTopic("successTopic")
-   * .build())
-   * .s3FailurePath("s3FailurePath")
-   * .s3OutputPath("s3OutputPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html)
-   */
-  public interface AsyncInferenceOutputConfigProperty {
-    /**
-     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
-     * asynchronous inference output in Amazon S3.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * Specifies the configuration for notifications of inference results for asynchronous
-     * inference.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-notificationconfig)
-     */
-    public fun notificationConfig(): Any? = unwrap(this).getNotificationConfig()
-
-    /**
-     * The Amazon S3 location to upload failure inference responses to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3failurepath)
-     */
-    public fun s3FailurePath(): String? = unwrap(this).getS3FailurePath()
-
-    /**
-     * The Amazon S3 location to upload inference responses to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3outputpath)
-     */
-    public fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
-
-    /**
-     * A builder for [AsyncInferenceOutputConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
-       * encrypt the asynchronous inference output in Amazon S3.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param notificationConfig Specifies the configuration for notifications of inference
-       * results for asynchronous inference.
-       */
-      public fun notificationConfig(notificationConfig: IResolvable)
-
-      /**
-       * @param notificationConfig Specifies the configuration for notifications of inference
-       * results for asynchronous inference.
-       */
-      public fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty)
-
-      /**
-       * @param notificationConfig Specifies the configuration for notifications of inference
-       * results for asynchronous inference.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3338c4e7a789e490c929ebb44cd454a0619e9b7a124dc2800175ea742e577929")
-      public
-          fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param s3FailurePath The Amazon S3 location to upload failure inference responses to.
-       */
-      public fun s3FailurePath(s3FailurePath: String)
-
-      /**
-       * @param s3OutputPath The Amazon S3 location to upload inference responses to.
-       */
-      public fun s3OutputPath(s3OutputPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty.builder()
-
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
-       * encrypt the asynchronous inference output in Amazon S3.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param notificationConfig Specifies the configuration for notifications of inference
-       * results for asynchronous inference.
-       */
-      override fun notificationConfig(notificationConfig: IResolvable) {
-        cdkBuilder.notificationConfig(notificationConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param notificationConfig Specifies the configuration for notifications of inference
-       * results for asynchronous inference.
-       */
-      override
-          fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty) {
-        cdkBuilder.notificationConfig(notificationConfig.let(AsyncInferenceNotificationConfigProperty::unwrap))
-      }
-
-      /**
-       * @param notificationConfig Specifies the configuration for notifications of inference
-       * results for asynchronous inference.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3338c4e7a789e490c929ebb44cd454a0619e9b7a124dc2800175ea742e577929")
-      override
-          fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty.Builder.() -> Unit):
-          Unit = notificationConfig(AsyncInferenceNotificationConfigProperty(notificationConfig))
-
-      /**
-       * @param s3FailurePath The Amazon S3 location to upload failure inference responses to.
-       */
-      override fun s3FailurePath(s3FailurePath: String) {
-        cdkBuilder.s3FailurePath(s3FailurePath)
-      }
-
-      /**
-       * @param s3OutputPath The Amazon S3 location to upload inference responses to.
-       */
-      override fun s3OutputPath(s3OutputPath: String) {
-        cdkBuilder.s3OutputPath(s3OutputPath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty,
-    ) : CdkObject(cdkObject), AsyncInferenceOutputConfigProperty {
-      /**
-       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
-       * asynchronous inference output in Amazon S3.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * Specifies the configuration for notifications of inference results for asynchronous
-       * inference.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-notificationconfig)
-       */
-      override fun notificationConfig(): Any? = unwrap(this).getNotificationConfig()
-
-      /**
-       * The Amazon S3 location to upload failure inference responses to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3failurepath)
-       */
-      override fun s3FailurePath(): String? = unwrap(this).getS3FailurePath()
-
-      /**
-       * The Amazon S3 location to upload inference responses to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html#cfn-sagemaker-endpointconfig-asyncinferenceoutputconfig-s3outputpath)
-       */
-      override fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AsyncInferenceOutputConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty):
-          AsyncInferenceOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AsyncInferenceOutputConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AsyncInferenceOutputConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty
+      internal fun unwrap(wrapped: VpcConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty
     }
   }
 }

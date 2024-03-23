@@ -2476,992 +2476,6 @@ public open class CfnAutoScalingGroup internal constructor(
   }
 
   /**
-   * `MemoryMiBRequest` is a property of the `InstanceRequirements` property of the
-   * [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property type that describes the minimum and maximum instance memory size for an instance type, in
-   * MiB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * MemoryMiBRequestProperty memoryMiBRequestProperty = MemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html)
-   */
-  public interface MemoryMiBRequestProperty {
-    /**
-     * The memory maximum in MiB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html#cfn-autoscaling-autoscalinggroup-memorymibrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The memory minimum in MiB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html#cfn-autoscaling-autoscalinggroup-memorymibrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [MemoryMiBRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The memory maximum in MiB.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The memory minimum in MiB.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty.builder()
-
-      /**
-       * @param max The memory maximum in MiB.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The memory minimum in MiB.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
-      /**
-       * The memory maximum in MiB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html#cfn-autoscaling-autoscalinggroup-memorymibrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The memory minimum in MiB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html#cfn-autoscaling-autoscalinggroup-memorymibrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryMiBRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty):
-          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBRequestProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MemoryMiBRequestProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty
-    }
-  }
-
-  /**
-   * `TotalLocalStorageGBRequest` is a property of the `InstanceRequirements` property of the
-   * [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property type that describes the minimum and maximum total local storage size for an instance
-   * type, in GB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * TotalLocalStorageGBRequestProperty totalLocalStorageGBRequestProperty =
-   * TotalLocalStorageGBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html)
-   */
-  public interface TotalLocalStorageGBRequestProperty {
-    /**
-     * The storage maximum in GB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html#cfn-autoscaling-autoscalinggroup-totallocalstoragegbrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The storage minimum in GB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html#cfn-autoscaling-autoscalinggroup-totallocalstoragegbrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [TotalLocalStorageGBRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The storage maximum in GB.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The storage minimum in GB.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty.builder()
-
-      /**
-       * @param max The storage maximum in GB.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The storage minimum in GB.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty,
-    ) : CdkObject(cdkObject), TotalLocalStorageGBRequestProperty {
-      /**
-       * The storage maximum in GB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html#cfn-autoscaling-autoscalinggroup-totallocalstoragegbrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The storage minimum in GB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html#cfn-autoscaling-autoscalinggroup-totallocalstoragegbrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TotalLocalStorageGBRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty):
-          TotalLocalStorageGBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TotalLocalStorageGBRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TotalLocalStorageGBRequestProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
-    }
-  }
-
-  /**
-   * Specifies a launch template to use when provisioning EC2 instances for an Auto Scaling group.
-   *
-   * You must specify the following:
-   *
-   * * The ID or the name of the launch template, but not both.
-   * * The version of the launch template.
-   *
-   * `LaunchTemplateSpecification` is property of the
-   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource. It is also a property of the [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
-   * and [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property types.
-   *
-   * For information about creating a launch template, see
-   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
-   * and [Create a launch template for an Auto Scaling
-   * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the
-   * *Amazon EC2 Auto Scaling User Guide* .
-   *
-   * For examples of launch templates, see [Create launch
-   * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-launch-templates.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * LaunchTemplateSpecificationProperty launchTemplateSpecificationProperty =
-   * LaunchTemplateSpecificationProperty.builder()
-   * .version("version")
-   * // the properties below are optional
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html)
-   */
-  public interface LaunchTemplateSpecificationProperty {
-    /**
-     * The ID of the launch template.
-     *
-     * You must specify the `LaunchTemplateID` or the `LaunchTemplateName` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid)
-     */
-    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-    /**
-     * The name of the launch template.
-     *
-     * You must specify the `LaunchTemplateName` or the `LaunchTemplateID` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename)
-     */
-    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-    /**
-     * The version number of the launch template.
-     *
-     * Specifying `$Latest` or `$Default` for the template version number is not supported. However,
-     * you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the `Fn::GetAtt` intrinsic
-     * function. For more information, see
-     * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
-     * .
-     *
-     *
-     * For an example of using the `Fn::GetAtt` function, see the
-     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
-     * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version)
-     */
-    public fun version(): String
-
-    /**
-     * A builder for [LaunchTemplateSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateID` or the `LaunchTemplateName` , but not both.
-       */
-      public fun launchTemplateId(launchTemplateId: String)
-
-      /**
-       * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateID` , but not both.
-       */
-      public fun launchTemplateName(launchTemplateName: String)
-
-      /**
-       * @param version The version number of the launch template. 
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
-       * .
-       *
-       *
-       * For an example of using the `Fn::GetAtt` function, see the
-       * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
-       * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty.builder()
-
-      /**
-       * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateID` or the `LaunchTemplateName` , but not both.
-       */
-      override fun launchTemplateId(launchTemplateId: String) {
-        cdkBuilder.launchTemplateId(launchTemplateId)
-      }
-
-      /**
-       * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateID` , but not both.
-       */
-      override fun launchTemplateName(launchTemplateName: String) {
-        cdkBuilder.launchTemplateName(launchTemplateName)
-      }
-
-      /**
-       * @param version The version number of the launch template. 
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
-       * .
-       *
-       *
-       * For an example of using the `Fn::GetAtt` function, see the
-       * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
-       * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
-      /**
-       * The ID of the launch template.
-       *
-       * You must specify the `LaunchTemplateID` or the `LaunchTemplateName` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid)
-       */
-      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-      /**
-       * The name of the launch template.
-       *
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateID` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename)
-       */
-      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-      /**
-       * The version number of the launch template.
-       *
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
-       * .
-       *
-       *
-       * For an example of using the `Fn::GetAtt` function, see the
-       * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
-       * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version)
-       */
-      override fun version(): String = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LaunchTemplateSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty):
-          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty
-    }
-  }
-
-  /**
-   * `NetworkInterfaceCountRequest` is a property of the `InstanceRequirements` property of the
-   * [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property type that describes the minimum and maximum number of network interfaces for an instance
-   * type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * NetworkInterfaceCountRequestProperty networkInterfaceCountRequestProperty =
-   * NetworkInterfaceCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html)
-   */
-  public interface NetworkInterfaceCountRequestProperty {
-    /**
-     * The maximum number of network interfaces.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html#cfn-autoscaling-autoscalinggroup-networkinterfacecountrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum number of network interfaces.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html#cfn-autoscaling-autoscalinggroup-networkinterfacecountrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [NetworkInterfaceCountRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum number of network interfaces.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum number of network interfaces.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty.builder()
-
-      /**
-       * @param max The maximum number of network interfaces.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum number of network interfaces.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
-      /**
-       * The maximum number of network interfaces.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html#cfn-autoscaling-autoscalinggroup-networkinterfacecountrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum number of network interfaces.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html#cfn-autoscaling-autoscalinggroup-networkinterfacecountrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NetworkInterfaceCountRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty):
-          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkInterfaceCountRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkInterfaceCountRequestProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty
-    }
-  }
-
-  /**
-   * A structure that specifies a tag for the `Tags` property of
-   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource.
-   *
-   * For more information, see [Tag Auto Scaling groups and
-   * instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the
-   * *Amazon EC2 Auto Scaling User Guide* . You can find a sample template snippet in the
-   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
-   * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
-   *
-   * CloudFormation adds the following tags to all Auto Scaling groups and associated instances:
-   *
-   * * aws:cloudformation:stack-name
-   * * aws:cloudformation:stack-id
-   * * aws:cloudformation:logical-id
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * TagPropertyProperty tagPropertyProperty = TagPropertyProperty.builder()
-   * .key("key")
-   * .propagateAtLaunch(false)
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html)
-   */
-  public interface TagPropertyProperty {
-    /**
-     * The tag key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-key)
-     */
-    public fun key(): String
-
-    /**
-     * Set to `true` if you want CloudFormation to copy the tag to EC2 instances that are launched
-     * as part of the Auto Scaling group.
-     *
-     * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied to
-     * any instances launched as part of the Auto Scaling group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-propagateatlaunch)
-     */
-    public fun propagateAtLaunch(): Any
-
-    /**
-     * The tag value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [TagPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The tag key. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param propagateAtLaunch Set to `true` if you want CloudFormation to copy the tag to EC2
-       * instances that are launched as part of the Auto Scaling group. 
-       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
-       * to any instances launched as part of the Auto Scaling group.
-       */
-      public fun propagateAtLaunch(propagateAtLaunch: Boolean)
-
-      /**
-       * @param propagateAtLaunch Set to `true` if you want CloudFormation to copy the tag to EC2
-       * instances that are launched as part of the Auto Scaling group. 
-       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
-       * to any instances launched as part of the Auto Scaling group.
-       */
-      public fun propagateAtLaunch(propagateAtLaunch: IResolvable)
-
-      /**
-       * @param value The tag value. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty.builder()
-
-      /**
-       * @param key The tag key. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param propagateAtLaunch Set to `true` if you want CloudFormation to copy the tag to EC2
-       * instances that are launched as part of the Auto Scaling group. 
-       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
-       * to any instances launched as part of the Auto Scaling group.
-       */
-      override fun propagateAtLaunch(propagateAtLaunch: Boolean) {
-        cdkBuilder.propagateAtLaunch(propagateAtLaunch)
-      }
-
-      /**
-       * @param propagateAtLaunch Set to `true` if you want CloudFormation to copy the tag to EC2
-       * instances that are launched as part of the Auto Scaling group. 
-       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
-       * to any instances launched as part of the Auto Scaling group.
-       */
-      override fun propagateAtLaunch(propagateAtLaunch: IResolvable) {
-        cdkBuilder.propagateAtLaunch(propagateAtLaunch.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param value The tag value. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty,
-    ) : CdkObject(cdkObject), TagPropertyProperty {
-      /**
-       * The tag key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * Set to `true` if you want CloudFormation to copy the tag to EC2 instances that are launched
-       * as part of the Auto Scaling group.
-       *
-       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
-       * to any instances launched as part of the Auto Scaling group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-propagateatlaunch)
-       */
-      override fun propagateAtLaunch(): Any = unwrap(this).getPropagateAtLaunch()
-
-      /**
-       * The tag value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagPropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty):
-          TagPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? TagPropertyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TagPropertyProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty
-    }
-  }
-
-  /**
-   * `NetworkBandwidthGbpsRequest` is a property of the `InstanceRequirements` property of the
-   * [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property type that describes the minimum and maximum network bandwidth for an instance type, in
-   * Gbps.
-   *
-   *
-   * Setting the minimum bandwidth does not guarantee that your instance will achieve the minimum
-   * bandwidth. Amazon EC2 will identify instance types that support the specified minimum bandwidth,
-   * but the actual bandwidth of your instance might go below the specified minimum at times. For more
-   * information, see [Available instance
-   * bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html#available-instance-bandwidth)
-   * in the *Amazon EC2 User Guide for Linux Instances* .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * NetworkBandwidthGbpsRequestProperty networkBandwidthGbpsRequestProperty =
-   * NetworkBandwidthGbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html)
-   */
-  public interface NetworkBandwidthGbpsRequestProperty {
-    /**
-     * The maximum amount of network bandwidth, in gigabits per second (Gbps).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html#cfn-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of network bandwidth, in gigabits per second (Gbps).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html#cfn-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [NetworkBandwidthGbpsRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of network bandwidth, in gigabits per second (Gbps).
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of network bandwidth, in gigabits per second (Gbps).
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty.builder()
-
-      /**
-       * @param max The maximum amount of network bandwidth, in gigabits per second (Gbps).
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of network bandwidth, in gigabits per second (Gbps).
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty,
-    ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
-      /**
-       * The maximum amount of network bandwidth, in gigabits per second (Gbps).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html#cfn-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of network bandwidth, in gigabits per second (Gbps).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html#cfn-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NetworkBandwidthGbpsRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty):
-          NetworkBandwidthGbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkBandwidthGbpsRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkBandwidthGbpsRequestProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty
-    }
-  }
-
-  /**
-   * `VCpuCountRequest` is a property of the `InstanceRequirements` property of the
-   * [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property type that describes the minimum and maximum number of vCPUs for an instance type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * VCpuCountRequestProperty vCpuCountRequestProperty = VCpuCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html)
-   */
-  public interface VCpuCountRequestProperty {
-    /**
-     * The maximum number of vCPUs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html#cfn-autoscaling-autoscalinggroup-vcpucountrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum number of vCPUs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html#cfn-autoscaling-autoscalinggroup-vcpucountrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [VCpuCountRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum number of vCPUs.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum number of vCPUs.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty.builder()
-
-      /**
-       * @param max The maximum number of vCPUs.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum number of vCPUs.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty,
-    ) : CdkObject(cdkObject), VCpuCountRequestProperty {
-      /**
-       * The maximum number of vCPUs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html#cfn-autoscaling-autoscalinggroup-vcpucountrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum number of vCPUs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html#cfn-autoscaling-autoscalinggroup-vcpucountrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VCpuCountRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty):
-          VCpuCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? VCpuCountRequestProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VCpuCountRequestProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty
-    }
-  }
-
-  /**
    * `AcceleratorCountRequest` is a property of the `InstanceRequirements` property of the
    * [AWS::AutoScaling::AutoScalingGroup
    * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
@@ -3576,11 +2590,11 @@ public open class CfnAutoScalingGroup internal constructor(
   }
 
   /**
-   * `MemoryGiBPerVCpuRequest` is a property of the `InstanceRequirements` property of the
+   * `AcceleratorTotalMemoryMiBRequest` is a property of the `InstanceRequirements` property of the
    * [AWS::AutoScaling::AutoScalingGroup
    * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property type that describes the minimum and maximum amount of memory per vCPU for an instance
-   * type, in GiB.
+   * property type that describes the minimum and maximum total memory size for the accelerators for an
+   * instance type, in MiB.
    *
    * Example:
    *
@@ -3588,128 +2602,115 @@ public open class CfnAutoScalingGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * MemoryGiBPerVCpuRequestProperty memoryGiBPerVCpuRequestProperty =
-   * MemoryGiBPerVCpuRequestProperty.builder()
+   * AcceleratorTotalMemoryMiBRequestProperty acceleratorTotalMemoryMiBRequestProperty =
+   * AcceleratorTotalMemoryMiBRequestProperty.builder()
    * .max(123)
    * .min(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html)
    */
-  public interface MemoryGiBPerVCpuRequestProperty {
+  public interface AcceleratorTotalMemoryMiBRequestProperty {
     /**
-     * The memory maximum in GiB.
+     * The memory maximum in MiB.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html#cfn-autoscaling-autoscalinggroup-memorygibpervcpurequest-max)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html#cfn-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The memory minimum in GiB.
+     * The memory minimum in MiB.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html#cfn-autoscaling-autoscalinggroup-memorygibpervcpurequest-min)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html#cfn-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * A builder for [MemoryGiBPerVCpuRequestProperty]
+     * A builder for [AcceleratorTotalMemoryMiBRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The memory maximum in GiB.
+       * @param max The memory maximum in MiB.
        */
       public fun max(max: Number)
 
       /**
-       * @param min The memory minimum in GiB.
+       * @param min The memory minimum in MiB.
        */
       public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty.builder()
 
       /**
-       * @param max The memory maximum in GiB.
+       * @param max The memory maximum in MiB.
        */
       override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
       /**
-       * @param min The memory minimum in GiB.
+       * @param min The memory minimum in MiB.
        */
       override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty,
-    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty,
+    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
       /**
-       * The memory maximum in GiB.
+       * The memory maximum in MiB.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html#cfn-autoscaling-autoscalinggroup-memorygibpervcpurequest-max)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html#cfn-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The memory minimum in GiB.
+       * The memory minimum in MiB.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html#cfn-autoscaling-autoscalinggroup-memorygibpervcpurequest-min)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html#cfn-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryGiBPerVCpuRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AcceleratorTotalMemoryMiBRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty):
-          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MemoryGiBPerVCpuRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty):
+          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AcceleratorTotalMemoryMiBRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MemoryGiBPerVCpuRequestProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty
+      internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty
     }
   }
 
   /**
-   * Use this structure to let Amazon EC2 Auto Scaling do the following when the Auto Scaling group
-   * has a mixed instances policy:  - Override the instance type that is specified in the launch
-   * template.
-   *
-   * * Use multiple instance types.
-   *
-   * Specify the instance types that you want, or define your instance requirements instead and let
-   * Amazon EC2 Auto Scaling provision the available instance types that meet your requirements. This
-   * can provide Amazon EC2 Auto Scaling with a larger selection of instance types to choose from when
-   * fulfilling Spot and On-Demand capacities. You can view which instance types are matched before you
-   * apply the instance requirements to your Auto Scaling group.
-   *
-   * After you define your instance requirements, you don't have to keep updating these settings to
-   * get new EC2 instance types automatically. Amazon EC2 Auto Scaling uses the instance requirements
-   * of the Auto Scaling group to determine whether a new EC2 instance type can be used.
-   *
-   * `LaunchTemplateOverrides` is a property of the [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
-   * property type.
+   * `BaselineEbsBandwidthMbpsRequest` is a property of the `InstanceRequirements` property of the
+   * [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+   * property type that describes the minimum and maximum baseline bandwidth performance for an
+   * instance type, in Mbps.
    *
    * Example:
    *
@@ -3717,1321 +2718,117 @@ public open class CfnAutoScalingGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * LaunchTemplateOverridesProperty launchTemplateOverridesProperty =
-   * LaunchTemplateOverridesProperty.builder()
-   * .instanceRequirements(InstanceRequirementsProperty.builder()
-   * .memoryMiB(MemoryMiBRequestProperty.builder()
+   * BaselineEbsBandwidthMbpsRequestProperty baselineEbsBandwidthMbpsRequestProperty =
+   * BaselineEbsBandwidthMbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
-   * .build())
-   * .vCpuCount(VCpuCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * // the properties below are optional
-   * .acceleratorCount(AcceleratorCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
-   * .acceleratorNames(List.of("acceleratorNames"))
-   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorTypes(List.of("acceleratorTypes"))
-   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
-   * .bareMetal("bareMetal")
-   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .burstablePerformance("burstablePerformance")
-   * .cpuManufacturers(List.of("cpuManufacturers"))
-   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
-   * .instanceGenerations(List.of("instanceGenerations"))
-   * .localStorage("localStorage")
-   * .localStorageTypes(List.of("localStorageTypes"))
-   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
-   * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .onDemandMaxPricePercentageOverLowestPrice(123)
-   * .requireHibernateSupport(false)
-   * .spotMaxPricePercentageOverLowestPrice(123)
-   * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .build())
-   * .instanceType("instanceType")
-   * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
-   * .version("version")
-   * // the properties below are optional
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .build())
-   * .weightedCapacity("weightedCapacity")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html)
    */
-  public interface LaunchTemplateOverridesProperty {
+  public interface BaselineEbsBandwidthMbpsRequestProperty {
     /**
-     * The instance requirements.
+     * The maximum value in Mbps.
      *
-     * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then, it
-     * uses your On-Demand and Spot allocation strategies to launch instances from these instance
-     * types.
-     *
-     * You can specify up to four separate sets of instance requirements per Auto Scaling group.
-     * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
-     * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
-     * AMI. Then, create a compatible set of instance requirements for each launch template.
-     *
-     *
-     * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancerequirements)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html#cfn-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest-max)
      */
-    public fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
+    public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The instance type, such as `m3.xlarge` . You must specify an instance type that is supported
-     * in your requested Region and Availability Zones. For more information, see [Instance
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * The minimum value in Mbps.
      *
-     * You can specify up to 40 instance types per Auto Scaling group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancetype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html#cfn-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest-min)
      */
-    public fun instanceType(): String? = unwrap(this).getInstanceType()
+    public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * Provides a launch template for the specified instance type or set of instance requirements.
-     *
-     * For example, some instance types might require a launch template with a different AMI. If not
-     * provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
-     * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
-     * for an instance
-     * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
-     * in the *Amazon EC2 Auto Scaling User Guide* .
-     *
-     * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
-     * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-launchtemplatespecification)
-     */
-    public fun launchTemplateSpecification(): Any? = unwrap(this).getLaunchTemplateSpecification()
-
-    /**
-     * If you provide a list of instance types to use, you can specify the number of capacity units
-     * provided by each instance type in terms of virtual CPUs, memory, storage, throughput, or other
-     * relative performance characteristic.
-     *
-     * When a Spot or On-Demand Instance is launched, the capacity units count toward the desired
-     * capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally
-     * fulfilled, even if this results in an overage. For example, if there are two units remaining to
-     * fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
-     * `WeightedCapacity` of five units, the instance is launched, and the desired capacity is exceeded
-     * by three units. For more information, see [Configure instance weighting for Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html)
-     * in the *Amazon EC2 Auto Scaling User Guide* . Value must be in the range of 1-999.
-     *
-     * If you specify a value for `WeightedCapacity` for one instance type, you must specify a value
-     * for `WeightedCapacity` for all of them.
-     *
-     *
-     * Every Auto Scaling group has three size parameters ( `DesiredCapacity` , `MaxSize` , and
-     * `MinSize` ). Usually, you set these sizes based on a specific number of instances. However, if
-     * you configure a mixed instances policy that defines weights for the instance types, you must
-     * specify these sizes with the same units that you use for weighting instances.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity)
-     */
-    public fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
-
-    /**
-     * A builder for [LaunchTemplateOverridesProperty]
+     * A builder for [BaselineEbsBandwidthMbpsRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param instanceRequirements The instance requirements.
-       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
-       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
-       * types.
-       *
-       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
-       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
-       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
-       * AMI. Then, create a compatible set of instance requirements for each launch template.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+       * @param max The maximum value in Mbps.
        */
-      public fun instanceRequirements(instanceRequirements: IResolvable)
+      public fun max(max: Number)
 
       /**
-       * @param instanceRequirements The instance requirements.
-       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
-       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
-       * types.
-       *
-       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
-       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
-       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
-       * AMI. Then, create a compatible set of instance requirements for each launch template.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+       * @param min The minimum value in Mbps.
        */
-      public fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty)
-
-      /**
-       * @param instanceRequirements The instance requirements.
-       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
-       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
-       * types.
-       *
-       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
-       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
-       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
-       * AMI. Then, create a compatible set of instance requirements for each launch template.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("94f4ea0c74ec4495738121b8d42fa540ee0b3090a922cc85121645d3598842f2")
-      public
-          fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit)
-
-      /**
-       * @param instanceType The instance type, such as `m3.xlarge` . You must specify an instance
-       * type that is supported in your requested Region and Availability Zones. For more information,
-       * see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
-       * You can specify up to 40 instance types per Auto Scaling group.
-       */
-      public fun instanceType(instanceType: String)
-
-      /**
-       * @param launchTemplateSpecification Provides a launch template for the specified instance
-       * type or set of instance requirements.
-       * For example, some instance types might require a launch template with a different AMI. If
-       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
-       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
-       * for an instance
-       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       *
-       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
-       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
-       */
-      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable)
-
-      /**
-       * @param launchTemplateSpecification Provides a launch template for the specified instance
-       * type or set of instance requirements.
-       * For example, some instance types might require a launch template with a different AMI. If
-       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
-       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
-       * for an instance
-       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       *
-       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
-       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
-       */
-      public
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty)
-
-      /**
-       * @param launchTemplateSpecification Provides a launch template for the specified instance
-       * type or set of instance requirements.
-       * For example, some instance types might require a launch template with a different AMI. If
-       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
-       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
-       * for an instance
-       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       *
-       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
-       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bfadd002dc80530ce8daf12a2dd7485c3550a7438eb96f083b1fd2313b9aa4a2")
-      public
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param weightedCapacity If you provide a list of instance types to use, you can specify the
-       * number of capacity units provided by each instance type in terms of virtual CPUs, memory,
-       * storage, throughput, or other relative performance characteristic.
-       * When a Spot or On-Demand Instance is launched, the capacity units count toward the desired
-       * capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally
-       * fulfilled, even if this results in an overage. For example, if there are two units remaining
-       * to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
-       * `WeightedCapacity` of five units, the instance is launched, and the desired capacity is
-       * exceeded by three units. For more information, see [Configure instance weighting for Amazon
-       * EC2 Auto
-       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* . Value must be in the range of 1-999.
-       *
-       * If you specify a value for `WeightedCapacity` for one instance type, you must specify a
-       * value for `WeightedCapacity` for all of them.
-       *
-       *
-       * Every Auto Scaling group has three size parameters ( `DesiredCapacity` , `MaxSize` , and
-       * `MinSize` ). Usually, you set these sizes based on a specific number of instances. However, if
-       * you configure a mixed instances policy that defines weights for the instance types, you must
-       * specify these sizes with the same units that you use for weighting instances.
-       */
-      public fun weightedCapacity(weightedCapacity: String)
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty.builder()
 
       /**
-       * @param instanceRequirements The instance requirements.
-       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
-       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
-       * types.
-       *
-       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
-       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
-       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
-       * AMI. Then, create a compatible set of instance requirements for each launch template.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+       * @param max The maximum value in Mbps.
        */
-      override fun instanceRequirements(instanceRequirements: IResolvable) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
       }
 
       /**
-       * @param instanceRequirements The instance requirements.
-       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
-       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
-       * types.
-       *
-       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
-       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
-       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
-       * AMI. Then, create a compatible set of instance requirements for each launch template.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+       * @param min The minimum value in Mbps.
        */
-      override fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsProperty::unwrap))
-      }
-
-      /**
-       * @param instanceRequirements The instance requirements.
-       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
-       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
-       * types.
-       *
-       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
-       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
-       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
-       * AMI. Then, create a compatible set of instance requirements for each launch template.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("94f4ea0c74ec4495738121b8d42fa540ee0b3090a922cc85121645d3598842f2")
-      override
-          fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit):
-          Unit = instanceRequirements(InstanceRequirementsProperty(instanceRequirements))
-
-      /**
-       * @param instanceType The instance type, such as `m3.xlarge` . You must specify an instance
-       * type that is supported in your requested Region and Availability Zones. For more information,
-       * see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
-       * You can specify up to 40 instance types per Auto Scaling group.
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      /**
-       * @param launchTemplateSpecification Provides a launch template for the specified instance
-       * type or set of instance requirements.
-       * For example, some instance types might require a launch template with a different AMI. If
-       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
-       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
-       * for an instance
-       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       *
-       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
-       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
-       */
-      override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param launchTemplateSpecification Provides a launch template for the specified instance
-       * type or set of instance requirements.
-       * For example, some instance types might require a launch template with a different AMI. If
-       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
-       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
-       * for an instance
-       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       *
-       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
-       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
-       */
-      override
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param launchTemplateSpecification Provides a launch template for the specified instance
-       * type or set of instance requirements.
-       * For example, some instance types might require a launch template with a different AMI. If
-       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
-       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
-       * for an instance
-       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       *
-       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
-       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bfadd002dc80530ce8daf12a2dd7485c3550a7438eb96f083b1fd2313b9aa4a2")
-      override
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          launchTemplateSpecification(LaunchTemplateSpecificationProperty(launchTemplateSpecification))
-
-      /**
-       * @param weightedCapacity If you provide a list of instance types to use, you can specify the
-       * number of capacity units provided by each instance type in terms of virtual CPUs, memory,
-       * storage, throughput, or other relative performance characteristic.
-       * When a Spot or On-Demand Instance is launched, the capacity units count toward the desired
-       * capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally
-       * fulfilled, even if this results in an overage. For example, if there are two units remaining
-       * to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
-       * `WeightedCapacity` of five units, the instance is launched, and the desired capacity is
-       * exceeded by three units. For more information, see [Configure instance weighting for Amazon
-       * EC2 Auto
-       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* . Value must be in the range of 1-999.
-       *
-       * If you specify a value for `WeightedCapacity` for one instance type, you must specify a
-       * value for `WeightedCapacity` for all of them.
-       *
-       *
-       * Every Auto Scaling group has three size parameters ( `DesiredCapacity` , `MaxSize` , and
-       * `MinSize` ). Usually, you set these sizes based on a specific number of instances. However, if
-       * you configure a mixed instances policy that defines weights for the instance types, you must
-       * specify these sizes with the same units that you use for weighting instances.
-       */
-      override fun weightedCapacity(weightedCapacity: String) {
-        cdkBuilder.weightedCapacity(weightedCapacity)
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
       }
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateOverridesProperty {
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty,
+    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
       /**
-       * The instance requirements.
+       * The maximum value in Mbps.
        *
-       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
-       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
-       * types.
-       *
-       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
-       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
-       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
-       * AMI. Then, create a compatible set of instance requirements for each launch template.
-       *
-       *
-       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancerequirements)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html#cfn-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest-max)
        */
-      override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
+      override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The instance type, such as `m3.xlarge` . You must specify an instance type that is
-       * supported in your requested Region and Availability Zones. For more information, see [Instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * The minimum value in Mbps.
        *
-       * You can specify up to 40 instance types per Auto Scaling group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancetype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html#cfn-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest-min)
        */
-      override fun instanceType(): String? = unwrap(this).getInstanceType()
-
-      /**
-       * Provides a launch template for the specified instance type or set of instance requirements.
-       *
-       * For example, some instance types might require a launch template with a different AMI. If
-       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
-       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
-       * for an instance
-       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       *
-       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
-       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-launchtemplatespecification)
-       */
-      override fun launchTemplateSpecification(): Any? =
-          unwrap(this).getLaunchTemplateSpecification()
-
-      /**
-       * If you provide a list of instance types to use, you can specify the number of capacity
-       * units provided by each instance type in terms of virtual CPUs, memory, storage, throughput, or
-       * other relative performance characteristic.
-       *
-       * When a Spot or On-Demand Instance is launched, the capacity units count toward the desired
-       * capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally
-       * fulfilled, even if this results in an overage. For example, if there are two units remaining
-       * to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
-       * `WeightedCapacity` of five units, the instance is launched, and the desired capacity is
-       * exceeded by three units. For more information, see [Configure instance weighting for Amazon
-       * EC2 Auto
-       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html)
-       * in the *Amazon EC2 Auto Scaling User Guide* . Value must be in the range of 1-999.
-       *
-       * If you specify a value for `WeightedCapacity` for one instance type, you must specify a
-       * value for `WeightedCapacity` for all of them.
-       *
-       *
-       * Every Auto Scaling group has three size parameters ( `DesiredCapacity` , `MaxSize` , and
-       * `MinSize` ). Usually, you set these sizes based on a specific number of instances. However, if
-       * you configure a mixed instances policy that defines weights for the instance types, you must
-       * specify these sizes with the same units that you use for weighting instances.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity)
-       */
-      override fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchTemplateOverridesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty):
-          LaunchTemplateOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LaunchTemplateOverridesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchTemplateOverridesProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty
-    }
-  }
-
-  /**
-   * Use this structure to specify the distribution of On-Demand Instances and Spot Instances and
-   * the allocation strategies used to fulfill On-Demand and Spot capacities for a mixed instances
-   * policy.
-   *
-   * For more information, see [Auto Scaling groups with multiple instance types and purchase
-   * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html)
-   * in the *Amazon EC2 Auto Scaling User Guide* .
-   *
-   * `InstancesDistribution` is a property of the [AWS::AutoScaling::AutoScalingGroup
-   * MixedInstancesPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * InstancesDistributionProperty instancesDistributionProperty =
-   * InstancesDistributionProperty.builder()
-   * .onDemandAllocationStrategy("onDemandAllocationStrategy")
-   * .onDemandBaseCapacity(123)
-   * .onDemandPercentageAboveBaseCapacity(123)
-   * .spotAllocationStrategy("spotAllocationStrategy")
-   * .spotInstancePools(123)
-   * .spotMaxPrice("spotMaxPrice")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html)
-   */
-  public interface InstancesDistributionProperty {
-    /**
-     * The allocation strategy to apply to your On-Demand Instances when they are launched.
-     *
-     * Possible instance types are determined by the launch template overrides that you specify.
-     *
-     * The following lists the valid values:
-     *
-     * * **lowest-price** - Uses price to determine which instance types are the highest priority,
-     * launching the lowest priced instance types within an Availability Zone first. This is the
-     * default value for Auto Scaling groups that specify `InstanceRequirements` .
-     * * **prioritized** - You set the order of instance types for the launch template overrides
-     * from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling
-     * launches your highest priority instance types first. If all your On-Demand capacity cannot be
-     * fulfilled using your highest priority instance type, then Amazon EC2 Auto Scaling launches the
-     * remaining capacity using the second priority instance type, and so on. This is the default value
-     * for Auto Scaling groups that don't specify `InstanceRequirements` and cannot be used for groups
-     * that do.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandallocationstrategy)
-     */
-    public fun onDemandAllocationStrategy(): String? = unwrap(this).getOnDemandAllocationStrategy()
-
-    /**
-     * The minimum amount of the Auto Scaling group's capacity that must be fulfilled by On-Demand
-     * Instances.
-     *
-     * This base portion is launched first as your group scales.
-     *
-     * This number has the same unit of measurement as the group's desired capacity. If you change
-     * the default unit of measurement (number of instances) by specifying weighted capacity values in
-     * your launch template overrides list, or by changing the default desired capacity type setting of
-     * the group, you must specify this number using the same unit of measurement.
-     *
-     * Default: 0
-     *
-     *
-     * An update to this setting means a gradual replacement of instances to adjust the current
-     * On-Demand Instance levels. When replacing instances, Amazon EC2 Auto Scaling launches new
-     * instances before terminating the previous ones.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandbasecapacity)
-     */
-    public fun onDemandBaseCapacity(): Number? = unwrap(this).getOnDemandBaseCapacity()
-
-    /**
-     * Controls the percentages of On-Demand Instances and Spot Instances for your additional
-     * capacity beyond `OnDemandBaseCapacity` .
-     *
-     * Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot
-     * Instances). If set to 100, only On-Demand Instances are used.
-     *
-     * Default: 100
-     *
-     *
-     * An update to this setting means a gradual replacement of instances to adjust the current
-     * On-Demand and Spot Instance levels for your additional capacity higher than the base capacity.
-     * When replacing instances, Amazon EC2 Auto Scaling launches new instances before terminating the
-     * previous ones.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandpercentageabovebasecapacity)
-     */
-    public fun onDemandPercentageAboveBaseCapacity(): Number? =
-        unwrap(this).getOnDemandPercentageAboveBaseCapacity()
-
-    /**
-     * The allocation strategy to apply to your Spot Instances when they are launched.
-     *
-     * Possible instance types are determined by the launch template overrides that you specify.
-     *
-     * The following lists the valid values:
-     *
-     * * **capacity-optimized** - Requests Spot Instances using pools that are optimally chosen
-     * based on the available Spot capacity. This strategy has the lowest risk of interruption. To give
-     * certain instance types a higher chance of launching first, use `capacity-optimized-prioritized`
-     * .
-     * * **capacity-optimized-prioritized** - You set the order of instance types for the launch
-     * template overrides from highest to lowest priority (from first to last in the list). Amazon EC2
-     * Auto Scaling honors the instance type priorities on a best effort basis but optimizes for
-     * capacity first. Note that if the On-Demand allocation strategy is set to `prioritized` , the
-     * same priority is applied when fulfilling On-Demand capacity. This is not a valid value for Auto
-     * Scaling groups that specify `InstanceRequirements` .
-     * * **lowest-price** - Requests Spot Instances using the lowest priced pools within an
-     * Availability Zone, across the number of Spot pools that you specify for the `SpotInstancePools`
-     * property. To ensure that your desired capacity is met, you might receive Spot Instances from
-     * several pools. This is the default value, but it might lead to high interruption rates because
-     * this strategy only considers instance price and not available capacity.
-     * * **price-capacity-optimized (recommended)** - The price and capacity optimized allocation
-     * strategy looks at both price and capacity to select the Spot Instance pools that are the least
-     * likely to be interrupted and have the lowest possible price.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotallocationstrategy)
-     */
-    public fun spotAllocationStrategy(): String? = unwrap(this).getSpotAllocationStrategy()
-
-    /**
-     * The number of Spot Instance pools across which to allocate your Spot Instances.
-     *
-     * The Spot pools are determined from the different instance types in the overrides. Valid only
-     * when the `SpotAllocationStrategy` is `lowest-price` . Value must be in the range of 1–20.
-     *
-     * Default: 2
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotinstancepools)
-     */
-    public fun spotInstancePools(): Number? = unwrap(this).getSpotInstancePools()
-
-    /**
-     * The maximum price per unit hour that you are willing to pay for a Spot Instance.
-     *
-     * If your maximum price is lower than the Spot price for the instance types that you selected,
-     * your Spot Instances are not launched. We do not recommend specifying a maximum price because it
-     * can lead to increased interruptions. When Spot Instances launch, you pay the current Spot price.
-     * To remove a maximum price that you previously set, include the property but specify an empty
-     * string ("") for the value.
-     *
-     *
-     * If you specify a maximum price, your instances will be interrupted more frequently than if
-     * you do not specify one.
-     *
-     *
-     * Valid Range: Minimum value of 0.001
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotmaxprice)
-     */
-    public fun spotMaxPrice(): String? = unwrap(this).getSpotMaxPrice()
-
-    /**
-     * A builder for [InstancesDistributionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param onDemandAllocationStrategy The allocation strategy to apply to your On-Demand
-       * Instances when they are launched.
-       * Possible instance types are determined by the launch template overrides that you specify.
-       *
-       * The following lists the valid values:
-       *
-       * * **lowest-price** - Uses price to determine which instance types are the highest priority,
-       * launching the lowest priced instance types within an Availability Zone first. This is the
-       * default value for Auto Scaling groups that specify `InstanceRequirements` .
-       * * **prioritized** - You set the order of instance types for the launch template overrides
-       * from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling
-       * launches your highest priority instance types first. If all your On-Demand capacity cannot be
-       * fulfilled using your highest priority instance type, then Amazon EC2 Auto Scaling launches the
-       * remaining capacity using the second priority instance type, and so on. This is the default
-       * value for Auto Scaling groups that don't specify `InstanceRequirements` and cannot be used for
-       * groups that do.
-       */
-      public fun onDemandAllocationStrategy(onDemandAllocationStrategy: String)
-
-      /**
-       * @param onDemandBaseCapacity The minimum amount of the Auto Scaling group's capacity that
-       * must be fulfilled by On-Demand Instances.
-       * This base portion is launched first as your group scales.
-       *
-       * This number has the same unit of measurement as the group's desired capacity. If you change
-       * the default unit of measurement (number of instances) by specifying weighted capacity values
-       * in your launch template overrides list, or by changing the default desired capacity type
-       * setting of the group, you must specify this number using the same unit of measurement.
-       *
-       * Default: 0
-       *
-       *
-       * An update to this setting means a gradual replacement of instances to adjust the current
-       * On-Demand Instance levels. When replacing instances, Amazon EC2 Auto Scaling launches new
-       * instances before terminating the previous ones.
-       */
-      public fun onDemandBaseCapacity(onDemandBaseCapacity: Number)
-
-      /**
-       * @param onDemandPercentageAboveBaseCapacity Controls the percentages of On-Demand Instances
-       * and Spot Instances for your additional capacity beyond `OnDemandBaseCapacity` .
-       * Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot
-       * Instances). If set to 100, only On-Demand Instances are used.
-       *
-       * Default: 100
-       *
-       *
-       * An update to this setting means a gradual replacement of instances to adjust the current
-       * On-Demand and Spot Instance levels for your additional capacity higher than the base capacity.
-       * When replacing instances, Amazon EC2 Auto Scaling launches new instances before terminating
-       * the previous ones.
-       */
-      public fun onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity: Number)
-
-      /**
-       * @param spotAllocationStrategy The allocation strategy to apply to your Spot Instances when
-       * they are launched.
-       * Possible instance types are determined by the launch template overrides that you specify.
-       *
-       * The following lists the valid values:
-       *
-       * * **capacity-optimized** - Requests Spot Instances using pools that are optimally chosen
-       * based on the available Spot capacity. This strategy has the lowest risk of interruption. To
-       * give certain instance types a higher chance of launching first, use
-       * `capacity-optimized-prioritized` .
-       * * **capacity-optimized-prioritized** - You set the order of instance types for the launch
-       * template overrides from highest to lowest priority (from first to last in the list). Amazon
-       * EC2 Auto Scaling honors the instance type priorities on a best effort basis but optimizes for
-       * capacity first. Note that if the On-Demand allocation strategy is set to `prioritized` , the
-       * same priority is applied when fulfilling On-Demand capacity. This is not a valid value for
-       * Auto Scaling groups that specify `InstanceRequirements` .
-       * * **lowest-price** - Requests Spot Instances using the lowest priced pools within an
-       * Availability Zone, across the number of Spot pools that you specify for the
-       * `SpotInstancePools` property. To ensure that your desired capacity is met, you might receive
-       * Spot Instances from several pools. This is the default value, but it might lead to high
-       * interruption rates because this strategy only considers instance price and not available
-       * capacity.
-       * * **price-capacity-optimized (recommended)** - The price and capacity optimized allocation
-       * strategy looks at both price and capacity to select the Spot Instance pools that are the least
-       * likely to be interrupted and have the lowest possible price.
-       */
-      public fun spotAllocationStrategy(spotAllocationStrategy: String)
-
-      /**
-       * @param spotInstancePools The number of Spot Instance pools across which to allocate your
-       * Spot Instances.
-       * The Spot pools are determined from the different instance types in the overrides. Valid
-       * only when the `SpotAllocationStrategy` is `lowest-price` . Value must be in the range of 1–20.
-       *
-       * Default: 2
-       */
-      public fun spotInstancePools(spotInstancePools: Number)
-
-      /**
-       * @param spotMaxPrice The maximum price per unit hour that you are willing to pay for a Spot
-       * Instance.
-       * If your maximum price is lower than the Spot price for the instance types that you
-       * selected, your Spot Instances are not launched. We do not recommend specifying a maximum price
-       * because it can lead to increased interruptions. When Spot Instances launch, you pay the
-       * current Spot price. To remove a maximum price that you previously set, include the property
-       * but specify an empty string ("") for the value.
-       *
-       *
-       * If you specify a maximum price, your instances will be interrupted more frequently than if
-       * you do not specify one.
-       *
-       *
-       * Valid Range: Minimum value of 0.001
-       */
-      public fun spotMaxPrice(spotMaxPrice: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty.builder()
-
-      /**
-       * @param onDemandAllocationStrategy The allocation strategy to apply to your On-Demand
-       * Instances when they are launched.
-       * Possible instance types are determined by the launch template overrides that you specify.
-       *
-       * The following lists the valid values:
-       *
-       * * **lowest-price** - Uses price to determine which instance types are the highest priority,
-       * launching the lowest priced instance types within an Availability Zone first. This is the
-       * default value for Auto Scaling groups that specify `InstanceRequirements` .
-       * * **prioritized** - You set the order of instance types for the launch template overrides
-       * from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling
-       * launches your highest priority instance types first. If all your On-Demand capacity cannot be
-       * fulfilled using your highest priority instance type, then Amazon EC2 Auto Scaling launches the
-       * remaining capacity using the second priority instance type, and so on. This is the default
-       * value for Auto Scaling groups that don't specify `InstanceRequirements` and cannot be used for
-       * groups that do.
-       */
-      override fun onDemandAllocationStrategy(onDemandAllocationStrategy: String) {
-        cdkBuilder.onDemandAllocationStrategy(onDemandAllocationStrategy)
-      }
-
-      /**
-       * @param onDemandBaseCapacity The minimum amount of the Auto Scaling group's capacity that
-       * must be fulfilled by On-Demand Instances.
-       * This base portion is launched first as your group scales.
-       *
-       * This number has the same unit of measurement as the group's desired capacity. If you change
-       * the default unit of measurement (number of instances) by specifying weighted capacity values
-       * in your launch template overrides list, or by changing the default desired capacity type
-       * setting of the group, you must specify this number using the same unit of measurement.
-       *
-       * Default: 0
-       *
-       *
-       * An update to this setting means a gradual replacement of instances to adjust the current
-       * On-Demand Instance levels. When replacing instances, Amazon EC2 Auto Scaling launches new
-       * instances before terminating the previous ones.
-       */
-      override fun onDemandBaseCapacity(onDemandBaseCapacity: Number) {
-        cdkBuilder.onDemandBaseCapacity(onDemandBaseCapacity)
-      }
-
-      /**
-       * @param onDemandPercentageAboveBaseCapacity Controls the percentages of On-Demand Instances
-       * and Spot Instances for your additional capacity beyond `OnDemandBaseCapacity` .
-       * Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot
-       * Instances). If set to 100, only On-Demand Instances are used.
-       *
-       * Default: 100
-       *
-       *
-       * An update to this setting means a gradual replacement of instances to adjust the current
-       * On-Demand and Spot Instance levels for your additional capacity higher than the base capacity.
-       * When replacing instances, Amazon EC2 Auto Scaling launches new instances before terminating
-       * the previous ones.
-       */
-      override
-          fun onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity: Number) {
-        cdkBuilder.onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity)
-      }
-
-      /**
-       * @param spotAllocationStrategy The allocation strategy to apply to your Spot Instances when
-       * they are launched.
-       * Possible instance types are determined by the launch template overrides that you specify.
-       *
-       * The following lists the valid values:
-       *
-       * * **capacity-optimized** - Requests Spot Instances using pools that are optimally chosen
-       * based on the available Spot capacity. This strategy has the lowest risk of interruption. To
-       * give certain instance types a higher chance of launching first, use
-       * `capacity-optimized-prioritized` .
-       * * **capacity-optimized-prioritized** - You set the order of instance types for the launch
-       * template overrides from highest to lowest priority (from first to last in the list). Amazon
-       * EC2 Auto Scaling honors the instance type priorities on a best effort basis but optimizes for
-       * capacity first. Note that if the On-Demand allocation strategy is set to `prioritized` , the
-       * same priority is applied when fulfilling On-Demand capacity. This is not a valid value for
-       * Auto Scaling groups that specify `InstanceRequirements` .
-       * * **lowest-price** - Requests Spot Instances using the lowest priced pools within an
-       * Availability Zone, across the number of Spot pools that you specify for the
-       * `SpotInstancePools` property. To ensure that your desired capacity is met, you might receive
-       * Spot Instances from several pools. This is the default value, but it might lead to high
-       * interruption rates because this strategy only considers instance price and not available
-       * capacity.
-       * * **price-capacity-optimized (recommended)** - The price and capacity optimized allocation
-       * strategy looks at both price and capacity to select the Spot Instance pools that are the least
-       * likely to be interrupted and have the lowest possible price.
-       */
-      override fun spotAllocationStrategy(spotAllocationStrategy: String) {
-        cdkBuilder.spotAllocationStrategy(spotAllocationStrategy)
-      }
-
-      /**
-       * @param spotInstancePools The number of Spot Instance pools across which to allocate your
-       * Spot Instances.
-       * The Spot pools are determined from the different instance types in the overrides. Valid
-       * only when the `SpotAllocationStrategy` is `lowest-price` . Value must be in the range of 1–20.
-       *
-       * Default: 2
-       */
-      override fun spotInstancePools(spotInstancePools: Number) {
-        cdkBuilder.spotInstancePools(spotInstancePools)
-      }
-
-      /**
-       * @param spotMaxPrice The maximum price per unit hour that you are willing to pay for a Spot
-       * Instance.
-       * If your maximum price is lower than the Spot price for the instance types that you
-       * selected, your Spot Instances are not launched. We do not recommend specifying a maximum price
-       * because it can lead to increased interruptions. When Spot Instances launch, you pay the
-       * current Spot price. To remove a maximum price that you previously set, include the property
-       * but specify an empty string ("") for the value.
-       *
-       *
-       * If you specify a maximum price, your instances will be interrupted more frequently than if
-       * you do not specify one.
-       *
-       *
-       * Valid Range: Minimum value of 0.001
-       */
-      override fun spotMaxPrice(spotMaxPrice: String) {
-        cdkBuilder.spotMaxPrice(spotMaxPrice)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty,
-    ) : CdkObject(cdkObject), InstancesDistributionProperty {
-      /**
-       * The allocation strategy to apply to your On-Demand Instances when they are launched.
-       *
-       * Possible instance types are determined by the launch template overrides that you specify.
-       *
-       * The following lists the valid values:
-       *
-       * * **lowest-price** - Uses price to determine which instance types are the highest priority,
-       * launching the lowest priced instance types within an Availability Zone first. This is the
-       * default value for Auto Scaling groups that specify `InstanceRequirements` .
-       * * **prioritized** - You set the order of instance types for the launch template overrides
-       * from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling
-       * launches your highest priority instance types first. If all your On-Demand capacity cannot be
-       * fulfilled using your highest priority instance type, then Amazon EC2 Auto Scaling launches the
-       * remaining capacity using the second priority instance type, and so on. This is the default
-       * value for Auto Scaling groups that don't specify `InstanceRequirements` and cannot be used for
-       * groups that do.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandallocationstrategy)
-       */
-      override fun onDemandAllocationStrategy(): String? =
-          unwrap(this).getOnDemandAllocationStrategy()
-
-      /**
-       * The minimum amount of the Auto Scaling group's capacity that must be fulfilled by On-Demand
-       * Instances.
-       *
-       * This base portion is launched first as your group scales.
-       *
-       * This number has the same unit of measurement as the group's desired capacity. If you change
-       * the default unit of measurement (number of instances) by specifying weighted capacity values
-       * in your launch template overrides list, or by changing the default desired capacity type
-       * setting of the group, you must specify this number using the same unit of measurement.
-       *
-       * Default: 0
-       *
-       *
-       * An update to this setting means a gradual replacement of instances to adjust the current
-       * On-Demand Instance levels. When replacing instances, Amazon EC2 Auto Scaling launches new
-       * instances before terminating the previous ones.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandbasecapacity)
-       */
-      override fun onDemandBaseCapacity(): Number? = unwrap(this).getOnDemandBaseCapacity()
-
-      /**
-       * Controls the percentages of On-Demand Instances and Spot Instances for your additional
-       * capacity beyond `OnDemandBaseCapacity` .
-       *
-       * Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot
-       * Instances). If set to 100, only On-Demand Instances are used.
-       *
-       * Default: 100
-       *
-       *
-       * An update to this setting means a gradual replacement of instances to adjust the current
-       * On-Demand and Spot Instance levels for your additional capacity higher than the base capacity.
-       * When replacing instances, Amazon EC2 Auto Scaling launches new instances before terminating
-       * the previous ones.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandpercentageabovebasecapacity)
-       */
-      override fun onDemandPercentageAboveBaseCapacity(): Number? =
-          unwrap(this).getOnDemandPercentageAboveBaseCapacity()
-
-      /**
-       * The allocation strategy to apply to your Spot Instances when they are launched.
-       *
-       * Possible instance types are determined by the launch template overrides that you specify.
-       *
-       * The following lists the valid values:
-       *
-       * * **capacity-optimized** - Requests Spot Instances using pools that are optimally chosen
-       * based on the available Spot capacity. This strategy has the lowest risk of interruption. To
-       * give certain instance types a higher chance of launching first, use
-       * `capacity-optimized-prioritized` .
-       * * **capacity-optimized-prioritized** - You set the order of instance types for the launch
-       * template overrides from highest to lowest priority (from first to last in the list). Amazon
-       * EC2 Auto Scaling honors the instance type priorities on a best effort basis but optimizes for
-       * capacity first. Note that if the On-Demand allocation strategy is set to `prioritized` , the
-       * same priority is applied when fulfilling On-Demand capacity. This is not a valid value for
-       * Auto Scaling groups that specify `InstanceRequirements` .
-       * * **lowest-price** - Requests Spot Instances using the lowest priced pools within an
-       * Availability Zone, across the number of Spot pools that you specify for the
-       * `SpotInstancePools` property. To ensure that your desired capacity is met, you might receive
-       * Spot Instances from several pools. This is the default value, but it might lead to high
-       * interruption rates because this strategy only considers instance price and not available
-       * capacity.
-       * * **price-capacity-optimized (recommended)** - The price and capacity optimized allocation
-       * strategy looks at both price and capacity to select the Spot Instance pools that are the least
-       * likely to be interrupted and have the lowest possible price.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotallocationstrategy)
-       */
-      override fun spotAllocationStrategy(): String? = unwrap(this).getSpotAllocationStrategy()
-
-      /**
-       * The number of Spot Instance pools across which to allocate your Spot Instances.
-       *
-       * The Spot pools are determined from the different instance types in the overrides. Valid
-       * only when the `SpotAllocationStrategy` is `lowest-price` . Value must be in the range of 1–20.
-       *
-       * Default: 2
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotinstancepools)
-       */
-      override fun spotInstancePools(): Number? = unwrap(this).getSpotInstancePools()
-
-      /**
-       * The maximum price per unit hour that you are willing to pay for a Spot Instance.
-       *
-       * If your maximum price is lower than the Spot price for the instance types that you
-       * selected, your Spot Instances are not launched. We do not recommend specifying a maximum price
-       * because it can lead to increased interruptions. When Spot Instances launch, you pay the
-       * current Spot price. To remove a maximum price that you previously set, include the property
-       * but specify an empty string ("") for the value.
-       *
-       *
-       * If you specify a maximum price, your instances will be interrupted more frequently than if
-       * you do not specify one.
-       *
-       *
-       * Valid Range: Minimum value of 0.001
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotmaxprice)
-       */
-      override fun spotMaxPrice(): String? = unwrap(this).getSpotMaxPrice()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstancesDistributionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty):
-          InstancesDistributionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstancesDistributionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstancesDistributionProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty
-    }
-  }
-
-  /**
-   * A structure that specifies an Amazon SNS notification configuration for the
-   * `NotificationConfigurations` property of the
-   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource.
-   *
-   * For an example template snippet, see [Configure Amazon EC2 Auto Scaling
-   * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
-   * .
-   *
-   * For more information, see [Get Amazon SNS notifications when your Auto Scaling group
-   * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
-   * *Amazon EC2 Auto Scaling User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * NotificationConfigurationProperty notificationConfigurationProperty =
-   * NotificationConfigurationProperty.builder()
-   * .topicArn("topicArn")
-   * // the properties below are optional
-   * .notificationTypes(List.of("notificationTypes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html)
-   */
-  public interface NotificationConfigurationProperty {
-    /**
-     * A list of event types that send a notification. Event types can include any of the following
-     * types.
-     *
-     * *Allowed values* :
-     *
-     * * `autoscaling:EC2_INSTANCE_LAUNCH`
-     * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
-     * * `autoscaling:EC2_INSTANCE_TERMINATE`
-     * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
-     * * `autoscaling:TEST_NOTIFICATION`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration-notificationtypes)
-     */
-    public fun notificationTypes(): List<String> = unwrap(this).getNotificationTypes() ?:
-        emptyList()
-
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration-topicarn)
-     */
-    public fun topicArn(): String
-
-    /**
-     * A builder for [NotificationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param notificationTypes A list of event types that send a notification. Event types can
-       * include any of the following types.
-       * *Allowed values* :
-       *
-       * * `autoscaling:EC2_INSTANCE_LAUNCH`
-       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
-       * * `autoscaling:TEST_NOTIFICATION`
-       */
-      public fun notificationTypes(notificationTypes: List<String>)
-
-      /**
-       * @param notificationTypes A list of event types that send a notification. Event types can
-       * include any of the following types.
-       * *Allowed values* :
-       *
-       * * `autoscaling:EC2_INSTANCE_LAUNCH`
-       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
-       * * `autoscaling:TEST_NOTIFICATION`
-       */
-      public fun notificationTypes(vararg notificationTypes: String)
-
-      /**
-       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. 
-       */
-      public fun topicArn(topicArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty.builder()
-
-      /**
-       * @param notificationTypes A list of event types that send a notification. Event types can
-       * include any of the following types.
-       * *Allowed values* :
-       *
-       * * `autoscaling:EC2_INSTANCE_LAUNCH`
-       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
-       * * `autoscaling:TEST_NOTIFICATION`
-       */
-      override fun notificationTypes(notificationTypes: List<String>) {
-        cdkBuilder.notificationTypes(notificationTypes)
-      }
-
-      /**
-       * @param notificationTypes A list of event types that send a notification. Event types can
-       * include any of the following types.
-       * *Allowed values* :
-       *
-       * * `autoscaling:EC2_INSTANCE_LAUNCH`
-       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
-       * * `autoscaling:TEST_NOTIFICATION`
-       */
-      override fun notificationTypes(vararg notificationTypes: String): Unit =
-          notificationTypes(notificationTypes.toList())
-
-      /**
-       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. 
-       */
-      override fun topicArn(topicArn: String) {
-        cdkBuilder.topicArn(topicArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty,
-    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
-      /**
-       * A list of event types that send a notification. Event types can include any of the
-       * following types.
-       *
-       * *Allowed values* :
-       *
-       * * `autoscaling:EC2_INSTANCE_LAUNCH`
-       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE`
-       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
-       * * `autoscaling:TEST_NOTIFICATION`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration-notificationtypes)
-       */
-      override fun notificationTypes(): List<String> = unwrap(this).getNotificationTypes() ?:
-          emptyList()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon SNS topic.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration-topicarn)
-       */
-      override fun topicArn(): String = unwrap(this).getTopicArn()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          NotificationConfigurationProperty {
+          BaselineEbsBandwidthMbpsRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty):
-          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty):
+          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselineEbsBandwidthMbpsRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NotificationConfigurationProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty
+      internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
     }
   }
 
   /**
-   * `MetricsCollection` is a property of the
+   * `InstanceMaintenancePolicy` is a property of the
    * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource that describes the group metrics that an Amazon EC2 Auto Scaling group sends to Amazon
-   * CloudWatch. These metrics describe the group rather than any of its instances.
+   * resource.
    *
-   * For more information, see [Monitor CloudWatch metrics for your Auto Scaling groups and
-   * instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html) in
-   * the *Amazon EC2 Auto Scaling User Guide* . You can find a sample template snippet in the
-   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
-   * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
+   * For more information, see [Instance maintenance
+   * policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html)
+   * in the *Amazon EC2 Auto Scaling User Guide* .
    *
    * Example:
    *
@@ -5039,293 +2836,158 @@ public open class CfnAutoScalingGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * MetricsCollectionProperty metricsCollectionProperty = MetricsCollectionProperty.builder()
-   * .granularity("granularity")
-   * // the properties below are optional
-   * .metrics(List.of("metrics"))
+   * InstanceMaintenancePolicyProperty instanceMaintenancePolicyProperty =
+   * InstanceMaintenancePolicyProperty.builder()
+   * .maxHealthyPercentage(123)
+   * .minHealthyPercentage(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html)
    */
-  public interface MetricsCollectionProperty {
+  public interface InstanceMaintenancePolicyProperty {
     /**
-     * The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWatch.
+     * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling
+     * group.
      *
-     * The only valid value is `1Minute` .
+     * It represents the maximum percentage of the group that can be in service and healthy, or
+     * pending, to support your workload when replacing instances. Value range is 100 to 200. To clear
+     * a previously set value, specify a value of `-1` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-granularity)
+     * Both `MinHealthyPercentage` and `MaxHealthyPercentage` must be specified, and the difference
+     * between them cannot be greater than 100. A large range increases the number of instances that
+     * can be replaced at the same time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy-maxhealthypercentage)
      */
-    public fun granularity(): String
+    public fun maxHealthyPercentage(): Number? = unwrap(this).getMaxHealthyPercentage()
 
     /**
-     * Identifies the metrics to enable.
+     * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling
+     * group.
      *
-     * You can specify one or more of the following metrics:
+     * It represents the minimum percentage of the group to keep in service, healthy, and ready to
+     * use to support your workload when replacing instances. Value range is 0 to 100. To clear a
+     * previously set value, specify a value of `-1` .
      *
-     * * `GroupMinSize`
-     * * `GroupMaxSize`
-     * * `GroupDesiredCapacity`
-     * * `GroupInServiceInstances`
-     * * `GroupPendingInstances`
-     * * `GroupStandbyInstances`
-     * * `GroupTerminatingInstances`
-     * * `GroupTotalInstances`
-     * * `GroupInServiceCapacity`
-     * * `GroupPendingCapacity`
-     * * `GroupStandbyCapacity`
-     * * `GroupTerminatingCapacity`
-     * * `GroupTotalCapacity`
-     * * `WarmPoolDesiredCapacity`
-     * * `WarmPoolWarmedCapacity`
-     * * `WarmPoolPendingCapacity`
-     * * `WarmPoolTerminatingCapacity`
-     * * `WarmPoolTotalCapacity`
-     * * `GroupAndWarmPoolDesiredCapacity`
-     * * `GroupAndWarmPoolTotalCapacity`
-     *
-     * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
-     *
-     * For more information, see [Auto Scaling group
-     * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
-     * in the *Amazon EC2 Auto Scaling User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-metrics)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy-minhealthypercentage)
      */
-    public fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
+    public fun minHealthyPercentage(): Number? = unwrap(this).getMinHealthyPercentage()
 
     /**
-     * A builder for [MetricsCollectionProperty]
+     * A builder for [InstanceMaintenancePolicyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param granularity The frequency at which Amazon EC2 Auto Scaling sends aggregated data to
-       * CloudWatch. 
-       * The only valid value is `1Minute` .
+       * @param maxHealthyPercentage Specifies the upper threshold as a percentage of the desired
+       * capacity of the Auto Scaling group.
+       * It represents the maximum percentage of the group that can be in service and healthy, or
+       * pending, to support your workload when replacing instances. Value range is 100 to 200. To
+       * clear a previously set value, specify a value of `-1` .
+       *
+       * Both `MinHealthyPercentage` and `MaxHealthyPercentage` must be specified, and the
+       * difference between them cannot be greater than 100. A large range increases the number of
+       * instances that can be replaced at the same time.
        */
-      public fun granularity(granularity: String)
+      public fun maxHealthyPercentage(maxHealthyPercentage: Number)
 
       /**
-       * @param metrics Identifies the metrics to enable.
-       * You can specify one or more of the following metrics:
-       *
-       * * `GroupMinSize`
-       * * `GroupMaxSize`
-       * * `GroupDesiredCapacity`
-       * * `GroupInServiceInstances`
-       * * `GroupPendingInstances`
-       * * `GroupStandbyInstances`
-       * * `GroupTerminatingInstances`
-       * * `GroupTotalInstances`
-       * * `GroupInServiceCapacity`
-       * * `GroupPendingCapacity`
-       * * `GroupStandbyCapacity`
-       * * `GroupTerminatingCapacity`
-       * * `GroupTotalCapacity`
-       * * `WarmPoolDesiredCapacity`
-       * * `WarmPoolWarmedCapacity`
-       * * `WarmPoolPendingCapacity`
-       * * `WarmPoolTerminatingCapacity`
-       * * `WarmPoolTotalCapacity`
-       * * `GroupAndWarmPoolDesiredCapacity`
-       * * `GroupAndWarmPoolTotalCapacity`
-       *
-       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
-       *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
+       * @param minHealthyPercentage Specifies the lower threshold as a percentage of the desired
+       * capacity of the Auto Scaling group.
+       * It represents the minimum percentage of the group to keep in service, healthy, and ready to
+       * use to support your workload when replacing instances. Value range is 0 to 100. To clear a
+       * previously set value, specify a value of `-1` .
        */
-      public fun metrics(metrics: List<String>)
-
-      /**
-       * @param metrics Identifies the metrics to enable.
-       * You can specify one or more of the following metrics:
-       *
-       * * `GroupMinSize`
-       * * `GroupMaxSize`
-       * * `GroupDesiredCapacity`
-       * * `GroupInServiceInstances`
-       * * `GroupPendingInstances`
-       * * `GroupStandbyInstances`
-       * * `GroupTerminatingInstances`
-       * * `GroupTotalInstances`
-       * * `GroupInServiceCapacity`
-       * * `GroupPendingCapacity`
-       * * `GroupStandbyCapacity`
-       * * `GroupTerminatingCapacity`
-       * * `GroupTotalCapacity`
-       * * `WarmPoolDesiredCapacity`
-       * * `WarmPoolWarmedCapacity`
-       * * `WarmPoolPendingCapacity`
-       * * `WarmPoolTerminatingCapacity`
-       * * `WarmPoolTotalCapacity`
-       * * `GroupAndWarmPoolDesiredCapacity`
-       * * `GroupAndWarmPoolTotalCapacity`
-       *
-       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
-       *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       */
-      public fun metrics(vararg metrics: String)
+      public fun minHealthyPercentage(minHealthyPercentage: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty.builder()
 
       /**
-       * @param granularity The frequency at which Amazon EC2 Auto Scaling sends aggregated data to
-       * CloudWatch. 
-       * The only valid value is `1Minute` .
+       * @param maxHealthyPercentage Specifies the upper threshold as a percentage of the desired
+       * capacity of the Auto Scaling group.
+       * It represents the maximum percentage of the group that can be in service and healthy, or
+       * pending, to support your workload when replacing instances. Value range is 100 to 200. To
+       * clear a previously set value, specify a value of `-1` .
+       *
+       * Both `MinHealthyPercentage` and `MaxHealthyPercentage` must be specified, and the
+       * difference between them cannot be greater than 100. A large range increases the number of
+       * instances that can be replaced at the same time.
        */
-      override fun granularity(granularity: String) {
-        cdkBuilder.granularity(granularity)
+      override fun maxHealthyPercentage(maxHealthyPercentage: Number) {
+        cdkBuilder.maxHealthyPercentage(maxHealthyPercentage)
       }
 
       /**
-       * @param metrics Identifies the metrics to enable.
-       * You can specify one or more of the following metrics:
-       *
-       * * `GroupMinSize`
-       * * `GroupMaxSize`
-       * * `GroupDesiredCapacity`
-       * * `GroupInServiceInstances`
-       * * `GroupPendingInstances`
-       * * `GroupStandbyInstances`
-       * * `GroupTerminatingInstances`
-       * * `GroupTotalInstances`
-       * * `GroupInServiceCapacity`
-       * * `GroupPendingCapacity`
-       * * `GroupStandbyCapacity`
-       * * `GroupTerminatingCapacity`
-       * * `GroupTotalCapacity`
-       * * `WarmPoolDesiredCapacity`
-       * * `WarmPoolWarmedCapacity`
-       * * `WarmPoolPendingCapacity`
-       * * `WarmPoolTerminatingCapacity`
-       * * `WarmPoolTotalCapacity`
-       * * `GroupAndWarmPoolDesiredCapacity`
-       * * `GroupAndWarmPoolTotalCapacity`
-       *
-       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
-       *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
+       * @param minHealthyPercentage Specifies the lower threshold as a percentage of the desired
+       * capacity of the Auto Scaling group.
+       * It represents the minimum percentage of the group to keep in service, healthy, and ready to
+       * use to support your workload when replacing instances. Value range is 0 to 100. To clear a
+       * previously set value, specify a value of `-1` .
        */
-      override fun metrics(metrics: List<String>) {
-        cdkBuilder.metrics(metrics)
+      override fun minHealthyPercentage(minHealthyPercentage: Number) {
+        cdkBuilder.minHealthyPercentage(minHealthyPercentage)
       }
-
-      /**
-       * @param metrics Identifies the metrics to enable.
-       * You can specify one or more of the following metrics:
-       *
-       * * `GroupMinSize`
-       * * `GroupMaxSize`
-       * * `GroupDesiredCapacity`
-       * * `GroupInServiceInstances`
-       * * `GroupPendingInstances`
-       * * `GroupStandbyInstances`
-       * * `GroupTerminatingInstances`
-       * * `GroupTotalInstances`
-       * * `GroupInServiceCapacity`
-       * * `GroupPendingCapacity`
-       * * `GroupStandbyCapacity`
-       * * `GroupTerminatingCapacity`
-       * * `GroupTotalCapacity`
-       * * `WarmPoolDesiredCapacity`
-       * * `WarmPoolWarmedCapacity`
-       * * `WarmPoolPendingCapacity`
-       * * `WarmPoolTerminatingCapacity`
-       * * `WarmPoolTotalCapacity`
-       * * `GroupAndWarmPoolDesiredCapacity`
-       * * `GroupAndWarmPoolTotalCapacity`
-       *
-       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
-       *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       */
-      override fun metrics(vararg metrics: String): Unit = metrics(metrics.toList())
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty,
-    ) : CdkObject(cdkObject), MetricsCollectionProperty {
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty,
+    ) : CdkObject(cdkObject), InstanceMaintenancePolicyProperty {
       /**
-       * The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWatch.
+       * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling
+       * group.
        *
-       * The only valid value is `1Minute` .
+       * It represents the maximum percentage of the group that can be in service and healthy, or
+       * pending, to support your workload when replacing instances. Value range is 100 to 200. To
+       * clear a previously set value, specify a value of `-1` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-granularity)
+       * Both `MinHealthyPercentage` and `MaxHealthyPercentage` must be specified, and the
+       * difference between them cannot be greater than 100. A large range increases the number of
+       * instances that can be replaced at the same time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy-maxhealthypercentage)
        */
-      override fun granularity(): String = unwrap(this).getGranularity()
+      override fun maxHealthyPercentage(): Number? = unwrap(this).getMaxHealthyPercentage()
 
       /**
-       * Identifies the metrics to enable.
+       * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling
+       * group.
        *
-       * You can specify one or more of the following metrics:
+       * It represents the minimum percentage of the group to keep in service, healthy, and ready to
+       * use to support your workload when replacing instances. Value range is 0 to 100. To clear a
+       * previously set value, specify a value of `-1` .
        *
-       * * `GroupMinSize`
-       * * `GroupMaxSize`
-       * * `GroupDesiredCapacity`
-       * * `GroupInServiceInstances`
-       * * `GroupPendingInstances`
-       * * `GroupStandbyInstances`
-       * * `GroupTerminatingInstances`
-       * * `GroupTotalInstances`
-       * * `GroupInServiceCapacity`
-       * * `GroupPendingCapacity`
-       * * `GroupStandbyCapacity`
-       * * `GroupTerminatingCapacity`
-       * * `GroupTotalCapacity`
-       * * `WarmPoolDesiredCapacity`
-       * * `WarmPoolWarmedCapacity`
-       * * `WarmPoolPendingCapacity`
-       * * `WarmPoolTerminatingCapacity`
-       * * `WarmPoolTotalCapacity`
-       * * `GroupAndWarmPoolDesiredCapacity`
-       * * `GroupAndWarmPoolTotalCapacity`
-       *
-       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
-       *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
-       * in the *Amazon EC2 Auto Scaling User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-metrics)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy-minhealthypercentage)
        */
-      override fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
+      override fun minHealthyPercentage(): Number? = unwrap(this).getMinHealthyPercentage()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricsCollectionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceMaintenancePolicyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty):
-          MetricsCollectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetricsCollectionProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty):
+          InstanceMaintenancePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceMaintenancePolicyProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MetricsCollectionProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty
+      internal fun unwrap(wrapped: InstanceMaintenancePolicyProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
     }
   }
 
@@ -7379,13 +5041,17 @@ public open class CfnAutoScalingGroup internal constructor(
   }
 
   /**
-   * `InstanceMaintenancePolicy` is a property of the
-   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource.
+   * Use this structure to specify the distribution of On-Demand Instances and Spot Instances and
+   * the allocation strategies used to fulfill On-Demand and Spot capacities for a mixed instances
+   * policy.
    *
-   * For more information, see [Instance maintenance
-   * policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html)
+   * For more information, see [Auto Scaling groups with multiple instance types and purchase
+   * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html)
    * in the *Amazon EC2 Auto Scaling User Guide* .
+   *
+   * `InstancesDistribution` is a property of the [AWS::AutoScaling::AutoScalingGroup
+   * MixedInstancesPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.html)
+   * property type.
    *
    * Example:
    *
@@ -7393,167 +5059,575 @@ public open class CfnAutoScalingGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * InstanceMaintenancePolicyProperty instanceMaintenancePolicyProperty =
-   * InstanceMaintenancePolicyProperty.builder()
-   * .maxHealthyPercentage(123)
-   * .minHealthyPercentage(123)
+   * InstancesDistributionProperty instancesDistributionProperty =
+   * InstancesDistributionProperty.builder()
+   * .onDemandAllocationStrategy("onDemandAllocationStrategy")
+   * .onDemandBaseCapacity(123)
+   * .onDemandPercentageAboveBaseCapacity(123)
+   * .spotAllocationStrategy("spotAllocationStrategy")
+   * .spotInstancePools(123)
+   * .spotMaxPrice("spotMaxPrice")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html)
    */
-  public interface InstanceMaintenancePolicyProperty {
+  public interface InstancesDistributionProperty {
     /**
-     * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling
-     * group.
+     * The allocation strategy to apply to your On-Demand Instances when they are launched.
      *
-     * It represents the maximum percentage of the group that can be in service and healthy, or
-     * pending, to support your workload when replacing instances. Value range is 100 to 200. To clear
-     * a previously set value, specify a value of `-1` .
+     * Possible instance types are determined by the launch template overrides that you specify.
      *
-     * Both `MinHealthyPercentage` and `MaxHealthyPercentage` must be specified, and the difference
-     * between them cannot be greater than 100. A large range increases the number of instances that
-     * can be replaced at the same time.
+     * The following lists the valid values:
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy-maxhealthypercentage)
+     * * **lowest-price** - Uses price to determine which instance types are the highest priority,
+     * launching the lowest priced instance types within an Availability Zone first. This is the
+     * default value for Auto Scaling groups that specify `InstanceRequirements` .
+     * * **prioritized** - You set the order of instance types for the launch template overrides
+     * from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling
+     * launches your highest priority instance types first. If all your On-Demand capacity cannot be
+     * fulfilled using your highest priority instance type, then Amazon EC2 Auto Scaling launches the
+     * remaining capacity using the second priority instance type, and so on. This is the default value
+     * for Auto Scaling groups that don't specify `InstanceRequirements` and cannot be used for groups
+     * that do.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandallocationstrategy)
      */
-    public fun maxHealthyPercentage(): Number? = unwrap(this).getMaxHealthyPercentage()
+    public fun onDemandAllocationStrategy(): String? = unwrap(this).getOnDemandAllocationStrategy()
 
     /**
-     * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling
-     * group.
+     * The minimum amount of the Auto Scaling group's capacity that must be fulfilled by On-Demand
+     * Instances.
      *
-     * It represents the minimum percentage of the group to keep in service, healthy, and ready to
-     * use to support your workload when replacing instances. Value range is 0 to 100. To clear a
-     * previously set value, specify a value of `-1` .
+     * This base portion is launched first as your group scales.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy-minhealthypercentage)
+     * This number has the same unit of measurement as the group's desired capacity. If you change
+     * the default unit of measurement (number of instances) by specifying weighted capacity values in
+     * your launch template overrides list, or by changing the default desired capacity type setting of
+     * the group, you must specify this number using the same unit of measurement.
+     *
+     * Default: 0
+     *
+     *
+     * An update to this setting means a gradual replacement of instances to adjust the current
+     * On-Demand Instance levels. When replacing instances, Amazon EC2 Auto Scaling launches new
+     * instances before terminating the previous ones.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandbasecapacity)
      */
-    public fun minHealthyPercentage(): Number? = unwrap(this).getMinHealthyPercentage()
+    public fun onDemandBaseCapacity(): Number? = unwrap(this).getOnDemandBaseCapacity()
 
     /**
-     * A builder for [InstanceMaintenancePolicyProperty]
+     * Controls the percentages of On-Demand Instances and Spot Instances for your additional
+     * capacity beyond `OnDemandBaseCapacity` .
+     *
+     * Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot
+     * Instances). If set to 100, only On-Demand Instances are used.
+     *
+     * Default: 100
+     *
+     *
+     * An update to this setting means a gradual replacement of instances to adjust the current
+     * On-Demand and Spot Instance levels for your additional capacity higher than the base capacity.
+     * When replacing instances, Amazon EC2 Auto Scaling launches new instances before terminating the
+     * previous ones.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandpercentageabovebasecapacity)
+     */
+    public fun onDemandPercentageAboveBaseCapacity(): Number? =
+        unwrap(this).getOnDemandPercentageAboveBaseCapacity()
+
+    /**
+     * The allocation strategy to apply to your Spot Instances when they are launched.
+     *
+     * Possible instance types are determined by the launch template overrides that you specify.
+     *
+     * The following lists the valid values:
+     *
+     * * **capacity-optimized** - Requests Spot Instances using pools that are optimally chosen
+     * based on the available Spot capacity. This strategy has the lowest risk of interruption. To give
+     * certain instance types a higher chance of launching first, use `capacity-optimized-prioritized`
+     * .
+     * * **capacity-optimized-prioritized** - You set the order of instance types for the launch
+     * template overrides from highest to lowest priority (from first to last in the list). Amazon EC2
+     * Auto Scaling honors the instance type priorities on a best effort basis but optimizes for
+     * capacity first. Note that if the On-Demand allocation strategy is set to `prioritized` , the
+     * same priority is applied when fulfilling On-Demand capacity. This is not a valid value for Auto
+     * Scaling groups that specify `InstanceRequirements` .
+     * * **lowest-price** - Requests Spot Instances using the lowest priced pools within an
+     * Availability Zone, across the number of Spot pools that you specify for the `SpotInstancePools`
+     * property. To ensure that your desired capacity is met, you might receive Spot Instances from
+     * several pools. This is the default value, but it might lead to high interruption rates because
+     * this strategy only considers instance price and not available capacity.
+     * * **price-capacity-optimized (recommended)** - The price and capacity optimized allocation
+     * strategy looks at both price and capacity to select the Spot Instance pools that are the least
+     * likely to be interrupted and have the lowest possible price.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotallocationstrategy)
+     */
+    public fun spotAllocationStrategy(): String? = unwrap(this).getSpotAllocationStrategy()
+
+    /**
+     * The number of Spot Instance pools across which to allocate your Spot Instances.
+     *
+     * The Spot pools are determined from the different instance types in the overrides. Valid only
+     * when the `SpotAllocationStrategy` is `lowest-price` . Value must be in the range of 1–20.
+     *
+     * Default: 2
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotinstancepools)
+     */
+    public fun spotInstancePools(): Number? = unwrap(this).getSpotInstancePools()
+
+    /**
+     * The maximum price per unit hour that you are willing to pay for a Spot Instance.
+     *
+     * If your maximum price is lower than the Spot price for the instance types that you selected,
+     * your Spot Instances are not launched. We do not recommend specifying a maximum price because it
+     * can lead to increased interruptions. When Spot Instances launch, you pay the current Spot price.
+     * To remove a maximum price that you previously set, include the property but specify an empty
+     * string ("") for the value.
+     *
+     *
+     * If you specify a maximum price, your instances will be interrupted more frequently than if
+     * you do not specify one.
+     *
+     *
+     * Valid Range: Minimum value of 0.001
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotmaxprice)
+     */
+    public fun spotMaxPrice(): String? = unwrap(this).getSpotMaxPrice()
+
+    /**
+     * A builder for [InstancesDistributionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxHealthyPercentage Specifies the upper threshold as a percentage of the desired
-       * capacity of the Auto Scaling group.
-       * It represents the maximum percentage of the group that can be in service and healthy, or
-       * pending, to support your workload when replacing instances. Value range is 100 to 200. To
-       * clear a previously set value, specify a value of `-1` .
+       * @param onDemandAllocationStrategy The allocation strategy to apply to your On-Demand
+       * Instances when they are launched.
+       * Possible instance types are determined by the launch template overrides that you specify.
        *
-       * Both `MinHealthyPercentage` and `MaxHealthyPercentage` must be specified, and the
-       * difference between them cannot be greater than 100. A large range increases the number of
-       * instances that can be replaced at the same time.
+       * The following lists the valid values:
+       *
+       * * **lowest-price** - Uses price to determine which instance types are the highest priority,
+       * launching the lowest priced instance types within an Availability Zone first. This is the
+       * default value for Auto Scaling groups that specify `InstanceRequirements` .
+       * * **prioritized** - You set the order of instance types for the launch template overrides
+       * from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling
+       * launches your highest priority instance types first. If all your On-Demand capacity cannot be
+       * fulfilled using your highest priority instance type, then Amazon EC2 Auto Scaling launches the
+       * remaining capacity using the second priority instance type, and so on. This is the default
+       * value for Auto Scaling groups that don't specify `InstanceRequirements` and cannot be used for
+       * groups that do.
        */
-      public fun maxHealthyPercentage(maxHealthyPercentage: Number)
+      public fun onDemandAllocationStrategy(onDemandAllocationStrategy: String)
 
       /**
-       * @param minHealthyPercentage Specifies the lower threshold as a percentage of the desired
-       * capacity of the Auto Scaling group.
-       * It represents the minimum percentage of the group to keep in service, healthy, and ready to
-       * use to support your workload when replacing instances. Value range is 0 to 100. To clear a
-       * previously set value, specify a value of `-1` .
+       * @param onDemandBaseCapacity The minimum amount of the Auto Scaling group's capacity that
+       * must be fulfilled by On-Demand Instances.
+       * This base portion is launched first as your group scales.
+       *
+       * This number has the same unit of measurement as the group's desired capacity. If you change
+       * the default unit of measurement (number of instances) by specifying weighted capacity values
+       * in your launch template overrides list, or by changing the default desired capacity type
+       * setting of the group, you must specify this number using the same unit of measurement.
+       *
+       * Default: 0
+       *
+       *
+       * An update to this setting means a gradual replacement of instances to adjust the current
+       * On-Demand Instance levels. When replacing instances, Amazon EC2 Auto Scaling launches new
+       * instances before terminating the previous ones.
        */
-      public fun minHealthyPercentage(minHealthyPercentage: Number)
+      public fun onDemandBaseCapacity(onDemandBaseCapacity: Number)
+
+      /**
+       * @param onDemandPercentageAboveBaseCapacity Controls the percentages of On-Demand Instances
+       * and Spot Instances for your additional capacity beyond `OnDemandBaseCapacity` .
+       * Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot
+       * Instances). If set to 100, only On-Demand Instances are used.
+       *
+       * Default: 100
+       *
+       *
+       * An update to this setting means a gradual replacement of instances to adjust the current
+       * On-Demand and Spot Instance levels for your additional capacity higher than the base capacity.
+       * When replacing instances, Amazon EC2 Auto Scaling launches new instances before terminating
+       * the previous ones.
+       */
+      public fun onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity: Number)
+
+      /**
+       * @param spotAllocationStrategy The allocation strategy to apply to your Spot Instances when
+       * they are launched.
+       * Possible instance types are determined by the launch template overrides that you specify.
+       *
+       * The following lists the valid values:
+       *
+       * * **capacity-optimized** - Requests Spot Instances using pools that are optimally chosen
+       * based on the available Spot capacity. This strategy has the lowest risk of interruption. To
+       * give certain instance types a higher chance of launching first, use
+       * `capacity-optimized-prioritized` .
+       * * **capacity-optimized-prioritized** - You set the order of instance types for the launch
+       * template overrides from highest to lowest priority (from first to last in the list). Amazon
+       * EC2 Auto Scaling honors the instance type priorities on a best effort basis but optimizes for
+       * capacity first. Note that if the On-Demand allocation strategy is set to `prioritized` , the
+       * same priority is applied when fulfilling On-Demand capacity. This is not a valid value for
+       * Auto Scaling groups that specify `InstanceRequirements` .
+       * * **lowest-price** - Requests Spot Instances using the lowest priced pools within an
+       * Availability Zone, across the number of Spot pools that you specify for the
+       * `SpotInstancePools` property. To ensure that your desired capacity is met, you might receive
+       * Spot Instances from several pools. This is the default value, but it might lead to high
+       * interruption rates because this strategy only considers instance price and not available
+       * capacity.
+       * * **price-capacity-optimized (recommended)** - The price and capacity optimized allocation
+       * strategy looks at both price and capacity to select the Spot Instance pools that are the least
+       * likely to be interrupted and have the lowest possible price.
+       */
+      public fun spotAllocationStrategy(spotAllocationStrategy: String)
+
+      /**
+       * @param spotInstancePools The number of Spot Instance pools across which to allocate your
+       * Spot Instances.
+       * The Spot pools are determined from the different instance types in the overrides. Valid
+       * only when the `SpotAllocationStrategy` is `lowest-price` . Value must be in the range of 1–20.
+       *
+       * Default: 2
+       */
+      public fun spotInstancePools(spotInstancePools: Number)
+
+      /**
+       * @param spotMaxPrice The maximum price per unit hour that you are willing to pay for a Spot
+       * Instance.
+       * If your maximum price is lower than the Spot price for the instance types that you
+       * selected, your Spot Instances are not launched. We do not recommend specifying a maximum price
+       * because it can lead to increased interruptions. When Spot Instances launch, you pay the
+       * current Spot price. To remove a maximum price that you previously set, include the property
+       * but specify an empty string ("") for the value.
+       *
+       *
+       * If you specify a maximum price, your instances will be interrupted more frequently than if
+       * you do not specify one.
+       *
+       *
+       * Valid Range: Minimum value of 0.001
+       */
+      public fun spotMaxPrice(spotMaxPrice: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty.builder()
 
       /**
-       * @param maxHealthyPercentage Specifies the upper threshold as a percentage of the desired
-       * capacity of the Auto Scaling group.
-       * It represents the maximum percentage of the group that can be in service and healthy, or
-       * pending, to support your workload when replacing instances. Value range is 100 to 200. To
-       * clear a previously set value, specify a value of `-1` .
+       * @param onDemandAllocationStrategy The allocation strategy to apply to your On-Demand
+       * Instances when they are launched.
+       * Possible instance types are determined by the launch template overrides that you specify.
        *
-       * Both `MinHealthyPercentage` and `MaxHealthyPercentage` must be specified, and the
-       * difference between them cannot be greater than 100. A large range increases the number of
-       * instances that can be replaced at the same time.
+       * The following lists the valid values:
+       *
+       * * **lowest-price** - Uses price to determine which instance types are the highest priority,
+       * launching the lowest priced instance types within an Availability Zone first. This is the
+       * default value for Auto Scaling groups that specify `InstanceRequirements` .
+       * * **prioritized** - You set the order of instance types for the launch template overrides
+       * from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling
+       * launches your highest priority instance types first. If all your On-Demand capacity cannot be
+       * fulfilled using your highest priority instance type, then Amazon EC2 Auto Scaling launches the
+       * remaining capacity using the second priority instance type, and so on. This is the default
+       * value for Auto Scaling groups that don't specify `InstanceRequirements` and cannot be used for
+       * groups that do.
        */
-      override fun maxHealthyPercentage(maxHealthyPercentage: Number) {
-        cdkBuilder.maxHealthyPercentage(maxHealthyPercentage)
+      override fun onDemandAllocationStrategy(onDemandAllocationStrategy: String) {
+        cdkBuilder.onDemandAllocationStrategy(onDemandAllocationStrategy)
       }
 
       /**
-       * @param minHealthyPercentage Specifies the lower threshold as a percentage of the desired
-       * capacity of the Auto Scaling group.
-       * It represents the minimum percentage of the group to keep in service, healthy, and ready to
-       * use to support your workload when replacing instances. Value range is 0 to 100. To clear a
-       * previously set value, specify a value of `-1` .
+       * @param onDemandBaseCapacity The minimum amount of the Auto Scaling group's capacity that
+       * must be fulfilled by On-Demand Instances.
+       * This base portion is launched first as your group scales.
+       *
+       * This number has the same unit of measurement as the group's desired capacity. If you change
+       * the default unit of measurement (number of instances) by specifying weighted capacity values
+       * in your launch template overrides list, or by changing the default desired capacity type
+       * setting of the group, you must specify this number using the same unit of measurement.
+       *
+       * Default: 0
+       *
+       *
+       * An update to this setting means a gradual replacement of instances to adjust the current
+       * On-Demand Instance levels. When replacing instances, Amazon EC2 Auto Scaling launches new
+       * instances before terminating the previous ones.
        */
-      override fun minHealthyPercentage(minHealthyPercentage: Number) {
-        cdkBuilder.minHealthyPercentage(minHealthyPercentage)
+      override fun onDemandBaseCapacity(onDemandBaseCapacity: Number) {
+        cdkBuilder.onDemandBaseCapacity(onDemandBaseCapacity)
+      }
+
+      /**
+       * @param onDemandPercentageAboveBaseCapacity Controls the percentages of On-Demand Instances
+       * and Spot Instances for your additional capacity beyond `OnDemandBaseCapacity` .
+       * Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot
+       * Instances). If set to 100, only On-Demand Instances are used.
+       *
+       * Default: 100
+       *
+       *
+       * An update to this setting means a gradual replacement of instances to adjust the current
+       * On-Demand and Spot Instance levels for your additional capacity higher than the base capacity.
+       * When replacing instances, Amazon EC2 Auto Scaling launches new instances before terminating
+       * the previous ones.
+       */
+      override
+          fun onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity: Number) {
+        cdkBuilder.onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity)
+      }
+
+      /**
+       * @param spotAllocationStrategy The allocation strategy to apply to your Spot Instances when
+       * they are launched.
+       * Possible instance types are determined by the launch template overrides that you specify.
+       *
+       * The following lists the valid values:
+       *
+       * * **capacity-optimized** - Requests Spot Instances using pools that are optimally chosen
+       * based on the available Spot capacity. This strategy has the lowest risk of interruption. To
+       * give certain instance types a higher chance of launching first, use
+       * `capacity-optimized-prioritized` .
+       * * **capacity-optimized-prioritized** - You set the order of instance types for the launch
+       * template overrides from highest to lowest priority (from first to last in the list). Amazon
+       * EC2 Auto Scaling honors the instance type priorities on a best effort basis but optimizes for
+       * capacity first. Note that if the On-Demand allocation strategy is set to `prioritized` , the
+       * same priority is applied when fulfilling On-Demand capacity. This is not a valid value for
+       * Auto Scaling groups that specify `InstanceRequirements` .
+       * * **lowest-price** - Requests Spot Instances using the lowest priced pools within an
+       * Availability Zone, across the number of Spot pools that you specify for the
+       * `SpotInstancePools` property. To ensure that your desired capacity is met, you might receive
+       * Spot Instances from several pools. This is the default value, but it might lead to high
+       * interruption rates because this strategy only considers instance price and not available
+       * capacity.
+       * * **price-capacity-optimized (recommended)** - The price and capacity optimized allocation
+       * strategy looks at both price and capacity to select the Spot Instance pools that are the least
+       * likely to be interrupted and have the lowest possible price.
+       */
+      override fun spotAllocationStrategy(spotAllocationStrategy: String) {
+        cdkBuilder.spotAllocationStrategy(spotAllocationStrategy)
+      }
+
+      /**
+       * @param spotInstancePools The number of Spot Instance pools across which to allocate your
+       * Spot Instances.
+       * The Spot pools are determined from the different instance types in the overrides. Valid
+       * only when the `SpotAllocationStrategy` is `lowest-price` . Value must be in the range of 1–20.
+       *
+       * Default: 2
+       */
+      override fun spotInstancePools(spotInstancePools: Number) {
+        cdkBuilder.spotInstancePools(spotInstancePools)
+      }
+
+      /**
+       * @param spotMaxPrice The maximum price per unit hour that you are willing to pay for a Spot
+       * Instance.
+       * If your maximum price is lower than the Spot price for the instance types that you
+       * selected, your Spot Instances are not launched. We do not recommend specifying a maximum price
+       * because it can lead to increased interruptions. When Spot Instances launch, you pay the
+       * current Spot price. To remove a maximum price that you previously set, include the property
+       * but specify an empty string ("") for the value.
+       *
+       *
+       * If you specify a maximum price, your instances will be interrupted more frequently than if
+       * you do not specify one.
+       *
+       *
+       * Valid Range: Minimum value of 0.001
+       */
+      override fun spotMaxPrice(spotMaxPrice: String) {
+        cdkBuilder.spotMaxPrice(spotMaxPrice)
       }
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty,
-    ) : CdkObject(cdkObject), InstanceMaintenancePolicyProperty {
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty,
+    ) : CdkObject(cdkObject), InstancesDistributionProperty {
       /**
-       * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling
-       * group.
+       * The allocation strategy to apply to your On-Demand Instances when they are launched.
        *
-       * It represents the maximum percentage of the group that can be in service and healthy, or
-       * pending, to support your workload when replacing instances. Value range is 100 to 200. To
-       * clear a previously set value, specify a value of `-1` .
+       * Possible instance types are determined by the launch template overrides that you specify.
        *
-       * Both `MinHealthyPercentage` and `MaxHealthyPercentage` must be specified, and the
-       * difference between them cannot be greater than 100. A large range increases the number of
-       * instances that can be replaced at the same time.
+       * The following lists the valid values:
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy-maxhealthypercentage)
+       * * **lowest-price** - Uses price to determine which instance types are the highest priority,
+       * launching the lowest priced instance types within an Availability Zone first. This is the
+       * default value for Auto Scaling groups that specify `InstanceRequirements` .
+       * * **prioritized** - You set the order of instance types for the launch template overrides
+       * from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling
+       * launches your highest priority instance types first. If all your On-Demand capacity cannot be
+       * fulfilled using your highest priority instance type, then Amazon EC2 Auto Scaling launches the
+       * remaining capacity using the second priority instance type, and so on. This is the default
+       * value for Auto Scaling groups that don't specify `InstanceRequirements` and cannot be used for
+       * groups that do.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandallocationstrategy)
        */
-      override fun maxHealthyPercentage(): Number? = unwrap(this).getMaxHealthyPercentage()
+      override fun onDemandAllocationStrategy(): String? =
+          unwrap(this).getOnDemandAllocationStrategy()
 
       /**
-       * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling
-       * group.
+       * The minimum amount of the Auto Scaling group's capacity that must be fulfilled by On-Demand
+       * Instances.
        *
-       * It represents the minimum percentage of the group to keep in service, healthy, and ready to
-       * use to support your workload when replacing instances. Value range is 0 to 100. To clear a
-       * previously set value, specify a value of `-1` .
+       * This base portion is launched first as your group scales.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancemaintenancepolicy.html#cfn-autoscaling-autoscalinggroup-instancemaintenancepolicy-minhealthypercentage)
+       * This number has the same unit of measurement as the group's desired capacity. If you change
+       * the default unit of measurement (number of instances) by specifying weighted capacity values
+       * in your launch template overrides list, or by changing the default desired capacity type
+       * setting of the group, you must specify this number using the same unit of measurement.
+       *
+       * Default: 0
+       *
+       *
+       * An update to this setting means a gradual replacement of instances to adjust the current
+       * On-Demand Instance levels. When replacing instances, Amazon EC2 Auto Scaling launches new
+       * instances before terminating the previous ones.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandbasecapacity)
        */
-      override fun minHealthyPercentage(): Number? = unwrap(this).getMinHealthyPercentage()
+      override fun onDemandBaseCapacity(): Number? = unwrap(this).getOnDemandBaseCapacity()
+
+      /**
+       * Controls the percentages of On-Demand Instances and Spot Instances for your additional
+       * capacity beyond `OnDemandBaseCapacity` .
+       *
+       * Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot
+       * Instances). If set to 100, only On-Demand Instances are used.
+       *
+       * Default: 100
+       *
+       *
+       * An update to this setting means a gradual replacement of instances to adjust the current
+       * On-Demand and Spot Instance levels for your additional capacity higher than the base capacity.
+       * When replacing instances, Amazon EC2 Auto Scaling launches new instances before terminating
+       * the previous ones.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-ondemandpercentageabovebasecapacity)
+       */
+      override fun onDemandPercentageAboveBaseCapacity(): Number? =
+          unwrap(this).getOnDemandPercentageAboveBaseCapacity()
+
+      /**
+       * The allocation strategy to apply to your Spot Instances when they are launched.
+       *
+       * Possible instance types are determined by the launch template overrides that you specify.
+       *
+       * The following lists the valid values:
+       *
+       * * **capacity-optimized** - Requests Spot Instances using pools that are optimally chosen
+       * based on the available Spot capacity. This strategy has the lowest risk of interruption. To
+       * give certain instance types a higher chance of launching first, use
+       * `capacity-optimized-prioritized` .
+       * * **capacity-optimized-prioritized** - You set the order of instance types for the launch
+       * template overrides from highest to lowest priority (from first to last in the list). Amazon
+       * EC2 Auto Scaling honors the instance type priorities on a best effort basis but optimizes for
+       * capacity first. Note that if the On-Demand allocation strategy is set to `prioritized` , the
+       * same priority is applied when fulfilling On-Demand capacity. This is not a valid value for
+       * Auto Scaling groups that specify `InstanceRequirements` .
+       * * **lowest-price** - Requests Spot Instances using the lowest priced pools within an
+       * Availability Zone, across the number of Spot pools that you specify for the
+       * `SpotInstancePools` property. To ensure that your desired capacity is met, you might receive
+       * Spot Instances from several pools. This is the default value, but it might lead to high
+       * interruption rates because this strategy only considers instance price and not available
+       * capacity.
+       * * **price-capacity-optimized (recommended)** - The price and capacity optimized allocation
+       * strategy looks at both price and capacity to select the Spot Instance pools that are the least
+       * likely to be interrupted and have the lowest possible price.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotallocationstrategy)
+       */
+      override fun spotAllocationStrategy(): String? = unwrap(this).getSpotAllocationStrategy()
+
+      /**
+       * The number of Spot Instance pools across which to allocate your Spot Instances.
+       *
+       * The Spot pools are determined from the different instance types in the overrides. Valid
+       * only when the `SpotAllocationStrategy` is `lowest-price` . Value must be in the range of 1–20.
+       *
+       * Default: 2
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotinstancepools)
+       */
+      override fun spotInstancePools(): Number? = unwrap(this).getSpotInstancePools()
+
+      /**
+       * The maximum price per unit hour that you are willing to pay for a Spot Instance.
+       *
+       * If your maximum price is lower than the Spot price for the instance types that you
+       * selected, your Spot Instances are not launched. We do not recommend specifying a maximum price
+       * because it can lead to increased interruptions. When Spot Instances launch, you pay the
+       * current Spot price. To remove a maximum price that you previously set, include the property
+       * but specify an empty string ("") for the value.
+       *
+       *
+       * If you specify a maximum price, your instances will be interrupted more frequently than if
+       * you do not specify one.
+       *
+       *
+       * Valid Range: Minimum value of 0.001
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html#cfn-autoscaling-autoscalinggroup-instancesdistribution-spotmaxprice)
+       */
+      override fun spotMaxPrice(): String? = unwrap(this).getSpotMaxPrice()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InstanceMaintenancePolicyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstancesDistributionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty):
-          InstanceMaintenancePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceMaintenancePolicyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty):
+          InstancesDistributionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstancesDistributionProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InstanceMaintenancePolicyProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
+      internal fun unwrap(wrapped: InstancesDistributionProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty
     }
   }
 
   /**
-   * `BaselineEbsBandwidthMbpsRequest` is a property of the `InstanceRequirements` property of the
-   * [AWS::AutoScaling::AutoScalingGroup
-   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property type that describes the minimum and maximum baseline bandwidth performance for an
-   * instance type, in Mbps.
+   * Use this structure to let Amazon EC2 Auto Scaling do the following when the Auto Scaling group
+   * has a mixed instances policy:  - Override the instance type that is specified in the launch
+   * template.
+   *
+   * * Use multiple instance types.
+   *
+   * Specify the instance types that you want, or define your instance requirements instead and let
+   * Amazon EC2 Auto Scaling provision the available instance types that meet your requirements. This
+   * can provide Amazon EC2 Auto Scaling with a larger selection of instance types to choose from when
+   * fulfilling Spot and On-Demand capacities. You can view which instance types are matched before you
+   * apply the instance requirements to your Auto Scaling group.
+   *
+   * After you define your instance requirements, you don't have to keep updating these settings to
+   * get new EC2 instance types automatically. Amazon EC2 Auto Scaling uses the instance requirements
+   * of the Auto Scaling group to determine whether a new EC2 instance type can be used.
+   *
+   * `LaunchTemplateOverrides` is a property of the [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
+   * property type.
    *
    * Example:
    *
@@ -7561,106 +5635,1016 @@ public open class CfnAutoScalingGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * BaselineEbsBandwidthMbpsRequestProperty baselineEbsBandwidthMbpsRequestProperty =
-   * BaselineEbsBandwidthMbpsRequestProperty.builder()
+   * LaunchTemplateOverridesProperty launchTemplateOverridesProperty =
+   * LaunchTemplateOverridesProperty.builder()
+   * .instanceRequirements(InstanceRequirementsProperty.builder()
+   * .memoryMiB(MemoryMiBRequestProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .vCpuCount(VCpuCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * // the properties below are optional
+   * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+   * .acceleratorNames(List.of("acceleratorNames"))
+   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorTypes(List.of("acceleratorTypes"))
+   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+   * .bareMetal("bareMetal")
+   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .burstablePerformance("burstablePerformance")
+   * .cpuManufacturers(List.of("cpuManufacturers"))
+   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+   * .instanceGenerations(List.of("instanceGenerations"))
+   * .localStorage("localStorage")
+   * .localStorageTypes(List.of("localStorageTypes"))
+   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
+   * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .onDemandMaxPricePercentageOverLowestPrice(123)
+   * .requireHibernateSupport(false)
+   * .spotMaxPricePercentageOverLowestPrice(123)
+   * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .build())
+   * .instanceType("instanceType")
+   * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
+   * .version("version")
+   * // the properties below are optional
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .build())
+   * .weightedCapacity("weightedCapacity")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
    */
-  public interface BaselineEbsBandwidthMbpsRequestProperty {
+  public interface LaunchTemplateOverridesProperty {
     /**
-     * The maximum value in Mbps.
+     * The instance requirements.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html#cfn-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest-max)
+     * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then, it
+     * uses your On-Demand and Spot allocation strategies to launch instances from these instance
+     * types.
+     *
+     * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+     * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+     * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
+     * AMI. Then, create a compatible set of instance requirements for each launch template.
+     *
+     *
+     * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancerequirements)
      */
-    public fun max(): Number? = unwrap(this).getMax()
+    public fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
 
     /**
-     * The minimum value in Mbps.
+     * The instance type, such as `m3.xlarge` . You must specify an instance type that is supported
+     * in your requested Region and Availability Zones. For more information, see [Instance
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
+     * Elastic Compute Cloud User Guide* .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html#cfn-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest-min)
+     * You can specify up to 40 instance types per Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancetype)
      */
-    public fun min(): Number? = unwrap(this).getMin()
+    public fun instanceType(): String? = unwrap(this).getInstanceType()
 
     /**
-     * A builder for [BaselineEbsBandwidthMbpsRequestProperty]
+     * Provides a launch template for the specified instance type or set of instance requirements.
+     *
+     * For example, some instance types might require a launch template with a different AMI. If not
+     * provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
+     * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
+     * for an instance
+     * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
+     *
+     * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
+     * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-launchtemplatespecification)
+     */
+    public fun launchTemplateSpecification(): Any? = unwrap(this).getLaunchTemplateSpecification()
+
+    /**
+     * If you provide a list of instance types to use, you can specify the number of capacity units
+     * provided by each instance type in terms of virtual CPUs, memory, storage, throughput, or other
+     * relative performance characteristic.
+     *
+     * When a Spot or On-Demand Instance is launched, the capacity units count toward the desired
+     * capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally
+     * fulfilled, even if this results in an overage. For example, if there are two units remaining to
+     * fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
+     * `WeightedCapacity` of five units, the instance is launched, and the desired capacity is exceeded
+     * by three units. For more information, see [Configure instance weighting for Amazon EC2 Auto
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* . Value must be in the range of 1-999.
+     *
+     * If you specify a value for `WeightedCapacity` for one instance type, you must specify a value
+     * for `WeightedCapacity` for all of them.
+     *
+     *
+     * Every Auto Scaling group has three size parameters ( `DesiredCapacity` , `MaxSize` , and
+     * `MinSize` ). Usually, you set these sizes based on a specific number of instances. However, if
+     * you configure a mixed instances policy that defines weights for the instance types, you must
+     * specify these sizes with the same units that you use for weighting instances.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity)
+     */
+    public fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
+
+    /**
+     * A builder for [LaunchTemplateOverridesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum value in Mbps.
+       * @param instanceRequirements The instance requirements.
+       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
+       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
+       * types.
+       *
+       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
+       * AMI. Then, create a compatible set of instance requirements for each launch template.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      public fun max(max: Number)
+      public fun instanceRequirements(instanceRequirements: IResolvable)
 
       /**
-       * @param min The minimum value in Mbps.
+       * @param instanceRequirements The instance requirements.
+       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
+       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
+       * types.
+       *
+       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
+       * AMI. Then, create a compatible set of instance requirements for each launch template.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      public fun min(min: Number)
+      public fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty)
+
+      /**
+       * @param instanceRequirements The instance requirements.
+       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
+       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
+       * types.
+       *
+       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
+       * AMI. Then, create a compatible set of instance requirements for each launch template.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94f4ea0c74ec4495738121b8d42fa540ee0b3090a922cc85121645d3598842f2")
+      public
+          fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit)
+
+      /**
+       * @param instanceType The instance type, such as `m3.xlarge` . You must specify an instance
+       * type that is supported in your requested Region and Availability Zones. For more information,
+       * see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
+       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * You can specify up to 40 instance types per Auto Scaling group.
+       */
+      public fun instanceType(instanceType: String)
+
+      /**
+       * @param launchTemplateSpecification Provides a launch template for the specified instance
+       * type or set of instance requirements.
+       * For example, some instance types might require a launch template with a different AMI. If
+       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
+       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
+       * for an instance
+       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
+       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
+       */
+      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable)
+
+      /**
+       * @param launchTemplateSpecification Provides a launch template for the specified instance
+       * type or set of instance requirements.
+       * For example, some instance types might require a launch template with a different AMI. If
+       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
+       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
+       * for an instance
+       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
+       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
+       */
+      public
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty)
+
+      /**
+       * @param launchTemplateSpecification Provides a launch template for the specified instance
+       * type or set of instance requirements.
+       * For example, some instance types might require a launch template with a different AMI. If
+       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
+       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
+       * for an instance
+       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
+       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bfadd002dc80530ce8daf12a2dd7485c3550a7438eb96f083b1fd2313b9aa4a2")
+      public
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param weightedCapacity If you provide a list of instance types to use, you can specify the
+       * number of capacity units provided by each instance type in terms of virtual CPUs, memory,
+       * storage, throughput, or other relative performance characteristic.
+       * When a Spot or On-Demand Instance is launched, the capacity units count toward the desired
+       * capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally
+       * fulfilled, even if this results in an overage. For example, if there are two units remaining
+       * to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
+       * `WeightedCapacity` of five units, the instance is launched, and the desired capacity is
+       * exceeded by three units. For more information, see [Configure instance weighting for Amazon
+       * EC2 Auto
+       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* . Value must be in the range of 1-999.
+       *
+       * If you specify a value for `WeightedCapacity` for one instance type, you must specify a
+       * value for `WeightedCapacity` for all of them.
+       *
+       *
+       * Every Auto Scaling group has three size parameters ( `DesiredCapacity` , `MaxSize` , and
+       * `MinSize` ). Usually, you set these sizes based on a specific number of instances. However, if
+       * you configure a mixed instances policy that defines weights for the instance types, you must
+       * specify these sizes with the same units that you use for weighting instances.
+       */
+      public fun weightedCapacity(weightedCapacity: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty.builder()
 
       /**
-       * @param max The maximum value in Mbps.
+       * @param instanceRequirements The instance requirements.
+       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
+       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
+       * types.
+       *
+       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
+       * AMI. Then, create a compatible set of instance requirements for each launch template.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
+      override fun instanceRequirements(instanceRequirements: IResolvable) {
+        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
       }
 
       /**
-       * @param min The minimum value in Mbps.
+       * @param instanceRequirements The instance requirements.
+       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
+       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
+       * types.
+       *
+       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
+       * AMI. Then, create a compatible set of instance requirements for each launch template.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
+      override fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
+        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsProperty::unwrap))
+      }
+
+      /**
+       * @param instanceRequirements The instance requirements.
+       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
+       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
+       * types.
+       *
+       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
+       * AMI. Then, create a compatible set of instance requirements for each launch template.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94f4ea0c74ec4495738121b8d42fa540ee0b3090a922cc85121645d3598842f2")
+      override
+          fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit):
+          Unit = instanceRequirements(InstanceRequirementsProperty(instanceRequirements))
+
+      /**
+       * @param instanceType The instance type, such as `m3.xlarge` . You must specify an instance
+       * type that is supported in your requested Region and Availability Zones. For more information,
+       * see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
+       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * You can specify up to 40 instance types per Auto Scaling group.
+       */
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
+      }
+
+      /**
+       * @param launchTemplateSpecification Provides a launch template for the specified instance
+       * type or set of instance requirements.
+       * For example, some instance types might require a launch template with a different AMI. If
+       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
+       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
+       * for an instance
+       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
+       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
+       */
+      override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param launchTemplateSpecification Provides a launch template for the specified instance
+       * type or set of instance requirements.
+       * For example, some instance types might require a launch template with a different AMI. If
+       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
+       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
+       * for an instance
+       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
+       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
+       */
+      override
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param launchTemplateSpecification Provides a launch template for the specified instance
+       * type or set of instance requirements.
+       * For example, some instance types might require a launch template with a different AMI. If
+       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
+       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
+       * for an instance
+       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
+       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bfadd002dc80530ce8daf12a2dd7485c3550a7438eb96f083b1fd2313b9aa4a2")
+      override
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          launchTemplateSpecification(LaunchTemplateSpecificationProperty(launchTemplateSpecification))
+
+      /**
+       * @param weightedCapacity If you provide a list of instance types to use, you can specify the
+       * number of capacity units provided by each instance type in terms of virtual CPUs, memory,
+       * storage, throughput, or other relative performance characteristic.
+       * When a Spot or On-Demand Instance is launched, the capacity units count toward the desired
+       * capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally
+       * fulfilled, even if this results in an overage. For example, if there are two units remaining
+       * to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
+       * `WeightedCapacity` of five units, the instance is launched, and the desired capacity is
+       * exceeded by three units. For more information, see [Configure instance weighting for Amazon
+       * EC2 Auto
+       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* . Value must be in the range of 1-999.
+       *
+       * If you specify a value for `WeightedCapacity` for one instance type, you must specify a
+       * value for `WeightedCapacity` for all of them.
+       *
+       *
+       * Every Auto Scaling group has three size parameters ( `DesiredCapacity` , `MaxSize` , and
+       * `MinSize` ). Usually, you set these sizes based on a specific number of instances. However, if
+       * you configure a mixed instances policy that defines weights for the instance types, you must
+       * specify these sizes with the same units that you use for weighting instances.
+       */
+      override fun weightedCapacity(weightedCapacity: String) {
+        cdkBuilder.weightedCapacity(weightedCapacity)
       }
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty,
-    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateOverridesProperty {
       /**
-       * The maximum value in Mbps.
+       * The instance requirements.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html#cfn-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest-max)
+       * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then,
+       * it uses your On-Demand and Spot allocation strategies to launch instances from these instance
+       * types.
+       *
+       * You can specify up to four separate sets of instance requirements per Auto Scaling group.
+       * This is useful for provisioning instances from different Amazon Machine Images (AMIs) in the
+       * same Auto Scaling group. To do this, create the AMIs and create a new launch template for each
+       * AMI. Then, create a compatible set of instance requirements for each launch template.
+       *
+       *
+       * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancerequirements)
        */
-      override fun max(): Number? = unwrap(this).getMax()
+      override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
 
       /**
-       * The minimum value in Mbps.
+       * The instance type, such as `m3.xlarge` . You must specify an instance type that is
+       * supported in your requested Region and Availability Zones. For more information, see [Instance
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
+       * Elastic Compute Cloud User Guide* .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest.html#cfn-autoscaling-autoscalinggroup-baselineebsbandwidthmbpsrequest-min)
+       * You can specify up to 40 instance types per Auto Scaling group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancetype)
        */
-      override fun min(): Number? = unwrap(this).getMin()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
+
+      /**
+       * Provides a launch template for the specified instance type or set of instance requirements.
+       *
+       * For example, some instance types might require a launch template with a different AMI. If
+       * not provided, Amazon EC2 Auto Scaling uses the launch template that's specified in the
+       * `LaunchTemplate` definition. For more information, see [Specifying a different launch template
+       * for an instance
+       * type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * You can specify up to 20 launch templates per Auto Scaling group. The launch templates
+       * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-launchtemplatespecification)
+       */
+      override fun launchTemplateSpecification(): Any? =
+          unwrap(this).getLaunchTemplateSpecification()
+
+      /**
+       * If you provide a list of instance types to use, you can specify the number of capacity
+       * units provided by each instance type in terms of virtual CPUs, memory, storage, throughput, or
+       * other relative performance characteristic.
+       *
+       * When a Spot or On-Demand Instance is launched, the capacity units count toward the desired
+       * capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally
+       * fulfilled, even if this results in an overage. For example, if there are two units remaining
+       * to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
+       * `WeightedCapacity` of five units, the instance is launched, and the desired capacity is
+       * exceeded by three units. For more information, see [Configure instance weighting for Amazon
+       * EC2 Auto
+       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* . Value must be in the range of 1-999.
+       *
+       * If you specify a value for `WeightedCapacity` for one instance type, you must specify a
+       * value for `WeightedCapacity` for all of them.
+       *
+       *
+       * Every Auto Scaling group has three size parameters ( `DesiredCapacity` , `MaxSize` , and
+       * `MinSize` ). Usually, you set these sizes based on a specific number of instances. However, if
+       * you configure a mixed instances policy that defines weights for the instance types, you must
+       * specify these sizes with the same units that you use for weighting instances.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity)
+       */
+      override fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          BaselineEbsBandwidthMbpsRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchTemplateOverridesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty):
-          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BaselineEbsBandwidthMbpsRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty):
+          LaunchTemplateOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateOverridesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsRequestProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
+      internal fun unwrap(wrapped: LaunchTemplateOverridesProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty
+    }
+  }
+
+  /**
+   * Use this structure to specify the launch templates and instance types (overrides) for a mixed
+   * instances policy.
+   *
+   * `LaunchTemplate` is a property of the [AWS::AutoScaling::AutoScalingGroup
+   * MixedInstancesPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * LaunchTemplateProperty launchTemplateProperty = LaunchTemplateProperty.builder()
+   * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
+   * .version("version")
+   * // the properties below are optional
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .build())
+   * // the properties below are optional
+   * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
+   * .instanceRequirements(InstanceRequirementsProperty.builder()
+   * .memoryMiB(MemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .vCpuCount(VCpuCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * // the properties below are optional
+   * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+   * .acceleratorNames(List.of("acceleratorNames"))
+   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorTypes(List.of("acceleratorTypes"))
+   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+   * .bareMetal("bareMetal")
+   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .burstablePerformance("burstablePerformance")
+   * .cpuManufacturers(List.of("cpuManufacturers"))
+   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+   * .instanceGenerations(List.of("instanceGenerations"))
+   * .localStorage("localStorage")
+   * .localStorageTypes(List.of("localStorageTypes"))
+   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
+   * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .onDemandMaxPricePercentageOverLowestPrice(123)
+   * .requireHibernateSupport(false)
+   * .spotMaxPricePercentageOverLowestPrice(123)
+   * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .build())
+   * .instanceType("instanceType")
+   * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
+   * .version("version")
+   * // the properties below are optional
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .build())
+   * .weightedCapacity("weightedCapacity")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
+   */
+  public interface LaunchTemplateProperty {
+    /**
+     * The launch template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html#cfn-autoscaling-autoscalinggroup-launchtemplate-launchtemplatespecification)
+     */
+    public fun launchTemplateSpecification(): Any
+
+    /**
+     * Any properties that you specify override the same properties in the launch template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html#cfn-autoscaling-autoscalinggroup-launchtemplate-overrides)
+     */
+    public fun overrides(): Any? = unwrap(this).getOverrides()
+
+    /**
+     * A builder for [LaunchTemplateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param launchTemplateSpecification The launch template. 
+       */
+      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable)
+
+      /**
+       * @param launchTemplateSpecification The launch template. 
+       */
+      public
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty)
+
+      /**
+       * @param launchTemplateSpecification The launch template. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("782d4c0c4f990e75a08265698f12ae7348b54caa42bc1d02c7f7bc986706a071")
+      public
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param overrides Any properties that you specify override the same properties in the launch
+       * template.
+       */
+      public fun overrides(overrides: IResolvable)
+
+      /**
+       * @param overrides Any properties that you specify override the same properties in the launch
+       * template.
+       */
+      public fun overrides(overrides: List<Any>)
+
+      /**
+       * @param overrides Any properties that you specify override the same properties in the launch
+       * template.
+       */
+      public fun overrides(vararg overrides: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty.builder()
+
+      /**
+       * @param launchTemplateSpecification The launch template. 
+       */
+      override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param launchTemplateSpecification The launch template. 
+       */
+      override
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param launchTemplateSpecification The launch template. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("782d4c0c4f990e75a08265698f12ae7348b54caa42bc1d02c7f7bc986706a071")
+      override
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          launchTemplateSpecification(LaunchTemplateSpecificationProperty(launchTemplateSpecification))
+
+      /**
+       * @param overrides Any properties that you specify override the same properties in the launch
+       * template.
+       */
+      override fun overrides(overrides: IResolvable) {
+        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param overrides Any properties that you specify override the same properties in the launch
+       * template.
+       */
+      override fun overrides(overrides: List<Any>) {
+        cdkBuilder.overrides(overrides)
+      }
+
+      /**
+       * @param overrides Any properties that you specify override the same properties in the launch
+       * template.
+       */
+      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateProperty {
+      /**
+       * The launch template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html#cfn-autoscaling-autoscalinggroup-launchtemplate-launchtemplatespecification)
+       */
+      override fun launchTemplateSpecification(): Any =
+          unwrap(this).getLaunchTemplateSpecification()
+
+      /**
+       * Any properties that you specify override the same properties in the launch template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html#cfn-autoscaling-autoscalinggroup-launchtemplate-overrides)
+       */
+      override fun overrides(): Any? = unwrap(this).getOverrides()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchTemplateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty):
+          LaunchTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchTemplateProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty
+    }
+  }
+
+  /**
+   * Specifies a launch template to use when provisioning EC2 instances for an Auto Scaling group.
+   *
+   * You must specify the following:
+   *
+   * * The ID or the name of the launch template, but not both.
+   * * The version of the launch template.
+   *
+   * `LaunchTemplateSpecification` is property of the
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource. It is also a property of the [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
+   * and [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+   * property types.
+   *
+   * For information about creating a launch template, see
+   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+   * and [Create a launch template for an Auto Scaling
+   * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the
+   * *Amazon EC2 Auto Scaling User Guide* .
+   *
+   * For examples of launch templates, see [Create launch
+   * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-launch-templates.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * LaunchTemplateSpecificationProperty launchTemplateSpecificationProperty =
+   * LaunchTemplateSpecificationProperty.builder()
+   * .version("version")
+   * // the properties below are optional
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html)
+   */
+  public interface LaunchTemplateSpecificationProperty {
+    /**
+     * The ID of the launch template.
+     *
+     * You must specify the `LaunchTemplateID` or the `LaunchTemplateName` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid)
+     */
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+    /**
+     * The name of the launch template.
+     *
+     * You must specify the `LaunchTemplateName` or the `LaunchTemplateID` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename)
+     */
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+    /**
+     * The version number of the launch template.
+     *
+     * Specifying `$Latest` or `$Default` for the template version number is not supported. However,
+     * you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the `Fn::GetAtt` intrinsic
+     * function. For more information, see
+     * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
+     * .
+     *
+     *
+     * For an example of using the `Fn::GetAtt` function, see the
+     * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
+     * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version)
+     */
+    public fun version(): String
+
+    /**
+     * A builder for [LaunchTemplateSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       * You must specify the `LaunchTemplateID` or the `LaunchTemplateName` , but not both.
+       */
+      public fun launchTemplateId(launchTemplateId: String)
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateID` , but not both.
+       */
+      public fun launchTemplateName(launchTemplateName: String)
+
+      /**
+       * @param version The version number of the launch template. 
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
+       * .
+       *
+       *
+       * For an example of using the `Fn::GetAtt` function, see the
+       * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
+       * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty.builder()
+
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       * You must specify the `LaunchTemplateID` or the `LaunchTemplateName` , but not both.
+       */
+      override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateID` , but not both.
+       */
+      override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      /**
+       * @param version The version number of the launch template. 
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
+       * .
+       *
+       *
+       * For an example of using the `Fn::GetAtt` function, see the
+       * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
+       * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
+      /**
+       * The ID of the launch template.
+       *
+       * You must specify the `LaunchTemplateID` or the `LaunchTemplateName` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid)
+       */
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+      /**
+       * The name of the launch template.
+       *
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateID` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename)
+       */
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+      /**
+       * The version number of the launch template.
+       *
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
+       * .
+       *
+       *
+       * For an example of using the `Fn::GetAtt` function, see the
+       * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
+       * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version)
+       */
+      override fun version(): String = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LaunchTemplateSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty):
+          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty
     }
   }
 
@@ -8016,6 +7000,543 @@ public open class CfnAutoScalingGroup internal constructor(
   }
 
   /**
+   * `MemoryGiBPerVCpuRequest` is a property of the `InstanceRequirements` property of the
+   * [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+   * property type that describes the minimum and maximum amount of memory per vCPU for an instance
+   * type, in GiB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * MemoryGiBPerVCpuRequestProperty memoryGiBPerVCpuRequestProperty =
+   * MemoryGiBPerVCpuRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html)
+   */
+  public interface MemoryGiBPerVCpuRequestProperty {
+    /**
+     * The memory maximum in GiB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html#cfn-autoscaling-autoscalinggroup-memorygibpervcpurequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The memory minimum in GiB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html#cfn-autoscaling-autoscalinggroup-memorygibpervcpurequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [MemoryGiBPerVCpuRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The memory maximum in GiB.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The memory minimum in GiB.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty.builder()
+
+      /**
+       * @param max The memory maximum in GiB.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The memory minimum in GiB.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty,
+    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
+      /**
+       * The memory maximum in GiB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html#cfn-autoscaling-autoscalinggroup-memorygibpervcpurequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The memory minimum in GiB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorygibpervcpurequest.html#cfn-autoscaling-autoscalinggroup-memorygibpervcpurequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryGiBPerVCpuRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty):
+          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemoryGiBPerVCpuRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemoryGiBPerVCpuRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty
+    }
+  }
+
+  /**
+   * `MemoryMiBRequest` is a property of the `InstanceRequirements` property of the
+   * [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+   * property type that describes the minimum and maximum instance memory size for an instance type, in
+   * MiB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * MemoryMiBRequestProperty memoryMiBRequestProperty = MemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html)
+   */
+  public interface MemoryMiBRequestProperty {
+    /**
+     * The memory maximum in MiB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html#cfn-autoscaling-autoscalinggroup-memorymibrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The memory minimum in MiB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html#cfn-autoscaling-autoscalinggroup-memorymibrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [MemoryMiBRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The memory maximum in MiB.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The memory minimum in MiB.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty.builder()
+
+      /**
+       * @param max The memory maximum in MiB.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The memory minimum in MiB.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty,
+    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
+      /**
+       * The memory maximum in MiB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html#cfn-autoscaling-autoscalinggroup-memorymibrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The memory minimum in MiB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-memorymibrequest.html#cfn-autoscaling-autoscalinggroup-memorymibrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryMiBRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty):
+          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBRequestProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemoryMiBRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty
+    }
+  }
+
+  /**
+   * `MetricsCollection` is a property of the
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource that describes the group metrics that an Amazon EC2 Auto Scaling group sends to Amazon
+   * CloudWatch. These metrics describe the group rather than any of its instances.
+   *
+   * For more information, see [Monitor CloudWatch metrics for your Auto Scaling groups and
+   * instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html) in
+   * the *Amazon EC2 Auto Scaling User Guide* . You can find a sample template snippet in the
+   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
+   * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * MetricsCollectionProperty metricsCollectionProperty = MetricsCollectionProperty.builder()
+   * .granularity("granularity")
+   * // the properties below are optional
+   * .metrics(List.of("metrics"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html)
+   */
+  public interface MetricsCollectionProperty {
+    /**
+     * The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWatch.
+     *
+     * The only valid value is `1Minute` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-granularity)
+     */
+    public fun granularity(): String
+
+    /**
+     * Identifies the metrics to enable.
+     *
+     * You can specify one or more of the following metrics:
+     *
+     * * `GroupMinSize`
+     * * `GroupMaxSize`
+     * * `GroupDesiredCapacity`
+     * * `GroupInServiceInstances`
+     * * `GroupPendingInstances`
+     * * `GroupStandbyInstances`
+     * * `GroupTerminatingInstances`
+     * * `GroupTotalInstances`
+     * * `GroupInServiceCapacity`
+     * * `GroupPendingCapacity`
+     * * `GroupStandbyCapacity`
+     * * `GroupTerminatingCapacity`
+     * * `GroupTotalCapacity`
+     * * `WarmPoolDesiredCapacity`
+     * * `WarmPoolWarmedCapacity`
+     * * `WarmPoolPendingCapacity`
+     * * `WarmPoolTerminatingCapacity`
+     * * `WarmPoolTotalCapacity`
+     * * `GroupAndWarmPoolDesiredCapacity`
+     * * `GroupAndWarmPoolTotalCapacity`
+     *
+     * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
+     *
+     * For more information, see [Auto Scaling group
+     * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-metrics)
+     */
+    public fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
+
+    /**
+     * A builder for [MetricsCollectionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param granularity The frequency at which Amazon EC2 Auto Scaling sends aggregated data to
+       * CloudWatch. 
+       * The only valid value is `1Minute` .
+       */
+      public fun granularity(granularity: String)
+
+      /**
+       * @param metrics Identifies the metrics to enable.
+       * You can specify one or more of the following metrics:
+       *
+       * * `GroupMinSize`
+       * * `GroupMaxSize`
+       * * `GroupDesiredCapacity`
+       * * `GroupInServiceInstances`
+       * * `GroupPendingInstances`
+       * * `GroupStandbyInstances`
+       * * `GroupTerminatingInstances`
+       * * `GroupTotalInstances`
+       * * `GroupInServiceCapacity`
+       * * `GroupPendingCapacity`
+       * * `GroupStandbyCapacity`
+       * * `GroupTerminatingCapacity`
+       * * `GroupTotalCapacity`
+       * * `WarmPoolDesiredCapacity`
+       * * `WarmPoolWarmedCapacity`
+       * * `WarmPoolPendingCapacity`
+       * * `WarmPoolTerminatingCapacity`
+       * * `WarmPoolTotalCapacity`
+       * * `GroupAndWarmPoolDesiredCapacity`
+       * * `GroupAndWarmPoolTotalCapacity`
+       *
+       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
+       *
+       * For more information, see [Auto Scaling group
+       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       */
+      public fun metrics(metrics: List<String>)
+
+      /**
+       * @param metrics Identifies the metrics to enable.
+       * You can specify one or more of the following metrics:
+       *
+       * * `GroupMinSize`
+       * * `GroupMaxSize`
+       * * `GroupDesiredCapacity`
+       * * `GroupInServiceInstances`
+       * * `GroupPendingInstances`
+       * * `GroupStandbyInstances`
+       * * `GroupTerminatingInstances`
+       * * `GroupTotalInstances`
+       * * `GroupInServiceCapacity`
+       * * `GroupPendingCapacity`
+       * * `GroupStandbyCapacity`
+       * * `GroupTerminatingCapacity`
+       * * `GroupTotalCapacity`
+       * * `WarmPoolDesiredCapacity`
+       * * `WarmPoolWarmedCapacity`
+       * * `WarmPoolPendingCapacity`
+       * * `WarmPoolTerminatingCapacity`
+       * * `WarmPoolTotalCapacity`
+       * * `GroupAndWarmPoolDesiredCapacity`
+       * * `GroupAndWarmPoolTotalCapacity`
+       *
+       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
+       *
+       * For more information, see [Auto Scaling group
+       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       */
+      public fun metrics(vararg metrics: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty.builder()
+
+      /**
+       * @param granularity The frequency at which Amazon EC2 Auto Scaling sends aggregated data to
+       * CloudWatch. 
+       * The only valid value is `1Minute` .
+       */
+      override fun granularity(granularity: String) {
+        cdkBuilder.granularity(granularity)
+      }
+
+      /**
+       * @param metrics Identifies the metrics to enable.
+       * You can specify one or more of the following metrics:
+       *
+       * * `GroupMinSize`
+       * * `GroupMaxSize`
+       * * `GroupDesiredCapacity`
+       * * `GroupInServiceInstances`
+       * * `GroupPendingInstances`
+       * * `GroupStandbyInstances`
+       * * `GroupTerminatingInstances`
+       * * `GroupTotalInstances`
+       * * `GroupInServiceCapacity`
+       * * `GroupPendingCapacity`
+       * * `GroupStandbyCapacity`
+       * * `GroupTerminatingCapacity`
+       * * `GroupTotalCapacity`
+       * * `WarmPoolDesiredCapacity`
+       * * `WarmPoolWarmedCapacity`
+       * * `WarmPoolPendingCapacity`
+       * * `WarmPoolTerminatingCapacity`
+       * * `WarmPoolTotalCapacity`
+       * * `GroupAndWarmPoolDesiredCapacity`
+       * * `GroupAndWarmPoolTotalCapacity`
+       *
+       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
+       *
+       * For more information, see [Auto Scaling group
+       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       */
+      override fun metrics(metrics: List<String>) {
+        cdkBuilder.metrics(metrics)
+      }
+
+      /**
+       * @param metrics Identifies the metrics to enable.
+       * You can specify one or more of the following metrics:
+       *
+       * * `GroupMinSize`
+       * * `GroupMaxSize`
+       * * `GroupDesiredCapacity`
+       * * `GroupInServiceInstances`
+       * * `GroupPendingInstances`
+       * * `GroupStandbyInstances`
+       * * `GroupTerminatingInstances`
+       * * `GroupTotalInstances`
+       * * `GroupInServiceCapacity`
+       * * `GroupPendingCapacity`
+       * * `GroupStandbyCapacity`
+       * * `GroupTerminatingCapacity`
+       * * `GroupTotalCapacity`
+       * * `WarmPoolDesiredCapacity`
+       * * `WarmPoolWarmedCapacity`
+       * * `WarmPoolPendingCapacity`
+       * * `WarmPoolTerminatingCapacity`
+       * * `WarmPoolTotalCapacity`
+       * * `GroupAndWarmPoolDesiredCapacity`
+       * * `GroupAndWarmPoolTotalCapacity`
+       *
+       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
+       *
+       * For more information, see [Auto Scaling group
+       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       */
+      override fun metrics(vararg metrics: String): Unit = metrics(metrics.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty,
+    ) : CdkObject(cdkObject), MetricsCollectionProperty {
+      /**
+       * The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWatch.
+       *
+       * The only valid value is `1Minute` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-granularity)
+       */
+      override fun granularity(): String = unwrap(this).getGranularity()
+
+      /**
+       * Identifies the metrics to enable.
+       *
+       * You can specify one or more of the following metrics:
+       *
+       * * `GroupMinSize`
+       * * `GroupMaxSize`
+       * * `GroupDesiredCapacity`
+       * * `GroupInServiceInstances`
+       * * `GroupPendingInstances`
+       * * `GroupStandbyInstances`
+       * * `GroupTerminatingInstances`
+       * * `GroupTotalInstances`
+       * * `GroupInServiceCapacity`
+       * * `GroupPendingCapacity`
+       * * `GroupStandbyCapacity`
+       * * `GroupTerminatingCapacity`
+       * * `GroupTotalCapacity`
+       * * `WarmPoolDesiredCapacity`
+       * * `WarmPoolWarmedCapacity`
+       * * `WarmPoolPendingCapacity`
+       * * `WarmPoolTerminatingCapacity`
+       * * `WarmPoolTotalCapacity`
+       * * `GroupAndWarmPoolDesiredCapacity`
+       * * `GroupAndWarmPoolTotalCapacity`
+       *
+       * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
+       *
+       * For more information, see [Auto Scaling group
+       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-metrics)
+       */
+      override fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricsCollectionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty):
+          MetricsCollectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricsCollectionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricsCollectionProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty
+    }
+  }
+
+  /**
    * Use this structure to launch multiple instance types and On-Demand Instances and Spot Instances
    * within a single Auto Scaling group.
    *
@@ -8294,11 +7815,20 @@ public open class CfnAutoScalingGroup internal constructor(
   }
 
   /**
-   * `AcceleratorTotalMemoryMiBRequest` is a property of the `InstanceRequirements` property of the
+   * `NetworkBandwidthGbpsRequest` is a property of the `InstanceRequirements` property of the
    * [AWS::AutoScaling::AutoScalingGroup
    * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
-   * property type that describes the minimum and maximum total memory size for the accelerators for an
-   * instance type, in MiB.
+   * property type that describes the minimum and maximum network bandwidth for an instance type, in
+   * Gbps.
+   *
+   *
+   * Setting the minimum bandwidth does not guarantee that your instance will achieve the minimum
+   * bandwidth. Amazon EC2 will identify instance types that support the specified minimum bandwidth,
+   * but the actual bandwidth of your instance might go below the specified minimum at times. For more
+   * information, see [Available instance
+   * bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html#available-instance-bandwidth)
+   * in the *Amazon EC2 User Guide for Linux Instances* .
+   *
    *
    * Example:
    *
@@ -8306,116 +7836,115 @@ public open class CfnAutoScalingGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * AcceleratorTotalMemoryMiBRequestProperty acceleratorTotalMemoryMiBRequestProperty =
-   * AcceleratorTotalMemoryMiBRequestProperty.builder()
+   * NetworkBandwidthGbpsRequestProperty networkBandwidthGbpsRequestProperty =
+   * NetworkBandwidthGbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html)
    */
-  public interface AcceleratorTotalMemoryMiBRequestProperty {
+  public interface NetworkBandwidthGbpsRequestProperty {
     /**
-     * The memory maximum in MiB.
+     * The maximum amount of network bandwidth, in gigabits per second (Gbps).
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html#cfn-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest-max)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html#cfn-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The memory minimum in MiB.
+     * The minimum amount of network bandwidth, in gigabits per second (Gbps).
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html#cfn-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest-min)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html#cfn-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * A builder for [AcceleratorTotalMemoryMiBRequestProperty]
+     * A builder for [NetworkBandwidthGbpsRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The memory maximum in MiB.
+       * @param max The maximum amount of network bandwidth, in gigabits per second (Gbps).
        */
       public fun max(max: Number)
 
       /**
-       * @param min The memory minimum in MiB.
+       * @param min The minimum amount of network bandwidth, in gigabits per second (Gbps).
        */
       public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty.builder()
 
       /**
-       * @param max The memory maximum in MiB.
+       * @param max The maximum amount of network bandwidth, in gigabits per second (Gbps).
        */
       override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
       /**
-       * @param min The memory minimum in MiB.
+       * @param min The minimum amount of network bandwidth, in gigabits per second (Gbps).
        */
       override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty,
+    ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
       /**
-       * The memory maximum in MiB.
+       * The maximum amount of network bandwidth, in gigabits per second (Gbps).
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html#cfn-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest-max)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html#cfn-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The memory minimum in MiB.
+       * The minimum amount of network bandwidth, in gigabits per second (Gbps).
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest.html#cfn-autoscaling-autoscalinggroup-acceleratortotalmemorymibrequest-min)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest.html#cfn-autoscaling-autoscalinggroup-networkbandwidthgbpsrequest-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          AcceleratorTotalMemoryMiBRequestProperty {
+          NetworkBandwidthGbpsRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty):
-          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AcceleratorTotalMemoryMiBRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty):
+          NetworkBandwidthGbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkBandwidthGbpsRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBRequestProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty
+      internal fun unwrap(wrapped: NetworkBandwidthGbpsRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty
     }
   }
 
   /**
-   * Use this structure to specify the launch templates and instance types (overrides) for a mixed
-   * instances policy.
-   *
-   * `LaunchTemplate` is a property of the [AWS::AutoScaling::AutoScalingGroup
-   * MixedInstancesPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.html)
-   * property type.
+   * `NetworkInterfaceCountRequest` is a property of the `InstanceRequirements` property of the
+   * [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+   * property type that describes the minimum and maximum number of network interfaces for an instance
+   * type.
    *
    * Example:
    *
@@ -8423,234 +7952,705 @@ public open class CfnAutoScalingGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * LaunchTemplateProperty launchTemplateProperty = LaunchTemplateProperty.builder()
-   * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
-   * .version("version")
-   * // the properties below are optional
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .build())
-   * // the properties below are optional
-   * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
-   * .instanceRequirements(InstanceRequirementsProperty.builder()
-   * .memoryMiB(MemoryMiBRequestProperty.builder()
+   * NetworkInterfaceCountRequestProperty networkInterfaceCountRequestProperty =
+   * NetworkInterfaceCountRequestProperty.builder()
    * .max(123)
    * .min(123)
-   * .build())
-   * .vCpuCount(VCpuCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * // the properties below are optional
-   * .acceleratorCount(AcceleratorCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
-   * .acceleratorNames(List.of("acceleratorNames"))
-   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorTypes(List.of("acceleratorTypes"))
-   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
-   * .bareMetal("bareMetal")
-   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .burstablePerformance("burstablePerformance")
-   * .cpuManufacturers(List.of("cpuManufacturers"))
-   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
-   * .instanceGenerations(List.of("instanceGenerations"))
-   * .localStorage("localStorage")
-   * .localStorageTypes(List.of("localStorageTypes"))
-   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
-   * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .onDemandMaxPricePercentageOverLowestPrice(123)
-   * .requireHibernateSupport(false)
-   * .spotMaxPricePercentageOverLowestPrice(123)
-   * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .build())
-   * .instanceType("instanceType")
-   * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
-   * .version("version")
-   * // the properties below are optional
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .build())
-   * .weightedCapacity("weightedCapacity")
-   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html)
    */
-  public interface LaunchTemplateProperty {
+  public interface NetworkInterfaceCountRequestProperty {
     /**
-     * The launch template.
+     * The maximum number of network interfaces.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html#cfn-autoscaling-autoscalinggroup-launchtemplate-launchtemplatespecification)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html#cfn-autoscaling-autoscalinggroup-networkinterfacecountrequest-max)
      */
-    public fun launchTemplateSpecification(): Any
+    public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * Any properties that you specify override the same properties in the launch template.
+     * The minimum number of network interfaces.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html#cfn-autoscaling-autoscalinggroup-launchtemplate-overrides)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html#cfn-autoscaling-autoscalinggroup-networkinterfacecountrequest-min)
      */
-    public fun overrides(): Any? = unwrap(this).getOverrides()
+    public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * A builder for [LaunchTemplateProperty]
+     * A builder for [NetworkInterfaceCountRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param launchTemplateSpecification The launch template. 
+       * @param max The maximum number of network interfaces.
        */
-      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable)
+      public fun max(max: Number)
 
       /**
-       * @param launchTemplateSpecification The launch template. 
+       * @param min The minimum number of network interfaces.
        */
-      public
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty)
-
-      /**
-       * @param launchTemplateSpecification The launch template. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("782d4c0c4f990e75a08265698f12ae7348b54caa42bc1d02c7f7bc986706a071")
-      public
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param overrides Any properties that you specify override the same properties in the launch
-       * template.
-       */
-      public fun overrides(overrides: IResolvable)
-
-      /**
-       * @param overrides Any properties that you specify override the same properties in the launch
-       * template.
-       */
-      public fun overrides(overrides: List<Any>)
-
-      /**
-       * @param overrides Any properties that you specify override the same properties in the launch
-       * template.
-       */
-      public fun overrides(vararg overrides: Any)
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty.builder()
 
       /**
-       * @param launchTemplateSpecification The launch template. 
+       * @param max The maximum number of network interfaces.
        */
-      override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
       }
 
       /**
-       * @param launchTemplateSpecification The launch template. 
+       * @param min The minimum number of network interfaces.
        */
-      override
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty::unwrap))
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
       }
-
-      /**
-       * @param launchTemplateSpecification The launch template. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("782d4c0c4f990e75a08265698f12ae7348b54caa42bc1d02c7f7bc986706a071")
-      override
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          launchTemplateSpecification(LaunchTemplateSpecificationProperty(launchTemplateSpecification))
-
-      /**
-       * @param overrides Any properties that you specify override the same properties in the launch
-       * template.
-       */
-      override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param overrides Any properties that you specify override the same properties in the launch
-       * template.
-       */
-      override fun overrides(overrides: List<Any>) {
-        cdkBuilder.overrides(overrides)
-      }
-
-      /**
-       * @param overrides Any properties that you specify override the same properties in the launch
-       * template.
-       */
-      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateProperty {
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty,
+    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
       /**
-       * The launch template.
+       * The maximum number of network interfaces.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html#cfn-autoscaling-autoscalinggroup-launchtemplate-launchtemplatespecification)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html#cfn-autoscaling-autoscalinggroup-networkinterfacecountrequest-max)
        */
-      override fun launchTemplateSpecification(): Any =
-          unwrap(this).getLaunchTemplateSpecification()
+      override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * Any properties that you specify override the same properties in the launch template.
+       * The minimum number of network interfaces.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html#cfn-autoscaling-autoscalinggroup-launchtemplate-overrides)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-networkinterfacecountrequest.html#cfn-autoscaling-autoscalinggroup-networkinterfacecountrequest-min)
        */
-      override fun overrides(): Any? = unwrap(this).getOverrides()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchTemplateProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NetworkInterfaceCountRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty):
-          LaunchTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty):
+          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkInterfaceCountRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkInterfaceCountRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty
+    }
+  }
+
+  /**
+   * A structure that specifies an Amazon SNS notification configuration for the
+   * `NotificationConfigurations` property of the
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource.
+   *
+   * For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+   * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html)
+   * .
+   *
+   * For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+   * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
+   * *Amazon EC2 Auto Scaling User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * NotificationConfigurationProperty notificationConfigurationProperty =
+   * NotificationConfigurationProperty.builder()
+   * .topicArn("topicArn")
+   * // the properties below are optional
+   * .notificationTypes(List.of("notificationTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html)
+   */
+  public interface NotificationConfigurationProperty {
+    /**
+     * A list of event types that send a notification. Event types can include any of the following
+     * types.
+     *
+     * *Allowed values* :
+     *
+     * * `autoscaling:EC2_INSTANCE_LAUNCH`
+     * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
+     * * `autoscaling:EC2_INSTANCE_TERMINATE`
+     * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
+     * * `autoscaling:TEST_NOTIFICATION`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration-notificationtypes)
+     */
+    public fun notificationTypes(): List<String> = unwrap(this).getNotificationTypes() ?:
+        emptyList()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration-topicarn)
+     */
+    public fun topicArn(): String
+
+    /**
+     * A builder for [NotificationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param notificationTypes A list of event types that send a notification. Event types can
+       * include any of the following types.
+       * *Allowed values* :
+       *
+       * * `autoscaling:EC2_INSTANCE_LAUNCH`
+       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
+       * * `autoscaling:TEST_NOTIFICATION`
+       */
+      public fun notificationTypes(notificationTypes: List<String>)
+
+      /**
+       * @param notificationTypes A list of event types that send a notification. Event types can
+       * include any of the following types.
+       * *Allowed values* :
+       *
+       * * `autoscaling:EC2_INSTANCE_LAUNCH`
+       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
+       * * `autoscaling:TEST_NOTIFICATION`
+       */
+      public fun notificationTypes(vararg notificationTypes: String)
+
+      /**
+       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. 
+       */
+      public fun topicArn(topicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty.builder()
+
+      /**
+       * @param notificationTypes A list of event types that send a notification. Event types can
+       * include any of the following types.
+       * *Allowed values* :
+       *
+       * * `autoscaling:EC2_INSTANCE_LAUNCH`
+       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
+       * * `autoscaling:TEST_NOTIFICATION`
+       */
+      override fun notificationTypes(notificationTypes: List<String>) {
+        cdkBuilder.notificationTypes(notificationTypes)
+      }
+
+      /**
+       * @param notificationTypes A list of event types that send a notification. Event types can
+       * include any of the following types.
+       * *Allowed values* :
+       *
+       * * `autoscaling:EC2_INSTANCE_LAUNCH`
+       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
+       * * `autoscaling:TEST_NOTIFICATION`
+       */
+      override fun notificationTypes(vararg notificationTypes: String): Unit =
+          notificationTypes(notificationTypes.toList())
+
+      /**
+       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic. 
+       */
+      override fun topicArn(topicArn: String) {
+        cdkBuilder.topicArn(topicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty,
+    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
+      /**
+       * A list of event types that send a notification. Event types can include any of the
+       * following types.
+       *
+       * *Allowed values* :
+       *
+       * * `autoscaling:EC2_INSTANCE_LAUNCH`
+       * * `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE`
+       * * `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
+       * * `autoscaling:TEST_NOTIFICATION`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration-notificationtypes)
+       */
+      override fun notificationTypes(): List<String> = unwrap(this).getNotificationTypes() ?:
+          emptyList()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon SNS topic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration-topicarn)
+       */
+      override fun topicArn(): String = unwrap(this).getTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NotificationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty):
+          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationConfigurationProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty
+    }
+  }
+
+  /**
+   * A structure that specifies a tag for the `Tags` property of
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource.
+   *
+   * For more information, see [Tag Auto Scaling groups and
+   * instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the
+   * *Amazon EC2 Auto Scaling User Guide* . You can find a sample template snippet in the
+   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#aws-resource-autoscaling-autoscalinggroup--examples)
+   * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
+   *
+   * CloudFormation adds the following tags to all Auto Scaling groups and associated instances:
+   *
+   * * aws:cloudformation:stack-name
+   * * aws:cloudformation:stack-id
+   * * aws:cloudformation:logical-id
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * TagPropertyProperty tagPropertyProperty = TagPropertyProperty.builder()
+   * .key("key")
+   * .propagateAtLaunch(false)
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html)
+   */
+  public interface TagPropertyProperty {
+    /**
+     * The tag key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-key)
+     */
+    public fun key(): String
+
+    /**
+     * Set to `true` if you want CloudFormation to copy the tag to EC2 instances that are launched
+     * as part of the Auto Scaling group.
+     *
+     * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied to
+     * any instances launched as part of the Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-propagateatlaunch)
+     */
+    public fun propagateAtLaunch(): Any
+
+    /**
+     * The tag value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [TagPropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The tag key. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param propagateAtLaunch Set to `true` if you want CloudFormation to copy the tag to EC2
+       * instances that are launched as part of the Auto Scaling group. 
+       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
+       * to any instances launched as part of the Auto Scaling group.
+       */
+      public fun propagateAtLaunch(propagateAtLaunch: Boolean)
+
+      /**
+       * @param propagateAtLaunch Set to `true` if you want CloudFormation to copy the tag to EC2
+       * instances that are launched as part of the Auto Scaling group. 
+       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
+       * to any instances launched as part of the Auto Scaling group.
+       */
+      public fun propagateAtLaunch(propagateAtLaunch: IResolvable)
+
+      /**
+       * @param value The tag value. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty.builder()
+
+      /**
+       * @param key The tag key. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param propagateAtLaunch Set to `true` if you want CloudFormation to copy the tag to EC2
+       * instances that are launched as part of the Auto Scaling group. 
+       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
+       * to any instances launched as part of the Auto Scaling group.
+       */
+      override fun propagateAtLaunch(propagateAtLaunch: Boolean) {
+        cdkBuilder.propagateAtLaunch(propagateAtLaunch)
+      }
+
+      /**
+       * @param propagateAtLaunch Set to `true` if you want CloudFormation to copy the tag to EC2
+       * instances that are launched as part of the Auto Scaling group. 
+       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
+       * to any instances launched as part of the Auto Scaling group.
+       */
+      override fun propagateAtLaunch(propagateAtLaunch: IResolvable) {
+        cdkBuilder.propagateAtLaunch(propagateAtLaunch.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param value The tag value. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty,
+    ) : CdkObject(cdkObject), TagPropertyProperty {
+      /**
+       * The tag key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * Set to `true` if you want CloudFormation to copy the tag to EC2 instances that are launched
+       * as part of the Auto Scaling group.
+       *
+       * Set to `false` if you want the tag attached only to the Auto Scaling group and not copied
+       * to any instances launched as part of the Auto Scaling group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-propagateatlaunch)
+       */
+      override fun propagateAtLaunch(): Any = unwrap(this).getPropagateAtLaunch()
+
+      /**
+       * The tag value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html#cfn-autoscaling-autoscalinggroup-tagproperty-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagPropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty):
+          TagPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? TagPropertyProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LaunchTemplateProperty):
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty =
+      internal fun unwrap(wrapped: TagPropertyProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty
+    }
+  }
+
+  /**
+   * `TotalLocalStorageGBRequest` is a property of the `InstanceRequirements` property of the
+   * [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+   * property type that describes the minimum and maximum total local storage size for an instance
+   * type, in GB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * TotalLocalStorageGBRequestProperty totalLocalStorageGBRequestProperty =
+   * TotalLocalStorageGBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html)
+   */
+  public interface TotalLocalStorageGBRequestProperty {
+    /**
+     * The storage maximum in GB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html#cfn-autoscaling-autoscalinggroup-totallocalstoragegbrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The storage minimum in GB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html#cfn-autoscaling-autoscalinggroup-totallocalstoragegbrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [TotalLocalStorageGBRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The storage maximum in GB.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The storage minimum in GB.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty.builder()
+
+      /**
+       * @param max The storage maximum in GB.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The storage minimum in GB.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty,
+    ) : CdkObject(cdkObject), TotalLocalStorageGBRequestProperty {
+      /**
+       * The storage maximum in GB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html#cfn-autoscaling-autoscalinggroup-totallocalstoragegbrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The storage minimum in GB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html#cfn-autoscaling-autoscalinggroup-totallocalstoragegbrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TotalLocalStorageGBRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty):
+          TotalLocalStorageGBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TotalLocalStorageGBRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TotalLocalStorageGBRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
+    }
+  }
+
+  /**
+   * `VCpuCountRequest` is a property of the `InstanceRequirements` property of the
+   * [AWS::AutoScaling::AutoScalingGroup
+   * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+   * property type that describes the minimum and maximum number of vCPUs for an instance type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * VCpuCountRequestProperty vCpuCountRequestProperty = VCpuCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html)
+   */
+  public interface VCpuCountRequestProperty {
+    /**
+     * The maximum number of vCPUs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html#cfn-autoscaling-autoscalinggroup-vcpucountrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum number of vCPUs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html#cfn-autoscaling-autoscalinggroup-vcpucountrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [VCpuCountRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum number of vCPUs.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum number of vCPUs.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty.builder()
+
+      /**
+       * @param max The maximum number of vCPUs.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum number of vCPUs.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty,
+    ) : CdkObject(cdkObject), VCpuCountRequestProperty {
+      /**
+       * The maximum number of vCPUs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html#cfn-autoscaling-autoscalinggroup-vcpucountrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum number of vCPUs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-vcpucountrequest.html#cfn-autoscaling-autoscalinggroup-vcpucountrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VCpuCountRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty):
+          VCpuCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? VCpuCountRequestProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VCpuCountRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty
     }
   }
 }

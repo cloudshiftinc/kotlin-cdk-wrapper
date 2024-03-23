@@ -1092,221 +1092,6 @@ public open class CfnEC2Fleet internal constructor(
   }
 
   /**
-   * Specifies the number of units to request for an EC2 Fleet.
-   *
-   * You can choose to set the target capacity in terms of instances or a performance characteristic
-   * that is important to your application workload, such as vCPUs, memory, or I/O. If the request type
-   * is `maintain` , you can specify a target capacity of `0` and add capacity later.
-   *
-   * `TargetCapacitySpecificationRequest` is a property of the
-   * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * TargetCapacitySpecificationRequestProperty targetCapacitySpecificationRequestProperty =
-   * TargetCapacitySpecificationRequestProperty.builder()
-   * .totalTargetCapacity(123)
-   * // the properties below are optional
-   * .defaultTargetCapacityType("defaultTargetCapacityType")
-   * .onDemandTargetCapacity(123)
-   * .spotTargetCapacity(123)
-   * .targetCapacityUnitType("targetCapacityUnitType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html)
-   */
-  public interface TargetCapacitySpecificationRequestProperty {
-    /**
-     * The default target capacity type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-defaulttargetcapacitytype)
-     */
-    public fun defaultTargetCapacityType(): String? = unwrap(this).getDefaultTargetCapacityType()
-
-    /**
-     * The number of On-Demand units to request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-ondemandtargetcapacity)
-     */
-    public fun onDemandTargetCapacity(): Number? = unwrap(this).getOnDemandTargetCapacity()
-
-    /**
-     * The number of Spot units to request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-spottargetcapacity)
-     */
-    public fun spotTargetCapacity(): Number? = unwrap(this).getSpotTargetCapacity()
-
-    /**
-     * The unit for the target capacity. You can specify this parameter only when using
-     * attributed-based instance type selection.
-     *
-     * Default: `units` (the number of instances)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-targetcapacityunittype)
-     */
-    public fun targetCapacityUnitType(): String? = unwrap(this).getTargetCapacityUnitType()
-
-    /**
-     * The number of units to request, filled using the default target capacity type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-totaltargetcapacity)
-     */
-    public fun totalTargetCapacity(): Number
-
-    /**
-     * A builder for [TargetCapacitySpecificationRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param defaultTargetCapacityType The default target capacity type.
-       */
-      public fun defaultTargetCapacityType(defaultTargetCapacityType: String)
-
-      /**
-       * @param onDemandTargetCapacity The number of On-Demand units to request.
-       */
-      public fun onDemandTargetCapacity(onDemandTargetCapacity: Number)
-
-      /**
-       * @param spotTargetCapacity The number of Spot units to request.
-       */
-      public fun spotTargetCapacity(spotTargetCapacity: Number)
-
-      /**
-       * @param targetCapacityUnitType The unit for the target capacity. You can specify this
-       * parameter only when using attributed-based instance type selection.
-       * Default: `units` (the number of instances)
-       */
-      public fun targetCapacityUnitType(targetCapacityUnitType: String)
-
-      /**
-       * @param totalTargetCapacity The number of units to request, filled using the default target
-       * capacity type. 
-       */
-      public fun totalTargetCapacity(totalTargetCapacity: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty.builder()
-
-      /**
-       * @param defaultTargetCapacityType The default target capacity type.
-       */
-      override fun defaultTargetCapacityType(defaultTargetCapacityType: String) {
-        cdkBuilder.defaultTargetCapacityType(defaultTargetCapacityType)
-      }
-
-      /**
-       * @param onDemandTargetCapacity The number of On-Demand units to request.
-       */
-      override fun onDemandTargetCapacity(onDemandTargetCapacity: Number) {
-        cdkBuilder.onDemandTargetCapacity(onDemandTargetCapacity)
-      }
-
-      /**
-       * @param spotTargetCapacity The number of Spot units to request.
-       */
-      override fun spotTargetCapacity(spotTargetCapacity: Number) {
-        cdkBuilder.spotTargetCapacity(spotTargetCapacity)
-      }
-
-      /**
-       * @param targetCapacityUnitType The unit for the target capacity. You can specify this
-       * parameter only when using attributed-based instance type selection.
-       * Default: `units` (the number of instances)
-       */
-      override fun targetCapacityUnitType(targetCapacityUnitType: String) {
-        cdkBuilder.targetCapacityUnitType(targetCapacityUnitType)
-      }
-
-      /**
-       * @param totalTargetCapacity The number of units to request, filled using the default target
-       * capacity type. 
-       */
-      override fun totalTargetCapacity(totalTargetCapacity: Number) {
-        cdkBuilder.totalTargetCapacity(totalTargetCapacity)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty,
-    ) : CdkObject(cdkObject), TargetCapacitySpecificationRequestProperty {
-      /**
-       * The default target capacity type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-defaulttargetcapacitytype)
-       */
-      override fun defaultTargetCapacityType(): String? =
-          unwrap(this).getDefaultTargetCapacityType()
-
-      /**
-       * The number of On-Demand units to request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-ondemandtargetcapacity)
-       */
-      override fun onDemandTargetCapacity(): Number? = unwrap(this).getOnDemandTargetCapacity()
-
-      /**
-       * The number of Spot units to request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-spottargetcapacity)
-       */
-      override fun spotTargetCapacity(): Number? = unwrap(this).getSpotTargetCapacity()
-
-      /**
-       * The unit for the target capacity. You can specify this parameter only when using
-       * attributed-based instance type selection.
-       *
-       * Default: `units` (the number of instances)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-targetcapacityunittype)
-       */
-      override fun targetCapacityUnitType(): String? = unwrap(this).getTargetCapacityUnitType()
-
-      /**
-       * The number of units to request, filled using the default target capacity type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-totaltargetcapacity)
-       */
-      override fun totalTargetCapacity(): Number = unwrap(this).getTotalTargetCapacity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetCapacitySpecificationRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty):
-          TargetCapacitySpecificationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetCapacitySpecificationRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetCapacitySpecificationRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty
-    }
-  }
-
-  /**
    * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
    * instance.
    *
@@ -1436,9 +1221,577 @@ public open class CfnEC2Fleet internal constructor(
   }
 
   /**
-   * Specifies the tags to apply to a resource when the resource is being created for an EC2 Fleet.
+   * The minimum and maximum amount of total accelerator memory, in MiB.
    *
-   * `TagSpecification` is a property of the
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AcceleratorTotalMemoryMiBRequestProperty acceleratorTotalMemoryMiBRequestProperty =
+   * AcceleratorTotalMemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html)
+   */
+  public interface AcceleratorTotalMemoryMiBRequestProperty {
+    /**
+     * The maximum amount of accelerator memory, in MiB.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html#cfn-ec2-ec2fleet-acceleratortotalmemorymibrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum amount of accelerator memory, in MiB.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html#cfn-ec2-ec2fleet-acceleratortotalmemorymibrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [AcceleratorTotalMemoryMiBRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum amount of accelerator memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum amount of accelerator memory, in MiB.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty.builder()
+
+      /**
+       * @param max The maximum amount of accelerator memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum amount of accelerator memory, in MiB.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty,
+    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
+      /**
+       * The maximum amount of accelerator memory, in MiB.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html#cfn-ec2-ec2fleet-acceleratortotalmemorymibrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum amount of accelerator memory, in MiB.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html#cfn-ec2-ec2fleet-acceleratortotalmemorymibrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AcceleratorTotalMemoryMiBRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty):
+          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AcceleratorTotalMemoryMiBRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
+   *
+   * For more information, see [Amazon EBS–optimized
+   * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
+   * EC2 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BaselineEbsBandwidthMbpsRequestProperty baselineEbsBandwidthMbpsRequestProperty =
+   * BaselineEbsBandwidthMbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html)
+   */
+  public interface BaselineEbsBandwidthMbpsRequestProperty {
+    /**
+     * The maximum baseline bandwidth, in Mbps.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-ec2fleet-baselineebsbandwidthmbpsrequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum baseline bandwidth, in Mbps.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-ec2fleet-baselineebsbandwidthmbpsrequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [BaselineEbsBandwidthMbpsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum baseline bandwidth, in Mbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum baseline bandwidth, in Mbps.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty.builder()
+
+      /**
+       * @param max The maximum baseline bandwidth, in Mbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum baseline bandwidth, in Mbps.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty,
+    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
+      /**
+       * The maximum baseline bandwidth, in Mbps.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-ec2fleet-baselineebsbandwidthmbpsrequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum baseline bandwidth, in Mbps.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-ec2fleet-baselineebsbandwidthmbpsrequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BaselineEbsBandwidthMbpsRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty):
+          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselineEbsBandwidthMbpsRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty
+    }
+  }
+
+  /**
+   * The Spot Instance replacement strategy to use when Amazon EC2 emits a rebalance notification
+   * signal that your Spot Instance is at an elevated risk of being interrupted.
+   *
+   * For more information, see [Capacity
+   * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-capacity-rebalance.html)
+   * in the *Amazon EC2 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CapacityRebalanceProperty capacityRebalanceProperty = CapacityRebalanceProperty.builder()
+   * .replacementStrategy("replacementStrategy")
+   * .terminationDelay(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html)
+   */
+  public interface CapacityRebalanceProperty {
+    /**
+     * The replacement strategy to use. Only available for fleets of type `maintain` .
+     *
+     * `launch` - EC2 Fleet launches a replacement Spot Instance when a rebalance notification is
+     * emitted for an existing Spot Instance in the fleet. EC2 Fleet does not terminate the instances
+     * that receive a rebalance notification. You can terminate the old instances, or you can leave
+     * them running. You are charged for all instances while they are running.
+     *
+     * `launch-before-terminate` - EC2 Fleet launches a replacement Spot Instance when a rebalance
+     * notification is emitted for an existing Spot Instance in the fleet, and then, after a delay that
+     * you specify (in `TerminationDelay` ), terminates the instances that received a rebalance
+     * notification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html#cfn-ec2-ec2fleet-capacityrebalance-replacementstrategy)
+     */
+    public fun replacementStrategy(): String? = unwrap(this).getReplacementStrategy()
+
+    /**
+     * The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot
+     * Instance after launching a new replacement Spot Instance.
+     *
+     * Required when `ReplacementStrategy` is set to `launch-before-terminate` .
+     *
+     * Not valid when `ReplacementStrategy` is set to `launch` .
+     *
+     * Valid values: Minimum value of `120` seconds. Maximum value of `7200` seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html#cfn-ec2-ec2fleet-capacityrebalance-terminationdelay)
+     */
+    public fun terminationDelay(): Number? = unwrap(this).getTerminationDelay()
+
+    /**
+     * A builder for [CapacityRebalanceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param replacementStrategy The replacement strategy to use. Only available for fleets of
+       * type `maintain` .
+       * `launch` - EC2 Fleet launches a replacement Spot Instance when a rebalance notification is
+       * emitted for an existing Spot Instance in the fleet. EC2 Fleet does not terminate the instances
+       * that receive a rebalance notification. You can terminate the old instances, or you can leave
+       * them running. You are charged for all instances while they are running.
+       *
+       * `launch-before-terminate` - EC2 Fleet launches a replacement Spot Instance when a rebalance
+       * notification is emitted for an existing Spot Instance in the fleet, and then, after a delay
+       * that you specify (in `TerminationDelay` ), terminates the instances that received a rebalance
+       * notification.
+       */
+      public fun replacementStrategy(replacementStrategy: String)
+
+      /**
+       * @param terminationDelay The amount of time (in seconds) that Amazon EC2 waits before
+       * terminating the old Spot Instance after launching a new replacement Spot Instance.
+       * Required when `ReplacementStrategy` is set to `launch-before-terminate` .
+       *
+       * Not valid when `ReplacementStrategy` is set to `launch` .
+       *
+       * Valid values: Minimum value of `120` seconds. Maximum value of `7200` seconds.
+       */
+      public fun terminationDelay(terminationDelay: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty.builder()
+
+      /**
+       * @param replacementStrategy The replacement strategy to use. Only available for fleets of
+       * type `maintain` .
+       * `launch` - EC2 Fleet launches a replacement Spot Instance when a rebalance notification is
+       * emitted for an existing Spot Instance in the fleet. EC2 Fleet does not terminate the instances
+       * that receive a rebalance notification. You can terminate the old instances, or you can leave
+       * them running. You are charged for all instances while they are running.
+       *
+       * `launch-before-terminate` - EC2 Fleet launches a replacement Spot Instance when a rebalance
+       * notification is emitted for an existing Spot Instance in the fleet, and then, after a delay
+       * that you specify (in `TerminationDelay` ), terminates the instances that received a rebalance
+       * notification.
+       */
+      override fun replacementStrategy(replacementStrategy: String) {
+        cdkBuilder.replacementStrategy(replacementStrategy)
+      }
+
+      /**
+       * @param terminationDelay The amount of time (in seconds) that Amazon EC2 waits before
+       * terminating the old Spot Instance after launching a new replacement Spot Instance.
+       * Required when `ReplacementStrategy` is set to `launch-before-terminate` .
+       *
+       * Not valid when `ReplacementStrategy` is set to `launch` .
+       *
+       * Valid values: Minimum value of `120` seconds. Maximum value of `7200` seconds.
+       */
+      override fun terminationDelay(terminationDelay: Number) {
+        cdkBuilder.terminationDelay(terminationDelay)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty,
+    ) : CdkObject(cdkObject), CapacityRebalanceProperty {
+      /**
+       * The replacement strategy to use. Only available for fleets of type `maintain` .
+       *
+       * `launch` - EC2 Fleet launches a replacement Spot Instance when a rebalance notification is
+       * emitted for an existing Spot Instance in the fleet. EC2 Fleet does not terminate the instances
+       * that receive a rebalance notification. You can terminate the old instances, or you can leave
+       * them running. You are charged for all instances while they are running.
+       *
+       * `launch-before-terminate` - EC2 Fleet launches a replacement Spot Instance when a rebalance
+       * notification is emitted for an existing Spot Instance in the fleet, and then, after a delay
+       * that you specify (in `TerminationDelay` ), terminates the instances that received a rebalance
+       * notification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html#cfn-ec2-ec2fleet-capacityrebalance-replacementstrategy)
+       */
+      override fun replacementStrategy(): String? = unwrap(this).getReplacementStrategy()
+
+      /**
+       * The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot
+       * Instance after launching a new replacement Spot Instance.
+       *
+       * Required when `ReplacementStrategy` is set to `launch-before-terminate` .
+       *
+       * Not valid when `ReplacementStrategy` is set to `launch` .
+       *
+       * Valid values: Minimum value of `120` seconds. Maximum value of `7200` seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html#cfn-ec2-ec2fleet-capacityrebalance-terminationdelay)
+       */
+      override fun terminationDelay(): Number? = unwrap(this).getTerminationDelay()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CapacityRebalanceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty):
+          CapacityRebalanceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityRebalanceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityRebalanceProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty
+    }
+  }
+
+  /**
+   * Describes the strategy for using unused Capacity Reservations for fulfilling On-Demand
+   * capacity.
+   *
+   *
+   * This strategy can only be used if the EC2 Fleet is of type `instant` .
+   *
+   *
+   * For more information about Capacity Reservations, see [On-Demand Capacity
+   * Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html)
+   * in the *Amazon EC2 User Guide* . For examples of using Capacity Reservations in an EC2 Fleet, see
+   * [EC2 Fleet example
+   * configurations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-examples.html) in
+   * the *Amazon EC2 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CapacityReservationOptionsRequestProperty capacityReservationOptionsRequestProperty =
+   * CapacityReservationOptionsRequestProperty.builder()
+   * .usageStrategy("usageStrategy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html)
+   */
+  public interface CapacityReservationOptionsRequestProperty {
+    /**
+     * Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.
+     *
+     * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
+     * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
+     * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
+     * `lowest-price` or `prioritized` ) is applied. If the number of unused Capacity Reservations is
+     * less than the On-Demand target capacity, the remaining On-Demand target capacity is launched
+     * according to the On-Demand allocation strategy ( `lowest-price` or `prioritized` ).
+     *
+     * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the
+     * chosen On-Demand allocation strategy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html#cfn-ec2-ec2fleet-capacityreservationoptionsrequest-usagestrategy)
+     */
+    public fun usageStrategy(): String? = unwrap(this).getUsageStrategy()
+
+    /**
+     * A builder for [CapacityReservationOptionsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param usageStrategy Indicates whether to use unused Capacity Reservations for fulfilling
+       * On-Demand capacity.
+       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
+       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
+       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
+       * `lowest-price` or `prioritized` ) is applied. If the number of unused Capacity Reservations is
+       * less than the On-Demand target capacity, the remaining On-Demand target capacity is launched
+       * according to the On-Demand allocation strategy ( `lowest-price` or `prioritized` ).
+       *
+       * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the
+       * chosen On-Demand allocation strategy.
+       */
+      public fun usageStrategy(usageStrategy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty.builder()
+
+      /**
+       * @param usageStrategy Indicates whether to use unused Capacity Reservations for fulfilling
+       * On-Demand capacity.
+       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
+       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
+       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
+       * `lowest-price` or `prioritized` ) is applied. If the number of unused Capacity Reservations is
+       * less than the On-Demand target capacity, the remaining On-Demand target capacity is launched
+       * according to the On-Demand allocation strategy ( `lowest-price` or `prioritized` ).
+       *
+       * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the
+       * chosen On-Demand allocation strategy.
+       */
+      override fun usageStrategy(usageStrategy: String) {
+        cdkBuilder.usageStrategy(usageStrategy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty,
+    ) : CdkObject(cdkObject), CapacityReservationOptionsRequestProperty {
+      /**
+       * Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.
+       *
+       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
+       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
+       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
+       * `lowest-price` or `prioritized` ) is applied. If the number of unused Capacity Reservations is
+       * less than the On-Demand target capacity, the remaining On-Demand target capacity is launched
+       * according to the On-Demand allocation strategy ( `lowest-price` or `prioritized` ).
+       *
+       * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the
+       * chosen On-Demand allocation strategy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html#cfn-ec2-ec2fleet-capacityreservationoptionsrequest-usagestrategy)
+       */
+      override fun usageStrategy(): String? = unwrap(this).getUsageStrategy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityReservationOptionsRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty):
+          CapacityReservationOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityReservationOptionsRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityReservationOptionsRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty
+    }
+  }
+
+  /**
+   * Specifies a launch template and overrides for an EC2 Fleet.
+   *
+   * `FleetLaunchTemplateConfigRequest` is a property of the
    * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
    * resource.
    *
@@ -1448,115 +1801,270 @@ public open class CfnEC2Fleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
-   * .resourceType("resourceType")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
+   * FleetLaunchTemplateConfigRequestProperty fleetLaunchTemplateConfigRequestProperty =
+   * FleetLaunchTemplateConfigRequestProperty.builder()
+   * .launchTemplateSpecification(FleetLaunchTemplateSpecificationRequestProperty.builder()
+   * .version("version")
+   * // the properties below are optional
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .build())
+   * .overrides(List.of(FleetLaunchTemplateOverridesRequestProperty.builder()
+   * .availabilityZone("availabilityZone")
+   * .instanceRequirements(InstanceRequirementsRequestProperty.builder()
+   * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+   * .acceleratorNames(List.of("acceleratorNames"))
+   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorTypes(List.of("acceleratorTypes"))
+   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+   * .bareMetal("bareMetal")
+   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .burstablePerformance("burstablePerformance")
+   * .cpuManufacturers(List.of("cpuManufacturers"))
+   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+   * .instanceGenerations(List.of("instanceGenerations"))
+   * .localStorage("localStorage")
+   * .localStorageTypes(List.of("localStorageTypes"))
+   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
+   * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .memoryMiB(MemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .onDemandMaxPricePercentageOverLowestPrice(123)
+   * .requireHibernateSupport(false)
+   * .spotMaxPricePercentageOverLowestPrice(123)
+   * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .vCpuCount(VCpuCountRangeRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .build())
+   * .instanceType("instanceType")
+   * .maxPrice("maxPrice")
+   * .placement(PlacementProperty.builder()
+   * .affinity("affinity")
+   * .availabilityZone("availabilityZone")
+   * .groupName("groupName")
+   * .hostId("hostId")
+   * .hostResourceGroupArn("hostResourceGroupArn")
+   * .partitionNumber(123)
+   * .spreadDomain("spreadDomain")
+   * .tenancy("tenancy")
+   * .build())
+   * .priority(123)
+   * .subnetId("subnetId")
+   * .weightedCapacity(123)
    * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html)
    */
-  public interface TagSpecificationProperty {
+  public interface FleetLaunchTemplateConfigRequestProperty {
     /**
-     * The type of resource to tag.
+     * The launch template to use.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html#cfn-ec2-ec2fleet-tagspecification-resourcetype)
+     * You must specify either the launch template ID or launch template name in the request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification)
      */
-    public fun resourceType(): String? = unwrap(this).getResourceType()
+    public fun launchTemplateSpecification(): Any? = unwrap(this).getLaunchTemplateSpecification()
 
     /**
-     * The tags to apply to the resource.
+     * Any parameters that you specify override the same parameters in the launch template.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html#cfn-ec2-ec2fleet-tagspecification-tags)
+     * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+     * launch templates.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides)
      */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    public fun overrides(): Any? = unwrap(this).getOverrides()
 
     /**
-     * A builder for [TagSpecificationProperty]
+     * A builder for [FleetLaunchTemplateConfigRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param resourceType The type of resource to tag.
+       * @param launchTemplateSpecification The launch template to use.
+       * You must specify either the launch template ID or launch template name in the request.
        */
-      public fun resourceType(resourceType: String)
+      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable)
 
       /**
-       * @param tags The tags to apply to the resource.
+       * @param launchTemplateSpecification The launch template to use.
+       * You must specify either the launch template ID or launch template name in the request.
        */
-      public fun tags(tags: List<CfnTag>)
+      public
+          fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty)
 
       /**
-       * @param tags The tags to apply to the resource.
+       * @param launchTemplateSpecification The launch template to use.
+       * You must specify either the launch template ID or launch template name in the request.
        */
-      public fun tags(vararg tags: CfnTag)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0ec4cc1dc1142399b7f1cacbbd347beb1f9bba7e97e957a3dca7cc4b86b049e")
+      public
+          fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param overrides Any parameters that you specify override the same parameters in the launch
+       * template.
+       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+       * launch templates.
+       */
+      public fun overrides(overrides: IResolvable)
+
+      /**
+       * @param overrides Any parameters that you specify override the same parameters in the launch
+       * template.
+       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+       * launch templates.
+       */
+      public fun overrides(overrides: List<Any>)
+
+      /**
+       * @param overrides Any parameters that you specify override the same parameters in the launch
+       * template.
+       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+       * launch templates.
+       */
+      public fun overrides(vararg overrides: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty.builder()
 
       /**
-       * @param resourceType The type of resource to tag.
+       * @param launchTemplateSpecification The launch template to use.
+       * You must specify either the launch template ID or launch template name in the request.
        */
-      override fun resourceType(resourceType: String) {
-        cdkBuilder.resourceType(resourceType)
+      override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
       }
 
       /**
-       * @param tags The tags to apply to the resource.
+       * @param launchTemplateSpecification The launch template to use.
+       * You must specify either the launch template ID or launch template name in the request.
        */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      override
+          fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty) {
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(FleetLaunchTemplateSpecificationRequestProperty::unwrap))
       }
 
       /**
-       * @param tags The tags to apply to the resource.
+       * @param launchTemplateSpecification The launch template to use.
+       * You must specify either the launch template ID or launch template name in the request.
        */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0ec4cc1dc1142399b7f1cacbbd347beb1f9bba7e97e957a3dca7cc4b86b049e")
+      override
+          fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty.Builder.() -> Unit):
+          Unit =
+          launchTemplateSpecification(FleetLaunchTemplateSpecificationRequestProperty(launchTemplateSpecification))
 
-      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty =
+      /**
+       * @param overrides Any parameters that you specify override the same parameters in the launch
+       * template.
+       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+       * launch templates.
+       */
+      override fun overrides(overrides: IResolvable) {
+        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param overrides Any parameters that you specify override the same parameters in the launch
+       * template.
+       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+       * launch templates.
+       */
+      override fun overrides(overrides: List<Any>) {
+        cdkBuilder.overrides(overrides)
+      }
+
+      /**
+       * @param overrides Any parameters that you specify override the same parameters in the launch
+       * template.
+       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+       * launch templates.
+       */
+      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty,
+    ) : CdkObject(cdkObject), FleetLaunchTemplateConfigRequestProperty {
       /**
-       * The type of resource to tag.
+       * The launch template to use.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html#cfn-ec2-ec2fleet-tagspecification-resourcetype)
+       * You must specify either the launch template ID or launch template name in the request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification)
        */
-      override fun resourceType(): String? = unwrap(this).getResourceType()
+      override fun launchTemplateSpecification(): Any? =
+          unwrap(this).getLaunchTemplateSpecification()
 
       /**
-       * The tags to apply to the resource.
+       * Any parameters that you specify override the same parameters in the launch template.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html#cfn-ec2-ec2fleet-tagspecification-tags)
+       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+       * launch templates.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides)
        */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+      override fun overrides(): Any? = unwrap(this).getOverrides()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagSpecificationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FleetLaunchTemplateConfigRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty):
-          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty):
+          FleetLaunchTemplateConfigRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FleetLaunchTemplateConfigRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TagSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty
+      internal fun unwrap(wrapped: FleetLaunchTemplateConfigRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty
     }
   }
 
@@ -2131,11 +2639,26 @@ public open class CfnEC2Fleet internal constructor(
   }
 
   /**
-   * Specifies the configuration of Spot Instances for an EC2 Fleet.
+   * Specifies the launch template to be used by the EC2 Fleet for configuring Amazon EC2 instances.
    *
-   * `SpotOptionsRequest` is a property of the
-   * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
-   * resource.
+   * You must specify the following:
+   *
+   * * The ID or the name of the launch template, but not both.
+   * * The version of the launch template.
+   *
+   * `FleetLaunchTemplateSpecificationRequest` is a property of the
+   * [FleetLaunchTemplateConfigRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html)
+   * property type.
+   *
+   * For information about creating a launch template, see
+   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+   * and [Create a launch
+   * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
+   * in the *Amazon EC2 User Guide* .
+   *
+   * For examples of launch templates, see
+   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
+   * .
    *
    * Example:
    *
@@ -2143,542 +2666,164 @@ public open class CfnEC2Fleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * SpotOptionsRequestProperty spotOptionsRequestProperty = SpotOptionsRequestProperty.builder()
-   * .allocationStrategy("allocationStrategy")
-   * .instanceInterruptionBehavior("instanceInterruptionBehavior")
-   * .instancePoolsToUseCount(123)
-   * .maintenanceStrategies(MaintenanceStrategiesProperty.builder()
-   * .capacityRebalance(CapacityRebalanceProperty.builder()
-   * .replacementStrategy("replacementStrategy")
-   * .terminationDelay(123)
-   * .build())
-   * .build())
-   * .maxTotalPrice("maxTotalPrice")
-   * .minTargetCapacity(123)
-   * .singleAvailabilityZone(false)
-   * .singleInstanceType(false)
+   * FleetLaunchTemplateSpecificationRequestProperty fleetLaunchTemplateSpecificationRequestProperty
+   * = FleetLaunchTemplateSpecificationRequestProperty.builder()
+   * .version("version")
+   * // the properties below are optional
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html)
    */
-  public interface SpotOptionsRequestProperty {
+  public interface FleetLaunchTemplateSpecificationRequestProperty {
     /**
-     * Indicates how to allocate the target Spot Instance capacity across the Spot Instance pools
-     * specified by the EC2 Fleet.
+     * The ID of the launch template.
      *
-     * If the allocation strategy is `lowestPrice` , EC2 Fleet launches instances from the Spot
-     * Instance pools with the lowest price. This is the default allocation strategy.
+     * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
      *
-     * If the allocation strategy is `diversified` , EC2 Fleet launches instances from all the Spot
-     * Instance pools that you specify.
-     *
-     * If the allocation strategy is `capacityOptimized` , EC2 Fleet launches instances from Spot
-     * Instance pools that are optimally chosen based on the available Spot Instance capacity.
-     *
-     * *Allowed Values* : `lowestPrice` | `diversified` | `capacityOptimized` |
-     * `capacityOptimizedPrioritized`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplateid)
      */
-    public fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
 
     /**
-     * The behavior when a Spot Instance is interrupted.
+     * The name of the launch template.
      *
-     * Default: `terminate`
+     * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplatename)
      */
-    public fun instanceInterruptionBehavior(): String? =
-        unwrap(this).getInstanceInterruptionBehavior()
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
     /**
-     * The number of Spot pools across which to allocate your target Spot capacity.
+     * The launch template version number, `$Latest` , or `$Default` . You must specify a value,
+     * otherwise the request fails.
      *
-     * Supported only when Spot `AllocationStrategy` is set to `lowest-price` . EC2 Fleet selects
-     * the cheapest Spot pools and evenly allocates your target Spot capacity across the number of Spot
-     * pools that you specify.
+     * If the value is `$Latest` , Amazon EC2 uses the latest version of the launch template.
      *
-     * Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you specify
-     * on a best effort basis. If a pool runs out of Spot capacity before fulfilling your target
-     * capacity, EC2 Fleet will continue to fulfill your request by drawing from the next cheapest
-     * pool. To ensure that your target capacity is met, you might receive Spot Instances from more
-     * than the number of pools that you specified. Similarly, if most of the pools have no Spot
-     * capacity, you might receive your full target capacity from fewer than the number of pools that
-     * you specified.
+     * If the value is `$Default` , Amazon EC2 uses the default version of the launch template.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-version)
      */
-    public fun instancePoolsToUseCount(): Number? = unwrap(this).getInstancePoolsToUseCount()
+    public fun version(): String
 
     /**
-     * The strategies for managing your Spot Instances that are at an elevated risk of being
-     * interrupted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maintenancestrategies)
-     */
-    public fun maintenanceStrategies(): Any? = unwrap(this).getMaintenanceStrategies()
-
-    /**
-     * The maximum amount per hour for Spot Instances that you're willing to pay.
-     *
-     * We do not recommend using this parameter because it can lead to increased interruptions. If
-     * you do not specify this parameter, you will pay the current Spot price.
-     *
-     *
-     * If you specify a maximum price, your Spot Instances will be interrupted more frequently than
-     * if you do not specify this parameter. &gt; If your fleet includes T instances that are
-     * configured as `unlimited` , and if their average CPU usage exceeds the baseline utilization, you
-     * will incur a charge for surplus credits. The `MaxTotalPrice` does not account for surplus
-     * credits, and, if you use surplus credits, your final cost might be higher than what you
-     * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
-     * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-     * in the *EC2 User Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice)
-     */
-    public fun maxTotalPrice(): String? = unwrap(this).getMaxTotalPrice()
-
-    /**
-     * The minimum target capacity for Spot Instances in the fleet.
-     *
-     * If the minimum target capacity is not reached, the fleet launches no instances.
-     *
-     * Supported only for fleets of type `instant` .
-     *
-     * At least one of the following must be specified: `SingleAvailabilityZone` |
-     * `SingleInstanceType`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-mintargetcapacity)
-     */
-    public fun minTargetCapacity(): Number? = unwrap(this).getMinTargetCapacity()
-
-    /**
-     * Indicates that the fleet launches all Spot Instances into a single Availability Zone.
-     *
-     * Supported only for fleets of type `instant` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleavailabilityzone)
-     */
-    public fun singleAvailabilityZone(): Any? = unwrap(this).getSingleAvailabilityZone()
-
-    /**
-     * Indicates that the fleet uses a single instance type to launch all Spot Instances in the
-     * fleet.
-     *
-     * Supported only for fleets of type `instant` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleinstancetype)
-     */
-    public fun singleInstanceType(): Any? = unwrap(this).getSingleInstanceType()
-
-    /**
-     * A builder for [SpotOptionsRequestProperty]
+     * A builder for [FleetLaunchTemplateSpecificationRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param allocationStrategy Indicates how to allocate the target Spot Instance capacity
-       * across the Spot Instance pools specified by the EC2 Fleet.
-       * If the allocation strategy is `lowestPrice` , EC2 Fleet launches instances from the Spot
-       * Instance pools with the lowest price. This is the default allocation strategy.
+       * @param launchTemplateId The ID of the launch template.
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       */
+      public fun launchTemplateId(launchTemplateId: String)
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       */
+      public fun launchTemplateName(launchTemplateName: String)
+
+      /**
+       * @param version The launch template version number, `$Latest` , or `$Default` . You must
+       * specify a value, otherwise the request fails. 
+       * If the value is `$Latest` , Amazon EC2 uses the latest version of the launch template.
        *
-       * If the allocation strategy is `diversified` , EC2 Fleet launches instances from all the
-       * Spot Instance pools that you specify.
-       *
-       * If the allocation strategy is `capacityOptimized` , EC2 Fleet launches instances from Spot
-       * Instance pools that are optimally chosen based on the available Spot Instance capacity.
-       *
-       * *Allowed Values* : `lowestPrice` | `diversified` | `capacityOptimized` |
-       * `capacityOptimizedPrioritized`
+       * If the value is `$Default` , Amazon EC2 uses the default version of the launch template.
        */
-      public fun allocationStrategy(allocationStrategy: String)
-
-      /**
-       * @param instanceInterruptionBehavior The behavior when a Spot Instance is interrupted.
-       * Default: `terminate`
-       */
-      public fun instanceInterruptionBehavior(instanceInterruptionBehavior: String)
-
-      /**
-       * @param instancePoolsToUseCount The number of Spot pools across which to allocate your
-       * target Spot capacity.
-       * Supported only when Spot `AllocationStrategy` is set to `lowest-price` . EC2 Fleet selects
-       * the cheapest Spot pools and evenly allocates your target Spot capacity across the number of
-       * Spot pools that you specify.
-       *
-       * Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you
-       * specify on a best effort basis. If a pool runs out of Spot capacity before fulfilling your
-       * target capacity, EC2 Fleet will continue to fulfill your request by drawing from the next
-       * cheapest pool. To ensure that your target capacity is met, you might receive Spot Instances
-       * from more than the number of pools that you specified. Similarly, if most of the pools have no
-       * Spot capacity, you might receive your full target capacity from fewer than the number of pools
-       * that you specified.
-       */
-      public fun instancePoolsToUseCount(instancePoolsToUseCount: Number)
-
-      /**
-       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
-       * elevated risk of being interrupted.
-       */
-      public fun maintenanceStrategies(maintenanceStrategies: IResolvable)
-
-      /**
-       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
-       * elevated risk of being interrupted.
-       */
-      public fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty)
-
-      /**
-       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
-       * elevated risk of being interrupted.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("500ef6316a62131118ebc42fa82a07abcb3210ee9a5942fa639e876b95154539")
-      public
-          fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param maxTotalPrice The maximum amount per hour for Spot Instances that you're willing to
-       * pay.
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
-       * than if you do not specify this parameter. &gt; If your fleet includes T instances that are
-       * configured as `unlimited` , and if their average CPU usage exceeds the baseline utilization,
-       * you will incur a charge for surplus credits. The `MaxTotalPrice` does not account for surplus
-       * credits, and, if you use surplus credits, your final cost might be higher than what you
-       * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
-       * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
-       */
-      public fun maxTotalPrice(maxTotalPrice: String)
-
-      /**
-       * @param minTargetCapacity The minimum target capacity for Spot Instances in the fleet.
-       * If the minimum target capacity is not reached, the fleet launches no instances.
-       *
-       * Supported only for fleets of type `instant` .
-       *
-       * At least one of the following must be specified: `SingleAvailabilityZone` |
-       * `SingleInstanceType`
-       */
-      public fun minTargetCapacity(minTargetCapacity: Number)
-
-      /**
-       * @param singleAvailabilityZone Indicates that the fleet launches all Spot Instances into a
-       * single Availability Zone.
-       * Supported only for fleets of type `instant` .
-       */
-      public fun singleAvailabilityZone(singleAvailabilityZone: Boolean)
-
-      /**
-       * @param singleAvailabilityZone Indicates that the fleet launches all Spot Instances into a
-       * single Availability Zone.
-       * Supported only for fleets of type `instant` .
-       */
-      public fun singleAvailabilityZone(singleAvailabilityZone: IResolvable)
-
-      /**
-       * @param singleInstanceType Indicates that the fleet uses a single instance type to launch
-       * all Spot Instances in the fleet.
-       * Supported only for fleets of type `instant` .
-       */
-      public fun singleInstanceType(singleInstanceType: Boolean)
-
-      /**
-       * @param singleInstanceType Indicates that the fleet uses a single instance type to launch
-       * all Spot Instances in the fleet.
-       * Supported only for fleets of type `instant` .
-       */
-      public fun singleInstanceType(singleInstanceType: IResolvable)
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty.builder()
 
       /**
-       * @param allocationStrategy Indicates how to allocate the target Spot Instance capacity
-       * across the Spot Instance pools specified by the EC2 Fleet.
-       * If the allocation strategy is `lowestPrice` , EC2 Fleet launches instances from the Spot
-       * Instance pools with the lowest price. This is the default allocation strategy.
+       * @param launchTemplateId The ID of the launch template.
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       */
+      override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       */
+      override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      /**
+       * @param version The launch template version number, `$Latest` , or `$Default` . You must
+       * specify a value, otherwise the request fails. 
+       * If the value is `$Latest` , Amazon EC2 uses the latest version of the launch template.
        *
-       * If the allocation strategy is `diversified` , EC2 Fleet launches instances from all the
-       * Spot Instance pools that you specify.
-       *
-       * If the allocation strategy is `capacityOptimized` , EC2 Fleet launches instances from Spot
-       * Instance pools that are optimally chosen based on the available Spot Instance capacity.
-       *
-       * *Allowed Values* : `lowestPrice` | `diversified` | `capacityOptimized` |
-       * `capacityOptimizedPrioritized`
+       * If the value is `$Default` , Amazon EC2 uses the default version of the launch template.
        */
-      override fun allocationStrategy(allocationStrategy: String) {
-        cdkBuilder.allocationStrategy(allocationStrategy)
+      override fun version(version: String) {
+        cdkBuilder.version(version)
       }
 
-      /**
-       * @param instanceInterruptionBehavior The behavior when a Spot Instance is interrupted.
-       * Default: `terminate`
-       */
-      override fun instanceInterruptionBehavior(instanceInterruptionBehavior: String) {
-        cdkBuilder.instanceInterruptionBehavior(instanceInterruptionBehavior)
-      }
-
-      /**
-       * @param instancePoolsToUseCount The number of Spot pools across which to allocate your
-       * target Spot capacity.
-       * Supported only when Spot `AllocationStrategy` is set to `lowest-price` . EC2 Fleet selects
-       * the cheapest Spot pools and evenly allocates your target Spot capacity across the number of
-       * Spot pools that you specify.
-       *
-       * Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you
-       * specify on a best effort basis. If a pool runs out of Spot capacity before fulfilling your
-       * target capacity, EC2 Fleet will continue to fulfill your request by drawing from the next
-       * cheapest pool. To ensure that your target capacity is met, you might receive Spot Instances
-       * from more than the number of pools that you specified. Similarly, if most of the pools have no
-       * Spot capacity, you might receive your full target capacity from fewer than the number of pools
-       * that you specified.
-       */
-      override fun instancePoolsToUseCount(instancePoolsToUseCount: Number) {
-        cdkBuilder.instancePoolsToUseCount(instancePoolsToUseCount)
-      }
-
-      /**
-       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
-       * elevated risk of being interrupted.
-       */
-      override fun maintenanceStrategies(maintenanceStrategies: IResolvable) {
-        cdkBuilder.maintenanceStrategies(maintenanceStrategies.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
-       * elevated risk of being interrupted.
-       */
-      override fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty) {
-        cdkBuilder.maintenanceStrategies(maintenanceStrategies.let(MaintenanceStrategiesProperty::unwrap))
-      }
-
-      /**
-       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
-       * elevated risk of being interrupted.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("500ef6316a62131118ebc42fa82a07abcb3210ee9a5942fa639e876b95154539")
-      override
-          fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty.Builder.() -> Unit):
-          Unit = maintenanceStrategies(MaintenanceStrategiesProperty(maintenanceStrategies))
-
-      /**
-       * @param maxTotalPrice The maximum amount per hour for Spot Instances that you're willing to
-       * pay.
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
-       * than if you do not specify this parameter. &gt; If your fleet includes T instances that are
-       * configured as `unlimited` , and if their average CPU usage exceeds the baseline utilization,
-       * you will incur a charge for surplus credits. The `MaxTotalPrice` does not account for surplus
-       * credits, and, if you use surplus credits, your final cost might be higher than what you
-       * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
-       * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
-       */
-      override fun maxTotalPrice(maxTotalPrice: String) {
-        cdkBuilder.maxTotalPrice(maxTotalPrice)
-      }
-
-      /**
-       * @param minTargetCapacity The minimum target capacity for Spot Instances in the fleet.
-       * If the minimum target capacity is not reached, the fleet launches no instances.
-       *
-       * Supported only for fleets of type `instant` .
-       *
-       * At least one of the following must be specified: `SingleAvailabilityZone` |
-       * `SingleInstanceType`
-       */
-      override fun minTargetCapacity(minTargetCapacity: Number) {
-        cdkBuilder.minTargetCapacity(minTargetCapacity)
-      }
-
-      /**
-       * @param singleAvailabilityZone Indicates that the fleet launches all Spot Instances into a
-       * single Availability Zone.
-       * Supported only for fleets of type `instant` .
-       */
-      override fun singleAvailabilityZone(singleAvailabilityZone: Boolean) {
-        cdkBuilder.singleAvailabilityZone(singleAvailabilityZone)
-      }
-
-      /**
-       * @param singleAvailabilityZone Indicates that the fleet launches all Spot Instances into a
-       * single Availability Zone.
-       * Supported only for fleets of type `instant` .
-       */
-      override fun singleAvailabilityZone(singleAvailabilityZone: IResolvable) {
-        cdkBuilder.singleAvailabilityZone(singleAvailabilityZone.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param singleInstanceType Indicates that the fleet uses a single instance type to launch
-       * all Spot Instances in the fleet.
-       * Supported only for fleets of type `instant` .
-       */
-      override fun singleInstanceType(singleInstanceType: Boolean) {
-        cdkBuilder.singleInstanceType(singleInstanceType)
-      }
-
-      /**
-       * @param singleInstanceType Indicates that the fleet uses a single instance type to launch
-       * all Spot Instances in the fleet.
-       * Supported only for fleets of type `instant` .
-       */
-      override fun singleInstanceType(singleInstanceType: IResolvable) {
-        cdkBuilder.singleInstanceType(singleInstanceType.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty,
-    ) : CdkObject(cdkObject), SpotOptionsRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty,
+    ) : CdkObject(cdkObject), FleetLaunchTemplateSpecificationRequestProperty {
       /**
-       * Indicates how to allocate the target Spot Instance capacity across the Spot Instance pools
-       * specified by the EC2 Fleet.
+       * The ID of the launch template.
        *
-       * If the allocation strategy is `lowestPrice` , EC2 Fleet launches instances from the Spot
-       * Instance pools with the lowest price. This is the default allocation strategy.
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
        *
-       * If the allocation strategy is `diversified` , EC2 Fleet launches instances from all the
-       * Spot Instance pools that you specify.
-       *
-       * If the allocation strategy is `capacityOptimized` , EC2 Fleet launches instances from Spot
-       * Instance pools that are optimally chosen based on the available Spot Instance capacity.
-       *
-       * *Allowed Values* : `lowestPrice` | `diversified` | `capacityOptimized` |
-       * `capacityOptimizedPrioritized`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplateid)
        */
-      override fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
 
       /**
-       * The behavior when a Spot Instance is interrupted.
+       * The name of the launch template.
        *
-       * Default: `terminate`
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplatename)
        */
-      override fun instanceInterruptionBehavior(): String? =
-          unwrap(this).getInstanceInterruptionBehavior()
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
       /**
-       * The number of Spot pools across which to allocate your target Spot capacity.
+       * The launch template version number, `$Latest` , or `$Default` . You must specify a value,
+       * otherwise the request fails.
        *
-       * Supported only when Spot `AllocationStrategy` is set to `lowest-price` . EC2 Fleet selects
-       * the cheapest Spot pools and evenly allocates your target Spot capacity across the number of
-       * Spot pools that you specify.
+       * If the value is `$Latest` , Amazon EC2 uses the latest version of the launch template.
        *
-       * Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you
-       * specify on a best effort basis. If a pool runs out of Spot capacity before fulfilling your
-       * target capacity, EC2 Fleet will continue to fulfill your request by drawing from the next
-       * cheapest pool. To ensure that your target capacity is met, you might receive Spot Instances
-       * from more than the number of pools that you specified. Similarly, if most of the pools have no
-       * Spot capacity, you might receive your full target capacity from fewer than the number of pools
-       * that you specified.
+       * If the value is `$Default` , Amazon EC2 uses the default version of the launch template.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-version)
        */
-      override fun instancePoolsToUseCount(): Number? = unwrap(this).getInstancePoolsToUseCount()
-
-      /**
-       * The strategies for managing your Spot Instances that are at an elevated risk of being
-       * interrupted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maintenancestrategies)
-       */
-      override fun maintenanceStrategies(): Any? = unwrap(this).getMaintenanceStrategies()
-
-      /**
-       * The maximum amount per hour for Spot Instances that you're willing to pay.
-       *
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
-       * than if you do not specify this parameter. &gt; If your fleet includes T instances that are
-       * configured as `unlimited` , and if their average CPU usage exceeds the baseline utilization,
-       * you will incur a charge for surplus credits. The `MaxTotalPrice` does not account for surplus
-       * credits, and, if you use surplus credits, your final cost might be higher than what you
-       * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
-       * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice)
-       */
-      override fun maxTotalPrice(): String? = unwrap(this).getMaxTotalPrice()
-
-      /**
-       * The minimum target capacity for Spot Instances in the fleet.
-       *
-       * If the minimum target capacity is not reached, the fleet launches no instances.
-       *
-       * Supported only for fleets of type `instant` .
-       *
-       * At least one of the following must be specified: `SingleAvailabilityZone` |
-       * `SingleInstanceType`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-mintargetcapacity)
-       */
-      override fun minTargetCapacity(): Number? = unwrap(this).getMinTargetCapacity()
-
-      /**
-       * Indicates that the fleet launches all Spot Instances into a single Availability Zone.
-       *
-       * Supported only for fleets of type `instant` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleavailabilityzone)
-       */
-      override fun singleAvailabilityZone(): Any? = unwrap(this).getSingleAvailabilityZone()
-
-      /**
-       * Indicates that the fleet uses a single instance type to launch all Spot Instances in the
-       * fleet.
-       *
-       * Supported only for fleets of type `instant` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleinstancetype)
-       */
-      override fun singleInstanceType(): Any? = unwrap(this).getSingleInstanceType()
+      override fun version(): String = unwrap(this).getVersion()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SpotOptionsRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FleetLaunchTemplateSpecificationRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty):
-          SpotOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SpotOptionsRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty):
+          FleetLaunchTemplateSpecificationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FleetLaunchTemplateSpecificationRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SpotOptionsRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty
+      internal fun unwrap(wrapped: FleetLaunchTemplateSpecificationRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty
     }
   }
 
@@ -5094,12 +5239,7 @@ public open class CfnEC2Fleet internal constructor(
   }
 
   /**
-   * The Spot Instance replacement strategy to use when Amazon EC2 emits a rebalance notification
-   * signal that your Spot Instance is at an elevated risk of being interrupted.
-   *
-   * For more information, see [Capacity
-   * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-capacity-rebalance.html)
-   * in the *Amazon EC2 User Guide* .
+   * The minimum and maximum amount of memory per vCPU, in GiB.
    *
    * Example:
    *
@@ -5107,221 +5247,47 @@ public open class CfnEC2Fleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CapacityRebalanceProperty capacityRebalanceProperty = CapacityRebalanceProperty.builder()
-   * .replacementStrategy("replacementStrategy")
-   * .terminationDelay(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html)
-   */
-  public interface CapacityRebalanceProperty {
-    /**
-     * The replacement strategy to use. Only available for fleets of type `maintain` .
-     *
-     * `launch` - EC2 Fleet launches a replacement Spot Instance when a rebalance notification is
-     * emitted for an existing Spot Instance in the fleet. EC2 Fleet does not terminate the instances
-     * that receive a rebalance notification. You can terminate the old instances, or you can leave
-     * them running. You are charged for all instances while they are running.
-     *
-     * `launch-before-terminate` - EC2 Fleet launches a replacement Spot Instance when a rebalance
-     * notification is emitted for an existing Spot Instance in the fleet, and then, after a delay that
-     * you specify (in `TerminationDelay` ), terminates the instances that received a rebalance
-     * notification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html#cfn-ec2-ec2fleet-capacityrebalance-replacementstrategy)
-     */
-    public fun replacementStrategy(): String? = unwrap(this).getReplacementStrategy()
-
-    /**
-     * The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot
-     * Instance after launching a new replacement Spot Instance.
-     *
-     * Required when `ReplacementStrategy` is set to `launch-before-terminate` .
-     *
-     * Not valid when `ReplacementStrategy` is set to `launch` .
-     *
-     * Valid values: Minimum value of `120` seconds. Maximum value of `7200` seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html#cfn-ec2-ec2fleet-capacityrebalance-terminationdelay)
-     */
-    public fun terminationDelay(): Number? = unwrap(this).getTerminationDelay()
-
-    /**
-     * A builder for [CapacityRebalanceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param replacementStrategy The replacement strategy to use. Only available for fleets of
-       * type `maintain` .
-       * `launch` - EC2 Fleet launches a replacement Spot Instance when a rebalance notification is
-       * emitted for an existing Spot Instance in the fleet. EC2 Fleet does not terminate the instances
-       * that receive a rebalance notification. You can terminate the old instances, or you can leave
-       * them running. You are charged for all instances while they are running.
-       *
-       * `launch-before-terminate` - EC2 Fleet launches a replacement Spot Instance when a rebalance
-       * notification is emitted for an existing Spot Instance in the fleet, and then, after a delay
-       * that you specify (in `TerminationDelay` ), terminates the instances that received a rebalance
-       * notification.
-       */
-      public fun replacementStrategy(replacementStrategy: String)
-
-      /**
-       * @param terminationDelay The amount of time (in seconds) that Amazon EC2 waits before
-       * terminating the old Spot Instance after launching a new replacement Spot Instance.
-       * Required when `ReplacementStrategy` is set to `launch-before-terminate` .
-       *
-       * Not valid when `ReplacementStrategy` is set to `launch` .
-       *
-       * Valid values: Minimum value of `120` seconds. Maximum value of `7200` seconds.
-       */
-      public fun terminationDelay(terminationDelay: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty.builder()
-
-      /**
-       * @param replacementStrategy The replacement strategy to use. Only available for fleets of
-       * type `maintain` .
-       * `launch` - EC2 Fleet launches a replacement Spot Instance when a rebalance notification is
-       * emitted for an existing Spot Instance in the fleet. EC2 Fleet does not terminate the instances
-       * that receive a rebalance notification. You can terminate the old instances, or you can leave
-       * them running. You are charged for all instances while they are running.
-       *
-       * `launch-before-terminate` - EC2 Fleet launches a replacement Spot Instance when a rebalance
-       * notification is emitted for an existing Spot Instance in the fleet, and then, after a delay
-       * that you specify (in `TerminationDelay` ), terminates the instances that received a rebalance
-       * notification.
-       */
-      override fun replacementStrategy(replacementStrategy: String) {
-        cdkBuilder.replacementStrategy(replacementStrategy)
-      }
-
-      /**
-       * @param terminationDelay The amount of time (in seconds) that Amazon EC2 waits before
-       * terminating the old Spot Instance after launching a new replacement Spot Instance.
-       * Required when `ReplacementStrategy` is set to `launch-before-terminate` .
-       *
-       * Not valid when `ReplacementStrategy` is set to `launch` .
-       *
-       * Valid values: Minimum value of `120` seconds. Maximum value of `7200` seconds.
-       */
-      override fun terminationDelay(terminationDelay: Number) {
-        cdkBuilder.terminationDelay(terminationDelay)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty,
-    ) : CdkObject(cdkObject), CapacityRebalanceProperty {
-      /**
-       * The replacement strategy to use. Only available for fleets of type `maintain` .
-       *
-       * `launch` - EC2 Fleet launches a replacement Spot Instance when a rebalance notification is
-       * emitted for an existing Spot Instance in the fleet. EC2 Fleet does not terminate the instances
-       * that receive a rebalance notification. You can terminate the old instances, or you can leave
-       * them running. You are charged for all instances while they are running.
-       *
-       * `launch-before-terminate` - EC2 Fleet launches a replacement Spot Instance when a rebalance
-       * notification is emitted for an existing Spot Instance in the fleet, and then, after a delay
-       * that you specify (in `TerminationDelay` ), terminates the instances that received a rebalance
-       * notification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html#cfn-ec2-ec2fleet-capacityrebalance-replacementstrategy)
-       */
-      override fun replacementStrategy(): String? = unwrap(this).getReplacementStrategy()
-
-      /**
-       * The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot
-       * Instance after launching a new replacement Spot Instance.
-       *
-       * Required when `ReplacementStrategy` is set to `launch-before-terminate` .
-       *
-       * Not valid when `ReplacementStrategy` is set to `launch` .
-       *
-       * Valid values: Minimum value of `120` seconds. Maximum value of `7200` seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityrebalance.html#cfn-ec2-ec2fleet-capacityrebalance-terminationdelay)
-       */
-      override fun terminationDelay(): Number? = unwrap(this).getTerminationDelay()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CapacityRebalanceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty):
-          CapacityRebalanceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CapacityRebalanceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CapacityRebalanceProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum number of network interfaces.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * NetworkInterfaceCountRequestProperty networkInterfaceCountRequestProperty =
-   * NetworkInterfaceCountRequestProperty.builder()
+   * MemoryGiBPerVCpuRequestProperty memoryGiBPerVCpuRequestProperty =
+   * MemoryGiBPerVCpuRequestProperty.builder()
    * .max(123)
    * .min(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html)
    */
-  public interface NetworkInterfaceCountRequestProperty {
+  public interface MemoryGiBPerVCpuRequestProperty {
     /**
-     * The maximum number of network interfaces.
+     * The maximum amount of memory per vCPU, in GiB.
      *
      * To specify no maximum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html#cfn-ec2-ec2fleet-networkinterfacecountrequest-max)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html#cfn-ec2-ec2fleet-memorygibpervcpurequest-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The minimum number of network interfaces.
+     * The minimum amount of memory per vCPU, in GiB.
      *
      * To specify no minimum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html#cfn-ec2-ec2fleet-networkinterfacecountrequest-min)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html#cfn-ec2-ec2fleet-memorygibpervcpurequest-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * A builder for [NetworkInterfaceCountRequestProperty]
+     * A builder for [MemoryGiBPerVCpuRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum number of network interfaces.
+       * @param max The maximum amount of memory per vCPU, in GiB.
        * To specify no maximum limit, omit this parameter.
        */
       public fun max(max: Number)
 
       /**
-       * @param min The minimum number of network interfaces.
+       * @param min The minimum amount of memory per vCPU, in GiB.
        * To specify no minimum limit, omit this parameter.
        */
       public fun min(min: Number)
@@ -5329,12 +5295,11 @@ public open class CfnEC2Fleet internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty.builder()
 
       /**
-       * @param max The maximum number of network interfaces.
+       * @param max The maximum amount of memory per vCPU, in GiB.
        * To specify no maximum limit, omit this parameter.
        */
       override fun max(max: Number) {
@@ -5342,7 +5307,7 @@ public open class CfnEC2Fleet internal constructor(
       }
 
       /**
-       * @param min The minimum number of network interfaces.
+       * @param min The minimum amount of memory per vCPU, in GiB.
        * To specify no minimum limit, omit this parameter.
        */
       override fun min(min: Number) {
@@ -5350,54 +5315,53 @@ public open class CfnEC2Fleet internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty,
+    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
       /**
-       * The maximum number of network interfaces.
+       * The maximum amount of memory per vCPU, in GiB.
        *
        * To specify no maximum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html#cfn-ec2-ec2fleet-networkinterfacecountrequest-max)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html#cfn-ec2-ec2fleet-memorygibpervcpurequest-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The minimum number of network interfaces.
+       * The minimum amount of memory per vCPU, in GiB.
        *
        * To specify no minimum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html#cfn-ec2-ec2fleet-networkinterfacecountrequest-min)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html#cfn-ec2-ec2fleet-memorygibpervcpurequest-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NetworkInterfaceCountRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryGiBPerVCpuRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty):
-          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkInterfaceCountRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty):
+          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemoryGiBPerVCpuRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NetworkInterfaceCountRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty
+      internal fun unwrap(wrapped: MemoryGiBPerVCpuRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty
     }
   }
 
   /**
-   * Describes the placement of an instance.
+   * The minimum and maximum amount of memory, in MiB.
    *
    * Example:
    *
@@ -5405,390 +5369,114 @@ public open class CfnEC2Fleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PlacementProperty placementProperty = PlacementProperty.builder()
-   * .affinity("affinity")
-   * .availabilityZone("availabilityZone")
-   * .groupName("groupName")
-   * .hostId("hostId")
-   * .hostResourceGroupArn("hostResourceGroupArn")
-   * .partitionNumber(123)
-   * .spreadDomain("spreadDomain")
-   * .tenancy("tenancy")
+   * MemoryMiBRequestProperty memoryMiBRequestProperty = MemoryMiBRequestProperty.builder()
+   * .max(123)
+   * .min(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html)
    */
-  public interface PlacementProperty {
+  public interface MemoryMiBRequestProperty {
     /**
-     * The affinity setting for the instance on the Dedicated Host.
+     * The maximum amount of memory, in MiB.
      *
-     * This parameter is not supported for
-     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
-     * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-     * .
+     * To specify no maximum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-affinity)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html#cfn-ec2-ec2fleet-memorymibrequest-max)
      */
-    public fun affinity(): String? = unwrap(this).getAffinity()
+    public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The Availability Zone of the instance.
+     * The minimum amount of memory, in MiB.
      *
-     * If not specified, an Availability Zone will be automatically chosen for you based on the load
-     * balancing criteria for the Region.
+     * To specify no minimum limit, specify `0` .
      *
-     * This parameter is not supported for
-     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-availabilityzone)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html#cfn-ec2-ec2fleet-memorymibrequest-min)
      */
-    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+    public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * The name of the placement group that the instance is in.
-     *
-     * If you specify `GroupName` , you can't specify `GroupId` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-groupname)
-     */
-    public fun groupName(): String? = unwrap(this).getGroupName()
-
-    /**
-     * The ID of the Dedicated Host on which the instance resides.
-     *
-     * This parameter is not supported for
-     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
-     * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-hostid)
-     */
-    public fun hostId(): String? = unwrap(this).getHostId()
-
-    /**
-     * The ARN of the host resource group in which to launch the instances.
-     *
-     * If you specify this parameter, either omit the *Tenancy* parameter or set it to `host` .
-     *
-     * This parameter is not supported for
-     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-hostresourcegrouparn)
-     */
-    public fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
-
-    /**
-     * The number of the partition that the instance is in.
-     *
-     * Valid only if the placement group strategy is set to `partition` .
-     *
-     * This parameter is not supported for
-     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-partitionnumber)
-     */
-    public fun partitionNumber(): Number? = unwrap(this).getPartitionNumber()
-
-    /**
-     * Reserved for future use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-spreaddomain)
-     */
-    public fun spreadDomain(): String? = unwrap(this).getSpreadDomain()
-
-    /**
-     * The tenancy of the instance. An instance with a tenancy of `dedicated` runs on single-tenant
-     * hardware.
-     *
-     * This parameter is not supported for
-     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) . The
-     * `host` tenancy is not supported for
-     * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-     * or for T3 instances that are configured for the `unlimited` CPU credit option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-tenancy)
-     */
-    public fun tenancy(): String? = unwrap(this).getTenancy()
-
-    /**
-     * A builder for [PlacementProperty]
+     * A builder for [MemoryMiBRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param affinity The affinity setting for the instance on the Dedicated Host.
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * .
+       * @param max The maximum amount of memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
        */
-      public fun affinity(affinity: String)
+      public fun max(max: Number)
 
       /**
-       * @param availabilityZone The Availability Zone of the instance.
-       * If not specified, an Availability Zone will be automatically chosen for you based on the
-       * load balancing criteria for the Region.
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       * @param min The minimum amount of memory, in MiB.
+       * To specify no minimum limit, specify `0` .
        */
-      public fun availabilityZone(availabilityZone: String)
-
-      /**
-       * @param groupName The name of the placement group that the instance is in.
-       * If you specify `GroupName` , you can't specify `GroupId` .
-       */
-      public fun groupName(groupName: String)
-
-      /**
-       * @param hostId The ID of the Dedicated Host on which the instance resides.
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * .
-       */
-      public fun hostId(hostId: String)
-
-      /**
-       * @param hostResourceGroupArn The ARN of the host resource group in which to launch the
-       * instances.
-       * If you specify this parameter, either omit the *Tenancy* parameter or set it to `host` .
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-       */
-      public fun hostResourceGroupArn(hostResourceGroupArn: String)
-
-      /**
-       * @param partitionNumber The number of the partition that the instance is in.
-       * Valid only if the placement group strategy is set to `partition` .
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-       */
-      public fun partitionNumber(partitionNumber: Number)
-
-      /**
-       * @param spreadDomain Reserved for future use.
-       */
-      public fun spreadDomain(spreadDomain: String)
-
-      /**
-       * @param tenancy The tenancy of the instance. An instance with a tenancy of `dedicated` runs
-       * on single-tenant hardware.
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) . The
-       * `host` tenancy is not supported for
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * or for T3 instances that are configured for the `unlimited` CPU credit option.
-       */
-      public fun tenancy(tenancy: String)
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty.builder()
 
       /**
-       * @param affinity The affinity setting for the instance on the Dedicated Host.
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * .
+       * @param max The maximum amount of memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
        */
-      override fun affinity(affinity: String) {
-        cdkBuilder.affinity(affinity)
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
       }
 
       /**
-       * @param availabilityZone The Availability Zone of the instance.
-       * If not specified, an Availability Zone will be automatically chosen for you based on the
-       * load balancing criteria for the Region.
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       * @param min The minimum amount of memory, in MiB.
+       * To specify no minimum limit, specify `0` .
        */
-      override fun availabilityZone(availabilityZone: String) {
-        cdkBuilder.availabilityZone(availabilityZone)
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
       }
 
-      /**
-       * @param groupName The name of the placement group that the instance is in.
-       * If you specify `GroupName` , you can't specify `GroupId` .
-       */
-      override fun groupName(groupName: String) {
-        cdkBuilder.groupName(groupName)
-      }
-
-      /**
-       * @param hostId The ID of the Dedicated Host on which the instance resides.
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * .
-       */
-      override fun hostId(hostId: String) {
-        cdkBuilder.hostId(hostId)
-      }
-
-      /**
-       * @param hostResourceGroupArn The ARN of the host resource group in which to launch the
-       * instances.
-       * If you specify this parameter, either omit the *Tenancy* parameter or set it to `host` .
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-       */
-      override fun hostResourceGroupArn(hostResourceGroupArn: String) {
-        cdkBuilder.hostResourceGroupArn(hostResourceGroupArn)
-      }
-
-      /**
-       * @param partitionNumber The number of the partition that the instance is in.
-       * Valid only if the placement group strategy is set to `partition` .
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-       */
-      override fun partitionNumber(partitionNumber: Number) {
-        cdkBuilder.partitionNumber(partitionNumber)
-      }
-
-      /**
-       * @param spreadDomain Reserved for future use.
-       */
-      override fun spreadDomain(spreadDomain: String) {
-        cdkBuilder.spreadDomain(spreadDomain)
-      }
-
-      /**
-       * @param tenancy The tenancy of the instance. An instance with a tenancy of `dedicated` runs
-       * on single-tenant hardware.
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) . The
-       * `host` tenancy is not supported for
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * or for T3 instances that are configured for the `unlimited` CPU credit option.
-       */
-      override fun tenancy(tenancy: String) {
-        cdkBuilder.tenancy(tenancy)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty =
+      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty,
-    ) : CdkObject(cdkObject), PlacementProperty {
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty,
+    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
       /**
-       * The affinity setting for the instance on the Dedicated Host.
+       * The maximum amount of memory, in MiB.
        *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * .
+       * To specify no maximum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-affinity)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html#cfn-ec2-ec2fleet-memorymibrequest-max)
        */
-      override fun affinity(): String? = unwrap(this).getAffinity()
+      override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The Availability Zone of the instance.
+       * The minimum amount of memory, in MiB.
        *
-       * If not specified, an Availability Zone will be automatically chosen for you based on the
-       * load balancing criteria for the Region.
+       * To specify no minimum limit, specify `0` .
        *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-availabilityzone)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html#cfn-ec2-ec2fleet-memorymibrequest-min)
        */
-      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
-
-      /**
-       * The name of the placement group that the instance is in.
-       *
-       * If you specify `GroupName` , you can't specify `GroupId` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-groupname)
-       */
-      override fun groupName(): String? = unwrap(this).getGroupName()
-
-      /**
-       * The ID of the Dedicated Host on which the instance resides.
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-hostid)
-       */
-      override fun hostId(): String? = unwrap(this).getHostId()
-
-      /**
-       * The ARN of the host resource group in which to launch the instances.
-       *
-       * If you specify this parameter, either omit the *Tenancy* parameter or set it to `host` .
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-hostresourcegrouparn)
-       */
-      override fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
-
-      /**
-       * The number of the partition that the instance is in.
-       *
-       * Valid only if the placement group strategy is set to `partition` .
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-partitionnumber)
-       */
-      override fun partitionNumber(): Number? = unwrap(this).getPartitionNumber()
-
-      /**
-       * Reserved for future use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-spreaddomain)
-       */
-      override fun spreadDomain(): String? = unwrap(this).getSpreadDomain()
-
-      /**
-       * The tenancy of the instance. An instance with a tenancy of `dedicated` runs on
-       * single-tenant hardware.
-       *
-       * This parameter is not supported for
-       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) . The
-       * `host` tenancy is not supported for
-       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
-       * or for T3 instances that are configured for the `unlimited` CPU credit option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-tenancy)
-       */
-      override fun tenancy(): String? = unwrap(this).getTenancy()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryMiBRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty):
-          PlacementProperty = CdkObjectWrappers.wrap(cdkObject) as? PlacementProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty):
+          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBRequestProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PlacementProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty
+      internal fun unwrap(wrapped: MemoryMiBRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty
     }
   }
 
@@ -5926,11 +5614,7 @@ public open class CfnEC2Fleet internal constructor(
   }
 
   /**
-   * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
-   *
-   * For more information, see [Amazon EBS–optimized
-   * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
-   * EC2 User Guide* .
+   * The minimum and maximum number of network interfaces.
    *
    * Example:
    *
@@ -5938,47 +5622,47 @@ public open class CfnEC2Fleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * BaselineEbsBandwidthMbpsRequestProperty baselineEbsBandwidthMbpsRequestProperty =
-   * BaselineEbsBandwidthMbpsRequestProperty.builder()
+   * NetworkInterfaceCountRequestProperty networkInterfaceCountRequestProperty =
+   * NetworkInterfaceCountRequestProperty.builder()
    * .max(123)
    * .min(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html)
    */
-  public interface BaselineEbsBandwidthMbpsRequestProperty {
+  public interface NetworkInterfaceCountRequestProperty {
     /**
-     * The maximum baseline bandwidth, in Mbps.
+     * The maximum number of network interfaces.
      *
      * To specify no maximum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-ec2fleet-baselineebsbandwidthmbpsrequest-max)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html#cfn-ec2-ec2fleet-networkinterfacecountrequest-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The minimum baseline bandwidth, in Mbps.
+     * The minimum number of network interfaces.
      *
      * To specify no minimum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-ec2fleet-baselineebsbandwidthmbpsrequest-min)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html#cfn-ec2-ec2fleet-networkinterfacecountrequest-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * A builder for [BaselineEbsBandwidthMbpsRequestProperty]
+     * A builder for [NetworkInterfaceCountRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum baseline bandwidth, in Mbps.
+       * @param max The maximum number of network interfaces.
        * To specify no maximum limit, omit this parameter.
        */
       public fun max(max: Number)
 
       /**
-       * @param min The minimum baseline bandwidth, in Mbps.
+       * @param min The minimum number of network interfaces.
        * To specify no minimum limit, omit this parameter.
        */
       public fun min(min: Number)
@@ -5986,12 +5670,12 @@ public open class CfnEC2Fleet internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty.Builder
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty.Builder
           =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty.builder()
 
       /**
-       * @param max The maximum baseline bandwidth, in Mbps.
+       * @param max The maximum number of network interfaces.
        * To specify no maximum limit, omit this parameter.
        */
       override fun max(max: Number) {
@@ -5999,7 +5683,7 @@ public open class CfnEC2Fleet internal constructor(
       }
 
       /**
-       * @param min The minimum baseline bandwidth, in Mbps.
+       * @param min The minimum number of network interfaces.
        * To specify no minimum limit, omit this parameter.
        */
       override fun min(min: Number) {
@@ -6007,49 +5691,49 @@ public open class CfnEC2Fleet internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty,
-    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty,
+    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
       /**
-       * The maximum baseline bandwidth, in Mbps.
+       * The maximum number of network interfaces.
        *
        * To specify no maximum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-ec2fleet-baselineebsbandwidthmbpsrequest-max)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html#cfn-ec2-ec2fleet-networkinterfacecountrequest-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The minimum baseline bandwidth, in Mbps.
+       * The minimum number of network interfaces.
        *
        * To specify no minimum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineebsbandwidthmbpsrequest.html#cfn-ec2-ec2fleet-baselineebsbandwidthmbpsrequest-min)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-networkinterfacecountrequest.html#cfn-ec2-ec2fleet-networkinterfacecountrequest-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          BaselineEbsBandwidthMbpsRequestProperty {
+          NetworkInterfaceCountRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty):
-          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BaselineEbsBandwidthMbpsRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty):
+          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkInterfaceCountRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty =
+      internal fun unwrap(wrapped: NetworkInterfaceCountRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty
     }
   }
 
@@ -6474,26 +6158,7 @@ public open class CfnEC2Fleet internal constructor(
   }
 
   /**
-   * Specifies the launch template to be used by the EC2 Fleet for configuring Amazon EC2 instances.
-   *
-   * You must specify the following:
-   *
-   * * The ID or the name of the launch template, but not both.
-   * * The version of the launch template.
-   *
-   * `FleetLaunchTemplateSpecificationRequest` is a property of the
-   * [FleetLaunchTemplateConfigRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html)
-   * property type.
-   *
-   * For information about creating a launch template, see
-   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
-   * and [Create a launch
-   * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
-   * in the *Amazon EC2 User Guide* .
-   *
-   * For examples of launch templates, see
-   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
-   * .
+   * Describes the placement of an instance.
    *
    * Example:
    *
@@ -6501,674 +6166,949 @@ public open class CfnEC2Fleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * FleetLaunchTemplateSpecificationRequestProperty fleetLaunchTemplateSpecificationRequestProperty
-   * = FleetLaunchTemplateSpecificationRequestProperty.builder()
-   * .version("version")
-   * // the properties below are optional
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
+   * PlacementProperty placementProperty = PlacementProperty.builder()
+   * .affinity("affinity")
+   * .availabilityZone("availabilityZone")
+   * .groupName("groupName")
+   * .hostId("hostId")
+   * .hostResourceGroupArn("hostResourceGroupArn")
+   * .partitionNumber(123)
+   * .spreadDomain("spreadDomain")
+   * .tenancy("tenancy")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html)
    */
-  public interface FleetLaunchTemplateSpecificationRequestProperty {
+  public interface PlacementProperty {
     /**
-     * The ID of the launch template.
+     * The affinity setting for the instance on the Dedicated Host.
      *
-     * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+     * This parameter is not supported for
+     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
+     * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+     * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplateid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-affinity)
      */
-    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+    public fun affinity(): String? = unwrap(this).getAffinity()
 
     /**
-     * The name of the launch template.
+     * The Availability Zone of the instance.
      *
-     * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+     * If not specified, an Availability Zone will be automatically chosen for you based on the load
+     * balancing criteria for the Region.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplatename)
+     * This parameter is not supported for
+     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-availabilityzone)
      */
-    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
     /**
-     * The launch template version number, `$Latest` , or `$Default` . You must specify a value,
-     * otherwise the request fails.
+     * The name of the placement group that the instance is in.
      *
-     * If the value is `$Latest` , Amazon EC2 uses the latest version of the launch template.
+     * If you specify `GroupName` , you can't specify `GroupId` .
      *
-     * If the value is `$Default` , Amazon EC2 uses the default version of the launch template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-version)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-groupname)
      */
-    public fun version(): String
+    public fun groupName(): String? = unwrap(this).getGroupName()
 
     /**
-     * A builder for [FleetLaunchTemplateSpecificationRequestProperty]
+     * The ID of the Dedicated Host on which the instance resides.
+     *
+     * This parameter is not supported for
+     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
+     * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-hostid)
+     */
+    public fun hostId(): String? = unwrap(this).getHostId()
+
+    /**
+     * The ARN of the host resource group in which to launch the instances.
+     *
+     * If you specify this parameter, either omit the *Tenancy* parameter or set it to `host` .
+     *
+     * This parameter is not supported for
+     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-hostresourcegrouparn)
+     */
+    public fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
+
+    /**
+     * The number of the partition that the instance is in.
+     *
+     * Valid only if the placement group strategy is set to `partition` .
+     *
+     * This parameter is not supported for
+     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-partitionnumber)
+     */
+    public fun partitionNumber(): Number? = unwrap(this).getPartitionNumber()
+
+    /**
+     * Reserved for future use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-spreaddomain)
+     */
+    public fun spreadDomain(): String? = unwrap(this).getSpreadDomain()
+
+    /**
+     * The tenancy of the instance. An instance with a tenancy of `dedicated` runs on single-tenant
+     * hardware.
+     *
+     * This parameter is not supported for
+     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) . The
+     * `host` tenancy is not supported for
+     * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+     * or for T3 instances that are configured for the `unlimited` CPU credit option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-tenancy)
+     */
+    public fun tenancy(): String? = unwrap(this).getTenancy()
+
+    /**
+     * A builder for [PlacementProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       * @param affinity The affinity setting for the instance on the Dedicated Host.
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * .
        */
-      public fun launchTemplateId(launchTemplateId: String)
+      public fun affinity(affinity: String)
 
       /**
-       * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-       */
-      public fun launchTemplateName(launchTemplateName: String)
-
-      /**
-       * @param version The launch template version number, `$Latest` , or `$Default` . You must
-       * specify a value, otherwise the request fails. 
-       * If the value is `$Latest` , Amazon EC2 uses the latest version of the launch template.
+       * @param availabilityZone The Availability Zone of the instance.
+       * If not specified, an Availability Zone will be automatically chosen for you based on the
+       * load balancing criteria for the Region.
        *
-       * If the value is `$Default` , Amazon EC2 uses the default version of the launch template.
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
        */
-      public fun version(version: String)
+      public fun availabilityZone(availabilityZone: String)
+
+      /**
+       * @param groupName The name of the placement group that the instance is in.
+       * If you specify `GroupName` , you can't specify `GroupId` .
+       */
+      public fun groupName(groupName: String)
+
+      /**
+       * @param hostId The ID of the Dedicated Host on which the instance resides.
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * .
+       */
+      public fun hostId(hostId: String)
+
+      /**
+       * @param hostResourceGroupArn The ARN of the host resource group in which to launch the
+       * instances.
+       * If you specify this parameter, either omit the *Tenancy* parameter or set it to `host` .
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       */
+      public fun hostResourceGroupArn(hostResourceGroupArn: String)
+
+      /**
+       * @param partitionNumber The number of the partition that the instance is in.
+       * Valid only if the placement group strategy is set to `partition` .
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       */
+      public fun partitionNumber(partitionNumber: Number)
+
+      /**
+       * @param spreadDomain Reserved for future use.
+       */
+      public fun spreadDomain(spreadDomain: String)
+
+      /**
+       * @param tenancy The tenancy of the instance. An instance with a tenancy of `dedicated` runs
+       * on single-tenant hardware.
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) . The
+       * `host` tenancy is not supported for
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * or for T3 instances that are configured for the `unlimited` CPU credit option.
+       */
+      public fun tenancy(tenancy: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty.builder()
 
       /**
-       * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       * @param affinity The affinity setting for the instance on the Dedicated Host.
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * .
        */
-      override fun launchTemplateId(launchTemplateId: String) {
-        cdkBuilder.launchTemplateId(launchTemplateId)
+      override fun affinity(affinity: String) {
+        cdkBuilder.affinity(affinity)
       }
 
       /**
-       * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-       */
-      override fun launchTemplateName(launchTemplateName: String) {
-        cdkBuilder.launchTemplateName(launchTemplateName)
-      }
-
-      /**
-       * @param version The launch template version number, `$Latest` , or `$Default` . You must
-       * specify a value, otherwise the request fails. 
-       * If the value is `$Latest` , Amazon EC2 uses the latest version of the launch template.
+       * @param availabilityZone The Availability Zone of the instance.
+       * If not specified, an Availability Zone will be automatically chosen for you based on the
+       * load balancing criteria for the Region.
        *
-       * If the value is `$Default` , Amazon EC2 uses the default version of the launch template.
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
        */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
+      override fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty
+      /**
+       * @param groupName The name of the placement group that the instance is in.
+       * If you specify `GroupName` , you can't specify `GroupId` .
+       */
+      override fun groupName(groupName: String) {
+        cdkBuilder.groupName(groupName)
+      }
+
+      /**
+       * @param hostId The ID of the Dedicated Host on which the instance resides.
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * .
+       */
+      override fun hostId(hostId: String) {
+        cdkBuilder.hostId(hostId)
+      }
+
+      /**
+       * @param hostResourceGroupArn The ARN of the host resource group in which to launch the
+       * instances.
+       * If you specify this parameter, either omit the *Tenancy* parameter or set it to `host` .
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       */
+      override fun hostResourceGroupArn(hostResourceGroupArn: String) {
+        cdkBuilder.hostResourceGroupArn(hostResourceGroupArn)
+      }
+
+      /**
+       * @param partitionNumber The number of the partition that the instance is in.
+       * Valid only if the placement group strategy is set to `partition` .
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       */
+      override fun partitionNumber(partitionNumber: Number) {
+        cdkBuilder.partitionNumber(partitionNumber)
+      }
+
+      /**
+       * @param spreadDomain Reserved for future use.
+       */
+      override fun spreadDomain(spreadDomain: String) {
+        cdkBuilder.spreadDomain(spreadDomain)
+      }
+
+      /**
+       * @param tenancy The tenancy of the instance. An instance with a tenancy of `dedicated` runs
+       * on single-tenant hardware.
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) . The
+       * `host` tenancy is not supported for
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * or for T3 instances that are configured for the `unlimited` CPU credit option.
+       */
+      override fun tenancy(tenancy: String) {
+        cdkBuilder.tenancy(tenancy)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty,
+    ) : CdkObject(cdkObject), PlacementProperty {
+      /**
+       * The affinity setting for the instance on the Dedicated Host.
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-affinity)
+       */
+      override fun affinity(): String? = unwrap(this).getAffinity()
+
+      /**
+       * The Availability Zone of the instance.
+       *
+       * If not specified, an Availability Zone will be automatically chosen for you based on the
+       * load balancing criteria for the Region.
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-availabilityzone)
+       */
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+      /**
+       * The name of the placement group that the instance is in.
+       *
+       * If you specify `GroupName` , you can't specify `GroupId` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-groupname)
+       */
+      override fun groupName(): String? = unwrap(this).getGroupName()
+
+      /**
+       * The ID of the Dedicated Host on which the instance resides.
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-hostid)
+       */
+      override fun hostId(): String? = unwrap(this).getHostId()
+
+      /**
+       * The ARN of the host resource group in which to launch the instances.
+       *
+       * If you specify this parameter, either omit the *Tenancy* parameter or set it to `host` .
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-hostresourcegrouparn)
+       */
+      override fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
+
+      /**
+       * The number of the partition that the instance is in.
+       *
+       * Valid only if the placement group strategy is set to `partition` .
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-partitionnumber)
+       */
+      override fun partitionNumber(): Number? = unwrap(this).getPartitionNumber()
+
+      /**
+       * Reserved for future use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-spreaddomain)
+       */
+      override fun spreadDomain(): String? = unwrap(this).getSpreadDomain()
+
+      /**
+       * The tenancy of the instance. An instance with a tenancy of `dedicated` runs on
+       * single-tenant hardware.
+       *
+       * This parameter is not supported for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) . The
+       * `host` tenancy is not supported for
+       * [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)
+       * or for T3 instances that are configured for the `unlimited` CPU credit option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html#cfn-ec2-ec2fleet-placement-tenancy)
+       */
+      override fun tenancy(): String? = unwrap(this).getTenancy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty):
+          PlacementProperty = CdkObjectWrappers.wrap(cdkObject) as? PlacementProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration of Spot Instances for an EC2 Fleet.
+   *
+   * `SpotOptionsRequest` is a property of the
+   * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * SpotOptionsRequestProperty spotOptionsRequestProperty = SpotOptionsRequestProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .instanceInterruptionBehavior("instanceInterruptionBehavior")
+   * .instancePoolsToUseCount(123)
+   * .maintenanceStrategies(MaintenanceStrategiesProperty.builder()
+   * .capacityRebalance(CapacityRebalanceProperty.builder()
+   * .replacementStrategy("replacementStrategy")
+   * .terminationDelay(123)
+   * .build())
+   * .build())
+   * .maxTotalPrice("maxTotalPrice")
+   * .minTargetCapacity(123)
+   * .singleAvailabilityZone(false)
+   * .singleInstanceType(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html)
+   */
+  public interface SpotOptionsRequestProperty {
+    /**
+     * Indicates how to allocate the target Spot Instance capacity across the Spot Instance pools
+     * specified by the EC2 Fleet.
+     *
+     * If the allocation strategy is `lowestPrice` , EC2 Fleet launches instances from the Spot
+     * Instance pools with the lowest price. This is the default allocation strategy.
+     *
+     * If the allocation strategy is `diversified` , EC2 Fleet launches instances from all the Spot
+     * Instance pools that you specify.
+     *
+     * If the allocation strategy is `capacityOptimized` , EC2 Fleet launches instances from Spot
+     * Instance pools that are optimally chosen based on the available Spot Instance capacity.
+     *
+     * *Allowed Values* : `lowestPrice` | `diversified` | `capacityOptimized` |
+     * `capacityOptimizedPrioritized`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy)
+     */
+    public fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+
+    /**
+     * The behavior when a Spot Instance is interrupted.
+     *
+     * Default: `terminate`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior)
+     */
+    public fun instanceInterruptionBehavior(): String? =
+        unwrap(this).getInstanceInterruptionBehavior()
+
+    /**
+     * The number of Spot pools across which to allocate your target Spot capacity.
+     *
+     * Supported only when Spot `AllocationStrategy` is set to `lowest-price` . EC2 Fleet selects
+     * the cheapest Spot pools and evenly allocates your target Spot capacity across the number of Spot
+     * pools that you specify.
+     *
+     * Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you specify
+     * on a best effort basis. If a pool runs out of Spot capacity before fulfilling your target
+     * capacity, EC2 Fleet will continue to fulfill your request by drawing from the next cheapest
+     * pool. To ensure that your target capacity is met, you might receive Spot Instances from more
+     * than the number of pools that you specified. Similarly, if most of the pools have no Spot
+     * capacity, you might receive your full target capacity from fewer than the number of pools that
+     * you specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount)
+     */
+    public fun instancePoolsToUseCount(): Number? = unwrap(this).getInstancePoolsToUseCount()
+
+    /**
+     * The strategies for managing your Spot Instances that are at an elevated risk of being
+     * interrupted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maintenancestrategies)
+     */
+    public fun maintenanceStrategies(): Any? = unwrap(this).getMaintenanceStrategies()
+
+    /**
+     * The maximum amount per hour for Spot Instances that you're willing to pay.
+     *
+     * We do not recommend using this parameter because it can lead to increased interruptions. If
+     * you do not specify this parameter, you will pay the current Spot price.
+     *
+     *
+     * If you specify a maximum price, your Spot Instances will be interrupted more frequently than
+     * if you do not specify this parameter. &gt; If your fleet includes T instances that are
+     * configured as `unlimited` , and if their average CPU usage exceeds the baseline utilization, you
+     * will incur a charge for surplus credits. The `MaxTotalPrice` does not account for surplus
+     * credits, and, if you use surplus credits, your final cost might be higher than what you
+     * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
+     * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
+     * in the *EC2 User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice)
+     */
+    public fun maxTotalPrice(): String? = unwrap(this).getMaxTotalPrice()
+
+    /**
+     * The minimum target capacity for Spot Instances in the fleet.
+     *
+     * If the minimum target capacity is not reached, the fleet launches no instances.
+     *
+     * Supported only for fleets of type `instant` .
+     *
+     * At least one of the following must be specified: `SingleAvailabilityZone` |
+     * `SingleInstanceType`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-mintargetcapacity)
+     */
+    public fun minTargetCapacity(): Number? = unwrap(this).getMinTargetCapacity()
+
+    /**
+     * Indicates that the fleet launches all Spot Instances into a single Availability Zone.
+     *
+     * Supported only for fleets of type `instant` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleavailabilityzone)
+     */
+    public fun singleAvailabilityZone(): Any? = unwrap(this).getSingleAvailabilityZone()
+
+    /**
+     * Indicates that the fleet uses a single instance type to launch all Spot Instances in the
+     * fleet.
+     *
+     * Supported only for fleets of type `instant` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleinstancetype)
+     */
+    public fun singleInstanceType(): Any? = unwrap(this).getSingleInstanceType()
+
+    /**
+     * A builder for [SpotOptionsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allocationStrategy Indicates how to allocate the target Spot Instance capacity
+       * across the Spot Instance pools specified by the EC2 Fleet.
+       * If the allocation strategy is `lowestPrice` , EC2 Fleet launches instances from the Spot
+       * Instance pools with the lowest price. This is the default allocation strategy.
+       *
+       * If the allocation strategy is `diversified` , EC2 Fleet launches instances from all the
+       * Spot Instance pools that you specify.
+       *
+       * If the allocation strategy is `capacityOptimized` , EC2 Fleet launches instances from Spot
+       * Instance pools that are optimally chosen based on the available Spot Instance capacity.
+       *
+       * *Allowed Values* : `lowestPrice` | `diversified` | `capacityOptimized` |
+       * `capacityOptimizedPrioritized`
+       */
+      public fun allocationStrategy(allocationStrategy: String)
+
+      /**
+       * @param instanceInterruptionBehavior The behavior when a Spot Instance is interrupted.
+       * Default: `terminate`
+       */
+      public fun instanceInterruptionBehavior(instanceInterruptionBehavior: String)
+
+      /**
+       * @param instancePoolsToUseCount The number of Spot pools across which to allocate your
+       * target Spot capacity.
+       * Supported only when Spot `AllocationStrategy` is set to `lowest-price` . EC2 Fleet selects
+       * the cheapest Spot pools and evenly allocates your target Spot capacity across the number of
+       * Spot pools that you specify.
+       *
+       * Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you
+       * specify on a best effort basis. If a pool runs out of Spot capacity before fulfilling your
+       * target capacity, EC2 Fleet will continue to fulfill your request by drawing from the next
+       * cheapest pool. To ensure that your target capacity is met, you might receive Spot Instances
+       * from more than the number of pools that you specified. Similarly, if most of the pools have no
+       * Spot capacity, you might receive your full target capacity from fewer than the number of pools
+       * that you specified.
+       */
+      public fun instancePoolsToUseCount(instancePoolsToUseCount: Number)
+
+      /**
+       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
+       * elevated risk of being interrupted.
+       */
+      public fun maintenanceStrategies(maintenanceStrategies: IResolvable)
+
+      /**
+       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
+       * elevated risk of being interrupted.
+       */
+      public fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty)
+
+      /**
+       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
+       * elevated risk of being interrupted.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("500ef6316a62131118ebc42fa82a07abcb3210ee9a5942fa639e876b95154539")
+      public
+          fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param maxTotalPrice The maximum amount per hour for Spot Instances that you're willing to
+       * pay.
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
+       *
+       *
+       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
+       * than if you do not specify this parameter. &gt; If your fleet includes T instances that are
+       * configured as `unlimited` , and if their average CPU usage exceeds the baseline utilization,
+       * you will incur a charge for surplus credits. The `MaxTotalPrice` does not account for surplus
+       * credits, and, if you use surplus credits, your final cost might be higher than what you
+       * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
+       * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
+       * in the *EC2 User Guide* .
+       */
+      public fun maxTotalPrice(maxTotalPrice: String)
+
+      /**
+       * @param minTargetCapacity The minimum target capacity for Spot Instances in the fleet.
+       * If the minimum target capacity is not reached, the fleet launches no instances.
+       *
+       * Supported only for fleets of type `instant` .
+       *
+       * At least one of the following must be specified: `SingleAvailabilityZone` |
+       * `SingleInstanceType`
+       */
+      public fun minTargetCapacity(minTargetCapacity: Number)
+
+      /**
+       * @param singleAvailabilityZone Indicates that the fleet launches all Spot Instances into a
+       * single Availability Zone.
+       * Supported only for fleets of type `instant` .
+       */
+      public fun singleAvailabilityZone(singleAvailabilityZone: Boolean)
+
+      /**
+       * @param singleAvailabilityZone Indicates that the fleet launches all Spot Instances into a
+       * single Availability Zone.
+       * Supported only for fleets of type `instant` .
+       */
+      public fun singleAvailabilityZone(singleAvailabilityZone: IResolvable)
+
+      /**
+       * @param singleInstanceType Indicates that the fleet uses a single instance type to launch
+       * all Spot Instances in the fleet.
+       * Supported only for fleets of type `instant` .
+       */
+      public fun singleInstanceType(singleInstanceType: Boolean)
+
+      /**
+       * @param singleInstanceType Indicates that the fleet uses a single instance type to launch
+       * all Spot Instances in the fleet.
+       * Supported only for fleets of type `instant` .
+       */
+      public fun singleInstanceType(singleInstanceType: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty.builder()
+
+      /**
+       * @param allocationStrategy Indicates how to allocate the target Spot Instance capacity
+       * across the Spot Instance pools specified by the EC2 Fleet.
+       * If the allocation strategy is `lowestPrice` , EC2 Fleet launches instances from the Spot
+       * Instance pools with the lowest price. This is the default allocation strategy.
+       *
+       * If the allocation strategy is `diversified` , EC2 Fleet launches instances from all the
+       * Spot Instance pools that you specify.
+       *
+       * If the allocation strategy is `capacityOptimized` , EC2 Fleet launches instances from Spot
+       * Instance pools that are optimally chosen based on the available Spot Instance capacity.
+       *
+       * *Allowed Values* : `lowestPrice` | `diversified` | `capacityOptimized` |
+       * `capacityOptimizedPrioritized`
+       */
+      override fun allocationStrategy(allocationStrategy: String) {
+        cdkBuilder.allocationStrategy(allocationStrategy)
+      }
+
+      /**
+       * @param instanceInterruptionBehavior The behavior when a Spot Instance is interrupted.
+       * Default: `terminate`
+       */
+      override fun instanceInterruptionBehavior(instanceInterruptionBehavior: String) {
+        cdkBuilder.instanceInterruptionBehavior(instanceInterruptionBehavior)
+      }
+
+      /**
+       * @param instancePoolsToUseCount The number of Spot pools across which to allocate your
+       * target Spot capacity.
+       * Supported only when Spot `AllocationStrategy` is set to `lowest-price` . EC2 Fleet selects
+       * the cheapest Spot pools and evenly allocates your target Spot capacity across the number of
+       * Spot pools that you specify.
+       *
+       * Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you
+       * specify on a best effort basis. If a pool runs out of Spot capacity before fulfilling your
+       * target capacity, EC2 Fleet will continue to fulfill your request by drawing from the next
+       * cheapest pool. To ensure that your target capacity is met, you might receive Spot Instances
+       * from more than the number of pools that you specified. Similarly, if most of the pools have no
+       * Spot capacity, you might receive your full target capacity from fewer than the number of pools
+       * that you specified.
+       */
+      override fun instancePoolsToUseCount(instancePoolsToUseCount: Number) {
+        cdkBuilder.instancePoolsToUseCount(instancePoolsToUseCount)
+      }
+
+      /**
+       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
+       * elevated risk of being interrupted.
+       */
+      override fun maintenanceStrategies(maintenanceStrategies: IResolvable) {
+        cdkBuilder.maintenanceStrategies(maintenanceStrategies.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
+       * elevated risk of being interrupted.
+       */
+      override fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty) {
+        cdkBuilder.maintenanceStrategies(maintenanceStrategies.let(MaintenanceStrategiesProperty::unwrap))
+      }
+
+      /**
+       * @param maintenanceStrategies The strategies for managing your Spot Instances that are at an
+       * elevated risk of being interrupted.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("500ef6316a62131118ebc42fa82a07abcb3210ee9a5942fa639e876b95154539")
+      override
+          fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty.Builder.() -> Unit):
+          Unit = maintenanceStrategies(MaintenanceStrategiesProperty(maintenanceStrategies))
+
+      /**
+       * @param maxTotalPrice The maximum amount per hour for Spot Instances that you're willing to
+       * pay.
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
+       *
+       *
+       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
+       * than if you do not specify this parameter. &gt; If your fleet includes T instances that are
+       * configured as `unlimited` , and if their average CPU usage exceeds the baseline utilization,
+       * you will incur a charge for surplus credits. The `MaxTotalPrice` does not account for surplus
+       * credits, and, if you use surplus credits, your final cost might be higher than what you
+       * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
+       * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
+       * in the *EC2 User Guide* .
+       */
+      override fun maxTotalPrice(maxTotalPrice: String) {
+        cdkBuilder.maxTotalPrice(maxTotalPrice)
+      }
+
+      /**
+       * @param minTargetCapacity The minimum target capacity for Spot Instances in the fleet.
+       * If the minimum target capacity is not reached, the fleet launches no instances.
+       *
+       * Supported only for fleets of type `instant` .
+       *
+       * At least one of the following must be specified: `SingleAvailabilityZone` |
+       * `SingleInstanceType`
+       */
+      override fun minTargetCapacity(minTargetCapacity: Number) {
+        cdkBuilder.minTargetCapacity(minTargetCapacity)
+      }
+
+      /**
+       * @param singleAvailabilityZone Indicates that the fleet launches all Spot Instances into a
+       * single Availability Zone.
+       * Supported only for fleets of type `instant` .
+       */
+      override fun singleAvailabilityZone(singleAvailabilityZone: Boolean) {
+        cdkBuilder.singleAvailabilityZone(singleAvailabilityZone)
+      }
+
+      /**
+       * @param singleAvailabilityZone Indicates that the fleet launches all Spot Instances into a
+       * single Availability Zone.
+       * Supported only for fleets of type `instant` .
+       */
+      override fun singleAvailabilityZone(singleAvailabilityZone: IResolvable) {
+        cdkBuilder.singleAvailabilityZone(singleAvailabilityZone.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param singleInstanceType Indicates that the fleet uses a single instance type to launch
+       * all Spot Instances in the fleet.
+       * Supported only for fleets of type `instant` .
+       */
+      override fun singleInstanceType(singleInstanceType: Boolean) {
+        cdkBuilder.singleInstanceType(singleInstanceType)
+      }
+
+      /**
+       * @param singleInstanceType Indicates that the fleet uses a single instance type to launch
+       * all Spot Instances in the fleet.
+       * Supported only for fleets of type `instant` .
+       */
+      override fun singleInstanceType(singleInstanceType: IResolvable) {
+        cdkBuilder.singleInstanceType(singleInstanceType.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty,
-    ) : CdkObject(cdkObject), FleetLaunchTemplateSpecificationRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty,
+    ) : CdkObject(cdkObject), SpotOptionsRequestProperty {
       /**
-       * The ID of the launch template.
+       * Indicates how to allocate the target Spot Instance capacity across the Spot Instance pools
+       * specified by the EC2 Fleet.
        *
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       * If the allocation strategy is `lowestPrice` , EC2 Fleet launches instances from the Spot
+       * Instance pools with the lowest price. This is the default allocation strategy.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplateid)
+       * If the allocation strategy is `diversified` , EC2 Fleet launches instances from all the
+       * Spot Instance pools that you specify.
+       *
+       * If the allocation strategy is `capacityOptimized` , EC2 Fleet launches instances from Spot
+       * Instance pools that are optimally chosen based on the available Spot Instance capacity.
+       *
+       * *Allowed Values* : `lowestPrice` | `diversified` | `capacityOptimized` |
+       * `capacityOptimizedPrioritized`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy)
        */
-      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+      override fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
 
       /**
-       * The name of the launch template.
+       * The behavior when a Spot Instance is interrupted.
        *
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       * Default: `terminate`
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplatename)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior)
        */
-      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+      override fun instanceInterruptionBehavior(): String? =
+          unwrap(this).getInstanceInterruptionBehavior()
 
       /**
-       * The launch template version number, `$Latest` , or `$Default` . You must specify a value,
-       * otherwise the request fails.
+       * The number of Spot pools across which to allocate your target Spot capacity.
        *
-       * If the value is `$Latest` , Amazon EC2 uses the latest version of the launch template.
+       * Supported only when Spot `AllocationStrategy` is set to `lowest-price` . EC2 Fleet selects
+       * the cheapest Spot pools and evenly allocates your target Spot capacity across the number of
+       * Spot pools that you specify.
        *
-       * If the value is `$Default` , Amazon EC2 uses the default version of the launch template.
+       * Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you
+       * specify on a best effort basis. If a pool runs out of Spot capacity before fulfilling your
+       * target capacity, EC2 Fleet will continue to fulfill your request by drawing from the next
+       * cheapest pool. To ensure that your target capacity is met, you might receive Spot Instances
+       * from more than the number of pools that you specified. Similarly, if most of the pools have no
+       * Spot capacity, you might receive your full target capacity from fewer than the number of pools
+       * that you specified.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-version)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount)
        */
-      override fun version(): String = unwrap(this).getVersion()
+      override fun instancePoolsToUseCount(): Number? = unwrap(this).getInstancePoolsToUseCount()
+
+      /**
+       * The strategies for managing your Spot Instances that are at an elevated risk of being
+       * interrupted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maintenancestrategies)
+       */
+      override fun maintenanceStrategies(): Any? = unwrap(this).getMaintenanceStrategies()
+
+      /**
+       * The maximum amount per hour for Spot Instances that you're willing to pay.
+       *
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
+       *
+       *
+       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
+       * than if you do not specify this parameter. &gt; If your fleet includes T instances that are
+       * configured as `unlimited` , and if their average CPU usage exceeds the baseline utilization,
+       * you will incur a charge for surplus credits. The `MaxTotalPrice` does not account for surplus
+       * credits, and, if you use surplus credits, your final cost might be higher than what you
+       * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
+       * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
+       * in the *EC2 User Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice)
+       */
+      override fun maxTotalPrice(): String? = unwrap(this).getMaxTotalPrice()
+
+      /**
+       * The minimum target capacity for Spot Instances in the fleet.
+       *
+       * If the minimum target capacity is not reached, the fleet launches no instances.
+       *
+       * Supported only for fleets of type `instant` .
+       *
+       * At least one of the following must be specified: `SingleAvailabilityZone` |
+       * `SingleInstanceType`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-mintargetcapacity)
+       */
+      override fun minTargetCapacity(): Number? = unwrap(this).getMinTargetCapacity()
+
+      /**
+       * Indicates that the fleet launches all Spot Instances into a single Availability Zone.
+       *
+       * Supported only for fleets of type `instant` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleavailabilityzone)
+       */
+      override fun singleAvailabilityZone(): Any? = unwrap(this).getSingleAvailabilityZone()
+
+      /**
+       * Indicates that the fleet uses a single instance type to launch all Spot Instances in the
+       * fleet.
+       *
+       * Supported only for fleets of type `instant` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-singleinstancetype)
+       */
+      override fun singleInstanceType(): Any? = unwrap(this).getSingleInstanceType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FleetLaunchTemplateSpecificationRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpotOptionsRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty):
-          FleetLaunchTemplateSpecificationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FleetLaunchTemplateSpecificationRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty):
+          SpotOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotOptionsRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FleetLaunchTemplateSpecificationRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum amount of memory, in MiB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MemoryMiBRequestProperty memoryMiBRequestProperty = MemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html)
-   */
-  public interface MemoryMiBRequestProperty {
-    /**
-     * The maximum amount of memory, in MiB.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html#cfn-ec2-ec2fleet-memorymibrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of memory, in MiB.
-     *
-     * To specify no minimum limit, specify `0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html#cfn-ec2-ec2fleet-memorymibrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [MemoryMiBRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of memory, in MiB.
-       * To specify no minimum limit, specify `0` .
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty.builder()
-
-      /**
-       * @param max The maximum amount of memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of memory, in MiB.
-       * To specify no minimum limit, specify `0` .
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
-      /**
-       * The maximum amount of memory, in MiB.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html#cfn-ec2-ec2fleet-memorymibrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of memory, in MiB.
-       *
-       * To specify no minimum limit, specify `0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorymibrequest.html#cfn-ec2-ec2fleet-memorymibrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryMiBRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty):
-          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBRequestProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MemoryMiBRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty = (wrapped as
+      internal fun unwrap(wrapped: SpotOptionsRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty
     }
   }
 
   /**
-   * The minimum and maximum number of vCPUs.
+   * Specifies the tags to apply to a resource when the resource is being created for an EC2 Fleet.
    *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * VCpuCountRangeRequestProperty vCpuCountRangeRequestProperty =
-   * VCpuCountRangeRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html)
-   */
-  public interface VCpuCountRangeRequestProperty {
-    /**
-     * The maximum number of vCPUs.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html#cfn-ec2-ec2fleet-vcpucountrangerequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum number of vCPUs.
-     *
-     * To specify no minimum limit, specify `0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html#cfn-ec2-ec2fleet-vcpucountrangerequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [VCpuCountRangeRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum number of vCPUs.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum number of vCPUs.
-       * To specify no minimum limit, specify `0` .
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty.builder()
-
-      /**
-       * @param max The maximum number of vCPUs.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum number of vCPUs.
-       * To specify no minimum limit, specify `0` .
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty,
-    ) : CdkObject(cdkObject), VCpuCountRangeRequestProperty {
-      /**
-       * The maximum number of vCPUs.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html#cfn-ec2-ec2fleet-vcpucountrangerequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum number of vCPUs.
-       *
-       * To specify no minimum limit, specify `0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html#cfn-ec2-ec2fleet-vcpucountrangerequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VCpuCountRangeRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty):
-          VCpuCountRangeRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VCpuCountRangeRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VCpuCountRangeRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum amount of total accelerator memory, in MiB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AcceleratorTotalMemoryMiBRequestProperty acceleratorTotalMemoryMiBRequestProperty =
-   * AcceleratorTotalMemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html)
-   */
-  public interface AcceleratorTotalMemoryMiBRequestProperty {
-    /**
-     * The maximum amount of accelerator memory, in MiB.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html#cfn-ec2-ec2fleet-acceleratortotalmemorymibrequest-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of accelerator memory, in MiB.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html#cfn-ec2-ec2fleet-acceleratortotalmemorymibrequest-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [AcceleratorTotalMemoryMiBRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of accelerator memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of accelerator memory, in MiB.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty.builder()
-
-      /**
-       * @param max The maximum amount of accelerator memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of accelerator memory, in MiB.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
-      /**
-       * The maximum amount of accelerator memory, in MiB.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html#cfn-ec2-ec2fleet-acceleratortotalmemorymibrequest-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of accelerator memory, in MiB.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-acceleratortotalmemorymibrequest.html#cfn-ec2-ec2fleet-acceleratortotalmemorymibrequest-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AcceleratorTotalMemoryMiBRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty):
-          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AcceleratorTotalMemoryMiBRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty
-    }
-  }
-
-  /**
-   * Describes the strategy for using unused Capacity Reservations for fulfilling On-Demand
-   * capacity.
-   *
-   *
-   * This strategy can only be used if the EC2 Fleet is of type `instant` .
-   *
-   *
-   * For more information about Capacity Reservations, see [On-Demand Capacity
-   * Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html)
-   * in the *Amazon EC2 User Guide* . For examples of using Capacity Reservations in an EC2 Fleet, see
-   * [EC2 Fleet example
-   * configurations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-examples.html) in
-   * the *Amazon EC2 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CapacityReservationOptionsRequestProperty capacityReservationOptionsRequestProperty =
-   * CapacityReservationOptionsRequestProperty.builder()
-   * .usageStrategy("usageStrategy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html)
-   */
-  public interface CapacityReservationOptionsRequestProperty {
-    /**
-     * Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.
-     *
-     * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
-     * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
-     * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
-     * `lowest-price` or `prioritized` ) is applied. If the number of unused Capacity Reservations is
-     * less than the On-Demand target capacity, the remaining On-Demand target capacity is launched
-     * according to the On-Demand allocation strategy ( `lowest-price` or `prioritized` ).
-     *
-     * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the
-     * chosen On-Demand allocation strategy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html#cfn-ec2-ec2fleet-capacityreservationoptionsrequest-usagestrategy)
-     */
-    public fun usageStrategy(): String? = unwrap(this).getUsageStrategy()
-
-    /**
-     * A builder for [CapacityReservationOptionsRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param usageStrategy Indicates whether to use unused Capacity Reservations for fulfilling
-       * On-Demand capacity.
-       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
-       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
-       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
-       * `lowest-price` or `prioritized` ) is applied. If the number of unused Capacity Reservations is
-       * less than the On-Demand target capacity, the remaining On-Demand target capacity is launched
-       * according to the On-Demand allocation strategy ( `lowest-price` or `prioritized` ).
-       *
-       * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the
-       * chosen On-Demand allocation strategy.
-       */
-      public fun usageStrategy(usageStrategy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty.builder()
-
-      /**
-       * @param usageStrategy Indicates whether to use unused Capacity Reservations for fulfilling
-       * On-Demand capacity.
-       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
-       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
-       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
-       * `lowest-price` or `prioritized` ) is applied. If the number of unused Capacity Reservations is
-       * less than the On-Demand target capacity, the remaining On-Demand target capacity is launched
-       * according to the On-Demand allocation strategy ( `lowest-price` or `prioritized` ).
-       *
-       * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the
-       * chosen On-Demand allocation strategy.
-       */
-      override fun usageStrategy(usageStrategy: String) {
-        cdkBuilder.usageStrategy(usageStrategy)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty,
-    ) : CdkObject(cdkObject), CapacityReservationOptionsRequestProperty {
-      /**
-       * Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.
-       *
-       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
-       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
-       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
-       * `lowest-price` or `prioritized` ) is applied. If the number of unused Capacity Reservations is
-       * less than the On-Demand target capacity, the remaining On-Demand target capacity is launched
-       * according to the On-Demand allocation strategy ( `lowest-price` or `prioritized` ).
-       *
-       * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the
-       * chosen On-Demand allocation strategy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html#cfn-ec2-ec2fleet-capacityreservationoptionsrequest-usagestrategy)
-       */
-      override fun usageStrategy(): String? = unwrap(this).getUsageStrategy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CapacityReservationOptionsRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty):
-          CapacityReservationOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CapacityReservationOptionsRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CapacityReservationOptionsRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty
-    }
-  }
-
-  /**
-   * Specifies a launch template and overrides for an EC2 Fleet.
-   *
-   * `FleetLaunchTemplateConfigRequest` is a property of the
+   * `TagSpecification` is a property of the
    * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
    * resource.
    *
@@ -7178,275 +7118,128 @@ public open class CfnEC2Fleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * FleetLaunchTemplateConfigRequestProperty fleetLaunchTemplateConfigRequestProperty =
-   * FleetLaunchTemplateConfigRequestProperty.builder()
-   * .launchTemplateSpecification(FleetLaunchTemplateSpecificationRequestProperty.builder()
-   * .version("version")
-   * // the properties below are optional
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .build())
-   * .overrides(List.of(FleetLaunchTemplateOverridesRequestProperty.builder()
-   * .availabilityZone("availabilityZone")
-   * .instanceRequirements(InstanceRequirementsRequestProperty.builder()
-   * .acceleratorCount(AcceleratorCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
-   * .acceleratorNames(List.of("acceleratorNames"))
-   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorTypes(List.of("acceleratorTypes"))
-   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
-   * .bareMetal("bareMetal")
-   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .burstablePerformance("burstablePerformance")
-   * .cpuManufacturers(List.of("cpuManufacturers"))
-   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
-   * .instanceGenerations(List.of("instanceGenerations"))
-   * .localStorage("localStorage")
-   * .localStorageTypes(List.of("localStorageTypes"))
-   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
-   * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .memoryMiB(MemoryMiBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .onDemandMaxPricePercentageOverLowestPrice(123)
-   * .requireHibernateSupport(false)
-   * .spotMaxPricePercentageOverLowestPrice(123)
-   * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .vCpuCount(VCpuCountRangeRequestProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .build())
-   * .instanceType("instanceType")
-   * .maxPrice("maxPrice")
-   * .placement(PlacementProperty.builder()
-   * .affinity("affinity")
-   * .availabilityZone("availabilityZone")
-   * .groupName("groupName")
-   * .hostId("hostId")
-   * .hostResourceGroupArn("hostResourceGroupArn")
-   * .partitionNumber(123)
-   * .spreadDomain("spreadDomain")
-   * .tenancy("tenancy")
-   * .build())
-   * .priority(123)
-   * .subnetId("subnetId")
-   * .weightedCapacity(123)
+   * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
+   * .resourceType("resourceType")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
    * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html)
    */
-  public interface FleetLaunchTemplateConfigRequestProperty {
+  public interface TagSpecificationProperty {
     /**
-     * The launch template to use.
+     * The type of resource to tag.
      *
-     * You must specify either the launch template ID or launch template name in the request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html#cfn-ec2-ec2fleet-tagspecification-resourcetype)
      */
-    public fun launchTemplateSpecification(): Any? = unwrap(this).getLaunchTemplateSpecification()
+    public fun resourceType(): String? = unwrap(this).getResourceType()
 
     /**
-     * Any parameters that you specify override the same parameters in the launch template.
+     * The tags to apply to the resource.
      *
-     * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
-     * launch templates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html#cfn-ec2-ec2fleet-tagspecification-tags)
      */
-    public fun overrides(): Any? = unwrap(this).getOverrides()
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * A builder for [FleetLaunchTemplateConfigRequestProperty]
+     * A builder for [TagSpecificationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param launchTemplateSpecification The launch template to use.
-       * You must specify either the launch template ID or launch template name in the request.
+       * @param resourceType The type of resource to tag.
        */
-      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable)
+      public fun resourceType(resourceType: String)
 
       /**
-       * @param launchTemplateSpecification The launch template to use.
-       * You must specify either the launch template ID or launch template name in the request.
+       * @param tags The tags to apply to the resource.
        */
-      public
-          fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty)
+      public fun tags(tags: List<CfnTag>)
 
       /**
-       * @param launchTemplateSpecification The launch template to use.
-       * You must specify either the launch template ID or launch template name in the request.
+       * @param tags The tags to apply to the resource.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0ec4cc1dc1142399b7f1cacbbd347beb1f9bba7e97e957a3dca7cc4b86b049e")
-      public
-          fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty.Builder.() -> Unit)
-
-      /**
-       * @param overrides Any parameters that you specify override the same parameters in the launch
-       * template.
-       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
-       * launch templates.
-       */
-      public fun overrides(overrides: IResolvable)
-
-      /**
-       * @param overrides Any parameters that you specify override the same parameters in the launch
-       * template.
-       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
-       * launch templates.
-       */
-      public fun overrides(overrides: List<Any>)
-
-      /**
-       * @param overrides Any parameters that you specify override the same parameters in the launch
-       * template.
-       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
-       * launch templates.
-       */
-      public fun overrides(vararg overrides: Any)
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty.builder()
 
       /**
-       * @param launchTemplateSpecification The launch template to use.
-       * You must specify either the launch template ID or launch template name in the request.
+       * @param resourceType The type of resource to tag.
        */
-      override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
+      override fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
       }
 
       /**
-       * @param launchTemplateSpecification The launch template to use.
-       * You must specify either the launch template ID or launch template name in the request.
+       * @param tags The tags to apply to the resource.
        */
-      override
-          fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(FleetLaunchTemplateSpecificationRequestProperty::unwrap))
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
       /**
-       * @param launchTemplateSpecification The launch template to use.
-       * You must specify either the launch template ID or launch template name in the request.
+       * @param tags The tags to apply to the resource.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0ec4cc1dc1142399b7f1cacbbd347beb1f9bba7e97e957a3dca7cc4b86b049e")
-      override
-          fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty.Builder.() -> Unit):
-          Unit =
-          launchTemplateSpecification(FleetLaunchTemplateSpecificationRequestProperty(launchTemplateSpecification))
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
-      /**
-       * @param overrides Any parameters that you specify override the same parameters in the launch
-       * template.
-       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
-       * launch templates.
-       */
-      override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param overrides Any parameters that you specify override the same parameters in the launch
-       * template.
-       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
-       * launch templates.
-       */
-      override fun overrides(overrides: List<Any>) {
-        cdkBuilder.overrides(overrides)
-      }
-
-      /**
-       * @param overrides Any parameters that you specify override the same parameters in the launch
-       * template.
-       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
-       * launch templates.
-       */
-      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty =
+      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty,
-    ) : CdkObject(cdkObject), FleetLaunchTemplateConfigRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty,
+    ) : CdkObject(cdkObject), TagSpecificationProperty {
       /**
-       * The launch template to use.
+       * The type of resource to tag.
        *
-       * You must specify either the launch template ID or launch template name in the request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html#cfn-ec2-ec2fleet-tagspecification-resourcetype)
        */
-      override fun launchTemplateSpecification(): Any? =
-          unwrap(this).getLaunchTemplateSpecification()
+      override fun resourceType(): String? = unwrap(this).getResourceType()
 
       /**
-       * Any parameters that you specify override the same parameters in the launch template.
+       * The tags to apply to the resource.
        *
-       * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
-       * launch templates.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html#cfn-ec2-ec2fleet-tagspecification-tags)
        */
-      override fun overrides(): Any? = unwrap(this).getOverrides()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FleetLaunchTemplateConfigRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagSpecificationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty):
-          FleetLaunchTemplateConfigRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FleetLaunchTemplateConfigRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty):
+          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FleetLaunchTemplateConfigRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty
+      internal fun unwrap(wrapped: TagSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty
     }
   }
 
   /**
-   * The minimum and maximum amount of memory per vCPU, in GiB.
+   * Specifies the number of units to request for an EC2 Fleet.
+   *
+   * You can choose to set the target capacity in terms of instances or a performance characteristic
+   * that is important to your application workload, such as vCPUs, memory, or I/O. If the request type
+   * is `maintain` , you can specify a target capacity of `0` and add capacity later.
+   *
+   * `TargetCapacitySpecificationRequest` is a property of the
+   * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
+   * resource.
    *
    * Example:
    *
@@ -7454,116 +7247,201 @@ public open class CfnEC2Fleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MemoryGiBPerVCpuRequestProperty memoryGiBPerVCpuRequestProperty =
-   * MemoryGiBPerVCpuRequestProperty.builder()
-   * .max(123)
-   * .min(123)
+   * TargetCapacitySpecificationRequestProperty targetCapacitySpecificationRequestProperty =
+   * TargetCapacitySpecificationRequestProperty.builder()
+   * .totalTargetCapacity(123)
+   * // the properties below are optional
+   * .defaultTargetCapacityType("defaultTargetCapacityType")
+   * .onDemandTargetCapacity(123)
+   * .spotTargetCapacity(123)
+   * .targetCapacityUnitType("targetCapacityUnitType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html)
    */
-  public interface MemoryGiBPerVCpuRequestProperty {
+  public interface TargetCapacitySpecificationRequestProperty {
     /**
-     * The maximum amount of memory per vCPU, in GiB.
+     * The default target capacity type.
      *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html#cfn-ec2-ec2fleet-memorygibpervcpurequest-max)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-defaulttargetcapacitytype)
      */
-    public fun max(): Number? = unwrap(this).getMax()
+    public fun defaultTargetCapacityType(): String? = unwrap(this).getDefaultTargetCapacityType()
 
     /**
-     * The minimum amount of memory per vCPU, in GiB.
+     * The number of On-Demand units to request.
      *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html#cfn-ec2-ec2fleet-memorygibpervcpurequest-min)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-ondemandtargetcapacity)
      */
-    public fun min(): Number? = unwrap(this).getMin()
+    public fun onDemandTargetCapacity(): Number? = unwrap(this).getOnDemandTargetCapacity()
 
     /**
-     * A builder for [MemoryGiBPerVCpuRequestProperty]
+     * The number of Spot units to request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-spottargetcapacity)
+     */
+    public fun spotTargetCapacity(): Number? = unwrap(this).getSpotTargetCapacity()
+
+    /**
+     * The unit for the target capacity. You can specify this parameter only when using
+     * attributed-based instance type selection.
+     *
+     * Default: `units` (the number of instances)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-targetcapacityunittype)
+     */
+    public fun targetCapacityUnitType(): String? = unwrap(this).getTargetCapacityUnitType()
+
+    /**
+     * The number of units to request, filled using the default target capacity type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-totaltargetcapacity)
+     */
+    public fun totalTargetCapacity(): Number
+
+    /**
+     * A builder for [TargetCapacitySpecificationRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum amount of memory per vCPU, in GiB.
-       * To specify no maximum limit, omit this parameter.
+       * @param defaultTargetCapacityType The default target capacity type.
        */
-      public fun max(max: Number)
+      public fun defaultTargetCapacityType(defaultTargetCapacityType: String)
 
       /**
-       * @param min The minimum amount of memory per vCPU, in GiB.
-       * To specify no minimum limit, omit this parameter.
+       * @param onDemandTargetCapacity The number of On-Demand units to request.
        */
-      public fun min(min: Number)
+      public fun onDemandTargetCapacity(onDemandTargetCapacity: Number)
+
+      /**
+       * @param spotTargetCapacity The number of Spot units to request.
+       */
+      public fun spotTargetCapacity(spotTargetCapacity: Number)
+
+      /**
+       * @param targetCapacityUnitType The unit for the target capacity. You can specify this
+       * parameter only when using attributed-based instance type selection.
+       * Default: `units` (the number of instances)
+       */
+      public fun targetCapacityUnitType(targetCapacityUnitType: String)
+
+      /**
+       * @param totalTargetCapacity The number of units to request, filled using the default target
+       * capacity type. 
+       */
+      public fun totalTargetCapacity(totalTargetCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty.builder()
 
       /**
-       * @param max The maximum amount of memory per vCPU, in GiB.
-       * To specify no maximum limit, omit this parameter.
+       * @param defaultTargetCapacityType The default target capacity type.
        */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
+      override fun defaultTargetCapacityType(defaultTargetCapacityType: String) {
+        cdkBuilder.defaultTargetCapacityType(defaultTargetCapacityType)
       }
 
       /**
-       * @param min The minimum amount of memory per vCPU, in GiB.
-       * To specify no minimum limit, omit this parameter.
+       * @param onDemandTargetCapacity The number of On-Demand units to request.
        */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
+      override fun onDemandTargetCapacity(onDemandTargetCapacity: Number) {
+        cdkBuilder.onDemandTargetCapacity(onDemandTargetCapacity)
+      }
+
+      /**
+       * @param spotTargetCapacity The number of Spot units to request.
+       */
+      override fun spotTargetCapacity(spotTargetCapacity: Number) {
+        cdkBuilder.spotTargetCapacity(spotTargetCapacity)
+      }
+
+      /**
+       * @param targetCapacityUnitType The unit for the target capacity. You can specify this
+       * parameter only when using attributed-based instance type selection.
+       * Default: `units` (the number of instances)
+       */
+      override fun targetCapacityUnitType(targetCapacityUnitType: String) {
+        cdkBuilder.targetCapacityUnitType(targetCapacityUnitType)
+      }
+
+      /**
+       * @param totalTargetCapacity The number of units to request, filled using the default target
+       * capacity type. 
+       */
+      override fun totalTargetCapacity(totalTargetCapacity: Number) {
+        cdkBuilder.totalTargetCapacity(totalTargetCapacity)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty,
-    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty,
+    ) : CdkObject(cdkObject), TargetCapacitySpecificationRequestProperty {
       /**
-       * The maximum amount of memory per vCPU, in GiB.
+       * The default target capacity type.
        *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html#cfn-ec2-ec2fleet-memorygibpervcpurequest-max)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-defaulttargetcapacitytype)
        */
-      override fun max(): Number? = unwrap(this).getMax()
+      override fun defaultTargetCapacityType(): String? =
+          unwrap(this).getDefaultTargetCapacityType()
 
       /**
-       * The minimum amount of memory per vCPU, in GiB.
+       * The number of On-Demand units to request.
        *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-memorygibpervcpurequest.html#cfn-ec2-ec2fleet-memorygibpervcpurequest-min)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-ondemandtargetcapacity)
        */
-      override fun min(): Number? = unwrap(this).getMin()
+      override fun onDemandTargetCapacity(): Number? = unwrap(this).getOnDemandTargetCapacity()
+
+      /**
+       * The number of Spot units to request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-spottargetcapacity)
+       */
+      override fun spotTargetCapacity(): Number? = unwrap(this).getSpotTargetCapacity()
+
+      /**
+       * The unit for the target capacity. You can specify this parameter only when using
+       * attributed-based instance type selection.
+       *
+       * Default: `units` (the number of instances)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-targetcapacityunittype)
+       */
+      override fun targetCapacityUnitType(): String? = unwrap(this).getTargetCapacityUnitType()
+
+      /**
+       * The number of units to request, filled using the default target capacity type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html#cfn-ec2-ec2fleet-targetcapacityspecificationrequest-totaltargetcapacity)
+       */
+      override fun totalTargetCapacity(): Number = unwrap(this).getTotalTargetCapacity()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryGiBPerVCpuRequestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TargetCapacitySpecificationRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty):
-          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MemoryGiBPerVCpuRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty):
+          TargetCapacitySpecificationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetCapacitySpecificationRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MemoryGiBPerVCpuRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty
+      internal fun unwrap(wrapped: TargetCapacitySpecificationRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty
     }
   }
 
@@ -7688,6 +7566,128 @@ public open class CfnEC2Fleet internal constructor(
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.TotalLocalStorageGBRequestProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.TotalLocalStorageGBRequestProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum number of vCPUs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * VCpuCountRangeRequestProperty vCpuCountRangeRequestProperty =
+   * VCpuCountRangeRequestProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html)
+   */
+  public interface VCpuCountRangeRequestProperty {
+    /**
+     * The maximum number of vCPUs.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html#cfn-ec2-ec2fleet-vcpucountrangerequest-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum number of vCPUs.
+     *
+     * To specify no minimum limit, specify `0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html#cfn-ec2-ec2fleet-vcpucountrangerequest-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [VCpuCountRangeRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum number of vCPUs.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum number of vCPUs.
+       * To specify no minimum limit, specify `0` .
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty.builder()
+
+      /**
+       * @param max The maximum number of vCPUs.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum number of vCPUs.
+       * To specify no minimum limit, specify `0` .
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty,
+    ) : CdkObject(cdkObject), VCpuCountRangeRequestProperty {
+      /**
+       * The maximum number of vCPUs.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html#cfn-ec2-ec2fleet-vcpucountrangerequest-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum number of vCPUs.
+       *
+       * To specify no minimum limit, specify `0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-vcpucountrangerequest.html#cfn-ec2-ec2fleet-vcpucountrangerequest-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VCpuCountRangeRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty):
+          VCpuCountRangeRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VCpuCountRangeRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VCpuCountRangeRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty
     }
   }
 }

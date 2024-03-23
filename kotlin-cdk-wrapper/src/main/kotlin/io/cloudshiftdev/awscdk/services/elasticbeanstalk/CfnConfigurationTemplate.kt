@@ -626,123 +626,6 @@ public open class CfnConfigurationTemplate internal constructor(
   }
 
   /**
-   * Use the `SourceConfiguration` property type to specify another AWS Elastic Beanstalk
-   * configuration template as the base to creating a new AWS::ElasticBeanstalk::ConfigurationTemplate
-   * resource in an AWS CloudFormation template.
-   *
-   * An AWS Elastic Beanstalk configuration template to base a new one on. You can use it to define
-   * a
-   * [AWS::ElasticBeanstalk::ConfigurationTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticbeanstalk.*;
-   * SourceConfigurationProperty sourceConfigurationProperty = SourceConfigurationProperty.builder()
-   * .applicationName("applicationName")
-   * .templateName("templateName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html)
-   */
-  public interface SourceConfigurationProperty {
-    /**
-     * The name of the application associated with the configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-applicationname)
-     */
-    public fun applicationName(): String
-
-    /**
-     * The name of the configuration template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename)
-     */
-    public fun templateName(): String
-
-    /**
-     * A builder for [SourceConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applicationName The name of the application associated with the configuration. 
-       */
-      public fun applicationName(applicationName: String)
-
-      /**
-       * @param templateName The name of the configuration template. 
-       */
-      public fun templateName(templateName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty.builder()
-
-      /**
-       * @param applicationName The name of the application associated with the configuration. 
-       */
-      override fun applicationName(applicationName: String) {
-        cdkBuilder.applicationName(applicationName)
-      }
-
-      /**
-       * @param templateName The name of the configuration template. 
-       */
-      override fun templateName(templateName: String) {
-        cdkBuilder.templateName(templateName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty,
-    ) : CdkObject(cdkObject), SourceConfigurationProperty {
-      /**
-       * The name of the application associated with the configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-applicationname)
-       */
-      override fun applicationName(): String = unwrap(this).getApplicationName()
-
-      /**
-       * The name of the configuration template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename)
-       */
-      override fun templateName(): String = unwrap(this).getTemplateName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty):
-          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SourceConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceConfigurationProperty):
-          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty
-    }
-  }
-
-  /**
    * Use the `ConfigurationOptionSetting` property type to specify an option for an AWS Elastic
    * Beanstalk configuration template when defining an AWS::ElasticBeanstalk::ConfigurationTemplate
    * resource in an AWS CloudFormation template.
@@ -925,6 +808,123 @@ public open class CfnConfigurationTemplate internal constructor(
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty
+    }
+  }
+
+  /**
+   * Use the `SourceConfiguration` property type to specify another AWS Elastic Beanstalk
+   * configuration template as the base to creating a new AWS::ElasticBeanstalk::ConfigurationTemplate
+   * resource in an AWS CloudFormation template.
+   *
+   * An AWS Elastic Beanstalk configuration template to base a new one on. You can use it to define
+   * a
+   * [AWS::ElasticBeanstalk::ConfigurationTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticbeanstalk.*;
+   * SourceConfigurationProperty sourceConfigurationProperty = SourceConfigurationProperty.builder()
+   * .applicationName("applicationName")
+   * .templateName("templateName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html)
+   */
+  public interface SourceConfigurationProperty {
+    /**
+     * The name of the application associated with the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-applicationname)
+     */
+    public fun applicationName(): String
+
+    /**
+     * The name of the configuration template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename)
+     */
+    public fun templateName(): String
+
+    /**
+     * A builder for [SourceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applicationName The name of the application associated with the configuration. 
+       */
+      public fun applicationName(applicationName: String)
+
+      /**
+       * @param templateName The name of the configuration template. 
+       */
+      public fun templateName(templateName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty.builder()
+
+      /**
+       * @param applicationName The name of the application associated with the configuration. 
+       */
+      override fun applicationName(applicationName: String) {
+        cdkBuilder.applicationName(applicationName)
+      }
+
+      /**
+       * @param templateName The name of the configuration template. 
+       */
+      override fun templateName(templateName: String) {
+        cdkBuilder.templateName(templateName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty,
+    ) : CdkObject(cdkObject), SourceConfigurationProperty {
+      /**
+       * The name of the application associated with the configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-applicationname)
+       */
+      override fun applicationName(): String = unwrap(this).getApplicationName()
+
+      /**
+       * The name of the configuration template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename)
+       */
+      override fun templateName(): String = unwrap(this).getTemplateName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty):
+          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceConfigurationProperty):
+          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty
     }
   }
 }

@@ -293,10 +293,9 @@ public open class CfnConfigurationSetEventDestination internal constructor(
   }
 
   /**
-   * An object that defines an Amazon Kinesis Data Firehose destination for email events.
+   * An object that defines an Amazon CloudWatch destination for email events.
    *
-   * You can use Amazon Kinesis Data Firehose to stream data to other services, such as Amazon S3
-   * and Amazon Redshift.
+   * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
    *
    * Example:
    *
@@ -304,114 +303,113 @@ public open class CfnConfigurationSetEventDestination internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpointemail.*;
-   * KinesisFirehoseDestinationProperty kinesisFirehoseDestinationProperty =
-   * KinesisFirehoseDestinationProperty.builder()
-   * .deliveryStreamArn("deliveryStreamArn")
-   * .iamRoleArn("iamRoleArn")
+   * CloudWatchDestinationProperty cloudWatchDestinationProperty =
+   * CloudWatchDestinationProperty.builder()
+   * .dimensionConfigurations(List.of(DimensionConfigurationProperty.builder()
+   * .defaultDimensionValue("defaultDimensionValue")
+   * .dimensionName("dimensionName")
+   * .dimensionValueSource("dimensionValueSource")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.html)
    */
-  public interface KinesisFirehoseDestinationProperty {
+  public interface CloudWatchDestinationProperty {
     /**
-     * The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that Amazon
-     * Pinpoint sends email events to.
+     * An array of objects that define the dimensions to use when you send email events to Amazon
+     * CloudWatch.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html#cfn-pinpointemail-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.html#cfn-pinpointemail-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
      */
-    public fun deliveryStreamArn(): String
+    public fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
 
     /**
-     * The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses when sending email
-     * events to the Amazon Kinesis Data Firehose stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html#cfn-pinpointemail-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
-     */
-    public fun iamRoleArn(): String
-
-    /**
-     * A builder for [KinesisFirehoseDestinationProperty]
+     * A builder for [CloudWatchDestinationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param deliveryStreamArn The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose
-       * stream that Amazon Pinpoint sends email events to. 
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
-      public fun deliveryStreamArn(deliveryStreamArn: String)
+      public fun dimensionConfigurations(dimensionConfigurations: IResolvable)
 
       /**
-       * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses
-       * when sending email events to the Amazon Kinesis Data Firehose stream. 
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
-      public fun iamRoleArn(iamRoleArn: String)
+      public fun dimensionConfigurations(dimensionConfigurations: List<Any>)
+
+      /**
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
+       */
+      public fun dimensionConfigurations(vararg dimensionConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.Builder
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.Builder
           =
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.builder()
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.builder()
 
       /**
-       * @param deliveryStreamArn The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose
-       * stream that Amazon Pinpoint sends email events to. 
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
-      override fun deliveryStreamArn(deliveryStreamArn: String) {
-        cdkBuilder.deliveryStreamArn(deliveryStreamArn)
+      override fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
+        cdkBuilder.dimensionConfigurations(dimensionConfigurations.let(IResolvable::unwrap))
       }
 
       /**
-       * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses
-       * when sending email events to the Amazon Kinesis Data Firehose stream. 
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
-      override fun iamRoleArn(iamRoleArn: String) {
-        cdkBuilder.iamRoleArn(iamRoleArn)
+      override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
+        cdkBuilder.dimensionConfigurations(dimensionConfigurations)
       }
+
+      /**
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
+       */
+      override fun dimensionConfigurations(vararg dimensionConfigurations: Any): Unit =
+          dimensionConfigurations(dimensionConfigurations.toList())
 
       public fun build():
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseDestinationProperty {
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
+    ) : CdkObject(cdkObject), CloudWatchDestinationProperty {
       /**
-       * The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that Amazon
-       * Pinpoint sends email events to.
+       * An array of objects that define the dimensions to use when you send email events to Amazon
+       * CloudWatch.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html#cfn-pinpointemail-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.html#cfn-pinpointemail-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
        */
-      override fun deliveryStreamArn(): String = unwrap(this).getDeliveryStreamArn()
-
-      /**
-       * The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses when sending email
-       * events to the Amazon Kinesis Data Firehose stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html#cfn-pinpointemail-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
-       */
-      override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
+      override fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          KinesisFirehoseDestinationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchDestinationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty):
-          KinesisFirehoseDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisFirehoseDestinationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty):
+          CloudWatchDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchDestinationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: KinesisFirehoseDestinationProperty):
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+      internal fun unwrap(wrapped: CloudWatchDestinationProperty):
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
     }
   }
 
@@ -1137,6 +1135,219 @@ public open class CfnConfigurationSetEventDestination internal constructor(
   }
 
   /**
+   * An object that defines an Amazon Kinesis Data Firehose destination for email events.
+   *
+   * You can use Amazon Kinesis Data Firehose to stream data to other services, such as Amazon S3
+   * and Amazon Redshift.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpointemail.*;
+   * KinesisFirehoseDestinationProperty kinesisFirehoseDestinationProperty =
+   * KinesisFirehoseDestinationProperty.builder()
+   * .deliveryStreamArn("deliveryStreamArn")
+   * .iamRoleArn("iamRoleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html)
+   */
+  public interface KinesisFirehoseDestinationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that Amazon
+     * Pinpoint sends email events to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html#cfn-pinpointemail-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)
+     */
+    public fun deliveryStreamArn(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses when sending email
+     * events to the Amazon Kinesis Data Firehose stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html#cfn-pinpointemail-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
+     */
+    public fun iamRoleArn(): String
+
+    /**
+     * A builder for [KinesisFirehoseDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deliveryStreamArn The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose
+       * stream that Amazon Pinpoint sends email events to. 
+       */
+      public fun deliveryStreamArn(deliveryStreamArn: String)
+
+      /**
+       * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses
+       * when sending email events to the Amazon Kinesis Data Firehose stream. 
+       */
+      public fun iamRoleArn(iamRoleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.builder()
+
+      /**
+       * @param deliveryStreamArn The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose
+       * stream that Amazon Pinpoint sends email events to. 
+       */
+      override fun deliveryStreamArn(deliveryStreamArn: String) {
+        cdkBuilder.deliveryStreamArn(deliveryStreamArn)
+      }
+
+      /**
+       * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses
+       * when sending email events to the Amazon Kinesis Data Firehose stream. 
+       */
+      override fun iamRoleArn(iamRoleArn: String) {
+        cdkBuilder.iamRoleArn(iamRoleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
+    ) : CdkObject(cdkObject), KinesisFirehoseDestinationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that Amazon
+       * Pinpoint sends email events to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html#cfn-pinpointemail-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)
+       */
+      override fun deliveryStreamArn(): String = unwrap(this).getDeliveryStreamArn()
+
+      /**
+       * The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses when sending email
+       * events to the Amazon Kinesis Data Firehose stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html#cfn-pinpointemail-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
+       */
+      override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          KinesisFirehoseDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty):
+          KinesisFirehoseDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisFirehoseDestinationProperty):
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+    }
+  }
+
+  /**
+   * An object that defines a Amazon Pinpoint destination for email events.
+   *
+   * You can use Amazon Pinpoint events to create attributes in Amazon Pinpoint projects. You can
+   * use these attributes to create segments for your campaigns.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpointemail.*;
+   * PinpointDestinationProperty pinpointDestinationProperty = PinpointDestinationProperty.builder()
+   * .applicationArn("applicationArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.html)
+   */
+  public interface PinpointDestinationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you want to send email
+     * events to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.html#cfn-pinpointemail-configurationseteventdestination-pinpointdestination-applicationarn)
+     */
+    public fun applicationArn(): String? = unwrap(this).getApplicationArn()
+
+    /**
+     * A builder for [PinpointDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applicationArn The Amazon Resource Name (ARN) of the Amazon Pinpoint project that
+       * you want to send email events to.
+       */
+      public fun applicationArn(applicationArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty.builder()
+
+      /**
+       * @param applicationArn The Amazon Resource Name (ARN) of the Amazon Pinpoint project that
+       * you want to send email events to.
+       */
+      override fun applicationArn(applicationArn: String) {
+        cdkBuilder.applicationArn(applicationArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty,
+    ) : CdkObject(cdkObject), PinpointDestinationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you want to send email
+       * events to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.html#cfn-pinpointemail-configurationseteventdestination-pinpointdestination-applicationarn)
+       */
+      override fun applicationArn(): String? = unwrap(this).getApplicationArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PinpointDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty):
+          PinpointDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PinpointDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PinpointDestinationProperty):
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty
+    }
+  }
+
+  /**
    * An object that defines an Amazon SNS destination for email events.
    *
    * You can use Amazon SNS to send notification when certain email events occur.
@@ -1232,217 +1443,6 @@ public open class CfnConfigurationSetEventDestination internal constructor(
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.SnsDestinationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.SnsDestinationProperty
-    }
-  }
-
-  /**
-   * An object that defines a Amazon Pinpoint destination for email events.
-   *
-   * You can use Amazon Pinpoint events to create attributes in Amazon Pinpoint projects. You can
-   * use these attributes to create segments for your campaigns.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpointemail.*;
-   * PinpointDestinationProperty pinpointDestinationProperty = PinpointDestinationProperty.builder()
-   * .applicationArn("applicationArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.html)
-   */
-  public interface PinpointDestinationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you want to send email
-     * events to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.html#cfn-pinpointemail-configurationseteventdestination-pinpointdestination-applicationarn)
-     */
-    public fun applicationArn(): String? = unwrap(this).getApplicationArn()
-
-    /**
-     * A builder for [PinpointDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applicationArn The Amazon Resource Name (ARN) of the Amazon Pinpoint project that
-       * you want to send email events to.
-       */
-      public fun applicationArn(applicationArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty.builder()
-
-      /**
-       * @param applicationArn The Amazon Resource Name (ARN) of the Amazon Pinpoint project that
-       * you want to send email events to.
-       */
-      override fun applicationArn(applicationArn: String) {
-        cdkBuilder.applicationArn(applicationArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty,
-    ) : CdkObject(cdkObject), PinpointDestinationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you want to send email
-       * events to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.html#cfn-pinpointemail-configurationseteventdestination-pinpointdestination-applicationarn)
-       */
-      override fun applicationArn(): String? = unwrap(this).getApplicationArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PinpointDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty):
-          PinpointDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PinpointDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PinpointDestinationProperty):
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty
-    }
-  }
-
-  /**
-   * An object that defines an Amazon CloudWatch destination for email events.
-   *
-   * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpointemail.*;
-   * CloudWatchDestinationProperty cloudWatchDestinationProperty =
-   * CloudWatchDestinationProperty.builder()
-   * .dimensionConfigurations(List.of(DimensionConfigurationProperty.builder()
-   * .defaultDimensionValue("defaultDimensionValue")
-   * .dimensionName("dimensionName")
-   * .dimensionValueSource("dimensionValueSource")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.html)
-   */
-  public interface CloudWatchDestinationProperty {
-    /**
-     * An array of objects that define the dimensions to use when you send email events to Amazon
-     * CloudWatch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.html#cfn-pinpointemail-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
-     */
-    public fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
-
-    /**
-     * A builder for [CloudWatchDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensionConfigurations An array of objects that define the dimensions to use when
-       * you send email events to Amazon CloudWatch.
-       */
-      public fun dimensionConfigurations(dimensionConfigurations: IResolvable)
-
-      /**
-       * @param dimensionConfigurations An array of objects that define the dimensions to use when
-       * you send email events to Amazon CloudWatch.
-       */
-      public fun dimensionConfigurations(dimensionConfigurations: List<Any>)
-
-      /**
-       * @param dimensionConfigurations An array of objects that define the dimensions to use when
-       * you send email events to Amazon CloudWatch.
-       */
-      public fun dimensionConfigurations(vararg dimensionConfigurations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.builder()
-
-      /**
-       * @param dimensionConfigurations An array of objects that define the dimensions to use when
-       * you send email events to Amazon CloudWatch.
-       */
-      override fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
-        cdkBuilder.dimensionConfigurations(dimensionConfigurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dimensionConfigurations An array of objects that define the dimensions to use when
-       * you send email events to Amazon CloudWatch.
-       */
-      override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
-        cdkBuilder.dimensionConfigurations(dimensionConfigurations)
-      }
-
-      /**
-       * @param dimensionConfigurations An array of objects that define the dimensions to use when
-       * you send email events to Amazon CloudWatch.
-       */
-      override fun dimensionConfigurations(vararg dimensionConfigurations: Any): Unit =
-          dimensionConfigurations(dimensionConfigurations.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchDestinationProperty {
-      /**
-       * An array of objects that define the dimensions to use when you send email events to Amazon
-       * CloudWatch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.html#cfn-pinpointemail-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
-       */
-      override fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty):
-          CloudWatchDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchDestinationProperty):
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
     }
   }
 }

@@ -762,6 +762,348 @@ public open class CfnWorkGroup internal constructor(
   }
 
   /**
+   * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
+   * results.
+   *
+   * When Athena stores query results in Amazon S3, the canned ACL is set with the `x-amz-acl`
+   * request header. For more information about S3 Object Ownership, see [Object Ownership
+   * settings](https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html#object-ownership-overview)
+   * in the *Amazon S3 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.athena.*;
+   * AclConfigurationProperty aclConfigurationProperty = AclConfigurationProperty.builder()
+   * .s3AclOption("s3AclOption")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-aclconfiguration.html)
+   */
+  public interface AclConfigurationProperty {
+    /**
+     * The Amazon S3 canned ACL that Athena should specify when storing query results.
+     *
+     * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in a
+     * workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
+     * specified in the workgroup's settings is used for all queries that run in the workgroup. For
+     * more information about Amazon S3 canned ACLs, see [Canned
+     * ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) in the
+     * *Amazon S3 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-aclconfiguration.html#cfn-athena-workgroup-aclconfiguration-s3acloption)
+     */
+    public fun s3AclOption(): String
+
+    /**
+     * A builder for [AclConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3AclOption The Amazon S3 canned ACL that Athena should specify when storing query
+       * results. 
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
+       * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
+       * specified in the workgroup's settings is used for all queries that run in the workgroup. For
+       * more information about Amazon S3 canned ACLs, see [Canned
+       * ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) in
+       * the *Amazon S3 User Guide* .
+       */
+      public fun s3AclOption(s3AclOption: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty.Builder =
+          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty.builder()
+
+      /**
+       * @param s3AclOption The Amazon S3 canned ACL that Athena should specify when storing query
+       * results. 
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
+       * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
+       * specified in the workgroup's settings is used for all queries that run in the workgroup. For
+       * more information about Amazon S3 canned ACLs, see [Canned
+       * ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) in
+       * the *Amazon S3 User Guide* .
+       */
+      override fun s3AclOption(s3AclOption: String) {
+        cdkBuilder.s3AclOption(s3AclOption)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty,
+    ) : CdkObject(cdkObject), AclConfigurationProperty {
+      /**
+       * The Amazon S3 canned ACL that Athena should specify when storing query results.
+       *
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
+       * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
+       * specified in the workgroup's settings is used for all queries that run in the workgroup. For
+       * more information about Amazon S3 canned ACLs, see [Canned
+       * ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) in
+       * the *Amazon S3 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-aclconfiguration.html#cfn-athena-workgroup-aclconfiguration-s3acloption)
+       */
+      override fun s3AclOption(): String = unwrap(this).getS3AclOption()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AclConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty):
+          AclConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? AclConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AclConfigurationProperty):
+          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the customer managed KMS key that is used to encrypt the user's data stores in
+   * Athena.
+   *
+   * When an AWS managed key is used, this value is null. This setting does not apply to Athena SQL
+   * workgroups.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.athena.*;
+   * CustomerContentEncryptionConfigurationProperty customerContentEncryptionConfigurationProperty =
+   * CustomerContentEncryptionConfigurationProperty.builder()
+   * .kmsKey("kmsKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-customercontentencryptionconfiguration.html)
+   */
+  public interface CustomerContentEncryptionConfigurationProperty {
+    /**
+     * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-customercontentencryptionconfiguration.html#cfn-athena-workgroup-customercontentencryptionconfiguration-kmskey)
+     */
+    public fun kmsKey(): String
+
+    /**
+     * A builder for [CustomerContentEncryptionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKey The customer managed KMS key that is used to encrypt the user's data stores
+       * in Athena. 
+       */
+      public fun kmsKey(kmsKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.builder()
+
+      /**
+       * @param kmsKey The customer managed KMS key that is used to encrypt the user's data stores
+       * in Athena. 
+       */
+      override fun kmsKey(kmsKey: String) {
+        cdkBuilder.kmsKey(kmsKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty,
+    ) : CdkObject(cdkObject), CustomerContentEncryptionConfigurationProperty {
+      /**
+       * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-customercontentencryptionconfiguration.html#cfn-athena-workgroup-customercontentencryptionconfiguration-kmskey)
+       */
+      override fun kmsKey(): String = unwrap(this).getKmsKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CustomerContentEncryptionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty):
+          CustomerContentEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerContentEncryptionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomerContentEncryptionConfigurationProperty):
+          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty
+    }
+  }
+
+  /**
+   * If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
+   * `SSE_KMS` or `CSE_KMS` ) and key information.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.athena.*;
+   * EncryptionConfigurationProperty encryptionConfigurationProperty =
+   * EncryptionConfigurationProperty.builder()
+   * .encryptionOption("encryptionOption")
+   * // the properties below are optional
+   * .kmsKey("kmsKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html)
+   */
+  public interface EncryptionConfigurationProperty {
+    /**
+     * Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys ( `SSE_S3` ),
+     * server-side encryption with KMS-managed keys ( `SSE_KMS` ), or client-side encryption with
+     * KMS-managed keys ( `CSE_KMS` ) is used.
+     *
+     * If a query runs in a workgroup and the workgroup overrides client-side settings, then the
+     * workgroup's setting for encryption is used. It specifies whether query results must be
+     * encrypted, for all queries that run in this workgroup.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-encryptionoption)
+     */
+    public fun encryptionOption(): String
+
+    /**
+     * For `SSE_KMS` and `CSE_KMS` , this is the KMS key ARN or ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-kmskey)
+     */
+    public fun kmsKey(): String? = unwrap(this).getKmsKey()
+
+    /**
+     * A builder for [EncryptionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encryptionOption Indicates whether Amazon S3 server-side encryption with Amazon
+       * S3-managed keys ( `SSE_S3` ), server-side encryption with KMS-managed keys ( `SSE_KMS` ), or
+       * client-side encryption with KMS-managed keys ( `CSE_KMS` ) is used. 
+       * If a query runs in a workgroup and the workgroup overrides client-side settings, then the
+       * workgroup's setting for encryption is used. It specifies whether query results must be
+       * encrypted, for all queries that run in this workgroup.
+       */
+      public fun encryptionOption(encryptionOption: String)
+
+      /**
+       * @param kmsKey For `SSE_KMS` and `CSE_KMS` , this is the KMS key ARN or ID.
+       */
+      public fun kmsKey(kmsKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty.builder()
+
+      /**
+       * @param encryptionOption Indicates whether Amazon S3 server-side encryption with Amazon
+       * S3-managed keys ( `SSE_S3` ), server-side encryption with KMS-managed keys ( `SSE_KMS` ), or
+       * client-side encryption with KMS-managed keys ( `CSE_KMS` ) is used. 
+       * If a query runs in a workgroup and the workgroup overrides client-side settings, then the
+       * workgroup's setting for encryption is used. It specifies whether query results must be
+       * encrypted, for all queries that run in this workgroup.
+       */
+      override fun encryptionOption(encryptionOption: String) {
+        cdkBuilder.encryptionOption(encryptionOption)
+      }
+
+      /**
+       * @param kmsKey For `SSE_KMS` and `CSE_KMS` , this is the KMS key ARN or ID.
+       */
+      override fun kmsKey(kmsKey: String) {
+        cdkBuilder.kmsKey(kmsKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty,
+    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+      /**
+       * Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys ( `SSE_S3`
+       * ), server-side encryption with KMS-managed keys ( `SSE_KMS` ), or client-side encryption with
+       * KMS-managed keys ( `CSE_KMS` ) is used.
+       *
+       * If a query runs in a workgroup and the workgroup overrides client-side settings, then the
+       * workgroup's setting for encryption is used. It specifies whether query results must be
+       * encrypted, for all queries that run in this workgroup.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-encryptionoption)
+       */
+      override fun encryptionOption(): String = unwrap(this).getEncryptionOption()
+
+      /**
+       * For `SSE_KMS` and `CSE_KMS` , this is the KMS key ARN or ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-kmskey)
+       */
+      override fun kmsKey(): String? = unwrap(this).getKmsKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty):
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionConfigurationProperty):
+          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty
+    }
+  }
+
+  /**
    * The Athena engine version for running queries, or the PySpark engine version for running
    * sessions.
    *
@@ -899,6 +1241,400 @@ public open class CfnWorkGroup internal constructor(
           software.amazon.awscdk.services.athena.CfnWorkGroup.EngineVersionProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.athena.CfnWorkGroup.EngineVersionProperty
+    }
+  }
+
+  /**
+   * The location in Amazon S3 where query and calculation results are stored and the encryption
+   * option, if any, used for query and calculation results.
+   *
+   * These are known as "client-side settings". If workgroup settings override client-side settings,
+   * then the query uses the workgroup settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.athena.*;
+   * ResultConfigurationProperty resultConfigurationProperty = ResultConfigurationProperty.builder()
+   * .aclConfiguration(AclConfigurationProperty.builder()
+   * .s3AclOption("s3AclOption")
+   * .build())
+   * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+   * .encryptionOption("encryptionOption")
+   * // the properties below are optional
+   * .kmsKey("kmsKey")
+   * .build())
+   * .expectedBucketOwner("expectedBucketOwner")
+   * .outputLocation("outputLocation")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html)
+   */
+  public interface ResultConfigurationProperty {
+    /**
+     * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
+     * results.
+     *
+     * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
+     * client-side setting. If workgroup settings override client-side settings, then the query uses
+     * the ACL configuration that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-aclconfiguration)
+     */
+    public fun aclConfiguration(): Any? = unwrap(this).getAclConfiguration()
+
+    /**
+     * If query results are encrypted in Amazon S3, indicates the encryption option used (for
+     * example, `SSE_KMS` or `CSE_KMS` ) and key information.
+     *
+     * This is a client-side setting. If workgroup settings override client-side settings, then the
+     * query uses the encryption configuration that is specified for the workgroup, and also uses the
+     * location for storing query results specified in the workgroup. See
+     * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+     * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)
+     */
+    public fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+
+    /**
+     * The account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * `ResultConfiguration:OutputLocation` .
+     *
+     * If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to your
+     * specified output location. If the `ExpectedBucketOwner` account ID does not match the actual
+     * owner of the Amazon S3 bucket, the call fails with a permissions error.
+     *
+     * This is a client-side setting. If workgroup settings override client-side settings, then the
+     * query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also uses
+     * the location for storing query results specified in the workgroup. See
+     * `EnforceWorkGroupConfiguration` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-expectedbucketowner)
+     */
+    public fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
+
+    /**
+     * The location in Amazon S3 where your query results are stored, such as
+     * `s3://path/to/query/bucket/` .
+     *
+     * To run a query, you must specify the query results location using either a client-side
+     * setting for individual queries or a location specified by the workgroup. If workgroup settings
+     * override client-side settings, then the query uses the location specified for the workgroup. If
+     * no query location is set, Athena issues an error. For more information, see [Working with Query
+     * Results, Output Files, and Query
+     * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
+     * `EnforceWorkGroupConfiguration` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-outputlocation)
+     */
+    public fun outputLocation(): String? = unwrap(this).getOutputLocation()
+
+    /**
+     * A builder for [ResultConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
+       * ownership of stored query results.
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
+       * client-side setting. If workgroup settings override client-side settings, then the query uses
+       * the ACL configuration that is specified for the workgroup, and also uses the location for
+       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       */
+      public fun aclConfiguration(aclConfiguration: IResolvable)
+
+      /**
+       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
+       * ownership of stored query results.
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
+       * client-side setting. If workgroup settings override client-side settings, then the query uses
+       * the ACL configuration that is specified for the workgroup, and also uses the location for
+       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       */
+      public fun aclConfiguration(aclConfiguration: AclConfigurationProperty)
+
+      /**
+       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
+       * ownership of stored query results.
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
+       * client-side setting. If workgroup settings override client-side settings, then the query uses
+       * the ACL configuration that is specified for the workgroup, and also uses the location for
+       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("411aa155ffc38a1c109962c4dcdad1093e7373d6f7aa57cbcd23a0698ce99120")
+      public fun aclConfiguration(aclConfiguration: AclConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
+       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the encryption configuration that is specified for the workgroup, and also uses
+       * the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
+
+      /**
+       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
+       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the encryption configuration that is specified for the workgroup, and also uses
+       * the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
+
+      /**
+       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
+       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the encryption configuration that is specified for the workgroup, and also uses
+       * the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5203c5f393dec1aa3e91088a082705ed6f73eac66b6b62ee8a887ec08dd6f120")
+      public
+          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param expectedBucketOwner The account ID that you expect to be the owner of the Amazon S3
+       * bucket specified by `ResultConfiguration:OutputLocation` .
+       * If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to
+       * your specified output location. If the `ExpectedBucketOwner` account ID does not match the
+       * actual owner of the Amazon S3 bucket, the call fails with a permissions error.
+       *
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also
+       * uses the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` .
+       */
+      public fun expectedBucketOwner(expectedBucketOwner: String)
+
+      /**
+       * @param outputLocation The location in Amazon S3 where your query results are stored, such
+       * as `s3://path/to/query/bucket/` .
+       * To run a query, you must specify the query results location using either a client-side
+       * setting for individual queries or a location specified by the workgroup. If workgroup settings
+       * override client-side settings, then the query uses the location specified for the workgroup.
+       * If no query location is set, Athena issues an error. For more information, see [Working with
+       * Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
+       * `EnforceWorkGroupConfiguration` .
+       */
+      public fun outputLocation(outputLocation: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty.Builder =
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty.builder()
+
+      /**
+       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
+       * ownership of stored query results.
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
+       * client-side setting. If workgroup settings override client-side settings, then the query uses
+       * the ACL configuration that is specified for the workgroup, and also uses the location for
+       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       */
+      override fun aclConfiguration(aclConfiguration: IResolvable) {
+        cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
+       * ownership of stored query results.
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
+       * client-side setting. If workgroup settings override client-side settings, then the query uses
+       * the ACL configuration that is specified for the workgroup, and also uses the location for
+       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       */
+      override fun aclConfiguration(aclConfiguration: AclConfigurationProperty) {
+        cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
+       * ownership of stored query results.
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
+       * client-side setting. If workgroup settings override client-side settings, then the query uses
+       * the ACL configuration that is specified for the workgroup, and also uses the location for
+       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("411aa155ffc38a1c109962c4dcdad1093e7373d6f7aa57cbcd23a0698ce99120")
+      override fun aclConfiguration(aclConfiguration: AclConfigurationProperty.Builder.() -> Unit):
+          Unit = aclConfiguration(AclConfigurationProperty(aclConfiguration))
+
+      /**
+       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
+       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the encryption configuration that is specified for the workgroup, and also uses
+       * the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
+       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the encryption configuration that is specified for the workgroup, and also uses
+       * the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      override
+          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
+       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the encryption configuration that is specified for the workgroup, and also uses
+       * the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5203c5f393dec1aa3e91088a082705ed6f73eac66b6b62ee8a887ec08dd6f120")
+      override
+          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit):
+          Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
+
+      /**
+       * @param expectedBucketOwner The account ID that you expect to be the owner of the Amazon S3
+       * bucket specified by `ResultConfiguration:OutputLocation` .
+       * If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to
+       * your specified output location. If the `ExpectedBucketOwner` account ID does not match the
+       * actual owner of the Amazon S3 bucket, the call fails with a permissions error.
+       *
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also
+       * uses the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` .
+       */
+      override fun expectedBucketOwner(expectedBucketOwner: String) {
+        cdkBuilder.expectedBucketOwner(expectedBucketOwner)
+      }
+
+      /**
+       * @param outputLocation The location in Amazon S3 where your query results are stored, such
+       * as `s3://path/to/query/bucket/` .
+       * To run a query, you must specify the query results location using either a client-side
+       * setting for individual queries or a location specified by the workgroup. If workgroup settings
+       * override client-side settings, then the query uses the location specified for the workgroup.
+       * If no query location is set, Athena issues an error. For more information, see [Working with
+       * Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
+       * `EnforceWorkGroupConfiguration` .
+       */
+      override fun outputLocation(outputLocation: String) {
+        cdkBuilder.outputLocation(outputLocation)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty,
+    ) : CdkObject(cdkObject), ResultConfigurationProperty {
+      /**
+       * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
+       * results.
+       *
+       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
+       * client-side setting. If workgroup settings override client-side settings, then the query uses
+       * the ACL configuration that is specified for the workgroup, and also uses the location for
+       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-aclconfiguration)
+       */
+      override fun aclConfiguration(): Any? = unwrap(this).getAclConfiguration()
+
+      /**
+       * If query results are encrypted in Amazon S3, indicates the encryption option used (for
+       * example, `SSE_KMS` or `CSE_KMS` ) and key information.
+       *
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the encryption configuration that is specified for the workgroup, and also uses
+       * the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)
+       */
+      override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+
+      /**
+       * The account ID that you expect to be the owner of the Amazon S3 bucket specified by
+       * `ResultConfiguration:OutputLocation` .
+       *
+       * If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to
+       * your specified output location. If the `ExpectedBucketOwner` account ID does not match the
+       * actual owner of the Amazon S3 bucket, the call fails with a permissions error.
+       *
+       * This is a client-side setting. If workgroup settings override client-side settings, then
+       * the query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also
+       * uses the location for storing query results specified in the workgroup. See
+       * `EnforceWorkGroupConfiguration` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-expectedbucketowner)
+       */
+      override fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
+
+      /**
+       * The location in Amazon S3 where your query results are stored, such as
+       * `s3://path/to/query/bucket/` .
+       *
+       * To run a query, you must specify the query results location using either a client-side
+       * setting for individual queries or a location specified by the workgroup. If workgroup settings
+       * override client-side settings, then the query uses the location specified for the workgroup.
+       * If no query location is set, Athena issues an error. For more information, see [Working with
+       * Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
+       * `EnforceWorkGroupConfiguration` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-outputlocation)
+       */
+      override fun outputLocation(): String? = unwrap(this).getOutputLocation()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResultConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty):
+          ResultConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResultConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResultConfigurationProperty):
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty
     }
   }
 
@@ -1530,11 +2266,13 @@ public open class CfnWorkGroup internal constructor(
   }
 
   /**
-   * The location in Amazon S3 where query and calculation results are stored and the encryption
-   * option, if any, used for query and calculation results.
+   * The configuration of the workgroup, which includes the location in Amazon S3 where query
+   * results are stored, the encryption option, if any, used for query results, whether Amazon
+   * CloudWatch Metrics are enabled for the workgroup, and the limit for the amount of bytes scanned
+   * (cutoff) per query, if it is specified.
    *
-   * These are known as "client-side settings". If workgroup settings override client-side settings,
-   * then the query uses the workgroup settings.
+   * The `EnforceWorkGroupConfiguration` option determines whether workgroup settings override
+   * client-side query settings.
    *
    * Example:
    *
@@ -1542,7 +2280,22 @@ public open class CfnWorkGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.athena.*;
-   * ResultConfigurationProperty resultConfigurationProperty = ResultConfigurationProperty.builder()
+   * WorkGroupConfigurationProperty workGroupConfigurationProperty =
+   * WorkGroupConfigurationProperty.builder()
+   * .additionalConfiguration("additionalConfiguration")
+   * .bytesScannedCutoffPerQuery(123)
+   * .customerContentEncryptionConfiguration(CustomerContentEncryptionConfigurationProperty.builder()
+   * .kmsKey("kmsKey")
+   * .build())
+   * .enforceWorkGroupConfiguration(false)
+   * .engineVersion(EngineVersionProperty.builder()
+   * .effectiveEngineVersion("effectiveEngineVersion")
+   * .selectedEngineVersion("selectedEngineVersion")
+   * .build())
+   * .executionRole("executionRole")
+   * .publishCloudWatchMetricsEnabled(false)
+   * .requesterPaysEnabled(false)
+   * .resultConfiguration(ResultConfigurationProperty.builder()
    * .aclConfiguration(AclConfigurationProperty.builder()
    * .s3AclOption("s3AclOption")
    * .build())
@@ -1553,373 +2306,559 @@ public open class CfnWorkGroup internal constructor(
    * .build())
    * .expectedBucketOwner("expectedBucketOwner")
    * .outputLocation("outputLocation")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html)
    */
-  public interface ResultConfigurationProperty {
+  public interface WorkGroupConfigurationProperty {
     /**
-     * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
-     * results.
+     * Specifies a user defined JSON string that is passed to the session engine.
      *
-     * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
-     * client-side setting. If workgroup settings override client-side settings, then the query uses
-     * the ACL configuration that is specified for the workgroup, and also uses the location for
-     * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-aclconfiguration)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-additionalconfiguration)
      */
-    public fun aclConfiguration(): Any? = unwrap(this).getAclConfiguration()
+    public fun additionalConfiguration(): String? = unwrap(this).getAdditionalConfiguration()
 
     /**
-     * If query results are encrypted in Amazon S3, indicates the encryption option used (for
-     * example, `SSE_KMS` or `CSE_KMS` ) and key information.
+     * The upper limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to
+     * scan.
      *
-     * This is a client-side setting. If workgroup settings override client-side settings, then the
-     * query uses the encryption configuration that is specified for the workgroup, and also uses the
-     * location for storing query results specified in the workgroup. See
-     * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+     * No default is defined.
+     *
+     *
+     * This property currently supports integer types. Support for long values is planned.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery)
+     */
+    public fun bytesScannedCutoffPerQuery(): Number? = unwrap(this).getBytesScannedCutoffPerQuery()
+
+    /**
+     * Specifies the KMS key that is used to encrypt the user's data stores in Athena.
+     *
+     * This setting does not apply to Athena SQL workgroups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-customercontentencryptionconfiguration)
+     */
+    public fun customerContentEncryptionConfiguration(): Any? =
+        unwrap(this).getCustomerContentEncryptionConfiguration()
+
+    /**
+     * If set to "true", the settings for the workgroup override client-side settings.
+     *
+     * If set to "false", client-side settings are used. For more information, see [Workgroup
+     * Settings Override Client-Side
      * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)
      */
-    public fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+    public fun enforceWorkGroupConfiguration(): Any? =
+        unwrap(this).getEnforceWorkGroupConfiguration()
 
     /**
-     * The account ID that you expect to be the owner of the Amazon S3 bucket specified by
-     * `ResultConfiguration:OutputLocation` .
+     * The engine version that all queries running on the workgroup use.
      *
-     * If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to your
-     * specified output location. If the `ExpectedBucketOwner` account ID does not match the actual
-     * owner of the Amazon S3 bucket, the call fails with a permissions error.
-     *
-     * This is a client-side setting. If workgroup settings override client-side settings, then the
-     * query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also uses
-     * the location for storing query results specified in the workgroup. See
-     * `EnforceWorkGroupConfiguration` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-expectedbucketowner)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-engineversion)
      */
-    public fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
+    public fun engineVersion(): Any? = unwrap(this).getEngineVersion()
 
     /**
-     * The location in Amazon S3 where your query results are stored, such as
-     * `s3://path/to/query/bucket/` .
+     * Role used to access user resources in an Athena for Apache Spark session.
      *
-     * To run a query, you must specify the query results location using either a client-side
-     * setting for individual queries or a location specified by the workgroup. If workgroup settings
-     * override client-side settings, then the query uses the location specified for the workgroup. If
-     * no query location is set, Athena issues an error. For more information, see [Working with Query
-     * Results, Output Files, and Query
-     * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
-     * `EnforceWorkGroupConfiguration` .
+     * This property applies only to Spark-enabled workgroups in Athena.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-outputlocation)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-executionrole)
      */
-    public fun outputLocation(): String? = unwrap(this).getOutputLocation()
+    public fun executionRole(): String? = unwrap(this).getExecutionRole()
 
     /**
-     * A builder for [ResultConfigurationProperty]
+     * Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled)
+     */
+    public fun publishCloudWatchMetricsEnabled(): Any? =
+        unwrap(this).getPublishCloudWatchMetricsEnabled()
+
+    /**
+     * If set to `true` , allows members assigned to a workgroup to reference Amazon S3 Requester
+     * Pays buckets in queries.
+     *
+     * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
+     * queries that retrieve data from Requester Pays buckets cause an error. The default is `false` .
+     * For more information about Requester Pays buckets, see [Requester Pays
+     * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
+     * *Amazon Simple Storage Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled)
+     */
+    public fun requesterPaysEnabled(): Any? = unwrap(this).getRequesterPaysEnabled()
+
+    /**
+     * Specifies the location in Amazon S3 where query results are stored and the encryption option,
+     * if any, used for query results.
+     *
+     * For more information, see [Working with Query Results, Output Files, and Query
+     * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)
+     */
+    public fun resultConfiguration(): Any? = unwrap(this).getResultConfiguration()
+
+    /**
+     * A builder for [WorkGroupConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
-       * ownership of stored query results.
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
-       * client-side setting. If workgroup settings override client-side settings, then the query uses
-       * the ACL configuration that is specified for the workgroup, and also uses the location for
-       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       * @param additionalConfiguration Specifies a user defined JSON string that is passed to the
+       * session engine.
        */
-      public fun aclConfiguration(aclConfiguration: IResolvable)
+      public fun additionalConfiguration(additionalConfiguration: String)
 
       /**
-       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
-       * ownership of stored query results.
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
-       * client-side setting. If workgroup settings override client-side settings, then the query uses
-       * the ACL configuration that is specified for the workgroup, and also uses the location for
-       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
-       */
-      public fun aclConfiguration(aclConfiguration: AclConfigurationProperty)
-
-      /**
-       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
-       * ownership of stored query results.
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
-       * client-side setting. If workgroup settings override client-side settings, then the query uses
-       * the ACL configuration that is specified for the workgroup, and also uses the location for
-       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("411aa155ffc38a1c109962c4dcdad1093e7373d6f7aa57cbcd23a0698ce99120")
-      public fun aclConfiguration(aclConfiguration: AclConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
-       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the encryption configuration that is specified for the workgroup, and also uses
-       * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
-
-      /**
-       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
-       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the encryption configuration that is specified for the workgroup, and also uses
-       * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
-
-      /**
-       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
-       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the encryption configuration that is specified for the workgroup, and also uses
-       * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5203c5f393dec1aa3e91088a082705ed6f73eac66b6b62ee8a887ec08dd6f120")
-      public
-          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param expectedBucketOwner The account ID that you expect to be the owner of the Amazon S3
-       * bucket specified by `ResultConfiguration:OutputLocation` .
-       * If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to
-       * your specified output location. If the `ExpectedBucketOwner` account ID does not match the
-       * actual owner of the Amazon S3 bucket, the call fails with a permissions error.
+       * @param bytesScannedCutoffPerQuery The upper limit (cutoff) for the amount of bytes a single
+       * query in a workgroup is allowed to scan.
+       * No default is defined.
        *
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also
-       * uses the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` .
+       *
+       * This property currently supports integer types. Support for long values is planned.
        */
-      public fun expectedBucketOwner(expectedBucketOwner: String)
+      public fun bytesScannedCutoffPerQuery(bytesScannedCutoffPerQuery: Number)
 
       /**
-       * @param outputLocation The location in Amazon S3 where your query results are stored, such
-       * as `s3://path/to/query/bucket/` .
-       * To run a query, you must specify the query results location using either a client-side
-       * setting for individual queries or a location specified by the workgroup. If workgroup settings
-       * override client-side settings, then the query uses the location specified for the workgroup.
-       * If no query location is set, Athena issues an error. For more information, see [Working with
-       * Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
-       * `EnforceWorkGroupConfiguration` .
+       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
+       * the user's data stores in Athena.
+       * This setting does not apply to Athena SQL workgroups.
        */
-      public fun outputLocation(outputLocation: String)
+      public
+          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: IResolvable)
+
+      /**
+       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
+       * the user's data stores in Athena.
+       * This setting does not apply to Athena SQL workgroups.
+       */
+      public
+          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty)
+
+      /**
+       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
+       * the user's data stores in Athena.
+       * This setting does not apply to Athena SQL workgroups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e01ac5be3f4a3b617ab2842bacda21ef62ab41b6c08d71da726816a38ae7dd21")
+      public
+          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
+       * override client-side settings.
+       * If set to "false", client-side settings are used. For more information, see [Workgroup
+       * Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      public fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: Boolean)
+
+      /**
+       * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
+       * override client-side settings.
+       * If set to "false", client-side settings are used. For more information, see [Workgroup
+       * Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      public fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: IResolvable)
+
+      /**
+       * @param engineVersion The engine version that all queries running on the workgroup use.
+       */
+      public fun engineVersion(engineVersion: IResolvable)
+
+      /**
+       * @param engineVersion The engine version that all queries running on the workgroup use.
+       */
+      public fun engineVersion(engineVersion: EngineVersionProperty)
+
+      /**
+       * @param engineVersion The engine version that all queries running on the workgroup use.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5983b34c50cefc1520e086b9661c01dfbc1ff46adf18519e782eb7e545b2c902")
+      public fun engineVersion(engineVersion: EngineVersionProperty.Builder.() -> Unit)
+
+      /**
+       * @param executionRole Role used to access user resources in an Athena for Apache Spark
+       * session.
+       * This property applies only to Spark-enabled workgroups in Athena.
+       */
+      public fun executionRole(executionRole: String)
+
+      /**
+       * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
+       * enabled for the workgroup.
+       */
+      public fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: Boolean)
+
+      /**
+       * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
+       * enabled for the workgroup.
+       */
+      public fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: IResolvable)
+
+      /**
+       * @param requesterPaysEnabled If set to `true` , allows members assigned to a workgroup to
+       * reference Amazon S3 Requester Pays buckets in queries.
+       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
+       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
+       * . For more information about Requester Pays buckets, see [Requester Pays
+       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
+       * *Amazon Simple Storage Service Developer Guide* .
+       */
+      public fun requesterPaysEnabled(requesterPaysEnabled: Boolean)
+
+      /**
+       * @param requesterPaysEnabled If set to `true` , allows members assigned to a workgroup to
+       * reference Amazon S3 Requester Pays buckets in queries.
+       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
+       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
+       * . For more information about Requester Pays buckets, see [Requester Pays
+       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
+       * *Amazon Simple Storage Service Developer Guide* .
+       */
+      public fun requesterPaysEnabled(requesterPaysEnabled: IResolvable)
+
+      /**
+       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
+       * stored and the encryption option, if any, used for query results.
+       * For more information, see [Working with Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       */
+      public fun resultConfiguration(resultConfiguration: IResolvable)
+
+      /**
+       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
+       * stored and the encryption option, if any, used for query results.
+       * For more information, see [Working with Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       */
+      public fun resultConfiguration(resultConfiguration: ResultConfigurationProperty)
+
+      /**
+       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
+       * stored and the encryption option, if any, used for query results.
+       * For more information, see [Working with Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("004561fbbfbe6dec63a390996bb2a4f0182fb92a2a15d27e6386401a651aca7d")
+      public
+          fun resultConfiguration(resultConfiguration: ResultConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty.Builder =
-          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty.builder()
+          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty.builder()
 
       /**
-       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
-       * ownership of stored query results.
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
-       * client-side setting. If workgroup settings override client-side settings, then the query uses
-       * the ACL configuration that is specified for the workgroup, and also uses the location for
-       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
+       * @param additionalConfiguration Specifies a user defined JSON string that is passed to the
+       * session engine.
        */
-      override fun aclConfiguration(aclConfiguration: IResolvable) {
-        cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable::unwrap))
+      override fun additionalConfiguration(additionalConfiguration: String) {
+        cdkBuilder.additionalConfiguration(additionalConfiguration)
       }
 
       /**
-       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
-       * ownership of stored query results.
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
-       * client-side setting. If workgroup settings override client-side settings, then the query uses
-       * the ACL configuration that is specified for the workgroup, and also uses the location for
-       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
-       */
-      override fun aclConfiguration(aclConfiguration: AclConfigurationProperty) {
-        cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
-       * ownership of stored query results.
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
-       * client-side setting. If workgroup settings override client-side settings, then the query uses
-       * the ACL configuration that is specified for the workgroup, and also uses the location for
-       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("411aa155ffc38a1c109962c4dcdad1093e7373d6f7aa57cbcd23a0698ce99120")
-      override fun aclConfiguration(aclConfiguration: AclConfigurationProperty.Builder.() -> Unit):
-          Unit = aclConfiguration(AclConfigurationProperty(aclConfiguration))
-
-      /**
-       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
-       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the encryption configuration that is specified for the workgroup, and also uses
-       * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
-       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the encryption configuration that is specified for the workgroup, and also uses
-       * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      override
-          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
-       * encryption option used (for example, `SSE_KMS` or `CSE_KMS` ) and key information.
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the encryption configuration that is specified for the workgroup, and also uses
-       * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5203c5f393dec1aa3e91088a082705ed6f73eac66b6b62ee8a887ec08dd6f120")
-      override
-          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit):
-          Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
-
-      /**
-       * @param expectedBucketOwner The account ID that you expect to be the owner of the Amazon S3
-       * bucket specified by `ResultConfiguration:OutputLocation` .
-       * If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to
-       * your specified output location. If the `ExpectedBucketOwner` account ID does not match the
-       * actual owner of the Amazon S3 bucket, the call fails with a permissions error.
+       * @param bytesScannedCutoffPerQuery The upper limit (cutoff) for the amount of bytes a single
+       * query in a workgroup is allowed to scan.
+       * No default is defined.
        *
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also
-       * uses the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` .
+       *
+       * This property currently supports integer types. Support for long values is planned.
        */
-      override fun expectedBucketOwner(expectedBucketOwner: String) {
-        cdkBuilder.expectedBucketOwner(expectedBucketOwner)
+      override fun bytesScannedCutoffPerQuery(bytesScannedCutoffPerQuery: Number) {
+        cdkBuilder.bytesScannedCutoffPerQuery(bytesScannedCutoffPerQuery)
       }
 
       /**
-       * @param outputLocation The location in Amazon S3 where your query results are stored, such
-       * as `s3://path/to/query/bucket/` .
-       * To run a query, you must specify the query results location using either a client-side
-       * setting for individual queries or a location specified by the workgroup. If workgroup settings
-       * override client-side settings, then the query uses the location specified for the workgroup.
-       * If no query location is set, Athena issues an error. For more information, see [Working with
-       * Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
-       * `EnforceWorkGroupConfiguration` .
+       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
+       * the user's data stores in Athena.
+       * This setting does not apply to Athena SQL workgroups.
        */
-      override fun outputLocation(outputLocation: String) {
-        cdkBuilder.outputLocation(outputLocation)
+      override
+          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: IResolvable) {
+        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(IResolvable::unwrap))
       }
+
+      /**
+       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
+       * the user's data stores in Athena.
+       * This setting does not apply to Athena SQL workgroups.
+       */
+      override
+          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty) {
+        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(CustomerContentEncryptionConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
+       * the user's data stores in Athena.
+       * This setting does not apply to Athena SQL workgroups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e01ac5be3f4a3b617ab2842bacda21ef62ab41b6c08d71da726816a38ae7dd21")
+      override
+          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          customerContentEncryptionConfiguration(CustomerContentEncryptionConfigurationProperty(customerContentEncryptionConfiguration))
+
+      /**
+       * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
+       * override client-side settings.
+       * If set to "false", client-side settings are used. For more information, see [Workgroup
+       * Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      override fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: Boolean) {
+        cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration)
+      }
+
+      /**
+       * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
+       * override client-side settings.
+       * If set to "false", client-side settings are used. For more information, see [Workgroup
+       * Settings Override Client-Side
+       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       */
+      override fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: IResolvable) {
+        cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param engineVersion The engine version that all queries running on the workgroup use.
+       */
+      override fun engineVersion(engineVersion: IResolvable) {
+        cdkBuilder.engineVersion(engineVersion.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param engineVersion The engine version that all queries running on the workgroup use.
+       */
+      override fun engineVersion(engineVersion: EngineVersionProperty) {
+        cdkBuilder.engineVersion(engineVersion.let(EngineVersionProperty::unwrap))
+      }
+
+      /**
+       * @param engineVersion The engine version that all queries running on the workgroup use.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5983b34c50cefc1520e086b9661c01dfbc1ff46adf18519e782eb7e545b2c902")
+      override fun engineVersion(engineVersion: EngineVersionProperty.Builder.() -> Unit): Unit =
+          engineVersion(EngineVersionProperty(engineVersion))
+
+      /**
+       * @param executionRole Role used to access user resources in an Athena for Apache Spark
+       * session.
+       * This property applies only to Spark-enabled workgroups in Athena.
+       */
+      override fun executionRole(executionRole: String) {
+        cdkBuilder.executionRole(executionRole)
+      }
+
+      /**
+       * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
+       * enabled for the workgroup.
+       */
+      override fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: Boolean) {
+        cdkBuilder.publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled)
+      }
+
+      /**
+       * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
+       * enabled for the workgroup.
+       */
+      override fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: IResolvable) {
+        cdkBuilder.publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requesterPaysEnabled If set to `true` , allows members assigned to a workgroup to
+       * reference Amazon S3 Requester Pays buckets in queries.
+       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
+       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
+       * . For more information about Requester Pays buckets, see [Requester Pays
+       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
+       * *Amazon Simple Storage Service Developer Guide* .
+       */
+      override fun requesterPaysEnabled(requesterPaysEnabled: Boolean) {
+        cdkBuilder.requesterPaysEnabled(requesterPaysEnabled)
+      }
+
+      /**
+       * @param requesterPaysEnabled If set to `true` , allows members assigned to a workgroup to
+       * reference Amazon S3 Requester Pays buckets in queries.
+       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
+       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
+       * . For more information about Requester Pays buckets, see [Requester Pays
+       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
+       * *Amazon Simple Storage Service Developer Guide* .
+       */
+      override fun requesterPaysEnabled(requesterPaysEnabled: IResolvable) {
+        cdkBuilder.requesterPaysEnabled(requesterPaysEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
+       * stored and the encryption option, if any, used for query results.
+       * For more information, see [Working with Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       */
+      override fun resultConfiguration(resultConfiguration: IResolvable) {
+        cdkBuilder.resultConfiguration(resultConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
+       * stored and the encryption option, if any, used for query results.
+       * For more information, see [Working with Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       */
+      override fun resultConfiguration(resultConfiguration: ResultConfigurationProperty) {
+        cdkBuilder.resultConfiguration(resultConfiguration.let(ResultConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
+       * stored and the encryption option, if any, used for query results.
+       * For more information, see [Working with Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("004561fbbfbe6dec63a390996bb2a4f0182fb92a2a15d27e6386401a651aca7d")
+      override
+          fun resultConfiguration(resultConfiguration: ResultConfigurationProperty.Builder.() -> Unit):
+          Unit = resultConfiguration(ResultConfigurationProperty(resultConfiguration))
 
       public fun build():
-          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty =
+          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty,
-    ) : CdkObject(cdkObject), ResultConfigurationProperty {
+          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty,
+    ) : CdkObject(cdkObject), WorkGroupConfigurationProperty {
       /**
-       * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
-       * results.
+       * Specifies a user defined JSON string that is passed to the session engine.
        *
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . This is a
-       * client-side setting. If workgroup settings override client-side settings, then the query uses
-       * the ACL configuration that is specified for the workgroup, and also uses the location for
-       * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-aclconfiguration)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-additionalconfiguration)
        */
-      override fun aclConfiguration(): Any? = unwrap(this).getAclConfiguration()
+      override fun additionalConfiguration(): String? = unwrap(this).getAdditionalConfiguration()
 
       /**
-       * If query results are encrypted in Amazon S3, indicates the encryption option used (for
-       * example, `SSE_KMS` or `CSE_KMS` ) and key information.
+       * The upper limit (cutoff) for the amount of bytes a single query in a workgroup is allowed
+       * to scan.
        *
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the encryption configuration that is specified for the workgroup, and also uses
-       * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
+       * No default is defined.
+       *
+       *
+       * This property currently supports integer types. Support for long values is planned.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery)
+       */
+      override fun bytesScannedCutoffPerQuery(): Number? =
+          unwrap(this).getBytesScannedCutoffPerQuery()
+
+      /**
+       * Specifies the KMS key that is used to encrypt the user's data stores in Athena.
+       *
+       * This setting does not apply to Athena SQL workgroups.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-customercontentencryptionconfiguration)
+       */
+      override fun customerContentEncryptionConfiguration(): Any? =
+          unwrap(this).getCustomerContentEncryptionConfiguration()
+
+      /**
+       * If set to "true", the settings for the workgroup override client-side settings.
+       *
+       * If set to "false", client-side settings are used. For more information, see [Workgroup
+       * Settings Override Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)
        */
-      override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+      override fun enforceWorkGroupConfiguration(): Any? =
+          unwrap(this).getEnforceWorkGroupConfiguration()
 
       /**
-       * The account ID that you expect to be the owner of the Amazon S3 bucket specified by
-       * `ResultConfiguration:OutputLocation` .
+       * The engine version that all queries running on the workgroup use.
        *
-       * If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to
-       * your specified output location. If the `ExpectedBucketOwner` account ID does not match the
-       * actual owner of the Amazon S3 bucket, the call fails with a permissions error.
-       *
-       * This is a client-side setting. If workgroup settings override client-side settings, then
-       * the query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also
-       * uses the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-expectedbucketowner)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-engineversion)
        */
-      override fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
+      override fun engineVersion(): Any? = unwrap(this).getEngineVersion()
 
       /**
-       * The location in Amazon S3 where your query results are stored, such as
-       * `s3://path/to/query/bucket/` .
+       * Role used to access user resources in an Athena for Apache Spark session.
        *
-       * To run a query, you must specify the query results location using either a client-side
-       * setting for individual queries or a location specified by the workgroup. If workgroup settings
-       * override client-side settings, then the query uses the location specified for the workgroup.
-       * If no query location is set, Athena issues an error. For more information, see [Working with
-       * Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
-       * `EnforceWorkGroupConfiguration` .
+       * This property applies only to Spark-enabled workgroups in Athena.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-outputlocation)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-executionrole)
        */
-      override fun outputLocation(): String? = unwrap(this).getOutputLocation()
+      override fun executionRole(): String? = unwrap(this).getExecutionRole()
+
+      /**
+       * Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled)
+       */
+      override fun publishCloudWatchMetricsEnabled(): Any? =
+          unwrap(this).getPublishCloudWatchMetricsEnabled()
+
+      /**
+       * If set to `true` , allows members assigned to a workgroup to reference Amazon S3 Requester
+       * Pays buckets in queries.
+       *
+       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
+       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
+       * . For more information about Requester Pays buckets, see [Requester Pays
+       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
+       * *Amazon Simple Storage Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled)
+       */
+      override fun requesterPaysEnabled(): Any? = unwrap(this).getRequesterPaysEnabled()
+
+      /**
+       * Specifies the location in Amazon S3 where query results are stored and the encryption
+       * option, if any, used for query results.
+       *
+       * For more information, see [Working with Query Results, Output Files, and Query
+       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)
+       */
+      override fun resultConfiguration(): Any? = unwrap(this).getResultConfiguration()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResultConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WorkGroupConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty):
-          ResultConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResultConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty):
+          WorkGroupConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkGroupConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ResultConfigurationProperty):
-          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty
+      internal fun unwrap(wrapped: WorkGroupConfigurationProperty):
+          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty
     }
   }
 
@@ -2535,945 +3474,6 @@ public open class CfnWorkGroup internal constructor(
           software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationUpdatesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationUpdatesProperty
-    }
-  }
-
-  /**
-   * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
-   * results.
-   *
-   * When Athena stores query results in Amazon S3, the canned ACL is set with the `x-amz-acl`
-   * request header. For more information about S3 Object Ownership, see [Object Ownership
-   * settings](https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html#object-ownership-overview)
-   * in the *Amazon S3 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.athena.*;
-   * AclConfigurationProperty aclConfigurationProperty = AclConfigurationProperty.builder()
-   * .s3AclOption("s3AclOption")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-aclconfiguration.html)
-   */
-  public interface AclConfigurationProperty {
-    /**
-     * The Amazon S3 canned ACL that Athena should specify when storing query results.
-     *
-     * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in a
-     * workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
-     * specified in the workgroup's settings is used for all queries that run in the workgroup. For
-     * more information about Amazon S3 canned ACLs, see [Canned
-     * ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) in the
-     * *Amazon S3 User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-aclconfiguration.html#cfn-athena-workgroup-aclconfiguration-s3acloption)
-     */
-    public fun s3AclOption(): String
-
-    /**
-     * A builder for [AclConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3AclOption The Amazon S3 canned ACL that Athena should specify when storing query
-       * results. 
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
-       * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
-       * specified in the workgroup's settings is used for all queries that run in the workgroup. For
-       * more information about Amazon S3 canned ACLs, see [Canned
-       * ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) in
-       * the *Amazon S3 User Guide* .
-       */
-      public fun s3AclOption(s3AclOption: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty.Builder =
-          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty.builder()
-
-      /**
-       * @param s3AclOption The Amazon S3 canned ACL that Athena should specify when storing query
-       * results. 
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
-       * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
-       * specified in the workgroup's settings is used for all queries that run in the workgroup. For
-       * more information about Amazon S3 canned ACLs, see [Canned
-       * ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) in
-       * the *Amazon S3 User Guide* .
-       */
-      override fun s3AclOption(s3AclOption: String) {
-        cdkBuilder.s3AclOption(s3AclOption)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty,
-    ) : CdkObject(cdkObject), AclConfigurationProperty {
-      /**
-       * The Amazon S3 canned ACL that Athena should specify when storing query results.
-       *
-       * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
-       * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
-       * specified in the workgroup's settings is used for all queries that run in the workgroup. For
-       * more information about Amazon S3 canned ACLs, see [Canned
-       * ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) in
-       * the *Amazon S3 User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-aclconfiguration.html#cfn-athena-workgroup-aclconfiguration-s3acloption)
-       */
-      override fun s3AclOption(): String = unwrap(this).getS3AclOption()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AclConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty):
-          AclConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? AclConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AclConfigurationProperty):
-          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty
-    }
-  }
-
-  /**
-   * The configuration of the workgroup, which includes the location in Amazon S3 where query
-   * results are stored, the encryption option, if any, used for query results, whether Amazon
-   * CloudWatch Metrics are enabled for the workgroup, and the limit for the amount of bytes scanned
-   * (cutoff) per query, if it is specified.
-   *
-   * The `EnforceWorkGroupConfiguration` option determines whether workgroup settings override
-   * client-side query settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.athena.*;
-   * WorkGroupConfigurationProperty workGroupConfigurationProperty =
-   * WorkGroupConfigurationProperty.builder()
-   * .additionalConfiguration("additionalConfiguration")
-   * .bytesScannedCutoffPerQuery(123)
-   * .customerContentEncryptionConfiguration(CustomerContentEncryptionConfigurationProperty.builder()
-   * .kmsKey("kmsKey")
-   * .build())
-   * .enforceWorkGroupConfiguration(false)
-   * .engineVersion(EngineVersionProperty.builder()
-   * .effectiveEngineVersion("effectiveEngineVersion")
-   * .selectedEngineVersion("selectedEngineVersion")
-   * .build())
-   * .executionRole("executionRole")
-   * .publishCloudWatchMetricsEnabled(false)
-   * .requesterPaysEnabled(false)
-   * .resultConfiguration(ResultConfigurationProperty.builder()
-   * .aclConfiguration(AclConfigurationProperty.builder()
-   * .s3AclOption("s3AclOption")
-   * .build())
-   * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
-   * .encryptionOption("encryptionOption")
-   * // the properties below are optional
-   * .kmsKey("kmsKey")
-   * .build())
-   * .expectedBucketOwner("expectedBucketOwner")
-   * .outputLocation("outputLocation")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html)
-   */
-  public interface WorkGroupConfigurationProperty {
-    /**
-     * Specifies a user defined JSON string that is passed to the session engine.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-additionalconfiguration)
-     */
-    public fun additionalConfiguration(): String? = unwrap(this).getAdditionalConfiguration()
-
-    /**
-     * The upper limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to
-     * scan.
-     *
-     * No default is defined.
-     *
-     *
-     * This property currently supports integer types. Support for long values is planned.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery)
-     */
-    public fun bytesScannedCutoffPerQuery(): Number? = unwrap(this).getBytesScannedCutoffPerQuery()
-
-    /**
-     * Specifies the KMS key that is used to encrypt the user's data stores in Athena.
-     *
-     * This setting does not apply to Athena SQL workgroups.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-customercontentencryptionconfiguration)
-     */
-    public fun customerContentEncryptionConfiguration(): Any? =
-        unwrap(this).getCustomerContentEncryptionConfiguration()
-
-    /**
-     * If set to "true", the settings for the workgroup override client-side settings.
-     *
-     * If set to "false", client-side settings are used. For more information, see [Workgroup
-     * Settings Override Client-Side
-     * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)
-     */
-    public fun enforceWorkGroupConfiguration(): Any? =
-        unwrap(this).getEnforceWorkGroupConfiguration()
-
-    /**
-     * The engine version that all queries running on the workgroup use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-engineversion)
-     */
-    public fun engineVersion(): Any? = unwrap(this).getEngineVersion()
-
-    /**
-     * Role used to access user resources in an Athena for Apache Spark session.
-     *
-     * This property applies only to Spark-enabled workgroups in Athena.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-executionrole)
-     */
-    public fun executionRole(): String? = unwrap(this).getExecutionRole()
-
-    /**
-     * Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled)
-     */
-    public fun publishCloudWatchMetricsEnabled(): Any? =
-        unwrap(this).getPublishCloudWatchMetricsEnabled()
-
-    /**
-     * If set to `true` , allows members assigned to a workgroup to reference Amazon S3 Requester
-     * Pays buckets in queries.
-     *
-     * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
-     * queries that retrieve data from Requester Pays buckets cause an error. The default is `false` .
-     * For more information about Requester Pays buckets, see [Requester Pays
-     * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
-     * *Amazon Simple Storage Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled)
-     */
-    public fun requesterPaysEnabled(): Any? = unwrap(this).getRequesterPaysEnabled()
-
-    /**
-     * Specifies the location in Amazon S3 where query results are stored and the encryption option,
-     * if any, used for query results.
-     *
-     * For more information, see [Working with Query Results, Output Files, and Query
-     * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)
-     */
-    public fun resultConfiguration(): Any? = unwrap(this).getResultConfiguration()
-
-    /**
-     * A builder for [WorkGroupConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param additionalConfiguration Specifies a user defined JSON string that is passed to the
-       * session engine.
-       */
-      public fun additionalConfiguration(additionalConfiguration: String)
-
-      /**
-       * @param bytesScannedCutoffPerQuery The upper limit (cutoff) for the amount of bytes a single
-       * query in a workgroup is allowed to scan.
-       * No default is defined.
-       *
-       *
-       * This property currently supports integer types. Support for long values is planned.
-       */
-      public fun bytesScannedCutoffPerQuery(bytesScannedCutoffPerQuery: Number)
-
-      /**
-       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
-       * the user's data stores in Athena.
-       * This setting does not apply to Athena SQL workgroups.
-       */
-      public
-          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: IResolvable)
-
-      /**
-       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
-       * the user's data stores in Athena.
-       * This setting does not apply to Athena SQL workgroups.
-       */
-      public
-          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty)
-
-      /**
-       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
-       * the user's data stores in Athena.
-       * This setting does not apply to Athena SQL workgroups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e01ac5be3f4a3b617ab2842bacda21ef62ab41b6c08d71da726816a38ae7dd21")
-      public
-          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
-       * override client-side settings.
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      public fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: Boolean)
-
-      /**
-       * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
-       * override client-side settings.
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      public fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: IResolvable)
-
-      /**
-       * @param engineVersion The engine version that all queries running on the workgroup use.
-       */
-      public fun engineVersion(engineVersion: IResolvable)
-
-      /**
-       * @param engineVersion The engine version that all queries running on the workgroup use.
-       */
-      public fun engineVersion(engineVersion: EngineVersionProperty)
-
-      /**
-       * @param engineVersion The engine version that all queries running on the workgroup use.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5983b34c50cefc1520e086b9661c01dfbc1ff46adf18519e782eb7e545b2c902")
-      public fun engineVersion(engineVersion: EngineVersionProperty.Builder.() -> Unit)
-
-      /**
-       * @param executionRole Role used to access user resources in an Athena for Apache Spark
-       * session.
-       * This property applies only to Spark-enabled workgroups in Athena.
-       */
-      public fun executionRole(executionRole: String)
-
-      /**
-       * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
-       * enabled for the workgroup.
-       */
-      public fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: Boolean)
-
-      /**
-       * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
-       * enabled for the workgroup.
-       */
-      public fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: IResolvable)
-
-      /**
-       * @param requesterPaysEnabled If set to `true` , allows members assigned to a workgroup to
-       * reference Amazon S3 Requester Pays buckets in queries.
-       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
-       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
-       * . For more information about Requester Pays buckets, see [Requester Pays
-       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
-       * *Amazon Simple Storage Service Developer Guide* .
-       */
-      public fun requesterPaysEnabled(requesterPaysEnabled: Boolean)
-
-      /**
-       * @param requesterPaysEnabled If set to `true` , allows members assigned to a workgroup to
-       * reference Amazon S3 Requester Pays buckets in queries.
-       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
-       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
-       * . For more information about Requester Pays buckets, see [Requester Pays
-       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
-       * *Amazon Simple Storage Service Developer Guide* .
-       */
-      public fun requesterPaysEnabled(requesterPaysEnabled: IResolvable)
-
-      /**
-       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
-       * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
-       */
-      public fun resultConfiguration(resultConfiguration: IResolvable)
-
-      /**
-       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
-       * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
-       */
-      public fun resultConfiguration(resultConfiguration: ResultConfigurationProperty)
-
-      /**
-       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
-       * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("004561fbbfbe6dec63a390996bb2a4f0182fb92a2a15d27e6386401a651aca7d")
-      public
-          fun resultConfiguration(resultConfiguration: ResultConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty.builder()
-
-      /**
-       * @param additionalConfiguration Specifies a user defined JSON string that is passed to the
-       * session engine.
-       */
-      override fun additionalConfiguration(additionalConfiguration: String) {
-        cdkBuilder.additionalConfiguration(additionalConfiguration)
-      }
-
-      /**
-       * @param bytesScannedCutoffPerQuery The upper limit (cutoff) for the amount of bytes a single
-       * query in a workgroup is allowed to scan.
-       * No default is defined.
-       *
-       *
-       * This property currently supports integer types. Support for long values is planned.
-       */
-      override fun bytesScannedCutoffPerQuery(bytesScannedCutoffPerQuery: Number) {
-        cdkBuilder.bytesScannedCutoffPerQuery(bytesScannedCutoffPerQuery)
-      }
-
-      /**
-       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
-       * the user's data stores in Athena.
-       * This setting does not apply to Athena SQL workgroups.
-       */
-      override
-          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: IResolvable) {
-        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
-       * the user's data stores in Athena.
-       * This setting does not apply to Athena SQL workgroups.
-       */
-      override
-          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty) {
-        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(CustomerContentEncryptionConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param customerContentEncryptionConfiguration Specifies the KMS key that is used to encrypt
-       * the user's data stores in Athena.
-       * This setting does not apply to Athena SQL workgroups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e01ac5be3f4a3b617ab2842bacda21ef62ab41b6c08d71da726816a38ae7dd21")
-      override
-          fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          customerContentEncryptionConfiguration(CustomerContentEncryptionConfigurationProperty(customerContentEncryptionConfiguration))
-
-      /**
-       * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
-       * override client-side settings.
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      override fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: Boolean) {
-        cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration)
-      }
-
-      /**
-       * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
-       * override client-side settings.
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       */
-      override fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: IResolvable) {
-        cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param engineVersion The engine version that all queries running on the workgroup use.
-       */
-      override fun engineVersion(engineVersion: IResolvable) {
-        cdkBuilder.engineVersion(engineVersion.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param engineVersion The engine version that all queries running on the workgroup use.
-       */
-      override fun engineVersion(engineVersion: EngineVersionProperty) {
-        cdkBuilder.engineVersion(engineVersion.let(EngineVersionProperty::unwrap))
-      }
-
-      /**
-       * @param engineVersion The engine version that all queries running on the workgroup use.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5983b34c50cefc1520e086b9661c01dfbc1ff46adf18519e782eb7e545b2c902")
-      override fun engineVersion(engineVersion: EngineVersionProperty.Builder.() -> Unit): Unit =
-          engineVersion(EngineVersionProperty(engineVersion))
-
-      /**
-       * @param executionRole Role used to access user resources in an Athena for Apache Spark
-       * session.
-       * This property applies only to Spark-enabled workgroups in Athena.
-       */
-      override fun executionRole(executionRole: String) {
-        cdkBuilder.executionRole(executionRole)
-      }
-
-      /**
-       * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
-       * enabled for the workgroup.
-       */
-      override fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: Boolean) {
-        cdkBuilder.publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled)
-      }
-
-      /**
-       * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
-       * enabled for the workgroup.
-       */
-      override fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: IResolvable) {
-        cdkBuilder.publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requesterPaysEnabled If set to `true` , allows members assigned to a workgroup to
-       * reference Amazon S3 Requester Pays buckets in queries.
-       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
-       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
-       * . For more information about Requester Pays buckets, see [Requester Pays
-       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
-       * *Amazon Simple Storage Service Developer Guide* .
-       */
-      override fun requesterPaysEnabled(requesterPaysEnabled: Boolean) {
-        cdkBuilder.requesterPaysEnabled(requesterPaysEnabled)
-      }
-
-      /**
-       * @param requesterPaysEnabled If set to `true` , allows members assigned to a workgroup to
-       * reference Amazon S3 Requester Pays buckets in queries.
-       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
-       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
-       * . For more information about Requester Pays buckets, see [Requester Pays
-       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
-       * *Amazon Simple Storage Service Developer Guide* .
-       */
-      override fun requesterPaysEnabled(requesterPaysEnabled: IResolvable) {
-        cdkBuilder.requesterPaysEnabled(requesterPaysEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
-       * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
-       */
-      override fun resultConfiguration(resultConfiguration: IResolvable) {
-        cdkBuilder.resultConfiguration(resultConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
-       * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
-       */
-      override fun resultConfiguration(resultConfiguration: ResultConfigurationProperty) {
-        cdkBuilder.resultConfiguration(resultConfiguration.let(ResultConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param resultConfiguration Specifies the location in Amazon S3 where query results are
-       * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("004561fbbfbe6dec63a390996bb2a4f0182fb92a2a15d27e6386401a651aca7d")
-      override
-          fun resultConfiguration(resultConfiguration: ResultConfigurationProperty.Builder.() -> Unit):
-          Unit = resultConfiguration(ResultConfigurationProperty(resultConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty,
-    ) : CdkObject(cdkObject), WorkGroupConfigurationProperty {
-      /**
-       * Specifies a user defined JSON string that is passed to the session engine.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-additionalconfiguration)
-       */
-      override fun additionalConfiguration(): String? = unwrap(this).getAdditionalConfiguration()
-
-      /**
-       * The upper limit (cutoff) for the amount of bytes a single query in a workgroup is allowed
-       * to scan.
-       *
-       * No default is defined.
-       *
-       *
-       * This property currently supports integer types. Support for long values is planned.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery)
-       */
-      override fun bytesScannedCutoffPerQuery(): Number? =
-          unwrap(this).getBytesScannedCutoffPerQuery()
-
-      /**
-       * Specifies the KMS key that is used to encrypt the user's data stores in Athena.
-       *
-       * This setting does not apply to Athena SQL workgroups.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-customercontentencryptionconfiguration)
-       */
-      override fun customerContentEncryptionConfiguration(): Any? =
-          unwrap(this).getCustomerContentEncryptionConfiguration()
-
-      /**
-       * If set to "true", the settings for the workgroup override client-side settings.
-       *
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)
-       */
-      override fun enforceWorkGroupConfiguration(): Any? =
-          unwrap(this).getEnforceWorkGroupConfiguration()
-
-      /**
-       * The engine version that all queries running on the workgroup use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-engineversion)
-       */
-      override fun engineVersion(): Any? = unwrap(this).getEngineVersion()
-
-      /**
-       * Role used to access user resources in an Athena for Apache Spark session.
-       *
-       * This property applies only to Spark-enabled workgroups in Athena.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-executionrole)
-       */
-      override fun executionRole(): String? = unwrap(this).getExecutionRole()
-
-      /**
-       * Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled)
-       */
-      override fun publishCloudWatchMetricsEnabled(): Any? =
-          unwrap(this).getPublishCloudWatchMetricsEnabled()
-
-      /**
-       * If set to `true` , allows members assigned to a workgroup to reference Amazon S3 Requester
-       * Pays buckets in queries.
-       *
-       * If set to `false` , workgroup members cannot query data from Requester Pays buckets, and
-       * queries that retrieve data from Requester Pays buckets cause an error. The default is `false`
-       * . For more information about Requester Pays buckets, see [Requester Pays
-       * Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the
-       * *Amazon Simple Storage Service Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled)
-       */
-      override fun requesterPaysEnabled(): Any? = unwrap(this).getRequesterPaysEnabled()
-
-      /**
-       * Specifies the location in Amazon S3 where query results are stored and the encryption
-       * option, if any, used for query results.
-       *
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)
-       */
-      override fun resultConfiguration(): Any? = unwrap(this).getResultConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkGroupConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty):
-          WorkGroupConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WorkGroupConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WorkGroupConfigurationProperty):
-          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty
-    }
-  }
-
-  /**
-   * If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
-   * `SSE_KMS` or `CSE_KMS` ) and key information.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.athena.*;
-   * EncryptionConfigurationProperty encryptionConfigurationProperty =
-   * EncryptionConfigurationProperty.builder()
-   * .encryptionOption("encryptionOption")
-   * // the properties below are optional
-   * .kmsKey("kmsKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html)
-   */
-  public interface EncryptionConfigurationProperty {
-    /**
-     * Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys ( `SSE_S3` ),
-     * server-side encryption with KMS-managed keys ( `SSE_KMS` ), or client-side encryption with
-     * KMS-managed keys ( `CSE_KMS` ) is used.
-     *
-     * If a query runs in a workgroup and the workgroup overrides client-side settings, then the
-     * workgroup's setting for encryption is used. It specifies whether query results must be
-     * encrypted, for all queries that run in this workgroup.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-encryptionoption)
-     */
-    public fun encryptionOption(): String
-
-    /**
-     * For `SSE_KMS` and `CSE_KMS` , this is the KMS key ARN or ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-kmskey)
-     */
-    public fun kmsKey(): String? = unwrap(this).getKmsKey()
-
-    /**
-     * A builder for [EncryptionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param encryptionOption Indicates whether Amazon S3 server-side encryption with Amazon
-       * S3-managed keys ( `SSE_S3` ), server-side encryption with KMS-managed keys ( `SSE_KMS` ), or
-       * client-side encryption with KMS-managed keys ( `CSE_KMS` ) is used. 
-       * If a query runs in a workgroup and the workgroup overrides client-side settings, then the
-       * workgroup's setting for encryption is used. It specifies whether query results must be
-       * encrypted, for all queries that run in this workgroup.
-       */
-      public fun encryptionOption(encryptionOption: String)
-
-      /**
-       * @param kmsKey For `SSE_KMS` and `CSE_KMS` , this is the KMS key ARN or ID.
-       */
-      public fun kmsKey(kmsKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty.builder()
-
-      /**
-       * @param encryptionOption Indicates whether Amazon S3 server-side encryption with Amazon
-       * S3-managed keys ( `SSE_S3` ), server-side encryption with KMS-managed keys ( `SSE_KMS` ), or
-       * client-side encryption with KMS-managed keys ( `CSE_KMS` ) is used. 
-       * If a query runs in a workgroup and the workgroup overrides client-side settings, then the
-       * workgroup's setting for encryption is used. It specifies whether query results must be
-       * encrypted, for all queries that run in this workgroup.
-       */
-      override fun encryptionOption(encryptionOption: String) {
-        cdkBuilder.encryptionOption(encryptionOption)
-      }
-
-      /**
-       * @param kmsKey For `SSE_KMS` and `CSE_KMS` , this is the KMS key ARN or ID.
-       */
-      override fun kmsKey(kmsKey: String) {
-        cdkBuilder.kmsKey(kmsKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
-      /**
-       * Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys ( `SSE_S3`
-       * ), server-side encryption with KMS-managed keys ( `SSE_KMS` ), or client-side encryption with
-       * KMS-managed keys ( `CSE_KMS` ) is used.
-       *
-       * If a query runs in a workgroup and the workgroup overrides client-side settings, then the
-       * workgroup's setting for encryption is used. It specifies whether query results must be
-       * encrypted, for all queries that run in this workgroup.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-encryptionoption)
-       */
-      override fun encryptionOption(): String = unwrap(this).getEncryptionOption()
-
-      /**
-       * For `SSE_KMS` and `CSE_KMS` , this is the KMS key ARN or ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-kmskey)
-       */
-      override fun kmsKey(): String? = unwrap(this).getKmsKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionConfigurationProperty):
-          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies the customer managed KMS key that is used to encrypt the user's data stores in
-   * Athena.
-   *
-   * When an AWS managed key is used, this value is null. This setting does not apply to Athena SQL
-   * workgroups.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.athena.*;
-   * CustomerContentEncryptionConfigurationProperty customerContentEncryptionConfigurationProperty =
-   * CustomerContentEncryptionConfigurationProperty.builder()
-   * .kmsKey("kmsKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-customercontentencryptionconfiguration.html)
-   */
-  public interface CustomerContentEncryptionConfigurationProperty {
-    /**
-     * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-customercontentencryptionconfiguration.html#cfn-athena-workgroup-customercontentencryptionconfiguration-kmskey)
-     */
-    public fun kmsKey(): String
-
-    /**
-     * A builder for [CustomerContentEncryptionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKey The customer managed KMS key that is used to encrypt the user's data stores
-       * in Athena. 
-       */
-      public fun kmsKey(kmsKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.builder()
-
-      /**
-       * @param kmsKey The customer managed KMS key that is used to encrypt the user's data stores
-       * in Athena. 
-       */
-      override fun kmsKey(kmsKey: String) {
-        cdkBuilder.kmsKey(kmsKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), CustomerContentEncryptionConfigurationProperty {
-      /**
-       * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-customercontentencryptionconfiguration.html#cfn-athena-workgroup-customercontentencryptionconfiguration-kmskey)
-       */
-      override fun kmsKey(): String = unwrap(this).getKmsKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CustomerContentEncryptionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty):
-          CustomerContentEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomerContentEncryptionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomerContentEncryptionConfigurationProperty):
-          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty
     }
   }
 }

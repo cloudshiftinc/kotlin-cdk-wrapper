@@ -412,181 +412,6 @@ public open class CfnPlan internal constructor(
   }
 
   /**
-   * The contact or contact channel that's being engaged.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
-   * TargetsProperty targetsProperty = TargetsProperty.builder()
-   * .channelTargetInfo(ChannelTargetInfoProperty.builder()
-   * .channelId("channelId")
-   * .retryIntervalInMinutes(123)
-   * .build())
-   * .contactTargetInfo(ContactTargetInfoProperty.builder()
-   * .contactId("contactId")
-   * .isEssential(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html)
-   */
-  public interface TargetsProperty {
-    /**
-     * Information about the contact channel that Incident Manager engages.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html#cfn-ssmcontacts-plan-targets-channeltargetinfo)
-     */
-    public fun channelTargetInfo(): Any? = unwrap(this).getChannelTargetInfo()
-
-    /**
-     * Information about the contact that Incident Manager engages.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html#cfn-ssmcontacts-plan-targets-contacttargetinfo)
-     */
-    public fun contactTargetInfo(): Any? = unwrap(this).getContactTargetInfo()
-
-    /**
-     * A builder for [TargetsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param channelTargetInfo Information about the contact channel that Incident Manager
-       * engages.
-       */
-      public fun channelTargetInfo(channelTargetInfo: IResolvable)
-
-      /**
-       * @param channelTargetInfo Information about the contact channel that Incident Manager
-       * engages.
-       */
-      public fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty)
-
-      /**
-       * @param channelTargetInfo Information about the contact channel that Incident Manager
-       * engages.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5e71becc743875d6062f09190ed71b0cc7036598b981ca96b066ae6778c1c94f")
-      public fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty.Builder.() -> Unit)
-
-      /**
-       * @param contactTargetInfo Information about the contact that Incident Manager engages.
-       */
-      public fun contactTargetInfo(contactTargetInfo: IResolvable)
-
-      /**
-       * @param contactTargetInfo Information about the contact that Incident Manager engages.
-       */
-      public fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty)
-
-      /**
-       * @param contactTargetInfo Information about the contact that Incident Manager engages.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("117105694507bf7d70016ab178c9333de2b3a6a01ed47a06890d9f3ff81c73eb")
-      public fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty.Builder =
-          software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty.builder()
-
-      /**
-       * @param channelTargetInfo Information about the contact channel that Incident Manager
-       * engages.
-       */
-      override fun channelTargetInfo(channelTargetInfo: IResolvable) {
-        cdkBuilder.channelTargetInfo(channelTargetInfo.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param channelTargetInfo Information about the contact channel that Incident Manager
-       * engages.
-       */
-      override fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty) {
-        cdkBuilder.channelTargetInfo(channelTargetInfo.let(ChannelTargetInfoProperty::unwrap))
-      }
-
-      /**
-       * @param channelTargetInfo Information about the contact channel that Incident Manager
-       * engages.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5e71becc743875d6062f09190ed71b0cc7036598b981ca96b066ae6778c1c94f")
-      override
-          fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty.Builder.() -> Unit):
-          Unit = channelTargetInfo(ChannelTargetInfoProperty(channelTargetInfo))
-
-      /**
-       * @param contactTargetInfo Information about the contact that Incident Manager engages.
-       */
-      override fun contactTargetInfo(contactTargetInfo: IResolvable) {
-        cdkBuilder.contactTargetInfo(contactTargetInfo.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param contactTargetInfo Information about the contact that Incident Manager engages.
-       */
-      override fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty) {
-        cdkBuilder.contactTargetInfo(contactTargetInfo.let(ContactTargetInfoProperty::unwrap))
-      }
-
-      /**
-       * @param contactTargetInfo Information about the contact that Incident Manager engages.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("117105694507bf7d70016ab178c9333de2b3a6a01ed47a06890d9f3ff81c73eb")
-      override
-          fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty.Builder.() -> Unit):
-          Unit = contactTargetInfo(ContactTargetInfoProperty(contactTargetInfo))
-
-      public fun build(): software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty,
-    ) : CdkObject(cdkObject), TargetsProperty {
-      /**
-       * Information about the contact channel that Incident Manager engages.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html#cfn-ssmcontacts-plan-targets-channeltargetinfo)
-       */
-      override fun channelTargetInfo(): Any? = unwrap(this).getChannelTargetInfo()
-
-      /**
-       * Information about the contact that Incident Manager engages.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html#cfn-ssmcontacts-plan-targets-contacttargetinfo)
-       */
-      override fun contactTargetInfo(): Any? = unwrap(this).getContactTargetInfo()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TargetsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty):
-          TargetsProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetsProperty):
-          software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty
-    }
-  }
-
-  /**
    * The contact that Incident Manager is engaging during an incident.
    *
    * Example:
@@ -860,6 +685,181 @@ public open class CfnPlan internal constructor(
       internal fun unwrap(wrapped: StageProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty
+    }
+  }
+
+  /**
+   * The contact or contact channel that's being engaged.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
+   * TargetsProperty targetsProperty = TargetsProperty.builder()
+   * .channelTargetInfo(ChannelTargetInfoProperty.builder()
+   * .channelId("channelId")
+   * .retryIntervalInMinutes(123)
+   * .build())
+   * .contactTargetInfo(ContactTargetInfoProperty.builder()
+   * .contactId("contactId")
+   * .isEssential(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html)
+   */
+  public interface TargetsProperty {
+    /**
+     * Information about the contact channel that Incident Manager engages.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html#cfn-ssmcontacts-plan-targets-channeltargetinfo)
+     */
+    public fun channelTargetInfo(): Any? = unwrap(this).getChannelTargetInfo()
+
+    /**
+     * Information about the contact that Incident Manager engages.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html#cfn-ssmcontacts-plan-targets-contacttargetinfo)
+     */
+    public fun contactTargetInfo(): Any? = unwrap(this).getContactTargetInfo()
+
+    /**
+     * A builder for [TargetsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param channelTargetInfo Information about the contact channel that Incident Manager
+       * engages.
+       */
+      public fun channelTargetInfo(channelTargetInfo: IResolvable)
+
+      /**
+       * @param channelTargetInfo Information about the contact channel that Incident Manager
+       * engages.
+       */
+      public fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty)
+
+      /**
+       * @param channelTargetInfo Information about the contact channel that Incident Manager
+       * engages.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e71becc743875d6062f09190ed71b0cc7036598b981ca96b066ae6778c1c94f")
+      public fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty.Builder.() -> Unit)
+
+      /**
+       * @param contactTargetInfo Information about the contact that Incident Manager engages.
+       */
+      public fun contactTargetInfo(contactTargetInfo: IResolvable)
+
+      /**
+       * @param contactTargetInfo Information about the contact that Incident Manager engages.
+       */
+      public fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty)
+
+      /**
+       * @param contactTargetInfo Information about the contact that Incident Manager engages.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("117105694507bf7d70016ab178c9333de2b3a6a01ed47a06890d9f3ff81c73eb")
+      public fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty.Builder =
+          software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty.builder()
+
+      /**
+       * @param channelTargetInfo Information about the contact channel that Incident Manager
+       * engages.
+       */
+      override fun channelTargetInfo(channelTargetInfo: IResolvable) {
+        cdkBuilder.channelTargetInfo(channelTargetInfo.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param channelTargetInfo Information about the contact channel that Incident Manager
+       * engages.
+       */
+      override fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty) {
+        cdkBuilder.channelTargetInfo(channelTargetInfo.let(ChannelTargetInfoProperty::unwrap))
+      }
+
+      /**
+       * @param channelTargetInfo Information about the contact channel that Incident Manager
+       * engages.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e71becc743875d6062f09190ed71b0cc7036598b981ca96b066ae6778c1c94f")
+      override
+          fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty.Builder.() -> Unit):
+          Unit = channelTargetInfo(ChannelTargetInfoProperty(channelTargetInfo))
+
+      /**
+       * @param contactTargetInfo Information about the contact that Incident Manager engages.
+       */
+      override fun contactTargetInfo(contactTargetInfo: IResolvable) {
+        cdkBuilder.contactTargetInfo(contactTargetInfo.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param contactTargetInfo Information about the contact that Incident Manager engages.
+       */
+      override fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty) {
+        cdkBuilder.contactTargetInfo(contactTargetInfo.let(ContactTargetInfoProperty::unwrap))
+      }
+
+      /**
+       * @param contactTargetInfo Information about the contact that Incident Manager engages.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("117105694507bf7d70016ab178c9333de2b3a6a01ed47a06890d9f3ff81c73eb")
+      override
+          fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty.Builder.() -> Unit):
+          Unit = contactTargetInfo(ContactTargetInfoProperty(contactTargetInfo))
+
+      public fun build(): software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty,
+    ) : CdkObject(cdkObject), TargetsProperty {
+      /**
+       * Information about the contact channel that Incident Manager engages.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html#cfn-ssmcontacts-plan-targets-channeltargetinfo)
+       */
+      override fun channelTargetInfo(): Any? = unwrap(this).getChannelTargetInfo()
+
+      /**
+       * Information about the contact that Incident Manager engages.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html#cfn-ssmcontacts-plan-targets-contacttargetinfo)
+       */
+      override fun contactTargetInfo(): Any? = unwrap(this).getContactTargetInfo()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TargetsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty):
+          TargetsProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetsProperty):
+          software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty
     }
   }
 }

@@ -1126,170 +1126,6 @@ public open class CfnStackSet internal constructor(
   }
 
   /**
-   * Describes whether StackSets performs non-conflicting operations concurrently and queues
-   * conflicting operations.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.*;
-   * ManagedExecutionProperty managedExecutionProperty = ManagedExecutionProperty.builder()
-   * .active(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-managedexecution.html)
-   */
-  public interface ManagedExecutionProperty {
-    /**
-     * When `true` , StackSets performs non-conflicting operations concurrently and queues
-     * conflicting operations.
-     *
-     * After conflicting operations finish, StackSets starts queued operations in request order.
-     *
-     *
-     * If there are already running or queued operations, StackSets queues all incoming operations
-     * even if they are non-conflicting.
-     *
-     * You can't modify your stack set's execution configuration while there are running or queued
-     * operations for that stack set.
-     *
-     *
-     * When `false` (default), StackSets performs one operation at a time in request order.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-managedexecution.html#cfn-cloudformation-stackset-managedexecution-active)
-     */
-    public fun active(): Any? = unwrap(this).getActive()
-
-    /**
-     * A builder for [ManagedExecutionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
-       * queues conflicting operations.
-       * After conflicting operations finish, StackSets starts queued operations in request order.
-       *
-       *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
-       *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
-       *
-       *
-       * When `false` (default), StackSets performs one operation at a time in request order.
-       */
-      public fun active(active: Boolean)
-
-      /**
-       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
-       * queues conflicting operations.
-       * After conflicting operations finish, StackSets starts queued operations in request order.
-       *
-       *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
-       *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
-       *
-       *
-       * When `false` (default), StackSets performs one operation at a time in request order.
-       */
-      public fun active(active: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty.Builder =
-          software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty.builder()
-
-      /**
-       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
-       * queues conflicting operations.
-       * After conflicting operations finish, StackSets starts queued operations in request order.
-       *
-       *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
-       *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
-       *
-       *
-       * When `false` (default), StackSets performs one operation at a time in request order.
-       */
-      override fun active(active: Boolean) {
-        cdkBuilder.active(active)
-      }
-
-      /**
-       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
-       * queues conflicting operations.
-       * After conflicting operations finish, StackSets starts queued operations in request order.
-       *
-       *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
-       *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
-       *
-       *
-       * When `false` (default), StackSets performs one operation at a time in request order.
-       */
-      override fun active(active: IResolvable) {
-        cdkBuilder.active(active.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty,
-    ) : CdkObject(cdkObject), ManagedExecutionProperty {
-      /**
-       * When `true` , StackSets performs non-conflicting operations concurrently and queues
-       * conflicting operations.
-       *
-       * After conflicting operations finish, StackSets starts queued operations in request order.
-       *
-       *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
-       *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
-       *
-       *
-       * When `false` (default), StackSets performs one operation at a time in request order.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-managedexecution.html#cfn-cloudformation-stackset-managedexecution-active)
-       */
-      override fun active(): Any? = unwrap(this).getActive()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ManagedExecutionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty):
-          ManagedExecutionProperty = CdkObjectWrappers.wrap(cdkObject) as? ManagedExecutionProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ManagedExecutionProperty):
-          software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty
-    }
-  }
-
-  /**
    * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
    * Organizations accounts that are added to a target organizational unit (OU).
    *
@@ -1725,7 +1561,8 @@ public open class CfnStackSet internal constructor(
   }
 
   /**
-   * The Parameter data type.
+   * Describes whether StackSets performs non-conflicting operations concurrently and queues
+   * conflicting operations.
    *
    * Example:
    *
@@ -1733,107 +1570,157 @@ public open class CfnStackSet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.*;
-   * ParameterProperty parameterProperty = ParameterProperty.builder()
-   * .parameterKey("parameterKey")
-   * .parameterValue("parameterValue")
+   * ManagedExecutionProperty managedExecutionProperty = ManagedExecutionProperty.builder()
+   * .active(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-managedexecution.html)
    */
-  public interface ParameterProperty {
+  public interface ManagedExecutionProperty {
     /**
-     * The key associated with the parameter.
+     * When `true` , StackSets performs non-conflicting operations concurrently and queues
+     * conflicting operations.
      *
-     * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the
-     * default value that's specified in your template.
+     * After conflicting operations finish, StackSets starts queued operations in request order.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parameterkey)
+     *
+     * If there are already running or queued operations, StackSets queues all incoming operations
+     * even if they are non-conflicting.
+     *
+     * You can't modify your stack set's execution configuration while there are running or queued
+     * operations for that stack set.
+     *
+     *
+     * When `false` (default), StackSets performs one operation at a time in request order.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-managedexecution.html#cfn-cloudformation-stackset-managedexecution-active)
      */
-    public fun parameterKey(): String
+    public fun active(): Any? = unwrap(this).getActive()
 
     /**
-     * The input value associated with the parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parametervalue)
-     */
-    public fun parameterValue(): String
-
-    /**
-     * A builder for [ParameterProperty]
+     * A builder for [ManagedExecutionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param parameterKey The key associated with the parameter. 
-       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
-       * the default value that's specified in your template.
+       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
+       * queues conflicting operations.
+       * After conflicting operations finish, StackSets starts queued operations in request order.
+       *
+       *
+       * If there are already running or queued operations, StackSets queues all incoming operations
+       * even if they are non-conflicting.
+       *
+       * You can't modify your stack set's execution configuration while there are running or queued
+       * operations for that stack set.
+       *
+       *
+       * When `false` (default), StackSets performs one operation at a time in request order.
        */
-      public fun parameterKey(parameterKey: String)
+      public fun active(active: Boolean)
 
       /**
-       * @param parameterValue The input value associated with the parameter. 
+       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
+       * queues conflicting operations.
+       * After conflicting operations finish, StackSets starts queued operations in request order.
+       *
+       *
+       * If there are already running or queued operations, StackSets queues all incoming operations
+       * even if they are non-conflicting.
+       *
+       * You can't modify your stack set's execution configuration while there are running or queued
+       * operations for that stack set.
+       *
+       *
+       * When `false` (default), StackSets performs one operation at a time in request order.
        */
-      public fun parameterValue(parameterValue: String)
+      public fun active(active: IResolvable)
     }
 
     private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.CfnStackSet.ParameterProperty.Builder =
-          software.amazon.awscdk.CfnStackSet.ParameterProperty.builder()
+      private val cdkBuilder: software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty.Builder =
+          software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty.builder()
 
       /**
-       * @param parameterKey The key associated with the parameter. 
-       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
-       * the default value that's specified in your template.
+       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
+       * queues conflicting operations.
+       * After conflicting operations finish, StackSets starts queued operations in request order.
+       *
+       *
+       * If there are already running or queued operations, StackSets queues all incoming operations
+       * even if they are non-conflicting.
+       *
+       * You can't modify your stack set's execution configuration while there are running or queued
+       * operations for that stack set.
+       *
+       *
+       * When `false` (default), StackSets performs one operation at a time in request order.
        */
-      override fun parameterKey(parameterKey: String) {
-        cdkBuilder.parameterKey(parameterKey)
+      override fun active(active: Boolean) {
+        cdkBuilder.active(active)
       }
 
       /**
-       * @param parameterValue The input value associated with the parameter. 
+       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
+       * queues conflicting operations.
+       * After conflicting operations finish, StackSets starts queued operations in request order.
+       *
+       *
+       * If there are already running or queued operations, StackSets queues all incoming operations
+       * even if they are non-conflicting.
+       *
+       * You can't modify your stack set's execution configuration while there are running or queued
+       * operations for that stack set.
+       *
+       *
+       * When `false` (default), StackSets performs one operation at a time in request order.
        */
-      override fun parameterValue(parameterValue: String) {
-        cdkBuilder.parameterValue(parameterValue)
+      override fun active(active: IResolvable) {
+        cdkBuilder.active(active.let(IResolvable::unwrap))
       }
 
-      public fun build(): software.amazon.awscdk.CfnStackSet.ParameterProperty = cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.CfnStackSet.ParameterProperty,
-    ) : CdkObject(cdkObject), ParameterProperty {
+      override val cdkObject: software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty,
+    ) : CdkObject(cdkObject), ManagedExecutionProperty {
       /**
-       * The key associated with the parameter.
+       * When `true` , StackSets performs non-conflicting operations concurrently and queues
+       * conflicting operations.
        *
-       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
-       * the default value that's specified in your template.
+       * After conflicting operations finish, StackSets starts queued operations in request order.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parameterkey)
+       *
+       * If there are already running or queued operations, StackSets queues all incoming operations
+       * even if they are non-conflicting.
+       *
+       * You can't modify your stack set's execution configuration while there are running or queued
+       * operations for that stack set.
+       *
+       *
+       * When `false` (default), StackSets performs one operation at a time in request order.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-managedexecution.html#cfn-cloudformation-stackset-managedexecution-active)
        */
-      override fun parameterKey(): String = unwrap(this).getParameterKey()
-
-      /**
-       * The input value associated with the parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parametervalue)
-       */
-      override fun parameterValue(): String = unwrap(this).getParameterValue()
+      override fun active(): Any? = unwrap(this).getActive()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ManagedExecutionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
-      internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.ParameterProperty):
-          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterProperty ?:
-          Wrapper(cdkObject)
+      internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty):
+          ManagedExecutionProperty = CdkObjectWrappers.wrap(cdkObject) as? ManagedExecutionProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ParameterProperty):
-          software.amazon.awscdk.CfnStackSet.ParameterProperty = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.CfnStackSet.ParameterProperty
+      internal fun unwrap(wrapped: ManagedExecutionProperty):
+          software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty
     }
   }
 
@@ -2235,6 +2122,119 @@ public open class CfnStackSet internal constructor(
       internal fun unwrap(wrapped: OperationPreferencesProperty):
           software.amazon.awscdk.CfnStackSet.OperationPreferencesProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.CfnStackSet.OperationPreferencesProperty
+    }
+  }
+
+  /**
+   * The Parameter data type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.*;
+   * ParameterProperty parameterProperty = ParameterProperty.builder()
+   * .parameterKey("parameterKey")
+   * .parameterValue("parameterValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html)
+   */
+  public interface ParameterProperty {
+    /**
+     * The key associated with the parameter.
+     *
+     * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the
+     * default value that's specified in your template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parameterkey)
+     */
+    public fun parameterKey(): String
+
+    /**
+     * The input value associated with the parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parametervalue)
+     */
+    public fun parameterValue(): String
+
+    /**
+     * A builder for [ParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param parameterKey The key associated with the parameter. 
+       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
+       * the default value that's specified in your template.
+       */
+      public fun parameterKey(parameterKey: String)
+
+      /**
+       * @param parameterValue The input value associated with the parameter. 
+       */
+      public fun parameterValue(parameterValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.CfnStackSet.ParameterProperty.Builder =
+          software.amazon.awscdk.CfnStackSet.ParameterProperty.builder()
+
+      /**
+       * @param parameterKey The key associated with the parameter. 
+       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
+       * the default value that's specified in your template.
+       */
+      override fun parameterKey(parameterKey: String) {
+        cdkBuilder.parameterKey(parameterKey)
+      }
+
+      /**
+       * @param parameterValue The input value associated with the parameter. 
+       */
+      override fun parameterValue(parameterValue: String) {
+        cdkBuilder.parameterValue(parameterValue)
+      }
+
+      public fun build(): software.amazon.awscdk.CfnStackSet.ParameterProperty = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.CfnStackSet.ParameterProperty,
+    ) : CdkObject(cdkObject), ParameterProperty {
+      /**
+       * The key associated with the parameter.
+       *
+       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
+       * the default value that's specified in your template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parameterkey)
+       */
+      override fun parameterKey(): String = unwrap(this).getParameterKey()
+
+      /**
+       * The input value associated with the parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parametervalue)
+       */
+      override fun parameterValue(): String = unwrap(this).getParameterValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.ParameterProperty):
+          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParameterProperty):
+          software.amazon.awscdk.CfnStackSet.ParameterProperty = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.CfnStackSet.ParameterProperty
     }
   }
 

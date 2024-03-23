@@ -435,218 +435,6 @@ public open class CfnProject internal constructor(
   }
 
   /**
-   * Details that you specify to provision a service catalog product.
-   *
-   * For information about service catalog, see [What is AWS Service
-   * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ServiceCatalogProvisioningDetailsProperty serviceCatalogProvisioningDetailsProperty =
-   * ServiceCatalogProvisioningDetailsProperty.builder()
-   * .productId("productId")
-   * // the properties below are optional
-   * .pathId("pathId")
-   * .provisioningArtifactId("provisioningArtifactId")
-   * .provisioningParameters(List.of(ProvisioningParameterProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html)
-   */
-  public interface ServiceCatalogProvisioningDetailsProperty {
-    /**
-     * The path identifier of the product.
-     *
-     * This value is optional if the product has a default path, and required if the product has
-     * more than one path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-pathid)
-     */
-    public fun pathId(): String? = unwrap(this).getPathId()
-
-    /**
-     * The ID of the product to provision.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-productid)
-     */
-    public fun productId(): String
-
-    /**
-     * The ID of the provisioning artifact.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-provisioningartifactid)
-     */
-    public fun provisioningArtifactId(): String? = unwrap(this).getProvisioningArtifactId()
-
-    /**
-     * A list of key value pairs that you specify when you provision a product.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-provisioningparameters)
-     */
-    public fun provisioningParameters(): Any? = unwrap(this).getProvisioningParameters()
-
-    /**
-     * A builder for [ServiceCatalogProvisioningDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pathId The path identifier of the product.
-       * This value is optional if the product has a default path, and required if the product has
-       * more than one path.
-       */
-      public fun pathId(pathId: String)
-
-      /**
-       * @param productId The ID of the product to provision. 
-       */
-      public fun productId(productId: String)
-
-      /**
-       * @param provisioningArtifactId The ID of the provisioning artifact.
-       */
-      public fun provisioningArtifactId(provisioningArtifactId: String)
-
-      /**
-       * @param provisioningParameters A list of key value pairs that you specify when you provision
-       * a product.
-       */
-      public fun provisioningParameters(provisioningParameters: IResolvable)
-
-      /**
-       * @param provisioningParameters A list of key value pairs that you specify when you provision
-       * a product.
-       */
-      public fun provisioningParameters(provisioningParameters: List<Any>)
-
-      /**
-       * @param provisioningParameters A list of key value pairs that you specify when you provision
-       * a product.
-       */
-      public fun provisioningParameters(vararg provisioningParameters: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty.builder()
-
-      /**
-       * @param pathId The path identifier of the product.
-       * This value is optional if the product has a default path, and required if the product has
-       * more than one path.
-       */
-      override fun pathId(pathId: String) {
-        cdkBuilder.pathId(pathId)
-      }
-
-      /**
-       * @param productId The ID of the product to provision. 
-       */
-      override fun productId(productId: String) {
-        cdkBuilder.productId(productId)
-      }
-
-      /**
-       * @param provisioningArtifactId The ID of the provisioning artifact.
-       */
-      override fun provisioningArtifactId(provisioningArtifactId: String) {
-        cdkBuilder.provisioningArtifactId(provisioningArtifactId)
-      }
-
-      /**
-       * @param provisioningParameters A list of key value pairs that you specify when you provision
-       * a product.
-       */
-      override fun provisioningParameters(provisioningParameters: IResolvable) {
-        cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param provisioningParameters A list of key value pairs that you specify when you provision
-       * a product.
-       */
-      override fun provisioningParameters(provisioningParameters: List<Any>) {
-        cdkBuilder.provisioningParameters(provisioningParameters)
-      }
-
-      /**
-       * @param provisioningParameters A list of key value pairs that you specify when you provision
-       * a product.
-       */
-      override fun provisioningParameters(vararg provisioningParameters: Any): Unit =
-          provisioningParameters(provisioningParameters.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty,
-    ) : CdkObject(cdkObject), ServiceCatalogProvisioningDetailsProperty {
-      /**
-       * The path identifier of the product.
-       *
-       * This value is optional if the product has a default path, and required if the product has
-       * more than one path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-pathid)
-       */
-      override fun pathId(): String? = unwrap(this).getPathId()
-
-      /**
-       * The ID of the product to provision.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-productid)
-       */
-      override fun productId(): String = unwrap(this).getProductId()
-
-      /**
-       * The ID of the provisioning artifact.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-provisioningartifactid)
-       */
-      override fun provisioningArtifactId(): String? = unwrap(this).getProvisioningArtifactId()
-
-      /**
-       * A list of key value pairs that you specify when you provision a product.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-provisioningparameters)
-       */
-      override fun provisioningParameters(): Any? = unwrap(this).getProvisioningParameters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceCatalogProvisioningDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty):
-          ServiceCatalogProvisioningDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceCatalogProvisioningDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServiceCatalogProvisioningDetailsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
-    }
-  }
-
-  /**
    * A key value pair used when you provision a project as a service catalog product.
    *
    * For information, see [What is AWS Service
@@ -928,6 +716,218 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty
+    }
+  }
+
+  /**
+   * Details that you specify to provision a service catalog product.
+   *
+   * For information about service catalog, see [What is AWS Service
+   * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ServiceCatalogProvisioningDetailsProperty serviceCatalogProvisioningDetailsProperty =
+   * ServiceCatalogProvisioningDetailsProperty.builder()
+   * .productId("productId")
+   * // the properties below are optional
+   * .pathId("pathId")
+   * .provisioningArtifactId("provisioningArtifactId")
+   * .provisioningParameters(List.of(ProvisioningParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html)
+   */
+  public interface ServiceCatalogProvisioningDetailsProperty {
+    /**
+     * The path identifier of the product.
+     *
+     * This value is optional if the product has a default path, and required if the product has
+     * more than one path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-pathid)
+     */
+    public fun pathId(): String? = unwrap(this).getPathId()
+
+    /**
+     * The ID of the product to provision.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-productid)
+     */
+    public fun productId(): String
+
+    /**
+     * The ID of the provisioning artifact.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-provisioningartifactid)
+     */
+    public fun provisioningArtifactId(): String? = unwrap(this).getProvisioningArtifactId()
+
+    /**
+     * A list of key value pairs that you specify when you provision a product.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-provisioningparameters)
+     */
+    public fun provisioningParameters(): Any? = unwrap(this).getProvisioningParameters()
+
+    /**
+     * A builder for [ServiceCatalogProvisioningDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pathId The path identifier of the product.
+       * This value is optional if the product has a default path, and required if the product has
+       * more than one path.
+       */
+      public fun pathId(pathId: String)
+
+      /**
+       * @param productId The ID of the product to provision. 
+       */
+      public fun productId(productId: String)
+
+      /**
+       * @param provisioningArtifactId The ID of the provisioning artifact.
+       */
+      public fun provisioningArtifactId(provisioningArtifactId: String)
+
+      /**
+       * @param provisioningParameters A list of key value pairs that you specify when you provision
+       * a product.
+       */
+      public fun provisioningParameters(provisioningParameters: IResolvable)
+
+      /**
+       * @param provisioningParameters A list of key value pairs that you specify when you provision
+       * a product.
+       */
+      public fun provisioningParameters(provisioningParameters: List<Any>)
+
+      /**
+       * @param provisioningParameters A list of key value pairs that you specify when you provision
+       * a product.
+       */
+      public fun provisioningParameters(vararg provisioningParameters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty.builder()
+
+      /**
+       * @param pathId The path identifier of the product.
+       * This value is optional if the product has a default path, and required if the product has
+       * more than one path.
+       */
+      override fun pathId(pathId: String) {
+        cdkBuilder.pathId(pathId)
+      }
+
+      /**
+       * @param productId The ID of the product to provision. 
+       */
+      override fun productId(productId: String) {
+        cdkBuilder.productId(productId)
+      }
+
+      /**
+       * @param provisioningArtifactId The ID of the provisioning artifact.
+       */
+      override fun provisioningArtifactId(provisioningArtifactId: String) {
+        cdkBuilder.provisioningArtifactId(provisioningArtifactId)
+      }
+
+      /**
+       * @param provisioningParameters A list of key value pairs that you specify when you provision
+       * a product.
+       */
+      override fun provisioningParameters(provisioningParameters: IResolvable) {
+        cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param provisioningParameters A list of key value pairs that you specify when you provision
+       * a product.
+       */
+      override fun provisioningParameters(provisioningParameters: List<Any>) {
+        cdkBuilder.provisioningParameters(provisioningParameters)
+      }
+
+      /**
+       * @param provisioningParameters A list of key value pairs that you specify when you provision
+       * a product.
+       */
+      override fun provisioningParameters(vararg provisioningParameters: Any): Unit =
+          provisioningParameters(provisioningParameters.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty,
+    ) : CdkObject(cdkObject), ServiceCatalogProvisioningDetailsProperty {
+      /**
+       * The path identifier of the product.
+       *
+       * This value is optional if the product has a default path, and required if the product has
+       * more than one path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-pathid)
+       */
+      override fun pathId(): String? = unwrap(this).getPathId()
+
+      /**
+       * The ID of the product to provision.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-productid)
+       */
+      override fun productId(): String = unwrap(this).getProductId()
+
+      /**
+       * The ID of the provisioning artifact.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-provisioningartifactid)
+       */
+      override fun provisioningArtifactId(): String? = unwrap(this).getProvisioningArtifactId()
+
+      /**
+       * A list of key value pairs that you specify when you provision a product.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisioningdetails.html#cfn-sagemaker-project-servicecatalogprovisioningdetails-provisioningparameters)
+       */
+      override fun provisioningParameters(): Any? = unwrap(this).getProvisioningParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceCatalogProvisioningDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty):
+          ServiceCatalogProvisioningDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceCatalogProvisioningDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceCatalogProvisioningDetailsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
     }
   }
 }

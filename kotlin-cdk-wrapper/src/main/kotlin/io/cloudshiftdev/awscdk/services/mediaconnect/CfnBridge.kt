@@ -668,6 +668,185 @@ public open class CfnBridge internal constructor(
   }
 
   /**
+   * The source of the bridge.
+   *
+   * A flow source originates in MediaConnect as an existing cloud flow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * BridgeFlowSourceProperty bridgeFlowSourceProperty = BridgeFlowSourceProperty.builder()
+   * .flowArn("flowArn")
+   * .name("name")
+   * // the properties below are optional
+   * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+   * .vpcInterfaceName("vpcInterfaceName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html)
+   */
+  public interface BridgeFlowSourceProperty {
+    /**
+     * The ARN of the cloud flow used as a source of this bridge.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowarn)
+     */
+    public fun flowArn(): String
+
+    /**
+     * The name of the VPC interface attachment to use for this source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowvpcinterfaceattachment)
+     */
+    public fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
+
+    /**
+     * The name of the flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [BridgeFlowSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param flowArn The ARN of the cloud flow used as a source of this bridge. 
+       */
+      public fun flowArn(flowArn: String)
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      public fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable)
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      public
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
+      public
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
+
+      /**
+       * @param name The name of the flow source. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.builder()
+
+      /**
+       * @param flowArn The ARN of the cloud flow used as a source of this bridge. 
+       */
+      override fun flowArn(flowArn: String) {
+        cdkBuilder.flowArn(flowArn)
+      }
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      override fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
+        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      override
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
+        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
+      }
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
+      override
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
+          Unit =
+          flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty(flowVpcInterfaceAttachment))
+
+      /**
+       * @param name The name of the flow source. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty,
+    ) : CdkObject(cdkObject), BridgeFlowSourceProperty {
+      /**
+       * The ARN of the cloud flow used as a source of this bridge.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowarn)
+       */
+      override fun flowArn(): String = unwrap(this).getFlowArn()
+
+      /**
+       * The name of the VPC interface attachment to use for this source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowvpcinterfaceattachment)
+       */
+      override fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
+
+      /**
+       * The name of the flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeFlowSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty):
+          BridgeFlowSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeFlowSourceProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BridgeFlowSourceProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty
+    }
+  }
+
+  /**
    * The output of the bridge.
    *
    * A network output is delivered to your premises.
@@ -888,6 +1067,613 @@ public open class CfnBridge internal constructor(
   }
 
   /**
+   * The source of the bridge.
+   *
+   * A network source originates at your premises.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * BridgeNetworkSourceProperty bridgeNetworkSourceProperty = BridgeNetworkSourceProperty.builder()
+   * .multicastIp("multicastIp")
+   * .name("name")
+   * .networkName("networkName")
+   * .port(123)
+   * .protocol("protocol")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html)
+   */
+  public interface BridgeNetworkSourceProperty {
+    /**
+     * The network source multicast IP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-multicastip)
+     */
+    public fun multicastIp(): String
+
+    /**
+     * The name of the network source.
+     *
+     * This name is used to reference the source and must be unique among sources in this bridge.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-name)
+     */
+    public fun name(): String
+
+    /**
+     * The network source's gateway network name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-networkname)
+     */
+    public fun networkName(): String
+
+    /**
+     * The network source port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-port)
+     */
+    public fun port(): Number
+
+    /**
+     * The network source protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-protocol)
+     */
+    public fun protocol(): String
+
+    /**
+     * A builder for [BridgeNetworkSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param multicastIp The network source multicast IP. 
+       */
+      public fun multicastIp(multicastIp: String)
+
+      /**
+       * @param name The name of the network source. 
+       * This name is used to reference the source and must be unique among sources in this bridge.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param networkName The network source's gateway network name. 
+       */
+      public fun networkName(networkName: String)
+
+      /**
+       * @param port The network source port. 
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param protocol The network source protocol. 
+       */
+      public fun protocol(protocol: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty.builder()
+
+      /**
+       * @param multicastIp The network source multicast IP. 
+       */
+      override fun multicastIp(multicastIp: String) {
+        cdkBuilder.multicastIp(multicastIp)
+      }
+
+      /**
+       * @param name The name of the network source. 
+       * This name is used to reference the source and must be unique among sources in this bridge.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param networkName The network source's gateway network name. 
+       */
+      override fun networkName(networkName: String) {
+        cdkBuilder.networkName(networkName)
+      }
+
+      /**
+       * @param port The network source port. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param protocol The network source protocol. 
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty,
+    ) : CdkObject(cdkObject), BridgeNetworkSourceProperty {
+      /**
+       * The network source multicast IP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-multicastip)
+       */
+      override fun multicastIp(): String = unwrap(this).getMulticastIp()
+
+      /**
+       * The name of the network source.
+       *
+       * This name is used to reference the source and must be unique among sources in this bridge.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The network source's gateway network name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-networkname)
+       */
+      override fun networkName(): String = unwrap(this).getNetworkName()
+
+      /**
+       * The network source port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * The network source protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-protocol)
+       */
+      override fun protocol(): String = unwrap(this).getProtocol()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeNetworkSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty):
+          BridgeNetworkSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BridgeNetworkSourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BridgeNetworkSourceProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty
+    }
+  }
+
+  /**
+   * The output of the bridge.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * BridgeOutputProperty bridgeOutputProperty = BridgeOutputProperty.builder()
+   * .networkOutput(BridgeNetworkOutputProperty.builder()
+   * .ipAddress("ipAddress")
+   * .name("name")
+   * .networkName("networkName")
+   * .port(123)
+   * .protocol("protocol")
+   * .ttl(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html)
+   */
+  public interface BridgeOutputProperty {
+    /**
+     * The output of the bridge.
+     *
+     * A network output is delivered to your premises.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html#cfn-mediaconnect-bridge-bridgeoutput-networkoutput)
+     */
+    public fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
+
+    /**
+     * A builder for [BridgeOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      public fun networkOutput(networkOutput: IResolvable)
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty)
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
+      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.builder()
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      override fun networkOutput(networkOutput: IResolvable) {
+        cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
+        cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty::unwrap))
+      }
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
+      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit):
+          Unit = networkOutput(BridgeNetworkOutputProperty(networkOutput))
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty,
+    ) : CdkObject(cdkObject), BridgeOutputProperty {
+      /**
+       * The output of the bridge.
+       *
+       * A network output is delivered to your premises.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html#cfn-mediaconnect-bridge-bridgeoutput-networkoutput)
+       */
+      override fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty):
+          BridgeOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeOutputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BridgeOutputProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty
+    }
+  }
+
+  /**
+   * The bridge's source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * BridgeSourceProperty bridgeSourceProperty = BridgeSourceProperty.builder()
+   * .flowSource(BridgeFlowSourceProperty.builder()
+   * .flowArn("flowArn")
+   * .name("name")
+   * // the properties below are optional
+   * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+   * .vpcInterfaceName("vpcInterfaceName")
+   * .build())
+   * .build())
+   * .networkSource(BridgeNetworkSourceProperty.builder()
+   * .multicastIp("multicastIp")
+   * .name("name")
+   * .networkName("networkName")
+   * .port(123)
+   * .protocol("protocol")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html)
+   */
+  public interface BridgeSourceProperty {
+    /**
+     * The source of the bridge.
+     *
+     * A flow source originates in MediaConnect as an existing cloud flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html#cfn-mediaconnect-bridge-bridgesource-flowsource)
+     */
+    public fun flowSource(): Any? = unwrap(this).getFlowSource()
+
+    /**
+     * The source of the bridge.
+     *
+     * A network source originates at your premises.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html#cfn-mediaconnect-bridge-bridgesource-networksource)
+     */
+    public fun networkSource(): Any? = unwrap(this).getNetworkSource()
+
+    /**
+     * A builder for [BridgeSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param flowSource The source of the bridge.
+       * A flow source originates in MediaConnect as an existing cloud flow.
+       */
+      public fun flowSource(flowSource: IResolvable)
+
+      /**
+       * @param flowSource The source of the bridge.
+       * A flow source originates in MediaConnect as an existing cloud flow.
+       */
+      public fun flowSource(flowSource: BridgeFlowSourceProperty)
+
+      /**
+       * @param flowSource The source of the bridge.
+       * A flow source originates in MediaConnect as an existing cloud flow.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("45d2eff2fd255d30ed98d40feff6e53f403ac34a4c7daf243a57686b87e54af5")
+      public fun flowSource(flowSource: BridgeFlowSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param networkSource The source of the bridge.
+       * A network source originates at your premises.
+       */
+      public fun networkSource(networkSource: IResolvable)
+
+      /**
+       * @param networkSource The source of the bridge.
+       * A network source originates at your premises.
+       */
+      public fun networkSource(networkSource: BridgeNetworkSourceProperty)
+
+      /**
+       * @param networkSource The source of the bridge.
+       * A network source originates at your premises.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6ca4ea347a4cdfc805830fcde7e6f90b961d0460b8b8db96c5c78aa12aaeccc7")
+      public fun networkSource(networkSource: BridgeNetworkSourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty.builder()
+
+      /**
+       * @param flowSource The source of the bridge.
+       * A flow source originates in MediaConnect as an existing cloud flow.
+       */
+      override fun flowSource(flowSource: IResolvable) {
+        cdkBuilder.flowSource(flowSource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param flowSource The source of the bridge.
+       * A flow source originates in MediaConnect as an existing cloud flow.
+       */
+      override fun flowSource(flowSource: BridgeFlowSourceProperty) {
+        cdkBuilder.flowSource(flowSource.let(BridgeFlowSourceProperty::unwrap))
+      }
+
+      /**
+       * @param flowSource The source of the bridge.
+       * A flow source originates in MediaConnect as an existing cloud flow.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("45d2eff2fd255d30ed98d40feff6e53f403ac34a4c7daf243a57686b87e54af5")
+      override fun flowSource(flowSource: BridgeFlowSourceProperty.Builder.() -> Unit): Unit =
+          flowSource(BridgeFlowSourceProperty(flowSource))
+
+      /**
+       * @param networkSource The source of the bridge.
+       * A network source originates at your premises.
+       */
+      override fun networkSource(networkSource: IResolvable) {
+        cdkBuilder.networkSource(networkSource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param networkSource The source of the bridge.
+       * A network source originates at your premises.
+       */
+      override fun networkSource(networkSource: BridgeNetworkSourceProperty) {
+        cdkBuilder.networkSource(networkSource.let(BridgeNetworkSourceProperty::unwrap))
+      }
+
+      /**
+       * @param networkSource The source of the bridge.
+       * A network source originates at your premises.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6ca4ea347a4cdfc805830fcde7e6f90b961d0460b8b8db96c5c78aa12aaeccc7")
+      override fun networkSource(networkSource: BridgeNetworkSourceProperty.Builder.() -> Unit):
+          Unit = networkSource(BridgeNetworkSourceProperty(networkSource))
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty,
+    ) : CdkObject(cdkObject), BridgeSourceProperty {
+      /**
+       * The source of the bridge.
+       *
+       * A flow source originates in MediaConnect as an existing cloud flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html#cfn-mediaconnect-bridge-bridgesource-flowsource)
+       */
+      override fun flowSource(): Any? = unwrap(this).getFlowSource()
+
+      /**
+       * The source of the bridge.
+       *
+       * A network source originates at your premises.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html#cfn-mediaconnect-bridge-bridgesource-networksource)
+       */
+      override fun networkSource(): Any? = unwrap(this).getNetworkSource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty):
+          BridgeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BridgeSourceProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty
+    }
+  }
+
+  /**
+   * Create a bridge with the egress bridge type.
+   *
+   * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
+   * flow and is delivered to your premises.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * EgressGatewayBridgeProperty egressGatewayBridgeProperty = EgressGatewayBridgeProperty.builder()
+   * .maxBitrate(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-egressgatewaybridge.html)
+   */
+  public interface EgressGatewayBridgeProperty {
+    /**
+     * The maximum expected bitrate (in bps) of the egress bridge.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-egressgatewaybridge.html#cfn-mediaconnect-bridge-egressgatewaybridge-maxbitrate)
+     */
+    public fun maxBitrate(): Number
+
+    /**
+     * A builder for [EgressGatewayBridgeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxBitrate The maximum expected bitrate (in bps) of the egress bridge. 
+       */
+      public fun maxBitrate(maxBitrate: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty.builder()
+
+      /**
+       * @param maxBitrate The maximum expected bitrate (in bps) of the egress bridge. 
+       */
+      override fun maxBitrate(maxBitrate: Number) {
+        cdkBuilder.maxBitrate(maxBitrate)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty,
+    ) : CdkObject(cdkObject), EgressGatewayBridgeProperty {
+      /**
+       * The maximum expected bitrate (in bps) of the egress bridge.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-egressgatewaybridge.html#cfn-mediaconnect-bridge-egressgatewaybridge-maxbitrate)
+       */
+      override fun maxBitrate(): Number = unwrap(this).getMaxBitrate()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EgressGatewayBridgeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty):
+          EgressGatewayBridgeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EgressGatewayBridgeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EgressGatewayBridgeProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty
+    }
+  }
+
+  /**
    * The settings for source failover.
    *
    * Example:
@@ -1092,961 +1878,6 @@ public open class CfnBridge internal constructor(
   }
 
   /**
-   * The VPC interface that you want to send your output to.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * VpcInterfaceAttachmentProperty vpcInterfaceAttachmentProperty =
-   * VpcInterfaceAttachmentProperty.builder()
-   * .vpcInterfaceName("vpcInterfaceName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html)
-   */
-  public interface VpcInterfaceAttachmentProperty {
-    /**
-     * The name of the VPC interface that you want to send your output to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
-     */
-    public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
-
-    /**
-     * A builder for [VpcInterfaceAttachmentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
-       */
-      public fun vpcInterfaceName(vpcInterfaceName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.Builder
-          =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.builder()
-
-      /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
-       */
-      override fun vpcInterfaceName(vpcInterfaceName: String) {
-        cdkBuilder.vpcInterfaceName(vpcInterfaceName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty,
-    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
-      /**
-       * The name of the VPC interface that you want to send your output to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
-       */
-      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcInterfaceAttachmentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty):
-          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty
-    }
-  }
-
-  /**
-   * The source of the bridge.
-   *
-   * A network source originates at your premises.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * BridgeNetworkSourceProperty bridgeNetworkSourceProperty = BridgeNetworkSourceProperty.builder()
-   * .multicastIp("multicastIp")
-   * .name("name")
-   * .networkName("networkName")
-   * .port(123)
-   * .protocol("protocol")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html)
-   */
-  public interface BridgeNetworkSourceProperty {
-    /**
-     * The network source multicast IP.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-multicastip)
-     */
-    public fun multicastIp(): String
-
-    /**
-     * The name of the network source.
-     *
-     * This name is used to reference the source and must be unique among sources in this bridge.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-name)
-     */
-    public fun name(): String
-
-    /**
-     * The network source's gateway network name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-networkname)
-     */
-    public fun networkName(): String
-
-    /**
-     * The network source port.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-port)
-     */
-    public fun port(): Number
-
-    /**
-     * The network source protocol.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-protocol)
-     */
-    public fun protocol(): String
-
-    /**
-     * A builder for [BridgeNetworkSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param multicastIp The network source multicast IP. 
-       */
-      public fun multicastIp(multicastIp: String)
-
-      /**
-       * @param name The name of the network source. 
-       * This name is used to reference the source and must be unique among sources in this bridge.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param networkName The network source's gateway network name. 
-       */
-      public fun networkName(networkName: String)
-
-      /**
-       * @param port The network source port. 
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param protocol The network source protocol. 
-       */
-      public fun protocol(protocol: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty.Builder
-          =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty.builder()
-
-      /**
-       * @param multicastIp The network source multicast IP. 
-       */
-      override fun multicastIp(multicastIp: String) {
-        cdkBuilder.multicastIp(multicastIp)
-      }
-
-      /**
-       * @param name The name of the network source. 
-       * This name is used to reference the source and must be unique among sources in this bridge.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param networkName The network source's gateway network name. 
-       */
-      override fun networkName(networkName: String) {
-        cdkBuilder.networkName(networkName)
-      }
-
-      /**
-       * @param port The network source port. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param protocol The network source protocol. 
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty,
-    ) : CdkObject(cdkObject), BridgeNetworkSourceProperty {
-      /**
-       * The network source multicast IP.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-multicastip)
-       */
-      override fun multicastIp(): String = unwrap(this).getMulticastIp()
-
-      /**
-       * The name of the network source.
-       *
-       * This name is used to reference the source and must be unique among sources in this bridge.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The network source's gateway network name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-networkname)
-       */
-      override fun networkName(): String = unwrap(this).getNetworkName()
-
-      /**
-       * The network source port.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
-
-      /**
-       * The network source protocol.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-protocol)
-       */
-      override fun protocol(): String = unwrap(this).getProtocol()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeNetworkSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty):
-          BridgeNetworkSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BridgeNetworkSourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BridgeNetworkSourceProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty
-    }
-  }
-
-  /**
-   * The bridge's source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * BridgeSourceProperty bridgeSourceProperty = BridgeSourceProperty.builder()
-   * .flowSource(BridgeFlowSourceProperty.builder()
-   * .flowArn("flowArn")
-   * .name("name")
-   * // the properties below are optional
-   * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
-   * .vpcInterfaceName("vpcInterfaceName")
-   * .build())
-   * .build())
-   * .networkSource(BridgeNetworkSourceProperty.builder()
-   * .multicastIp("multicastIp")
-   * .name("name")
-   * .networkName("networkName")
-   * .port(123)
-   * .protocol("protocol")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html)
-   */
-  public interface BridgeSourceProperty {
-    /**
-     * The source of the bridge.
-     *
-     * A flow source originates in MediaConnect as an existing cloud flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html#cfn-mediaconnect-bridge-bridgesource-flowsource)
-     */
-    public fun flowSource(): Any? = unwrap(this).getFlowSource()
-
-    /**
-     * The source of the bridge.
-     *
-     * A network source originates at your premises.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html#cfn-mediaconnect-bridge-bridgesource-networksource)
-     */
-    public fun networkSource(): Any? = unwrap(this).getNetworkSource()
-
-    /**
-     * A builder for [BridgeSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param flowSource The source of the bridge.
-       * A flow source originates in MediaConnect as an existing cloud flow.
-       */
-      public fun flowSource(flowSource: IResolvable)
-
-      /**
-       * @param flowSource The source of the bridge.
-       * A flow source originates in MediaConnect as an existing cloud flow.
-       */
-      public fun flowSource(flowSource: BridgeFlowSourceProperty)
-
-      /**
-       * @param flowSource The source of the bridge.
-       * A flow source originates in MediaConnect as an existing cloud flow.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("45d2eff2fd255d30ed98d40feff6e53f403ac34a4c7daf243a57686b87e54af5")
-      public fun flowSource(flowSource: BridgeFlowSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param networkSource The source of the bridge.
-       * A network source originates at your premises.
-       */
-      public fun networkSource(networkSource: IResolvable)
-
-      /**
-       * @param networkSource The source of the bridge.
-       * A network source originates at your premises.
-       */
-      public fun networkSource(networkSource: BridgeNetworkSourceProperty)
-
-      /**
-       * @param networkSource The source of the bridge.
-       * A network source originates at your premises.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6ca4ea347a4cdfc805830fcde7e6f90b961d0460b8b8db96c5c78aa12aaeccc7")
-      public fun networkSource(networkSource: BridgeNetworkSourceProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty.builder()
-
-      /**
-       * @param flowSource The source of the bridge.
-       * A flow source originates in MediaConnect as an existing cloud flow.
-       */
-      override fun flowSource(flowSource: IResolvable) {
-        cdkBuilder.flowSource(flowSource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param flowSource The source of the bridge.
-       * A flow source originates in MediaConnect as an existing cloud flow.
-       */
-      override fun flowSource(flowSource: BridgeFlowSourceProperty) {
-        cdkBuilder.flowSource(flowSource.let(BridgeFlowSourceProperty::unwrap))
-      }
-
-      /**
-       * @param flowSource The source of the bridge.
-       * A flow source originates in MediaConnect as an existing cloud flow.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("45d2eff2fd255d30ed98d40feff6e53f403ac34a4c7daf243a57686b87e54af5")
-      override fun flowSource(flowSource: BridgeFlowSourceProperty.Builder.() -> Unit): Unit =
-          flowSource(BridgeFlowSourceProperty(flowSource))
-
-      /**
-       * @param networkSource The source of the bridge.
-       * A network source originates at your premises.
-       */
-      override fun networkSource(networkSource: IResolvable) {
-        cdkBuilder.networkSource(networkSource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param networkSource The source of the bridge.
-       * A network source originates at your premises.
-       */
-      override fun networkSource(networkSource: BridgeNetworkSourceProperty) {
-        cdkBuilder.networkSource(networkSource.let(BridgeNetworkSourceProperty::unwrap))
-      }
-
-      /**
-       * @param networkSource The source of the bridge.
-       * A network source originates at your premises.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6ca4ea347a4cdfc805830fcde7e6f90b961d0460b8b8db96c5c78aa12aaeccc7")
-      override fun networkSource(networkSource: BridgeNetworkSourceProperty.Builder.() -> Unit):
-          Unit = networkSource(BridgeNetworkSourceProperty(networkSource))
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty,
-    ) : CdkObject(cdkObject), BridgeSourceProperty {
-      /**
-       * The source of the bridge.
-       *
-       * A flow source originates in MediaConnect as an existing cloud flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html#cfn-mediaconnect-bridge-bridgesource-flowsource)
-       */
-      override fun flowSource(): Any? = unwrap(this).getFlowSource()
-
-      /**
-       * The source of the bridge.
-       *
-       * A network source originates at your premises.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html#cfn-mediaconnect-bridge-bridgesource-networksource)
-       */
-      override fun networkSource(): Any? = unwrap(this).getNetworkSource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty):
-          BridgeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BridgeSourceProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty
-    }
-  }
-
-  /**
-   * The priority you want to assign to a source.
-   *
-   * You can have a primary stream and a backup stream or two equally prioritized streams. This
-   * setting only applies when Failover Mode is set to FAILOVER.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * SourcePriorityProperty sourcePriorityProperty = SourcePriorityProperty.builder()
-   * .primarySource("primarySource")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html)
-   */
-  public interface SourcePriorityProperty {
-    /**
-     * The name of the source you choose as the primary source for this flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html#cfn-mediaconnect-bridge-sourcepriority-primarysource)
-     */
-    public fun primarySource(): String? = unwrap(this).getPrimarySource()
-
-    /**
-     * A builder for [SourcePriorityProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param primarySource The name of the source you choose as the primary source for this flow.
-       */
-      public fun primarySource(primarySource: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.builder()
-
-      /**
-       * @param primarySource The name of the source you choose as the primary source for this flow.
-       */
-      override fun primarySource(primarySource: String) {
-        cdkBuilder.primarySource(primarySource)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty,
-    ) : CdkObject(cdkObject), SourcePriorityProperty {
-      /**
-       * The name of the source you choose as the primary source for this flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html#cfn-mediaconnect-bridge-sourcepriority-primarysource)
-       */
-      override fun primarySource(): String? = unwrap(this).getPrimarySource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourcePriorityProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty):
-          SourcePriorityProperty = CdkObjectWrappers.wrap(cdkObject) as? SourcePriorityProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourcePriorityProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty
-    }
-  }
-
-  /**
-   * The source of the bridge.
-   *
-   * A flow source originates in MediaConnect as an existing cloud flow.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * BridgeFlowSourceProperty bridgeFlowSourceProperty = BridgeFlowSourceProperty.builder()
-   * .flowArn("flowArn")
-   * .name("name")
-   * // the properties below are optional
-   * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
-   * .vpcInterfaceName("vpcInterfaceName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html)
-   */
-  public interface BridgeFlowSourceProperty {
-    /**
-     * The ARN of the cloud flow used as a source of this bridge.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowarn)
-     */
-    public fun flowArn(): String
-
-    /**
-     * The name of the VPC interface attachment to use for this source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowvpcinterfaceattachment)
-     */
-    public fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
-
-    /**
-     * The name of the flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [BridgeFlowSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param flowArn The ARN of the cloud flow used as a source of this bridge. 
-       */
-      public fun flowArn(flowArn: String)
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      public fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable)
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      public
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
-      public
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
-
-      /**
-       * @param name The name of the flow source. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.builder()
-
-      /**
-       * @param flowArn The ARN of the cloud flow used as a source of this bridge. 
-       */
-      override fun flowArn(flowArn: String) {
-        cdkBuilder.flowArn(flowArn)
-      }
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      override fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
-        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      override
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
-      }
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
-      override
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
-          Unit =
-          flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty(flowVpcInterfaceAttachment))
-
-      /**
-       * @param name The name of the flow source. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty,
-    ) : CdkObject(cdkObject), BridgeFlowSourceProperty {
-      /**
-       * The ARN of the cloud flow used as a source of this bridge.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowarn)
-       */
-      override fun flowArn(): String = unwrap(this).getFlowArn()
-
-      /**
-       * The name of the VPC interface attachment to use for this source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowvpcinterfaceattachment)
-       */
-      override fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
-
-      /**
-       * The name of the flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeFlowSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty):
-          BridgeFlowSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeFlowSourceProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BridgeFlowSourceProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty
-    }
-  }
-
-  /**
-   * Create a bridge with the egress bridge type.
-   *
-   * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-   * flow and is delivered to your premises.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * EgressGatewayBridgeProperty egressGatewayBridgeProperty = EgressGatewayBridgeProperty.builder()
-   * .maxBitrate(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-egressgatewaybridge.html)
-   */
-  public interface EgressGatewayBridgeProperty {
-    /**
-     * The maximum expected bitrate (in bps) of the egress bridge.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-egressgatewaybridge.html#cfn-mediaconnect-bridge-egressgatewaybridge-maxbitrate)
-     */
-    public fun maxBitrate(): Number
-
-    /**
-     * A builder for [EgressGatewayBridgeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxBitrate The maximum expected bitrate (in bps) of the egress bridge. 
-       */
-      public fun maxBitrate(maxBitrate: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty.Builder
-          =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty.builder()
-
-      /**
-       * @param maxBitrate The maximum expected bitrate (in bps) of the egress bridge. 
-       */
-      override fun maxBitrate(maxBitrate: Number) {
-        cdkBuilder.maxBitrate(maxBitrate)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty,
-    ) : CdkObject(cdkObject), EgressGatewayBridgeProperty {
-      /**
-       * The maximum expected bitrate (in bps) of the egress bridge.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-egressgatewaybridge.html#cfn-mediaconnect-bridge-egressgatewaybridge-maxbitrate)
-       */
-      override fun maxBitrate(): Number = unwrap(this).getMaxBitrate()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EgressGatewayBridgeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty):
-          EgressGatewayBridgeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EgressGatewayBridgeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EgressGatewayBridgeProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty
-    }
-  }
-
-  /**
-   * The output of the bridge.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * BridgeOutputProperty bridgeOutputProperty = BridgeOutputProperty.builder()
-   * .networkOutput(BridgeNetworkOutputProperty.builder()
-   * .ipAddress("ipAddress")
-   * .name("name")
-   * .networkName("networkName")
-   * .port(123)
-   * .protocol("protocol")
-   * .ttl(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html)
-   */
-  public interface BridgeOutputProperty {
-    /**
-     * The output of the bridge.
-     *
-     * A network output is delivered to your premises.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html#cfn-mediaconnect-bridge-bridgeoutput-networkoutput)
-     */
-    public fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
-
-    /**
-     * A builder for [BridgeOutputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
-       */
-      public fun networkOutput(networkOutput: IResolvable)
-
-      /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
-       */
-      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty)
-
-      /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
-      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.builder()
-
-      /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
-       */
-      override fun networkOutput(networkOutput: IResolvable) {
-        cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
-       */
-      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
-        cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty::unwrap))
-      }
-
-      /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
-      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit):
-          Unit = networkOutput(BridgeNetworkOutputProperty(networkOutput))
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty,
-    ) : CdkObject(cdkObject), BridgeOutputProperty {
-      /**
-       * The output of the bridge.
-       *
-       * A network output is delivered to your premises.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html#cfn-mediaconnect-bridge-bridgeoutput-networkoutput)
-       */
-      override fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeOutputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty):
-          BridgeOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeOutputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BridgeOutputProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty
-    }
-  }
-
-  /**
    * Create a bridge with the ingress bridge type.
    *
    * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
@@ -2157,6 +1988,175 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty
+    }
+  }
+
+  /**
+   * The priority you want to assign to a source.
+   *
+   * You can have a primary stream and a backup stream or two equally prioritized streams. This
+   * setting only applies when Failover Mode is set to FAILOVER.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * SourcePriorityProperty sourcePriorityProperty = SourcePriorityProperty.builder()
+   * .primarySource("primarySource")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html)
+   */
+  public interface SourcePriorityProperty {
+    /**
+     * The name of the source you choose as the primary source for this flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html#cfn-mediaconnect-bridge-sourcepriority-primarysource)
+     */
+    public fun primarySource(): String? = unwrap(this).getPrimarySource()
+
+    /**
+     * A builder for [SourcePriorityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param primarySource The name of the source you choose as the primary source for this flow.
+       */
+      public fun primarySource(primarySource: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.builder()
+
+      /**
+       * @param primarySource The name of the source you choose as the primary source for this flow.
+       */
+      override fun primarySource(primarySource: String) {
+        cdkBuilder.primarySource(primarySource)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty,
+    ) : CdkObject(cdkObject), SourcePriorityProperty {
+      /**
+       * The name of the source you choose as the primary source for this flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html#cfn-mediaconnect-bridge-sourcepriority-primarysource)
+       */
+      override fun primarySource(): String? = unwrap(this).getPrimarySource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourcePriorityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty):
+          SourcePriorityProperty = CdkObjectWrappers.wrap(cdkObject) as? SourcePriorityProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourcePriorityProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty
+    }
+  }
+
+  /**
+   * The VPC interface that you want to send your output to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * VpcInterfaceAttachmentProperty vpcInterfaceAttachmentProperty =
+   * VpcInterfaceAttachmentProperty.builder()
+   * .vpcInterfaceName("vpcInterfaceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html)
+   */
+  public interface VpcInterfaceAttachmentProperty {
+    /**
+     * The name of the VPC interface that you want to send your output to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
+     */
+    public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+
+    /**
+     * A builder for [VpcInterfaceAttachmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       */
+      public fun vpcInterfaceName(vpcInterfaceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.builder()
+
+      /**
+       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       */
+      override fun vpcInterfaceName(vpcInterfaceName: String) {
+        cdkBuilder.vpcInterfaceName(vpcInterfaceName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty,
+    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
+      /**
+       * The name of the VPC interface that you want to send your output to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
+       */
+      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcInterfaceAttachmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty):
+          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty
     }
   }
 }

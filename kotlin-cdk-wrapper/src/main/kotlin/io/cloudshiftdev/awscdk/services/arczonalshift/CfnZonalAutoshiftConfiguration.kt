@@ -407,6 +407,142 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
   }
 
   /**
+   * A control condition is an alarm that you specify for a practice run.
+   *
+   * When you configure practice runs with zonal autoshift for a resource, you specify Amazon
+   * CloudWatch alarms, which you create in CloudWatch to use with the practice run. The alarms that
+   * you specify are an *outcome alarm* , to monitor application health during practice runs and,
+   * optionally, a *blocking alarm* , to block practice runs from starting or to interrupt a practice
+   * run in progress.
+   *
+   * Control condition alarms do not apply for autoshifts.
+   *
+   * For more information, see [Considerations when you configure zonal
+   * autoshift](https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.considerations.html)
+   * in the Route 53 ARC Developer Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.arczonalshift.*;
+   * ControlConditionProperty controlConditionProperty = ControlConditionProperty.builder()
+   * .alarmIdentifier("alarmIdentifier")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html)
+   */
+  public interface ControlConditionProperty {
+    /**
+     * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control
+     * condition for a practice run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html#cfn-arczonalshift-zonalautoshiftconfiguration-controlcondition-alarmidentifier)
+     */
+    public fun alarmIdentifier(): String
+
+    /**
+     * The type of alarm specified for a practice run.
+     *
+     * You can only specify Amazon CloudWatch alarms for practice runs, so the only valid value is
+     * `CLOUDWATCH` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html#cfn-arczonalshift-zonalautoshiftconfiguration-controlcondition-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [ControlConditionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarmIdentifier The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that
+       * you specify as a control condition for a practice run. 
+       */
+      public fun alarmIdentifier(alarmIdentifier: String)
+
+      /**
+       * @param type The type of alarm specified for a practice run. 
+       * You can only specify Amazon CloudWatch alarms for practice runs, so the only valid value is
+       * `CLOUDWATCH` .
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty.Builder
+          =
+          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty.builder()
+
+      /**
+       * @param alarmIdentifier The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that
+       * you specify as a control condition for a practice run. 
+       */
+      override fun alarmIdentifier(alarmIdentifier: String) {
+        cdkBuilder.alarmIdentifier(alarmIdentifier)
+      }
+
+      /**
+       * @param type The type of alarm specified for a practice run. 
+       * You can only specify Amazon CloudWatch alarms for practice runs, so the only valid value is
+       * `CLOUDWATCH` .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty,
+    ) : CdkObject(cdkObject), ControlConditionProperty {
+      /**
+       * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control
+       * condition for a practice run.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html#cfn-arczonalshift-zonalautoshiftconfiguration-controlcondition-alarmidentifier)
+       */
+      override fun alarmIdentifier(): String = unwrap(this).getAlarmIdentifier()
+
+      /**
+       * The type of alarm specified for a practice run.
+       *
+       * You can only specify Amazon CloudWatch alarms for practice runs, so the only valid value is
+       * `CLOUDWATCH` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html#cfn-arczonalshift-zonalautoshiftconfiguration-controlcondition-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ControlConditionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty):
+          ControlConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ControlConditionProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ControlConditionProperty):
+          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty
+    }
+  }
+
+  /**
    * A practice run configuration for a resource includes the Amazon CloudWatch alarms that you've
    * specified for a practice run, as well as any blocked dates or blocked windows for the practice
    * run.
@@ -762,142 +898,6 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty
-    }
-  }
-
-  /**
-   * A control condition is an alarm that you specify for a practice run.
-   *
-   * When you configure practice runs with zonal autoshift for a resource, you specify Amazon
-   * CloudWatch alarms, which you create in CloudWatch to use with the practice run. The alarms that
-   * you specify are an *outcome alarm* , to monitor application health during practice runs and,
-   * optionally, a *blocking alarm* , to block practice runs from starting or to interrupt a practice
-   * run in progress.
-   *
-   * Control condition alarms do not apply for autoshifts.
-   *
-   * For more information, see [Considerations when you configure zonal
-   * autoshift](https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.considerations.html)
-   * in the Route 53 ARC Developer Guide.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.arczonalshift.*;
-   * ControlConditionProperty controlConditionProperty = ControlConditionProperty.builder()
-   * .alarmIdentifier("alarmIdentifier")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html)
-   */
-  public interface ControlConditionProperty {
-    /**
-     * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control
-     * condition for a practice run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html#cfn-arczonalshift-zonalautoshiftconfiguration-controlcondition-alarmidentifier)
-     */
-    public fun alarmIdentifier(): String
-
-    /**
-     * The type of alarm specified for a practice run.
-     *
-     * You can only specify Amazon CloudWatch alarms for practice runs, so the only valid value is
-     * `CLOUDWATCH` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html#cfn-arczonalshift-zonalautoshiftconfiguration-controlcondition-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [ControlConditionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param alarmIdentifier The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that
-       * you specify as a control condition for a practice run. 
-       */
-      public fun alarmIdentifier(alarmIdentifier: String)
-
-      /**
-       * @param type The type of alarm specified for a practice run. 
-       * You can only specify Amazon CloudWatch alarms for practice runs, so the only valid value is
-       * `CLOUDWATCH` .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty.Builder
-          =
-          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty.builder()
-
-      /**
-       * @param alarmIdentifier The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that
-       * you specify as a control condition for a practice run. 
-       */
-      override fun alarmIdentifier(alarmIdentifier: String) {
-        cdkBuilder.alarmIdentifier(alarmIdentifier)
-      }
-
-      /**
-       * @param type The type of alarm specified for a practice run. 
-       * You can only specify Amazon CloudWatch alarms for practice runs, so the only valid value is
-       * `CLOUDWATCH` .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty,
-    ) : CdkObject(cdkObject), ControlConditionProperty {
-      /**
-       * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control
-       * condition for a practice run.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html#cfn-arczonalshift-zonalautoshiftconfiguration-controlcondition-alarmidentifier)
-       */
-      override fun alarmIdentifier(): String = unwrap(this).getAlarmIdentifier()
-
-      /**
-       * The type of alarm specified for a practice run.
-       *
-       * You can only specify Amazon CloudWatch alarms for practice runs, so the only valid value is
-       * `CLOUDWATCH` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-controlcondition.html#cfn-arczonalshift-zonalautoshiftconfiguration-controlcondition-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ControlConditionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty):
-          ControlConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ControlConditionProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ControlConditionProperty):
-          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty
     }
   }
 }

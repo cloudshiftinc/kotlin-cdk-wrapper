@@ -630,6 +630,116 @@ public open class CfnNetworkInsightsPath internal constructor(
   }
 
   /**
+   * Describes a port range.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * FilterPortRangeProperty filterPortRangeProperty = FilterPortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html)
+   */
+  public interface FilterPortRangeProperty {
+    /**
+     * The first port in the range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html#cfn-ec2-networkinsightspath-filterportrange-fromport)
+     */
+    public fun fromPort(): Number? = unwrap(this).getFromPort()
+
+    /**
+     * The last port in the range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html#cfn-ec2-networkinsightspath-filterportrange-toport)
+     */
+    public fun toPort(): Number? = unwrap(this).getToPort()
+
+    /**
+     * A builder for [FilterPortRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fromPort The first port in the range.
+       */
+      public fun fromPort(fromPort: Number)
+
+      /**
+       * @param toPort The last port in the range.
+       */
+      public fun toPort(toPort: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty.builder()
+
+      /**
+       * @param fromPort The first port in the range.
+       */
+      override fun fromPort(fromPort: Number) {
+        cdkBuilder.fromPort(fromPort)
+      }
+
+      /**
+       * @param toPort The last port in the range.
+       */
+      override fun toPort(toPort: Number) {
+        cdkBuilder.toPort(toPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty,
+    ) : CdkObject(cdkObject), FilterPortRangeProperty {
+      /**
+       * The first port in the range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html#cfn-ec2-networkinsightspath-filterportrange-fromport)
+       */
+      override fun fromPort(): Number? = unwrap(this).getFromPort()
+
+      /**
+       * The last port in the range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html#cfn-ec2-networkinsightspath-filterportrange-toport)
+       */
+      override fun toPort(): Number? = unwrap(this).getToPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterPortRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty):
+          FilterPortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterPortRangeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterPortRangeProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty
+    }
+  }
+
+  /**
    * Describes a set of filters for a path analysis.
    *
    * Use path filters to scope the analysis when there can be multiple resulting paths.
@@ -853,116 +963,6 @@ public open class CfnNetworkInsightsPath internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty
-    }
-  }
-
-  /**
-   * Describes a port range.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * FilterPortRangeProperty filterPortRangeProperty = FilterPortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html)
-   */
-  public interface FilterPortRangeProperty {
-    /**
-     * The first port in the range.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html#cfn-ec2-networkinsightspath-filterportrange-fromport)
-     */
-    public fun fromPort(): Number? = unwrap(this).getFromPort()
-
-    /**
-     * The last port in the range.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html#cfn-ec2-networkinsightspath-filterportrange-toport)
-     */
-    public fun toPort(): Number? = unwrap(this).getToPort()
-
-    /**
-     * A builder for [FilterPortRangeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fromPort The first port in the range.
-       */
-      public fun fromPort(fromPort: Number)
-
-      /**
-       * @param toPort The last port in the range.
-       */
-      public fun toPort(toPort: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty.builder()
-
-      /**
-       * @param fromPort The first port in the range.
-       */
-      override fun fromPort(fromPort: Number) {
-        cdkBuilder.fromPort(fromPort)
-      }
-
-      /**
-       * @param toPort The last port in the range.
-       */
-      override fun toPort(toPort: Number) {
-        cdkBuilder.toPort(toPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty,
-    ) : CdkObject(cdkObject), FilterPortRangeProperty {
-      /**
-       * The first port in the range.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html#cfn-ec2-networkinsightspath-filterportrange-fromport)
-       */
-      override fun fromPort(): Number? = unwrap(this).getFromPort()
-
-      /**
-       * The last port in the range.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html#cfn-ec2-networkinsightspath-filterportrange-toport)
-       */
-      override fun toPort(): Number? = unwrap(this).getToPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterPortRangeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty):
-          FilterPortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterPortRangeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterPortRangeProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty
     }
   }
 }

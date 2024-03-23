@@ -584,6 +584,948 @@ public open class CfnEvaluationForm internal constructor(
   }
 
   /**
+   * An item at the root level.
+   *
+   * All items must be sections.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormSectionProperty evaluationFormSectionProperty_;
+   * EvaluationFormBaseItemProperty evaluationFormBaseItemProperty =
+   * EvaluationFormBaseItemProperty.builder()
+   * .section(EvaluationFormSectionProperty.builder()
+   * .refId("refId")
+   * .title("title")
+   * // the properties below are optional
+   * .instructions("instructions")
+   * .items(List.of(EvaluationFormItemProperty.builder()
+   * .question(EvaluationFormQuestionProperty.builder()
+   * .questionType("questionType")
+   * .refId("refId")
+   * .title("title")
+   * // the properties below are optional
+   * .instructions("instructions")
+   * .notApplicableEnabled(false)
+   * .questionTypeProperties(EvaluationFormQuestionTypePropertiesProperty.builder()
+   * .numeric(EvaluationFormNumericQuestionPropertiesProperty.builder()
+   * .maxValue(123)
+   * .minValue(123)
+   * // the properties below are optional
+   * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
+   * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
+   * .label("label")
+   * .build())
+   * .build())
+   * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
+   * .maxValue(123)
+   * .minValue(123)
+   * // the properties below are optional
+   * .automaticFail(false)
+   * .score(123)
+   * .build()))
+   * .build())
+   * .singleSelect(EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
+   * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
+   * .refId("refId")
+   * .text("text")
+   * // the properties below are optional
+   * .automaticFail(false)
+   * .score(123)
+   * .build()))
+   * // the properties below are optional
+   * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+   * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+   * .category("category")
+   * .condition("condition")
+   * .optionRefId("optionRefId")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .defaultOptionRefId("defaultOptionRefId")
+   * .build())
+   * .displayAs("displayAs")
+   * .build())
+   * .build())
+   * .weight(123)
+   * .build())
+   * .section(evaluationFormSectionProperty_)
+   * .build()))
+   * .weight(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformbaseitem.html)
+   */
+  public interface EvaluationFormBaseItemProperty {
+    /**
+     * A subsection or inner section of an item.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformbaseitem.html#cfn-connect-evaluationform-evaluationformbaseitem-section)
+     */
+    public fun section(): Any
+
+    /**
+     * A builder for [EvaluationFormBaseItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param section A subsection or inner section of an item. 
+       */
+      public fun section(section: IResolvable)
+
+      /**
+       * @param section A subsection or inner section of an item. 
+       */
+      public fun section(section: EvaluationFormSectionProperty)
+
+      /**
+       * @param section A subsection or inner section of an item. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("75f7b8dd462ca67cd3a8ed539fc8fad8338912c53c9442851afc351f9dc203fe")
+      public fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty.builder()
+
+      /**
+       * @param section A subsection or inner section of an item. 
+       */
+      override fun section(section: IResolvable) {
+        cdkBuilder.section(section.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param section A subsection or inner section of an item. 
+       */
+      override fun section(section: EvaluationFormSectionProperty) {
+        cdkBuilder.section(section.let(EvaluationFormSectionProperty::unwrap))
+      }
+
+      /**
+       * @param section A subsection or inner section of an item. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("75f7b8dd462ca67cd3a8ed539fc8fad8338912c53c9442851afc351f9dc203fe")
+      override fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit): Unit =
+          section(EvaluationFormSectionProperty(section))
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty,
+    ) : CdkObject(cdkObject), EvaluationFormBaseItemProperty {
+      /**
+       * A subsection or inner section of an item.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformbaseitem.html#cfn-connect-evaluationform-evaluationformbaseitem-section)
+       */
+      override fun section(): Any = unwrap(this).getSection()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EvaluationFormBaseItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty):
+          EvaluationFormBaseItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationFormBaseItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormBaseItemProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty
+    }
+  }
+
+  /**
+   * Items that are part of the evaluation form.
+   *
+   * The total number of sections and questions must not exceed 100 each. Questions must be
+   * contained in a section.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormItemProperty evaluationFormItemProperty_;
+   * EvaluationFormItemProperty evaluationFormItemProperty = EvaluationFormItemProperty.builder()
+   * .question(EvaluationFormQuestionProperty.builder()
+   * .questionType("questionType")
+   * .refId("refId")
+   * .title("title")
+   * // the properties below are optional
+   * .instructions("instructions")
+   * .notApplicableEnabled(false)
+   * .questionTypeProperties(EvaluationFormQuestionTypePropertiesProperty.builder()
+   * .numeric(EvaluationFormNumericQuestionPropertiesProperty.builder()
+   * .maxValue(123)
+   * .minValue(123)
+   * // the properties below are optional
+   * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
+   * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
+   * .label("label")
+   * .build())
+   * .build())
+   * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
+   * .maxValue(123)
+   * .minValue(123)
+   * // the properties below are optional
+   * .automaticFail(false)
+   * .score(123)
+   * .build()))
+   * .build())
+   * .singleSelect(EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
+   * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
+   * .refId("refId")
+   * .text("text")
+   * // the properties below are optional
+   * .automaticFail(false)
+   * .score(123)
+   * .build()))
+   * // the properties below are optional
+   * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+   * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+   * .category("category")
+   * .condition("condition")
+   * .optionRefId("optionRefId")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .defaultOptionRefId("defaultOptionRefId")
+   * .build())
+   * .displayAs("displayAs")
+   * .build())
+   * .build())
+   * .weight(123)
+   * .build())
+   * .section(EvaluationFormSectionProperty.builder()
+   * .refId("refId")
+   * .title("title")
+   * // the properties below are optional
+   * .instructions("instructions")
+   * .items(List.of(evaluationFormItemProperty_))
+   * .weight(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html)
+   */
+  public interface EvaluationFormItemProperty {
+    /**
+     * The information of the question.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html#cfn-connect-evaluationform-evaluationformitem-question)
+     */
+    public fun question(): Any? = unwrap(this).getQuestion()
+
+    /**
+     * The information of the section.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html#cfn-connect-evaluationform-evaluationformitem-section)
+     */
+    public fun section(): Any? = unwrap(this).getSection()
+
+    /**
+     * A builder for [EvaluationFormItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param question The information of the question.
+       */
+      public fun question(question: IResolvable)
+
+      /**
+       * @param question The information of the question.
+       */
+      public fun question(question: EvaluationFormQuestionProperty)
+
+      /**
+       * @param question The information of the question.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e5318a14fa17ffb27f54d09ae3d4e6adfe1d0a87d6d836ba0e4d31e90e5d44fa")
+      public fun question(question: EvaluationFormQuestionProperty.Builder.() -> Unit)
+
+      /**
+       * @param section The information of the section.
+       */
+      public fun section(section: IResolvable)
+
+      /**
+       * @param section The information of the section.
+       */
+      public fun section(section: EvaluationFormSectionProperty)
+
+      /**
+       * @param section The information of the section.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("515bf2263e1945779436dc77ef1a3a822c8481e6e43e0878bb8e3dc2b5a85496")
+      public fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty.builder()
+
+      /**
+       * @param question The information of the question.
+       */
+      override fun question(question: IResolvable) {
+        cdkBuilder.question(question.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param question The information of the question.
+       */
+      override fun question(question: EvaluationFormQuestionProperty) {
+        cdkBuilder.question(question.let(EvaluationFormQuestionProperty::unwrap))
+      }
+
+      /**
+       * @param question The information of the question.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e5318a14fa17ffb27f54d09ae3d4e6adfe1d0a87d6d836ba0e4d31e90e5d44fa")
+      override fun question(question: EvaluationFormQuestionProperty.Builder.() -> Unit): Unit =
+          question(EvaluationFormQuestionProperty(question))
+
+      /**
+       * @param section The information of the section.
+       */
+      override fun section(section: IResolvable) {
+        cdkBuilder.section(section.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param section The information of the section.
+       */
+      override fun section(section: EvaluationFormSectionProperty) {
+        cdkBuilder.section(section.let(EvaluationFormSectionProperty::unwrap))
+      }
+
+      /**
+       * @param section The information of the section.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("515bf2263e1945779436dc77ef1a3a822c8481e6e43e0878bb8e3dc2b5a85496")
+      override fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit): Unit =
+          section(EvaluationFormSectionProperty(section))
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty,
+    ) : CdkObject(cdkObject), EvaluationFormItemProperty {
+      /**
+       * The information of the question.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html#cfn-connect-evaluationform-evaluationformitem-question)
+       */
+      override fun question(): Any? = unwrap(this).getQuestion()
+
+      /**
+       * The information of the section.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html#cfn-connect-evaluationform-evaluationformitem-section)
+       */
+      override fun section(): Any? = unwrap(this).getSection()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EvaluationFormItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty):
+          EvaluationFormItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationFormItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormItemProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty
+    }
+  }
+
+  /**
+   * Information about the automation configuration in numeric questions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormNumericQuestionAutomationProperty evaluationFormNumericQuestionAutomationProperty
+   * = EvaluationFormNumericQuestionAutomationProperty.builder()
+   * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
+   * .label("label")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html)
+   */
+  public interface EvaluationFormNumericQuestionAutomationProperty {
+    /**
+     * The property value of the automation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html#cfn-connect-evaluationform-evaluationformnumericquestionautomation-propertyvalue)
+     */
+    public fun propertyValue(): Any
+
+    /**
+     * A builder for [EvaluationFormNumericQuestionAutomationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param propertyValue The property value of the automation. 
+       */
+      public fun propertyValue(propertyValue: IResolvable)
+
+      /**
+       * @param propertyValue The property value of the automation. 
+       */
+      public fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty)
+
+      /**
+       * @param propertyValue The property value of the automation. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c1b7fb14f46a5514785021373b865ef90fc264cc00a77fd4e30965d5c7f300a6")
+      public
+          fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty.builder()
+
+      /**
+       * @param propertyValue The property value of the automation. 
+       */
+      override fun propertyValue(propertyValue: IResolvable) {
+        cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param propertyValue The property value of the automation. 
+       */
+      override fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty) {
+        cdkBuilder.propertyValue(propertyValue.let(NumericQuestionPropertyValueAutomationProperty::unwrap))
+      }
+
+      /**
+       * @param propertyValue The property value of the automation. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c1b7fb14f46a5514785021373b865ef90fc264cc00a77fd4e30965d5c7f300a6")
+      override
+          fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty.Builder.() -> Unit):
+          Unit = propertyValue(NumericQuestionPropertyValueAutomationProperty(propertyValue))
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty,
+    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionAutomationProperty {
+      /**
+       * The property value of the automation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html#cfn-connect-evaluationform-evaluationformnumericquestionautomation-propertyvalue)
+       */
+      override fun propertyValue(): Any = unwrap(this).getPropertyValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EvaluationFormNumericQuestionAutomationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty):
+          EvaluationFormNumericQuestionAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationFormNumericQuestionAutomationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormNumericQuestionAutomationProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty
+    }
+  }
+
+  /**
+   * Information about the option range used for scoring in numeric questions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormNumericQuestionOptionProperty evaluationFormNumericQuestionOptionProperty =
+   * EvaluationFormNumericQuestionOptionProperty.builder()
+   * .maxValue(123)
+   * .minValue(123)
+   * // the properties below are optional
+   * .automaticFail(false)
+   * .score(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html)
+   */
+  public interface EvaluationFormNumericQuestionOptionProperty {
+    /**
+     * The flag to mark the option as automatic fail.
+     *
+     * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-automaticfail)
+     */
+    public fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
+
+    /**
+     * The maximum answer value of the range option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-maxvalue)
+     */
+    public fun maxValue(): Number
+
+    /**
+     * The minimum answer value of the range option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-minvalue)
+     */
+    public fun minValue(): Number
+
+    /**
+     * The score assigned to answer values within the range option.
+     *
+     * *Minimum* : 0
+     *
+     * *Maximum* : 10
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-score)
+     */
+    public fun score(): Number? = unwrap(this).getScore()
+
+    /**
+     * A builder for [EvaluationFormNumericQuestionOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param automaticFail The flag to mark the option as automatic fail.
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       */
+      public fun automaticFail(automaticFail: Boolean)
+
+      /**
+       * @param automaticFail The flag to mark the option as automatic fail.
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       */
+      public fun automaticFail(automaticFail: IResolvable)
+
+      /**
+       * @param maxValue The maximum answer value of the range option. 
+       */
+      public fun maxValue(maxValue: Number)
+
+      /**
+       * @param minValue The minimum answer value of the range option. 
+       */
+      public fun minValue(minValue: Number)
+
+      /**
+       * @param score The score assigned to answer values within the range option.
+       * *Minimum* : 0
+       *
+       * *Maximum* : 10
+       */
+      public fun score(score: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty.builder()
+
+      /**
+       * @param automaticFail The flag to mark the option as automatic fail.
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       */
+      override fun automaticFail(automaticFail: Boolean) {
+        cdkBuilder.automaticFail(automaticFail)
+      }
+
+      /**
+       * @param automaticFail The flag to mark the option as automatic fail.
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       */
+      override fun automaticFail(automaticFail: IResolvable) {
+        cdkBuilder.automaticFail(automaticFail.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxValue The maximum answer value of the range option. 
+       */
+      override fun maxValue(maxValue: Number) {
+        cdkBuilder.maxValue(maxValue)
+      }
+
+      /**
+       * @param minValue The minimum answer value of the range option. 
+       */
+      override fun minValue(minValue: Number) {
+        cdkBuilder.minValue(minValue)
+      }
+
+      /**
+       * @param score The score assigned to answer values within the range option.
+       * *Minimum* : 0
+       *
+       * *Maximum* : 10
+       */
+      override fun score(score: Number) {
+        cdkBuilder.score(score)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty,
+    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionOptionProperty {
+      /**
+       * The flag to mark the option as automatic fail.
+       *
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-automaticfail)
+       */
+      override fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
+
+      /**
+       * The maximum answer value of the range option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-maxvalue)
+       */
+      override fun maxValue(): Number = unwrap(this).getMaxValue()
+
+      /**
+       * The minimum answer value of the range option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-minvalue)
+       */
+      override fun minValue(): Number = unwrap(this).getMinValue()
+
+      /**
+       * The score assigned to answer values within the range option.
+       *
+       * *Minimum* : 0
+       *
+       * *Maximum* : 10
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-score)
+       */
+      override fun score(): Number? = unwrap(this).getScore()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EvaluationFormNumericQuestionOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty):
+          EvaluationFormNumericQuestionOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationFormNumericQuestionOptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormNumericQuestionOptionProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty
+    }
+  }
+
+  /**
+   * Information about properties for a numeric question in an evaluation form.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormNumericQuestionPropertiesProperty evaluationFormNumericQuestionPropertiesProperty
+   * = EvaluationFormNumericQuestionPropertiesProperty.builder()
+   * .maxValue(123)
+   * .minValue(123)
+   * // the properties below are optional
+   * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
+   * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
+   * .label("label")
+   * .build())
+   * .build())
+   * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
+   * .maxValue(123)
+   * .minValue(123)
+   * // the properties below are optional
+   * .automaticFail(false)
+   * .score(123)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html)
+   */
+  public interface EvaluationFormNumericQuestionPropertiesProperty {
+    /**
+     * The automation properties of the numeric question.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-automation)
+     */
+    public fun automation(): Any? = unwrap(this).getAutomation()
+
+    /**
+     * The maximum answer value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-maxvalue)
+     */
+    public fun maxValue(): Number
+
+    /**
+     * The minimum answer value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-minvalue)
+     */
+    public fun minValue(): Number
+
+    /**
+     * The scoring options of the numeric question.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-options)
+     */
+    public fun options(): Any? = unwrap(this).getOptions()
+
+    /**
+     * A builder for [EvaluationFormNumericQuestionPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param automation The automation properties of the numeric question.
+       */
+      public fun automation(automation: IResolvable)
+
+      /**
+       * @param automation The automation properties of the numeric question.
+       */
+      public fun automation(automation: EvaluationFormNumericQuestionAutomationProperty)
+
+      /**
+       * @param automation The automation properties of the numeric question.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c698dd5314d7b0a87b42190cf4aeb546028b5d817bd9c0f9b274e1ca785890af")
+      public
+          fun automation(automation: EvaluationFormNumericQuestionAutomationProperty.Builder.() -> Unit)
+
+      /**
+       * @param maxValue The maximum answer value. 
+       */
+      public fun maxValue(maxValue: Number)
+
+      /**
+       * @param minValue The minimum answer value. 
+       */
+      public fun minValue(minValue: Number)
+
+      /**
+       * @param options The scoring options of the numeric question.
+       */
+      public fun options(options: IResolvable)
+
+      /**
+       * @param options The scoring options of the numeric question.
+       */
+      public fun options(options: List<Any>)
+
+      /**
+       * @param options The scoring options of the numeric question.
+       */
+      public fun options(vararg options: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty.builder()
+
+      /**
+       * @param automation The automation properties of the numeric question.
+       */
+      override fun automation(automation: IResolvable) {
+        cdkBuilder.automation(automation.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param automation The automation properties of the numeric question.
+       */
+      override fun automation(automation: EvaluationFormNumericQuestionAutomationProperty) {
+        cdkBuilder.automation(automation.let(EvaluationFormNumericQuestionAutomationProperty::unwrap))
+      }
+
+      /**
+       * @param automation The automation properties of the numeric question.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c698dd5314d7b0a87b42190cf4aeb546028b5d817bd9c0f9b274e1ca785890af")
+      override
+          fun automation(automation: EvaluationFormNumericQuestionAutomationProperty.Builder.() -> Unit):
+          Unit = automation(EvaluationFormNumericQuestionAutomationProperty(automation))
+
+      /**
+       * @param maxValue The maximum answer value. 
+       */
+      override fun maxValue(maxValue: Number) {
+        cdkBuilder.maxValue(maxValue)
+      }
+
+      /**
+       * @param minValue The minimum answer value. 
+       */
+      override fun minValue(minValue: Number) {
+        cdkBuilder.minValue(minValue)
+      }
+
+      /**
+       * @param options The scoring options of the numeric question.
+       */
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param options The scoring options of the numeric question.
+       */
+      override fun options(options: List<Any>) {
+        cdkBuilder.options(options)
+      }
+
+      /**
+       * @param options The scoring options of the numeric question.
+       */
+      override fun options(vararg options: Any): Unit = options(options.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty,
+    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionPropertiesProperty {
+      /**
+       * The automation properties of the numeric question.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-automation)
+       */
+      override fun automation(): Any? = unwrap(this).getAutomation()
+
+      /**
+       * The maximum answer value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-maxvalue)
+       */
+      override fun maxValue(): Number = unwrap(this).getMaxValue()
+
+      /**
+       * The minimum answer value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-minvalue)
+       */
+      override fun minValue(): Number = unwrap(this).getMinValue()
+
+      /**
+       * The scoring options of the numeric question.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-options)
+       */
+      override fun options(): Any? = unwrap(this).getOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EvaluationFormNumericQuestionPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty):
+          EvaluationFormNumericQuestionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationFormNumericQuestionPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormNumericQuestionPropertiesProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty
+    }
+  }
+
+  /**
    * Information about a question from an evaluation form.
    *
    * Example:
@@ -1175,2112 +2117,6 @@ public open class CfnEvaluationForm internal constructor(
   }
 
   /**
-   * Items that are part of the evaluation form.
-   *
-   * The total number of sections and questions must not exceed 100 each. Questions must be
-   * contained in a section.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormItemProperty evaluationFormItemProperty_;
-   * EvaluationFormItemProperty evaluationFormItemProperty = EvaluationFormItemProperty.builder()
-   * .question(EvaluationFormQuestionProperty.builder()
-   * .questionType("questionType")
-   * .refId("refId")
-   * .title("title")
-   * // the properties below are optional
-   * .instructions("instructions")
-   * .notApplicableEnabled(false)
-   * .questionTypeProperties(EvaluationFormQuestionTypePropertiesProperty.builder()
-   * .numeric(EvaluationFormNumericQuestionPropertiesProperty.builder()
-   * .maxValue(123)
-   * .minValue(123)
-   * // the properties below are optional
-   * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
-   * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
-   * .label("label")
-   * .build())
-   * .build())
-   * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
-   * .maxValue(123)
-   * .minValue(123)
-   * // the properties below are optional
-   * .automaticFail(false)
-   * .score(123)
-   * .build()))
-   * .build())
-   * .singleSelect(EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
-   * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
-   * .refId("refId")
-   * .text("text")
-   * // the properties below are optional
-   * .automaticFail(false)
-   * .score(123)
-   * .build()))
-   * // the properties below are optional
-   * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
-   * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
-   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
-   * .category("category")
-   * .condition("condition")
-   * .optionRefId("optionRefId")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .defaultOptionRefId("defaultOptionRefId")
-   * .build())
-   * .displayAs("displayAs")
-   * .build())
-   * .build())
-   * .weight(123)
-   * .build())
-   * .section(EvaluationFormSectionProperty.builder()
-   * .refId("refId")
-   * .title("title")
-   * // the properties below are optional
-   * .instructions("instructions")
-   * .items(List.of(evaluationFormItemProperty_))
-   * .weight(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html)
-   */
-  public interface EvaluationFormItemProperty {
-    /**
-     * The information of the question.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html#cfn-connect-evaluationform-evaluationformitem-question)
-     */
-    public fun question(): Any? = unwrap(this).getQuestion()
-
-    /**
-     * The information of the section.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html#cfn-connect-evaluationform-evaluationformitem-section)
-     */
-    public fun section(): Any? = unwrap(this).getSection()
-
-    /**
-     * A builder for [EvaluationFormItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param question The information of the question.
-       */
-      public fun question(question: IResolvable)
-
-      /**
-       * @param question The information of the question.
-       */
-      public fun question(question: EvaluationFormQuestionProperty)
-
-      /**
-       * @param question The information of the question.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e5318a14fa17ffb27f54d09ae3d4e6adfe1d0a87d6d836ba0e4d31e90e5d44fa")
-      public fun question(question: EvaluationFormQuestionProperty.Builder.() -> Unit)
-
-      /**
-       * @param section The information of the section.
-       */
-      public fun section(section: IResolvable)
-
-      /**
-       * @param section The information of the section.
-       */
-      public fun section(section: EvaluationFormSectionProperty)
-
-      /**
-       * @param section The information of the section.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("515bf2263e1945779436dc77ef1a3a822c8481e6e43e0878bb8e3dc2b5a85496")
-      public fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty.builder()
-
-      /**
-       * @param question The information of the question.
-       */
-      override fun question(question: IResolvable) {
-        cdkBuilder.question(question.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param question The information of the question.
-       */
-      override fun question(question: EvaluationFormQuestionProperty) {
-        cdkBuilder.question(question.let(EvaluationFormQuestionProperty::unwrap))
-      }
-
-      /**
-       * @param question The information of the question.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e5318a14fa17ffb27f54d09ae3d4e6adfe1d0a87d6d836ba0e4d31e90e5d44fa")
-      override fun question(question: EvaluationFormQuestionProperty.Builder.() -> Unit): Unit =
-          question(EvaluationFormQuestionProperty(question))
-
-      /**
-       * @param section The information of the section.
-       */
-      override fun section(section: IResolvable) {
-        cdkBuilder.section(section.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param section The information of the section.
-       */
-      override fun section(section: EvaluationFormSectionProperty) {
-        cdkBuilder.section(section.let(EvaluationFormSectionProperty::unwrap))
-      }
-
-      /**
-       * @param section The information of the section.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("515bf2263e1945779436dc77ef1a3a822c8481e6e43e0878bb8e3dc2b5a85496")
-      override fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit): Unit =
-          section(EvaluationFormSectionProperty(section))
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty,
-    ) : CdkObject(cdkObject), EvaluationFormItemProperty {
-      /**
-       * The information of the question.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html#cfn-connect-evaluationform-evaluationformitem-question)
-       */
-      override fun question(): Any? = unwrap(this).getQuestion()
-
-      /**
-       * The information of the section.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformitem.html#cfn-connect-evaluationform-evaluationformitem-section)
-       */
-      override fun section(): Any? = unwrap(this).getSection()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EvaluationFormItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty):
-          EvaluationFormItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EvaluationFormItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormItemProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty
-    }
-  }
-
-  /**
-   * Information about the automation configuration in single select questions.
-   *
-   * Automation options are evaluated in order, and the first matched option is applied. If no
-   * automation option matches, and there is a default option, then the default option is applied.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormSingleSelectQuestionAutomationProperty
-   * evaluationFormSingleSelectQuestionAutomationProperty =
-   * EvaluationFormSingleSelectQuestionAutomationProperty.builder()
-   * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
-   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
-   * .category("category")
-   * .condition("condition")
-   * .optionRefId("optionRefId")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .defaultOptionRefId("defaultOptionRefId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html)
-   */
-  public interface EvaluationFormSingleSelectQuestionAutomationProperty {
-    /**
-     * The identifier of the default answer option, when none of the automation options match the
-     * criteria.
-     *
-     * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-defaultoptionrefid)
-     */
-    public fun defaultOptionRefId(): String? = unwrap(this).getDefaultOptionRefId()
-
-    /**
-     * The automation options of the single select question.
-     *
-     * *Minimum* : 1
-     *
-     * *Maximum* : 20
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-options)
-     */
-    public fun options(): Any
-
-    /**
-     * A builder for [EvaluationFormSingleSelectQuestionAutomationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param defaultOptionRefId The identifier of the default answer option, when none of the
-       * automation options match the criteria.
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       */
-      public fun defaultOptionRefId(defaultOptionRefId: String)
-
-      /**
-       * @param options The automation options of the single select question. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 20
-       */
-      public fun options(options: IResolvable)
-
-      /**
-       * @param options The automation options of the single select question. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 20
-       */
-      public fun options(options: List<Any>)
-
-      /**
-       * @param options The automation options of the single select question. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 20
-       */
-      public fun options(vararg options: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty.builder()
-
-      /**
-       * @param defaultOptionRefId The identifier of the default answer option, when none of the
-       * automation options match the criteria.
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       */
-      override fun defaultOptionRefId(defaultOptionRefId: String) {
-        cdkBuilder.defaultOptionRefId(defaultOptionRefId)
-      }
-
-      /**
-       * @param options The automation options of the single select question. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 20
-       */
-      override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param options The automation options of the single select question. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 20
-       */
-      override fun options(options: List<Any>) {
-        cdkBuilder.options(options)
-      }
-
-      /**
-       * @param options The automation options of the single select question. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 20
-       */
-      override fun options(vararg options: Any): Unit = options(options.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionAutomationProperty {
-      /**
-       * The identifier of the default answer option, when none of the automation options match the
-       * criteria.
-       *
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-defaultoptionrefid)
-       */
-      override fun defaultOptionRefId(): String? = unwrap(this).getDefaultOptionRefId()
-
-      /**
-       * The automation options of the single select question.
-       *
-       * *Minimum* : 1
-       *
-       * *Maximum* : 20
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-options)
-       */
-      override fun options(): Any = unwrap(this).getOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EvaluationFormSingleSelectQuestionAutomationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty):
-          EvaluationFormSingleSelectQuestionAutomationProperty = CdkObjectWrappers.wrap(cdkObject)
-          as? EvaluationFormSingleSelectQuestionAutomationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionAutomationProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty
-    }
-  }
-
-  /**
-   * Information about properties for a numeric question in an evaluation form.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormNumericQuestionPropertiesProperty evaluationFormNumericQuestionPropertiesProperty
-   * = EvaluationFormNumericQuestionPropertiesProperty.builder()
-   * .maxValue(123)
-   * .minValue(123)
-   * // the properties below are optional
-   * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
-   * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
-   * .label("label")
-   * .build())
-   * .build())
-   * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
-   * .maxValue(123)
-   * .minValue(123)
-   * // the properties below are optional
-   * .automaticFail(false)
-   * .score(123)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html)
-   */
-  public interface EvaluationFormNumericQuestionPropertiesProperty {
-    /**
-     * The automation properties of the numeric question.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-automation)
-     */
-    public fun automation(): Any? = unwrap(this).getAutomation()
-
-    /**
-     * The maximum answer value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-maxvalue)
-     */
-    public fun maxValue(): Number
-
-    /**
-     * The minimum answer value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-minvalue)
-     */
-    public fun minValue(): Number
-
-    /**
-     * The scoring options of the numeric question.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-options)
-     */
-    public fun options(): Any? = unwrap(this).getOptions()
-
-    /**
-     * A builder for [EvaluationFormNumericQuestionPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param automation The automation properties of the numeric question.
-       */
-      public fun automation(automation: IResolvable)
-
-      /**
-       * @param automation The automation properties of the numeric question.
-       */
-      public fun automation(automation: EvaluationFormNumericQuestionAutomationProperty)
-
-      /**
-       * @param automation The automation properties of the numeric question.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c698dd5314d7b0a87b42190cf4aeb546028b5d817bd9c0f9b274e1ca785890af")
-      public
-          fun automation(automation: EvaluationFormNumericQuestionAutomationProperty.Builder.() -> Unit)
-
-      /**
-       * @param maxValue The maximum answer value. 
-       */
-      public fun maxValue(maxValue: Number)
-
-      /**
-       * @param minValue The minimum answer value. 
-       */
-      public fun minValue(minValue: Number)
-
-      /**
-       * @param options The scoring options of the numeric question.
-       */
-      public fun options(options: IResolvable)
-
-      /**
-       * @param options The scoring options of the numeric question.
-       */
-      public fun options(options: List<Any>)
-
-      /**
-       * @param options The scoring options of the numeric question.
-       */
-      public fun options(vararg options: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty.builder()
-
-      /**
-       * @param automation The automation properties of the numeric question.
-       */
-      override fun automation(automation: IResolvable) {
-        cdkBuilder.automation(automation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param automation The automation properties of the numeric question.
-       */
-      override fun automation(automation: EvaluationFormNumericQuestionAutomationProperty) {
-        cdkBuilder.automation(automation.let(EvaluationFormNumericQuestionAutomationProperty::unwrap))
-      }
-
-      /**
-       * @param automation The automation properties of the numeric question.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c698dd5314d7b0a87b42190cf4aeb546028b5d817bd9c0f9b274e1ca785890af")
-      override
-          fun automation(automation: EvaluationFormNumericQuestionAutomationProperty.Builder.() -> Unit):
-          Unit = automation(EvaluationFormNumericQuestionAutomationProperty(automation))
-
-      /**
-       * @param maxValue The maximum answer value. 
-       */
-      override fun maxValue(maxValue: Number) {
-        cdkBuilder.maxValue(maxValue)
-      }
-
-      /**
-       * @param minValue The minimum answer value. 
-       */
-      override fun minValue(minValue: Number) {
-        cdkBuilder.minValue(minValue)
-      }
-
-      /**
-       * @param options The scoring options of the numeric question.
-       */
-      override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param options The scoring options of the numeric question.
-       */
-      override fun options(options: List<Any>) {
-        cdkBuilder.options(options)
-      }
-
-      /**
-       * @param options The scoring options of the numeric question.
-       */
-      override fun options(vararg options: Any): Unit = options(options.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty,
-    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionPropertiesProperty {
-      /**
-       * The automation properties of the numeric question.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-automation)
-       */
-      override fun automation(): Any? = unwrap(this).getAutomation()
-
-      /**
-       * The maximum answer value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-maxvalue)
-       */
-      override fun maxValue(): Number = unwrap(this).getMaxValue()
-
-      /**
-       * The minimum answer value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-minvalue)
-       */
-      override fun minValue(): Number = unwrap(this).getMinValue()
-
-      /**
-       * The scoring options of the numeric question.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html#cfn-connect-evaluationform-evaluationformnumericquestionproperties-options)
-       */
-      override fun options(): Any? = unwrap(this).getOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EvaluationFormNumericQuestionPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty):
-          EvaluationFormNumericQuestionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EvaluationFormNumericQuestionPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormNumericQuestionPropertiesProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty
-    }
-  }
-
-  /**
-   * Information about the automation option based on a rule category for a single select question.
-   *
-   * *Length Constraints* : Minimum length of 1. Maximum length of 50.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * SingleSelectQuestionRuleCategoryAutomationProperty
-   * singleSelectQuestionRuleCategoryAutomationProperty =
-   * SingleSelectQuestionRuleCategoryAutomationProperty.builder()
-   * .category("category")
-   * .condition("condition")
-   * .optionRefId("optionRefId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html)
-   */
-  public interface SingleSelectQuestionRuleCategoryAutomationProperty {
-    /**
-     * The category name, as defined in Rules.
-     *
-     * *Minimum* : 1
-     *
-     * *Maximum* : 50
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-category)
-     */
-    public fun category(): String
-
-    /**
-     * The condition to apply for the automation option.
-     *
-     * If the condition is PRESENT, then the option is applied when the contact data includes the
-     * category. Similarly, if the condition is NOT_PRESENT, then the option is applied when the
-     * contact data does not include the category.
-     *
-     * *Allowed values* : `PRESENT` | `NOT_PRESENT`
-     *
-     * *Maximum* : 50
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-condition)
-     */
-    public fun condition(): String
-
-    /**
-     * The identifier of the answer option. An identifier must be unique within the question.
-     *
-     * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-optionrefid)
-     */
-    public fun optionRefId(): String
-
-    /**
-     * A builder for [SingleSelectQuestionRuleCategoryAutomationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param category The category name, as defined in Rules. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 50
-       */
-      public fun category(category: String)
-
-      /**
-       * @param condition The condition to apply for the automation option. 
-       * If the condition is PRESENT, then the option is applied when the contact data includes the
-       * category. Similarly, if the condition is NOT_PRESENT, then the option is applied when the
-       * contact data does not include the category.
-       *
-       * *Allowed values* : `PRESENT` | `NOT_PRESENT`
-       *
-       * *Maximum* : 50
-       */
-      public fun condition(condition: String)
-
-      /**
-       * @param optionRefId The identifier of the answer option. An identifier must be unique within
-       * the question. 
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       */
-      public fun optionRefId(optionRefId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty.builder()
-
-      /**
-       * @param category The category name, as defined in Rules. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 50
-       */
-      override fun category(category: String) {
-        cdkBuilder.category(category)
-      }
-
-      /**
-       * @param condition The condition to apply for the automation option. 
-       * If the condition is PRESENT, then the option is applied when the contact data includes the
-       * category. Similarly, if the condition is NOT_PRESENT, then the option is applied when the
-       * contact data does not include the category.
-       *
-       * *Allowed values* : `PRESENT` | `NOT_PRESENT`
-       *
-       * *Maximum* : 50
-       */
-      override fun condition(condition: String) {
-        cdkBuilder.condition(condition)
-      }
-
-      /**
-       * @param optionRefId The identifier of the answer option. An identifier must be unique within
-       * the question. 
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       */
-      override fun optionRefId(optionRefId: String) {
-        cdkBuilder.optionRefId(optionRefId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty,
-    ) : CdkObject(cdkObject), SingleSelectQuestionRuleCategoryAutomationProperty {
-      /**
-       * The category name, as defined in Rules.
-       *
-       * *Minimum* : 1
-       *
-       * *Maximum* : 50
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-category)
-       */
-      override fun category(): String = unwrap(this).getCategory()
-
-      /**
-       * The condition to apply for the automation option.
-       *
-       * If the condition is PRESENT, then the option is applied when the contact data includes the
-       * category. Similarly, if the condition is NOT_PRESENT, then the option is applied when the
-       * contact data does not include the category.
-       *
-       * *Allowed values* : `PRESENT` | `NOT_PRESENT`
-       *
-       * *Maximum* : 50
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-condition)
-       */
-      override fun condition(): String = unwrap(this).getCondition()
-
-      /**
-       * The identifier of the answer option. An identifier must be unique within the question.
-       *
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-optionrefid)
-       */
-      override fun optionRefId(): String = unwrap(this).getOptionRefId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SingleSelectQuestionRuleCategoryAutomationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty):
-          SingleSelectQuestionRuleCategoryAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SingleSelectQuestionRuleCategoryAutomationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SingleSelectQuestionRuleCategoryAutomationProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty
-    }
-  }
-
-  /**
-   * Information about the options in single select questions.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormSingleSelectQuestionPropertiesProperty
-   * evaluationFormSingleSelectQuestionPropertiesProperty =
-   * EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
-   * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
-   * .refId("refId")
-   * .text("text")
-   * // the properties below are optional
-   * .automaticFail(false)
-   * .score(123)
-   * .build()))
-   * // the properties below are optional
-   * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
-   * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
-   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
-   * .category("category")
-   * .condition("condition")
-   * .optionRefId("optionRefId")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .defaultOptionRefId("defaultOptionRefId")
-   * .build())
-   * .displayAs("displayAs")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html)
-   */
-  public interface EvaluationFormSingleSelectQuestionPropertiesProperty {
-    /**
-     * The display mode of the single select question.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-automation)
-     */
-    public fun automation(): Any? = unwrap(this).getAutomation()
-
-    /**
-     * The display mode of the single select question.
-     *
-     * *Allowed values* : `DROPDOWN` | `RADIO`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-displayas)
-     */
-    public fun displayAs(): String? = unwrap(this).getDisplayAs()
-
-    /**
-     * The answer options of the single select question.
-     *
-     * *Minimum* : 2
-     *
-     * *Maximum* : 256
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-options)
-     */
-    public fun options(): Any
-
-    /**
-     * A builder for [EvaluationFormSingleSelectQuestionPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param automation The display mode of the single select question.
-       */
-      public fun automation(automation: IResolvable)
-
-      /**
-       * @param automation The display mode of the single select question.
-       */
-      public fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty)
-
-      /**
-       * @param automation The display mode of the single select question.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e9894990d64228a53c80be65a65f4e5421d5e66c52b694c5709d0bd3219bff93")
-      public
-          fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty.Builder.() -> Unit)
-
-      /**
-       * @param displayAs The display mode of the single select question.
-       * *Allowed values* : `DROPDOWN` | `RADIO`
-       */
-      public fun displayAs(displayAs: String)
-
-      /**
-       * @param options The answer options of the single select question. 
-       * *Minimum* : 2
-       *
-       * *Maximum* : 256
-       */
-      public fun options(options: IResolvable)
-
-      /**
-       * @param options The answer options of the single select question. 
-       * *Minimum* : 2
-       *
-       * *Maximum* : 256
-       */
-      public fun options(options: List<Any>)
-
-      /**
-       * @param options The answer options of the single select question. 
-       * *Minimum* : 2
-       *
-       * *Maximum* : 256
-       */
-      public fun options(vararg options: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
-
-      /**
-       * @param automation The display mode of the single select question.
-       */
-      override fun automation(automation: IResolvable) {
-        cdkBuilder.automation(automation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param automation The display mode of the single select question.
-       */
-      override fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty) {
-        cdkBuilder.automation(automation.let(EvaluationFormSingleSelectQuestionAutomationProperty::unwrap))
-      }
-
-      /**
-       * @param automation The display mode of the single select question.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e9894990d64228a53c80be65a65f4e5421d5e66c52b694c5709d0bd3219bff93")
-      override
-          fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty.Builder.() -> Unit):
-          Unit = automation(EvaluationFormSingleSelectQuestionAutomationProperty(automation))
-
-      /**
-       * @param displayAs The display mode of the single select question.
-       * *Allowed values* : `DROPDOWN` | `RADIO`
-       */
-      override fun displayAs(displayAs: String) {
-        cdkBuilder.displayAs(displayAs)
-      }
-
-      /**
-       * @param options The answer options of the single select question. 
-       * *Minimum* : 2
-       *
-       * *Maximum* : 256
-       */
-      override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param options The answer options of the single select question. 
-       * *Minimum* : 2
-       *
-       * *Maximum* : 256
-       */
-      override fun options(options: List<Any>) {
-        cdkBuilder.options(options)
-      }
-
-      /**
-       * @param options The answer options of the single select question. 
-       * *Minimum* : 2
-       *
-       * *Maximum* : 256
-       */
-      override fun options(vararg options: Any): Unit = options(options.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionPropertiesProperty {
-      /**
-       * The display mode of the single select question.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-automation)
-       */
-      override fun automation(): Any? = unwrap(this).getAutomation()
-
-      /**
-       * The display mode of the single select question.
-       *
-       * *Allowed values* : `DROPDOWN` | `RADIO`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-displayas)
-       */
-      override fun displayAs(): String? = unwrap(this).getDisplayAs()
-
-      /**
-       * The answer options of the single select question.
-       *
-       * *Minimum* : 2
-       *
-       * *Maximum* : 256
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-options)
-       */
-      override fun options(): Any = unwrap(this).getOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EvaluationFormSingleSelectQuestionPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty):
-          EvaluationFormSingleSelectQuestionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject)
-          as? EvaluationFormSingleSelectQuestionPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionPropertiesProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty
-    }
-  }
-
-  /**
-   * Information about the automation configuration in single select questions.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormSingleSelectQuestionOptionProperty
-   * evaluationFormSingleSelectQuestionOptionProperty =
-   * EvaluationFormSingleSelectQuestionOptionProperty.builder()
-   * .refId("refId")
-   * .text("text")
-   * // the properties below are optional
-   * .automaticFail(false)
-   * .score(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html)
-   */
-  public interface EvaluationFormSingleSelectQuestionOptionProperty {
-    /**
-     * The flag to mark the option as automatic fail.
-     *
-     * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-automaticfail)
-     */
-    public fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
-
-    /**
-     * The identifier of the answer option. An identifier must be unique within the question.
-     *
-     * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-refid)
-     */
-    public fun refId(): String
-
-    /**
-     * The score assigned to the answer option.
-     *
-     * *Minimum* : 0
-     *
-     * *Maximum* : 10
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-score)
-     */
-    public fun score(): Number? = unwrap(this).getScore()
-
-    /**
-     * The title of the answer option.
-     *
-     * *Length Constraints* : Minimum length of 1. Maximum length of 128.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-text)
-     */
-    public fun text(): String
-
-    /**
-     * A builder for [EvaluationFormSingleSelectQuestionOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param automaticFail The flag to mark the option as automatic fail.
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       */
-      public fun automaticFail(automaticFail: Boolean)
-
-      /**
-       * @param automaticFail The flag to mark the option as automatic fail.
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       */
-      public fun automaticFail(automaticFail: IResolvable)
-
-      /**
-       * @param refId The identifier of the answer option. An identifier must be unique within the
-       * question. 
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       */
-      public fun refId(refId: String)
-
-      /**
-       * @param score The score assigned to the answer option.
-       * *Minimum* : 0
-       *
-       * *Maximum* : 10
-       */
-      public fun score(score: Number)
-
-      /**
-       * @param text The title of the answer option. 
-       * *Length Constraints* : Minimum length of 1. Maximum length of 128.
-       */
-      public fun text(text: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty.builder()
-
-      /**
-       * @param automaticFail The flag to mark the option as automatic fail.
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       */
-      override fun automaticFail(automaticFail: Boolean) {
-        cdkBuilder.automaticFail(automaticFail)
-      }
-
-      /**
-       * @param automaticFail The flag to mark the option as automatic fail.
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       */
-      override fun automaticFail(automaticFail: IResolvable) {
-        cdkBuilder.automaticFail(automaticFail.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param refId The identifier of the answer option. An identifier must be unique within the
-       * question. 
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       */
-      override fun refId(refId: String) {
-        cdkBuilder.refId(refId)
-      }
-
-      /**
-       * @param score The score assigned to the answer option.
-       * *Minimum* : 0
-       *
-       * *Maximum* : 10
-       */
-      override fun score(score: Number) {
-        cdkBuilder.score(score)
-      }
-
-      /**
-       * @param text The title of the answer option. 
-       * *Length Constraints* : Minimum length of 1. Maximum length of 128.
-       */
-      override fun text(text: String) {
-        cdkBuilder.text(text)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionOptionProperty {
-      /**
-       * The flag to mark the option as automatic fail.
-       *
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-automaticfail)
-       */
-      override fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
-
-      /**
-       * The identifier of the answer option. An identifier must be unique within the question.
-       *
-       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-refid)
-       */
-      override fun refId(): String = unwrap(this).getRefId()
-
-      /**
-       * The score assigned to the answer option.
-       *
-       * *Minimum* : 0
-       *
-       * *Maximum* : 10
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-score)
-       */
-      override fun score(): Number? = unwrap(this).getScore()
-
-      /**
-       * The title of the answer option.
-       *
-       * *Length Constraints* : Minimum length of 1. Maximum length of 128.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-text)
-       */
-      override fun text(): String = unwrap(this).getText()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EvaluationFormSingleSelectQuestionOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty):
-          EvaluationFormSingleSelectQuestionOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EvaluationFormSingleSelectQuestionOptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionOptionProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty
-    }
-  }
-
-  /**
-   * A scoring strategy of the evaluation form.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * ScoringStrategyProperty scoringStrategyProperty = ScoringStrategyProperty.builder()
-   * .mode("mode")
-   * .status("status")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html)
-   */
-  public interface ScoringStrategyProperty {
-    /**
-     * The scoring mode of the evaluation form.
-     *
-     * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html#cfn-connect-evaluationform-scoringstrategy-mode)
-     */
-    public fun mode(): String
-
-    /**
-     * The scoring status of the evaluation form.
-     *
-     * *Allowed values* : `ENABLED` | `DISABLED`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html#cfn-connect-evaluationform-scoringstrategy-status)
-     */
-    public fun status(): String
-
-    /**
-     * A builder for [ScoringStrategyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mode The scoring mode of the evaluation form. 
-       * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
-       */
-      public fun mode(mode: String)
-
-      /**
-       * @param status The scoring status of the evaluation form. 
-       * *Allowed values* : `ENABLED` | `DISABLED`
-       */
-      public fun status(status: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty.builder()
-
-      /**
-       * @param mode The scoring mode of the evaluation form. 
-       * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      /**
-       * @param status The scoring status of the evaluation form. 
-       * *Allowed values* : `ENABLED` | `DISABLED`
-       */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty,
-    ) : CdkObject(cdkObject), ScoringStrategyProperty {
-      /**
-       * The scoring mode of the evaluation form.
-       *
-       * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html#cfn-connect-evaluationform-scoringstrategy-mode)
-       */
-      override fun mode(): String = unwrap(this).getMode()
-
-      /**
-       * The scoring status of the evaluation form.
-       *
-       * *Allowed values* : `ENABLED` | `DISABLED`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html#cfn-connect-evaluationform-scoringstrategy-status)
-       */
-      override fun status(): String = unwrap(this).getStatus()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScoringStrategyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty):
-          ScoringStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as? ScoringStrategyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScoringStrategyProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty
-    }
-  }
-
-  /**
-   * An item at the root level.
-   *
-   * All items must be sections.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormSectionProperty evaluationFormSectionProperty_;
-   * EvaluationFormBaseItemProperty evaluationFormBaseItemProperty =
-   * EvaluationFormBaseItemProperty.builder()
-   * .section(EvaluationFormSectionProperty.builder()
-   * .refId("refId")
-   * .title("title")
-   * // the properties below are optional
-   * .instructions("instructions")
-   * .items(List.of(EvaluationFormItemProperty.builder()
-   * .question(EvaluationFormQuestionProperty.builder()
-   * .questionType("questionType")
-   * .refId("refId")
-   * .title("title")
-   * // the properties below are optional
-   * .instructions("instructions")
-   * .notApplicableEnabled(false)
-   * .questionTypeProperties(EvaluationFormQuestionTypePropertiesProperty.builder()
-   * .numeric(EvaluationFormNumericQuestionPropertiesProperty.builder()
-   * .maxValue(123)
-   * .minValue(123)
-   * // the properties below are optional
-   * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
-   * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
-   * .label("label")
-   * .build())
-   * .build())
-   * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
-   * .maxValue(123)
-   * .minValue(123)
-   * // the properties below are optional
-   * .automaticFail(false)
-   * .score(123)
-   * .build()))
-   * .build())
-   * .singleSelect(EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
-   * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
-   * .refId("refId")
-   * .text("text")
-   * // the properties below are optional
-   * .automaticFail(false)
-   * .score(123)
-   * .build()))
-   * // the properties below are optional
-   * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
-   * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
-   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
-   * .category("category")
-   * .condition("condition")
-   * .optionRefId("optionRefId")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .defaultOptionRefId("defaultOptionRefId")
-   * .build())
-   * .displayAs("displayAs")
-   * .build())
-   * .build())
-   * .weight(123)
-   * .build())
-   * .section(evaluationFormSectionProperty_)
-   * .build()))
-   * .weight(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformbaseitem.html)
-   */
-  public interface EvaluationFormBaseItemProperty {
-    /**
-     * A subsection or inner section of an item.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformbaseitem.html#cfn-connect-evaluationform-evaluationformbaseitem-section)
-     */
-    public fun section(): Any
-
-    /**
-     * A builder for [EvaluationFormBaseItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param section A subsection or inner section of an item. 
-       */
-      public fun section(section: IResolvable)
-
-      /**
-       * @param section A subsection or inner section of an item. 
-       */
-      public fun section(section: EvaluationFormSectionProperty)
-
-      /**
-       * @param section A subsection or inner section of an item. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("75f7b8dd462ca67cd3a8ed539fc8fad8338912c53c9442851afc351f9dc203fe")
-      public fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty.builder()
-
-      /**
-       * @param section A subsection or inner section of an item. 
-       */
-      override fun section(section: IResolvable) {
-        cdkBuilder.section(section.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param section A subsection or inner section of an item. 
-       */
-      override fun section(section: EvaluationFormSectionProperty) {
-        cdkBuilder.section(section.let(EvaluationFormSectionProperty::unwrap))
-      }
-
-      /**
-       * @param section A subsection or inner section of an item. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("75f7b8dd462ca67cd3a8ed539fc8fad8338912c53c9442851afc351f9dc203fe")
-      override fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit): Unit =
-          section(EvaluationFormSectionProperty(section))
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty,
-    ) : CdkObject(cdkObject), EvaluationFormBaseItemProperty {
-      /**
-       * A subsection or inner section of an item.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformbaseitem.html#cfn-connect-evaluationform-evaluationformbaseitem-section)
-       */
-      override fun section(): Any = unwrap(this).getSection()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EvaluationFormBaseItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty):
-          EvaluationFormBaseItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EvaluationFormBaseItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormBaseItemProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty
-    }
-  }
-
-  /**
-   * Information about the option range used for scoring in numeric questions.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormNumericQuestionOptionProperty evaluationFormNumericQuestionOptionProperty =
-   * EvaluationFormNumericQuestionOptionProperty.builder()
-   * .maxValue(123)
-   * .minValue(123)
-   * // the properties below are optional
-   * .automaticFail(false)
-   * .score(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html)
-   */
-  public interface EvaluationFormNumericQuestionOptionProperty {
-    /**
-     * The flag to mark the option as automatic fail.
-     *
-     * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-automaticfail)
-     */
-    public fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
-
-    /**
-     * The maximum answer value of the range option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-maxvalue)
-     */
-    public fun maxValue(): Number
-
-    /**
-     * The minimum answer value of the range option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-minvalue)
-     */
-    public fun minValue(): Number
-
-    /**
-     * The score assigned to answer values within the range option.
-     *
-     * *Minimum* : 0
-     *
-     * *Maximum* : 10
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-score)
-     */
-    public fun score(): Number? = unwrap(this).getScore()
-
-    /**
-     * A builder for [EvaluationFormNumericQuestionOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param automaticFail The flag to mark the option as automatic fail.
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       */
-      public fun automaticFail(automaticFail: Boolean)
-
-      /**
-       * @param automaticFail The flag to mark the option as automatic fail.
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       */
-      public fun automaticFail(automaticFail: IResolvable)
-
-      /**
-       * @param maxValue The maximum answer value of the range option. 
-       */
-      public fun maxValue(maxValue: Number)
-
-      /**
-       * @param minValue The minimum answer value of the range option. 
-       */
-      public fun minValue(minValue: Number)
-
-      /**
-       * @param score The score assigned to answer values within the range option.
-       * *Minimum* : 0
-       *
-       * *Maximum* : 10
-       */
-      public fun score(score: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty.builder()
-
-      /**
-       * @param automaticFail The flag to mark the option as automatic fail.
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       */
-      override fun automaticFail(automaticFail: Boolean) {
-        cdkBuilder.automaticFail(automaticFail)
-      }
-
-      /**
-       * @param automaticFail The flag to mark the option as automatic fail.
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       */
-      override fun automaticFail(automaticFail: IResolvable) {
-        cdkBuilder.automaticFail(automaticFail.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxValue The maximum answer value of the range option. 
-       */
-      override fun maxValue(maxValue: Number) {
-        cdkBuilder.maxValue(maxValue)
-      }
-
-      /**
-       * @param minValue The minimum answer value of the range option. 
-       */
-      override fun minValue(minValue: Number) {
-        cdkBuilder.minValue(minValue)
-      }
-
-      /**
-       * @param score The score assigned to answer values within the range option.
-       * *Minimum* : 0
-       *
-       * *Maximum* : 10
-       */
-      override fun score(score: Number) {
-        cdkBuilder.score(score)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty,
-    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionOptionProperty {
-      /**
-       * The flag to mark the option as automatic fail.
-       *
-       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-automaticfail)
-       */
-      override fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
-
-      /**
-       * The maximum answer value of the range option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-maxvalue)
-       */
-      override fun maxValue(): Number = unwrap(this).getMaxValue()
-
-      /**
-       * The minimum answer value of the range option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-minvalue)
-       */
-      override fun minValue(): Number = unwrap(this).getMinValue()
-
-      /**
-       * The score assigned to answer values within the range option.
-       *
-       * *Minimum* : 0
-       *
-       * *Maximum* : 10
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html#cfn-connect-evaluationform-evaluationformnumericquestionoption-score)
-       */
-      override fun score(): Number? = unwrap(this).getScore()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EvaluationFormNumericQuestionOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty):
-          EvaluationFormNumericQuestionOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EvaluationFormNumericQuestionOptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormNumericQuestionOptionProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty
-    }
-  }
-
-  /**
-   * Information about the property value used in automation of a numeric questions.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * NumericQuestionPropertyValueAutomationProperty numericQuestionPropertyValueAutomationProperty =
-   * NumericQuestionPropertyValueAutomationProperty.builder()
-   * .label("label")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-numericquestionpropertyvalueautomation.html)
-   */
-  public interface NumericQuestionPropertyValueAutomationProperty {
-    /**
-     * The property label of the automation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-numericquestionpropertyvalueautomation.html#cfn-connect-evaluationform-numericquestionpropertyvalueautomation-label)
-     */
-    public fun label(): String
-
-    /**
-     * A builder for [NumericQuestionPropertyValueAutomationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param label The property label of the automation. 
-       */
-      public fun label(label: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty.builder()
-
-      /**
-       * @param label The property label of the automation. 
-       */
-      override fun label(label: String) {
-        cdkBuilder.label(label)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty,
-    ) : CdkObject(cdkObject), NumericQuestionPropertyValueAutomationProperty {
-      /**
-       * The property label of the automation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-numericquestionpropertyvalueautomation.html#cfn-connect-evaluationform-numericquestionpropertyvalueautomation-label)
-       */
-      override fun label(): String = unwrap(this).getLabel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NumericQuestionPropertyValueAutomationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty):
-          NumericQuestionPropertyValueAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NumericQuestionPropertyValueAutomationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NumericQuestionPropertyValueAutomationProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty
-    }
-  }
-
-  /**
-   * Information about the automation configuration in numeric questions.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormNumericQuestionAutomationProperty evaluationFormNumericQuestionAutomationProperty
-   * = EvaluationFormNumericQuestionAutomationProperty.builder()
-   * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
-   * .label("label")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html)
-   */
-  public interface EvaluationFormNumericQuestionAutomationProperty {
-    /**
-     * The property value of the automation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html#cfn-connect-evaluationform-evaluationformnumericquestionautomation-propertyvalue)
-     */
-    public fun propertyValue(): Any
-
-    /**
-     * A builder for [EvaluationFormNumericQuestionAutomationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param propertyValue The property value of the automation. 
-       */
-      public fun propertyValue(propertyValue: IResolvable)
-
-      /**
-       * @param propertyValue The property value of the automation. 
-       */
-      public fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty)
-
-      /**
-       * @param propertyValue The property value of the automation. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c1b7fb14f46a5514785021373b865ef90fc264cc00a77fd4e30965d5c7f300a6")
-      public
-          fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty.builder()
-
-      /**
-       * @param propertyValue The property value of the automation. 
-       */
-      override fun propertyValue(propertyValue: IResolvable) {
-        cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param propertyValue The property value of the automation. 
-       */
-      override fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty) {
-        cdkBuilder.propertyValue(propertyValue.let(NumericQuestionPropertyValueAutomationProperty::unwrap))
-      }
-
-      /**
-       * @param propertyValue The property value of the automation. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c1b7fb14f46a5514785021373b865ef90fc264cc00a77fd4e30965d5c7f300a6")
-      override
-          fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty.Builder.() -> Unit):
-          Unit = propertyValue(NumericQuestionPropertyValueAutomationProperty(propertyValue))
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty,
-    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionAutomationProperty {
-      /**
-       * The property value of the automation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html#cfn-connect-evaluationform-evaluationformnumericquestionautomation-propertyvalue)
-       */
-      override fun propertyValue(): Any = unwrap(this).getPropertyValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EvaluationFormNumericQuestionAutomationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty):
-          EvaluationFormNumericQuestionAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EvaluationFormNumericQuestionAutomationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormNumericQuestionAutomationProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty
-    }
-  }
-
-  /**
-   * The automation options of the single select question.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EvaluationFormSingleSelectQuestionAutomationOptionProperty
-   * evaluationFormSingleSelectQuestionAutomationOptionProperty =
-   * EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
-   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
-   * .category("category")
-   * .condition("condition")
-   * .optionRefId("optionRefId")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomationoption.html)
-   */
-  public interface EvaluationFormSingleSelectQuestionAutomationOptionProperty {
-    /**
-     * The automation option based on a rule category for the single select question.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomationoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomationoption-rulecategory)
-     */
-    public fun ruleCategory(): Any
-
-    /**
-     * A builder for [EvaluationFormSingleSelectQuestionAutomationOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ruleCategory The automation option based on a rule category for the single select
-       * question. 
-       */
-      public fun ruleCategory(ruleCategory: IResolvable)
-
-      /**
-       * @param ruleCategory The automation option based on a rule category for the single select
-       * question. 
-       */
-      public fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty)
-
-      /**
-       * @param ruleCategory The automation option based on a rule category for the single select
-       * question. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f5e2ff25c6d03de1cc3b1528c68ff95d0a888f949e0c19b008f08358a9feb587")
-      public
-          fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
-
-      /**
-       * @param ruleCategory The automation option based on a rule category for the single select
-       * question. 
-       */
-      override fun ruleCategory(ruleCategory: IResolvable) {
-        cdkBuilder.ruleCategory(ruleCategory.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ruleCategory The automation option based on a rule category for the single select
-       * question. 
-       */
-      override fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty) {
-        cdkBuilder.ruleCategory(ruleCategory.let(SingleSelectQuestionRuleCategoryAutomationProperty::unwrap))
-      }
-
-      /**
-       * @param ruleCategory The automation option based on a rule category for the single select
-       * question. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f5e2ff25c6d03de1cc3b1528c68ff95d0a888f949e0c19b008f08358a9feb587")
-      override
-          fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty.Builder.() -> Unit):
-          Unit = ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty(ruleCategory))
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionAutomationOptionProperty {
-      /**
-       * The automation option based on a rule category for the single select question.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomationoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomationoption-rulecategory)
-       */
-      override fun ruleCategory(): Any = unwrap(this).getRuleCategory()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EvaluationFormSingleSelectQuestionAutomationOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty):
-          EvaluationFormSingleSelectQuestionAutomationOptionProperty =
-          CdkObjectWrappers.wrap(cdkObject) as?
-          EvaluationFormSingleSelectQuestionAutomationOptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionAutomationOptionProperty):
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty
-    }
-  }
-
-  /**
    * Information about a section from an evaluation form.
    *
    * A section can contain sections and/or questions. Evaluation forms can only contain sections and
@@ -3586,6 +2422,1170 @@ public open class CfnEvaluationForm internal constructor(
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSectionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSectionProperty
+    }
+  }
+
+  /**
+   * The automation options of the single select question.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormSingleSelectQuestionAutomationOptionProperty
+   * evaluationFormSingleSelectQuestionAutomationOptionProperty =
+   * EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+   * .category("category")
+   * .condition("condition")
+   * .optionRefId("optionRefId")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomationoption.html)
+   */
+  public interface EvaluationFormSingleSelectQuestionAutomationOptionProperty {
+    /**
+     * The automation option based on a rule category for the single select question.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomationoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomationoption-rulecategory)
+     */
+    public fun ruleCategory(): Any
+
+    /**
+     * A builder for [EvaluationFormSingleSelectQuestionAutomationOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ruleCategory The automation option based on a rule category for the single select
+       * question. 
+       */
+      public fun ruleCategory(ruleCategory: IResolvable)
+
+      /**
+       * @param ruleCategory The automation option based on a rule category for the single select
+       * question. 
+       */
+      public fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty)
+
+      /**
+       * @param ruleCategory The automation option based on a rule category for the single select
+       * question. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f5e2ff25c6d03de1cc3b1528c68ff95d0a888f949e0c19b008f08358a9feb587")
+      public
+          fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+
+      /**
+       * @param ruleCategory The automation option based on a rule category for the single select
+       * question. 
+       */
+      override fun ruleCategory(ruleCategory: IResolvable) {
+        cdkBuilder.ruleCategory(ruleCategory.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ruleCategory The automation option based on a rule category for the single select
+       * question. 
+       */
+      override fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty) {
+        cdkBuilder.ruleCategory(ruleCategory.let(SingleSelectQuestionRuleCategoryAutomationProperty::unwrap))
+      }
+
+      /**
+       * @param ruleCategory The automation option based on a rule category for the single select
+       * question. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f5e2ff25c6d03de1cc3b1528c68ff95d0a888f949e0c19b008f08358a9feb587")
+      override
+          fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty.Builder.() -> Unit):
+          Unit = ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty(ruleCategory))
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty,
+    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionAutomationOptionProperty {
+      /**
+       * The automation option based on a rule category for the single select question.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomationoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomationoption-rulecategory)
+       */
+      override fun ruleCategory(): Any = unwrap(this).getRuleCategory()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EvaluationFormSingleSelectQuestionAutomationOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty):
+          EvaluationFormSingleSelectQuestionAutomationOptionProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationFormSingleSelectQuestionAutomationOptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionAutomationOptionProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty
+    }
+  }
+
+  /**
+   * Information about the automation configuration in single select questions.
+   *
+   * Automation options are evaluated in order, and the first matched option is applied. If no
+   * automation option matches, and there is a default option, then the default option is applied.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormSingleSelectQuestionAutomationProperty
+   * evaluationFormSingleSelectQuestionAutomationProperty =
+   * EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+   * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+   * .category("category")
+   * .condition("condition")
+   * .optionRefId("optionRefId")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .defaultOptionRefId("defaultOptionRefId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html)
+   */
+  public interface EvaluationFormSingleSelectQuestionAutomationProperty {
+    /**
+     * The identifier of the default answer option, when none of the automation options match the
+     * criteria.
+     *
+     * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-defaultoptionrefid)
+     */
+    public fun defaultOptionRefId(): String? = unwrap(this).getDefaultOptionRefId()
+
+    /**
+     * The automation options of the single select question.
+     *
+     * *Minimum* : 1
+     *
+     * *Maximum* : 20
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-options)
+     */
+    public fun options(): Any
+
+    /**
+     * A builder for [EvaluationFormSingleSelectQuestionAutomationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultOptionRefId The identifier of the default answer option, when none of the
+       * automation options match the criteria.
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       */
+      public fun defaultOptionRefId(defaultOptionRefId: String)
+
+      /**
+       * @param options The automation options of the single select question. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 20
+       */
+      public fun options(options: IResolvable)
+
+      /**
+       * @param options The automation options of the single select question. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 20
+       */
+      public fun options(options: List<Any>)
+
+      /**
+       * @param options The automation options of the single select question. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 20
+       */
+      public fun options(vararg options: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+
+      /**
+       * @param defaultOptionRefId The identifier of the default answer option, when none of the
+       * automation options match the criteria.
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       */
+      override fun defaultOptionRefId(defaultOptionRefId: String) {
+        cdkBuilder.defaultOptionRefId(defaultOptionRefId)
+      }
+
+      /**
+       * @param options The automation options of the single select question. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 20
+       */
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param options The automation options of the single select question. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 20
+       */
+      override fun options(options: List<Any>) {
+        cdkBuilder.options(options)
+      }
+
+      /**
+       * @param options The automation options of the single select question. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 20
+       */
+      override fun options(vararg options: Any): Unit = options(options.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty,
+    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionAutomationProperty {
+      /**
+       * The identifier of the default answer option, when none of the automation options match the
+       * criteria.
+       *
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-defaultoptionrefid)
+       */
+      override fun defaultOptionRefId(): String? = unwrap(this).getDefaultOptionRefId()
+
+      /**
+       * The automation options of the single select question.
+       *
+       * *Minimum* : 1
+       *
+       * *Maximum* : 20
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-options)
+       */
+      override fun options(): Any = unwrap(this).getOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EvaluationFormSingleSelectQuestionAutomationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty):
+          EvaluationFormSingleSelectQuestionAutomationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? EvaluationFormSingleSelectQuestionAutomationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionAutomationProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty
+    }
+  }
+
+  /**
+   * Information about the automation configuration in single select questions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormSingleSelectQuestionOptionProperty
+   * evaluationFormSingleSelectQuestionOptionProperty =
+   * EvaluationFormSingleSelectQuestionOptionProperty.builder()
+   * .refId("refId")
+   * .text("text")
+   * // the properties below are optional
+   * .automaticFail(false)
+   * .score(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html)
+   */
+  public interface EvaluationFormSingleSelectQuestionOptionProperty {
+    /**
+     * The flag to mark the option as automatic fail.
+     *
+     * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-automaticfail)
+     */
+    public fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
+
+    /**
+     * The identifier of the answer option. An identifier must be unique within the question.
+     *
+     * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-refid)
+     */
+    public fun refId(): String
+
+    /**
+     * The score assigned to the answer option.
+     *
+     * *Minimum* : 0
+     *
+     * *Maximum* : 10
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-score)
+     */
+    public fun score(): Number? = unwrap(this).getScore()
+
+    /**
+     * The title of the answer option.
+     *
+     * *Length Constraints* : Minimum length of 1. Maximum length of 128.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-text)
+     */
+    public fun text(): String
+
+    /**
+     * A builder for [EvaluationFormSingleSelectQuestionOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param automaticFail The flag to mark the option as automatic fail.
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       */
+      public fun automaticFail(automaticFail: Boolean)
+
+      /**
+       * @param automaticFail The flag to mark the option as automatic fail.
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       */
+      public fun automaticFail(automaticFail: IResolvable)
+
+      /**
+       * @param refId The identifier of the answer option. An identifier must be unique within the
+       * question. 
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       */
+      public fun refId(refId: String)
+
+      /**
+       * @param score The score assigned to the answer option.
+       * *Minimum* : 0
+       *
+       * *Maximum* : 10
+       */
+      public fun score(score: Number)
+
+      /**
+       * @param text The title of the answer option. 
+       * *Length Constraints* : Minimum length of 1. Maximum length of 128.
+       */
+      public fun text(text: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty.builder()
+
+      /**
+       * @param automaticFail The flag to mark the option as automatic fail.
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       */
+      override fun automaticFail(automaticFail: Boolean) {
+        cdkBuilder.automaticFail(automaticFail)
+      }
+
+      /**
+       * @param automaticFail The flag to mark the option as automatic fail.
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       */
+      override fun automaticFail(automaticFail: IResolvable) {
+        cdkBuilder.automaticFail(automaticFail.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param refId The identifier of the answer option. An identifier must be unique within the
+       * question. 
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       */
+      override fun refId(refId: String) {
+        cdkBuilder.refId(refId)
+      }
+
+      /**
+       * @param score The score assigned to the answer option.
+       * *Minimum* : 0
+       *
+       * *Maximum* : 10
+       */
+      override fun score(score: Number) {
+        cdkBuilder.score(score)
+      }
+
+      /**
+       * @param text The title of the answer option. 
+       * *Length Constraints* : Minimum length of 1. Maximum length of 128.
+       */
+      override fun text(text: String) {
+        cdkBuilder.text(text)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty,
+    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionOptionProperty {
+      /**
+       * The flag to mark the option as automatic fail.
+       *
+       * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-automaticfail)
+       */
+      override fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
+
+      /**
+       * The identifier of the answer option. An identifier must be unique within the question.
+       *
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-refid)
+       */
+      override fun refId(): String = unwrap(this).getRefId()
+
+      /**
+       * The score assigned to the answer option.
+       *
+       * *Minimum* : 0
+       *
+       * *Maximum* : 10
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-score)
+       */
+      override fun score(): Number? = unwrap(this).getScore()
+
+      /**
+       * The title of the answer option.
+       *
+       * *Length Constraints* : Minimum length of 1. Maximum length of 128.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html#cfn-connect-evaluationform-evaluationformsingleselectquestionoption-text)
+       */
+      override fun text(): String = unwrap(this).getText()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EvaluationFormSingleSelectQuestionOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty):
+          EvaluationFormSingleSelectQuestionOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationFormSingleSelectQuestionOptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionOptionProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty
+    }
+  }
+
+  /**
+   * Information about the options in single select questions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * EvaluationFormSingleSelectQuestionPropertiesProperty
+   * evaluationFormSingleSelectQuestionPropertiesProperty =
+   * EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
+   * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
+   * .refId("refId")
+   * .text("text")
+   * // the properties below are optional
+   * .automaticFail(false)
+   * .score(123)
+   * .build()))
+   * // the properties below are optional
+   * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+   * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+   * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+   * .category("category")
+   * .condition("condition")
+   * .optionRefId("optionRefId")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .defaultOptionRefId("defaultOptionRefId")
+   * .build())
+   * .displayAs("displayAs")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html)
+   */
+  public interface EvaluationFormSingleSelectQuestionPropertiesProperty {
+    /**
+     * The display mode of the single select question.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-automation)
+     */
+    public fun automation(): Any? = unwrap(this).getAutomation()
+
+    /**
+     * The display mode of the single select question.
+     *
+     * *Allowed values* : `DROPDOWN` | `RADIO`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-displayas)
+     */
+    public fun displayAs(): String? = unwrap(this).getDisplayAs()
+
+    /**
+     * The answer options of the single select question.
+     *
+     * *Minimum* : 2
+     *
+     * *Maximum* : 256
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-options)
+     */
+    public fun options(): Any
+
+    /**
+     * A builder for [EvaluationFormSingleSelectQuestionPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param automation The display mode of the single select question.
+       */
+      public fun automation(automation: IResolvable)
+
+      /**
+       * @param automation The display mode of the single select question.
+       */
+      public fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty)
+
+      /**
+       * @param automation The display mode of the single select question.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e9894990d64228a53c80be65a65f4e5421d5e66c52b694c5709d0bd3219bff93")
+      public
+          fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty.Builder.() -> Unit)
+
+      /**
+       * @param displayAs The display mode of the single select question.
+       * *Allowed values* : `DROPDOWN` | `RADIO`
+       */
+      public fun displayAs(displayAs: String)
+
+      /**
+       * @param options The answer options of the single select question. 
+       * *Minimum* : 2
+       *
+       * *Maximum* : 256
+       */
+      public fun options(options: IResolvable)
+
+      /**
+       * @param options The answer options of the single select question. 
+       * *Minimum* : 2
+       *
+       * *Maximum* : 256
+       */
+      public fun options(options: List<Any>)
+
+      /**
+       * @param options The answer options of the single select question. 
+       * *Minimum* : 2
+       *
+       * *Maximum* : 256
+       */
+      public fun options(vararg options: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
+
+      /**
+       * @param automation The display mode of the single select question.
+       */
+      override fun automation(automation: IResolvable) {
+        cdkBuilder.automation(automation.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param automation The display mode of the single select question.
+       */
+      override fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty) {
+        cdkBuilder.automation(automation.let(EvaluationFormSingleSelectQuestionAutomationProperty::unwrap))
+      }
+
+      /**
+       * @param automation The display mode of the single select question.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e9894990d64228a53c80be65a65f4e5421d5e66c52b694c5709d0bd3219bff93")
+      override
+          fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty.Builder.() -> Unit):
+          Unit = automation(EvaluationFormSingleSelectQuestionAutomationProperty(automation))
+
+      /**
+       * @param displayAs The display mode of the single select question.
+       * *Allowed values* : `DROPDOWN` | `RADIO`
+       */
+      override fun displayAs(displayAs: String) {
+        cdkBuilder.displayAs(displayAs)
+      }
+
+      /**
+       * @param options The answer options of the single select question. 
+       * *Minimum* : 2
+       *
+       * *Maximum* : 256
+       */
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param options The answer options of the single select question. 
+       * *Minimum* : 2
+       *
+       * *Maximum* : 256
+       */
+      override fun options(options: List<Any>) {
+        cdkBuilder.options(options)
+      }
+
+      /**
+       * @param options The answer options of the single select question. 
+       * *Minimum* : 2
+       *
+       * *Maximum* : 256
+       */
+      override fun options(vararg options: Any): Unit = options(options.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty,
+    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionPropertiesProperty {
+      /**
+       * The display mode of the single select question.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-automation)
+       */
+      override fun automation(): Any? = unwrap(this).getAutomation()
+
+      /**
+       * The display mode of the single select question.
+       *
+       * *Allowed values* : `DROPDOWN` | `RADIO`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-displayas)
+       */
+      override fun displayAs(): String? = unwrap(this).getDisplayAs()
+
+      /**
+       * The answer options of the single select question.
+       *
+       * *Minimum* : 2
+       *
+       * *Maximum* : 256
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html#cfn-connect-evaluationform-evaluationformsingleselectquestionproperties-options)
+       */
+      override fun options(): Any = unwrap(this).getOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EvaluationFormSingleSelectQuestionPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty):
+          EvaluationFormSingleSelectQuestionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? EvaluationFormSingleSelectQuestionPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionPropertiesProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty
+    }
+  }
+
+  /**
+   * Information about the property value used in automation of a numeric questions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * NumericQuestionPropertyValueAutomationProperty numericQuestionPropertyValueAutomationProperty =
+   * NumericQuestionPropertyValueAutomationProperty.builder()
+   * .label("label")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-numericquestionpropertyvalueautomation.html)
+   */
+  public interface NumericQuestionPropertyValueAutomationProperty {
+    /**
+     * The property label of the automation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-numericquestionpropertyvalueautomation.html#cfn-connect-evaluationform-numericquestionpropertyvalueautomation-label)
+     */
+    public fun label(): String
+
+    /**
+     * A builder for [NumericQuestionPropertyValueAutomationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param label The property label of the automation. 
+       */
+      public fun label(label: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty.builder()
+
+      /**
+       * @param label The property label of the automation. 
+       */
+      override fun label(label: String) {
+        cdkBuilder.label(label)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty,
+    ) : CdkObject(cdkObject), NumericQuestionPropertyValueAutomationProperty {
+      /**
+       * The property label of the automation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-numericquestionpropertyvalueautomation.html#cfn-connect-evaluationform-numericquestionpropertyvalueautomation-label)
+       */
+      override fun label(): String = unwrap(this).getLabel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NumericQuestionPropertyValueAutomationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty):
+          NumericQuestionPropertyValueAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NumericQuestionPropertyValueAutomationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NumericQuestionPropertyValueAutomationProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty
+    }
+  }
+
+  /**
+   * A scoring strategy of the evaluation form.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * ScoringStrategyProperty scoringStrategyProperty = ScoringStrategyProperty.builder()
+   * .mode("mode")
+   * .status("status")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html)
+   */
+  public interface ScoringStrategyProperty {
+    /**
+     * The scoring mode of the evaluation form.
+     *
+     * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html#cfn-connect-evaluationform-scoringstrategy-mode)
+     */
+    public fun mode(): String
+
+    /**
+     * The scoring status of the evaluation form.
+     *
+     * *Allowed values* : `ENABLED` | `DISABLED`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html#cfn-connect-evaluationform-scoringstrategy-status)
+     */
+    public fun status(): String
+
+    /**
+     * A builder for [ScoringStrategyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mode The scoring mode of the evaluation form. 
+       * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
+       */
+      public fun mode(mode: String)
+
+      /**
+       * @param status The scoring status of the evaluation form. 
+       * *Allowed values* : `ENABLED` | `DISABLED`
+       */
+      public fun status(status: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty.builder()
+
+      /**
+       * @param mode The scoring mode of the evaluation form. 
+       * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      /**
+       * @param status The scoring status of the evaluation form. 
+       * *Allowed values* : `ENABLED` | `DISABLED`
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty,
+    ) : CdkObject(cdkObject), ScoringStrategyProperty {
+      /**
+       * The scoring mode of the evaluation form.
+       *
+       * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html#cfn-connect-evaluationform-scoringstrategy-mode)
+       */
+      override fun mode(): String = unwrap(this).getMode()
+
+      /**
+       * The scoring status of the evaluation form.
+       *
+       * *Allowed values* : `ENABLED` | `DISABLED`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html#cfn-connect-evaluationform-scoringstrategy-status)
+       */
+      override fun status(): String = unwrap(this).getStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScoringStrategyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty):
+          ScoringStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as? ScoringStrategyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScoringStrategyProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty
+    }
+  }
+
+  /**
+   * Information about the automation option based on a rule category for a single select question.
+   *
+   * *Length Constraints* : Minimum length of 1. Maximum length of 50.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * SingleSelectQuestionRuleCategoryAutomationProperty
+   * singleSelectQuestionRuleCategoryAutomationProperty =
+   * SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+   * .category("category")
+   * .condition("condition")
+   * .optionRefId("optionRefId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html)
+   */
+  public interface SingleSelectQuestionRuleCategoryAutomationProperty {
+    /**
+     * The category name, as defined in Rules.
+     *
+     * *Minimum* : 1
+     *
+     * *Maximum* : 50
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-category)
+     */
+    public fun category(): String
+
+    /**
+     * The condition to apply for the automation option.
+     *
+     * If the condition is PRESENT, then the option is applied when the contact data includes the
+     * category. Similarly, if the condition is NOT_PRESENT, then the option is applied when the
+     * contact data does not include the category.
+     *
+     * *Allowed values* : `PRESENT` | `NOT_PRESENT`
+     *
+     * *Maximum* : 50
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-condition)
+     */
+    public fun condition(): String
+
+    /**
+     * The identifier of the answer option. An identifier must be unique within the question.
+     *
+     * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-optionrefid)
+     */
+    public fun optionRefId(): String
+
+    /**
+     * A builder for [SingleSelectQuestionRuleCategoryAutomationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param category The category name, as defined in Rules. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 50
+       */
+      public fun category(category: String)
+
+      /**
+       * @param condition The condition to apply for the automation option. 
+       * If the condition is PRESENT, then the option is applied when the contact data includes the
+       * category. Similarly, if the condition is NOT_PRESENT, then the option is applied when the
+       * contact data does not include the category.
+       *
+       * *Allowed values* : `PRESENT` | `NOT_PRESENT`
+       *
+       * *Maximum* : 50
+       */
+      public fun condition(condition: String)
+
+      /**
+       * @param optionRefId The identifier of the answer option. An identifier must be unique within
+       * the question. 
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       */
+      public fun optionRefId(optionRefId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+
+      /**
+       * @param category The category name, as defined in Rules. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 50
+       */
+      override fun category(category: String) {
+        cdkBuilder.category(category)
+      }
+
+      /**
+       * @param condition The condition to apply for the automation option. 
+       * If the condition is PRESENT, then the option is applied when the contact data includes the
+       * category. Similarly, if the condition is NOT_PRESENT, then the option is applied when the
+       * contact data does not include the category.
+       *
+       * *Allowed values* : `PRESENT` | `NOT_PRESENT`
+       *
+       * *Maximum* : 50
+       */
+      override fun condition(condition: String) {
+        cdkBuilder.condition(condition)
+      }
+
+      /**
+       * @param optionRefId The identifier of the answer option. An identifier must be unique within
+       * the question. 
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       */
+      override fun optionRefId(optionRefId: String) {
+        cdkBuilder.optionRefId(optionRefId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty,
+    ) : CdkObject(cdkObject), SingleSelectQuestionRuleCategoryAutomationProperty {
+      /**
+       * The category name, as defined in Rules.
+       *
+       * *Minimum* : 1
+       *
+       * *Maximum* : 50
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-category)
+       */
+      override fun category(): String = unwrap(this).getCategory()
+
+      /**
+       * The condition to apply for the automation option.
+       *
+       * If the condition is PRESENT, then the option is applied when the contact data includes the
+       * category. Similarly, if the condition is NOT_PRESENT, then the option is applied when the
+       * contact data does not include the category.
+       *
+       * *Allowed values* : `PRESENT` | `NOT_PRESENT`
+       *
+       * *Maximum* : 50
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-condition)
+       */
+      override fun condition(): String = unwrap(this).getCondition()
+
+      /**
+       * The identifier of the answer option. An identifier must be unique within the question.
+       *
+       * *Length Constraints* : Minimum length of 1. Maximum length of 40.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-singleselectquestionrulecategoryautomation.html#cfn-connect-evaluationform-singleselectquestionrulecategoryautomation-optionrefid)
+       */
+      override fun optionRefId(): String = unwrap(this).getOptionRefId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SingleSelectQuestionRuleCategoryAutomationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty):
+          SingleSelectQuestionRuleCategoryAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleSelectQuestionRuleCategoryAutomationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SingleSelectQuestionRuleCategoryAutomationProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty
     }
   }
 }

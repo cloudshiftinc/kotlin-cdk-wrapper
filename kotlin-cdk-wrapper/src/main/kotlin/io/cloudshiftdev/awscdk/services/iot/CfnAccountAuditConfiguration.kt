@@ -509,6 +509,102 @@ public open class CfnAccountAuditConfiguration internal constructor(
   }
 
   /**
+   * Which audit checks are enabled and disabled for this account.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * AuditCheckConfigurationProperty auditCheckConfigurationProperty =
+   * AuditCheckConfigurationProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.html)
+   */
+  public interface AuditCheckConfigurationProperty {
+    /**
+     * True if this audit check is enabled for this account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [AuditCheckConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled True if this audit check is enabled for this account.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled True if this audit check is enabled for this account.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty.builder()
+
+      /**
+       * @param enabled True if this audit check is enabled for this account.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled True if this audit check is enabled for this account.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty,
+    ) : CdkObject(cdkObject), AuditCheckConfigurationProperty {
+      /**
+       * True if this audit check is enabled for this account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AuditCheckConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty):
+          AuditCheckConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuditCheckConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AuditCheckConfigurationProperty):
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty
+    }
+  }
+
+  /**
    * The types of audit checks that can be performed.
    *
    * Example:
@@ -1768,6 +1864,122 @@ public open class CfnAccountAuditConfiguration internal constructor(
   }
 
   /**
+   * The configuration of the audit notification target.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * AuditNotificationTargetConfigurationsProperty auditNotificationTargetConfigurationsProperty =
+   * AuditNotificationTargetConfigurationsProperty.builder()
+   * .sns(AuditNotificationTargetProperty.builder()
+   * .enabled(false)
+   * .roleArn("roleArn")
+   * .targetArn("targetArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtargetconfigurations.html)
+   */
+  public interface AuditNotificationTargetConfigurationsProperty {
+    /**
+     * The `Sns` notification target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtargetconfigurations.html#cfn-iot-accountauditconfiguration-auditnotificationtargetconfigurations-sns)
+     */
+    public fun sns(): Any? = unwrap(this).getSns()
+
+    /**
+     * A builder for [AuditNotificationTargetConfigurationsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sns The `Sns` notification target.
+       */
+      public fun sns(sns: IResolvable)
+
+      /**
+       * @param sns The `Sns` notification target.
+       */
+      public fun sns(sns: AuditNotificationTargetProperty)
+
+      /**
+       * @param sns The `Sns` notification target.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fb90c3d3c3cb7a59bdab3a99f45ae84f3033c4f55c30c8083a8d8a41099079b2")
+      public fun sns(sns: AuditNotificationTargetProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty.builder()
+
+      /**
+       * @param sns The `Sns` notification target.
+       */
+      override fun sns(sns: IResolvable) {
+        cdkBuilder.sns(sns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sns The `Sns` notification target.
+       */
+      override fun sns(sns: AuditNotificationTargetProperty) {
+        cdkBuilder.sns(sns.let(AuditNotificationTargetProperty::unwrap))
+      }
+
+      /**
+       * @param sns The `Sns` notification target.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fb90c3d3c3cb7a59bdab3a99f45ae84f3033c4f55c30c8083a8d8a41099079b2")
+      override fun sns(sns: AuditNotificationTargetProperty.Builder.() -> Unit): Unit =
+          sns(AuditNotificationTargetProperty(sns))
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty,
+    ) : CdkObject(cdkObject), AuditNotificationTargetConfigurationsProperty {
+      /**
+       * The `Sns` notification target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtargetconfigurations.html#cfn-iot-accountauditconfiguration-auditnotificationtargetconfigurations-sns)
+       */
+      override fun sns(): Any? = unwrap(this).getSns()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AuditNotificationTargetConfigurationsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty):
+          AuditNotificationTargetConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuditNotificationTargetConfigurationsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AuditNotificationTargetConfigurationsProperty):
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty
+    }
+  }
+
+  /**
    * Information about the targets to which audit notifications are sent.
    *
    * Example:
@@ -1916,218 +2128,6 @@ public open class CfnAccountAuditConfiguration internal constructor(
           software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty
-    }
-  }
-
-  /**
-   * Which audit checks are enabled and disabled for this account.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * AuditCheckConfigurationProperty auditCheckConfigurationProperty =
-   * AuditCheckConfigurationProperty.builder()
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.html)
-   */
-  public interface AuditCheckConfigurationProperty {
-    /**
-     * True if this audit check is enabled for this account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfiguration-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [AuditCheckConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled True if this audit check is enabled for this account.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled True if this audit check is enabled for this account.
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty.builder()
-
-      /**
-       * @param enabled True if this audit check is enabled for this account.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled True if this audit check is enabled for this account.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty,
-    ) : CdkObject(cdkObject), AuditCheckConfigurationProperty {
-      /**
-       * True if this audit check is enabled for this account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfiguration-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AuditCheckConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty):
-          AuditCheckConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AuditCheckConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuditCheckConfigurationProperty):
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty
-    }
-  }
-
-  /**
-   * The configuration of the audit notification target.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * AuditNotificationTargetConfigurationsProperty auditNotificationTargetConfigurationsProperty =
-   * AuditNotificationTargetConfigurationsProperty.builder()
-   * .sns(AuditNotificationTargetProperty.builder()
-   * .enabled(false)
-   * .roleArn("roleArn")
-   * .targetArn("targetArn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtargetconfigurations.html)
-   */
-  public interface AuditNotificationTargetConfigurationsProperty {
-    /**
-     * The `Sns` notification target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtargetconfigurations.html#cfn-iot-accountauditconfiguration-auditnotificationtargetconfigurations-sns)
-     */
-    public fun sns(): Any? = unwrap(this).getSns()
-
-    /**
-     * A builder for [AuditNotificationTargetConfigurationsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param sns The `Sns` notification target.
-       */
-      public fun sns(sns: IResolvable)
-
-      /**
-       * @param sns The `Sns` notification target.
-       */
-      public fun sns(sns: AuditNotificationTargetProperty)
-
-      /**
-       * @param sns The `Sns` notification target.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fb90c3d3c3cb7a59bdab3a99f45ae84f3033c4f55c30c8083a8d8a41099079b2")
-      public fun sns(sns: AuditNotificationTargetProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty.builder()
-
-      /**
-       * @param sns The `Sns` notification target.
-       */
-      override fun sns(sns: IResolvable) {
-        cdkBuilder.sns(sns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sns The `Sns` notification target.
-       */
-      override fun sns(sns: AuditNotificationTargetProperty) {
-        cdkBuilder.sns(sns.let(AuditNotificationTargetProperty::unwrap))
-      }
-
-      /**
-       * @param sns The `Sns` notification target.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fb90c3d3c3cb7a59bdab3a99f45ae84f3033c4f55c30c8083a8d8a41099079b2")
-      override fun sns(sns: AuditNotificationTargetProperty.Builder.() -> Unit): Unit =
-          sns(AuditNotificationTargetProperty(sns))
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty,
-    ) : CdkObject(cdkObject), AuditNotificationTargetConfigurationsProperty {
-      /**
-       * The `Sns` notification target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtargetconfigurations.html#cfn-iot-accountauditconfiguration-auditnotificationtargetconfigurations-sns)
-       */
-      override fun sns(): Any? = unwrap(this).getSns()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AuditNotificationTargetConfigurationsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty):
-          AuditNotificationTargetConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AuditNotificationTargetConfigurationsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuditNotificationTargetConfigurationsProperty):
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty
     }
   }
 }

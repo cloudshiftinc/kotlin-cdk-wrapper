@@ -371,160 +371,6 @@ public open class CfnHealthCheck internal constructor(
   }
 
   /**
-   * The `HealthCheckTag` property describes one key-value pair that is associated with an
-   * `AWS::Route53::HealthCheck` resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.route53.*;
-   * HealthCheckTagProperty healthCheckTagProperty = HealthCheckTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html)
-   */
-  public interface HealthCheckTagProperty {
-    /**
-     * The value of `Key` depends on the operation that you want to perform:.
-     *
-     * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give the
-     * new tag.
-     * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
-     * * *Delete a key* : `Key` is the name of the tag you want to remove.
-     * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
-     * console, the list of your health checks includes a *Name* column that lets you see the name that
-     * you've given to each health check.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value of `Value` depends on the operation that you want to perform:.
-     *
-     * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
-     * the new tag.
-     * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [HealthCheckTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The value of `Key` depends on the operation that you want to perform:. 
-       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
-       * * *Delete a key* : `Key` is the name of the tag you want to remove.
-       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
-       * console, the list of your health checks includes a *Name* column that lets you see the name
-       * that you've given to each health check.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of `Value` depends on the operation that you want to perform:. 
-       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty.Builder =
-          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty.builder()
-
-      /**
-       * @param key The value of `Key` depends on the operation that you want to perform:. 
-       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
-       * * *Delete a key* : `Key` is the name of the tag you want to remove.
-       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
-       * console, the list of your health checks includes a *Name* column that lets you see the name
-       * that you've given to each health check.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of `Value` depends on the operation that you want to perform:. 
-       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty,
-    ) : CdkObject(cdkObject), HealthCheckTagProperty {
-      /**
-       * The value of `Key` depends on the operation that you want to perform:.
-       *
-       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
-       * * *Delete a key* : `Key` is the name of the tag you want to remove.
-       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
-       * console, the list of your health checks includes a *Name* column that lets you see the name
-       * that you've given to each health check.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value of `Value` depends on the operation that you want to perform:.
-       *
-       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty):
-          HealthCheckTagProperty = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckTagProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HealthCheckTagProperty):
-          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty
-    }
-  }
-
-  /**
    * A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health
    * checkers to use to determine whether the specified health check is healthy.
    *
@@ -2282,6 +2128,160 @@ public open class CfnHealthCheck internal constructor(
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty
+    }
+  }
+
+  /**
+   * The `HealthCheckTag` property describes one key-value pair that is associated with an
+   * `AWS::Route53::HealthCheck` resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.route53.*;
+   * HealthCheckTagProperty healthCheckTagProperty = HealthCheckTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html)
+   */
+  public interface HealthCheckTagProperty {
+    /**
+     * The value of `Key` depends on the operation that you want to perform:.
+     *
+     * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give the
+     * new tag.
+     * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
+     * * *Delete a key* : `Key` is the name of the tag you want to remove.
+     * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
+     * console, the list of your health checks includes a *Name* column that lets you see the name that
+     * you've given to each health check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of `Value` depends on the operation that you want to perform:.
+     *
+     * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
+     * the new tag.
+     * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [HealthCheckTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The value of `Key` depends on the operation that you want to perform:. 
+       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
+       * * *Delete a key* : `Key` is the name of the tag you want to remove.
+       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
+       * console, the list of your health checks includes a *Name* column that lets you see the name
+       * that you've given to each health check.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of `Value` depends on the operation that you want to perform:. 
+       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty.Builder =
+          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty.builder()
+
+      /**
+       * @param key The value of `Key` depends on the operation that you want to perform:. 
+       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
+       * * *Delete a key* : `Key` is the name of the tag you want to remove.
+       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
+       * console, the list of your health checks includes a *Name* column that lets you see the name
+       * that you've given to each health check.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of `Value` depends on the operation that you want to perform:. 
+       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty,
+    ) : CdkObject(cdkObject), HealthCheckTagProperty {
+      /**
+       * The value of `Key` depends on the operation that you want to perform:.
+       *
+       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
+       * * *Delete a key* : `Key` is the name of the tag you want to remove.
+       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
+       * console, the list of your health checks includes a *Name* column that lets you see the name
+       * that you've given to each health check.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of `Value` depends on the operation that you want to perform:.
+       *
+       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty):
+          HealthCheckTagProperty = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HealthCheckTagProperty):
+          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty
     }
   }
 }

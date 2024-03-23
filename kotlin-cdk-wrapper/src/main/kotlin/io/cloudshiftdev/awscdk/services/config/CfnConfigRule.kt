@@ -799,6 +799,413 @@ public open class CfnConfigRule internal constructor(
   }
 
   /**
+   * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of
+   * contributors that affect the compliance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * ComplianceProperty complianceProperty = ComplianceProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-compliance.html)
+   */
+  public interface ComplianceProperty {
+    /**
+     * Indicates whether an AWS resource or AWS Config rule is compliant.
+     *
+     * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A
+     * resource is noncompliant if it does not comply with one or more of these rules.
+     *
+     * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is
+     * noncompliant if any of these resources do not comply.
+     *
+     * AWS Config returns the `INSUFFICIENT_DATA` value when no evaluation results are available for
+     * the AWS resource or AWS Config rule.
+     *
+     * For the `Compliance` data type, AWS Config supports only `COMPLIANT` , `NON_COMPLIANT` , and
+     * `INSUFFICIENT_DATA` values. AWS Config does not support the `NOT_APPLICABLE` value for the
+     * `Compliance` data type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-compliance.html#cfn-config-configrule-compliance-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ComplianceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type Indicates whether an AWS resource or AWS Config rule is compliant.
+       * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A
+       * resource is noncompliant if it does not comply with one or more of these rules.
+       *
+       * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule
+       * is noncompliant if any of these resources do not comply.
+       *
+       * AWS Config returns the `INSUFFICIENT_DATA` value when no evaluation results are available
+       * for the AWS resource or AWS Config rule.
+       *
+       * For the `Compliance` data type, AWS Config supports only `COMPLIANT` , `NON_COMPLIANT` ,
+       * and `INSUFFICIENT_DATA` values. AWS Config does not support the `NOT_APPLICABLE` value for the
+       * `Compliance` data type.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty.Builder =
+          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty.builder()
+
+      /**
+       * @param type Indicates whether an AWS resource or AWS Config rule is compliant.
+       * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A
+       * resource is noncompliant if it does not comply with one or more of these rules.
+       *
+       * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule
+       * is noncompliant if any of these resources do not comply.
+       *
+       * AWS Config returns the `INSUFFICIENT_DATA` value when no evaluation results are available
+       * for the AWS resource or AWS Config rule.
+       *
+       * For the `Compliance` data type, AWS Config supports only `COMPLIANT` , `NON_COMPLIANT` ,
+       * and `INSUFFICIENT_DATA` values. AWS Config does not support the `NOT_APPLICABLE` value for the
+       * `Compliance` data type.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty,
+    ) : CdkObject(cdkObject), ComplianceProperty {
+      /**
+       * Indicates whether an AWS resource or AWS Config rule is compliant.
+       *
+       * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A
+       * resource is noncompliant if it does not comply with one or more of these rules.
+       *
+       * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule
+       * is noncompliant if any of these resources do not comply.
+       *
+       * AWS Config returns the `INSUFFICIENT_DATA` value when no evaluation results are available
+       * for the AWS resource or AWS Config rule.
+       *
+       * For the `Compliance` data type, AWS Config supports only `COMPLIANT` , `NON_COMPLIANT` ,
+       * and `INSUFFICIENT_DATA` values. AWS Config does not support the `NOT_APPLICABLE` value for the
+       * `Compliance` data type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-compliance.html#cfn-config-configrule-compliance-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComplianceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty):
+          ComplianceProperty = CdkObjectWrappers.wrap(cdkObject) as? ComplianceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComplianceProperty):
+          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty
+    }
+  }
+
+  /**
+   * Provides the CustomPolicyDetails, the rule owner ( `AWS` for managed rules, `CUSTOM_POLICY` for
+   * Custom Policy rules, and `CUSTOM_LAMBDA` for Custom Lambda rules), the rule identifier, and the
+   * events that cause the evaluation of your AWS resources.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * CustomPolicyDetailsProperty customPolicyDetailsProperty = CustomPolicyDetailsProperty.builder()
+   * .enableDebugLogDelivery(false)
+   * .policyRuntime("policyRuntime")
+   * .policyText("policyText")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html)
+   */
+  public interface CustomPolicyDetailsProperty {
+    /**
+     * The boolean expression for enabling debug logging for your AWS Config Custom Policy rule.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-enabledebuglogdelivery)
+     */
+    public fun enableDebugLogDelivery(): Any? = unwrap(this).getEnableDebugLogDelivery()
+
+    /**
+     * The runtime system for your AWS Config Custom Policy rule.
+     *
+     * Guard is a policy-as-code language that allows you to write policies that are enforced by AWS
+     * Config Custom Policy rules. For more information about Guard, see the [Guard GitHub
+     * Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-policyruntime)
+     */
+    public fun policyRuntime(): String? = unwrap(this).getPolicyRuntime()
+
+    /**
+     * The policy definition containing the logic for your AWS Config Custom Policy rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-policytext)
+     */
+    public fun policyText(): String? = unwrap(this).getPolicyText()
+
+    /**
+     * A builder for [CustomPolicyDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableDebugLogDelivery The boolean expression for enabling debug logging for your
+       * AWS Config Custom Policy rule.
+       * The default value is `false` .
+       */
+      public fun enableDebugLogDelivery(enableDebugLogDelivery: Boolean)
+
+      /**
+       * @param enableDebugLogDelivery The boolean expression for enabling debug logging for your
+       * AWS Config Custom Policy rule.
+       * The default value is `false` .
+       */
+      public fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable)
+
+      /**
+       * @param policyRuntime The runtime system for your AWS Config Custom Policy rule.
+       * Guard is a policy-as-code language that allows you to write policies that are enforced by
+       * AWS Config Custom Policy rules. For more information about Guard, see the [Guard GitHub
+       * Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard)
+       * .
+       */
+      public fun policyRuntime(policyRuntime: String)
+
+      /**
+       * @param policyText The policy definition containing the logic for your AWS Config Custom
+       * Policy rule.
+       */
+      public fun policyText(policyText: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty.Builder =
+          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty.builder()
+
+      /**
+       * @param enableDebugLogDelivery The boolean expression for enabling debug logging for your
+       * AWS Config Custom Policy rule.
+       * The default value is `false` .
+       */
+      override fun enableDebugLogDelivery(enableDebugLogDelivery: Boolean) {
+        cdkBuilder.enableDebugLogDelivery(enableDebugLogDelivery)
+      }
+
+      /**
+       * @param enableDebugLogDelivery The boolean expression for enabling debug logging for your
+       * AWS Config Custom Policy rule.
+       * The default value is `false` .
+       */
+      override fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable) {
+        cdkBuilder.enableDebugLogDelivery(enableDebugLogDelivery.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param policyRuntime The runtime system for your AWS Config Custom Policy rule.
+       * Guard is a policy-as-code language that allows you to write policies that are enforced by
+       * AWS Config Custom Policy rules. For more information about Guard, see the [Guard GitHub
+       * Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard)
+       * .
+       */
+      override fun policyRuntime(policyRuntime: String) {
+        cdkBuilder.policyRuntime(policyRuntime)
+      }
+
+      /**
+       * @param policyText The policy definition containing the logic for your AWS Config Custom
+       * Policy rule.
+       */
+      override fun policyText(policyText: String) {
+        cdkBuilder.policyText(policyText)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty,
+    ) : CdkObject(cdkObject), CustomPolicyDetailsProperty {
+      /**
+       * The boolean expression for enabling debug logging for your AWS Config Custom Policy rule.
+       *
+       * The default value is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-enabledebuglogdelivery)
+       */
+      override fun enableDebugLogDelivery(): Any? = unwrap(this).getEnableDebugLogDelivery()
+
+      /**
+       * The runtime system for your AWS Config Custom Policy rule.
+       *
+       * Guard is a policy-as-code language that allows you to write policies that are enforced by
+       * AWS Config Custom Policy rules. For more information about Guard, see the [Guard GitHub
+       * Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-policyruntime)
+       */
+      override fun policyRuntime(): String? = unwrap(this).getPolicyRuntime()
+
+      /**
+       * The policy definition containing the logic for your AWS Config Custom Policy rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-policytext)
+       */
+      override fun policyText(): String? = unwrap(this).getPolicyText()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomPolicyDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty):
+          CustomPolicyDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomPolicyDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomPolicyDetailsProperty):
+          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty
+    }
+  }
+
+  /**
+   * The configuration object for AWS Config rule evaluation mode.
+   *
+   * The supported valid values are Detective or Proactive.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * EvaluationModeConfigurationProperty evaluationModeConfigurationProperty =
+   * EvaluationModeConfigurationProperty.builder()
+   * .mode("mode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-evaluationmodeconfiguration.html)
+   */
+  public interface EvaluationModeConfigurationProperty {
+    /**
+     * The mode of an evaluation.
+     *
+     * The valid values are Detective or Proactive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-evaluationmodeconfiguration.html#cfn-config-configrule-evaluationmodeconfiguration-mode)
+     */
+    public fun mode(): String? = unwrap(this).getMode()
+
+    /**
+     * A builder for [EvaluationModeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mode The mode of an evaluation.
+       * The valid values are Detective or Proactive.
+       */
+      public fun mode(mode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty.builder()
+
+      /**
+       * @param mode The mode of an evaluation.
+       * The valid values are Detective or Proactive.
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty,
+    ) : CdkObject(cdkObject), EvaluationModeConfigurationProperty {
+      /**
+       * The mode of an evaluation.
+       *
+       * The valid values are Detective or Proactive.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-evaluationmodeconfiguration.html#cfn-config-configrule-evaluationmodeconfiguration-mode)
+       */
+      override fun mode(): String? = unwrap(this).getMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EvaluationModeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty):
+          EvaluationModeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationModeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EvaluationModeConfigurationProperty):
+          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty
+    }
+  }
+
+  /**
    * Defines which resources trigger an evaluation for an AWS Config rule.
    *
    * The scope can include one or more resource types, a combination of a tag key and value, or a
@@ -1021,9 +1428,12 @@ public open class CfnConfigRule internal constructor(
   }
 
   /**
-   * The configuration object for AWS Config rule evaluation mode.
+   * Provides the source and the message types that trigger AWS Config to evaluate your AWS
+   * resources against a rule.
    *
-   * The supported valid values are Detective or Proactive.
+   * It also provides the frequency with which you want AWS Config to run evaluations for the rule
+   * if the trigger type is periodic. You can specify the parameter values for `SourceDetail` only for
+   * custom rules.
    *
    * Example:
    *
@@ -1031,85 +1441,247 @@ public open class CfnConfigRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.config.*;
-   * EvaluationModeConfigurationProperty evaluationModeConfigurationProperty =
-   * EvaluationModeConfigurationProperty.builder()
-   * .mode("mode")
+   * SourceDetailProperty sourceDetailProperty = SourceDetailProperty.builder()
+   * .eventSource("eventSource")
+   * .messageType("messageType")
+   * // the properties below are optional
+   * .maximumExecutionFrequency("maximumExecutionFrequency")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-evaluationmodeconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html)
    */
-  public interface EvaluationModeConfigurationProperty {
+  public interface SourceDetailProperty {
     /**
-     * The mode of an evaluation.
+     * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your
+     * AWS resources.
      *
-     * The valid values are Detective or Proactive.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-evaluationmodeconfiguration.html#cfn-config-configrule-evaluationmodeconfiguration-mode)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-eventsource)
      */
-    public fun mode(): String? = unwrap(this).getMode()
+    public fun eventSource(): String
 
     /**
-     * A builder for [EvaluationModeConfigurationProperty]
+     * The frequency at which you want AWS Config to run evaluations for a custom rule with a
+     * periodic trigger.
+     *
+     * If you specify a value for `MaximumExecutionFrequency` , then `MessageType` must use the
+     * `ScheduledNotification` value.
+     *
+     *
+     * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
+     * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
+     *
+     * Based on the valid value you choose, AWS Config runs evaluations once for each valid value.
+     * For example, if you choose `Three_Hours` , AWS Config runs evaluations once every three hours.
+     * In this case, `Three_Hours` is the frequency of this rule.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-maximumexecutionfrequency)
+     */
+    public fun maximumExecutionFrequency(): String? = unwrap(this).getMaximumExecutionFrequency()
+
+    /**
+     * The type of notification that triggers AWS Config to run an evaluation for a rule.
+     *
+     * You can specify the following notification types:
+     *
+     * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+     * configuration item as a result of a resource change.
+     * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+     * delivers an oversized configuration item. AWS Config may generate this notification type when a
+     * resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+     * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+     * `MaximumExecutionFrequency` .
+     * * `ConfigurationSnapshotDeliveryCompleted` - Triggers a periodic evaluation when AWS Config
+     * delivers a configuration snapshot.
+     *
+     * If you want your custom rule to be triggered by configuration changes, specify two
+     * SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for
+     * `OversizedConfigurationItemChangeNotification` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-messagetype)
+     */
+    public fun messageType(): String
+
+    /**
+     * A builder for [SourceDetailProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param mode The mode of an evaluation.
-       * The valid values are Detective or Proactive.
+       * @param eventSource The source of the event, such as an AWS service, that triggers AWS
+       * Config to evaluate your AWS resources. 
        */
-      public fun mode(mode: String)
+      public fun eventSource(eventSource: String)
+
+      /**
+       * @param maximumExecutionFrequency The frequency at which you want AWS Config to run
+       * evaluations for a custom rule with a periodic trigger.
+       * If you specify a value for `MaximumExecutionFrequency` , then `MessageType` must use the
+       * `ScheduledNotification` value.
+       *
+       *
+       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
+       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
+       *
+       * Based on the valid value you choose, AWS Config runs evaluations once for each valid value.
+       * For example, if you choose `Three_Hours` , AWS Config runs evaluations once every three hours.
+       * In this case, `Three_Hours` is the frequency of this rule.
+       */
+      public fun maximumExecutionFrequency(maximumExecutionFrequency: String)
+
+      /**
+       * @param messageType The type of notification that triggers AWS Config to run an evaluation
+       * for a rule. 
+       * You can specify the following notification types:
+       *
+       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+       * configuration item as a result of a resource change.
+       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+       * delivers an oversized configuration item. AWS Config may generate this notification type when
+       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+       * `MaximumExecutionFrequency` .
+       * * `ConfigurationSnapshotDeliveryCompleted` - Triggers a periodic evaluation when AWS Config
+       * delivers a configuration snapshot.
+       *
+       * If you want your custom rule to be triggered by configuration changes, specify two
+       * SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for
+       * `OversizedConfigurationItemChangeNotification` .
+       */
+      public fun messageType(messageType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty.builder()
+          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty.Builder =
+          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty.builder()
 
       /**
-       * @param mode The mode of an evaluation.
-       * The valid values are Detective or Proactive.
+       * @param eventSource The source of the event, such as an AWS service, that triggers AWS
+       * Config to evaluate your AWS resources. 
        */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
+      override fun eventSource(eventSource: String) {
+        cdkBuilder.eventSource(eventSource)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty =
-          cdkBuilder.build()
+      /**
+       * @param maximumExecutionFrequency The frequency at which you want AWS Config to run
+       * evaluations for a custom rule with a periodic trigger.
+       * If you specify a value for `MaximumExecutionFrequency` , then `MessageType` must use the
+       * `ScheduledNotification` value.
+       *
+       *
+       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
+       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
+       *
+       * Based on the valid value you choose, AWS Config runs evaluations once for each valid value.
+       * For example, if you choose `Three_Hours` , AWS Config runs evaluations once every three hours.
+       * In this case, `Three_Hours` is the frequency of this rule.
+       */
+      override fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
+        cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency)
+      }
+
+      /**
+       * @param messageType The type of notification that triggers AWS Config to run an evaluation
+       * for a rule. 
+       * You can specify the following notification types:
+       *
+       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+       * configuration item as a result of a resource change.
+       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+       * delivers an oversized configuration item. AWS Config may generate this notification type when
+       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+       * `MaximumExecutionFrequency` .
+       * * `ConfigurationSnapshotDeliveryCompleted` - Triggers a periodic evaluation when AWS Config
+       * delivers a configuration snapshot.
+       *
+       * If you want your custom rule to be triggered by configuration changes, specify two
+       * SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for
+       * `OversizedConfigurationItemChangeNotification` .
+       */
+      override fun messageType(messageType: String) {
+        cdkBuilder.messageType(messageType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty,
-    ) : CdkObject(cdkObject), EvaluationModeConfigurationProperty {
+          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty,
+    ) : CdkObject(cdkObject), SourceDetailProperty {
       /**
-       * The mode of an evaluation.
+       * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your
+       * AWS resources.
        *
-       * The valid values are Detective or Proactive.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-evaluationmodeconfiguration.html#cfn-config-configrule-evaluationmodeconfiguration-mode)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-eventsource)
        */
-      override fun mode(): String? = unwrap(this).getMode()
+      override fun eventSource(): String = unwrap(this).getEventSource()
+
+      /**
+       * The frequency at which you want AWS Config to run evaluations for a custom rule with a
+       * periodic trigger.
+       *
+       * If you specify a value for `MaximumExecutionFrequency` , then `MessageType` must use the
+       * `ScheduledNotification` value.
+       *
+       *
+       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
+       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
+       *
+       * Based on the valid value you choose, AWS Config runs evaluations once for each valid value.
+       * For example, if you choose `Three_Hours` , AWS Config runs evaluations once every three hours.
+       * In this case, `Three_Hours` is the frequency of this rule.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-maximumexecutionfrequency)
+       */
+      override fun maximumExecutionFrequency(): String? =
+          unwrap(this).getMaximumExecutionFrequency()
+
+      /**
+       * The type of notification that triggers AWS Config to run an evaluation for a rule.
+       *
+       * You can specify the following notification types:
+       *
+       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+       * configuration item as a result of a resource change.
+       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+       * delivers an oversized configuration item. AWS Config may generate this notification type when
+       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+       * `MaximumExecutionFrequency` .
+       * * `ConfigurationSnapshotDeliveryCompleted` - Triggers a periodic evaluation when AWS Config
+       * delivers a configuration snapshot.
+       *
+       * If you want your custom rule to be triggered by configuration changes, specify two
+       * SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for
+       * `OversizedConfigurationItemChangeNotification` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-messagetype)
+       */
+      override fun messageType(): String = unwrap(this).getMessageType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EvaluationModeConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceDetailProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty):
-          EvaluationModeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EvaluationModeConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty):
+          SourceDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceDetailProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EvaluationModeConfigurationProperty):
-          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty
+      internal fun unwrap(wrapped: SourceDetailProperty):
+          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty
     }
   }
 
@@ -1489,578 +2061,6 @@ public open class CfnConfigRule internal constructor(
           software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty
-    }
-  }
-
-  /**
-   * Provides the source and the message types that trigger AWS Config to evaluate your AWS
-   * resources against a rule.
-   *
-   * It also provides the frequency with which you want AWS Config to run evaluations for the rule
-   * if the trigger type is periodic. You can specify the parameter values for `SourceDetail` only for
-   * custom rules.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * SourceDetailProperty sourceDetailProperty = SourceDetailProperty.builder()
-   * .eventSource("eventSource")
-   * .messageType("messageType")
-   * // the properties below are optional
-   * .maximumExecutionFrequency("maximumExecutionFrequency")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html)
-   */
-  public interface SourceDetailProperty {
-    /**
-     * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your
-     * AWS resources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-eventsource)
-     */
-    public fun eventSource(): String
-
-    /**
-     * The frequency at which you want AWS Config to run evaluations for a custom rule with a
-     * periodic trigger.
-     *
-     * If you specify a value for `MaximumExecutionFrequency` , then `MessageType` must use the
-     * `ScheduledNotification` value.
-     *
-     *
-     * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
-     * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
-     *
-     * Based on the valid value you choose, AWS Config runs evaluations once for each valid value.
-     * For example, if you choose `Three_Hours` , AWS Config runs evaluations once every three hours.
-     * In this case, `Three_Hours` is the frequency of this rule.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-maximumexecutionfrequency)
-     */
-    public fun maximumExecutionFrequency(): String? = unwrap(this).getMaximumExecutionFrequency()
-
-    /**
-     * The type of notification that triggers AWS Config to run an evaluation for a rule.
-     *
-     * You can specify the following notification types:
-     *
-     * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-     * configuration item as a result of a resource change.
-     * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-     * delivers an oversized configuration item. AWS Config may generate this notification type when a
-     * resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-     * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-     * `MaximumExecutionFrequency` .
-     * * `ConfigurationSnapshotDeliveryCompleted` - Triggers a periodic evaluation when AWS Config
-     * delivers a configuration snapshot.
-     *
-     * If you want your custom rule to be triggered by configuration changes, specify two
-     * SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for
-     * `OversizedConfigurationItemChangeNotification` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-messagetype)
-     */
-    public fun messageType(): String
-
-    /**
-     * A builder for [SourceDetailProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param eventSource The source of the event, such as an AWS service, that triggers AWS
-       * Config to evaluate your AWS resources. 
-       */
-      public fun eventSource(eventSource: String)
-
-      /**
-       * @param maximumExecutionFrequency The frequency at which you want AWS Config to run
-       * evaluations for a custom rule with a periodic trigger.
-       * If you specify a value for `MaximumExecutionFrequency` , then `MessageType` must use the
-       * `ScheduledNotification` value.
-       *
-       *
-       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
-       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
-       *
-       * Based on the valid value you choose, AWS Config runs evaluations once for each valid value.
-       * For example, if you choose `Three_Hours` , AWS Config runs evaluations once every three hours.
-       * In this case, `Three_Hours` is the frequency of this rule.
-       */
-      public fun maximumExecutionFrequency(maximumExecutionFrequency: String)
-
-      /**
-       * @param messageType The type of notification that triggers AWS Config to run an evaluation
-       * for a rule. 
-       * You can specify the following notification types:
-       *
-       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-       * configuration item as a result of a resource change.
-       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-       * delivers an oversized configuration item. AWS Config may generate this notification type when
-       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-       * `MaximumExecutionFrequency` .
-       * * `ConfigurationSnapshotDeliveryCompleted` - Triggers a periodic evaluation when AWS Config
-       * delivers a configuration snapshot.
-       *
-       * If you want your custom rule to be triggered by configuration changes, specify two
-       * SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for
-       * `OversizedConfigurationItemChangeNotification` .
-       */
-      public fun messageType(messageType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty.Builder =
-          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty.builder()
-
-      /**
-       * @param eventSource The source of the event, such as an AWS service, that triggers AWS
-       * Config to evaluate your AWS resources. 
-       */
-      override fun eventSource(eventSource: String) {
-        cdkBuilder.eventSource(eventSource)
-      }
-
-      /**
-       * @param maximumExecutionFrequency The frequency at which you want AWS Config to run
-       * evaluations for a custom rule with a periodic trigger.
-       * If you specify a value for `MaximumExecutionFrequency` , then `MessageType` must use the
-       * `ScheduledNotification` value.
-       *
-       *
-       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
-       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
-       *
-       * Based on the valid value you choose, AWS Config runs evaluations once for each valid value.
-       * For example, if you choose `Three_Hours` , AWS Config runs evaluations once every three hours.
-       * In this case, `Three_Hours` is the frequency of this rule.
-       */
-      override fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
-        cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency)
-      }
-
-      /**
-       * @param messageType The type of notification that triggers AWS Config to run an evaluation
-       * for a rule. 
-       * You can specify the following notification types:
-       *
-       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-       * configuration item as a result of a resource change.
-       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-       * delivers an oversized configuration item. AWS Config may generate this notification type when
-       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-       * `MaximumExecutionFrequency` .
-       * * `ConfigurationSnapshotDeliveryCompleted` - Triggers a periodic evaluation when AWS Config
-       * delivers a configuration snapshot.
-       *
-       * If you want your custom rule to be triggered by configuration changes, specify two
-       * SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for
-       * `OversizedConfigurationItemChangeNotification` .
-       */
-      override fun messageType(messageType: String) {
-        cdkBuilder.messageType(messageType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty,
-    ) : CdkObject(cdkObject), SourceDetailProperty {
-      /**
-       * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your
-       * AWS resources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-eventsource)
-       */
-      override fun eventSource(): String = unwrap(this).getEventSource()
-
-      /**
-       * The frequency at which you want AWS Config to run evaluations for a custom rule with a
-       * periodic trigger.
-       *
-       * If you specify a value for `MaximumExecutionFrequency` , then `MessageType` must use the
-       * `ScheduledNotification` value.
-       *
-       *
-       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
-       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
-       *
-       * Based on the valid value you choose, AWS Config runs evaluations once for each valid value.
-       * For example, if you choose `Three_Hours` , AWS Config runs evaluations once every three hours.
-       * In this case, `Three_Hours` is the frequency of this rule.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-maximumexecutionfrequency)
-       */
-      override fun maximumExecutionFrequency(): String? =
-          unwrap(this).getMaximumExecutionFrequency()
-
-      /**
-       * The type of notification that triggers AWS Config to run an evaluation for a rule.
-       *
-       * You can specify the following notification types:
-       *
-       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-       * configuration item as a result of a resource change.
-       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-       * delivers an oversized configuration item. AWS Config may generate this notification type when
-       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-       * `MaximumExecutionFrequency` .
-       * * `ConfigurationSnapshotDeliveryCompleted` - Triggers a periodic evaluation when AWS Config
-       * delivers a configuration snapshot.
-       *
-       * If you want your custom rule to be triggered by configuration changes, specify two
-       * SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for
-       * `OversizedConfigurationItemChangeNotification` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-sourcedetail.html#cfn-config-configrule-sourcedetail-messagetype)
-       */
-      override fun messageType(): String = unwrap(this).getMessageType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceDetailProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty):
-          SourceDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceDetailProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceDetailProperty):
-          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty
-    }
-  }
-
-  /**
-   * Provides the CustomPolicyDetails, the rule owner ( `AWS` for managed rules, `CUSTOM_POLICY` for
-   * Custom Policy rules, and `CUSTOM_LAMBDA` for Custom Lambda rules), the rule identifier, and the
-   * events that cause the evaluation of your AWS resources.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * CustomPolicyDetailsProperty customPolicyDetailsProperty = CustomPolicyDetailsProperty.builder()
-   * .enableDebugLogDelivery(false)
-   * .policyRuntime("policyRuntime")
-   * .policyText("policyText")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html)
-   */
-  public interface CustomPolicyDetailsProperty {
-    /**
-     * The boolean expression for enabling debug logging for your AWS Config Custom Policy rule.
-     *
-     * The default value is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-enabledebuglogdelivery)
-     */
-    public fun enableDebugLogDelivery(): Any? = unwrap(this).getEnableDebugLogDelivery()
-
-    /**
-     * The runtime system for your AWS Config Custom Policy rule.
-     *
-     * Guard is a policy-as-code language that allows you to write policies that are enforced by AWS
-     * Config Custom Policy rules. For more information about Guard, see the [Guard GitHub
-     * Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-policyruntime)
-     */
-    public fun policyRuntime(): String? = unwrap(this).getPolicyRuntime()
-
-    /**
-     * The policy definition containing the logic for your AWS Config Custom Policy rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-policytext)
-     */
-    public fun policyText(): String? = unwrap(this).getPolicyText()
-
-    /**
-     * A builder for [CustomPolicyDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableDebugLogDelivery The boolean expression for enabling debug logging for your
-       * AWS Config Custom Policy rule.
-       * The default value is `false` .
-       */
-      public fun enableDebugLogDelivery(enableDebugLogDelivery: Boolean)
-
-      /**
-       * @param enableDebugLogDelivery The boolean expression for enabling debug logging for your
-       * AWS Config Custom Policy rule.
-       * The default value is `false` .
-       */
-      public fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable)
-
-      /**
-       * @param policyRuntime The runtime system for your AWS Config Custom Policy rule.
-       * Guard is a policy-as-code language that allows you to write policies that are enforced by
-       * AWS Config Custom Policy rules. For more information about Guard, see the [Guard GitHub
-       * Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard)
-       * .
-       */
-      public fun policyRuntime(policyRuntime: String)
-
-      /**
-       * @param policyText The policy definition containing the logic for your AWS Config Custom
-       * Policy rule.
-       */
-      public fun policyText(policyText: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty.Builder =
-          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty.builder()
-
-      /**
-       * @param enableDebugLogDelivery The boolean expression for enabling debug logging for your
-       * AWS Config Custom Policy rule.
-       * The default value is `false` .
-       */
-      override fun enableDebugLogDelivery(enableDebugLogDelivery: Boolean) {
-        cdkBuilder.enableDebugLogDelivery(enableDebugLogDelivery)
-      }
-
-      /**
-       * @param enableDebugLogDelivery The boolean expression for enabling debug logging for your
-       * AWS Config Custom Policy rule.
-       * The default value is `false` .
-       */
-      override fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable) {
-        cdkBuilder.enableDebugLogDelivery(enableDebugLogDelivery.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param policyRuntime The runtime system for your AWS Config Custom Policy rule.
-       * Guard is a policy-as-code language that allows you to write policies that are enforced by
-       * AWS Config Custom Policy rules. For more information about Guard, see the [Guard GitHub
-       * Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard)
-       * .
-       */
-      override fun policyRuntime(policyRuntime: String) {
-        cdkBuilder.policyRuntime(policyRuntime)
-      }
-
-      /**
-       * @param policyText The policy definition containing the logic for your AWS Config Custom
-       * Policy rule.
-       */
-      override fun policyText(policyText: String) {
-        cdkBuilder.policyText(policyText)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty,
-    ) : CdkObject(cdkObject), CustomPolicyDetailsProperty {
-      /**
-       * The boolean expression for enabling debug logging for your AWS Config Custom Policy rule.
-       *
-       * The default value is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-enabledebuglogdelivery)
-       */
-      override fun enableDebugLogDelivery(): Any? = unwrap(this).getEnableDebugLogDelivery()
-
-      /**
-       * The runtime system for your AWS Config Custom Policy rule.
-       *
-       * Guard is a policy-as-code language that allows you to write policies that are enforced by
-       * AWS Config Custom Policy rules. For more information about Guard, see the [Guard GitHub
-       * Repository](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-guard)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-policyruntime)
-       */
-      override fun policyRuntime(): String? = unwrap(this).getPolicyRuntime()
-
-      /**
-       * The policy definition containing the logic for your AWS Config Custom Policy rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html#cfn-config-configrule-custompolicydetails-policytext)
-       */
-      override fun policyText(): String? = unwrap(this).getPolicyText()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomPolicyDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty):
-          CustomPolicyDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomPolicyDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomPolicyDetailsProperty):
-          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty
-    }
-  }
-
-  /**
-   * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of
-   * contributors that affect the compliance.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * ComplianceProperty complianceProperty = ComplianceProperty.builder()
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-compliance.html)
-   */
-  public interface ComplianceProperty {
-    /**
-     * Indicates whether an AWS resource or AWS Config rule is compliant.
-     *
-     * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A
-     * resource is noncompliant if it does not comply with one or more of these rules.
-     *
-     * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is
-     * noncompliant if any of these resources do not comply.
-     *
-     * AWS Config returns the `INSUFFICIENT_DATA` value when no evaluation results are available for
-     * the AWS resource or AWS Config rule.
-     *
-     * For the `Compliance` data type, AWS Config supports only `COMPLIANT` , `NON_COMPLIANT` , and
-     * `INSUFFICIENT_DATA` values. AWS Config does not support the `NOT_APPLICABLE` value for the
-     * `Compliance` data type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-compliance.html#cfn-config-configrule-compliance-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ComplianceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type Indicates whether an AWS resource or AWS Config rule is compliant.
-       * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A
-       * resource is noncompliant if it does not comply with one or more of these rules.
-       *
-       * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule
-       * is noncompliant if any of these resources do not comply.
-       *
-       * AWS Config returns the `INSUFFICIENT_DATA` value when no evaluation results are available
-       * for the AWS resource or AWS Config rule.
-       *
-       * For the `Compliance` data type, AWS Config supports only `COMPLIANT` , `NON_COMPLIANT` ,
-       * and `INSUFFICIENT_DATA` values. AWS Config does not support the `NOT_APPLICABLE` value for the
-       * `Compliance` data type.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty.Builder =
-          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty.builder()
-
-      /**
-       * @param type Indicates whether an AWS resource or AWS Config rule is compliant.
-       * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A
-       * resource is noncompliant if it does not comply with one or more of these rules.
-       *
-       * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule
-       * is noncompliant if any of these resources do not comply.
-       *
-       * AWS Config returns the `INSUFFICIENT_DATA` value when no evaluation results are available
-       * for the AWS resource or AWS Config rule.
-       *
-       * For the `Compliance` data type, AWS Config supports only `COMPLIANT` , `NON_COMPLIANT` ,
-       * and `INSUFFICIENT_DATA` values. AWS Config does not support the `NOT_APPLICABLE` value for the
-       * `Compliance` data type.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty,
-    ) : CdkObject(cdkObject), ComplianceProperty {
-      /**
-       * Indicates whether an AWS resource or AWS Config rule is compliant.
-       *
-       * A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A
-       * resource is noncompliant if it does not comply with one or more of these rules.
-       *
-       * A rule is compliant if all of the resources that the rule evaluates comply with it. A rule
-       * is noncompliant if any of these resources do not comply.
-       *
-       * AWS Config returns the `INSUFFICIENT_DATA` value when no evaluation results are available
-       * for the AWS resource or AWS Config rule.
-       *
-       * For the `Compliance` data type, AWS Config supports only `COMPLIANT` , `NON_COMPLIANT` ,
-       * and `INSUFFICIENT_DATA` values. AWS Config does not support the `NOT_APPLICABLE` value for the
-       * `Compliance` data type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-compliance.html#cfn-config-configrule-compliance-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComplianceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty):
-          ComplianceProperty = CdkObjectWrappers.wrap(cdkObject) as? ComplianceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComplianceProperty):
-          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty
     }
   }
 }

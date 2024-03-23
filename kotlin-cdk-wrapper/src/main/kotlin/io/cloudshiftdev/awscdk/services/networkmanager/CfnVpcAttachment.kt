@@ -534,162 +534,6 @@ public open class CfnVpcAttachment internal constructor(
   }
 
   /**
-   * Describes the VPC options.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
-   * VpcOptionsProperty vpcOptionsProperty = VpcOptionsProperty.builder()
-   * .applianceModeSupport(false)
-   * .ipv6Support(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html)
-   */
-  public interface VpcOptionsProperty {
-    /**
-     * Indicates whether appliance mode is supported.
-     *
-     * If enabled, traffic flow between a source and destination use the same Availability Zone for
-     * the VPC attachment for the lifetime of that flow. The default value is `false` .
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-appliancemodesupport)
-     */
-    public fun applianceModeSupport(): Any? = unwrap(this).getApplianceModeSupport()
-
-    /**
-     * Indicates whether IPv6 is supported.
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-ipv6support)
-     */
-    public fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
-
-    /**
-     * A builder for [VpcOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applianceModeSupport Indicates whether appliance mode is supported.
-       * If enabled, traffic flow between a source and destination use the same Availability Zone
-       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
-       */
-      public fun applianceModeSupport(applianceModeSupport: Boolean)
-
-      /**
-       * @param applianceModeSupport Indicates whether appliance mode is supported.
-       * If enabled, traffic flow between a source and destination use the same Availability Zone
-       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
-       */
-      public fun applianceModeSupport(applianceModeSupport: IResolvable)
-
-      /**
-       * @param ipv6Support Indicates whether IPv6 is supported.
-       */
-      public fun ipv6Support(ipv6Support: Boolean)
-
-      /**
-       * @param ipv6Support Indicates whether IPv6 is supported.
-       */
-      public fun ipv6Support(ipv6Support: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty.builder()
-
-      /**
-       * @param applianceModeSupport Indicates whether appliance mode is supported.
-       * If enabled, traffic flow between a source and destination use the same Availability Zone
-       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
-       */
-      override fun applianceModeSupport(applianceModeSupport: Boolean) {
-        cdkBuilder.applianceModeSupport(applianceModeSupport)
-      }
-
-      /**
-       * @param applianceModeSupport Indicates whether appliance mode is supported.
-       * If enabled, traffic flow between a source and destination use the same Availability Zone
-       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
-       */
-      override fun applianceModeSupport(applianceModeSupport: IResolvable) {
-        cdkBuilder.applianceModeSupport(applianceModeSupport.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ipv6Support Indicates whether IPv6 is supported.
-       */
-      override fun ipv6Support(ipv6Support: Boolean) {
-        cdkBuilder.ipv6Support(ipv6Support)
-      }
-
-      /**
-       * @param ipv6Support Indicates whether IPv6 is supported.
-       */
-      override fun ipv6Support(ipv6Support: IResolvable) {
-        cdkBuilder.ipv6Support(ipv6Support.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty,
-    ) : CdkObject(cdkObject), VpcOptionsProperty {
-      /**
-       * Indicates whether appliance mode is supported.
-       *
-       * If enabled, traffic flow between a source and destination use the same Availability Zone
-       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-appliancemodesupport)
-       */
-      override fun applianceModeSupport(): Any? = unwrap(this).getApplianceModeSupport()
-
-      /**
-       * Indicates whether IPv6 is supported.
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-ipv6support)
-       */
-      override fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty):
-          VpcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcOptionsProperty):
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty
-    }
-  }
-
-  /**
    * Describes a proposed segment change.
    *
    * In some cases, the segment change must first be evaluated and accepted.
@@ -842,6 +686,162 @@ public open class CfnVpcAttachment internal constructor(
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty
+    }
+  }
+
+  /**
+   * Describes the VPC options.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+   * VpcOptionsProperty vpcOptionsProperty = VpcOptionsProperty.builder()
+   * .applianceModeSupport(false)
+   * .ipv6Support(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html)
+   */
+  public interface VpcOptionsProperty {
+    /**
+     * Indicates whether appliance mode is supported.
+     *
+     * If enabled, traffic flow between a source and destination use the same Availability Zone for
+     * the VPC attachment for the lifetime of that flow. The default value is `false` .
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-appliancemodesupport)
+     */
+    public fun applianceModeSupport(): Any? = unwrap(this).getApplianceModeSupport()
+
+    /**
+     * Indicates whether IPv6 is supported.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-ipv6support)
+     */
+    public fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
+
+    /**
+     * A builder for [VpcOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applianceModeSupport Indicates whether appliance mode is supported.
+       * If enabled, traffic flow between a source and destination use the same Availability Zone
+       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
+       */
+      public fun applianceModeSupport(applianceModeSupport: Boolean)
+
+      /**
+       * @param applianceModeSupport Indicates whether appliance mode is supported.
+       * If enabled, traffic flow between a source and destination use the same Availability Zone
+       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
+       */
+      public fun applianceModeSupport(applianceModeSupport: IResolvable)
+
+      /**
+       * @param ipv6Support Indicates whether IPv6 is supported.
+       */
+      public fun ipv6Support(ipv6Support: Boolean)
+
+      /**
+       * @param ipv6Support Indicates whether IPv6 is supported.
+       */
+      public fun ipv6Support(ipv6Support: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty.builder()
+
+      /**
+       * @param applianceModeSupport Indicates whether appliance mode is supported.
+       * If enabled, traffic flow between a source and destination use the same Availability Zone
+       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
+       */
+      override fun applianceModeSupport(applianceModeSupport: Boolean) {
+        cdkBuilder.applianceModeSupport(applianceModeSupport)
+      }
+
+      /**
+       * @param applianceModeSupport Indicates whether appliance mode is supported.
+       * If enabled, traffic flow between a source and destination use the same Availability Zone
+       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
+       */
+      override fun applianceModeSupport(applianceModeSupport: IResolvable) {
+        cdkBuilder.applianceModeSupport(applianceModeSupport.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ipv6Support Indicates whether IPv6 is supported.
+       */
+      override fun ipv6Support(ipv6Support: Boolean) {
+        cdkBuilder.ipv6Support(ipv6Support)
+      }
+
+      /**
+       * @param ipv6Support Indicates whether IPv6 is supported.
+       */
+      override fun ipv6Support(ipv6Support: IResolvable) {
+        cdkBuilder.ipv6Support(ipv6Support.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty,
+    ) : CdkObject(cdkObject), VpcOptionsProperty {
+      /**
+       * Indicates whether appliance mode is supported.
+       *
+       * If enabled, traffic flow between a source and destination use the same Availability Zone
+       * for the VPC attachment for the lifetime of that flow. The default value is `false` .
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-appliancemodesupport)
+       */
+      override fun applianceModeSupport(): Any? = unwrap(this).getApplianceModeSupport()
+
+      /**
+       * Indicates whether IPv6 is supported.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-ipv6support)
+       */
+      override fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty):
+          VpcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcOptionsProperty):
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty
     }
   }
 }

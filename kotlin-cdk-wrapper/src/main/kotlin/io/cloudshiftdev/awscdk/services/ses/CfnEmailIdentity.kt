@@ -699,6 +699,425 @@ public open class CfnEmailIdentity internal constructor(
   }
 
   /**
+   * Used to associate a configuration set with an email identity.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * ConfigurationSetAttributesProperty configurationSetAttributesProperty =
+   * ConfigurationSetAttributesProperty.builder()
+   * .configurationSetName("configurationSetName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html)
+   */
+  public interface ConfigurationSetAttributesProperty {
+    /**
+     * The configuration set to associate with an email identity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html#cfn-ses-emailidentity-configurationsetattributes-configurationsetname)
+     */
+    public fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
+
+    /**
+     * A builder for [ConfigurationSetAttributesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configurationSetName The configuration set to associate with an email identity.
+       */
+      public fun configurationSetName(configurationSetName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.builder()
+
+      /**
+       * @param configurationSetName The configuration set to associate with an email identity.
+       */
+      override fun configurationSetName(configurationSetName: String) {
+        cdkBuilder.configurationSetName(configurationSetName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty,
+    ) : CdkObject(cdkObject), ConfigurationSetAttributesProperty {
+      /**
+       * The configuration set to associate with an email identity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html#cfn-ses-emailidentity-configurationsetattributes-configurationsetname)
+       */
+      override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConfigurationSetAttributesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty):
+          ConfigurationSetAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationSetAttributesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConfigurationSetAttributesProperty):
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty
+    }
+  }
+
+  /**
+   * Used to enable or disable DKIM authentication for an email identity.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * DkimAttributesProperty dkimAttributesProperty = DkimAttributesProperty.builder()
+   * .signingEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html)
+   */
+  public interface DkimAttributesProperty {
+    /**
+     * Sets the DKIM signing configuration for the identity.
+     *
+     * When you set this value `true` , then the messages that are sent from the identity are signed
+     * using DKIM. If you set this value to `false` , your messages are sent without DKIM signing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html#cfn-ses-emailidentity-dkimattributes-signingenabled)
+     */
+    public fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
+
+    /**
+     * A builder for [DkimAttributesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param signingEnabled Sets the DKIM signing configuration for the identity.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
+       */
+      public fun signingEnabled(signingEnabled: Boolean)
+
+      /**
+       * @param signingEnabled Sets the DKIM signing configuration for the identity.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
+       */
+      public fun signingEnabled(signingEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.builder()
+
+      /**
+       * @param signingEnabled Sets the DKIM signing configuration for the identity.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
+       */
+      override fun signingEnabled(signingEnabled: Boolean) {
+        cdkBuilder.signingEnabled(signingEnabled)
+      }
+
+      /**
+       * @param signingEnabled Sets the DKIM signing configuration for the identity.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
+       */
+      override fun signingEnabled(signingEnabled: IResolvable) {
+        cdkBuilder.signingEnabled(signingEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty,
+    ) : CdkObject(cdkObject), DkimAttributesProperty {
+      /**
+       * Sets the DKIM signing configuration for the identity.
+       *
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html#cfn-ses-emailidentity-dkimattributes-signingenabled)
+       */
+      override fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DkimAttributesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty):
+          DkimAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? DkimAttributesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DkimAttributesProperty):
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty
+    }
+  }
+
+  /**
+   * Used to configure or change the DKIM authentication settings for an email domain identity.
+   *
+   * You can use this operation to do any of the following:
+   *
+   * * Update the signing attributes for an identity that uses Bring Your Own DKIM (BYODKIM).
+   * * Update the key length that should be used for Easy DKIM.
+   * * Change from using no DKIM authentication to using Easy DKIM.
+   * * Change from using no DKIM authentication to using BYODKIM.
+   * * Change from using Easy DKIM to using BYODKIM.
+   * * Change from using BYODKIM to using Easy DKIM.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * DkimSigningAttributesProperty dkimSigningAttributesProperty =
+   * DkimSigningAttributesProperty.builder()
+   * .domainSigningPrivateKey("domainSigningPrivateKey")
+   * .domainSigningSelector("domainSigningSelector")
+   * .nextSigningKeyLength("nextSigningKeyLength")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html)
+   */
+  public interface DkimSigningAttributesProperty {
+    /**
+     * [Bring Your Own DKIM] A private key that's used to generate a DKIM signature.
+     *
+     * The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64
+     * encoding.
+     *
+     *
+     * Rather than embedding sensitive information directly in your CFN templates, we recommend you
+     * use dynamic parameters in the stack template to reference sensitive information that is stored
+     * and managed outside of CFN, such as in the AWS Systems Manager Parameter Store or AWS Secrets
+     * Manager.
+     *
+     * For more information, see the [Do not embed credentials in your
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)
+     * best practice.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-domainsigningprivatekey)
+     */
+    public fun domainSigningPrivateKey(): String? = unwrap(this).getDomainSigningPrivateKey()
+
+    /**
+     * [Bring Your Own DKIM] A string that's used to identify a public key in the DNS configuration
+     * for a domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-domainsigningselector)
+     */
+    public fun domainSigningSelector(): String? = unwrap(this).getDomainSigningSelector()
+
+    /**
+     * [Easy DKIM] The key length of the future DKIM key pair to be generated.
+     *
+     * This can be changed at most once per day.
+     *
+     * Valid Values: `RSA_1024_BIT | RSA_2048_BIT`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-nextsigningkeylength)
+     */
+    public fun nextSigningKeyLength(): String? = unwrap(this).getNextSigningKeyLength()
+
+    /**
+     * A builder for [DkimSigningAttributesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param domainSigningPrivateKey [Bring Your Own DKIM] A private key that's used to generate
+       * a DKIM signature.
+       * The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64
+       * encoding.
+       *
+       *
+       * Rather than embedding sensitive information directly in your CFN templates, we recommend
+       * you use dynamic parameters in the stack template to reference sensitive information that is
+       * stored and managed outside of CFN, such as in the AWS Systems Manager Parameter Store or AWS
+       * Secrets Manager.
+       *
+       * For more information, see the [Do not embed credentials in your
+       * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)
+       * best practice.
+       */
+      public fun domainSigningPrivateKey(domainSigningPrivateKey: String)
+
+      /**
+       * @param domainSigningSelector [Bring Your Own DKIM] A string that's used to identify a
+       * public key in the DNS configuration for a domain.
+       */
+      public fun domainSigningSelector(domainSigningSelector: String)
+
+      /**
+       * @param nextSigningKeyLength [Easy DKIM] The key length of the future DKIM key pair to be
+       * generated.
+       * This can be changed at most once per day.
+       *
+       * Valid Values: `RSA_1024_BIT | RSA_2048_BIT`
+       */
+      public fun nextSigningKeyLength(nextSigningKeyLength: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty.builder()
+
+      /**
+       * @param domainSigningPrivateKey [Bring Your Own DKIM] A private key that's used to generate
+       * a DKIM signature.
+       * The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64
+       * encoding.
+       *
+       *
+       * Rather than embedding sensitive information directly in your CFN templates, we recommend
+       * you use dynamic parameters in the stack template to reference sensitive information that is
+       * stored and managed outside of CFN, such as in the AWS Systems Manager Parameter Store or AWS
+       * Secrets Manager.
+       *
+       * For more information, see the [Do not embed credentials in your
+       * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)
+       * best practice.
+       */
+      override fun domainSigningPrivateKey(domainSigningPrivateKey: String) {
+        cdkBuilder.domainSigningPrivateKey(domainSigningPrivateKey)
+      }
+
+      /**
+       * @param domainSigningSelector [Bring Your Own DKIM] A string that's used to identify a
+       * public key in the DNS configuration for a domain.
+       */
+      override fun domainSigningSelector(domainSigningSelector: String) {
+        cdkBuilder.domainSigningSelector(domainSigningSelector)
+      }
+
+      /**
+       * @param nextSigningKeyLength [Easy DKIM] The key length of the future DKIM key pair to be
+       * generated.
+       * This can be changed at most once per day.
+       *
+       * Valid Values: `RSA_1024_BIT | RSA_2048_BIT`
+       */
+      override fun nextSigningKeyLength(nextSigningKeyLength: String) {
+        cdkBuilder.nextSigningKeyLength(nextSigningKeyLength)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty,
+    ) : CdkObject(cdkObject), DkimSigningAttributesProperty {
+      /**
+       * [Bring Your Own DKIM] A private key that's used to generate a DKIM signature.
+       *
+       * The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64
+       * encoding.
+       *
+       *
+       * Rather than embedding sensitive information directly in your CFN templates, we recommend
+       * you use dynamic parameters in the stack template to reference sensitive information that is
+       * stored and managed outside of CFN, such as in the AWS Systems Manager Parameter Store or AWS
+       * Secrets Manager.
+       *
+       * For more information, see the [Do not embed credentials in your
+       * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)
+       * best practice.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-domainsigningprivatekey)
+       */
+      override fun domainSigningPrivateKey(): String? = unwrap(this).getDomainSigningPrivateKey()
+
+      /**
+       * [Bring Your Own DKIM] A string that's used to identify a public key in the DNS
+       * configuration for a domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-domainsigningselector)
+       */
+      override fun domainSigningSelector(): String? = unwrap(this).getDomainSigningSelector()
+
+      /**
+       * [Easy DKIM] The key length of the future DKIM key pair to be generated.
+       *
+       * This can be changed at most once per day.
+       *
+       * Valid Values: `RSA_1024_BIT | RSA_2048_BIT`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-nextsigningkeylength)
+       */
+      override fun nextSigningKeyLength(): String? = unwrap(this).getNextSigningKeyLength()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DkimSigningAttributesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty):
+          DkimSigningAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DkimSigningAttributesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DkimSigningAttributesProperty):
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty
+    }
+  }
+
+  /**
    * Used to enable or disable feedback forwarding for an identity.
    *
    * This setting determines what happens when an identity is used to send an email that results in
@@ -1015,425 +1434,6 @@ public open class CfnEmailIdentity internal constructor(
           software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty
-    }
-  }
-
-  /**
-   * Used to configure or change the DKIM authentication settings for an email domain identity.
-   *
-   * You can use this operation to do any of the following:
-   *
-   * * Update the signing attributes for an identity that uses Bring Your Own DKIM (BYODKIM).
-   * * Update the key length that should be used for Easy DKIM.
-   * * Change from using no DKIM authentication to using Easy DKIM.
-   * * Change from using no DKIM authentication to using BYODKIM.
-   * * Change from using Easy DKIM to using BYODKIM.
-   * * Change from using BYODKIM to using Easy DKIM.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * DkimSigningAttributesProperty dkimSigningAttributesProperty =
-   * DkimSigningAttributesProperty.builder()
-   * .domainSigningPrivateKey("domainSigningPrivateKey")
-   * .domainSigningSelector("domainSigningSelector")
-   * .nextSigningKeyLength("nextSigningKeyLength")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html)
-   */
-  public interface DkimSigningAttributesProperty {
-    /**
-     * [Bring Your Own DKIM] A private key that's used to generate a DKIM signature.
-     *
-     * The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64
-     * encoding.
-     *
-     *
-     * Rather than embedding sensitive information directly in your CFN templates, we recommend you
-     * use dynamic parameters in the stack template to reference sensitive information that is stored
-     * and managed outside of CFN, such as in the AWS Systems Manager Parameter Store or AWS Secrets
-     * Manager.
-     *
-     * For more information, see the [Do not embed credentials in your
-     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)
-     * best practice.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-domainsigningprivatekey)
-     */
-    public fun domainSigningPrivateKey(): String? = unwrap(this).getDomainSigningPrivateKey()
-
-    /**
-     * [Bring Your Own DKIM] A string that's used to identify a public key in the DNS configuration
-     * for a domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-domainsigningselector)
-     */
-    public fun domainSigningSelector(): String? = unwrap(this).getDomainSigningSelector()
-
-    /**
-     * [Easy DKIM] The key length of the future DKIM key pair to be generated.
-     *
-     * This can be changed at most once per day.
-     *
-     * Valid Values: `RSA_1024_BIT | RSA_2048_BIT`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-nextsigningkeylength)
-     */
-    public fun nextSigningKeyLength(): String? = unwrap(this).getNextSigningKeyLength()
-
-    /**
-     * A builder for [DkimSigningAttributesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param domainSigningPrivateKey [Bring Your Own DKIM] A private key that's used to generate
-       * a DKIM signature.
-       * The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64
-       * encoding.
-       *
-       *
-       * Rather than embedding sensitive information directly in your CFN templates, we recommend
-       * you use dynamic parameters in the stack template to reference sensitive information that is
-       * stored and managed outside of CFN, such as in the AWS Systems Manager Parameter Store or AWS
-       * Secrets Manager.
-       *
-       * For more information, see the [Do not embed credentials in your
-       * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)
-       * best practice.
-       */
-      public fun domainSigningPrivateKey(domainSigningPrivateKey: String)
-
-      /**
-       * @param domainSigningSelector [Bring Your Own DKIM] A string that's used to identify a
-       * public key in the DNS configuration for a domain.
-       */
-      public fun domainSigningSelector(domainSigningSelector: String)
-
-      /**
-       * @param nextSigningKeyLength [Easy DKIM] The key length of the future DKIM key pair to be
-       * generated.
-       * This can be changed at most once per day.
-       *
-       * Valid Values: `RSA_1024_BIT | RSA_2048_BIT`
-       */
-      public fun nextSigningKeyLength(nextSigningKeyLength: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty.Builder
-          =
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty.builder()
-
-      /**
-       * @param domainSigningPrivateKey [Bring Your Own DKIM] A private key that's used to generate
-       * a DKIM signature.
-       * The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64
-       * encoding.
-       *
-       *
-       * Rather than embedding sensitive information directly in your CFN templates, we recommend
-       * you use dynamic parameters in the stack template to reference sensitive information that is
-       * stored and managed outside of CFN, such as in the AWS Systems Manager Parameter Store or AWS
-       * Secrets Manager.
-       *
-       * For more information, see the [Do not embed credentials in your
-       * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)
-       * best practice.
-       */
-      override fun domainSigningPrivateKey(domainSigningPrivateKey: String) {
-        cdkBuilder.domainSigningPrivateKey(domainSigningPrivateKey)
-      }
-
-      /**
-       * @param domainSigningSelector [Bring Your Own DKIM] A string that's used to identify a
-       * public key in the DNS configuration for a domain.
-       */
-      override fun domainSigningSelector(domainSigningSelector: String) {
-        cdkBuilder.domainSigningSelector(domainSigningSelector)
-      }
-
-      /**
-       * @param nextSigningKeyLength [Easy DKIM] The key length of the future DKIM key pair to be
-       * generated.
-       * This can be changed at most once per day.
-       *
-       * Valid Values: `RSA_1024_BIT | RSA_2048_BIT`
-       */
-      override fun nextSigningKeyLength(nextSigningKeyLength: String) {
-        cdkBuilder.nextSigningKeyLength(nextSigningKeyLength)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty,
-    ) : CdkObject(cdkObject), DkimSigningAttributesProperty {
-      /**
-       * [Bring Your Own DKIM] A private key that's used to generate a DKIM signature.
-       *
-       * The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64
-       * encoding.
-       *
-       *
-       * Rather than embedding sensitive information directly in your CFN templates, we recommend
-       * you use dynamic parameters in the stack template to reference sensitive information that is
-       * stored and managed outside of CFN, such as in the AWS Systems Manager Parameter Store or AWS
-       * Secrets Manager.
-       *
-       * For more information, see the [Do not embed credentials in your
-       * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds)
-       * best practice.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-domainsigningprivatekey)
-       */
-      override fun domainSigningPrivateKey(): String? = unwrap(this).getDomainSigningPrivateKey()
-
-      /**
-       * [Bring Your Own DKIM] A string that's used to identify a public key in the DNS
-       * configuration for a domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-domainsigningselector)
-       */
-      override fun domainSigningSelector(): String? = unwrap(this).getDomainSigningSelector()
-
-      /**
-       * [Easy DKIM] The key length of the future DKIM key pair to be generated.
-       *
-       * This can be changed at most once per day.
-       *
-       * Valid Values: `RSA_1024_BIT | RSA_2048_BIT`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html#cfn-ses-emailidentity-dkimsigningattributes-nextsigningkeylength)
-       */
-      override fun nextSigningKeyLength(): String? = unwrap(this).getNextSigningKeyLength()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DkimSigningAttributesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty):
-          DkimSigningAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DkimSigningAttributesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DkimSigningAttributesProperty):
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty
-    }
-  }
-
-  /**
-   * Used to associate a configuration set with an email identity.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * ConfigurationSetAttributesProperty configurationSetAttributesProperty =
-   * ConfigurationSetAttributesProperty.builder()
-   * .configurationSetName("configurationSetName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html)
-   */
-  public interface ConfigurationSetAttributesProperty {
-    /**
-     * The configuration set to associate with an email identity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html#cfn-ses-emailidentity-configurationsetattributes-configurationsetname)
-     */
-    public fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
-
-    /**
-     * A builder for [ConfigurationSetAttributesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param configurationSetName The configuration set to associate with an email identity.
-       */
-      public fun configurationSetName(configurationSetName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.Builder
-          =
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.builder()
-
-      /**
-       * @param configurationSetName The configuration set to associate with an email identity.
-       */
-      override fun configurationSetName(configurationSetName: String) {
-        cdkBuilder.configurationSetName(configurationSetName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty,
-    ) : CdkObject(cdkObject), ConfigurationSetAttributesProperty {
-      /**
-       * The configuration set to associate with an email identity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html#cfn-ses-emailidentity-configurationsetattributes-configurationsetname)
-       */
-      override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ConfigurationSetAttributesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty):
-          ConfigurationSetAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConfigurationSetAttributesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConfigurationSetAttributesProperty):
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty
-    }
-  }
-
-  /**
-   * Used to enable or disable DKIM authentication for an email identity.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * DkimAttributesProperty dkimAttributesProperty = DkimAttributesProperty.builder()
-   * .signingEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html)
-   */
-  public interface DkimAttributesProperty {
-    /**
-     * Sets the DKIM signing configuration for the identity.
-     *
-     * When you set this value `true` , then the messages that are sent from the identity are signed
-     * using DKIM. If you set this value to `false` , your messages are sent without DKIM signing.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html#cfn-ses-emailidentity-dkimattributes-signingenabled)
-     */
-    public fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
-
-    /**
-     * A builder for [DkimAttributesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param signingEnabled Sets the DKIM signing configuration for the identity.
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
-       */
-      public fun signingEnabled(signingEnabled: Boolean)
-
-      /**
-       * @param signingEnabled Sets the DKIM signing configuration for the identity.
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
-       */
-      public fun signingEnabled(signingEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.builder()
-
-      /**
-       * @param signingEnabled Sets the DKIM signing configuration for the identity.
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
-       */
-      override fun signingEnabled(signingEnabled: Boolean) {
-        cdkBuilder.signingEnabled(signingEnabled)
-      }
-
-      /**
-       * @param signingEnabled Sets the DKIM signing configuration for the identity.
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
-       */
-      override fun signingEnabled(signingEnabled: IResolvable) {
-        cdkBuilder.signingEnabled(signingEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty,
-    ) : CdkObject(cdkObject), DkimAttributesProperty {
-      /**
-       * Sets the DKIM signing configuration for the identity.
-       *
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html#cfn-ses-emailidentity-dkimattributes-signingenabled)
-       */
-      override fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DkimAttributesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty):
-          DkimAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? DkimAttributesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DkimAttributesProperty):
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty
     }
   }
 }

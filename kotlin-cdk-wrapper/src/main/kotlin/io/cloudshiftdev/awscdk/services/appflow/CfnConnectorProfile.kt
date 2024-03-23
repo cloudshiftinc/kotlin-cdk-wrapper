@@ -626,7 +626,7 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * The connector-specific profile properties required when using Marketo.
+   * The connector-specific credentials required when using Amplitude.
    *
    * Example:
    *
@@ -634,79 +634,876 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * MarketoConnectorProfilePropertiesProperty marketoConnectorProfilePropertiesProperty =
-   * MarketoConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
+   * AmplitudeConnectorProfileCredentialsProperty amplitudeConnectorProfileCredentialsProperty =
+   * AmplitudeConnectorProfileCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * .secretKey("secretKey")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html)
    */
-  public interface MarketoConnectorProfilePropertiesProperty {
+  public interface AmplitudeConnectorProfileCredentialsProperty {
     /**
-     * The location of the Marketo resource.
+     * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
+     * to your API.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties.html#cfn-appflow-connectorprofile-marketoconnectorprofileproperties-instanceurl)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-apikey)
      */
-    public fun instanceUrl(): String
+    public fun apiKey(): String
 
     /**
-     * A builder for [MarketoConnectorProfilePropertiesProperty]
+     * The Secret Access Key portion of the credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-secretkey)
+     */
+    public fun secretKey(): String
+
+    /**
+     * A builder for [AmplitudeConnectorProfileCredentialsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param instanceUrl The location of the Marketo resource. 
+       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
+       * calling program to your API. 
        */
-      public fun instanceUrl(instanceUrl: String)
+      public fun apiKey(apiKey: String)
+
+      /**
+       * @param secretKey The Secret Access Key portion of the credentials. 
+       */
+      public fun secretKey(secretKey: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty.builder()
 
       /**
-       * @param instanceUrl The location of the Marketo resource. 
+       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
+       * calling program to your API. 
        */
-      override fun instanceUrl(instanceUrl: String) {
-        cdkBuilder.instanceUrl(instanceUrl)
+      override fun apiKey(apiKey: String) {
+        cdkBuilder.apiKey(apiKey)
+      }
+
+      /**
+       * @param secretKey The Secret Access Key portion of the credentials. 
+       */
+      override fun secretKey(secretKey: String) {
+        cdkBuilder.secretKey(secretKey)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), MarketoConnectorProfilePropertiesProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), AmplitudeConnectorProfileCredentialsProperty {
       /**
-       * The location of the Marketo resource.
+       * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
+       * to your API.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties.html#cfn-appflow-connectorprofile-marketoconnectorprofileproperties-instanceurl)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-apikey)
        */
-      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
+      override fun apiKey(): String = unwrap(this).getApiKey()
+
+      /**
+       * The Secret Access Key portion of the credentials.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-secretkey)
+       */
+      override fun secretKey(): String = unwrap(this).getSecretKey()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          MarketoConnectorProfilePropertiesProperty {
+          AmplitudeConnectorProfileCredentialsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty):
-          MarketoConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MarketoConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty):
+          AmplitudeConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmplitudeConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MarketoConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty
+      internal fun unwrap(wrapped: AmplitudeConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty
+    }
+  }
+
+  /**
+   * The API key credentials required for API key authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * ApiKeyCredentialsProperty apiKeyCredentialsProperty = ApiKeyCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * // the properties below are optional
+   * .apiSecretKey("apiSecretKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html)
+   */
+  public interface ApiKeyCredentialsProperty {
+    /**
+     * The API key required for API key authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html#cfn-appflow-connectorprofile-apikeycredentials-apikey)
+     */
+    public fun apiKey(): String
+
+    /**
+     * The API secret key required for API key authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html#cfn-appflow-connectorprofile-apikeycredentials-apisecretkey)
+     */
+    public fun apiSecretKey(): String? = unwrap(this).getApiSecretKey()
+
+    /**
+     * A builder for [ApiKeyCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param apiKey The API key required for API key authentication. 
+       */
+      public fun apiKey(apiKey: String)
+
+      /**
+       * @param apiSecretKey The API secret key required for API key authentication.
+       */
+      public fun apiSecretKey(apiSecretKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty.builder()
+
+      /**
+       * @param apiKey The API key required for API key authentication. 
+       */
+      override fun apiKey(apiKey: String) {
+        cdkBuilder.apiKey(apiKey)
+      }
+
+      /**
+       * @param apiSecretKey The API secret key required for API key authentication.
+       */
+      override fun apiSecretKey(apiSecretKey: String) {
+        cdkBuilder.apiSecretKey(apiSecretKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty,
+    ) : CdkObject(cdkObject), ApiKeyCredentialsProperty {
+      /**
+       * The API key required for API key authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html#cfn-appflow-connectorprofile-apikeycredentials-apikey)
+       */
+      override fun apiKey(): String = unwrap(this).getApiKey()
+
+      /**
+       * The API secret key required for API key authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html#cfn-appflow-connectorprofile-apikeycredentials-apisecretkey)
+       */
+      override fun apiSecretKey(): String? = unwrap(this).getApiSecretKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApiKeyCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty):
+          ApiKeyCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApiKeyCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApiKeyCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty
+    }
+  }
+
+  /**
+   * The basic auth credentials required for basic authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * BasicAuthCredentialsProperty basicAuthCredentialsProperty =
+   * BasicAuthCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html)
+   */
+  public interface BasicAuthCredentialsProperty {
+    /**
+     * The password to use to connect to a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html#cfn-appflow-connectorprofile-basicauthcredentials-password)
+     */
+    public fun password(): String
+
+    /**
+     * The username to use to connect to a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html#cfn-appflow-connectorprofile-basicauthcredentials-username)
+     */
+    public fun username(): String
+
+    /**
+     * A builder for [BasicAuthCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param password The password to use to connect to a resource. 
+       */
+      public fun password(password: String)
+
+      /**
+       * @param username The username to use to connect to a resource. 
+       */
+      public fun username(username: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty.builder()
+
+      /**
+       * @param password The password to use to connect to a resource. 
+       */
+      override fun password(password: String) {
+        cdkBuilder.password(password)
+      }
+
+      /**
+       * @param username The username to use to connect to a resource. 
+       */
+      override fun username(username: String) {
+        cdkBuilder.username(username)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty,
+    ) : CdkObject(cdkObject), BasicAuthCredentialsProperty {
+      /**
+       * The password to use to connect to a resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html#cfn-appflow-connectorprofile-basicauthcredentials-password)
+       */
+      override fun password(): String = unwrap(this).getPassword()
+
+      /**
+       * The username to use to connect to a resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html#cfn-appflow-connectorprofile-basicauthcredentials-username)
+       */
+      override fun username(): String = unwrap(this).getUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BasicAuthCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty):
+          BasicAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BasicAuthCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BasicAuthCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty
+    }
+  }
+
+  /**
+   * Used by select connectors for which the OAuth workflow is supported, such as Salesforce, Google
+   * Analytics, Marketo, Zendesk, and Slack.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * ConnectorOAuthRequestProperty connectorOAuthRequestProperty =
+   * ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html)
+   */
+  public interface ConnectorOAuthRequestProperty {
+    /**
+     * The code provided by the connector when it has been authenticated via the connected app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-authcode)
+     */
+    public fun authCode(): String? = unwrap(this).getAuthCode()
+
+    /**
+     * The URL to which the authentication server redirects the browser after authorization has been
+     * granted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-redirecturi)
+     */
+    public fun redirectUri(): String? = unwrap(this).getRedirectUri()
+
+    /**
+     * A builder for [ConnectorOAuthRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authCode The code provided by the connector when it has been authenticated via the
+       * connected app.
+       */
+      public fun authCode(authCode: String)
+
+      /**
+       * @param redirectUri The URL to which the authentication server redirects the browser after
+       * authorization has been granted.
+       */
+      public fun redirectUri(redirectUri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty.builder()
+
+      /**
+       * @param authCode The code provided by the connector when it has been authenticated via the
+       * connected app.
+       */
+      override fun authCode(authCode: String) {
+        cdkBuilder.authCode(authCode)
+      }
+
+      /**
+       * @param redirectUri The URL to which the authentication server redirects the browser after
+       * authorization has been granted.
+       */
+      override fun redirectUri(redirectUri: String) {
+        cdkBuilder.redirectUri(redirectUri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty,
+    ) : CdkObject(cdkObject), ConnectorOAuthRequestProperty {
+      /**
+       * The code provided by the connector when it has been authenticated via the connected app.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-authcode)
+       */
+      override fun authCode(): String? = unwrap(this).getAuthCode()
+
+      /**
+       * The URL to which the authentication server redirects the browser after authorization has
+       * been granted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-redirecturi)
+       */
+      override fun redirectUri(): String? = unwrap(this).getRedirectUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectorOAuthRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty):
+          ConnectorOAuthRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorOAuthRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectorOAuthRequestProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty
+    }
+  }
+
+  /**
+   * Defines the connector-specific configuration and credentials for the connector profile.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * ConnectorProfileConfigProperty connectorProfileConfigProperty =
+   * ConnectorProfileConfigProperty.builder()
+   * .connectorProfileCredentials(ConnectorProfileCredentialsProperty.builder()
+   * .amplitude(AmplitudeConnectorProfileCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * .secretKey("secretKey")
+   * .build())
+   * .customConnector(CustomConnectorProfileCredentialsProperty.builder()
+   * .authenticationType("authenticationType")
+   * // the properties below are optional
+   * .apiKey(ApiKeyCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * // the properties below are optional
+   * .apiSecretKey("apiSecretKey")
+   * .build())
+   * .basic(BasicAuthCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build())
+   * .custom(CustomAuthCredentialsProperty.builder()
+   * .customAuthenticationType("customAuthenticationType")
+   * // the properties below are optional
+   * .credentialsMap(Map.of(
+   * "credentialsMapKey", "credentialsMap"))
+   * .build())
+   * .oauth2(OAuth2CredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build())
+   * .build())
+   * .datadog(DatadogConnectorProfileCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * .applicationKey("applicationKey")
+   * .build())
+   * .dynatrace(DynatraceConnectorProfileCredentialsProperty.builder()
+   * .apiToken("apiToken")
+   * .build())
+   * .googleAnalytics(GoogleAnalyticsConnectorProfileCredentialsProperty.builder()
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * // the properties below are optional
+   * .accessToken("accessToken")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build())
+   * .inforNexus(InforNexusConnectorProfileCredentialsProperty.builder()
+   * .accessKeyId("accessKeyId")
+   * .datakey("datakey")
+   * .secretAccessKey("secretAccessKey")
+   * .userId("userId")
+   * .build())
+   * .marketo(MarketoConnectorProfileCredentialsProperty.builder()
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * // the properties below are optional
+   * .accessToken("accessToken")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .build())
+   * .pardot(PardotConnectorProfileCredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientCredentialsArn("clientCredentialsArn")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build())
+   * .redshift(RedshiftConnectorProfileCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build())
+   * .salesforce(SalesforceConnectorProfileCredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientCredentialsArn("clientCredentialsArn")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .jwtToken("jwtToken")
+   * .oAuth2GrantType("oAuth2GrantType")
+   * .refreshToken("refreshToken")
+   * .build())
+   * .sapoData(SAPODataConnectorProfileCredentialsProperty.builder()
+   * .basicAuthCredentials(BasicAuthCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build())
+   * .oAuthCredentials(OAuthCredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build())
+   * .build())
+   * .serviceNow(ServiceNowConnectorProfileCredentialsProperty.builder()
+   * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build())
+   * .password("password")
+   * .username("username")
+   * .build())
+   * .singular(SingularConnectorProfileCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * .build())
+   * .slack(SlackConnectorProfileCredentialsProperty.builder()
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * // the properties below are optional
+   * .accessToken("accessToken")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .build())
+   * .snowflake(SnowflakeConnectorProfileCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build())
+   * .trendmicro(TrendmicroConnectorProfileCredentialsProperty.builder()
+   * .apiSecretKey("apiSecretKey")
+   * .build())
+   * .veeva(VeevaConnectorProfileCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build())
+   * .zendesk(ZendeskConnectorProfileCredentialsProperty.builder()
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * // the properties below are optional
+   * .accessToken("accessToken")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .build())
+   * .build())
+   * .connectorProfileProperties(ConnectorProfilePropertiesProperty.builder()
+   * .customConnector(CustomConnectorProfilePropertiesProperty.builder()
+   * .oAuth2Properties(OAuth2PropertiesProperty.builder()
+   * .oAuth2GrantType("oAuth2GrantType")
+   * .tokenUrl("tokenUrl")
+   * .tokenUrlCustomProperties(Map.of(
+   * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
+   * .build())
+   * .profileProperties(Map.of(
+   * "profilePropertiesKey", "profileProperties"))
+   * .build())
+   * .datadog(DatadogConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build())
+   * .dynatrace(DynatraceConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build())
+   * .inforNexus(InforNexusConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build())
+   * .marketo(MarketoConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build())
+   * .pardot(PardotConnectorProfilePropertiesProperty.builder()
+   * .businessUnitId("businessUnitId")
+   * // the properties below are optional
+   * .instanceUrl("instanceUrl")
+   * .isSandboxEnvironment(false)
+   * .build())
+   * .redshift(RedshiftConnectorProfilePropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .clusterIdentifier("clusterIdentifier")
+   * .dataApiRoleArn("dataApiRoleArn")
+   * .databaseName("databaseName")
+   * .databaseUrl("databaseUrl")
+   * .isRedshiftServerless(false)
+   * .workgroupName("workgroupName")
+   * .build())
+   * .salesforce(SalesforceConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .isSandboxEnvironment(false)
+   * .usePrivateLinkForMetadataAndAuthorization(false)
+   * .build())
+   * .sapoData(SAPODataConnectorProfilePropertiesProperty.builder()
+   * .applicationHostUrl("applicationHostUrl")
+   * .applicationServicePath("applicationServicePath")
+   * .clientNumber("clientNumber")
+   * .disableSso(false)
+   * .logonLanguage("logonLanguage")
+   * .oAuthProperties(OAuthPropertiesProperty.builder()
+   * .authCodeUrl("authCodeUrl")
+   * .oAuthScopes(List.of("oAuthScopes"))
+   * .tokenUrl("tokenUrl")
+   * .build())
+   * .portNumber(123)
+   * .privateLinkServiceName("privateLinkServiceName")
+   * .build())
+   * .serviceNow(ServiceNowConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build())
+   * .slack(SlackConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build())
+   * .snowflake(SnowflakeConnectorProfilePropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * .stage("stage")
+   * .warehouse("warehouse")
+   * // the properties below are optional
+   * .accountName("accountName")
+   * .bucketPrefix("bucketPrefix")
+   * .privateLinkServiceName("privateLinkServiceName")
+   * .region("region")
+   * .build())
+   * .veeva(VeevaConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build())
+   * .zendesk(ZendeskConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html)
+   */
+  public interface ConnectorProfileConfigProperty {
+    /**
+     * The connector-specific credentials required by each connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html#cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofilecredentials)
+     */
+    public fun connectorProfileCredentials(): Any? = unwrap(this).getConnectorProfileCredentials()
+
+    /**
+     * The connector-specific properties of the profile configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html#cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofileproperties)
+     */
+    public fun connectorProfileProperties(): Any? = unwrap(this).getConnectorProfileProperties()
+
+    /**
+     * A builder for [ConnectorProfileConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectorProfileCredentials The connector-specific credentials required by each
+       * connector.
+       */
+      public fun connectorProfileCredentials(connectorProfileCredentials: IResolvable)
+
+      /**
+       * @param connectorProfileCredentials The connector-specific credentials required by each
+       * connector.
+       */
+      public
+          fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty)
+
+      /**
+       * @param connectorProfileCredentials The connector-specific credentials required by each
+       * connector.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("78778b1f9eeaa31c36d3eb49b35214ea9780c33419d1bb5dc2578d2149bbfcbd")
+      public
+          fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty.Builder.() -> Unit)
+
+      /**
+       * @param connectorProfileProperties The connector-specific properties of the profile
+       * configuration.
+       */
+      public fun connectorProfileProperties(connectorProfileProperties: IResolvable)
+
+      /**
+       * @param connectorProfileProperties The connector-specific properties of the profile
+       * configuration.
+       */
+      public
+          fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty)
+
+      /**
+       * @param connectorProfileProperties The connector-specific properties of the profile
+       * configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7a4f9955d4fa6725ec82e5142587f8d99d8a127f0b14839c12236d96b0fc2301")
+      public
+          fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty.builder()
+
+      /**
+       * @param connectorProfileCredentials The connector-specific credentials required by each
+       * connector.
+       */
+      override fun connectorProfileCredentials(connectorProfileCredentials: IResolvable) {
+        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectorProfileCredentials The connector-specific credentials required by each
+       * connector.
+       */
+      override
+          fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty) {
+        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials.let(ConnectorProfileCredentialsProperty::unwrap))
+      }
+
+      /**
+       * @param connectorProfileCredentials The connector-specific credentials required by each
+       * connector.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("78778b1f9eeaa31c36d3eb49b35214ea9780c33419d1bb5dc2578d2149bbfcbd")
+      override
+          fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty.Builder.() -> Unit):
+          Unit =
+          connectorProfileCredentials(ConnectorProfileCredentialsProperty(connectorProfileCredentials))
+
+      /**
+       * @param connectorProfileProperties The connector-specific properties of the profile
+       * configuration.
+       */
+      override fun connectorProfileProperties(connectorProfileProperties: IResolvable) {
+        cdkBuilder.connectorProfileProperties(connectorProfileProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectorProfileProperties The connector-specific properties of the profile
+       * configuration.
+       */
+      override
+          fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty) {
+        cdkBuilder.connectorProfileProperties(connectorProfileProperties.let(ConnectorProfilePropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param connectorProfileProperties The connector-specific properties of the profile
+       * configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7a4f9955d4fa6725ec82e5142587f8d99d8a127f0b14839c12236d96b0fc2301")
+      override
+          fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty.Builder.() -> Unit):
+          Unit =
+          connectorProfileProperties(ConnectorProfilePropertiesProperty(connectorProfileProperties))
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty,
+    ) : CdkObject(cdkObject), ConnectorProfileConfigProperty {
+      /**
+       * The connector-specific credentials required by each connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html#cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofilecredentials)
+       */
+      override fun connectorProfileCredentials(): Any? =
+          unwrap(this).getConnectorProfileCredentials()
+
+      /**
+       * The connector-specific properties of the profile configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html#cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofileproperties)
+       */
+      override fun connectorProfileProperties(): Any? = unwrap(this).getConnectorProfileProperties()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectorProfileConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty):
+          ConnectorProfileConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorProfileConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectorProfileConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty
     }
   }
 
@@ -1915,926 +2712,6 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * Defines the connector-specific configuration and credentials for the connector profile.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ConnectorProfileConfigProperty connectorProfileConfigProperty =
-   * ConnectorProfileConfigProperty.builder()
-   * .connectorProfileCredentials(ConnectorProfileCredentialsProperty.builder()
-   * .amplitude(AmplitudeConnectorProfileCredentialsProperty.builder()
-   * .apiKey("apiKey")
-   * .secretKey("secretKey")
-   * .build())
-   * .customConnector(CustomConnectorProfileCredentialsProperty.builder()
-   * .authenticationType("authenticationType")
-   * // the properties below are optional
-   * .apiKey(ApiKeyCredentialsProperty.builder()
-   * .apiKey("apiKey")
-   * // the properties below are optional
-   * .apiSecretKey("apiSecretKey")
-   * .build())
-   * .basic(BasicAuthCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build())
-   * .custom(CustomAuthCredentialsProperty.builder()
-   * .customAuthenticationType("customAuthenticationType")
-   * // the properties below are optional
-   * .credentialsMap(Map.of(
-   * "credentialsMapKey", "credentialsMap"))
-   * .build())
-   * .oauth2(OAuth2CredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .refreshToken("refreshToken")
-   * .build())
-   * .build())
-   * .datadog(DatadogConnectorProfileCredentialsProperty.builder()
-   * .apiKey("apiKey")
-   * .applicationKey("applicationKey")
-   * .build())
-   * .dynatrace(DynatraceConnectorProfileCredentialsProperty.builder()
-   * .apiToken("apiToken")
-   * .build())
-   * .googleAnalytics(GoogleAnalyticsConnectorProfileCredentialsProperty.builder()
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * // the properties below are optional
-   * .accessToken("accessToken")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .refreshToken("refreshToken")
-   * .build())
-   * .inforNexus(InforNexusConnectorProfileCredentialsProperty.builder()
-   * .accessKeyId("accessKeyId")
-   * .datakey("datakey")
-   * .secretAccessKey("secretAccessKey")
-   * .userId("userId")
-   * .build())
-   * .marketo(MarketoConnectorProfileCredentialsProperty.builder()
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * // the properties below are optional
-   * .accessToken("accessToken")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .build())
-   * .pardot(PardotConnectorProfileCredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientCredentialsArn("clientCredentialsArn")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .refreshToken("refreshToken")
-   * .build())
-   * .redshift(RedshiftConnectorProfileCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build())
-   * .salesforce(SalesforceConnectorProfileCredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientCredentialsArn("clientCredentialsArn")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .jwtToken("jwtToken")
-   * .oAuth2GrantType("oAuth2GrantType")
-   * .refreshToken("refreshToken")
-   * .build())
-   * .sapoData(SAPODataConnectorProfileCredentialsProperty.builder()
-   * .basicAuthCredentials(BasicAuthCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build())
-   * .oAuthCredentials(OAuthCredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .refreshToken("refreshToken")
-   * .build())
-   * .build())
-   * .serviceNow(ServiceNowConnectorProfileCredentialsProperty.builder()
-   * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .refreshToken("refreshToken")
-   * .build())
-   * .password("password")
-   * .username("username")
-   * .build())
-   * .singular(SingularConnectorProfileCredentialsProperty.builder()
-   * .apiKey("apiKey")
-   * .build())
-   * .slack(SlackConnectorProfileCredentialsProperty.builder()
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * // the properties below are optional
-   * .accessToken("accessToken")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .build())
-   * .snowflake(SnowflakeConnectorProfileCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build())
-   * .trendmicro(TrendmicroConnectorProfileCredentialsProperty.builder()
-   * .apiSecretKey("apiSecretKey")
-   * .build())
-   * .veeva(VeevaConnectorProfileCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build())
-   * .zendesk(ZendeskConnectorProfileCredentialsProperty.builder()
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * // the properties below are optional
-   * .accessToken("accessToken")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .build())
-   * .build())
-   * .connectorProfileProperties(ConnectorProfilePropertiesProperty.builder()
-   * .customConnector(CustomConnectorProfilePropertiesProperty.builder()
-   * .oAuth2Properties(OAuth2PropertiesProperty.builder()
-   * .oAuth2GrantType("oAuth2GrantType")
-   * .tokenUrl("tokenUrl")
-   * .tokenUrlCustomProperties(Map.of(
-   * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
-   * .build())
-   * .profileProperties(Map.of(
-   * "profilePropertiesKey", "profileProperties"))
-   * .build())
-   * .datadog(DatadogConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build())
-   * .dynatrace(DynatraceConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build())
-   * .inforNexus(InforNexusConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build())
-   * .marketo(MarketoConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build())
-   * .pardot(PardotConnectorProfilePropertiesProperty.builder()
-   * .businessUnitId("businessUnitId")
-   * // the properties below are optional
-   * .instanceUrl("instanceUrl")
-   * .isSandboxEnvironment(false)
-   * .build())
-   * .redshift(RedshiftConnectorProfilePropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .clusterIdentifier("clusterIdentifier")
-   * .dataApiRoleArn("dataApiRoleArn")
-   * .databaseName("databaseName")
-   * .databaseUrl("databaseUrl")
-   * .isRedshiftServerless(false)
-   * .workgroupName("workgroupName")
-   * .build())
-   * .salesforce(SalesforceConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .isSandboxEnvironment(false)
-   * .usePrivateLinkForMetadataAndAuthorization(false)
-   * .build())
-   * .sapoData(SAPODataConnectorProfilePropertiesProperty.builder()
-   * .applicationHostUrl("applicationHostUrl")
-   * .applicationServicePath("applicationServicePath")
-   * .clientNumber("clientNumber")
-   * .disableSso(false)
-   * .logonLanguage("logonLanguage")
-   * .oAuthProperties(OAuthPropertiesProperty.builder()
-   * .authCodeUrl("authCodeUrl")
-   * .oAuthScopes(List.of("oAuthScopes"))
-   * .tokenUrl("tokenUrl")
-   * .build())
-   * .portNumber(123)
-   * .privateLinkServiceName("privateLinkServiceName")
-   * .build())
-   * .serviceNow(ServiceNowConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build())
-   * .slack(SlackConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build())
-   * .snowflake(SnowflakeConnectorProfilePropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * .stage("stage")
-   * .warehouse("warehouse")
-   * // the properties below are optional
-   * .accountName("accountName")
-   * .bucketPrefix("bucketPrefix")
-   * .privateLinkServiceName("privateLinkServiceName")
-   * .region("region")
-   * .build())
-   * .veeva(VeevaConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build())
-   * .zendesk(ZendeskConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html)
-   */
-  public interface ConnectorProfileConfigProperty {
-    /**
-     * The connector-specific credentials required by each connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html#cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofilecredentials)
-     */
-    public fun connectorProfileCredentials(): Any? = unwrap(this).getConnectorProfileCredentials()
-
-    /**
-     * The connector-specific properties of the profile configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html#cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofileproperties)
-     */
-    public fun connectorProfileProperties(): Any? = unwrap(this).getConnectorProfileProperties()
-
-    /**
-     * A builder for [ConnectorProfileConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectorProfileCredentials The connector-specific credentials required by each
-       * connector.
-       */
-      public fun connectorProfileCredentials(connectorProfileCredentials: IResolvable)
-
-      /**
-       * @param connectorProfileCredentials The connector-specific credentials required by each
-       * connector.
-       */
-      public
-          fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty)
-
-      /**
-       * @param connectorProfileCredentials The connector-specific credentials required by each
-       * connector.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("78778b1f9eeaa31c36d3eb49b35214ea9780c33419d1bb5dc2578d2149bbfcbd")
-      public
-          fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty.Builder.() -> Unit)
-
-      /**
-       * @param connectorProfileProperties The connector-specific properties of the profile
-       * configuration.
-       */
-      public fun connectorProfileProperties(connectorProfileProperties: IResolvable)
-
-      /**
-       * @param connectorProfileProperties The connector-specific properties of the profile
-       * configuration.
-       */
-      public
-          fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty)
-
-      /**
-       * @param connectorProfileProperties The connector-specific properties of the profile
-       * configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7a4f9955d4fa6725ec82e5142587f8d99d8a127f0b14839c12236d96b0fc2301")
-      public
-          fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty.builder()
-
-      /**
-       * @param connectorProfileCredentials The connector-specific credentials required by each
-       * connector.
-       */
-      override fun connectorProfileCredentials(connectorProfileCredentials: IResolvable) {
-        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectorProfileCredentials The connector-specific credentials required by each
-       * connector.
-       */
-      override
-          fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty) {
-        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials.let(ConnectorProfileCredentialsProperty::unwrap))
-      }
-
-      /**
-       * @param connectorProfileCredentials The connector-specific credentials required by each
-       * connector.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("78778b1f9eeaa31c36d3eb49b35214ea9780c33419d1bb5dc2578d2149bbfcbd")
-      override
-          fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty.Builder.() -> Unit):
-          Unit =
-          connectorProfileCredentials(ConnectorProfileCredentialsProperty(connectorProfileCredentials))
-
-      /**
-       * @param connectorProfileProperties The connector-specific properties of the profile
-       * configuration.
-       */
-      override fun connectorProfileProperties(connectorProfileProperties: IResolvable) {
-        cdkBuilder.connectorProfileProperties(connectorProfileProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectorProfileProperties The connector-specific properties of the profile
-       * configuration.
-       */
-      override
-          fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty) {
-        cdkBuilder.connectorProfileProperties(connectorProfileProperties.let(ConnectorProfilePropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param connectorProfileProperties The connector-specific properties of the profile
-       * configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7a4f9955d4fa6725ec82e5142587f8d99d8a127f0b14839c12236d96b0fc2301")
-      override
-          fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty.Builder.() -> Unit):
-          Unit =
-          connectorProfileProperties(ConnectorProfilePropertiesProperty(connectorProfileProperties))
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty,
-    ) : CdkObject(cdkObject), ConnectorProfileConfigProperty {
-      /**
-       * The connector-specific credentials required by each connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html#cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofilecredentials)
-       */
-      override fun connectorProfileCredentials(): Any? =
-          unwrap(this).getConnectorProfileCredentials()
-
-      /**
-       * The connector-specific properties of the profile configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html#cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofileproperties)
-       */
-      override fun connectorProfileProperties(): Any? = unwrap(this).getConnectorProfileProperties()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectorProfileConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty):
-          ConnectorProfileConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectorProfileConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConnectorProfileConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty
-    }
-  }
-
-  /**
-   * The profile properties required by the custom connector.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * CustomConnectorProfilePropertiesProperty customConnectorProfilePropertiesProperty =
-   * CustomConnectorProfilePropertiesProperty.builder()
-   * .oAuth2Properties(OAuth2PropertiesProperty.builder()
-   * .oAuth2GrantType("oAuth2GrantType")
-   * .tokenUrl("tokenUrl")
-   * .tokenUrlCustomProperties(Map.of(
-   * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
-   * .build())
-   * .profileProperties(Map.of(
-   * "profilePropertiesKey", "profileProperties"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html)
-   */
-  public interface CustomConnectorProfilePropertiesProperty {
-    /**
-     * The OAuth 2.0 properties required for OAuth 2.0 authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html#cfn-appflow-connectorprofile-customconnectorprofileproperties-oauth2properties)
-     */
-    public fun oAuth2Properties(): Any? = unwrap(this).getOAuth2Properties()
-
-    /**
-     * A map of properties that are required to create a profile for the custom connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html#cfn-appflow-connectorprofile-customconnectorprofileproperties-profileproperties)
-     */
-    public fun profileProperties(): Any? = unwrap(this).getProfileProperties()
-
-    /**
-     * A builder for [CustomConnectorProfilePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
-       */
-      public fun oAuth2Properties(oAuth2Properties: IResolvable)
-
-      /**
-       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
-       */
-      public fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty)
-
-      /**
-       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2b19f4de65de008ed686f361f574db4fd256cbdcbd75798f4357eb0f8a2695bf")
-      public fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param profileProperties A map of properties that are required to create a profile for the
-       * custom connector.
-       */
-      public fun profileProperties(profileProperties: IResolvable)
-
-      /**
-       * @param profileProperties A map of properties that are required to create a profile for the
-       * custom connector.
-       */
-      public fun profileProperties(profileProperties: Map<String, String>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty.builder()
-
-      /**
-       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
-       */
-      override fun oAuth2Properties(oAuth2Properties: IResolvable) {
-        cdkBuilder.oAuth2Properties(oAuth2Properties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
-       */
-      override fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty) {
-        cdkBuilder.oAuth2Properties(oAuth2Properties.let(OAuth2PropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2b19f4de65de008ed686f361f574db4fd256cbdcbd75798f4357eb0f8a2695bf")
-      override fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty.Builder.() -> Unit):
-          Unit = oAuth2Properties(OAuth2PropertiesProperty(oAuth2Properties))
-
-      /**
-       * @param profileProperties A map of properties that are required to create a profile for the
-       * custom connector.
-       */
-      override fun profileProperties(profileProperties: IResolvable) {
-        cdkBuilder.profileProperties(profileProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param profileProperties A map of properties that are required to create a profile for the
-       * custom connector.
-       */
-      override fun profileProperties(profileProperties: Map<String, String>) {
-        cdkBuilder.profileProperties(profileProperties)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), CustomConnectorProfilePropertiesProperty {
-      /**
-       * The OAuth 2.0 properties required for OAuth 2.0 authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html#cfn-appflow-connectorprofile-customconnectorprofileproperties-oauth2properties)
-       */
-      override fun oAuth2Properties(): Any? = unwrap(this).getOAuth2Properties()
-
-      /**
-       * A map of properties that are required to create a profile for the custom connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html#cfn-appflow-connectorprofile-customconnectorprofileproperties-profileproperties)
-       */
-      override fun profileProperties(): Any? = unwrap(this).getProfileProperties()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CustomConnectorProfilePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty):
-          CustomConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile credentials required when using Snowflake.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SnowflakeConnectorProfileCredentialsProperty snowflakeConnectorProfileCredentialsProperty =
-   * SnowflakeConnectorProfileCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html)
-   */
-  public interface SnowflakeConnectorProfileCredentialsProperty {
-    /**
-     * The password that corresponds to the user name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-snowflakeconnectorprofilecredentials-password)
-     */
-    public fun password(): String
-
-    /**
-     * The name of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-snowflakeconnectorprofilecredentials-username)
-     */
-    public fun username(): String
-
-    /**
-     * A builder for [SnowflakeConnectorProfileCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param password The password that corresponds to the user name. 
-       */
-      public fun password(password: String)
-
-      /**
-       * @param username The name of the user. 
-       */
-      public fun username(username: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty.builder()
-
-      /**
-       * @param password The password that corresponds to the user name. 
-       */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
-      }
-
-      /**
-       * @param username The name of the user. 
-       */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), SnowflakeConnectorProfileCredentialsProperty {
-      /**
-       * The password that corresponds to the user name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-snowflakeconnectorprofilecredentials-password)
-       */
-      override fun password(): String = unwrap(this).getPassword()
-
-      /**
-       * The name of the user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-snowflakeconnectorprofilecredentials-username)
-       */
-      override fun username(): String = unwrap(this).getUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SnowflakeConnectorProfileCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty):
-          SnowflakeConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SnowflakeConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnowflakeConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty
-    }
-  }
-
-  /**
-   * The OAuth credentials required for OAuth type authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * OAuthCredentialsProperty oAuthCredentialsProperty = OAuthCredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .refreshToken("refreshToken")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html)
-   */
-  public interface OAuthCredentialsProperty {
-    /**
-     * The access token used to access protected SAPOData resources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-accesstoken)
-     */
-    public fun accessToken(): String? = unwrap(this).getAccessToken()
-
-    /**
-     * The identifier for the desired client.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-clientid)
-     */
-    public fun clientId(): String? = unwrap(this).getClientId()
-
-    /**
-     * The client secret used by the OAuth client to authenticate to the authorization server.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-clientsecret)
-     */
-    public fun clientSecret(): String? = unwrap(this).getClientSecret()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-connectoroauthrequest)
-     */
-    public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
-
-    /**
-     * The refresh token used to refresh expired access token.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-refreshtoken)
-     */
-    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
-
-    /**
-     * A builder for [OAuthCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessToken The access token used to access protected SAPOData resources.
-       */
-      public fun accessToken(accessToken: String)
-
-      /**
-       * @param clientId The identifier for the desired client.
-       */
-      public fun clientId(clientId: String)
-
-      /**
-       * @param clientSecret The client secret used by the OAuth client to authenticate to the
-       * authorization server.
-       */
-      public fun clientSecret(clientSecret: String)
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable)
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      public fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty)
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8442f2194e283e001ea82ffc637844ff009a16f0f2c0533ea53c18d98645acd7")
-      public
-          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
-
-      /**
-       * @param refreshToken The refresh token used to refresh expired access token.
-       */
-      public fun refreshToken(refreshToken: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty.builder()
-
-      /**
-       * @param accessToken The access token used to access protected SAPOData resources.
-       */
-      override fun accessToken(accessToken: String) {
-        cdkBuilder.accessToken(accessToken)
-      }
-
-      /**
-       * @param clientId The identifier for the desired client.
-       */
-      override fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-      }
-
-      /**
-       * @param clientSecret The client secret used by the OAuth client to authenticate to the
-       * authorization server.
-       */
-      override fun clientSecret(clientSecret: String) {
-        cdkBuilder.clientSecret(clientSecret)
-      }
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
-      }
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8442f2194e283e001ea82ffc637844ff009a16f0f2c0533ea53c18d98645acd7")
-      override
-          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
-          Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
-
-      /**
-       * @param refreshToken The refresh token used to refresh expired access token.
-       */
-      override fun refreshToken(refreshToken: String) {
-        cdkBuilder.refreshToken(refreshToken)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty,
-    ) : CdkObject(cdkObject), OAuthCredentialsProperty {
-      /**
-       * The access token used to access protected SAPOData resources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-accesstoken)
-       */
-      override fun accessToken(): String? = unwrap(this).getAccessToken()
-
-      /**
-       * The identifier for the desired client.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-clientid)
-       */
-      override fun clientId(): String? = unwrap(this).getClientId()
-
-      /**
-       * The client secret used by the OAuth client to authenticate to the authorization server.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-clientsecret)
-       */
-      override fun clientSecret(): String? = unwrap(this).getClientSecret()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-connectoroauthrequest)
-       */
-      override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
-
-      /**
-       * The refresh token used to refresh expired access token.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-refreshtoken)
-       */
-      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OAuthCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty):
-          OAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuthCredentialsProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OAuthCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty
-    }
-  }
-
-  /**
    * The connector-specific profile properties required by each connector.
    *
    * Example:
@@ -3730,7 +3607,7 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * The connector-specific profile properties required by Dynatrace.
+   * The custom credentials required for custom authentication.
    *
    * Example:
    *
@@ -3738,84 +3615,124 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * DynatraceConnectorProfilePropertiesProperty dynatraceConnectorProfilePropertiesProperty =
-   * DynatraceConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
+   * CustomAuthCredentialsProperty customAuthCredentialsProperty =
+   * CustomAuthCredentialsProperty.builder()
+   * .customAuthenticationType("customAuthenticationType")
+   * // the properties below are optional
+   * .credentialsMap(Map.of(
+   * "credentialsMapKey", "credentialsMap"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html)
    */
-  public interface DynatraceConnectorProfilePropertiesProperty {
+  public interface CustomAuthCredentialsProperty {
     /**
-     * The location of the Dynatrace resource.
+     * A map that holds custom authentication credentials.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties.html#cfn-appflow-connectorprofile-dynatraceconnectorprofileproperties-instanceurl)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html#cfn-appflow-connectorprofile-customauthcredentials-credentialsmap)
      */
-    public fun instanceUrl(): String
+    public fun credentialsMap(): Any? = unwrap(this).getCredentialsMap()
 
     /**
-     * A builder for [DynatraceConnectorProfilePropertiesProperty]
+     * The custom authentication type that the connector uses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html#cfn-appflow-connectorprofile-customauthcredentials-customauthenticationtype)
+     */
+    public fun customAuthenticationType(): String
+
+    /**
+     * A builder for [CustomAuthCredentialsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param instanceUrl The location of the Dynatrace resource. 
+       * @param credentialsMap A map that holds custom authentication credentials.
        */
-      public fun instanceUrl(instanceUrl: String)
+      public fun credentialsMap(credentialsMap: IResolvable)
+
+      /**
+       * @param credentialsMap A map that holds custom authentication credentials.
+       */
+      public fun credentialsMap(credentialsMap: Map<String, String>)
+
+      /**
+       * @param customAuthenticationType The custom authentication type that the connector uses. 
+       */
+      public fun customAuthenticationType(customAuthenticationType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty.builder()
 
       /**
-       * @param instanceUrl The location of the Dynatrace resource. 
+       * @param credentialsMap A map that holds custom authentication credentials.
        */
-      override fun instanceUrl(instanceUrl: String) {
-        cdkBuilder.instanceUrl(instanceUrl)
+      override fun credentialsMap(credentialsMap: IResolvable) {
+        cdkBuilder.credentialsMap(credentialsMap.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param credentialsMap A map that holds custom authentication credentials.
+       */
+      override fun credentialsMap(credentialsMap: Map<String, String>) {
+        cdkBuilder.credentialsMap(credentialsMap)
+      }
+
+      /**
+       * @param customAuthenticationType The custom authentication type that the connector uses. 
+       */
+      override fun customAuthenticationType(customAuthenticationType: String) {
+        cdkBuilder.customAuthenticationType(customAuthenticationType)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), DynatraceConnectorProfilePropertiesProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty,
+    ) : CdkObject(cdkObject), CustomAuthCredentialsProperty {
       /**
-       * The location of the Dynatrace resource.
+       * A map that holds custom authentication credentials.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties.html#cfn-appflow-connectorprofile-dynatraceconnectorprofileproperties-instanceurl)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html#cfn-appflow-connectorprofile-customauthcredentials-credentialsmap)
        */
-      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
+      override fun credentialsMap(): Any? = unwrap(this).getCredentialsMap()
+
+      /**
+       * The custom authentication type that the connector uses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html#cfn-appflow-connectorprofile-customauthcredentials-customauthenticationtype)
+       */
+      override fun customAuthenticationType(): String = unwrap(this).getCustomAuthenticationType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DynatraceConnectorProfilePropertiesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomAuthCredentialsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty):
-          DynatraceConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DynatraceConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty):
+          CustomAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomAuthCredentialsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DynatraceConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty
+      internal fun unwrap(wrapped: CustomAuthCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty
     }
   }
 
   /**
-   * The connector-specific profile properties required by Infor Nexus.
+   * The connector-specific profile credentials that are required when using the custom connector.
    *
    * Example:
    *
@@ -3823,249 +3740,26 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * InforNexusConnectorProfilePropertiesProperty inforNexusConnectorProfilePropertiesProperty =
-   * InforNexusConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties.html)
-   */
-  public interface InforNexusConnectorProfilePropertiesProperty {
-    /**
-     * The location of the Infor Nexus resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties.html#cfn-appflow-connectorprofile-infornexusconnectorprofileproperties-instanceurl)
-     */
-    public fun instanceUrl(): String
-
-    /**
-     * A builder for [InforNexusConnectorProfilePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceUrl The location of the Infor Nexus resource. 
-       */
-      public fun instanceUrl(instanceUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty.builder()
-
-      /**
-       * @param instanceUrl The location of the Infor Nexus resource. 
-       */
-      override fun instanceUrl(instanceUrl: String) {
-        cdkBuilder.instanceUrl(instanceUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), InforNexusConnectorProfilePropertiesProperty {
-      /**
-       * The location of the Infor Nexus resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties.html#cfn-appflow-connectorprofile-infornexusconnectorprofileproperties-instanceurl)
-       */
-      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InforNexusConnectorProfilePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty):
-          InforNexusConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InforNexusConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InforNexusConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty
-    }
-  }
-
-  /**
-   * The OAuth properties required for OAuth type authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * OAuthPropertiesProperty oAuthPropertiesProperty = OAuthPropertiesProperty.builder()
-   * .authCodeUrl("authCodeUrl")
-   * .oAuthScopes(List.of("oAuthScopes"))
-   * .tokenUrl("tokenUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html)
-   */
-  public interface OAuthPropertiesProperty {
-    /**
-     * The authorization code url required to redirect to SAP Login Page to fetch authorization code
-     * for OAuth type authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-authcodeurl)
-     */
-    public fun authCodeUrl(): String? = unwrap(this).getAuthCodeUrl()
-
-    /**
-     * The OAuth scopes required for OAuth type authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-oauthscopes)
-     */
-    public fun oAuthScopes(): List<String> = unwrap(this).getOAuthScopes() ?: emptyList()
-
-    /**
-     * The token url required to fetch access/refresh tokens using authorization code and also to
-     * refresh expired access token using refresh token.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-tokenurl)
-     */
-    public fun tokenUrl(): String? = unwrap(this).getTokenUrl()
-
-    /**
-     * A builder for [OAuthPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authCodeUrl The authorization code url required to redirect to SAP Login Page to
-       * fetch authorization code for OAuth type authentication.
-       */
-      public fun authCodeUrl(authCodeUrl: String)
-
-      /**
-       * @param oAuthScopes The OAuth scopes required for OAuth type authentication.
-       */
-      public fun oAuthScopes(oAuthScopes: List<String>)
-
-      /**
-       * @param oAuthScopes The OAuth scopes required for OAuth type authentication.
-       */
-      public fun oAuthScopes(vararg oAuthScopes: String)
-
-      /**
-       * @param tokenUrl The token url required to fetch access/refresh tokens using authorization
-       * code and also to refresh expired access token using refresh token.
-       */
-      public fun tokenUrl(tokenUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty.builder()
-
-      /**
-       * @param authCodeUrl The authorization code url required to redirect to SAP Login Page to
-       * fetch authorization code for OAuth type authentication.
-       */
-      override fun authCodeUrl(authCodeUrl: String) {
-        cdkBuilder.authCodeUrl(authCodeUrl)
-      }
-
-      /**
-       * @param oAuthScopes The OAuth scopes required for OAuth type authentication.
-       */
-      override fun oAuthScopes(oAuthScopes: List<String>) {
-        cdkBuilder.oAuthScopes(oAuthScopes)
-      }
-
-      /**
-       * @param oAuthScopes The OAuth scopes required for OAuth type authentication.
-       */
-      override fun oAuthScopes(vararg oAuthScopes: String): Unit = oAuthScopes(oAuthScopes.toList())
-
-      /**
-       * @param tokenUrl The token url required to fetch access/refresh tokens using authorization
-       * code and also to refresh expired access token using refresh token.
-       */
-      override fun tokenUrl(tokenUrl: String) {
-        cdkBuilder.tokenUrl(tokenUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty,
-    ) : CdkObject(cdkObject), OAuthPropertiesProperty {
-      /**
-       * The authorization code url required to redirect to SAP Login Page to fetch authorization
-       * code for OAuth type authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-authcodeurl)
-       */
-      override fun authCodeUrl(): String? = unwrap(this).getAuthCodeUrl()
-
-      /**
-       * The OAuth scopes required for OAuth type authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-oauthscopes)
-       */
-      override fun oAuthScopes(): List<String> = unwrap(this).getOAuthScopes() ?: emptyList()
-
-      /**
-       * The token url required to fetch access/refresh tokens using authorization code and also to
-       * refresh expired access token using refresh token.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-tokenurl)
-       */
-      override fun tokenUrl(): String? = unwrap(this).getTokenUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OAuthPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty):
-          OAuthPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuthPropertiesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OAuthPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile credentials required when using ServiceNow.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ServiceNowConnectorProfileCredentialsProperty serviceNowConnectorProfileCredentialsProperty =
-   * ServiceNowConnectorProfileCredentialsProperty.builder()
-   * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+   * CustomConnectorProfileCredentialsProperty customConnectorProfileCredentialsProperty =
+   * CustomConnectorProfileCredentialsProperty.builder()
+   * .authenticationType("authenticationType")
+   * // the properties below are optional
+   * .apiKey(ApiKeyCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * // the properties below are optional
+   * .apiSecretKey("apiSecretKey")
+   * .build())
+   * .basic(BasicAuthCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build())
+   * .custom(CustomAuthCredentialsProperty.builder()
+   * .customAuthenticationType("customAuthenticationType")
+   * // the properties below are optional
+   * .credentialsMap(Map.of(
+   * "credentialsMapKey", "credentialsMap"))
+   * .build())
+   * .oauth2(OAuth2CredentialsProperty.builder()
    * .accessToken("accessToken")
    * .clientId("clientId")
    * .clientSecret("clientSecret")
@@ -4075,159 +3769,305 @@ public open class CfnConnectorProfile internal constructor(
    * .build())
    * .refreshToken("refreshToken")
    * .build())
-   * .password("password")
-   * .username("username")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html)
    */
-  public interface ServiceNowConnectorProfileCredentialsProperty {
+  public interface CustomConnectorProfileCredentialsProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-oauth2credentials)
-     */
-    public fun oAuth2Credentials(): Any? = unwrap(this).getOAuth2Credentials()
-
-    /**
-     * The password that corresponds to the user name.
+     * The API keys required for the authentication of the user.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-password)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-apikey)
      */
-    public fun password(): String? = unwrap(this).getPassword()
+    public fun apiKey(): Any? = unwrap(this).getApiKey()
 
     /**
-     * The name of the user.
+     * The authentication type that the custom connector uses for authenticating while creating a
+     * connector profile.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-username)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-authenticationtype)
      */
-    public fun username(): String? = unwrap(this).getUsername()
+    public fun authenticationType(): String
 
     /**
-     * A builder for [ServiceNowConnectorProfileCredentialsProperty]
+     * The basic credentials that are required for the authentication of the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-basic)
+     */
+    public fun basic(): Any? = unwrap(this).getBasic()
+
+    /**
+     * If the connector uses the custom authentication mechanism, this holds the required
+     * credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-custom)
+     */
+    public fun custom(): Any? = unwrap(this).getCustom()
+
+    /**
+     * The OAuth 2.0 credentials required for the authentication of the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-oauth2)
+     */
+    public fun oauth2(): Any? = unwrap(this).getOauth2()
+
+    /**
+     * A builder for [CustomConnectorProfileCredentialsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param apiKey The API keys required for the authentication of the user.
        */
-      public fun oAuth2Credentials(oAuth2Credentials: IResolvable)
+      public fun apiKey(apiKey: IResolvable)
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param apiKey The API keys required for the authentication of the user.
        */
-      public fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty)
+      public fun apiKey(apiKey: ApiKeyCredentialsProperty)
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param apiKey The API keys required for the authentication of the user.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("52363dd6c5a8eb299b5db6177cba24c77f4eff2eb58a49b48fab009df69af22f")
-      public fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty.Builder.() -> Unit)
+      @JvmName("bda9c7ae8acca1765606651cbf1342b871184c3896a0ceba607cce3b48aa28ab")
+      public fun apiKey(apiKey: ApiKeyCredentialsProperty.Builder.() -> Unit)
 
       /**
-       * @param password The password that corresponds to the user name.
+       * @param authenticationType The authentication type that the custom connector uses for
+       * authenticating while creating a connector profile. 
        */
-      public fun password(password: String)
+      public fun authenticationType(authenticationType: String)
 
       /**
-       * @param username The name of the user.
+       * @param basic The basic credentials that are required for the authentication of the user.
        */
-      public fun username(username: String)
+      public fun basic(basic: IResolvable)
+
+      /**
+       * @param basic The basic credentials that are required for the authentication of the user.
+       */
+      public fun basic(basic: BasicAuthCredentialsProperty)
+
+      /**
+       * @param basic The basic credentials that are required for the authentication of the user.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("baf9e4c4b7919bde7a4210e14a74239e0e76b1c7d17663717ad1a3e13368e7b0")
+      public fun basic(basic: BasicAuthCredentialsProperty.Builder.() -> Unit)
+
+      /**
+       * @param custom If the connector uses the custom authentication mechanism, this holds the
+       * required credentials.
+       */
+      public fun custom(custom: IResolvable)
+
+      /**
+       * @param custom If the connector uses the custom authentication mechanism, this holds the
+       * required credentials.
+       */
+      public fun custom(custom: CustomAuthCredentialsProperty)
+
+      /**
+       * @param custom If the connector uses the custom authentication mechanism, this holds the
+       * required credentials.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ac29a2fddade456121fe054623920654f76aa806595f8c1f8601ae65913a4452")
+      public fun custom(custom: CustomAuthCredentialsProperty.Builder.() -> Unit)
+
+      /**
+       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
+       */
+      public fun oauth2(oauth2: IResolvable)
+
+      /**
+       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
+       */
+      public fun oauth2(oauth2: OAuth2CredentialsProperty)
+
+      /**
+       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7d281424b16b15ada3366ead134f9f690373cc0331fd6365f23b2c6a26223839")
+      public fun oauth2(oauth2: OAuth2CredentialsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty.builder()
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param apiKey The API keys required for the authentication of the user.
        */
-      override fun oAuth2Credentials(oAuth2Credentials: IResolvable) {
-        cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(IResolvable::unwrap))
+      override fun apiKey(apiKey: IResolvable) {
+        cdkBuilder.apiKey(apiKey.let(IResolvable::unwrap))
       }
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param apiKey The API keys required for the authentication of the user.
        */
-      override fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty) {
-        cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(OAuth2CredentialsProperty::unwrap))
+      override fun apiKey(apiKey: ApiKeyCredentialsProperty) {
+        cdkBuilder.apiKey(apiKey.let(ApiKeyCredentialsProperty::unwrap))
       }
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param apiKey The API keys required for the authentication of the user.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("52363dd6c5a8eb299b5db6177cba24c77f4eff2eb58a49b48fab009df69af22f")
-      override
-          fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty.Builder.() -> Unit):
-          Unit = oAuth2Credentials(OAuth2CredentialsProperty(oAuth2Credentials))
+      @JvmName("bda9c7ae8acca1765606651cbf1342b871184c3896a0ceba607cce3b48aa28ab")
+      override fun apiKey(apiKey: ApiKeyCredentialsProperty.Builder.() -> Unit): Unit =
+          apiKey(ApiKeyCredentialsProperty(apiKey))
 
       /**
-       * @param password The password that corresponds to the user name.
+       * @param authenticationType The authentication type that the custom connector uses for
+       * authenticating while creating a connector profile. 
        */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
+      override fun authenticationType(authenticationType: String) {
+        cdkBuilder.authenticationType(authenticationType)
       }
 
       /**
-       * @param username The name of the user.
+       * @param basic The basic credentials that are required for the authentication of the user.
        */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
+      override fun basic(basic: IResolvable) {
+        cdkBuilder.basic(basic.let(IResolvable::unwrap))
       }
+
+      /**
+       * @param basic The basic credentials that are required for the authentication of the user.
+       */
+      override fun basic(basic: BasicAuthCredentialsProperty) {
+        cdkBuilder.basic(basic.let(BasicAuthCredentialsProperty::unwrap))
+      }
+
+      /**
+       * @param basic The basic credentials that are required for the authentication of the user.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("baf9e4c4b7919bde7a4210e14a74239e0e76b1c7d17663717ad1a3e13368e7b0")
+      override fun basic(basic: BasicAuthCredentialsProperty.Builder.() -> Unit): Unit =
+          basic(BasicAuthCredentialsProperty(basic))
+
+      /**
+       * @param custom If the connector uses the custom authentication mechanism, this holds the
+       * required credentials.
+       */
+      override fun custom(custom: IResolvable) {
+        cdkBuilder.custom(custom.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param custom If the connector uses the custom authentication mechanism, this holds the
+       * required credentials.
+       */
+      override fun custom(custom: CustomAuthCredentialsProperty) {
+        cdkBuilder.custom(custom.let(CustomAuthCredentialsProperty::unwrap))
+      }
+
+      /**
+       * @param custom If the connector uses the custom authentication mechanism, this holds the
+       * required credentials.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ac29a2fddade456121fe054623920654f76aa806595f8c1f8601ae65913a4452")
+      override fun custom(custom: CustomAuthCredentialsProperty.Builder.() -> Unit): Unit =
+          custom(CustomAuthCredentialsProperty(custom))
+
+      /**
+       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
+       */
+      override fun oauth2(oauth2: IResolvable) {
+        cdkBuilder.oauth2(oauth2.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
+       */
+      override fun oauth2(oauth2: OAuth2CredentialsProperty) {
+        cdkBuilder.oauth2(oauth2.let(OAuth2CredentialsProperty::unwrap))
+      }
+
+      /**
+       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7d281424b16b15ada3366ead134f9f690373cc0331fd6365f23b2c6a26223839")
+      override fun oauth2(oauth2: OAuth2CredentialsProperty.Builder.() -> Unit): Unit =
+          oauth2(OAuth2CredentialsProperty(oauth2))
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), ServiceNowConnectorProfileCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), CustomConnectorProfileCredentialsProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-oauth2credentials)
+       * The API keys required for the authentication of the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-apikey)
        */
-      override fun oAuth2Credentials(): Any? = unwrap(this).getOAuth2Credentials()
+      override fun apiKey(): Any? = unwrap(this).getApiKey()
 
       /**
-       * The password that corresponds to the user name.
+       * The authentication type that the custom connector uses for authenticating while creating a
+       * connector profile.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-password)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-authenticationtype)
        */
-      override fun password(): String? = unwrap(this).getPassword()
+      override fun authenticationType(): String = unwrap(this).getAuthenticationType()
 
       /**
-       * The name of the user.
+       * The basic credentials that are required for the authentication of the user.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-username)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-basic)
        */
-      override fun username(): String? = unwrap(this).getUsername()
+      override fun basic(): Any? = unwrap(this).getBasic()
+
+      /**
+       * If the connector uses the custom authentication mechanism, this holds the required
+       * credentials.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-custom)
+       */
+      override fun custom(): Any? = unwrap(this).getCustom()
+
+      /**
+       * The OAuth 2.0 credentials required for the authentication of the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-oauth2)
+       */
+      override fun oauth2(): Any? = unwrap(this).getOauth2()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceNowConnectorProfileCredentialsProperty {
+          CustomConnectorProfileCredentialsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty):
-          ServiceNowConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceNowConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty):
+          CustomConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ServiceNowConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty
+      internal fun unwrap(wrapped: CustomConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty
     }
   }
 
   /**
-   * The connector-specific profile properties required when using ServiceNow.
+   * The profile properties required by the custom connector.
    *
    * Example:
    *
@@ -4235,276 +4075,285 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ServiceNowConnectorProfilePropertiesProperty serviceNowConnectorProfilePropertiesProperty =
-   * ServiceNowConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties.html)
-   */
-  public interface ServiceNowConnectorProfilePropertiesProperty {
-    /**
-     * The location of the ServiceNow resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties.html#cfn-appflow-connectorprofile-servicenowconnectorprofileproperties-instanceurl)
-     */
-    public fun instanceUrl(): String
-
-    /**
-     * A builder for [ServiceNowConnectorProfilePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceUrl The location of the ServiceNow resource. 
-       */
-      public fun instanceUrl(instanceUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty.builder()
-
-      /**
-       * @param instanceUrl The location of the ServiceNow resource. 
-       */
-      override fun instanceUrl(instanceUrl: String) {
-        cdkBuilder.instanceUrl(instanceUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), ServiceNowConnectorProfilePropertiesProperty {
-      /**
-       * The location of the ServiceNow resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties.html#cfn-appflow-connectorprofile-servicenowconnectorprofileproperties-instanceurl)
-       */
-      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceNowConnectorProfilePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty):
-          ServiceNowConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceNowConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServiceNowConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile credentials required when using Salesforce Pardot.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * PardotConnectorProfileCredentialsProperty pardotConnectorProfileCredentialsProperty =
-   * PardotConnectorProfileCredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientCredentialsArn("clientCredentialsArn")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
+   * CustomConnectorProfilePropertiesProperty customConnectorProfilePropertiesProperty =
+   * CustomConnectorProfilePropertiesProperty.builder()
+   * .oAuth2Properties(OAuth2PropertiesProperty.builder()
+   * .oAuth2GrantType("oAuth2GrantType")
+   * .tokenUrl("tokenUrl")
+   * .tokenUrlCustomProperties(Map.of(
+   * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
    * .build())
-   * .refreshToken("refreshToken")
+   * .profileProperties(Map.of(
+   * "profilePropertiesKey", "profileProperties"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html)
    */
-  public interface PardotConnectorProfileCredentialsProperty {
+  public interface CustomConnectorProfilePropertiesProperty {
     /**
-     * The credentials used to access protected Salesforce Pardot resources.
+     * The OAuth 2.0 properties required for OAuth 2.0 authentication.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-accesstoken)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html#cfn-appflow-connectorprofile-customconnectorprofileproperties-oauth2properties)
      */
-    public fun accessToken(): String? = unwrap(this).getAccessToken()
+    public fun oAuth2Properties(): Any? = unwrap(this).getOAuth2Properties()
 
     /**
-     * The secret manager ARN, which contains the client ID and client secret of the connected app.
+     * A map of properties that are required to create a profile for the custom connector.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-clientcredentialsarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html#cfn-appflow-connectorprofile-customconnectorprofileproperties-profileproperties)
      */
-    public fun clientCredentialsArn(): String? = unwrap(this).getClientCredentialsArn()
+    public fun profileProperties(): Any? = unwrap(this).getProfileProperties()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-connectoroauthrequest)
-     */
-    public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
-
-    /**
-     * The credentials used to acquire new access tokens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-refreshtoken)
-     */
-    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
-
-    /**
-     * A builder for [PardotConnectorProfileCredentialsProperty]
+     * A builder for [CustomConnectorProfilePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accessToken The credentials used to access protected Salesforce Pardot resources.
+       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
        */
-      public fun accessToken(accessToken: String)
+      public fun oAuth2Properties(oAuth2Properties: IResolvable)
 
       /**
-       * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
-       * secret of the connected app.
+       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
        */
-      public fun clientCredentialsArn(clientCredentialsArn: String)
+      public fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty)
 
       /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable)
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      public fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty)
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
+       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("39ab3c472f4a497ec72452bbf4eb331f225ea0fad5409ed04313e340bfb59fcb")
-      public
-          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
+      @JvmName("2b19f4de65de008ed686f361f574db4fd256cbdcbd75798f4357eb0f8a2695bf")
+      public fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty.Builder.() -> Unit)
 
       /**
-       * @param refreshToken The credentials used to acquire new access tokens.
+       * @param profileProperties A map of properties that are required to create a profile for the
+       * custom connector.
        */
-      public fun refreshToken(refreshToken: String)
+      public fun profileProperties(profileProperties: IResolvable)
+
+      /**
+       * @param profileProperties A map of properties that are required to create a profile for the
+       * custom connector.
+       */
+      public fun profileProperties(profileProperties: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty.builder()
 
       /**
-       * @param accessToken The credentials used to access protected Salesforce Pardot resources.
+       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
        */
-      override fun accessToken(accessToken: String) {
-        cdkBuilder.accessToken(accessToken)
+      override fun oAuth2Properties(oAuth2Properties: IResolvable) {
+        cdkBuilder.oAuth2Properties(oAuth2Properties.let(IResolvable::unwrap))
       }
 
       /**
-       * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
-       * secret of the connected app.
+       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
        */
-      override fun clientCredentialsArn(clientCredentialsArn: String) {
-        cdkBuilder.clientCredentialsArn(clientCredentialsArn)
+      override fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty) {
+        cdkBuilder.oAuth2Properties(oAuth2Properties.let(OAuth2PropertiesProperty::unwrap))
       }
 
       /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
-       */
-      override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
-      }
-
-      /**
-       * @param connectorOAuthRequest the value to be set.
+       * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("39ab3c472f4a497ec72452bbf4eb331f225ea0fad5409ed04313e340bfb59fcb")
-      override
-          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
-          Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
+      @JvmName("2b19f4de65de008ed686f361f574db4fd256cbdcbd75798f4357eb0f8a2695bf")
+      override fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty.Builder.() -> Unit):
+          Unit = oAuth2Properties(OAuth2PropertiesProperty(oAuth2Properties))
 
       /**
-       * @param refreshToken The credentials used to acquire new access tokens.
+       * @param profileProperties A map of properties that are required to create a profile for the
+       * custom connector.
        */
-      override fun refreshToken(refreshToken: String) {
-        cdkBuilder.refreshToken(refreshToken)
+      override fun profileProperties(profileProperties: IResolvable) {
+        cdkBuilder.profileProperties(profileProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param profileProperties A map of properties that are required to create a profile for the
+       * custom connector.
+       */
+      override fun profileProperties(profileProperties: Map<String, String>) {
+        cdkBuilder.profileProperties(profileProperties)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), PardotConnectorProfileCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), CustomConnectorProfilePropertiesProperty {
       /**
-       * The credentials used to access protected Salesforce Pardot resources.
+       * The OAuth 2.0 properties required for OAuth 2.0 authentication.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-accesstoken)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html#cfn-appflow-connectorprofile-customconnectorprofileproperties-oauth2properties)
        */
-      override fun accessToken(): String? = unwrap(this).getAccessToken()
+      override fun oAuth2Properties(): Any? = unwrap(this).getOAuth2Properties()
 
       /**
-       * The secret manager ARN, which contains the client ID and client secret of the connected
-       * app.
+       * A map of properties that are required to create a profile for the custom connector.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-clientcredentialsarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html#cfn-appflow-connectorprofile-customconnectorprofileproperties-profileproperties)
        */
-      override fun clientCredentialsArn(): String? = unwrap(this).getClientCredentialsArn()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-connectoroauthrequest)
-       */
-      override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
-
-      /**
-       * The credentials used to acquire new access tokens.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-refreshtoken)
-       */
-      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
+      override fun profileProperties(): Any? = unwrap(this).getProfileProperties()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          PardotConnectorProfileCredentialsProperty {
+          CustomConnectorProfilePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty):
-          PardotConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PardotConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty):
+          CustomConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PardotConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty
+      internal fun unwrap(wrapped: CustomConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty
+    }
+  }
+
+  /**
+   * The connector-specific credentials required by Datadog.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * DatadogConnectorProfileCredentialsProperty datadogConnectorProfileCredentialsProperty =
+   * DatadogConnectorProfileCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * .applicationKey("applicationKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html)
+   */
+  public interface DatadogConnectorProfileCredentialsProperty {
+    /**
+     * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
+     * to your API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-apikey)
+     */
+    public fun apiKey(): String
+
+    /**
+     * Application keys, in conjunction with your API key, give you full access to Datadog’s
+     * programmatic API.
+     *
+     * Application keys are associated with the user account that created them. The application key
+     * is used to log all requests made to the API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-applicationkey)
+     */
+    public fun applicationKey(): String
+
+    /**
+     * A builder for [DatadogConnectorProfileCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
+       * calling program to your API. 
+       */
+      public fun apiKey(apiKey: String)
+
+      /**
+       * @param applicationKey Application keys, in conjunction with your API key, give you full
+       * access to Datadog’s programmatic API. 
+       * Application keys are associated with the user account that created them. The application
+       * key is used to log all requests made to the API.
+       */
+      public fun applicationKey(applicationKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty.builder()
+
+      /**
+       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
+       * calling program to your API. 
+       */
+      override fun apiKey(apiKey: String) {
+        cdkBuilder.apiKey(apiKey)
+      }
+
+      /**
+       * @param applicationKey Application keys, in conjunction with your API key, give you full
+       * access to Datadog’s programmatic API. 
+       * Application keys are associated with the user account that created them. The application
+       * key is used to log all requests made to the API.
+       */
+      override fun applicationKey(applicationKey: String) {
+        cdkBuilder.applicationKey(applicationKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), DatadogConnectorProfileCredentialsProperty {
+      /**
+       * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
+       * to your API.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-apikey)
+       */
+      override fun apiKey(): String = unwrap(this).getApiKey()
+
+      /**
+       * Application keys, in conjunction with your API key, give you full access to Datadog’s
+       * programmatic API.
+       *
+       * Application keys are associated with the user account that created them. The application
+       * key is used to log all requests made to the API.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-applicationkey)
+       */
+      override fun applicationKey(): String = unwrap(this).getApplicationKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DatadogConnectorProfileCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty):
+          DatadogConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatadogConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatadogConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty
     }
   }
 
@@ -4594,767 +4443,6 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * The API key credentials required for API key authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ApiKeyCredentialsProperty apiKeyCredentialsProperty = ApiKeyCredentialsProperty.builder()
-   * .apiKey("apiKey")
-   * // the properties below are optional
-   * .apiSecretKey("apiSecretKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html)
-   */
-  public interface ApiKeyCredentialsProperty {
-    /**
-     * The API key required for API key authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html#cfn-appflow-connectorprofile-apikeycredentials-apikey)
-     */
-    public fun apiKey(): String
-
-    /**
-     * The API secret key required for API key authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html#cfn-appflow-connectorprofile-apikeycredentials-apisecretkey)
-     */
-    public fun apiSecretKey(): String? = unwrap(this).getApiSecretKey()
-
-    /**
-     * A builder for [ApiKeyCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param apiKey The API key required for API key authentication. 
-       */
-      public fun apiKey(apiKey: String)
-
-      /**
-       * @param apiSecretKey The API secret key required for API key authentication.
-       */
-      public fun apiSecretKey(apiSecretKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty.builder()
-
-      /**
-       * @param apiKey The API key required for API key authentication. 
-       */
-      override fun apiKey(apiKey: String) {
-        cdkBuilder.apiKey(apiKey)
-      }
-
-      /**
-       * @param apiSecretKey The API secret key required for API key authentication.
-       */
-      override fun apiSecretKey(apiSecretKey: String) {
-        cdkBuilder.apiSecretKey(apiSecretKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty,
-    ) : CdkObject(cdkObject), ApiKeyCredentialsProperty {
-      /**
-       * The API key required for API key authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html#cfn-appflow-connectorprofile-apikeycredentials-apikey)
-       */
-      override fun apiKey(): String = unwrap(this).getApiKey()
-
-      /**
-       * The API secret key required for API key authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html#cfn-appflow-connectorprofile-apikeycredentials-apisecretkey)
-       */
-      override fun apiSecretKey(): String? = unwrap(this).getApiSecretKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ApiKeyCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty):
-          ApiKeyCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ApiKeyCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ApiKeyCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile properties required when using Zendesk.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ZendeskConnectorProfilePropertiesProperty zendeskConnectorProfilePropertiesProperty =
-   * ZendeskConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties.html)
-   */
-  public interface ZendeskConnectorProfilePropertiesProperty {
-    /**
-     * The location of the Zendesk resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties.html#cfn-appflow-connectorprofile-zendeskconnectorprofileproperties-instanceurl)
-     */
-    public fun instanceUrl(): String
-
-    /**
-     * A builder for [ZendeskConnectorProfilePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceUrl The location of the Zendesk resource. 
-       */
-      public fun instanceUrl(instanceUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty.builder()
-
-      /**
-       * @param instanceUrl The location of the Zendesk resource. 
-       */
-      override fun instanceUrl(instanceUrl: String) {
-        cdkBuilder.instanceUrl(instanceUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), ZendeskConnectorProfilePropertiesProperty {
-      /**
-       * The location of the Zendesk resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties.html#cfn-appflow-connectorprofile-zendeskconnectorprofileproperties-instanceurl)
-       */
-      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ZendeskConnectorProfilePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty):
-          ZendeskConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ZendeskConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ZendeskConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty
-    }
-  }
-
-  /**
-   * Used by select connectors for which the OAuth workflow is supported, such as Salesforce, Google
-   * Analytics, Marketo, Zendesk, and Slack.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ConnectorOAuthRequestProperty connectorOAuthRequestProperty =
-   * ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html)
-   */
-  public interface ConnectorOAuthRequestProperty {
-    /**
-     * The code provided by the connector when it has been authenticated via the connected app.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-authcode)
-     */
-    public fun authCode(): String? = unwrap(this).getAuthCode()
-
-    /**
-     * The URL to which the authentication server redirects the browser after authorization has been
-     * granted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-redirecturi)
-     */
-    public fun redirectUri(): String? = unwrap(this).getRedirectUri()
-
-    /**
-     * A builder for [ConnectorOAuthRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authCode The code provided by the connector when it has been authenticated via the
-       * connected app.
-       */
-      public fun authCode(authCode: String)
-
-      /**
-       * @param redirectUri The URL to which the authentication server redirects the browser after
-       * authorization has been granted.
-       */
-      public fun redirectUri(redirectUri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty.builder()
-
-      /**
-       * @param authCode The code provided by the connector when it has been authenticated via the
-       * connected app.
-       */
-      override fun authCode(authCode: String) {
-        cdkBuilder.authCode(authCode)
-      }
-
-      /**
-       * @param redirectUri The URL to which the authentication server redirects the browser after
-       * authorization has been granted.
-       */
-      override fun redirectUri(redirectUri: String) {
-        cdkBuilder.redirectUri(redirectUri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty,
-    ) : CdkObject(cdkObject), ConnectorOAuthRequestProperty {
-      /**
-       * The code provided by the connector when it has been authenticated via the connected app.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-authcode)
-       */
-      override fun authCode(): String? = unwrap(this).getAuthCode()
-
-      /**
-       * The URL to which the authentication server redirects the browser after authorization has
-       * been granted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-redirecturi)
-       */
-      override fun redirectUri(): String? = unwrap(this).getRedirectUri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectorOAuthRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty):
-          ConnectorOAuthRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectorOAuthRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConnectorOAuthRequestProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty
-    }
-  }
-
-  /**
-   * The basic auth credentials required for basic authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * BasicAuthCredentialsProperty basicAuthCredentialsProperty =
-   * BasicAuthCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html)
-   */
-  public interface BasicAuthCredentialsProperty {
-    /**
-     * The password to use to connect to a resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html#cfn-appflow-connectorprofile-basicauthcredentials-password)
-     */
-    public fun password(): String
-
-    /**
-     * The username to use to connect to a resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html#cfn-appflow-connectorprofile-basicauthcredentials-username)
-     */
-    public fun username(): String
-
-    /**
-     * A builder for [BasicAuthCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param password The password to use to connect to a resource. 
-       */
-      public fun password(password: String)
-
-      /**
-       * @param username The username to use to connect to a resource. 
-       */
-      public fun username(username: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty.builder()
-
-      /**
-       * @param password The password to use to connect to a resource. 
-       */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
-      }
-
-      /**
-       * @param username The username to use to connect to a resource. 
-       */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty,
-    ) : CdkObject(cdkObject), BasicAuthCredentialsProperty {
-      /**
-       * The password to use to connect to a resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html#cfn-appflow-connectorprofile-basicauthcredentials-password)
-       */
-      override fun password(): String = unwrap(this).getPassword()
-
-      /**
-       * The username to use to connect to a resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html#cfn-appflow-connectorprofile-basicauthcredentials-username)
-       */
-      override fun username(): String = unwrap(this).getUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BasicAuthCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty):
-          BasicAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BasicAuthCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BasicAuthCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile properties required when using Salesforce.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SalesforceConnectorProfilePropertiesProperty salesforceConnectorProfilePropertiesProperty =
-   * SalesforceConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .isSandboxEnvironment(false)
-   * .usePrivateLinkForMetadataAndAuthorization(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html)
-   */
-  public interface SalesforceConnectorProfilePropertiesProperty {
-    /**
-     * The location of the Salesforce resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-instanceurl)
-     */
-    public fun instanceUrl(): String? = unwrap(this).getInstanceUrl()
-
-    /**
-     * Indicates whether the connector profile applies to a sandbox or production environment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment)
-     */
-    public fun isSandboxEnvironment(): Any? = unwrap(this).getIsSandboxEnvironment()
-
-    /**
-     * If the connection mode for the connector profile is private, this parameter sets whether
-     * Amazon AppFlow uses the private network to send metadata and authorization calls to Salesforce.
-     *
-     * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
-     * infrastructure without being exposed to the public internet.
-     *
-     * Set either of the following values:
-     *
-     * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
-     *
-     * These private calls are:
-     *
-     * * Calls to get metadata about your Salesforce records. This metadata describes your
-     * Salesforce objects and their fields.
-     * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
-     * records.
-     * * Calls to transfer your Salesforce records as part of a flow run.
-     * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately and
-     * other calls over the public internet.
-     *
-     * The public calls are:
-     *
-     * * Calls to get metadata about your Salesforce records.
-     * * Calls to get or refresh access tokens.
-     *
-     * The private calls are:
-     *
-     * * Calls to transfer your Salesforce records as part of a flow run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-useprivatelinkformetadataandauthorization)
-     */
-    public fun usePrivateLinkForMetadataAndAuthorization(): Any? =
-        unwrap(this).getUsePrivateLinkForMetadataAndAuthorization()
-
-    /**
-     * A builder for [SalesforceConnectorProfilePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceUrl The location of the Salesforce resource.
-       */
-      public fun instanceUrl(instanceUrl: String)
-
-      /**
-       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
-       * production environment.
-       */
-      public fun isSandboxEnvironment(isSandboxEnvironment: Boolean)
-
-      /**
-       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
-       * production environment.
-       */
-      public fun isSandboxEnvironment(isSandboxEnvironment: IResolvable)
-
-      /**
-       * @param usePrivateLinkForMetadataAndAuthorization If the connection mode for the connector
-       * profile is private, this parameter sets whether Amazon AppFlow uses the private network to
-       * send metadata and authorization calls to Salesforce.
-       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
-       * infrastructure without being exposed to the public internet.
-       *
-       * Set either of the following values:
-       *
-       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
-       *
-       * These private calls are:
-       *
-       * * Calls to get metadata about your Salesforce records. This metadata describes your
-       * Salesforce objects and their fields.
-       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
-       * records.
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
-       * and other calls over the public internet.
-       *
-       * The public calls are:
-       *
-       * * Calls to get metadata about your Salesforce records.
-       * * Calls to get or refresh access tokens.
-       *
-       * The private calls are:
-       *
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       */
-      public
-          fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: Boolean)
-
-      /**
-       * @param usePrivateLinkForMetadataAndAuthorization If the connection mode for the connector
-       * profile is private, this parameter sets whether Amazon AppFlow uses the private network to
-       * send metadata and authorization calls to Salesforce.
-       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
-       * infrastructure without being exposed to the public internet.
-       *
-       * Set either of the following values:
-       *
-       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
-       *
-       * These private calls are:
-       *
-       * * Calls to get metadata about your Salesforce records. This metadata describes your
-       * Salesforce objects and their fields.
-       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
-       * records.
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
-       * and other calls over the public internet.
-       *
-       * The public calls are:
-       *
-       * * Calls to get metadata about your Salesforce records.
-       * * Calls to get or refresh access tokens.
-       *
-       * The private calls are:
-       *
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       */
-      public
-          fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty.builder()
-
-      /**
-       * @param instanceUrl The location of the Salesforce resource.
-       */
-      override fun instanceUrl(instanceUrl: String) {
-        cdkBuilder.instanceUrl(instanceUrl)
-      }
-
-      /**
-       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
-       * production environment.
-       */
-      override fun isSandboxEnvironment(isSandboxEnvironment: Boolean) {
-        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
-      }
-
-      /**
-       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
-       * production environment.
-       */
-      override fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
-        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param usePrivateLinkForMetadataAndAuthorization If the connection mode for the connector
-       * profile is private, this parameter sets whether Amazon AppFlow uses the private network to
-       * send metadata and authorization calls to Salesforce.
-       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
-       * infrastructure without being exposed to the public internet.
-       *
-       * Set either of the following values:
-       *
-       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
-       *
-       * These private calls are:
-       *
-       * * Calls to get metadata about your Salesforce records. This metadata describes your
-       * Salesforce objects and their fields.
-       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
-       * records.
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
-       * and other calls over the public internet.
-       *
-       * The public calls are:
-       *
-       * * Calls to get metadata about your Salesforce records.
-       * * Calls to get or refresh access tokens.
-       *
-       * The private calls are:
-       *
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       */
-      override
-          fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: Boolean) {
-        cdkBuilder.usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization)
-      }
-
-      /**
-       * @param usePrivateLinkForMetadataAndAuthorization If the connection mode for the connector
-       * profile is private, this parameter sets whether Amazon AppFlow uses the private network to
-       * send metadata and authorization calls to Salesforce.
-       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
-       * infrastructure without being exposed to the public internet.
-       *
-       * Set either of the following values:
-       *
-       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
-       *
-       * These private calls are:
-       *
-       * * Calls to get metadata about your Salesforce records. This metadata describes your
-       * Salesforce objects and their fields.
-       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
-       * records.
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
-       * and other calls over the public internet.
-       *
-       * The public calls are:
-       *
-       * * Calls to get metadata about your Salesforce records.
-       * * Calls to get or refresh access tokens.
-       *
-       * The private calls are:
-       *
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       */
-      override
-          fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: IResolvable) {
-        cdkBuilder.usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), SalesforceConnectorProfilePropertiesProperty {
-      /**
-       * The location of the Salesforce resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-instanceurl)
-       */
-      override fun instanceUrl(): String? = unwrap(this).getInstanceUrl()
-
-      /**
-       * Indicates whether the connector profile applies to a sandbox or production environment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment)
-       */
-      override fun isSandboxEnvironment(): Any? = unwrap(this).getIsSandboxEnvironment()
-
-      /**
-       * If the connection mode for the connector profile is private, this parameter sets whether
-       * Amazon AppFlow uses the private network to send metadata and authorization calls to
-       * Salesforce.
-       *
-       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
-       * infrastructure without being exposed to the public internet.
-       *
-       * Set either of the following values:
-       *
-       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
-       *
-       * These private calls are:
-       *
-       * * Calls to get metadata about your Salesforce records. This metadata describes your
-       * Salesforce objects and their fields.
-       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
-       * records.
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
-       * and other calls over the public internet.
-       *
-       * The public calls are:
-       *
-       * * Calls to get metadata about your Salesforce records.
-       * * Calls to get or refresh access tokens.
-       *
-       * The private calls are:
-       *
-       * * Calls to transfer your Salesforce records as part of a flow run.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-useprivatelinkformetadataandauthorization)
-       */
-      override fun usePrivateLinkForMetadataAndAuthorization(): Any? =
-          unwrap(this).getUsePrivateLinkForMetadataAndAuthorization()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SalesforceConnectorProfilePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty):
-          SalesforceConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SalesforceConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SalesforceConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty
-    }
-  }
-
-  /**
    * The connector-specific profile credentials required by Dynatrace.
    *
    * Example:
@@ -5440,7 +4528,7 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * The connector-specific profile properties required when using Snowflake.
+   * The connector-specific profile properties required by Dynatrace.
    *
    * Example:
    *
@@ -5448,733 +4536,79 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SnowflakeConnectorProfilePropertiesProperty snowflakeConnectorProfilePropertiesProperty =
-   * SnowflakeConnectorProfilePropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * .stage("stage")
-   * .warehouse("warehouse")
-   * // the properties below are optional
-   * .accountName("accountName")
-   * .bucketPrefix("bucketPrefix")
-   * .privateLinkServiceName("privateLinkServiceName")
-   * .region("region")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html)
-   */
-  public interface SnowflakeConnectorProfilePropertiesProperty {
-    /**
-     * The name of the account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-accountname)
-     */
-    public fun accountName(): String? = unwrap(this).getAccountName()
-
-    /**
-     * The name of the Amazon S3 bucket associated with Snowflake.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-bucketname)
-     */
-    public fun bucketName(): String
-
-    /**
-     * The bucket path that refers to the Amazon S3 bucket associated with Snowflake.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-bucketprefix)
-     */
-    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-    /**
-     * The Snowflake Private Link service name to be used for private data transfers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-privatelinkservicename)
-     */
-    public fun privateLinkServiceName(): String? = unwrap(this).getPrivateLinkServiceName()
-
-    /**
-     * The AWS Region of the Snowflake account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-region)
-     */
-    public fun region(): String? = unwrap(this).getRegion()
-
-    /**
-     * The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the
-     * Snowflake account.
-     *
-     * This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<Stage Name>.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-stage)
-     */
-    public fun stage(): String
-
-    /**
-     * The name of the Snowflake warehouse.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-warehouse)
-     */
-    public fun warehouse(): String
-
-    /**
-     * A builder for [SnowflakeConnectorProfilePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accountName The name of the account.
-       */
-      public fun accountName(accountName: String)
-
-      /**
-       * @param bucketName The name of the Amazon S3 bucket associated with Snowflake. 
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param bucketPrefix The bucket path that refers to the Amazon S3 bucket associated with
-       * Snowflake.
-       */
-      public fun bucketPrefix(bucketPrefix: String)
-
-      /**
-       * @param privateLinkServiceName The Snowflake Private Link service name to be used for
-       * private data transfers.
-       */
-      public fun privateLinkServiceName(privateLinkServiceName: String)
-
-      /**
-       * @param region The AWS Region of the Snowflake account.
-       */
-      public fun region(region: String)
-
-      /**
-       * @param stage The name of the Amazon S3 stage that was created while setting up an Amazon S3
-       * stage in the Snowflake account. 
-       * This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<Stage Name>.
-       */
-      public fun stage(stage: String)
-
-      /**
-       * @param warehouse The name of the Snowflake warehouse. 
-       */
-      public fun warehouse(warehouse: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty.builder()
-
-      /**
-       * @param accountName The name of the account.
-       */
-      override fun accountName(accountName: String) {
-        cdkBuilder.accountName(accountName)
-      }
-
-      /**
-       * @param bucketName The name of the Amazon S3 bucket associated with Snowflake. 
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param bucketPrefix The bucket path that refers to the Amazon S3 bucket associated with
-       * Snowflake.
-       */
-      override fun bucketPrefix(bucketPrefix: String) {
-        cdkBuilder.bucketPrefix(bucketPrefix)
-      }
-
-      /**
-       * @param privateLinkServiceName The Snowflake Private Link service name to be used for
-       * private data transfers.
-       */
-      override fun privateLinkServiceName(privateLinkServiceName: String) {
-        cdkBuilder.privateLinkServiceName(privateLinkServiceName)
-      }
-
-      /**
-       * @param region The AWS Region of the Snowflake account.
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      /**
-       * @param stage The name of the Amazon S3 stage that was created while setting up an Amazon S3
-       * stage in the Snowflake account. 
-       * This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<Stage Name>.
-       */
-      override fun stage(stage: String) {
-        cdkBuilder.stage(stage)
-      }
-
-      /**
-       * @param warehouse The name of the Snowflake warehouse. 
-       */
-      override fun warehouse(warehouse: String) {
-        cdkBuilder.warehouse(warehouse)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), SnowflakeConnectorProfilePropertiesProperty {
-      /**
-       * The name of the account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-accountname)
-       */
-      override fun accountName(): String? = unwrap(this).getAccountName()
-
-      /**
-       * The name of the Amazon S3 bucket associated with Snowflake.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-bucketname)
-       */
-      override fun bucketName(): String = unwrap(this).getBucketName()
-
-      /**
-       * The bucket path that refers to the Amazon S3 bucket associated with Snowflake.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-bucketprefix)
-       */
-      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-      /**
-       * The Snowflake Private Link service name to be used for private data transfers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-privatelinkservicename)
-       */
-      override fun privateLinkServiceName(): String? = unwrap(this).getPrivateLinkServiceName()
-
-      /**
-       * The AWS Region of the Snowflake account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-region)
-       */
-      override fun region(): String? = unwrap(this).getRegion()
-
-      /**
-       * The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the
-       * Snowflake account.
-       *
-       * This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<Stage Name>.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-stage)
-       */
-      override fun stage(): String = unwrap(this).getStage()
-
-      /**
-       * The name of the Snowflake warehouse.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-warehouse)
-       */
-      override fun warehouse(): String = unwrap(this).getWarehouse()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SnowflakeConnectorProfilePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty):
-          SnowflakeConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SnowflakeConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnowflakeConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile properties required when using Salesforce Pardot.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * PardotConnectorProfilePropertiesProperty pardotConnectorProfilePropertiesProperty =
-   * PardotConnectorProfilePropertiesProperty.builder()
-   * .businessUnitId("businessUnitId")
-   * // the properties below are optional
+   * DynatraceConnectorProfilePropertiesProperty dynatraceConnectorProfilePropertiesProperty =
+   * DynatraceConnectorProfilePropertiesProperty.builder()
    * .instanceUrl("instanceUrl")
-   * .isSandboxEnvironment(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties.html)
    */
-  public interface PardotConnectorProfilePropertiesProperty {
+  public interface DynatraceConnectorProfilePropertiesProperty {
     /**
-     * The business unit id of Salesforce Pardot instance.
+     * The location of the Dynatrace resource.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-businessunitid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties.html#cfn-appflow-connectorprofile-dynatraceconnectorprofileproperties-instanceurl)
      */
-    public fun businessUnitId(): String
+    public fun instanceUrl(): String
 
     /**
-     * The location of the Salesforce Pardot resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-instanceurl)
-     */
-    public fun instanceUrl(): String? = unwrap(this).getInstanceUrl()
-
-    /**
-     * Indicates whether the connector profile applies to a sandbox or production environment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-issandboxenvironment)
-     */
-    public fun isSandboxEnvironment(): Any? = unwrap(this).getIsSandboxEnvironment()
-
-    /**
-     * A builder for [PardotConnectorProfilePropertiesProperty]
+     * A builder for [DynatraceConnectorProfilePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param businessUnitId The business unit id of Salesforce Pardot instance. 
-       */
-      public fun businessUnitId(businessUnitId: String)
-
-      /**
-       * @param instanceUrl The location of the Salesforce Pardot resource.
+       * @param instanceUrl The location of the Dynatrace resource. 
        */
       public fun instanceUrl(instanceUrl: String)
-
-      /**
-       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
-       * production environment.
-       */
-      public fun isSandboxEnvironment(isSandboxEnvironment: Boolean)
-
-      /**
-       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
-       * production environment.
-       */
-      public fun isSandboxEnvironment(isSandboxEnvironment: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty.builder()
 
       /**
-       * @param businessUnitId The business unit id of Salesforce Pardot instance. 
-       */
-      override fun businessUnitId(businessUnitId: String) {
-        cdkBuilder.businessUnitId(businessUnitId)
-      }
-
-      /**
-       * @param instanceUrl The location of the Salesforce Pardot resource.
+       * @param instanceUrl The location of the Dynatrace resource. 
        */
       override fun instanceUrl(instanceUrl: String) {
         cdkBuilder.instanceUrl(instanceUrl)
       }
 
-      /**
-       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
-       * production environment.
-       */
-      override fun isSandboxEnvironment(isSandboxEnvironment: Boolean) {
-        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
-      }
-
-      /**
-       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
-       * production environment.
-       */
-      override fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
-        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment.let(IResolvable::unwrap))
-      }
-
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), PardotConnectorProfilePropertiesProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), DynatraceConnectorProfilePropertiesProperty {
       /**
-       * The business unit id of Salesforce Pardot instance.
+       * The location of the Dynatrace resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-businessunitid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties.html#cfn-appflow-connectorprofile-dynatraceconnectorprofileproperties-instanceurl)
        */
-      override fun businessUnitId(): String = unwrap(this).getBusinessUnitId()
-
-      /**
-       * The location of the Salesforce Pardot resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-instanceurl)
-       */
-      override fun instanceUrl(): String? = unwrap(this).getInstanceUrl()
-
-      /**
-       * Indicates whether the connector profile applies to a sandbox or production environment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-issandboxenvironment)
-       */
-      override fun isSandboxEnvironment(): Any? = unwrap(this).getIsSandboxEnvironment()
+      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          PardotConnectorProfilePropertiesProperty {
+          DynatraceConnectorProfilePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty):
-          PardotConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PardotConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty):
+          DynatraceConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DynatraceConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PardotConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty
+      internal fun unwrap(wrapped: DynatraceConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile credentials required by Marketo.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * MarketoConnectorProfileCredentialsProperty marketoConnectorProfileCredentialsProperty =
-   * MarketoConnectorProfileCredentialsProperty.builder()
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * // the properties below are optional
-   * .accessToken("accessToken")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html)
-   */
-  public interface MarketoConnectorProfileCredentialsProperty {
-    /**
-     * The credentials used to access protected Marketo resources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-accesstoken)
-     */
-    public fun accessToken(): String? = unwrap(this).getAccessToken()
-
-    /**
-     * The identifier for the desired client.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientid)
-     */
-    public fun clientId(): String
-
-    /**
-     * The client secret used by the OAuth client to authenticate to the authorization server.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientsecret)
-     */
-    public fun clientSecret(): String
-
-    /**
-     * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
-     * Google Analytics, Marketo, Zendesk, and Slack.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-connectoroauthrequest)
-     */
-    public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
-
-    /**
-     * A builder for [MarketoConnectorProfileCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessToken The credentials used to access protected Marketo resources.
-       */
-      public fun accessToken(accessToken: String)
-
-      /**
-       * @param clientId The identifier for the desired client. 
-       */
-      public fun clientId(clientId: String)
-
-      /**
-       * @param clientSecret The client secret used by the OAuth client to authenticate to the
-       * authorization server. 
-       */
-      public fun clientSecret(clientSecret: String)
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable)
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      public fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty)
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a8bdb1e299be6f3f735fa466dee66c3a670e66cb5b936de9a655580cb9d7f106")
-      public
-          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty.builder()
-
-      /**
-       * @param accessToken The credentials used to access protected Marketo resources.
-       */
-      override fun accessToken(accessToken: String) {
-        cdkBuilder.accessToken(accessToken)
-      }
-
-      /**
-       * @param clientId The identifier for the desired client. 
-       */
-      override fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-      }
-
-      /**
-       * @param clientSecret The client secret used by the OAuth client to authenticate to the
-       * authorization server. 
-       */
-      override fun clientSecret(clientSecret: String) {
-        cdkBuilder.clientSecret(clientSecret)
-      }
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
-      }
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a8bdb1e299be6f3f735fa466dee66c3a670e66cb5b936de9a655580cb9d7f106")
-      override
-          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
-          Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), MarketoConnectorProfileCredentialsProperty {
-      /**
-       * The credentials used to access protected Marketo resources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-accesstoken)
-       */
-      override fun accessToken(): String? = unwrap(this).getAccessToken()
-
-      /**
-       * The identifier for the desired client.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientid)
-       */
-      override fun clientId(): String = unwrap(this).getClientId()
-
-      /**
-       * The client secret used by the OAuth client to authenticate to the authorization server.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientsecret)
-       */
-      override fun clientSecret(): String = unwrap(this).getClientSecret()
-
-      /**
-       * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
-       * Google Analytics, Marketo, Zendesk, and Slack.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-connectoroauthrequest)
-       */
-      override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MarketoConnectorProfileCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty):
-          MarketoConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MarketoConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MarketoConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile credentials required when using Veeva.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * VeevaConnectorProfileCredentialsProperty veevaConnectorProfileCredentialsProperty =
-   * VeevaConnectorProfileCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html)
-   */
-  public interface VeevaConnectorProfileCredentialsProperty {
-    /**
-     * The password that corresponds to the user name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html#cfn-appflow-connectorprofile-veevaconnectorprofilecredentials-password)
-     */
-    public fun password(): String
-
-    /**
-     * The name of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html#cfn-appflow-connectorprofile-veevaconnectorprofilecredentials-username)
-     */
-    public fun username(): String
-
-    /**
-     * A builder for [VeevaConnectorProfileCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param password The password that corresponds to the user name. 
-       */
-      public fun password(password: String)
-
-      /**
-       * @param username The name of the user. 
-       */
-      public fun username(username: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty.builder()
-
-      /**
-       * @param password The password that corresponds to the user name. 
-       */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
-      }
-
-      /**
-       * @param username The name of the user. 
-       */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), VeevaConnectorProfileCredentialsProperty {
-      /**
-       * The password that corresponds to the user name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html#cfn-appflow-connectorprofile-veevaconnectorprofilecredentials-password)
-       */
-      override fun password(): String = unwrap(this).getPassword()
-
-      /**
-       * The name of the user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html#cfn-appflow-connectorprofile-veevaconnectorprofilecredentials-username)
-       */
-      override fun username(): String = unwrap(this).getUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VeevaConnectorProfileCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty):
-          VeevaConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VeevaConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VeevaConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty
     }
   }
 
@@ -6425,7 +4859,7 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * The connector-specific profile credentials required when using Singular.
+   * The connector-specific profile credentials required by Infor Nexus.
    *
    * Example:
    *
@@ -6433,88 +4867,165 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SingularConnectorProfileCredentialsProperty singularConnectorProfileCredentialsProperty =
-   * SingularConnectorProfileCredentialsProperty.builder()
-   * .apiKey("apiKey")
+   * InforNexusConnectorProfileCredentialsProperty inforNexusConnectorProfileCredentialsProperty =
+   * InforNexusConnectorProfileCredentialsProperty.builder()
+   * .accessKeyId("accessKeyId")
+   * .datakey("datakey")
+   * .secretAccessKey("secretAccessKey")
+   * .userId("userId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html)
    */
-  public interface SingularConnectorProfileCredentialsProperty {
+  public interface InforNexusConnectorProfileCredentialsProperty {
     /**
-     * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
-     * to your API.
+     * The Access Key portion of the credentials.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials.html#cfn-appflow-connectorprofile-singularconnectorprofilecredentials-apikey)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-accesskeyid)
      */
-    public fun apiKey(): String
+    public fun accessKeyId(): String
 
     /**
-     * A builder for [SingularConnectorProfileCredentialsProperty]
+     * The encryption keys used to encrypt data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-datakey)
+     */
+    public fun datakey(): String
+
+    /**
+     * The secret key used to sign requests.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-secretaccesskey)
+     */
+    public fun secretAccessKey(): String
+
+    /**
+     * The identifier for the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-userid)
+     */
+    public fun userId(): String
+
+    /**
+     * A builder for [InforNexusConnectorProfileCredentialsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
-       * calling program to your API. 
+       * @param accessKeyId The Access Key portion of the credentials. 
        */
-      public fun apiKey(apiKey: String)
+      public fun accessKeyId(accessKeyId: String)
+
+      /**
+       * @param datakey The encryption keys used to encrypt data. 
+       */
+      public fun datakey(datakey: String)
+
+      /**
+       * @param secretAccessKey The secret key used to sign requests. 
+       */
+      public fun secretAccessKey(secretAccessKey: String)
+
+      /**
+       * @param userId The identifier for the user. 
+       */
+      public fun userId(userId: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty.builder()
 
       /**
-       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
-       * calling program to your API. 
+       * @param accessKeyId The Access Key portion of the credentials. 
        */
-      override fun apiKey(apiKey: String) {
-        cdkBuilder.apiKey(apiKey)
+      override fun accessKeyId(accessKeyId: String) {
+        cdkBuilder.accessKeyId(accessKeyId)
+      }
+
+      /**
+       * @param datakey The encryption keys used to encrypt data. 
+       */
+      override fun datakey(datakey: String) {
+        cdkBuilder.datakey(datakey)
+      }
+
+      /**
+       * @param secretAccessKey The secret key used to sign requests. 
+       */
+      override fun secretAccessKey(secretAccessKey: String) {
+        cdkBuilder.secretAccessKey(secretAccessKey)
+      }
+
+      /**
+       * @param userId The identifier for the user. 
+       */
+      override fun userId(userId: String) {
+        cdkBuilder.userId(userId)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), SingularConnectorProfileCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), InforNexusConnectorProfileCredentialsProperty {
       /**
-       * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
-       * to your API.
+       * The Access Key portion of the credentials.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials.html#cfn-appflow-connectorprofile-singularconnectorprofilecredentials-apikey)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-accesskeyid)
        */
-      override fun apiKey(): String = unwrap(this).getApiKey()
+      override fun accessKeyId(): String = unwrap(this).getAccessKeyId()
+
+      /**
+       * The encryption keys used to encrypt data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-datakey)
+       */
+      override fun datakey(): String = unwrap(this).getDatakey()
+
+      /**
+       * The secret key used to sign requests.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-secretaccesskey)
+       */
+      override fun secretAccessKey(): String = unwrap(this).getSecretAccessKey()
+
+      /**
+       * The identifier for the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-userid)
+       */
+      override fun userId(): String = unwrap(this).getUserId()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          SingularConnectorProfileCredentialsProperty {
+          InforNexusConnectorProfileCredentialsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty):
-          SingularConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SingularConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty):
+          InforNexusConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InforNexusConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SingularConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty
+      internal fun unwrap(wrapped: InforNexusConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty
     }
   }
 
   /**
-   * The connector-specific profile properties required when using Slack.
+   * The connector-specific profile properties required by Infor Nexus.
    *
    * Example:
    *
@@ -6522,84 +5033,84 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SlackConnectorProfilePropertiesProperty slackConnectorProfilePropertiesProperty =
-   * SlackConnectorProfilePropertiesProperty.builder()
+   * InforNexusConnectorProfilePropertiesProperty inforNexusConnectorProfilePropertiesProperty =
+   * InforNexusConnectorProfilePropertiesProperty.builder()
    * .instanceUrl("instanceUrl")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-slackconnectorprofileproperties.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties.html)
    */
-  public interface SlackConnectorProfilePropertiesProperty {
+  public interface InforNexusConnectorProfilePropertiesProperty {
     /**
-     * The location of the Slack resource.
+     * The location of the Infor Nexus resource.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-slackconnectorprofileproperties.html#cfn-appflow-connectorprofile-slackconnectorprofileproperties-instanceurl)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties.html#cfn-appflow-connectorprofile-infornexusconnectorprofileproperties-instanceurl)
      */
     public fun instanceUrl(): String
 
     /**
-     * A builder for [SlackConnectorProfilePropertiesProperty]
+     * A builder for [InforNexusConnectorProfilePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param instanceUrl The location of the Slack resource. 
+       * @param instanceUrl The location of the Infor Nexus resource. 
        */
       public fun instanceUrl(instanceUrl: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty.builder()
 
       /**
-       * @param instanceUrl The location of the Slack resource. 
+       * @param instanceUrl The location of the Infor Nexus resource. 
        */
       override fun instanceUrl(instanceUrl: String) {
         cdkBuilder.instanceUrl(instanceUrl)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), SlackConnectorProfilePropertiesProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), InforNexusConnectorProfilePropertiesProperty {
       /**
-       * The location of the Slack resource.
+       * The location of the Infor Nexus resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-slackconnectorprofileproperties.html#cfn-appflow-connectorprofile-slackconnectorprofileproperties-instanceurl)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties.html#cfn-appflow-connectorprofile-infornexusconnectorprofileproperties-instanceurl)
        */
       override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          SlackConnectorProfilePropertiesProperty {
+          InforNexusConnectorProfilePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty):
-          SlackConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SlackConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty):
+          InforNexusConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InforNexusConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SlackConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty
+      internal fun unwrap(wrapped: InforNexusConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty
     }
   }
 
   /**
-   * The connector-specific profile credentials required when using Salesforce.
+   * The connector-specific profile credentials required by Marketo.
    *
    * Example:
    *
@@ -6607,96 +5118,71 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SalesforceConnectorProfileCredentialsProperty salesforceConnectorProfileCredentialsProperty =
-   * SalesforceConnectorProfileCredentialsProperty.builder()
+   * MarketoConnectorProfileCredentialsProperty marketoConnectorProfileCredentialsProperty =
+   * MarketoConnectorProfileCredentialsProperty.builder()
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * // the properties below are optional
    * .accessToken("accessToken")
-   * .clientCredentialsArn("clientCredentialsArn")
    * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
    * .authCode("authCode")
    * .redirectUri("redirectUri")
    * .build())
-   * .jwtToken("jwtToken")
-   * .oAuth2GrantType("oAuth2GrantType")
-   * .refreshToken("refreshToken")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html)
    */
-  public interface SalesforceConnectorProfileCredentialsProperty {
+  public interface MarketoConnectorProfileCredentialsProperty {
     /**
-     * The credentials used to access protected Salesforce resources.
+     * The credentials used to access protected Marketo resources.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-accesstoken)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-accesstoken)
      */
     public fun accessToken(): String? = unwrap(this).getAccessToken()
 
     /**
-     * The secret manager ARN, which contains the client ID and client secret of the connected app.
+     * The identifier for the desired client.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientid)
      */
-    public fun clientCredentialsArn(): String? = unwrap(this).getClientCredentialsArn()
+    public fun clientId(): String
+
+    /**
+     * The client secret used by the OAuth client to authenticate to the authorization server.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientsecret)
+     */
+    public fun clientSecret(): String
 
     /**
      * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
      * Google Analytics, Marketo, Zendesk, and Slack.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-connectoroauthrequest)
      */
     public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
 
     /**
-     * A JSON web token (JWT) that authorizes Amazon AppFlow to access your Salesforce records.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-jwttoken)
-     */
-    public fun jwtToken(): String? = unwrap(this).getJwtToken()
-
-    /**
-     * Specifies the OAuth 2.0 grant type that Amazon AppFlow uses when it requests an access token
-     * from Salesforce. Amazon AppFlow requires an access token each time it attempts to access your
-     * Salesforce records.
-     *
-     * You can specify one of the following values:
-     *
-     * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
-     * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
-     * after you log in to your Salesforce account and authorize Amazon AppFlow to access your records.
-     * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
-     * secret) when it requests the access token from Salesforce. You provide these credentials to
-     * Amazon AppFlow when you define the connection to your Salesforce account.
-     * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
-     * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
-     * your Salesforce account. When you use this grant type, you don't need to log in to your
-     * Salesforce account to authorize Amazon AppFlow to access your records.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype)
-     */
-    public fun oAuth2GrantType(): String? = unwrap(this).getOAuth2GrantType()
-
-    /**
-     * The credentials used to acquire new access tokens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken)
-     */
-    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
-
-    /**
-     * A builder for [SalesforceConnectorProfileCredentialsProperty]
+     * A builder for [MarketoConnectorProfileCredentialsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accessToken The credentials used to access protected Salesforce resources.
+       * @param accessToken The credentials used to access protected Marketo resources.
        */
       public fun accessToken(accessToken: String)
 
       /**
-       * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
-       * secret of the connected app.
+       * @param clientId The identifier for the desired client. 
        */
-      public fun clientCredentialsArn(clientCredentialsArn: String)
+      public fun clientId(clientId: String)
+
+      /**
+       * @param clientSecret The client secret used by the OAuth client to authenticate to the
+       * authorization server. 
+       */
+      public fun clientSecret(clientSecret: String)
 
       /**
        * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
@@ -6715,61 +5201,37 @@ public open class CfnConnectorProfile internal constructor(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("05b5b87a5c00f6b8e1d374bf90ffc9cf90006dc3c79379d0efacdad291a09d99")
+      @JvmName("a8bdb1e299be6f3f735fa466dee66c3a670e66cb5b936de9a655580cb9d7f106")
       public
           fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
-
-      /**
-       * @param jwtToken A JSON web token (JWT) that authorizes Amazon AppFlow to access your
-       * Salesforce records.
-       */
-      public fun jwtToken(jwtToken: String)
-
-      /**
-       * @param oAuth2GrantType Specifies the OAuth 2.0 grant type that Amazon AppFlow uses when it
-       * requests an access token from Salesforce. Amazon AppFlow requires an access token each time it
-       * attempts to access your Salesforce records.
-       * You can specify one of the following values:
-       *
-       * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
-       * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
-       * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
-       * records.
-       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
-       * secret) when it requests the access token from Salesforce. You provide these credentials to
-       * Amazon AppFlow when you define the connection to your Salesforce account.
-       * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
-       * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
-       * your Salesforce account. When you use this grant type, you don't need to log in to your
-       * Salesforce account to authorize Amazon AppFlow to access your records.
-       */
-      public fun oAuth2GrantType(oAuth2GrantType: String)
-
-      /**
-       * @param refreshToken The credentials used to acquire new access tokens.
-       */
-      public fun refreshToken(refreshToken: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty.builder()
 
       /**
-       * @param accessToken The credentials used to access protected Salesforce resources.
+       * @param accessToken The credentials used to access protected Marketo resources.
        */
       override fun accessToken(accessToken: String) {
         cdkBuilder.accessToken(accessToken)
       }
 
       /**
-       * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
-       * secret of the connected app.
+       * @param clientId The identifier for the desired client. 
        */
-      override fun clientCredentialsArn(clientCredentialsArn: String) {
-        cdkBuilder.clientCredentialsArn(clientCredentialsArn)
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param clientSecret The client secret used by the OAuth client to authenticate to the
+       * authorization server. 
+       */
+      override fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
       }
 
       /**
@@ -6793,40 +5255,1052 @@ public open class CfnConnectorProfile internal constructor(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("05b5b87a5c00f6b8e1d374bf90ffc9cf90006dc3c79379d0efacdad291a09d99")
+      @JvmName("a8bdb1e299be6f3f735fa466dee66c3a670e66cb5b936de9a655580cb9d7f106")
+      override
+          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
+          Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), MarketoConnectorProfileCredentialsProperty {
+      /**
+       * The credentials used to access protected Marketo resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-accesstoken)
+       */
+      override fun accessToken(): String? = unwrap(this).getAccessToken()
+
+      /**
+       * The identifier for the desired client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientid)
+       */
+      override fun clientId(): String = unwrap(this).getClientId()
+
+      /**
+       * The client secret used by the OAuth client to authenticate to the authorization server.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientsecret)
+       */
+      override fun clientSecret(): String = unwrap(this).getClientSecret()
+
+      /**
+       * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
+       * Google Analytics, Marketo, Zendesk, and Slack.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html#cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-connectoroauthrequest)
+       */
+      override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MarketoConnectorProfileCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty):
+          MarketoConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MarketoConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile properties required when using Marketo.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * MarketoConnectorProfilePropertiesProperty marketoConnectorProfilePropertiesProperty =
+   * MarketoConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties.html)
+   */
+  public interface MarketoConnectorProfilePropertiesProperty {
+    /**
+     * The location of the Marketo resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties.html#cfn-appflow-connectorprofile-marketoconnectorprofileproperties-instanceurl)
+     */
+    public fun instanceUrl(): String
+
+    /**
+     * A builder for [MarketoConnectorProfilePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceUrl The location of the Marketo resource. 
+       */
+      public fun instanceUrl(instanceUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty.builder()
+
+      /**
+       * @param instanceUrl The location of the Marketo resource. 
+       */
+      override fun instanceUrl(instanceUrl: String) {
+        cdkBuilder.instanceUrl(instanceUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), MarketoConnectorProfilePropertiesProperty {
+      /**
+       * The location of the Marketo resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties.html#cfn-appflow-connectorprofile-marketoconnectorprofileproperties-instanceurl)
+       */
+      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MarketoConnectorProfilePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty):
+          MarketoConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MarketoConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty
+    }
+  }
+
+  /**
+   * The OAuth 2.0 credentials required for OAuth 2.0 authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * OAuth2CredentialsProperty oAuth2CredentialsProperty = OAuth2CredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html)
+   */
+  public interface OAuth2CredentialsProperty {
+    /**
+     * The access token used to access the connector on your behalf.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-accesstoken)
+     */
+    public fun accessToken(): String? = unwrap(this).getAccessToken()
+
+    /**
+     * The identifier for the desired client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-clientid)
+     */
+    public fun clientId(): String? = unwrap(this).getClientId()
+
+    /**
+     * The client secret used by the OAuth client to authenticate to the authorization server.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-clientsecret)
+     */
+    public fun clientSecret(): String? = unwrap(this).getClientSecret()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-oauthrequest)
+     */
+    public fun oAuthRequest(): Any? = unwrap(this).getOAuthRequest()
+
+    /**
+     * The refresh token used to refresh an expired access token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-refreshtoken)
+     */
+    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
+
+    /**
+     * A builder for [OAuth2CredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessToken The access token used to access the connector on your behalf.
+       */
+      public fun accessToken(accessToken: String)
+
+      /**
+       * @param clientId The identifier for the desired client.
+       */
+      public fun clientId(clientId: String)
+
+      /**
+       * @param clientSecret The client secret used by the OAuth client to authenticate to the
+       * authorization server.
+       */
+      public fun clientSecret(clientSecret: String)
+
+      /**
+       * @param oAuthRequest the value to be set.
+       */
+      public fun oAuthRequest(oAuthRequest: IResolvable)
+
+      /**
+       * @param oAuthRequest the value to be set.
+       */
+      public fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty)
+
+      /**
+       * @param oAuthRequest the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c3eb0d875de5660f896f978d3b639a614e893c8dedd762ca9248a0f3e4b08194")
+      public fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param refreshToken The refresh token used to refresh an expired access token.
+       */
+      public fun refreshToken(refreshToken: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty.builder()
+
+      /**
+       * @param accessToken The access token used to access the connector on your behalf.
+       */
+      override fun accessToken(accessToken: String) {
+        cdkBuilder.accessToken(accessToken)
+      }
+
+      /**
+       * @param clientId The identifier for the desired client.
+       */
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param clientSecret The client secret used by the OAuth client to authenticate to the
+       * authorization server.
+       */
+      override fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
+      }
+
+      /**
+       * @param oAuthRequest the value to be set.
+       */
+      override fun oAuthRequest(oAuthRequest: IResolvable) {
+        cdkBuilder.oAuthRequest(oAuthRequest.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param oAuthRequest the value to be set.
+       */
+      override fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty) {
+        cdkBuilder.oAuthRequest(oAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+      }
+
+      /**
+       * @param oAuthRequest the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c3eb0d875de5660f896f978d3b639a614e893c8dedd762ca9248a0f3e4b08194")
+      override fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
+          Unit = oAuthRequest(ConnectorOAuthRequestProperty(oAuthRequest))
+
+      /**
+       * @param refreshToken The refresh token used to refresh an expired access token.
+       */
+      override fun refreshToken(refreshToken: String) {
+        cdkBuilder.refreshToken(refreshToken)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty,
+    ) : CdkObject(cdkObject), OAuth2CredentialsProperty {
+      /**
+       * The access token used to access the connector on your behalf.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-accesstoken)
+       */
+      override fun accessToken(): String? = unwrap(this).getAccessToken()
+
+      /**
+       * The identifier for the desired client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-clientid)
+       */
+      override fun clientId(): String? = unwrap(this).getClientId()
+
+      /**
+       * The client secret used by the OAuth client to authenticate to the authorization server.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-clientsecret)
+       */
+      override fun clientSecret(): String? = unwrap(this).getClientSecret()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-oauthrequest)
+       */
+      override fun oAuthRequest(): Any? = unwrap(this).getOAuthRequest()
+
+      /**
+       * The refresh token used to refresh an expired access token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-refreshtoken)
+       */
+      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OAuth2CredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty):
+          OAuth2CredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OAuth2CredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OAuth2CredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty
+    }
+  }
+
+  /**
+   * The OAuth 2.0 properties required for OAuth 2.0 authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * OAuth2PropertiesProperty oAuth2PropertiesProperty = OAuth2PropertiesProperty.builder()
+   * .oAuth2GrantType("oAuth2GrantType")
+   * .tokenUrl("tokenUrl")
+   * .tokenUrlCustomProperties(Map.of(
+   * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html)
+   */
+  public interface OAuth2PropertiesProperty {
+    /**
+     * The OAuth 2.0 grant type used by connector for OAuth 2.0 authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-oauth2granttype)
+     */
+    public fun oAuth2GrantType(): String? = unwrap(this).getOAuth2GrantType()
+
+    /**
+     * The token URL required for OAuth 2.0 authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-tokenurl)
+     */
+    public fun tokenUrl(): String? = unwrap(this).getTokenUrl()
+
+    /**
+     * Associates your token URL with a map of properties that you define.
+     *
+     * Use this parameter to provide any additional details that the connector requires to
+     * authenticate your request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-tokenurlcustomproperties)
+     */
+    public fun tokenUrlCustomProperties(): Any? = unwrap(this).getTokenUrlCustomProperties()
+
+    /**
+     * A builder for [OAuth2PropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param oAuth2GrantType The OAuth 2.0 grant type used by connector for OAuth 2.0
+       * authentication.
+       */
+      public fun oAuth2GrantType(oAuth2GrantType: String)
+
+      /**
+       * @param tokenUrl The token URL required for OAuth 2.0 authentication.
+       */
+      public fun tokenUrl(tokenUrl: String)
+
+      /**
+       * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
+       * define.
+       * Use this parameter to provide any additional details that the connector requires to
+       * authenticate your request.
+       */
+      public fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable)
+
+      /**
+       * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
+       * define.
+       * Use this parameter to provide any additional details that the connector requires to
+       * authenticate your request.
+       */
+      public fun tokenUrlCustomProperties(tokenUrlCustomProperties: Map<String, String>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty.builder()
+
+      /**
+       * @param oAuth2GrantType The OAuth 2.0 grant type used by connector for OAuth 2.0
+       * authentication.
+       */
+      override fun oAuth2GrantType(oAuth2GrantType: String) {
+        cdkBuilder.oAuth2GrantType(oAuth2GrantType)
+      }
+
+      /**
+       * @param tokenUrl The token URL required for OAuth 2.0 authentication.
+       */
+      override fun tokenUrl(tokenUrl: String) {
+        cdkBuilder.tokenUrl(tokenUrl)
+      }
+
+      /**
+       * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
+       * define.
+       * Use this parameter to provide any additional details that the connector requires to
+       * authenticate your request.
+       */
+      override fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable) {
+        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
+       * define.
+       * Use this parameter to provide any additional details that the connector requires to
+       * authenticate your request.
+       */
+      override fun tokenUrlCustomProperties(tokenUrlCustomProperties: Map<String, String>) {
+        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty,
+    ) : CdkObject(cdkObject), OAuth2PropertiesProperty {
+      /**
+       * The OAuth 2.0 grant type used by connector for OAuth 2.0 authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-oauth2granttype)
+       */
+      override fun oAuth2GrantType(): String? = unwrap(this).getOAuth2GrantType()
+
+      /**
+       * The token URL required for OAuth 2.0 authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-tokenurl)
+       */
+      override fun tokenUrl(): String? = unwrap(this).getTokenUrl()
+
+      /**
+       * Associates your token URL with a map of properties that you define.
+       *
+       * Use this parameter to provide any additional details that the connector requires to
+       * authenticate your request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-tokenurlcustomproperties)
+       */
+      override fun tokenUrlCustomProperties(): Any? = unwrap(this).getTokenUrlCustomProperties()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OAuth2PropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty):
+          OAuth2PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuth2PropertiesProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OAuth2PropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty
+    }
+  }
+
+  /**
+   * The OAuth credentials required for OAuth type authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * OAuthCredentialsProperty oAuthCredentialsProperty = OAuthCredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html)
+   */
+  public interface OAuthCredentialsProperty {
+    /**
+     * The access token used to access protected SAPOData resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-accesstoken)
+     */
+    public fun accessToken(): String? = unwrap(this).getAccessToken()
+
+    /**
+     * The identifier for the desired client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-clientid)
+     */
+    public fun clientId(): String? = unwrap(this).getClientId()
+
+    /**
+     * The client secret used by the OAuth client to authenticate to the authorization server.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-clientsecret)
+     */
+    public fun clientSecret(): String? = unwrap(this).getClientSecret()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-connectoroauthrequest)
+     */
+    public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
+
+    /**
+     * The refresh token used to refresh expired access token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-refreshtoken)
+     */
+    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
+
+    /**
+     * A builder for [OAuthCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessToken The access token used to access protected SAPOData resources.
+       */
+      public fun accessToken(accessToken: String)
+
+      /**
+       * @param clientId The identifier for the desired client.
+       */
+      public fun clientId(clientId: String)
+
+      /**
+       * @param clientSecret The client secret used by the OAuth client to authenticate to the
+       * authorization server.
+       */
+      public fun clientSecret(clientSecret: String)
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable)
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      public fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty)
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8442f2194e283e001ea82ffc637844ff009a16f0f2c0533ea53c18d98645acd7")
+      public
+          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param refreshToken The refresh token used to refresh expired access token.
+       */
+      public fun refreshToken(refreshToken: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty.builder()
+
+      /**
+       * @param accessToken The access token used to access protected SAPOData resources.
+       */
+      override fun accessToken(accessToken: String) {
+        cdkBuilder.accessToken(accessToken)
+      }
+
+      /**
+       * @param clientId The identifier for the desired client.
+       */
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param clientSecret The client secret used by the OAuth client to authenticate to the
+       * authorization server.
+       */
+      override fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
+      }
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+      }
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8442f2194e283e001ea82ffc637844ff009a16f0f2c0533ea53c18d98645acd7")
       override
           fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
           Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
 
       /**
-       * @param jwtToken A JSON web token (JWT) that authorizes Amazon AppFlow to access your
-       * Salesforce records.
+       * @param refreshToken The refresh token used to refresh expired access token.
        */
-      override fun jwtToken(jwtToken: String) {
-        cdkBuilder.jwtToken(jwtToken)
+      override fun refreshToken(refreshToken: String) {
+        cdkBuilder.refreshToken(refreshToken)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty,
+    ) : CdkObject(cdkObject), OAuthCredentialsProperty {
+      /**
+       * The access token used to access protected SAPOData resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-accesstoken)
+       */
+      override fun accessToken(): String? = unwrap(this).getAccessToken()
+
+      /**
+       * The identifier for the desired client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-clientid)
+       */
+      override fun clientId(): String? = unwrap(this).getClientId()
+
+      /**
+       * The client secret used by the OAuth client to authenticate to the authorization server.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-clientsecret)
+       */
+      override fun clientSecret(): String? = unwrap(this).getClientSecret()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-connectoroauthrequest)
+       */
+      override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
+
+      /**
+       * The refresh token used to refresh expired access token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthcredentials.html#cfn-appflow-connectorprofile-oauthcredentials-refreshtoken)
+       */
+      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OAuthCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty):
+          OAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuthCredentialsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OAuthCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty
+    }
+  }
+
+  /**
+   * The OAuth properties required for OAuth type authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * OAuthPropertiesProperty oAuthPropertiesProperty = OAuthPropertiesProperty.builder()
+   * .authCodeUrl("authCodeUrl")
+   * .oAuthScopes(List.of("oAuthScopes"))
+   * .tokenUrl("tokenUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html)
+   */
+  public interface OAuthPropertiesProperty {
+    /**
+     * The authorization code url required to redirect to SAP Login Page to fetch authorization code
+     * for OAuth type authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-authcodeurl)
+     */
+    public fun authCodeUrl(): String? = unwrap(this).getAuthCodeUrl()
+
+    /**
+     * The OAuth scopes required for OAuth type authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-oauthscopes)
+     */
+    public fun oAuthScopes(): List<String> = unwrap(this).getOAuthScopes() ?: emptyList()
+
+    /**
+     * The token url required to fetch access/refresh tokens using authorization code and also to
+     * refresh expired access token using refresh token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-tokenurl)
+     */
+    public fun tokenUrl(): String? = unwrap(this).getTokenUrl()
+
+    /**
+     * A builder for [OAuthPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authCodeUrl The authorization code url required to redirect to SAP Login Page to
+       * fetch authorization code for OAuth type authentication.
+       */
+      public fun authCodeUrl(authCodeUrl: String)
+
+      /**
+       * @param oAuthScopes The OAuth scopes required for OAuth type authentication.
+       */
+      public fun oAuthScopes(oAuthScopes: List<String>)
+
+      /**
+       * @param oAuthScopes The OAuth scopes required for OAuth type authentication.
+       */
+      public fun oAuthScopes(vararg oAuthScopes: String)
+
+      /**
+       * @param tokenUrl The token url required to fetch access/refresh tokens using authorization
+       * code and also to refresh expired access token using refresh token.
+       */
+      public fun tokenUrl(tokenUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty.builder()
+
+      /**
+       * @param authCodeUrl The authorization code url required to redirect to SAP Login Page to
+       * fetch authorization code for OAuth type authentication.
+       */
+      override fun authCodeUrl(authCodeUrl: String) {
+        cdkBuilder.authCodeUrl(authCodeUrl)
       }
 
       /**
-       * @param oAuth2GrantType Specifies the OAuth 2.0 grant type that Amazon AppFlow uses when it
-       * requests an access token from Salesforce. Amazon AppFlow requires an access token each time it
-       * attempts to access your Salesforce records.
-       * You can specify one of the following values:
-       *
-       * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
-       * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
-       * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
-       * records.
-       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
-       * secret) when it requests the access token from Salesforce. You provide these credentials to
-       * Amazon AppFlow when you define the connection to your Salesforce account.
-       * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
-       * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
-       * your Salesforce account. When you use this grant type, you don't need to log in to your
-       * Salesforce account to authorize Amazon AppFlow to access your records.
+       * @param oAuthScopes The OAuth scopes required for OAuth type authentication.
        */
-      override fun oAuth2GrantType(oAuth2GrantType: String) {
-        cdkBuilder.oAuth2GrantType(oAuth2GrantType)
+      override fun oAuthScopes(oAuthScopes: List<String>) {
+        cdkBuilder.oAuthScopes(oAuthScopes)
       }
+
+      /**
+       * @param oAuthScopes The OAuth scopes required for OAuth type authentication.
+       */
+      override fun oAuthScopes(vararg oAuthScopes: String): Unit = oAuthScopes(oAuthScopes.toList())
+
+      /**
+       * @param tokenUrl The token url required to fetch access/refresh tokens using authorization
+       * code and also to refresh expired access token using refresh token.
+       */
+      override fun tokenUrl(tokenUrl: String) {
+        cdkBuilder.tokenUrl(tokenUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty,
+    ) : CdkObject(cdkObject), OAuthPropertiesProperty {
+      /**
+       * The authorization code url required to redirect to SAP Login Page to fetch authorization
+       * code for OAuth type authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-authcodeurl)
+       */
+      override fun authCodeUrl(): String? = unwrap(this).getAuthCodeUrl()
+
+      /**
+       * The OAuth scopes required for OAuth type authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-oauthscopes)
+       */
+      override fun oAuthScopes(): List<String> = unwrap(this).getOAuthScopes() ?: emptyList()
+
+      /**
+       * The token url required to fetch access/refresh tokens using authorization code and also to
+       * refresh expired access token using refresh token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-tokenurl)
+       */
+      override fun tokenUrl(): String? = unwrap(this).getTokenUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OAuthPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty):
+          OAuthPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuthPropertiesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OAuthPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile credentials required when using Salesforce Pardot.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * PardotConnectorProfileCredentialsProperty pardotConnectorProfileCredentialsProperty =
+   * PardotConnectorProfileCredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientCredentialsArn("clientCredentialsArn")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html)
+   */
+  public interface PardotConnectorProfileCredentialsProperty {
+    /**
+     * The credentials used to access protected Salesforce Pardot resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-accesstoken)
+     */
+    public fun accessToken(): String? = unwrap(this).getAccessToken()
+
+    /**
+     * The secret manager ARN, which contains the client ID and client secret of the connected app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-clientcredentialsarn)
+     */
+    public fun clientCredentialsArn(): String? = unwrap(this).getClientCredentialsArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-connectoroauthrequest)
+     */
+    public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
+
+    /**
+     * The credentials used to acquire new access tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-refreshtoken)
+     */
+    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
+
+    /**
+     * A builder for [PardotConnectorProfileCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessToken The credentials used to access protected Salesforce Pardot resources.
+       */
+      public fun accessToken(accessToken: String)
+
+      /**
+       * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
+       * secret of the connected app.
+       */
+      public fun clientCredentialsArn(clientCredentialsArn: String)
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable)
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      public fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty)
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("39ab3c472f4a497ec72452bbf4eb331f225ea0fad5409ed04313e340bfb59fcb")
+      public
+          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param refreshToken The credentials used to acquire new access tokens.
+       */
+      public fun refreshToken(refreshToken: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.builder()
+
+      /**
+       * @param accessToken The credentials used to access protected Salesforce Pardot resources.
+       */
+      override fun accessToken(accessToken: String) {
+        cdkBuilder.accessToken(accessToken)
+      }
+
+      /**
+       * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
+       * secret of the connected app.
+       */
+      override fun clientCredentialsArn(clientCredentialsArn: String) {
+        cdkBuilder.clientCredentialsArn(clientCredentialsArn)
+      }
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+      }
+
+      /**
+       * @param connectorOAuthRequest the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("39ab3c472f4a497ec72452bbf4eb331f225ea0fad5409ed04313e340bfb59fcb")
+      override
+          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
+          Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
 
       /**
        * @param refreshToken The credentials used to acquire new access tokens.
@@ -6836,18 +6310,18 @@ public open class CfnConnectorProfile internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), SalesforceConnectorProfileCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), PardotConnectorProfileCredentialsProperty {
       /**
-       * The credentials used to access protected Salesforce resources.
+       * The credentials used to access protected Salesforce Pardot resources.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-accesstoken)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-accesstoken)
        */
       override fun accessToken(): String? = unwrap(this).getAccessToken()
 
@@ -6855,77 +6329,44 @@ public open class CfnConnectorProfile internal constructor(
        * The secret manager ARN, which contains the client ID and client secret of the connected
        * app.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-clientcredentialsarn)
        */
       override fun clientCredentialsArn(): String? = unwrap(this).getClientCredentialsArn()
 
       /**
-       * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
-       * Google Analytics, Marketo, Zendesk, and Slack.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-connectoroauthrequest)
        */
       override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
 
       /**
-       * A JSON web token (JWT) that authorizes Amazon AppFlow to access your Salesforce records.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-jwttoken)
-       */
-      override fun jwtToken(): String? = unwrap(this).getJwtToken()
-
-      /**
-       * Specifies the OAuth 2.0 grant type that Amazon AppFlow uses when it requests an access
-       * token from Salesforce. Amazon AppFlow requires an access token each time it attempts to access
-       * your Salesforce records.
-       *
-       * You can specify one of the following values:
-       *
-       * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
-       * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
-       * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
-       * records.
-       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
-       * secret) when it requests the access token from Salesforce. You provide these credentials to
-       * Amazon AppFlow when you define the connection to your Salesforce account.
-       * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
-       * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
-       * your Salesforce account. When you use this grant type, you don't need to log in to your
-       * Salesforce account to authorize Amazon AppFlow to access your records.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype)
-       */
-      override fun oAuth2GrantType(): String? = unwrap(this).getOAuth2GrantType()
-
-      /**
        * The credentials used to acquire new access tokens.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.html#cfn-appflow-connectorprofile-pardotconnectorprofilecredentials-refreshtoken)
        */
       override fun refreshToken(): String? = unwrap(this).getRefreshToken()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          SalesforceConnectorProfileCredentialsProperty {
+          PardotConnectorProfileCredentialsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty):
-          SalesforceConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SalesforceConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty):
+          PardotConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PardotConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SalesforceConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty
+      internal fun unwrap(wrapped: PardotConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty
     }
   }
 
   /**
-   * The custom credentials required for custom authentication.
+   * The connector-specific profile properties required when using Salesforce Pardot.
    *
    * Example:
    *
@@ -6933,119 +6374,262 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * CustomAuthCredentialsProperty customAuthCredentialsProperty =
-   * CustomAuthCredentialsProperty.builder()
-   * .customAuthenticationType("customAuthenticationType")
+   * PardotConnectorProfilePropertiesProperty pardotConnectorProfilePropertiesProperty =
+   * PardotConnectorProfilePropertiesProperty.builder()
+   * .businessUnitId("businessUnitId")
    * // the properties below are optional
-   * .credentialsMap(Map.of(
-   * "credentialsMapKey", "credentialsMap"))
+   * .instanceUrl("instanceUrl")
+   * .isSandboxEnvironment(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html)
    */
-  public interface CustomAuthCredentialsProperty {
+  public interface PardotConnectorProfilePropertiesProperty {
     /**
-     * A map that holds custom authentication credentials.
+     * The business unit id of Salesforce Pardot instance.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html#cfn-appflow-connectorprofile-customauthcredentials-credentialsmap)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-businessunitid)
      */
-    public fun credentialsMap(): Any? = unwrap(this).getCredentialsMap()
+    public fun businessUnitId(): String
 
     /**
-     * The custom authentication type that the connector uses.
+     * The location of the Salesforce Pardot resource.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html#cfn-appflow-connectorprofile-customauthcredentials-customauthenticationtype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-instanceurl)
      */
-    public fun customAuthenticationType(): String
+    public fun instanceUrl(): String? = unwrap(this).getInstanceUrl()
 
     /**
-     * A builder for [CustomAuthCredentialsProperty]
+     * Indicates whether the connector profile applies to a sandbox or production environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-issandboxenvironment)
+     */
+    public fun isSandboxEnvironment(): Any? = unwrap(this).getIsSandboxEnvironment()
+
+    /**
+     * A builder for [PardotConnectorProfilePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param credentialsMap A map that holds custom authentication credentials.
+       * @param businessUnitId The business unit id of Salesforce Pardot instance. 
        */
-      public fun credentialsMap(credentialsMap: IResolvable)
+      public fun businessUnitId(businessUnitId: String)
 
       /**
-       * @param credentialsMap A map that holds custom authentication credentials.
+       * @param instanceUrl The location of the Salesforce Pardot resource.
        */
-      public fun credentialsMap(credentialsMap: Map<String, String>)
+      public fun instanceUrl(instanceUrl: String)
 
       /**
-       * @param customAuthenticationType The custom authentication type that the connector uses. 
+       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
+       * production environment.
        */
-      public fun customAuthenticationType(customAuthenticationType: String)
+      public fun isSandboxEnvironment(isSandboxEnvironment: Boolean)
+
+      /**
+       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
+       * production environment.
+       */
+      public fun isSandboxEnvironment(isSandboxEnvironment: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.builder()
 
       /**
-       * @param credentialsMap A map that holds custom authentication credentials.
+       * @param businessUnitId The business unit id of Salesforce Pardot instance. 
        */
-      override fun credentialsMap(credentialsMap: IResolvable) {
-        cdkBuilder.credentialsMap(credentialsMap.let(IResolvable::unwrap))
+      override fun businessUnitId(businessUnitId: String) {
+        cdkBuilder.businessUnitId(businessUnitId)
       }
 
       /**
-       * @param credentialsMap A map that holds custom authentication credentials.
+       * @param instanceUrl The location of the Salesforce Pardot resource.
        */
-      override fun credentialsMap(credentialsMap: Map<String, String>) {
-        cdkBuilder.credentialsMap(credentialsMap)
+      override fun instanceUrl(instanceUrl: String) {
+        cdkBuilder.instanceUrl(instanceUrl)
       }
 
       /**
-       * @param customAuthenticationType The custom authentication type that the connector uses. 
+       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
+       * production environment.
        */
-      override fun customAuthenticationType(customAuthenticationType: String) {
-        cdkBuilder.customAuthenticationType(customAuthenticationType)
+      override fun isSandboxEnvironment(isSandboxEnvironment: Boolean) {
+        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
+      }
+
+      /**
+       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
+       * production environment.
+       */
+      override fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
+        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty,
-    ) : CdkObject(cdkObject), CustomAuthCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), PardotConnectorProfilePropertiesProperty {
       /**
-       * A map that holds custom authentication credentials.
+       * The business unit id of Salesforce Pardot instance.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html#cfn-appflow-connectorprofile-customauthcredentials-credentialsmap)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-businessunitid)
        */
-      override fun credentialsMap(): Any? = unwrap(this).getCredentialsMap()
+      override fun businessUnitId(): String = unwrap(this).getBusinessUnitId()
 
       /**
-       * The custom authentication type that the connector uses.
+       * The location of the Salesforce Pardot resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html#cfn-appflow-connectorprofile-customauthcredentials-customauthenticationtype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-instanceurl)
        */
-      override fun customAuthenticationType(): String = unwrap(this).getCustomAuthenticationType()
+      override fun instanceUrl(): String? = unwrap(this).getInstanceUrl()
+
+      /**
+       * Indicates whether the connector profile applies to a sandbox or production environment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.html#cfn-appflow-connectorprofile-pardotconnectorprofileproperties-issandboxenvironment)
+       */
+      override fun isSandboxEnvironment(): Any? = unwrap(this).getIsSandboxEnvironment()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomAuthCredentialsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PardotConnectorProfilePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty):
-          CustomAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomAuthCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty):
+          PardotConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PardotConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CustomAuthCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty
+      internal fun unwrap(wrapped: PardotConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile credentials required when using Amazon Redshift.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * RedshiftConnectorProfileCredentialsProperty redshiftConnectorProfileCredentialsProperty =
+   * RedshiftConnectorProfileCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html)
+   */
+  public interface RedshiftConnectorProfileCredentialsProperty {
+    /**
+     * The password that corresponds to the user name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html#cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-password)
+     */
+    public fun password(): String? = unwrap(this).getPassword()
+
+    /**
+     * The name of the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html#cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-username)
+     */
+    public fun username(): String? = unwrap(this).getUsername()
+
+    /**
+     * A builder for [RedshiftConnectorProfileCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param password The password that corresponds to the user name.
+       */
+      public fun password(password: String)
+
+      /**
+       * @param username The name of the user.
+       */
+      public fun username(username: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty.builder()
+
+      /**
+       * @param password The password that corresponds to the user name.
+       */
+      override fun password(password: String) {
+        cdkBuilder.password(password)
+      }
+
+      /**
+       * @param username The name of the user.
+       */
+      override fun username(username: String) {
+        cdkBuilder.username(username)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), RedshiftConnectorProfileCredentialsProperty {
+      /**
+       * The password that corresponds to the user name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html#cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-password)
+       */
+      override fun password(): String? = unwrap(this).getPassword()
+
+      /**
+       * The name of the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html#cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-username)
+       */
+      override fun username(): String? = unwrap(this).getUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftConnectorProfileCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty):
+          RedshiftConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty
     }
   }
 
@@ -7416,966 +7000,6 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * The connector-specific profile credentials required when using Zendesk.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ZendeskConnectorProfileCredentialsProperty zendeskConnectorProfileCredentialsProperty =
-   * ZendeskConnectorProfileCredentialsProperty.builder()
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * // the properties below are optional
-   * .accessToken("accessToken")
-   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html)
-   */
-  public interface ZendeskConnectorProfileCredentialsProperty {
-    /**
-     * The credentials used to access protected Zendesk resources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-accesstoken)
-     */
-    public fun accessToken(): String? = unwrap(this).getAccessToken()
-
-    /**
-     * The identifier for the desired client.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-clientid)
-     */
-    public fun clientId(): String
-
-    /**
-     * The client secret used by the OAuth client to authenticate to the authorization server.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-clientsecret)
-     */
-    public fun clientSecret(): String
-
-    /**
-     * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
-     * Google Analytics, Marketo, Zendesk, and Slack.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-connectoroauthrequest)
-     */
-    public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
-
-    /**
-     * A builder for [ZendeskConnectorProfileCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessToken The credentials used to access protected Zendesk resources.
-       */
-      public fun accessToken(accessToken: String)
-
-      /**
-       * @param clientId The identifier for the desired client. 
-       */
-      public fun clientId(clientId: String)
-
-      /**
-       * @param clientSecret The client secret used by the OAuth client to authenticate to the
-       * authorization server. 
-       */
-      public fun clientSecret(clientSecret: String)
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable)
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      public fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty)
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d29d020530b959b07eeaaab77bfcbc9bc73fe8d6ad3ed392f9f4f2f9f5bacb45")
-      public
-          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty.builder()
-
-      /**
-       * @param accessToken The credentials used to access protected Zendesk resources.
-       */
-      override fun accessToken(accessToken: String) {
-        cdkBuilder.accessToken(accessToken)
-      }
-
-      /**
-       * @param clientId The identifier for the desired client. 
-       */
-      override fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-      }
-
-      /**
-       * @param clientSecret The client secret used by the OAuth client to authenticate to the
-       * authorization server. 
-       */
-      override fun clientSecret(clientSecret: String) {
-        cdkBuilder.clientSecret(clientSecret)
-      }
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
-      }
-
-      /**
-       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
-       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d29d020530b959b07eeaaab77bfcbc9bc73fe8d6ad3ed392f9f4f2f9f5bacb45")
-      override
-          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
-          Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), ZendeskConnectorProfileCredentialsProperty {
-      /**
-       * The credentials used to access protected Zendesk resources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-accesstoken)
-       */
-      override fun accessToken(): String? = unwrap(this).getAccessToken()
-
-      /**
-       * The identifier for the desired client.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-clientid)
-       */
-      override fun clientId(): String = unwrap(this).getClientId()
-
-      /**
-       * The client secret used by the OAuth client to authenticate to the authorization server.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-clientsecret)
-       */
-      override fun clientSecret(): String = unwrap(this).getClientSecret()
-
-      /**
-       * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
-       * Google Analytics, Marketo, Zendesk, and Slack.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-connectoroauthrequest)
-       */
-      override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ZendeskConnectorProfileCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty):
-          ZendeskConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ZendeskConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ZendeskConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile credentials that are required when using the custom connector.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * CustomConnectorProfileCredentialsProperty customConnectorProfileCredentialsProperty =
-   * CustomConnectorProfileCredentialsProperty.builder()
-   * .authenticationType("authenticationType")
-   * // the properties below are optional
-   * .apiKey(ApiKeyCredentialsProperty.builder()
-   * .apiKey("apiKey")
-   * // the properties below are optional
-   * .apiSecretKey("apiSecretKey")
-   * .build())
-   * .basic(BasicAuthCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build())
-   * .custom(CustomAuthCredentialsProperty.builder()
-   * .customAuthenticationType("customAuthenticationType")
-   * // the properties below are optional
-   * .credentialsMap(Map.of(
-   * "credentialsMapKey", "credentialsMap"))
-   * .build())
-   * .oauth2(OAuth2CredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .refreshToken("refreshToken")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html)
-   */
-  public interface CustomConnectorProfileCredentialsProperty {
-    /**
-     * The API keys required for the authentication of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-apikey)
-     */
-    public fun apiKey(): Any? = unwrap(this).getApiKey()
-
-    /**
-     * The authentication type that the custom connector uses for authenticating while creating a
-     * connector profile.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-authenticationtype)
-     */
-    public fun authenticationType(): String
-
-    /**
-     * The basic credentials that are required for the authentication of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-basic)
-     */
-    public fun basic(): Any? = unwrap(this).getBasic()
-
-    /**
-     * If the connector uses the custom authentication mechanism, this holds the required
-     * credentials.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-custom)
-     */
-    public fun custom(): Any? = unwrap(this).getCustom()
-
-    /**
-     * The OAuth 2.0 credentials required for the authentication of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-oauth2)
-     */
-    public fun oauth2(): Any? = unwrap(this).getOauth2()
-
-    /**
-     * A builder for [CustomConnectorProfileCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param apiKey The API keys required for the authentication of the user.
-       */
-      public fun apiKey(apiKey: IResolvable)
-
-      /**
-       * @param apiKey The API keys required for the authentication of the user.
-       */
-      public fun apiKey(apiKey: ApiKeyCredentialsProperty)
-
-      /**
-       * @param apiKey The API keys required for the authentication of the user.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bda9c7ae8acca1765606651cbf1342b871184c3896a0ceba607cce3b48aa28ab")
-      public fun apiKey(apiKey: ApiKeyCredentialsProperty.Builder.() -> Unit)
-
-      /**
-       * @param authenticationType The authentication type that the custom connector uses for
-       * authenticating while creating a connector profile. 
-       */
-      public fun authenticationType(authenticationType: String)
-
-      /**
-       * @param basic The basic credentials that are required for the authentication of the user.
-       */
-      public fun basic(basic: IResolvable)
-
-      /**
-       * @param basic The basic credentials that are required for the authentication of the user.
-       */
-      public fun basic(basic: BasicAuthCredentialsProperty)
-
-      /**
-       * @param basic The basic credentials that are required for the authentication of the user.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("baf9e4c4b7919bde7a4210e14a74239e0e76b1c7d17663717ad1a3e13368e7b0")
-      public fun basic(basic: BasicAuthCredentialsProperty.Builder.() -> Unit)
-
-      /**
-       * @param custom If the connector uses the custom authentication mechanism, this holds the
-       * required credentials.
-       */
-      public fun custom(custom: IResolvable)
-
-      /**
-       * @param custom If the connector uses the custom authentication mechanism, this holds the
-       * required credentials.
-       */
-      public fun custom(custom: CustomAuthCredentialsProperty)
-
-      /**
-       * @param custom If the connector uses the custom authentication mechanism, this holds the
-       * required credentials.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ac29a2fddade456121fe054623920654f76aa806595f8c1f8601ae65913a4452")
-      public fun custom(custom: CustomAuthCredentialsProperty.Builder.() -> Unit)
-
-      /**
-       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
-       */
-      public fun oauth2(oauth2: IResolvable)
-
-      /**
-       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
-       */
-      public fun oauth2(oauth2: OAuth2CredentialsProperty)
-
-      /**
-       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7d281424b16b15ada3366ead134f9f690373cc0331fd6365f23b2c6a26223839")
-      public fun oauth2(oauth2: OAuth2CredentialsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty.builder()
-
-      /**
-       * @param apiKey The API keys required for the authentication of the user.
-       */
-      override fun apiKey(apiKey: IResolvable) {
-        cdkBuilder.apiKey(apiKey.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param apiKey The API keys required for the authentication of the user.
-       */
-      override fun apiKey(apiKey: ApiKeyCredentialsProperty) {
-        cdkBuilder.apiKey(apiKey.let(ApiKeyCredentialsProperty::unwrap))
-      }
-
-      /**
-       * @param apiKey The API keys required for the authentication of the user.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bda9c7ae8acca1765606651cbf1342b871184c3896a0ceba607cce3b48aa28ab")
-      override fun apiKey(apiKey: ApiKeyCredentialsProperty.Builder.() -> Unit): Unit =
-          apiKey(ApiKeyCredentialsProperty(apiKey))
-
-      /**
-       * @param authenticationType The authentication type that the custom connector uses for
-       * authenticating while creating a connector profile. 
-       */
-      override fun authenticationType(authenticationType: String) {
-        cdkBuilder.authenticationType(authenticationType)
-      }
-
-      /**
-       * @param basic The basic credentials that are required for the authentication of the user.
-       */
-      override fun basic(basic: IResolvable) {
-        cdkBuilder.basic(basic.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param basic The basic credentials that are required for the authentication of the user.
-       */
-      override fun basic(basic: BasicAuthCredentialsProperty) {
-        cdkBuilder.basic(basic.let(BasicAuthCredentialsProperty::unwrap))
-      }
-
-      /**
-       * @param basic The basic credentials that are required for the authentication of the user.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("baf9e4c4b7919bde7a4210e14a74239e0e76b1c7d17663717ad1a3e13368e7b0")
-      override fun basic(basic: BasicAuthCredentialsProperty.Builder.() -> Unit): Unit =
-          basic(BasicAuthCredentialsProperty(basic))
-
-      /**
-       * @param custom If the connector uses the custom authentication mechanism, this holds the
-       * required credentials.
-       */
-      override fun custom(custom: IResolvable) {
-        cdkBuilder.custom(custom.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param custom If the connector uses the custom authentication mechanism, this holds the
-       * required credentials.
-       */
-      override fun custom(custom: CustomAuthCredentialsProperty) {
-        cdkBuilder.custom(custom.let(CustomAuthCredentialsProperty::unwrap))
-      }
-
-      /**
-       * @param custom If the connector uses the custom authentication mechanism, this holds the
-       * required credentials.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ac29a2fddade456121fe054623920654f76aa806595f8c1f8601ae65913a4452")
-      override fun custom(custom: CustomAuthCredentialsProperty.Builder.() -> Unit): Unit =
-          custom(CustomAuthCredentialsProperty(custom))
-
-      /**
-       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
-       */
-      override fun oauth2(oauth2: IResolvable) {
-        cdkBuilder.oauth2(oauth2.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
-       */
-      override fun oauth2(oauth2: OAuth2CredentialsProperty) {
-        cdkBuilder.oauth2(oauth2.let(OAuth2CredentialsProperty::unwrap))
-      }
-
-      /**
-       * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7d281424b16b15ada3366ead134f9f690373cc0331fd6365f23b2c6a26223839")
-      override fun oauth2(oauth2: OAuth2CredentialsProperty.Builder.() -> Unit): Unit =
-          oauth2(OAuth2CredentialsProperty(oauth2))
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), CustomConnectorProfileCredentialsProperty {
-      /**
-       * The API keys required for the authentication of the user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-apikey)
-       */
-      override fun apiKey(): Any? = unwrap(this).getApiKey()
-
-      /**
-       * The authentication type that the custom connector uses for authenticating while creating a
-       * connector profile.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-authenticationtype)
-       */
-      override fun authenticationType(): String = unwrap(this).getAuthenticationType()
-
-      /**
-       * The basic credentials that are required for the authentication of the user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-basic)
-       */
-      override fun basic(): Any? = unwrap(this).getBasic()
-
-      /**
-       * If the connector uses the custom authentication mechanism, this holds the required
-       * credentials.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-custom)
-       */
-      override fun custom(): Any? = unwrap(this).getCustom()
-
-      /**
-       * The OAuth 2.0 credentials required for the authentication of the user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html#cfn-appflow-connectorprofile-customconnectorprofilecredentials-oauth2)
-       */
-      override fun oauth2(): Any? = unwrap(this).getOauth2()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CustomConnectorProfileCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty):
-          CustomConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile properties required when using Veeva.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * VeevaConnectorProfilePropertiesProperty veevaConnectorProfilePropertiesProperty =
-   * VeevaConnectorProfilePropertiesProperty.builder()
-   * .instanceUrl("instanceUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties.html)
-   */
-  public interface VeevaConnectorProfilePropertiesProperty {
-    /**
-     * The location of the Veeva resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties.html#cfn-appflow-connectorprofile-veevaconnectorprofileproperties-instanceurl)
-     */
-    public fun instanceUrl(): String
-
-    /**
-     * A builder for [VeevaConnectorProfilePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceUrl The location of the Veeva resource. 
-       */
-      public fun instanceUrl(instanceUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty.builder()
-
-      /**
-       * @param instanceUrl The location of the Veeva resource. 
-       */
-      override fun instanceUrl(instanceUrl: String) {
-        cdkBuilder.instanceUrl(instanceUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), VeevaConnectorProfilePropertiesProperty {
-      /**
-       * The location of the Veeva resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties.html#cfn-appflow-connectorprofile-veevaconnectorprofileproperties-instanceurl)
-       */
-      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VeevaConnectorProfilePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty):
-          VeevaConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VeevaConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VeevaConnectorProfilePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty
-    }
-  }
-
-  /**
-   * The OAuth 2.0 credentials required for OAuth 2.0 authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * OAuth2CredentialsProperty oAuth2CredentialsProperty = OAuth2CredentialsProperty.builder()
-   * .accessToken("accessToken")
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
-   * .authCode("authCode")
-   * .redirectUri("redirectUri")
-   * .build())
-   * .refreshToken("refreshToken")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html)
-   */
-  public interface OAuth2CredentialsProperty {
-    /**
-     * The access token used to access the connector on your behalf.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-accesstoken)
-     */
-    public fun accessToken(): String? = unwrap(this).getAccessToken()
-
-    /**
-     * The identifier for the desired client.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-clientid)
-     */
-    public fun clientId(): String? = unwrap(this).getClientId()
-
-    /**
-     * The client secret used by the OAuth client to authenticate to the authorization server.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-clientsecret)
-     */
-    public fun clientSecret(): String? = unwrap(this).getClientSecret()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-oauthrequest)
-     */
-    public fun oAuthRequest(): Any? = unwrap(this).getOAuthRequest()
-
-    /**
-     * The refresh token used to refresh an expired access token.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-refreshtoken)
-     */
-    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
-
-    /**
-     * A builder for [OAuth2CredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessToken The access token used to access the connector on your behalf.
-       */
-      public fun accessToken(accessToken: String)
-
-      /**
-       * @param clientId The identifier for the desired client.
-       */
-      public fun clientId(clientId: String)
-
-      /**
-       * @param clientSecret The client secret used by the OAuth client to authenticate to the
-       * authorization server.
-       */
-      public fun clientSecret(clientSecret: String)
-
-      /**
-       * @param oAuthRequest the value to be set.
-       */
-      public fun oAuthRequest(oAuthRequest: IResolvable)
-
-      /**
-       * @param oAuthRequest the value to be set.
-       */
-      public fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty)
-
-      /**
-       * @param oAuthRequest the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c3eb0d875de5660f896f978d3b639a614e893c8dedd762ca9248a0f3e4b08194")
-      public fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
-
-      /**
-       * @param refreshToken The refresh token used to refresh an expired access token.
-       */
-      public fun refreshToken(refreshToken: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty.builder()
-
-      /**
-       * @param accessToken The access token used to access the connector on your behalf.
-       */
-      override fun accessToken(accessToken: String) {
-        cdkBuilder.accessToken(accessToken)
-      }
-
-      /**
-       * @param clientId The identifier for the desired client.
-       */
-      override fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-      }
-
-      /**
-       * @param clientSecret The client secret used by the OAuth client to authenticate to the
-       * authorization server.
-       */
-      override fun clientSecret(clientSecret: String) {
-        cdkBuilder.clientSecret(clientSecret)
-      }
-
-      /**
-       * @param oAuthRequest the value to be set.
-       */
-      override fun oAuthRequest(oAuthRequest: IResolvable) {
-        cdkBuilder.oAuthRequest(oAuthRequest.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param oAuthRequest the value to be set.
-       */
-      override fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.oAuthRequest(oAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
-      }
-
-      /**
-       * @param oAuthRequest the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c3eb0d875de5660f896f978d3b639a614e893c8dedd762ca9248a0f3e4b08194")
-      override fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
-          Unit = oAuthRequest(ConnectorOAuthRequestProperty(oAuthRequest))
-
-      /**
-       * @param refreshToken The refresh token used to refresh an expired access token.
-       */
-      override fun refreshToken(refreshToken: String) {
-        cdkBuilder.refreshToken(refreshToken)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty,
-    ) : CdkObject(cdkObject), OAuth2CredentialsProperty {
-      /**
-       * The access token used to access the connector on your behalf.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-accesstoken)
-       */
-      override fun accessToken(): String? = unwrap(this).getAccessToken()
-
-      /**
-       * The identifier for the desired client.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-clientid)
-       */
-      override fun clientId(): String? = unwrap(this).getClientId()
-
-      /**
-       * The client secret used by the OAuth client to authenticate to the authorization server.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-clientsecret)
-       */
-      override fun clientSecret(): String? = unwrap(this).getClientSecret()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-oauthrequest)
-       */
-      override fun oAuthRequest(): Any? = unwrap(this).getOAuthRequest()
-
-      /**
-       * The refresh token used to refresh an expired access token.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html#cfn-appflow-connectorprofile-oauth2credentials-refreshtoken)
-       */
-      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OAuth2CredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty):
-          OAuth2CredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OAuth2CredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OAuth2CredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty
-    }
-  }
-
-  /**
-   * The connector-specific profile credentials required when using Amazon Redshift.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * RedshiftConnectorProfileCredentialsProperty redshiftConnectorProfileCredentialsProperty =
-   * RedshiftConnectorProfileCredentialsProperty.builder()
-   * .password("password")
-   * .username("username")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html)
-   */
-  public interface RedshiftConnectorProfileCredentialsProperty {
-    /**
-     * The password that corresponds to the user name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html#cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-password)
-     */
-    public fun password(): String? = unwrap(this).getPassword()
-
-    /**
-     * The name of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html#cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-username)
-     */
-    public fun username(): String? = unwrap(this).getUsername()
-
-    /**
-     * A builder for [RedshiftConnectorProfileCredentialsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param password The password that corresponds to the user name.
-       */
-      public fun password(password: String)
-
-      /**
-       * @param username The name of the user.
-       */
-      public fun username(username: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty.builder()
-
-      /**
-       * @param password The password that corresponds to the user name.
-       */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
-      }
-
-      /**
-       * @param username The name of the user.
-       */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), RedshiftConnectorProfileCredentialsProperty {
-      /**
-       * The password that corresponds to the user name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html#cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-password)
-       */
-      override fun password(): String? = unwrap(this).getPassword()
-
-      /**
-       * The name of the user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html#cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-username)
-       */
-      override fun username(): String? = unwrap(this).getUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RedshiftConnectorProfileCredentialsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty):
-          RedshiftConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RedshiftConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedshiftConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty
-    }
-  }
-
-  /**
    * The connector-specific profile credentials required when using SAPOData.
    *
    * Example:
@@ -8552,176 +7176,6 @@ public open class CfnConnectorProfile internal constructor(
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SAPODataConnectorProfileCredentialsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SAPODataConnectorProfileCredentialsProperty
-    }
-  }
-
-  /**
-   * The OAuth 2.0 properties required for OAuth 2.0 authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * OAuth2PropertiesProperty oAuth2PropertiesProperty = OAuth2PropertiesProperty.builder()
-   * .oAuth2GrantType("oAuth2GrantType")
-   * .tokenUrl("tokenUrl")
-   * .tokenUrlCustomProperties(Map.of(
-   * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html)
-   */
-  public interface OAuth2PropertiesProperty {
-    /**
-     * The OAuth 2.0 grant type used by connector for OAuth 2.0 authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-oauth2granttype)
-     */
-    public fun oAuth2GrantType(): String? = unwrap(this).getOAuth2GrantType()
-
-    /**
-     * The token URL required for OAuth 2.0 authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-tokenurl)
-     */
-    public fun tokenUrl(): String? = unwrap(this).getTokenUrl()
-
-    /**
-     * Associates your token URL with a map of properties that you define.
-     *
-     * Use this parameter to provide any additional details that the connector requires to
-     * authenticate your request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-tokenurlcustomproperties)
-     */
-    public fun tokenUrlCustomProperties(): Any? = unwrap(this).getTokenUrlCustomProperties()
-
-    /**
-     * A builder for [OAuth2PropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param oAuth2GrantType The OAuth 2.0 grant type used by connector for OAuth 2.0
-       * authentication.
-       */
-      public fun oAuth2GrantType(oAuth2GrantType: String)
-
-      /**
-       * @param tokenUrl The token URL required for OAuth 2.0 authentication.
-       */
-      public fun tokenUrl(tokenUrl: String)
-
-      /**
-       * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
-       * define.
-       * Use this parameter to provide any additional details that the connector requires to
-       * authenticate your request.
-       */
-      public fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable)
-
-      /**
-       * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
-       * define.
-       * Use this parameter to provide any additional details that the connector requires to
-       * authenticate your request.
-       */
-      public fun tokenUrlCustomProperties(tokenUrlCustomProperties: Map<String, String>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty.builder()
-
-      /**
-       * @param oAuth2GrantType The OAuth 2.0 grant type used by connector for OAuth 2.0
-       * authentication.
-       */
-      override fun oAuth2GrantType(oAuth2GrantType: String) {
-        cdkBuilder.oAuth2GrantType(oAuth2GrantType)
-      }
-
-      /**
-       * @param tokenUrl The token URL required for OAuth 2.0 authentication.
-       */
-      override fun tokenUrl(tokenUrl: String) {
-        cdkBuilder.tokenUrl(tokenUrl)
-      }
-
-      /**
-       * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
-       * define.
-       * Use this parameter to provide any additional details that the connector requires to
-       * authenticate your request.
-       */
-      override fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable) {
-        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
-       * define.
-       * Use this parameter to provide any additional details that the connector requires to
-       * authenticate your request.
-       */
-      override fun tokenUrlCustomProperties(tokenUrlCustomProperties: Map<String, String>) {
-        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty,
-    ) : CdkObject(cdkObject), OAuth2PropertiesProperty {
-      /**
-       * The OAuth 2.0 grant type used by connector for OAuth 2.0 authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-oauth2granttype)
-       */
-      override fun oAuth2GrantType(): String? = unwrap(this).getOAuth2GrantType()
-
-      /**
-       * The token URL required for OAuth 2.0 authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-tokenurl)
-       */
-      override fun tokenUrl(): String? = unwrap(this).getTokenUrl()
-
-      /**
-       * Associates your token URL with a map of properties that you define.
-       *
-       * Use this parameter to provide any additional details that the connector requires to
-       * authenticate your request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html#cfn-appflow-connectorprofile-oauth2properties-tokenurlcustomproperties)
-       */
-      override fun tokenUrlCustomProperties(): Any? = unwrap(this).getTokenUrlCustomProperties()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OAuth2PropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty):
-          OAuth2PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuth2PropertiesProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OAuth2PropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty
     }
   }
 
@@ -9057,7 +7511,7 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * The connector-specific profile credentials required by Infor Nexus.
+   * The connector-specific profile credentials required when using Salesforce.
    *
    * Example:
    *
@@ -9065,165 +7519,325 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * InforNexusConnectorProfileCredentialsProperty inforNexusConnectorProfileCredentialsProperty =
-   * InforNexusConnectorProfileCredentialsProperty.builder()
-   * .accessKeyId("accessKeyId")
-   * .datakey("datakey")
-   * .secretAccessKey("secretAccessKey")
-   * .userId("userId")
+   * SalesforceConnectorProfileCredentialsProperty salesforceConnectorProfileCredentialsProperty =
+   * SalesforceConnectorProfileCredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientCredentialsArn("clientCredentialsArn")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .jwtToken("jwtToken")
+   * .oAuth2GrantType("oAuth2GrantType")
+   * .refreshToken("refreshToken")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html)
    */
-  public interface InforNexusConnectorProfileCredentialsProperty {
+  public interface SalesforceConnectorProfileCredentialsProperty {
     /**
-     * The Access Key portion of the credentials.
+     * The credentials used to access protected Salesforce resources.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-accesskeyid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-accesstoken)
      */
-    public fun accessKeyId(): String
+    public fun accessToken(): String? = unwrap(this).getAccessToken()
 
     /**
-     * The encryption keys used to encrypt data.
+     * The secret manager ARN, which contains the client ID and client secret of the connected app.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-datakey)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn)
      */
-    public fun datakey(): String
+    public fun clientCredentialsArn(): String? = unwrap(this).getClientCredentialsArn()
 
     /**
-     * The secret key used to sign requests.
+     * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
+     * Google Analytics, Marketo, Zendesk, and Slack.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-secretaccesskey)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest)
      */
-    public fun secretAccessKey(): String
+    public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
 
     /**
-     * The identifier for the user.
+     * A JSON web token (JWT) that authorizes Amazon AppFlow to access your Salesforce records.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-userid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-jwttoken)
      */
-    public fun userId(): String
+    public fun jwtToken(): String? = unwrap(this).getJwtToken()
 
     /**
-     * A builder for [InforNexusConnectorProfileCredentialsProperty]
+     * Specifies the OAuth 2.0 grant type that Amazon AppFlow uses when it requests an access token
+     * from Salesforce. Amazon AppFlow requires an access token each time it attempts to access your
+     * Salesforce records.
+     *
+     * You can specify one of the following values:
+     *
+     * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
+     * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
+     * after you log in to your Salesforce account and authorize Amazon AppFlow to access your records.
+     * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
+     * secret) when it requests the access token from Salesforce. You provide these credentials to
+     * Amazon AppFlow when you define the connection to your Salesforce account.
+     * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
+     * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
+     * your Salesforce account. When you use this grant type, you don't need to log in to your
+     * Salesforce account to authorize Amazon AppFlow to access your records.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype)
+     */
+    public fun oAuth2GrantType(): String? = unwrap(this).getOAuth2GrantType()
+
+    /**
+     * The credentials used to acquire new access tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken)
+     */
+    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
+
+    /**
+     * A builder for [SalesforceConnectorProfileCredentialsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accessKeyId The Access Key portion of the credentials. 
+       * @param accessToken The credentials used to access protected Salesforce resources.
        */
-      public fun accessKeyId(accessKeyId: String)
+      public fun accessToken(accessToken: String)
 
       /**
-       * @param datakey The encryption keys used to encrypt data. 
+       * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
+       * secret of the connected app.
        */
-      public fun datakey(datakey: String)
+      public fun clientCredentialsArn(clientCredentialsArn: String)
 
       /**
-       * @param secretAccessKey The secret key used to sign requests. 
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
-      public fun secretAccessKey(secretAccessKey: String)
+      public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable)
 
       /**
-       * @param userId The identifier for the user. 
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
-      public fun userId(userId: String)
+      public fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty)
+
+      /**
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("05b5b87a5c00f6b8e1d374bf90ffc9cf90006dc3c79379d0efacdad291a09d99")
+      public
+          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param jwtToken A JSON web token (JWT) that authorizes Amazon AppFlow to access your
+       * Salesforce records.
+       */
+      public fun jwtToken(jwtToken: String)
+
+      /**
+       * @param oAuth2GrantType Specifies the OAuth 2.0 grant type that Amazon AppFlow uses when it
+       * requests an access token from Salesforce. Amazon AppFlow requires an access token each time it
+       * attempts to access your Salesforce records.
+       * You can specify one of the following values:
+       *
+       * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
+       * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
+       * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
+       * records.
+       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
+       * secret) when it requests the access token from Salesforce. You provide these credentials to
+       * Amazon AppFlow when you define the connection to your Salesforce account.
+       * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
+       * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
+       * your Salesforce account. When you use this grant type, you don't need to log in to your
+       * Salesforce account to authorize Amazon AppFlow to access your records.
+       */
+      public fun oAuth2GrantType(oAuth2GrantType: String)
+
+      /**
+       * @param refreshToken The credentials used to acquire new access tokens.
+       */
+      public fun refreshToken(refreshToken: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty.builder()
 
       /**
-       * @param accessKeyId The Access Key portion of the credentials. 
+       * @param accessToken The credentials used to access protected Salesforce resources.
        */
-      override fun accessKeyId(accessKeyId: String) {
-        cdkBuilder.accessKeyId(accessKeyId)
+      override fun accessToken(accessToken: String) {
+        cdkBuilder.accessToken(accessToken)
       }
 
       /**
-       * @param datakey The encryption keys used to encrypt data. 
+       * @param clientCredentialsArn The secret manager ARN, which contains the client ID and client
+       * secret of the connected app.
        */
-      override fun datakey(datakey: String) {
-        cdkBuilder.datakey(datakey)
+      override fun clientCredentialsArn(clientCredentialsArn: String) {
+        cdkBuilder.clientCredentialsArn(clientCredentialsArn)
       }
 
       /**
-       * @param secretAccessKey The secret key used to sign requests. 
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
-      override fun secretAccessKey(secretAccessKey: String) {
-        cdkBuilder.secretAccessKey(secretAccessKey)
+      override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
       }
 
       /**
-       * @param userId The identifier for the user. 
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
-      override fun userId(userId: String) {
-        cdkBuilder.userId(userId)
+      override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+      }
+
+      /**
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("05b5b87a5c00f6b8e1d374bf90ffc9cf90006dc3c79379d0efacdad291a09d99")
+      override
+          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
+          Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
+
+      /**
+       * @param jwtToken A JSON web token (JWT) that authorizes Amazon AppFlow to access your
+       * Salesforce records.
+       */
+      override fun jwtToken(jwtToken: String) {
+        cdkBuilder.jwtToken(jwtToken)
+      }
+
+      /**
+       * @param oAuth2GrantType Specifies the OAuth 2.0 grant type that Amazon AppFlow uses when it
+       * requests an access token from Salesforce. Amazon AppFlow requires an access token each time it
+       * attempts to access your Salesforce records.
+       * You can specify one of the following values:
+       *
+       * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
+       * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
+       * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
+       * records.
+       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
+       * secret) when it requests the access token from Salesforce. You provide these credentials to
+       * Amazon AppFlow when you define the connection to your Salesforce account.
+       * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
+       * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
+       * your Salesforce account. When you use this grant type, you don't need to log in to your
+       * Salesforce account to authorize Amazon AppFlow to access your records.
+       */
+      override fun oAuth2GrantType(oAuth2GrantType: String) {
+        cdkBuilder.oAuth2GrantType(oAuth2GrantType)
+      }
+
+      /**
+       * @param refreshToken The credentials used to acquire new access tokens.
+       */
+      override fun refreshToken(refreshToken: String) {
+        cdkBuilder.refreshToken(refreshToken)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), InforNexusConnectorProfileCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), SalesforceConnectorProfileCredentialsProperty {
       /**
-       * The Access Key portion of the credentials.
+       * The credentials used to access protected Salesforce resources.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-accesskeyid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-accesstoken)
        */
-      override fun accessKeyId(): String = unwrap(this).getAccessKeyId()
+      override fun accessToken(): String? = unwrap(this).getAccessToken()
 
       /**
-       * The encryption keys used to encrypt data.
+       * The secret manager ARN, which contains the client ID and client secret of the connected
+       * app.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-datakey)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn)
        */
-      override fun datakey(): String = unwrap(this).getDatakey()
+      override fun clientCredentialsArn(): String? = unwrap(this).getClientCredentialsArn()
 
       /**
-       * The secret key used to sign requests.
+       * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
+       * Google Analytics, Marketo, Zendesk, and Slack.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-secretaccesskey)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest)
        */
-      override fun secretAccessKey(): String = unwrap(this).getSecretAccessKey()
+      override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
 
       /**
-       * The identifier for the user.
+       * A JSON web token (JWT) that authorizes Amazon AppFlow to access your Salesforce records.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html#cfn-appflow-connectorprofile-infornexusconnectorprofilecredentials-userid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-jwttoken)
        */
-      override fun userId(): String = unwrap(this).getUserId()
+      override fun jwtToken(): String? = unwrap(this).getJwtToken()
+
+      /**
+       * Specifies the OAuth 2.0 grant type that Amazon AppFlow uses when it requests an access
+       * token from Salesforce. Amazon AppFlow requires an access token each time it attempts to access
+       * your Salesforce records.
+       *
+       * You can specify one of the following values:
+       *
+       * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
+       * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
+       * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
+       * records.
+       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
+       * secret) when it requests the access token from Salesforce. You provide these credentials to
+       * Amazon AppFlow when you define the connection to your Salesforce account.
+       * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
+       * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
+       * your Salesforce account. When you use this grant type, you don't need to log in to your
+       * Salesforce account to authorize Amazon AppFlow to access your records.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype)
+       */
+      override fun oAuth2GrantType(): String? = unwrap(this).getOAuth2GrantType()
+
+      /**
+       * The credentials used to acquire new access tokens.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken)
+       */
+      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          InforNexusConnectorProfileCredentialsProperty {
+          SalesforceConnectorProfileCredentialsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty):
-          InforNexusConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InforNexusConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty):
+          SalesforceConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InforNexusConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty
+      internal fun unwrap(wrapped: SalesforceConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty
     }
   }
 
   /**
-   * The connector-specific profile credentials required when using Trend Micro.
+   * The connector-specific profile properties required when using Salesforce.
    *
    * Example:
    *
@@ -9231,79 +7845,676 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * TrendmicroConnectorProfileCredentialsProperty trendmicroConnectorProfileCredentialsProperty =
-   * TrendmicroConnectorProfileCredentialsProperty.builder()
-   * .apiSecretKey("apiSecretKey")
+   * SalesforceConnectorProfilePropertiesProperty salesforceConnectorProfilePropertiesProperty =
+   * SalesforceConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .isSandboxEnvironment(false)
+   * .usePrivateLinkForMetadataAndAuthorization(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html)
    */
-  public interface TrendmicroConnectorProfileCredentialsProperty {
+  public interface SalesforceConnectorProfilePropertiesProperty {
     /**
-     * The Secret Access Key portion of the credentials.
+     * The location of the Salesforce resource.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials.html#cfn-appflow-connectorprofile-trendmicroconnectorprofilecredentials-apisecretkey)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-instanceurl)
      */
-    public fun apiSecretKey(): String
+    public fun instanceUrl(): String? = unwrap(this).getInstanceUrl()
 
     /**
-     * A builder for [TrendmicroConnectorProfileCredentialsProperty]
+     * Indicates whether the connector profile applies to a sandbox or production environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment)
+     */
+    public fun isSandboxEnvironment(): Any? = unwrap(this).getIsSandboxEnvironment()
+
+    /**
+     * If the connection mode for the connector profile is private, this parameter sets whether
+     * Amazon AppFlow uses the private network to send metadata and authorization calls to Salesforce.
+     *
+     * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
+     * infrastructure without being exposed to the public internet.
+     *
+     * Set either of the following values:
+     *
+     * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
+     *
+     * These private calls are:
+     *
+     * * Calls to get metadata about your Salesforce records. This metadata describes your
+     * Salesforce objects and their fields.
+     * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
+     * records.
+     * * Calls to transfer your Salesforce records as part of a flow run.
+     * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately and
+     * other calls over the public internet.
+     *
+     * The public calls are:
+     *
+     * * Calls to get metadata about your Salesforce records.
+     * * Calls to get or refresh access tokens.
+     *
+     * The private calls are:
+     *
+     * * Calls to transfer your Salesforce records as part of a flow run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-useprivatelinkformetadataandauthorization)
+     */
+    public fun usePrivateLinkForMetadataAndAuthorization(): Any? =
+        unwrap(this).getUsePrivateLinkForMetadataAndAuthorization()
+
+    /**
+     * A builder for [SalesforceConnectorProfilePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param apiSecretKey The Secret Access Key portion of the credentials. 
+       * @param instanceUrl The location of the Salesforce resource.
        */
-      public fun apiSecretKey(apiSecretKey: String)
+      public fun instanceUrl(instanceUrl: String)
+
+      /**
+       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
+       * production environment.
+       */
+      public fun isSandboxEnvironment(isSandboxEnvironment: Boolean)
+
+      /**
+       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
+       * production environment.
+       */
+      public fun isSandboxEnvironment(isSandboxEnvironment: IResolvable)
+
+      /**
+       * @param usePrivateLinkForMetadataAndAuthorization If the connection mode for the connector
+       * profile is private, this parameter sets whether Amazon AppFlow uses the private network to
+       * send metadata and authorization calls to Salesforce.
+       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
+       * infrastructure without being exposed to the public internet.
+       *
+       * Set either of the following values:
+       *
+       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
+       *
+       * These private calls are:
+       *
+       * * Calls to get metadata about your Salesforce records. This metadata describes your
+       * Salesforce objects and their fields.
+       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
+       * records.
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
+       * and other calls over the public internet.
+       *
+       * The public calls are:
+       *
+       * * Calls to get metadata about your Salesforce records.
+       * * Calls to get or refresh access tokens.
+       *
+       * The private calls are:
+       *
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       */
+      public
+          fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: Boolean)
+
+      /**
+       * @param usePrivateLinkForMetadataAndAuthorization If the connection mode for the connector
+       * profile is private, this parameter sets whether Amazon AppFlow uses the private network to
+       * send metadata and authorization calls to Salesforce.
+       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
+       * infrastructure without being exposed to the public internet.
+       *
+       * Set either of the following values:
+       *
+       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
+       *
+       * These private calls are:
+       *
+       * * Calls to get metadata about your Salesforce records. This metadata describes your
+       * Salesforce objects and their fields.
+       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
+       * records.
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
+       * and other calls over the public internet.
+       *
+       * The public calls are:
+       *
+       * * Calls to get metadata about your Salesforce records.
+       * * Calls to get or refresh access tokens.
+       *
+       * The private calls are:
+       *
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       */
+      public
+          fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty.builder()
 
       /**
-       * @param apiSecretKey The Secret Access Key portion of the credentials. 
+       * @param instanceUrl The location of the Salesforce resource.
        */
-      override fun apiSecretKey(apiSecretKey: String) {
-        cdkBuilder.apiSecretKey(apiSecretKey)
+      override fun instanceUrl(instanceUrl: String) {
+        cdkBuilder.instanceUrl(instanceUrl)
+      }
+
+      /**
+       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
+       * production environment.
+       */
+      override fun isSandboxEnvironment(isSandboxEnvironment: Boolean) {
+        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
+      }
+
+      /**
+       * @param isSandboxEnvironment Indicates whether the connector profile applies to a sandbox or
+       * production environment.
+       */
+      override fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
+        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param usePrivateLinkForMetadataAndAuthorization If the connection mode for the connector
+       * profile is private, this parameter sets whether Amazon AppFlow uses the private network to
+       * send metadata and authorization calls to Salesforce.
+       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
+       * infrastructure without being exposed to the public internet.
+       *
+       * Set either of the following values:
+       *
+       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
+       *
+       * These private calls are:
+       *
+       * * Calls to get metadata about your Salesforce records. This metadata describes your
+       * Salesforce objects and their fields.
+       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
+       * records.
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
+       * and other calls over the public internet.
+       *
+       * The public calls are:
+       *
+       * * Calls to get metadata about your Salesforce records.
+       * * Calls to get or refresh access tokens.
+       *
+       * The private calls are:
+       *
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       */
+      override
+          fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: Boolean) {
+        cdkBuilder.usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization)
+      }
+
+      /**
+       * @param usePrivateLinkForMetadataAndAuthorization If the connection mode for the connector
+       * profile is private, this parameter sets whether Amazon AppFlow uses the private network to
+       * send metadata and authorization calls to Salesforce.
+       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
+       * infrastructure without being exposed to the public internet.
+       *
+       * Set either of the following values:
+       *
+       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
+       *
+       * These private calls are:
+       *
+       * * Calls to get metadata about your Salesforce records. This metadata describes your
+       * Salesforce objects and their fields.
+       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
+       * records.
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
+       * and other calls over the public internet.
+       *
+       * The public calls are:
+       *
+       * * Calls to get metadata about your Salesforce records.
+       * * Calls to get or refresh access tokens.
+       *
+       * The private calls are:
+       *
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       */
+      override
+          fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: IResolvable) {
+        cdkBuilder.usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), TrendmicroConnectorProfileCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), SalesforceConnectorProfilePropertiesProperty {
       /**
-       * The Secret Access Key portion of the credentials.
+       * The location of the Salesforce resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials.html#cfn-appflow-connectorprofile-trendmicroconnectorprofilecredentials-apisecretkey)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-instanceurl)
        */
-      override fun apiSecretKey(): String = unwrap(this).getApiSecretKey()
+      override fun instanceUrl(): String? = unwrap(this).getInstanceUrl()
+
+      /**
+       * Indicates whether the connector profile applies to a sandbox or production environment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment)
+       */
+      override fun isSandboxEnvironment(): Any? = unwrap(this).getIsSandboxEnvironment()
+
+      /**
+       * If the connection mode for the connector profile is private, this parameter sets whether
+       * Amazon AppFlow uses the private network to send metadata and authorization calls to
+       * Salesforce.
+       *
+       * Amazon AppFlow sends private calls through AWS PrivateLink . These calls travel through AWS
+       * infrastructure without being exposed to the public internet.
+       *
+       * Set either of the following values:
+       *
+       * * **true** - Amazon AppFlow sends all calls to Salesforce over the private network.
+       *
+       * These private calls are:
+       *
+       * * Calls to get metadata about your Salesforce records. This metadata describes your
+       * Salesforce objects and their fields.
+       * * Calls to get or refresh access tokens that allow Amazon AppFlow to access your Salesforce
+       * records.
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       * * **false** - The default value. Amazon AppFlow sends some calls to Salesforce privately
+       * and other calls over the public internet.
+       *
+       * The public calls are:
+       *
+       * * Calls to get metadata about your Salesforce records.
+       * * Calls to get or refresh access tokens.
+       *
+       * The private calls are:
+       *
+       * * Calls to transfer your Salesforce records as part of a flow run.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-useprivatelinkformetadataandauthorization)
+       */
+      override fun usePrivateLinkForMetadataAndAuthorization(): Any? =
+          unwrap(this).getUsePrivateLinkForMetadataAndAuthorization()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          TrendmicroConnectorProfileCredentialsProperty {
+          SalesforceConnectorProfilePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty):
-          TrendmicroConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TrendmicroConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty):
+          SalesforceConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TrendmicroConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty
+      internal fun unwrap(wrapped: SalesforceConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile credentials required when using ServiceNow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * ServiceNowConnectorProfileCredentialsProperty serviceNowConnectorProfileCredentialsProperty =
+   * ServiceNowConnectorProfileCredentialsProperty.builder()
+   * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+   * .accessToken("accessToken")
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .refreshToken("refreshToken")
+   * .build())
+   * .password("password")
+   * .username("username")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html)
+   */
+  public interface ServiceNowConnectorProfileCredentialsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-oauth2credentials)
+     */
+    public fun oAuth2Credentials(): Any? = unwrap(this).getOAuth2Credentials()
+
+    /**
+     * The password that corresponds to the user name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-password)
+     */
+    public fun password(): String? = unwrap(this).getPassword()
+
+    /**
+     * The name of the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-username)
+     */
+    public fun username(): String? = unwrap(this).getUsername()
+
+    /**
+     * A builder for [ServiceNowConnectorProfileCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param oAuth2Credentials the value to be set.
+       */
+      public fun oAuth2Credentials(oAuth2Credentials: IResolvable)
+
+      /**
+       * @param oAuth2Credentials the value to be set.
+       */
+      public fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty)
+
+      /**
+       * @param oAuth2Credentials the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("52363dd6c5a8eb299b5db6177cba24c77f4eff2eb58a49b48fab009df69af22f")
+      public fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty.Builder.() -> Unit)
+
+      /**
+       * @param password The password that corresponds to the user name.
+       */
+      public fun password(password: String)
+
+      /**
+       * @param username The name of the user.
+       */
+      public fun username(username: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty.builder()
+
+      /**
+       * @param oAuth2Credentials the value to be set.
+       */
+      override fun oAuth2Credentials(oAuth2Credentials: IResolvable) {
+        cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param oAuth2Credentials the value to be set.
+       */
+      override fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty) {
+        cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(OAuth2CredentialsProperty::unwrap))
+      }
+
+      /**
+       * @param oAuth2Credentials the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("52363dd6c5a8eb299b5db6177cba24c77f4eff2eb58a49b48fab009df69af22f")
+      override
+          fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty.Builder.() -> Unit):
+          Unit = oAuth2Credentials(OAuth2CredentialsProperty(oAuth2Credentials))
+
+      /**
+       * @param password The password that corresponds to the user name.
+       */
+      override fun password(password: String) {
+        cdkBuilder.password(password)
+      }
+
+      /**
+       * @param username The name of the user.
+       */
+      override fun username(username: String) {
+        cdkBuilder.username(username)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), ServiceNowConnectorProfileCredentialsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-oauth2credentials)
+       */
+      override fun oAuth2Credentials(): Any? = unwrap(this).getOAuth2Credentials()
+
+      /**
+       * The password that corresponds to the user name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-password)
+       */
+      override fun password(): String? = unwrap(this).getPassword()
+
+      /**
+       * The name of the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-username)
+       */
+      override fun username(): String? = unwrap(this).getUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceNowConnectorProfileCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty):
+          ServiceNowConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceNowConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile properties required when using ServiceNow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * ServiceNowConnectorProfilePropertiesProperty serviceNowConnectorProfilePropertiesProperty =
+   * ServiceNowConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties.html)
+   */
+  public interface ServiceNowConnectorProfilePropertiesProperty {
+    /**
+     * The location of the ServiceNow resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties.html#cfn-appflow-connectorprofile-servicenowconnectorprofileproperties-instanceurl)
+     */
+    public fun instanceUrl(): String
+
+    /**
+     * A builder for [ServiceNowConnectorProfilePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceUrl The location of the ServiceNow resource. 
+       */
+      public fun instanceUrl(instanceUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty.builder()
+
+      /**
+       * @param instanceUrl The location of the ServiceNow resource. 
+       */
+      override fun instanceUrl(instanceUrl: String) {
+        cdkBuilder.instanceUrl(instanceUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), ServiceNowConnectorProfilePropertiesProperty {
+      /**
+       * The location of the ServiceNow resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties.html#cfn-appflow-connectorprofile-servicenowconnectorprofileproperties-instanceurl)
+       */
+      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceNowConnectorProfilePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty):
+          ServiceNowConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceNowConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile credentials required when using Singular.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SingularConnectorProfileCredentialsProperty singularConnectorProfileCredentialsProperty =
+   * SingularConnectorProfileCredentialsProperty.builder()
+   * .apiKey("apiKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials.html)
+   */
+  public interface SingularConnectorProfileCredentialsProperty {
+    /**
+     * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
+     * to your API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials.html#cfn-appflow-connectorprofile-singularconnectorprofilecredentials-apikey)
+     */
+    public fun apiKey(): String
+
+    /**
+     * A builder for [SingularConnectorProfileCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
+       * calling program to your API. 
+       */
+      public fun apiKey(apiKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty.builder()
+
+      /**
+       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
+       * calling program to your API. 
+       */
+      override fun apiKey(apiKey: String) {
+        cdkBuilder.apiKey(apiKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), SingularConnectorProfileCredentialsProperty {
+      /**
+       * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
+       * to your API.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials.html#cfn-appflow-connectorprofile-singularconnectorprofilecredentials-apikey)
+       */
+      override fun apiKey(): String = unwrap(this).getApiKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SingularConnectorProfileCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty):
+          SingularConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingularConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SingularConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty
     }
   }
 
@@ -9517,7 +8728,7 @@ public open class CfnConnectorProfile internal constructor(
   }
 
   /**
-   * The connector-specific credentials required by Datadog.
+   * The connector-specific profile properties required when using Slack.
    *
    * Example:
    *
@@ -9525,129 +8736,84 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * DatadogConnectorProfileCredentialsProperty datadogConnectorProfileCredentialsProperty =
-   * DatadogConnectorProfileCredentialsProperty.builder()
-   * .apiKey("apiKey")
-   * .applicationKey("applicationKey")
+   * SlackConnectorProfilePropertiesProperty slackConnectorProfilePropertiesProperty =
+   * SlackConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-slackconnectorprofileproperties.html)
    */
-  public interface DatadogConnectorProfileCredentialsProperty {
+  public interface SlackConnectorProfilePropertiesProperty {
     /**
-     * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
-     * to your API.
+     * The location of the Slack resource.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-apikey)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-slackconnectorprofileproperties.html#cfn-appflow-connectorprofile-slackconnectorprofileproperties-instanceurl)
      */
-    public fun apiKey(): String
+    public fun instanceUrl(): String
 
     /**
-     * Application keys, in conjunction with your API key, give you full access to Datadog’s
-     * programmatic API.
-     *
-     * Application keys are associated with the user account that created them. The application key
-     * is used to log all requests made to the API.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-applicationkey)
-     */
-    public fun applicationKey(): String
-
-    /**
-     * A builder for [DatadogConnectorProfileCredentialsProperty]
+     * A builder for [SlackConnectorProfilePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
-       * calling program to your API. 
+       * @param instanceUrl The location of the Slack resource. 
        */
-      public fun apiKey(apiKey: String)
-
-      /**
-       * @param applicationKey Application keys, in conjunction with your API key, give you full
-       * access to Datadog’s programmatic API. 
-       * Application keys are associated with the user account that created them. The application
-       * key is used to log all requests made to the API.
-       */
-      public fun applicationKey(applicationKey: String)
+      public fun instanceUrl(instanceUrl: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty.builder()
 
       /**
-       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
-       * calling program to your API. 
+       * @param instanceUrl The location of the Slack resource. 
        */
-      override fun apiKey(apiKey: String) {
-        cdkBuilder.apiKey(apiKey)
-      }
-
-      /**
-       * @param applicationKey Application keys, in conjunction with your API key, give you full
-       * access to Datadog’s programmatic API. 
-       * Application keys are associated with the user account that created them. The application
-       * key is used to log all requests made to the API.
-       */
-      override fun applicationKey(applicationKey: String) {
-        cdkBuilder.applicationKey(applicationKey)
+      override fun instanceUrl(instanceUrl: String) {
+        cdkBuilder.instanceUrl(instanceUrl)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), DatadogConnectorProfileCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), SlackConnectorProfilePropertiesProperty {
       /**
-       * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
-       * to your API.
+       * The location of the Slack resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-apikey)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-slackconnectorprofileproperties.html#cfn-appflow-connectorprofile-slackconnectorprofileproperties-instanceurl)
        */
-      override fun apiKey(): String = unwrap(this).getApiKey()
-
-      /**
-       * Application keys, in conjunction with your API key, give you full access to Datadog’s
-       * programmatic API.
-       *
-       * Application keys are associated with the user account that created them. The application
-       * key is used to log all requests made to the API.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html#cfn-appflow-connectorprofile-datadogconnectorprofilecredentials-applicationkey)
-       */
-      override fun applicationKey(): String = unwrap(this).getApplicationKey()
+      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          DatadogConnectorProfileCredentialsProperty {
+          SlackConnectorProfilePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty):
-          DatadogConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DatadogConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty):
+          SlackConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlackConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DatadogConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty
+      internal fun unwrap(wrapped: SlackConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty
     }
   }
 
   /**
-   * The connector-specific credentials required when using Amplitude.
+   * The connector-specific profile credentials required when using Snowflake.
    *
    * Example:
    *
@@ -9655,110 +8821,944 @@ public open class CfnConnectorProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * AmplitudeConnectorProfileCredentialsProperty amplitudeConnectorProfileCredentialsProperty =
-   * AmplitudeConnectorProfileCredentialsProperty.builder()
-   * .apiKey("apiKey")
-   * .secretKey("secretKey")
+   * SnowflakeConnectorProfileCredentialsProperty snowflakeConnectorProfileCredentialsProperty =
+   * SnowflakeConnectorProfileCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html)
    */
-  public interface AmplitudeConnectorProfileCredentialsProperty {
+  public interface SnowflakeConnectorProfileCredentialsProperty {
     /**
-     * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
-     * to your API.
+     * The password that corresponds to the user name.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-apikey)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-snowflakeconnectorprofilecredentials-password)
      */
-    public fun apiKey(): String
+    public fun password(): String
 
     /**
-     * The Secret Access Key portion of the credentials.
+     * The name of the user.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-secretkey)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-snowflakeconnectorprofilecredentials-username)
      */
-    public fun secretKey(): String
+    public fun username(): String
 
     /**
-     * A builder for [AmplitudeConnectorProfileCredentialsProperty]
+     * A builder for [SnowflakeConnectorProfileCredentialsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
-       * calling program to your API. 
+       * @param password The password that corresponds to the user name. 
        */
-      public fun apiKey(apiKey: String)
+      public fun password(password: String)
 
       /**
-       * @param secretKey The Secret Access Key portion of the credentials. 
+       * @param username The name of the user. 
        */
-      public fun secretKey(secretKey: String)
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty.builder()
 
       /**
-       * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
-       * calling program to your API. 
+       * @param password The password that corresponds to the user name. 
        */
-      override fun apiKey(apiKey: String) {
-        cdkBuilder.apiKey(apiKey)
+      override fun password(password: String) {
+        cdkBuilder.password(password)
       }
 
       /**
-       * @param secretKey The Secret Access Key portion of the credentials. 
+       * @param username The name of the user. 
        */
-      override fun secretKey(secretKey: String) {
-        cdkBuilder.secretKey(secretKey)
+      override fun username(username: String) {
+        cdkBuilder.username(username)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), AmplitudeConnectorProfileCredentialsProperty {
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), SnowflakeConnectorProfileCredentialsProperty {
       /**
-       * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
-       * to your API.
+       * The password that corresponds to the user name.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-apikey)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-snowflakeconnectorprofilecredentials-password)
        */
-      override fun apiKey(): String = unwrap(this).getApiKey()
+      override fun password(): String = unwrap(this).getPassword()
 
       /**
-       * The Secret Access Key portion of the credentials.
+       * The name of the user.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-amplitudeconnectorprofilecredentials-secretkey)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html#cfn-appflow-connectorprofile-snowflakeconnectorprofilecredentials-username)
        */
-      override fun secretKey(): String = unwrap(this).getSecretKey()
+      override fun username(): String = unwrap(this).getUsername()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          AmplitudeConnectorProfileCredentialsProperty {
+          SnowflakeConnectorProfileCredentialsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty):
-          AmplitudeConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AmplitudeConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty):
+          SnowflakeConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AmplitudeConnectorProfileCredentialsProperty):
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty
+      internal fun unwrap(wrapped: SnowflakeConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile properties required when using Snowflake.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SnowflakeConnectorProfilePropertiesProperty snowflakeConnectorProfilePropertiesProperty =
+   * SnowflakeConnectorProfilePropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * .stage("stage")
+   * .warehouse("warehouse")
+   * // the properties below are optional
+   * .accountName("accountName")
+   * .bucketPrefix("bucketPrefix")
+   * .privateLinkServiceName("privateLinkServiceName")
+   * .region("region")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html)
+   */
+  public interface SnowflakeConnectorProfilePropertiesProperty {
+    /**
+     * The name of the account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-accountname)
+     */
+    public fun accountName(): String? = unwrap(this).getAccountName()
+
+    /**
+     * The name of the Amazon S3 bucket associated with Snowflake.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * The bucket path that refers to the Amazon S3 bucket associated with Snowflake.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-bucketprefix)
+     */
+    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+    /**
+     * The Snowflake Private Link service name to be used for private data transfers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-privatelinkservicename)
+     */
+    public fun privateLinkServiceName(): String? = unwrap(this).getPrivateLinkServiceName()
+
+    /**
+     * The AWS Region of the Snowflake account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-region)
+     */
+    public fun region(): String? = unwrap(this).getRegion()
+
+    /**
+     * The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the
+     * Snowflake account.
+     *
+     * This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<Stage Name>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-stage)
+     */
+    public fun stage(): String
+
+    /**
+     * The name of the Snowflake warehouse.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-warehouse)
+     */
+    public fun warehouse(): String
+
+    /**
+     * A builder for [SnowflakeConnectorProfilePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountName The name of the account.
+       */
+      public fun accountName(accountName: String)
+
+      /**
+       * @param bucketName The name of the Amazon S3 bucket associated with Snowflake. 
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param bucketPrefix The bucket path that refers to the Amazon S3 bucket associated with
+       * Snowflake.
+       */
+      public fun bucketPrefix(bucketPrefix: String)
+
+      /**
+       * @param privateLinkServiceName The Snowflake Private Link service name to be used for
+       * private data transfers.
+       */
+      public fun privateLinkServiceName(privateLinkServiceName: String)
+
+      /**
+       * @param region The AWS Region of the Snowflake account.
+       */
+      public fun region(region: String)
+
+      /**
+       * @param stage The name of the Amazon S3 stage that was created while setting up an Amazon S3
+       * stage in the Snowflake account. 
+       * This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<Stage Name>.
+       */
+      public fun stage(stage: String)
+
+      /**
+       * @param warehouse The name of the Snowflake warehouse. 
+       */
+      public fun warehouse(warehouse: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty.builder()
+
+      /**
+       * @param accountName The name of the account.
+       */
+      override fun accountName(accountName: String) {
+        cdkBuilder.accountName(accountName)
+      }
+
+      /**
+       * @param bucketName The name of the Amazon S3 bucket associated with Snowflake. 
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param bucketPrefix The bucket path that refers to the Amazon S3 bucket associated with
+       * Snowflake.
+       */
+      override fun bucketPrefix(bucketPrefix: String) {
+        cdkBuilder.bucketPrefix(bucketPrefix)
+      }
+
+      /**
+       * @param privateLinkServiceName The Snowflake Private Link service name to be used for
+       * private data transfers.
+       */
+      override fun privateLinkServiceName(privateLinkServiceName: String) {
+        cdkBuilder.privateLinkServiceName(privateLinkServiceName)
+      }
+
+      /**
+       * @param region The AWS Region of the Snowflake account.
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      /**
+       * @param stage The name of the Amazon S3 stage that was created while setting up an Amazon S3
+       * stage in the Snowflake account. 
+       * This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<Stage Name>.
+       */
+      override fun stage(stage: String) {
+        cdkBuilder.stage(stage)
+      }
+
+      /**
+       * @param warehouse The name of the Snowflake warehouse. 
+       */
+      override fun warehouse(warehouse: String) {
+        cdkBuilder.warehouse(warehouse)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), SnowflakeConnectorProfilePropertiesProperty {
+      /**
+       * The name of the account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-accountname)
+       */
+      override fun accountName(): String? = unwrap(this).getAccountName()
+
+      /**
+       * The name of the Amazon S3 bucket associated with Snowflake.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+
+      /**
+       * The bucket path that refers to the Amazon S3 bucket associated with Snowflake.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-bucketprefix)
+       */
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+      /**
+       * The Snowflake Private Link service name to be used for private data transfers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-privatelinkservicename)
+       */
+      override fun privateLinkServiceName(): String? = unwrap(this).getPrivateLinkServiceName()
+
+      /**
+       * The AWS Region of the Snowflake account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-region)
+       */
+      override fun region(): String? = unwrap(this).getRegion()
+
+      /**
+       * The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the
+       * Snowflake account.
+       *
+       * This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<Stage Name>.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-stage)
+       */
+      override fun stage(): String = unwrap(this).getStage()
+
+      /**
+       * The name of the Snowflake warehouse.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html#cfn-appflow-connectorprofile-snowflakeconnectorprofileproperties-warehouse)
+       */
+      override fun warehouse(): String = unwrap(this).getWarehouse()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SnowflakeConnectorProfilePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty):
+          SnowflakeConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnowflakeConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile credentials required when using Trend Micro.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * TrendmicroConnectorProfileCredentialsProperty trendmicroConnectorProfileCredentialsProperty =
+   * TrendmicroConnectorProfileCredentialsProperty.builder()
+   * .apiSecretKey("apiSecretKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials.html)
+   */
+  public interface TrendmicroConnectorProfileCredentialsProperty {
+    /**
+     * The Secret Access Key portion of the credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials.html#cfn-appflow-connectorprofile-trendmicroconnectorprofilecredentials-apisecretkey)
+     */
+    public fun apiSecretKey(): String
+
+    /**
+     * A builder for [TrendmicroConnectorProfileCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param apiSecretKey The Secret Access Key portion of the credentials. 
+       */
+      public fun apiSecretKey(apiSecretKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty.builder()
+
+      /**
+       * @param apiSecretKey The Secret Access Key portion of the credentials. 
+       */
+      override fun apiSecretKey(apiSecretKey: String) {
+        cdkBuilder.apiSecretKey(apiSecretKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), TrendmicroConnectorProfileCredentialsProperty {
+      /**
+       * The Secret Access Key portion of the credentials.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials.html#cfn-appflow-connectorprofile-trendmicroconnectorprofilecredentials-apisecretkey)
+       */
+      override fun apiSecretKey(): String = unwrap(this).getApiSecretKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TrendmicroConnectorProfileCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty):
+          TrendmicroConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrendmicroConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TrendmicroConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile credentials required when using Veeva.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * VeevaConnectorProfileCredentialsProperty veevaConnectorProfileCredentialsProperty =
+   * VeevaConnectorProfileCredentialsProperty.builder()
+   * .password("password")
+   * .username("username")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html)
+   */
+  public interface VeevaConnectorProfileCredentialsProperty {
+    /**
+     * The password that corresponds to the user name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html#cfn-appflow-connectorprofile-veevaconnectorprofilecredentials-password)
+     */
+    public fun password(): String
+
+    /**
+     * The name of the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html#cfn-appflow-connectorprofile-veevaconnectorprofilecredentials-username)
+     */
+    public fun username(): String
+
+    /**
+     * A builder for [VeevaConnectorProfileCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param password The password that corresponds to the user name. 
+       */
+      public fun password(password: String)
+
+      /**
+       * @param username The name of the user. 
+       */
+      public fun username(username: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty.builder()
+
+      /**
+       * @param password The password that corresponds to the user name. 
+       */
+      override fun password(password: String) {
+        cdkBuilder.password(password)
+      }
+
+      /**
+       * @param username The name of the user. 
+       */
+      override fun username(username: String) {
+        cdkBuilder.username(username)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), VeevaConnectorProfileCredentialsProperty {
+      /**
+       * The password that corresponds to the user name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html#cfn-appflow-connectorprofile-veevaconnectorprofilecredentials-password)
+       */
+      override fun password(): String = unwrap(this).getPassword()
+
+      /**
+       * The name of the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html#cfn-appflow-connectorprofile-veevaconnectorprofilecredentials-username)
+       */
+      override fun username(): String = unwrap(this).getUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VeevaConnectorProfileCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty):
+          VeevaConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VeevaConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VeevaConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile properties required when using Veeva.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * VeevaConnectorProfilePropertiesProperty veevaConnectorProfilePropertiesProperty =
+   * VeevaConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties.html)
+   */
+  public interface VeevaConnectorProfilePropertiesProperty {
+    /**
+     * The location of the Veeva resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties.html#cfn-appflow-connectorprofile-veevaconnectorprofileproperties-instanceurl)
+     */
+    public fun instanceUrl(): String
+
+    /**
+     * A builder for [VeevaConnectorProfilePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceUrl The location of the Veeva resource. 
+       */
+      public fun instanceUrl(instanceUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty.builder()
+
+      /**
+       * @param instanceUrl The location of the Veeva resource. 
+       */
+      override fun instanceUrl(instanceUrl: String) {
+        cdkBuilder.instanceUrl(instanceUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), VeevaConnectorProfilePropertiesProperty {
+      /**
+       * The location of the Veeva resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties.html#cfn-appflow-connectorprofile-veevaconnectorprofileproperties-instanceurl)
+       */
+      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VeevaConnectorProfilePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty):
+          VeevaConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VeevaConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VeevaConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile credentials required when using Zendesk.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * ZendeskConnectorProfileCredentialsProperty zendeskConnectorProfileCredentialsProperty =
+   * ZendeskConnectorProfileCredentialsProperty.builder()
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * // the properties below are optional
+   * .accessToken("accessToken")
+   * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+   * .authCode("authCode")
+   * .redirectUri("redirectUri")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html)
+   */
+  public interface ZendeskConnectorProfileCredentialsProperty {
+    /**
+     * The credentials used to access protected Zendesk resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-accesstoken)
+     */
+    public fun accessToken(): String? = unwrap(this).getAccessToken()
+
+    /**
+     * The identifier for the desired client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-clientid)
+     */
+    public fun clientId(): String
+
+    /**
+     * The client secret used by the OAuth client to authenticate to the authorization server.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-clientsecret)
+     */
+    public fun clientSecret(): String
+
+    /**
+     * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
+     * Google Analytics, Marketo, Zendesk, and Slack.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-connectoroauthrequest)
+     */
+    public fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
+
+    /**
+     * A builder for [ZendeskConnectorProfileCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessToken The credentials used to access protected Zendesk resources.
+       */
+      public fun accessToken(accessToken: String)
+
+      /**
+       * @param clientId The identifier for the desired client. 
+       */
+      public fun clientId(clientId: String)
+
+      /**
+       * @param clientSecret The client secret used by the OAuth client to authenticate to the
+       * authorization server. 
+       */
+      public fun clientSecret(clientSecret: String)
+
+      /**
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
+       */
+      public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable)
+
+      /**
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
+       */
+      public fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty)
+
+      /**
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d29d020530b959b07eeaaab77bfcbc9bc73fe8d6ad3ed392f9f4f2f9f5bacb45")
+      public
+          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty.builder()
+
+      /**
+       * @param accessToken The credentials used to access protected Zendesk resources.
+       */
+      override fun accessToken(accessToken: String) {
+        cdkBuilder.accessToken(accessToken)
+      }
+
+      /**
+       * @param clientId The identifier for the desired client. 
+       */
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param clientSecret The client secret used by the OAuth client to authenticate to the
+       * authorization server. 
+       */
+      override fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
+      }
+
+      /**
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
+       */
+      override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
+       */
+      override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+      }
+
+      /**
+       * @param connectorOAuthRequest Used by select connectors for which the OAuth workflow is
+       * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d29d020530b959b07eeaaab77bfcbc9bc73fe8d6ad3ed392f9f4f2f9f5bacb45")
+      override
+          fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty.Builder.() -> Unit):
+          Unit = connectorOAuthRequest(ConnectorOAuthRequestProperty(connectorOAuthRequest))
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty,
+    ) : CdkObject(cdkObject), ZendeskConnectorProfileCredentialsProperty {
+      /**
+       * The credentials used to access protected Zendesk resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-accesstoken)
+       */
+      override fun accessToken(): String? = unwrap(this).getAccessToken()
+
+      /**
+       * The identifier for the desired client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-clientid)
+       */
+      override fun clientId(): String = unwrap(this).getClientId()
+
+      /**
+       * The client secret used by the OAuth client to authenticate to the authorization server.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-clientsecret)
+       */
+      override fun clientSecret(): String = unwrap(this).getClientSecret()
+
+      /**
+       * Used by select connectors for which the OAuth workflow is supported, such as Salesforce,
+       * Google Analytics, Marketo, Zendesk, and Slack.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html#cfn-appflow-connectorprofile-zendeskconnectorprofilecredentials-connectoroauthrequest)
+       */
+      override fun connectorOAuthRequest(): Any? = unwrap(this).getConnectorOAuthRequest()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ZendeskConnectorProfileCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty):
+          ZendeskConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ZendeskConnectorProfileCredentialsProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty
+    }
+  }
+
+  /**
+   * The connector-specific profile properties required when using Zendesk.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * ZendeskConnectorProfilePropertiesProperty zendeskConnectorProfilePropertiesProperty =
+   * ZendeskConnectorProfilePropertiesProperty.builder()
+   * .instanceUrl("instanceUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties.html)
+   */
+  public interface ZendeskConnectorProfilePropertiesProperty {
+    /**
+     * The location of the Zendesk resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties.html#cfn-appflow-connectorprofile-zendeskconnectorprofileproperties-instanceurl)
+     */
+    public fun instanceUrl(): String
+
+    /**
+     * A builder for [ZendeskConnectorProfilePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceUrl The location of the Zendesk resource. 
+       */
+      public fun instanceUrl(instanceUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty.builder()
+
+      /**
+       * @param instanceUrl The location of the Zendesk resource. 
+       */
+      override fun instanceUrl(instanceUrl: String) {
+        cdkBuilder.instanceUrl(instanceUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty,
+    ) : CdkObject(cdkObject), ZendeskConnectorProfilePropertiesProperty {
+      /**
+       * The location of the Zendesk resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties.html#cfn-appflow-connectorprofile-zendeskconnectorprofileproperties-instanceurl)
+       */
+      override fun instanceUrl(): String = unwrap(this).getInstanceUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ZendeskConnectorProfilePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty):
+          ZendeskConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ZendeskConnectorProfilePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty
     }
   }
 }

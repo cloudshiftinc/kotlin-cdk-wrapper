@@ -703,754 +703,6 @@ public open class CfnListener internal constructor(
   }
 
   /**
-   * Specifies the configuration information for mutual authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * MutualAuthenticationProperty mutualAuthenticationProperty =
-   * MutualAuthenticationProperty.builder()
-   * .ignoreClientCertificateExpiry(false)
-   * .mode("mode")
-   * .trustStoreArn("trustStoreArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html)
-   */
-  public interface MutualAuthenticationProperty {
-    /**
-     * Indicates whether expired client certificates are ignored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-ignoreclientcertificateexpiry)
-     */
-    public fun ignoreClientCertificateExpiry(): Any? =
-        unwrap(this).getIgnoreClientCertificateExpiry()
-
-    /**
-     * The client certificate handling method.
-     *
-     * Options are `off` , `passthrough` or `verify` . The default value is `off` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-mode)
-     */
-    public fun mode(): String? = unwrap(this).getMode()
-
-    /**
-     * The Amazon Resource Name (ARN) of the trust store.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-truststorearn)
-     */
-    public fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
-
-    /**
-     * A builder for [MutualAuthenticationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
-       * ignored.
-       */
-      public fun ignoreClientCertificateExpiry(ignoreClientCertificateExpiry: Boolean)
-
-      /**
-       * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
-       * ignored.
-       */
-      public fun ignoreClientCertificateExpiry(ignoreClientCertificateExpiry: IResolvable)
-
-      /**
-       * @param mode The client certificate handling method.
-       * Options are `off` , `passthrough` or `verify` . The default value is `off` .
-       */
-      public fun mode(mode: String)
-
-      /**
-       * @param trustStoreArn The Amazon Resource Name (ARN) of the trust store.
-       */
-      public fun trustStoreArn(trustStoreArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty.builder()
-
-      /**
-       * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
-       * ignored.
-       */
-      override fun ignoreClientCertificateExpiry(ignoreClientCertificateExpiry: Boolean) {
-        cdkBuilder.ignoreClientCertificateExpiry(ignoreClientCertificateExpiry)
-      }
-
-      /**
-       * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
-       * ignored.
-       */
-      override fun ignoreClientCertificateExpiry(ignoreClientCertificateExpiry: IResolvable) {
-        cdkBuilder.ignoreClientCertificateExpiry(ignoreClientCertificateExpiry.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param mode The client certificate handling method.
-       * Options are `off` , `passthrough` or `verify` . The default value is `off` .
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      /**
-       * @param trustStoreArn The Amazon Resource Name (ARN) of the trust store.
-       */
-      override fun trustStoreArn(trustStoreArn: String) {
-        cdkBuilder.trustStoreArn(trustStoreArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty,
-    ) : CdkObject(cdkObject), MutualAuthenticationProperty {
-      /**
-       * Indicates whether expired client certificates are ignored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-ignoreclientcertificateexpiry)
-       */
-      override fun ignoreClientCertificateExpiry(): Any? =
-          unwrap(this).getIgnoreClientCertificateExpiry()
-
-      /**
-       * The client certificate handling method.
-       *
-       * Options are `off` , `passthrough` or `verify` . The default value is `off` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-mode)
-       */
-      override fun mode(): String? = unwrap(this).getMode()
-
-      /**
-       * The Amazon Resource Name (ARN) of the trust store.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-truststorearn)
-       */
-      override fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MutualAuthenticationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty):
-          MutualAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MutualAuthenticationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MutualAuthenticationProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty
-    }
-  }
-
-  /**
-   * Information about how traffic will be distributed between multiple target groups in a forward
-   * rule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * TargetGroupTupleProperty targetGroupTupleProperty = TargetGroupTupleProperty.builder()
-   * .targetGroupArn("targetGroupArn")
-   * .weight(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html)
-   */
-  public interface TargetGroupTupleProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the target group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html#cfn-elasticloadbalancingv2-listener-targetgrouptuple-targetgrouparn)
-     */
-    public fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
-
-    /**
-     * The weight.
-     *
-     * The range is 0 to 999.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html#cfn-elasticloadbalancingv2-listener-targetgrouptuple-weight)
-     */
-    public fun weight(): Number? = unwrap(this).getWeight()
-
-    /**
-     * A builder for [TargetGroupTupleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
-       */
-      public fun targetGroupArn(targetGroupArn: String)
-
-      /**
-       * @param weight The weight.
-       * The range is 0 to 999.
-       */
-      public fun weight(weight: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty.builder()
-
-      /**
-       * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
-       */
-      override fun targetGroupArn(targetGroupArn: String) {
-        cdkBuilder.targetGroupArn(targetGroupArn)
-      }
-
-      /**
-       * @param weight The weight.
-       * The range is 0 to 999.
-       */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty,
-    ) : CdkObject(cdkObject), TargetGroupTupleProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the target group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html#cfn-elasticloadbalancingv2-listener-targetgrouptuple-targetgrouparn)
-       */
-      override fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
-
-      /**
-       * The weight.
-       *
-       * The range is 0 to 999.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html#cfn-elasticloadbalancingv2-listener-targetgrouptuple-weight)
-       */
-      override fun weight(): Number? = unwrap(this).getWeight()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TargetGroupTupleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty):
-          TargetGroupTupleProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupTupleProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetGroupTupleProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty
-    }
-  }
-
-  /**
-   * Specifies information required when returning a custom HTTP response.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * FixedResponseConfigProperty fixedResponseConfigProperty = FixedResponseConfigProperty.builder()
-   * .statusCode("statusCode")
-   * // the properties below are optional
-   * .contentType("contentType")
-   * .messageBody("messageBody")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html)
-   */
-  public interface FixedResponseConfigProperty {
-    /**
-     * The content type.
-     *
-     * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-contenttype)
-     */
-    public fun contentType(): String? = unwrap(this).getContentType()
-
-    /**
-     * The message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-messagebody)
-     */
-    public fun messageBody(): String? = unwrap(this).getMessageBody()
-
-    /**
-     * The HTTP response code (2XX, 4XX, or 5XX).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-statuscode)
-     */
-    public fun statusCode(): String
-
-    /**
-     * A builder for [FixedResponseConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contentType The content type.
-       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-       */
-      public fun contentType(contentType: String)
-
-      /**
-       * @param messageBody The message.
-       */
-      public fun messageBody(messageBody: String)
-
-      /**
-       * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
-       */
-      public fun statusCode(statusCode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty.builder()
-
-      /**
-       * @param contentType The content type.
-       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-       */
-      override fun contentType(contentType: String) {
-        cdkBuilder.contentType(contentType)
-      }
-
-      /**
-       * @param messageBody The message.
-       */
-      override fun messageBody(messageBody: String) {
-        cdkBuilder.messageBody(messageBody)
-      }
-
-      /**
-       * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
-       */
-      override fun statusCode(statusCode: String) {
-        cdkBuilder.statusCode(statusCode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty,
-    ) : CdkObject(cdkObject), FixedResponseConfigProperty {
-      /**
-       * The content type.
-       *
-       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-contenttype)
-       */
-      override fun contentType(): String? = unwrap(this).getContentType()
-
-      /**
-       * The message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-messagebody)
-       */
-      override fun messageBody(): String? = unwrap(this).getMessageBody()
-
-      /**
-       * The HTTP response code (2XX, 4XX, or 5XX).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-statuscode)
-       */
-      override fun statusCode(): String = unwrap(this).getStatusCode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FixedResponseConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty):
-          FixedResponseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FixedResponseConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FixedResponseConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty
-    }
-  }
-
-  /**
-   * Information about the target group stickiness for a rule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * TargetGroupStickinessConfigProperty targetGroupStickinessConfigProperty =
-   * TargetGroupStickinessConfigProperty.builder()
-   * .durationSeconds(123)
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html)
-   */
-  public interface TargetGroupStickinessConfigProperty {
-    /**
-     * The time period, in seconds, during which requests from a client should be routed to the same
-     * target group.
-     *
-     * The range is 1-604800 seconds (7 days).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-durationseconds)
-     */
-    public fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
-
-    /**
-     * Indicates whether target group stickiness is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [TargetGroupStickinessConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param durationSeconds The time period, in seconds, during which requests from a client
-       * should be routed to the same target group.
-       * The range is 1-604800 seconds (7 days).
-       */
-      public fun durationSeconds(durationSeconds: Number)
-
-      /**
-       * @param enabled Indicates whether target group stickiness is enabled.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Indicates whether target group stickiness is enabled.
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty.builder()
-
-      /**
-       * @param durationSeconds The time period, in seconds, during which requests from a client
-       * should be routed to the same target group.
-       * The range is 1-604800 seconds (7 days).
-       */
-      override fun durationSeconds(durationSeconds: Number) {
-        cdkBuilder.durationSeconds(durationSeconds)
-      }
-
-      /**
-       * @param enabled Indicates whether target group stickiness is enabled.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Indicates whether target group stickiness is enabled.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty,
-    ) : CdkObject(cdkObject), TargetGroupStickinessConfigProperty {
-      /**
-       * The time period, in seconds, during which requests from a client should be routed to the
-       * same target group.
-       *
-       * The range is 1-604800 seconds (7 days).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-durationseconds)
-       */
-      override fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
-
-      /**
-       * Indicates whether target group stickiness is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetGroupStickinessConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty):
-          TargetGroupStickinessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetGroupStickinessConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetGroupStickinessConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty
-    }
-  }
-
-  /**
-   * Information for creating an action that distributes requests among one or more target groups.
-   *
-   * For Network Load Balancers, you can specify a single target group. Specify only when `Type` is
-   * `forward` . If you specify both `ForwardConfig` and `TargetGroupArn` , you can specify only one
-   * target group using `ForwardConfig` and it must be the same target group specified in
-   * `TargetGroupArn` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * ForwardConfigProperty forwardConfigProperty = ForwardConfigProperty.builder()
-   * .targetGroups(List.of(TargetGroupTupleProperty.builder()
-   * .targetGroupArn("targetGroupArn")
-   * .weight(123)
-   * .build()))
-   * .targetGroupStickinessConfig(TargetGroupStickinessConfigProperty.builder()
-   * .durationSeconds(123)
-   * .enabled(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html)
-   */
-  public interface ForwardConfigProperty {
-    /**
-     * Information about the target group stickiness for a rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroupstickinessconfig)
-     */
-    public fun targetGroupStickinessConfig(): Any? = unwrap(this).getTargetGroupStickinessConfig()
-
-    /**
-     * Information about how traffic will be distributed between multiple target groups in a forward
-     * rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroups)
-     */
-    public fun targetGroups(): Any? = unwrap(this).getTargetGroups()
-
-    /**
-     * A builder for [ForwardConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      public fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable)
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      public
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty)
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("99f6637a85351cd3698125d7a5a5d7f3d544a374d5bc8cdf8f39ba6a59a24924")
-      public
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      public fun targetGroups(targetGroups: IResolvable)
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      public fun targetGroups(targetGroups: List<Any>)
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      public fun targetGroups(vararg targetGroups: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty.builder()
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      override fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
-        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      override
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty) {
-        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(TargetGroupStickinessConfigProperty::unwrap))
-      }
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("99f6637a85351cd3698125d7a5a5d7f3d544a374d5bc8cdf8f39ba6a59a24924")
-      override
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit):
-          Unit =
-          targetGroupStickinessConfig(TargetGroupStickinessConfigProperty(targetGroupStickinessConfig))
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      override fun targetGroups(targetGroups: IResolvable) {
-        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
-      }
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      override fun targetGroups(vararg targetGroups: Any): Unit =
-          targetGroups(targetGroups.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty,
-    ) : CdkObject(cdkObject), ForwardConfigProperty {
-      /**
-       * Information about the target group stickiness for a rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroupstickinessconfig)
-       */
-      override fun targetGroupStickinessConfig(): Any? =
-          unwrap(this).getTargetGroupStickinessConfig()
-
-      /**
-       * Information about how traffic will be distributed between multiple target groups in a
-       * forward rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroups)
-       */
-      override fun targetGroups(): Any? = unwrap(this).getTargetGroups()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ForwardConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty):
-          ForwardConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ForwardConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ForwardConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty
-    }
-  }
-
-  /**
    * Specifies an action for a listener rule.
    *
    * Example:
@@ -2045,7 +1297,7 @@ public open class CfnListener internal constructor(
   }
 
   /**
-   * Specifies an SSL server certificate to use as the default certificate for a secure listener.
+   * Specifies information required when integrating with Amazon Cognito to authenticate users.
    *
    * Example:
    *
@@ -2053,77 +1305,336 @@ public open class CfnListener internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * CertificateProperty certificateProperty = CertificateProperty.builder()
-   * .certificateArn("certificateArn")
+   * AuthenticateCognitoConfigProperty authenticateCognitoConfigProperty =
+   * AuthenticateCognitoConfigProperty.builder()
+   * .userPoolArn("userPoolArn")
+   * .userPoolClientId("userPoolClientId")
+   * .userPoolDomain("userPoolDomain")
+   * // the properties below are optional
+   * .authenticationRequestExtraParams(Map.of(
+   * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
+   * .onUnauthenticatedRequest("onUnauthenticatedRequest")
+   * .scope("scope")
+   * .sessionCookieName("sessionCookieName")
+   * .sessionTimeout("sessionTimeout")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificate.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html)
    */
-  public interface CertificateProperty {
+  public interface AuthenticateCognitoConfigProperty {
     /**
-     * The Amazon Resource Name (ARN) of the certificate.
+     * The query parameters (up to 10) to include in the redirect request to the authorization
+     * endpoint.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificate.html#cfn-elasticloadbalancingv2-listener-certificate-certificatearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams)
      */
-    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+    public fun authenticationRequestExtraParams(): Any? =
+        unwrap(this).getAuthenticationRequestExtraParams()
 
     /**
-     * A builder for [CertificateProperty]
+     * The behavior if the user is not authenticated. The following are possible values:.
+     *
+     * * deny `` - Return an HTTP 401 Unauthorized error.
+     * * allow `` - Allow the request to be forwarded to the target.
+     * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+     * default value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest)
+     */
+    public fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
+
+    /**
+     * The set of user claims to be requested from the IdP. The default is `openid` .
+     *
+     * To verify which scope values your IdP supports and how to separate multiple values, see the
+     * documentation for your IdP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope)
+     */
+    public fun scope(): String? = unwrap(this).getScope()
+
+    /**
+     * The name of the cookie used to maintain session information.
+     *
+     * The default is AWSELBAuthSessionCookie.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename)
+     */
+    public fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
+
+    /**
+     * The maximum duration of the authentication session, in seconds.
+     *
+     * The default is 604800 seconds (7 days).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout)
+     */
+    public fun sessionTimeout(): String? = unwrap(this).getSessionTimeout()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn)
+     */
+    public fun userPoolArn(): String
+
+    /**
+     * The ID of the Amazon Cognito user pool client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid)
+     */
+    public fun userPoolClientId(): String
+
+    /**
+     * The domain prefix or fully-qualified domain name of the Amazon Cognito user pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain)
+     */
+    public fun userPoolDomain(): String
+
+    /**
+     * A builder for [AuthenticateCognitoConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param certificateArn The Amazon Resource Name (ARN) of the certificate.
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
        */
-      public fun certificateArn(certificateArn: String)
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      public
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+
+      /**
+       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
+       * following are possible values:.
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       */
+      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String)
+
+      /**
+       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       */
+      public fun scope(scope: String)
+
+      /**
+       * @param sessionCookieName The name of the cookie used to maintain session information.
+       * The default is AWSELBAuthSessionCookie.
+       */
+      public fun sessionCookieName(sessionCookieName: String)
+
+      /**
+       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
+       * The default is 604800 seconds (7 days).
+       */
+      public fun sessionTimeout(sessionTimeout: String)
+
+      /**
+       * @param userPoolArn The Amazon Resource Name (ARN) of the Amazon Cognito user pool. 
+       */
+      public fun userPoolArn(userPoolArn: String)
+
+      /**
+       * @param userPoolClientId The ID of the Amazon Cognito user pool client. 
+       */
+      public fun userPoolClientId(userPoolClientId: String)
+
+      /**
+       * @param userPoolDomain The domain prefix or fully-qualified domain name of the Amazon
+       * Cognito user pool. 
+       */
+      public fun userPoolDomain(userPoolDomain: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty.Builder
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty.Builder
           =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty.builder()
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty.builder()
 
       /**
-       * @param certificateArn The Amazon Resource Name (ARN) of the certificate.
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
        */
-      override fun certificateArn(certificateArn: String) {
-        cdkBuilder.certificateArn(certificateArn)
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      override
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      }
+
+      /**
+       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
+       * following are possible values:.
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       */
+      override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
+        cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest)
+      }
+
+      /**
+       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       */
+      override fun scope(scope: String) {
+        cdkBuilder.scope(scope)
+      }
+
+      /**
+       * @param sessionCookieName The name of the cookie used to maintain session information.
+       * The default is AWSELBAuthSessionCookie.
+       */
+      override fun sessionCookieName(sessionCookieName: String) {
+        cdkBuilder.sessionCookieName(sessionCookieName)
+      }
+
+      /**
+       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
+       * The default is 604800 seconds (7 days).
+       */
+      override fun sessionTimeout(sessionTimeout: String) {
+        cdkBuilder.sessionTimeout(sessionTimeout)
+      }
+
+      /**
+       * @param userPoolArn The Amazon Resource Name (ARN) of the Amazon Cognito user pool. 
+       */
+      override fun userPoolArn(userPoolArn: String) {
+        cdkBuilder.userPoolArn(userPoolArn)
+      }
+
+      /**
+       * @param userPoolClientId The ID of the Amazon Cognito user pool client. 
+       */
+      override fun userPoolClientId(userPoolClientId: String) {
+        cdkBuilder.userPoolClientId(userPoolClientId)
+      }
+
+      /**
+       * @param userPoolDomain The domain prefix or fully-qualified domain name of the Amazon
+       * Cognito user pool. 
+       */
+      override fun userPoolDomain(userPoolDomain: String) {
+        cdkBuilder.userPoolDomain(userPoolDomain)
       }
 
       public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty,
-    ) : CdkObject(cdkObject), CertificateProperty {
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty,
+    ) : CdkObject(cdkObject), AuthenticateCognitoConfigProperty {
       /**
-       * The Amazon Resource Name (ARN) of the certificate.
+       * The query parameters (up to 10) to include in the redirect request to the authorization
+       * endpoint.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificate.html#cfn-elasticloadbalancingv2-listener-certificate-certificatearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams)
        */
-      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+      override fun authenticationRequestExtraParams(): Any? =
+          unwrap(this).getAuthenticationRequestExtraParams()
+
+      /**
+       * The behavior if the user is not authenticated. The following are possible values:.
+       *
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest)
+       */
+      override fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
+
+      /**
+       * The set of user claims to be requested from the IdP. The default is `openid` .
+       *
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope)
+       */
+      override fun scope(): String? = unwrap(this).getScope()
+
+      /**
+       * The name of the cookie used to maintain session information.
+       *
+       * The default is AWSELBAuthSessionCookie.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename)
+       */
+      override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
+
+      /**
+       * The maximum duration of the authentication session, in seconds.
+       *
+       * The default is 604800 seconds (7 days).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout)
+       */
+      override fun sessionTimeout(): String? = unwrap(this).getSessionTimeout()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn)
+       */
+      override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
+
+      /**
+       * The ID of the Amazon Cognito user pool client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid)
+       */
+      override fun userPoolClientId(): String = unwrap(this).getUserPoolClientId()
+
+      /**
+       * The domain prefix or fully-qualified domain name of the Amazon Cognito user pool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain)
+       */
+      override fun userPoolDomain(): String = unwrap(this).getUserPoolDomain()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AuthenticateCognitoConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty):
-          CertificateProperty = CdkObjectWrappers.wrap(cdkObject) as? CertificateProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty):
+          AuthenticateCognitoConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthenticateCognitoConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CertificateProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty
+      internal fun unwrap(wrapped: AuthenticateCognitoConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty
     }
   }
 
@@ -2631,6 +2142,586 @@ public open class CfnListener internal constructor(
   }
 
   /**
+   * Specifies an SSL server certificate to use as the default certificate for a secure listener.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * CertificateProperty certificateProperty = CertificateProperty.builder()
+   * .certificateArn("certificateArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificate.html)
+   */
+  public interface CertificateProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificate.html#cfn-elasticloadbalancingv2-listener-certificate-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * A builder for [CertificateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateArn The Amazon Resource Name (ARN) of the certificate.
+       */
+      public fun certificateArn(certificateArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty.builder()
+
+      /**
+       * @param certificateArn The Amazon Resource Name (ARN) of the certificate.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty,
+    ) : CdkObject(cdkObject), CertificateProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificate.html#cfn-elasticloadbalancingv2-listener-certificate-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty):
+          CertificateProperty = CdkObjectWrappers.wrap(cdkObject) as? CertificateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CertificateProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty
+    }
+  }
+
+  /**
+   * Specifies information required when returning a custom HTTP response.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * FixedResponseConfigProperty fixedResponseConfigProperty = FixedResponseConfigProperty.builder()
+   * .statusCode("statusCode")
+   * // the properties below are optional
+   * .contentType("contentType")
+   * .messageBody("messageBody")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html)
+   */
+  public interface FixedResponseConfigProperty {
+    /**
+     * The content type.
+     *
+     * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-contenttype)
+     */
+    public fun contentType(): String? = unwrap(this).getContentType()
+
+    /**
+     * The message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-messagebody)
+     */
+    public fun messageBody(): String? = unwrap(this).getMessageBody()
+
+    /**
+     * The HTTP response code (2XX, 4XX, or 5XX).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-statuscode)
+     */
+    public fun statusCode(): String
+
+    /**
+     * A builder for [FixedResponseConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contentType The content type.
+       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+       */
+      public fun contentType(contentType: String)
+
+      /**
+       * @param messageBody The message.
+       */
+      public fun messageBody(messageBody: String)
+
+      /**
+       * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
+       */
+      public fun statusCode(statusCode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty.builder()
+
+      /**
+       * @param contentType The content type.
+       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+       */
+      override fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+      }
+
+      /**
+       * @param messageBody The message.
+       */
+      override fun messageBody(messageBody: String) {
+        cdkBuilder.messageBody(messageBody)
+      }
+
+      /**
+       * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
+       */
+      override fun statusCode(statusCode: String) {
+        cdkBuilder.statusCode(statusCode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty,
+    ) : CdkObject(cdkObject), FixedResponseConfigProperty {
+      /**
+       * The content type.
+       *
+       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-contenttype)
+       */
+      override fun contentType(): String? = unwrap(this).getContentType()
+
+      /**
+       * The message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-messagebody)
+       */
+      override fun messageBody(): String? = unwrap(this).getMessageBody()
+
+      /**
+       * The HTTP response code (2XX, 4XX, or 5XX).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listener-fixedresponseconfig-statuscode)
+       */
+      override fun statusCode(): String = unwrap(this).getStatusCode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FixedResponseConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty):
+          FixedResponseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FixedResponseConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FixedResponseConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty
+    }
+  }
+
+  /**
+   * Information for creating an action that distributes requests among one or more target groups.
+   *
+   * For Network Load Balancers, you can specify a single target group. Specify only when `Type` is
+   * `forward` . If you specify both `ForwardConfig` and `TargetGroupArn` , you can specify only one
+   * target group using `ForwardConfig` and it must be the same target group specified in
+   * `TargetGroupArn` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * ForwardConfigProperty forwardConfigProperty = ForwardConfigProperty.builder()
+   * .targetGroups(List.of(TargetGroupTupleProperty.builder()
+   * .targetGroupArn("targetGroupArn")
+   * .weight(123)
+   * .build()))
+   * .targetGroupStickinessConfig(TargetGroupStickinessConfigProperty.builder()
+   * .durationSeconds(123)
+   * .enabled(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html)
+   */
+  public interface ForwardConfigProperty {
+    /**
+     * Information about the target group stickiness for a rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroupstickinessconfig)
+     */
+    public fun targetGroupStickinessConfig(): Any? = unwrap(this).getTargetGroupStickinessConfig()
+
+    /**
+     * Information about how traffic will be distributed between multiple target groups in a forward
+     * rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroups)
+     */
+    public fun targetGroups(): Any? = unwrap(this).getTargetGroups()
+
+    /**
+     * A builder for [ForwardConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      public fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable)
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      public
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty)
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("99f6637a85351cd3698125d7a5a5d7f3d544a374d5bc8cdf8f39ba6a59a24924")
+      public
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      public fun targetGroups(targetGroups: IResolvable)
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      public fun targetGroups(targetGroups: List<Any>)
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      public fun targetGroups(vararg targetGroups: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty.builder()
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      override fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
+        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      override
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty) {
+        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(TargetGroupStickinessConfigProperty::unwrap))
+      }
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("99f6637a85351cd3698125d7a5a5d7f3d544a374d5bc8cdf8f39ba6a59a24924")
+      override
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit):
+          Unit =
+          targetGroupStickinessConfig(TargetGroupStickinessConfigProperty(targetGroupStickinessConfig))
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      override fun targetGroups(targetGroups: IResolvable) {
+        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      override fun targetGroups(targetGroups: List<Any>) {
+        cdkBuilder.targetGroups(targetGroups)
+      }
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty,
+    ) : CdkObject(cdkObject), ForwardConfigProperty {
+      /**
+       * Information about the target group stickiness for a rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroupstickinessconfig)
+       */
+      override fun targetGroupStickinessConfig(): Any? =
+          unwrap(this).getTargetGroupStickinessConfig()
+
+      /**
+       * Information about how traffic will be distributed between multiple target groups in a
+       * forward rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-forwardconfig.html#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroups)
+       */
+      override fun targetGroups(): Any? = unwrap(this).getTargetGroups()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ForwardConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty):
+          ForwardConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ForwardConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ForwardConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration information for mutual authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * MutualAuthenticationProperty mutualAuthenticationProperty =
+   * MutualAuthenticationProperty.builder()
+   * .ignoreClientCertificateExpiry(false)
+   * .mode("mode")
+   * .trustStoreArn("trustStoreArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html)
+   */
+  public interface MutualAuthenticationProperty {
+    /**
+     * Indicates whether expired client certificates are ignored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-ignoreclientcertificateexpiry)
+     */
+    public fun ignoreClientCertificateExpiry(): Any? =
+        unwrap(this).getIgnoreClientCertificateExpiry()
+
+    /**
+     * The client certificate handling method.
+     *
+     * Options are `off` , `passthrough` or `verify` . The default value is `off` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-mode)
+     */
+    public fun mode(): String? = unwrap(this).getMode()
+
+    /**
+     * The Amazon Resource Name (ARN) of the trust store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-truststorearn)
+     */
+    public fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
+
+    /**
+     * A builder for [MutualAuthenticationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
+       * ignored.
+       */
+      public fun ignoreClientCertificateExpiry(ignoreClientCertificateExpiry: Boolean)
+
+      /**
+       * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
+       * ignored.
+       */
+      public fun ignoreClientCertificateExpiry(ignoreClientCertificateExpiry: IResolvable)
+
+      /**
+       * @param mode The client certificate handling method.
+       * Options are `off` , `passthrough` or `verify` . The default value is `off` .
+       */
+      public fun mode(mode: String)
+
+      /**
+       * @param trustStoreArn The Amazon Resource Name (ARN) of the trust store.
+       */
+      public fun trustStoreArn(trustStoreArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty.builder()
+
+      /**
+       * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
+       * ignored.
+       */
+      override fun ignoreClientCertificateExpiry(ignoreClientCertificateExpiry: Boolean) {
+        cdkBuilder.ignoreClientCertificateExpiry(ignoreClientCertificateExpiry)
+      }
+
+      /**
+       * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
+       * ignored.
+       */
+      override fun ignoreClientCertificateExpiry(ignoreClientCertificateExpiry: IResolvable) {
+        cdkBuilder.ignoreClientCertificateExpiry(ignoreClientCertificateExpiry.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param mode The client certificate handling method.
+       * Options are `off` , `passthrough` or `verify` . The default value is `off` .
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      /**
+       * @param trustStoreArn The Amazon Resource Name (ARN) of the trust store.
+       */
+      override fun trustStoreArn(trustStoreArn: String) {
+        cdkBuilder.trustStoreArn(trustStoreArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty,
+    ) : CdkObject(cdkObject), MutualAuthenticationProperty {
+      /**
+       * Indicates whether expired client certificates are ignored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-ignoreclientcertificateexpiry)
+       */
+      override fun ignoreClientCertificateExpiry(): Any? =
+          unwrap(this).getIgnoreClientCertificateExpiry()
+
+      /**
+       * The client certificate handling method.
+       *
+       * Options are `off` , `passthrough` or `verify` . The default value is `off` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-mode)
+       */
+      override fun mode(): String? = unwrap(this).getMode()
+
+      /**
+       * The Amazon Resource Name (ARN) of the trust store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-truststorearn)
+       */
+      override fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MutualAuthenticationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty):
+          MutualAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MutualAuthenticationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MutualAuthenticationProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty
+    }
+  }
+
+  /**
    * Information about a redirect action.
    *
    * A URI consists of the following components: protocol://hostname:port/path?query. You must
@@ -2909,7 +3000,7 @@ public open class CfnListener internal constructor(
   }
 
   /**
-   * Specifies information required when integrating with Amazon Cognito to authenticate users.
+   * Information about the target group stickiness for a rule.
    *
    * Example:
    *
@@ -2917,336 +3008,245 @@ public open class CfnListener internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * AuthenticateCognitoConfigProperty authenticateCognitoConfigProperty =
-   * AuthenticateCognitoConfigProperty.builder()
-   * .userPoolArn("userPoolArn")
-   * .userPoolClientId("userPoolClientId")
-   * .userPoolDomain("userPoolDomain")
-   * // the properties below are optional
-   * .authenticationRequestExtraParams(Map.of(
-   * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
-   * .onUnauthenticatedRequest("onUnauthenticatedRequest")
-   * .scope("scope")
-   * .sessionCookieName("sessionCookieName")
-   * .sessionTimeout("sessionTimeout")
+   * TargetGroupStickinessConfigProperty targetGroupStickinessConfigProperty =
+   * TargetGroupStickinessConfigProperty.builder()
+   * .durationSeconds(123)
+   * .enabled(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html)
    */
-  public interface AuthenticateCognitoConfigProperty {
+  public interface TargetGroupStickinessConfigProperty {
     /**
-     * The query parameters (up to 10) to include in the redirect request to the authorization
-     * endpoint.
+     * The time period, in seconds, during which requests from a client should be routed to the same
+     * target group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams)
+     * The range is 1-604800 seconds (7 days).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-durationseconds)
      */
-    public fun authenticationRequestExtraParams(): Any? =
-        unwrap(this).getAuthenticationRequestExtraParams()
+    public fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
 
     /**
-     * The behavior if the user is not authenticated. The following are possible values:.
+     * Indicates whether target group stickiness is enabled.
      *
-     * * deny `` - Return an HTTP 401 Unauthorized error.
-     * * allow `` - Allow the request to be forwarded to the target.
-     * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-     * default value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-enabled)
      */
-    public fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
+    public fun enabled(): Any? = unwrap(this).getEnabled()
 
     /**
-     * The set of user claims to be requested from the IdP. The default is `openid` .
-     *
-     * To verify which scope values your IdP supports and how to separate multiple values, see the
-     * documentation for your IdP.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope)
-     */
-    public fun scope(): String? = unwrap(this).getScope()
-
-    /**
-     * The name of the cookie used to maintain session information.
-     *
-     * The default is AWSELBAuthSessionCookie.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename)
-     */
-    public fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
-
-    /**
-     * The maximum duration of the authentication session, in seconds.
-     *
-     * The default is 604800 seconds (7 days).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout)
-     */
-    public fun sessionTimeout(): String? = unwrap(this).getSessionTimeout()
-
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn)
-     */
-    public fun userPoolArn(): String
-
-    /**
-     * The ID of the Amazon Cognito user pool client.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid)
-     */
-    public fun userPoolClientId(): String
-
-    /**
-     * The domain prefix or fully-qualified domain name of the Amazon Cognito user pool.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain)
-     */
-    public fun userPoolDomain(): String
-
-    /**
-     * A builder for [AuthenticateCognitoConfigProperty]
+     * A builder for [TargetGroupStickinessConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
+       * @param durationSeconds The time period, in seconds, during which requests from a client
+       * should be routed to the same target group.
+       * The range is 1-604800 seconds (7 days).
        */
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+      public fun durationSeconds(durationSeconds: Number)
 
       /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
+       * @param enabled Indicates whether target group stickiness is enabled.
        */
-      public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+      public fun enabled(enabled: Boolean)
 
       /**
-       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
-       * following are possible values:.
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
+       * @param enabled Indicates whether target group stickiness is enabled.
        */
-      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String)
-
-      /**
-       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       */
-      public fun scope(scope: String)
-
-      /**
-       * @param sessionCookieName The name of the cookie used to maintain session information.
-       * The default is AWSELBAuthSessionCookie.
-       */
-      public fun sessionCookieName(sessionCookieName: String)
-
-      /**
-       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
-       * The default is 604800 seconds (7 days).
-       */
-      public fun sessionTimeout(sessionTimeout: String)
-
-      /**
-       * @param userPoolArn The Amazon Resource Name (ARN) of the Amazon Cognito user pool. 
-       */
-      public fun userPoolArn(userPoolArn: String)
-
-      /**
-       * @param userPoolClientId The ID of the Amazon Cognito user pool client. 
-       */
-      public fun userPoolClientId(userPoolClientId: String)
-
-      /**
-       * @param userPoolDomain The domain prefix or fully-qualified domain name of the Amazon
-       * Cognito user pool. 
-       */
-      public fun userPoolDomain(userPoolDomain: String)
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty.Builder
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty.Builder
           =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty.builder()
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty.builder()
 
       /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
+       * @param durationSeconds The time period, in seconds, during which requests from a client
+       * should be routed to the same target group.
+       * The range is 1-604800 seconds (7 days).
        */
-      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable::unwrap))
+      override fun durationSeconds(durationSeconds: Number) {
+        cdkBuilder.durationSeconds(durationSeconds)
       }
 
       /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
+       * @param enabled Indicates whether target group stickiness is enabled.
        */
-      override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
-       * following are possible values:.
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
+       * @param enabled Indicates whether target group stickiness is enabled.
        */
-      override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
-        cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest)
-      }
-
-      /**
-       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       */
-      override fun scope(scope: String) {
-        cdkBuilder.scope(scope)
-      }
-
-      /**
-       * @param sessionCookieName The name of the cookie used to maintain session information.
-       * The default is AWSELBAuthSessionCookie.
-       */
-      override fun sessionCookieName(sessionCookieName: String) {
-        cdkBuilder.sessionCookieName(sessionCookieName)
-      }
-
-      /**
-       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
-       * The default is 604800 seconds (7 days).
-       */
-      override fun sessionTimeout(sessionTimeout: String) {
-        cdkBuilder.sessionTimeout(sessionTimeout)
-      }
-
-      /**
-       * @param userPoolArn The Amazon Resource Name (ARN) of the Amazon Cognito user pool. 
-       */
-      override fun userPoolArn(userPoolArn: String) {
-        cdkBuilder.userPoolArn(userPoolArn)
-      }
-
-      /**
-       * @param userPoolClientId The ID of the Amazon Cognito user pool client. 
-       */
-      override fun userPoolClientId(userPoolClientId: String) {
-        cdkBuilder.userPoolClientId(userPoolClientId)
-      }
-
-      /**
-       * @param userPoolDomain The domain prefix or fully-qualified domain name of the Amazon
-       * Cognito user pool. 
-       */
-      override fun userPoolDomain(userPoolDomain: String) {
-        cdkBuilder.userPoolDomain(userPoolDomain)
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty,
-    ) : CdkObject(cdkObject), AuthenticateCognitoConfigProperty {
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty,
+    ) : CdkObject(cdkObject), TargetGroupStickinessConfigProperty {
       /**
-       * The query parameters (up to 10) to include in the redirect request to the authorization
-       * endpoint.
+       * The time period, in seconds, during which requests from a client should be routed to the
+       * same target group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams)
+       * The range is 1-604800 seconds (7 days).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-durationseconds)
        */
-      override fun authenticationRequestExtraParams(): Any? =
-          unwrap(this).getAuthenticationRequestExtraParams()
+      override fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
 
       /**
-       * The behavior if the user is not authenticated. The following are possible values:.
+       * Indicates whether target group stickiness is enabled.
        *
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-enabled)
        */
-      override fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
-
-      /**
-       * The set of user claims to be requested from the IdP. The default is `openid` .
-       *
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope)
-       */
-      override fun scope(): String? = unwrap(this).getScope()
-
-      /**
-       * The name of the cookie used to maintain session information.
-       *
-       * The default is AWSELBAuthSessionCookie.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename)
-       */
-      override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
-
-      /**
-       * The maximum duration of the authentication session, in seconds.
-       *
-       * The default is 604800 seconds (7 days).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout)
-       */
-      override fun sessionTimeout(): String? = unwrap(this).getSessionTimeout()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn)
-       */
-      override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
-
-      /**
-       * The ID of the Amazon Cognito user pool client.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid)
-       */
-      override fun userPoolClientId(): String = unwrap(this).getUserPoolClientId()
-
-      /**
-       * The domain prefix or fully-qualified domain name of the Amazon Cognito user pool.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain)
-       */
-      override fun userPoolDomain(): String = unwrap(this).getUserPoolDomain()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          AuthenticateCognitoConfigProperty {
+          TargetGroupStickinessConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty):
-          AuthenticateCognitoConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AuthenticateCognitoConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty):
+          TargetGroupStickinessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetGroupStickinessConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AuthenticateCognitoConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty
+      internal fun unwrap(wrapped: TargetGroupStickinessConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty
+    }
+  }
+
+  /**
+   * Information about how traffic will be distributed between multiple target groups in a forward
+   * rule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * TargetGroupTupleProperty targetGroupTupleProperty = TargetGroupTupleProperty.builder()
+   * .targetGroupArn("targetGroupArn")
+   * .weight(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html)
+   */
+  public interface TargetGroupTupleProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the target group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html#cfn-elasticloadbalancingv2-listener-targetgrouptuple-targetgrouparn)
+     */
+    public fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
+
+    /**
+     * The weight.
+     *
+     * The range is 0 to 999.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html#cfn-elasticloadbalancingv2-listener-targetgrouptuple-weight)
+     */
+    public fun weight(): Number? = unwrap(this).getWeight()
+
+    /**
+     * A builder for [TargetGroupTupleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
+       */
+      public fun targetGroupArn(targetGroupArn: String)
+
+      /**
+       * @param weight The weight.
+       * The range is 0 to 999.
+       */
+      public fun weight(weight: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty.builder()
+
+      /**
+       * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
+       */
+      override fun targetGroupArn(targetGroupArn: String) {
+        cdkBuilder.targetGroupArn(targetGroupArn)
+      }
+
+      /**
+       * @param weight The weight.
+       * The range is 0 to 999.
+       */
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty,
+    ) : CdkObject(cdkObject), TargetGroupTupleProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the target group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html#cfn-elasticloadbalancingv2-listener-targetgrouptuple-targetgrouparn)
+       */
+      override fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
+
+      /**
+       * The weight.
+       *
+       * The range is 0 to 999.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html#cfn-elasticloadbalancingv2-listener-targetgrouptuple-weight)
+       */
+      override fun weight(): Number? = unwrap(this).getWeight()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TargetGroupTupleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty):
+          TargetGroupTupleProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupTupleProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetGroupTupleProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty
     }
   }
 }

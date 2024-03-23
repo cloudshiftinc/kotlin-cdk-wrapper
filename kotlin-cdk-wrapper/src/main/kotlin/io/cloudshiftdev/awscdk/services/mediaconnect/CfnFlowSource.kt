@@ -1270,90 +1270,6 @@ public open class CfnFlowSource internal constructor(
   }
 
   /**
-   * The VPC interface that you want to send your output to.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * VpcInterfaceAttachmentProperty vpcInterfaceAttachmentProperty =
-   * VpcInterfaceAttachmentProperty.builder()
-   * .vpcInterfaceName("vpcInterfaceName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html)
-   */
-  public interface VpcInterfaceAttachmentProperty {
-    /**
-     * The name of the VPC interface that you want to send your output to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html#cfn-mediaconnect-flowsource-vpcinterfaceattachment-vpcinterfacename)
-     */
-    public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
-
-    /**
-     * A builder for [VpcInterfaceAttachmentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
-       */
-      public fun vpcInterfaceName(vpcInterfaceName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty.Builder
-          =
-          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty.builder()
-
-      /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
-       */
-      override fun vpcInterfaceName(vpcInterfaceName: String) {
-        cdkBuilder.vpcInterfaceName(vpcInterfaceName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty,
-    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
-      /**
-       * The name of the VPC interface that you want to send your output to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html#cfn-mediaconnect-flowsource-vpcinterfaceattachment-vpcinterfacename)
-       */
-      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcInterfaceAttachmentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty):
-          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty
-    }
-  }
-
-  /**
    * The source configuration for cloud flows receiving a stream from a bridge.
    *
    * Example:
@@ -1498,6 +1414,90 @@ public open class CfnFlowSource internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.GatewayBridgeSourceProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.GatewayBridgeSourceProperty
+    }
+  }
+
+  /**
+   * The VPC interface that you want to send your output to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * VpcInterfaceAttachmentProperty vpcInterfaceAttachmentProperty =
+   * VpcInterfaceAttachmentProperty.builder()
+   * .vpcInterfaceName("vpcInterfaceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html)
+   */
+  public interface VpcInterfaceAttachmentProperty {
+    /**
+     * The name of the VPC interface that you want to send your output to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html#cfn-mediaconnect-flowsource-vpcinterfaceattachment-vpcinterfacename)
+     */
+    public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+
+    /**
+     * A builder for [VpcInterfaceAttachmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       */
+      public fun vpcInterfaceName(vpcInterfaceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty.builder()
+
+      /**
+       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       */
+      override fun vpcInterfaceName(vpcInterfaceName: String) {
+        cdkBuilder.vpcInterfaceName(vpcInterfaceName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty,
+    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
+      /**
+       * The name of the VPC interface that you want to send your output to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html#cfn-mediaconnect-flowsource-vpcinterfaceattachment-vpcinterfacename)
+       */
+      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcInterfaceAttachmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty):
+          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty
     }
   }
 }

@@ -796,6 +796,637 @@ public open class CfnSignalCatalog internal constructor(
   }
 
   /**
+   * A signal that represents static information about the vehicle, such as engine type or
+   * manufacturing date.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * AttributeProperty attributeProperty = AttributeProperty.builder()
+   * .dataType("dataType")
+   * .fullyQualifiedName("fullyQualifiedName")
+   * // the properties below are optional
+   * .allowedValues(List.of("allowedValues"))
+   * .assignedValue("assignedValue")
+   * .defaultValue("defaultValue")
+   * .description("description")
+   * .max(123)
+   * .min(123)
+   * .unit("unit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html)
+   */
+  public interface AttributeProperty {
+    /**
+     * (Optional) A list of possible values an attribute can be assigned.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-allowedvalues)
+     */
+    public fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
+
+    /**
+     * (Optional) A specified value for the attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-assignedvalue)
+     */
+    public fun assignedValue(): String? = unwrap(this).getAssignedValue()
+
+    /**
+     * The specified data type of the attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-datatype)
+     */
+    public fun dataType(): String
+
+    /**
+     * (Optional) The default value of the attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-defaultvalue)
+     */
+    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+    /**
+     * (Optional) A brief description of the attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The fully qualified name of the attribute.
+     *
+     * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-fullyqualifiedname)
+     */
+    public fun fullyQualifiedName(): String
+
+    /**
+     * (Optional) The specified possible maximum value of the attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * (Optional) The specified possible minimum value of the attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * (Optional) The scientific unit for the attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-unit)
+     */
+    public fun unit(): String? = unwrap(this).getUnit()
+
+    /**
+     * A builder for [AttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+       */
+      public fun allowedValues(allowedValues: List<String>)
+
+      /**
+       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+       */
+      public fun allowedValues(vararg allowedValues: String)
+
+      /**
+       * @param assignedValue (Optional) A specified value for the attribute.
+       */
+      public fun assignedValue(assignedValue: String)
+
+      /**
+       * @param dataType The specified data type of the attribute. 
+       */
+      public fun dataType(dataType: String)
+
+      /**
+       * @param defaultValue (Optional) The default value of the attribute.
+       */
+      public fun defaultValue(defaultValue: String)
+
+      /**
+       * @param description (Optional) A brief description of the attribute.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param fullyQualifiedName The fully qualified name of the attribute. 
+       * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
+       */
+      public fun fullyQualifiedName(fullyQualifiedName: String)
+
+      /**
+       * @param max (Optional) The specified possible maximum value of the attribute.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min (Optional) The specified possible minimum value of the attribute.
+       */
+      public fun min(min: Number)
+
+      /**
+       * @param unit (Optional) The scientific unit for the attribute.
+       */
+      public fun unit(unit: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty.Builder =
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty.builder()
+
+      /**
+       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+       */
+      override fun allowedValues(allowedValues: List<String>) {
+        cdkBuilder.allowedValues(allowedValues)
+      }
+
+      /**
+       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+       */
+      override fun allowedValues(vararg allowedValues: String): Unit =
+          allowedValues(allowedValues.toList())
+
+      /**
+       * @param assignedValue (Optional) A specified value for the attribute.
+       */
+      override fun assignedValue(assignedValue: String) {
+        cdkBuilder.assignedValue(assignedValue)
+      }
+
+      /**
+       * @param dataType The specified data type of the attribute. 
+       */
+      override fun dataType(dataType: String) {
+        cdkBuilder.dataType(dataType)
+      }
+
+      /**
+       * @param defaultValue (Optional) The default value of the attribute.
+       */
+      override fun defaultValue(defaultValue: String) {
+        cdkBuilder.defaultValue(defaultValue)
+      }
+
+      /**
+       * @param description (Optional) A brief description of the attribute.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param fullyQualifiedName The fully qualified name of the attribute. 
+       * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
+       */
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
+        cdkBuilder.fullyQualifiedName(fullyQualifiedName)
+      }
+
+      /**
+       * @param max (Optional) The specified possible maximum value of the attribute.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min (Optional) The specified possible minimum value of the attribute.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      /**
+       * @param unit (Optional) The scientific unit for the attribute.
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty,
+    ) : CdkObject(cdkObject), AttributeProperty {
+      /**
+       * (Optional) A list of possible values an attribute can be assigned.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-allowedvalues)
+       */
+      override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
+
+      /**
+       * (Optional) A specified value for the attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-assignedvalue)
+       */
+      override fun assignedValue(): String? = unwrap(this).getAssignedValue()
+
+      /**
+       * The specified data type of the attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-datatype)
+       */
+      override fun dataType(): String = unwrap(this).getDataType()
+
+      /**
+       * (Optional) The default value of the attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-defaultvalue)
+       */
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+      /**
+       * (Optional) A brief description of the attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * The fully qualified name of the attribute.
+       *
+       * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-fullyqualifiedname)
+       */
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+
+      /**
+       * (Optional) The specified possible maximum value of the attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * (Optional) The specified possible minimum value of the attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+
+      /**
+       * (Optional) The scientific unit for the attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-unit)
+       */
+      override fun unit(): String? = unwrap(this).getUnit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty):
+          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AttributeProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty
+    }
+  }
+
+  /**
+   * A group of signals that are defined in a hierarchical structure.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * BranchProperty branchProperty = BranchProperty.builder()
+   * .fullyQualifiedName("fullyQualifiedName")
+   * // the properties below are optional
+   * .description("description")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html)
+   */
+  public interface BranchProperty {
+    /**
+     * (Optional) A brief description of the branch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The fully qualified name of the branch.
+     *
+     * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-fullyqualifiedname)
+     */
+    public fun fullyQualifiedName(): String
+
+    /**
+     * A builder for [BranchProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description (Optional) A brief description of the branch.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param fullyQualifiedName The fully qualified name of the branch. 
+       * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
+       */
+      public fun fullyQualifiedName(fullyQualifiedName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty.Builder =
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty.builder()
+
+      /**
+       * @param description (Optional) A brief description of the branch.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param fullyQualifiedName The fully qualified name of the branch. 
+       * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
+       */
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
+        cdkBuilder.fullyQualifiedName(fullyQualifiedName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty,
+    ) : CdkObject(cdkObject), BranchProperty {
+      /**
+       * (Optional) A brief description of the branch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * The fully qualified name of the branch.
+       *
+       * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-fullyqualifiedname)
+       */
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BranchProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty):
+          BranchProperty = CdkObjectWrappers.wrap(cdkObject) as? BranchProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BranchProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty
+    }
+  }
+
+  /**
+   * Information about the number of nodes and node types in a vehicle network.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * NodeCountsProperty nodeCountsProperty = NodeCountsProperty.builder()
+   * .totalActuators(123)
+   * .totalAttributes(123)
+   * .totalBranches(123)
+   * .totalNodes(123)
+   * .totalSensors(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html)
+   */
+  public interface NodeCountsProperty {
+    /**
+     * (Optional) The total number of nodes in a vehicle network that represent actuators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalactuators)
+     */
+    public fun totalActuators(): Number? = unwrap(this).getTotalActuators()
+
+    /**
+     * (Optional) The total number of nodes in a vehicle network that represent attributes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalattributes)
+     */
+    public fun totalAttributes(): Number? = unwrap(this).getTotalAttributes()
+
+    /**
+     * (Optional) The total number of nodes in a vehicle network that represent branches.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalbranches)
+     */
+    public fun totalBranches(): Number? = unwrap(this).getTotalBranches()
+
+    /**
+     * (Optional) The total number of nodes in a vehicle network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalnodes)
+     */
+    public fun totalNodes(): Number? = unwrap(this).getTotalNodes()
+
+    /**
+     * (Optional) The total number of nodes in a vehicle network that represent sensors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalsensors)
+     */
+    public fun totalSensors(): Number? = unwrap(this).getTotalSensors()
+
+    /**
+     * A builder for [NodeCountsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param totalActuators (Optional) The total number of nodes in a vehicle network that
+       * represent actuators.
+       */
+      public fun totalActuators(totalActuators: Number)
+
+      /**
+       * @param totalAttributes (Optional) The total number of nodes in a vehicle network that
+       * represent attributes.
+       */
+      public fun totalAttributes(totalAttributes: Number)
+
+      /**
+       * @param totalBranches (Optional) The total number of nodes in a vehicle network that
+       * represent branches.
+       */
+      public fun totalBranches(totalBranches: Number)
+
+      /**
+       * @param totalNodes (Optional) The total number of nodes in a vehicle network.
+       */
+      public fun totalNodes(totalNodes: Number)
+
+      /**
+       * @param totalSensors (Optional) The total number of nodes in a vehicle network that
+       * represent sensors.
+       */
+      public fun totalSensors(totalSensors: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty.Builder =
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty.builder()
+
+      /**
+       * @param totalActuators (Optional) The total number of nodes in a vehicle network that
+       * represent actuators.
+       */
+      override fun totalActuators(totalActuators: Number) {
+        cdkBuilder.totalActuators(totalActuators)
+      }
+
+      /**
+       * @param totalAttributes (Optional) The total number of nodes in a vehicle network that
+       * represent attributes.
+       */
+      override fun totalAttributes(totalAttributes: Number) {
+        cdkBuilder.totalAttributes(totalAttributes)
+      }
+
+      /**
+       * @param totalBranches (Optional) The total number of nodes in a vehicle network that
+       * represent branches.
+       */
+      override fun totalBranches(totalBranches: Number) {
+        cdkBuilder.totalBranches(totalBranches)
+      }
+
+      /**
+       * @param totalNodes (Optional) The total number of nodes in a vehicle network.
+       */
+      override fun totalNodes(totalNodes: Number) {
+        cdkBuilder.totalNodes(totalNodes)
+      }
+
+      /**
+       * @param totalSensors (Optional) The total number of nodes in a vehicle network that
+       * represent sensors.
+       */
+      override fun totalSensors(totalSensors: Number) {
+        cdkBuilder.totalSensors(totalSensors)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty,
+    ) : CdkObject(cdkObject), NodeCountsProperty {
+      /**
+       * (Optional) The total number of nodes in a vehicle network that represent actuators.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalactuators)
+       */
+      override fun totalActuators(): Number? = unwrap(this).getTotalActuators()
+
+      /**
+       * (Optional) The total number of nodes in a vehicle network that represent attributes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalattributes)
+       */
+      override fun totalAttributes(): Number? = unwrap(this).getTotalAttributes()
+
+      /**
+       * (Optional) The total number of nodes in a vehicle network that represent branches.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalbranches)
+       */
+      override fun totalBranches(): Number? = unwrap(this).getTotalBranches()
+
+      /**
+       * (Optional) The total number of nodes in a vehicle network.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalnodes)
+       */
+      override fun totalNodes(): Number? = unwrap(this).getTotalNodes()
+
+      /**
+       * (Optional) The total number of nodes in a vehicle network that represent sensors.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalsensors)
+       */
+      override fun totalSensors(): Number? = unwrap(this).getTotalSensors()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NodeCountsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty):
+          NodeCountsProperty = CdkObjectWrappers.wrap(cdkObject) as? NodeCountsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NodeCountsProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty
+    }
+  }
+
+  /**
    * A general abstraction of a signal.
    *
    * A node can be specified as an actuator, attribute, branch, or sensor.
@@ -1458,637 +2089,6 @@ public open class CfnSignalCatalog internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty
-    }
-  }
-
-  /**
-   * A signal that represents static information about the vehicle, such as engine type or
-   * manufacturing date.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * AttributeProperty attributeProperty = AttributeProperty.builder()
-   * .dataType("dataType")
-   * .fullyQualifiedName("fullyQualifiedName")
-   * // the properties below are optional
-   * .allowedValues(List.of("allowedValues"))
-   * .assignedValue("assignedValue")
-   * .defaultValue("defaultValue")
-   * .description("description")
-   * .max(123)
-   * .min(123)
-   * .unit("unit")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html)
-   */
-  public interface AttributeProperty {
-    /**
-     * (Optional) A list of possible values an attribute can be assigned.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-allowedvalues)
-     */
-    public fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
-
-    /**
-     * (Optional) A specified value for the attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-assignedvalue)
-     */
-    public fun assignedValue(): String? = unwrap(this).getAssignedValue()
-
-    /**
-     * The specified data type of the attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-datatype)
-     */
-    public fun dataType(): String
-
-    /**
-     * (Optional) The default value of the attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-defaultvalue)
-     */
-    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-    /**
-     * (Optional) A brief description of the attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The fully qualified name of the attribute.
-     *
-     * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-fullyqualifiedname)
-     */
-    public fun fullyQualifiedName(): String
-
-    /**
-     * (Optional) The specified possible maximum value of the attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * (Optional) The specified possible minimum value of the attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * (Optional) The scientific unit for the attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-unit)
-     */
-    public fun unit(): String? = unwrap(this).getUnit()
-
-    /**
-     * A builder for [AttributeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
-       */
-      public fun allowedValues(allowedValues: List<String>)
-
-      /**
-       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
-       */
-      public fun allowedValues(vararg allowedValues: String)
-
-      /**
-       * @param assignedValue (Optional) A specified value for the attribute.
-       */
-      public fun assignedValue(assignedValue: String)
-
-      /**
-       * @param dataType The specified data type of the attribute. 
-       */
-      public fun dataType(dataType: String)
-
-      /**
-       * @param defaultValue (Optional) The default value of the attribute.
-       */
-      public fun defaultValue(defaultValue: String)
-
-      /**
-       * @param description (Optional) A brief description of the attribute.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param fullyQualifiedName The fully qualified name of the attribute. 
-       * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
-       */
-      public fun fullyQualifiedName(fullyQualifiedName: String)
-
-      /**
-       * @param max (Optional) The specified possible maximum value of the attribute.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min (Optional) The specified possible minimum value of the attribute.
-       */
-      public fun min(min: Number)
-
-      /**
-       * @param unit (Optional) The scientific unit for the attribute.
-       */
-      public fun unit(unit: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty.Builder =
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty.builder()
-
-      /**
-       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
-       */
-      override fun allowedValues(allowedValues: List<String>) {
-        cdkBuilder.allowedValues(allowedValues)
-      }
-
-      /**
-       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
-       */
-      override fun allowedValues(vararg allowedValues: String): Unit =
-          allowedValues(allowedValues.toList())
-
-      /**
-       * @param assignedValue (Optional) A specified value for the attribute.
-       */
-      override fun assignedValue(assignedValue: String) {
-        cdkBuilder.assignedValue(assignedValue)
-      }
-
-      /**
-       * @param dataType The specified data type of the attribute. 
-       */
-      override fun dataType(dataType: String) {
-        cdkBuilder.dataType(dataType)
-      }
-
-      /**
-       * @param defaultValue (Optional) The default value of the attribute.
-       */
-      override fun defaultValue(defaultValue: String) {
-        cdkBuilder.defaultValue(defaultValue)
-      }
-
-      /**
-       * @param description (Optional) A brief description of the attribute.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param fullyQualifiedName The fully qualified name of the attribute. 
-       * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
-       */
-      override fun fullyQualifiedName(fullyQualifiedName: String) {
-        cdkBuilder.fullyQualifiedName(fullyQualifiedName)
-      }
-
-      /**
-       * @param max (Optional) The specified possible maximum value of the attribute.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min (Optional) The specified possible minimum value of the attribute.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      /**
-       * @param unit (Optional) The scientific unit for the attribute.
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty,
-    ) : CdkObject(cdkObject), AttributeProperty {
-      /**
-       * (Optional) A list of possible values an attribute can be assigned.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-allowedvalues)
-       */
-      override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
-
-      /**
-       * (Optional) A specified value for the attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-assignedvalue)
-       */
-      override fun assignedValue(): String? = unwrap(this).getAssignedValue()
-
-      /**
-       * The specified data type of the attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-datatype)
-       */
-      override fun dataType(): String = unwrap(this).getDataType()
-
-      /**
-       * (Optional) The default value of the attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-defaultvalue)
-       */
-      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-      /**
-       * (Optional) A brief description of the attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The fully qualified name of the attribute.
-       *
-       * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-fullyqualifiedname)
-       */
-      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
-
-      /**
-       * (Optional) The specified possible maximum value of the attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * (Optional) The specified possible minimum value of the attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-
-      /**
-       * (Optional) The scientific unit for the attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-unit)
-       */
-      override fun unit(): String? = unwrap(this).getUnit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty):
-          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AttributeProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty
-    }
-  }
-
-  /**
-   * A group of signals that are defined in a hierarchical structure.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * BranchProperty branchProperty = BranchProperty.builder()
-   * .fullyQualifiedName("fullyQualifiedName")
-   * // the properties below are optional
-   * .description("description")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html)
-   */
-  public interface BranchProperty {
-    /**
-     * (Optional) A brief description of the branch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The fully qualified name of the branch.
-     *
-     * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-fullyqualifiedname)
-     */
-    public fun fullyQualifiedName(): String
-
-    /**
-     * A builder for [BranchProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param description (Optional) A brief description of the branch.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param fullyQualifiedName The fully qualified name of the branch. 
-       * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
-       */
-      public fun fullyQualifiedName(fullyQualifiedName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty.Builder =
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty.builder()
-
-      /**
-       * @param description (Optional) A brief description of the branch.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param fullyQualifiedName The fully qualified name of the branch. 
-       * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
-       */
-      override fun fullyQualifiedName(fullyQualifiedName: String) {
-        cdkBuilder.fullyQualifiedName(fullyQualifiedName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty,
-    ) : CdkObject(cdkObject), BranchProperty {
-      /**
-       * (Optional) A brief description of the branch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The fully qualified name of the branch.
-       *
-       * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-fullyqualifiedname)
-       */
-      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BranchProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty):
-          BranchProperty = CdkObjectWrappers.wrap(cdkObject) as? BranchProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BranchProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty
-    }
-  }
-
-  /**
-   * Information about the number of nodes and node types in a vehicle network.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
-   * NodeCountsProperty nodeCountsProperty = NodeCountsProperty.builder()
-   * .totalActuators(123)
-   * .totalAttributes(123)
-   * .totalBranches(123)
-   * .totalNodes(123)
-   * .totalSensors(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html)
-   */
-  public interface NodeCountsProperty {
-    /**
-     * (Optional) The total number of nodes in a vehicle network that represent actuators.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalactuators)
-     */
-    public fun totalActuators(): Number? = unwrap(this).getTotalActuators()
-
-    /**
-     * (Optional) The total number of nodes in a vehicle network that represent attributes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalattributes)
-     */
-    public fun totalAttributes(): Number? = unwrap(this).getTotalAttributes()
-
-    /**
-     * (Optional) The total number of nodes in a vehicle network that represent branches.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalbranches)
-     */
-    public fun totalBranches(): Number? = unwrap(this).getTotalBranches()
-
-    /**
-     * (Optional) The total number of nodes in a vehicle network.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalnodes)
-     */
-    public fun totalNodes(): Number? = unwrap(this).getTotalNodes()
-
-    /**
-     * (Optional) The total number of nodes in a vehicle network that represent sensors.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalsensors)
-     */
-    public fun totalSensors(): Number? = unwrap(this).getTotalSensors()
-
-    /**
-     * A builder for [NodeCountsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param totalActuators (Optional) The total number of nodes in a vehicle network that
-       * represent actuators.
-       */
-      public fun totalActuators(totalActuators: Number)
-
-      /**
-       * @param totalAttributes (Optional) The total number of nodes in a vehicle network that
-       * represent attributes.
-       */
-      public fun totalAttributes(totalAttributes: Number)
-
-      /**
-       * @param totalBranches (Optional) The total number of nodes in a vehicle network that
-       * represent branches.
-       */
-      public fun totalBranches(totalBranches: Number)
-
-      /**
-       * @param totalNodes (Optional) The total number of nodes in a vehicle network.
-       */
-      public fun totalNodes(totalNodes: Number)
-
-      /**
-       * @param totalSensors (Optional) The total number of nodes in a vehicle network that
-       * represent sensors.
-       */
-      public fun totalSensors(totalSensors: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty.Builder =
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty.builder()
-
-      /**
-       * @param totalActuators (Optional) The total number of nodes in a vehicle network that
-       * represent actuators.
-       */
-      override fun totalActuators(totalActuators: Number) {
-        cdkBuilder.totalActuators(totalActuators)
-      }
-
-      /**
-       * @param totalAttributes (Optional) The total number of nodes in a vehicle network that
-       * represent attributes.
-       */
-      override fun totalAttributes(totalAttributes: Number) {
-        cdkBuilder.totalAttributes(totalAttributes)
-      }
-
-      /**
-       * @param totalBranches (Optional) The total number of nodes in a vehicle network that
-       * represent branches.
-       */
-      override fun totalBranches(totalBranches: Number) {
-        cdkBuilder.totalBranches(totalBranches)
-      }
-
-      /**
-       * @param totalNodes (Optional) The total number of nodes in a vehicle network.
-       */
-      override fun totalNodes(totalNodes: Number) {
-        cdkBuilder.totalNodes(totalNodes)
-      }
-
-      /**
-       * @param totalSensors (Optional) The total number of nodes in a vehicle network that
-       * represent sensors.
-       */
-      override fun totalSensors(totalSensors: Number) {
-        cdkBuilder.totalSensors(totalSensors)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty,
-    ) : CdkObject(cdkObject), NodeCountsProperty {
-      /**
-       * (Optional) The total number of nodes in a vehicle network that represent actuators.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalactuators)
-       */
-      override fun totalActuators(): Number? = unwrap(this).getTotalActuators()
-
-      /**
-       * (Optional) The total number of nodes in a vehicle network that represent attributes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalattributes)
-       */
-      override fun totalAttributes(): Number? = unwrap(this).getTotalAttributes()
-
-      /**
-       * (Optional) The total number of nodes in a vehicle network that represent branches.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalbranches)
-       */
-      override fun totalBranches(): Number? = unwrap(this).getTotalBranches()
-
-      /**
-       * (Optional) The total number of nodes in a vehicle network.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalnodes)
-       */
-      override fun totalNodes(): Number? = unwrap(this).getTotalNodes()
-
-      /**
-       * (Optional) The total number of nodes in a vehicle network that represent sensors.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalsensors)
-       */
-      override fun totalSensors(): Number? = unwrap(this).getTotalSensors()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NodeCountsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty):
-          NodeCountsProperty = CdkObjectWrappers.wrap(cdkObject) as? NodeCountsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NodeCountsProperty):
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty
     }
   }
 }

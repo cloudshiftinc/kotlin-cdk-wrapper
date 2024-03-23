@@ -799,210 +799,6 @@ public open class CfnCustomActionType internal constructor(
   }
 
   /**
-   * `Settings` is a property of the `AWS::CodePipeline::CustomActionType` resource that provides
-   * URLs that users can access to view information about the CodePipeline custom action.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * SettingsProperty settingsProperty = SettingsProperty.builder()
-   * .entityUrlTemplate("entityUrlTemplate")
-   * .executionUrlTemplate("executionUrlTemplate")
-   * .revisionUrlTemplate("revisionUrlTemplate")
-   * .thirdPartyConfigurationUrl("thirdPartyConfigurationUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html)
-   */
-  public interface SettingsProperty {
-    /**
-     * The URL returned to the CodePipeline console that provides a deep link to the resources of
-     * the external system, such as the configuration page for a CodeDeploy deployment group.
-     *
-     * This link is provided as part of the action display in the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-entityurltemplate)
-     */
-    public fun entityUrlTemplate(): String? = unwrap(this).getEntityUrlTemplate()
-
-    /**
-     * The URL returned to the CodePipeline console that contains a link to the top-level landing
-     * page for the external system, such as the console page for CodeDeploy.
-     *
-     * This link is shown on the pipeline view page in the CodePipeline console and provides a link
-     * to the execution entity of the external action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate)
-     */
-    public fun executionUrlTemplate(): String? = unwrap(this).getExecutionUrlTemplate()
-
-    /**
-     * The URL returned to the CodePipeline console that contains a link to the page where customers
-     * can update or change the configuration of the external action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate)
-     */
-    public fun revisionUrlTemplate(): String? = unwrap(this).getRevisionUrlTemplate()
-
-    /**
-     * The URL of a sign-up page where users can sign up for an external service and perform initial
-     * configuration of the action provided by that service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl)
-     */
-    public fun thirdPartyConfigurationUrl(): String? = unwrap(this).getThirdPartyConfigurationUrl()
-
-    /**
-     * A builder for [SettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param entityUrlTemplate The URL returned to the CodePipeline console that provides a deep
-       * link to the resources of the external system, such as the configuration page for a CodeDeploy
-       * deployment group.
-       * This link is provided as part of the action display in the pipeline.
-       */
-      public fun entityUrlTemplate(entityUrlTemplate: String)
-
-      /**
-       * @param executionUrlTemplate The URL returned to the CodePipeline console that contains a
-       * link to the top-level landing page for the external system, such as the console page for
-       * CodeDeploy.
-       * This link is shown on the pipeline view page in the CodePipeline console and provides a
-       * link to the execution entity of the external action.
-       */
-      public fun executionUrlTemplate(executionUrlTemplate: String)
-
-      /**
-       * @param revisionUrlTemplate The URL returned to the CodePipeline console that contains a
-       * link to the page where customers can update or change the configuration of the external
-       * action.
-       */
-      public fun revisionUrlTemplate(revisionUrlTemplate: String)
-
-      /**
-       * @param thirdPartyConfigurationUrl The URL of a sign-up page where users can sign up for an
-       * external service and perform initial configuration of the action provided by that service.
-       */
-      public fun thirdPartyConfigurationUrl(thirdPartyConfigurationUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty.builder()
-
-      /**
-       * @param entityUrlTemplate The URL returned to the CodePipeline console that provides a deep
-       * link to the resources of the external system, such as the configuration page for a CodeDeploy
-       * deployment group.
-       * This link is provided as part of the action display in the pipeline.
-       */
-      override fun entityUrlTemplate(entityUrlTemplate: String) {
-        cdkBuilder.entityUrlTemplate(entityUrlTemplate)
-      }
-
-      /**
-       * @param executionUrlTemplate The URL returned to the CodePipeline console that contains a
-       * link to the top-level landing page for the external system, such as the console page for
-       * CodeDeploy.
-       * This link is shown on the pipeline view page in the CodePipeline console and provides a
-       * link to the execution entity of the external action.
-       */
-      override fun executionUrlTemplate(executionUrlTemplate: String) {
-        cdkBuilder.executionUrlTemplate(executionUrlTemplate)
-      }
-
-      /**
-       * @param revisionUrlTemplate The URL returned to the CodePipeline console that contains a
-       * link to the page where customers can update or change the configuration of the external
-       * action.
-       */
-      override fun revisionUrlTemplate(revisionUrlTemplate: String) {
-        cdkBuilder.revisionUrlTemplate(revisionUrlTemplate)
-      }
-
-      /**
-       * @param thirdPartyConfigurationUrl The URL of a sign-up page where users can sign up for an
-       * external service and perform initial configuration of the action provided by that service.
-       */
-      override fun thirdPartyConfigurationUrl(thirdPartyConfigurationUrl: String) {
-        cdkBuilder.thirdPartyConfigurationUrl(thirdPartyConfigurationUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty,
-    ) : CdkObject(cdkObject), SettingsProperty {
-      /**
-       * The URL returned to the CodePipeline console that provides a deep link to the resources of
-       * the external system, such as the configuration page for a CodeDeploy deployment group.
-       *
-       * This link is provided as part of the action display in the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-entityurltemplate)
-       */
-      override fun entityUrlTemplate(): String? = unwrap(this).getEntityUrlTemplate()
-
-      /**
-       * The URL returned to the CodePipeline console that contains a link to the top-level landing
-       * page for the external system, such as the console page for CodeDeploy.
-       *
-       * This link is shown on the pipeline view page in the CodePipeline console and provides a
-       * link to the execution entity of the external action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate)
-       */
-      override fun executionUrlTemplate(): String? = unwrap(this).getExecutionUrlTemplate()
-
-      /**
-       * The URL returned to the CodePipeline console that contains a link to the page where
-       * customers can update or change the configuration of the external action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate)
-       */
-      override fun revisionUrlTemplate(): String? = unwrap(this).getRevisionUrlTemplate()
-
-      /**
-       * The URL of a sign-up page where users can sign up for an external service and perform
-       * initial configuration of the action provided by that service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl)
-       */
-      override fun thirdPartyConfigurationUrl(): String? =
-          unwrap(this).getThirdPartyConfigurationUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty):
-          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SettingsProperty):
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty
-    }
-  }
-
-  /**
    * The configuration properties for the custom action.
    *
    *
@@ -1380,6 +1176,210 @@ public open class CfnCustomActionType internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty
+    }
+  }
+
+  /**
+   * `Settings` is a property of the `AWS::CodePipeline::CustomActionType` resource that provides
+   * URLs that users can access to view information about the CodePipeline custom action.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * SettingsProperty settingsProperty = SettingsProperty.builder()
+   * .entityUrlTemplate("entityUrlTemplate")
+   * .executionUrlTemplate("executionUrlTemplate")
+   * .revisionUrlTemplate("revisionUrlTemplate")
+   * .thirdPartyConfigurationUrl("thirdPartyConfigurationUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html)
+   */
+  public interface SettingsProperty {
+    /**
+     * The URL returned to the CodePipeline console that provides a deep link to the resources of
+     * the external system, such as the configuration page for a CodeDeploy deployment group.
+     *
+     * This link is provided as part of the action display in the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-entityurltemplate)
+     */
+    public fun entityUrlTemplate(): String? = unwrap(this).getEntityUrlTemplate()
+
+    /**
+     * The URL returned to the CodePipeline console that contains a link to the top-level landing
+     * page for the external system, such as the console page for CodeDeploy.
+     *
+     * This link is shown on the pipeline view page in the CodePipeline console and provides a link
+     * to the execution entity of the external action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate)
+     */
+    public fun executionUrlTemplate(): String? = unwrap(this).getExecutionUrlTemplate()
+
+    /**
+     * The URL returned to the CodePipeline console that contains a link to the page where customers
+     * can update or change the configuration of the external action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate)
+     */
+    public fun revisionUrlTemplate(): String? = unwrap(this).getRevisionUrlTemplate()
+
+    /**
+     * The URL of a sign-up page where users can sign up for an external service and perform initial
+     * configuration of the action provided by that service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl)
+     */
+    public fun thirdPartyConfigurationUrl(): String? = unwrap(this).getThirdPartyConfigurationUrl()
+
+    /**
+     * A builder for [SettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param entityUrlTemplate The URL returned to the CodePipeline console that provides a deep
+       * link to the resources of the external system, such as the configuration page for a CodeDeploy
+       * deployment group.
+       * This link is provided as part of the action display in the pipeline.
+       */
+      public fun entityUrlTemplate(entityUrlTemplate: String)
+
+      /**
+       * @param executionUrlTemplate The URL returned to the CodePipeline console that contains a
+       * link to the top-level landing page for the external system, such as the console page for
+       * CodeDeploy.
+       * This link is shown on the pipeline view page in the CodePipeline console and provides a
+       * link to the execution entity of the external action.
+       */
+      public fun executionUrlTemplate(executionUrlTemplate: String)
+
+      /**
+       * @param revisionUrlTemplate The URL returned to the CodePipeline console that contains a
+       * link to the page where customers can update or change the configuration of the external
+       * action.
+       */
+      public fun revisionUrlTemplate(revisionUrlTemplate: String)
+
+      /**
+       * @param thirdPartyConfigurationUrl The URL of a sign-up page where users can sign up for an
+       * external service and perform initial configuration of the action provided by that service.
+       */
+      public fun thirdPartyConfigurationUrl(thirdPartyConfigurationUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty.builder()
+
+      /**
+       * @param entityUrlTemplate The URL returned to the CodePipeline console that provides a deep
+       * link to the resources of the external system, such as the configuration page for a CodeDeploy
+       * deployment group.
+       * This link is provided as part of the action display in the pipeline.
+       */
+      override fun entityUrlTemplate(entityUrlTemplate: String) {
+        cdkBuilder.entityUrlTemplate(entityUrlTemplate)
+      }
+
+      /**
+       * @param executionUrlTemplate The URL returned to the CodePipeline console that contains a
+       * link to the top-level landing page for the external system, such as the console page for
+       * CodeDeploy.
+       * This link is shown on the pipeline view page in the CodePipeline console and provides a
+       * link to the execution entity of the external action.
+       */
+      override fun executionUrlTemplate(executionUrlTemplate: String) {
+        cdkBuilder.executionUrlTemplate(executionUrlTemplate)
+      }
+
+      /**
+       * @param revisionUrlTemplate The URL returned to the CodePipeline console that contains a
+       * link to the page where customers can update or change the configuration of the external
+       * action.
+       */
+      override fun revisionUrlTemplate(revisionUrlTemplate: String) {
+        cdkBuilder.revisionUrlTemplate(revisionUrlTemplate)
+      }
+
+      /**
+       * @param thirdPartyConfigurationUrl The URL of a sign-up page where users can sign up for an
+       * external service and perform initial configuration of the action provided by that service.
+       */
+      override fun thirdPartyConfigurationUrl(thirdPartyConfigurationUrl: String) {
+        cdkBuilder.thirdPartyConfigurationUrl(thirdPartyConfigurationUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty,
+    ) : CdkObject(cdkObject), SettingsProperty {
+      /**
+       * The URL returned to the CodePipeline console that provides a deep link to the resources of
+       * the external system, such as the configuration page for a CodeDeploy deployment group.
+       *
+       * This link is provided as part of the action display in the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-entityurltemplate)
+       */
+      override fun entityUrlTemplate(): String? = unwrap(this).getEntityUrlTemplate()
+
+      /**
+       * The URL returned to the CodePipeline console that contains a link to the top-level landing
+       * page for the external system, such as the console page for CodeDeploy.
+       *
+       * This link is shown on the pipeline view page in the CodePipeline console and provides a
+       * link to the execution entity of the external action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate)
+       */
+      override fun executionUrlTemplate(): String? = unwrap(this).getExecutionUrlTemplate()
+
+      /**
+       * The URL returned to the CodePipeline console that contains a link to the page where
+       * customers can update or change the configuration of the external action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate)
+       */
+      override fun revisionUrlTemplate(): String? = unwrap(this).getRevisionUrlTemplate()
+
+      /**
+       * The URL of a sign-up page where users can sign up for an external service and perform
+       * initial configuration of the action provided by that service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl)
+       */
+      override fun thirdPartyConfigurationUrl(): String? =
+          unwrap(this).getThirdPartyConfigurationUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty):
+          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SettingsProperty):
+          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty
     }
   }
 }

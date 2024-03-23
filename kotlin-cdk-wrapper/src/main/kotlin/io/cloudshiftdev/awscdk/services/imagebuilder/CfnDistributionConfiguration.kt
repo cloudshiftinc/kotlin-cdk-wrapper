@@ -347,7 +347,7 @@ public open class CfnDistributionConfiguration internal constructor(
   }
 
   /**
-   * Define and configure faster launching for output Windows AMIs.
+   * Define and configure the output AMIs of the pipeline.
    *
    * Example:
    *
@@ -355,301 +355,480 @@ public open class CfnDistributionConfiguration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * FastLaunchConfigurationProperty fastLaunchConfigurationProperty =
-   * FastLaunchConfigurationProperty.builder()
-   * .accountId("accountId")
-   * .enabled(false)
-   * .launchTemplate(FastLaunchLaunchTemplateSpecificationProperty.builder()
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .launchTemplateVersion("launchTemplateVersion")
+   * AmiDistributionConfigurationProperty amiDistributionConfigurationProperty =
+   * AmiDistributionConfigurationProperty.builder()
+   * .amiTags(Map.of(
+   * "amiTagsKey", "amiTags"))
+   * .description("description")
+   * .kmsKeyId("kmsKeyId")
+   * .launchPermissionConfiguration(LaunchPermissionConfigurationProperty.builder()
+   * .organizationalUnitArns(List.of("organizationalUnitArns"))
+   * .organizationArns(List.of("organizationArns"))
+   * .userGroups(List.of("userGroups"))
+   * .userIds(List.of("userIds"))
    * .build())
-   * .maxParallelLaunches(123)
-   * .snapshotConfiguration(FastLaunchSnapshotConfigurationProperty.builder()
-   * .targetResourceCount(123)
-   * .build())
+   * .name("name")
+   * .targetAccountIds(List.of("targetAccountIds"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html)
    */
-  public interface FastLaunchConfigurationProperty {
+  public interface AmiDistributionConfigurationProperty {
     /**
-     * The owner account ID for the fast-launch enabled Windows AMI.
+     * The tags to apply to AMIs distributed to this Region.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-accountid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-amitags)
      */
-    public fun accountId(): String? = unwrap(this).getAccountId()
+    public fun amiTags(): Any? = unwrap(this).getAmiTags()
 
     /**
-     * A Boolean that represents the current state of faster launching for the Windows AMI.
+     * The description of the AMI distribution configuration.
      *
-     * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+     * Minimum and maximum length are in characters.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-enabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-description)
      */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
+    public fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The launch template that the fast-launch enabled Windows AMI uses when it launches Windows
-     * instances to create pre-provisioned snapshots.
+     * The KMS key identifier used to encrypt the distributed image.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-launchtemplate)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-kmskeyid)
      */
-    public fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     /**
-     * The maximum number of parallel instances that are launched for creating resources.
+     * Launch permissions can be used to configure which AWS account s can use the AMI to launch
+     * instances.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-maxparallellaunches)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-launchpermissionconfiguration)
      */
-    public fun maxParallelLaunches(): Number? = unwrap(this).getMaxParallelLaunches()
+    public fun launchPermissionConfiguration(): Any? =
+        unwrap(this).getLaunchPermissionConfiguration()
 
     /**
-     * Configuration settings for managing the number of snapshots that are created from
-     * pre-provisioned instances for the Windows AMI when faster launching is enabled.
+     * The name of the output AMI.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-snapshotconfiguration)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-name)
      */
-    public fun snapshotConfiguration(): Any? = unwrap(this).getSnapshotConfiguration()
+    public fun name(): String? = unwrap(this).getName()
 
     /**
-     * A builder for [FastLaunchConfigurationProperty]
+     * The ID of an account to which you want to distribute an image.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-targetaccountids)
+     */
+    public fun targetAccountIds(): List<String> = unwrap(this).getTargetAccountIds() ?: emptyList()
+
+    /**
+     * A builder for [AmiDistributionConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accountId The owner account ID for the fast-launch enabled Windows AMI.
+       * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
-      public fun accountId(accountId: String)
+      public fun amiTags(amiTags: IResolvable)
 
       /**
-       * @param enabled A Boolean that represents the current state of faster launching for the
-       * Windows AMI.
-       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
-      public fun enabled(enabled: Boolean)
+      public fun amiTags(amiTags: Map<String, String>)
 
       /**
-       * @param enabled A Boolean that represents the current state of faster launching for the
-       * Windows AMI.
-       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       * @param description The description of the AMI distribution configuration.
+       * Minimum and maximum length are in characters.
        */
-      public fun enabled(enabled: IResolvable)
+      public fun description(description: String)
 
       /**
-       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
-       * when it launches Windows instances to create pre-provisioned snapshots.
+       * @param kmsKeyId The KMS key identifier used to encrypt the distributed image.
        */
-      public fun launchTemplate(launchTemplate: IResolvable)
+      public fun kmsKeyId(kmsKeyId: String)
 
       /**
-       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
-       * when it launches Windows instances to create pre-provisioned snapshots.
+       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
+       * account s can use the AMI to launch instances.
        */
-      public fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty)
+      public fun launchPermissionConfiguration(launchPermissionConfiguration: IResolvable)
 
       /**
-       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
-       * when it launches Windows instances to create pre-provisioned snapshots.
+       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
+       * account s can use the AMI to launch instances.
+       */
+      public
+          fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty)
+
+      /**
+       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
+       * account s can use the AMI to launch instances.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8de8d9d9090f8a1faa0956d49f10c75cbec6e79170ab681806aa68af0e95e0a9")
+      @JvmName("c400002ce94b557f48fb2d2253a5a8693c5b10c052fff0404053ec670f8ec6f1")
       public
-          fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty.Builder.() -> Unit)
+          fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param maxParallelLaunches The maximum number of parallel instances that are launched for
-       * creating resources.
+       * @param name The name of the output AMI.
        */
-      public fun maxParallelLaunches(maxParallelLaunches: Number)
+      public fun name(name: String)
 
       /**
-       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
-       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
-       * enabled.
+       * @param targetAccountIds The ID of an account to which you want to distribute an image.
        */
-      public fun snapshotConfiguration(snapshotConfiguration: IResolvable)
+      public fun targetAccountIds(targetAccountIds: List<String>)
 
       /**
-       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
-       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
-       * enabled.
+       * @param targetAccountIds The ID of an account to which you want to distribute an image.
        */
-      public
-          fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty)
-
-      /**
-       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
-       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
-       * enabled.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4278f27bde85506fe2b205f731c9b02d31b969355212f17d409a9bfc5cb7a103")
-      public
-          fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty.Builder.() -> Unit)
+      public fun targetAccountIds(vararg targetAccountIds: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty.Builder
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty.builder()
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty.builder()
 
       /**
-       * @param accountId The owner account ID for the fast-launch enabled Windows AMI.
+       * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
-      override fun accountId(accountId: String) {
-        cdkBuilder.accountId(accountId)
+      override fun amiTags(amiTags: IResolvable) {
+        cdkBuilder.amiTags(amiTags.let(IResolvable::unwrap))
       }
 
       /**
-       * @param enabled A Boolean that represents the current state of faster launching for the
-       * Windows AMI.
-       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
+      override fun amiTags(amiTags: Map<String, String>) {
+        cdkBuilder.amiTags(amiTags)
       }
 
       /**
-       * @param enabled A Boolean that represents the current state of faster launching for the
-       * Windows AMI.
-       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       * @param description The description of the AMI distribution configuration.
+       * Minimum and maximum length are in characters.
        */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      override fun description(description: String) {
+        cdkBuilder.description(description)
       }
 
       /**
-       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
-       * when it launches Windows instances to create pre-provisioned snapshots.
+       * @param kmsKeyId The KMS key identifier used to encrypt the distributed image.
        */
-      override fun launchTemplate(launchTemplate: IResolvable) {
-        cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
       /**
-       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
-       * when it launches Windows instances to create pre-provisioned snapshots.
+       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
+       * account s can use the AMI to launch instances.
        */
-      override fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty) {
-        cdkBuilder.launchTemplate(launchTemplate.let(FastLaunchLaunchTemplateSpecificationProperty::unwrap))
+      override fun launchPermissionConfiguration(launchPermissionConfiguration: IResolvable) {
+        cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
-       * when it launches Windows instances to create pre-provisioned snapshots.
+       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
+       * account s can use the AMI to launch instances.
+       */
+      override
+          fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty) {
+        cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration.let(LaunchPermissionConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
+       * account s can use the AMI to launch instances.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8de8d9d9090f8a1faa0956d49f10c75cbec6e79170ab681806aa68af0e95e0a9")
+      @JvmName("c400002ce94b557f48fb2d2253a5a8693c5b10c052fff0404053ec670f8ec6f1")
       override
-          fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty.Builder.() -> Unit):
-          Unit = launchTemplate(FastLaunchLaunchTemplateSpecificationProperty(launchTemplate))
-
-      /**
-       * @param maxParallelLaunches The maximum number of parallel instances that are launched for
-       * creating resources.
-       */
-      override fun maxParallelLaunches(maxParallelLaunches: Number) {
-        cdkBuilder.maxParallelLaunches(maxParallelLaunches)
-      }
-
-      /**
-       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
-       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
-       * enabled.
-       */
-      override fun snapshotConfiguration(snapshotConfiguration: IResolvable) {
-        cdkBuilder.snapshotConfiguration(snapshotConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
-       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
-       * enabled.
-       */
-      override
-          fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty) {
-        cdkBuilder.snapshotConfiguration(snapshotConfiguration.let(FastLaunchSnapshotConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
-       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
-       * enabled.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4278f27bde85506fe2b205f731c9b02d31b969355212f17d409a9bfc5cb7a103")
-      override
-          fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty.Builder.() -> Unit):
+          fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty.Builder.() -> Unit):
           Unit =
-          snapshotConfiguration(FastLaunchSnapshotConfigurationProperty(snapshotConfiguration))
+          launchPermissionConfiguration(LaunchPermissionConfigurationProperty(launchPermissionConfiguration))
+
+      /**
+       * @param name The name of the output AMI.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param targetAccountIds The ID of an account to which you want to distribute an image.
+       */
+      override fun targetAccountIds(targetAccountIds: List<String>) {
+        cdkBuilder.targetAccountIds(targetAccountIds)
+      }
+
+      /**
+       * @param targetAccountIds The ID of an account to which you want to distribute an image.
+       */
+      override fun targetAccountIds(vararg targetAccountIds: String): Unit =
+          targetAccountIds(targetAccountIds.toList())
 
       public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty,
-    ) : CdkObject(cdkObject), FastLaunchConfigurationProperty {
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty,
+    ) : CdkObject(cdkObject), AmiDistributionConfigurationProperty {
       /**
-       * The owner account ID for the fast-launch enabled Windows AMI.
+       * The tags to apply to AMIs distributed to this Region.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-accountid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-amitags)
        */
-      override fun accountId(): String? = unwrap(this).getAccountId()
+      override fun amiTags(): Any? = unwrap(this).getAmiTags()
 
       /**
-       * A Boolean that represents the current state of faster launching for the Windows AMI.
+       * The description of the AMI distribution configuration.
        *
-       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       * Minimum and maximum length are in characters.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-enabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-description)
        */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun description(): String? = unwrap(this).getDescription()
 
       /**
-       * The launch template that the fast-launch enabled Windows AMI uses when it launches Windows
-       * instances to create pre-provisioned snapshots.
+       * The KMS key identifier used to encrypt the distributed image.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-launchtemplate)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-kmskeyid)
        */
-      override fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
       /**
-       * The maximum number of parallel instances that are launched for creating resources.
+       * Launch permissions can be used to configure which AWS account s can use the AMI to launch
+       * instances.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-maxparallellaunches)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-launchpermissionconfiguration)
        */
-      override fun maxParallelLaunches(): Number? = unwrap(this).getMaxParallelLaunches()
+      override fun launchPermissionConfiguration(): Any? =
+          unwrap(this).getLaunchPermissionConfiguration()
 
       /**
-       * Configuration settings for managing the number of snapshots that are created from
-       * pre-provisioned instances for the Windows AMI when faster launching is enabled.
+       * The name of the output AMI.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-snapshotconfiguration)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-name)
        */
-      override fun snapshotConfiguration(): Any? = unwrap(this).getSnapshotConfiguration()
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The ID of an account to which you want to distribute an image.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-targetaccountids)
+       */
+      override fun targetAccountIds(): List<String> = unwrap(this).getTargetAccountIds() ?:
+          emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FastLaunchConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AmiDistributionConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty):
-          FastLaunchConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FastLaunchConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty):
+          AmiDistributionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmiDistributionConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FastLaunchConfigurationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty
+      internal fun unwrap(wrapped: AmiDistributionConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty
+    }
+  }
+
+  /**
+   * Container distribution settings for encryption, licensing, and sharing in a specific Region.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * ContainerDistributionConfigurationProperty containerDistributionConfigurationProperty =
+   * ContainerDistributionConfigurationProperty.builder()
+   * .containerTags(List.of("containerTags"))
+   * .description("description")
+   * .targetRepository(TargetContainerRepositoryProperty.builder()
+   * .repositoryName("repositoryName")
+   * .service("service")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html)
+   */
+  public interface ContainerDistributionConfigurationProperty {
+    /**
+     * Tags that are attached to the container distribution configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-containertags)
+     */
+    public fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
+
+    /**
+     * The description of the container distribution configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The destination repository for the container distribution configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-targetrepository)
+     */
+    public fun targetRepository(): Any? = unwrap(this).getTargetRepository()
+
+    /**
+     * A builder for [ContainerDistributionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerTags Tags that are attached to the container distribution configuration.
+       */
+      public fun containerTags(containerTags: List<String>)
+
+      /**
+       * @param containerTags Tags that are attached to the container distribution configuration.
+       */
+      public fun containerTags(vararg containerTags: String)
+
+      /**
+       * @param description The description of the container distribution configuration.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param targetRepository The destination repository for the container distribution
+       * configuration.
+       */
+      public fun targetRepository(targetRepository: IResolvable)
+
+      /**
+       * @param targetRepository The destination repository for the container distribution
+       * configuration.
+       */
+      public fun targetRepository(targetRepository: TargetContainerRepositoryProperty)
+
+      /**
+       * @param targetRepository The destination repository for the container distribution
+       * configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3abe93f8cd08350c006e560c9641d8a913b8a8e7ec17314f270edbe34b657032")
+      public
+          fun targetRepository(targetRepository: TargetContainerRepositoryProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty.builder()
+
+      /**
+       * @param containerTags Tags that are attached to the container distribution configuration.
+       */
+      override fun containerTags(containerTags: List<String>) {
+        cdkBuilder.containerTags(containerTags)
+      }
+
+      /**
+       * @param containerTags Tags that are attached to the container distribution configuration.
+       */
+      override fun containerTags(vararg containerTags: String): Unit =
+          containerTags(containerTags.toList())
+
+      /**
+       * @param description The description of the container distribution configuration.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param targetRepository The destination repository for the container distribution
+       * configuration.
+       */
+      override fun targetRepository(targetRepository: IResolvable) {
+        cdkBuilder.targetRepository(targetRepository.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetRepository The destination repository for the container distribution
+       * configuration.
+       */
+      override fun targetRepository(targetRepository: TargetContainerRepositoryProperty) {
+        cdkBuilder.targetRepository(targetRepository.let(TargetContainerRepositoryProperty::unwrap))
+      }
+
+      /**
+       * @param targetRepository The destination repository for the container distribution
+       * configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3abe93f8cd08350c006e560c9641d8a913b8a8e7ec17314f270edbe34b657032")
+      override
+          fun targetRepository(targetRepository: TargetContainerRepositoryProperty.Builder.() -> Unit):
+          Unit = targetRepository(TargetContainerRepositoryProperty(targetRepository))
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty,
+    ) : CdkObject(cdkObject), ContainerDistributionConfigurationProperty {
+      /**
+       * Tags that are attached to the container distribution configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-containertags)
+       */
+      override fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
+
+      /**
+       * The description of the container distribution configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * The destination repository for the container distribution configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-targetrepository)
+       */
+      override fun targetRepository(): Any? = unwrap(this).getTargetRepository()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ContainerDistributionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty):
+          ContainerDistributionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContainerDistributionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContainerDistributionConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty
     }
   }
 
@@ -1022,6 +1201,553 @@ public open class CfnDistributionConfiguration internal constructor(
   }
 
   /**
+   * Define and configure faster launching for output Windows AMIs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * FastLaunchConfigurationProperty fastLaunchConfigurationProperty =
+   * FastLaunchConfigurationProperty.builder()
+   * .accountId("accountId")
+   * .enabled(false)
+   * .launchTemplate(FastLaunchLaunchTemplateSpecificationProperty.builder()
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .launchTemplateVersion("launchTemplateVersion")
+   * .build())
+   * .maxParallelLaunches(123)
+   * .snapshotConfiguration(FastLaunchSnapshotConfigurationProperty.builder()
+   * .targetResourceCount(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html)
+   */
+  public interface FastLaunchConfigurationProperty {
+    /**
+     * The owner account ID for the fast-launch enabled Windows AMI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-accountid)
+     */
+    public fun accountId(): String? = unwrap(this).getAccountId()
+
+    /**
+     * A Boolean that represents the current state of faster launching for the Windows AMI.
+     *
+     * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * The launch template that the fast-launch enabled Windows AMI uses when it launches Windows
+     * instances to create pre-provisioned snapshots.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-launchtemplate)
+     */
+    public fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
+
+    /**
+     * The maximum number of parallel instances that are launched for creating resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-maxparallellaunches)
+     */
+    public fun maxParallelLaunches(): Number? = unwrap(this).getMaxParallelLaunches()
+
+    /**
+     * Configuration settings for managing the number of snapshots that are created from
+     * pre-provisioned instances for the Windows AMI when faster launching is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-snapshotconfiguration)
+     */
+    public fun snapshotConfiguration(): Any? = unwrap(this).getSnapshotConfiguration()
+
+    /**
+     * A builder for [FastLaunchConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountId The owner account ID for the fast-launch enabled Windows AMI.
+       */
+      public fun accountId(accountId: String)
+
+      /**
+       * @param enabled A Boolean that represents the current state of faster launching for the
+       * Windows AMI.
+       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled A Boolean that represents the current state of faster launching for the
+       * Windows AMI.
+       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
+       * when it launches Windows instances to create pre-provisioned snapshots.
+       */
+      public fun launchTemplate(launchTemplate: IResolvable)
+
+      /**
+       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
+       * when it launches Windows instances to create pre-provisioned snapshots.
+       */
+      public fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty)
+
+      /**
+       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
+       * when it launches Windows instances to create pre-provisioned snapshots.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8de8d9d9090f8a1faa0956d49f10c75cbec6e79170ab681806aa68af0e95e0a9")
+      public
+          fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param maxParallelLaunches The maximum number of parallel instances that are launched for
+       * creating resources.
+       */
+      public fun maxParallelLaunches(maxParallelLaunches: Number)
+
+      /**
+       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
+       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
+       * enabled.
+       */
+      public fun snapshotConfiguration(snapshotConfiguration: IResolvable)
+
+      /**
+       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
+       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
+       * enabled.
+       */
+      public
+          fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty)
+
+      /**
+       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
+       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
+       * enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4278f27bde85506fe2b205f731c9b02d31b969355212f17d409a9bfc5cb7a103")
+      public
+          fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty.builder()
+
+      /**
+       * @param accountId The owner account ID for the fast-launch enabled Windows AMI.
+       */
+      override fun accountId(accountId: String) {
+        cdkBuilder.accountId(accountId)
+      }
+
+      /**
+       * @param enabled A Boolean that represents the current state of faster launching for the
+       * Windows AMI.
+       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled A Boolean that represents the current state of faster launching for the
+       * Windows AMI.
+       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
+       * when it launches Windows instances to create pre-provisioned snapshots.
+       */
+      override fun launchTemplate(launchTemplate: IResolvable) {
+        cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
+       * when it launches Windows instances to create pre-provisioned snapshots.
+       */
+      override fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty) {
+        cdkBuilder.launchTemplate(launchTemplate.let(FastLaunchLaunchTemplateSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param launchTemplate The launch template that the fast-launch enabled Windows AMI uses
+       * when it launches Windows instances to create pre-provisioned snapshots.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8de8d9d9090f8a1faa0956d49f10c75cbec6e79170ab681806aa68af0e95e0a9")
+      override
+          fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty.Builder.() -> Unit):
+          Unit = launchTemplate(FastLaunchLaunchTemplateSpecificationProperty(launchTemplate))
+
+      /**
+       * @param maxParallelLaunches The maximum number of parallel instances that are launched for
+       * creating resources.
+       */
+      override fun maxParallelLaunches(maxParallelLaunches: Number) {
+        cdkBuilder.maxParallelLaunches(maxParallelLaunches)
+      }
+
+      /**
+       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
+       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
+       * enabled.
+       */
+      override fun snapshotConfiguration(snapshotConfiguration: IResolvable) {
+        cdkBuilder.snapshotConfiguration(snapshotConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
+       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
+       * enabled.
+       */
+      override
+          fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty) {
+        cdkBuilder.snapshotConfiguration(snapshotConfiguration.let(FastLaunchSnapshotConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param snapshotConfiguration Configuration settings for managing the number of snapshots
+       * that are created from pre-provisioned instances for the Windows AMI when faster launching is
+       * enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4278f27bde85506fe2b205f731c9b02d31b969355212f17d409a9bfc5cb7a103")
+      override
+          fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          snapshotConfiguration(FastLaunchSnapshotConfigurationProperty(snapshotConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty,
+    ) : CdkObject(cdkObject), FastLaunchConfigurationProperty {
+      /**
+       * The owner account ID for the fast-launch enabled Windows AMI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-accountid)
+       */
+      override fun accountId(): String? = unwrap(this).getAccountId()
+
+      /**
+       * A Boolean that represents the current state of faster launching for the Windows AMI.
+       *
+       * Set to `true` to start using Windows faster launching, or `false` to stop using it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The launch template that the fast-launch enabled Windows AMI uses when it launches Windows
+       * instances to create pre-provisioned snapshots.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-launchtemplate)
+       */
+      override fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
+
+      /**
+       * The maximum number of parallel instances that are launched for creating resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-maxparallellaunches)
+       */
+      override fun maxParallelLaunches(): Number? = unwrap(this).getMaxParallelLaunches()
+
+      /**
+       * Configuration settings for managing the number of snapshots that are created from
+       * pre-provisioned instances for the Windows AMI when faster launching is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchconfiguration-snapshotconfiguration)
+       */
+      override fun snapshotConfiguration(): Any? = unwrap(this).getSnapshotConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FastLaunchConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty):
+          FastLaunchConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FastLaunchConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FastLaunchConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty
+    }
+  }
+
+  /**
+   * Identifies the launch template that the associated Windows AMI uses for launching an instance
+   * when faster launching is enabled.
+   *
+   *
+   * You can specify either the `launchTemplateName` or the `launchTemplateId` , but not both.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * FastLaunchLaunchTemplateSpecificationProperty fastLaunchLaunchTemplateSpecificationProperty =
+   * FastLaunchLaunchTemplateSpecificationProperty.builder()
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .launchTemplateVersion("launchTemplateVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html)
+   */
+  public interface FastLaunchLaunchTemplateSpecificationProperty {
+    /**
+     * The ID of the launch template to use for faster launching for a Windows AMI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplateid)
+     */
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+    /**
+     * The name of the launch template to use for faster launching for a Windows AMI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplatename)
+     */
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+    /**
+     * The version of the launch template to use for faster launching for a Windows AMI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplateversion)
+     */
+    public fun launchTemplateVersion(): String? = unwrap(this).getLaunchTemplateVersion()
+
+    /**
+     * A builder for [FastLaunchLaunchTemplateSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param launchTemplateId The ID of the launch template to use for faster launching for a
+       * Windows AMI.
+       */
+      public fun launchTemplateId(launchTemplateId: String)
+
+      /**
+       * @param launchTemplateName The name of the launch template to use for faster launching for a
+       * Windows AMI.
+       */
+      public fun launchTemplateName(launchTemplateName: String)
+
+      /**
+       * @param launchTemplateVersion The version of the launch template to use for faster launching
+       * for a Windows AMI.
+       */
+      public fun launchTemplateVersion(launchTemplateVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty.builder()
+
+      /**
+       * @param launchTemplateId The ID of the launch template to use for faster launching for a
+       * Windows AMI.
+       */
+      override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      /**
+       * @param launchTemplateName The name of the launch template to use for faster launching for a
+       * Windows AMI.
+       */
+      override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      /**
+       * @param launchTemplateVersion The version of the launch template to use for faster launching
+       * for a Windows AMI.
+       */
+      override fun launchTemplateVersion(launchTemplateVersion: String) {
+        cdkBuilder.launchTemplateVersion(launchTemplateVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty,
+    ) : CdkObject(cdkObject), FastLaunchLaunchTemplateSpecificationProperty {
+      /**
+       * The ID of the launch template to use for faster launching for a Windows AMI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplateid)
+       */
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+      /**
+       * The name of the launch template to use for faster launching for a Windows AMI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplatename)
+       */
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+      /**
+       * The version of the launch template to use for faster launching for a Windows AMI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplateversion)
+       */
+      override fun launchTemplateVersion(): String? = unwrap(this).getLaunchTemplateVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FastLaunchLaunchTemplateSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty):
+          FastLaunchLaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FastLaunchLaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FastLaunchLaunchTemplateSpecificationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty
+    }
+  }
+
+  /**
+   * Configuration settings for creating and managing pre-provisioned snapshots for a fast-launch
+   * enabled Windows AMI.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * FastLaunchSnapshotConfigurationProperty fastLaunchSnapshotConfigurationProperty =
+   * FastLaunchSnapshotConfigurationProperty.builder()
+   * .targetResourceCount(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration.html)
+   */
+  public interface FastLaunchSnapshotConfigurationProperty {
+    /**
+     * The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows
+     * AMI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration-targetresourcecount)
+     */
+    public fun targetResourceCount(): Number? = unwrap(this).getTargetResourceCount()
+
+    /**
+     * A builder for [FastLaunchSnapshotConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetResourceCount The number of pre-provisioned snapshots to keep on hand for a
+       * fast-launch enabled Windows AMI.
+       */
+      public fun targetResourceCount(targetResourceCount: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty.builder()
+
+      /**
+       * @param targetResourceCount The number of pre-provisioned snapshots to keep on hand for a
+       * fast-launch enabled Windows AMI.
+       */
+      override fun targetResourceCount(targetResourceCount: Number) {
+        cdkBuilder.targetResourceCount(targetResourceCount)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty,
+    ) : CdkObject(cdkObject), FastLaunchSnapshotConfigurationProperty {
+      /**
+       * The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows
+       * AMI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration-targetresourcecount)
+       */
+      override fun targetResourceCount(): Number? = unwrap(this).getTargetResourceCount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FastLaunchSnapshotConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty):
+          FastLaunchSnapshotConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FastLaunchSnapshotConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FastLaunchSnapshotConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty
+    }
+  }
+
+  /**
    * Describes the configuration for a launch permission.
    *
    * The launch permission modification request is sent to the [Amazon EC2
@@ -1291,582 +2017,6 @@ public open class CfnDistributionConfiguration internal constructor(
   }
 
   /**
-   * Container distribution settings for encryption, licensing, and sharing in a specific Region.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * ContainerDistributionConfigurationProperty containerDistributionConfigurationProperty =
-   * ContainerDistributionConfigurationProperty.builder()
-   * .containerTags(List.of("containerTags"))
-   * .description("description")
-   * .targetRepository(TargetContainerRepositoryProperty.builder()
-   * .repositoryName("repositoryName")
-   * .service("service")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html)
-   */
-  public interface ContainerDistributionConfigurationProperty {
-    /**
-     * Tags that are attached to the container distribution configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-containertags)
-     */
-    public fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
-
-    /**
-     * The description of the container distribution configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The destination repository for the container distribution configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-targetrepository)
-     */
-    public fun targetRepository(): Any? = unwrap(this).getTargetRepository()
-
-    /**
-     * A builder for [ContainerDistributionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerTags Tags that are attached to the container distribution configuration.
-       */
-      public fun containerTags(containerTags: List<String>)
-
-      /**
-       * @param containerTags Tags that are attached to the container distribution configuration.
-       */
-      public fun containerTags(vararg containerTags: String)
-
-      /**
-       * @param description The description of the container distribution configuration.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param targetRepository The destination repository for the container distribution
-       * configuration.
-       */
-      public fun targetRepository(targetRepository: IResolvable)
-
-      /**
-       * @param targetRepository The destination repository for the container distribution
-       * configuration.
-       */
-      public fun targetRepository(targetRepository: TargetContainerRepositoryProperty)
-
-      /**
-       * @param targetRepository The destination repository for the container distribution
-       * configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3abe93f8cd08350c006e560c9641d8a913b8a8e7ec17314f270edbe34b657032")
-      public
-          fun targetRepository(targetRepository: TargetContainerRepositoryProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty.builder()
-
-      /**
-       * @param containerTags Tags that are attached to the container distribution configuration.
-       */
-      override fun containerTags(containerTags: List<String>) {
-        cdkBuilder.containerTags(containerTags)
-      }
-
-      /**
-       * @param containerTags Tags that are attached to the container distribution configuration.
-       */
-      override fun containerTags(vararg containerTags: String): Unit =
-          containerTags(containerTags.toList())
-
-      /**
-       * @param description The description of the container distribution configuration.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param targetRepository The destination repository for the container distribution
-       * configuration.
-       */
-      override fun targetRepository(targetRepository: IResolvable) {
-        cdkBuilder.targetRepository(targetRepository.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetRepository The destination repository for the container distribution
-       * configuration.
-       */
-      override fun targetRepository(targetRepository: TargetContainerRepositoryProperty) {
-        cdkBuilder.targetRepository(targetRepository.let(TargetContainerRepositoryProperty::unwrap))
-      }
-
-      /**
-       * @param targetRepository The destination repository for the container distribution
-       * configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3abe93f8cd08350c006e560c9641d8a913b8a8e7ec17314f270edbe34b657032")
-      override
-          fun targetRepository(targetRepository: TargetContainerRepositoryProperty.Builder.() -> Unit):
-          Unit = targetRepository(TargetContainerRepositoryProperty(targetRepository))
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty,
-    ) : CdkObject(cdkObject), ContainerDistributionConfigurationProperty {
-      /**
-       * Tags that are attached to the container distribution configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-containertags)
-       */
-      override fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
-
-      /**
-       * The description of the container distribution configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The destination repository for the container distribution configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-containerdistributionconfiguration-targetrepository)
-       */
-      override fun targetRepository(): Any? = unwrap(this).getTargetRepository()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ContainerDistributionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty):
-          ContainerDistributionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ContainerDistributionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ContainerDistributionConfigurationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty
-    }
-  }
-
-  /**
-   * Configuration settings for creating and managing pre-provisioned snapshots for a fast-launch
-   * enabled Windows AMI.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * FastLaunchSnapshotConfigurationProperty fastLaunchSnapshotConfigurationProperty =
-   * FastLaunchSnapshotConfigurationProperty.builder()
-   * .targetResourceCount(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration.html)
-   */
-  public interface FastLaunchSnapshotConfigurationProperty {
-    /**
-     * The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows
-     * AMI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration-targetresourcecount)
-     */
-    public fun targetResourceCount(): Number? = unwrap(this).getTargetResourceCount()
-
-    /**
-     * A builder for [FastLaunchSnapshotConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetResourceCount The number of pre-provisioned snapshots to keep on hand for a
-       * fast-launch enabled Windows AMI.
-       */
-      public fun targetResourceCount(targetResourceCount: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty.builder()
-
-      /**
-       * @param targetResourceCount The number of pre-provisioned snapshots to keep on hand for a
-       * fast-launch enabled Windows AMI.
-       */
-      override fun targetResourceCount(targetResourceCount: Number) {
-        cdkBuilder.targetResourceCount(targetResourceCount)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty,
-    ) : CdkObject(cdkObject), FastLaunchSnapshotConfigurationProperty {
-      /**
-       * The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows
-       * AMI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration.html#cfn-imagebuilder-distributionconfiguration-fastlaunchsnapshotconfiguration-targetresourcecount)
-       */
-      override fun targetResourceCount(): Number? = unwrap(this).getTargetResourceCount()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FastLaunchSnapshotConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty):
-          FastLaunchSnapshotConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FastLaunchSnapshotConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FastLaunchSnapshotConfigurationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty
-    }
-  }
-
-  /**
-   * Define and configure the output AMIs of the pipeline.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * AmiDistributionConfigurationProperty amiDistributionConfigurationProperty =
-   * AmiDistributionConfigurationProperty.builder()
-   * .amiTags(Map.of(
-   * "amiTagsKey", "amiTags"))
-   * .description("description")
-   * .kmsKeyId("kmsKeyId")
-   * .launchPermissionConfiguration(LaunchPermissionConfigurationProperty.builder()
-   * .organizationalUnitArns(List.of("organizationalUnitArns"))
-   * .organizationArns(List.of("organizationArns"))
-   * .userGroups(List.of("userGroups"))
-   * .userIds(List.of("userIds"))
-   * .build())
-   * .name("name")
-   * .targetAccountIds(List.of("targetAccountIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html)
-   */
-  public interface AmiDistributionConfigurationProperty {
-    /**
-     * The tags to apply to AMIs distributed to this Region.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-amitags)
-     */
-    public fun amiTags(): Any? = unwrap(this).getAmiTags()
-
-    /**
-     * The description of the AMI distribution configuration.
-     *
-     * Minimum and maximum length are in characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The KMS key identifier used to encrypt the distributed image.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * Launch permissions can be used to configure which AWS account s can use the AMI to launch
-     * instances.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-launchpermissionconfiguration)
-     */
-    public fun launchPermissionConfiguration(): Any? =
-        unwrap(this).getLaunchPermissionConfiguration()
-
-    /**
-     * The name of the output AMI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The ID of an account to which you want to distribute an image.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-targetaccountids)
-     */
-    public fun targetAccountIds(): List<String> = unwrap(this).getTargetAccountIds() ?: emptyList()
-
-    /**
-     * A builder for [AmiDistributionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param amiTags The tags to apply to AMIs distributed to this Region.
-       */
-      public fun amiTags(amiTags: IResolvable)
-
-      /**
-       * @param amiTags The tags to apply to AMIs distributed to this Region.
-       */
-      public fun amiTags(amiTags: Map<String, String>)
-
-      /**
-       * @param description The description of the AMI distribution configuration.
-       * Minimum and maximum length are in characters.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param kmsKeyId The KMS key identifier used to encrypt the distributed image.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
-       * account s can use the AMI to launch instances.
-       */
-      public fun launchPermissionConfiguration(launchPermissionConfiguration: IResolvable)
-
-      /**
-       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
-       * account s can use the AMI to launch instances.
-       */
-      public
-          fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty)
-
-      /**
-       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
-       * account s can use the AMI to launch instances.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c400002ce94b557f48fb2d2253a5a8693c5b10c052fff0404053ec670f8ec6f1")
-      public
-          fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param name The name of the output AMI.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param targetAccountIds The ID of an account to which you want to distribute an image.
-       */
-      public fun targetAccountIds(targetAccountIds: List<String>)
-
-      /**
-       * @param targetAccountIds The ID of an account to which you want to distribute an image.
-       */
-      public fun targetAccountIds(vararg targetAccountIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty.builder()
-
-      /**
-       * @param amiTags The tags to apply to AMIs distributed to this Region.
-       */
-      override fun amiTags(amiTags: IResolvable) {
-        cdkBuilder.amiTags(amiTags.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param amiTags The tags to apply to AMIs distributed to this Region.
-       */
-      override fun amiTags(amiTags: Map<String, String>) {
-        cdkBuilder.amiTags(amiTags)
-      }
-
-      /**
-       * @param description The description of the AMI distribution configuration.
-       * Minimum and maximum length are in characters.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param kmsKeyId The KMS key identifier used to encrypt the distributed image.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
-       * account s can use the AMI to launch instances.
-       */
-      override fun launchPermissionConfiguration(launchPermissionConfiguration: IResolvable) {
-        cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
-       * account s can use the AMI to launch instances.
-       */
-      override
-          fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty) {
-        cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration.let(LaunchPermissionConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
-       * account s can use the AMI to launch instances.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c400002ce94b557f48fb2d2253a5a8693c5b10c052fff0404053ec670f8ec6f1")
-      override
-          fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          launchPermissionConfiguration(LaunchPermissionConfigurationProperty(launchPermissionConfiguration))
-
-      /**
-       * @param name The name of the output AMI.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param targetAccountIds The ID of an account to which you want to distribute an image.
-       */
-      override fun targetAccountIds(targetAccountIds: List<String>) {
-        cdkBuilder.targetAccountIds(targetAccountIds)
-      }
-
-      /**
-       * @param targetAccountIds The ID of an account to which you want to distribute an image.
-       */
-      override fun targetAccountIds(vararg targetAccountIds: String): Unit =
-          targetAccountIds(targetAccountIds.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty,
-    ) : CdkObject(cdkObject), AmiDistributionConfigurationProperty {
-      /**
-       * The tags to apply to AMIs distributed to this Region.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-amitags)
-       */
-      override fun amiTags(): Any? = unwrap(this).getAmiTags()
-
-      /**
-       * The description of the AMI distribution configuration.
-       *
-       * Minimum and maximum length are in characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The KMS key identifier used to encrypt the distributed image.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * Launch permissions can be used to configure which AWS account s can use the AMI to launch
-       * instances.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-launchpermissionconfiguration)
-       */
-      override fun launchPermissionConfiguration(): Any? =
-          unwrap(this).getLaunchPermissionConfiguration()
-
-      /**
-       * The name of the output AMI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The ID of an account to which you want to distribute an image.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-targetaccountids)
-       */
-      override fun targetAccountIds(): List<String> = unwrap(this).getTargetAccountIds() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AmiDistributionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty):
-          AmiDistributionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AmiDistributionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AmiDistributionConfigurationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty
-    }
-  }
-
-  /**
    * Identifies an Amazon EC2 launch template to use for a specific account.
    *
    * Example:
@@ -2020,156 +2170,6 @@ public open class CfnDistributionConfiguration internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchTemplateConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchTemplateConfigurationProperty
-    }
-  }
-
-  /**
-   * Identifies the launch template that the associated Windows AMI uses for launching an instance
-   * when faster launching is enabled.
-   *
-   *
-   * You can specify either the `launchTemplateName` or the `launchTemplateId` , but not both.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * FastLaunchLaunchTemplateSpecificationProperty fastLaunchLaunchTemplateSpecificationProperty =
-   * FastLaunchLaunchTemplateSpecificationProperty.builder()
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .launchTemplateVersion("launchTemplateVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html)
-   */
-  public interface FastLaunchLaunchTemplateSpecificationProperty {
-    /**
-     * The ID of the launch template to use for faster launching for a Windows AMI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplateid)
-     */
-    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-    /**
-     * The name of the launch template to use for faster launching for a Windows AMI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplatename)
-     */
-    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-    /**
-     * The version of the launch template to use for faster launching for a Windows AMI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplateversion)
-     */
-    public fun launchTemplateVersion(): String? = unwrap(this).getLaunchTemplateVersion()
-
-    /**
-     * A builder for [FastLaunchLaunchTemplateSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param launchTemplateId The ID of the launch template to use for faster launching for a
-       * Windows AMI.
-       */
-      public fun launchTemplateId(launchTemplateId: String)
-
-      /**
-       * @param launchTemplateName The name of the launch template to use for faster launching for a
-       * Windows AMI.
-       */
-      public fun launchTemplateName(launchTemplateName: String)
-
-      /**
-       * @param launchTemplateVersion The version of the launch template to use for faster launching
-       * for a Windows AMI.
-       */
-      public fun launchTemplateVersion(launchTemplateVersion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty.builder()
-
-      /**
-       * @param launchTemplateId The ID of the launch template to use for faster launching for a
-       * Windows AMI.
-       */
-      override fun launchTemplateId(launchTemplateId: String) {
-        cdkBuilder.launchTemplateId(launchTemplateId)
-      }
-
-      /**
-       * @param launchTemplateName The name of the launch template to use for faster launching for a
-       * Windows AMI.
-       */
-      override fun launchTemplateName(launchTemplateName: String) {
-        cdkBuilder.launchTemplateName(launchTemplateName)
-      }
-
-      /**
-       * @param launchTemplateVersion The version of the launch template to use for faster launching
-       * for a Windows AMI.
-       */
-      override fun launchTemplateVersion(launchTemplateVersion: String) {
-        cdkBuilder.launchTemplateVersion(launchTemplateVersion)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), FastLaunchLaunchTemplateSpecificationProperty {
-      /**
-       * The ID of the launch template to use for faster launching for a Windows AMI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplateid)
-       */
-      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-      /**
-       * The name of the launch template to use for faster launching for a Windows AMI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplatename)
-       */
-      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-      /**
-       * The version of the launch template to use for faster launching for a Windows AMI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html#cfn-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification-launchtemplateversion)
-       */
-      override fun launchTemplateVersion(): String? = unwrap(this).getLaunchTemplateVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FastLaunchLaunchTemplateSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty):
-          FastLaunchLaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FastLaunchLaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FastLaunchLaunchTemplateSpecificationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty
     }
   }
 

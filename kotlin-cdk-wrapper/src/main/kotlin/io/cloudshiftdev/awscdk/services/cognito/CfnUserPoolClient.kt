@@ -1954,187 +1954,6 @@ public open class CfnUserPoolClient internal constructor(
   }
 
   /**
-   * The time units you use when you set the duration of ID, access, and refresh tokens.
-   *
-   * The default unit for RefreshToken is days, and the default for ID and access tokens is hours.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * TokenValidityUnitsProperty tokenValidityUnitsProperty = TokenValidityUnitsProperty.builder()
-   * .accessToken("accessToken")
-   * .idToken("idToken")
-   * .refreshToken("refreshToken")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html)
-   */
-  public interface TokenValidityUnitsProperty {
-    /**
-     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
-     * `AccessTokenValidity` parameter.
-     *
-     * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
-     * range from five minutes to one day.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken)
-     */
-    public fun accessToken(): String? = unwrap(this).getAccessToken()
-
-    /**
-     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
-     * `IdTokenValidity` parameter.
-     *
-     * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
-     * five minutes to one day.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-idtoken)
-     */
-    public fun idToken(): String? = unwrap(this).getIdToken()
-
-    /**
-     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
-     * `RefreshTokenValidity` parameter.
-     *
-     * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
-     * range from 60 minutes to 10 years.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken)
-     */
-    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
-
-    /**
-     * A builder for [TokenValidityUnitsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
-       * that you set in the `AccessTokenValidity` parameter.
-       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
-       * range from five minutes to one day.
-       */
-      public fun accessToken(accessToken: String)
-
-      /**
-       * @param idToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
-       * that you set in the `IdTokenValidity` parameter.
-       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
-       * five minutes to one day.
-       */
-      public fun idToken(idToken: String)
-
-      /**
-       * @param refreshToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the
-       * value that you set in the `RefreshTokenValidity` parameter.
-       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
-       * range from 60 minutes to 10 years.
-       */
-      public fun refreshToken(refreshToken: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty.builder()
-
-      /**
-       * @param accessToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
-       * that you set in the `AccessTokenValidity` parameter.
-       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
-       * range from five minutes to one day.
-       */
-      override fun accessToken(accessToken: String) {
-        cdkBuilder.accessToken(accessToken)
-      }
-
-      /**
-       * @param idToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
-       * that you set in the `IdTokenValidity` parameter.
-       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
-       * five minutes to one day.
-       */
-      override fun idToken(idToken: String) {
-        cdkBuilder.idToken(idToken)
-      }
-
-      /**
-       * @param refreshToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the
-       * value that you set in the `RefreshTokenValidity` parameter.
-       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
-       * range from 60 minutes to 10 years.
-       */
-      override fun refreshToken(refreshToken: String) {
-        cdkBuilder.refreshToken(refreshToken)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty,
-    ) : CdkObject(cdkObject), TokenValidityUnitsProperty {
-      /**
-       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
-       * the `AccessTokenValidity` parameter.
-       *
-       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
-       * range from five minutes to one day.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken)
-       */
-      override fun accessToken(): String? = unwrap(this).getAccessToken()
-
-      /**
-       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
-       * the `IdTokenValidity` parameter.
-       *
-       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
-       * five minutes to one day.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-idtoken)
-       */
-      override fun idToken(): String? = unwrap(this).getIdToken()
-
-      /**
-       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
-       * the `RefreshTokenValidity` parameter.
-       *
-       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
-       * range from 60 minutes to 10 years.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken)
-       */
-      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TokenValidityUnitsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty):
-          TokenValidityUnitsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TokenValidityUnitsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TokenValidityUnitsProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty
-    }
-  }
-
-  /**
    * The Amazon Pinpoint analytics configuration necessary to collect metrics for a user pool.
    *
    *
@@ -2361,6 +2180,187 @@ public open class CfnUserPoolClient internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty
+    }
+  }
+
+  /**
+   * The time units you use when you set the duration of ID, access, and refresh tokens.
+   *
+   * The default unit for RefreshToken is days, and the default for ID and access tokens is hours.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * TokenValidityUnitsProperty tokenValidityUnitsProperty = TokenValidityUnitsProperty.builder()
+   * .accessToken("accessToken")
+   * .idToken("idToken")
+   * .refreshToken("refreshToken")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html)
+   */
+  public interface TokenValidityUnitsProperty {
+    /**
+     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
+     * `AccessTokenValidity` parameter.
+     *
+     * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
+     * range from five minutes to one day.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken)
+     */
+    public fun accessToken(): String? = unwrap(this).getAccessToken()
+
+    /**
+     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
+     * `IdTokenValidity` parameter.
+     *
+     * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
+     * five minutes to one day.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-idtoken)
+     */
+    public fun idToken(): String? = unwrap(this).getIdToken()
+
+    /**
+     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
+     * `RefreshTokenValidity` parameter.
+     *
+     * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
+     * range from 60 minutes to 10 years.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken)
+     */
+    public fun refreshToken(): String? = unwrap(this).getRefreshToken()
+
+    /**
+     * A builder for [TokenValidityUnitsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
+       * that you set in the `AccessTokenValidity` parameter.
+       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
+       * range from five minutes to one day.
+       */
+      public fun accessToken(accessToken: String)
+
+      /**
+       * @param idToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
+       * that you set in the `IdTokenValidity` parameter.
+       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
+       * five minutes to one day.
+       */
+      public fun idToken(idToken: String)
+
+      /**
+       * @param refreshToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the
+       * value that you set in the `RefreshTokenValidity` parameter.
+       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
+       * range from 60 minutes to 10 years.
+       */
+      public fun refreshToken(refreshToken: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty.builder()
+
+      /**
+       * @param accessToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
+       * that you set in the `AccessTokenValidity` parameter.
+       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
+       * range from five minutes to one day.
+       */
+      override fun accessToken(accessToken: String) {
+        cdkBuilder.accessToken(accessToken)
+      }
+
+      /**
+       * @param idToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
+       * that you set in the `IdTokenValidity` parameter.
+       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
+       * five minutes to one day.
+       */
+      override fun idToken(idToken: String) {
+        cdkBuilder.idToken(idToken)
+      }
+
+      /**
+       * @param refreshToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the
+       * value that you set in the `RefreshTokenValidity` parameter.
+       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
+       * range from 60 minutes to 10 years.
+       */
+      override fun refreshToken(refreshToken: String) {
+        cdkBuilder.refreshToken(refreshToken)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty,
+    ) : CdkObject(cdkObject), TokenValidityUnitsProperty {
+      /**
+       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
+       * the `AccessTokenValidity` parameter.
+       *
+       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
+       * range from five minutes to one day.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken)
+       */
+      override fun accessToken(): String? = unwrap(this).getAccessToken()
+
+      /**
+       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
+       * the `IdTokenValidity` parameter.
+       *
+       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
+       * five minutes to one day.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-idtoken)
+       */
+      override fun idToken(): String? = unwrap(this).getIdToken()
+
+      /**
+       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
+       * the `RefreshTokenValidity` parameter.
+       *
+       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
+       * range from 60 minutes to 10 years.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken)
+       */
+      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TokenValidityUnitsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty):
+          TokenValidityUnitsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TokenValidityUnitsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TokenValidityUnitsProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty
     }
   }
 }

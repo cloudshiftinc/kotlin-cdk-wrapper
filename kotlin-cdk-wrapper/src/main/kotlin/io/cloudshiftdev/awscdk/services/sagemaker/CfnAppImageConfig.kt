@@ -446,243 +446,6 @@ public open class CfnAppImageConfig internal constructor(
   }
 
   /**
-   * The configuration for the file system and kernels in a SageMaker image running as a JupyterLab
-   * app.
-   *
-   * The `FileSystemConfig` object is not supported.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * JupyterLabAppImageConfigProperty jupyterLabAppImageConfigProperty =
-   * JupyterLabAppImageConfigProperty.builder()
-   * .containerConfig(ContainerConfigProperty.builder()
-   * .containerArguments(List.of("containerArguments"))
-   * .containerEntrypoint(List.of("containerEntrypoint"))
-   * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-jupyterlabappimageconfig.html)
-   */
-  public interface JupyterLabAppImageConfigProperty {
-    /**
-     * The configuration used to run the application image container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-jupyterlabappimageconfig.html#cfn-sagemaker-appimageconfig-jupyterlabappimageconfig-containerconfig)
-     */
-    public fun containerConfig(): Any? = unwrap(this).getContainerConfig()
-
-    /**
-     * A builder for [JupyterLabAppImageConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerConfig The configuration used to run the application image container.
-       */
-      public fun containerConfig(containerConfig: IResolvable)
-
-      /**
-       * @param containerConfig The configuration used to run the application image container.
-       */
-      public fun containerConfig(containerConfig: ContainerConfigProperty)
-
-      /**
-       * @param containerConfig The configuration used to run the application image container.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e1aebf9fe4a21aa96b51896243d92e93f2bcd5d3a552db1c9e582002bc4cd71a")
-      public fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty.builder()
-
-      /**
-       * @param containerConfig The configuration used to run the application image container.
-       */
-      override fun containerConfig(containerConfig: IResolvable) {
-        cdkBuilder.containerConfig(containerConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param containerConfig The configuration used to run the application image container.
-       */
-      override fun containerConfig(containerConfig: ContainerConfigProperty) {
-        cdkBuilder.containerConfig(containerConfig.let(ContainerConfigProperty::unwrap))
-      }
-
-      /**
-       * @param containerConfig The configuration used to run the application image container.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e1aebf9fe4a21aa96b51896243d92e93f2bcd5d3a552db1c9e582002bc4cd71a")
-      override fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit):
-          Unit = containerConfig(ContainerConfigProperty(containerConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty,
-    ) : CdkObject(cdkObject), JupyterLabAppImageConfigProperty {
-      /**
-       * The configuration used to run the application image container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-jupyterlabappimageconfig.html#cfn-sagemaker-appimageconfig-jupyterlabappimageconfig-containerconfig)
-       */
-      override fun containerConfig(): Any? = unwrap(this).getContainerConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JupyterLabAppImageConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty):
-          JupyterLabAppImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JupyterLabAppImageConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JupyterLabAppImageConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty
-    }
-  }
-
-  /**
-   * The specification of a Jupyter kernel.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * KernelSpecProperty kernelSpecProperty = KernelSpecProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .displayName("displayName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html)
-   */
-  public interface KernelSpecProperty {
-    /**
-     * The display name of the kernel.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html#cfn-sagemaker-appimageconfig-kernelspec-displayname)
-     */
-    public fun displayName(): String? = unwrap(this).getDisplayName()
-
-    /**
-     * The name of the Jupyter kernel in the image.
-     *
-     * This value is case sensitive.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html#cfn-sagemaker-appimageconfig-kernelspec-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [KernelSpecProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param displayName The display name of the kernel.
-       */
-      public fun displayName(displayName: String)
-
-      /**
-       * @param name The name of the Jupyter kernel in the image. 
-       * This value is case sensitive.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty.builder()
-
-      /**
-       * @param displayName The display name of the kernel.
-       */
-      override fun displayName(displayName: String) {
-        cdkBuilder.displayName(displayName)
-      }
-
-      /**
-       * @param name The name of the Jupyter kernel in the image. 
-       * This value is case sensitive.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty,
-    ) : CdkObject(cdkObject), KernelSpecProperty {
-      /**
-       * The display name of the kernel.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html#cfn-sagemaker-appimageconfig-kernelspec-displayname)
-       */
-      override fun displayName(): String? = unwrap(this).getDisplayName()
-
-      /**
-       * The name of the Jupyter kernel in the image.
-       *
-       * This value is case sensitive.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html#cfn-sagemaker-appimageconfig-kernelspec-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KernelSpecProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty):
-          KernelSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? KernelSpecProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KernelSpecProperty):
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty
-    }
-  }
-
-  /**
    * The configuration used to run the application image container.
    *
    * Example:
@@ -878,6 +641,394 @@ public open class CfnAppImageConfig internal constructor(
   }
 
   /**
+   * The environment variables to set in the container.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CustomImageContainerEnvironmentVariableProperty customImageContainerEnvironmentVariableProperty
+   * = CustomImageContainerEnvironmentVariableProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html)
+   */
+  public interface CustomImageContainerEnvironmentVariableProperty {
+    /**
+     * The key that identifies a container environment variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html#cfn-sagemaker-appimageconfig-customimagecontainerenvironmentvariable-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of the container environment variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html#cfn-sagemaker-appimageconfig-customimagecontainerenvironmentvariable-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [CustomImageContainerEnvironmentVariableProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key that identifies a container environment variable. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the container environment variable. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty.builder()
+
+      /**
+       * @param key The key that identifies a container environment variable. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the container environment variable. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty,
+    ) : CdkObject(cdkObject), CustomImageContainerEnvironmentVariableProperty {
+      /**
+       * The key that identifies a container environment variable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html#cfn-sagemaker-appimageconfig-customimagecontainerenvironmentvariable-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of the container environment variable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html#cfn-sagemaker-appimageconfig-customimagecontainerenvironmentvariable-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CustomImageContainerEnvironmentVariableProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty):
+          CustomImageContainerEnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomImageContainerEnvironmentVariableProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomImageContainerEnvironmentVariableProperty):
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty
+    }
+  }
+
+  /**
+   * The Amazon Elastic File System storage configuration for a SageMaker image.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * FileSystemConfigProperty fileSystemConfigProperty = FileSystemConfigProperty.builder()
+   * .defaultGid(123)
+   * .defaultUid(123)
+   * .mountPath("mountPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html)
+   */
+  public interface FileSystemConfigProperty {
+    /**
+     * The default POSIX group ID (GID).
+     *
+     * If not specified, defaults to `100` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-defaultgid)
+     */
+    public fun defaultGid(): Number? = unwrap(this).getDefaultGid()
+
+    /**
+     * The default POSIX user ID (UID).
+     *
+     * If not specified, defaults to `1000` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-defaultuid)
+     */
+    public fun defaultUid(): Number? = unwrap(this).getDefaultUid()
+
+    /**
+     * The path within the image to mount the user's EFS home directory.
+     *
+     * The directory should be empty. If not specified, defaults to * /home/sagemaker-user* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-mountpath)
+     */
+    public fun mountPath(): String? = unwrap(this).getMountPath()
+
+    /**
+     * A builder for [FileSystemConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultGid The default POSIX group ID (GID).
+       * If not specified, defaults to `100` .
+       */
+      public fun defaultGid(defaultGid: Number)
+
+      /**
+       * @param defaultUid The default POSIX user ID (UID).
+       * If not specified, defaults to `1000` .
+       */
+      public fun defaultUid(defaultUid: Number)
+
+      /**
+       * @param mountPath The path within the image to mount the user's EFS home directory.
+       * The directory should be empty. If not specified, defaults to * /home/sagemaker-user* .
+       */
+      public fun mountPath(mountPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty.builder()
+
+      /**
+       * @param defaultGid The default POSIX group ID (GID).
+       * If not specified, defaults to `100` .
+       */
+      override fun defaultGid(defaultGid: Number) {
+        cdkBuilder.defaultGid(defaultGid)
+      }
+
+      /**
+       * @param defaultUid The default POSIX user ID (UID).
+       * If not specified, defaults to `1000` .
+       */
+      override fun defaultUid(defaultUid: Number) {
+        cdkBuilder.defaultUid(defaultUid)
+      }
+
+      /**
+       * @param mountPath The path within the image to mount the user's EFS home directory.
+       * The directory should be empty. If not specified, defaults to * /home/sagemaker-user* .
+       */
+      override fun mountPath(mountPath: String) {
+        cdkBuilder.mountPath(mountPath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty,
+    ) : CdkObject(cdkObject), FileSystemConfigProperty {
+      /**
+       * The default POSIX group ID (GID).
+       *
+       * If not specified, defaults to `100` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-defaultgid)
+       */
+      override fun defaultGid(): Number? = unwrap(this).getDefaultGid()
+
+      /**
+       * The default POSIX user ID (UID).
+       *
+       * If not specified, defaults to `1000` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-defaultuid)
+       */
+      override fun defaultUid(): Number? = unwrap(this).getDefaultUid()
+
+      /**
+       * The path within the image to mount the user's EFS home directory.
+       *
+       * The directory should be empty. If not specified, defaults to * /home/sagemaker-user* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-mountpath)
+       */
+      override fun mountPath(): String? = unwrap(this).getMountPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FileSystemConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty):
+          FileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FileSystemConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FileSystemConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty
+    }
+  }
+
+  /**
+   * The configuration for the file system and kernels in a SageMaker image running as a JupyterLab
+   * app.
+   *
+   * The `FileSystemConfig` object is not supported.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * JupyterLabAppImageConfigProperty jupyterLabAppImageConfigProperty =
+   * JupyterLabAppImageConfigProperty.builder()
+   * .containerConfig(ContainerConfigProperty.builder()
+   * .containerArguments(List.of("containerArguments"))
+   * .containerEntrypoint(List.of("containerEntrypoint"))
+   * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-jupyterlabappimageconfig.html)
+   */
+  public interface JupyterLabAppImageConfigProperty {
+    /**
+     * The configuration used to run the application image container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-jupyterlabappimageconfig.html#cfn-sagemaker-appimageconfig-jupyterlabappimageconfig-containerconfig)
+     */
+    public fun containerConfig(): Any? = unwrap(this).getContainerConfig()
+
+    /**
+     * A builder for [JupyterLabAppImageConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerConfig The configuration used to run the application image container.
+       */
+      public fun containerConfig(containerConfig: IResolvable)
+
+      /**
+       * @param containerConfig The configuration used to run the application image container.
+       */
+      public fun containerConfig(containerConfig: ContainerConfigProperty)
+
+      /**
+       * @param containerConfig The configuration used to run the application image container.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e1aebf9fe4a21aa96b51896243d92e93f2bcd5d3a552db1c9e582002bc4cd71a")
+      public fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty.builder()
+
+      /**
+       * @param containerConfig The configuration used to run the application image container.
+       */
+      override fun containerConfig(containerConfig: IResolvable) {
+        cdkBuilder.containerConfig(containerConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param containerConfig The configuration used to run the application image container.
+       */
+      override fun containerConfig(containerConfig: ContainerConfigProperty) {
+        cdkBuilder.containerConfig(containerConfig.let(ContainerConfigProperty::unwrap))
+      }
+
+      /**
+       * @param containerConfig The configuration used to run the application image container.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e1aebf9fe4a21aa96b51896243d92e93f2bcd5d3a552db1c9e582002bc4cd71a")
+      override fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit):
+          Unit = containerConfig(ContainerConfigProperty(containerConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty,
+    ) : CdkObject(cdkObject), JupyterLabAppImageConfigProperty {
+      /**
+       * The configuration used to run the application image container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-jupyterlabappimageconfig.html#cfn-sagemaker-appimageconfig-jupyterlabappimageconfig-containerconfig)
+       */
+      override fun containerConfig(): Any? = unwrap(this).getContainerConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JupyterLabAppImageConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty):
+          JupyterLabAppImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JupyterLabAppImageConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JupyterLabAppImageConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty
+    }
+  }
+
+  /**
    * The configuration for the file system and kernels in a SageMaker image running as a
    * KernelGateway app.
    *
@@ -1054,7 +1205,7 @@ public open class CfnAppImageConfig internal constructor(
   }
 
   /**
-   * The Amazon Elastic File System storage configuration for a SageMaker image.
+   * The specification of a Jupyter kernel.
    *
    * Example:
    *
@@ -1062,261 +1213,110 @@ public open class CfnAppImageConfig internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * FileSystemConfigProperty fileSystemConfigProperty = FileSystemConfigProperty.builder()
-   * .defaultGid(123)
-   * .defaultUid(123)
-   * .mountPath("mountPath")
+   * KernelSpecProperty kernelSpecProperty = KernelSpecProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .displayName("displayName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html)
    */
-  public interface FileSystemConfigProperty {
+  public interface KernelSpecProperty {
     /**
-     * The default POSIX group ID (GID).
+     * The display name of the kernel.
      *
-     * If not specified, defaults to `100` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-defaultgid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html#cfn-sagemaker-appimageconfig-kernelspec-displayname)
      */
-    public fun defaultGid(): Number? = unwrap(this).getDefaultGid()
+    public fun displayName(): String? = unwrap(this).getDisplayName()
 
     /**
-     * The default POSIX user ID (UID).
+     * The name of the Jupyter kernel in the image.
      *
-     * If not specified, defaults to `1000` .
+     * This value is case sensitive.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-defaultuid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html#cfn-sagemaker-appimageconfig-kernelspec-name)
      */
-    public fun defaultUid(): Number? = unwrap(this).getDefaultUid()
+    public fun name(): String
 
     /**
-     * The path within the image to mount the user's EFS home directory.
-     *
-     * The directory should be empty. If not specified, defaults to * /home/sagemaker-user* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-mountpath)
-     */
-    public fun mountPath(): String? = unwrap(this).getMountPath()
-
-    /**
-     * A builder for [FileSystemConfigProperty]
+     * A builder for [KernelSpecProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultGid The default POSIX group ID (GID).
-       * If not specified, defaults to `100` .
+       * @param displayName The display name of the kernel.
        */
-      public fun defaultGid(defaultGid: Number)
+      public fun displayName(displayName: String)
 
       /**
-       * @param defaultUid The default POSIX user ID (UID).
-       * If not specified, defaults to `1000` .
+       * @param name The name of the Jupyter kernel in the image. 
+       * This value is case sensitive.
        */
-      public fun defaultUid(defaultUid: Number)
-
-      /**
-       * @param mountPath The path within the image to mount the user's EFS home directory.
-       * The directory should be empty. If not specified, defaults to * /home/sagemaker-user* .
-       */
-      public fun mountPath(mountPath: String)
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty.builder()
 
       /**
-       * @param defaultGid The default POSIX group ID (GID).
-       * If not specified, defaults to `100` .
+       * @param displayName The display name of the kernel.
        */
-      override fun defaultGid(defaultGid: Number) {
-        cdkBuilder.defaultGid(defaultGid)
+      override fun displayName(displayName: String) {
+        cdkBuilder.displayName(displayName)
       }
 
       /**
-       * @param defaultUid The default POSIX user ID (UID).
-       * If not specified, defaults to `1000` .
+       * @param name The name of the Jupyter kernel in the image. 
+       * This value is case sensitive.
        */
-      override fun defaultUid(defaultUid: Number) {
-        cdkBuilder.defaultUid(defaultUid)
-      }
-
-      /**
-       * @param mountPath The path within the image to mount the user's EFS home directory.
-       * The directory should be empty. If not specified, defaults to * /home/sagemaker-user* .
-       */
-      override fun mountPath(mountPath: String) {
-        cdkBuilder.mountPath(mountPath)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty =
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty,
-    ) : CdkObject(cdkObject), FileSystemConfigProperty {
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty,
+    ) : CdkObject(cdkObject), KernelSpecProperty {
       /**
-       * The default POSIX group ID (GID).
+       * The display name of the kernel.
        *
-       * If not specified, defaults to `100` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-defaultgid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html#cfn-sagemaker-appimageconfig-kernelspec-displayname)
        */
-      override fun defaultGid(): Number? = unwrap(this).getDefaultGid()
+      override fun displayName(): String? = unwrap(this).getDisplayName()
 
       /**
-       * The default POSIX user ID (UID).
+       * The name of the Jupyter kernel in the image.
        *
-       * If not specified, defaults to `1000` .
+       * This value is case sensitive.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-defaultuid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html#cfn-sagemaker-appimageconfig-kernelspec-name)
        */
-      override fun defaultUid(): Number? = unwrap(this).getDefaultUid()
-
-      /**
-       * The path within the image to mount the user's EFS home directory.
-       *
-       * The directory should be empty. If not specified, defaults to * /home/sagemaker-user* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html#cfn-sagemaker-appimageconfig-filesystemconfig-mountpath)
-       */
-      override fun mountPath(): String? = unwrap(this).getMountPath()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FileSystemConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KernelSpecProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty):
-          FileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FileSystemConfigProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty):
+          KernelSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? KernelSpecProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FileSystemConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty
-    }
-  }
-
-  /**
-   * The environment variables to set in the container.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CustomImageContainerEnvironmentVariableProperty customImageContainerEnvironmentVariableProperty
-   * = CustomImageContainerEnvironmentVariableProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html)
-   */
-  public interface CustomImageContainerEnvironmentVariableProperty {
-    /**
-     * The key that identifies a container environment variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html#cfn-sagemaker-appimageconfig-customimagecontainerenvironmentvariable-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value of the container environment variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html#cfn-sagemaker-appimageconfig-customimagecontainerenvironmentvariable-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [CustomImageContainerEnvironmentVariableProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The key that identifies a container environment variable. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of the container environment variable. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty.builder()
-
-      /**
-       * @param key The key that identifies a container environment variable. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of the container environment variable. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), CustomImageContainerEnvironmentVariableProperty {
-      /**
-       * The key that identifies a container environment variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html#cfn-sagemaker-appimageconfig-customimagecontainerenvironmentvariable-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value of the container environment variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-customimagecontainerenvironmentvariable.html#cfn-sagemaker-appimageconfig-customimagecontainerenvironmentvariable-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CustomImageContainerEnvironmentVariableProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty):
-          CustomImageContainerEnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomImageContainerEnvironmentVariableProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomImageContainerEnvironmentVariableProperty):
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty
+      internal fun unwrap(wrapped: KernelSpecProperty):
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty
     }
   }
 }

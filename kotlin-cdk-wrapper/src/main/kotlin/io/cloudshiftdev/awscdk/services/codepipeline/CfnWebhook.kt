@@ -608,6 +608,135 @@ public open class CfnWebhook internal constructor(
   }
 
   /**
+   * The authentication applied to incoming webhook trigger requests.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * WebhookAuthConfigurationProperty webhookAuthConfigurationProperty =
+   * WebhookAuthConfigurationProperty.builder()
+   * .allowedIpRange("allowedIpRange")
+   * .secretToken("secretToken")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html)
+   */
+  public interface WebhookAuthConfigurationProperty {
+    /**
+     * The property used to configure acceptance of webhooks in an IP address range.
+     *
+     * For IP, only the `AllowedIPRange` property must be set. This property must be set to a valid
+     * CIDR range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange)
+     */
+    public fun allowedIpRange(): String? = unwrap(this).getAllowedIpRange()
+
+    /**
+     * The property used to configure GitHub authentication.
+     *
+     * For GITHUB_HMAC, only the `SecretToken` property must be set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
+     */
+    public fun secretToken(): String? = unwrap(this).getSecretToken()
+
+    /**
+     * A builder for [WebhookAuthConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allowedIpRange The property used to configure acceptance of webhooks in an IP
+       * address range.
+       * For IP, only the `AllowedIPRange` property must be set. This property must be set to a
+       * valid CIDR range.
+       */
+      public fun allowedIpRange(allowedIpRange: String)
+
+      /**
+       * @param secretToken The property used to configure GitHub authentication.
+       * For GITHUB_HMAC, only the `SecretToken` property must be set.
+       */
+      public fun secretToken(secretToken: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty.builder()
+
+      /**
+       * @param allowedIpRange The property used to configure acceptance of webhooks in an IP
+       * address range.
+       * For IP, only the `AllowedIPRange` property must be set. This property must be set to a
+       * valid CIDR range.
+       */
+      override fun allowedIpRange(allowedIpRange: String) {
+        cdkBuilder.allowedIpRange(allowedIpRange)
+      }
+
+      /**
+       * @param secretToken The property used to configure GitHub authentication.
+       * For GITHUB_HMAC, only the `SecretToken` property must be set.
+       */
+      override fun secretToken(secretToken: String) {
+        cdkBuilder.secretToken(secretToken)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty,
+    ) : CdkObject(cdkObject), WebhookAuthConfigurationProperty {
+      /**
+       * The property used to configure acceptance of webhooks in an IP address range.
+       *
+       * For IP, only the `AllowedIPRange` property must be set. This property must be set to a
+       * valid CIDR range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange)
+       */
+      override fun allowedIpRange(): String? = unwrap(this).getAllowedIpRange()
+
+      /**
+       * The property used to configure GitHub authentication.
+       *
+       * For GITHUB_HMAC, only the `SecretToken` property must be set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
+       */
+      override fun secretToken(): String? = unwrap(this).getSecretToken()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WebhookAuthConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty):
+          WebhookAuthConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebhookAuthConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WebhookAuthConfigurationProperty):
+          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty
+    }
+  }
+
+  /**
    * The event criteria that specify when a webhook notification is sent to your URL.
    *
    * Example:
@@ -770,135 +899,6 @@ public open class CfnWebhook internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty
-    }
-  }
-
-  /**
-   * The authentication applied to incoming webhook trigger requests.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * WebhookAuthConfigurationProperty webhookAuthConfigurationProperty =
-   * WebhookAuthConfigurationProperty.builder()
-   * .allowedIpRange("allowedIpRange")
-   * .secretToken("secretToken")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html)
-   */
-  public interface WebhookAuthConfigurationProperty {
-    /**
-     * The property used to configure acceptance of webhooks in an IP address range.
-     *
-     * For IP, only the `AllowedIPRange` property must be set. This property must be set to a valid
-     * CIDR range.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange)
-     */
-    public fun allowedIpRange(): String? = unwrap(this).getAllowedIpRange()
-
-    /**
-     * The property used to configure GitHub authentication.
-     *
-     * For GITHUB_HMAC, only the `SecretToken` property must be set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
-     */
-    public fun secretToken(): String? = unwrap(this).getSecretToken()
-
-    /**
-     * A builder for [WebhookAuthConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allowedIpRange The property used to configure acceptance of webhooks in an IP
-       * address range.
-       * For IP, only the `AllowedIPRange` property must be set. This property must be set to a
-       * valid CIDR range.
-       */
-      public fun allowedIpRange(allowedIpRange: String)
-
-      /**
-       * @param secretToken The property used to configure GitHub authentication.
-       * For GITHUB_HMAC, only the `SecretToken` property must be set.
-       */
-      public fun secretToken(secretToken: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty.builder()
-
-      /**
-       * @param allowedIpRange The property used to configure acceptance of webhooks in an IP
-       * address range.
-       * For IP, only the `AllowedIPRange` property must be set. This property must be set to a
-       * valid CIDR range.
-       */
-      override fun allowedIpRange(allowedIpRange: String) {
-        cdkBuilder.allowedIpRange(allowedIpRange)
-      }
-
-      /**
-       * @param secretToken The property used to configure GitHub authentication.
-       * For GITHUB_HMAC, only the `SecretToken` property must be set.
-       */
-      override fun secretToken(secretToken: String) {
-        cdkBuilder.secretToken(secretToken)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty,
-    ) : CdkObject(cdkObject), WebhookAuthConfigurationProperty {
-      /**
-       * The property used to configure acceptance of webhooks in an IP address range.
-       *
-       * For IP, only the `AllowedIPRange` property must be set. This property must be set to a
-       * valid CIDR range.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-allowediprange)
-       */
-      override fun allowedIpRange(): String? = unwrap(this).getAllowedIpRange()
-
-      /**
-       * The property used to configure GitHub authentication.
-       *
-       * For GITHUB_HMAC, only the `SecretToken` property must be set.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
-       */
-      override fun secretToken(): String? = unwrap(this).getSecretToken()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WebhookAuthConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty):
-          WebhookAuthConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WebhookAuthConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WebhookAuthConfigurationProperty):
-          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty
     }
   }
 }

@@ -411,6 +411,2167 @@ public open class CfnLaunchTemplate internal constructor(
   }
 
   /**
+   * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
+   * instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AcceleratorCountProperty acceleratorCountProperty = AcceleratorCountProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html)
+   */
+  public interface AcceleratorCountProperty {
+    /**
+     * The maximum number of accelerators.
+     *
+     * To specify no maximum limit, omit this parameter. To exclude accelerator-enabled instance
+     * types, set `Max` to `0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html#cfn-ec2-launchtemplate-acceleratorcount-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum number of accelerators.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html#cfn-ec2-launchtemplate-acceleratorcount-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [AcceleratorCountProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum number of accelerators.
+       * To specify no maximum limit, omit this parameter. To exclude accelerator-enabled instance
+       * types, set `Max` to `0` .
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum number of accelerators.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty.builder()
+
+      /**
+       * @param max The maximum number of accelerators.
+       * To specify no maximum limit, omit this parameter. To exclude accelerator-enabled instance
+       * types, set `Max` to `0` .
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum number of accelerators.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty,
+    ) : CdkObject(cdkObject), AcceleratorCountProperty {
+      /**
+       * The maximum number of accelerators.
+       *
+       * To specify no maximum limit, omit this parameter. To exclude accelerator-enabled instance
+       * types, set `Max` to `0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html#cfn-ec2-launchtemplate-acceleratorcount-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum number of accelerators.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html#cfn-ec2-launchtemplate-acceleratorcount-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AcceleratorCountProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty):
+          AcceleratorCountProperty = CdkObjectWrappers.wrap(cdkObject) as? AcceleratorCountProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AcceleratorCountProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum amount of total accelerator memory, in MiB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AcceleratorTotalMemoryMiBProperty acceleratorTotalMemoryMiBProperty =
+   * AcceleratorTotalMemoryMiBProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html)
+   */
+  public interface AcceleratorTotalMemoryMiBProperty {
+    /**
+     * The maximum amount of accelerator memory, in MiB.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html#cfn-ec2-launchtemplate-acceleratortotalmemorymib-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum amount of accelerator memory, in MiB.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html#cfn-ec2-launchtemplate-acceleratortotalmemorymib-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [AcceleratorTotalMemoryMiBProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum amount of accelerator memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum amount of accelerator memory, in MiB.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty.builder()
+
+      /**
+       * @param max The maximum amount of accelerator memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum amount of accelerator memory, in MiB.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty,
+    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBProperty {
+      /**
+       * The maximum amount of accelerator memory, in MiB.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html#cfn-ec2-launchtemplate-acceleratortotalmemorymib-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum amount of accelerator memory, in MiB.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html#cfn-ec2-launchtemplate-acceleratortotalmemorymib-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AcceleratorTotalMemoryMiBProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty):
+          AcceleratorTotalMemoryMiBProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AcceleratorTotalMemoryMiBProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
+   *
+   * For more information, see [Amazon EBS–optimized
+   * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
+   * EC2 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BaselineEbsBandwidthMbpsProperty baselineEbsBandwidthMbpsProperty =
+   * BaselineEbsBandwidthMbpsProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html)
+   */
+  public interface BaselineEbsBandwidthMbpsProperty {
+    /**
+     * The maximum baseline bandwidth, in Mbps.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html#cfn-ec2-launchtemplate-baselineebsbandwidthmbps-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum baseline bandwidth, in Mbps.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html#cfn-ec2-launchtemplate-baselineebsbandwidthmbps-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [BaselineEbsBandwidthMbpsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum baseline bandwidth, in Mbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum baseline bandwidth, in Mbps.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty.builder()
+
+      /**
+       * @param max The maximum baseline bandwidth, in Mbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum baseline bandwidth, in Mbps.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty,
+    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsProperty {
+      /**
+       * The maximum baseline bandwidth, in Mbps.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html#cfn-ec2-launchtemplate-baselineebsbandwidthmbps-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum baseline bandwidth, in Mbps.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html#cfn-ec2-launchtemplate-baselineebsbandwidthmbps-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BaselineEbsBandwidthMbpsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty):
+          BaselineEbsBandwidthMbpsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselineEbsBandwidthMbpsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty
+    }
+  }
+
+  /**
+   * Specifies a block device mapping for a launch template.
+   *
+   * You must specify `DeviceName` plus exactly one of the following properties: `Ebs` , `NoDevice`
+   * , or `VirtualName` .
+   *
+   * `BlockDeviceMapping` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+   * .deviceName("deviceName")
+   * .ebs(EbsProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .kmsKeyId("kmsKeyId")
+   * .snapshotId("snapshotId")
+   * .throughput(123)
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build())
+   * .noDevice("noDevice")
+   * .virtualName("virtualName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html)
+   */
+  public interface BlockDeviceMappingProperty {
+    /**
+     * The device name (for example, /dev/sdh or xvdh).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-devicename)
+     */
+    public fun deviceName(): String? = unwrap(this).getDeviceName()
+
+    /**
+     * Parameters used to automatically set up EBS volumes when the instance is launched.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-ebs)
+     */
+    public fun ebs(): Any? = unwrap(this).getEbs()
+
+    /**
+     * To omit the device from the block device mapping, specify an empty string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-nodevice)
+     */
+    public fun noDevice(): String? = unwrap(this).getNoDevice()
+
+    /**
+     * The virtual device name (ephemeralN).
+     *
+     * Instance store volumes are numbered starting from 0. An instance type with 2 available
+     * instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of
+     * available instance store volumes depends on the instance type. After you connect to the
+     * instance, you must mount the volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-virtualname)
+     */
+    public fun virtualName(): String? = unwrap(this).getVirtualName()
+
+    /**
+     * A builder for [BlockDeviceMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deviceName The device name (for example, /dev/sdh or xvdh).
+       */
+      public fun deviceName(deviceName: String)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      public fun ebs(ebs: IResolvable)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      public fun ebs(ebs: EbsProperty)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("13d6ae31b3c9294cb1f107c22c338c808581bedefec428957e26694bbbfd5a89")
+      public fun ebs(ebs: EbsProperty.Builder.() -> Unit)
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       */
+      public fun noDevice(noDevice: String)
+
+      /**
+       * @param virtualName The virtual device name (ephemeralN).
+       * Instance store volumes are numbered starting from 0. An instance type with 2 available
+       * instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of
+       * available instance store volumes depends on the instance type. After you connect to the
+       * instance, you must mount the volume.
+       */
+      public fun virtualName(virtualName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty.builder()
+
+      /**
+       * @param deviceName The device name (for example, /dev/sdh or xvdh).
+       */
+      override fun deviceName(deviceName: String) {
+        cdkBuilder.deviceName(deviceName)
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      override fun ebs(ebs: IResolvable) {
+        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      override fun ebs(ebs: EbsProperty) {
+        cdkBuilder.ebs(ebs.let(EbsProperty::unwrap))
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("13d6ae31b3c9294cb1f107c22c338c808581bedefec428957e26694bbbfd5a89")
+      override fun ebs(ebs: EbsProperty.Builder.() -> Unit): Unit = ebs(EbsProperty(ebs))
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       */
+      override fun noDevice(noDevice: String) {
+        cdkBuilder.noDevice(noDevice)
+      }
+
+      /**
+       * @param virtualName The virtual device name (ephemeralN).
+       * Instance store volumes are numbered starting from 0. An instance type with 2 available
+       * instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of
+       * available instance store volumes depends on the instance type. After you connect to the
+       * instance, you must mount the volume.
+       */
+      override fun virtualName(virtualName: String) {
+        cdkBuilder.virtualName(virtualName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty,
+    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+      /**
+       * The device name (for example, /dev/sdh or xvdh).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-devicename)
+       */
+      override fun deviceName(): String? = unwrap(this).getDeviceName()
+
+      /**
+       * Parameters used to automatically set up EBS volumes when the instance is launched.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-ebs)
+       */
+      override fun ebs(): Any? = unwrap(this).getEbs()
+
+      /**
+       * To omit the device from the block device mapping, specify an empty string.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-nodevice)
+       */
+      override fun noDevice(): String? = unwrap(this).getNoDevice()
+
+      /**
+       * The virtual device name (ephemeralN).
+       *
+       * Instance store volumes are numbered starting from 0. An instance type with 2 available
+       * instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of
+       * available instance store volumes depends on the instance type. After you connect to the
+       * instance, you must mount the volume.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-virtualname)
+       */
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty):
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty
+    }
+  }
+
+  /**
+   * Specifies an instance's Capacity Reservation targeting option. You can specify only one option
+   * at a time.
+   *
+   * `CapacityReservationSpecification` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CapacityReservationSpecificationProperty capacityReservationSpecificationProperty =
+   * CapacityReservationSpecificationProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationTarget(CapacityReservationTargetProperty.builder()
+   * .capacityReservationId("capacityReservationId")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html)
+   */
+  public interface CapacityReservationSpecificationProperty {
+    /**
+     * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
+     *
+     * * `open` - The instance can run in any `open` Capacity Reservation that has matching
+     * attributes (instance type, platform, Availability Zone).
+     * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
+     * The instance runs in On-Demand capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html#cfn-ec2-launchtemplate-capacityreservationspecification-capacityreservationpreference)
+     */
+    public fun capacityReservationPreference(): String? =
+        unwrap(this).getCapacityReservationPreference()
+
+    /**
+     * Information about the target Capacity Reservation or Capacity Reservation group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html#cfn-ec2-launchtemplate-capacityreservationspecification-capacityreservationtarget)
+     */
+    public fun capacityReservationTarget(): Any? = unwrap(this).getCapacityReservationTarget()
+
+    /**
+     * A builder for [CapacityReservationSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capacityReservationPreference Indicates the instance's Capacity Reservation
+       * preferences. Possible preferences include:.
+       * * `open` - The instance can run in any `open` Capacity Reservation that has matching
+       * attributes (instance type, platform, Availability Zone).
+       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
+       * The instance runs in On-Demand capacity.
+       */
+      public fun capacityReservationPreference(capacityReservationPreference: String)
+
+      /**
+       * @param capacityReservationTarget Information about the target Capacity Reservation or
+       * Capacity Reservation group.
+       */
+      public fun capacityReservationTarget(capacityReservationTarget: IResolvable)
+
+      /**
+       * @param capacityReservationTarget Information about the target Capacity Reservation or
+       * Capacity Reservation group.
+       */
+      public
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty)
+
+      /**
+       * @param capacityReservationTarget Information about the target Capacity Reservation or
+       * Capacity Reservation group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("13509a6123938dcb67ae290a6c4220f1dfb5f0a1121bea480151b94202eb2fdc")
+      public
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty.builder()
+
+      /**
+       * @param capacityReservationPreference Indicates the instance's Capacity Reservation
+       * preferences. Possible preferences include:.
+       * * `open` - The instance can run in any `open` Capacity Reservation that has matching
+       * attributes (instance type, platform, Availability Zone).
+       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
+       * The instance runs in On-Demand capacity.
+       */
+      override fun capacityReservationPreference(capacityReservationPreference: String) {
+        cdkBuilder.capacityReservationPreference(capacityReservationPreference)
+      }
+
+      /**
+       * @param capacityReservationTarget Information about the target Capacity Reservation or
+       * Capacity Reservation group.
+       */
+      override fun capacityReservationTarget(capacityReservationTarget: IResolvable) {
+        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param capacityReservationTarget Information about the target Capacity Reservation or
+       * Capacity Reservation group.
+       */
+      override
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty) {
+        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(CapacityReservationTargetProperty::unwrap))
+      }
+
+      /**
+       * @param capacityReservationTarget Information about the target Capacity Reservation or
+       * Capacity Reservation group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("13509a6123938dcb67ae290a6c4220f1dfb5f0a1121bea480151b94202eb2fdc")
+      override
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit):
+          Unit =
+          capacityReservationTarget(CapacityReservationTargetProperty(capacityReservationTarget))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty,
+    ) : CdkObject(cdkObject), CapacityReservationSpecificationProperty {
+      /**
+       * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
+       *
+       * * `open` - The instance can run in any `open` Capacity Reservation that has matching
+       * attributes (instance type, platform, Availability Zone).
+       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
+       * The instance runs in On-Demand capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html#cfn-ec2-launchtemplate-capacityreservationspecification-capacityreservationpreference)
+       */
+      override fun capacityReservationPreference(): String? =
+          unwrap(this).getCapacityReservationPreference()
+
+      /**
+       * Information about the target Capacity Reservation or Capacity Reservation group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html#cfn-ec2-launchtemplate-capacityreservationspecification-capacityreservationtarget)
+       */
+      override fun capacityReservationTarget(): Any? = unwrap(this).getCapacityReservationTarget()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityReservationSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty):
+          CapacityReservationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityReservationSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityReservationSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty
+    }
+  }
+
+  /**
+   * Specifies a target Capacity Reservation.
+   *
+   * `CapacityReservationTarget` is a property of the [Amazon EC2 LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CapacityReservationTargetProperty capacityReservationTargetProperty =
+   * CapacityReservationTargetProperty.builder()
+   * .capacityReservationId("capacityReservationId")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html)
+   */
+  public interface CapacityReservationTargetProperty {
+    /**
+     * The ID of the Capacity Reservation in which to run the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid)
+     */
+    public fun capacityReservationId(): String? = unwrap(this).getCapacityReservationId()
+
+    /**
+     * The ARN of the Capacity Reservation resource group in which to run the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationresourcegrouparn)
+     */
+    public fun capacityReservationResourceGroupArn(): String? =
+        unwrap(this).getCapacityReservationResourceGroupArn()
+
+    /**
+     * A builder for [CapacityReservationTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capacityReservationId The ID of the Capacity Reservation in which to run the
+       * instance.
+       */
+      public fun capacityReservationId(capacityReservationId: String)
+
+      /**
+       * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource
+       * group in which to run the instance.
+       */
+      public fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty.builder()
+
+      /**
+       * @param capacityReservationId The ID of the Capacity Reservation in which to run the
+       * instance.
+       */
+      override fun capacityReservationId(capacityReservationId: String) {
+        cdkBuilder.capacityReservationId(capacityReservationId)
+      }
+
+      /**
+       * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource
+       * group in which to run the instance.
+       */
+      override
+          fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String) {
+        cdkBuilder.capacityReservationResourceGroupArn(capacityReservationResourceGroupArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty,
+    ) : CdkObject(cdkObject), CapacityReservationTargetProperty {
+      /**
+       * The ID of the Capacity Reservation in which to run the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid)
+       */
+      override fun capacityReservationId(): String? = unwrap(this).getCapacityReservationId()
+
+      /**
+       * The ARN of the Capacity Reservation resource group in which to run the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationresourcegrouparn)
+       */
+      override fun capacityReservationResourceGroupArn(): String? =
+          unwrap(this).getCapacityReservationResourceGroupArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityReservationTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty):
+          CapacityReservationTargetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityReservationTargetProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityReservationTargetProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty
+    }
+  }
+
+  /**
+   * A security group connection tracking specification that enables you to set the idle timeout for
+   * connection tracking on an Elastic network interface.
+   *
+   * For more information, see [Connection tracking
+   * timeouts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts)
+   * in the *Amazon Elastic Compute Cloud User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * ConnectionTrackingSpecificationProperty connectionTrackingSpecificationProperty =
+   * ConnectionTrackingSpecificationProperty.builder()
+   * .tcpEstablishedTimeout(123)
+   * .udpStreamTimeout(123)
+   * .udpTimeout(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html)
+   */
+  public interface ConnectionTrackingSpecificationProperty {
+    /**
+     * Timeout (in seconds) for idle TCP connections in an established state.
+     *
+     * Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less
+     * than 432000 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-tcpestablishedtimeout)
+     */
+    public fun tcpEstablishedTimeout(): Number? = unwrap(this).getTcpEstablishedTimeout()
+
+    /**
+     * Timeout (in seconds) for idle UDP flows classified as streams which have seen more than one
+     * request-response transaction.
+     *
+     * Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-udpstreamtimeout)
+     */
+    public fun udpStreamTimeout(): Number? = unwrap(this).getUdpStreamTimeout()
+
+    /**
+     * Timeout (in seconds) for idle UDP flows that have seen traffic only in a single direction or
+     * a single request-response transaction.
+     *
+     * Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-udptimeout)
+     */
+    public fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
+
+    /**
+     * A builder for [ConnectionTrackingSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tcpEstablishedTimeout Timeout (in seconds) for idle TCP connections in an
+       * established state.
+       * Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less
+       * than 432000 seconds.
+       */
+      public fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number)
+
+      /**
+       * @param udpStreamTimeout Timeout (in seconds) for idle UDP flows classified as streams which
+       * have seen more than one request-response transaction.
+       * Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.
+       */
+      public fun udpStreamTimeout(udpStreamTimeout: Number)
+
+      /**
+       * @param udpTimeout Timeout (in seconds) for idle UDP flows that have seen traffic only in a
+       * single direction or a single request-response transaction.
+       * Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.
+       */
+      public fun udpTimeout(udpTimeout: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty.builder()
+
+      /**
+       * @param tcpEstablishedTimeout Timeout (in seconds) for idle TCP connections in an
+       * established state.
+       * Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less
+       * than 432000 seconds.
+       */
+      override fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number) {
+        cdkBuilder.tcpEstablishedTimeout(tcpEstablishedTimeout)
+      }
+
+      /**
+       * @param udpStreamTimeout Timeout (in seconds) for idle UDP flows classified as streams which
+       * have seen more than one request-response transaction.
+       * Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.
+       */
+      override fun udpStreamTimeout(udpStreamTimeout: Number) {
+        cdkBuilder.udpStreamTimeout(udpStreamTimeout)
+      }
+
+      /**
+       * @param udpTimeout Timeout (in seconds) for idle UDP flows that have seen traffic only in a
+       * single direction or a single request-response transaction.
+       * Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.
+       */
+      override fun udpTimeout(udpTimeout: Number) {
+        cdkBuilder.udpTimeout(udpTimeout)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty,
+    ) : CdkObject(cdkObject), ConnectionTrackingSpecificationProperty {
+      /**
+       * Timeout (in seconds) for idle TCP connections in an established state.
+       *
+       * Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less
+       * than 432000 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-tcpestablishedtimeout)
+       */
+      override fun tcpEstablishedTimeout(): Number? = unwrap(this).getTcpEstablishedTimeout()
+
+      /**
+       * Timeout (in seconds) for idle UDP flows classified as streams which have seen more than one
+       * request-response transaction.
+       *
+       * Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-udpstreamtimeout)
+       */
+      override fun udpStreamTimeout(): Number? = unwrap(this).getUdpStreamTimeout()
+
+      /**
+       * Timeout (in seconds) for idle UDP flows that have seen traffic only in a single direction
+       * or a single request-response transaction.
+       *
+       * Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-udptimeout)
+       */
+      override fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConnectionTrackingSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty):
+          ConnectionTrackingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionTrackingSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectionTrackingSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty
+    }
+  }
+
+  /**
+   * Specifies the CPU options for an instance.
+   *
+   * For more information, see [Optimize CPU
+   * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the
+   * *Amazon Elastic Compute Cloud User Guide* .
+   *
+   * `CpuOptions` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CpuOptionsProperty cpuOptionsProperty = CpuOptionsProperty.builder()
+   * .amdSevSnp("amdSevSnp")
+   * .coreCount(123)
+   * .threadsPerCore(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html)
+   */
+  public interface CpuOptionsProperty {
+    /**
+     * Indicates whether to enable the instance for AMD SEV-SNP.
+     *
+     * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
+     * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-amdsevsnp)
+     */
+    public fun amdSevSnp(): String? = unwrap(this).getAmdSevSnp()
+
+    /**
+     * The number of CPU cores for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-corecount)
+     */
+    public fun coreCount(): Number? = unwrap(this).getCoreCount()
+
+    /**
+     * The number of threads per CPU core.
+     *
+     * To disable multithreading for the instance, specify a value of `1` . Otherwise, specify the
+     * default value of `2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-threadspercore)
+     */
+    public fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+
+    /**
+     * A builder for [CpuOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param amdSevSnp Indicates whether to enable the instance for AMD SEV-SNP.
+       * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
+       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
+       */
+      public fun amdSevSnp(amdSevSnp: String)
+
+      /**
+       * @param coreCount The number of CPU cores for the instance.
+       */
+      public fun coreCount(coreCount: Number)
+
+      /**
+       * @param threadsPerCore The number of threads per CPU core.
+       * To disable multithreading for the instance, specify a value of `1` . Otherwise, specify the
+       * default value of `2` .
+       */
+      public fun threadsPerCore(threadsPerCore: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty.builder()
+
+      /**
+       * @param amdSevSnp Indicates whether to enable the instance for AMD SEV-SNP.
+       * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
+       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
+       */
+      override fun amdSevSnp(amdSevSnp: String) {
+        cdkBuilder.amdSevSnp(amdSevSnp)
+      }
+
+      /**
+       * @param coreCount The number of CPU cores for the instance.
+       */
+      override fun coreCount(coreCount: Number) {
+        cdkBuilder.coreCount(coreCount)
+      }
+
+      /**
+       * @param threadsPerCore The number of threads per CPU core.
+       * To disable multithreading for the instance, specify a value of `1` . Otherwise, specify the
+       * default value of `2` .
+       */
+      override fun threadsPerCore(threadsPerCore: Number) {
+        cdkBuilder.threadsPerCore(threadsPerCore)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty,
+    ) : CdkObject(cdkObject), CpuOptionsProperty {
+      /**
+       * Indicates whether to enable the instance for AMD SEV-SNP.
+       *
+       * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
+       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-amdsevsnp)
+       */
+      override fun amdSevSnp(): String? = unwrap(this).getAmdSevSnp()
+
+      /**
+       * The number of CPU cores for the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-corecount)
+       */
+      override fun coreCount(): Number? = unwrap(this).getCoreCount()
+
+      /**
+       * The number of threads per CPU core.
+       *
+       * To disable multithreading for the instance, specify a value of `1` . Otherwise, specify the
+       * default value of `2` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-threadspercore)
+       */
+      override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CpuOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty):
+          CpuOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CpuOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CpuOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies the credit option for CPU usage of a T2, T3, or T3a instance.
+   *
+   * `CreditSpecification` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CreditSpecificationProperty creditSpecificationProperty = CreditSpecificationProperty.builder()
+   * .cpuCredits("cpuCredits")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-creditspecification.html)
+   */
+  public interface CreditSpecificationProperty {
+    /**
+     * The credit option for CPU usage of a T instance.
+     *
+     * Valid values: `standard` | `unlimited`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-creditspecification.html#cfn-ec2-launchtemplate-creditspecification-cpucredits)
+     */
+    public fun cpuCredits(): String? = unwrap(this).getCpuCredits()
+
+    /**
+     * A builder for [CreditSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpuCredits The credit option for CPU usage of a T instance.
+       * Valid values: `standard` | `unlimited`
+       */
+      public fun cpuCredits(cpuCredits: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty.builder()
+
+      /**
+       * @param cpuCredits The credit option for CPU usage of a T instance.
+       * Valid values: `standard` | `unlimited`
+       */
+      override fun cpuCredits(cpuCredits: String) {
+        cdkBuilder.cpuCredits(cpuCredits)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty,
+    ) : CdkObject(cdkObject), CreditSpecificationProperty {
+      /**
+       * The credit option for CPU usage of a T instance.
+       *
+       * Valid values: `standard` | `unlimited`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-creditspecification.html#cfn-ec2-launchtemplate-creditspecification-cpucredits)
+       */
+      override fun cpuCredits(): String? = unwrap(this).getCpuCredits()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CreditSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty):
+          CreditSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CreditSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CreditSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty
+    }
+  }
+
+  /**
+   * Parameters for a block device for an EBS volume in an Amazon EC2 launch template.
+   *
+   * `Ebs` is a property of [AWS::EC2::LaunchTemplate
+   * BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EbsProperty ebsProperty = EbsProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .kmsKeyId("kmsKeyId")
+   * .snapshotId("snapshotId")
+   * .throughput(123)
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html)
+   */
+  public interface EbsProperty {
+    /**
+     * Indicates whether the EBS volume is deleted on instance termination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-deleteontermination)
+     */
+    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+    /**
+     * Indicates whether the EBS volume is encrypted.
+     *
+     * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
+     * you are creating a volume from a snapshot, you can't specify an encryption value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-encrypted)
+     */
+    public fun encrypted(): Any? = unwrap(this).getEncrypted()
+
+    /**
+     * The number of I/O operations per second (IOPS).
+     *
+     * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+     * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+     * volume and the rate at which the volume accumulates I/O credits for bursting.
+     *
+     * The following are the supported values for each volume type:
+     *
+     * * `gp3` : 3,000 - 16,000 IOPS
+     * * `io1` : 100 - 64,000 IOPS
+     * * `io2` : 100 - 256,000 IOPS
+     *
+     * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+     * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+     * . On other instances, you can achieve performance up to 32,000 IOPS.
+     *
+     * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used for encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * The ID of the snapshot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-snapshotid)
+     */
+    public fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+    /**
+     * The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+     *
+     * Valid Range: Minimum value of 125. Maximum value of 1000.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-throughput)
+     */
+    public fun throughput(): Number? = unwrap(this).getThroughput()
+
+    /**
+     * The size of the volume, in GiBs.
+     *
+     * You must specify either a snapshot ID or a volume size. The following are the supported
+     * volumes sizes for each volume type:
+     *
+     * * `gp2` and `gp3` : 1 - 16,384 GiB
+     * * `io1` : 4 - 16,384 GiB
+     * * `io2` : 4 - 65,536 GiB
+     * * `st1` and `sc1` : 125 - 16,384 GiB
+     * * `standard` : 1 - 1024 GiB
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumesize)
+     */
+    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+    /**
+     * The volume type.
+     *
+     * For more information, see [Amazon EBS volume
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+     * Elastic Compute Cloud User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumetype)
+     */
+    public fun volumeType(): String? = unwrap(this).getVolumeType()
+
+    /**
+     * A builder for [EbsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       */
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       */
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
+
+      /**
+       * @param encrypted Indicates whether the EBS volume is encrypted.
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
+       * you are creating a volume from a snapshot, you can't specify an encryption value.
+       */
+      public fun encrypted(encrypted: Boolean)
+
+      /**
+       * @param encrypted Indicates whether the EBS volume is encrypted.
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
+       * you are creating a volume from a snapshot, you can't specify an encryption value.
+       */
+      public fun encrypted(encrypted: IResolvable)
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS).
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param kmsKeyId The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used
+       * for encryption.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param snapshotId The ID of the snapshot.
+       */
+      public fun snapshotId(snapshotId: String)
+
+      /**
+       * @param throughput The throughput to provision for a `gp3` volume, with a maximum of 1,000
+       * MiB/s.
+       * Valid Range: Minimum value of 125. Maximum value of 1000.
+       */
+      public fun throughput(throughput: Number)
+
+      /**
+       * @param volumeSize The size of the volume, in GiBs.
+       * You must specify either a snapshot ID or a volume size. The following are the supported
+       * volumes sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       */
+      public fun volumeSize(volumeSize: Number)
+
+      /**
+       * @param volumeType The volume type.
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * Elastic Compute Cloud User Guide* .
+       */
+      public fun volumeType(volumeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty.builder()
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       */
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination)
+      }
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       */
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encrypted Indicates whether the EBS volume is encrypted.
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
+       * you are creating a volume from a snapshot, you can't specify an encryption value.
+       */
+      override fun encrypted(encrypted: Boolean) {
+        cdkBuilder.encrypted(encrypted)
+      }
+
+      /**
+       * @param encrypted Indicates whether the EBS volume is encrypted.
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
+       * you are creating a volume from a snapshot, you can't specify an encryption value.
+       */
+      override fun encrypted(encrypted: IResolvable) {
+        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS).
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param kmsKeyId The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used
+       * for encryption.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param snapshotId The ID of the snapshot.
+       */
+      override fun snapshotId(snapshotId: String) {
+        cdkBuilder.snapshotId(snapshotId)
+      }
+
+      /**
+       * @param throughput The throughput to provision for a `gp3` volume, with a maximum of 1,000
+       * MiB/s.
+       * Valid Range: Minimum value of 125. Maximum value of 1000.
+       */
+      override fun throughput(throughput: Number) {
+        cdkBuilder.throughput(throughput)
+      }
+
+      /**
+       * @param volumeSize The size of the volume, in GiBs.
+       * You must specify either a snapshot ID or a volume size. The following are the supported
+       * volumes sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       */
+      override fun volumeSize(volumeSize: Number) {
+        cdkBuilder.volumeSize(volumeSize)
+      }
+
+      /**
+       * @param volumeType The volume type.
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * Elastic Compute Cloud User Guide* .
+       */
+      override fun volumeType(volumeType: String) {
+        cdkBuilder.volumeType(volumeType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty,
+    ) : CdkObject(cdkObject), EbsProperty {
+      /**
+       * Indicates whether the EBS volume is deleted on instance termination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-deleteontermination)
+       */
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+      /**
+       * Indicates whether the EBS volume is encrypted.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
+       * you are creating a volume from a snapshot, you can't specify an encryption value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-encrypted)
+       */
+      override fun encrypted(): Any? = unwrap(this).getEncrypted()
+
+      /**
+       * The number of I/O operations per second (IOPS).
+       *
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used for encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * The ID of the snapshot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-snapshotid)
+       */
+      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+      /**
+       * The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+       *
+       * Valid Range: Minimum value of 125. Maximum value of 1000.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-throughput)
+       */
+      override fun throughput(): Number? = unwrap(this).getThroughput()
+
+      /**
+       * The size of the volume, in GiBs.
+       *
+       * You must specify either a snapshot ID or a volume size. The following are the supported
+       * volumes sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumesize)
+       */
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+      /**
+       * The volume type.
+       *
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * Elastic Compute Cloud User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumetype)
+       */
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EbsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty):
+          EbsProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EbsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty
+    }
+  }
+
+  /**
+   * Amazon Elastic Graphics reached end of life on January 8, 2024.
+   *
+   * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
+   * G4dn, or G5 instances.
+   *
+   * Specifies a specification for an Elastic GPU for an Amazon EC2 launch template.
+   *
+   * `ElasticGpuSpecification` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * ElasticGpuSpecificationProperty elasticGpuSpecificationProperty =
+   * ElasticGpuSpecificationProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html)
+   */
+  public interface ElasticGpuSpecificationProperty {
+    /**
+     * The type of Elastic Graphics accelerator.
+     *
+     * For more information about the values to specify for `Type` , see [Elastic Graphics
+     * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+     * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
+     * User Guide for Windows Instances* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html#cfn-ec2-launchtemplate-elasticgpuspecification-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ElasticGpuSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The type of Elastic Graphics accelerator.
+       * For more information about the values to specify for `Type` , see [Elastic Graphics
+       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
+       * User Guide for Windows Instances* .
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty.builder()
+
+      /**
+       * @param type The type of Elastic Graphics accelerator.
+       * For more information about the values to specify for `Type` , see [Elastic Graphics
+       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
+       * User Guide for Windows Instances* .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty,
+    ) : CdkObject(cdkObject), ElasticGpuSpecificationProperty {
+      /**
+       * The type of Elastic Graphics accelerator.
+       *
+       * For more information about the values to specify for `Type` , see [Elastic Graphics
+       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
+       * User Guide for Windows Instances* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html#cfn-ec2-launchtemplate-elasticgpuspecification-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticGpuSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty):
+          ElasticGpuSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticGpuSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticGpuSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty
+    }
+  }
+
+  /**
+   * ENA Express uses AWS Scalable Reliable Datagram (SRD) technology to increase the maximum
+   * bandwidth used per stream and minimize tail latency of network traffic between EC2 instances.
+   *
+   * With ENA Express, you can communicate between two EC2 instances in the same subnet within the
+   * same account, or in different accounts. Both sending and receiving instances must have ENA Express
+   * enabled.
+   *
+   * To improve the reliability of network packet delivery, ENA Express reorders network packets on
+   * the receiving end by default. However, some UDP-based applications are designed to handle network
+   * packets that are out of order to reduce the overhead for packet delivery at the network layer.
+   * When ENA Express is enabled, you can specify whether UDP network traffic uses it.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EnaSrdSpecificationProperty enaSrdSpecificationProperty = EnaSrdSpecificationProperty.builder()
+   * .enaSrdEnabled(false)
+   * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+   * .enaSrdUdpEnabled(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html)
+   */
+  public interface EnaSrdSpecificationProperty {
+    /**
+     * Indicates whether ENA Express is enabled for the network interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html#cfn-ec2-launchtemplate-enasrdspecification-enasrdenabled)
+     */
+    public fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
+
+    /**
+     * Configures ENA Express for UDP network traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html#cfn-ec2-launchtemplate-enasrdspecification-enasrdudpspecification)
+     */
+    public fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
+
+    /**
+     * A builder for [EnaSrdSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
+       */
+      public fun enaSrdEnabled(enaSrdEnabled: Boolean)
+
+      /**
+       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
+       */
+      public fun enaSrdEnabled(enaSrdEnabled: IResolvable)
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable)
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty)
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dd7cd088ca722e28b6bce1ce2139206df9bf6fb92063da1c5b497af55aa9ffb4")
+      public
+          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty.builder()
+
+      /**
+       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
+       */
+      override fun enaSrdEnabled(enaSrdEnabled: Boolean) {
+        cdkBuilder.enaSrdEnabled(enaSrdEnabled)
+      }
+
+      /**
+       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
+       */
+      override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
+        cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
+        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
+        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dd7cd088ca722e28b6bce1ce2139206df9bf6fb92063da1c5b497af55aa9ffb4")
+      override
+          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit):
+          Unit = enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty(enaSrdUdpSpecification))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty,
+    ) : CdkObject(cdkObject), EnaSrdSpecificationProperty {
+      /**
+       * Indicates whether ENA Express is enabled for the network interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html#cfn-ec2-launchtemplate-enasrdspecification-enasrdenabled)
+       */
+      override fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
+
+      /**
+       * Configures ENA Express for UDP network traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html#cfn-ec2-launchtemplate-enasrdspecification-enasrdudpspecification)
+       */
+      override fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnaSrdSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty):
+          EnaSrdSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnaSrdSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnaSrdSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty
+    }
+  }
+
+  /**
+   * ENA Express is compatible with both TCP and UDP transport protocols.
+   *
+   * When it's enabled, TCP traffic automatically uses it. However, some UDP-based applications are
+   * designed to handle network packets that are out of order, without a need for retransmission, such
+   * as live video broadcasting or other near-real-time applications. For UDP traffic, you can specify
+   * whether to use ENA Express, based on your application environment needs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EnaSrdUdpSpecificationProperty enaSrdUdpSpecificationProperty =
+   * EnaSrdUdpSpecificationProperty.builder()
+   * .enaSrdUdpEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdudpspecification.html)
+   */
+  public interface EnaSrdUdpSpecificationProperty {
+    /**
+     * Indicates whether UDP traffic to and from the instance uses ENA Express.
+     *
+     * To specify this setting, you must first enable ENA Express.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdudpspecification.html#cfn-ec2-launchtemplate-enasrdudpspecification-enasrdudpenabled)
+     */
+    public fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
+
+    /**
+     * A builder for [EnaSrdUdpSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean)
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty.builder()
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
+        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled)
+      }
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
+        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty,
+    ) : CdkObject(cdkObject), EnaSrdUdpSpecificationProperty {
+      /**
+       * Indicates whether UDP traffic to and from the instance uses ENA Express.
+       *
+       * To specify this setting, you must first enable ENA Express.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdudpspecification.html#cfn-ec2-launchtemplate-enasrdudpspecification-enasrdudpenabled)
+       */
+      override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnaSrdUdpSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty):
+          EnaSrdUdpSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnaSrdUdpSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnaSrdUdpSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty
+    }
+  }
+
+  /**
    * Indicates whether the instance is enabled for AWS Nitro Enclaves.
    *
    * Example:
@@ -517,133 +2678,16 @@ public open class CfnLaunchTemplate internal constructor(
   }
 
   /**
-   * The minimum and maximum number of network interfaces.
+   * Specifies whether your instance is configured for hibernation.
    *
-   * Example:
+   * This parameter is valid only if the instance meets the [hibernation
+   * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#hibernating-prerequisites)
+   * . For more information, see [Hibernate Your
+   * Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
+   * User Guide* .
    *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * NetworkInterfaceCountProperty networkInterfaceCountProperty =
-   * NetworkInterfaceCountProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html)
-   */
-  public interface NetworkInterfaceCountProperty {
-    /**
-     * The maximum number of network interfaces.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html#cfn-ec2-launchtemplate-networkinterfacecount-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum number of network interfaces.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html#cfn-ec2-launchtemplate-networkinterfacecount-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [NetworkInterfaceCountProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum number of network interfaces.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum number of network interfaces.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty.builder()
-
-      /**
-       * @param max The maximum number of network interfaces.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum number of network interfaces.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceCountProperty {
-      /**
-       * The maximum number of network interfaces.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html#cfn-ec2-launchtemplate-networkinterfacecount-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum number of network interfaces.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html#cfn-ec2-launchtemplate-networkinterfacecount-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfaceCountProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty):
-          NetworkInterfaceCountProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkInterfaceCountProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkInterfaceCountProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty
-    }
-  }
-
-  /**
-   * Specifies options for Spot Instances.
-   *
-   * `SpotOptions` is a property of [AWS::EC2::LaunchTemplate
-   * InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html)
+   * `HibernationOptions` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
    * .
    *
    * Example:
@@ -652,263 +2696,2897 @@ public open class CfnLaunchTemplate internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * SpotOptionsProperty spotOptionsProperty = SpotOptionsProperty.builder()
-   * .blockDurationMinutes(123)
-   * .instanceInterruptionBehavior("instanceInterruptionBehavior")
-   * .maxPrice("maxPrice")
-   * .spotInstanceType("spotInstanceType")
-   * .validUntil("validUntil")
+   * HibernationOptionsProperty hibernationOptionsProperty = HibernationOptionsProperty.builder()
+   * .configured(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-hibernationoptions.html)
    */
-  public interface SpotOptionsProperty {
+  public interface HibernationOptionsProperty {
     /**
-     * Deprecated.
+     * If you set this parameter to `true` , the instance is enabled for hibernation.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-blockdurationminutes)
+     * Default: `false`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-hibernationoptions.html#cfn-ec2-launchtemplate-hibernationoptions-configured)
      */
-    public fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+    public fun configured(): Any? = unwrap(this).getConfigured()
 
     /**
-     * The behavior when a Spot Instance is interrupted.
-     *
-     * The default is `terminate` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-instanceinterruptionbehavior)
-     */
-    public fun instanceInterruptionBehavior(): String? =
-        unwrap(this).getInstanceInterruptionBehavior()
-
-    /**
-     * The maximum hourly price you're willing to pay for the Spot Instances.
-     *
-     * We do not recommend using this parameter because it can lead to increased interruptions. If
-     * you do not specify this parameter, you will pay the current Spot price.
-     *
-     *
-     * If you specify a maximum price, your Spot Instances will be interrupted more frequently than
-     * if you do not specify this parameter.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-maxprice)
-     */
-    public fun maxPrice(): String? = unwrap(this).getMaxPrice()
-
-    /**
-     * The Spot Instance request type.
-     *
-     * If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the
-     * Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is
-     * below its desired capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-spotinstancetype)
-     */
-    public fun spotInstanceType(): String? = unwrap(this).getSpotInstanceType()
-
-    /**
-     * The end date of the request, in UTC format ( *YYYY-MM-DD* T *HH:MM:SS* Z). Supported only for
-     * persistent requests.
-     *
-     * * For a persistent request, the request remains active until the `ValidUntil` date and time
-     * is reached. Otherwise, the request remains active until you cancel it.
-     * * For a one-time request, `ValidUntil` is not supported. The request remains active until all
-     * instances launch or you cancel the request.
-     *
-     * Default: 7 days from the current date
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-validuntil)
-     */
-    public fun validUntil(): String? = unwrap(this).getValidUntil()
-
-    /**
-     * A builder for [SpotOptionsProperty]
+     * A builder for [HibernationOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param blockDurationMinutes Deprecated.
+       * @param configured If you set this parameter to `true` , the instance is enabled for
+       * hibernation.
+       * Default: `false`
        */
-      public fun blockDurationMinutes(blockDurationMinutes: Number)
+      public fun configured(configured: Boolean)
 
       /**
-       * @param instanceInterruptionBehavior The behavior when a Spot Instance is interrupted.
-       * The default is `terminate` .
+       * @param configured If you set this parameter to `true` , the instance is enabled for
+       * hibernation.
+       * Default: `false`
        */
-      public fun instanceInterruptionBehavior(instanceInterruptionBehavior: String)
-
-      /**
-       * @param maxPrice The maximum hourly price you're willing to pay for the Spot Instances.
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
-       * than if you do not specify this parameter.
-       */
-      public fun maxPrice(maxPrice: String)
-
-      /**
-       * @param spotInstanceType The Spot Instance request type.
-       * If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the
-       * Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is
-       * below its desired capacity.
-       */
-      public fun spotInstanceType(spotInstanceType: String)
-
-      /**
-       * @param validUntil The end date of the request, in UTC format ( *YYYY-MM-DD* T *HH:MM:SS*
-       * Z). Supported only for persistent requests.
-       * * For a persistent request, the request remains active until the `ValidUntil` date and time
-       * is reached. Otherwise, the request remains active until you cancel it.
-       * * For a one-time request, `ValidUntil` is not supported. The request remains active until
-       * all instances launch or you cancel the request.
-       *
-       * Default: 7 days from the current date
-       */
-      public fun validUntil(validUntil: String)
+      public fun configured(configured: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty.builder()
 
       /**
-       * @param blockDurationMinutes Deprecated.
+       * @param configured If you set this parameter to `true` , the instance is enabled for
+       * hibernation.
+       * Default: `false`
        */
-      override fun blockDurationMinutes(blockDurationMinutes: Number) {
-        cdkBuilder.blockDurationMinutes(blockDurationMinutes)
+      override fun configured(configured: Boolean) {
+        cdkBuilder.configured(configured)
       }
 
       /**
-       * @param instanceInterruptionBehavior The behavior when a Spot Instance is interrupted.
-       * The default is `terminate` .
+       * @param configured If you set this parameter to `true` , the instance is enabled for
+       * hibernation.
+       * Default: `false`
        */
-      override fun instanceInterruptionBehavior(instanceInterruptionBehavior: String) {
-        cdkBuilder.instanceInterruptionBehavior(instanceInterruptionBehavior)
+      override fun configured(configured: IResolvable) {
+        cdkBuilder.configured(configured.let(IResolvable::unwrap))
       }
 
-      /**
-       * @param maxPrice The maximum hourly price you're willing to pay for the Spot Instances.
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
-       * than if you do not specify this parameter.
-       */
-      override fun maxPrice(maxPrice: String) {
-        cdkBuilder.maxPrice(maxPrice)
-      }
-
-      /**
-       * @param spotInstanceType The Spot Instance request type.
-       * If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the
-       * Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is
-       * below its desired capacity.
-       */
-      override fun spotInstanceType(spotInstanceType: String) {
-        cdkBuilder.spotInstanceType(spotInstanceType)
-      }
-
-      /**
-       * @param validUntil The end date of the request, in UTC format ( *YYYY-MM-DD* T *HH:MM:SS*
-       * Z). Supported only for persistent requests.
-       * * For a persistent request, the request remains active until the `ValidUntil` date and time
-       * is reached. Otherwise, the request remains active until you cancel it.
-       * * For a one-time request, `ValidUntil` is not supported. The request remains active until
-       * all instances launch or you cancel the request.
-       *
-       * Default: 7 days from the current date
-       */
-      override fun validUntil(validUntil: String) {
-        cdkBuilder.validUntil(validUntil)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty
-          = cdkBuilder.build()
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty,
-    ) : CdkObject(cdkObject), SpotOptionsProperty {
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty,
+    ) : CdkObject(cdkObject), HibernationOptionsProperty {
       /**
-       * Deprecated.
+       * If you set this parameter to `true` , the instance is enabled for hibernation.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-blockdurationminutes)
+       * Default: `false`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-hibernationoptions.html#cfn-ec2-launchtemplate-hibernationoptions-configured)
        */
-      override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
-
-      /**
-       * The behavior when a Spot Instance is interrupted.
-       *
-       * The default is `terminate` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-instanceinterruptionbehavior)
-       */
-      override fun instanceInterruptionBehavior(): String? =
-          unwrap(this).getInstanceInterruptionBehavior()
-
-      /**
-       * The maximum hourly price you're willing to pay for the Spot Instances.
-       *
-       * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
-       *
-       *
-       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
-       * than if you do not specify this parameter.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-maxprice)
-       */
-      override fun maxPrice(): String? = unwrap(this).getMaxPrice()
-
-      /**
-       * The Spot Instance request type.
-       *
-       * If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the
-       * Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is
-       * below its desired capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-spotinstancetype)
-       */
-      override fun spotInstanceType(): String? = unwrap(this).getSpotInstanceType()
-
-      /**
-       * The end date of the request, in UTC format ( *YYYY-MM-DD* T *HH:MM:SS* Z). Supported only
-       * for persistent requests.
-       *
-       * * For a persistent request, the request remains active until the `ValidUntil` date and time
-       * is reached. Otherwise, the request remains active until you cancel it.
-       * * For a one-time request, `ValidUntil` is not supported. The request remains active until
-       * all instances launch or you cancel the request.
-       *
-       * Default: 7 days from the current date
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-validuntil)
-       */
-      override fun validUntil(): String? = unwrap(this).getValidUntil()
+      override fun configured(): Any? = unwrap(this).getConfigured()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SpotOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HibernationOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty):
-          SpotOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SpotOptionsProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty):
+          HibernationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HibernationOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HibernationOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies an IAM instance profile, which is a container for an IAM role for your instance.
+   *
+   * You can use an IAM role to distribute your AWS credentials to your instances.
+   *
+   * If you are creating the launch template for use with an Amazon EC2 Auto Scaling group, you can
+   * specify either the name or the ARN of the instance profile, but not both.
+   *
+   * `IamInstanceProfile` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * IamInstanceProfileProperty iamInstanceProfileProperty = IamInstanceProfileProperty.builder()
+   * .arn("arn")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html)
+   */
+  public interface IamInstanceProfileProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the instance profile.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html#cfn-ec2-launchtemplate-iaminstanceprofile-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * The name of the instance profile.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html#cfn-ec2-launchtemplate-iaminstanceprofile-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [IamInstanceProfileProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the instance profile.
+       */
+      public fun arn(arn: String)
+
+      /**
+       * @param name The name of the instance profile.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty.builder()
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the instance profile.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      /**
+       * @param name The name of the instance profile.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty,
+    ) : CdkObject(cdkObject), IamInstanceProfileProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the instance profile.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html#cfn-ec2-launchtemplate-iaminstanceprofile-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+
+      /**
+       * The name of the instance profile.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html#cfn-ec2-launchtemplate-iaminstanceprofile-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IamInstanceProfileProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty):
+          IamInstanceProfileProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IamInstanceProfileProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IamInstanceProfileProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty
+    }
+  }
+
+  /**
+   * Specifies the market (purchasing) option for an instance.
+   *
+   * `InstanceMarketOptions` is a property of the [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * InstanceMarketOptionsProperty instanceMarketOptionsProperty =
+   * InstanceMarketOptionsProperty.builder()
+   * .marketType("marketType")
+   * .spotOptions(SpotOptionsProperty.builder()
+   * .blockDurationMinutes(123)
+   * .instanceInterruptionBehavior("instanceInterruptionBehavior")
+   * .maxPrice("maxPrice")
+   * .spotInstanceType("spotInstanceType")
+   * .validUntil("validUntil")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html)
+   */
+  public interface InstanceMarketOptionsProperty {
+    /**
+     * The market type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html#cfn-ec2-launchtemplate-instancemarketoptions-markettype)
+     */
+    public fun marketType(): String? = unwrap(this).getMarketType()
+
+    /**
+     * The options for Spot Instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html#cfn-ec2-launchtemplate-instancemarketoptions-spotoptions)
+     */
+    public fun spotOptions(): Any? = unwrap(this).getSpotOptions()
+
+    /**
+     * A builder for [InstanceMarketOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param marketType The market type.
+       */
+      public fun marketType(marketType: String)
+
+      /**
+       * @param spotOptions The options for Spot Instances.
+       */
+      public fun spotOptions(spotOptions: IResolvable)
+
+      /**
+       * @param spotOptions The options for Spot Instances.
+       */
+      public fun spotOptions(spotOptions: SpotOptionsProperty)
+
+      /**
+       * @param spotOptions The options for Spot Instances.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f744c35a1804b7b20099c6d3a34b26802557f5b5ffb6c6f41595d1880bb85894")
+      public fun spotOptions(spotOptions: SpotOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty.builder()
+
+      /**
+       * @param marketType The market type.
+       */
+      override fun marketType(marketType: String) {
+        cdkBuilder.marketType(marketType)
+      }
+
+      /**
+       * @param spotOptions The options for Spot Instances.
+       */
+      override fun spotOptions(spotOptions: IResolvable) {
+        cdkBuilder.spotOptions(spotOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param spotOptions The options for Spot Instances.
+       */
+      override fun spotOptions(spotOptions: SpotOptionsProperty) {
+        cdkBuilder.spotOptions(spotOptions.let(SpotOptionsProperty::unwrap))
+      }
+
+      /**
+       * @param spotOptions The options for Spot Instances.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f744c35a1804b7b20099c6d3a34b26802557f5b5ffb6c6f41595d1880bb85894")
+      override fun spotOptions(spotOptions: SpotOptionsProperty.Builder.() -> Unit): Unit =
+          spotOptions(SpotOptionsProperty(spotOptions))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty,
+    ) : CdkObject(cdkObject), InstanceMarketOptionsProperty {
+      /**
+       * The market type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html#cfn-ec2-launchtemplate-instancemarketoptions-markettype)
+       */
+      override fun marketType(): String? = unwrap(this).getMarketType()
+
+      /**
+       * The options for Spot Instances.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html#cfn-ec2-launchtemplate-instancemarketoptions-spotoptions)
+       */
+      override fun spotOptions(): Any? = unwrap(this).getSpotOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceMarketOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty):
+          InstanceMarketOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceMarketOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceMarketOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty
+    }
+  }
+
+  /**
+   * The attributes for the instance types.
+   *
+   * When you specify instance attributes, Amazon EC2 will identify instance types with these
+   * attributes.
+   *
+   * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any
+   * unspecified optional attribute is set to its default.
+   *
+   * When you specify multiple attributes, you get instance types that satisfy all of the specified
+   * attributes. If you specify multiple values for an attribute, you get instance types that satisfy
+   * any of the specified values.
+   *
+   * To limit the list of instance types from which Amazon EC2 can identify matching instance types,
+   * you can use one of the following parameters, but not both in the same request:
+   *
+   * * `AllowedInstanceTypes` - The instance types to include in the list. All other instance types
+   * are ignored, even if they match your specified attributes.
+   * * `ExcludedInstanceTypes` - The instance types to exclude from the list, even if they match
+   * your specified attributes.
+   *
+   *
+   * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+   *
+   * Attribute-based instance type selection is only supported when using Auto Scaling groups, EC2
+   * Fleet, and Spot Fleet to launch instances. If you plan to use the launch template in the [launch
+   * instance
+   * wizard](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html) , or
+   * with the
+   * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) API
+   * or
+   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+   * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
+   *
+   *
+   * For more information, see [Attribute-based instance type selection for EC2
+   * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
+   * , [Attribute-based instance type selection for Spot
+   * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
+   * , and [Spot placement
+   * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
+   * *Amazon EC2 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * InstanceRequirementsProperty instanceRequirementsProperty =
+   * InstanceRequirementsProperty.builder()
+   * .acceleratorCount(AcceleratorCountProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+   * .acceleratorNames(List.of("acceleratorNames"))
+   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .acceleratorTypes(List.of("acceleratorTypes"))
+   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+   * .bareMetal("bareMetal")
+   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .burstablePerformance("burstablePerformance")
+   * .cpuManufacturers(List.of("cpuManufacturers"))
+   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+   * .instanceGenerations(List.of("instanceGenerations"))
+   * .localStorage("localStorage")
+   * .localStorageTypes(List.of("localStorageTypes"))
+   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
+   * .memoryGiBPerVCpu(MemoryGiBPerVCpuProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .memoryMiB(MemoryMiBProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkBandwidthGbps(NetworkBandwidthGbpsProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .networkInterfaceCount(NetworkInterfaceCountProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .onDemandMaxPricePercentageOverLowestPrice(123)
+   * .requireHibernateSupport(false)
+   * .spotMaxPricePercentageOverLowestPrice(123)
+   * .totalLocalStorageGb(TotalLocalStorageGBProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .vCpuCount(VCpuCountProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html)
+   */
+  public interface InstanceRequirementsProperty {
+    /**
+     * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
+     * instance.
+     *
+     * To exclude accelerator-enabled instance types, set `Max` to `0` .
+     *
+     * Default: No minimum or maximum limits
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratorcount)
+     */
+    public fun acceleratorCount(): Any? = unwrap(this).getAcceleratorCount()
+
+    /**
+     * Indicates whether instance types must have accelerators by specific manufacturers.
+     *
+     * * For instance types with AWS devices, specify `amazon-web-services` .
+     * * For instance types with AMD devices, specify `amd` .
+     * * For instance types with Habana devices, specify `habana` .
+     * * For instance types with NVIDIA devices, specify `nvidia` .
+     * * For instance types with Xilinx devices, specify `xilinx` .
+     *
+     * Default: Any manufacturer
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratormanufacturers)
+     */
+    public fun acceleratorManufacturers(): List<String> = unwrap(this).getAcceleratorManufacturers()
+        ?: emptyList()
+
+    /**
+     * The accelerators that must be on the instance type.
+     *
+     * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
+     * * For instance types with NVIDIA A100 GPUs, specify `a100` .
+     * * For instance types with NVIDIA H100 GPUs, specify `h100` .
+     * * For instance types with AWS Inferentia chips, specify `inferentia` .
+     * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
+     * * For instance types with NVIDIA K80 GPUs, specify `k80` .
+     * * For instance types with NVIDIA M60 GPUs, specify `m60` .
+     * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
+     * * For instance types with NVIDIA T4 GPUs, specify `t4` .
+     * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
+     * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+     * * For instance types with NVIDIA V100 GPUs, specify `v100` .
+     *
+     * Default: Any accelerator
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratornames)
+     */
+    public fun acceleratorNames(): List<String> = unwrap(this).getAcceleratorNames() ?: emptyList()
+
+    /**
+     * The minimum and maximum amount of total accelerator memory, in MiB.
+     *
+     * Default: No minimum or maximum limits
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratortotalmemorymib)
+     */
+    public fun acceleratorTotalMemoryMiB(): Any? = unwrap(this).getAcceleratorTotalMemoryMiB()
+
+    /**
+     * The accelerator types that must be on the instance type.
+     *
+     * * For instance types with GPU accelerators, specify `gpu` .
+     * * For instance types with FPGA accelerators, specify `fpga` .
+     * * For instance types with inference accelerators, specify `inference` .
+     *
+     * Default: Any accelerator type
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratortypes)
+     */
+    public fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?: emptyList()
+
+    /**
+     * The instance types to apply your specified attributes against.
+     *
+     * All other instance types are ignored, even if they match your specified attributes.
+     *
+     * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to allow
+     * an instance type, size, or generation. The following are examples: `m5.8xlarge` , `c5*.*` ,
+     * `m5a.*` , `r*` , `*3*` .
+     *
+     * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family, which
+     * includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow all the
+     * M5a instance types, but not the M5n instance types.
+     *
+     *
+     * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
+     *
+     *
+     * Default: All instance types
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-allowedinstancetypes)
+     */
+    public fun allowedInstanceTypes(): List<String> = unwrap(this).getAllowedInstanceTypes() ?:
+        emptyList()
+
+    /**
+     * Indicates whether bare metal instance types must be included, excluded, or required.
+     *
+     * * To include bare metal instance types, specify `included` .
+     * * To require only bare metal instance types, specify `required` .
+     * * To exclude bare metal instance types, specify `excluded` .
+     *
+     * Default: `excluded`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baremetal)
+     */
+    public fun bareMetal(): String? = unwrap(this).getBareMetal()
+
+    /**
+     * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
+     *
+     * For more information, see [Amazon EBS–optimized
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide* .
+     *
+     * Default: No minimum or maximum limits
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baselineebsbandwidthmbps)
+     */
+    public fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
+
+    /**
+     * Indicates whether burstable performance T instance types are included, excluded, or required.
+     *
+     * For more information, see [Burstable performance
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+     * .
+     *
+     * * To include burstable performance instance types, specify `included` .
+     * * To require only burstable performance instance types, specify `required` .
+     * * To exclude burstable performance instance types, specify `excluded` .
+     *
+     * Default: `excluded`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-burstableperformance)
+     */
+    public fun burstablePerformance(): String? = unwrap(this).getBurstablePerformance()
+
+    /**
+     * The CPU manufacturers to include.
+     *
+     * * For instance types with Intel CPUs, specify `intel` .
+     * * For instance types with AMD CPUs, specify `amd` .
+     * * For instance types with AWS CPUs, specify `amazon-web-services` .
+     *
+     *
+     * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched with
+     * a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your
+     * launch template.
+     *
+     *
+     * Default: Any manufacturer
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-cpumanufacturers)
+     */
+    public fun cpuManufacturers(): List<String> = unwrap(this).getCpuManufacturers() ?: emptyList()
+
+    /**
+     * The instance types to exclude.
+     *
+     * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+     * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+     * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+     *
+     * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
+     * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will exclude
+     * all the M5a instance types, but not the M5n instance types.
+     *
+     *
+     * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
+     *
+     *
+     * Default: No excluded instance types
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-excludedinstancetypes)
+     */
+    public fun excludedInstanceTypes(): List<String> = unwrap(this).getExcludedInstanceTypes() ?:
+        emptyList()
+
+    /**
+     * Indicates whether current or previous generation instance types are included.
+     *
+     * The current generation instance types are recommended for use. Current generation instance
+     * types are typically the latest two to three generations in each instance family. For more
+     * information, see [Instance
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
+     * EC2 User Guide* .
+     *
+     * For current generation instance types, specify `current` .
+     *
+     * For previous generation instance types, specify `previous` .
+     *
+     * Default: Current and previous generation instance types
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-instancegenerations)
+     */
+    public fun instanceGenerations(): List<String> = unwrap(this).getInstanceGenerations() ?:
+        emptyList()
+
+    /**
+     * Indicates whether instance types with instance store volumes are included, excluded, or
+     * required.
+     *
+     * For more information, [Amazon EC2 instance
+     * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon
+     * EC2 User Guide* .
+     *
+     * * To include instance types with instance store volumes, specify `included` .
+     * * To require only instance types with instance store volumes, specify `required` .
+     * * To exclude instance types with instance store volumes, specify `excluded` .
+     *
+     * Default: `included`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-localstorage)
+     */
+    public fun localStorage(): String? = unwrap(this).getLocalStorage()
+
+    /**
+     * The type of local storage that is required.
+     *
+     * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
+     * * For instance types with solid state drive (SSD) storage, specify `ssd` .
+     *
+     * Default: `hdd` and `ssd`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-localstoragetypes)
+     */
+    public fun localStorageTypes(): List<String> = unwrap(this).getLocalStorageTypes() ?:
+        emptyList()
+
+    /**
+     * [Price protection] The price protection threshold for Spot Instances, as a percentage of an
+     * identified On-Demand price.
+     *
+     * The identified On-Demand price is the price of the lowest priced current generation C, M, or
+     * R instance type with your specified attributes. If no current generation C, M, or R instance
+     * type matches your attributes, then the identified price is from the lowest priced current
+     * generation instance types, and failing that, from the lowest priced previous generation instance
+     * types that match your attributes. When Amazon EC2 selects instance types with your attributes,
+     * it will exclude instance types whose price exceeds your specified threshold.
+     *
+     * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+     *
+     * To indicate no price protection threshold, specify a high value, such as `999999` .
+     *
+     * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
+     * is based on the per vCPU or per memory price instead of the per instance price.
+     *
+     *
+     * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+     * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
+     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
+     * to `100` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-maxspotpriceaspercentageofoptimalondemandprice)
+     */
+    public fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(): Number? =
+        unwrap(this).getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()
+
+    /**
+     * The minimum and maximum amount of memory per vCPU, in GiB.
+     *
+     * Default: No minimum or maximum limits
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-memorygibpervcpu)
+     */
+    public fun memoryGiBPerVCpu(): Any? = unwrap(this).getMemoryGiBPerVCpu()
+
+    /**
+     * The minimum and maximum amount of memory, in MiB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-memorymib)
+     */
+    public fun memoryMiB(): Any? = unwrap(this).getMemoryMiB()
+
+    /**
+     * The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps).
+     *
+     * Default: No minimum or maximum limits
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-networkbandwidthgbps)
+     */
+    public fun networkBandwidthGbps(): Any? = unwrap(this).getNetworkBandwidthGbps()
+
+    /**
+     * The minimum and maximum number of network interfaces.
+     *
+     * Default: No minimum or maximum limits
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-networkinterfacecount)
+     */
+    public fun networkInterfaceCount(): Any? = unwrap(this).getNetworkInterfaceCount()
+
+    /**
+     * [Price protection] The price protection threshold for On-Demand Instances, as a percentage
+     * higher than an identified On-Demand price.
+     *
+     * The identified On-Demand price is the price of the lowest priced current generation C, M, or
+     * R instance type with your specified attributes. When Amazon EC2 selects instance types with your
+     * attributes, it will exclude instance types whose price exceeds your specified threshold.
+     *
+     * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+     *
+     * To turn off price protection, specify a high value, such as `999999` .
+     *
+     * This parameter is not supported for
+     * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+     * and
+     * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+     * .
+     *
+     *
+     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+     * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     * price.
+     *
+     *
+     * Default: `20`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-ondemandmaxpricepercentageoverlowestprice)
+     */
+    public fun onDemandMaxPricePercentageOverLowestPrice(): Number? =
+        unwrap(this).getOnDemandMaxPricePercentageOverLowestPrice()
+
+    /**
+     * Indicates whether instance types must support hibernation for On-Demand Instances.
+     *
+     * This parameter is not supported for
+     * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+     * .
+     *
+     * Default: `false`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-requirehibernatesupport)
+     */
+    public fun requireHibernateSupport(): Any? = unwrap(this).getRequireHibernateSupport()
+
+    /**
+     * [Price protection] The price protection threshold for Spot Instances, as a percentage higher
+     * than an identified Spot price.
+     *
+     * The identified Spot price is the Spot price of the lowest priced current generation C, M, or
+     * R instance type with your specified attributes. If no current generation C, M, or R instance
+     * type matches your attributes, then the identified Spot price is from the lowest priced current
+     * generation instance types, and failing that, from the lowest priced previous generation instance
+     * types that match your attributes. When Amazon EC2 selects instance types with your attributes,
+     * it will exclude instance types whose Spot price exceeds your specified threshold.
+     *
+     * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+     *
+     * To indicate no price protection threshold, specify a high value, such as `999999` .
+     *
+     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+     * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     * price.
+     *
+     * This parameter is not supported for
+     * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+     * and
+     * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+     * .
+     *
+     *
+     * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+     * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
+     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
+     * to `100` .
+     *
+     *
+     * Default: `100`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-spotmaxpricepercentageoverlowestprice)
+     */
+    public fun spotMaxPricePercentageOverLowestPrice(): Number? =
+        unwrap(this).getSpotMaxPricePercentageOverLowestPrice()
+
+    /**
+     * The minimum and maximum amount of total local storage, in GB.
+     *
+     * Default: No minimum or maximum limits
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-totallocalstoragegb)
+     */
+    public fun totalLocalStorageGb(): Any? = unwrap(this).getTotalLocalStorageGb()
+
+    /**
+     * The minimum and maximum number of vCPUs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-vcpucount)
+     */
+    public fun vCpuCount(): Any? = unwrap(this).getVCpuCount()
+
+    /**
+     * A builder for [InstanceRequirementsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
+       * Inferentia chips) on an instance.
+       * To exclude accelerator-enabled instance types, set `Max` to `0` .
+       *
+       * Default: No minimum or maximum limits
+       */
+      public fun acceleratorCount(acceleratorCount: IResolvable)
+
+      /**
+       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
+       * Inferentia chips) on an instance.
+       * To exclude accelerator-enabled instance types, set `Max` to `0` .
+       *
+       * Default: No minimum or maximum limits
+       */
+      public fun acceleratorCount(acceleratorCount: AcceleratorCountProperty)
+
+      /**
+       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
+       * Inferentia chips) on an instance.
+       * To exclude accelerator-enabled instance types, set `Max` to `0` .
+       *
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e6d22fd76cabe48f089b8c237bc1c7ec9426e15e6717e466b208f0fbcf8978aa")
+      public fun acceleratorCount(acceleratorCount: AcceleratorCountProperty.Builder.() -> Unit)
+
+      /**
+       * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
+       * specific manufacturers.
+       * * For instance types with AWS devices, specify `amazon-web-services` .
+       * * For instance types with AMD devices, specify `amd` .
+       * * For instance types with Habana devices, specify `habana` .
+       * * For instance types with NVIDIA devices, specify `nvidia` .
+       * * For instance types with Xilinx devices, specify `xilinx` .
+       *
+       * Default: Any manufacturer
+       */
+      public fun acceleratorManufacturers(acceleratorManufacturers: List<String>)
+
+      /**
+       * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
+       * specific manufacturers.
+       * * For instance types with AWS devices, specify `amazon-web-services` .
+       * * For instance types with AMD devices, specify `amd` .
+       * * For instance types with Habana devices, specify `habana` .
+       * * For instance types with NVIDIA devices, specify `nvidia` .
+       * * For instance types with Xilinx devices, specify `xilinx` .
+       *
+       * Default: Any manufacturer
+       */
+      public fun acceleratorManufacturers(vararg acceleratorManufacturers: String)
+
+      /**
+       * @param acceleratorNames The accelerators that must be on the instance type.
+       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
+       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
+       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
+       * * For instance types with AWS Inferentia chips, specify `inferentia` .
+       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
+       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
+       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
+       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
+       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
+       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
+       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
+       *
+       * Default: Any accelerator
+       */
+      public fun acceleratorNames(acceleratorNames: List<String>)
+
+      /**
+       * @param acceleratorNames The accelerators that must be on the instance type.
+       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
+       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
+       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
+       * * For instance types with AWS Inferentia chips, specify `inferentia` .
+       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
+       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
+       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
+       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
+       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
+       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
+       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
+       *
+       * Default: Any accelerator
+       */
+      public fun acceleratorNames(vararg acceleratorNames: String)
+
+      /**
+       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
+       * memory, in MiB.
+       * Default: No minimum or maximum limits
+       */
+      public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable)
+
+      /**
+       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
+       * memory, in MiB.
+       * Default: No minimum or maximum limits
+       */
+      public
+          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty)
+
+      /**
+       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
+       * memory, in MiB.
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("687315408c1bb56ead021b0c0a5a9e16088665e100a889fb74ce71abbd43fa22")
+      public
+          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty.Builder.() -> Unit)
+
+      /**
+       * @param acceleratorTypes The accelerator types that must be on the instance type.
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with inference accelerators, specify `inference` .
+       *
+       * Default: Any accelerator type
+       */
+      public fun acceleratorTypes(acceleratorTypes: List<String>)
+
+      /**
+       * @param acceleratorTypes The accelerator types that must be on the instance type.
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with inference accelerators, specify `inference` .
+       *
+       * Default: Any accelerator type
+       */
+      public fun acceleratorTypes(vararg acceleratorTypes: String)
+
+      /**
+       * @param allowedInstanceTypes The instance types to apply your specified attributes against.
+       * All other instance types are ignored, even if they match your specified attributes.
+       *
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
+       * all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
+       *
+       *
+       * Default: All instance types
+       */
+      public fun allowedInstanceTypes(allowedInstanceTypes: List<String>)
+
+      /**
+       * @param allowedInstanceTypes The instance types to apply your specified attributes against.
+       * All other instance types are ignored, even if they match your specified attributes.
+       *
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
+       * all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
+       *
+       *
+       * Default: All instance types
+       */
+      public fun allowedInstanceTypes(vararg allowedInstanceTypes: String)
+
+      /**
+       * @param bareMetal Indicates whether bare metal instance types must be included, excluded, or
+       * required.
+       * * To include bare metal instance types, specify `included` .
+       * * To require only bare metal instance types, specify `required` .
+       * * To exclude bare metal instance types, specify `excluded` .
+       *
+       * Default: `excluded`
+       */
+      public fun bareMetal(bareMetal: String)
+
+      /**
+       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
+       * in Mbps.
+       * For more information, see [Amazon EBS–optimized
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Default: No minimum or maximum limits
+       */
+      public fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable)
+
+      /**
+       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
+       * in Mbps.
+       * For more information, see [Amazon EBS–optimized
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Default: No minimum or maximum limits
+       */
+      public
+          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty)
+
+      /**
+       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
+       * in Mbps.
+       * For more information, see [Amazon EBS–optimized
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("99ce2f9d06f918c623b5226bc75b8d59bcc2dbe40fb6a6ce2e63c42d1f8391a1")
+      public
+          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty.Builder.() -> Unit)
+
+      /**
+       * @param burstablePerformance Indicates whether burstable performance T instance types are
+       * included, excluded, or required.
+       * For more information, see [Burstable performance
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+       * .
+       *
+       * * To include burstable performance instance types, specify `included` .
+       * * To require only burstable performance instance types, specify `required` .
+       * * To exclude burstable performance instance types, specify `excluded` .
+       *
+       * Default: `excluded`
+       */
+      public fun burstablePerformance(burstablePerformance: String)
+
+      /**
+       * @param cpuManufacturers The CPU manufacturers to include.
+       * * For instance types with Intel CPUs, specify `intel` .
+       * * For instance types with AMD CPUs, specify `amd` .
+       * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       *
+       *
+       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
+       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
+       * your launch template.
+       *
+       *
+       * Default: Any manufacturer
+       */
+      public fun cpuManufacturers(cpuManufacturers: List<String>)
+
+      /**
+       * @param cpuManufacturers The CPU manufacturers to include.
+       * * For instance types with Intel CPUs, specify `intel` .
+       * * For instance types with AMD CPUs, specify `amd` .
+       * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       *
+       *
+       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
+       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
+       * your launch template.
+       *
+       *
+       * Default: Any manufacturer
+       */
+      public fun cpuManufacturers(vararg cpuManufacturers: String)
+
+      /**
+       * @param excludedInstanceTypes The instance types to exclude.
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
+       * exclude all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
+       *
+       *
+       * Default: No excluded instance types
+       */
+      public fun excludedInstanceTypes(excludedInstanceTypes: List<String>)
+
+      /**
+       * @param excludedInstanceTypes The instance types to exclude.
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
+       * exclude all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
+       *
+       *
+       * Default: No excluded instance types
+       */
+      public fun excludedInstanceTypes(vararg excludedInstanceTypes: String)
+
+      /**
+       * @param instanceGenerations Indicates whether current or previous generation instance types
+       * are included.
+       * The current generation instance types are recommended for use. Current generation instance
+       * types are typically the latest two to three generations in each instance family. For more
+       * information, see [Instance
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
+       * EC2 User Guide* .
+       *
+       * For current generation instance types, specify `current` .
+       *
+       * For previous generation instance types, specify `previous` .
+       *
+       * Default: Current and previous generation instance types
+       */
+      public fun instanceGenerations(instanceGenerations: List<String>)
+
+      /**
+       * @param instanceGenerations Indicates whether current or previous generation instance types
+       * are included.
+       * The current generation instance types are recommended for use. Current generation instance
+       * types are typically the latest two to three generations in each instance family. For more
+       * information, see [Instance
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
+       * EC2 User Guide* .
+       *
+       * For current generation instance types, specify `current` .
+       *
+       * For previous generation instance types, specify `previous` .
+       *
+       * Default: Current and previous generation instance types
+       */
+      public fun instanceGenerations(vararg instanceGenerations: String)
+
+      /**
+       * @param localStorage Indicates whether instance types with instance store volumes are
+       * included, excluded, or required.
+       * For more information, [Amazon EC2 instance
+       * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * * To include instance types with instance store volumes, specify `included` .
+       * * To require only instance types with instance store volumes, specify `required` .
+       * * To exclude instance types with instance store volumes, specify `excluded` .
+       *
+       * Default: `included`
+       */
+      public fun localStorage(localStorage: String)
+
+      /**
+       * @param localStorageTypes The type of local storage that is required.
+       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
+       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
+       *
+       * Default: `hdd` and `ssd`
+       */
+      public fun localStorageTypes(localStorageTypes: List<String>)
+
+      /**
+       * @param localStorageTypes The type of local storage that is required.
+       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
+       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
+       *
+       * Default: `hdd` and `ssd`
+       */
+      public fun localStorageTypes(vararg localStorageTypes: String)
+
+      /**
+       * @param maxSpotPriceAsPercentageOfOptimalOnDemandPrice [Price protection] The price
+       * protection threshold for Spot Instances, as a percentage of an identified On-Demand price.
+       * The identified On-Demand price is the price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. If no current generation C, M, or R
+       * instance type matches your attributes, then the identified price is from the lowest priced
+       * current generation instance types, and failing that, from the lowest priced previous
+       * generation instance types that match your attributes. When Amazon EC2 selects instance types
+       * with your attributes, it will exclude instance types whose price exceeds your specified
+       * threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To indicate no price protection threshold, specify a high value, such as `999999` .
+       *
+       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
+       * is based on the per vCPU or per memory price instead of the per instance price.
+       *
+       *
+       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
+       * defaults to `100` .
+       */
+      public
+          fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
+
+      /**
+       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
+       * Default: No minimum or maximum limits
+       */
+      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable)
+
+      /**
+       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
+       * Default: No minimum or maximum limits
+       */
+      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty)
+
+      /**
+       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("39bcea6b054460d3a4f72bf8e85c617b9de2d27b154012b8b2ffbae654835453")
+      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty.Builder.() -> Unit)
+
+      /**
+       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
+       */
+      public fun memoryMiB(memoryMiB: IResolvable)
+
+      /**
+       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
+       */
+      public fun memoryMiB(memoryMiB: MemoryMiBProperty)
+
+      /**
+       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2be30fd8478496bd807b2a12ef67cfe0b5fc5f22ee2e40f86594c093e02e6352")
+      public fun memoryMiB(memoryMiB: MemoryMiBProperty.Builder.() -> Unit)
+
+      /**
+       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
+       * gigabits per second (Gbps).
+       * Default: No minimum or maximum limits
+       */
+      public fun networkBandwidthGbps(networkBandwidthGbps: IResolvable)
+
+      /**
+       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
+       * gigabits per second (Gbps).
+       * Default: No minimum or maximum limits
+       */
+      public fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty)
+
+      /**
+       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
+       * gigabits per second (Gbps).
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1827db3ce1bb2f184bd37966238ca76dc315b92780edbf8056c5fc90eda9c716")
+      public
+          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty.Builder.() -> Unit)
+
+      /**
+       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
+       * Default: No minimum or maximum limits
+       */
+      public fun networkInterfaceCount(networkInterfaceCount: IResolvable)
+
+      /**
+       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
+       * Default: No minimum or maximum limits
+       */
+      public fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty)
+
+      /**
+       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fde96b2e0debdfcc33f8a0d0943f348612d4a2d2bfba0d2761c2738bdb344082")
+      public
+          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty.Builder.() -> Unit)
+
+      /**
+       * @param onDemandMaxPricePercentageOverLowestPrice [Price protection] The price protection
+       * threshold for On-Demand Instances, as a percentage higher than an identified On-Demand price.
+       * The identified On-Demand price is the price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. When Amazon EC2 selects instance types with
+       * your attributes, it will exclude instance types whose price exceeds your specified threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To turn off price protection, specify a high value, such as `999999` .
+       *
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * and
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * .
+       *
+       *
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+       * price.
+       *
+       *
+       * Default: `20`
+       */
+      public
+          fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number)
+
+      /**
+       * @param requireHibernateSupport Indicates whether instance types must support hibernation
+       * for On-Demand Instances.
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * .
+       *
+       * Default: `false`
+       */
+      public fun requireHibernateSupport(requireHibernateSupport: Boolean)
+
+      /**
+       * @param requireHibernateSupport Indicates whether instance types must support hibernation
+       * for On-Demand Instances.
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * .
+       *
+       * Default: `false`
+       */
+      public fun requireHibernateSupport(requireHibernateSupport: IResolvable)
+
+      /**
+       * @param spotMaxPricePercentageOverLowestPrice [Price protection] The price protection
+       * threshold for Spot Instances, as a percentage higher than an identified Spot price.
+       * The identified Spot price is the Spot price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. If no current generation C, M, or R
+       * instance type matches your attributes, then the identified Spot price is from the lowest
+       * priced current generation instance types, and failing that, from the lowest priced previous
+       * generation instance types that match your attributes. When Amazon EC2 selects instance types
+       * with your attributes, it will exclude instance types whose Spot price exceeds your specified
+       * threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To indicate no price protection threshold, specify a high value, such as `999999` .
+       *
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+       * price.
+       *
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * and
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * .
+       *
+       *
+       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
+       * defaults to `100` .
+       *
+       *
+       * Default: `100`
+       */
+      public
+          fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number)
+
+      /**
+       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
+       * Default: No minimum or maximum limits
+       */
+      public fun totalLocalStorageGb(totalLocalStorageGb: IResolvable)
+
+      /**
+       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
+       * Default: No minimum or maximum limits
+       */
+      public fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty)
+
+      /**
+       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8ced7d39abec56d68911dca344eb452396b66dd2240deef63392ea726ad8b8a4")
+      public
+          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty.Builder.() -> Unit)
+
+      /**
+       * @param vCpuCount The minimum and maximum number of vCPUs.
+       */
+      public fun vCpuCount(vCpuCount: IResolvable)
+
+      /**
+       * @param vCpuCount The minimum and maximum number of vCPUs.
+       */
+      public fun vCpuCount(vCpuCount: VCpuCountProperty)
+
+      /**
+       * @param vCpuCount The minimum and maximum number of vCPUs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("510e27b3bf93ab1beb810d076c1533945e97fbf0fa819abd7c204fae624cfaa0")
+      public fun vCpuCount(vCpuCount: VCpuCountProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty.builder()
+
+      /**
+       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
+       * Inferentia chips) on an instance.
+       * To exclude accelerator-enabled instance types, set `Max` to `0` .
+       *
+       * Default: No minimum or maximum limits
+       */
+      override fun acceleratorCount(acceleratorCount: IResolvable) {
+        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
+       * Inferentia chips) on an instance.
+       * To exclude accelerator-enabled instance types, set `Max` to `0` .
+       *
+       * Default: No minimum or maximum limits
+       */
+      override fun acceleratorCount(acceleratorCount: AcceleratorCountProperty) {
+        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountProperty::unwrap))
+      }
+
+      /**
+       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
+       * Inferentia chips) on an instance.
+       * To exclude accelerator-enabled instance types, set `Max` to `0` .
+       *
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e6d22fd76cabe48f089b8c237bc1c7ec9426e15e6717e466b208f0fbcf8978aa")
+      override fun acceleratorCount(acceleratorCount: AcceleratorCountProperty.Builder.() -> Unit):
+          Unit = acceleratorCount(AcceleratorCountProperty(acceleratorCount))
+
+      /**
+       * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
+       * specific manufacturers.
+       * * For instance types with AWS devices, specify `amazon-web-services` .
+       * * For instance types with AMD devices, specify `amd` .
+       * * For instance types with Habana devices, specify `habana` .
+       * * For instance types with NVIDIA devices, specify `nvidia` .
+       * * For instance types with Xilinx devices, specify `xilinx` .
+       *
+       * Default: Any manufacturer
+       */
+      override fun acceleratorManufacturers(acceleratorManufacturers: List<String>) {
+        cdkBuilder.acceleratorManufacturers(acceleratorManufacturers)
+      }
+
+      /**
+       * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
+       * specific manufacturers.
+       * * For instance types with AWS devices, specify `amazon-web-services` .
+       * * For instance types with AMD devices, specify `amd` .
+       * * For instance types with Habana devices, specify `habana` .
+       * * For instance types with NVIDIA devices, specify `nvidia` .
+       * * For instance types with Xilinx devices, specify `xilinx` .
+       *
+       * Default: Any manufacturer
+       */
+      override fun acceleratorManufacturers(vararg acceleratorManufacturers: String): Unit =
+          acceleratorManufacturers(acceleratorManufacturers.toList())
+
+      /**
+       * @param acceleratorNames The accelerators that must be on the instance type.
+       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
+       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
+       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
+       * * For instance types with AWS Inferentia chips, specify `inferentia` .
+       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
+       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
+       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
+       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
+       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
+       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
+       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
+       *
+       * Default: Any accelerator
+       */
+      override fun acceleratorNames(acceleratorNames: List<String>) {
+        cdkBuilder.acceleratorNames(acceleratorNames)
+      }
+
+      /**
+       * @param acceleratorNames The accelerators that must be on the instance type.
+       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
+       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
+       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
+       * * For instance types with AWS Inferentia chips, specify `inferentia` .
+       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
+       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
+       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
+       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
+       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
+       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
+       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
+       *
+       * Default: Any accelerator
+       */
+      override fun acceleratorNames(vararg acceleratorNames: String): Unit =
+          acceleratorNames(acceleratorNames.toList())
+
+      /**
+       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
+       * memory, in MiB.
+       * Default: No minimum or maximum limits
+       */
+      override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
+       * memory, in MiB.
+       * Default: No minimum or maximum limits
+       */
+      override
+          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty) {
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBProperty::unwrap))
+      }
+
+      /**
+       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
+       * memory, in MiB.
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("687315408c1bb56ead021b0c0a5a9e16088665e100a889fb74ce71abbd43fa22")
+      override
+          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty.Builder.() -> Unit):
+          Unit =
+          acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBProperty(acceleratorTotalMemoryMiB))
+
+      /**
+       * @param acceleratorTypes The accelerator types that must be on the instance type.
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with inference accelerators, specify `inference` .
+       *
+       * Default: Any accelerator type
+       */
+      override fun acceleratorTypes(acceleratorTypes: List<String>) {
+        cdkBuilder.acceleratorTypes(acceleratorTypes)
+      }
+
+      /**
+       * @param acceleratorTypes The accelerator types that must be on the instance type.
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with inference accelerators, specify `inference` .
+       *
+       * Default: Any accelerator type
+       */
+      override fun acceleratorTypes(vararg acceleratorTypes: String): Unit =
+          acceleratorTypes(acceleratorTypes.toList())
+
+      /**
+       * @param allowedInstanceTypes The instance types to apply your specified attributes against.
+       * All other instance types are ignored, even if they match your specified attributes.
+       *
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
+       * all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
+       *
+       *
+       * Default: All instance types
+       */
+      override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
+        cdkBuilder.allowedInstanceTypes(allowedInstanceTypes)
+      }
+
+      /**
+       * @param allowedInstanceTypes The instance types to apply your specified attributes against.
+       * All other instance types are ignored, even if they match your specified attributes.
+       *
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
+       * all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
+       *
+       *
+       * Default: All instance types
+       */
+      override fun allowedInstanceTypes(vararg allowedInstanceTypes: String): Unit =
+          allowedInstanceTypes(allowedInstanceTypes.toList())
+
+      /**
+       * @param bareMetal Indicates whether bare metal instance types must be included, excluded, or
+       * required.
+       * * To include bare metal instance types, specify `included` .
+       * * To require only bare metal instance types, specify `required` .
+       * * To exclude bare metal instance types, specify `excluded` .
+       *
+       * Default: `excluded`
+       */
+      override fun bareMetal(bareMetal: String) {
+        cdkBuilder.bareMetal(bareMetal)
+      }
+
+      /**
+       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
+       * in Mbps.
+       * For more information, see [Amazon EBS–optimized
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Default: No minimum or maximum limits
+       */
+      override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
+       * in Mbps.
+       * For more information, see [Amazon EBS–optimized
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Default: No minimum or maximum limits
+       */
+      override
+          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty) {
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsProperty::unwrap))
+      }
+
+      /**
+       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
+       * in Mbps.
+       * For more information, see [Amazon EBS–optimized
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("99ce2f9d06f918c623b5226bc75b8d59bcc2dbe40fb6a6ce2e63c42d1f8391a1")
+      override
+          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty.Builder.() -> Unit):
+          Unit =
+          baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsProperty(baselineEbsBandwidthMbps))
+
+      /**
+       * @param burstablePerformance Indicates whether burstable performance T instance types are
+       * included, excluded, or required.
+       * For more information, see [Burstable performance
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+       * .
+       *
+       * * To include burstable performance instance types, specify `included` .
+       * * To require only burstable performance instance types, specify `required` .
+       * * To exclude burstable performance instance types, specify `excluded` .
+       *
+       * Default: `excluded`
+       */
+      override fun burstablePerformance(burstablePerformance: String) {
+        cdkBuilder.burstablePerformance(burstablePerformance)
+      }
+
+      /**
+       * @param cpuManufacturers The CPU manufacturers to include.
+       * * For instance types with Intel CPUs, specify `intel` .
+       * * For instance types with AMD CPUs, specify `amd` .
+       * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       *
+       *
+       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
+       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
+       * your launch template.
+       *
+       *
+       * Default: Any manufacturer
+       */
+      override fun cpuManufacturers(cpuManufacturers: List<String>) {
+        cdkBuilder.cpuManufacturers(cpuManufacturers)
+      }
+
+      /**
+       * @param cpuManufacturers The CPU manufacturers to include.
+       * * For instance types with Intel CPUs, specify `intel` .
+       * * For instance types with AMD CPUs, specify `amd` .
+       * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       *
+       *
+       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
+       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
+       * your launch template.
+       *
+       *
+       * Default: Any manufacturer
+       */
+      override fun cpuManufacturers(vararg cpuManufacturers: String): Unit =
+          cpuManufacturers(cpuManufacturers.toList())
+
+      /**
+       * @param excludedInstanceTypes The instance types to exclude.
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
+       * exclude all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
+       *
+       *
+       * Default: No excluded instance types
+       */
+      override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
+        cdkBuilder.excludedInstanceTypes(excludedInstanceTypes)
+      }
+
+      /**
+       * @param excludedInstanceTypes The instance types to exclude.
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
+       * exclude all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
+       *
+       *
+       * Default: No excluded instance types
+       */
+      override fun excludedInstanceTypes(vararg excludedInstanceTypes: String): Unit =
+          excludedInstanceTypes(excludedInstanceTypes.toList())
+
+      /**
+       * @param instanceGenerations Indicates whether current or previous generation instance types
+       * are included.
+       * The current generation instance types are recommended for use. Current generation instance
+       * types are typically the latest two to three generations in each instance family. For more
+       * information, see [Instance
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
+       * EC2 User Guide* .
+       *
+       * For current generation instance types, specify `current` .
+       *
+       * For previous generation instance types, specify `previous` .
+       *
+       * Default: Current and previous generation instance types
+       */
+      override fun instanceGenerations(instanceGenerations: List<String>) {
+        cdkBuilder.instanceGenerations(instanceGenerations)
+      }
+
+      /**
+       * @param instanceGenerations Indicates whether current or previous generation instance types
+       * are included.
+       * The current generation instance types are recommended for use. Current generation instance
+       * types are typically the latest two to three generations in each instance family. For more
+       * information, see [Instance
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
+       * EC2 User Guide* .
+       *
+       * For current generation instance types, specify `current` .
+       *
+       * For previous generation instance types, specify `previous` .
+       *
+       * Default: Current and previous generation instance types
+       */
+      override fun instanceGenerations(vararg instanceGenerations: String): Unit =
+          instanceGenerations(instanceGenerations.toList())
+
+      /**
+       * @param localStorage Indicates whether instance types with instance store volumes are
+       * included, excluded, or required.
+       * For more information, [Amazon EC2 instance
+       * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * * To include instance types with instance store volumes, specify `included` .
+       * * To require only instance types with instance store volumes, specify `required` .
+       * * To exclude instance types with instance store volumes, specify `excluded` .
+       *
+       * Default: `included`
+       */
+      override fun localStorage(localStorage: String) {
+        cdkBuilder.localStorage(localStorage)
+      }
+
+      /**
+       * @param localStorageTypes The type of local storage that is required.
+       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
+       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
+       *
+       * Default: `hdd` and `ssd`
+       */
+      override fun localStorageTypes(localStorageTypes: List<String>) {
+        cdkBuilder.localStorageTypes(localStorageTypes)
+      }
+
+      /**
+       * @param localStorageTypes The type of local storage that is required.
+       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
+       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
+       *
+       * Default: `hdd` and `ssd`
+       */
+      override fun localStorageTypes(vararg localStorageTypes: String): Unit =
+          localStorageTypes(localStorageTypes.toList())
+
+      /**
+       * @param maxSpotPriceAsPercentageOfOptimalOnDemandPrice [Price protection] The price
+       * protection threshold for Spot Instances, as a percentage of an identified On-Demand price.
+       * The identified On-Demand price is the price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. If no current generation C, M, or R
+       * instance type matches your attributes, then the identified price is from the lowest priced
+       * current generation instance types, and failing that, from the lowest priced previous
+       * generation instance types that match your attributes. When Amazon EC2 selects instance types
+       * with your attributes, it will exclude instance types whose price exceeds your specified
+       * threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To indicate no price protection threshold, specify a high value, such as `999999` .
+       *
+       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
+       * is based on the per vCPU or per memory price instead of the per instance price.
+       *
+       *
+       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
+       * defaults to `100` .
+       */
+      override
+          fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
+        cdkBuilder.maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice)
+      }
+
+      /**
+       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
+       * Default: No minimum or maximum limits
+       */
+      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
+       * Default: No minimum or maximum limits
+       */
+      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty) {
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuProperty::unwrap))
+      }
+
+      /**
+       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("39bcea6b054460d3a4f72bf8e85c617b9de2d27b154012b8b2ffbae654835453")
+      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty.Builder.() -> Unit):
+          Unit = memoryGiBPerVCpu(MemoryGiBPerVCpuProperty(memoryGiBPerVCpu))
+
+      /**
+       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
+       */
+      override fun memoryMiB(memoryMiB: IResolvable) {
+        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
+       */
+      override fun memoryMiB(memoryMiB: MemoryMiBProperty) {
+        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBProperty::unwrap))
+      }
+
+      /**
+       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2be30fd8478496bd807b2a12ef67cfe0b5fc5f22ee2e40f86594c093e02e6352")
+      override fun memoryMiB(memoryMiB: MemoryMiBProperty.Builder.() -> Unit): Unit =
+          memoryMiB(MemoryMiBProperty(memoryMiB))
+
+      /**
+       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
+       * gigabits per second (Gbps).
+       * Default: No minimum or maximum limits
+       */
+      override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
+       * gigabits per second (Gbps).
+       * Default: No minimum or maximum limits
+       */
+      override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty) {
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsProperty::unwrap))
+      }
+
+      /**
+       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
+       * gigabits per second (Gbps).
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1827db3ce1bb2f184bd37966238ca76dc315b92780edbf8056c5fc90eda9c716")
+      override
+          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty.Builder.() -> Unit):
+          Unit = networkBandwidthGbps(NetworkBandwidthGbpsProperty(networkBandwidthGbps))
+
+      /**
+       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
+       * Default: No minimum or maximum limits
+       */
+      override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
+       * Default: No minimum or maximum limits
+       */
+      override fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty) {
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountProperty::unwrap))
+      }
+
+      /**
+       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fde96b2e0debdfcc33f8a0d0943f348612d4a2d2bfba0d2761c2738bdb344082")
+      override
+          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty.Builder.() -> Unit):
+          Unit = networkInterfaceCount(NetworkInterfaceCountProperty(networkInterfaceCount))
+
+      /**
+       * @param onDemandMaxPricePercentageOverLowestPrice [Price protection] The price protection
+       * threshold for On-Demand Instances, as a percentage higher than an identified On-Demand price.
+       * The identified On-Demand price is the price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. When Amazon EC2 selects instance types with
+       * your attributes, it will exclude instance types whose price exceeds your specified threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To turn off price protection, specify a high value, such as `999999` .
+       *
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * and
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * .
+       *
+       *
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+       * price.
+       *
+       *
+       * Default: `20`
+       */
+      override
+          fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number) {
+        cdkBuilder.onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice)
+      }
+
+      /**
+       * @param requireHibernateSupport Indicates whether instance types must support hibernation
+       * for On-Demand Instances.
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * .
+       *
+       * Default: `false`
+       */
+      override fun requireHibernateSupport(requireHibernateSupport: Boolean) {
+        cdkBuilder.requireHibernateSupport(requireHibernateSupport)
+      }
+
+      /**
+       * @param requireHibernateSupport Indicates whether instance types must support hibernation
+       * for On-Demand Instances.
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * .
+       *
+       * Default: `false`
+       */
+      override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
+        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param spotMaxPricePercentageOverLowestPrice [Price protection] The price protection
+       * threshold for Spot Instances, as a percentage higher than an identified Spot price.
+       * The identified Spot price is the Spot price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. If no current generation C, M, or R
+       * instance type matches your attributes, then the identified Spot price is from the lowest
+       * priced current generation instance types, and failing that, from the lowest priced previous
+       * generation instance types that match your attributes. When Amazon EC2 selects instance types
+       * with your attributes, it will exclude instance types whose Spot price exceeds your specified
+       * threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To indicate no price protection threshold, specify a high value, such as `999999` .
+       *
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+       * price.
+       *
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * and
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * .
+       *
+       *
+       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
+       * defaults to `100` .
+       *
+       *
+       * Default: `100`
+       */
+      override
+          fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number) {
+        cdkBuilder.spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice)
+      }
+
+      /**
+       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
+       * Default: No minimum or maximum limits
+       */
+      override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
+       * Default: No minimum or maximum limits
+       */
+      override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty) {
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBProperty::unwrap))
+      }
+
+      /**
+       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
+       * Default: No minimum or maximum limits
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8ced7d39abec56d68911dca344eb452396b66dd2240deef63392ea726ad8b8a4")
+      override
+          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty.Builder.() -> Unit):
+          Unit = totalLocalStorageGb(TotalLocalStorageGBProperty(totalLocalStorageGb))
+
+      /**
+       * @param vCpuCount The minimum and maximum number of vCPUs.
+       */
+      override fun vCpuCount(vCpuCount: IResolvable) {
+        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param vCpuCount The minimum and maximum number of vCPUs.
+       */
+      override fun vCpuCount(vCpuCount: VCpuCountProperty) {
+        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountProperty::unwrap))
+      }
+
+      /**
+       * @param vCpuCount The minimum and maximum number of vCPUs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("510e27b3bf93ab1beb810d076c1533945e97fbf0fa819abd7c204fae624cfaa0")
+      override fun vCpuCount(vCpuCount: VCpuCountProperty.Builder.() -> Unit): Unit =
+          vCpuCount(VCpuCountProperty(vCpuCount))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty,
+    ) : CdkObject(cdkObject), InstanceRequirementsProperty {
+      /**
+       * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
+       * instance.
+       *
+       * To exclude accelerator-enabled instance types, set `Max` to `0` .
+       *
+       * Default: No minimum or maximum limits
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratorcount)
+       */
+      override fun acceleratorCount(): Any? = unwrap(this).getAcceleratorCount()
+
+      /**
+       * Indicates whether instance types must have accelerators by specific manufacturers.
+       *
+       * * For instance types with AWS devices, specify `amazon-web-services` .
+       * * For instance types with AMD devices, specify `amd` .
+       * * For instance types with Habana devices, specify `habana` .
+       * * For instance types with NVIDIA devices, specify `nvidia` .
+       * * For instance types with Xilinx devices, specify `xilinx` .
+       *
+       * Default: Any manufacturer
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratormanufacturers)
+       */
+      override fun acceleratorManufacturers(): List<String> =
+          unwrap(this).getAcceleratorManufacturers() ?: emptyList()
+
+      /**
+       * The accelerators that must be on the instance type.
+       *
+       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
+       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
+       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
+       * * For instance types with AWS Inferentia chips, specify `inferentia` .
+       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
+       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
+       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
+       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
+       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
+       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
+       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
+       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
+       *
+       * Default: Any accelerator
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratornames)
+       */
+      override fun acceleratorNames(): List<String> = unwrap(this).getAcceleratorNames() ?:
+          emptyList()
+
+      /**
+       * The minimum and maximum amount of total accelerator memory, in MiB.
+       *
+       * Default: No minimum or maximum limits
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratortotalmemorymib)
+       */
+      override fun acceleratorTotalMemoryMiB(): Any? = unwrap(this).getAcceleratorTotalMemoryMiB()
+
+      /**
+       * The accelerator types that must be on the instance type.
+       *
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with inference accelerators, specify `inference` .
+       *
+       * Default: Any accelerator type
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratortypes)
+       */
+      override fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?:
+          emptyList()
+
+      /**
+       * The instance types to apply your specified attributes against.
+       *
+       * All other instance types are ignored, even if they match your specified attributes.
+       *
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
+       * all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
+       *
+       *
+       * Default: All instance types
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-allowedinstancetypes)
+       */
+      override fun allowedInstanceTypes(): List<String> = unwrap(this).getAllowedInstanceTypes() ?:
+          emptyList()
+
+      /**
+       * Indicates whether bare metal instance types must be included, excluded, or required.
+       *
+       * * To include bare metal instance types, specify `included` .
+       * * To require only bare metal instance types, specify `required` .
+       * * To exclude bare metal instance types, specify `excluded` .
+       *
+       * Default: `excluded`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baremetal)
+       */
+      override fun bareMetal(): String? = unwrap(this).getBareMetal()
+
+      /**
+       * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
+       *
+       * For more information, see [Amazon EBS–optimized
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Default: No minimum or maximum limits
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baselineebsbandwidthmbps)
+       */
+      override fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
+
+      /**
+       * Indicates whether burstable performance T instance types are included, excluded, or
+       * required.
+       *
+       * For more information, see [Burstable performance
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+       * .
+       *
+       * * To include burstable performance instance types, specify `included` .
+       * * To require only burstable performance instance types, specify `required` .
+       * * To exclude burstable performance instance types, specify `excluded` .
+       *
+       * Default: `excluded`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-burstableperformance)
+       */
+      override fun burstablePerformance(): String? = unwrap(this).getBurstablePerformance()
+
+      /**
+       * The CPU manufacturers to include.
+       *
+       * * For instance types with Intel CPUs, specify `intel` .
+       * * For instance types with AMD CPUs, specify `amd` .
+       * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       *
+       *
+       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
+       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
+       * your launch template.
+       *
+       *
+       * Default: Any manufacturer
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-cpumanufacturers)
+       */
+      override fun cpuManufacturers(): List<String> = unwrap(this).getCpuManufacturers() ?:
+          emptyList()
+
+      /**
+       * The instance types to exclude.
+       *
+       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
+       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
+       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
+       *
+       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
+       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
+       * exclude all the M5a instance types, but not the M5n instance types.
+       *
+       *
+       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
+       *
+       *
+       * Default: No excluded instance types
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-excludedinstancetypes)
+       */
+      override fun excludedInstanceTypes(): List<String> = unwrap(this).getExcludedInstanceTypes()
+          ?: emptyList()
+
+      /**
+       * Indicates whether current or previous generation instance types are included.
+       *
+       * The current generation instance types are recommended for use. Current generation instance
+       * types are typically the latest two to three generations in each instance family. For more
+       * information, see [Instance
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
+       * EC2 User Guide* .
+       *
+       * For current generation instance types, specify `current` .
+       *
+       * For previous generation instance types, specify `previous` .
+       *
+       * Default: Current and previous generation instance types
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-instancegenerations)
+       */
+      override fun instanceGenerations(): List<String> = unwrap(this).getInstanceGenerations() ?:
+          emptyList()
+
+      /**
+       * Indicates whether instance types with instance store volumes are included, excluded, or
+       * required.
+       *
+       * For more information, [Amazon EC2 instance
+       * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * * To include instance types with instance store volumes, specify `included` .
+       * * To require only instance types with instance store volumes, specify `required` .
+       * * To exclude instance types with instance store volumes, specify `excluded` .
+       *
+       * Default: `included`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-localstorage)
+       */
+      override fun localStorage(): String? = unwrap(this).getLocalStorage()
+
+      /**
+       * The type of local storage that is required.
+       *
+       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
+       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
+       *
+       * Default: `hdd` and `ssd`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-localstoragetypes)
+       */
+      override fun localStorageTypes(): List<String> = unwrap(this).getLocalStorageTypes() ?:
+          emptyList()
+
+      /**
+       * [Price protection] The price protection threshold for Spot Instances, as a percentage of an
+       * identified On-Demand price.
+       *
+       * The identified On-Demand price is the price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. If no current generation C, M, or R
+       * instance type matches your attributes, then the identified price is from the lowest priced
+       * current generation instance types, and failing that, from the lowest priced previous
+       * generation instance types that match your attributes. When Amazon EC2 selects instance types
+       * with your attributes, it will exclude instance types whose price exceeds your specified
+       * threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To indicate no price protection threshold, specify a high value, such as `999999` .
+       *
+       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
+       * is based on the per vCPU or per memory price instead of the per instance price.
+       *
+       *
+       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
+       * defaults to `100` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-maxspotpriceaspercentageofoptimalondemandprice)
+       */
+      override fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(): Number? =
+          unwrap(this).getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()
+
+      /**
+       * The minimum and maximum amount of memory per vCPU, in GiB.
+       *
+       * Default: No minimum or maximum limits
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-memorygibpervcpu)
+       */
+      override fun memoryGiBPerVCpu(): Any? = unwrap(this).getMemoryGiBPerVCpu()
+
+      /**
+       * The minimum and maximum amount of memory, in MiB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-memorymib)
+       */
+      override fun memoryMiB(): Any? = unwrap(this).getMemoryMiB()
+
+      /**
+       * The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps).
+       *
+       * Default: No minimum or maximum limits
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-networkbandwidthgbps)
+       */
+      override fun networkBandwidthGbps(): Any? = unwrap(this).getNetworkBandwidthGbps()
+
+      /**
+       * The minimum and maximum number of network interfaces.
+       *
+       * Default: No minimum or maximum limits
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-networkinterfacecount)
+       */
+      override fun networkInterfaceCount(): Any? = unwrap(this).getNetworkInterfaceCount()
+
+      /**
+       * [Price protection] The price protection threshold for On-Demand Instances, as a percentage
+       * higher than an identified On-Demand price.
+       *
+       * The identified On-Demand price is the price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. When Amazon EC2 selects instance types with
+       * your attributes, it will exclude instance types whose price exceeds your specified threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To turn off price protection, specify a high value, such as `999999` .
+       *
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * and
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * .
+       *
+       *
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+       * price.
+       *
+       *
+       * Default: `20`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-ondemandmaxpricepercentageoverlowestprice)
+       */
+      override fun onDemandMaxPricePercentageOverLowestPrice(): Number? =
+          unwrap(this).getOnDemandMaxPricePercentageOverLowestPrice()
+
+      /**
+       * Indicates whether instance types must support hibernation for On-Demand Instances.
+       *
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * .
+       *
+       * Default: `false`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-requirehibernatesupport)
+       */
+      override fun requireHibernateSupport(): Any? = unwrap(this).getRequireHibernateSupport()
+
+      /**
+       * [Price protection] The price protection threshold for Spot Instances, as a percentage
+       * higher than an identified Spot price.
+       *
+       * The identified Spot price is the Spot price of the lowest priced current generation C, M,
+       * or R instance type with your specified attributes. If no current generation C, M, or R
+       * instance type matches your attributes, then the identified Spot price is from the lowest
+       * priced current generation instance types, and failing that, from the lowest priced previous
+       * generation instance types that match your attributes. When Amazon EC2 selects instance types
+       * with your attributes, it will exclude instance types whose Spot price exceeds your specified
+       * threshold.
+       *
+       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
+       *
+       * To indicate no price protection threshold, specify a high value, such as `999999` .
+       *
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+       * price.
+       *
+       * This parameter is not supported for
+       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
+       * and
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * .
+       *
+       *
+       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
+       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
+       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
+       * defaults to `100` .
+       *
+       *
+       * Default: `100`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-spotmaxpricepercentageoverlowestprice)
+       */
+      override fun spotMaxPricePercentageOverLowestPrice(): Number? =
+          unwrap(this).getSpotMaxPricePercentageOverLowestPrice()
+
+      /**
+       * The minimum and maximum amount of total local storage, in GB.
+       *
+       * Default: No minimum or maximum limits
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-totallocalstoragegb)
+       */
+      override fun totalLocalStorageGb(): Any? = unwrap(this).getTotalLocalStorageGb()
+
+      /**
+       * The minimum and maximum number of vCPUs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-vcpucount)
+       */
+      override fun vCpuCount(): Any? = unwrap(this).getVCpuCount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceRequirementsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty):
+          InstanceRequirementsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceRequirementsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceRequirementsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty
+    }
+  }
+
+  /**
+   * Specifies an IPv4 prefix for a network interface.
+   *
+   * `Ipv4PrefixSpecification` is a property of [AWS::EC2::LaunchTemplate
+   * NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * Ipv4PrefixSpecificationProperty ipv4PrefixSpecificationProperty =
+   * Ipv4PrefixSpecificationProperty.builder()
+   * .ipv4Prefix("ipv4Prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv4prefixspecification.html)
+   */
+  public interface Ipv4PrefixSpecificationProperty {
+    /**
+     * The IPv4 prefix.
+     *
+     * For information, see [Assigning prefixes to Amazon EC2 network
+     * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+     * *Amazon Elastic Compute Cloud User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv4prefixspecification.html#cfn-ec2-launchtemplate-ipv4prefixspecification-ipv4prefix)
+     */
+    public fun ipv4Prefix(): String? = unwrap(this).getIpv4Prefix()
+
+    /**
+     * A builder for [Ipv4PrefixSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipv4Prefix The IPv4 prefix.
+       * For information, see [Assigning prefixes to Amazon EC2 network
+       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       */
+      public fun ipv4Prefix(ipv4Prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty.builder()
+
+      /**
+       * @param ipv4Prefix The IPv4 prefix.
+       * For information, see [Assigning prefixes to Amazon EC2 network
+       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       */
+      override fun ipv4Prefix(ipv4Prefix: String) {
+        cdkBuilder.ipv4Prefix(ipv4Prefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty,
+    ) : CdkObject(cdkObject), Ipv4PrefixSpecificationProperty {
+      /**
+       * The IPv4 prefix.
+       *
+       * For information, see [Assigning prefixes to Amazon EC2 network
+       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv4prefixspecification.html#cfn-ec2-launchtemplate-ipv4prefixspecification-ipv4prefix)
+       */
+      override fun ipv4Prefix(): String? = unwrap(this).getIpv4Prefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Ipv4PrefixSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty):
+          Ipv4PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Ipv4PrefixSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Ipv4PrefixSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty
+    }
+  }
+
+  /**
+   * Specifies an IPv6 address in an Amazon EC2 launch template.
+   *
+   * `Ipv6Add` is a property of [AWS::EC2::LaunchTemplate
+   * NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * Ipv6AddProperty ipv6AddProperty = Ipv6AddProperty.builder()
+   * .ipv6Address("ipv6Address")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6add.html)
+   */
+  public interface Ipv6AddProperty {
+    /**
+     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet.
+     *
+     * You can't use this option if you're specifying a number of IPv6 addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6add.html#cfn-ec2-launchtemplate-ipv6add-ipv6address)
+     */
+    public fun ipv6Address(): String? = unwrap(this).getIpv6Address()
+
+    /**
+     * A builder for [Ipv6AddProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipv6Address One or more specific IPv6 addresses from the IPv6 CIDR block range of
+       * your subnet.
+       * You can't use this option if you're specifying a number of IPv6 addresses.
+       */
+      public fun ipv6Address(ipv6Address: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty.builder()
+
+      /**
+       * @param ipv6Address One or more specific IPv6 addresses from the IPv6 CIDR block range of
+       * your subnet.
+       * You can't use this option if you're specifying a number of IPv6 addresses.
+       */
+      override fun ipv6Address(ipv6Address: String) {
+        cdkBuilder.ipv6Address(ipv6Address)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty,
+    ) : CdkObject(cdkObject), Ipv6AddProperty {
+      /**
+       * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet.
+       *
+       * You can't use this option if you're specifying a number of IPv6 addresses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6add.html#cfn-ec2-launchtemplate-ipv6add-ipv6address)
+       */
+      override fun ipv6Address(): String? = unwrap(this).getIpv6Address()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Ipv6AddProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty):
+          Ipv6AddProperty = CdkObjectWrappers.wrap(cdkObject) as? Ipv6AddProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SpotOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty = (wrapped as
+      internal fun unwrap(wrapped: Ipv6AddProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty
+    }
+  }
+
+  /**
+   * Specifies an IPv6 prefix for a network interface.
+   *
+   * `Ipv6PrefixSpecification` is a property of [AWS::EC2::LaunchTemplate
+   * NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * Ipv6PrefixSpecificationProperty ipv6PrefixSpecificationProperty =
+   * Ipv6PrefixSpecificationProperty.builder()
+   * .ipv6Prefix("ipv6Prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6prefixspecification.html)
+   */
+  public interface Ipv6PrefixSpecificationProperty {
+    /**
+     * The IPv6 prefix.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6prefixspecification.html#cfn-ec2-launchtemplate-ipv6prefixspecification-ipv6prefix)
+     */
+    public fun ipv6Prefix(): String? = unwrap(this).getIpv6Prefix()
+
+    /**
+     * A builder for [Ipv6PrefixSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipv6Prefix The IPv6 prefix.
+       */
+      public fun ipv6Prefix(ipv6Prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty.builder()
+
+      /**
+       * @param ipv6Prefix The IPv6 prefix.
+       */
+      override fun ipv6Prefix(ipv6Prefix: String) {
+        cdkBuilder.ipv6Prefix(ipv6Prefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty,
+    ) : CdkObject(cdkObject), Ipv6PrefixSpecificationProperty {
+      /**
+       * The IPv6 prefix.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6prefixspecification.html#cfn-ec2-launchtemplate-ipv6prefixspecification-ipv6prefix)
+       */
+      override fun ipv6Prefix(): String? = unwrap(this).getIpv6Prefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Ipv6PrefixSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty):
+          Ipv6PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Ipv6PrefixSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Ipv6PrefixSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty
     }
   }
 
@@ -3594,133 +8272,10 @@ public open class CfnLaunchTemplate internal constructor(
   }
 
   /**
-   * Specifies a target Capacity Reservation.
+   * Specifies an elastic inference accelerator.
    *
-   * `CapacityReservationTarget` is a property of the [Amazon EC2 LaunchTemplate
+   * `LaunchTemplateElasticInferenceAccelerator` is a property of [AWS::EC2::LaunchTemplate
    * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CapacityReservationTargetProperty capacityReservationTargetProperty =
-   * CapacityReservationTargetProperty.builder()
-   * .capacityReservationId("capacityReservationId")
-   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html)
-   */
-  public interface CapacityReservationTargetProperty {
-    /**
-     * The ID of the Capacity Reservation in which to run the instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid)
-     */
-    public fun capacityReservationId(): String? = unwrap(this).getCapacityReservationId()
-
-    /**
-     * The ARN of the Capacity Reservation resource group in which to run the instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationresourcegrouparn)
-     */
-    public fun capacityReservationResourceGroupArn(): String? =
-        unwrap(this).getCapacityReservationResourceGroupArn()
-
-    /**
-     * A builder for [CapacityReservationTargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param capacityReservationId The ID of the Capacity Reservation in which to run the
-       * instance.
-       */
-      public fun capacityReservationId(capacityReservationId: String)
-
-      /**
-       * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource
-       * group in which to run the instance.
-       */
-      public fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty.builder()
-
-      /**
-       * @param capacityReservationId The ID of the Capacity Reservation in which to run the
-       * instance.
-       */
-      override fun capacityReservationId(capacityReservationId: String) {
-        cdkBuilder.capacityReservationId(capacityReservationId)
-      }
-
-      /**
-       * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource
-       * group in which to run the instance.
-       */
-      override
-          fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String) {
-        cdkBuilder.capacityReservationResourceGroupArn(capacityReservationResourceGroupArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty,
-    ) : CdkObject(cdkObject), CapacityReservationTargetProperty {
-      /**
-       * The ID of the Capacity Reservation in which to run the instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid)
-       */
-      override fun capacityReservationId(): String? = unwrap(this).getCapacityReservationId()
-
-      /**
-       * The ARN of the Capacity Reservation resource group in which to run the instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationtarget.html#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationresourcegrouparn)
-       */
-      override fun capacityReservationResourceGroupArn(): String? =
-          unwrap(this).getCapacityReservationResourceGroupArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CapacityReservationTargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty):
-          CapacityReservationTargetProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CapacityReservationTargetProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CapacityReservationTargetProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty
-    }
-  }
-
-  /**
-   * Specifies an IPv4 prefix for a network interface.
-   *
-   * `Ipv4PrefixSpecification` is a property of [AWS::EC2::LaunchTemplate
-   * NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
    * .
    *
    * Example:
@@ -3729,97 +8284,128 @@ public open class CfnLaunchTemplate internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * Ipv4PrefixSpecificationProperty ipv4PrefixSpecificationProperty =
-   * Ipv4PrefixSpecificationProperty.builder()
-   * .ipv4Prefix("ipv4Prefix")
+   * LaunchTemplateElasticInferenceAcceleratorProperty
+   * launchTemplateElasticInferenceAcceleratorProperty =
+   * LaunchTemplateElasticInferenceAcceleratorProperty.builder()
+   * .count(123)
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv4prefixspecification.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html)
    */
-  public interface Ipv4PrefixSpecificationProperty {
+  public interface LaunchTemplateElasticInferenceAcceleratorProperty {
     /**
-     * The IPv4 prefix.
+     * The number of elastic inference accelerators to attach to the instance.
      *
-     * For information, see [Assigning prefixes to Amazon EC2 network
-     * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
+     * Default: 1
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv4prefixspecification.html#cfn-ec2-launchtemplate-ipv4prefixspecification-ipv4prefix)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-count)
      */
-    public fun ipv4Prefix(): String? = unwrap(this).getIpv4Prefix()
+    public fun count(): Number? = unwrap(this).getCount()
 
     /**
-     * A builder for [Ipv4PrefixSpecificationProperty]
+     * The type of elastic inference accelerator.
+     *
+     * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [LaunchTemplateElasticInferenceAcceleratorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ipv4Prefix The IPv4 prefix.
-       * For information, see [Assigning prefixes to Amazon EC2 network
-       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * @param count The number of elastic inference accelerators to attach to the instance.
+       * Default: 1
        */
-      public fun ipv4Prefix(ipv4Prefix: String)
+      public fun count(count: Number)
+
+      /**
+       * @param type The type of elastic inference accelerator.
+       * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
+       */
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty.Builder
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty.Builder
           =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty.builder()
 
       /**
-       * @param ipv4Prefix The IPv4 prefix.
-       * For information, see [Assigning prefixes to Amazon EC2 network
-       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * @param count The number of elastic inference accelerators to attach to the instance.
+       * Default: 1
        */
-      override fun ipv4Prefix(ipv4Prefix: String) {
-        cdkBuilder.ipv4Prefix(ipv4Prefix)
+      override fun count(count: Number) {
+        cdkBuilder.count(count)
+      }
+
+      /**
+       * @param type The type of elastic inference accelerator.
+       * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty,
-    ) : CdkObject(cdkObject), Ipv4PrefixSpecificationProperty {
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateElasticInferenceAcceleratorProperty {
       /**
-       * The IPv4 prefix.
+       * The number of elastic inference accelerators to attach to the instance.
        *
-       * For information, see [Assigning prefixes to Amazon EC2 network
-       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * Default: 1
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv4prefixspecification.html#cfn-ec2-launchtemplate-ipv4prefixspecification-ipv4prefix)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-count)
        */
-      override fun ipv4Prefix(): String? = unwrap(this).getIpv4Prefix()
+      override fun count(): Number? = unwrap(this).getCount()
+
+      /**
+       * The type of elastic inference accelerator.
+       *
+       * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): Ipv4PrefixSpecificationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LaunchTemplateElasticInferenceAcceleratorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty):
-          Ipv4PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          Ipv4PrefixSpecificationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty):
+          LaunchTemplateElasticInferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateElasticInferenceAcceleratorProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: Ipv4PrefixSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty
+      internal fun unwrap(wrapped: LaunchTemplateElasticInferenceAcceleratorProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty
     }
   }
 
   /**
-   * The minimum and maximum amount of total accelerator memory, in MiB.
+   * Specifies the tags to apply to the launch template during creation.
+   *
+   * `LaunchTemplateTagSpecification` is a property of
+   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+   * .
    *
    * Example:
    *
@@ -3827,47 +8413,372 @@ public open class CfnLaunchTemplate internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AcceleratorTotalMemoryMiBProperty acceleratorTotalMemoryMiBProperty =
-   * AcceleratorTotalMemoryMiBProperty.builder()
+   * LaunchTemplateTagSpecificationProperty launchTemplateTagSpecificationProperty =
+   * LaunchTemplateTagSpecificationProperty.builder()
+   * .resourceType("resourceType")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html)
+   */
+  public interface LaunchTemplateTagSpecificationProperty {
+    /**
+     * The type of resource.
+     *
+     * To tag the launch template, `ResourceType` must be `launch-template` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-resourcetype)
+     */
+    public fun resourceType(): String? = unwrap(this).getResourceType()
+
+    /**
+     * The tags for the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [LaunchTemplateTagSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceType The type of resource.
+       * To tag the launch template, `ResourceType` must be `launch-template` .
+       */
+      public fun resourceType(resourceType: String)
+
+      /**
+       * @param tags The tags for the resource.
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The tags for the resource.
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty.builder()
+
+      /**
+       * @param resourceType The type of resource.
+       * To tag the launch template, `ResourceType` must be `launch-template` .
+       */
+      override fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
+      }
+
+      /**
+       * @param tags The tags for the resource.
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      }
+
+      /**
+       * @param tags The tags for the resource.
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateTagSpecificationProperty {
+      /**
+       * The type of resource.
+       *
+       * To tag the launch template, `ResourceType` must be `launch-template` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-resourcetype)
+       */
+      override fun resourceType(): String? = unwrap(this).getResourceType()
+
+      /**
+       * The tags for the resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LaunchTemplateTagSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty):
+          LaunchTemplateTagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateTagSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchTemplateTagSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty
+    }
+  }
+
+  /**
+   * Specifies a license configuration for an instance.
+   *
+   * `LicenseSpecification` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * LicenseSpecificationProperty licenseSpecificationProperty =
+   * LicenseSpecificationProperty.builder()
+   * .licenseConfigurationArn("licenseConfigurationArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-licensespecification.html)
+   */
+  public interface LicenseSpecificationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the license configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-licensespecification.html#cfn-ec2-launchtemplate-licensespecification-licenseconfigurationarn)
+     */
+    public fun licenseConfigurationArn(): String? = unwrap(this).getLicenseConfigurationArn()
+
+    /**
+     * A builder for [LicenseSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param licenseConfigurationArn The Amazon Resource Name (ARN) of the license configuration.
+       */
+      public fun licenseConfigurationArn(licenseConfigurationArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty.builder()
+
+      /**
+       * @param licenseConfigurationArn The Amazon Resource Name (ARN) of the license configuration.
+       */
+      override fun licenseConfigurationArn(licenseConfigurationArn: String) {
+        cdkBuilder.licenseConfigurationArn(licenseConfigurationArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty,
+    ) : CdkObject(cdkObject), LicenseSpecificationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the license configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-licensespecification.html#cfn-ec2-launchtemplate-licensespecification-licenseconfigurationarn)
+       */
+      override fun licenseConfigurationArn(): String? = unwrap(this).getLicenseConfigurationArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LicenseSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty):
+          LicenseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LicenseSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LicenseSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty
+    }
+  }
+
+  /**
+   * The maintenance options of your instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * MaintenanceOptionsProperty maintenanceOptionsProperty = MaintenanceOptionsProperty.builder()
+   * .autoRecovery("autoRecovery")
+   * .rebootMigration("rebootMigration")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html)
+   */
+  public interface MaintenanceOptionsProperty {
+    /**
+     * Disables the automatic recovery behavior of your instance or sets it to default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-autorecovery)
+     */
+    public fun autoRecovery(): String? = unwrap(this).getAutoRecovery()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-rebootmigration)
+     */
+    public fun rebootMigration(): String? = unwrap(this).getRebootMigration()
+
+    /**
+     * A builder for [MaintenanceOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoRecovery Disables the automatic recovery behavior of your instance or sets it to
+       * default.
+       */
+      public fun autoRecovery(autoRecovery: String)
+
+      /**
+       * @param rebootMigration the value to be set.
+       */
+      public fun rebootMigration(rebootMigration: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty.builder()
+
+      /**
+       * @param autoRecovery Disables the automatic recovery behavior of your instance or sets it to
+       * default.
+       */
+      override fun autoRecovery(autoRecovery: String) {
+        cdkBuilder.autoRecovery(autoRecovery)
+      }
+
+      /**
+       * @param rebootMigration the value to be set.
+       */
+      override fun rebootMigration(rebootMigration: String) {
+        cdkBuilder.rebootMigration(rebootMigration)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty,
+    ) : CdkObject(cdkObject), MaintenanceOptionsProperty {
+      /**
+       * Disables the automatic recovery behavior of your instance or sets it to default.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-autorecovery)
+       */
+      override fun autoRecovery(): String? = unwrap(this).getAutoRecovery()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-rebootmigration)
+       */
+      override fun rebootMigration(): String? = unwrap(this).getRebootMigration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MaintenanceOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty):
+          MaintenanceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MaintenanceOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum amount of memory per vCPU, in GiB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * MemoryGiBPerVCpuProperty memoryGiBPerVCpuProperty = MemoryGiBPerVCpuProperty.builder()
    * .max(123)
    * .min(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html)
    */
-  public interface AcceleratorTotalMemoryMiBProperty {
+  public interface MemoryGiBPerVCpuProperty {
     /**
-     * The maximum amount of accelerator memory, in MiB.
+     * The maximum amount of memory per vCPU, in GiB.
      *
      * To specify no maximum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html#cfn-ec2-launchtemplate-acceleratortotalmemorymib-max)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html#cfn-ec2-launchtemplate-memorygibpervcpu-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The minimum amount of accelerator memory, in MiB.
+     * The minimum amount of memory per vCPU, in GiB.
      *
      * To specify no minimum limit, omit this parameter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html#cfn-ec2-launchtemplate-acceleratortotalmemorymib-min)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html#cfn-ec2-launchtemplate-memorygibpervcpu-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * A builder for [AcceleratorTotalMemoryMiBProperty]
+     * A builder for [MemoryGiBPerVCpuProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum amount of accelerator memory, in MiB.
+       * @param max The maximum amount of memory per vCPU, in GiB.
        * To specify no maximum limit, omit this parameter.
        */
       public fun max(max: Number)
 
       /**
-       * @param min The minimum amount of accelerator memory, in MiB.
+       * @param min The minimum amount of memory per vCPU, in GiB.
        * To specify no minimum limit, omit this parameter.
        */
       public fun min(min: Number)
@@ -3875,12 +8786,11 @@ public open class CfnLaunchTemplate internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty.builder()
 
       /**
-       * @param max The maximum amount of accelerator memory, in MiB.
+       * @param max The maximum amount of memory per vCPU, in GiB.
        * To specify no maximum limit, omit this parameter.
        */
       override fun max(max: Number) {
@@ -3888,7 +8798,7 @@ public open class CfnLaunchTemplate internal constructor(
       }
 
       /**
-       * @param min The minimum amount of accelerator memory, in MiB.
+       * @param min The minimum amount of memory per vCPU, in GiB.
        * To specify no minimum limit, omit this parameter.
        */
       override fun min(min: Number) {
@@ -3896,49 +8806,855 @@ public open class CfnLaunchTemplate internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBProperty {
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty,
+    ) : CdkObject(cdkObject), MemoryGiBPerVCpuProperty {
       /**
-       * The maximum amount of accelerator memory, in MiB.
+       * The maximum amount of memory per vCPU, in GiB.
        *
        * To specify no maximum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html#cfn-ec2-launchtemplate-acceleratortotalmemorymib-max)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html#cfn-ec2-launchtemplate-memorygibpervcpu-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The minimum amount of accelerator memory, in MiB.
+       * The minimum amount of memory per vCPU, in GiB.
        *
        * To specify no minimum limit, omit this parameter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.html#cfn-ec2-launchtemplate-acceleratortotalmemorymib-min)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html#cfn-ec2-launchtemplate-memorygibpervcpu-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AcceleratorTotalMemoryMiBProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryGiBPerVCpuProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty):
-          AcceleratorTotalMemoryMiBProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AcceleratorTotalMemoryMiBProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty):
+          MemoryGiBPerVCpuProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryGiBPerVCpuProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty =
+      internal fun unwrap(wrapped: MemoryGiBPerVCpuProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum amount of memory, in MiB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * MemoryMiBProperty memoryMiBProperty = MemoryMiBProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html)
+   */
+  public interface MemoryMiBProperty {
+    /**
+     * The maximum amount of memory, in MiB.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html#cfn-ec2-launchtemplate-memorymib-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum amount of memory, in MiB.
+     *
+     * To specify no minimum limit, specify `0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html#cfn-ec2-launchtemplate-memorymib-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [MemoryMiBProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum amount of memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum amount of memory, in MiB.
+       * To specify no minimum limit, specify `0` .
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty.builder()
+
+      /**
+       * @param max The maximum amount of memory, in MiB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum amount of memory, in MiB.
+       * To specify no minimum limit, specify `0` .
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty,
+    ) : CdkObject(cdkObject), MemoryMiBProperty {
+      /**
+       * The maximum amount of memory, in MiB.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html#cfn-ec2-launchtemplate-memorymib-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum amount of memory, in MiB.
+       *
+       * To specify no minimum limit, specify `0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html#cfn-ec2-launchtemplate-memorymib-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryMiBProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty):
+          MemoryMiBProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemoryMiBProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty
+    }
+  }
+
+  /**
+   * The metadata options for the instance.
+   *
+   * For more information, see [Instance metadata and user
+   * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
+   * *Amazon EC2 User Guide* .
+   *
+   * `MetadataOptions` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * MetadataOptionsProperty metadataOptionsProperty = MetadataOptionsProperty.builder()
+   * .httpEndpoint("httpEndpoint")
+   * .httpProtocolIpv6("httpProtocolIpv6")
+   * .httpPutResponseHopLimit(123)
+   * .httpTokens("httpTokens")
+   * .instanceMetadataTags("instanceMetadataTags")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html)
+   */
+  public interface MetadataOptionsProperty {
+    /**
+     * Enables or disables the HTTP metadata endpoint on your instances.
+     *
+     * If the parameter is not specified, the default state is `enabled` .
+     *
+     *
+     * If you specify a value of `disabled` , you will not be able to access your instance metadata.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpendpoint)
+     */
+    public fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
+
+    /**
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     *
+     * Default: `disabled`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpprotocolipv6)
+     */
+    public fun httpProtocolIpv6(): String? = unwrap(this).getHttpProtocolIpv6()
+
+    /**
+     * The desired HTTP PUT response hop limit for instance metadata requests.
+     *
+     * The larger the number, the further instance metadata requests can travel.
+     *
+     * Default: `1`
+     *
+     * Possible values: Integers from 1 to 64
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpputresponsehoplimit)
+     */
+    public fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
+
+    /**
+     * Indicates whether IMDSv2 is required.
+     *
+     * * `optional` - IMDSv2 is optional. You can choose whether to send a session token in your
+     * instance metadata retrieval requests. If you retrieve IAM role credentials without a session
+     * token, you receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a
+     * valid session token, you receive the IMDSv2 role credentials.
+     * * `required` - IMDSv2 is required. You must send a session token in your instance metadata
+     * retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
+     * credentials; IMDSv1 credentials are not available.
+     *
+     * Default: If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance
+     * is `v2.0` , the default is `required` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httptokens)
+     */
+    public fun httpTokens(): String? = unwrap(this).getHttpTokens()
+
+    /**
+     * Set to `enabled` to allow access to instance tags from the instance metadata.
+     *
+     * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
+     * information, see [Work with instance tags using the instance
+     * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
+     * .
+     *
+     * Default: `disabled`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-instancemetadatatags)
+     */
+    public fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
+
+    /**
+     * A builder for [MetadataOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param httpEndpoint Enables or disables the HTTP metadata endpoint on your instances.
+       * If the parameter is not specified, the default state is `enabled` .
+       *
+       *
+       * If you specify a value of `disabled` , you will not be able to access your instance
+       * metadata.
+       */
+      public fun httpEndpoint(httpEndpoint: String)
+
+      /**
+       * @param httpProtocolIpv6 Enables or disables the IPv6 endpoint for the instance metadata
+       * service.
+       * Default: `disabled`
+       */
+      public fun httpProtocolIpv6(httpProtocolIpv6: String)
+
+      /**
+       * @param httpPutResponseHopLimit The desired HTTP PUT response hop limit for instance
+       * metadata requests.
+       * The larger the number, the further instance metadata requests can travel.
+       *
+       * Default: `1`
+       *
+       * Possible values: Integers from 1 to 64
+       */
+      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number)
+
+      /**
+       * @param httpTokens Indicates whether IMDSv2 is required.
+       * * `optional` - IMDSv2 is optional. You can choose whether to send a session token in your
+       * instance metadata retrieval requests. If you retrieve IAM role credentials without a session
+       * token, you receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a
+       * valid session token, you receive the IMDSv2 role credentials.
+       * * `required` - IMDSv2 is required. You must send a session token in your instance metadata
+       * retrieval requests. With this option, retrieving the IAM role credentials always returns
+       * IMDSv2 credentials; IMDSv1 credentials are not available.
+       *
+       * Default: If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance
+       * is `v2.0` , the default is `required` .
+       */
+      public fun httpTokens(httpTokens: String)
+
+      /**
+       * @param instanceMetadataTags Set to `enabled` to allow access to instance tags from the
+       * instance metadata.
+       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
+       * information, see [Work with instance tags using the instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
+       * .
+       *
+       * Default: `disabled`
+       */
+      public fun instanceMetadataTags(instanceMetadataTags: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty.builder()
+
+      /**
+       * @param httpEndpoint Enables or disables the HTTP metadata endpoint on your instances.
+       * If the parameter is not specified, the default state is `enabled` .
+       *
+       *
+       * If you specify a value of `disabled` , you will not be able to access your instance
+       * metadata.
+       */
+      override fun httpEndpoint(httpEndpoint: String) {
+        cdkBuilder.httpEndpoint(httpEndpoint)
+      }
+
+      /**
+       * @param httpProtocolIpv6 Enables or disables the IPv6 endpoint for the instance metadata
+       * service.
+       * Default: `disabled`
+       */
+      override fun httpProtocolIpv6(httpProtocolIpv6: String) {
+        cdkBuilder.httpProtocolIpv6(httpProtocolIpv6)
+      }
+
+      /**
+       * @param httpPutResponseHopLimit The desired HTTP PUT response hop limit for instance
+       * metadata requests.
+       * The larger the number, the further instance metadata requests can travel.
+       *
+       * Default: `1`
+       *
+       * Possible values: Integers from 1 to 64
+       */
+      override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
+        cdkBuilder.httpPutResponseHopLimit(httpPutResponseHopLimit)
+      }
+
+      /**
+       * @param httpTokens Indicates whether IMDSv2 is required.
+       * * `optional` - IMDSv2 is optional. You can choose whether to send a session token in your
+       * instance metadata retrieval requests. If you retrieve IAM role credentials without a session
+       * token, you receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a
+       * valid session token, you receive the IMDSv2 role credentials.
+       * * `required` - IMDSv2 is required. You must send a session token in your instance metadata
+       * retrieval requests. With this option, retrieving the IAM role credentials always returns
+       * IMDSv2 credentials; IMDSv1 credentials are not available.
+       *
+       * Default: If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance
+       * is `v2.0` , the default is `required` .
+       */
+      override fun httpTokens(httpTokens: String) {
+        cdkBuilder.httpTokens(httpTokens)
+      }
+
+      /**
+       * @param instanceMetadataTags Set to `enabled` to allow access to instance tags from the
+       * instance metadata.
+       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
+       * information, see [Work with instance tags using the instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
+       * .
+       *
+       * Default: `disabled`
+       */
+      override fun instanceMetadataTags(instanceMetadataTags: String) {
+        cdkBuilder.instanceMetadataTags(instanceMetadataTags)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty,
+    ) : CdkObject(cdkObject), MetadataOptionsProperty {
+      /**
+       * Enables or disables the HTTP metadata endpoint on your instances.
+       *
+       * If the parameter is not specified, the default state is `enabled` .
+       *
+       *
+       * If you specify a value of `disabled` , you will not be able to access your instance
+       * metadata.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpendpoint)
+       */
+      override fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
+
+      /**
+       * Enables or disables the IPv6 endpoint for the instance metadata service.
+       *
+       * Default: `disabled`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpprotocolipv6)
+       */
+      override fun httpProtocolIpv6(): String? = unwrap(this).getHttpProtocolIpv6()
+
+      /**
+       * The desired HTTP PUT response hop limit for instance metadata requests.
+       *
+       * The larger the number, the further instance metadata requests can travel.
+       *
+       * Default: `1`
+       *
+       * Possible values: Integers from 1 to 64
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpputresponsehoplimit)
+       */
+      override fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
+
+      /**
+       * Indicates whether IMDSv2 is required.
+       *
+       * * `optional` - IMDSv2 is optional. You can choose whether to send a session token in your
+       * instance metadata retrieval requests. If you retrieve IAM role credentials without a session
+       * token, you receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a
+       * valid session token, you receive the IMDSv2 role credentials.
+       * * `required` - IMDSv2 is required. You must send a session token in your instance metadata
+       * retrieval requests. With this option, retrieving the IAM role credentials always returns
+       * IMDSv2 credentials; IMDSv1 credentials are not available.
+       *
+       * Default: If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance
+       * is `v2.0` , the default is `required` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httptokens)
+       */
+      override fun httpTokens(): String? = unwrap(this).getHttpTokens()
+
+      /**
+       * Set to `enabled` to allow access to instance tags from the instance metadata.
+       *
+       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
+       * information, see [Work with instance tags using the instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
+       * .
+       *
+       * Default: `disabled`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-instancemetadatatags)
+       */
+      override fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty):
+          MetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies whether detailed monitoring is enabled for an instance.
+   *
+   * For more information about detailed monitoring, see [Enable or turn off detailed monitoring for
+   * your instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html) in
+   * the *Amazon EC2 User Guide* .
+   *
+   * `Monitoring` is a property of [AWS::EC2::LaunchTemplate
+   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * MonitoringProperty monitoringProperty = MonitoringProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-monitoring.html)
+   */
+  public interface MonitoringProperty {
+    /**
+     * Specify `true` to enable detailed monitoring.
+     *
+     * Otherwise, basic monitoring is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-monitoring.html#cfn-ec2-launchtemplate-monitoring-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [MonitoringProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Specify `true` to enable detailed monitoring.
+       * Otherwise, basic monitoring is enabled.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specify `true` to enable detailed monitoring.
+       * Otherwise, basic monitoring is enabled.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty.builder()
+
+      /**
+       * @param enabled Specify `true` to enable detailed monitoring.
+       * Otherwise, basic monitoring is enabled.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specify `true` to enable detailed monitoring.
+       * Otherwise, basic monitoring is enabled.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty,
+    ) : CdkObject(cdkObject), MonitoringProperty {
+      /**
+       * Specify `true` to enable detailed monitoring.
+       *
+       * Otherwise, basic monitoring is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-monitoring.html#cfn-ec2-launchtemplate-monitoring-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty):
+          MonitoringProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps).
+   *
+   *
+   * Setting the minimum bandwidth does not guarantee that your instance will achieve the minimum
+   * bandwidth. Amazon EC2 will identify instance types that support the specified minimum bandwidth,
+   * but the actual bandwidth of your instance might go below the specified minimum at times. For more
+   * information, see [Available instance
+   * bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html#available-instance-bandwidth)
+   * in the *Amazon EC2 User Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * NetworkBandwidthGbpsProperty networkBandwidthGbpsProperty =
+   * NetworkBandwidthGbpsProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html)
+   */
+  public interface NetworkBandwidthGbpsProperty {
+    /**
+     * The maximum amount of network bandwidth, in Gbps.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html#cfn-ec2-launchtemplate-networkbandwidthgbps-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum amount of network bandwidth, in Gbps.
+     *
+     * If this parameter is not specified, there is no minimum limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html#cfn-ec2-launchtemplate-networkbandwidthgbps-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [NetworkBandwidthGbpsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum amount of network bandwidth, in Gbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum amount of network bandwidth, in Gbps.
+       * If this parameter is not specified, there is no minimum limit.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty.builder()
+
+      /**
+       * @param max The maximum amount of network bandwidth, in Gbps.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum amount of network bandwidth, in Gbps.
+       * If this parameter is not specified, there is no minimum limit.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty,
+    ) : CdkObject(cdkObject), NetworkBandwidthGbpsProperty {
+      /**
+       * The maximum amount of network bandwidth, in Gbps.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html#cfn-ec2-launchtemplate-networkbandwidthgbps-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum amount of network bandwidth, in Gbps.
+       *
+       * If this parameter is not specified, there is no minimum limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html#cfn-ec2-launchtemplate-networkbandwidthgbps-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkBandwidthGbpsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty):
+          NetworkBandwidthGbpsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkBandwidthGbpsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkBandwidthGbpsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum number of network interfaces.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * NetworkInterfaceCountProperty networkInterfaceCountProperty =
+   * NetworkInterfaceCountProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html)
+   */
+  public interface NetworkInterfaceCountProperty {
+    /**
+     * The maximum number of network interfaces.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html#cfn-ec2-launchtemplate-networkinterfacecount-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum number of network interfaces.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html#cfn-ec2-launchtemplate-networkinterfacecount-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [NetworkInterfaceCountProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum number of network interfaces.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum number of network interfaces.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty.builder()
+
+      /**
+       * @param max The maximum number of network interfaces.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum number of network interfaces.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty,
+    ) : CdkObject(cdkObject), NetworkInterfaceCountProperty {
+      /**
+       * The maximum number of network interfaces.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html#cfn-ec2-launchtemplate-networkinterfacecount-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum number of network interfaces.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterfacecount.html#cfn-ec2-launchtemplate-networkinterfacecount-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfaceCountProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty):
+          NetworkInterfaceCountProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkInterfaceCountProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkInterfaceCountProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty
     }
   }
 
@@ -5029,6512 +10745,6 @@ public open class CfnLaunchTemplate internal constructor(
   }
 
   /**
-   * The minimum and maximum amount of total local storage, in GB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * TotalLocalStorageGBProperty totalLocalStorageGBProperty = TotalLocalStorageGBProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html)
-   */
-  public interface TotalLocalStorageGBProperty {
-    /**
-     * The maximum amount of total local storage, in GB.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html#cfn-ec2-launchtemplate-totallocalstoragegb-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of total local storage, in GB.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html#cfn-ec2-launchtemplate-totallocalstoragegb-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [TotalLocalStorageGBProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of total local storage, in GB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of total local storage, in GB.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty.builder()
-
-      /**
-       * @param max The maximum amount of total local storage, in GB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of total local storage, in GB.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty,
-    ) : CdkObject(cdkObject), TotalLocalStorageGBProperty {
-      /**
-       * The maximum amount of total local storage, in GB.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html#cfn-ec2-launchtemplate-totallocalstoragegb-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of total local storage, in GB.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html#cfn-ec2-launchtemplate-totallocalstoragegb-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TotalLocalStorageGBProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty):
-          TotalLocalStorageGBProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TotalLocalStorageGBProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TotalLocalStorageGBProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty
-    }
-  }
-
-  /**
-   * Amazon Elastic Graphics reached end of life on January 8, 2024.
-   *
-   * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
-   * G4dn, or G5 instances.
-   *
-   * Specifies a specification for an Elastic GPU for an Amazon EC2 launch template.
-   *
-   * `ElasticGpuSpecification` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * ElasticGpuSpecificationProperty elasticGpuSpecificationProperty =
-   * ElasticGpuSpecificationProperty.builder()
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html)
-   */
-  public interface ElasticGpuSpecificationProperty {
-    /**
-     * The type of Elastic Graphics accelerator.
-     *
-     * For more information about the values to specify for `Type` , see [Elastic Graphics
-     * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-     * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-     * User Guide for Windows Instances* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html#cfn-ec2-launchtemplate-elasticgpuspecification-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ElasticGpuSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The type of Elastic Graphics accelerator.
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty.builder()
-
-      /**
-       * @param type The type of Elastic Graphics accelerator.
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty,
-    ) : CdkObject(cdkObject), ElasticGpuSpecificationProperty {
-      /**
-       * The type of Elastic Graphics accelerator.
-       *
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html#cfn-ec2-launchtemplate-elasticgpuspecification-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticGpuSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty):
-          ElasticGpuSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ElasticGpuSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ElasticGpuSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies an elastic inference accelerator.
-   *
-   * `LaunchTemplateElasticInferenceAccelerator` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * LaunchTemplateElasticInferenceAcceleratorProperty
-   * launchTemplateElasticInferenceAcceleratorProperty =
-   * LaunchTemplateElasticInferenceAcceleratorProperty.builder()
-   * .count(123)
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html)
-   */
-  public interface LaunchTemplateElasticInferenceAcceleratorProperty {
-    /**
-     * The number of elastic inference accelerators to attach to the instance.
-     *
-     * Default: 1
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-count)
-     */
-    public fun count(): Number? = unwrap(this).getCount()
-
-    /**
-     * The type of elastic inference accelerator.
-     *
-     * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [LaunchTemplateElasticInferenceAcceleratorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param count The number of elastic inference accelerators to attach to the instance.
-       * Default: 1
-       */
-      public fun count(count: Number)
-
-      /**
-       * @param type The type of elastic inference accelerator.
-       * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty.builder()
-
-      /**
-       * @param count The number of elastic inference accelerators to attach to the instance.
-       * Default: 1
-       */
-      override fun count(count: Number) {
-        cdkBuilder.count(count)
-      }
-
-      /**
-       * @param type The type of elastic inference accelerator.
-       * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateElasticInferenceAcceleratorProperty {
-      /**
-       * The number of elastic inference accelerators to attach to the instance.
-       *
-       * Default: 1
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-count)
-       */
-      override fun count(): Number? = unwrap(this).getCount()
-
-      /**
-       * The type of elastic inference accelerator.
-       *
-       * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LaunchTemplateElasticInferenceAcceleratorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty):
-          LaunchTemplateElasticInferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LaunchTemplateElasticInferenceAcceleratorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchTemplateElasticInferenceAcceleratorProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty
-    }
-  }
-
-  /**
-   * Parameters for a block device for an EBS volume in an Amazon EC2 launch template.
-   *
-   * `Ebs` is a property of [AWS::EC2::LaunchTemplate
-   * BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * EbsProperty ebsProperty = EbsProperty.builder()
-   * .deleteOnTermination(false)
-   * .encrypted(false)
-   * .iops(123)
-   * .kmsKeyId("kmsKeyId")
-   * .snapshotId("snapshotId")
-   * .throughput(123)
-   * .volumeSize(123)
-   * .volumeType("volumeType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html)
-   */
-  public interface EbsProperty {
-    /**
-     * Indicates whether the EBS volume is deleted on instance termination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-deleteontermination)
-     */
-    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
-
-    /**
-     * Indicates whether the EBS volume is encrypted.
-     *
-     * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
-     * you are creating a volume from a snapshot, you can't specify an encryption value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-encrypted)
-     */
-    public fun encrypted(): Any? = unwrap(this).getEncrypted()
-
-    /**
-     * The number of I/O operations per second (IOPS).
-     *
-     * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
-     * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
-     * volume and the rate at which the volume accumulates I/O credits for bursting.
-     *
-     * The following are the supported values for each volume type:
-     *
-     * * `gp3` : 3,000 - 16,000 IOPS
-     * * `io1` : 100 - 64,000 IOPS
-     * * `io2` : 100 - 256,000 IOPS
-     *
-     * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-     * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-     * . On other instances, you can achieve performance up to 32,000 IOPS.
-     *
-     * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-iops)
-     */
-    public fun iops(): Number? = unwrap(this).getIops()
-
-    /**
-     * The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used for encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * The ID of the snapshot.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-snapshotid)
-     */
-    public fun snapshotId(): String? = unwrap(this).getSnapshotId()
-
-    /**
-     * The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
-     *
-     * Valid Range: Minimum value of 125. Maximum value of 1000.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-throughput)
-     */
-    public fun throughput(): Number? = unwrap(this).getThroughput()
-
-    /**
-     * The size of the volume, in GiBs.
-     *
-     * You must specify either a snapshot ID or a volume size. The following are the supported
-     * volumes sizes for each volume type:
-     *
-     * * `gp2` and `gp3` : 1 - 16,384 GiB
-     * * `io1` : 4 - 16,384 GiB
-     * * `io2` : 4 - 65,536 GiB
-     * * `st1` and `sc1` : 125 - 16,384 GiB
-     * * `standard` : 1 - 1024 GiB
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumesize)
-     */
-    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-    /**
-     * The volume type.
-     *
-     * For more information, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumetype)
-     */
-    public fun volumeType(): String? = unwrap(this).getVolumeType()
-
-    /**
-     * A builder for [EbsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
-       * termination.
-       */
-      public fun deleteOnTermination(deleteOnTermination: Boolean)
-
-      /**
-       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
-       * termination.
-       */
-      public fun deleteOnTermination(deleteOnTermination: IResolvable)
-
-      /**
-       * @param encrypted Indicates whether the EBS volume is encrypted.
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
-       * you are creating a volume from a snapshot, you can't specify an encryption value.
-       */
-      public fun encrypted(encrypted: Boolean)
-
-      /**
-       * @param encrypted Indicates whether the EBS volume is encrypted.
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
-       * you are creating a volume from a snapshot, you can't specify an encryption value.
-       */
-      public fun encrypted(encrypted: IResolvable)
-
-      /**
-       * @param iops The number of I/O operations per second (IOPS).
-       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
-       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
-       * volume and the rate at which the volume accumulates I/O credits for bursting.
-       *
-       * The following are the supported values for each volume type:
-       *
-       * * `gp3` : 3,000 - 16,000 IOPS
-       * * `io1` : 100 - 64,000 IOPS
-       * * `io2` : 100 - 256,000 IOPS
-       *
-       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
-       *
-       * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
-       */
-      public fun iops(iops: Number)
-
-      /**
-       * @param kmsKeyId The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used
-       * for encryption.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param snapshotId The ID of the snapshot.
-       */
-      public fun snapshotId(snapshotId: String)
-
-      /**
-       * @param throughput The throughput to provision for a `gp3` volume, with a maximum of 1,000
-       * MiB/s.
-       * Valid Range: Minimum value of 125. Maximum value of 1000.
-       */
-      public fun throughput(throughput: Number)
-
-      /**
-       * @param volumeSize The size of the volume, in GiBs.
-       * You must specify either a snapshot ID or a volume size. The following are the supported
-       * volumes sizes for each volume type:
-       *
-       * * `gp2` and `gp3` : 1 - 16,384 GiB
-       * * `io1` : 4 - 16,384 GiB
-       * * `io2` : 4 - 65,536 GiB
-       * * `st1` and `sc1` : 125 - 16,384 GiB
-       * * `standard` : 1 - 1024 GiB
-       */
-      public fun volumeSize(volumeSize: Number)
-
-      /**
-       * @param volumeType The volume type.
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
-       */
-      public fun volumeType(volumeType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty.builder()
-
-      /**
-       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
-       * termination.
-       */
-      override fun deleteOnTermination(deleteOnTermination: Boolean) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination)
-      }
-
-      /**
-       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
-       * termination.
-       */
-      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encrypted Indicates whether the EBS volume is encrypted.
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
-       * you are creating a volume from a snapshot, you can't specify an encryption value.
-       */
-      override fun encrypted(encrypted: Boolean) {
-        cdkBuilder.encrypted(encrypted)
-      }
-
-      /**
-       * @param encrypted Indicates whether the EBS volume is encrypted.
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
-       * you are creating a volume from a snapshot, you can't specify an encryption value.
-       */
-      override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param iops The number of I/O operations per second (IOPS).
-       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
-       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
-       * volume and the rate at which the volume accumulates I/O credits for bursting.
-       *
-       * The following are the supported values for each volume type:
-       *
-       * * `gp3` : 3,000 - 16,000 IOPS
-       * * `io1` : 100 - 64,000 IOPS
-       * * `io2` : 100 - 256,000 IOPS
-       *
-       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
-       *
-       * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
-       */
-      override fun iops(iops: Number) {
-        cdkBuilder.iops(iops)
-      }
-
-      /**
-       * @param kmsKeyId The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used
-       * for encryption.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param snapshotId The ID of the snapshot.
-       */
-      override fun snapshotId(snapshotId: String) {
-        cdkBuilder.snapshotId(snapshotId)
-      }
-
-      /**
-       * @param throughput The throughput to provision for a `gp3` volume, with a maximum of 1,000
-       * MiB/s.
-       * Valid Range: Minimum value of 125. Maximum value of 1000.
-       */
-      override fun throughput(throughput: Number) {
-        cdkBuilder.throughput(throughput)
-      }
-
-      /**
-       * @param volumeSize The size of the volume, in GiBs.
-       * You must specify either a snapshot ID or a volume size. The following are the supported
-       * volumes sizes for each volume type:
-       *
-       * * `gp2` and `gp3` : 1 - 16,384 GiB
-       * * `io1` : 4 - 16,384 GiB
-       * * `io2` : 4 - 65,536 GiB
-       * * `st1` and `sc1` : 125 - 16,384 GiB
-       * * `standard` : 1 - 1024 GiB
-       */
-      override fun volumeSize(volumeSize: Number) {
-        cdkBuilder.volumeSize(volumeSize)
-      }
-
-      /**
-       * @param volumeType The volume type.
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
-       */
-      override fun volumeType(volumeType: String) {
-        cdkBuilder.volumeType(volumeType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty,
-    ) : CdkObject(cdkObject), EbsProperty {
-      /**
-       * Indicates whether the EBS volume is deleted on instance termination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-deleteontermination)
-       */
-      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
-
-      /**
-       * Indicates whether the EBS volume is encrypted.
-       *
-       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. If
-       * you are creating a volume from a snapshot, you can't specify an encryption value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-encrypted)
-       */
-      override fun encrypted(): Any? = unwrap(this).getEncrypted()
-
-      /**
-       * The number of I/O operations per second (IOPS).
-       *
-       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
-       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
-       * volume and the rate at which the volume accumulates I/O credits for bursting.
-       *
-       * The following are the supported values for each volume type:
-       *
-       * * `gp3` : 3,000 - 16,000 IOPS
-       * * `io1` : 100 - 64,000 IOPS
-       * * `io2` : 100 - 256,000 IOPS
-       *
-       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
-       *
-       * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-iops)
-       */
-      override fun iops(): Number? = unwrap(this).getIops()
-
-      /**
-       * The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used for encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * The ID of the snapshot.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-snapshotid)
-       */
-      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
-
-      /**
-       * The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
-       *
-       * Valid Range: Minimum value of 125. Maximum value of 1000.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-throughput)
-       */
-      override fun throughput(): Number? = unwrap(this).getThroughput()
-
-      /**
-       * The size of the volume, in GiBs.
-       *
-       * You must specify either a snapshot ID or a volume size. The following are the supported
-       * volumes sizes for each volume type:
-       *
-       * * `gp2` and `gp3` : 1 - 16,384 GiB
-       * * `io1` : 4 - 16,384 GiB
-       * * `io2` : 4 - 65,536 GiB
-       * * `st1` and `sc1` : 125 - 16,384 GiB
-       * * `standard` : 1 - 1024 GiB
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumesize)
-       */
-      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-      /**
-       * The volume type.
-       *
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumetype)
-       */
-      override fun volumeType(): String? = unwrap(this).getVolumeType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EbsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty):
-          EbsProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EbsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty
-    }
-  }
-
-  /**
-   * Specifies the market (purchasing) option for an instance.
-   *
-   * `InstanceMarketOptions` is a property of the [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * InstanceMarketOptionsProperty instanceMarketOptionsProperty =
-   * InstanceMarketOptionsProperty.builder()
-   * .marketType("marketType")
-   * .spotOptions(SpotOptionsProperty.builder()
-   * .blockDurationMinutes(123)
-   * .instanceInterruptionBehavior("instanceInterruptionBehavior")
-   * .maxPrice("maxPrice")
-   * .spotInstanceType("spotInstanceType")
-   * .validUntil("validUntil")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html)
-   */
-  public interface InstanceMarketOptionsProperty {
-    /**
-     * The market type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html#cfn-ec2-launchtemplate-instancemarketoptions-markettype)
-     */
-    public fun marketType(): String? = unwrap(this).getMarketType()
-
-    /**
-     * The options for Spot Instances.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html#cfn-ec2-launchtemplate-instancemarketoptions-spotoptions)
-     */
-    public fun spotOptions(): Any? = unwrap(this).getSpotOptions()
-
-    /**
-     * A builder for [InstanceMarketOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param marketType The market type.
-       */
-      public fun marketType(marketType: String)
-
-      /**
-       * @param spotOptions The options for Spot Instances.
-       */
-      public fun spotOptions(spotOptions: IResolvable)
-
-      /**
-       * @param spotOptions The options for Spot Instances.
-       */
-      public fun spotOptions(spotOptions: SpotOptionsProperty)
-
-      /**
-       * @param spotOptions The options for Spot Instances.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f744c35a1804b7b20099c6d3a34b26802557f5b5ffb6c6f41595d1880bb85894")
-      public fun spotOptions(spotOptions: SpotOptionsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty.builder()
-
-      /**
-       * @param marketType The market type.
-       */
-      override fun marketType(marketType: String) {
-        cdkBuilder.marketType(marketType)
-      }
-
-      /**
-       * @param spotOptions The options for Spot Instances.
-       */
-      override fun spotOptions(spotOptions: IResolvable) {
-        cdkBuilder.spotOptions(spotOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param spotOptions The options for Spot Instances.
-       */
-      override fun spotOptions(spotOptions: SpotOptionsProperty) {
-        cdkBuilder.spotOptions(spotOptions.let(SpotOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param spotOptions The options for Spot Instances.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f744c35a1804b7b20099c6d3a34b26802557f5b5ffb6c6f41595d1880bb85894")
-      override fun spotOptions(spotOptions: SpotOptionsProperty.Builder.() -> Unit): Unit =
-          spotOptions(SpotOptionsProperty(spotOptions))
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty,
-    ) : CdkObject(cdkObject), InstanceMarketOptionsProperty {
-      /**
-       * The market type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html#cfn-ec2-launchtemplate-instancemarketoptions-markettype)
-       */
-      override fun marketType(): String? = unwrap(this).getMarketType()
-
-      /**
-       * The options for Spot Instances.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html#cfn-ec2-launchtemplate-instancemarketoptions-spotoptions)
-       */
-      override fun spotOptions(): Any? = unwrap(this).getSpotOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceMarketOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty):
-          InstanceMarketOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceMarketOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceMarketOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty
-    }
-  }
-
-  /**
-   * A security group connection tracking specification that enables you to set the idle timeout for
-   * connection tracking on an Elastic network interface.
-   *
-   * For more information, see [Connection tracking
-   * timeouts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts)
-   * in the *Amazon Elastic Compute Cloud User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * ConnectionTrackingSpecificationProperty connectionTrackingSpecificationProperty =
-   * ConnectionTrackingSpecificationProperty.builder()
-   * .tcpEstablishedTimeout(123)
-   * .udpStreamTimeout(123)
-   * .udpTimeout(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html)
-   */
-  public interface ConnectionTrackingSpecificationProperty {
-    /**
-     * Timeout (in seconds) for idle TCP connections in an established state.
-     *
-     * Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less
-     * than 432000 seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-tcpestablishedtimeout)
-     */
-    public fun tcpEstablishedTimeout(): Number? = unwrap(this).getTcpEstablishedTimeout()
-
-    /**
-     * Timeout (in seconds) for idle UDP flows classified as streams which have seen more than one
-     * request-response transaction.
-     *
-     * Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-udpstreamtimeout)
-     */
-    public fun udpStreamTimeout(): Number? = unwrap(this).getUdpStreamTimeout()
-
-    /**
-     * Timeout (in seconds) for idle UDP flows that have seen traffic only in a single direction or
-     * a single request-response transaction.
-     *
-     * Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-udptimeout)
-     */
-    public fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
-
-    /**
-     * A builder for [ConnectionTrackingSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param tcpEstablishedTimeout Timeout (in seconds) for idle TCP connections in an
-       * established state.
-       * Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less
-       * than 432000 seconds.
-       */
-      public fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number)
-
-      /**
-       * @param udpStreamTimeout Timeout (in seconds) for idle UDP flows classified as streams which
-       * have seen more than one request-response transaction.
-       * Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.
-       */
-      public fun udpStreamTimeout(udpStreamTimeout: Number)
-
-      /**
-       * @param udpTimeout Timeout (in seconds) for idle UDP flows that have seen traffic only in a
-       * single direction or a single request-response transaction.
-       * Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.
-       */
-      public fun udpTimeout(udpTimeout: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty.builder()
-
-      /**
-       * @param tcpEstablishedTimeout Timeout (in seconds) for idle TCP connections in an
-       * established state.
-       * Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less
-       * than 432000 seconds.
-       */
-      override fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number) {
-        cdkBuilder.tcpEstablishedTimeout(tcpEstablishedTimeout)
-      }
-
-      /**
-       * @param udpStreamTimeout Timeout (in seconds) for idle UDP flows classified as streams which
-       * have seen more than one request-response transaction.
-       * Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.
-       */
-      override fun udpStreamTimeout(udpStreamTimeout: Number) {
-        cdkBuilder.udpStreamTimeout(udpStreamTimeout)
-      }
-
-      /**
-       * @param udpTimeout Timeout (in seconds) for idle UDP flows that have seen traffic only in a
-       * single direction or a single request-response transaction.
-       * Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.
-       */
-      override fun udpTimeout(udpTimeout: Number) {
-        cdkBuilder.udpTimeout(udpTimeout)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty,
-    ) : CdkObject(cdkObject), ConnectionTrackingSpecificationProperty {
-      /**
-       * Timeout (in seconds) for idle TCP connections in an established state.
-       *
-       * Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less
-       * than 432000 seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-tcpestablishedtimeout)
-       */
-      override fun tcpEstablishedTimeout(): Number? = unwrap(this).getTcpEstablishedTimeout()
-
-      /**
-       * Timeout (in seconds) for idle UDP flows classified as streams which have seen more than one
-       * request-response transaction.
-       *
-       * Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-udpstreamtimeout)
-       */
-      override fun udpStreamTimeout(): Number? = unwrap(this).getUdpStreamTimeout()
-
-      /**
-       * Timeout (in seconds) for idle UDP flows that have seen traffic only in a single direction
-       * or a single request-response transaction.
-       *
-       * Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-connectiontrackingspecification.html#cfn-ec2-launchtemplate-connectiontrackingspecification-udptimeout)
-       */
-      override fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ConnectionTrackingSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty):
-          ConnectionTrackingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectionTrackingSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConnectionTrackingSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies whether your instance is configured for hibernation.
-   *
-   * This parameter is valid only if the instance meets the [hibernation
-   * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#hibernating-prerequisites)
-   * . For more information, see [Hibernate Your
-   * Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
-   * User Guide* .
-   *
-   * `HibernationOptions` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * HibernationOptionsProperty hibernationOptionsProperty = HibernationOptionsProperty.builder()
-   * .configured(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-hibernationoptions.html)
-   */
-  public interface HibernationOptionsProperty {
-    /**
-     * If you set this parameter to `true` , the instance is enabled for hibernation.
-     *
-     * Default: `false`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-hibernationoptions.html#cfn-ec2-launchtemplate-hibernationoptions-configured)
-     */
-    public fun configured(): Any? = unwrap(this).getConfigured()
-
-    /**
-     * A builder for [HibernationOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param configured If you set this parameter to `true` , the instance is enabled for
-       * hibernation.
-       * Default: `false`
-       */
-      public fun configured(configured: Boolean)
-
-      /**
-       * @param configured If you set this parameter to `true` , the instance is enabled for
-       * hibernation.
-       * Default: `false`
-       */
-      public fun configured(configured: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty.builder()
-
-      /**
-       * @param configured If you set this parameter to `true` , the instance is enabled for
-       * hibernation.
-       * Default: `false`
-       */
-      override fun configured(configured: Boolean) {
-        cdkBuilder.configured(configured)
-      }
-
-      /**
-       * @param configured If you set this parameter to `true` , the instance is enabled for
-       * hibernation.
-       * Default: `false`
-       */
-      override fun configured(configured: IResolvable) {
-        cdkBuilder.configured(configured.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty,
-    ) : CdkObject(cdkObject), HibernationOptionsProperty {
-      /**
-       * If you set this parameter to `true` , the instance is enabled for hibernation.
-       *
-       * Default: `false`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-hibernationoptions.html#cfn-ec2-launchtemplate-hibernationoptions-configured)
-       */
-      override fun configured(): Any? = unwrap(this).getConfigured()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HibernationOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty):
-          HibernationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HibernationOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HibernationOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty
-    }
-  }
-
-  /**
-   * Specifies an IAM instance profile, which is a container for an IAM role for your instance.
-   *
-   * You can use an IAM role to distribute your AWS credentials to your instances.
-   *
-   * If you are creating the launch template for use with an Amazon EC2 Auto Scaling group, you can
-   * specify either the name or the ARN of the instance profile, but not both.
-   *
-   * `IamInstanceProfile` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * IamInstanceProfileProperty iamInstanceProfileProperty = IamInstanceProfileProperty.builder()
-   * .arn("arn")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html)
-   */
-  public interface IamInstanceProfileProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the instance profile.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html#cfn-ec2-launchtemplate-iaminstanceprofile-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * The name of the instance profile.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html#cfn-ec2-launchtemplate-iaminstanceprofile-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [IamInstanceProfileProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the instance profile.
-       */
-      public fun arn(arn: String)
-
-      /**
-       * @param name The name of the instance profile.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty.builder()
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the instance profile.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      /**
-       * @param name The name of the instance profile.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty,
-    ) : CdkObject(cdkObject), IamInstanceProfileProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the instance profile.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html#cfn-ec2-launchtemplate-iaminstanceprofile-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-
-      /**
-       * The name of the instance profile.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-iaminstanceprofile.html#cfn-ec2-launchtemplate-iaminstanceprofile-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IamInstanceProfileProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty):
-          IamInstanceProfileProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IamInstanceProfileProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IamInstanceProfileProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty
-    }
-  }
-
-  /**
-   * Specifies an IPv6 prefix for a network interface.
-   *
-   * `Ipv6PrefixSpecification` is a property of [AWS::EC2::LaunchTemplate
-   * NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * Ipv6PrefixSpecificationProperty ipv6PrefixSpecificationProperty =
-   * Ipv6PrefixSpecificationProperty.builder()
-   * .ipv6Prefix("ipv6Prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6prefixspecification.html)
-   */
-  public interface Ipv6PrefixSpecificationProperty {
-    /**
-     * The IPv6 prefix.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6prefixspecification.html#cfn-ec2-launchtemplate-ipv6prefixspecification-ipv6prefix)
-     */
-    public fun ipv6Prefix(): String? = unwrap(this).getIpv6Prefix()
-
-    /**
-     * A builder for [Ipv6PrefixSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipv6Prefix The IPv6 prefix.
-       */
-      public fun ipv6Prefix(ipv6Prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty.builder()
-
-      /**
-       * @param ipv6Prefix The IPv6 prefix.
-       */
-      override fun ipv6Prefix(ipv6Prefix: String) {
-        cdkBuilder.ipv6Prefix(ipv6Prefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty,
-    ) : CdkObject(cdkObject), Ipv6PrefixSpecificationProperty {
-      /**
-       * The IPv6 prefix.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6prefixspecification.html#cfn-ec2-launchtemplate-ipv6prefixspecification-ipv6prefix)
-       */
-      override fun ipv6Prefix(): String? = unwrap(this).getIpv6Prefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): Ipv6PrefixSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty):
-          Ipv6PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          Ipv6PrefixSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: Ipv6PrefixSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty
-    }
-  }
-
-  /**
-   * The hostname type for EC2 instances launched into this subnet and how DNS A and AAAA record
-   * queries should be handled.
-   *
-   * For more information, see [Amazon EC2 instance hostname
-   * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-   * *Amazon Elastic Compute Cloud User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PrivateDnsNameOptionsProperty privateDnsNameOptionsProperty =
-   * PrivateDnsNameOptionsProperty.builder()
-   * .enableResourceNameDnsAaaaRecord(false)
-   * .enableResourceNameDnsARecord(false)
-   * .hostnameType("hostnameType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html)
-   */
-  public interface PrivateDnsNameOptionsProperty {
-    /**
-     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-enableresourcenamednsarecord)
-     */
-    public fun enableResourceNameDnsARecord(): Any? = unwrap(this).getEnableResourceNameDnsARecord()
-
-    /**
-     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-enableresourcenamednsaaaarecord)
-     */
-    public fun enableResourceNameDnsAaaaRecord(): Any? =
-        unwrap(this).getEnableResourceNameDnsAaaaRecord()
-
-    /**
-     * The type of hostname for EC2 instances.
-     *
-     * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-     * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
-     * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID. For
-     * more information, see [Amazon EC2 instance hostname
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-hostnametype)
-     */
-    public fun hostnameType(): String? = unwrap(this).getHostnameType()
-
-    /**
-     * A builder for [PrivateDnsNameOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS A records.
-       */
-      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean)
-
-      /**
-       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS A records.
-       */
-      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable)
-
-      /**
-       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS AAAA records.
-       */
-      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean)
-
-      /**
-       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS AAAA records.
-       */
-      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable)
-
-      /**
-       * @param hostnameType The type of hostname for EC2 instances.
-       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
-       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      public fun hostnameType(hostnameType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty.builder()
-
-      /**
-       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS A records.
-       */
-      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
-        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord)
-      }
-
-      /**
-       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS A records.
-       */
-      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS AAAA records.
-       */
-      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
-        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord)
-      }
-
-      /**
-       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS AAAA records.
-       */
-      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param hostnameType The type of hostname for EC2 instances.
-       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
-       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      override fun hostnameType(hostnameType: String) {
-        cdkBuilder.hostnameType(hostnameType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty,
-    ) : CdkObject(cdkObject), PrivateDnsNameOptionsProperty {
-      /**
-       * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-enableresourcenamednsarecord)
-       */
-      override fun enableResourceNameDnsARecord(): Any? =
-          unwrap(this).getEnableResourceNameDnsARecord()
-
-      /**
-       * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-enableresourcenamednsaaaarecord)
-       */
-      override fun enableResourceNameDnsAaaaRecord(): Any? =
-          unwrap(this).getEnableResourceNameDnsAaaaRecord()
-
-      /**
-       * The type of hostname for EC2 instances.
-       *
-       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
-       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-hostnametype)
-       */
-      override fun hostnameType(): String? = unwrap(this).getHostnameType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateDnsNameOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty):
-          PrivateDnsNameOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateDnsNameOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateDnsNameOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty
-    }
-  }
-
-  /**
-   * The metadata options for the instance.
-   *
-   * For more information, see [Instance metadata and user
-   * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-   * *Amazon EC2 User Guide* .
-   *
-   * `MetadataOptions` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MetadataOptionsProperty metadataOptionsProperty = MetadataOptionsProperty.builder()
-   * .httpEndpoint("httpEndpoint")
-   * .httpProtocolIpv6("httpProtocolIpv6")
-   * .httpPutResponseHopLimit(123)
-   * .httpTokens("httpTokens")
-   * .instanceMetadataTags("instanceMetadataTags")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html)
-   */
-  public interface MetadataOptionsProperty {
-    /**
-     * Enables or disables the HTTP metadata endpoint on your instances.
-     *
-     * If the parameter is not specified, the default state is `enabled` .
-     *
-     *
-     * If you specify a value of `disabled` , you will not be able to access your instance metadata.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpendpoint)
-     */
-    public fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
-
-    /**
-     * Enables or disables the IPv6 endpoint for the instance metadata service.
-     *
-     * Default: `disabled`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpprotocolipv6)
-     */
-    public fun httpProtocolIpv6(): String? = unwrap(this).getHttpProtocolIpv6()
-
-    /**
-     * The desired HTTP PUT response hop limit for instance metadata requests.
-     *
-     * The larger the number, the further instance metadata requests can travel.
-     *
-     * Default: `1`
-     *
-     * Possible values: Integers from 1 to 64
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpputresponsehoplimit)
-     */
-    public fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
-
-    /**
-     * Indicates whether IMDSv2 is required.
-     *
-     * * `optional` - IMDSv2 is optional. You can choose whether to send a session token in your
-     * instance metadata retrieval requests. If you retrieve IAM role credentials without a session
-     * token, you receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a
-     * valid session token, you receive the IMDSv2 role credentials.
-     * * `required` - IMDSv2 is required. You must send a session token in your instance metadata
-     * retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
-     * credentials; IMDSv1 credentials are not available.
-     *
-     * Default: If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance
-     * is `v2.0` , the default is `required` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httptokens)
-     */
-    public fun httpTokens(): String? = unwrap(this).getHttpTokens()
-
-    /**
-     * Set to `enabled` to allow access to instance tags from the instance metadata.
-     *
-     * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
-     * information, see [Work with instance tags using the instance
-     * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
-     * .
-     *
-     * Default: `disabled`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-instancemetadatatags)
-     */
-    public fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
-
-    /**
-     * A builder for [MetadataOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param httpEndpoint Enables or disables the HTTP metadata endpoint on your instances.
-       * If the parameter is not specified, the default state is `enabled` .
-       *
-       *
-       * If you specify a value of `disabled` , you will not be able to access your instance
-       * metadata.
-       */
-      public fun httpEndpoint(httpEndpoint: String)
-
-      /**
-       * @param httpProtocolIpv6 Enables or disables the IPv6 endpoint for the instance metadata
-       * service.
-       * Default: `disabled`
-       */
-      public fun httpProtocolIpv6(httpProtocolIpv6: String)
-
-      /**
-       * @param httpPutResponseHopLimit The desired HTTP PUT response hop limit for instance
-       * metadata requests.
-       * The larger the number, the further instance metadata requests can travel.
-       *
-       * Default: `1`
-       *
-       * Possible values: Integers from 1 to 64
-       */
-      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number)
-
-      /**
-       * @param httpTokens Indicates whether IMDSv2 is required.
-       * * `optional` - IMDSv2 is optional. You can choose whether to send a session token in your
-       * instance metadata retrieval requests. If you retrieve IAM role credentials without a session
-       * token, you receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a
-       * valid session token, you receive the IMDSv2 role credentials.
-       * * `required` - IMDSv2 is required. You must send a session token in your instance metadata
-       * retrieval requests. With this option, retrieving the IAM role credentials always returns
-       * IMDSv2 credentials; IMDSv1 credentials are not available.
-       *
-       * Default: If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance
-       * is `v2.0` , the default is `required` .
-       */
-      public fun httpTokens(httpTokens: String)
-
-      /**
-       * @param instanceMetadataTags Set to `enabled` to allow access to instance tags from the
-       * instance metadata.
-       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
-       * information, see [Work with instance tags using the instance
-       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
-       * .
-       *
-       * Default: `disabled`
-       */
-      public fun instanceMetadataTags(instanceMetadataTags: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty.builder()
-
-      /**
-       * @param httpEndpoint Enables or disables the HTTP metadata endpoint on your instances.
-       * If the parameter is not specified, the default state is `enabled` .
-       *
-       *
-       * If you specify a value of `disabled` , you will not be able to access your instance
-       * metadata.
-       */
-      override fun httpEndpoint(httpEndpoint: String) {
-        cdkBuilder.httpEndpoint(httpEndpoint)
-      }
-
-      /**
-       * @param httpProtocolIpv6 Enables or disables the IPv6 endpoint for the instance metadata
-       * service.
-       * Default: `disabled`
-       */
-      override fun httpProtocolIpv6(httpProtocolIpv6: String) {
-        cdkBuilder.httpProtocolIpv6(httpProtocolIpv6)
-      }
-
-      /**
-       * @param httpPutResponseHopLimit The desired HTTP PUT response hop limit for instance
-       * metadata requests.
-       * The larger the number, the further instance metadata requests can travel.
-       *
-       * Default: `1`
-       *
-       * Possible values: Integers from 1 to 64
-       */
-      override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
-        cdkBuilder.httpPutResponseHopLimit(httpPutResponseHopLimit)
-      }
-
-      /**
-       * @param httpTokens Indicates whether IMDSv2 is required.
-       * * `optional` - IMDSv2 is optional. You can choose whether to send a session token in your
-       * instance metadata retrieval requests. If you retrieve IAM role credentials without a session
-       * token, you receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a
-       * valid session token, you receive the IMDSv2 role credentials.
-       * * `required` - IMDSv2 is required. You must send a session token in your instance metadata
-       * retrieval requests. With this option, retrieving the IAM role credentials always returns
-       * IMDSv2 credentials; IMDSv1 credentials are not available.
-       *
-       * Default: If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance
-       * is `v2.0` , the default is `required` .
-       */
-      override fun httpTokens(httpTokens: String) {
-        cdkBuilder.httpTokens(httpTokens)
-      }
-
-      /**
-       * @param instanceMetadataTags Set to `enabled` to allow access to instance tags from the
-       * instance metadata.
-       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
-       * information, see [Work with instance tags using the instance
-       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
-       * .
-       *
-       * Default: `disabled`
-       */
-      override fun instanceMetadataTags(instanceMetadataTags: String) {
-        cdkBuilder.instanceMetadataTags(instanceMetadataTags)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty,
-    ) : CdkObject(cdkObject), MetadataOptionsProperty {
-      /**
-       * Enables or disables the HTTP metadata endpoint on your instances.
-       *
-       * If the parameter is not specified, the default state is `enabled` .
-       *
-       *
-       * If you specify a value of `disabled` , you will not be able to access your instance
-       * metadata.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpendpoint)
-       */
-      override fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
-
-      /**
-       * Enables or disables the IPv6 endpoint for the instance metadata service.
-       *
-       * Default: `disabled`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpprotocolipv6)
-       */
-      override fun httpProtocolIpv6(): String? = unwrap(this).getHttpProtocolIpv6()
-
-      /**
-       * The desired HTTP PUT response hop limit for instance metadata requests.
-       *
-       * The larger the number, the further instance metadata requests can travel.
-       *
-       * Default: `1`
-       *
-       * Possible values: Integers from 1 to 64
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httpputresponsehoplimit)
-       */
-      override fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
-
-      /**
-       * Indicates whether IMDSv2 is required.
-       *
-       * * `optional` - IMDSv2 is optional. You can choose whether to send a session token in your
-       * instance metadata retrieval requests. If you retrieve IAM role credentials without a session
-       * token, you receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a
-       * valid session token, you receive the IMDSv2 role credentials.
-       * * `required` - IMDSv2 is required. You must send a session token in your instance metadata
-       * retrieval requests. With this option, retrieving the IAM role credentials always returns
-       * IMDSv2 credentials; IMDSv1 credentials are not available.
-       *
-       * Default: If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance
-       * is `v2.0` , the default is `required` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-httptokens)
-       */
-      override fun httpTokens(): String? = unwrap(this).getHttpTokens()
-
-      /**
-       * Set to `enabled` to allow access to instance tags from the instance metadata.
-       *
-       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
-       * information, see [Work with instance tags using the instance
-       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
-       * .
-       *
-       * Default: `disabled`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html#cfn-ec2-launchtemplate-metadataoptions-instancemetadatatags)
-       */
-      override fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty):
-          MetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetadataOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty
-    }
-  }
-
-  /**
-   * Specifies the credit option for CPU usage of a T2, T3, or T3a instance.
-   *
-   * `CreditSpecification` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CreditSpecificationProperty creditSpecificationProperty = CreditSpecificationProperty.builder()
-   * .cpuCredits("cpuCredits")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-creditspecification.html)
-   */
-  public interface CreditSpecificationProperty {
-    /**
-     * The credit option for CPU usage of a T instance.
-     *
-     * Valid values: `standard` | `unlimited`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-creditspecification.html#cfn-ec2-launchtemplate-creditspecification-cpucredits)
-     */
-    public fun cpuCredits(): String? = unwrap(this).getCpuCredits()
-
-    /**
-     * A builder for [CreditSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpuCredits The credit option for CPU usage of a T instance.
-       * Valid values: `standard` | `unlimited`
-       */
-      public fun cpuCredits(cpuCredits: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty.builder()
-
-      /**
-       * @param cpuCredits The credit option for CPU usage of a T instance.
-       * Valid values: `standard` | `unlimited`
-       */
-      override fun cpuCredits(cpuCredits: String) {
-        cdkBuilder.cpuCredits(cpuCredits)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty,
-    ) : CdkObject(cdkObject), CreditSpecificationProperty {
-      /**
-       * The credit option for CPU usage of a T instance.
-       *
-       * Valid values: `standard` | `unlimited`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-creditspecification.html#cfn-ec2-launchtemplate-creditspecification-cpucredits)
-       */
-      override fun cpuCredits(): String? = unwrap(this).getCpuCredits()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CreditSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty):
-          CreditSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CreditSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CreditSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum amount of memory per vCPU, in GiB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MemoryGiBPerVCpuProperty memoryGiBPerVCpuProperty = MemoryGiBPerVCpuProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html)
-   */
-  public interface MemoryGiBPerVCpuProperty {
-    /**
-     * The maximum amount of memory per vCPU, in GiB.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html#cfn-ec2-launchtemplate-memorygibpervcpu-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of memory per vCPU, in GiB.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html#cfn-ec2-launchtemplate-memorygibpervcpu-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [MemoryGiBPerVCpuProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of memory per vCPU, in GiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of memory per vCPU, in GiB.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty.builder()
-
-      /**
-       * @param max The maximum amount of memory per vCPU, in GiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of memory per vCPU, in GiB.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty,
-    ) : CdkObject(cdkObject), MemoryGiBPerVCpuProperty {
-      /**
-       * The maximum amount of memory per vCPU, in GiB.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html#cfn-ec2-launchtemplate-memorygibpervcpu-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of memory per vCPU, in GiB.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html#cfn-ec2-launchtemplate-memorygibpervcpu-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryGiBPerVCpuProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty):
-          MemoryGiBPerVCpuProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryGiBPerVCpuProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MemoryGiBPerVCpuProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps).
-   *
-   *
-   * Setting the minimum bandwidth does not guarantee that your instance will achieve the minimum
-   * bandwidth. Amazon EC2 will identify instance types that support the specified minimum bandwidth,
-   * but the actual bandwidth of your instance might go below the specified minimum at times. For more
-   * information, see [Available instance
-   * bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html#available-instance-bandwidth)
-   * in the *Amazon EC2 User Guide* .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * NetworkBandwidthGbpsProperty networkBandwidthGbpsProperty =
-   * NetworkBandwidthGbpsProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html)
-   */
-  public interface NetworkBandwidthGbpsProperty {
-    /**
-     * The maximum amount of network bandwidth, in Gbps.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html#cfn-ec2-launchtemplate-networkbandwidthgbps-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of network bandwidth, in Gbps.
-     *
-     * If this parameter is not specified, there is no minimum limit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html#cfn-ec2-launchtemplate-networkbandwidthgbps-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [NetworkBandwidthGbpsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of network bandwidth, in Gbps.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of network bandwidth, in Gbps.
-       * If this parameter is not specified, there is no minimum limit.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty.builder()
-
-      /**
-       * @param max The maximum amount of network bandwidth, in Gbps.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of network bandwidth, in Gbps.
-       * If this parameter is not specified, there is no minimum limit.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty,
-    ) : CdkObject(cdkObject), NetworkBandwidthGbpsProperty {
-      /**
-       * The maximum amount of network bandwidth, in Gbps.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html#cfn-ec2-launchtemplate-networkbandwidthgbps-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of network bandwidth, in Gbps.
-       *
-       * If this parameter is not specified, there is no minimum limit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkbandwidthgbps.html#cfn-ec2-launchtemplate-networkbandwidthgbps-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkBandwidthGbpsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty):
-          NetworkBandwidthGbpsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkBandwidthGbpsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkBandwidthGbpsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty
-    }
-  }
-
-  /**
-   * Specifies the tags to apply to a resource when the resource is created for the launch template.
-   *
-   * `TagSpecification` is a property type of
-   * [`TagSpecifications`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
-   * .
-   * [`TagSpecifications`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
-   * is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
-   * .resourceType("resourceType")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html)
-   */
-  public interface TagSpecificationProperty {
-    /**
-     * The type of resource to tag.
-     *
-     * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
-     * launch template, you can specify tags for the following resource types only: `instance` |
-     * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include the
-     * resource type that you specify, the instance launch fails. For example, not all instance types
-     * include a volume.
-     *
-     * To tag a resource after it has been created, see
-     * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html#cfn-ec2-launchtemplate-tagspecification-resourcetype)
-     */
-    public fun resourceType(): String? = unwrap(this).getResourceType()
-
-    /**
-     * The tags to apply to the resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html#cfn-ec2-launchtemplate-tagspecification-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * A builder for [TagSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceType The type of resource to tag.
-       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
-       * launch template, you can specify tags for the following resource types only: `instance` |
-       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
-       * the resource type that you specify, the instance launch fails. For example, not all instance
-       * types include a volume.
-       *
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       */
-      public fun resourceType(resourceType: String)
-
-      /**
-       * @param tags The tags to apply to the resource.
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags The tags to apply to the resource.
-       */
-      public fun tags(vararg tags: CfnTag)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty.builder()
-
-      /**
-       * @param resourceType The type of resource to tag.
-       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
-       * launch template, you can specify tags for the following resource types only: `instance` |
-       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
-       * the resource type that you specify, the instance launch fails. For example, not all instance
-       * types include a volume.
-       *
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       */
-      override fun resourceType(resourceType: String) {
-        cdkBuilder.resourceType(resourceType)
-      }
-
-      /**
-       * @param tags The tags to apply to the resource.
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags The tags to apply to the resource.
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
-      /**
-       * The type of resource to tag.
-       *
-       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
-       * launch template, you can specify tags for the following resource types only: `instance` |
-       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
-       * the resource type that you specify, the instance launch fails. For example, not all instance
-       * types include a volume.
-       *
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html#cfn-ec2-launchtemplate-tagspecification-resourcetype)
-       */
-      override fun resourceType(): String? = unwrap(this).getResourceType()
-
-      /**
-       * The tags to apply to the resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html#cfn-ec2-launchtemplate-tagspecification-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty):
-          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TagSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty
-    }
-  }
-
-  /**
-   * The attributes for the instance types.
-   *
-   * When you specify instance attributes, Amazon EC2 will identify instance types with these
-   * attributes.
-   *
-   * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any
-   * unspecified optional attribute is set to its default.
-   *
-   * When you specify multiple attributes, you get instance types that satisfy all of the specified
-   * attributes. If you specify multiple values for an attribute, you get instance types that satisfy
-   * any of the specified values.
-   *
-   * To limit the list of instance types from which Amazon EC2 can identify matching instance types,
-   * you can use one of the following parameters, but not both in the same request:
-   *
-   * * `AllowedInstanceTypes` - The instance types to include in the list. All other instance types
-   * are ignored, even if they match your specified attributes.
-   * * `ExcludedInstanceTypes` - The instance types to exclude from the list, even if they match
-   * your specified attributes.
-   *
-   *
-   * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
-   *
-   * Attribute-based instance type selection is only supported when using Auto Scaling groups, EC2
-   * Fleet, and Spot Fleet to launch instances. If you plan to use the launch template in the [launch
-   * instance
-   * wizard](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html) , or
-   * with the
-   * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) API
-   * or
-   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
-   * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
-   *
-   *
-   * For more information, see [Attribute-based instance type selection for EC2
-   * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-   * , [Attribute-based instance type selection for Spot
-   * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-   * , and [Spot placement
-   * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
-   * *Amazon EC2 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * InstanceRequirementsProperty instanceRequirementsProperty =
-   * InstanceRequirementsProperty.builder()
-   * .acceleratorCount(AcceleratorCountProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
-   * .acceleratorNames(List.of("acceleratorNames"))
-   * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .acceleratorTypes(List.of("acceleratorTypes"))
-   * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
-   * .bareMetal("bareMetal")
-   * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .burstablePerformance("burstablePerformance")
-   * .cpuManufacturers(List.of("cpuManufacturers"))
-   * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
-   * .instanceGenerations(List.of("instanceGenerations"))
-   * .localStorage("localStorage")
-   * .localStorageTypes(List.of("localStorageTypes"))
-   * .maxSpotPriceAsPercentageOfOptimalOnDemandPrice(123)
-   * .memoryGiBPerVCpu(MemoryGiBPerVCpuProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .memoryMiB(MemoryMiBProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkBandwidthGbps(NetworkBandwidthGbpsProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .networkInterfaceCount(NetworkInterfaceCountProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .onDemandMaxPricePercentageOverLowestPrice(123)
-   * .requireHibernateSupport(false)
-   * .spotMaxPricePercentageOverLowestPrice(123)
-   * .totalLocalStorageGb(TotalLocalStorageGBProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .vCpuCount(VCpuCountProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html)
-   */
-  public interface InstanceRequirementsProperty {
-    /**
-     * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
-     * instance.
-     *
-     * To exclude accelerator-enabled instance types, set `Max` to `0` .
-     *
-     * Default: No minimum or maximum limits
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratorcount)
-     */
-    public fun acceleratorCount(): Any? = unwrap(this).getAcceleratorCount()
-
-    /**
-     * Indicates whether instance types must have accelerators by specific manufacturers.
-     *
-     * * For instance types with AWS devices, specify `amazon-web-services` .
-     * * For instance types with AMD devices, specify `amd` .
-     * * For instance types with Habana devices, specify `habana` .
-     * * For instance types with NVIDIA devices, specify `nvidia` .
-     * * For instance types with Xilinx devices, specify `xilinx` .
-     *
-     * Default: Any manufacturer
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratormanufacturers)
-     */
-    public fun acceleratorManufacturers(): List<String> = unwrap(this).getAcceleratorManufacturers()
-        ?: emptyList()
-
-    /**
-     * The accelerators that must be on the instance type.
-     *
-     * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
-     * * For instance types with NVIDIA A100 GPUs, specify `a100` .
-     * * For instance types with NVIDIA H100 GPUs, specify `h100` .
-     * * For instance types with AWS Inferentia chips, specify `inferentia` .
-     * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
-     * * For instance types with NVIDIA K80 GPUs, specify `k80` .
-     * * For instance types with NVIDIA M60 GPUs, specify `m60` .
-     * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
-     * * For instance types with NVIDIA T4 GPUs, specify `t4` .
-     * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
-     * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
-     * * For instance types with NVIDIA V100 GPUs, specify `v100` .
-     *
-     * Default: Any accelerator
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratornames)
-     */
-    public fun acceleratorNames(): List<String> = unwrap(this).getAcceleratorNames() ?: emptyList()
-
-    /**
-     * The minimum and maximum amount of total accelerator memory, in MiB.
-     *
-     * Default: No minimum or maximum limits
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratortotalmemorymib)
-     */
-    public fun acceleratorTotalMemoryMiB(): Any? = unwrap(this).getAcceleratorTotalMemoryMiB()
-
-    /**
-     * The accelerator types that must be on the instance type.
-     *
-     * * For instance types with GPU accelerators, specify `gpu` .
-     * * For instance types with FPGA accelerators, specify `fpga` .
-     * * For instance types with inference accelerators, specify `inference` .
-     *
-     * Default: Any accelerator type
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratortypes)
-     */
-    public fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?: emptyList()
-
-    /**
-     * The instance types to apply your specified attributes against.
-     *
-     * All other instance types are ignored, even if they match your specified attributes.
-     *
-     * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to allow
-     * an instance type, size, or generation. The following are examples: `m5.8xlarge` , `c5*.*` ,
-     * `m5a.*` , `r*` , `*3*` .
-     *
-     * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family, which
-     * includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow all the
-     * M5a instance types, but not the M5n instance types.
-     *
-     *
-     * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
-     *
-     *
-     * Default: All instance types
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-allowedinstancetypes)
-     */
-    public fun allowedInstanceTypes(): List<String> = unwrap(this).getAllowedInstanceTypes() ?:
-        emptyList()
-
-    /**
-     * Indicates whether bare metal instance types must be included, excluded, or required.
-     *
-     * * To include bare metal instance types, specify `included` .
-     * * To require only bare metal instance types, specify `required` .
-     * * To exclude bare metal instance types, specify `excluded` .
-     *
-     * Default: `excluded`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baremetal)
-     */
-    public fun bareMetal(): String? = unwrap(this).getBareMetal()
-
-    /**
-     * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
-     *
-     * For more information, see [Amazon EBS–optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide* .
-     *
-     * Default: No minimum or maximum limits
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baselineebsbandwidthmbps)
-     */
-    public fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
-
-    /**
-     * Indicates whether burstable performance T instance types are included, excluded, or required.
-     *
-     * For more information, see [Burstable performance
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
-     * .
-     *
-     * * To include burstable performance instance types, specify `included` .
-     * * To require only burstable performance instance types, specify `required` .
-     * * To exclude burstable performance instance types, specify `excluded` .
-     *
-     * Default: `excluded`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-burstableperformance)
-     */
-    public fun burstablePerformance(): String? = unwrap(this).getBurstablePerformance()
-
-    /**
-     * The CPU manufacturers to include.
-     *
-     * * For instance types with Intel CPUs, specify `intel` .
-     * * For instance types with AMD CPUs, specify `amd` .
-     * * For instance types with AWS CPUs, specify `amazon-web-services` .
-     *
-     *
-     * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched with
-     * a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your
-     * launch template.
-     *
-     *
-     * Default: Any manufacturer
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-cpumanufacturers)
-     */
-    public fun cpuManufacturers(): List<String> = unwrap(this).getCpuManufacturers() ?: emptyList()
-
-    /**
-     * The instance types to exclude.
-     *
-     * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-     * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-     * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-     *
-     * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
-     * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will exclude
-     * all the M5a instance types, but not the M5n instance types.
-     *
-     *
-     * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
-     *
-     *
-     * Default: No excluded instance types
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-excludedinstancetypes)
-     */
-    public fun excludedInstanceTypes(): List<String> = unwrap(this).getExcludedInstanceTypes() ?:
-        emptyList()
-
-    /**
-     * Indicates whether current or previous generation instance types are included.
-     *
-     * The current generation instance types are recommended for use. Current generation instance
-     * types are typically the latest two to three generations in each instance family. For more
-     * information, see [Instance
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-     * EC2 User Guide* .
-     *
-     * For current generation instance types, specify `current` .
-     *
-     * For previous generation instance types, specify `previous` .
-     *
-     * Default: Current and previous generation instance types
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-instancegenerations)
-     */
-    public fun instanceGenerations(): List<String> = unwrap(this).getInstanceGenerations() ?:
-        emptyList()
-
-    /**
-     * Indicates whether instance types with instance store volumes are included, excluded, or
-     * required.
-     *
-     * For more information, [Amazon EC2 instance
-     * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon
-     * EC2 User Guide* .
-     *
-     * * To include instance types with instance store volumes, specify `included` .
-     * * To require only instance types with instance store volumes, specify `required` .
-     * * To exclude instance types with instance store volumes, specify `excluded` .
-     *
-     * Default: `included`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-localstorage)
-     */
-    public fun localStorage(): String? = unwrap(this).getLocalStorage()
-
-    /**
-     * The type of local storage that is required.
-     *
-     * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
-     * * For instance types with solid state drive (SSD) storage, specify `ssd` .
-     *
-     * Default: `hdd` and `ssd`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-localstoragetypes)
-     */
-    public fun localStorageTypes(): List<String> = unwrap(this).getLocalStorageTypes() ?:
-        emptyList()
-
-    /**
-     * [Price protection] The price protection threshold for Spot Instances, as a percentage of an
-     * identified On-Demand price.
-     *
-     * The identified On-Demand price is the price of the lowest priced current generation C, M, or
-     * R instance type with your specified attributes. If no current generation C, M, or R instance
-     * type matches your attributes, then the identified price is from the lowest priced current
-     * generation instance types, and failing that, from the lowest priced previous generation instance
-     * types that match your attributes. When Amazon EC2 selects instance types with your attributes,
-     * it will exclude instance types whose price exceeds your specified threshold.
-     *
-     * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-     *
-     * To indicate no price protection threshold, specify a high value, such as `999999` .
-     *
-     * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-     * is based on the per vCPU or per memory price instead of the per instance price.
-     *
-     *
-     * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-     * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
-     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
-     * to `100` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-maxspotpriceaspercentageofoptimalondemandprice)
-     */
-    public fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(): Number? =
-        unwrap(this).getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()
-
-    /**
-     * The minimum and maximum amount of memory per vCPU, in GiB.
-     *
-     * Default: No minimum or maximum limits
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-memorygibpervcpu)
-     */
-    public fun memoryGiBPerVCpu(): Any? = unwrap(this).getMemoryGiBPerVCpu()
-
-    /**
-     * The minimum and maximum amount of memory, in MiB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-memorymib)
-     */
-    public fun memoryMiB(): Any? = unwrap(this).getMemoryMiB()
-
-    /**
-     * The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps).
-     *
-     * Default: No minimum or maximum limits
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-networkbandwidthgbps)
-     */
-    public fun networkBandwidthGbps(): Any? = unwrap(this).getNetworkBandwidthGbps()
-
-    /**
-     * The minimum and maximum number of network interfaces.
-     *
-     * Default: No minimum or maximum limits
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-networkinterfacecount)
-     */
-    public fun networkInterfaceCount(): Any? = unwrap(this).getNetworkInterfaceCount()
-
-    /**
-     * [Price protection] The price protection threshold for On-Demand Instances, as a percentage
-     * higher than an identified On-Demand price.
-     *
-     * The identified On-Demand price is the price of the lowest priced current generation C, M, or
-     * R instance type with your specified attributes. When Amazon EC2 selects instance types with your
-     * attributes, it will exclude instance types whose price exceeds your specified threshold.
-     *
-     * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-     *
-     * To turn off price protection, specify a high value, such as `999999` .
-     *
-     * This parameter is not supported for
-     * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-     * and
-     * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
-     * .
-     *
-     *
-     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-     * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-     * price.
-     *
-     *
-     * Default: `20`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-ondemandmaxpricepercentageoverlowestprice)
-     */
-    public fun onDemandMaxPricePercentageOverLowestPrice(): Number? =
-        unwrap(this).getOnDemandMaxPricePercentageOverLowestPrice()
-
-    /**
-     * Indicates whether instance types must support hibernation for On-Demand Instances.
-     *
-     * This parameter is not supported for
-     * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-     * .
-     *
-     * Default: `false`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-requirehibernatesupport)
-     */
-    public fun requireHibernateSupport(): Any? = unwrap(this).getRequireHibernateSupport()
-
-    /**
-     * [Price protection] The price protection threshold for Spot Instances, as a percentage higher
-     * than an identified Spot price.
-     *
-     * The identified Spot price is the Spot price of the lowest priced current generation C, M, or
-     * R instance type with your specified attributes. If no current generation C, M, or R instance
-     * type matches your attributes, then the identified Spot price is from the lowest priced current
-     * generation instance types, and failing that, from the lowest priced previous generation instance
-     * types that match your attributes. When Amazon EC2 selects instance types with your attributes,
-     * it will exclude instance types whose Spot price exceeds your specified threshold.
-     *
-     * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-     *
-     * To indicate no price protection threshold, specify a high value, such as `999999` .
-     *
-     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-     * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-     * price.
-     *
-     * This parameter is not supported for
-     * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-     * and
-     * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
-     * .
-     *
-     *
-     * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-     * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify either,
-     * then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter defaults
-     * to `100` .
-     *
-     *
-     * Default: `100`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-spotmaxpricepercentageoverlowestprice)
-     */
-    public fun spotMaxPricePercentageOverLowestPrice(): Number? =
-        unwrap(this).getSpotMaxPricePercentageOverLowestPrice()
-
-    /**
-     * The minimum and maximum amount of total local storage, in GB.
-     *
-     * Default: No minimum or maximum limits
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-totallocalstoragegb)
-     */
-    public fun totalLocalStorageGb(): Any? = unwrap(this).getTotalLocalStorageGb()
-
-    /**
-     * The minimum and maximum number of vCPUs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-vcpucount)
-     */
-    public fun vCpuCount(): Any? = unwrap(this).getVCpuCount()
-
-    /**
-     * A builder for [InstanceRequirementsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
-       * Inferentia chips) on an instance.
-       * To exclude accelerator-enabled instance types, set `Max` to `0` .
-       *
-       * Default: No minimum or maximum limits
-       */
-      public fun acceleratorCount(acceleratorCount: IResolvable)
-
-      /**
-       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
-       * Inferentia chips) on an instance.
-       * To exclude accelerator-enabled instance types, set `Max` to `0` .
-       *
-       * Default: No minimum or maximum limits
-       */
-      public fun acceleratorCount(acceleratorCount: AcceleratorCountProperty)
-
-      /**
-       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
-       * Inferentia chips) on an instance.
-       * To exclude accelerator-enabled instance types, set `Max` to `0` .
-       *
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e6d22fd76cabe48f089b8c237bc1c7ec9426e15e6717e466b208f0fbcf8978aa")
-      public fun acceleratorCount(acceleratorCount: AcceleratorCountProperty.Builder.() -> Unit)
-
-      /**
-       * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
-       * specific manufacturers.
-       * * For instance types with AWS devices, specify `amazon-web-services` .
-       * * For instance types with AMD devices, specify `amd` .
-       * * For instance types with Habana devices, specify `habana` .
-       * * For instance types with NVIDIA devices, specify `nvidia` .
-       * * For instance types with Xilinx devices, specify `xilinx` .
-       *
-       * Default: Any manufacturer
-       */
-      public fun acceleratorManufacturers(acceleratorManufacturers: List<String>)
-
-      /**
-       * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
-       * specific manufacturers.
-       * * For instance types with AWS devices, specify `amazon-web-services` .
-       * * For instance types with AMD devices, specify `amd` .
-       * * For instance types with Habana devices, specify `habana` .
-       * * For instance types with NVIDIA devices, specify `nvidia` .
-       * * For instance types with Xilinx devices, specify `xilinx` .
-       *
-       * Default: Any manufacturer
-       */
-      public fun acceleratorManufacturers(vararg acceleratorManufacturers: String)
-
-      /**
-       * @param acceleratorNames The accelerators that must be on the instance type.
-       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
-       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
-       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
-       * * For instance types with AWS Inferentia chips, specify `inferentia` .
-       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
-       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
-       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
-       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
-       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
-       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
-       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
-       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
-       *
-       * Default: Any accelerator
-       */
-      public fun acceleratorNames(acceleratorNames: List<String>)
-
-      /**
-       * @param acceleratorNames The accelerators that must be on the instance type.
-       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
-       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
-       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
-       * * For instance types with AWS Inferentia chips, specify `inferentia` .
-       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
-       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
-       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
-       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
-       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
-       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
-       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
-       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
-       *
-       * Default: Any accelerator
-       */
-      public fun acceleratorNames(vararg acceleratorNames: String)
-
-      /**
-       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
-       * memory, in MiB.
-       * Default: No minimum or maximum limits
-       */
-      public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable)
-
-      /**
-       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
-       * memory, in MiB.
-       * Default: No minimum or maximum limits
-       */
-      public
-          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty)
-
-      /**
-       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
-       * memory, in MiB.
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("687315408c1bb56ead021b0c0a5a9e16088665e100a889fb74ce71abbd43fa22")
-      public
-          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty.Builder.() -> Unit)
-
-      /**
-       * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * For instance types with GPU accelerators, specify `gpu` .
-       * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
-       *
-       * Default: Any accelerator type
-       */
-      public fun acceleratorTypes(acceleratorTypes: List<String>)
-
-      /**
-       * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * For instance types with GPU accelerators, specify `gpu` .
-       * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
-       *
-       * Default: Any accelerator type
-       */
-      public fun acceleratorTypes(vararg acceleratorTypes: String)
-
-      /**
-       * @param allowedInstanceTypes The instance types to apply your specified attributes against.
-       * All other instance types are ignored, even if they match your specified attributes.
-       *
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
-       * all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
-       *
-       *
-       * Default: All instance types
-       */
-      public fun allowedInstanceTypes(allowedInstanceTypes: List<String>)
-
-      /**
-       * @param allowedInstanceTypes The instance types to apply your specified attributes against.
-       * All other instance types are ignored, even if they match your specified attributes.
-       *
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
-       * all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
-       *
-       *
-       * Default: All instance types
-       */
-      public fun allowedInstanceTypes(vararg allowedInstanceTypes: String)
-
-      /**
-       * @param bareMetal Indicates whether bare metal instance types must be included, excluded, or
-       * required.
-       * * To include bare metal instance types, specify `included` .
-       * * To require only bare metal instance types, specify `required` .
-       * * To exclude bare metal instance types, specify `excluded` .
-       *
-       * Default: `excluded`
-       */
-      public fun bareMetal(bareMetal: String)
-
-      /**
-       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
-       * in Mbps.
-       * For more information, see [Amazon EBS–optimized
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * Default: No minimum or maximum limits
-       */
-      public fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable)
-
-      /**
-       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
-       * in Mbps.
-       * For more information, see [Amazon EBS–optimized
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * Default: No minimum or maximum limits
-       */
-      public
-          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty)
-
-      /**
-       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
-       * in Mbps.
-       * For more information, see [Amazon EBS–optimized
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("99ce2f9d06f918c623b5226bc75b8d59bcc2dbe40fb6a6ce2e63c42d1f8391a1")
-      public
-          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty.Builder.() -> Unit)
-
-      /**
-       * @param burstablePerformance Indicates whether burstable performance T instance types are
-       * included, excluded, or required.
-       * For more information, see [Burstable performance
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
-       * .
-       *
-       * * To include burstable performance instance types, specify `included` .
-       * * To require only burstable performance instance types, specify `required` .
-       * * To exclude burstable performance instance types, specify `excluded` .
-       *
-       * Default: `excluded`
-       */
-      public fun burstablePerformance(burstablePerformance: String)
-
-      /**
-       * @param cpuManufacturers The CPU manufacturers to include.
-       * * For instance types with Intel CPUs, specify `intel` .
-       * * For instance types with AMD CPUs, specify `amd` .
-       * * For instance types with AWS CPUs, specify `amazon-web-services` .
-       *
-       *
-       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
-       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
-       * your launch template.
-       *
-       *
-       * Default: Any manufacturer
-       */
-      public fun cpuManufacturers(cpuManufacturers: List<String>)
-
-      /**
-       * @param cpuManufacturers The CPU manufacturers to include.
-       * * For instance types with Intel CPUs, specify `intel` .
-       * * For instance types with AMD CPUs, specify `amd` .
-       * * For instance types with AWS CPUs, specify `amazon-web-services` .
-       *
-       *
-       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
-       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
-       * your launch template.
-       *
-       *
-       * Default: Any manufacturer
-       */
-      public fun cpuManufacturers(vararg cpuManufacturers: String)
-
-      /**
-       * @param excludedInstanceTypes The instance types to exclude.
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
-       * exclude all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
-       *
-       *
-       * Default: No excluded instance types
-       */
-      public fun excludedInstanceTypes(excludedInstanceTypes: List<String>)
-
-      /**
-       * @param excludedInstanceTypes The instance types to exclude.
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
-       * exclude all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
-       *
-       *
-       * Default: No excluded instance types
-       */
-      public fun excludedInstanceTypes(vararg excludedInstanceTypes: String)
-
-      /**
-       * @param instanceGenerations Indicates whether current or previous generation instance types
-       * are included.
-       * The current generation instance types are recommended for use. Current generation instance
-       * types are typically the latest two to three generations in each instance family. For more
-       * information, see [Instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide* .
-       *
-       * For current generation instance types, specify `current` .
-       *
-       * For previous generation instance types, specify `previous` .
-       *
-       * Default: Current and previous generation instance types
-       */
-      public fun instanceGenerations(instanceGenerations: List<String>)
-
-      /**
-       * @param instanceGenerations Indicates whether current or previous generation instance types
-       * are included.
-       * The current generation instance types are recommended for use. Current generation instance
-       * types are typically the latest two to three generations in each instance family. For more
-       * information, see [Instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide* .
-       *
-       * For current generation instance types, specify `current` .
-       *
-       * For previous generation instance types, specify `previous` .
-       *
-       * Default: Current and previous generation instance types
-       */
-      public fun instanceGenerations(vararg instanceGenerations: String)
-
-      /**
-       * @param localStorage Indicates whether instance types with instance store volumes are
-       * included, excluded, or required.
-       * For more information, [Amazon EC2 instance
-       * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * * To include instance types with instance store volumes, specify `included` .
-       * * To require only instance types with instance store volumes, specify `required` .
-       * * To exclude instance types with instance store volumes, specify `excluded` .
-       *
-       * Default: `included`
-       */
-      public fun localStorage(localStorage: String)
-
-      /**
-       * @param localStorageTypes The type of local storage that is required.
-       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
-       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
-       *
-       * Default: `hdd` and `ssd`
-       */
-      public fun localStorageTypes(localStorageTypes: List<String>)
-
-      /**
-       * @param localStorageTypes The type of local storage that is required.
-       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
-       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
-       *
-       * Default: `hdd` and `ssd`
-       */
-      public fun localStorageTypes(vararg localStorageTypes: String)
-
-      /**
-       * @param maxSpotPriceAsPercentageOfOptimalOnDemandPrice [Price protection] The price
-       * protection threshold for Spot Instances, as a percentage of an identified On-Demand price.
-       * The identified On-Demand price is the price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. If no current generation C, M, or R
-       * instance type matches your attributes, then the identified price is from the lowest priced
-       * current generation instance types, and failing that, from the lowest priced previous
-       * generation instance types that match your attributes. When Amazon EC2 selects instance types
-       * with your attributes, it will exclude instance types whose price exceeds your specified
-       * threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
-       *
-       *
-       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
-       */
-      public
-          fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
-
-      /**
-       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
-       * Default: No minimum or maximum limits
-       */
-      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable)
-
-      /**
-       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
-       * Default: No minimum or maximum limits
-       */
-      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty)
-
-      /**
-       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("39bcea6b054460d3a4f72bf8e85c617b9de2d27b154012b8b2ffbae654835453")
-      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty.Builder.() -> Unit)
-
-      /**
-       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
-       */
-      public fun memoryMiB(memoryMiB: IResolvable)
-
-      /**
-       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
-       */
-      public fun memoryMiB(memoryMiB: MemoryMiBProperty)
-
-      /**
-       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2be30fd8478496bd807b2a12ef67cfe0b5fc5f22ee2e40f86594c093e02e6352")
-      public fun memoryMiB(memoryMiB: MemoryMiBProperty.Builder.() -> Unit)
-
-      /**
-       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
-       * gigabits per second (Gbps).
-       * Default: No minimum or maximum limits
-       */
-      public fun networkBandwidthGbps(networkBandwidthGbps: IResolvable)
-
-      /**
-       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
-       * gigabits per second (Gbps).
-       * Default: No minimum or maximum limits
-       */
-      public fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty)
-
-      /**
-       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
-       * gigabits per second (Gbps).
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1827db3ce1bb2f184bd37966238ca76dc315b92780edbf8056c5fc90eda9c716")
-      public
-          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty.Builder.() -> Unit)
-
-      /**
-       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
-       * Default: No minimum or maximum limits
-       */
-      public fun networkInterfaceCount(networkInterfaceCount: IResolvable)
-
-      /**
-       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
-       * Default: No minimum or maximum limits
-       */
-      public fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty)
-
-      /**
-       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fde96b2e0debdfcc33f8a0d0943f348612d4a2d2bfba0d2761c2738bdb344082")
-      public
-          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty.Builder.() -> Unit)
-
-      /**
-       * @param onDemandMaxPricePercentageOverLowestPrice [Price protection] The price protection
-       * threshold for On-Demand Instances, as a percentage higher than an identified On-Demand price.
-       * The identified On-Demand price is the price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. When Amazon EC2 selects instance types with
-       * your attributes, it will exclude instance types whose price exceeds your specified threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To turn off price protection, specify a high value, such as `999999` .
-       *
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * and
-       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
-       * .
-       *
-       *
-       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-       * price.
-       *
-       *
-       * Default: `20`
-       */
-      public
-          fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number)
-
-      /**
-       * @param requireHibernateSupport Indicates whether instance types must support hibernation
-       * for On-Demand Instances.
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * .
-       *
-       * Default: `false`
-       */
-      public fun requireHibernateSupport(requireHibernateSupport: Boolean)
-
-      /**
-       * @param requireHibernateSupport Indicates whether instance types must support hibernation
-       * for On-Demand Instances.
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * .
-       *
-       * Default: `false`
-       */
-      public fun requireHibernateSupport(requireHibernateSupport: IResolvable)
-
-      /**
-       * @param spotMaxPricePercentageOverLowestPrice [Price protection] The price protection
-       * threshold for Spot Instances, as a percentage higher than an identified Spot price.
-       * The identified Spot price is the Spot price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. If no current generation C, M, or R
-       * instance type matches your attributes, then the identified Spot price is from the lowest
-       * priced current generation instance types, and failing that, from the lowest priced previous
-       * generation instance types that match your attributes. When Amazon EC2 selects instance types
-       * with your attributes, it will exclude instance types whose Spot price exceeds your specified
-       * threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
-       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-       * price.
-       *
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * and
-       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
-       * .
-       *
-       *
-       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
-       *
-       *
-       * Default: `100`
-       */
-      public
-          fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number)
-
-      /**
-       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
-       * Default: No minimum or maximum limits
-       */
-      public fun totalLocalStorageGb(totalLocalStorageGb: IResolvable)
-
-      /**
-       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
-       * Default: No minimum or maximum limits
-       */
-      public fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty)
-
-      /**
-       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8ced7d39abec56d68911dca344eb452396b66dd2240deef63392ea726ad8b8a4")
-      public
-          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty.Builder.() -> Unit)
-
-      /**
-       * @param vCpuCount The minimum and maximum number of vCPUs.
-       */
-      public fun vCpuCount(vCpuCount: IResolvable)
-
-      /**
-       * @param vCpuCount The minimum and maximum number of vCPUs.
-       */
-      public fun vCpuCount(vCpuCount: VCpuCountProperty)
-
-      /**
-       * @param vCpuCount The minimum and maximum number of vCPUs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("510e27b3bf93ab1beb810d076c1533945e97fbf0fa819abd7c204fae624cfaa0")
-      public fun vCpuCount(vCpuCount: VCpuCountProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty.builder()
-
-      /**
-       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
-       * Inferentia chips) on an instance.
-       * To exclude accelerator-enabled instance types, set `Max` to `0` .
-       *
-       * Default: No minimum or maximum limits
-       */
-      override fun acceleratorCount(acceleratorCount: IResolvable) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
-       * Inferentia chips) on an instance.
-       * To exclude accelerator-enabled instance types, set `Max` to `0` .
-       *
-       * Default: No minimum or maximum limits
-       */
-      override fun acceleratorCount(acceleratorCount: AcceleratorCountProperty) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountProperty::unwrap))
-      }
-
-      /**
-       * @param acceleratorCount The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS
-       * Inferentia chips) on an instance.
-       * To exclude accelerator-enabled instance types, set `Max` to `0` .
-       *
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e6d22fd76cabe48f089b8c237bc1c7ec9426e15e6717e466b208f0fbcf8978aa")
-      override fun acceleratorCount(acceleratorCount: AcceleratorCountProperty.Builder.() -> Unit):
-          Unit = acceleratorCount(AcceleratorCountProperty(acceleratorCount))
-
-      /**
-       * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
-       * specific manufacturers.
-       * * For instance types with AWS devices, specify `amazon-web-services` .
-       * * For instance types with AMD devices, specify `amd` .
-       * * For instance types with Habana devices, specify `habana` .
-       * * For instance types with NVIDIA devices, specify `nvidia` .
-       * * For instance types with Xilinx devices, specify `xilinx` .
-       *
-       * Default: Any manufacturer
-       */
-      override fun acceleratorManufacturers(acceleratorManufacturers: List<String>) {
-        cdkBuilder.acceleratorManufacturers(acceleratorManufacturers)
-      }
-
-      /**
-       * @param acceleratorManufacturers Indicates whether instance types must have accelerators by
-       * specific manufacturers.
-       * * For instance types with AWS devices, specify `amazon-web-services` .
-       * * For instance types with AMD devices, specify `amd` .
-       * * For instance types with Habana devices, specify `habana` .
-       * * For instance types with NVIDIA devices, specify `nvidia` .
-       * * For instance types with Xilinx devices, specify `xilinx` .
-       *
-       * Default: Any manufacturer
-       */
-      override fun acceleratorManufacturers(vararg acceleratorManufacturers: String): Unit =
-          acceleratorManufacturers(acceleratorManufacturers.toList())
-
-      /**
-       * @param acceleratorNames The accelerators that must be on the instance type.
-       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
-       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
-       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
-       * * For instance types with AWS Inferentia chips, specify `inferentia` .
-       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
-       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
-       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
-       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
-       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
-       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
-       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
-       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
-       *
-       * Default: Any accelerator
-       */
-      override fun acceleratorNames(acceleratorNames: List<String>) {
-        cdkBuilder.acceleratorNames(acceleratorNames)
-      }
-
-      /**
-       * @param acceleratorNames The accelerators that must be on the instance type.
-       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
-       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
-       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
-       * * For instance types with AWS Inferentia chips, specify `inferentia` .
-       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
-       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
-       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
-       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
-       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
-       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
-       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
-       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
-       *
-       * Default: Any accelerator
-       */
-      override fun acceleratorNames(vararg acceleratorNames: String): Unit =
-          acceleratorNames(acceleratorNames.toList())
-
-      /**
-       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
-       * memory, in MiB.
-       * Default: No minimum or maximum limits
-       */
-      override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
-       * memory, in MiB.
-       * Default: No minimum or maximum limits
-       */
-      override
-          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBProperty::unwrap))
-      }
-
-      /**
-       * @param acceleratorTotalMemoryMiB The minimum and maximum amount of total accelerator
-       * memory, in MiB.
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("687315408c1bb56ead021b0c0a5a9e16088665e100a889fb74ce71abbd43fa22")
-      override
-          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty.Builder.() -> Unit):
-          Unit =
-          acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBProperty(acceleratorTotalMemoryMiB))
-
-      /**
-       * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * For instance types with GPU accelerators, specify `gpu` .
-       * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
-       *
-       * Default: Any accelerator type
-       */
-      override fun acceleratorTypes(acceleratorTypes: List<String>) {
-        cdkBuilder.acceleratorTypes(acceleratorTypes)
-      }
-
-      /**
-       * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * For instance types with GPU accelerators, specify `gpu` .
-       * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
-       *
-       * Default: Any accelerator type
-       */
-      override fun acceleratorTypes(vararg acceleratorTypes: String): Unit =
-          acceleratorTypes(acceleratorTypes.toList())
-
-      /**
-       * @param allowedInstanceTypes The instance types to apply your specified attributes against.
-       * All other instance types are ignored, even if they match your specified attributes.
-       *
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
-       * all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
-       *
-       *
-       * Default: All instance types
-       */
-      override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
-        cdkBuilder.allowedInstanceTypes(allowedInstanceTypes)
-      }
-
-      /**
-       * @param allowedInstanceTypes The instance types to apply your specified attributes against.
-       * All other instance types are ignored, even if they match your specified attributes.
-       *
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
-       * all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
-       *
-       *
-       * Default: All instance types
-       */
-      override fun allowedInstanceTypes(vararg allowedInstanceTypes: String): Unit =
-          allowedInstanceTypes(allowedInstanceTypes.toList())
-
-      /**
-       * @param bareMetal Indicates whether bare metal instance types must be included, excluded, or
-       * required.
-       * * To include bare metal instance types, specify `included` .
-       * * To require only bare metal instance types, specify `required` .
-       * * To exclude bare metal instance types, specify `excluded` .
-       *
-       * Default: `excluded`
-       */
-      override fun bareMetal(bareMetal: String) {
-        cdkBuilder.bareMetal(bareMetal)
-      }
-
-      /**
-       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
-       * in Mbps.
-       * For more information, see [Amazon EBS–optimized
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * Default: No minimum or maximum limits
-       */
-      override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
-       * in Mbps.
-       * For more information, see [Amazon EBS–optimized
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * Default: No minimum or maximum limits
-       */
-      override
-          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsProperty::unwrap))
-      }
-
-      /**
-       * @param baselineEbsBandwidthMbps The minimum and maximum baseline bandwidth to Amazon EBS,
-       * in Mbps.
-       * For more information, see [Amazon EBS–optimized
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("99ce2f9d06f918c623b5226bc75b8d59bcc2dbe40fb6a6ce2e63c42d1f8391a1")
-      override
-          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty.Builder.() -> Unit):
-          Unit =
-          baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsProperty(baselineEbsBandwidthMbps))
-
-      /**
-       * @param burstablePerformance Indicates whether burstable performance T instance types are
-       * included, excluded, or required.
-       * For more information, see [Burstable performance
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
-       * .
-       *
-       * * To include burstable performance instance types, specify `included` .
-       * * To require only burstable performance instance types, specify `required` .
-       * * To exclude burstable performance instance types, specify `excluded` .
-       *
-       * Default: `excluded`
-       */
-      override fun burstablePerformance(burstablePerformance: String) {
-        cdkBuilder.burstablePerformance(burstablePerformance)
-      }
-
-      /**
-       * @param cpuManufacturers The CPU manufacturers to include.
-       * * For instance types with Intel CPUs, specify `intel` .
-       * * For instance types with AMD CPUs, specify `amd` .
-       * * For instance types with AWS CPUs, specify `amazon-web-services` .
-       *
-       *
-       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
-       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
-       * your launch template.
-       *
-       *
-       * Default: Any manufacturer
-       */
-      override fun cpuManufacturers(cpuManufacturers: List<String>) {
-        cdkBuilder.cpuManufacturers(cpuManufacturers)
-      }
-
-      /**
-       * @param cpuManufacturers The CPU manufacturers to include.
-       * * For instance types with Intel CPUs, specify `intel` .
-       * * For instance types with AMD CPUs, specify `amd` .
-       * * For instance types with AWS CPUs, specify `amazon-web-services` .
-       *
-       *
-       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
-       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
-       * your launch template.
-       *
-       *
-       * Default: Any manufacturer
-       */
-      override fun cpuManufacturers(vararg cpuManufacturers: String): Unit =
-          cpuManufacturers(cpuManufacturers.toList())
-
-      /**
-       * @param excludedInstanceTypes The instance types to exclude.
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
-       * exclude all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
-       *
-       *
-       * Default: No excluded instance types
-       */
-      override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
-        cdkBuilder.excludedInstanceTypes(excludedInstanceTypes)
-      }
-
-      /**
-       * @param excludedInstanceTypes The instance types to exclude.
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
-       * exclude all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
-       *
-       *
-       * Default: No excluded instance types
-       */
-      override fun excludedInstanceTypes(vararg excludedInstanceTypes: String): Unit =
-          excludedInstanceTypes(excludedInstanceTypes.toList())
-
-      /**
-       * @param instanceGenerations Indicates whether current or previous generation instance types
-       * are included.
-       * The current generation instance types are recommended for use. Current generation instance
-       * types are typically the latest two to three generations in each instance family. For more
-       * information, see [Instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide* .
-       *
-       * For current generation instance types, specify `current` .
-       *
-       * For previous generation instance types, specify `previous` .
-       *
-       * Default: Current and previous generation instance types
-       */
-      override fun instanceGenerations(instanceGenerations: List<String>) {
-        cdkBuilder.instanceGenerations(instanceGenerations)
-      }
-
-      /**
-       * @param instanceGenerations Indicates whether current or previous generation instance types
-       * are included.
-       * The current generation instance types are recommended for use. Current generation instance
-       * types are typically the latest two to three generations in each instance family. For more
-       * information, see [Instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide* .
-       *
-       * For current generation instance types, specify `current` .
-       *
-       * For previous generation instance types, specify `previous` .
-       *
-       * Default: Current and previous generation instance types
-       */
-      override fun instanceGenerations(vararg instanceGenerations: String): Unit =
-          instanceGenerations(instanceGenerations.toList())
-
-      /**
-       * @param localStorage Indicates whether instance types with instance store volumes are
-       * included, excluded, or required.
-       * For more information, [Amazon EC2 instance
-       * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * * To include instance types with instance store volumes, specify `included` .
-       * * To require only instance types with instance store volumes, specify `required` .
-       * * To exclude instance types with instance store volumes, specify `excluded` .
-       *
-       * Default: `included`
-       */
-      override fun localStorage(localStorage: String) {
-        cdkBuilder.localStorage(localStorage)
-      }
-
-      /**
-       * @param localStorageTypes The type of local storage that is required.
-       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
-       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
-       *
-       * Default: `hdd` and `ssd`
-       */
-      override fun localStorageTypes(localStorageTypes: List<String>) {
-        cdkBuilder.localStorageTypes(localStorageTypes)
-      }
-
-      /**
-       * @param localStorageTypes The type of local storage that is required.
-       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
-       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
-       *
-       * Default: `hdd` and `ssd`
-       */
-      override fun localStorageTypes(vararg localStorageTypes: String): Unit =
-          localStorageTypes(localStorageTypes.toList())
-
-      /**
-       * @param maxSpotPriceAsPercentageOfOptimalOnDemandPrice [Price protection] The price
-       * protection threshold for Spot Instances, as a percentage of an identified On-Demand price.
-       * The identified On-Demand price is the price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. If no current generation C, M, or R
-       * instance type matches your attributes, then the identified price is from the lowest priced
-       * current generation instance types, and failing that, from the lowest priced previous
-       * generation instance types that match your attributes. When Amazon EC2 selects instance types
-       * with your attributes, it will exclude instance types whose price exceeds your specified
-       * threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
-       *
-       *
-       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
-       */
-      override
-          fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
-        cdkBuilder.maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice)
-      }
-
-      /**
-       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
-       * Default: No minimum or maximum limits
-       */
-      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
-       * Default: No minimum or maximum limits
-       */
-      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuProperty::unwrap))
-      }
-
-      /**
-       * @param memoryGiBPerVCpu The minimum and maximum amount of memory per vCPU, in GiB.
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("39bcea6b054460d3a4f72bf8e85c617b9de2d27b154012b8b2ffbae654835453")
-      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty.Builder.() -> Unit):
-          Unit = memoryGiBPerVCpu(MemoryGiBPerVCpuProperty(memoryGiBPerVCpu))
-
-      /**
-       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
-       */
-      override fun memoryMiB(memoryMiB: IResolvable) {
-        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
-       */
-      override fun memoryMiB(memoryMiB: MemoryMiBProperty) {
-        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBProperty::unwrap))
-      }
-
-      /**
-       * @param memoryMiB The minimum and maximum amount of memory, in MiB.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2be30fd8478496bd807b2a12ef67cfe0b5fc5f22ee2e40f86594c093e02e6352")
-      override fun memoryMiB(memoryMiB: MemoryMiBProperty.Builder.() -> Unit): Unit =
-          memoryMiB(MemoryMiBProperty(memoryMiB))
-
-      /**
-       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
-       * gigabits per second (Gbps).
-       * Default: No minimum or maximum limits
-       */
-      override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
-       * gigabits per second (Gbps).
-       * Default: No minimum or maximum limits
-       */
-      override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsProperty::unwrap))
-      }
-
-      /**
-       * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in
-       * gigabits per second (Gbps).
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1827db3ce1bb2f184bd37966238ca76dc315b92780edbf8056c5fc90eda9c716")
-      override
-          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty.Builder.() -> Unit):
-          Unit = networkBandwidthGbps(NetworkBandwidthGbpsProperty(networkBandwidthGbps))
-
-      /**
-       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
-       * Default: No minimum or maximum limits
-       */
-      override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
-       * Default: No minimum or maximum limits
-       */
-      override fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountProperty::unwrap))
-      }
-
-      /**
-       * @param networkInterfaceCount The minimum and maximum number of network interfaces.
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fde96b2e0debdfcc33f8a0d0943f348612d4a2d2bfba0d2761c2738bdb344082")
-      override
-          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty.Builder.() -> Unit):
-          Unit = networkInterfaceCount(NetworkInterfaceCountProperty(networkInterfaceCount))
-
-      /**
-       * @param onDemandMaxPricePercentageOverLowestPrice [Price protection] The price protection
-       * threshold for On-Demand Instances, as a percentage higher than an identified On-Demand price.
-       * The identified On-Demand price is the price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. When Amazon EC2 selects instance types with
-       * your attributes, it will exclude instance types whose price exceeds your specified threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To turn off price protection, specify a high value, such as `999999` .
-       *
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * and
-       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
-       * .
-       *
-       *
-       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-       * price.
-       *
-       *
-       * Default: `20`
-       */
-      override
-          fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number) {
-        cdkBuilder.onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice)
-      }
-
-      /**
-       * @param requireHibernateSupport Indicates whether instance types must support hibernation
-       * for On-Demand Instances.
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * .
-       *
-       * Default: `false`
-       */
-      override fun requireHibernateSupport(requireHibernateSupport: Boolean) {
-        cdkBuilder.requireHibernateSupport(requireHibernateSupport)
-      }
-
-      /**
-       * @param requireHibernateSupport Indicates whether instance types must support hibernation
-       * for On-Demand Instances.
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * .
-       *
-       * Default: `false`
-       */
-      override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
-        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param spotMaxPricePercentageOverLowestPrice [Price protection] The price protection
-       * threshold for Spot Instances, as a percentage higher than an identified Spot price.
-       * The identified Spot price is the Spot price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. If no current generation C, M, or R
-       * instance type matches your attributes, then the identified Spot price is from the lowest
-       * priced current generation instance types, and failing that, from the lowest priced previous
-       * generation instance types that match your attributes. When Amazon EC2 selects instance types
-       * with your attributes, it will exclude instance types whose Spot price exceeds your specified
-       * threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
-       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-       * price.
-       *
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * and
-       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
-       * .
-       *
-       *
-       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
-       *
-       *
-       * Default: `100`
-       */
-      override
-          fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number) {
-        cdkBuilder.spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice)
-      }
-
-      /**
-       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
-       * Default: No minimum or maximum limits
-       */
-      override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
-       * Default: No minimum or maximum limits
-       */
-      override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBProperty::unwrap))
-      }
-
-      /**
-       * @param totalLocalStorageGb The minimum and maximum amount of total local storage, in GB.
-       * Default: No minimum or maximum limits
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8ced7d39abec56d68911dca344eb452396b66dd2240deef63392ea726ad8b8a4")
-      override
-          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty.Builder.() -> Unit):
-          Unit = totalLocalStorageGb(TotalLocalStorageGBProperty(totalLocalStorageGb))
-
-      /**
-       * @param vCpuCount The minimum and maximum number of vCPUs.
-       */
-      override fun vCpuCount(vCpuCount: IResolvable) {
-        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param vCpuCount The minimum and maximum number of vCPUs.
-       */
-      override fun vCpuCount(vCpuCount: VCpuCountProperty) {
-        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountProperty::unwrap))
-      }
-
-      /**
-       * @param vCpuCount The minimum and maximum number of vCPUs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("510e27b3bf93ab1beb810d076c1533945e97fbf0fa819abd7c204fae624cfaa0")
-      override fun vCpuCount(vCpuCount: VCpuCountProperty.Builder.() -> Unit): Unit =
-          vCpuCount(VCpuCountProperty(vCpuCount))
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty,
-    ) : CdkObject(cdkObject), InstanceRequirementsProperty {
-      /**
-       * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
-       * instance.
-       *
-       * To exclude accelerator-enabled instance types, set `Max` to `0` .
-       *
-       * Default: No minimum or maximum limits
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratorcount)
-       */
-      override fun acceleratorCount(): Any? = unwrap(this).getAcceleratorCount()
-
-      /**
-       * Indicates whether instance types must have accelerators by specific manufacturers.
-       *
-       * * For instance types with AWS devices, specify `amazon-web-services` .
-       * * For instance types with AMD devices, specify `amd` .
-       * * For instance types with Habana devices, specify `habana` .
-       * * For instance types with NVIDIA devices, specify `nvidia` .
-       * * For instance types with Xilinx devices, specify `xilinx` .
-       *
-       * Default: Any manufacturer
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratormanufacturers)
-       */
-      override fun acceleratorManufacturers(): List<String> =
-          unwrap(this).getAcceleratorManufacturers() ?: emptyList()
-
-      /**
-       * The accelerators that must be on the instance type.
-       *
-       * * For instance types with NVIDIA A10G GPUs, specify `a10g` .
-       * * For instance types with NVIDIA A100 GPUs, specify `a100` .
-       * * For instance types with NVIDIA H100 GPUs, specify `h100` .
-       * * For instance types with AWS Inferentia chips, specify `inferentia` .
-       * * For instance types with NVIDIA GRID K520 GPUs, specify `k520` .
-       * * For instance types with NVIDIA K80 GPUs, specify `k80` .
-       * * For instance types with NVIDIA M60 GPUs, specify `m60` .
-       * * For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520` .
-       * * For instance types with NVIDIA T4 GPUs, specify `t4` .
-       * * For instance types with NVIDIA T4G GPUs, specify `t4g` .
-       * * For instance types with Xilinx VU9P FPGAs, specify `vu9p` .
-       * * For instance types with NVIDIA V100 GPUs, specify `v100` .
-       *
-       * Default: Any accelerator
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratornames)
-       */
-      override fun acceleratorNames(): List<String> = unwrap(this).getAcceleratorNames() ?:
-          emptyList()
-
-      /**
-       * The minimum and maximum amount of total accelerator memory, in MiB.
-       *
-       * Default: No minimum or maximum limits
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratortotalmemorymib)
-       */
-      override fun acceleratorTotalMemoryMiB(): Any? = unwrap(this).getAcceleratorTotalMemoryMiB()
-
-      /**
-       * The accelerator types that must be on the instance type.
-       *
-       * * For instance types with GPU accelerators, specify `gpu` .
-       * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
-       *
-       * Default: Any accelerator type
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-acceleratortypes)
-       */
-      override fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?:
-          emptyList()
-
-      /**
-       * The instance types to apply your specified attributes against.
-       *
-       * All other instance types are ignored, even if they match your specified attributes.
-       *
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * allow an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will allow the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will allow
-       * all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `AllowedInstanceTypes` , you can't specify `ExcludedInstanceTypes` .
-       *
-       *
-       * Default: All instance types
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-allowedinstancetypes)
-       */
-      override fun allowedInstanceTypes(): List<String> = unwrap(this).getAllowedInstanceTypes() ?:
-          emptyList()
-
-      /**
-       * Indicates whether bare metal instance types must be included, excluded, or required.
-       *
-       * * To include bare metal instance types, specify `included` .
-       * * To require only bare metal instance types, specify `required` .
-       * * To exclude bare metal instance types, specify `excluded` .
-       *
-       * Default: `excluded`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baremetal)
-       */
-      override fun bareMetal(): String? = unwrap(this).getBareMetal()
-
-      /**
-       * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
-       *
-       * For more information, see [Amazon EBS–optimized
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * Default: No minimum or maximum limits
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baselineebsbandwidthmbps)
-       */
-      override fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
-
-      /**
-       * Indicates whether burstable performance T instance types are included, excluded, or
-       * required.
-       *
-       * For more information, see [Burstable performance
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
-       * .
-       *
-       * * To include burstable performance instance types, specify `included` .
-       * * To require only burstable performance instance types, specify `required` .
-       * * To exclude burstable performance instance types, specify `excluded` .
-       *
-       * Default: `excluded`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-burstableperformance)
-       */
-      override fun burstablePerformance(): String? = unwrap(this).getBurstablePerformance()
-
-      /**
-       * The CPU manufacturers to include.
-       *
-       * * For instance types with Intel CPUs, specify `intel` .
-       * * For instance types with AMD CPUs, specify `amd` .
-       * * For instance types with AWS CPUs, specify `amazon-web-services` .
-       *
-       *
-       * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
-       * with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in
-       * your launch template.
-       *
-       *
-       * Default: Any manufacturer
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-cpumanufacturers)
-       */
-      override fun cpuManufacturers(): List<String> = unwrap(this).getCpuManufacturers() ?:
-          emptyList()
-
-      /**
-       * The instance types to exclude.
-       *
-       * You can use strings with one or more wild cards, represented by an asterisk ( `*` ), to
-       * exclude an instance type, size, or generation. The following are examples: `m5.8xlarge` ,
-       * `c5*.*` , `m5a.*` , `r*` , `*3*` .
-       *
-       * For example, if you specify `c5*` ,Amazon EC2 will exclude the entire C5 instance family,
-       * which includes all C5a and C5n instance types. If you specify `m5a.*` , Amazon EC2 will
-       * exclude all the M5a instance types, but not the M5n instance types.
-       *
-       *
-       * If you specify `ExcludedInstanceTypes` , you can't specify `AllowedInstanceTypes` .
-       *
-       *
-       * Default: No excluded instance types
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-excludedinstancetypes)
-       */
-      override fun excludedInstanceTypes(): List<String> = unwrap(this).getExcludedInstanceTypes()
-          ?: emptyList()
-
-      /**
-       * Indicates whether current or previous generation instance types are included.
-       *
-       * The current generation instance types are recommended for use. Current generation instance
-       * types are typically the latest two to three generations in each instance family. For more
-       * information, see [Instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide* .
-       *
-       * For current generation instance types, specify `current` .
-       *
-       * For previous generation instance types, specify `previous` .
-       *
-       * Default: Current and previous generation instance types
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-instancegenerations)
-       */
-      override fun instanceGenerations(): List<String> = unwrap(this).getInstanceGenerations() ?:
-          emptyList()
-
-      /**
-       * Indicates whether instance types with instance store volumes are included, excluded, or
-       * required.
-       *
-       * For more information, [Amazon EC2 instance
-       * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
-       * *Amazon EC2 User Guide* .
-       *
-       * * To include instance types with instance store volumes, specify `included` .
-       * * To require only instance types with instance store volumes, specify `required` .
-       * * To exclude instance types with instance store volumes, specify `excluded` .
-       *
-       * Default: `included`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-localstorage)
-       */
-      override fun localStorage(): String? = unwrap(this).getLocalStorage()
-
-      /**
-       * The type of local storage that is required.
-       *
-       * * For instance types with hard disk drive (HDD) storage, specify `hdd` .
-       * * For instance types with solid state drive (SSD) storage, specify `ssd` .
-       *
-       * Default: `hdd` and `ssd`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-localstoragetypes)
-       */
-      override fun localStorageTypes(): List<String> = unwrap(this).getLocalStorageTypes() ?:
-          emptyList()
-
-      /**
-       * [Price protection] The price protection threshold for Spot Instances, as a percentage of an
-       * identified On-Demand price.
-       *
-       * The identified On-Demand price is the price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. If no current generation C, M, or R
-       * instance type matches your attributes, then the identified price is from the lowest priced
-       * current generation instance types, and failing that, from the lowest priced previous
-       * generation instance types that match your attributes. When Amazon EC2 selects instance types
-       * with your attributes, it will exclude instance types whose price exceeds your specified
-       * threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
-       *
-       *
-       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-maxspotpriceaspercentageofoptimalondemandprice)
-       */
-      override fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(): Number? =
-          unwrap(this).getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()
-
-      /**
-       * The minimum and maximum amount of memory per vCPU, in GiB.
-       *
-       * Default: No minimum or maximum limits
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-memorygibpervcpu)
-       */
-      override fun memoryGiBPerVCpu(): Any? = unwrap(this).getMemoryGiBPerVCpu()
-
-      /**
-       * The minimum and maximum amount of memory, in MiB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-memorymib)
-       */
-      override fun memoryMiB(): Any? = unwrap(this).getMemoryMiB()
-
-      /**
-       * The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps).
-       *
-       * Default: No minimum or maximum limits
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-networkbandwidthgbps)
-       */
-      override fun networkBandwidthGbps(): Any? = unwrap(this).getNetworkBandwidthGbps()
-
-      /**
-       * The minimum and maximum number of network interfaces.
-       *
-       * Default: No minimum or maximum limits
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-networkinterfacecount)
-       */
-      override fun networkInterfaceCount(): Any? = unwrap(this).getNetworkInterfaceCount()
-
-      /**
-       * [Price protection] The price protection threshold for On-Demand Instances, as a percentage
-       * higher than an identified On-Demand price.
-       *
-       * The identified On-Demand price is the price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. When Amazon EC2 selects instance types with
-       * your attributes, it will exclude instance types whose price exceeds your specified threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To turn off price protection, specify a high value, such as `999999` .
-       *
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * and
-       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
-       * .
-       *
-       *
-       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-       * price.
-       *
-       *
-       * Default: `20`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-ondemandmaxpricepercentageoverlowestprice)
-       */
-      override fun onDemandMaxPricePercentageOverLowestPrice(): Number? =
-          unwrap(this).getOnDemandMaxPricePercentageOverLowestPrice()
-
-      /**
-       * Indicates whether instance types must support hibernation for On-Demand Instances.
-       *
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * .
-       *
-       * Default: `false`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-requirehibernatesupport)
-       */
-      override fun requireHibernateSupport(): Any? = unwrap(this).getRequireHibernateSupport()
-
-      /**
-       * [Price protection] The price protection threshold for Spot Instances, as a percentage
-       * higher than an identified Spot price.
-       *
-       * The identified Spot price is the Spot price of the lowest priced current generation C, M,
-       * or R instance type with your specified attributes. If no current generation C, M, or R
-       * instance type matches your attributes, then the identified Spot price is from the lowest
-       * priced current generation instance types, and failing that, from the lowest priced previous
-       * generation instance types that match your attributes. When Amazon EC2 selects instance types
-       * with your attributes, it will exclude instance types whose Spot price exceeds your specified
-       * threshold.
-       *
-       * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
-       *
-       * To indicate no price protection threshold, specify a high value, such as `999999` .
-       *
-       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
-       * threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
-       * price.
-       *
-       * This parameter is not supported for
-       * [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)
-       * and
-       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
-       * .
-       *
-       *
-       * Only one of `SpotMaxPricePercentageOverLowestPrice` or
-       * `MaxSpotPriceAsPercentageOfOptimalOnDemandPrice` can be specified. If you don't specify
-       * either, then `SpotMaxPricePercentageOverLowestPrice` is used and the value for that parameter
-       * defaults to `100` .
-       *
-       *
-       * Default: `100`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-spotmaxpricepercentageoverlowestprice)
-       */
-      override fun spotMaxPricePercentageOverLowestPrice(): Number? =
-          unwrap(this).getSpotMaxPricePercentageOverLowestPrice()
-
-      /**
-       * The minimum and maximum amount of total local storage, in GB.
-       *
-       * Default: No minimum or maximum limits
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-totallocalstoragegb)
-       */
-      override fun totalLocalStorageGb(): Any? = unwrap(this).getTotalLocalStorageGb()
-
-      /**
-       * The minimum and maximum number of vCPUs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-vcpucount)
-       */
-      override fun vCpuCount(): Any? = unwrap(this).getVCpuCount()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceRequirementsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty):
-          InstanceRequirementsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceRequirementsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceRequirementsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty
-    }
-  }
-
-  /**
-   * ENA Express is compatible with both TCP and UDP transport protocols.
-   *
-   * When it's enabled, TCP traffic automatically uses it. However, some UDP-based applications are
-   * designed to handle network packets that are out of order, without a need for retransmission, such
-   * as live video broadcasting or other near-real-time applications. For UDP traffic, you can specify
-   * whether to use ENA Express, based on your application environment needs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * EnaSrdUdpSpecificationProperty enaSrdUdpSpecificationProperty =
-   * EnaSrdUdpSpecificationProperty.builder()
-   * .enaSrdUdpEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdudpspecification.html)
-   */
-  public interface EnaSrdUdpSpecificationProperty {
-    /**
-     * Indicates whether UDP traffic to and from the instance uses ENA Express.
-     *
-     * To specify this setting, you must first enable ENA Express.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdudpspecification.html#cfn-ec2-launchtemplate-enasrdudpspecification-enasrdudpenabled)
-     */
-    public fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
-
-    /**
-     * A builder for [EnaSrdUdpSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
-       * Express.
-       * To specify this setting, you must first enable ENA Express.
-       */
-      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean)
-
-      /**
-       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
-       * Express.
-       * To specify this setting, you must first enable ENA Express.
-       */
-      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty.builder()
-
-      /**
-       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
-       * Express.
-       * To specify this setting, you must first enable ENA Express.
-       */
-      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
-        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled)
-      }
-
-      /**
-       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
-       * Express.
-       * To specify this setting, you must first enable ENA Express.
-       */
-      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
-        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty,
-    ) : CdkObject(cdkObject), EnaSrdUdpSpecificationProperty {
-      /**
-       * Indicates whether UDP traffic to and from the instance uses ENA Express.
-       *
-       * To specify this setting, you must first enable ENA Express.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdudpspecification.html#cfn-ec2-launchtemplate-enasrdudpspecification-enasrdudpenabled)
-       */
-      override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnaSrdUdpSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty):
-          EnaSrdUdpSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EnaSrdUdpSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnaSrdUdpSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies an instance's Capacity Reservation targeting option. You can specify only one option
-   * at a time.
-   *
-   * `CapacityReservationSpecification` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CapacityReservationSpecificationProperty capacityReservationSpecificationProperty =
-   * CapacityReservationSpecificationProperty.builder()
-   * .capacityReservationPreference("capacityReservationPreference")
-   * .capacityReservationTarget(CapacityReservationTargetProperty.builder()
-   * .capacityReservationId("capacityReservationId")
-   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html)
-   */
-  public interface CapacityReservationSpecificationProperty {
-    /**
-     * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
-     *
-     * * `open` - The instance can run in any `open` Capacity Reservation that has matching
-     * attributes (instance type, platform, Availability Zone).
-     * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
-     * The instance runs in On-Demand capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html#cfn-ec2-launchtemplate-capacityreservationspecification-capacityreservationpreference)
-     */
-    public fun capacityReservationPreference(): String? =
-        unwrap(this).getCapacityReservationPreference()
-
-    /**
-     * Information about the target Capacity Reservation or Capacity Reservation group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html#cfn-ec2-launchtemplate-capacityreservationspecification-capacityreservationtarget)
-     */
-    public fun capacityReservationTarget(): Any? = unwrap(this).getCapacityReservationTarget()
-
-    /**
-     * A builder for [CapacityReservationSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param capacityReservationPreference Indicates the instance's Capacity Reservation
-       * preferences. Possible preferences include:.
-       * * `open` - The instance can run in any `open` Capacity Reservation that has matching
-       * attributes (instance type, platform, Availability Zone).
-       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
-       * The instance runs in On-Demand capacity.
-       */
-      public fun capacityReservationPreference(capacityReservationPreference: String)
-
-      /**
-       * @param capacityReservationTarget Information about the target Capacity Reservation or
-       * Capacity Reservation group.
-       */
-      public fun capacityReservationTarget(capacityReservationTarget: IResolvable)
-
-      /**
-       * @param capacityReservationTarget Information about the target Capacity Reservation or
-       * Capacity Reservation group.
-       */
-      public
-          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty)
-
-      /**
-       * @param capacityReservationTarget Information about the target Capacity Reservation or
-       * Capacity Reservation group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("13509a6123938dcb67ae290a6c4220f1dfb5f0a1121bea480151b94202eb2fdc")
-      public
-          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty.builder()
-
-      /**
-       * @param capacityReservationPreference Indicates the instance's Capacity Reservation
-       * preferences. Possible preferences include:.
-       * * `open` - The instance can run in any `open` Capacity Reservation that has matching
-       * attributes (instance type, platform, Availability Zone).
-       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
-       * The instance runs in On-Demand capacity.
-       */
-      override fun capacityReservationPreference(capacityReservationPreference: String) {
-        cdkBuilder.capacityReservationPreference(capacityReservationPreference)
-      }
-
-      /**
-       * @param capacityReservationTarget Information about the target Capacity Reservation or
-       * Capacity Reservation group.
-       */
-      override fun capacityReservationTarget(capacityReservationTarget: IResolvable) {
-        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param capacityReservationTarget Information about the target Capacity Reservation or
-       * Capacity Reservation group.
-       */
-      override
-          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty) {
-        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(CapacityReservationTargetProperty::unwrap))
-      }
-
-      /**
-       * @param capacityReservationTarget Information about the target Capacity Reservation or
-       * Capacity Reservation group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("13509a6123938dcb67ae290a6c4220f1dfb5f0a1121bea480151b94202eb2fdc")
-      override
-          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit):
-          Unit =
-          capacityReservationTarget(CapacityReservationTargetProperty(capacityReservationTarget))
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty,
-    ) : CdkObject(cdkObject), CapacityReservationSpecificationProperty {
-      /**
-       * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
-       *
-       * * `open` - The instance can run in any `open` Capacity Reservation that has matching
-       * attributes (instance type, platform, Availability Zone).
-       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
-       * The instance runs in On-Demand capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html#cfn-ec2-launchtemplate-capacityreservationspecification-capacityreservationpreference)
-       */
-      override fun capacityReservationPreference(): String? =
-          unwrap(this).getCapacityReservationPreference()
-
-      /**
-       * Information about the target Capacity Reservation or Capacity Reservation group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html#cfn-ec2-launchtemplate-capacityreservationspecification-capacityreservationtarget)
-       */
-      override fun capacityReservationTarget(): Any? = unwrap(this).getCapacityReservationTarget()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CapacityReservationSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty):
-          CapacityReservationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CapacityReservationSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CapacityReservationSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
-   *
-   * For more information, see [Amazon EBS–optimized
-   * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
-   * EC2 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * BaselineEbsBandwidthMbpsProperty baselineEbsBandwidthMbpsProperty =
-   * BaselineEbsBandwidthMbpsProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html)
-   */
-  public interface BaselineEbsBandwidthMbpsProperty {
-    /**
-     * The maximum baseline bandwidth, in Mbps.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html#cfn-ec2-launchtemplate-baselineebsbandwidthmbps-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum baseline bandwidth, in Mbps.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html#cfn-ec2-launchtemplate-baselineebsbandwidthmbps-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [BaselineEbsBandwidthMbpsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum baseline bandwidth, in Mbps.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum baseline bandwidth, in Mbps.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty.builder()
-
-      /**
-       * @param max The maximum baseline bandwidth, in Mbps.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum baseline bandwidth, in Mbps.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty,
-    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsProperty {
-      /**
-       * The maximum baseline bandwidth, in Mbps.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html#cfn-ec2-launchtemplate-baselineebsbandwidthmbps-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum baseline bandwidth, in Mbps.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html#cfn-ec2-launchtemplate-baselineebsbandwidthmbps-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BaselineEbsBandwidthMbpsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty):
-          BaselineEbsBandwidthMbpsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BaselineEbsBandwidthMbpsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum number of vCPUs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * VCpuCountProperty vCpuCountProperty = VCpuCountProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html)
-   */
-  public interface VCpuCountProperty {
-    /**
-     * The maximum number of vCPUs.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html#cfn-ec2-launchtemplate-vcpucount-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum number of vCPUs.
-     *
-     * To specify no minimum limit, specify `0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html#cfn-ec2-launchtemplate-vcpucount-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [VCpuCountProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum number of vCPUs.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum number of vCPUs.
-       * To specify no minimum limit, specify `0` .
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty.builder()
-
-      /**
-       * @param max The maximum number of vCPUs.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum number of vCPUs.
-       * To specify no minimum limit, specify `0` .
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty,
-    ) : CdkObject(cdkObject), VCpuCountProperty {
-      /**
-       * The maximum number of vCPUs.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html#cfn-ec2-launchtemplate-vcpucount-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum number of vCPUs.
-       *
-       * To specify no minimum limit, specify `0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html#cfn-ec2-launchtemplate-vcpucount-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VCpuCountProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty):
-          VCpuCountProperty = CdkObjectWrappers.wrap(cdkObject) as? VCpuCountProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VCpuCountProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty
-    }
-  }
-
-  /**
-   * The maintenance options of your instance.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MaintenanceOptionsProperty maintenanceOptionsProperty = MaintenanceOptionsProperty.builder()
-   * .autoRecovery("autoRecovery")
-   * .rebootMigration("rebootMigration")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html)
-   */
-  public interface MaintenanceOptionsProperty {
-    /**
-     * Disables the automatic recovery behavior of your instance or sets it to default.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-autorecovery)
-     */
-    public fun autoRecovery(): String? = unwrap(this).getAutoRecovery()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-rebootmigration)
-     */
-    public fun rebootMigration(): String? = unwrap(this).getRebootMigration()
-
-    /**
-     * A builder for [MaintenanceOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoRecovery Disables the automatic recovery behavior of your instance or sets it to
-       * default.
-       */
-      public fun autoRecovery(autoRecovery: String)
-
-      /**
-       * @param rebootMigration the value to be set.
-       */
-      public fun rebootMigration(rebootMigration: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty.builder()
-
-      /**
-       * @param autoRecovery Disables the automatic recovery behavior of your instance or sets it to
-       * default.
-       */
-      override fun autoRecovery(autoRecovery: String) {
-        cdkBuilder.autoRecovery(autoRecovery)
-      }
-
-      /**
-       * @param rebootMigration the value to be set.
-       */
-      override fun rebootMigration(rebootMigration: String) {
-        cdkBuilder.rebootMigration(rebootMigration)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty,
-    ) : CdkObject(cdkObject), MaintenanceOptionsProperty {
-      /**
-       * Disables the automatic recovery behavior of your instance or sets it to default.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-autorecovery)
-       */
-      override fun autoRecovery(): String? = unwrap(this).getAutoRecovery()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-rebootmigration)
-       */
-      override fun rebootMigration(): String? = unwrap(this).getRebootMigration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MaintenanceOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty):
-          MaintenanceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MaintenanceOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MaintenanceOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty
-    }
-  }
-
-  /**
-   * ENA Express uses AWS Scalable Reliable Datagram (SRD) technology to increase the maximum
-   * bandwidth used per stream and minimize tail latency of network traffic between EC2 instances.
-   *
-   * With ENA Express, you can communicate between two EC2 instances in the same subnet within the
-   * same account, or in different accounts. Both sending and receiving instances must have ENA Express
-   * enabled.
-   *
-   * To improve the reliability of network packet delivery, ENA Express reorders network packets on
-   * the receiving end by default. However, some UDP-based applications are designed to handle network
-   * packets that are out of order to reduce the overhead for packet delivery at the network layer.
-   * When ENA Express is enabled, you can specify whether UDP network traffic uses it.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * EnaSrdSpecificationProperty enaSrdSpecificationProperty = EnaSrdSpecificationProperty.builder()
-   * .enaSrdEnabled(false)
-   * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
-   * .enaSrdUdpEnabled(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html)
-   */
-  public interface EnaSrdSpecificationProperty {
-    /**
-     * Indicates whether ENA Express is enabled for the network interface.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html#cfn-ec2-launchtemplate-enasrdspecification-enasrdenabled)
-     */
-    public fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
-
-    /**
-     * Configures ENA Express for UDP network traffic.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html#cfn-ec2-launchtemplate-enasrdspecification-enasrdudpspecification)
-     */
-    public fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
-
-    /**
-     * A builder for [EnaSrdSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
-       */
-      public fun enaSrdEnabled(enaSrdEnabled: Boolean)
-
-      /**
-       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
-       */
-      public fun enaSrdEnabled(enaSrdEnabled: IResolvable)
-
-      /**
-       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
-       */
-      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable)
-
-      /**
-       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
-       */
-      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty)
-
-      /**
-       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("dd7cd088ca722e28b6bce1ce2139206df9bf6fb92063da1c5b497af55aa9ffb4")
-      public
-          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty.builder()
-
-      /**
-       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
-       */
-      override fun enaSrdEnabled(enaSrdEnabled: Boolean) {
-        cdkBuilder.enaSrdEnabled(enaSrdEnabled)
-      }
-
-      /**
-       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
-       */
-      override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
-        cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
-       */
-      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
-        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
-       */
-      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
-        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("dd7cd088ca722e28b6bce1ce2139206df9bf6fb92063da1c5b497af55aa9ffb4")
-      override
-          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit):
-          Unit = enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty(enaSrdUdpSpecification))
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty,
-    ) : CdkObject(cdkObject), EnaSrdSpecificationProperty {
-      /**
-       * Indicates whether ENA Express is enabled for the network interface.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html#cfn-ec2-launchtemplate-enasrdspecification-enasrdenabled)
-       */
-      override fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
-
-      /**
-       * Configures ENA Express for UDP network traffic.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-enasrdspecification.html#cfn-ec2-launchtemplate-enasrdspecification-enasrdudpspecification)
-       */
-      override fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnaSrdSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty):
-          EnaSrdSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EnaSrdSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnaSrdSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies whether detailed monitoring is enabled for an instance.
-   *
-   * For more information about detailed monitoring, see [Enable or turn off detailed monitoring for
-   * your instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html) in
-   * the *Amazon EC2 User Guide* .
-   *
-   * `Monitoring` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MonitoringProperty monitoringProperty = MonitoringProperty.builder()
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-monitoring.html)
-   */
-  public interface MonitoringProperty {
-    /**
-     * Specify `true` to enable detailed monitoring.
-     *
-     * Otherwise, basic monitoring is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-monitoring.html#cfn-ec2-launchtemplate-monitoring-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [MonitoringProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Specify `true` to enable detailed monitoring.
-       * Otherwise, basic monitoring is enabled.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specify `true` to enable detailed monitoring.
-       * Otherwise, basic monitoring is enabled.
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty.builder()
-
-      /**
-       * @param enabled Specify `true` to enable detailed monitoring.
-       * Otherwise, basic monitoring is enabled.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specify `true` to enable detailed monitoring.
-       * Otherwise, basic monitoring is enabled.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty,
-    ) : CdkObject(cdkObject), MonitoringProperty {
-      /**
-       * Specify `true` to enable detailed monitoring.
-       *
-       * Otherwise, basic monitoring is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-monitoring.html#cfn-ec2-launchtemplate-monitoring-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty):
-          MonitoringProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum amount of memory, in MiB.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * MemoryMiBProperty memoryMiBProperty = MemoryMiBProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html)
-   */
-  public interface MemoryMiBProperty {
-    /**
-     * The maximum amount of memory, in MiB.
-     *
-     * To specify no maximum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html#cfn-ec2-launchtemplate-memorymib-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum amount of memory, in MiB.
-     *
-     * To specify no minimum limit, specify `0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html#cfn-ec2-launchtemplate-memorymib-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [MemoryMiBProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum amount of memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum amount of memory, in MiB.
-       * To specify no minimum limit, specify `0` .
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty.builder()
-
-      /**
-       * @param max The maximum amount of memory, in MiB.
-       * To specify no maximum limit, omit this parameter.
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum amount of memory, in MiB.
-       * To specify no minimum limit, specify `0` .
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty,
-    ) : CdkObject(cdkObject), MemoryMiBProperty {
-      /**
-       * The maximum amount of memory, in MiB.
-       *
-       * To specify no maximum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html#cfn-ec2-launchtemplate-memorymib-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum amount of memory, in MiB.
-       *
-       * To specify no minimum limit, specify `0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorymib.html#cfn-ec2-launchtemplate-memorymib-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryMiBProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty):
-          MemoryMiBProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MemoryMiBProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty
-    }
-  }
-
-  /**
-   * Specifies a secondary private IPv4 address for a network interface.
-   *
-   * `PrivateIpAdd` is a property of [AWS::EC2::LaunchTemplate
-   * NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PrivateIpAddProperty privateIpAddProperty = PrivateIpAddProperty.builder()
-   * .primary(false)
-   * .privateIpAddress("privateIpAddress")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html)
-   */
-  public interface PrivateIpAddProperty {
-    /**
-     * Indicates whether the private IPv4 address is the primary private IPv4 address.
-     *
-     * Only one IPv4 address can be designated as primary.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-primary)
-     */
-    public fun primary(): Any? = unwrap(this).getPrimary()
-
-    /**
-     * The private IPv4 address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-privateipaddress)
-     */
-    public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
-
-    /**
-     * A builder for [PrivateIpAddProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address.
-       * Only one IPv4 address can be designated as primary.
-       */
-      public fun primary(primary: Boolean)
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address.
-       * Only one IPv4 address can be designated as primary.
-       */
-      public fun primary(primary: IResolvable)
-
-      /**
-       * @param privateIpAddress The private IPv4 address.
-       */
-      public fun privateIpAddress(privateIpAddress: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty.builder()
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address.
-       * Only one IPv4 address can be designated as primary.
-       */
-      override fun primary(primary: Boolean) {
-        cdkBuilder.primary(primary)
-      }
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address.
-       * Only one IPv4 address can be designated as primary.
-       */
-      override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param privateIpAddress The private IPv4 address.
-       */
-      override fun privateIpAddress(privateIpAddress: String) {
-        cdkBuilder.privateIpAddress(privateIpAddress)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty,
-    ) : CdkObject(cdkObject), PrivateIpAddProperty {
-      /**
-       * Indicates whether the private IPv4 address is the primary private IPv4 address.
-       *
-       * Only one IPv4 address can be designated as primary.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-primary)
-       */
-      override fun primary(): Any? = unwrap(this).getPrimary()
-
-      /**
-       * The private IPv4 address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-privateipaddress)
-       */
-      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateIpAddProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty):
-          PrivateIpAddProperty = CdkObjectWrappers.wrap(cdkObject) as? PrivateIpAddProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateIpAddProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty
-    }
-  }
-
-  /**
-   * Specifies the CPU options for an instance.
-   *
-   * For more information, see [Optimize CPU
-   * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the
-   * *Amazon Elastic Compute Cloud User Guide* .
-   *
-   * `CpuOptions` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CpuOptionsProperty cpuOptionsProperty = CpuOptionsProperty.builder()
-   * .amdSevSnp("amdSevSnp")
-   * .coreCount(123)
-   * .threadsPerCore(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html)
-   */
-  public interface CpuOptionsProperty {
-    /**
-     * Indicates whether to enable the instance for AMD SEV-SNP.
-     *
-     * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
-     * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-amdsevsnp)
-     */
-    public fun amdSevSnp(): String? = unwrap(this).getAmdSevSnp()
-
-    /**
-     * The number of CPU cores for the instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-corecount)
-     */
-    public fun coreCount(): Number? = unwrap(this).getCoreCount()
-
-    /**
-     * The number of threads per CPU core.
-     *
-     * To disable multithreading for the instance, specify a value of `1` . Otherwise, specify the
-     * default value of `2` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-threadspercore)
-     */
-    public fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
-
-    /**
-     * A builder for [CpuOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param amdSevSnp Indicates whether to enable the instance for AMD SEV-SNP.
-       * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
-       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
-       */
-      public fun amdSevSnp(amdSevSnp: String)
-
-      /**
-       * @param coreCount The number of CPU cores for the instance.
-       */
-      public fun coreCount(coreCount: Number)
-
-      /**
-       * @param threadsPerCore The number of threads per CPU core.
-       * To disable multithreading for the instance, specify a value of `1` . Otherwise, specify the
-       * default value of `2` .
-       */
-      public fun threadsPerCore(threadsPerCore: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty.builder()
-
-      /**
-       * @param amdSevSnp Indicates whether to enable the instance for AMD SEV-SNP.
-       * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
-       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
-       */
-      override fun amdSevSnp(amdSevSnp: String) {
-        cdkBuilder.amdSevSnp(amdSevSnp)
-      }
-
-      /**
-       * @param coreCount The number of CPU cores for the instance.
-       */
-      override fun coreCount(coreCount: Number) {
-        cdkBuilder.coreCount(coreCount)
-      }
-
-      /**
-       * @param threadsPerCore The number of threads per CPU core.
-       * To disable multithreading for the instance, specify a value of `1` . Otherwise, specify the
-       * default value of `2` .
-       */
-      override fun threadsPerCore(threadsPerCore: Number) {
-        cdkBuilder.threadsPerCore(threadsPerCore)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty,
-    ) : CdkObject(cdkObject), CpuOptionsProperty {
-      /**
-       * Indicates whether to enable the instance for AMD SEV-SNP.
-       *
-       * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
-       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-amdsevsnp)
-       */
-      override fun amdSevSnp(): String? = unwrap(this).getAmdSevSnp()
-
-      /**
-       * The number of CPU cores for the instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-corecount)
-       */
-      override fun coreCount(): Number? = unwrap(this).getCoreCount()
-
-      /**
-       * The number of threads per CPU core.
-       *
-       * To disable multithreading for the instance, specify a value of `1` . Otherwise, specify the
-       * default value of `2` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-threadspercore)
-       */
-      override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CpuOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty):
-          CpuOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CpuOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CpuOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty
-    }
-  }
-
-  /**
-   * Specifies the tags to apply to the launch template during creation.
-   *
-   * `LaunchTemplateTagSpecification` is a property of
-   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * LaunchTemplateTagSpecificationProperty launchTemplateTagSpecificationProperty =
-   * LaunchTemplateTagSpecificationProperty.builder()
-   * .resourceType("resourceType")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html)
-   */
-  public interface LaunchTemplateTagSpecificationProperty {
-    /**
-     * The type of resource.
-     *
-     * To tag the launch template, `ResourceType` must be `launch-template` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-resourcetype)
-     */
-    public fun resourceType(): String? = unwrap(this).getResourceType()
-
-    /**
-     * The tags for the resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * A builder for [LaunchTemplateTagSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceType The type of resource.
-       * To tag the launch template, `ResourceType` must be `launch-template` .
-       */
-      public fun resourceType(resourceType: String)
-
-      /**
-       * @param tags The tags for the resource.
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags The tags for the resource.
-       */
-      public fun tags(vararg tags: CfnTag)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty.builder()
-
-      /**
-       * @param resourceType The type of resource.
-       * To tag the launch template, `ResourceType` must be `launch-template` .
-       */
-      override fun resourceType(resourceType: String) {
-        cdkBuilder.resourceType(resourceType)
-      }
-
-      /**
-       * @param tags The tags for the resource.
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags The tags for the resource.
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateTagSpecificationProperty {
-      /**
-       * The type of resource.
-       *
-       * To tag the launch template, `ResourceType` must be `launch-template` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-resourcetype)
-       */
-      override fun resourceType(): String? = unwrap(this).getResourceType()
-
-      /**
-       * The tags for the resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LaunchTemplateTagSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty):
-          LaunchTemplateTagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LaunchTemplateTagSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchTemplateTagSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
-   * instance.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AcceleratorCountProperty acceleratorCountProperty = AcceleratorCountProperty.builder()
-   * .max(123)
-   * .min(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html)
-   */
-  public interface AcceleratorCountProperty {
-    /**
-     * The maximum number of accelerators.
-     *
-     * To specify no maximum limit, omit this parameter. To exclude accelerator-enabled instance
-     * types, set `Max` to `0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html#cfn-ec2-launchtemplate-acceleratorcount-max)
-     */
-    public fun max(): Number? = unwrap(this).getMax()
-
-    /**
-     * The minimum number of accelerators.
-     *
-     * To specify no minimum limit, omit this parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html#cfn-ec2-launchtemplate-acceleratorcount-min)
-     */
-    public fun min(): Number? = unwrap(this).getMin()
-
-    /**
-     * A builder for [AcceleratorCountProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param max The maximum number of accelerators.
-       * To specify no maximum limit, omit this parameter. To exclude accelerator-enabled instance
-       * types, set `Max` to `0` .
-       */
-      public fun max(max: Number)
-
-      /**
-       * @param min The minimum number of accelerators.
-       * To specify no minimum limit, omit this parameter.
-       */
-      public fun min(min: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty.builder()
-
-      /**
-       * @param max The maximum number of accelerators.
-       * To specify no maximum limit, omit this parameter. To exclude accelerator-enabled instance
-       * types, set `Max` to `0` .
-       */
-      override fun max(max: Number) {
-        cdkBuilder.max(max)
-      }
-
-      /**
-       * @param min The minimum number of accelerators.
-       * To specify no minimum limit, omit this parameter.
-       */
-      override fun min(min: Number) {
-        cdkBuilder.min(min)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty,
-    ) : CdkObject(cdkObject), AcceleratorCountProperty {
-      /**
-       * The maximum number of accelerators.
-       *
-       * To specify no maximum limit, omit this parameter. To exclude accelerator-enabled instance
-       * types, set `Max` to `0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html#cfn-ec2-launchtemplate-acceleratorcount-max)
-       */
-      override fun max(): Number? = unwrap(this).getMax()
-
-      /**
-       * The minimum number of accelerators.
-       *
-       * To specify no minimum limit, omit this parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-acceleratorcount.html#cfn-ec2-launchtemplate-acceleratorcount-min)
-       */
-      override fun min(): Number? = unwrap(this).getMin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AcceleratorCountProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty):
-          AcceleratorCountProperty = CdkObjectWrappers.wrap(cdkObject) as? AcceleratorCountProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AcceleratorCountProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty
-    }
-  }
-
-  /**
-   * Specifies an IPv6 address in an Amazon EC2 launch template.
-   *
-   * `Ipv6Add` is a property of [AWS::EC2::LaunchTemplate
-   * NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * Ipv6AddProperty ipv6AddProperty = Ipv6AddProperty.builder()
-   * .ipv6Address("ipv6Address")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6add.html)
-   */
-  public interface Ipv6AddProperty {
-    /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet.
-     *
-     * You can't use this option if you're specifying a number of IPv6 addresses.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6add.html#cfn-ec2-launchtemplate-ipv6add-ipv6address)
-     */
-    public fun ipv6Address(): String? = unwrap(this).getIpv6Address()
-
-    /**
-     * A builder for [Ipv6AddProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipv6Address One or more specific IPv6 addresses from the IPv6 CIDR block range of
-       * your subnet.
-       * You can't use this option if you're specifying a number of IPv6 addresses.
-       */
-      public fun ipv6Address(ipv6Address: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty.builder()
-
-      /**
-       * @param ipv6Address One or more specific IPv6 addresses from the IPv6 CIDR block range of
-       * your subnet.
-       * You can't use this option if you're specifying a number of IPv6 addresses.
-       */
-      override fun ipv6Address(ipv6Address: String) {
-        cdkBuilder.ipv6Address(ipv6Address)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty,
-    ) : CdkObject(cdkObject), Ipv6AddProperty {
-      /**
-       * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet.
-       *
-       * You can't use this option if you're specifying a number of IPv6 addresses.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv6add.html#cfn-ec2-launchtemplate-ipv6add-ipv6address)
-       */
-      override fun ipv6Address(): String? = unwrap(this).getIpv6Address()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): Ipv6AddProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty):
-          Ipv6AddProperty = CdkObjectWrappers.wrap(cdkObject) as? Ipv6AddProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: Ipv6AddProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty
-    }
-  }
-
-  /**
-   * Specifies a license configuration for an instance.
-   *
-   * `LicenseSpecification` is a property of [AWS::EC2::LaunchTemplate
-   * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * LicenseSpecificationProperty licenseSpecificationProperty =
-   * LicenseSpecificationProperty.builder()
-   * .licenseConfigurationArn("licenseConfigurationArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-licensespecification.html)
-   */
-  public interface LicenseSpecificationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the license configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-licensespecification.html#cfn-ec2-launchtemplate-licensespecification-licenseconfigurationarn)
-     */
-    public fun licenseConfigurationArn(): String? = unwrap(this).getLicenseConfigurationArn()
-
-    /**
-     * A builder for [LicenseSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param licenseConfigurationArn The Amazon Resource Name (ARN) of the license configuration.
-       */
-      public fun licenseConfigurationArn(licenseConfigurationArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty.builder()
-
-      /**
-       * @param licenseConfigurationArn The Amazon Resource Name (ARN) of the license configuration.
-       */
-      override fun licenseConfigurationArn(licenseConfigurationArn: String) {
-        cdkBuilder.licenseConfigurationArn(licenseConfigurationArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty,
-    ) : CdkObject(cdkObject), LicenseSpecificationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the license configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-licensespecification.html#cfn-ec2-launchtemplate-licensespecification-licenseconfigurationarn)
-       */
-      override fun licenseConfigurationArn(): String? = unwrap(this).getLicenseConfigurationArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LicenseSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty):
-          LicenseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LicenseSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LicenseSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty
-    }
-  }
-
-  /**
    * Specifies the placement of an instance.
    *
    * `Placement` is a property of [AWS::EC2::LaunchTemplate
@@ -11869,12 +11079,626 @@ public open class CfnLaunchTemplate internal constructor(
   }
 
   /**
-   * Specifies a block device mapping for a launch template.
+   * The hostname type for EC2 instances launched into this subnet and how DNS A and AAAA record
+   * queries should be handled.
    *
-   * You must specify `DeviceName` plus exactly one of the following properties: `Ebs` , `NoDevice`
-   * , or `VirtualName` .
+   * For more information, see [Amazon EC2 instance hostname
+   * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+   * *Amazon Elastic Compute Cloud User Guide* .
    *
-   * `BlockDeviceMapping` is a property of [AWS::EC2::LaunchTemplate
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PrivateDnsNameOptionsProperty privateDnsNameOptionsProperty =
+   * PrivateDnsNameOptionsProperty.builder()
+   * .enableResourceNameDnsAaaaRecord(false)
+   * .enableResourceNameDnsARecord(false)
+   * .hostnameType("hostnameType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html)
+   */
+  public interface PrivateDnsNameOptionsProperty {
+    /**
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-enableresourcenamednsarecord)
+     */
+    public fun enableResourceNameDnsARecord(): Any? = unwrap(this).getEnableResourceNameDnsARecord()
+
+    /**
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-enableresourcenamednsaaaarecord)
+     */
+    public fun enableResourceNameDnsAaaaRecord(): Any? =
+        unwrap(this).getEnableResourceNameDnsAaaaRecord()
+
+    /**
+     * The type of hostname for EC2 instances.
+     *
+     * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+     * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
+     * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID. For
+     * more information, see [Amazon EC2 instance hostname
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+     * *Amazon Elastic Compute Cloud User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-hostnametype)
+     */
+    public fun hostnameType(): String? = unwrap(this).getHostnameType()
+
+    /**
+     * A builder for [PrivateDnsNameOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS A records.
+       */
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean)
+
+      /**
+       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS A records.
+       */
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable)
+
+      /**
+       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS AAAA records.
+       */
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean)
+
+      /**
+       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS AAAA records.
+       */
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable)
+
+      /**
+       * @param hostnameType The type of hostname for EC2 instances.
+       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
+       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       */
+      public fun hostnameType(hostnameType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty.builder()
+
+      /**
+       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS A records.
+       */
+      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord)
+      }
+
+      /**
+       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS A records.
+       */
+      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS AAAA records.
+       */
+      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord)
+      }
+
+      /**
+       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS AAAA records.
+       */
+      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param hostnameType The type of hostname for EC2 instances.
+       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
+       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       */
+      override fun hostnameType(hostnameType: String) {
+        cdkBuilder.hostnameType(hostnameType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty,
+    ) : CdkObject(cdkObject), PrivateDnsNameOptionsProperty {
+      /**
+       * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-enableresourcenamednsarecord)
+       */
+      override fun enableResourceNameDnsARecord(): Any? =
+          unwrap(this).getEnableResourceNameDnsARecord()
+
+      /**
+       * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-enableresourcenamednsaaaarecord)
+       */
+      override fun enableResourceNameDnsAaaaRecord(): Any? =
+          unwrap(this).getEnableResourceNameDnsAaaaRecord()
+
+      /**
+       * The type of hostname for EC2 instances.
+       *
+       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
+       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html#cfn-ec2-launchtemplate-privatednsnameoptions-hostnametype)
+       */
+      override fun hostnameType(): String? = unwrap(this).getHostnameType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateDnsNameOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty):
+          PrivateDnsNameOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateDnsNameOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateDnsNameOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies a secondary private IPv4 address for a network interface.
+   *
+   * `PrivateIpAdd` is a property of [AWS::EC2::LaunchTemplate
+   * NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PrivateIpAddProperty privateIpAddProperty = PrivateIpAddProperty.builder()
+   * .primary(false)
+   * .privateIpAddress("privateIpAddress")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html)
+   */
+  public interface PrivateIpAddProperty {
+    /**
+     * Indicates whether the private IPv4 address is the primary private IPv4 address.
+     *
+     * Only one IPv4 address can be designated as primary.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-primary)
+     */
+    public fun primary(): Any? = unwrap(this).getPrimary()
+
+    /**
+     * The private IPv4 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-privateipaddress)
+     */
+    public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+
+    /**
+     * A builder for [PrivateIpAddProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address.
+       * Only one IPv4 address can be designated as primary.
+       */
+      public fun primary(primary: Boolean)
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address.
+       * Only one IPv4 address can be designated as primary.
+       */
+      public fun primary(primary: IResolvable)
+
+      /**
+       * @param privateIpAddress The private IPv4 address.
+       */
+      public fun privateIpAddress(privateIpAddress: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty.builder()
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address.
+       * Only one IPv4 address can be designated as primary.
+       */
+      override fun primary(primary: Boolean) {
+        cdkBuilder.primary(primary)
+      }
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address.
+       * Only one IPv4 address can be designated as primary.
+       */
+      override fun primary(primary: IResolvable) {
+        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param privateIpAddress The private IPv4 address.
+       */
+      override fun privateIpAddress(privateIpAddress: String) {
+        cdkBuilder.privateIpAddress(privateIpAddress)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty,
+    ) : CdkObject(cdkObject), PrivateIpAddProperty {
+      /**
+       * Indicates whether the private IPv4 address is the primary private IPv4 address.
+       *
+       * Only one IPv4 address can be designated as primary.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-primary)
+       */
+      override fun primary(): Any? = unwrap(this).getPrimary()
+
+      /**
+       * The private IPv4 address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-privateipaddress)
+       */
+      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateIpAddProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty):
+          PrivateIpAddProperty = CdkObjectWrappers.wrap(cdkObject) as? PrivateIpAddProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateIpAddProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty
+    }
+  }
+
+  /**
+   * Specifies options for Spot Instances.
+   *
+   * `SpotOptions` is a property of [AWS::EC2::LaunchTemplate
+   * InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * SpotOptionsProperty spotOptionsProperty = SpotOptionsProperty.builder()
+   * .blockDurationMinutes(123)
+   * .instanceInterruptionBehavior("instanceInterruptionBehavior")
+   * .maxPrice("maxPrice")
+   * .spotInstanceType("spotInstanceType")
+   * .validUntil("validUntil")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html)
+   */
+  public interface SpotOptionsProperty {
+    /**
+     * Deprecated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-blockdurationminutes)
+     */
+    public fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+
+    /**
+     * The behavior when a Spot Instance is interrupted.
+     *
+     * The default is `terminate` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-instanceinterruptionbehavior)
+     */
+    public fun instanceInterruptionBehavior(): String? =
+        unwrap(this).getInstanceInterruptionBehavior()
+
+    /**
+     * The maximum hourly price you're willing to pay for the Spot Instances.
+     *
+     * We do not recommend using this parameter because it can lead to increased interruptions. If
+     * you do not specify this parameter, you will pay the current Spot price.
+     *
+     *
+     * If you specify a maximum price, your Spot Instances will be interrupted more frequently than
+     * if you do not specify this parameter.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-maxprice)
+     */
+    public fun maxPrice(): String? = unwrap(this).getMaxPrice()
+
+    /**
+     * The Spot Instance request type.
+     *
+     * If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the
+     * Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is
+     * below its desired capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-spotinstancetype)
+     */
+    public fun spotInstanceType(): String? = unwrap(this).getSpotInstanceType()
+
+    /**
+     * The end date of the request, in UTC format ( *YYYY-MM-DD* T *HH:MM:SS* Z). Supported only for
+     * persistent requests.
+     *
+     * * For a persistent request, the request remains active until the `ValidUntil` date and time
+     * is reached. Otherwise, the request remains active until you cancel it.
+     * * For a one-time request, `ValidUntil` is not supported. The request remains active until all
+     * instances launch or you cancel the request.
+     *
+     * Default: 7 days from the current date
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-validuntil)
+     */
+    public fun validUntil(): String? = unwrap(this).getValidUntil()
+
+    /**
+     * A builder for [SpotOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param blockDurationMinutes Deprecated.
+       */
+      public fun blockDurationMinutes(blockDurationMinutes: Number)
+
+      /**
+       * @param instanceInterruptionBehavior The behavior when a Spot Instance is interrupted.
+       * The default is `terminate` .
+       */
+      public fun instanceInterruptionBehavior(instanceInterruptionBehavior: String)
+
+      /**
+       * @param maxPrice The maximum hourly price you're willing to pay for the Spot Instances.
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
+       *
+       *
+       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
+       * than if you do not specify this parameter.
+       */
+      public fun maxPrice(maxPrice: String)
+
+      /**
+       * @param spotInstanceType The Spot Instance request type.
+       * If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the
+       * Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is
+       * below its desired capacity.
+       */
+      public fun spotInstanceType(spotInstanceType: String)
+
+      /**
+       * @param validUntil The end date of the request, in UTC format ( *YYYY-MM-DD* T *HH:MM:SS*
+       * Z). Supported only for persistent requests.
+       * * For a persistent request, the request remains active until the `ValidUntil` date and time
+       * is reached. Otherwise, the request remains active until you cancel it.
+       * * For a one-time request, `ValidUntil` is not supported. The request remains active until
+       * all instances launch or you cancel the request.
+       *
+       * Default: 7 days from the current date
+       */
+      public fun validUntil(validUntil: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty.builder()
+
+      /**
+       * @param blockDurationMinutes Deprecated.
+       */
+      override fun blockDurationMinutes(blockDurationMinutes: Number) {
+        cdkBuilder.blockDurationMinutes(blockDurationMinutes)
+      }
+
+      /**
+       * @param instanceInterruptionBehavior The behavior when a Spot Instance is interrupted.
+       * The default is `terminate` .
+       */
+      override fun instanceInterruptionBehavior(instanceInterruptionBehavior: String) {
+        cdkBuilder.instanceInterruptionBehavior(instanceInterruptionBehavior)
+      }
+
+      /**
+       * @param maxPrice The maximum hourly price you're willing to pay for the Spot Instances.
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
+       *
+       *
+       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
+       * than if you do not specify this parameter.
+       */
+      override fun maxPrice(maxPrice: String) {
+        cdkBuilder.maxPrice(maxPrice)
+      }
+
+      /**
+       * @param spotInstanceType The Spot Instance request type.
+       * If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the
+       * Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is
+       * below its desired capacity.
+       */
+      override fun spotInstanceType(spotInstanceType: String) {
+        cdkBuilder.spotInstanceType(spotInstanceType)
+      }
+
+      /**
+       * @param validUntil The end date of the request, in UTC format ( *YYYY-MM-DD* T *HH:MM:SS*
+       * Z). Supported only for persistent requests.
+       * * For a persistent request, the request remains active until the `ValidUntil` date and time
+       * is reached. Otherwise, the request remains active until you cancel it.
+       * * For a one-time request, `ValidUntil` is not supported. The request remains active until
+       * all instances launch or you cancel the request.
+       *
+       * Default: 7 days from the current date
+       */
+      override fun validUntil(validUntil: String) {
+        cdkBuilder.validUntil(validUntil)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty,
+    ) : CdkObject(cdkObject), SpotOptionsProperty {
+      /**
+       * Deprecated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-blockdurationminutes)
+       */
+      override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+
+      /**
+       * The behavior when a Spot Instance is interrupted.
+       *
+       * The default is `terminate` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-instanceinterruptionbehavior)
+       */
+      override fun instanceInterruptionBehavior(): String? =
+          unwrap(this).getInstanceInterruptionBehavior()
+
+      /**
+       * The maximum hourly price you're willing to pay for the Spot Instances.
+       *
+       * We do not recommend using this parameter because it can lead to increased interruptions. If
+       * you do not specify this parameter, you will pay the current Spot price.
+       *
+       *
+       * If you specify a maximum price, your Spot Instances will be interrupted more frequently
+       * than if you do not specify this parameter.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-maxprice)
+       */
+      override fun maxPrice(): String? = unwrap(this).getMaxPrice()
+
+      /**
+       * The Spot Instance request type.
+       *
+       * If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the
+       * Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is
+       * below its desired capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-spotinstancetype)
+       */
+      override fun spotInstanceType(): String? = unwrap(this).getSpotInstanceType()
+
+      /**
+       * The end date of the request, in UTC format ( *YYYY-MM-DD* T *HH:MM:SS* Z). Supported only
+       * for persistent requests.
+       *
+       * * For a persistent request, the request remains active until the `ValidUntil` date and time
+       * is reached. Otherwise, the request remains active until you cancel it.
+       * * For a one-time request, `ValidUntil` is not supported. The request remains active until
+       * all instances launch or you cancel the request.
+       *
+       * Default: 7 days from the current date
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html#cfn-ec2-launchtemplate-spotoptions-validuntil)
+       */
+      override fun validUntil(): String? = unwrap(this).getValidUntil()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpotOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty):
+          SpotOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SpotOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpotOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies the tags to apply to a resource when the resource is created for the launch template.
+   *
+   * `TagSpecification` is a property type of
+   * [`TagSpecifications`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
+   * .
+   * [`TagSpecifications`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
+   * is a property of [AWS::EC2::LaunchTemplate
    * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
    * .
    *
@@ -11884,216 +11708,392 @@ public open class CfnLaunchTemplate internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
-   * .deviceName("deviceName")
-   * .ebs(EbsProperty.builder()
-   * .deleteOnTermination(false)
-   * .encrypted(false)
-   * .iops(123)
-   * .kmsKeyId("kmsKeyId")
-   * .snapshotId("snapshotId")
-   * .throughput(123)
-   * .volumeSize(123)
-   * .volumeType("volumeType")
-   * .build())
-   * .noDevice("noDevice")
-   * .virtualName("virtualName")
+   * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
+   * .resourceType("resourceType")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html)
    */
-  public interface BlockDeviceMappingProperty {
+  public interface TagSpecificationProperty {
     /**
-     * The device name (for example, /dev/sdh or xvdh).
+     * The type of resource to tag.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-devicename)
+     * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
+     * launch template, you can specify tags for the following resource types only: `instance` |
+     * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include the
+     * resource type that you specify, the instance launch fails. For example, not all instance types
+     * include a volume.
+     *
+     * To tag a resource after it has been created, see
+     * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html#cfn-ec2-launchtemplate-tagspecification-resourcetype)
      */
-    public fun deviceName(): String? = unwrap(this).getDeviceName()
+    public fun resourceType(): String? = unwrap(this).getResourceType()
 
     /**
-     * Parameters used to automatically set up EBS volumes when the instance is launched.
+     * The tags to apply to the resource.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-ebs)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html#cfn-ec2-launchtemplate-tagspecification-tags)
      */
-    public fun ebs(): Any? = unwrap(this).getEbs()
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * To omit the device from the block device mapping, specify an empty string.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-nodevice)
-     */
-    public fun noDevice(): String? = unwrap(this).getNoDevice()
-
-    /**
-     * The virtual device name (ephemeralN).
-     *
-     * Instance store volumes are numbered starting from 0. An instance type with 2 available
-     * instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of
-     * available instance store volumes depends on the instance type. After you connect to the
-     * instance, you must mount the volume.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-virtualname)
-     */
-    public fun virtualName(): String? = unwrap(this).getVirtualName()
-
-    /**
-     * A builder for [BlockDeviceMappingProperty]
+     * A builder for [TagSpecificationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param deviceName The device name (for example, /dev/sdh or xvdh).
+       * @param resourceType The type of resource to tag.
+       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
+       * launch template, you can specify tags for the following resource types only: `instance` |
+       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
+       * the resource type that you specify, the instance launch fails. For example, not all instance
+       * types include a volume.
+       *
+       * To tag a resource after it has been created, see
+       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
        */
-      public fun deviceName(deviceName: String)
+      public fun resourceType(resourceType: String)
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
+       * @param tags The tags to apply to the resource.
        */
-      public fun ebs(ebs: IResolvable)
+      public fun tags(tags: List<CfnTag>)
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
+       * @param tags The tags to apply to the resource.
        */
-      public fun ebs(ebs: EbsProperty)
-
-      /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("13d6ae31b3c9294cb1f107c22c338c808581bedefec428957e26694bbbfd5a89")
-      public fun ebs(ebs: EbsProperty.Builder.() -> Unit)
-
-      /**
-       * @param noDevice To omit the device from the block device mapping, specify an empty string.
-       */
-      public fun noDevice(noDevice: String)
-
-      /**
-       * @param virtualName The virtual device name (ephemeralN).
-       * Instance store volumes are numbered starting from 0. An instance type with 2 available
-       * instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of
-       * available instance store volumes depends on the instance type. After you connect to the
-       * instance, you must mount the volume.
-       */
-      public fun virtualName(virtualName: String)
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty.builder()
 
       /**
-       * @param deviceName The device name (for example, /dev/sdh or xvdh).
+       * @param resourceType The type of resource to tag.
+       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
+       * launch template, you can specify tags for the following resource types only: `instance` |
+       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
+       * the resource type that you specify, the instance launch fails. For example, not all instance
+       * types include a volume.
+       *
+       * To tag a resource after it has been created, see
+       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
        */
-      override fun deviceName(deviceName: String) {
-        cdkBuilder.deviceName(deviceName)
+      override fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
       }
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
+       * @param tags The tags to apply to the resource.
        */
-      override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
+       * @param tags The tags to apply to the resource.
        */
-      override fun ebs(ebs: EbsProperty) {
-        cdkBuilder.ebs(ebs.let(EbsProperty::unwrap))
-      }
-
-      /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("13d6ae31b3c9294cb1f107c22c338c808581bedefec428957e26694bbbfd5a89")
-      override fun ebs(ebs: EbsProperty.Builder.() -> Unit): Unit = ebs(EbsProperty(ebs))
-
-      /**
-       * @param noDevice To omit the device from the block device mapping, specify an empty string.
-       */
-      override fun noDevice(noDevice: String) {
-        cdkBuilder.noDevice(noDevice)
-      }
-
-      /**
-       * @param virtualName The virtual device name (ephemeralN).
-       * Instance store volumes are numbered starting from 0. An instance type with 2 available
-       * instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of
-       * available instance store volumes depends on the instance type. After you connect to the
-       * instance, you must mount the volume.
-       */
-      override fun virtualName(virtualName: String) {
-        cdkBuilder.virtualName(virtualName)
-      }
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty,
+    ) : CdkObject(cdkObject), TagSpecificationProperty {
       /**
-       * The device name (for example, /dev/sdh or xvdh).
+       * The type of resource to tag.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-devicename)
+       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
+       * launch template, you can specify tags for the following resource types only: `instance` |
+       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
+       * the resource type that you specify, the instance launch fails. For example, not all instance
+       * types include a volume.
+       *
+       * To tag a resource after it has been created, see
+       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html#cfn-ec2-launchtemplate-tagspecification-resourcetype)
        */
-      override fun deviceName(): String? = unwrap(this).getDeviceName()
+      override fun resourceType(): String? = unwrap(this).getResourceType()
 
       /**
-       * Parameters used to automatically set up EBS volumes when the instance is launched.
+       * The tags to apply to the resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-ebs)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html#cfn-ec2-launchtemplate-tagspecification-tags)
        */
-      override fun ebs(): Any? = unwrap(this).getEbs()
-
-      /**
-       * To omit the device from the block device mapping, specify an empty string.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-nodevice)
-       */
-      override fun noDevice(): String? = unwrap(this).getNoDevice()
-
-      /**
-       * The virtual device name (ephemeralN).
-       *
-       * Instance store volumes are numbered starting from 0. An instance type with 2 available
-       * instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of
-       * available instance store volumes depends on the instance type. After you connect to the
-       * instance, you must mount the volume.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-virtualname)
-       */
-      override fun virtualName(): String? = unwrap(this).getVirtualName()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagSpecificationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty):
+          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty =
+      internal fun unwrap(wrapped: TagSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum amount of total local storage, in GB.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * TotalLocalStorageGBProperty totalLocalStorageGBProperty = TotalLocalStorageGBProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html)
+   */
+  public interface TotalLocalStorageGBProperty {
+    /**
+     * The maximum amount of total local storage, in GB.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html#cfn-ec2-launchtemplate-totallocalstoragegb-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum amount of total local storage, in GB.
+     *
+     * To specify no minimum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html#cfn-ec2-launchtemplate-totallocalstoragegb-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [TotalLocalStorageGBProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum amount of total local storage, in GB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum amount of total local storage, in GB.
+       * To specify no minimum limit, omit this parameter.
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty.builder()
+
+      /**
+       * @param max The maximum amount of total local storage, in GB.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum amount of total local storage, in GB.
+       * To specify no minimum limit, omit this parameter.
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty,
+    ) : CdkObject(cdkObject), TotalLocalStorageGBProperty {
+      /**
+       * The maximum amount of total local storage, in GB.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html#cfn-ec2-launchtemplate-totallocalstoragegb-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum amount of total local storage, in GB.
+       *
+       * To specify no minimum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-totallocalstoragegb.html#cfn-ec2-launchtemplate-totallocalstoragegb-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TotalLocalStorageGBProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty):
+          TotalLocalStorageGBProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TotalLocalStorageGBProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TotalLocalStorageGBProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty
+    }
+  }
+
+  /**
+   * The minimum and maximum number of vCPUs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * VCpuCountProperty vCpuCountProperty = VCpuCountProperty.builder()
+   * .max(123)
+   * .min(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html)
+   */
+  public interface VCpuCountProperty {
+    /**
+     * The maximum number of vCPUs.
+     *
+     * To specify no maximum limit, omit this parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html#cfn-ec2-launchtemplate-vcpucount-max)
+     */
+    public fun max(): Number? = unwrap(this).getMax()
+
+    /**
+     * The minimum number of vCPUs.
+     *
+     * To specify no minimum limit, specify `0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html#cfn-ec2-launchtemplate-vcpucount-min)
+     */
+    public fun min(): Number? = unwrap(this).getMin()
+
+    /**
+     * A builder for [VCpuCountProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param max The maximum number of vCPUs.
+       * To specify no maximum limit, omit this parameter.
+       */
+      public fun max(max: Number)
+
+      /**
+       * @param min The minimum number of vCPUs.
+       * To specify no minimum limit, specify `0` .
+       */
+      public fun min(min: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty.builder()
+
+      /**
+       * @param max The maximum number of vCPUs.
+       * To specify no maximum limit, omit this parameter.
+       */
+      override fun max(max: Number) {
+        cdkBuilder.max(max)
+      }
+
+      /**
+       * @param min The minimum number of vCPUs.
+       * To specify no minimum limit, specify `0` .
+       */
+      override fun min(min: Number) {
+        cdkBuilder.min(min)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty,
+    ) : CdkObject(cdkObject), VCpuCountProperty {
+      /**
+       * The maximum number of vCPUs.
+       *
+       * To specify no maximum limit, omit this parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html#cfn-ec2-launchtemplate-vcpucount-max)
+       */
+      override fun max(): Number? = unwrap(this).getMax()
+
+      /**
+       * The minimum number of vCPUs.
+       *
+       * To specify no minimum limit, specify `0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-vcpucount.html#cfn-ec2-launchtemplate-vcpucount-min)
+       */
+      override fun min(): Number? = unwrap(this).getMin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VCpuCountProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty):
+          VCpuCountProperty = CdkObjectWrappers.wrap(cdkObject) as? VCpuCountProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VCpuCountProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty
     }
   }
 }

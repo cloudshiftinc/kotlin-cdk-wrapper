@@ -6246,6 +6246,123 @@ public open class CfnDBInstance internal constructor(
   }
 
   /**
+   * Returns the details of the DB instance’s server certificate.
+   *
+   * For more information, see [Using SSL/TLS to encrypt a connection to a DB
+   * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) in the
+   * *Amazon RDS User Guide* and [Using SSL/TLS to encrypt a connection to a DB
+   * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL.html) in
+   * the *Amazon Aurora User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rds.*;
+   * CertificateDetailsProperty certificateDetailsProperty = CertificateDetailsProperty.builder()
+   * .caIdentifier("caIdentifier")
+   * .validTill("validTill")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html)
+   */
+  public interface CertificateDetailsProperty {
+    /**
+     * The CA identifier of the CA certificate used for the DB instance's server certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-caidentifier)
+     */
+    public fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
+
+    /**
+     * The expiration date of the DB instance’s server certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-validtill)
+     */
+    public fun validTill(): String? = unwrap(this).getValidTill()
+
+    /**
+     * A builder for [CertificateDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's
+       * server certificate.
+       */
+      public fun caIdentifier(caIdentifier: String)
+
+      /**
+       * @param validTill The expiration date of the DB instance’s server certificate.
+       */
+      public fun validTill(validTill: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.Builder =
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.builder()
+
+      /**
+       * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's
+       * server certificate.
+       */
+      override fun caIdentifier(caIdentifier: String) {
+        cdkBuilder.caIdentifier(caIdentifier)
+      }
+
+      /**
+       * @param validTill The expiration date of the DB instance’s server certificate.
+       */
+      override fun validTill(validTill: String) {
+        cdkBuilder.validTill(validTill)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty,
+    ) : CdkObject(cdkObject), CertificateDetailsProperty {
+      /**
+       * The CA identifier of the CA certificate used for the DB instance's server certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-caidentifier)
+       */
+      override fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
+
+      /**
+       * The expiration date of the DB instance’s server certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-validtill)
+       */
+      override fun validTill(): String? = unwrap(this).getValidTill()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty):
+          CertificateDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CertificateDetailsProperty):
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty
+    }
+  }
+
+  /**
    * Information about an AWS Identity and Access Management (IAM) role that is associated with a DB
    * instance.
    *
@@ -6525,13 +6642,14 @@ public open class CfnDBInstance internal constructor(
   }
 
   /**
-   * Returns the details of the DB instance’s server certificate.
+   * The `MasterUserSecret` return value specifies the secret managed by RDS in AWS Secrets Manager
+   * for the master user password.
    *
-   * For more information, see [Using SSL/TLS to encrypt a connection to a DB
-   * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) in the
-   * *Amazon RDS User Guide* and [Using SSL/TLS to encrypt a connection to a DB
-   * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL.html) in
-   * the *Amazon Aurora User Guide* .
+   * For more information, see [Password management with AWS Secrets
+   * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
+   * *Amazon RDS User Guide* and [Password management with AWS Secrets
+   * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-secrets-manager.html) in
+   * the *Amazon Aurora User Guide.*
    *
    * Example:
    *
@@ -6539,105 +6657,102 @@ public open class CfnDBInstance internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.rds.*;
-   * CertificateDetailsProperty certificateDetailsProperty = CertificateDetailsProperty.builder()
-   * .caIdentifier("caIdentifier")
-   * .validTill("validTill")
+   * MasterUserSecretProperty masterUserSecretProperty = MasterUserSecretProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .secretArn("secretArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html)
    */
-  public interface CertificateDetailsProperty {
+  public interface MasterUserSecretProperty {
     /**
-     * The CA identifier of the CA certificate used for the DB instance's server certificate.
+     * The AWS KMS key identifier that is used to encrypt the secret.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-caidentifier)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html#cfn-rds-dbinstance-masterusersecret-kmskeyid)
      */
-    public fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     /**
-     * The expiration date of the DB instance’s server certificate.
+     * The Amazon Resource Name (ARN) of the secret.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-validtill)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html#cfn-rds-dbinstance-masterusersecret-secretarn)
      */
-    public fun validTill(): String? = unwrap(this).getValidTill()
+    public fun secretArn(): String? = unwrap(this).getSecretArn()
 
     /**
-     * A builder for [CertificateDetailsProperty]
+     * A builder for [MasterUserSecretProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's
-       * server certificate.
+       * @param kmsKeyId The AWS KMS key identifier that is used to encrypt the secret.
        */
-      public fun caIdentifier(caIdentifier: String)
+      public fun kmsKeyId(kmsKeyId: String)
 
       /**
-       * @param validTill The expiration date of the DB instance’s server certificate.
+       * @param secretArn The Amazon Resource Name (ARN) of the secret.
        */
-      public fun validTill(validTill: String)
+      public fun secretArn(secretArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.Builder =
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.builder()
+          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty.Builder =
+          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty.builder()
 
       /**
-       * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's
-       * server certificate.
+       * @param kmsKeyId The AWS KMS key identifier that is used to encrypt the secret.
        */
-      override fun caIdentifier(caIdentifier: String) {
-        cdkBuilder.caIdentifier(caIdentifier)
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
       /**
-       * @param validTill The expiration date of the DB instance’s server certificate.
+       * @param secretArn The Amazon Resource Name (ARN) of the secret.
        */
-      override fun validTill(validTill: String) {
-        cdkBuilder.validTill(validTill)
+      override fun secretArn(secretArn: String) {
+        cdkBuilder.secretArn(secretArn)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty =
-          cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty,
-    ) : CdkObject(cdkObject), CertificateDetailsProperty {
+          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty,
+    ) : CdkObject(cdkObject), MasterUserSecretProperty {
       /**
-       * The CA identifier of the CA certificate used for the DB instance's server certificate.
+       * The AWS KMS key identifier that is used to encrypt the secret.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-caidentifier)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html#cfn-rds-dbinstance-masterusersecret-kmskeyid)
        */
-      override fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
       /**
-       * The expiration date of the DB instance’s server certificate.
+       * The Amazon Resource Name (ARN) of the secret.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-validtill)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html#cfn-rds-dbinstance-masterusersecret-secretarn)
        */
-      override fun validTill(): String? = unwrap(this).getValidTill()
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateDetailsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MasterUserSecretProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty):
-          CertificateDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CertificateDetailsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty):
+          MasterUserSecretProperty = CdkObjectWrappers.wrap(cdkObject) as? MasterUserSecretProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CertificateDetailsProperty):
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty = (wrapped as
+      internal fun unwrap(wrapped: MasterUserSecretProperty):
+          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty
+          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty
     }
   }
 
@@ -6753,121 +6868,6 @@ public open class CfnDBInstance internal constructor(
           software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty
-    }
-  }
-
-  /**
-   * The `MasterUserSecret` return value specifies the secret managed by RDS in AWS Secrets Manager
-   * for the master user password.
-   *
-   * For more information, see [Password management with AWS Secrets
-   * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
-   * *Amazon RDS User Guide* and [Password management with AWS Secrets
-   * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-secrets-manager.html) in
-   * the *Amazon Aurora User Guide.*
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rds.*;
-   * MasterUserSecretProperty masterUserSecretProperty = MasterUserSecretProperty.builder()
-   * .kmsKeyId("kmsKeyId")
-   * .secretArn("secretArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html)
-   */
-  public interface MasterUserSecretProperty {
-    /**
-     * The AWS KMS key identifier that is used to encrypt the secret.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html#cfn-rds-dbinstance-masterusersecret-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * The Amazon Resource Name (ARN) of the secret.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html#cfn-rds-dbinstance-masterusersecret-secretarn)
-     */
-    public fun secretArn(): String? = unwrap(this).getSecretArn()
-
-    /**
-     * A builder for [MasterUserSecretProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The AWS KMS key identifier that is used to encrypt the secret.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param secretArn The Amazon Resource Name (ARN) of the secret.
-       */
-      public fun secretArn(secretArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty.Builder =
-          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty.builder()
-
-      /**
-       * @param kmsKeyId The AWS KMS key identifier that is used to encrypt the secret.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param secretArn The Amazon Resource Name (ARN) of the secret.
-       */
-      override fun secretArn(secretArn: String) {
-        cdkBuilder.secretArn(secretArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty,
-    ) : CdkObject(cdkObject), MasterUserSecretProperty {
-      /**
-       * The AWS KMS key identifier that is used to encrypt the secret.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html#cfn-rds-dbinstance-masterusersecret-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * The Amazon Resource Name (ARN) of the secret.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-masterusersecret.html#cfn-rds-dbinstance-masterusersecret-secretarn)
-       */
-      override fun secretArn(): String? = unwrap(this).getSecretArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MasterUserSecretProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty):
-          MasterUserSecretProperty = CdkObjectWrappers.wrap(cdkObject) as? MasterUserSecretProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MasterUserSecretProperty):
-          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty
     }
   }
 }

@@ -1202,8 +1202,10 @@ public open class CfnExperiment internal constructor(
   }
 
   /**
-   * This structure defines how much experiment traffic to allocate to one treatment used in the
-   * experiment.
+   * A structure that contains the configuration of which variation to use as the "control" version.
+   *
+   * The "control" version is used for comparison with other variations. This structure also
+   * specifies how much experiment traffic is allocated to each variation.
    *
    * Example:
    *
@@ -1211,114 +1213,161 @@ public open class CfnExperiment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.evidently.*;
-   * TreatmentToWeightProperty treatmentToWeightProperty = TreatmentToWeightProperty.builder()
+   * OnlineAbConfigObjectProperty onlineAbConfigObjectProperty =
+   * OnlineAbConfigObjectProperty.builder()
+   * .controlTreatmentName("controlTreatmentName")
+   * .treatmentWeights(List.of(TreatmentToWeightProperty.builder()
    * .splitWeight(123)
    * .treatment("treatment")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html)
    */
-  public interface TreatmentToWeightProperty {
+  public interface OnlineAbConfigObjectProperty {
     /**
-     * The portion of experiment traffic to allocate to this treatment.
+     * The name of the variation that is to be the default variation that the other variations are
+     * compared to.
      *
-     * Specify the traffic portion in thousandths of a percent, so 20,000 allocated to a treatment
-     * would allocate 20% of the experiment traffic to that treatment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html#cfn-evidently-experiment-treatmenttoweight-splitweight)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html#cfn-evidently-experiment-onlineabconfigobject-controltreatmentname)
      */
-    public fun splitWeight(): Number
+    public fun controlTreatmentName(): String? = unwrap(this).getControlTreatmentName()
 
     /**
-     * The name of the treatment.
+     * A set of key-value pairs.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html#cfn-evidently-experiment-treatmenttoweight-treatment)
+     * The keys are treatment names, and the values are the portion of experiment traffic to be
+     * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
+     * for a variation would allocate 20% of the experiment traffic to that variation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html#cfn-evidently-experiment-onlineabconfigobject-treatmentweights)
      */
-    public fun treatment(): String
+    public fun treatmentWeights(): Any? = unwrap(this).getTreatmentWeights()
 
     /**
-     * A builder for [TreatmentToWeightProperty]
+     * A builder for [OnlineAbConfigObjectProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param splitWeight The portion of experiment traffic to allocate to this treatment. 
-       * Specify the traffic portion in thousandths of a percent, so 20,000 allocated to a treatment
-       * would allocate 20% of the experiment traffic to that treatment.
+       * @param controlTreatmentName The name of the variation that is to be the default variation
+       * that the other variations are compared to.
        */
-      public fun splitWeight(splitWeight: Number)
+      public fun controlTreatmentName(controlTreatmentName: String)
 
       /**
-       * @param treatment The name of the treatment. 
+       * @param treatmentWeights A set of key-value pairs.
+       * The keys are treatment names, and the values are the portion of experiment traffic to be
+       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
+       * for a variation would allocate 20% of the experiment traffic to that variation.
        */
-      public fun treatment(treatment: String)
+      public fun treatmentWeights(treatmentWeights: IResolvable)
+
+      /**
+       * @param treatmentWeights A set of key-value pairs.
+       * The keys are treatment names, and the values are the portion of experiment traffic to be
+       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
+       * for a variation would allocate 20% of the experiment traffic to that variation.
+       */
+      public fun treatmentWeights(treatmentWeights: List<Any>)
+
+      /**
+       * @param treatmentWeights A set of key-value pairs.
+       * The keys are treatment names, and the values are the portion of experiment traffic to be
+       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
+       * for a variation would allocate 20% of the experiment traffic to that variation.
+       */
+      public fun treatmentWeights(vararg treatmentWeights: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty.Builder
+          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty.Builder
           =
-          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty.builder()
+          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty.builder()
 
       /**
-       * @param splitWeight The portion of experiment traffic to allocate to this treatment. 
-       * Specify the traffic portion in thousandths of a percent, so 20,000 allocated to a treatment
-       * would allocate 20% of the experiment traffic to that treatment.
+       * @param controlTreatmentName The name of the variation that is to be the default variation
+       * that the other variations are compared to.
        */
-      override fun splitWeight(splitWeight: Number) {
-        cdkBuilder.splitWeight(splitWeight)
+      override fun controlTreatmentName(controlTreatmentName: String) {
+        cdkBuilder.controlTreatmentName(controlTreatmentName)
       }
 
       /**
-       * @param treatment The name of the treatment. 
+       * @param treatmentWeights A set of key-value pairs.
+       * The keys are treatment names, and the values are the portion of experiment traffic to be
+       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
+       * for a variation would allocate 20% of the experiment traffic to that variation.
        */
-      override fun treatment(treatment: String) {
-        cdkBuilder.treatment(treatment)
+      override fun treatmentWeights(treatmentWeights: IResolvable) {
+        cdkBuilder.treatmentWeights(treatmentWeights.let(IResolvable::unwrap))
       }
+
+      /**
+       * @param treatmentWeights A set of key-value pairs.
+       * The keys are treatment names, and the values are the portion of experiment traffic to be
+       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
+       * for a variation would allocate 20% of the experiment traffic to that variation.
+       */
+      override fun treatmentWeights(treatmentWeights: List<Any>) {
+        cdkBuilder.treatmentWeights(treatmentWeights)
+      }
+
+      /**
+       * @param treatmentWeights A set of key-value pairs.
+       * The keys are treatment names, and the values are the portion of experiment traffic to be
+       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
+       * for a variation would allocate 20% of the experiment traffic to that variation.
+       */
+      override fun treatmentWeights(vararg treatmentWeights: Any): Unit =
+          treatmentWeights(treatmentWeights.toList())
 
       public fun build():
-          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty =
+          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty,
-    ) : CdkObject(cdkObject), TreatmentToWeightProperty {
+          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty,
+    ) : CdkObject(cdkObject), OnlineAbConfigObjectProperty {
       /**
-       * The portion of experiment traffic to allocate to this treatment.
+       * The name of the variation that is to be the default variation that the other variations are
+       * compared to.
        *
-       * Specify the traffic portion in thousandths of a percent, so 20,000 allocated to a treatment
-       * would allocate 20% of the experiment traffic to that treatment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html#cfn-evidently-experiment-treatmenttoweight-splitweight)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html#cfn-evidently-experiment-onlineabconfigobject-controltreatmentname)
        */
-      override fun splitWeight(): Number = unwrap(this).getSplitWeight()
+      override fun controlTreatmentName(): String? = unwrap(this).getControlTreatmentName()
 
       /**
-       * The name of the treatment.
+       * A set of key-value pairs.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html#cfn-evidently-experiment-treatmenttoweight-treatment)
+       * The keys are treatment names, and the values are the portion of experiment traffic to be
+       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
+       * for a variation would allocate 20% of the experiment traffic to that variation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html#cfn-evidently-experiment-onlineabconfigobject-treatmentweights)
        */
-      override fun treatment(): String = unwrap(this).getTreatment()
+      override fun treatmentWeights(): Any? = unwrap(this).getTreatmentWeights()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TreatmentToWeightProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OnlineAbConfigObjectProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty):
-          TreatmentToWeightProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TreatmentToWeightProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty):
+          OnlineAbConfigObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnlineAbConfigObjectProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TreatmentToWeightProperty):
-          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty =
+      internal fun unwrap(wrapped: OnlineAbConfigObjectProperty):
+          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty
+          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty
     }
   }
 
@@ -1688,10 +1737,8 @@ public open class CfnExperiment internal constructor(
   }
 
   /**
-   * A structure that contains the configuration of which variation to use as the "control" version.
-   *
-   * The "control" version is used for comparison with other variations. This structure also
-   * specifies how much experiment traffic is allocated to each variation.
+   * This structure defines how much experiment traffic to allocate to one treatment used in the
+   * experiment.
    *
    * Example:
    *
@@ -1699,161 +1746,114 @@ public open class CfnExperiment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.evidently.*;
-   * OnlineAbConfigObjectProperty onlineAbConfigObjectProperty =
-   * OnlineAbConfigObjectProperty.builder()
-   * .controlTreatmentName("controlTreatmentName")
-   * .treatmentWeights(List.of(TreatmentToWeightProperty.builder()
+   * TreatmentToWeightProperty treatmentToWeightProperty = TreatmentToWeightProperty.builder()
    * .splitWeight(123)
    * .treatment("treatment")
-   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html)
    */
-  public interface OnlineAbConfigObjectProperty {
+  public interface TreatmentToWeightProperty {
     /**
-     * The name of the variation that is to be the default variation that the other variations are
-     * compared to.
+     * The portion of experiment traffic to allocate to this treatment.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html#cfn-evidently-experiment-onlineabconfigobject-controltreatmentname)
+     * Specify the traffic portion in thousandths of a percent, so 20,000 allocated to a treatment
+     * would allocate 20% of the experiment traffic to that treatment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html#cfn-evidently-experiment-treatmenttoweight-splitweight)
      */
-    public fun controlTreatmentName(): String? = unwrap(this).getControlTreatmentName()
+    public fun splitWeight(): Number
 
     /**
-     * A set of key-value pairs.
+     * The name of the treatment.
      *
-     * The keys are treatment names, and the values are the portion of experiment traffic to be
-     * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
-     * for a variation would allocate 20% of the experiment traffic to that variation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html#cfn-evidently-experiment-onlineabconfigobject-treatmentweights)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html#cfn-evidently-experiment-treatmenttoweight-treatment)
      */
-    public fun treatmentWeights(): Any? = unwrap(this).getTreatmentWeights()
+    public fun treatment(): String
 
     /**
-     * A builder for [OnlineAbConfigObjectProperty]
+     * A builder for [TreatmentToWeightProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param controlTreatmentName The name of the variation that is to be the default variation
-       * that the other variations are compared to.
+       * @param splitWeight The portion of experiment traffic to allocate to this treatment. 
+       * Specify the traffic portion in thousandths of a percent, so 20,000 allocated to a treatment
+       * would allocate 20% of the experiment traffic to that treatment.
        */
-      public fun controlTreatmentName(controlTreatmentName: String)
+      public fun splitWeight(splitWeight: Number)
 
       /**
-       * @param treatmentWeights A set of key-value pairs.
-       * The keys are treatment names, and the values are the portion of experiment traffic to be
-       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
-       * for a variation would allocate 20% of the experiment traffic to that variation.
+       * @param treatment The name of the treatment. 
        */
-      public fun treatmentWeights(treatmentWeights: IResolvable)
-
-      /**
-       * @param treatmentWeights A set of key-value pairs.
-       * The keys are treatment names, and the values are the portion of experiment traffic to be
-       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
-       * for a variation would allocate 20% of the experiment traffic to that variation.
-       */
-      public fun treatmentWeights(treatmentWeights: List<Any>)
-
-      /**
-       * @param treatmentWeights A set of key-value pairs.
-       * The keys are treatment names, and the values are the portion of experiment traffic to be
-       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
-       * for a variation would allocate 20% of the experiment traffic to that variation.
-       */
-      public fun treatmentWeights(vararg treatmentWeights: Any)
+      public fun treatment(treatment: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty.Builder
+          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty.Builder
           =
-          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty.builder()
+          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty.builder()
 
       /**
-       * @param controlTreatmentName The name of the variation that is to be the default variation
-       * that the other variations are compared to.
+       * @param splitWeight The portion of experiment traffic to allocate to this treatment. 
+       * Specify the traffic portion in thousandths of a percent, so 20,000 allocated to a treatment
+       * would allocate 20% of the experiment traffic to that treatment.
        */
-      override fun controlTreatmentName(controlTreatmentName: String) {
-        cdkBuilder.controlTreatmentName(controlTreatmentName)
+      override fun splitWeight(splitWeight: Number) {
+        cdkBuilder.splitWeight(splitWeight)
       }
 
       /**
-       * @param treatmentWeights A set of key-value pairs.
-       * The keys are treatment names, and the values are the portion of experiment traffic to be
-       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
-       * for a variation would allocate 20% of the experiment traffic to that variation.
+       * @param treatment The name of the treatment. 
        */
-      override fun treatmentWeights(treatmentWeights: IResolvable) {
-        cdkBuilder.treatmentWeights(treatmentWeights.let(IResolvable::unwrap))
+      override fun treatment(treatment: String) {
+        cdkBuilder.treatment(treatment)
       }
-
-      /**
-       * @param treatmentWeights A set of key-value pairs.
-       * The keys are treatment names, and the values are the portion of experiment traffic to be
-       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
-       * for a variation would allocate 20% of the experiment traffic to that variation.
-       */
-      override fun treatmentWeights(treatmentWeights: List<Any>) {
-        cdkBuilder.treatmentWeights(treatmentWeights)
-      }
-
-      /**
-       * @param treatmentWeights A set of key-value pairs.
-       * The keys are treatment names, and the values are the portion of experiment traffic to be
-       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
-       * for a variation would allocate 20% of the experiment traffic to that variation.
-       */
-      override fun treatmentWeights(vararg treatmentWeights: Any): Unit =
-          treatmentWeights(treatmentWeights.toList())
 
       public fun build():
-          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty =
+          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty,
-    ) : CdkObject(cdkObject), OnlineAbConfigObjectProperty {
+          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty,
+    ) : CdkObject(cdkObject), TreatmentToWeightProperty {
       /**
-       * The name of the variation that is to be the default variation that the other variations are
-       * compared to.
+       * The portion of experiment traffic to allocate to this treatment.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html#cfn-evidently-experiment-onlineabconfigobject-controltreatmentname)
+       * Specify the traffic portion in thousandths of a percent, so 20,000 allocated to a treatment
+       * would allocate 20% of the experiment traffic to that treatment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html#cfn-evidently-experiment-treatmenttoweight-splitweight)
        */
-      override fun controlTreatmentName(): String? = unwrap(this).getControlTreatmentName()
+      override fun splitWeight(): Number = unwrap(this).getSplitWeight()
 
       /**
-       * A set of key-value pairs.
+       * The name of the treatment.
        *
-       * The keys are treatment names, and the values are the portion of experiment traffic to be
-       * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000
-       * for a variation would allocate 20% of the experiment traffic to that variation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-onlineabconfigobject.html#cfn-evidently-experiment-onlineabconfigobject-treatmentweights)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html#cfn-evidently-experiment-treatmenttoweight-treatment)
        */
-      override fun treatmentWeights(): Any? = unwrap(this).getTreatmentWeights()
+      override fun treatment(): String = unwrap(this).getTreatment()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OnlineAbConfigObjectProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TreatmentToWeightProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty):
-          OnlineAbConfigObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OnlineAbConfigObjectProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty):
+          TreatmentToWeightProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TreatmentToWeightProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: OnlineAbConfigObjectProperty):
-          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty =
+      internal fun unwrap(wrapped: TreatmentToWeightProperty):
+          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty
+          software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty
     }
   }
 }

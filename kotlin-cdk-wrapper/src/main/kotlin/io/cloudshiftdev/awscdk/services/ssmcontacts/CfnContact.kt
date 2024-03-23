@@ -318,6 +318,246 @@ public open class CfnContact internal constructor(
   }
 
   /**
+   * Information about the contact channel that Incident Manager uses to engage the contact.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
+   * ChannelTargetInfoProperty channelTargetInfoProperty = ChannelTargetInfoProperty.builder()
+   * .channelId("channelId")
+   * .retryIntervalInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html)
+   */
+  public interface ChannelTargetInfoProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the contact channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-channelid)
+     */
+    public fun channelId(): String
+
+    /**
+     * The number of minutes to wait before retrying to send engagement if the engagement initially
+     * failed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-retryintervalinminutes)
+     */
+    public fun retryIntervalInMinutes(): Number
+
+    /**
+     * A builder for [ChannelTargetInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param channelId The Amazon Resource Name (ARN) of the contact channel. 
+       */
+      public fun channelId(channelId: String)
+
+      /**
+       * @param retryIntervalInMinutes The number of minutes to wait before retrying to send
+       * engagement if the engagement initially failed. 
+       */
+      public fun retryIntervalInMinutes(retryIntervalInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty.Builder =
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty.builder()
+
+      /**
+       * @param channelId The Amazon Resource Name (ARN) of the contact channel. 
+       */
+      override fun channelId(channelId: String) {
+        cdkBuilder.channelId(channelId)
+      }
+
+      /**
+       * @param retryIntervalInMinutes The number of minutes to wait before retrying to send
+       * engagement if the engagement initially failed. 
+       */
+      override fun retryIntervalInMinutes(retryIntervalInMinutes: Number) {
+        cdkBuilder.retryIntervalInMinutes(retryIntervalInMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty,
+    ) : CdkObject(cdkObject), ChannelTargetInfoProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the contact channel.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-channelid)
+       */
+      override fun channelId(): String = unwrap(this).getChannelId()
+
+      /**
+       * The number of minutes to wait before retrying to send engagement if the engagement
+       * initially failed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-retryintervalinminutes)
+       */
+      override fun retryIntervalInMinutes(): Number = unwrap(this).getRetryIntervalInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ChannelTargetInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty):
+          ChannelTargetInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ChannelTargetInfoProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ChannelTargetInfoProperty):
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty
+    }
+  }
+
+  /**
+   * The contact that Incident Manager is engaging during an incident.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
+   * ContactTargetInfoProperty contactTargetInfoProperty = ContactTargetInfoProperty.builder()
+   * .contactId("contactId")
+   * .isEssential(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html)
+   */
+  public interface ContactTargetInfoProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the contact.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-contactid)
+     */
+    public fun contactId(): String
+
+    /**
+     * A Boolean value determining if the contact's acknowledgement stops the progress of stages in
+     * the plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-isessential)
+     */
+    public fun isEssential(): Any
+
+    /**
+     * A builder for [ContactTargetInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contactId The Amazon Resource Name (ARN) of the contact. 
+       */
+      public fun contactId(contactId: String)
+
+      /**
+       * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
+       * progress of stages in the plan. 
+       */
+      public fun isEssential(isEssential: Boolean)
+
+      /**
+       * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
+       * progress of stages in the plan. 
+       */
+      public fun isEssential(isEssential: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty.Builder =
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty.builder()
+
+      /**
+       * @param contactId The Amazon Resource Name (ARN) of the contact. 
+       */
+      override fun contactId(contactId: String) {
+        cdkBuilder.contactId(contactId)
+      }
+
+      /**
+       * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
+       * progress of stages in the plan. 
+       */
+      override fun isEssential(isEssential: Boolean) {
+        cdkBuilder.isEssential(isEssential)
+      }
+
+      /**
+       * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
+       * progress of stages in the plan. 
+       */
+      override fun isEssential(isEssential: IResolvable) {
+        cdkBuilder.isEssential(isEssential.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty,
+    ) : CdkObject(cdkObject), ContactTargetInfoProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the contact.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-contactid)
+       */
+      override fun contactId(): String = unwrap(this).getContactId()
+
+      /**
+       * A Boolean value determining if the contact's acknowledgement stops the progress of stages
+       * in the plan.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-isessential)
+       */
+      override fun isEssential(): Any = unwrap(this).getIsEssential()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ContactTargetInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty):
+          ContactTargetInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContactTargetInfoProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContactTargetInfoProperty):
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty
+    }
+  }
+
+  /**
    * The `Stage` property type specifies a set amount of time that an escalation plan or engagement
    * plan engages the specified contacts or contact methods.
    *
@@ -509,133 +749,6 @@ public open class CfnContact internal constructor(
   }
 
   /**
-   * The contact that Incident Manager is engaging during an incident.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
-   * ContactTargetInfoProperty contactTargetInfoProperty = ContactTargetInfoProperty.builder()
-   * .contactId("contactId")
-   * .isEssential(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html)
-   */
-  public interface ContactTargetInfoProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the contact.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-contactid)
-     */
-    public fun contactId(): String
-
-    /**
-     * A Boolean value determining if the contact's acknowledgement stops the progress of stages in
-     * the plan.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-isessential)
-     */
-    public fun isEssential(): Any
-
-    /**
-     * A builder for [ContactTargetInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contactId The Amazon Resource Name (ARN) of the contact. 
-       */
-      public fun contactId(contactId: String)
-
-      /**
-       * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
-       * progress of stages in the plan. 
-       */
-      public fun isEssential(isEssential: Boolean)
-
-      /**
-       * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
-       * progress of stages in the plan. 
-       */
-      public fun isEssential(isEssential: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty.Builder =
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty.builder()
-
-      /**
-       * @param contactId The Amazon Resource Name (ARN) of the contact. 
-       */
-      override fun contactId(contactId: String) {
-        cdkBuilder.contactId(contactId)
-      }
-
-      /**
-       * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
-       * progress of stages in the plan. 
-       */
-      override fun isEssential(isEssential: Boolean) {
-        cdkBuilder.isEssential(isEssential)
-      }
-
-      /**
-       * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
-       * progress of stages in the plan. 
-       */
-      override fun isEssential(isEssential: IResolvable) {
-        cdkBuilder.isEssential(isEssential.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty,
-    ) : CdkObject(cdkObject), ContactTargetInfoProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the contact.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-contactid)
-       */
-      override fun contactId(): String = unwrap(this).getContactId()
-
-      /**
-       * A Boolean value determining if the contact's acknowledgement stops the progress of stages
-       * in the plan.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-isessential)
-       */
-      override fun isEssential(): Any = unwrap(this).getIsEssential()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ContactTargetInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty):
-          ContactTargetInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ContactTargetInfoProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ContactTargetInfoProperty):
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty
-    }
-  }
-
-  /**
    * The contact or contact channel that's being engaged.
    *
    * Example:
@@ -808,119 +921,6 @@ public open class CfnContact internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnContact.TargetsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ssmcontacts.CfnContact.TargetsProperty
-    }
-  }
-
-  /**
-   * Information about the contact channel that Incident Manager uses to engage the contact.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmcontacts.*;
-   * ChannelTargetInfoProperty channelTargetInfoProperty = ChannelTargetInfoProperty.builder()
-   * .channelId("channelId")
-   * .retryIntervalInMinutes(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html)
-   */
-  public interface ChannelTargetInfoProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the contact channel.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-channelid)
-     */
-    public fun channelId(): String
-
-    /**
-     * The number of minutes to wait before retrying to send engagement if the engagement initially
-     * failed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-retryintervalinminutes)
-     */
-    public fun retryIntervalInMinutes(): Number
-
-    /**
-     * A builder for [ChannelTargetInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param channelId The Amazon Resource Name (ARN) of the contact channel. 
-       */
-      public fun channelId(channelId: String)
-
-      /**
-       * @param retryIntervalInMinutes The number of minutes to wait before retrying to send
-       * engagement if the engagement initially failed. 
-       */
-      public fun retryIntervalInMinutes(retryIntervalInMinutes: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty.Builder =
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty.builder()
-
-      /**
-       * @param channelId The Amazon Resource Name (ARN) of the contact channel. 
-       */
-      override fun channelId(channelId: String) {
-        cdkBuilder.channelId(channelId)
-      }
-
-      /**
-       * @param retryIntervalInMinutes The number of minutes to wait before retrying to send
-       * engagement if the engagement initially failed. 
-       */
-      override fun retryIntervalInMinutes(retryIntervalInMinutes: Number) {
-        cdkBuilder.retryIntervalInMinutes(retryIntervalInMinutes)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty,
-    ) : CdkObject(cdkObject), ChannelTargetInfoProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the contact channel.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-channelid)
-       */
-      override fun channelId(): String = unwrap(this).getChannelId()
-
-      /**
-       * The number of minutes to wait before retrying to send engagement if the engagement
-       * initially failed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-retryintervalinminutes)
-       */
-      override fun retryIntervalInMinutes(): Number = unwrap(this).getRetryIntervalInMinutes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ChannelTargetInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty):
-          ChannelTargetInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ChannelTargetInfoProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ChannelTargetInfoProperty):
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty
     }
   }
 }

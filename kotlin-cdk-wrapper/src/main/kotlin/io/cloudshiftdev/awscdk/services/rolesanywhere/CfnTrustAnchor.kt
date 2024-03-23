@@ -444,145 +444,6 @@ public open class CfnTrustAnchor internal constructor(
   }
 
   /**
-   * A union object representing the data field of the TrustAnchor depending on its type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rolesanywhere.*;
-   * SourceDataProperty sourceDataProperty = SourceDataProperty.builder()
-   * .acmPcaArn("acmPcaArn")
-   * .x509CertificateData("x509CertificateData")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html)
-   */
-  public interface SourceDataProperty {
-    /**
-     * The root certificate of the AWS Private Certificate Authority specified by this ARN is used
-     * in trust validation for temporary credential requests.
-     *
-     * Included for trust anchors of type `AWS_ACM_PCA` .
-     *
-     *
-     * This field is not supported in your region.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html#cfn-rolesanywhere-trustanchor-sourcedata-acmpcaarn)
-     */
-    public fun acmPcaArn(): String? = unwrap(this).getAcmPcaArn()
-
-    /**
-     * The PEM-encoded data for the certificate anchor.
-     *
-     * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html#cfn-rolesanywhere-trustanchor-sourcedata-x509certificatedata)
-     */
-    public fun x509CertificateData(): String? = unwrap(this).getX509CertificateData()
-
-    /**
-     * A builder for [SourceDataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param acmPcaArn The root certificate of the AWS Private Certificate Authority specified by
-       * this ARN is used in trust validation for temporary credential requests.
-       * Included for trust anchors of type `AWS_ACM_PCA` .
-       *
-       *
-       * This field is not supported in your region.
-       */
-      public fun acmPcaArn(acmPcaArn: String)
-
-      /**
-       * @param x509CertificateData The PEM-encoded data for the certificate anchor.
-       * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
-       */
-      public fun x509CertificateData(x509CertificateData: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty.Builder =
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty.builder()
-
-      /**
-       * @param acmPcaArn The root certificate of the AWS Private Certificate Authority specified by
-       * this ARN is used in trust validation for temporary credential requests.
-       * Included for trust anchors of type `AWS_ACM_PCA` .
-       *
-       *
-       * This field is not supported in your region.
-       */
-      override fun acmPcaArn(acmPcaArn: String) {
-        cdkBuilder.acmPcaArn(acmPcaArn)
-      }
-
-      /**
-       * @param x509CertificateData The PEM-encoded data for the certificate anchor.
-       * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
-       */
-      override fun x509CertificateData(x509CertificateData: String) {
-        cdkBuilder.x509CertificateData(x509CertificateData)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty,
-    ) : CdkObject(cdkObject), SourceDataProperty {
-      /**
-       * The root certificate of the AWS Private Certificate Authority specified by this ARN is used
-       * in trust validation for temporary credential requests.
-       *
-       * Included for trust anchors of type `AWS_ACM_PCA` .
-       *
-       *
-       * This field is not supported in your region.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html#cfn-rolesanywhere-trustanchor-sourcedata-acmpcaarn)
-       */
-      override fun acmPcaArn(): String? = unwrap(this).getAcmPcaArn()
-
-      /**
-       * The PEM-encoded data for the certificate anchor.
-       *
-       * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html#cfn-rolesanywhere-trustanchor-sourcedata-x509certificatedata)
-       */
-      override fun x509CertificateData(): String? = unwrap(this).getX509CertificateData()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceDataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty):
-          SourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceDataProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceDataProperty):
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty
-    }
-  }
-
-  /**
    * Customizable notification settings that will be applied to notification events.
    *
    * IAM Roles Anywhere consumes these settings while notifying across multiple channels -
@@ -793,6 +654,145 @@ public open class CfnTrustAnchor internal constructor(
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty
+    }
+  }
+
+  /**
+   * A union object representing the data field of the TrustAnchor depending on its type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rolesanywhere.*;
+   * SourceDataProperty sourceDataProperty = SourceDataProperty.builder()
+   * .acmPcaArn("acmPcaArn")
+   * .x509CertificateData("x509CertificateData")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html)
+   */
+  public interface SourceDataProperty {
+    /**
+     * The root certificate of the AWS Private Certificate Authority specified by this ARN is used
+     * in trust validation for temporary credential requests.
+     *
+     * Included for trust anchors of type `AWS_ACM_PCA` .
+     *
+     *
+     * This field is not supported in your region.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html#cfn-rolesanywhere-trustanchor-sourcedata-acmpcaarn)
+     */
+    public fun acmPcaArn(): String? = unwrap(this).getAcmPcaArn()
+
+    /**
+     * The PEM-encoded data for the certificate anchor.
+     *
+     * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html#cfn-rolesanywhere-trustanchor-sourcedata-x509certificatedata)
+     */
+    public fun x509CertificateData(): String? = unwrap(this).getX509CertificateData()
+
+    /**
+     * A builder for [SourceDataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param acmPcaArn The root certificate of the AWS Private Certificate Authority specified by
+       * this ARN is used in trust validation for temporary credential requests.
+       * Included for trust anchors of type `AWS_ACM_PCA` .
+       *
+       *
+       * This field is not supported in your region.
+       */
+      public fun acmPcaArn(acmPcaArn: String)
+
+      /**
+       * @param x509CertificateData The PEM-encoded data for the certificate anchor.
+       * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
+       */
+      public fun x509CertificateData(x509CertificateData: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty.Builder =
+          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty.builder()
+
+      /**
+       * @param acmPcaArn The root certificate of the AWS Private Certificate Authority specified by
+       * this ARN is used in trust validation for temporary credential requests.
+       * Included for trust anchors of type `AWS_ACM_PCA` .
+       *
+       *
+       * This field is not supported in your region.
+       */
+      override fun acmPcaArn(acmPcaArn: String) {
+        cdkBuilder.acmPcaArn(acmPcaArn)
+      }
+
+      /**
+       * @param x509CertificateData The PEM-encoded data for the certificate anchor.
+       * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
+       */
+      override fun x509CertificateData(x509CertificateData: String) {
+        cdkBuilder.x509CertificateData(x509CertificateData)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty,
+    ) : CdkObject(cdkObject), SourceDataProperty {
+      /**
+       * The root certificate of the AWS Private Certificate Authority specified by this ARN is used
+       * in trust validation for temporary credential requests.
+       *
+       * Included for trust anchors of type `AWS_ACM_PCA` .
+       *
+       *
+       * This field is not supported in your region.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html#cfn-rolesanywhere-trustanchor-sourcedata-acmpcaarn)
+       */
+      override fun acmPcaArn(): String? = unwrap(this).getAcmPcaArn()
+
+      /**
+       * The PEM-encoded data for the certificate anchor.
+       *
+       * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html#cfn-rolesanywhere-trustanchor-sourcedata-x509certificatedata)
+       */
+      override fun x509CertificateData(): String? = unwrap(this).getX509CertificateData()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceDataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty):
+          SourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceDataProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceDataProperty):
+          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty
     }
   }
 

@@ -1015,6 +1015,607 @@ public open class CfnIndex internal constructor(
   }
 
   /**
+   * Specifies the properties, such as relevance tuning and searchability, of an index field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kendra.*;
+   * DocumentMetadataConfigurationProperty documentMetadataConfigurationProperty =
+   * DocumentMetadataConfigurationProperty.builder()
+   * .name("name")
+   * .type("type")
+   * // the properties below are optional
+   * .relevance(RelevanceProperty.builder()
+   * .duration("duration")
+   * .freshness(false)
+   * .importance(123)
+   * .rankOrder("rankOrder")
+   * .valueImportanceItems(List.of(ValueImportanceItemProperty.builder()
+   * .key("key")
+   * .value(123)
+   * .build()))
+   * .build())
+   * .search(SearchProperty.builder()
+   * .displayable(false)
+   * .facetable(false)
+   * .searchable(false)
+   * .sortable(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html)
+   */
+  public interface DocumentMetadataConfigurationProperty {
+    /**
+     * The name of the index field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-name)
+     */
+    public fun name(): String
+
+    /**
+     * Provides tuning parameters to determine how the field affects the search results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-relevance)
+     */
+    public fun relevance(): Any? = unwrap(this).getRelevance()
+
+    /**
+     * Provides information about how the field is used during a search.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-search)
+     */
+    public fun search(): Any? = unwrap(this).getSearch()
+
+    /**
+     * The data type of the index field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [DocumentMetadataConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the index field. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param relevance Provides tuning parameters to determine how the field affects the search
+       * results.
+       */
+      public fun relevance(relevance: IResolvable)
+
+      /**
+       * @param relevance Provides tuning parameters to determine how the field affects the search
+       * results.
+       */
+      public fun relevance(relevance: RelevanceProperty)
+
+      /**
+       * @param relevance Provides tuning parameters to determine how the field affects the search
+       * results.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fd71cb346fd43a23cb27cd4336b913ab1ed1651c684ae7045c87fd3eea2236e8")
+      public fun relevance(relevance: RelevanceProperty.Builder.() -> Unit)
+
+      /**
+       * @param search Provides information about how the field is used during a search.
+       */
+      public fun search(search: IResolvable)
+
+      /**
+       * @param search Provides information about how the field is used during a search.
+       */
+      public fun search(search: SearchProperty)
+
+      /**
+       * @param search Provides information about how the field is used during a search.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("85095dde21447ef2f3d3bb8aed5edd9c3a66f25cf46dc38121e1038b29d27f81")
+      public fun search(search: SearchProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The data type of the index field. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty.builder()
+
+      /**
+       * @param name The name of the index field. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param relevance Provides tuning parameters to determine how the field affects the search
+       * results.
+       */
+      override fun relevance(relevance: IResolvable) {
+        cdkBuilder.relevance(relevance.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param relevance Provides tuning parameters to determine how the field affects the search
+       * results.
+       */
+      override fun relevance(relevance: RelevanceProperty) {
+        cdkBuilder.relevance(relevance.let(RelevanceProperty::unwrap))
+      }
+
+      /**
+       * @param relevance Provides tuning parameters to determine how the field affects the search
+       * results.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fd71cb346fd43a23cb27cd4336b913ab1ed1651c684ae7045c87fd3eea2236e8")
+      override fun relevance(relevance: RelevanceProperty.Builder.() -> Unit): Unit =
+          relevance(RelevanceProperty(relevance))
+
+      /**
+       * @param search Provides information about how the field is used during a search.
+       */
+      override fun search(search: IResolvable) {
+        cdkBuilder.search(search.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param search Provides information about how the field is used during a search.
+       */
+      override fun search(search: SearchProperty) {
+        cdkBuilder.search(search.let(SearchProperty::unwrap))
+      }
+
+      /**
+       * @param search Provides information about how the field is used during a search.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("85095dde21447ef2f3d3bb8aed5edd9c3a66f25cf46dc38121e1038b29d27f81")
+      override fun search(search: SearchProperty.Builder.() -> Unit): Unit =
+          search(SearchProperty(search))
+
+      /**
+       * @param type The data type of the index field. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty,
+    ) : CdkObject(cdkObject), DocumentMetadataConfigurationProperty {
+      /**
+       * The name of the index field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Provides tuning parameters to determine how the field affects the search results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-relevance)
+       */
+      override fun relevance(): Any? = unwrap(this).getRelevance()
+
+      /**
+       * Provides information about how the field is used during a search.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-search)
+       */
+      override fun search(): Any? = unwrap(this).getSearch()
+
+      /**
+       * The data type of the index field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DocumentMetadataConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty):
+          DocumentMetadataConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentMetadataConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DocumentMetadataConfigurationProperty):
+          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty
+    }
+  }
+
+  /**
+   * Provides the configuration information for the JSON token type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kendra.*;
+   * JsonTokenTypeConfigurationProperty jsonTokenTypeConfigurationProperty =
+   * JsonTokenTypeConfigurationProperty.builder()
+   * .groupAttributeField("groupAttributeField")
+   * .userNameAttributeField("userNameAttributeField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html)
+   */
+  public interface JsonTokenTypeConfigurationProperty {
+    /**
+     * The group attribute field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html#cfn-kendra-index-jsontokentypeconfiguration-groupattributefield)
+     */
+    public fun groupAttributeField(): String
+
+    /**
+     * The user name attribute field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html#cfn-kendra-index-jsontokentypeconfiguration-usernameattributefield)
+     */
+    public fun userNameAttributeField(): String
+
+    /**
+     * A builder for [JsonTokenTypeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param groupAttributeField The group attribute field. 
+       */
+      public fun groupAttributeField(groupAttributeField: String)
+
+      /**
+       * @param userNameAttributeField The user name attribute field. 
+       */
+      public fun userNameAttributeField(userNameAttributeField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty.builder()
+
+      /**
+       * @param groupAttributeField The group attribute field. 
+       */
+      override fun groupAttributeField(groupAttributeField: String) {
+        cdkBuilder.groupAttributeField(groupAttributeField)
+      }
+
+      /**
+       * @param userNameAttributeField The user name attribute field. 
+       */
+      override fun userNameAttributeField(userNameAttributeField: String) {
+        cdkBuilder.userNameAttributeField(userNameAttributeField)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty,
+    ) : CdkObject(cdkObject), JsonTokenTypeConfigurationProperty {
+      /**
+       * The group attribute field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html#cfn-kendra-index-jsontokentypeconfiguration-groupattributefield)
+       */
+      override fun groupAttributeField(): String = unwrap(this).getGroupAttributeField()
+
+      /**
+       * The user name attribute field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html#cfn-kendra-index-jsontokentypeconfiguration-usernameattributefield)
+       */
+      override fun userNameAttributeField(): String = unwrap(this).getUserNameAttributeField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          JsonTokenTypeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty):
+          JsonTokenTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JsonTokenTypeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JsonTokenTypeConfigurationProperty):
+          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty
+    }
+  }
+
+  /**
+   * Provides the configuration information for the JWT token type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kendra.*;
+   * JwtTokenTypeConfigurationProperty jwtTokenTypeConfigurationProperty =
+   * JwtTokenTypeConfigurationProperty.builder()
+   * .keyLocation("keyLocation")
+   * // the properties below are optional
+   * .claimRegex("claimRegex")
+   * .groupAttributeField("groupAttributeField")
+   * .issuer("issuer")
+   * .secretManagerArn("secretManagerArn")
+   * .url("url")
+   * .userNameAttributeField("userNameAttributeField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html)
+   */
+  public interface JwtTokenTypeConfigurationProperty {
+    /**
+     * The regular expression that identifies the claim.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-claimregex)
+     */
+    public fun claimRegex(): String? = unwrap(this).getClaimRegex()
+
+    /**
+     * The group attribute field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-groupattributefield)
+     */
+    public fun groupAttributeField(): String? = unwrap(this).getGroupAttributeField()
+
+    /**
+     * The issuer of the token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-issuer)
+     */
+    public fun issuer(): String? = unwrap(this).getIssuer()
+
+    /**
+     * The location of the key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-keylocation)
+     */
+    public fun keyLocation(): String
+
+    /**
+     * The Amazon Resource Name (arn) of the secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-secretmanagerarn)
+     */
+    public fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
+
+    /**
+     * The signing key URL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-url)
+     */
+    public fun url(): String? = unwrap(this).getUrl()
+
+    /**
+     * The user name attribute field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-usernameattributefield)
+     */
+    public fun userNameAttributeField(): String? = unwrap(this).getUserNameAttributeField()
+
+    /**
+     * A builder for [JwtTokenTypeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param claimRegex The regular expression that identifies the claim.
+       */
+      public fun claimRegex(claimRegex: String)
+
+      /**
+       * @param groupAttributeField The group attribute field.
+       */
+      public fun groupAttributeField(groupAttributeField: String)
+
+      /**
+       * @param issuer The issuer of the token.
+       */
+      public fun issuer(issuer: String)
+
+      /**
+       * @param keyLocation The location of the key. 
+       */
+      public fun keyLocation(keyLocation: String)
+
+      /**
+       * @param secretManagerArn The Amazon Resource Name (arn) of the secret.
+       */
+      public fun secretManagerArn(secretManagerArn: String)
+
+      /**
+       * @param url The signing key URL.
+       */
+      public fun url(url: String)
+
+      /**
+       * @param userNameAttributeField The user name attribute field.
+       */
+      public fun userNameAttributeField(userNameAttributeField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty.builder()
+
+      /**
+       * @param claimRegex The regular expression that identifies the claim.
+       */
+      override fun claimRegex(claimRegex: String) {
+        cdkBuilder.claimRegex(claimRegex)
+      }
+
+      /**
+       * @param groupAttributeField The group attribute field.
+       */
+      override fun groupAttributeField(groupAttributeField: String) {
+        cdkBuilder.groupAttributeField(groupAttributeField)
+      }
+
+      /**
+       * @param issuer The issuer of the token.
+       */
+      override fun issuer(issuer: String) {
+        cdkBuilder.issuer(issuer)
+      }
+
+      /**
+       * @param keyLocation The location of the key. 
+       */
+      override fun keyLocation(keyLocation: String) {
+        cdkBuilder.keyLocation(keyLocation)
+      }
+
+      /**
+       * @param secretManagerArn The Amazon Resource Name (arn) of the secret.
+       */
+      override fun secretManagerArn(secretManagerArn: String) {
+        cdkBuilder.secretManagerArn(secretManagerArn)
+      }
+
+      /**
+       * @param url The signing key URL.
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      /**
+       * @param userNameAttributeField The user name attribute field.
+       */
+      override fun userNameAttributeField(userNameAttributeField: String) {
+        cdkBuilder.userNameAttributeField(userNameAttributeField)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty,
+    ) : CdkObject(cdkObject), JwtTokenTypeConfigurationProperty {
+      /**
+       * The regular expression that identifies the claim.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-claimregex)
+       */
+      override fun claimRegex(): String? = unwrap(this).getClaimRegex()
+
+      /**
+       * The group attribute field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-groupattributefield)
+       */
+      override fun groupAttributeField(): String? = unwrap(this).getGroupAttributeField()
+
+      /**
+       * The issuer of the token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-issuer)
+       */
+      override fun issuer(): String? = unwrap(this).getIssuer()
+
+      /**
+       * The location of the key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-keylocation)
+       */
+      override fun keyLocation(): String = unwrap(this).getKeyLocation()
+
+      /**
+       * The Amazon Resource Name (arn) of the secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-secretmanagerarn)
+       */
+      override fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
+
+      /**
+       * The signing key URL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-url)
+       */
+      override fun url(): String? = unwrap(this).getUrl()
+
+      /**
+       * The user name attribute field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-usernameattributefield)
+       */
+      override fun userNameAttributeField(): String? = unwrap(this).getUserNameAttributeField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          JwtTokenTypeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty):
+          JwtTokenTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JwtTokenTypeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JwtTokenTypeConfigurationProperty):
+          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty
+    }
+  }
+
+  /**
    * Provides information for tuning the relevance of a field in a search.
    *
    * When a query includes terms that match the field, the results are given a boost in the response
@@ -1394,888 +1995,6 @@ public open class CfnIndex internal constructor(
   }
 
   /**
-   * Provides the configuration information for a token.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kendra.*;
-   * UserTokenConfigurationProperty userTokenConfigurationProperty =
-   * UserTokenConfigurationProperty.builder()
-   * .jsonTokenTypeConfiguration(JsonTokenTypeConfigurationProperty.builder()
-   * .groupAttributeField("groupAttributeField")
-   * .userNameAttributeField("userNameAttributeField")
-   * .build())
-   * .jwtTokenTypeConfiguration(JwtTokenTypeConfigurationProperty.builder()
-   * .keyLocation("keyLocation")
-   * // the properties below are optional
-   * .claimRegex("claimRegex")
-   * .groupAttributeField("groupAttributeField")
-   * .issuer("issuer")
-   * .secretManagerArn("secretManagerArn")
-   * .url("url")
-   * .userNameAttributeField("userNameAttributeField")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html)
-   */
-  public interface UserTokenConfigurationProperty {
-    /**
-     * Information about the JSON token type configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html#cfn-kendra-index-usertokenconfiguration-jsontokentypeconfiguration)
-     */
-    public fun jsonTokenTypeConfiguration(): Any? = unwrap(this).getJsonTokenTypeConfiguration()
-
-    /**
-     * Information about the JWT token type configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html#cfn-kendra-index-usertokenconfiguration-jwttokentypeconfiguration)
-     */
-    public fun jwtTokenTypeConfiguration(): Any? = unwrap(this).getJwtTokenTypeConfiguration()
-
-    /**
-     * A builder for [UserTokenConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
-       */
-      public fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable)
-
-      /**
-       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
-       */
-      public
-          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty)
-
-      /**
-       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b2b5657d56c6ffc4b2998617167f62e077c15729e83acbefe984863f124826d6")
-      public
-          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
-       */
-      public fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable)
-
-      /**
-       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
-       */
-      public
-          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty)
-
-      /**
-       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d02dd01b0333bbec06cbc77d1731bd147a022d10a87639d37c63ae4aac7641f7")
-      public
-          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty.Builder =
-          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty.builder()
-
-      /**
-       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
-       */
-      override fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable) {
-        cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
-       */
-      override
-          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty) {
-        cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(JsonTokenTypeConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b2b5657d56c6ffc4b2998617167f62e077c15729e83acbefe984863f124826d6")
-      override
-          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          jsonTokenTypeConfiguration(JsonTokenTypeConfigurationProperty(jsonTokenTypeConfiguration))
-
-      /**
-       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
-       */
-      override fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable) {
-        cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
-       */
-      override
-          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty) {
-        cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(JwtTokenTypeConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d02dd01b0333bbec06cbc77d1731bd147a022d10a87639d37c63ae4aac7641f7")
-      override
-          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          jwtTokenTypeConfiguration(JwtTokenTypeConfigurationProperty(jwtTokenTypeConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty,
-    ) : CdkObject(cdkObject), UserTokenConfigurationProperty {
-      /**
-       * Information about the JSON token type configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html#cfn-kendra-index-usertokenconfiguration-jsontokentypeconfiguration)
-       */
-      override fun jsonTokenTypeConfiguration(): Any? = unwrap(this).getJsonTokenTypeConfiguration()
-
-      /**
-       * Information about the JWT token type configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html#cfn-kendra-index-usertokenconfiguration-jwttokentypeconfiguration)
-       */
-      override fun jwtTokenTypeConfiguration(): Any? = unwrap(this).getJwtTokenTypeConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UserTokenConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty):
-          UserTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          UserTokenConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UserTokenConfigurationProperty):
-          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty
-    }
-  }
-
-  /**
-   * Provides the configuration information for the JWT token type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kendra.*;
-   * JwtTokenTypeConfigurationProperty jwtTokenTypeConfigurationProperty =
-   * JwtTokenTypeConfigurationProperty.builder()
-   * .keyLocation("keyLocation")
-   * // the properties below are optional
-   * .claimRegex("claimRegex")
-   * .groupAttributeField("groupAttributeField")
-   * .issuer("issuer")
-   * .secretManagerArn("secretManagerArn")
-   * .url("url")
-   * .userNameAttributeField("userNameAttributeField")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html)
-   */
-  public interface JwtTokenTypeConfigurationProperty {
-    /**
-     * The regular expression that identifies the claim.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-claimregex)
-     */
-    public fun claimRegex(): String? = unwrap(this).getClaimRegex()
-
-    /**
-     * The group attribute field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-groupattributefield)
-     */
-    public fun groupAttributeField(): String? = unwrap(this).getGroupAttributeField()
-
-    /**
-     * The issuer of the token.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-issuer)
-     */
-    public fun issuer(): String? = unwrap(this).getIssuer()
-
-    /**
-     * The location of the key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-keylocation)
-     */
-    public fun keyLocation(): String
-
-    /**
-     * The Amazon Resource Name (arn) of the secret.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-secretmanagerarn)
-     */
-    public fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
-
-    /**
-     * The signing key URL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-url)
-     */
-    public fun url(): String? = unwrap(this).getUrl()
-
-    /**
-     * The user name attribute field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-usernameattributefield)
-     */
-    public fun userNameAttributeField(): String? = unwrap(this).getUserNameAttributeField()
-
-    /**
-     * A builder for [JwtTokenTypeConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param claimRegex The regular expression that identifies the claim.
-       */
-      public fun claimRegex(claimRegex: String)
-
-      /**
-       * @param groupAttributeField The group attribute field.
-       */
-      public fun groupAttributeField(groupAttributeField: String)
-
-      /**
-       * @param issuer The issuer of the token.
-       */
-      public fun issuer(issuer: String)
-
-      /**
-       * @param keyLocation The location of the key. 
-       */
-      public fun keyLocation(keyLocation: String)
-
-      /**
-       * @param secretManagerArn The Amazon Resource Name (arn) of the secret.
-       */
-      public fun secretManagerArn(secretManagerArn: String)
-
-      /**
-       * @param url The signing key URL.
-       */
-      public fun url(url: String)
-
-      /**
-       * @param userNameAttributeField The user name attribute field.
-       */
-      public fun userNameAttributeField(userNameAttributeField: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty.builder()
-
-      /**
-       * @param claimRegex The regular expression that identifies the claim.
-       */
-      override fun claimRegex(claimRegex: String) {
-        cdkBuilder.claimRegex(claimRegex)
-      }
-
-      /**
-       * @param groupAttributeField The group attribute field.
-       */
-      override fun groupAttributeField(groupAttributeField: String) {
-        cdkBuilder.groupAttributeField(groupAttributeField)
-      }
-
-      /**
-       * @param issuer The issuer of the token.
-       */
-      override fun issuer(issuer: String) {
-        cdkBuilder.issuer(issuer)
-      }
-
-      /**
-       * @param keyLocation The location of the key. 
-       */
-      override fun keyLocation(keyLocation: String) {
-        cdkBuilder.keyLocation(keyLocation)
-      }
-
-      /**
-       * @param secretManagerArn The Amazon Resource Name (arn) of the secret.
-       */
-      override fun secretManagerArn(secretManagerArn: String) {
-        cdkBuilder.secretManagerArn(secretManagerArn)
-      }
-
-      /**
-       * @param url The signing key URL.
-       */
-      override fun url(url: String) {
-        cdkBuilder.url(url)
-      }
-
-      /**
-       * @param userNameAttributeField The user name attribute field.
-       */
-      override fun userNameAttributeField(userNameAttributeField: String) {
-        cdkBuilder.userNameAttributeField(userNameAttributeField)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty,
-    ) : CdkObject(cdkObject), JwtTokenTypeConfigurationProperty {
-      /**
-       * The regular expression that identifies the claim.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-claimregex)
-       */
-      override fun claimRegex(): String? = unwrap(this).getClaimRegex()
-
-      /**
-       * The group attribute field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-groupattributefield)
-       */
-      override fun groupAttributeField(): String? = unwrap(this).getGroupAttributeField()
-
-      /**
-       * The issuer of the token.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-issuer)
-       */
-      override fun issuer(): String? = unwrap(this).getIssuer()
-
-      /**
-       * The location of the key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-keylocation)
-       */
-      override fun keyLocation(): String = unwrap(this).getKeyLocation()
-
-      /**
-       * The Amazon Resource Name (arn) of the secret.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-secretmanagerarn)
-       */
-      override fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
-
-      /**
-       * The signing key URL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-url)
-       */
-      override fun url(): String? = unwrap(this).getUrl()
-
-      /**
-       * The user name attribute field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jwttokentypeconfiguration.html#cfn-kendra-index-jwttokentypeconfiguration-usernameattributefield)
-       */
-      override fun userNameAttributeField(): String? = unwrap(this).getUserNameAttributeField()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          JwtTokenTypeConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty):
-          JwtTokenTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JwtTokenTypeConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JwtTokenTypeConfigurationProperty):
-          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies the properties, such as relevance tuning and searchability, of an index field.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kendra.*;
-   * DocumentMetadataConfigurationProperty documentMetadataConfigurationProperty =
-   * DocumentMetadataConfigurationProperty.builder()
-   * .name("name")
-   * .type("type")
-   * // the properties below are optional
-   * .relevance(RelevanceProperty.builder()
-   * .duration("duration")
-   * .freshness(false)
-   * .importance(123)
-   * .rankOrder("rankOrder")
-   * .valueImportanceItems(List.of(ValueImportanceItemProperty.builder()
-   * .key("key")
-   * .value(123)
-   * .build()))
-   * .build())
-   * .search(SearchProperty.builder()
-   * .displayable(false)
-   * .facetable(false)
-   * .searchable(false)
-   * .sortable(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html)
-   */
-  public interface DocumentMetadataConfigurationProperty {
-    /**
-     * The name of the index field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-name)
-     */
-    public fun name(): String
-
-    /**
-     * Provides tuning parameters to determine how the field affects the search results.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-relevance)
-     */
-    public fun relevance(): Any? = unwrap(this).getRelevance()
-
-    /**
-     * Provides information about how the field is used during a search.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-search)
-     */
-    public fun search(): Any? = unwrap(this).getSearch()
-
-    /**
-     * The data type of the index field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [DocumentMetadataConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the index field. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param relevance Provides tuning parameters to determine how the field affects the search
-       * results.
-       */
-      public fun relevance(relevance: IResolvable)
-
-      /**
-       * @param relevance Provides tuning parameters to determine how the field affects the search
-       * results.
-       */
-      public fun relevance(relevance: RelevanceProperty)
-
-      /**
-       * @param relevance Provides tuning parameters to determine how the field affects the search
-       * results.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fd71cb346fd43a23cb27cd4336b913ab1ed1651c684ae7045c87fd3eea2236e8")
-      public fun relevance(relevance: RelevanceProperty.Builder.() -> Unit)
-
-      /**
-       * @param search Provides information about how the field is used during a search.
-       */
-      public fun search(search: IResolvable)
-
-      /**
-       * @param search Provides information about how the field is used during a search.
-       */
-      public fun search(search: SearchProperty)
-
-      /**
-       * @param search Provides information about how the field is used during a search.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("85095dde21447ef2f3d3bb8aed5edd9c3a66f25cf46dc38121e1038b29d27f81")
-      public fun search(search: SearchProperty.Builder.() -> Unit)
-
-      /**
-       * @param type The data type of the index field. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty.builder()
-
-      /**
-       * @param name The name of the index field. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param relevance Provides tuning parameters to determine how the field affects the search
-       * results.
-       */
-      override fun relevance(relevance: IResolvable) {
-        cdkBuilder.relevance(relevance.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param relevance Provides tuning parameters to determine how the field affects the search
-       * results.
-       */
-      override fun relevance(relevance: RelevanceProperty) {
-        cdkBuilder.relevance(relevance.let(RelevanceProperty::unwrap))
-      }
-
-      /**
-       * @param relevance Provides tuning parameters to determine how the field affects the search
-       * results.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fd71cb346fd43a23cb27cd4336b913ab1ed1651c684ae7045c87fd3eea2236e8")
-      override fun relevance(relevance: RelevanceProperty.Builder.() -> Unit): Unit =
-          relevance(RelevanceProperty(relevance))
-
-      /**
-       * @param search Provides information about how the field is used during a search.
-       */
-      override fun search(search: IResolvable) {
-        cdkBuilder.search(search.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param search Provides information about how the field is used during a search.
-       */
-      override fun search(search: SearchProperty) {
-        cdkBuilder.search(search.let(SearchProperty::unwrap))
-      }
-
-      /**
-       * @param search Provides information about how the field is used during a search.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("85095dde21447ef2f3d3bb8aed5edd9c3a66f25cf46dc38121e1038b29d27f81")
-      override fun search(search: SearchProperty.Builder.() -> Unit): Unit =
-          search(SearchProperty(search))
-
-      /**
-       * @param type The data type of the index field. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty,
-    ) : CdkObject(cdkObject), DocumentMetadataConfigurationProperty {
-      /**
-       * The name of the index field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Provides tuning parameters to determine how the field affects the search results.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-relevance)
-       */
-      override fun relevance(): Any? = unwrap(this).getRelevance()
-
-      /**
-       * Provides information about how the field is used during a search.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-search)
-       */
-      override fun search(): Any? = unwrap(this).getSearch()
-
-      /**
-       * The data type of the index field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html#cfn-kendra-index-documentmetadataconfiguration-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DocumentMetadataConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty):
-          DocumentMetadataConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DocumentMetadataConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DocumentMetadataConfigurationProperty):
-          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty
-    }
-  }
-
-  /**
-   * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt data indexed
-   * by Amazon Kendra.
-   *
-   * We suggest that you use a CMK from your account to help secure your index. Amazon Kendra
-   * doesn't support asymmetric CMKs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kendra.*;
-   * ServerSideEncryptionConfigurationProperty serverSideEncryptionConfigurationProperty =
-   * ServerSideEncryptionConfigurationProperty.builder()
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-serversideencryptionconfiguration.html)
-   */
-  public interface ServerSideEncryptionConfigurationProperty {
-    /**
-     * The identifier of the AWS KMS key .
-     *
-     * Amazon Kendra doesn't support asymmetric keys.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-serversideencryptionconfiguration.html#cfn-kendra-index-serversideencryptionconfiguration-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * A builder for [ServerSideEncryptionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The identifier of the AWS KMS key .
-       * Amazon Kendra doesn't support asymmetric keys.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty.builder()
-
-      /**
-       * @param kmsKeyId The identifier of the AWS KMS key .
-       * Amazon Kendra doesn't support asymmetric keys.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
-      /**
-       * The identifier of the AWS KMS key .
-       *
-       * Amazon Kendra doesn't support asymmetric keys.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-serversideencryptionconfiguration.html#cfn-kendra-index-serversideencryptionconfiguration-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServerSideEncryptionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty):
-          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
-          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty
-    }
-  }
-
-  /**
-   * Provides the configuration information for the JSON token type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kendra.*;
-   * JsonTokenTypeConfigurationProperty jsonTokenTypeConfigurationProperty =
-   * JsonTokenTypeConfigurationProperty.builder()
-   * .groupAttributeField("groupAttributeField")
-   * .userNameAttributeField("userNameAttributeField")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html)
-   */
-  public interface JsonTokenTypeConfigurationProperty {
-    /**
-     * The group attribute field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html#cfn-kendra-index-jsontokentypeconfiguration-groupattributefield)
-     */
-    public fun groupAttributeField(): String
-
-    /**
-     * The user name attribute field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html#cfn-kendra-index-jsontokentypeconfiguration-usernameattributefield)
-     */
-    public fun userNameAttributeField(): String
-
-    /**
-     * A builder for [JsonTokenTypeConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param groupAttributeField The group attribute field. 
-       */
-      public fun groupAttributeField(groupAttributeField: String)
-
-      /**
-       * @param userNameAttributeField The user name attribute field. 
-       */
-      public fun userNameAttributeField(userNameAttributeField: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty.builder()
-
-      /**
-       * @param groupAttributeField The group attribute field. 
-       */
-      override fun groupAttributeField(groupAttributeField: String) {
-        cdkBuilder.groupAttributeField(groupAttributeField)
-      }
-
-      /**
-       * @param userNameAttributeField The user name attribute field. 
-       */
-      override fun userNameAttributeField(userNameAttributeField: String) {
-        cdkBuilder.userNameAttributeField(userNameAttributeField)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty,
-    ) : CdkObject(cdkObject), JsonTokenTypeConfigurationProperty {
-      /**
-       * The group attribute field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html#cfn-kendra-index-jsontokentypeconfiguration-groupattributefield)
-       */
-      override fun groupAttributeField(): String = unwrap(this).getGroupAttributeField()
-
-      /**
-       * The user name attribute field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-jsontokentypeconfiguration.html#cfn-kendra-index-jsontokentypeconfiguration-usernameattributefield)
-       */
-      override fun userNameAttributeField(): String = unwrap(this).getUserNameAttributeField()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          JsonTokenTypeConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty):
-          JsonTokenTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JsonTokenTypeConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JsonTokenTypeConfigurationProperty):
-          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty
-    }
-  }
-
-  /**
    * Provides information about how a custom index field is used during a search.
    *
    * Example:
@@ -2528,6 +2247,287 @@ public open class CfnIndex internal constructor(
       internal fun unwrap(wrapped: SearchProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty
+    }
+  }
+
+  /**
+   * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt data indexed
+   * by Amazon Kendra.
+   *
+   * We suggest that you use a CMK from your account to help secure your index. Amazon Kendra
+   * doesn't support asymmetric CMKs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kendra.*;
+   * ServerSideEncryptionConfigurationProperty serverSideEncryptionConfigurationProperty =
+   * ServerSideEncryptionConfigurationProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-serversideencryptionconfiguration.html)
+   */
+  public interface ServerSideEncryptionConfigurationProperty {
+    /**
+     * The identifier of the AWS KMS key .
+     *
+     * Amazon Kendra doesn't support asymmetric keys.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-serversideencryptionconfiguration.html#cfn-kendra-index-serversideencryptionconfiguration-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * A builder for [ServerSideEncryptionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The identifier of the AWS KMS key .
+       * Amazon Kendra doesn't support asymmetric keys.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty.builder()
+
+      /**
+       * @param kmsKeyId The identifier of the AWS KMS key .
+       * Amazon Kendra doesn't support asymmetric keys.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty,
+    ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
+      /**
+       * The identifier of the AWS KMS key .
+       *
+       * Amazon Kendra doesn't support asymmetric keys.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-serversideencryptionconfiguration.html#cfn-kendra-index-serversideencryptionconfiguration-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServerSideEncryptionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty):
+          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
+          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty
+    }
+  }
+
+  /**
+   * Provides the configuration information for a token.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kendra.*;
+   * UserTokenConfigurationProperty userTokenConfigurationProperty =
+   * UserTokenConfigurationProperty.builder()
+   * .jsonTokenTypeConfiguration(JsonTokenTypeConfigurationProperty.builder()
+   * .groupAttributeField("groupAttributeField")
+   * .userNameAttributeField("userNameAttributeField")
+   * .build())
+   * .jwtTokenTypeConfiguration(JwtTokenTypeConfigurationProperty.builder()
+   * .keyLocation("keyLocation")
+   * // the properties below are optional
+   * .claimRegex("claimRegex")
+   * .groupAttributeField("groupAttributeField")
+   * .issuer("issuer")
+   * .secretManagerArn("secretManagerArn")
+   * .url("url")
+   * .userNameAttributeField("userNameAttributeField")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html)
+   */
+  public interface UserTokenConfigurationProperty {
+    /**
+     * Information about the JSON token type configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html#cfn-kendra-index-usertokenconfiguration-jsontokentypeconfiguration)
+     */
+    public fun jsonTokenTypeConfiguration(): Any? = unwrap(this).getJsonTokenTypeConfiguration()
+
+    /**
+     * Information about the JWT token type configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html#cfn-kendra-index-usertokenconfiguration-jwttokentypeconfiguration)
+     */
+    public fun jwtTokenTypeConfiguration(): Any? = unwrap(this).getJwtTokenTypeConfiguration()
+
+    /**
+     * A builder for [UserTokenConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
+       */
+      public fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable)
+
+      /**
+       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
+       */
+      public
+          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty)
+
+      /**
+       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b2b5657d56c6ffc4b2998617167f62e077c15729e83acbefe984863f124826d6")
+      public
+          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
+       */
+      public fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable)
+
+      /**
+       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
+       */
+      public
+          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty)
+
+      /**
+       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d02dd01b0333bbec06cbc77d1731bd147a022d10a87639d37c63ae4aac7641f7")
+      public
+          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty.Builder =
+          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty.builder()
+
+      /**
+       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
+       */
+      override fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable) {
+        cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
+       */
+      override
+          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty) {
+        cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(JsonTokenTypeConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b2b5657d56c6ffc4b2998617167f62e077c15729e83acbefe984863f124826d6")
+      override
+          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          jsonTokenTypeConfiguration(JsonTokenTypeConfigurationProperty(jsonTokenTypeConfiguration))
+
+      /**
+       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
+       */
+      override fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable) {
+        cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
+       */
+      override
+          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty) {
+        cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(JwtTokenTypeConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d02dd01b0333bbec06cbc77d1731bd147a022d10a87639d37c63ae4aac7641f7")
+      override
+          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          jwtTokenTypeConfiguration(JwtTokenTypeConfigurationProperty(jwtTokenTypeConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty,
+    ) : CdkObject(cdkObject), UserTokenConfigurationProperty {
+      /**
+       * Information about the JSON token type configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html#cfn-kendra-index-usertokenconfiguration-jsontokentypeconfiguration)
+       */
+      override fun jsonTokenTypeConfiguration(): Any? = unwrap(this).getJsonTokenTypeConfiguration()
+
+      /**
+       * Information about the JWT token type configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-usertokenconfiguration.html#cfn-kendra-index-usertokenconfiguration-jwttokentypeconfiguration)
+       */
+      override fun jwtTokenTypeConfiguration(): Any? = unwrap(this).getJwtTokenTypeConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UserTokenConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty):
+          UserTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserTokenConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UserTokenConfigurationProperty):
+          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty
     }
   }
 

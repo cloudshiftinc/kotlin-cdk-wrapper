@@ -417,345 +417,6 @@ public open class CfnFlow internal constructor(
   }
 
   /**
-   * The priority you want to assign to a source.
-   *
-   * You can have a primary stream and a backup stream or two equally prioritized streams. This
-   * setting only applies when Failover Mode is set to FAILOVER.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * SourcePriorityProperty sourcePriorityProperty = SourcePriorityProperty.builder()
-   * .primarySource("primarySource")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcepriority.html)
-   */
-  public interface SourcePriorityProperty {
-    /**
-     * The name of the source you choose as the primary source for this flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcepriority.html#cfn-mediaconnect-flow-sourcepriority-primarysource)
-     */
-    public fun primarySource(): String
-
-    /**
-     * A builder for [SourcePriorityProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param primarySource The name of the source you choose as the primary source for this flow.
-       * 
-       */
-      public fun primarySource(primarySource: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty.builder()
-
-      /**
-       * @param primarySource The name of the source you choose as the primary source for this flow.
-       * 
-       */
-      override fun primarySource(primarySource: String) {
-        cdkBuilder.primarySource(primarySource)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty,
-    ) : CdkObject(cdkObject), SourcePriorityProperty {
-      /**
-       * The name of the source you choose as the primary source for this flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcepriority.html#cfn-mediaconnect-flow-sourcepriority-primarysource)
-       */
-      override fun primarySource(): String = unwrap(this).getPrimarySource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourcePriorityProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty):
-          SourcePriorityProperty = CdkObjectWrappers.wrap(cdkObject) as? SourcePriorityProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourcePriorityProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty
-    }
-  }
-
-  /**
-   * The settings for source failover.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * FailoverConfigProperty failoverConfigProperty = FailoverConfigProperty.builder()
-   * .failoverMode("failoverMode")
-   * .recoveryWindow(123)
-   * .sourcePriority(SourcePriorityProperty.builder()
-   * .primarySource("primarySource")
-   * .build())
-   * .state("state")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html)
-   */
-  public interface FailoverConfigProperty {
-    /**
-     * The type of failover you choose for this flow.
-     *
-     * MERGE combines the source streams into a single stream, allowing graceful recovery from any
-     * single-source loss. FAILOVER allows switching between different streams. The string for this
-     * property must be entered as MERGE or FAILOVER. No other string entry is valid.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-failovermode)
-     */
-    public fun failoverMode(): String? = unwrap(this).getFailoverMode()
-
-    /**
-     * The size of the buffer (delay) that the service maintains.
-     *
-     * A larger buffer means a longer delay in transmitting the stream, but more room for error
-     * correction. A smaller buffer means a shorter delay, but less room for error correction. You can
-     * choose a value from 100-500 ms. If you keep this field blank, the service uses the default value
-     * of 200 ms. This setting only applies when Failover Mode is set to MERGE.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-recoverywindow)
-     */
-    public fun recoveryWindow(): Number? = unwrap(this).getRecoveryWindow()
-
-    /**
-     * The priority you want to assign to a source.
-     *
-     * You can have a primary stream and a backup stream or two equally prioritized streams. This
-     * setting only applies when Failover Mode is set to FAILOVER.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-sourcepriority)
-     */
-    public fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
-
-    /**
-     * The state of source failover on the flow.
-     *
-     * If the state is inactive, the flow can have only one source. If the state is active, the flow
-     * can have one or two sources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-state)
-     */
-    public fun state(): String? = unwrap(this).getState()
-
-    /**
-     * A builder for [FailoverConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param failoverMode The type of failover you choose for this flow.
-       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
-       * single-source loss. FAILOVER allows switching between different streams. The string for this
-       * property must be entered as MERGE or FAILOVER. No other string entry is valid.
-       */
-      public fun failoverMode(failoverMode: String)
-
-      /**
-       * @param recoveryWindow The size of the buffer (delay) that the service maintains.
-       * A larger buffer means a longer delay in transmitting the stream, but more room for error
-       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
-       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
-       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
-       */
-      public fun recoveryWindow(recoveryWindow: Number)
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      public fun sourcePriority(sourcePriority: IResolvable)
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      public fun sourcePriority(sourcePriority: SourcePriorityProperty)
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("433bb811abbc6de8c47e56b6bda3581404f5d13ff508958578003f78c0329544")
-      public fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit)
-
-      /**
-       * @param state The state of source failover on the flow.
-       * If the state is inactive, the flow can have only one source. If the state is active, the
-       * flow can have one or two sources.
-       */
-      public fun state(state: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty.builder()
-
-      /**
-       * @param failoverMode The type of failover you choose for this flow.
-       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
-       * single-source loss. FAILOVER allows switching between different streams. The string for this
-       * property must be entered as MERGE or FAILOVER. No other string entry is valid.
-       */
-      override fun failoverMode(failoverMode: String) {
-        cdkBuilder.failoverMode(failoverMode)
-      }
-
-      /**
-       * @param recoveryWindow The size of the buffer (delay) that the service maintains.
-       * A larger buffer means a longer delay in transmitting the stream, but more room for error
-       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
-       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
-       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
-       */
-      override fun recoveryWindow(recoveryWindow: Number) {
-        cdkBuilder.recoveryWindow(recoveryWindow)
-      }
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      override fun sourcePriority(sourcePriority: IResolvable) {
-        cdkBuilder.sourcePriority(sourcePriority.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
-        cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty::unwrap))
-      }
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("433bb811abbc6de8c47e56b6bda3581404f5d13ff508958578003f78c0329544")
-      override fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit): Unit =
-          sourcePriority(SourcePriorityProperty(sourcePriority))
-
-      /**
-       * @param state The state of source failover on the flow.
-       * If the state is inactive, the flow can have only one source. If the state is active, the
-       * flow can have one or two sources.
-       */
-      override fun state(state: String) {
-        cdkBuilder.state(state)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty,
-    ) : CdkObject(cdkObject), FailoverConfigProperty {
-      /**
-       * The type of failover you choose for this flow.
-       *
-       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
-       * single-source loss. FAILOVER allows switching between different streams. The string for this
-       * property must be entered as MERGE or FAILOVER. No other string entry is valid.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-failovermode)
-       */
-      override fun failoverMode(): String? = unwrap(this).getFailoverMode()
-
-      /**
-       * The size of the buffer (delay) that the service maintains.
-       *
-       * A larger buffer means a longer delay in transmitting the stream, but more room for error
-       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
-       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
-       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-recoverywindow)
-       */
-      override fun recoveryWindow(): Number? = unwrap(this).getRecoveryWindow()
-
-      /**
-       * The priority you want to assign to a source.
-       *
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-sourcepriority)
-       */
-      override fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
-
-      /**
-       * The state of source failover on the flow.
-       *
-       * If the state is inactive, the flow can have only one source. If the state is active, the
-       * flow can have one or two sources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-state)
-       */
-      override fun state(): String? = unwrap(this).getState()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FailoverConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty):
-          FailoverConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FailoverConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FailoverConfigProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty
-    }
-  }
-
-  /**
    * Information about the encryption of the flow.
    *
    * Example:
@@ -1128,6 +789,492 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.EncryptionProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.mediaconnect.CfnFlow.EncryptionProperty
+    }
+  }
+
+  /**
+   * The settings for source failover.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * FailoverConfigProperty failoverConfigProperty = FailoverConfigProperty.builder()
+   * .failoverMode("failoverMode")
+   * .recoveryWindow(123)
+   * .sourcePriority(SourcePriorityProperty.builder()
+   * .primarySource("primarySource")
+   * .build())
+   * .state("state")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html)
+   */
+  public interface FailoverConfigProperty {
+    /**
+     * The type of failover you choose for this flow.
+     *
+     * MERGE combines the source streams into a single stream, allowing graceful recovery from any
+     * single-source loss. FAILOVER allows switching between different streams. The string for this
+     * property must be entered as MERGE or FAILOVER. No other string entry is valid.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-failovermode)
+     */
+    public fun failoverMode(): String? = unwrap(this).getFailoverMode()
+
+    /**
+     * The size of the buffer (delay) that the service maintains.
+     *
+     * A larger buffer means a longer delay in transmitting the stream, but more room for error
+     * correction. A smaller buffer means a shorter delay, but less room for error correction. You can
+     * choose a value from 100-500 ms. If you keep this field blank, the service uses the default value
+     * of 200 ms. This setting only applies when Failover Mode is set to MERGE.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-recoverywindow)
+     */
+    public fun recoveryWindow(): Number? = unwrap(this).getRecoveryWindow()
+
+    /**
+     * The priority you want to assign to a source.
+     *
+     * You can have a primary stream and a backup stream or two equally prioritized streams. This
+     * setting only applies when Failover Mode is set to FAILOVER.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-sourcepriority)
+     */
+    public fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
+
+    /**
+     * The state of source failover on the flow.
+     *
+     * If the state is inactive, the flow can have only one source. If the state is active, the flow
+     * can have one or two sources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-state)
+     */
+    public fun state(): String? = unwrap(this).getState()
+
+    /**
+     * A builder for [FailoverConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param failoverMode The type of failover you choose for this flow.
+       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
+       * single-source loss. FAILOVER allows switching between different streams. The string for this
+       * property must be entered as MERGE or FAILOVER. No other string entry is valid.
+       */
+      public fun failoverMode(failoverMode: String)
+
+      /**
+       * @param recoveryWindow The size of the buffer (delay) that the service maintains.
+       * A larger buffer means a longer delay in transmitting the stream, but more room for error
+       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
+       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
+       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
+       */
+      public fun recoveryWindow(recoveryWindow: Number)
+
+      /**
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       */
+      public fun sourcePriority(sourcePriority: IResolvable)
+
+      /**
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       */
+      public fun sourcePriority(sourcePriority: SourcePriorityProperty)
+
+      /**
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("433bb811abbc6de8c47e56b6bda3581404f5d13ff508958578003f78c0329544")
+      public fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit)
+
+      /**
+       * @param state The state of source failover on the flow.
+       * If the state is inactive, the flow can have only one source. If the state is active, the
+       * flow can have one or two sources.
+       */
+      public fun state(state: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty.builder()
+
+      /**
+       * @param failoverMode The type of failover you choose for this flow.
+       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
+       * single-source loss. FAILOVER allows switching between different streams. The string for this
+       * property must be entered as MERGE or FAILOVER. No other string entry is valid.
+       */
+      override fun failoverMode(failoverMode: String) {
+        cdkBuilder.failoverMode(failoverMode)
+      }
+
+      /**
+       * @param recoveryWindow The size of the buffer (delay) that the service maintains.
+       * A larger buffer means a longer delay in transmitting the stream, but more room for error
+       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
+       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
+       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
+       */
+      override fun recoveryWindow(recoveryWindow: Number) {
+        cdkBuilder.recoveryWindow(recoveryWindow)
+      }
+
+      /**
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       */
+      override fun sourcePriority(sourcePriority: IResolvable) {
+        cdkBuilder.sourcePriority(sourcePriority.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       */
+      override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
+        cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty::unwrap))
+      }
+
+      /**
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("433bb811abbc6de8c47e56b6bda3581404f5d13ff508958578003f78c0329544")
+      override fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit): Unit =
+          sourcePriority(SourcePriorityProperty(sourcePriority))
+
+      /**
+       * @param state The state of source failover on the flow.
+       * If the state is inactive, the flow can have only one source. If the state is active, the
+       * flow can have one or two sources.
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty,
+    ) : CdkObject(cdkObject), FailoverConfigProperty {
+      /**
+       * The type of failover you choose for this flow.
+       *
+       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
+       * single-source loss. FAILOVER allows switching between different streams. The string for this
+       * property must be entered as MERGE or FAILOVER. No other string entry is valid.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-failovermode)
+       */
+      override fun failoverMode(): String? = unwrap(this).getFailoverMode()
+
+      /**
+       * The size of the buffer (delay) that the service maintains.
+       *
+       * A larger buffer means a longer delay in transmitting the stream, but more room for error
+       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
+       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
+       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-recoverywindow)
+       */
+      override fun recoveryWindow(): Number? = unwrap(this).getRecoveryWindow()
+
+      /**
+       * The priority you want to assign to a source.
+       *
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-sourcepriority)
+       */
+      override fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
+
+      /**
+       * The state of source failover on the flow.
+       *
+       * If the state is inactive, the flow can have only one source. If the state is active, the
+       * flow can have one or two sources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-state)
+       */
+      override fun state(): String? = unwrap(this).getState()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FailoverConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty):
+          FailoverConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FailoverConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FailoverConfigProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty
+    }
+  }
+
+  /**
+   * The source configuration for cloud flows receiving a stream from a bridge.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * GatewayBridgeSourceProperty gatewayBridgeSourceProperty = GatewayBridgeSourceProperty.builder()
+   * .bridgeArn("bridgeArn")
+   * // the properties below are optional
+   * .vpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+   * .vpcInterfaceName("vpcInterfaceName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html)
+   */
+  public interface GatewayBridgeSourceProperty {
+    /**
+     * The ARN of the bridge feeding this flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html#cfn-mediaconnect-flow-gatewaybridgesource-bridgearn)
+     */
+    public fun bridgeArn(): String
+
+    /**
+     * The name of the VPC interface attachment to use for this bridge source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html#cfn-mediaconnect-flow-gatewaybridgesource-vpcinterfaceattachment)
+     */
+    public fun vpcInterfaceAttachment(): Any? = unwrap(this).getVpcInterfaceAttachment()
+
+    /**
+     * A builder for [GatewayBridgeSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bridgeArn The ARN of the bridge feeding this flow. 
+       */
+      public fun bridgeArn(bridgeArn: String)
+
+      /**
+       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * bridge source.
+       */
+      public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable)
+
+      /**
+       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * bridge source.
+       */
+      public fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
+
+      /**
+       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * bridge source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e668c114dc639e8388a9195b1759d7621f6ce9cfc3d911d80839d3a718ad09a1")
+      public
+          fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty.builder()
+
+      /**
+       * @param bridgeArn The ARN of the bridge feeding this flow. 
+       */
+      override fun bridgeArn(bridgeArn: String) {
+        cdkBuilder.bridgeArn(bridgeArn)
+      }
+
+      /**
+       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * bridge source.
+       */
+      override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
+        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * bridge source.
+       */
+      override fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
+        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
+      }
+
+      /**
+       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * bridge source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e668c114dc639e8388a9195b1759d7621f6ce9cfc3d911d80839d3a718ad09a1")
+      override
+          fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
+          Unit = vpcInterfaceAttachment(VpcInterfaceAttachmentProperty(vpcInterfaceAttachment))
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty,
+    ) : CdkObject(cdkObject), GatewayBridgeSourceProperty {
+      /**
+       * The ARN of the bridge feeding this flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html#cfn-mediaconnect-flow-gatewaybridgesource-bridgearn)
+       */
+      override fun bridgeArn(): String = unwrap(this).getBridgeArn()
+
+      /**
+       * The name of the VPC interface attachment to use for this bridge source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html#cfn-mediaconnect-flow-gatewaybridgesource-vpcinterfaceattachment)
+       */
+      override fun vpcInterfaceAttachment(): Any? = unwrap(this).getVpcInterfaceAttachment()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GatewayBridgeSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty):
+          GatewayBridgeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayBridgeSourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GatewayBridgeSourceProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty
+    }
+  }
+
+  /**
+   * The priority you want to assign to a source.
+   *
+   * You can have a primary stream and a backup stream or two equally prioritized streams. This
+   * setting only applies when Failover Mode is set to FAILOVER.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * SourcePriorityProperty sourcePriorityProperty = SourcePriorityProperty.builder()
+   * .primarySource("primarySource")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcepriority.html)
+   */
+  public interface SourcePriorityProperty {
+    /**
+     * The name of the source you choose as the primary source for this flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcepriority.html#cfn-mediaconnect-flow-sourcepriority-primarysource)
+     */
+    public fun primarySource(): String
+
+    /**
+     * A builder for [SourcePriorityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param primarySource The name of the source you choose as the primary source for this flow.
+       * 
+       */
+      public fun primarySource(primarySource: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty.builder()
+
+      /**
+       * @param primarySource The name of the source you choose as the primary source for this flow.
+       * 
+       */
+      override fun primarySource(primarySource: String) {
+        cdkBuilder.primarySource(primarySource)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty,
+    ) : CdkObject(cdkObject), SourcePriorityProperty {
+      /**
+       * The name of the source you choose as the primary source for this flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcepriority.html#cfn-mediaconnect-flow-sourcepriority-primarysource)
+       */
+      override fun primarySource(): String = unwrap(this).getPrimarySource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourcePriorityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty):
+          SourcePriorityProperty = CdkObjectWrappers.wrap(cdkObject) as? SourcePriorityProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourcePriorityProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty
     }
   }
 
@@ -1903,153 +2050,6 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceProperty
-    }
-  }
-
-  /**
-   * The source configuration for cloud flows receiving a stream from a bridge.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * GatewayBridgeSourceProperty gatewayBridgeSourceProperty = GatewayBridgeSourceProperty.builder()
-   * .bridgeArn("bridgeArn")
-   * // the properties below are optional
-   * .vpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
-   * .vpcInterfaceName("vpcInterfaceName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html)
-   */
-  public interface GatewayBridgeSourceProperty {
-    /**
-     * The ARN of the bridge feeding this flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html#cfn-mediaconnect-flow-gatewaybridgesource-bridgearn)
-     */
-    public fun bridgeArn(): String
-
-    /**
-     * The name of the VPC interface attachment to use for this bridge source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html#cfn-mediaconnect-flow-gatewaybridgesource-vpcinterfaceattachment)
-     */
-    public fun vpcInterfaceAttachment(): Any? = unwrap(this).getVpcInterfaceAttachment()
-
-    /**
-     * A builder for [GatewayBridgeSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bridgeArn The ARN of the bridge feeding this flow. 
-       */
-      public fun bridgeArn(bridgeArn: String)
-
-      /**
-       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * bridge source.
-       */
-      public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable)
-
-      /**
-       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * bridge source.
-       */
-      public fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
-
-      /**
-       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * bridge source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e668c114dc639e8388a9195b1759d7621f6ce9cfc3d911d80839d3a718ad09a1")
-      public
-          fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty.builder()
-
-      /**
-       * @param bridgeArn The ARN of the bridge feeding this flow. 
-       */
-      override fun bridgeArn(bridgeArn: String) {
-        cdkBuilder.bridgeArn(bridgeArn)
-      }
-
-      /**
-       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * bridge source.
-       */
-      override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
-        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * bridge source.
-       */
-      override fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
-      }
-
-      /**
-       * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * bridge source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e668c114dc639e8388a9195b1759d7621f6ce9cfc3d911d80839d3a718ad09a1")
-      override
-          fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
-          Unit = vpcInterfaceAttachment(VpcInterfaceAttachmentProperty(vpcInterfaceAttachment))
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty,
-    ) : CdkObject(cdkObject), GatewayBridgeSourceProperty {
-      /**
-       * The ARN of the bridge feeding this flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html#cfn-mediaconnect-flow-gatewaybridgesource-bridgearn)
-       */
-      override fun bridgeArn(): String = unwrap(this).getBridgeArn()
-
-      /**
-       * The name of the VPC interface attachment to use for this bridge source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html#cfn-mediaconnect-flow-gatewaybridgesource-vpcinterfaceattachment)
-       */
-      override fun vpcInterfaceAttachment(): Any? = unwrap(this).getVpcInterfaceAttachment()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GatewayBridgeSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty):
-          GatewayBridgeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GatewayBridgeSourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GatewayBridgeSourceProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty
     }
   }
 

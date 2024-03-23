@@ -1017,6 +1017,530 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
   }
 
   /**
+   * Input object for the batch transform job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * BatchTransformInputProperty batchTransformInputProperty = BatchTransformInputProperty.builder()
+   * .dataCapturedDestinationS3Uri("dataCapturedDestinationS3Uri")
+   * .datasetFormat(DatasetFormatProperty.builder()
+   * .csv(CsvProperty.builder()
+   * .header(false)
+   * .build())
+   * .json(JsonProperty.builder()
+   * .line(false)
+   * .build())
+   * .parquet(false)
+   * .build())
+   * .localPath("localPath")
+   * // the properties below are optional
+   * .featuresAttribute("featuresAttribute")
+   * .inferenceAttribute("inferenceAttribute")
+   * .probabilityAttribute("probabilityAttribute")
+   * .s3DataDistributionType("s3DataDistributionType")
+   * .s3InputMode("s3InputMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html)
+   */
+  public interface BatchTransformInputProperty {
+    /**
+     * The Amazon S3 location being used to capture the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-datacaptureddestinations3uri)
+     */
+    public fun dataCapturedDestinationS3Uri(): String
+
+    /**
+     * The dataset format for your batch transform job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-datasetformat)
+     */
+    public fun datasetFormat(): Any
+
+    /**
+     * The attributes of the input data that are the input features.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-featuresattribute)
+     */
+    public fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
+
+    /**
+     * The attribute of the input data that represents the ground truth label.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-inferenceattribute)
+     */
+    public fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
+
+    /**
+     * Path to the filesystem where the batch transform data is available to the container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-localpath)
+     */
+    public fun localPath(): String
+
+    /**
+     * In a classification problem, the attribute that represents the class probability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-probabilityattribute)
+     */
+    public fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key.
+     *
+     * Defaults to `FullyReplicated`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-s3datadistributiontype)
+     */
+    public fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
+
+    /**
+     * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
+     * monitoring job.
+     *
+     * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that fit
+     * in memory. Defaults to `File` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-s3inputmode)
+     */
+    public fun s3InputMode(): String? = unwrap(this).getS3InputMode()
+
+    /**
+     * A builder for [BatchTransformInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataCapturedDestinationS3Uri The Amazon S3 location being used to capture the data. 
+       */
+      public fun dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri: String)
+
+      /**
+       * @param datasetFormat The dataset format for your batch transform job. 
+       */
+      public fun datasetFormat(datasetFormat: IResolvable)
+
+      /**
+       * @param datasetFormat The dataset format for your batch transform job. 
+       */
+      public fun datasetFormat(datasetFormat: DatasetFormatProperty)
+
+      /**
+       * @param datasetFormat The dataset format for your batch transform job. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7b8a9932aec8edb38d066ed1cc14d7a6ba6798736d5f0ed23e3d9368071741f8")
+      public fun datasetFormat(datasetFormat: DatasetFormatProperty.Builder.() -> Unit)
+
+      /**
+       * @param featuresAttribute The attributes of the input data that are the input features.
+       */
+      public fun featuresAttribute(featuresAttribute: String)
+
+      /**
+       * @param inferenceAttribute The attribute of the input data that represents the ground truth
+       * label.
+       */
+      public fun inferenceAttribute(inferenceAttribute: String)
+
+      /**
+       * @param localPath Path to the filesystem where the batch transform data is available to the
+       * container. 
+       */
+      public fun localPath(localPath: String)
+
+      /**
+       * @param probabilityAttribute In a classification problem, the attribute that represents the
+       * class probability.
+       */
+      public fun probabilityAttribute(probabilityAttribute: String)
+
+      /**
+       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
+       * replicated or sharded by an S3 key.
+       * Defaults to `FullyReplicated`
+       */
+      public fun s3DataDistributionType(s3DataDistributionType: String)
+
+      /**
+       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
+       * data for the monitoring job.
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       */
+      public fun s3InputMode(s3InputMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty.builder()
+
+      /**
+       * @param dataCapturedDestinationS3Uri The Amazon S3 location being used to capture the data. 
+       */
+      override fun dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri: String) {
+        cdkBuilder.dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri)
+      }
+
+      /**
+       * @param datasetFormat The dataset format for your batch transform job. 
+       */
+      override fun datasetFormat(datasetFormat: IResolvable) {
+        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param datasetFormat The dataset format for your batch transform job. 
+       */
+      override fun datasetFormat(datasetFormat: DatasetFormatProperty) {
+        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty::unwrap))
+      }
+
+      /**
+       * @param datasetFormat The dataset format for your batch transform job. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7b8a9932aec8edb38d066ed1cc14d7a6ba6798736d5f0ed23e3d9368071741f8")
+      override fun datasetFormat(datasetFormat: DatasetFormatProperty.Builder.() -> Unit): Unit =
+          datasetFormat(DatasetFormatProperty(datasetFormat))
+
+      /**
+       * @param featuresAttribute The attributes of the input data that are the input features.
+       */
+      override fun featuresAttribute(featuresAttribute: String) {
+        cdkBuilder.featuresAttribute(featuresAttribute)
+      }
+
+      /**
+       * @param inferenceAttribute The attribute of the input data that represents the ground truth
+       * label.
+       */
+      override fun inferenceAttribute(inferenceAttribute: String) {
+        cdkBuilder.inferenceAttribute(inferenceAttribute)
+      }
+
+      /**
+       * @param localPath Path to the filesystem where the batch transform data is available to the
+       * container. 
+       */
+      override fun localPath(localPath: String) {
+        cdkBuilder.localPath(localPath)
+      }
+
+      /**
+       * @param probabilityAttribute In a classification problem, the attribute that represents the
+       * class probability.
+       */
+      override fun probabilityAttribute(probabilityAttribute: String) {
+        cdkBuilder.probabilityAttribute(probabilityAttribute)
+      }
+
+      /**
+       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
+       * replicated or sharded by an S3 key.
+       * Defaults to `FullyReplicated`
+       */
+      override fun s3DataDistributionType(s3DataDistributionType: String) {
+        cdkBuilder.s3DataDistributionType(s3DataDistributionType)
+      }
+
+      /**
+       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
+       * data for the monitoring job.
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       */
+      override fun s3InputMode(s3InputMode: String) {
+        cdkBuilder.s3InputMode(s3InputMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty,
+    ) : CdkObject(cdkObject), BatchTransformInputProperty {
+      /**
+       * The Amazon S3 location being used to capture the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-datacaptureddestinations3uri)
+       */
+      override fun dataCapturedDestinationS3Uri(): String =
+          unwrap(this).getDataCapturedDestinationS3Uri()
+
+      /**
+       * The dataset format for your batch transform job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-datasetformat)
+       */
+      override fun datasetFormat(): Any = unwrap(this).getDatasetFormat()
+
+      /**
+       * The attributes of the input data that are the input features.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-featuresattribute)
+       */
+      override fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
+
+      /**
+       * The attribute of the input data that represents the ground truth label.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-inferenceattribute)
+       */
+      override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
+
+      /**
+       * Path to the filesystem where the batch transform data is available to the container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-localpath)
+       */
+      override fun localPath(): String = unwrap(this).getLocalPath()
+
+      /**
+       * In a classification problem, the attribute that represents the class probability.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-probabilityattribute)
+       */
+      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+
+      /**
+       * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key.
+       *
+       * Defaults to `FullyReplicated`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-s3datadistributiontype)
+       */
+      override fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
+
+      /**
+       * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
+       * monitoring job.
+       *
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-s3inputmode)
+       */
+      override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BatchTransformInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty):
+          BatchTransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchTransformInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BatchTransformInputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty
+    }
+  }
+
+  /**
+   * The configuration for the cluster resources used to run the processing job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
+   * .instanceCount(123)
+   * .instanceType("instanceType")
+   * .volumeSizeInGb(123)
+   * // the properties below are optional
+   * .volumeKmsKeyId("volumeKmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html)
+   */
+  public interface ClusterConfigProperty {
+    /**
+     * The number of ML compute instances to use in the model monitoring job.
+     *
+     * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-instancecount)
+     */
+    public fun instanceCount(): Number
+
+    /**
+     * The ML compute instance type for the processing job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-instancetype)
+     */
+    public fun instanceType(): String
+
+    /**
+     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-volumekmskeyid)
+     */
+    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+    /**
+     * The size of the ML storage volume, in gigabytes, that you want to provision.
+     *
+     * You must specify sufficient ML storage for your scenario.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-volumesizeingb)
+     */
+    public fun volumeSizeInGb(): Number
+
+    /**
+     * A builder for [ClusterConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
+       * 
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+       */
+      public fun instanceCount(instanceCount: Number)
+
+      /**
+       * @param instanceType The ML compute instance type for the processing job. 
+       */
+      public fun instanceType(instanceType: String)
+
+      /**
+       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
+       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
+       * model monitoring job.
+       */
+      public fun volumeKmsKeyId(volumeKmsKeyId: String)
+
+      /**
+       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
+       * provision. 
+       * You must specify sufficient ML storage for your scenario.
+       */
+      public fun volumeSizeInGb(volumeSizeInGb: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty.builder()
+
+      /**
+       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
+       * 
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+       */
+      override fun instanceCount(instanceCount: Number) {
+        cdkBuilder.instanceCount(instanceCount)
+      }
+
+      /**
+       * @param instanceType The ML compute instance type for the processing job. 
+       */
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
+      }
+
+      /**
+       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
+       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
+       * model monitoring job.
+       */
+      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
+        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
+      }
+
+      /**
+       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
+       * provision. 
+       * You must specify sufficient ML storage for your scenario.
+       */
+      override fun volumeSizeInGb(volumeSizeInGb: Number) {
+        cdkBuilder.volumeSizeInGb(volumeSizeInGb)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty,
+    ) : CdkObject(cdkObject), ClusterConfigProperty {
+      /**
+       * The number of ML compute instances to use in the model monitoring job.
+       *
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-instancecount)
+       */
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+
+      /**
+       * The ML compute instance type for the processing job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-instancetype)
+       */
+      override fun instanceType(): String = unwrap(this).getInstanceType()
+
+      /**
+       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
+       * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-volumekmskeyid)
+       */
+      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+      /**
+       * The size of the ML storage volume, in gigabytes, that you want to provision.
+       *
+       * You must specify sufficient ML storage for your scenario.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-volumesizeingb)
+       */
+      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty):
+          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClusterConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty
+    }
+  }
+
+  /**
    * Input object for the endpoint.
    *
    * Example:
@@ -1100,27 +1624,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
   }
 
   /**
-   * Specifies a limit to how long a model training job or model compilation job can run.
-   *
-   * It also specifies how long a managed spot training job has to complete. When the job reaches
-   * the time limit, SageMaker ends the training or compilation job. Use this API to cap model training
-   * costs.
-   *
-   * To stop a training job, SageMaker sends the algorithm the `SIGTERM` signal, which delays job
-   * termination for 120 seconds. Algorithms can use this 120-second window to save the model
-   * artifacts, so the results of training are not lost.
-   *
-   * The training algorithms provided by SageMaker automatically save the intermediate results of a
-   * model training job when possible. This attempt to save artifacts is only a best effort case as
-   * model might not be in a state from which it can be saved. For example, if training has just
-   * started, the model might not be ready to save. When saved, this intermediate data is a valid model
-   * artifact. You can use it to create a model with `CreateModel` .
-   *
-   *
-   * The Neural Topic Model (NTM) currently does not support saving intermediate model artifacts.
-   * When training NTMs, make sure that the maximum runtime is sufficient for the training job to
-   * complete.
-   *
+   * The CSV format.
    *
    * Example:
    *
@@ -1128,127 +1632,88 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * StoppingConditionProperty stoppingConditionProperty = StoppingConditionProperty.builder()
-   * .maxRuntimeInSeconds(123)
+   * CsvProperty csvProperty = CsvProperty.builder()
+   * .header(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-stoppingcondition.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-csv.html)
    */
-  public interface StoppingConditionProperty {
+  public interface CsvProperty {
     /**
-     * The maximum length of time, in seconds, that a training or compilation job can run before it
-     * is stopped.
+     * A boolean flag indicating if given CSV has header.
      *
-     * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
-     * generated. We recommend starting with 900 seconds and increasing as necessary based on your
-     * model.
-     *
-     * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
-     * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
-     * maximum time for all of the attempts in total, not each individual attempt. The default value is
-     * 1 day. The maximum value is 28 days.
-     *
-     * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
-     * metrics or archiving and uploading models after it has been stopped, is 30 days.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-stoppingcondition.html#cfn-sagemaker-modelexplainabilityjobdefinition-stoppingcondition-maxruntimeinseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-csv.html#cfn-sagemaker-modelexplainabilityjobdefinition-csv-header)
      */
-    public fun maxRuntimeInSeconds(): Number
+    public fun `header`(): Any? = unwrap(this).getHeader()
 
     /**
-     * A builder for [StoppingConditionProperty]
+     * A builder for [CsvProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxRuntimeInSeconds The maximum length of time, in seconds, that a training or
-       * compilation job can run before it is stopped. 
-       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
-       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
-       * model.
-       *
-       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
-       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
-       * maximum time for all of the attempts in total, not each individual attempt. The default value
-       * is 1 day. The maximum value is 28 days.
-       *
-       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
-       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       * @param header A boolean flag indicating if given CSV has header.
        */
-      public fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number)
+      public fun `header`(`header`: Boolean)
+
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      public fun `header`(`header`: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty.builder()
 
       /**
-       * @param maxRuntimeInSeconds The maximum length of time, in seconds, that a training or
-       * compilation job can run before it is stopped. 
-       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
-       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
-       * model.
-       *
-       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
-       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
-       * maximum time for all of the attempts in total, not each individual attempt. The default value
-       * is 1 day. The maximum value is 28 days.
-       *
-       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
-       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       * @param header A boolean flag indicating if given CSV has header.
        */
-      override fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number) {
-        cdkBuilder.maxRuntimeInSeconds(maxRuntimeInSeconds)
+      override fun `header`(`header`: Boolean) {
+        cdkBuilder.`header`(`header`)
+      }
+
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      override fun `header`(`header`: IResolvable) {
+        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty,
-    ) : CdkObject(cdkObject), StoppingConditionProperty {
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty,
+    ) : CdkObject(cdkObject), CsvProperty {
       /**
-       * The maximum length of time, in seconds, that a training or compilation job can run before
-       * it is stopped.
+       * A boolean flag indicating if given CSV has header.
        *
-       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
-       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
-       * model.
-       *
-       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
-       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
-       * maximum time for all of the attempts in total, not each individual attempt. The default value
-       * is 1 day. The maximum value is 28 days.
-       *
-       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
-       * metrics or archiving and uploading models after it has been stopped, is 30 days.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-stoppingcondition.html#cfn-sagemaker-modelexplainabilityjobdefinition-stoppingcondition-maxruntimeinseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-csv.html#cfn-sagemaker-modelexplainabilityjobdefinition-csv-header)
        */
-      override fun maxRuntimeInSeconds(): Number = unwrap(this).getMaxRuntimeInSeconds()
+      override fun `header`(): Any? = unwrap(this).getHeader()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StoppingConditionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CsvProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty):
-          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StoppingConditionProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty):
+          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StoppingConditionProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty
+      internal fun unwrap(wrapped: CsvProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty
     }
   }
 
@@ -1458,7 +1923,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
   }
 
   /**
-   * Identifies the resources to deploy for a monitoring job.
+   * Input object for the endpoint.
    *
    * Example:
    *
@@ -1466,308 +1931,277 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringResourcesProperty monitoringResourcesProperty = MonitoringResourcesProperty.builder()
-   * .clusterConfig(ClusterConfigProperty.builder()
-   * .instanceCount(123)
-   * .instanceType("instanceType")
-   * .volumeSizeInGb(123)
+   * EndpointInputProperty endpointInputProperty = EndpointInputProperty.builder()
+   * .endpointName("endpointName")
+   * .localPath("localPath")
    * // the properties below are optional
-   * .volumeKmsKeyId("volumeKmsKeyId")
-   * .build())
+   * .featuresAttribute("featuresAttribute")
+   * .inferenceAttribute("inferenceAttribute")
+   * .probabilityAttribute("probabilityAttribute")
+   * .s3DataDistributionType("s3DataDistributionType")
+   * .s3InputMode("s3InputMode")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringresources.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html)
    */
-  public interface MonitoringResourcesProperty {
+  public interface EndpointInputProperty {
     /**
-     * The configuration for the cluster resources used to run the processing job.
+     * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringresources.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringresources-clusterconfig)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-endpointname)
      */
-    public fun clusterConfig(): Any
+    public fun endpointName(): String
 
     /**
-     * A builder for [MonitoringResourcesProperty]
+     * The attributes of the input data that are the input features.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-featuresattribute)
+     */
+    public fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
+
+    /**
+     * The attribute of the input data that represents the ground truth label.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-inferenceattribute)
+     */
+    public fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
+
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-localpath)
+     */
+    public fun localPath(): String
+
+    /**
+     * In a classification problem, the attribute that represents the class probability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-probabilityattribute)
+     */
+    public fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an Amazon S3
+     * key.
+     *
+     * Defaults to `FullyReplicated`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3datadistributiontype)
+     */
+    public fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
+
+    /**
+     * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
+     * monitoring job.
+     *
+     * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that fit
+     * in memory. Defaults to `File` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3inputmode)
+     */
+    public fun s3InputMode(): String? = unwrap(this).getS3InputMode()
+
+    /**
+     * A builder for [EndpointInputProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param clusterConfig The configuration for the cluster resources used to run the processing
-       * job. 
+       * @param endpointName An endpoint in customer's account which has enabled `DataCaptureConfig`
+       * enabled. 
        */
-      public fun clusterConfig(clusterConfig: IResolvable)
+      public fun endpointName(endpointName: String)
 
       /**
-       * @param clusterConfig The configuration for the cluster resources used to run the processing
-       * job. 
+       * @param featuresAttribute The attributes of the input data that are the input features.
        */
-      public fun clusterConfig(clusterConfig: ClusterConfigProperty)
+      public fun featuresAttribute(featuresAttribute: String)
 
       /**
-       * @param clusterConfig The configuration for the cluster resources used to run the processing
-       * job. 
+       * @param inferenceAttribute The attribute of the input data that represents the ground truth
+       * label.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("42f8aec8def9eb81f8c1f81a564f7bc914c277b8a594cdc422237bbc3d9a8d65")
-      public fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit)
+      public fun inferenceAttribute(inferenceAttribute: String)
+
+      /**
+       * @param localPath Path to the filesystem where the endpoint data is available to the
+       * container. 
+       */
+      public fun localPath(localPath: String)
+
+      /**
+       * @param probabilityAttribute In a classification problem, the attribute that represents the
+       * class probability.
+       */
+      public fun probabilityAttribute(probabilityAttribute: String)
+
+      /**
+       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
+       * replicated or sharded by an Amazon S3 key.
+       * Defaults to `FullyReplicated`
+       */
+      public fun s3DataDistributionType(s3DataDistributionType: String)
+
+      /**
+       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
+       * data for the monitoring job.
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       */
+      public fun s3InputMode(s3InputMode: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty.builder()
 
       /**
-       * @param clusterConfig The configuration for the cluster resources used to run the processing
-       * job. 
+       * @param endpointName An endpoint in customer's account which has enabled `DataCaptureConfig`
+       * enabled. 
        */
-      override fun clusterConfig(clusterConfig: IResolvable) {
-        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
+      override fun endpointName(endpointName: String) {
+        cdkBuilder.endpointName(endpointName)
       }
 
       /**
-       * @param clusterConfig The configuration for the cluster resources used to run the processing
-       * job. 
+       * @param featuresAttribute The attributes of the input data that are the input features.
        */
-      override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
-        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
+      override fun featuresAttribute(featuresAttribute: String) {
+        cdkBuilder.featuresAttribute(featuresAttribute)
       }
 
       /**
-       * @param clusterConfig The configuration for the cluster resources used to run the processing
-       * job. 
+       * @param inferenceAttribute The attribute of the input data that represents the ground truth
+       * label.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("42f8aec8def9eb81f8c1f81a564f7bc914c277b8a594cdc422237bbc3d9a8d65")
-      override fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit): Unit =
-          clusterConfig(ClusterConfigProperty(clusterConfig))
+      override fun inferenceAttribute(inferenceAttribute: String) {
+        cdkBuilder.inferenceAttribute(inferenceAttribute)
+      }
+
+      /**
+       * @param localPath Path to the filesystem where the endpoint data is available to the
+       * container. 
+       */
+      override fun localPath(localPath: String) {
+        cdkBuilder.localPath(localPath)
+      }
+
+      /**
+       * @param probabilityAttribute In a classification problem, the attribute that represents the
+       * class probability.
+       */
+      override fun probabilityAttribute(probabilityAttribute: String) {
+        cdkBuilder.probabilityAttribute(probabilityAttribute)
+      }
+
+      /**
+       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
+       * replicated or sharded by an Amazon S3 key.
+       * Defaults to `FullyReplicated`
+       */
+      override fun s3DataDistributionType(s3DataDistributionType: String) {
+        cdkBuilder.s3DataDistributionType(s3DataDistributionType)
+      }
+
+      /**
+       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
+       * data for the monitoring job.
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       */
+      override fun s3InputMode(s3InputMode: String) {
+        cdkBuilder.s3InputMode(s3InputMode)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty,
-    ) : CdkObject(cdkObject), MonitoringResourcesProperty {
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty,
+    ) : CdkObject(cdkObject), EndpointInputProperty {
       /**
-       * The configuration for the cluster resources used to run the processing job.
+       * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringresources.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringresources-clusterconfig)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-endpointname)
        */
-      override fun clusterConfig(): Any = unwrap(this).getClusterConfig()
+      override fun endpointName(): String = unwrap(this).getEndpointName()
+
+      /**
+       * The attributes of the input data that are the input features.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-featuresattribute)
+       */
+      override fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
+
+      /**
+       * The attribute of the input data that represents the ground truth label.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-inferenceattribute)
+       */
+      override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
+
+      /**
+       * Path to the filesystem where the endpoint data is available to the container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-localpath)
+       */
+      override fun localPath(): String = unwrap(this).getLocalPath()
+
+      /**
+       * In a classification problem, the attribute that represents the class probability.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-probabilityattribute)
+       */
+      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+
+      /**
+       * Whether input data distributed in Amazon S3 is fully replicated or sharded by an Amazon S3
+       * key.
+       *
+       * Defaults to `FullyReplicated`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3datadistributiontype)
+       */
+      override fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
+
+      /**
+       * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
+       * monitoring job.
+       *
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3inputmode)
+       */
+      override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringResourcesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointInputProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty):
-          MonitoringResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MonitoringResourcesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringResourcesProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty
-    }
-  }
-
-  /**
-   * The configuration for the cluster resources used to run the processing job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
-   * .instanceCount(123)
-   * .instanceType("instanceType")
-   * .volumeSizeInGb(123)
-   * // the properties below are optional
-   * .volumeKmsKeyId("volumeKmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html)
-   */
-  public interface ClusterConfigProperty {
-    /**
-     * The number of ML compute instances to use in the model monitoring job.
-     *
-     * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-instancecount)
-     */
-    public fun instanceCount(): Number
-
-    /**
-     * The ML compute instance type for the processing job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-instancetype)
-     */
-    public fun instanceType(): String
-
-    /**
-     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
-     * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-volumekmskeyid)
-     */
-    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
-
-    /**
-     * The size of the ML storage volume, in gigabytes, that you want to provision.
-     *
-     * You must specify sufficient ML storage for your scenario.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-volumesizeingb)
-     */
-    public fun volumeSizeInGb(): Number
-
-    /**
-     * A builder for [ClusterConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
-       * 
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       */
-      public fun instanceCount(instanceCount: Number)
-
-      /**
-       * @param instanceType The ML compute instance type for the processing job. 
-       */
-      public fun instanceType(instanceType: String)
-
-      /**
-       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
-       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
-       * model monitoring job.
-       */
-      public fun volumeKmsKeyId(volumeKmsKeyId: String)
-
-      /**
-       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
-       * provision. 
-       * You must specify sufficient ML storage for your scenario.
-       */
-      public fun volumeSizeInGb(volumeSizeInGb: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty.builder()
-
-      /**
-       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
-       * 
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       */
-      override fun instanceCount(instanceCount: Number) {
-        cdkBuilder.instanceCount(instanceCount)
-      }
-
-      /**
-       * @param instanceType The ML compute instance type for the processing job. 
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      /**
-       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
-       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
-       * model monitoring job.
-       */
-      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
-        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
-      }
-
-      /**
-       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
-       * provision. 
-       * You must specify sufficient ML storage for your scenario.
-       */
-      override fun volumeSizeInGb(volumeSizeInGb: Number) {
-        cdkBuilder.volumeSizeInGb(volumeSizeInGb)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty,
-    ) : CdkObject(cdkObject), ClusterConfigProperty {
-      /**
-       * The number of ML compute instances to use in the model monitoring job.
-       *
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-instancecount)
-       */
-      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
-
-      /**
-       * The ML compute instance type for the processing job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-instancetype)
-       */
-      override fun instanceType(): String = unwrap(this).getInstanceType()
-
-      /**
-       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
-       * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-volumekmskeyid)
-       */
-      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
-
-      /**
-       * The size of the ML storage volume, in gigabytes, that you want to provision.
-       *
-       * You must specify sufficient ML storage for your scenario.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-clusterconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-clusterconfig-volumesizeingb)
-       */
-      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty):
-          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty):
+          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointInputProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ClusterConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty
+      internal fun unwrap(wrapped: EndpointInputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty
     }
   }
 
   /**
-   * The output object for a monitoring job.
+   * The Json format.
    *
    * Example:
    *
@@ -1775,115 +2209,255 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringOutputProperty monitoringOutputProperty = MonitoringOutputProperty.builder()
-   * .s3Output(S3OutputProperty.builder()
-   * .localPath("localPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .s3UploadMode("s3UploadMode")
-   * .build())
+   * JsonProperty jsonProperty = JsonProperty.builder()
+   * .line(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutput.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-json.html)
    */
-  public interface MonitoringOutputProperty {
+  public interface JsonProperty {
     /**
-     * The Amazon S3 storage location where the results of a monitoring job are saved.
+     * A boolean flag indicating if it is JSON line format.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutput.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutput-s3output)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-json.html#cfn-sagemaker-modelexplainabilityjobdefinition-json-line)
      */
-    public fun s3Output(): Any
+    public fun line(): Any? = unwrap(this).getLine()
 
     /**
-     * A builder for [MonitoringOutputProperty]
+     * A builder for [JsonProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param line A boolean flag indicating if it is JSON line format.
        */
-      public fun s3Output(s3Output: IResolvable)
+      public fun line(line: Boolean)
 
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param line A boolean flag indicating if it is JSON line format.
        */
-      public fun s3Output(s3Output: S3OutputProperty)
-
-      /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0ee30764bb6561fa1de467ef6293013f2eb9c0f4a3ff018a8824a01ef2bc271")
-      public fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit)
+      public fun line(line: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty.builder()
 
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param line A boolean flag indicating if it is JSON line format.
        */
-      override fun s3Output(s3Output: IResolvable) {
-        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+      override fun line(line: Boolean) {
+        cdkBuilder.line(line)
       }
 
       /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
+       * @param line A boolean flag indicating if it is JSON line format.
        */
-      override fun s3Output(s3Output: S3OutputProperty) {
-        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+      override fun line(line: IResolvable) {
+        cdkBuilder.line(line.let(IResolvable::unwrap))
       }
-
-      /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0ee30764bb6561fa1de467ef6293013f2eb9c0f4a3ff018a8824a01ef2bc271")
-      override fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit): Unit =
-          s3Output(S3OutputProperty(s3Output))
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputProperty {
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty,
+    ) : CdkObject(cdkObject), JsonProperty {
       /**
-       * The Amazon S3 storage location where the results of a monitoring job are saved.
+       * A boolean flag indicating if it is JSON line format.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutput.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutput-s3output)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-json.html#cfn-sagemaker-modelexplainabilityjobdefinition-json-line)
        */
-      override fun s3Output(): Any = unwrap(this).getS3Output()
+      override fun line(): Any? = unwrap(this).getLine()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JsonProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty):
-          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty):
+          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MonitoringOutputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty
+      internal fun unwrap(wrapped: JsonProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty
+    }
+  }
+
+  /**
+   * Docker container image configuration object for the model explainability job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelExplainabilityAppSpecificationProperty modelExplainabilityAppSpecificationProperty =
+   * ModelExplainabilityAppSpecificationProperty.builder()
+   * .configUri("configUri")
+   * .imageUri("imageUri")
+   * // the properties below are optional
+   * .environment(Map.of(
+   * "environmentKey", "environment"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html)
+   */
+  public interface ModelExplainabilityAppSpecificationProperty {
+    /**
+     * JSON formatted Amazon S3 file that defines explainability parameters.
+     *
+     * For more information on this JSON configuration file, see [Configure model explainability
+     * parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri)
+     */
+    public fun configUri(): String
+
+    /**
+     * Sets the environment variables in the Docker container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment)
+     */
+    public fun environment(): Any? = unwrap(this).getEnvironment()
+
+    /**
+     * The container image to be run by the model explainability job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri)
+     */
+    public fun imageUri(): String
+
+    /**
+     * A builder for [ModelExplainabilityAppSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configUri JSON formatted Amazon S3 file that defines explainability parameters. 
+       * For more information on this JSON configuration file, see [Configure model explainability
+       * parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)
+       * .
+       */
+      public fun configUri(configUri: String)
+
+      /**
+       * @param environment Sets the environment variables in the Docker container.
+       */
+      public fun environment(environment: IResolvable)
+
+      /**
+       * @param environment Sets the environment variables in the Docker container.
+       */
+      public fun environment(environment: Map<String, String>)
+
+      /**
+       * @param imageUri The container image to be run by the model explainability job. 
+       */
+      public fun imageUri(imageUri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty.builder()
+
+      /**
+       * @param configUri JSON formatted Amazon S3 file that defines explainability parameters. 
+       * For more information on this JSON configuration file, see [Configure model explainability
+       * parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)
+       * .
+       */
+      override fun configUri(configUri: String) {
+        cdkBuilder.configUri(configUri)
+      }
+
+      /**
+       * @param environment Sets the environment variables in the Docker container.
+       */
+      override fun environment(environment: IResolvable) {
+        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param environment Sets the environment variables in the Docker container.
+       */
+      override fun environment(environment: Map<String, String>) {
+        cdkBuilder.environment(environment)
+      }
+
+      /**
+       * @param imageUri The container image to be run by the model explainability job. 
+       */
+      override fun imageUri(imageUri: String) {
+        cdkBuilder.imageUri(imageUri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty,
+    ) : CdkObject(cdkObject), ModelExplainabilityAppSpecificationProperty {
+      /**
+       * JSON formatted Amazon S3 file that defines explainability parameters.
+       *
+       * For more information on this JSON configuration file, see [Configure model explainability
+       * parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri)
+       */
+      override fun configUri(): String = unwrap(this).getConfigUri()
+
+      /**
+       * Sets the environment variables in the Docker container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment)
+       */
+      override fun environment(): Any? = unwrap(this).getEnvironment()
+
+      /**
+       * The container image to be run by the model explainability job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri)
+       */
+      override fun imageUri(): String = unwrap(this).getImageUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ModelExplainabilityAppSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty):
+          ModelExplainabilityAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelExplainabilityAppSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelExplainabilityAppSpecificationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty
     }
   }
 
@@ -2226,6 +2800,405 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
   }
 
   /**
+   * The output configuration for monitoring jobs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MonitoringOutputConfigProperty monitoringOutputConfigProperty =
+   * MonitoringOutputConfigProperty.builder()
+   * .monitoringOutputs(List.of(MonitoringOutputProperty.builder()
+   * .s3Output(S3OutputProperty.builder()
+   * .localPath("localPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .s3UploadMode("s3UploadMode")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html)
+   */
+  public interface MonitoringOutputConfigProperty {
+    /**
+     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+     * model artifacts at rest using Amazon S3 server-side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * Monitoring outputs for monitoring jobs.
+     *
+     * This is where the output of the periodic monitoring jobs is uploaded.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig-monitoringoutputs)
+     */
+    public fun monitoringOutputs(): Any
+
+    /**
+     * A builder for [MonitoringOutputConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
+       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(monitoringOutputs: IResolvable)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(monitoringOutputs: List<Any>)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(vararg monitoringOutputs: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty.builder()
+
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
+       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(monitoringOutputs: IResolvable) {
+        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(monitoringOutputs: List<Any>) {
+        cdkBuilder.monitoringOutputs(monitoringOutputs)
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(vararg monitoringOutputs: Any): Unit =
+          monitoringOutputs(monitoringOutputs.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty,
+    ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
+      /**
+       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+       * model artifacts at rest using Amazon S3 server-side encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * Monitoring outputs for monitoring jobs.
+       *
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig-monitoringoutputs)
+       */
+      override fun monitoringOutputs(): Any = unwrap(this).getMonitoringOutputs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty):
+          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty
+    }
+  }
+
+  /**
+   * The output object for a monitoring job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MonitoringOutputProperty monitoringOutputProperty = MonitoringOutputProperty.builder()
+   * .s3Output(S3OutputProperty.builder()
+   * .localPath("localPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .s3UploadMode("s3UploadMode")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutput.html)
+   */
+  public interface MonitoringOutputProperty {
+    /**
+     * The Amazon S3 storage location where the results of a monitoring job are saved.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutput.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutput-s3output)
+     */
+    public fun s3Output(): Any
+
+    /**
+     * A builder for [MonitoringOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      public fun s3Output(s3Output: IResolvable)
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      public fun s3Output(s3Output: S3OutputProperty)
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0ee30764bb6561fa1de467ef6293013f2eb9c0f4a3ff018a8824a01ef2bc271")
+      public fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.builder()
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      override fun s3Output(s3Output: IResolvable) {
+        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      override fun s3Output(s3Output: S3OutputProperty) {
+        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+      }
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0ee30764bb6561fa1de467ef6293013f2eb9c0f4a3ff018a8824a01ef2bc271")
+      override fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit): Unit =
+          s3Output(S3OutputProperty(s3Output))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty,
+    ) : CdkObject(cdkObject), MonitoringOutputProperty {
+      /**
+       * The Amazon S3 storage location where the results of a monitoring job are saved.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutput.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutput-s3output)
+       */
+      override fun s3Output(): Any = unwrap(this).getS3Output()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty):
+          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringOutputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty
+    }
+  }
+
+  /**
+   * Identifies the resources to deploy for a monitoring job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MonitoringResourcesProperty monitoringResourcesProperty = MonitoringResourcesProperty.builder()
+   * .clusterConfig(ClusterConfigProperty.builder()
+   * .instanceCount(123)
+   * .instanceType("instanceType")
+   * .volumeSizeInGb(123)
+   * // the properties below are optional
+   * .volumeKmsKeyId("volumeKmsKeyId")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringresources.html)
+   */
+  public interface MonitoringResourcesProperty {
+    /**
+     * The configuration for the cluster resources used to run the processing job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringresources.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringresources-clusterconfig)
+     */
+    public fun clusterConfig(): Any
+
+    /**
+     * A builder for [MonitoringResourcesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clusterConfig The configuration for the cluster resources used to run the processing
+       * job. 
+       */
+      public fun clusterConfig(clusterConfig: IResolvable)
+
+      /**
+       * @param clusterConfig The configuration for the cluster resources used to run the processing
+       * job. 
+       */
+      public fun clusterConfig(clusterConfig: ClusterConfigProperty)
+
+      /**
+       * @param clusterConfig The configuration for the cluster resources used to run the processing
+       * job. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("42f8aec8def9eb81f8c1f81a564f7bc914c277b8a594cdc422237bbc3d9a8d65")
+      public fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty.builder()
+
+      /**
+       * @param clusterConfig The configuration for the cluster resources used to run the processing
+       * job. 
+       */
+      override fun clusterConfig(clusterConfig: IResolvable) {
+        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param clusterConfig The configuration for the cluster resources used to run the processing
+       * job. 
+       */
+      override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
+        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
+      }
+
+      /**
+       * @param clusterConfig The configuration for the cluster resources used to run the processing
+       * job. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("42f8aec8def9eb81f8c1f81a564f7bc914c277b8a594cdc422237bbc3d9a8d65")
+      override fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit): Unit =
+          clusterConfig(ClusterConfigProperty(clusterConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty,
+    ) : CdkObject(cdkObject), MonitoringResourcesProperty {
+      /**
+       * The configuration for the cluster resources used to run the processing job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringresources.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringresources-clusterconfig)
+       */
+      override fun clusterConfig(): Any = unwrap(this).getClusterConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringResourcesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty):
+          MonitoringResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringResourcesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringResourcesProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty
+    }
+  }
+
+  /**
    * Networking options for a job, such as network traffic encryption between containers, whether to
    * allow inbound and outbound network calls to and from containers, and the VPC subnets and security
    * groups to use for VPC-enabled jobs.
@@ -2459,604 +3432,6 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
   }
 
   /**
-   * Input object for the batch transform job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * BatchTransformInputProperty batchTransformInputProperty = BatchTransformInputProperty.builder()
-   * .dataCapturedDestinationS3Uri("dataCapturedDestinationS3Uri")
-   * .datasetFormat(DatasetFormatProperty.builder()
-   * .csv(CsvProperty.builder()
-   * .header(false)
-   * .build())
-   * .json(JsonProperty.builder()
-   * .line(false)
-   * .build())
-   * .parquet(false)
-   * .build())
-   * .localPath("localPath")
-   * // the properties below are optional
-   * .featuresAttribute("featuresAttribute")
-   * .inferenceAttribute("inferenceAttribute")
-   * .probabilityAttribute("probabilityAttribute")
-   * .s3DataDistributionType("s3DataDistributionType")
-   * .s3InputMode("s3InputMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html)
-   */
-  public interface BatchTransformInputProperty {
-    /**
-     * The Amazon S3 location being used to capture the data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-datacaptureddestinations3uri)
-     */
-    public fun dataCapturedDestinationS3Uri(): String
-
-    /**
-     * The dataset format for your batch transform job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-datasetformat)
-     */
-    public fun datasetFormat(): Any
-
-    /**
-     * The attributes of the input data that are the input features.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-featuresattribute)
-     */
-    public fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
-
-    /**
-     * The attribute of the input data that represents the ground truth label.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-inferenceattribute)
-     */
-    public fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
-
-    /**
-     * Path to the filesystem where the batch transform data is available to the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-localpath)
-     */
-    public fun localPath(): String
-
-    /**
-     * In a classification problem, the attribute that represents the class probability.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-probabilityattribute)
-     */
-    public fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
-
-    /**
-     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key.
-     *
-     * Defaults to `FullyReplicated`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-s3datadistributiontype)
-     */
-    public fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
-
-    /**
-     * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
-     * monitoring job.
-     *
-     * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that fit
-     * in memory. Defaults to `File` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-s3inputmode)
-     */
-    public fun s3InputMode(): String? = unwrap(this).getS3InputMode()
-
-    /**
-     * A builder for [BatchTransformInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataCapturedDestinationS3Uri The Amazon S3 location being used to capture the data. 
-       */
-      public fun dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri: String)
-
-      /**
-       * @param datasetFormat The dataset format for your batch transform job. 
-       */
-      public fun datasetFormat(datasetFormat: IResolvable)
-
-      /**
-       * @param datasetFormat The dataset format for your batch transform job. 
-       */
-      public fun datasetFormat(datasetFormat: DatasetFormatProperty)
-
-      /**
-       * @param datasetFormat The dataset format for your batch transform job. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7b8a9932aec8edb38d066ed1cc14d7a6ba6798736d5f0ed23e3d9368071741f8")
-      public fun datasetFormat(datasetFormat: DatasetFormatProperty.Builder.() -> Unit)
-
-      /**
-       * @param featuresAttribute The attributes of the input data that are the input features.
-       */
-      public fun featuresAttribute(featuresAttribute: String)
-
-      /**
-       * @param inferenceAttribute The attribute of the input data that represents the ground truth
-       * label.
-       */
-      public fun inferenceAttribute(inferenceAttribute: String)
-
-      /**
-       * @param localPath Path to the filesystem where the batch transform data is available to the
-       * container. 
-       */
-      public fun localPath(localPath: String)
-
-      /**
-       * @param probabilityAttribute In a classification problem, the attribute that represents the
-       * class probability.
-       */
-      public fun probabilityAttribute(probabilityAttribute: String)
-
-      /**
-       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
-       * replicated or sharded by an S3 key.
-       * Defaults to `FullyReplicated`
-       */
-      public fun s3DataDistributionType(s3DataDistributionType: String)
-
-      /**
-       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
-       * data for the monitoring job.
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       */
-      public fun s3InputMode(s3InputMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty.builder()
-
-      /**
-       * @param dataCapturedDestinationS3Uri The Amazon S3 location being used to capture the data. 
-       */
-      override fun dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri: String) {
-        cdkBuilder.dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri)
-      }
-
-      /**
-       * @param datasetFormat The dataset format for your batch transform job. 
-       */
-      override fun datasetFormat(datasetFormat: IResolvable) {
-        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param datasetFormat The dataset format for your batch transform job. 
-       */
-      override fun datasetFormat(datasetFormat: DatasetFormatProperty) {
-        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty::unwrap))
-      }
-
-      /**
-       * @param datasetFormat The dataset format for your batch transform job. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7b8a9932aec8edb38d066ed1cc14d7a6ba6798736d5f0ed23e3d9368071741f8")
-      override fun datasetFormat(datasetFormat: DatasetFormatProperty.Builder.() -> Unit): Unit =
-          datasetFormat(DatasetFormatProperty(datasetFormat))
-
-      /**
-       * @param featuresAttribute The attributes of the input data that are the input features.
-       */
-      override fun featuresAttribute(featuresAttribute: String) {
-        cdkBuilder.featuresAttribute(featuresAttribute)
-      }
-
-      /**
-       * @param inferenceAttribute The attribute of the input data that represents the ground truth
-       * label.
-       */
-      override fun inferenceAttribute(inferenceAttribute: String) {
-        cdkBuilder.inferenceAttribute(inferenceAttribute)
-      }
-
-      /**
-       * @param localPath Path to the filesystem where the batch transform data is available to the
-       * container. 
-       */
-      override fun localPath(localPath: String) {
-        cdkBuilder.localPath(localPath)
-      }
-
-      /**
-       * @param probabilityAttribute In a classification problem, the attribute that represents the
-       * class probability.
-       */
-      override fun probabilityAttribute(probabilityAttribute: String) {
-        cdkBuilder.probabilityAttribute(probabilityAttribute)
-      }
-
-      /**
-       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
-       * replicated or sharded by an S3 key.
-       * Defaults to `FullyReplicated`
-       */
-      override fun s3DataDistributionType(s3DataDistributionType: String) {
-        cdkBuilder.s3DataDistributionType(s3DataDistributionType)
-      }
-
-      /**
-       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
-       * data for the monitoring job.
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       */
-      override fun s3InputMode(s3InputMode: String) {
-        cdkBuilder.s3InputMode(s3InputMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty,
-    ) : CdkObject(cdkObject), BatchTransformInputProperty {
-      /**
-       * The Amazon S3 location being used to capture the data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-datacaptureddestinations3uri)
-       */
-      override fun dataCapturedDestinationS3Uri(): String =
-          unwrap(this).getDataCapturedDestinationS3Uri()
-
-      /**
-       * The dataset format for your batch transform job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-datasetformat)
-       */
-      override fun datasetFormat(): Any = unwrap(this).getDatasetFormat()
-
-      /**
-       * The attributes of the input data that are the input features.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-featuresattribute)
-       */
-      override fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
-
-      /**
-       * The attribute of the input data that represents the ground truth label.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-inferenceattribute)
-       */
-      override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
-
-      /**
-       * Path to the filesystem where the batch transform data is available to the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-localpath)
-       */
-      override fun localPath(): String = unwrap(this).getLocalPath()
-
-      /**
-       * In a classification problem, the attribute that represents the class probability.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-probabilityattribute)
-       */
-      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
-
-      /**
-       * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key.
-       *
-       * Defaults to `FullyReplicated`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-s3datadistributiontype)
-       */
-      override fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
-
-      /**
-       * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
-       * monitoring job.
-       *
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-batchtransforminput.html#cfn-sagemaker-modelexplainabilityjobdefinition-batchtransforminput-s3inputmode)
-       */
-      override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BatchTransformInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty):
-          BatchTransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BatchTransformInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BatchTransformInputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty
-    }
-  }
-
-  /**
-   * The Json format.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * JsonProperty jsonProperty = JsonProperty.builder()
-   * .line(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-json.html)
-   */
-  public interface JsonProperty {
-    /**
-     * A boolean flag indicating if it is JSON line format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-json.html#cfn-sagemaker-modelexplainabilityjobdefinition-json-line)
-     */
-    public fun line(): Any? = unwrap(this).getLine()
-
-    /**
-     * A builder for [JsonProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param line A boolean flag indicating if it is JSON line format.
-       */
-      public fun line(line: Boolean)
-
-      /**
-       * @param line A boolean flag indicating if it is JSON line format.
-       */
-      public fun line(line: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty.builder()
-
-      /**
-       * @param line A boolean flag indicating if it is JSON line format.
-       */
-      override fun line(line: Boolean) {
-        cdkBuilder.line(line)
-      }
-
-      /**
-       * @param line A boolean flag indicating if it is JSON line format.
-       */
-      override fun line(line: IResolvable) {
-        cdkBuilder.line(line.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty,
-    ) : CdkObject(cdkObject), JsonProperty {
-      /**
-       * A boolean flag indicating if it is JSON line format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-json.html#cfn-sagemaker-modelexplainabilityjobdefinition-json-line)
-       */
-      override fun line(): Any? = unwrap(this).getLine()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JsonProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty):
-          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JsonProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty
-    }
-  }
-
-  /**
-   * Docker container image configuration object for the model explainability job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelExplainabilityAppSpecificationProperty modelExplainabilityAppSpecificationProperty =
-   * ModelExplainabilityAppSpecificationProperty.builder()
-   * .configUri("configUri")
-   * .imageUri("imageUri")
-   * // the properties below are optional
-   * .environment(Map.of(
-   * "environmentKey", "environment"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html)
-   */
-  public interface ModelExplainabilityAppSpecificationProperty {
-    /**
-     * JSON formatted Amazon S3 file that defines explainability parameters.
-     *
-     * For more information on this JSON configuration file, see [Configure model explainability
-     * parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri)
-     */
-    public fun configUri(): String
-
-    /**
-     * Sets the environment variables in the Docker container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment)
-     */
-    public fun environment(): Any? = unwrap(this).getEnvironment()
-
-    /**
-     * The container image to be run by the model explainability job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri)
-     */
-    public fun imageUri(): String
-
-    /**
-     * A builder for [ModelExplainabilityAppSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param configUri JSON formatted Amazon S3 file that defines explainability parameters. 
-       * For more information on this JSON configuration file, see [Configure model explainability
-       * parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)
-       * .
-       */
-      public fun configUri(configUri: String)
-
-      /**
-       * @param environment Sets the environment variables in the Docker container.
-       */
-      public fun environment(environment: IResolvable)
-
-      /**
-       * @param environment Sets the environment variables in the Docker container.
-       */
-      public fun environment(environment: Map<String, String>)
-
-      /**
-       * @param imageUri The container image to be run by the model explainability job. 
-       */
-      public fun imageUri(imageUri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty.builder()
-
-      /**
-       * @param configUri JSON formatted Amazon S3 file that defines explainability parameters. 
-       * For more information on this JSON configuration file, see [Configure model explainability
-       * parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)
-       * .
-       */
-      override fun configUri(configUri: String) {
-        cdkBuilder.configUri(configUri)
-      }
-
-      /**
-       * @param environment Sets the environment variables in the Docker container.
-       */
-      override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param environment Sets the environment variables in the Docker container.
-       */
-      override fun environment(environment: Map<String, String>) {
-        cdkBuilder.environment(environment)
-      }
-
-      /**
-       * @param imageUri The container image to be run by the model explainability job. 
-       */
-      override fun imageUri(imageUri: String) {
-        cdkBuilder.imageUri(imageUri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty,
-    ) : CdkObject(cdkObject), ModelExplainabilityAppSpecificationProperty {
-      /**
-       * JSON formatted Amazon S3 file that defines explainability parameters.
-       *
-       * For more information on this JSON configuration file, see [Configure model explainability
-       * parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri)
-       */
-      override fun configUri(): String = unwrap(this).getConfigUri()
-
-      /**
-       * Sets the environment variables in the Docker container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment)
-       */
-      override fun environment(): Any? = unwrap(this).getEnvironment()
-
-      /**
-       * The container image to be run by the model explainability job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri)
-       */
-      override fun imageUri(): String = unwrap(this).getImageUri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ModelExplainabilityAppSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty):
-          ModelExplainabilityAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ModelExplainabilityAppSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelExplainabilityAppSpecificationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty
-    }
-  }
-
-  /**
    * The Amazon S3 storage location where the results of a monitoring job are saved.
    *
    * Example:
@@ -3208,6 +3583,159 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.S3OutputProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.S3OutputProperty
+    }
+  }
+
+  /**
+   * Specifies a limit to how long a model training job or model compilation job can run.
+   *
+   * It also specifies how long a managed spot training job has to complete. When the job reaches
+   * the time limit, SageMaker ends the training or compilation job. Use this API to cap model training
+   * costs.
+   *
+   * To stop a training job, SageMaker sends the algorithm the `SIGTERM` signal, which delays job
+   * termination for 120 seconds. Algorithms can use this 120-second window to save the model
+   * artifacts, so the results of training are not lost.
+   *
+   * The training algorithms provided by SageMaker automatically save the intermediate results of a
+   * model training job when possible. This attempt to save artifacts is only a best effort case as
+   * model might not be in a state from which it can be saved. For example, if training has just
+   * started, the model might not be ready to save. When saved, this intermediate data is a valid model
+   * artifact. You can use it to create a model with `CreateModel` .
+   *
+   *
+   * The Neural Topic Model (NTM) currently does not support saving intermediate model artifacts.
+   * When training NTMs, make sure that the maximum runtime is sufficient for the training job to
+   * complete.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * StoppingConditionProperty stoppingConditionProperty = StoppingConditionProperty.builder()
+   * .maxRuntimeInSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-stoppingcondition.html)
+   */
+  public interface StoppingConditionProperty {
+    /**
+     * The maximum length of time, in seconds, that a training or compilation job can run before it
+     * is stopped.
+     *
+     * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
+     * generated. We recommend starting with 900 seconds and increasing as necessary based on your
+     * model.
+     *
+     * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
+     * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
+     * maximum time for all of the attempts in total, not each individual attempt. The default value is
+     * 1 day. The maximum value is 28 days.
+     *
+     * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
+     * metrics or archiving and uploading models after it has been stopped, is 30 days.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-stoppingcondition.html#cfn-sagemaker-modelexplainabilityjobdefinition-stoppingcondition-maxruntimeinseconds)
+     */
+    public fun maxRuntimeInSeconds(): Number
+
+    /**
+     * A builder for [StoppingConditionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxRuntimeInSeconds The maximum length of time, in seconds, that a training or
+       * compilation job can run before it is stopped. 
+       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
+       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
+       * model.
+       *
+       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
+       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
+       * maximum time for all of the attempts in total, not each individual attempt. The default value
+       * is 1 day. The maximum value is 28 days.
+       *
+       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
+       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       */
+      public fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty.builder()
+
+      /**
+       * @param maxRuntimeInSeconds The maximum length of time, in seconds, that a training or
+       * compilation job can run before it is stopped. 
+       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
+       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
+       * model.
+       *
+       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
+       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
+       * maximum time for all of the attempts in total, not each individual attempt. The default value
+       * is 1 day. The maximum value is 28 days.
+       *
+       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
+       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       */
+      override fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number) {
+        cdkBuilder.maxRuntimeInSeconds(maxRuntimeInSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty,
+    ) : CdkObject(cdkObject), StoppingConditionProperty {
+      /**
+       * The maximum length of time, in seconds, that a training or compilation job can run before
+       * it is stopped.
+       *
+       * For compilation jobs, if the job does not complete during this time, a `TimeOut` error is
+       * generated. We recommend starting with 900 seconds and increasing as necessary based on your
+       * model.
+       *
+       * For all other jobs, if the job does not complete during this time, SageMaker ends the job.
+       * When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the
+       * maximum time for all of the attempts in total, not each individual attempt. The default value
+       * is 1 day. The maximum value is 28 days.
+       *
+       * The maximum time that a `TrainingJob` can run in total, including any time spent publishing
+       * metrics or archiving and uploading models after it has been stopped, is 30 days.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-stoppingcondition.html#cfn-sagemaker-modelexplainabilityjobdefinition-stoppingcondition-maxruntimeinseconds)
+       */
+      override fun maxRuntimeInSeconds(): Number = unwrap(this).getMaxRuntimeInSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StoppingConditionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty):
+          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StoppingConditionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StoppingConditionProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty
     }
   }
 
@@ -3376,534 +3904,6 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.VpcConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.VpcConfigProperty
-    }
-  }
-
-  /**
-   * The output configuration for monitoring jobs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringOutputConfigProperty monitoringOutputConfigProperty =
-   * MonitoringOutputConfigProperty.builder()
-   * .monitoringOutputs(List.of(MonitoringOutputProperty.builder()
-   * .s3Output(S3OutputProperty.builder()
-   * .localPath("localPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .s3UploadMode("s3UploadMode")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html)
-   */
-  public interface MonitoringOutputConfigProperty {
-    /**
-     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
-     * model artifacts at rest using Amazon S3 server-side encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * Monitoring outputs for monitoring jobs.
-     *
-     * This is where the output of the periodic monitoring jobs is uploaded.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig-monitoringoutputs)
-     */
-    public fun monitoringOutputs(): Any
-
-    /**
-     * A builder for [MonitoringOutputConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(monitoringOutputs: IResolvable)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(monitoringOutputs: List<Any>)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(vararg monitoringOutputs: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty.builder()
-
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(monitoringOutputs: IResolvable) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(monitoringOutputs: List<Any>) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs)
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(vararg monitoringOutputs: Any): Unit =
-          monitoringOutputs(monitoringOutputs.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
-      /**
-       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
-       * model artifacts at rest using Amazon S3 server-side encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * Monitoring outputs for monitoring jobs.
-       *
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelexplainabilityjobdefinition-monitoringoutputconfig-monitoringoutputs)
-       */
-      override fun monitoringOutputs(): Any = unwrap(this).getMonitoringOutputs()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty):
-          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty
-    }
-  }
-
-  /**
-   * Input object for the endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * EndpointInputProperty endpointInputProperty = EndpointInputProperty.builder()
-   * .endpointName("endpointName")
-   * .localPath("localPath")
-   * // the properties below are optional
-   * .featuresAttribute("featuresAttribute")
-   * .inferenceAttribute("inferenceAttribute")
-   * .probabilityAttribute("probabilityAttribute")
-   * .s3DataDistributionType("s3DataDistributionType")
-   * .s3InputMode("s3InputMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html)
-   */
-  public interface EndpointInputProperty {
-    /**
-     * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-endpointname)
-     */
-    public fun endpointName(): String
-
-    /**
-     * The attributes of the input data that are the input features.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-featuresattribute)
-     */
-    public fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
-
-    /**
-     * The attribute of the input data that represents the ground truth label.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-inferenceattribute)
-     */
-    public fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
-
-    /**
-     * Path to the filesystem where the endpoint data is available to the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-localpath)
-     */
-    public fun localPath(): String
-
-    /**
-     * In a classification problem, the attribute that represents the class probability.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-probabilityattribute)
-     */
-    public fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
-
-    /**
-     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an Amazon S3
-     * key.
-     *
-     * Defaults to `FullyReplicated`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3datadistributiontype)
-     */
-    public fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
-
-    /**
-     * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
-     * monitoring job.
-     *
-     * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that fit
-     * in memory. Defaults to `File` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3inputmode)
-     */
-    public fun s3InputMode(): String? = unwrap(this).getS3InputMode()
-
-    /**
-     * A builder for [EndpointInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endpointName An endpoint in customer's account which has enabled `DataCaptureConfig`
-       * enabled. 
-       */
-      public fun endpointName(endpointName: String)
-
-      /**
-       * @param featuresAttribute The attributes of the input data that are the input features.
-       */
-      public fun featuresAttribute(featuresAttribute: String)
-
-      /**
-       * @param inferenceAttribute The attribute of the input data that represents the ground truth
-       * label.
-       */
-      public fun inferenceAttribute(inferenceAttribute: String)
-
-      /**
-       * @param localPath Path to the filesystem where the endpoint data is available to the
-       * container. 
-       */
-      public fun localPath(localPath: String)
-
-      /**
-       * @param probabilityAttribute In a classification problem, the attribute that represents the
-       * class probability.
-       */
-      public fun probabilityAttribute(probabilityAttribute: String)
-
-      /**
-       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
-       * replicated or sharded by an Amazon S3 key.
-       * Defaults to `FullyReplicated`
-       */
-      public fun s3DataDistributionType(s3DataDistributionType: String)
-
-      /**
-       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
-       * data for the monitoring job.
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       */
-      public fun s3InputMode(s3InputMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty.builder()
-
-      /**
-       * @param endpointName An endpoint in customer's account which has enabled `DataCaptureConfig`
-       * enabled. 
-       */
-      override fun endpointName(endpointName: String) {
-        cdkBuilder.endpointName(endpointName)
-      }
-
-      /**
-       * @param featuresAttribute The attributes of the input data that are the input features.
-       */
-      override fun featuresAttribute(featuresAttribute: String) {
-        cdkBuilder.featuresAttribute(featuresAttribute)
-      }
-
-      /**
-       * @param inferenceAttribute The attribute of the input data that represents the ground truth
-       * label.
-       */
-      override fun inferenceAttribute(inferenceAttribute: String) {
-        cdkBuilder.inferenceAttribute(inferenceAttribute)
-      }
-
-      /**
-       * @param localPath Path to the filesystem where the endpoint data is available to the
-       * container. 
-       */
-      override fun localPath(localPath: String) {
-        cdkBuilder.localPath(localPath)
-      }
-
-      /**
-       * @param probabilityAttribute In a classification problem, the attribute that represents the
-       * class probability.
-       */
-      override fun probabilityAttribute(probabilityAttribute: String) {
-        cdkBuilder.probabilityAttribute(probabilityAttribute)
-      }
-
-      /**
-       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
-       * replicated or sharded by an Amazon S3 key.
-       * Defaults to `FullyReplicated`
-       */
-      override fun s3DataDistributionType(s3DataDistributionType: String) {
-        cdkBuilder.s3DataDistributionType(s3DataDistributionType)
-      }
-
-      /**
-       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
-       * data for the monitoring job.
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       */
-      override fun s3InputMode(s3InputMode: String) {
-        cdkBuilder.s3InputMode(s3InputMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty,
-    ) : CdkObject(cdkObject), EndpointInputProperty {
-      /**
-       * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-endpointname)
-       */
-      override fun endpointName(): String = unwrap(this).getEndpointName()
-
-      /**
-       * The attributes of the input data that are the input features.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-featuresattribute)
-       */
-      override fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
-
-      /**
-       * The attribute of the input data that represents the ground truth label.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-inferenceattribute)
-       */
-      override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
-
-      /**
-       * Path to the filesystem where the endpoint data is available to the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-localpath)
-       */
-      override fun localPath(): String = unwrap(this).getLocalPath()
-
-      /**
-       * In a classification problem, the attribute that represents the class probability.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-probabilityattribute)
-       */
-      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
-
-      /**
-       * Whether input data distributed in Amazon S3 is fully replicated or sharded by an Amazon S3
-       * key.
-       *
-       * Defaults to `FullyReplicated`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3datadistributiontype)
-       */
-      override fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
-
-      /**
-       * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
-       * monitoring job.
-       *
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-endpointinput.html#cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3inputmode)
-       */
-      override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty):
-          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointInputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EndpointInputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty
-    }
-  }
-
-  /**
-   * The CSV format.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CsvProperty csvProperty = CsvProperty.builder()
-   * .header(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-csv.html)
-   */
-  public interface CsvProperty {
-    /**
-     * A boolean flag indicating if given CSV has header.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-csv.html#cfn-sagemaker-modelexplainabilityjobdefinition-csv-header)
-     */
-    public fun `header`(): Any? = unwrap(this).getHeader()
-
-    /**
-     * A builder for [CsvProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      public fun `header`(`header`: Boolean)
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      public fun `header`(`header`: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty.builder()
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      override fun `header`(`header`: Boolean) {
-        cdkBuilder.`header`(`header`)
-      }
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty,
-    ) : CdkObject(cdkObject), CsvProperty {
-      /**
-       * A boolean flag indicating if given CSV has header.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-csv.html#cfn-sagemaker-modelexplainabilityjobdefinition-csv-header)
-       */
-      override fun `header`(): Any? = unwrap(this).getHeader()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CsvProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty):
-          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CsvProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty
     }
   }
 }

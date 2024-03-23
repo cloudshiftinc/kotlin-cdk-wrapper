@@ -335,328 +335,6 @@ public open class CfnServerlessCluster internal constructor(
   }
 
   /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.msk.*;
-   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
-   * .subnetIds(List.of("subnetIds"))
-   * // the properties below are optional
-   * .securityGroups(List.of("securityGroups"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html)
-   */
-  public interface VpcConfigProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-securitygroups)
-     */
-    public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-subnetids)
-     */
-    public fun subnetIds(): List<String>
-
-    /**
-     * A builder for [VpcConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param securityGroups the value to be set.
-       */
-      public fun securityGroups(securityGroups: List<String>)
-
-      /**
-       * @param securityGroups the value to be set.
-       */
-      public fun securityGroups(vararg securityGroups: String)
-
-      /**
-       * @param subnetIds the value to be set. 
-       */
-      public fun subnetIds(subnetIds: List<String>)
-
-      /**
-       * @param subnetIds the value to be set. 
-       */
-      public fun subnetIds(vararg subnetIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty.Builder =
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty.builder()
-
-      /**
-       * @param securityGroups the value to be set.
-       */
-      override fun securityGroups(securityGroups: List<String>) {
-        cdkBuilder.securityGroups(securityGroups)
-      }
-
-      /**
-       * @param securityGroups the value to be set.
-       */
-      override fun securityGroups(vararg securityGroups: String): Unit =
-          securityGroups(securityGroups.toList())
-
-      /**
-       * @param subnetIds the value to be set. 
-       */
-      override fun subnetIds(subnetIds: List<String>) {
-        cdkBuilder.subnetIds(subnetIds)
-      }
-
-      /**
-       * @param subnetIds the value to be set. 
-       */
-      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
-
-      public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-securitygroups)
-       */
-      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-subnetids)
-       */
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcConfigProperty):
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty
-    }
-  }
-
-  /**
-   * Details for client authentication using SASL.
-   *
-   * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to true.
-   * You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose `TLS_PLAINTEXT` ,
-   * then you must also set `unauthenticated` to true.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.msk.*;
-   * SaslProperty saslProperty = SaslProperty.builder()
-   * .iam(IamProperty.builder()
-   * .enabled(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-sasl.html)
-   */
-  public interface SaslProperty {
-    /**
-     * Details for ClientAuthentication using IAM.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-sasl.html#cfn-msk-serverlesscluster-sasl-iam)
-     */
-    public fun iam(): Any
-
-    /**
-     * A builder for [SaslProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param iam Details for ClientAuthentication using IAM. 
-       */
-      public fun iam(iam: IResolvable)
-
-      /**
-       * @param iam Details for ClientAuthentication using IAM. 
-       */
-      public fun iam(iam: IamProperty)
-
-      /**
-       * @param iam Details for ClientAuthentication using IAM. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c34c9bf0119fd310be992cabba59f51a54b78c65b04929f9828e945991a85a1f")
-      public fun iam(iam: IamProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty.Builder =
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty.builder()
-
-      /**
-       * @param iam Details for ClientAuthentication using IAM. 
-       */
-      override fun iam(iam: IResolvable) {
-        cdkBuilder.iam(iam.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param iam Details for ClientAuthentication using IAM. 
-       */
-      override fun iam(iam: IamProperty) {
-        cdkBuilder.iam(iam.let(IamProperty::unwrap))
-      }
-
-      /**
-       * @param iam Details for ClientAuthentication using IAM. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c34c9bf0119fd310be992cabba59f51a54b78c65b04929f9828e945991a85a1f")
-      override fun iam(iam: IamProperty.Builder.() -> Unit): Unit = iam(IamProperty(iam))
-
-      public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty,
-    ) : CdkObject(cdkObject), SaslProperty {
-      /**
-       * Details for ClientAuthentication using IAM.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-sasl.html#cfn-msk-serverlesscluster-sasl-iam)
-       */
-      override fun iam(): Any = unwrap(this).getIam()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SaslProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty):
-          SaslProperty = CdkObjectWrappers.wrap(cdkObject) as? SaslProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SaslProperty):
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty
-    }
-  }
-
-  /**
-   * Details for SASL/IAM client authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.msk.*;
-   * IamProperty iamProperty = IamProperty.builder()
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-iam.html)
-   */
-  public interface IamProperty {
-    /**
-     * SASL/IAM authentication is enabled or not.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-iam.html#cfn-msk-serverlesscluster-iam-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * A builder for [IamProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled SASL/IAM authentication is enabled or not. 
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled SASL/IAM authentication is enabled or not. 
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty.Builder =
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty.builder()
-
-      /**
-       * @param enabled SASL/IAM authentication is enabled or not. 
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled SASL/IAM authentication is enabled or not. 
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty,
-    ) : CdkObject(cdkObject), IamProperty {
-      /**
-       * SASL/IAM authentication is enabled or not.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-iam.html#cfn-msk-serverlesscluster-iam-enabled)
-       */
-      override fun enabled(): Any = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IamProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty):
-          IamProperty = CdkObjectWrappers.wrap(cdkObject) as? IamProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IamProperty):
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty
-    }
-  }
-
-  /**
    * Includes all client authentication information.
    *
    * Example:
@@ -793,6 +471,328 @@ public open class CfnServerlessCluster internal constructor(
           software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty
+    }
+  }
+
+  /**
+   * Details for SASL/IAM client authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.msk.*;
+   * IamProperty iamProperty = IamProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-iam.html)
+   */
+  public interface IamProperty {
+    /**
+     * SASL/IAM authentication is enabled or not.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-iam.html#cfn-msk-serverlesscluster-iam-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [IamProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled SASL/IAM authentication is enabled or not. 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled SASL/IAM authentication is enabled or not. 
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty.Builder =
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty.builder()
+
+      /**
+       * @param enabled SASL/IAM authentication is enabled or not. 
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled SASL/IAM authentication is enabled or not. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty,
+    ) : CdkObject(cdkObject), IamProperty {
+      /**
+       * SASL/IAM authentication is enabled or not.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-iam.html#cfn-msk-serverlesscluster-iam-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IamProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty):
+          IamProperty = CdkObjectWrappers.wrap(cdkObject) as? IamProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IamProperty):
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty
+    }
+  }
+
+  /**
+   * Details for client authentication using SASL.
+   *
+   * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to true.
+   * You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose `TLS_PLAINTEXT` ,
+   * then you must also set `unauthenticated` to true.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.msk.*;
+   * SaslProperty saslProperty = SaslProperty.builder()
+   * .iam(IamProperty.builder()
+   * .enabled(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-sasl.html)
+   */
+  public interface SaslProperty {
+    /**
+     * Details for ClientAuthentication using IAM.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-sasl.html#cfn-msk-serverlesscluster-sasl-iam)
+     */
+    public fun iam(): Any
+
+    /**
+     * A builder for [SaslProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param iam Details for ClientAuthentication using IAM. 
+       */
+      public fun iam(iam: IResolvable)
+
+      /**
+       * @param iam Details for ClientAuthentication using IAM. 
+       */
+      public fun iam(iam: IamProperty)
+
+      /**
+       * @param iam Details for ClientAuthentication using IAM. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c34c9bf0119fd310be992cabba59f51a54b78c65b04929f9828e945991a85a1f")
+      public fun iam(iam: IamProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty.Builder =
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty.builder()
+
+      /**
+       * @param iam Details for ClientAuthentication using IAM. 
+       */
+      override fun iam(iam: IResolvable) {
+        cdkBuilder.iam(iam.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param iam Details for ClientAuthentication using IAM. 
+       */
+      override fun iam(iam: IamProperty) {
+        cdkBuilder.iam(iam.let(IamProperty::unwrap))
+      }
+
+      /**
+       * @param iam Details for ClientAuthentication using IAM. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c34c9bf0119fd310be992cabba59f51a54b78c65b04929f9828e945991a85a1f")
+      override fun iam(iam: IamProperty.Builder.() -> Unit): Unit = iam(IamProperty(iam))
+
+      public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty,
+    ) : CdkObject(cdkObject), SaslProperty {
+      /**
+       * Details for ClientAuthentication using IAM.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-sasl.html#cfn-msk-serverlesscluster-sasl-iam)
+       */
+      override fun iam(): Any = unwrap(this).getIam()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SaslProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty):
+          SaslProperty = CdkObjectWrappers.wrap(cdkObject) as? SaslProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SaslProperty):
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.msk.*;
+   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+   * .subnetIds(List.of("subnetIds"))
+   * // the properties below are optional
+   * .securityGroups(List.of("securityGroups"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html)
+   */
+  public interface VpcConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-securitygroups)
+     */
+    public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-subnetids)
+     */
+    public fun subnetIds(): List<String>
+
+    /**
+     * A builder for [VpcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroups the value to be set.
+       */
+      public fun securityGroups(securityGroups: List<String>)
+
+      /**
+       * @param securityGroups the value to be set.
+       */
+      public fun securityGroups(vararg securityGroups: String)
+
+      /**
+       * @param subnetIds the value to be set. 
+       */
+      public fun subnetIds(subnetIds: List<String>)
+
+      /**
+       * @param subnetIds the value to be set. 
+       */
+      public fun subnetIds(vararg subnetIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty.Builder =
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty.builder()
+
+      /**
+       * @param securityGroups the value to be set.
+       */
+      override fun securityGroups(securityGroups: List<String>) {
+        cdkBuilder.securityGroups(securityGroups)
+      }
+
+      /**
+       * @param securityGroups the value to be set.
+       */
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
+      /**
+       * @param subnetIds the value to be set. 
+       */
+      override fun subnetIds(subnetIds: List<String>) {
+        cdkBuilder.subnetIds(subnetIds)
+      }
+
+      /**
+       * @param subnetIds the value to be set. 
+       */
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+      public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty,
+    ) : CdkObject(cdkObject), VpcConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-securitygroups)
+       */
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-subnetids)
+       */
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty):
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigProperty):
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty
     }
   }
 }

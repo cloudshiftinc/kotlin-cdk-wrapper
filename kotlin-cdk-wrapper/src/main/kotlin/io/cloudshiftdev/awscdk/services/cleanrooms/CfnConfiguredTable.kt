@@ -553,9 +553,7 @@ public open class CfnConfiguredTable internal constructor(
   }
 
   /**
-   * A pointer to the dataset that underlies this table.
-   *
-   * Currently, this can only be an AWS Glue table.
+   * Column in configured table that can be used in aggregate function in query.
    *
    * Example:
    *
@@ -563,113 +561,114 @@ public open class CfnConfiguredTable internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * TableReferenceProperty tableReferenceProperty = TableReferenceProperty.builder()
-   * .glue(GlueTableReferenceProperty.builder()
-   * .databaseName("databaseName")
-   * .tableName("tableName")
-   * .build())
+   * AggregateColumnProperty aggregateColumnProperty = AggregateColumnProperty.builder()
+   * .columnNames(List.of("columnNames"))
+   * .function("function")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html)
    */
-  public interface TableReferenceProperty {
+  public interface AggregateColumnProperty {
     /**
-     * If present, a reference to the AWS Glue table referred to by this table reference.
+     * Column names in configured table of aggregate columns.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-glue)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html#cfn-cleanrooms-configuredtable-aggregatecolumn-columnnames)
      */
-    public fun glue(): Any
+    public fun columnNames(): List<String>
 
     /**
-     * A builder for [TableReferenceProperty]
+     * Aggregation function that can be applied to aggregate column in query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html#cfn-cleanrooms-configuredtable-aggregatecolumn-function)
+     */
+    public fun function(): String
+
+    /**
+     * A builder for [AggregateColumnProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * @param columnNames Column names in configured table of aggregate columns. 
        */
-      public fun glue(glue: IResolvable)
+      public fun columnNames(columnNames: List<String>)
 
       /**
-       * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * @param columnNames Column names in configured table of aggregate columns. 
        */
-      public fun glue(glue: GlueTableReferenceProperty)
+      public fun columnNames(vararg columnNames: String)
 
       /**
-       * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * @param function Aggregation function that can be applied to aggregate column in query. 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("db4f6a5ba6d28531ae58587a3a8dd814bc5df20896049b36a90d989f5dfa0f07")
-      public fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit)
+      public fun function(function: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty.Builder
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty.Builder
           =
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty.builder()
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty.builder()
 
       /**
-       * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * @param columnNames Column names in configured table of aggregate columns. 
        */
-      override fun glue(glue: IResolvable) {
-        cdkBuilder.glue(glue.let(IResolvable::unwrap))
+      override fun columnNames(columnNames: List<String>) {
+        cdkBuilder.columnNames(columnNames)
       }
 
       /**
-       * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * @param columnNames Column names in configured table of aggregate columns. 
        */
-      override fun glue(glue: GlueTableReferenceProperty) {
-        cdkBuilder.glue(glue.let(GlueTableReferenceProperty::unwrap))
-      }
+      override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
 
       /**
-       * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * @param function Aggregation function that can be applied to aggregate column in query. 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("db4f6a5ba6d28531ae58587a3a8dd814bc5df20896049b36a90d989f5dfa0f07")
-      override fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit): Unit =
-          glue(GlueTableReferenceProperty(glue))
+      override fun function(function: String) {
+        cdkBuilder.function(function)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty,
-    ) : CdkObject(cdkObject), TableReferenceProperty {
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty,
+    ) : CdkObject(cdkObject), AggregateColumnProperty {
       /**
-       * If present, a reference to the AWS Glue table referred to by this table reference.
+       * Column names in configured table of aggregate columns.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-glue)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html#cfn-cleanrooms-configuredtable-aggregatecolumn-columnnames)
        */
-      override fun glue(): Any = unwrap(this).getGlue()
+      override fun columnNames(): List<String> = unwrap(this).getColumnNames()
+
+      /**
+       * Aggregation function that can be applied to aggregate column in query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html#cfn-cleanrooms-configuredtable-aggregatecolumn-function)
+       */
+      override fun function(): String = unwrap(this).getFunction()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TableReferenceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AggregateColumnProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty):
-          TableReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? TableReferenceProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty):
+          AggregateColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? AggregateColumnProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TableReferenceProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty =
+      internal fun unwrap(wrapped: AggregateColumnProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty
     }
   }
 
@@ -1388,377 +1387,6 @@ public open class CfnConfiguredTable internal constructor(
   }
 
   /**
-   * Column in configured table that can be used in aggregate function in query.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * AggregateColumnProperty aggregateColumnProperty = AggregateColumnProperty.builder()
-   * .columnNames(List.of("columnNames"))
-   * .function("function")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html)
-   */
-  public interface AggregateColumnProperty {
-    /**
-     * Column names in configured table of aggregate columns.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html#cfn-cleanrooms-configuredtable-aggregatecolumn-columnnames)
-     */
-    public fun columnNames(): List<String>
-
-    /**
-     * Aggregation function that can be applied to aggregate column in query.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html#cfn-cleanrooms-configuredtable-aggregatecolumn-function)
-     */
-    public fun function(): String
-
-    /**
-     * A builder for [AggregateColumnProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param columnNames Column names in configured table of aggregate columns. 
-       */
-      public fun columnNames(columnNames: List<String>)
-
-      /**
-       * @param columnNames Column names in configured table of aggregate columns. 
-       */
-      public fun columnNames(vararg columnNames: String)
-
-      /**
-       * @param function Aggregation function that can be applied to aggregate column in query. 
-       */
-      public fun function(function: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty.builder()
-
-      /**
-       * @param columnNames Column names in configured table of aggregate columns. 
-       */
-      override fun columnNames(columnNames: List<String>) {
-        cdkBuilder.columnNames(columnNames)
-      }
-
-      /**
-       * @param columnNames Column names in configured table of aggregate columns. 
-       */
-      override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
-
-      /**
-       * @param function Aggregation function that can be applied to aggregate column in query. 
-       */
-      override fun function(function: String) {
-        cdkBuilder.function(function)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty,
-    ) : CdkObject(cdkObject), AggregateColumnProperty {
-      /**
-       * Column names in configured table of aggregate columns.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html#cfn-cleanrooms-configuredtable-aggregatecolumn-columnnames)
-       */
-      override fun columnNames(): List<String> = unwrap(this).getColumnNames()
-
-      /**
-       * Aggregation function that can be applied to aggregate column in query.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-aggregatecolumn.html#cfn-cleanrooms-configuredtable-aggregatecolumn-function)
-       */
-      override fun function(): String = unwrap(this).getFunction()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AggregateColumnProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty):
-          AggregateColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? AggregateColumnProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AggregateColumnProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty
-    }
-  }
-
-  /**
-   * Controls on the query specifications that can be run on a configured table.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * ConfiguredTableAnalysisRulePolicyProperty configuredTableAnalysisRulePolicyProperty =
-   * ConfiguredTableAnalysisRulePolicyProperty.builder()
-   * .v1(ConfiguredTableAnalysisRulePolicyV1Property.builder()
-   * .aggregation(AnalysisRuleAggregationProperty.builder()
-   * .aggregateColumns(List.of(AggregateColumnProperty.builder()
-   * .columnNames(List.of("columnNames"))
-   * .function("function")
-   * .build()))
-   * .dimensionColumns(List.of("dimensionColumns"))
-   * .joinColumns(List.of("joinColumns"))
-   * .outputConstraints(List.of(AggregationConstraintProperty.builder()
-   * .columnName("columnName")
-   * .minimum(123)
-   * .type("type")
-   * .build()))
-   * .scalarFunctions(List.of("scalarFunctions"))
-   * // the properties below are optional
-   * .allowedJoinOperators(List.of("allowedJoinOperators"))
-   * .joinRequired("joinRequired")
-   * .build())
-   * .custom(AnalysisRuleCustomProperty.builder()
-   * .allowedAnalyses(List.of("allowedAnalyses"))
-   * // the properties below are optional
-   * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
-   * .build())
-   * .list(AnalysisRuleListProperty.builder()
-   * .joinColumns(List.of("joinColumns"))
-   * .listColumns(List.of("listColumns"))
-   * // the properties below are optional
-   * .allowedJoinOperators(List.of("allowedJoinOperators"))
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-configuredtableanalysisrulepolicy.html)
-   */
-  public interface ConfiguredTableAnalysisRulePolicyProperty {
-    /**
-     * Controls on the query specifications that can be run on a configured table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-configuredtableanalysisrulepolicy.html#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicy-v1)
-     */
-    public fun v1(): Any
-
-    /**
-     * A builder for [ConfiguredTableAnalysisRulePolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param v1 Controls on the query specifications that can be run on a configured table. 
-       */
-      public fun v1(v1: IResolvable)
-
-      /**
-       * @param v1 Controls on the query specifications that can be run on a configured table. 
-       */
-      public fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property)
-
-      /**
-       * @param v1 Controls on the query specifications that can be run on a configured table. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5e94b83562724b240a08adee0ffd72a564528ea2c203a921ff233196cdddd8d6")
-      public fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty.builder()
-
-      /**
-       * @param v1 Controls on the query specifications that can be run on a configured table. 
-       */
-      override fun v1(v1: IResolvable) {
-        cdkBuilder.v1(v1.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param v1 Controls on the query specifications that can be run on a configured table. 
-       */
-      override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property) {
-        cdkBuilder.v1(v1.let(ConfiguredTableAnalysisRulePolicyV1Property::unwrap))
-      }
-
-      /**
-       * @param v1 Controls on the query specifications that can be run on a configured table. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5e94b83562724b240a08adee0ffd72a564528ea2c203a921ff233196cdddd8d6")
-      override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property.Builder.() -> Unit): Unit =
-          v1(ConfiguredTableAnalysisRulePolicyV1Property(v1))
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty,
-    ) : CdkObject(cdkObject), ConfiguredTableAnalysisRulePolicyProperty {
-      /**
-       * Controls on the query specifications that can be run on a configured table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-configuredtableanalysisrulepolicy.html#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicy-v1)
-       */
-      override fun v1(): Any = unwrap(this).getV1()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ConfiguredTableAnalysisRulePolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty):
-          ConfiguredTableAnalysisRulePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConfiguredTableAnalysisRulePolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConfiguredTableAnalysisRulePolicyProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty
-    }
-  }
-
-  /**
-   * A reference to a table within an AWS Glue data catalog.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * GlueTableReferenceProperty glueTableReferenceProperty = GlueTableReferenceProperty.builder()
-   * .databaseName("databaseName")
-   * .tableName("tableName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html)
-   */
-  public interface GlueTableReferenceProperty {
-    /**
-     * The name of the database the AWS Glue table belongs to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html#cfn-cleanrooms-configuredtable-gluetablereference-databasename)
-     */
-    public fun databaseName(): String
-
-    /**
-     * The name of the AWS Glue table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html#cfn-cleanrooms-configuredtable-gluetablereference-tablename)
-     */
-    public fun tableName(): String
-
-    /**
-     * A builder for [GlueTableReferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param databaseName The name of the database the AWS Glue table belongs to. 
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param tableName The name of the AWS Glue table. 
-       */
-      public fun tableName(tableName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty.builder()
-
-      /**
-       * @param databaseName The name of the database the AWS Glue table belongs to. 
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param tableName The name of the AWS Glue table. 
-       */
-      override fun tableName(tableName: String) {
-        cdkBuilder.tableName(tableName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty,
-    ) : CdkObject(cdkObject), GlueTableReferenceProperty {
-      /**
-       * The name of the database the AWS Glue table belongs to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html#cfn-cleanrooms-configuredtable-gluetablereference-databasename)
-       */
-      override fun databaseName(): String = unwrap(this).getDatabaseName()
-
-      /**
-       * The name of the AWS Glue table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html#cfn-cleanrooms-configuredtable-gluetablereference-tablename)
-       */
-      override fun tableName(): String = unwrap(this).getTableName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GlueTableReferenceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty):
-          GlueTableReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GlueTableReferenceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GlueTableReferenceProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty
-    }
-  }
-
-  /**
    * A type of analysis rule that enables row-level analysis.
    *
    * Example:
@@ -2124,6 +1752,147 @@ public open class CfnConfiguredTable internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * ConfiguredTableAnalysisRulePolicyProperty configuredTableAnalysisRulePolicyProperty =
+   * ConfiguredTableAnalysisRulePolicyProperty.builder()
+   * .v1(ConfiguredTableAnalysisRulePolicyV1Property.builder()
+   * .aggregation(AnalysisRuleAggregationProperty.builder()
+   * .aggregateColumns(List.of(AggregateColumnProperty.builder()
+   * .columnNames(List.of("columnNames"))
+   * .function("function")
+   * .build()))
+   * .dimensionColumns(List.of("dimensionColumns"))
+   * .joinColumns(List.of("joinColumns"))
+   * .outputConstraints(List.of(AggregationConstraintProperty.builder()
+   * .columnName("columnName")
+   * .minimum(123)
+   * .type("type")
+   * .build()))
+   * .scalarFunctions(List.of("scalarFunctions"))
+   * // the properties below are optional
+   * .allowedJoinOperators(List.of("allowedJoinOperators"))
+   * .joinRequired("joinRequired")
+   * .build())
+   * .custom(AnalysisRuleCustomProperty.builder()
+   * .allowedAnalyses(List.of("allowedAnalyses"))
+   * // the properties below are optional
+   * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
+   * .build())
+   * .list(AnalysisRuleListProperty.builder()
+   * .joinColumns(List.of("joinColumns"))
+   * .listColumns(List.of("listColumns"))
+   * // the properties below are optional
+   * .allowedJoinOperators(List.of("allowedJoinOperators"))
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-configuredtableanalysisrulepolicy.html)
+   */
+  public interface ConfiguredTableAnalysisRulePolicyProperty {
+    /**
+     * Controls on the query specifications that can be run on a configured table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-configuredtableanalysisrulepolicy.html#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicy-v1)
+     */
+    public fun v1(): Any
+
+    /**
+     * A builder for [ConfiguredTableAnalysisRulePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param v1 Controls on the query specifications that can be run on a configured table. 
+       */
+      public fun v1(v1: IResolvable)
+
+      /**
+       * @param v1 Controls on the query specifications that can be run on a configured table. 
+       */
+      public fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property)
+
+      /**
+       * @param v1 Controls on the query specifications that can be run on a configured table. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e94b83562724b240a08adee0ffd72a564528ea2c203a921ff233196cdddd8d6")
+      public fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty.builder()
+
+      /**
+       * @param v1 Controls on the query specifications that can be run on a configured table. 
+       */
+      override fun v1(v1: IResolvable) {
+        cdkBuilder.v1(v1.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param v1 Controls on the query specifications that can be run on a configured table. 
+       */
+      override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property) {
+        cdkBuilder.v1(v1.let(ConfiguredTableAnalysisRulePolicyV1Property::unwrap))
+      }
+
+      /**
+       * @param v1 Controls on the query specifications that can be run on a configured table. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e94b83562724b240a08adee0ffd72a564528ea2c203a921ff233196cdddd8d6")
+      override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property.Builder.() -> Unit): Unit =
+          v1(ConfiguredTableAnalysisRulePolicyV1Property(v1))
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty,
+    ) : CdkObject(cdkObject), ConfiguredTableAnalysisRulePolicyProperty {
+      /**
+       * Controls on the query specifications that can be run on a configured table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-configuredtableanalysisrulepolicy.html#cfn-cleanrooms-configuredtable-configuredtableanalysisrulepolicy-v1)
+       */
+      override fun v1(): Any = unwrap(this).getV1()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConfiguredTableAnalysisRulePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty):
+          ConfiguredTableAnalysisRulePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfiguredTableAnalysisRulePolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConfiguredTableAnalysisRulePolicyProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty
+    }
+  }
+
+  /**
+   * Controls on the query specifications that can be run on a configured table.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
    * ConfiguredTableAnalysisRulePolicyV1Property configuredTableAnalysisRulePolicyV1Property =
    * ConfiguredTableAnalysisRulePolicyV1Property.builder()
    * .aggregation(AnalysisRuleAggregationProperty.builder()
@@ -2363,6 +2132,237 @@ public open class CfnConfiguredTable internal constructor(
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property
+    }
+  }
+
+  /**
+   * A reference to a table within an AWS Glue data catalog.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * GlueTableReferenceProperty glueTableReferenceProperty = GlueTableReferenceProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html)
+   */
+  public interface GlueTableReferenceProperty {
+    /**
+     * The name of the database the AWS Glue table belongs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html#cfn-cleanrooms-configuredtable-gluetablereference-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * The name of the AWS Glue table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html#cfn-cleanrooms-configuredtable-gluetablereference-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * A builder for [GlueTableReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseName The name of the database the AWS Glue table belongs to. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param tableName The name of the AWS Glue table. 
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty.builder()
+
+      /**
+       * @param databaseName The name of the database the AWS Glue table belongs to. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param tableName The name of the AWS Glue table. 
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty,
+    ) : CdkObject(cdkObject), GlueTableReferenceProperty {
+      /**
+       * The name of the database the AWS Glue table belongs to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html#cfn-cleanrooms-configuredtable-gluetablereference-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The name of the AWS Glue table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-gluetablereference.html#cfn-cleanrooms-configuredtable-gluetablereference-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GlueTableReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty):
+          GlueTableReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlueTableReferenceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GlueTableReferenceProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty
+    }
+  }
+
+  /**
+   * A pointer to the dataset that underlies this table.
+   *
+   * Currently, this can only be an AWS Glue table.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * TableReferenceProperty tableReferenceProperty = TableReferenceProperty.builder()
+   * .glue(GlueTableReferenceProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html)
+   */
+  public interface TableReferenceProperty {
+    /**
+     * If present, a reference to the AWS Glue table referred to by this table reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-glue)
+     */
+    public fun glue(): Any
+
+    /**
+     * A builder for [TableReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param glue If present, a reference to the AWS Glue table referred to by this table
+       * reference. 
+       */
+      public fun glue(glue: IResolvable)
+
+      /**
+       * @param glue If present, a reference to the AWS Glue table referred to by this table
+       * reference. 
+       */
+      public fun glue(glue: GlueTableReferenceProperty)
+
+      /**
+       * @param glue If present, a reference to the AWS Glue table referred to by this table
+       * reference. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("db4f6a5ba6d28531ae58587a3a8dd814bc5df20896049b36a90d989f5dfa0f07")
+      public fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty.builder()
+
+      /**
+       * @param glue If present, a reference to the AWS Glue table referred to by this table
+       * reference. 
+       */
+      override fun glue(glue: IResolvable) {
+        cdkBuilder.glue(glue.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param glue If present, a reference to the AWS Glue table referred to by this table
+       * reference. 
+       */
+      override fun glue(glue: GlueTableReferenceProperty) {
+        cdkBuilder.glue(glue.let(GlueTableReferenceProperty::unwrap))
+      }
+
+      /**
+       * @param glue If present, a reference to the AWS Glue table referred to by this table
+       * reference. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("db4f6a5ba6d28531ae58587a3a8dd814bc5df20896049b36a90d989f5dfa0f07")
+      override fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit): Unit =
+          glue(GlueTableReferenceProperty(glue))
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty,
+    ) : CdkObject(cdkObject), TableReferenceProperty {
+      /**
+       * If present, a reference to the AWS Glue table referred to by this table reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-glue)
+       */
+      override fun glue(): Any = unwrap(this).getGlue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TableReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty):
+          TableReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? TableReferenceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TableReferenceProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty
     }
   }
 }

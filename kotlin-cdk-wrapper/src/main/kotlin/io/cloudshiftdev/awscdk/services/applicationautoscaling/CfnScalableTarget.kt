@@ -816,6 +816,120 @@ public open class CfnScalableTarget internal constructor(
   }
 
   /**
+   * `ScalableTargetAction` specifies the minimum and maximum capacity for the
+   * `ScalableTargetAction` property of the [AWS::ApplicationAutoScaling::ScalableTarget
+   * ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationautoscaling.*;
+   * ScalableTargetActionProperty scalableTargetActionProperty =
+   * ScalableTargetActionProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html)
+   */
+  public interface ScalableTargetActionProperty {
+    /**
+     * The maximum capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity)
+     */
+    public fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
+
+    /**
+     * The minimum capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity)
+     */
+    public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
+
+    /**
+     * A builder for [ScalableTargetActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxCapacity The maximum capacity.
+       */
+      public fun maxCapacity(maxCapacity: Number)
+
+      /**
+       * @param minCapacity The minimum capacity.
+       */
+      public fun minCapacity(minCapacity: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty.builder()
+
+      /**
+       * @param maxCapacity The maximum capacity.
+       */
+      override fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
+      }
+
+      /**
+       * @param minCapacity The minimum capacity.
+       */
+      override fun minCapacity(minCapacity: Number) {
+        cdkBuilder.minCapacity(minCapacity)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty,
+    ) : CdkObject(cdkObject), ScalableTargetActionProperty {
+      /**
+       * The maximum capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity)
+       */
+      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
+
+      /**
+       * The minimum capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity)
+       */
+      override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScalableTargetActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty):
+          ScalableTargetActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScalableTargetActionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScalableTargetActionProperty):
+          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty
+    }
+  }
+
+  /**
    * `ScheduledAction` is a property of the
    * [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
    * resource that specifies a scheduled action for a scalable target.
@@ -1433,120 +1547,6 @@ public open class CfnScalableTarget internal constructor(
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty
-    }
-  }
-
-  /**
-   * `ScalableTargetAction` specifies the minimum and maximum capacity for the
-   * `ScalableTargetAction` property of the [AWS::ApplicationAutoScaling::ScalableTarget
-   * ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationautoscaling.*;
-   * ScalableTargetActionProperty scalableTargetActionProperty =
-   * ScalableTargetActionProperty.builder()
-   * .maxCapacity(123)
-   * .minCapacity(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html)
-   */
-  public interface ScalableTargetActionProperty {
-    /**
-     * The maximum capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity)
-     */
-    public fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
-
-    /**
-     * The minimum capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity)
-     */
-    public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
-
-    /**
-     * A builder for [ScalableTargetActionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxCapacity The maximum capacity.
-       */
-      public fun maxCapacity(maxCapacity: Number)
-
-      /**
-       * @param minCapacity The minimum capacity.
-       */
-      public fun minCapacity(minCapacity: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty.builder()
-
-      /**
-       * @param maxCapacity The maximum capacity.
-       */
-      override fun maxCapacity(maxCapacity: Number) {
-        cdkBuilder.maxCapacity(maxCapacity)
-      }
-
-      /**
-       * @param minCapacity The minimum capacity.
-       */
-      override fun minCapacity(minCapacity: Number) {
-        cdkBuilder.minCapacity(minCapacity)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty,
-    ) : CdkObject(cdkObject), ScalableTargetActionProperty {
-      /**
-       * The maximum capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity)
-       */
-      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
-
-      /**
-       * The minimum capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.html#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity)
-       */
-      override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScalableTargetActionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty):
-          ScalableTargetActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ScalableTargetActionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScalableTargetActionProperty):
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty
     }
   }
 }

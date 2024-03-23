@@ -644,6 +644,1583 @@ public open class CfnTemplate internal constructor(
   }
 
   /**
+   * Application policies describe what the certificate can be used for.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * ApplicationPoliciesProperty applicationPoliciesProperty = ApplicationPoliciesProperty.builder()
+   * .policies(List.of(ApplicationPolicyProperty.builder()
+   * .policyObjectIdentifier("policyObjectIdentifier")
+   * .policyType("policyType")
+   * .build()))
+   * // the properties below are optional
+   * .critical(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html)
+   */
+  public interface ApplicationPoliciesProperty {
+    /**
+     * Marks the application policy extension as critical.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html#cfn-pcaconnectorad-template-applicationpolicies-critical)
+     */
+    public fun critical(): Any? = unwrap(this).getCritical()
+
+    /**
+     * Application policies describe what the certificate can be used for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html#cfn-pcaconnectorad-template-applicationpolicies-policies)
+     */
+    public fun policies(): Any
+
+    /**
+     * A builder for [ApplicationPoliciesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param critical Marks the application policy extension as critical.
+       */
+      public fun critical(critical: Boolean)
+
+      /**
+       * @param critical Marks the application policy extension as critical.
+       */
+      public fun critical(critical: IResolvable)
+
+      /**
+       * @param policies Application policies describe what the certificate can be used for. 
+       */
+      public fun policies(policies: IResolvable)
+
+      /**
+       * @param policies Application policies describe what the certificate can be used for. 
+       */
+      public fun policies(policies: List<Any>)
+
+      /**
+       * @param policies Application policies describe what the certificate can be used for. 
+       */
+      public fun policies(vararg policies: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty.builder()
+
+      /**
+       * @param critical Marks the application policy extension as critical.
+       */
+      override fun critical(critical: Boolean) {
+        cdkBuilder.critical(critical)
+      }
+
+      /**
+       * @param critical Marks the application policy extension as critical.
+       */
+      override fun critical(critical: IResolvable) {
+        cdkBuilder.critical(critical.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param policies Application policies describe what the certificate can be used for. 
+       */
+      override fun policies(policies: IResolvable) {
+        cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param policies Application policies describe what the certificate can be used for. 
+       */
+      override fun policies(policies: List<Any>) {
+        cdkBuilder.policies(policies)
+      }
+
+      /**
+       * @param policies Application policies describe what the certificate can be used for. 
+       */
+      override fun policies(vararg policies: Any): Unit = policies(policies.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty,
+    ) : CdkObject(cdkObject), ApplicationPoliciesProperty {
+      /**
+       * Marks the application policy extension as critical.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html#cfn-pcaconnectorad-template-applicationpolicies-critical)
+       */
+      override fun critical(): Any? = unwrap(this).getCritical()
+
+      /**
+       * Application policies describe what the certificate can be used for.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html#cfn-pcaconnectorad-template-applicationpolicies-policies)
+       */
+      override fun policies(): Any = unwrap(this).getPolicies()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationPoliciesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty):
+          ApplicationPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationPoliciesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApplicationPoliciesProperty):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty
+    }
+  }
+
+  /**
+   * Application policies describe what the certificate can be used for.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * ApplicationPolicyProperty applicationPolicyProperty = ApplicationPolicyProperty.builder()
+   * .policyObjectIdentifier("policyObjectIdentifier")
+   * .policyType("policyType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html)
+   */
+  public interface ApplicationPolicyProperty {
+    /**
+     * The object identifier (OID) of an application policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html#cfn-pcaconnectorad-template-applicationpolicy-policyobjectidentifier)
+     */
+    public fun policyObjectIdentifier(): String? = unwrap(this).getPolicyObjectIdentifier()
+
+    /**
+     * The type of application policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html#cfn-pcaconnectorad-template-applicationpolicy-policytype)
+     */
+    public fun policyType(): String? = unwrap(this).getPolicyType()
+
+    /**
+     * A builder for [ApplicationPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param policyObjectIdentifier The object identifier (OID) of an application policy.
+       */
+      public fun policyObjectIdentifier(policyObjectIdentifier: String)
+
+      /**
+       * @param policyType The type of application policy.
+       */
+      public fun policyType(policyType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty.builder()
+
+      /**
+       * @param policyObjectIdentifier The object identifier (OID) of an application policy.
+       */
+      override fun policyObjectIdentifier(policyObjectIdentifier: String) {
+        cdkBuilder.policyObjectIdentifier(policyObjectIdentifier)
+      }
+
+      /**
+       * @param policyType The type of application policy.
+       */
+      override fun policyType(policyType: String) {
+        cdkBuilder.policyType(policyType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty,
+    ) : CdkObject(cdkObject), ApplicationPolicyProperty {
+      /**
+       * The object identifier (OID) of an application policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html#cfn-pcaconnectorad-template-applicationpolicy-policyobjectidentifier)
+       */
+      override fun policyObjectIdentifier(): String? = unwrap(this).getPolicyObjectIdentifier()
+
+      /**
+       * The type of application policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html#cfn-pcaconnectorad-template-applicationpolicy-policytype)
+       */
+      override fun policyType(): String? = unwrap(this).getPolicyType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty):
+          ApplicationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApplicationPolicyProperty):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty
+    }
+  }
+
+  /**
+   * Information describing the end of the validity period of the certificate.
+   *
+   * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+   * period of time during which a certificate is valid. Validity can be expressed as an explicit date
+   * and time when the certificate expires, or as a span of time after issuance, stated in days,
+   * months, or years. For more information, see Validity in RFC 5280. This value is unaffected when
+   * ValidityNotBefore is also specified. For example, if Validity is set to 20 days in the future, the
+   * certificate will expire 20 days from issuance time regardless of the ValidityNotBefore value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * CertificateValidityProperty certificateValidityProperty = CertificateValidityProperty.builder()
+   * .renewalPeriod(ValidityPeriodProperty.builder()
+   * .period(123)
+   * .periodType("periodType")
+   * .build())
+   * .validityPeriod(ValidityPeriodProperty.builder()
+   * .period(123)
+   * .periodType("periodType")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html)
+   */
+  public interface CertificateValidityProperty {
+    /**
+     * Renewal period is the period of time before certificate expiration when a new certificate
+     * will be requested.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html#cfn-pcaconnectorad-template-certificatevalidity-renewalperiod)
+     */
+    public fun renewalPeriod(): Any
+
+    /**
+     * Information describing the end of the validity period of the certificate.
+     *
+     * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+     * period of time during which a certificate is valid. Validity can be expressed as an explicit
+     * date and time when the certificate expires, or as a span of time after issuance, stated in days,
+     * months, or years. For more information, see Validity in RFC 5280. This value is unaffected when
+     * ValidityNotBefore is also specified. For example, if Validity is set to 20 days in the future,
+     * the certificate will expire 20 days from issuance time regardless of the ValidityNotBefore
+     * value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html#cfn-pcaconnectorad-template-certificatevalidity-validityperiod)
+     */
+    public fun validityPeriod(): Any
+
+    /**
+     * A builder for [CertificateValidityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param renewalPeriod Renewal period is the period of time before certificate expiration
+       * when a new certificate will be requested. 
+       */
+      public fun renewalPeriod(renewalPeriod: IResolvable)
+
+      /**
+       * @param renewalPeriod Renewal period is the period of time before certificate expiration
+       * when a new certificate will be requested. 
+       */
+      public fun renewalPeriod(renewalPeriod: ValidityPeriodProperty)
+
+      /**
+       * @param renewalPeriod Renewal period is the period of time before certificate expiration
+       * when a new certificate will be requested. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("074d06ca33d33e75e9aa8418600945d8d29663f6d1be76c0343c2cf70cff619c")
+      public fun renewalPeriod(renewalPeriod: ValidityPeriodProperty.Builder.() -> Unit)
+
+      /**
+       * @param validityPeriod Information describing the end of the validity period of the
+       * certificate. 
+       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+       * period of time during which a certificate is valid. Validity can be expressed as an explicit
+       * date and time when the certificate expires, or as a span of time after issuance, stated in
+       * days, months, or years. For more information, see Validity in RFC 5280. This value is
+       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
+       * days in the future, the certificate will expire 20 days from issuance time regardless of the
+       * ValidityNotBefore value.
+       */
+      public fun validityPeriod(validityPeriod: IResolvable)
+
+      /**
+       * @param validityPeriod Information describing the end of the validity period of the
+       * certificate. 
+       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+       * period of time during which a certificate is valid. Validity can be expressed as an explicit
+       * date and time when the certificate expires, or as a span of time after issuance, stated in
+       * days, months, or years. For more information, see Validity in RFC 5280. This value is
+       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
+       * days in the future, the certificate will expire 20 days from issuance time regardless of the
+       * ValidityNotBefore value.
+       */
+      public fun validityPeriod(validityPeriod: ValidityPeriodProperty)
+
+      /**
+       * @param validityPeriod Information describing the end of the validity period of the
+       * certificate. 
+       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+       * period of time during which a certificate is valid. Validity can be expressed as an explicit
+       * date and time when the certificate expires, or as a span of time after issuance, stated in
+       * days, months, or years. For more information, see Validity in RFC 5280. This value is
+       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
+       * days in the future, the certificate will expire 20 days from issuance time regardless of the
+       * ValidityNotBefore value.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("762e9ab84bc09a28664eaa5d5953d5389f0fa6cb433ee08b768232b09f3c7410")
+      public fun validityPeriod(validityPeriod: ValidityPeriodProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty.builder()
+
+      /**
+       * @param renewalPeriod Renewal period is the period of time before certificate expiration
+       * when a new certificate will be requested. 
+       */
+      override fun renewalPeriod(renewalPeriod: IResolvable) {
+        cdkBuilder.renewalPeriod(renewalPeriod.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param renewalPeriod Renewal period is the period of time before certificate expiration
+       * when a new certificate will be requested. 
+       */
+      override fun renewalPeriod(renewalPeriod: ValidityPeriodProperty) {
+        cdkBuilder.renewalPeriod(renewalPeriod.let(ValidityPeriodProperty::unwrap))
+      }
+
+      /**
+       * @param renewalPeriod Renewal period is the period of time before certificate expiration
+       * when a new certificate will be requested. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("074d06ca33d33e75e9aa8418600945d8d29663f6d1be76c0343c2cf70cff619c")
+      override fun renewalPeriod(renewalPeriod: ValidityPeriodProperty.Builder.() -> Unit): Unit =
+          renewalPeriod(ValidityPeriodProperty(renewalPeriod))
+
+      /**
+       * @param validityPeriod Information describing the end of the validity period of the
+       * certificate. 
+       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+       * period of time during which a certificate is valid. Validity can be expressed as an explicit
+       * date and time when the certificate expires, or as a span of time after issuance, stated in
+       * days, months, or years. For more information, see Validity in RFC 5280. This value is
+       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
+       * days in the future, the certificate will expire 20 days from issuance time regardless of the
+       * ValidityNotBefore value.
+       */
+      override fun validityPeriod(validityPeriod: IResolvable) {
+        cdkBuilder.validityPeriod(validityPeriod.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param validityPeriod Information describing the end of the validity period of the
+       * certificate. 
+       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+       * period of time during which a certificate is valid. Validity can be expressed as an explicit
+       * date and time when the certificate expires, or as a span of time after issuance, stated in
+       * days, months, or years. For more information, see Validity in RFC 5280. This value is
+       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
+       * days in the future, the certificate will expire 20 days from issuance time regardless of the
+       * ValidityNotBefore value.
+       */
+      override fun validityPeriod(validityPeriod: ValidityPeriodProperty) {
+        cdkBuilder.validityPeriod(validityPeriod.let(ValidityPeriodProperty::unwrap))
+      }
+
+      /**
+       * @param validityPeriod Information describing the end of the validity period of the
+       * certificate. 
+       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+       * period of time during which a certificate is valid. Validity can be expressed as an explicit
+       * date and time when the certificate expires, or as a span of time after issuance, stated in
+       * days, months, or years. For more information, see Validity in RFC 5280. This value is
+       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
+       * days in the future, the certificate will expire 20 days from issuance time regardless of the
+       * ValidityNotBefore value.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("762e9ab84bc09a28664eaa5d5953d5389f0fa6cb433ee08b768232b09f3c7410")
+      override fun validityPeriod(validityPeriod: ValidityPeriodProperty.Builder.() -> Unit): Unit =
+          validityPeriod(ValidityPeriodProperty(validityPeriod))
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty,
+    ) : CdkObject(cdkObject), CertificateValidityProperty {
+      /**
+       * Renewal period is the period of time before certificate expiration when a new certificate
+       * will be requested.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html#cfn-pcaconnectorad-template-certificatevalidity-renewalperiod)
+       */
+      override fun renewalPeriod(): Any = unwrap(this).getRenewalPeriod()
+
+      /**
+       * Information describing the end of the validity period of the certificate.
+       *
+       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
+       * period of time during which a certificate is valid. Validity can be expressed as an explicit
+       * date and time when the certificate expires, or as a span of time after issuance, stated in
+       * days, months, or years. For more information, see Validity in RFC 5280. This value is
+       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
+       * days in the future, the certificate will expire 20 days from issuance time regardless of the
+       * ValidityNotBefore value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html#cfn-pcaconnectorad-template-certificatevalidity-validityperiod)
+       */
+      override fun validityPeriod(): Any = unwrap(this).getValidityPeriod()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateValidityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty):
+          CertificateValidityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateValidityProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CertificateValidityProperty):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty
+    }
+  }
+
+  /**
+   * Template configurations for v2 template schema.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * EnrollmentFlagsV2Property enrollmentFlagsV2Property = EnrollmentFlagsV2Property.builder()
+   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
+   * .includeSymmetricAlgorithms(false)
+   * .noSecurityExtension(false)
+   * .removeInvalidCertificateFromPersonalStore(false)
+   * .userInteractionRequired(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html)
+   */
+  public interface EnrollmentFlagsV2Property {
+    /**
+     * Allow renewal using the same key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-enablekeyreuseonnttokenkeysetstoragefull)
+     */
+    public fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
+        unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
+
+    /**
+     * Include symmetric algorithms allowed by the subject.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-includesymmetricalgorithms)
+     */
+    public fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
+
+    /**
+     * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
+     * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
+     * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
+     * elevation-of-privilege vulnerability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-nosecurityextension)
+     */
+    public fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
+
+    /**
+     * Delete expired or revoked certificates instead of archiving them.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-removeinvalidcertificatefrompersonalstore)
+     */
+    public fun removeInvalidCertificateFromPersonalStore(): Any? =
+        unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
+
+    /**
+     * Require user interaction when the subject is enrolled and the private key associated with the
+     * certificate is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-userinteractionrequired)
+     */
+    public fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
+
+    /**
+     * A builder for [EnrollmentFlagsV2Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      public
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean)
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      public
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable)
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean)
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable)
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      public fun noSecurityExtension(noSecurityExtension: Boolean)
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      public fun noSecurityExtension(noSecurityExtension: IResolvable)
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      public
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean)
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      public
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable)
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      public fun userInteractionRequired(userInteractionRequired: Boolean)
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      public fun userInteractionRequired(userInteractionRequired: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property.builder()
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      override
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean) {
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull)
+      }
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      override
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean) {
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms)
+      }
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      override fun noSecurityExtension(noSecurityExtension: Boolean) {
+        cdkBuilder.noSecurityExtension(noSecurityExtension)
+      }
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      override fun noSecurityExtension(noSecurityExtension: IResolvable) {
+        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      override
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean) {
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore)
+      }
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      override
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      override fun userInteractionRequired(userInteractionRequired: Boolean) {
+        cdkBuilder.userInteractionRequired(userInteractionRequired)
+      }
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      override fun userInteractionRequired(userInteractionRequired: IResolvable) {
+        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property,
+    ) : CdkObject(cdkObject), EnrollmentFlagsV2Property {
+      /**
+       * Allow renewal using the same key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-enablekeyreuseonnttokenkeysetstoragefull)
+       */
+      override fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
+          unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
+
+      /**
+       * Include symmetric algorithms allowed by the subject.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-includesymmetricalgorithms)
+       */
+      override fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
+
+      /**
+       * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
+       * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
+       * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
+       * elevation-of-privilege vulnerability.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-nosecurityextension)
+       */
+      override fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
+
+      /**
+       * Delete expired or revoked certificates instead of archiving them.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-removeinvalidcertificatefrompersonalstore)
+       */
+      override fun removeInvalidCertificateFromPersonalStore(): Any? =
+          unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
+
+      /**
+       * Require user interaction when the subject is enrolled and the private key associated with
+       * the certificate is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-userinteractionrequired)
+       */
+      override fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnrollmentFlagsV2Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property):
+          EnrollmentFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as?
+          EnrollmentFlagsV2Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnrollmentFlagsV2Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property
+    }
+  }
+
+  /**
+   * Template configurations for v3 template schema.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * EnrollmentFlagsV3Property enrollmentFlagsV3Property = EnrollmentFlagsV3Property.builder()
+   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
+   * .includeSymmetricAlgorithms(false)
+   * .noSecurityExtension(false)
+   * .removeInvalidCertificateFromPersonalStore(false)
+   * .userInteractionRequired(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html)
+   */
+  public interface EnrollmentFlagsV3Property {
+    /**
+     * Allow renewal using the same key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-enablekeyreuseonnttokenkeysetstoragefull)
+     */
+    public fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
+        unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
+
+    /**
+     * Include symmetric algorithms allowed by the subject.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-includesymmetricalgorithms)
+     */
+    public fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
+
+    /**
+     * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
+     * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
+     * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
+     * elevation-of-privilege vulnerability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-nosecurityextension)
+     */
+    public fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
+
+    /**
+     * Delete expired or revoked certificates instead of archiving them.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-removeinvalidcertificatefrompersonalstore)
+     */
+    public fun removeInvalidCertificateFromPersonalStore(): Any? =
+        unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
+
+    /**
+     * Require user interaction when the subject is enrolled and the private key associated with the
+     * certificate is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-userinteractionrequired)
+     */
+    public fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
+
+    /**
+     * A builder for [EnrollmentFlagsV3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      public
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean)
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      public
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable)
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean)
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable)
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      public fun noSecurityExtension(noSecurityExtension: Boolean)
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      public fun noSecurityExtension(noSecurityExtension: IResolvable)
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      public
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean)
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      public
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable)
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      public fun userInteractionRequired(userInteractionRequired: Boolean)
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      public fun userInteractionRequired(userInteractionRequired: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property.builder()
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      override
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean) {
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull)
+      }
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      override
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean) {
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms)
+      }
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      override fun noSecurityExtension(noSecurityExtension: Boolean) {
+        cdkBuilder.noSecurityExtension(noSecurityExtension)
+      }
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      override fun noSecurityExtension(noSecurityExtension: IResolvable) {
+        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      override
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean) {
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore)
+      }
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      override
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      override fun userInteractionRequired(userInteractionRequired: Boolean) {
+        cdkBuilder.userInteractionRequired(userInteractionRequired)
+      }
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      override fun userInteractionRequired(userInteractionRequired: IResolvable) {
+        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property,
+    ) : CdkObject(cdkObject), EnrollmentFlagsV3Property {
+      /**
+       * Allow renewal using the same key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-enablekeyreuseonnttokenkeysetstoragefull)
+       */
+      override fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
+          unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
+
+      /**
+       * Include symmetric algorithms allowed by the subject.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-includesymmetricalgorithms)
+       */
+      override fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
+
+      /**
+       * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
+       * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
+       * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
+       * elevation-of-privilege vulnerability.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-nosecurityextension)
+       */
+      override fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
+
+      /**
+       * Delete expired or revoked certificates instead of archiving them.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-removeinvalidcertificatefrompersonalstore)
+       */
+      override fun removeInvalidCertificateFromPersonalStore(): Any? =
+          unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
+
+      /**
+       * Require user interaction when the subject is enrolled and the private key associated with
+       * the certificate is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-userinteractionrequired)
+       */
+      override fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnrollmentFlagsV3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property):
+          EnrollmentFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as?
+          EnrollmentFlagsV3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnrollmentFlagsV3Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property
+    }
+  }
+
+  /**
+   * Template configurations for v4 template schema.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * EnrollmentFlagsV4Property enrollmentFlagsV4Property = EnrollmentFlagsV4Property.builder()
+   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
+   * .includeSymmetricAlgorithms(false)
+   * .noSecurityExtension(false)
+   * .removeInvalidCertificateFromPersonalStore(false)
+   * .userInteractionRequired(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html)
+   */
+  public interface EnrollmentFlagsV4Property {
+    /**
+     * Allow renewal using the same key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-enablekeyreuseonnttokenkeysetstoragefull)
+     */
+    public fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
+        unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
+
+    /**
+     * Include symmetric algorithms allowed by the subject.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-includesymmetricalgorithms)
+     */
+    public fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
+
+    /**
+     * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
+     * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
+     * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
+     * elevation-of-privilege vulnerability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-nosecurityextension)
+     */
+    public fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
+
+    /**
+     * Delete expired or revoked certificates instead of archiving them.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-removeinvalidcertificatefrompersonalstore)
+     */
+    public fun removeInvalidCertificateFromPersonalStore(): Any? =
+        unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
+
+    /**
+     * Require user interaction when the subject is enrolled and the private key associated with the
+     * certificate is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-userinteractionrequired)
+     */
+    public fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
+
+    /**
+     * A builder for [EnrollmentFlagsV4Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      public
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean)
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      public
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable)
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean)
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable)
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      public fun noSecurityExtension(noSecurityExtension: Boolean)
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      public fun noSecurityExtension(noSecurityExtension: IResolvable)
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      public
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean)
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      public
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable)
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      public fun userInteractionRequired(userInteractionRequired: Boolean)
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      public fun userInteractionRequired(userInteractionRequired: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property.builder()
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      override
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean) {
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull)
+      }
+
+      /**
+       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
+       */
+      override
+          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean) {
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms)
+      }
+
+      /**
+       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
+       */
+      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      override fun noSecurityExtension(noSecurityExtension: Boolean) {
+        cdkBuilder.noSecurityExtension(noSecurityExtension)
+      }
+
+      /**
+       * @param noSecurityExtension This flag instructs the CA to not include the security extension
+       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
+       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
+       * Kerberos elevation-of-privilege vulnerability.
+       */
+      override fun noSecurityExtension(noSecurityExtension: IResolvable) {
+        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      override
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean) {
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore)
+      }
+
+      /**
+       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
+       * instead of archiving them.
+       */
+      override
+          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      override fun userInteractionRequired(userInteractionRequired: Boolean) {
+        cdkBuilder.userInteractionRequired(userInteractionRequired)
+      }
+
+      /**
+       * @param userInteractionRequired Require user interaction when the subject is enrolled and
+       * the private key associated with the certificate is used.
+       */
+      override fun userInteractionRequired(userInteractionRequired: IResolvable) {
+        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property,
+    ) : CdkObject(cdkObject), EnrollmentFlagsV4Property {
+      /**
+       * Allow renewal using the same key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-enablekeyreuseonnttokenkeysetstoragefull)
+       */
+      override fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
+          unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
+
+      /**
+       * Include symmetric algorithms allowed by the subject.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-includesymmetricalgorithms)
+       */
+      override fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
+
+      /**
+       * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
+       * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
+       * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
+       * elevation-of-privilege vulnerability.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-nosecurityextension)
+       */
+      override fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
+
+      /**
+       * Delete expired or revoked certificates instead of archiving them.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-removeinvalidcertificatefrompersonalstore)
+       */
+      override fun removeInvalidCertificateFromPersonalStore(): Any? =
+          unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
+
+      /**
+       * Require user interaction when the subject is enrolled and the private key associated with
+       * the certificate is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-userinteractionrequired)
+       */
+      override fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnrollmentFlagsV4Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property):
+          EnrollmentFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as?
+          EnrollmentFlagsV4Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnrollmentFlagsV4Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property
+    }
+  }
+
+  /**
+   * Certificate extensions for v2 template schema.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * ExtensionsV2Property extensionsV2Property = ExtensionsV2Property.builder()
+   * .keyUsage(KeyUsageProperty.builder()
+   * .usageFlags(KeyUsageFlagsProperty.builder()
+   * .dataEncipherment(false)
+   * .digitalSignature(false)
+   * .keyAgreement(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * // the properties below are optional
+   * .applicationPolicies(ApplicationPoliciesProperty.builder()
+   * .policies(List.of(ApplicationPolicyProperty.builder()
+   * .policyObjectIdentifier("policyObjectIdentifier")
+   * .policyType("policyType")
+   * .build()))
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html)
+   */
+  public interface ExtensionsV2Property {
+    /**
+     * Application policies specify what the certificate is used for and its purpose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html#cfn-pcaconnectorad-template-extensionsv2-applicationpolicies)
+     */
+    public fun applicationPolicies(): Any? = unwrap(this).getApplicationPolicies()
+
+    /**
+     * The key usage extension defines the purpose (e.g., encipherment, signature, certificate
+     * signing) of the key contained in the certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html#cfn-pcaconnectorad-template-extensionsv2-keyusage)
+     */
+    public fun keyUsage(): Any
+
+    /**
+     * A builder for [ExtensionsV2Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      public fun applicationPolicies(applicationPolicies: IResolvable)
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      public fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty)
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a828670bec1d28e8cc1a2d50058b79d351f6c153d40af2f570d8060b6444d726")
+      public
+          fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty.Builder.() -> Unit)
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
+       * certificate signing) of the key contained in the certificate. 
+       */
+      public fun keyUsage(keyUsage: IResolvable)
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
+       * certificate signing) of the key contained in the certificate. 
+       */
+      public fun keyUsage(keyUsage: KeyUsageProperty)
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
+       * certificate signing) of the key contained in the certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9c693eed2a201cdc50ab632d8b3801ac042a7a5b25b4ead1c4ddc1c28256cf4e")
+      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property.Builder =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property.builder()
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      override fun applicationPolicies(applicationPolicies: IResolvable) {
+        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      override fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty) {
+        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty::unwrap))
+      }
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a828670bec1d28e8cc1a2d50058b79d351f6c153d40af2f570d8060b6444d726")
+      override
+          fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty.Builder.() -> Unit):
+          Unit = applicationPolicies(ApplicationPoliciesProperty(applicationPolicies))
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
+       * certificate signing) of the key contained in the certificate. 
+       */
+      override fun keyUsage(keyUsage: IResolvable) {
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
+       * certificate signing) of the key contained in the certificate. 
+       */
+      override fun keyUsage(keyUsage: KeyUsageProperty) {
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+      }
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
+       * certificate signing) of the key contained in the certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9c693eed2a201cdc50ab632d8b3801ac042a7a5b25b4ead1c4ddc1c28256cf4e")
+      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
+          keyUsage(KeyUsageProperty(keyUsage))
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property,
+    ) : CdkObject(cdkObject), ExtensionsV2Property {
+      /**
+       * Application policies specify what the certificate is used for and its purpose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html#cfn-pcaconnectorad-template-extensionsv2-applicationpolicies)
+       */
+      override fun applicationPolicies(): Any? = unwrap(this).getApplicationPolicies()
+
+      /**
+       * The key usage extension defines the purpose (e.g., encipherment, signature, certificate
+       * signing) of the key contained in the certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html#cfn-pcaconnectorad-template-extensionsv2-keyusage)
+       */
+      override fun keyUsage(): Any = unwrap(this).getKeyUsage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExtensionsV2Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property):
+          ExtensionsV2Property = CdkObjectWrappers.wrap(cdkObject) as? ExtensionsV2Property ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExtensionsV2Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property
+    }
+  }
+
+  /**
    * Certificate extensions for v3 template schema.
    *
    * Example:
@@ -837,6 +2414,656 @@ public open class CfnTemplate internal constructor(
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV3Property = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV3Property
+    }
+  }
+
+  /**
+   * Certificate extensions for v4 template schema.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * ExtensionsV4Property extensionsV4Property = ExtensionsV4Property.builder()
+   * .keyUsage(KeyUsageProperty.builder()
+   * .usageFlags(KeyUsageFlagsProperty.builder()
+   * .dataEncipherment(false)
+   * .digitalSignature(false)
+   * .keyAgreement(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * // the properties below are optional
+   * .applicationPolicies(ApplicationPoliciesProperty.builder()
+   * .policies(List.of(ApplicationPolicyProperty.builder()
+   * .policyObjectIdentifier("policyObjectIdentifier")
+   * .policyType("policyType")
+   * .build()))
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html)
+   */
+  public interface ExtensionsV4Property {
+    /**
+     * Application policies specify what the certificate is used for and its purpose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html#cfn-pcaconnectorad-template-extensionsv4-applicationpolicies)
+     */
+    public fun applicationPolicies(): Any? = unwrap(this).getApplicationPolicies()
+
+    /**
+     * The key usage extension defines the purpose (e.g., encipherment, signature) of the key
+     * contained in the certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html#cfn-pcaconnectorad-template-extensionsv4-keyusage)
+     */
+    public fun keyUsage(): Any
+
+    /**
+     * A builder for [ExtensionsV4Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      public fun applicationPolicies(applicationPolicies: IResolvable)
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      public fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty)
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("675d22ebbe7e9e9c07c73217c59014a96cdbd81d23ef77e4d48bc82a7ba6ae7b")
+      public
+          fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty.Builder.() -> Unit)
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      public fun keyUsage(keyUsage: IResolvable)
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      public fun keyUsage(keyUsage: KeyUsageProperty)
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("776a28e32dec6f401fe6ac8cef051766a5972ba4f4657a12e9d95cbe6aeaa65a")
+      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property.Builder =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property.builder()
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      override fun applicationPolicies(applicationPolicies: IResolvable) {
+        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      override fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty) {
+        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty::unwrap))
+      }
+
+      /**
+       * @param applicationPolicies Application policies specify what the certificate is used for
+       * and its purpose.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("675d22ebbe7e9e9c07c73217c59014a96cdbd81d23ef77e4d48bc82a7ba6ae7b")
+      override
+          fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty.Builder.() -> Unit):
+          Unit = applicationPolicies(ApplicationPoliciesProperty(applicationPolicies))
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      override fun keyUsage(keyUsage: IResolvable) {
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      override fun keyUsage(keyUsage: KeyUsageProperty) {
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+      }
+
+      /**
+       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("776a28e32dec6f401fe6ac8cef051766a5972ba4f4657a12e9d95cbe6aeaa65a")
+      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
+          keyUsage(KeyUsageProperty(keyUsage))
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property,
+    ) : CdkObject(cdkObject), ExtensionsV4Property {
+      /**
+       * Application policies specify what the certificate is used for and its purpose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html#cfn-pcaconnectorad-template-extensionsv4-applicationpolicies)
+       */
+      override fun applicationPolicies(): Any? = unwrap(this).getApplicationPolicies()
+
+      /**
+       * The key usage extension defines the purpose (e.g., encipherment, signature) of the key
+       * contained in the certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html#cfn-pcaconnectorad-template-extensionsv4-keyusage)
+       */
+      override fun keyUsage(): Any = unwrap(this).getKeyUsage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExtensionsV4Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property):
+          ExtensionsV4Property = CdkObjectWrappers.wrap(cdkObject) as? ExtensionsV4Property ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExtensionsV4Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property
+    }
+  }
+
+  /**
+   * General flags for v2 template schema that defines if the template is for a machine or a user
+   * and if the template can be issued using autoenrollment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * GeneralFlagsV2Property generalFlagsV2Property = GeneralFlagsV2Property.builder()
+   * .autoEnrollment(false)
+   * .machineType(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html)
+   */
+  public interface GeneralFlagsV2Property {
+    /**
+     * Allows certificate issuance using autoenrollment.
+     *
+     * Set to TRUE to allow autoenrollment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html#cfn-pcaconnectorad-template-generalflagsv2-autoenrollment)
+     */
+    public fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
+
+    /**
+     * Defines if the template is for machines or users.
+     *
+     * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html#cfn-pcaconnectorad-template-generalflagsv2-machinetype)
+     */
+    public fun machineType(): Any? = unwrap(this).getMachineType()
+
+    /**
+     * A builder for [GeneralFlagsV2Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      public fun autoEnrollment(autoEnrollment: Boolean)
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      public fun autoEnrollment(autoEnrollment: IResolvable)
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
+       */
+      public fun machineType(machineType: Boolean)
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
+       */
+      public fun machineType(machineType: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property.builder()
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      override fun autoEnrollment(autoEnrollment: Boolean) {
+        cdkBuilder.autoEnrollment(autoEnrollment)
+      }
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      override fun autoEnrollment(autoEnrollment: IResolvable) {
+        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
+       */
+      override fun machineType(machineType: Boolean) {
+        cdkBuilder.machineType(machineType)
+      }
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
+       */
+      override fun machineType(machineType: IResolvable) {
+        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property,
+    ) : CdkObject(cdkObject), GeneralFlagsV2Property {
+      /**
+       * Allows certificate issuance using autoenrollment.
+       *
+       * Set to TRUE to allow autoenrollment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html#cfn-pcaconnectorad-template-generalflagsv2-autoenrollment)
+       */
+      override fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
+
+      /**
+       * Defines if the template is for machines or users.
+       *
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html#cfn-pcaconnectorad-template-generalflagsv2-machinetype)
+       */
+      override fun machineType(): Any? = unwrap(this).getMachineType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralFlagsV2Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property):
+          GeneralFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as? GeneralFlagsV2Property ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GeneralFlagsV2Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property
+    }
+  }
+
+  /**
+   * General flags for v3 template schema that defines if the template is for a machine or a user
+   * and if the template can be issued using autoenrollment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * GeneralFlagsV3Property generalFlagsV3Property = GeneralFlagsV3Property.builder()
+   * .autoEnrollment(false)
+   * .machineType(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html)
+   */
+  public interface GeneralFlagsV3Property {
+    /**
+     * Allows certificate issuance using autoenrollment.
+     *
+     * Set to TRUE to allow autoenrollment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html#cfn-pcaconnectorad-template-generalflagsv3-autoenrollment)
+     */
+    public fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
+
+    /**
+     * Defines if the template is for machines or users.
+     *
+     * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html#cfn-pcaconnectorad-template-generalflagsv3-machinetype)
+     */
+    public fun machineType(): Any? = unwrap(this).getMachineType()
+
+    /**
+     * A builder for [GeneralFlagsV3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      public fun autoEnrollment(autoEnrollment: Boolean)
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      public fun autoEnrollment(autoEnrollment: IResolvable)
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       */
+      public fun machineType(machineType: Boolean)
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       */
+      public fun machineType(machineType: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property.builder()
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      override fun autoEnrollment(autoEnrollment: Boolean) {
+        cdkBuilder.autoEnrollment(autoEnrollment)
+      }
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      override fun autoEnrollment(autoEnrollment: IResolvable) {
+        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       */
+      override fun machineType(machineType: Boolean) {
+        cdkBuilder.machineType(machineType)
+      }
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       */
+      override fun machineType(machineType: IResolvable) {
+        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property,
+    ) : CdkObject(cdkObject), GeneralFlagsV3Property {
+      /**
+       * Allows certificate issuance using autoenrollment.
+       *
+       * Set to TRUE to allow autoenrollment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html#cfn-pcaconnectorad-template-generalflagsv3-autoenrollment)
+       */
+      override fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
+
+      /**
+       * Defines if the template is for machines or users.
+       *
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html#cfn-pcaconnectorad-template-generalflagsv3-machinetype)
+       */
+      override fun machineType(): Any? = unwrap(this).getMachineType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralFlagsV3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property):
+          GeneralFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as? GeneralFlagsV3Property ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GeneralFlagsV3Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property
+    }
+  }
+
+  /**
+   * General flags for v4 template schema that defines if the template is for a machine or a user
+   * and if the template can be issued using autoenrollment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * GeneralFlagsV4Property generalFlagsV4Property = GeneralFlagsV4Property.builder()
+   * .autoEnrollment(false)
+   * .machineType(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html)
+   */
+  public interface GeneralFlagsV4Property {
+    /**
+     * Allows certificate issuance using autoenrollment.
+     *
+     * Set to TRUE to allow autoenrollment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html#cfn-pcaconnectorad-template-generalflagsv4-autoenrollment)
+     */
+    public fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
+
+    /**
+     * Defines if the template is for machines or users.
+     *
+     * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html#cfn-pcaconnectorad-template-generalflagsv4-machinetype)
+     */
+    public fun machineType(): Any? = unwrap(this).getMachineType()
+
+    /**
+     * A builder for [GeneralFlagsV4Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      public fun autoEnrollment(autoEnrollment: Boolean)
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      public fun autoEnrollment(autoEnrollment: IResolvable)
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       */
+      public fun machineType(machineType: Boolean)
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       */
+      public fun machineType(machineType: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property.builder()
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      override fun autoEnrollment(autoEnrollment: Boolean) {
+        cdkBuilder.autoEnrollment(autoEnrollment)
+      }
+
+      /**
+       * @param autoEnrollment Allows certificate issuance using autoenrollment.
+       * Set to TRUE to allow autoenrollment.
+       */
+      override fun autoEnrollment(autoEnrollment: IResolvable) {
+        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       */
+      override fun machineType(machineType: Boolean) {
+        cdkBuilder.machineType(machineType)
+      }
+
+      /**
+       * @param machineType Defines if the template is for machines or users.
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       */
+      override fun machineType(machineType: IResolvable) {
+        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property,
+    ) : CdkObject(cdkObject), GeneralFlagsV4Property {
+      /**
+       * Allows certificate issuance using autoenrollment.
+       *
+       * Set to TRUE to allow autoenrollment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html#cfn-pcaconnectorad-template-generalflagsv4-autoenrollment)
+       */
+      override fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
+
+      /**
+       * Defines if the template is for machines or users.
+       *
+       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html#cfn-pcaconnectorad-template-generalflagsv4-machinetype)
+       */
+      override fun machineType(): Any? = unwrap(this).getMachineType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralFlagsV4Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property):
+          GeneralFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as? GeneralFlagsV4Property ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GeneralFlagsV4Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property
     }
   }
 
@@ -1115,6 +3342,3816 @@ public open class CfnTemplate internal constructor(
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageFlagsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageFlagsProperty
+    }
+  }
+
+  /**
+   * The key usage extension defines the purpose (e.g., encipherment, signature) of the key
+   * contained in the certificate.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * KeyUsageProperty keyUsageProperty = KeyUsageProperty.builder()
+   * .usageFlags(KeyUsageFlagsProperty.builder()
+   * .dataEncipherment(false)
+   * .digitalSignature(false)
+   * .keyAgreement(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * // the properties below are optional
+   * .critical(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html)
+   */
+  public interface KeyUsageProperty {
+    /**
+     * Sets the key usage extension to critical.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html#cfn-pcaconnectorad-template-keyusage-critical)
+     */
+    public fun critical(): Any? = unwrap(this).getCritical()
+
+    /**
+     * The key usage flags represent the purpose (e.g., encipherment, signature) of the key
+     * contained in the certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html#cfn-pcaconnectorad-template-keyusage-usageflags)
+     */
+    public fun usageFlags(): Any
+
+    /**
+     * A builder for [KeyUsageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param critical Sets the key usage extension to critical.
+       */
+      public fun critical(critical: Boolean)
+
+      /**
+       * @param critical Sets the key usage extension to critical.
+       */
+      public fun critical(critical: IResolvable)
+
+      /**
+       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      public fun usageFlags(usageFlags: IResolvable)
+
+      /**
+       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      public fun usageFlags(usageFlags: KeyUsageFlagsProperty)
+
+      /**
+       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ad3e4f3b9ba170b2557434b15baa9537680ce57819b2f576d9ac89d90bd87379")
+      public fun usageFlags(usageFlags: KeyUsageFlagsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty.Builder =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty.builder()
+
+      /**
+       * @param critical Sets the key usage extension to critical.
+       */
+      override fun critical(critical: Boolean) {
+        cdkBuilder.critical(critical)
+      }
+
+      /**
+       * @param critical Sets the key usage extension to critical.
+       */
+      override fun critical(critical: IResolvable) {
+        cdkBuilder.critical(critical.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      override fun usageFlags(usageFlags: IResolvable) {
+        cdkBuilder.usageFlags(usageFlags.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      override fun usageFlags(usageFlags: KeyUsageFlagsProperty) {
+        cdkBuilder.usageFlags(usageFlags.let(KeyUsageFlagsProperty::unwrap))
+      }
+
+      /**
+       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
+       * of the key contained in the certificate. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ad3e4f3b9ba170b2557434b15baa9537680ce57819b2f576d9ac89d90bd87379")
+      override fun usageFlags(usageFlags: KeyUsageFlagsProperty.Builder.() -> Unit): Unit =
+          usageFlags(KeyUsageFlagsProperty(usageFlags))
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty,
+    ) : CdkObject(cdkObject), KeyUsageProperty {
+      /**
+       * Sets the key usage extension to critical.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html#cfn-pcaconnectorad-template-keyusage-critical)
+       */
+      override fun critical(): Any? = unwrap(this).getCritical()
+
+      /**
+       * The key usage flags represent the purpose (e.g., encipherment, signature) of the key
+       * contained in the certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html#cfn-pcaconnectorad-template-keyusage-usageflags)
+       */
+      override fun usageFlags(): Any = unwrap(this).getUsageFlags()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyUsageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty):
+          KeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyUsageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeyUsageProperty):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty
+    }
+  }
+
+  /**
+   * Specifies key usage.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * KeyUsagePropertyFlagsProperty keyUsagePropertyFlagsProperty =
+   * KeyUsagePropertyFlagsProperty.builder()
+   * .decrypt(false)
+   * .keyAgreement(false)
+   * .sign(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html)
+   */
+  public interface KeyUsagePropertyFlagsProperty {
+    /**
+     * Allows key for encryption and decryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-decrypt)
+     */
+    public fun decrypt(): Any? = unwrap(this).getDecrypt()
+
+    /**
+     * Allows key exchange without encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-keyagreement)
+     */
+    public fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
+
+    /**
+     * Allow key use for digital signature.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-sign)
+     */
+    public fun sign(): Any? = unwrap(this).getSign()
+
+    /**
+     * A builder for [KeyUsagePropertyFlagsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param decrypt Allows key for encryption and decryption.
+       */
+      public fun decrypt(decrypt: Boolean)
+
+      /**
+       * @param decrypt Allows key for encryption and decryption.
+       */
+      public fun decrypt(decrypt: IResolvable)
+
+      /**
+       * @param keyAgreement Allows key exchange without encryption.
+       */
+      public fun keyAgreement(keyAgreement: Boolean)
+
+      /**
+       * @param keyAgreement Allows key exchange without encryption.
+       */
+      public fun keyAgreement(keyAgreement: IResolvable)
+
+      /**
+       * @param sign Allow key use for digital signature.
+       */
+      public fun sign(sign: Boolean)
+
+      /**
+       * @param sign Allow key use for digital signature.
+       */
+      public fun sign(sign: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty.builder()
+
+      /**
+       * @param decrypt Allows key for encryption and decryption.
+       */
+      override fun decrypt(decrypt: Boolean) {
+        cdkBuilder.decrypt(decrypt)
+      }
+
+      /**
+       * @param decrypt Allows key for encryption and decryption.
+       */
+      override fun decrypt(decrypt: IResolvable) {
+        cdkBuilder.decrypt(decrypt.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyAgreement Allows key exchange without encryption.
+       */
+      override fun keyAgreement(keyAgreement: Boolean) {
+        cdkBuilder.keyAgreement(keyAgreement)
+      }
+
+      /**
+       * @param keyAgreement Allows key exchange without encryption.
+       */
+      override fun keyAgreement(keyAgreement: IResolvable) {
+        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sign Allow key use for digital signature.
+       */
+      override fun sign(sign: Boolean) {
+        cdkBuilder.sign(sign)
+      }
+
+      /**
+       * @param sign Allow key use for digital signature.
+       */
+      override fun sign(sign: IResolvable) {
+        cdkBuilder.sign(sign.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty,
+    ) : CdkObject(cdkObject), KeyUsagePropertyFlagsProperty {
+      /**
+       * Allows key for encryption and decryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-decrypt)
+       */
+      override fun decrypt(): Any? = unwrap(this).getDecrypt()
+
+      /**
+       * Allows key exchange without encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-keyagreement)
+       */
+      override fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
+
+      /**
+       * Allow key use for digital signature.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-sign)
+       */
+      override fun sign(): Any? = unwrap(this).getSign()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyUsagePropertyFlagsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty):
+          KeyUsagePropertyFlagsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KeyUsagePropertyFlagsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeyUsagePropertyFlagsProperty):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty
+    }
+  }
+
+  /**
+   * The key usage property defines the purpose of the private key contained in the certificate.
+   *
+   * You can specify specific purposes using property flags or all by using property type ALL.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * KeyUsagePropertyProperty keyUsagePropertyProperty = KeyUsagePropertyProperty.builder()
+   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
+   * .decrypt(false)
+   * .keyAgreement(false)
+   * .sign(false)
+   * .build())
+   * .propertyType("propertyType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html)
+   */
+  public interface KeyUsagePropertyProperty {
+    /**
+     * You can specify key usage for encryption, key agreement, and signature.
+     *
+     * You can use property flags or property type but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html#cfn-pcaconnectorad-template-keyusageproperty-propertyflags)
+     */
+    public fun propertyFlags(): Any? = unwrap(this).getPropertyFlags()
+
+    /**
+     * You can specify all key usages using property type ALL.
+     *
+     * You can use property type or property flags but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html#cfn-pcaconnectorad-template-keyusageproperty-propertytype)
+     */
+    public fun propertyType(): String? = unwrap(this).getPropertyType()
+
+    /**
+     * A builder for [KeyUsagePropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param propertyFlags You can specify key usage for encryption, key agreement, and
+       * signature.
+       * You can use property flags or property type but not both.
+       */
+      public fun propertyFlags(propertyFlags: IResolvable)
+
+      /**
+       * @param propertyFlags You can specify key usage for encryption, key agreement, and
+       * signature.
+       * You can use property flags or property type but not both.
+       */
+      public fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty)
+
+      /**
+       * @param propertyFlags You can specify key usage for encryption, key agreement, and
+       * signature.
+       * You can use property flags or property type but not both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7d650478be89420c8682f59b49461f47f84cdefa1fef1dfc8316cc539e14cce6")
+      public fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty.Builder.() -> Unit)
+
+      /**
+       * @param propertyType You can specify all key usages using property type ALL.
+       * You can use property type or property flags but not both.
+       */
+      public fun propertyType(propertyType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty.builder()
+
+      /**
+       * @param propertyFlags You can specify key usage for encryption, key agreement, and
+       * signature.
+       * You can use property flags or property type but not both.
+       */
+      override fun propertyFlags(propertyFlags: IResolvable) {
+        cdkBuilder.propertyFlags(propertyFlags.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param propertyFlags You can specify key usage for encryption, key agreement, and
+       * signature.
+       * You can use property flags or property type but not both.
+       */
+      override fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty) {
+        cdkBuilder.propertyFlags(propertyFlags.let(KeyUsagePropertyFlagsProperty::unwrap))
+      }
+
+      /**
+       * @param propertyFlags You can specify key usage for encryption, key agreement, and
+       * signature.
+       * You can use property flags or property type but not both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7d650478be89420c8682f59b49461f47f84cdefa1fef1dfc8316cc539e14cce6")
+      override fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty.Builder.() -> Unit):
+          Unit = propertyFlags(KeyUsagePropertyFlagsProperty(propertyFlags))
+
+      /**
+       * @param propertyType You can specify all key usages using property type ALL.
+       * You can use property type or property flags but not both.
+       */
+      override fun propertyType(propertyType: String) {
+        cdkBuilder.propertyType(propertyType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty,
+    ) : CdkObject(cdkObject), KeyUsagePropertyProperty {
+      /**
+       * You can specify key usage for encryption, key agreement, and signature.
+       *
+       * You can use property flags or property type but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html#cfn-pcaconnectorad-template-keyusageproperty-propertyflags)
+       */
+      override fun propertyFlags(): Any? = unwrap(this).getPropertyFlags()
+
+      /**
+       * You can specify all key usages using property type ALL.
+       *
+       * You can use property type or property flags but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html#cfn-pcaconnectorad-template-keyusageproperty-propertytype)
+       */
+      override fun propertyType(): String? = unwrap(this).getPropertyType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyUsagePropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty):
+          KeyUsagePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyUsagePropertyProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeyUsagePropertyProperty):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty
+    }
+  }
+
+  /**
+   * Defines the attributes of the private key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * PrivateKeyAttributesV2Property privateKeyAttributesV2Property =
+   * PrivateKeyAttributesV2Property.builder()
+   * .keySpec("keySpec")
+   * .minimalKeyLength(123)
+   * // the properties below are optional
+   * .cryptoProviders(List.of("cryptoProviders"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html)
+   */
+  public interface PrivateKeyAttributesV2Property {
+    /**
+     * Defines the cryptographic providers used to generate the private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-cryptoproviders)
+     */
+    public fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?: emptyList()
+
+    /**
+     * Defines the purpose of the private key.
+     *
+     * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-keyspec)
+     */
+    public fun keySpec(): String
+
+    /**
+     * Set the minimum key length of the private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-minimalkeylength)
+     */
+    public fun minimalKeyLength(): Number
+
+    /**
+     * A builder for [PrivateKeyAttributesV2Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      public fun cryptoProviders(cryptoProviders: List<String>)
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      public fun cryptoProviders(vararg cryptoProviders: String)
+
+      /**
+       * @param keySpec Defines the purpose of the private key. 
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       */
+      public fun keySpec(keySpec: String)
+
+      /**
+       * @param minimalKeyLength Set the minimum key length of the private key. 
+       */
+      public fun minimalKeyLength(minimalKeyLength: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property.builder()
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      override fun cryptoProviders(cryptoProviders: List<String>) {
+        cdkBuilder.cryptoProviders(cryptoProviders)
+      }
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
+          cryptoProviders(cryptoProviders.toList())
+
+      /**
+       * @param keySpec Defines the purpose of the private key. 
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       */
+      override fun keySpec(keySpec: String) {
+        cdkBuilder.keySpec(keySpec)
+      }
+
+      /**
+       * @param minimalKeyLength Set the minimum key length of the private key. 
+       */
+      override fun minimalKeyLength(minimalKeyLength: Number) {
+        cdkBuilder.minimalKeyLength(minimalKeyLength)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property,
+    ) : CdkObject(cdkObject), PrivateKeyAttributesV2Property {
+      /**
+       * Defines the cryptographic providers used to generate the private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-cryptoproviders)
+       */
+      override fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?:
+          emptyList()
+
+      /**
+       * Defines the purpose of the private key.
+       *
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-keyspec)
+       */
+      override fun keySpec(): String = unwrap(this).getKeySpec()
+
+      /**
+       * Set the minimum key length of the private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-minimalkeylength)
+       */
+      override fun minimalKeyLength(): Number = unwrap(this).getMinimalKeyLength()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyAttributesV2Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property):
+          PrivateKeyAttributesV2Property = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateKeyAttributesV2Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateKeyAttributesV2Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property
+    }
+  }
+
+  /**
+   * Defines the attributes of the private key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * PrivateKeyAttributesV3Property privateKeyAttributesV3Property =
+   * PrivateKeyAttributesV3Property.builder()
+   * .algorithm("algorithm")
+   * .keySpec("keySpec")
+   * .keyUsageProperty(KeyUsagePropertyProperty.builder()
+   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
+   * .decrypt(false)
+   * .keyAgreement(false)
+   * .sign(false)
+   * .build())
+   * .propertyType("propertyType")
+   * .build())
+   * .minimalKeyLength(123)
+   * // the properties below are optional
+   * .cryptoProviders(List.of("cryptoProviders"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html)
+   */
+  public interface PrivateKeyAttributesV3Property {
+    /**
+     * Defines the algorithm used to generate the private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-algorithm)
+     */
+    public fun algorithm(): String
+
+    /**
+     * Defines the cryptographic providers used to generate the private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-cryptoproviders)
+     */
+    public fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?: emptyList()
+
+    /**
+     * Defines the purpose of the private key.
+     *
+     * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-keyspec)
+     */
+    public fun keySpec(): String
+
+    /**
+     * The key usage property defines the purpose of the private key contained in the certificate.
+     *
+     * You can specify specific purposes using property flags or all by using property type ALL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-keyusageproperty)
+     */
+    public fun keyUsageProperty(): Any
+
+    /**
+     * Set the minimum key length of the private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-minimalkeylength)
+     */
+    public fun minimalKeyLength(): Number
+
+    /**
+     * A builder for [PrivateKeyAttributesV3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param algorithm Defines the algorithm used to generate the private key. 
+       */
+      public fun algorithm(algorithm: String)
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      public fun cryptoProviders(cryptoProviders: List<String>)
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      public fun cryptoProviders(vararg cryptoProviders: String)
+
+      /**
+       * @param keySpec Defines the purpose of the private key. 
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       */
+      public fun keySpec(keySpec: String)
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate. 
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      public fun keyUsageProperty(keyUsageProperty: IResolvable)
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate. 
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      public fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty)
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate. 
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ccd5bffefaa9ac6fdcbd555901a072569107b00d07950ec2c4793559eb0cc6d9")
+      public fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty.Builder.() -> Unit)
+
+      /**
+       * @param minimalKeyLength Set the minimum key length of the private key. 
+       */
+      public fun minimalKeyLength(minimalKeyLength: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property.builder()
+
+      /**
+       * @param algorithm Defines the algorithm used to generate the private key. 
+       */
+      override fun algorithm(algorithm: String) {
+        cdkBuilder.algorithm(algorithm)
+      }
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      override fun cryptoProviders(cryptoProviders: List<String>) {
+        cdkBuilder.cryptoProviders(cryptoProviders)
+      }
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
+          cryptoProviders(cryptoProviders.toList())
+
+      /**
+       * @param keySpec Defines the purpose of the private key. 
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       */
+      override fun keySpec(keySpec: String) {
+        cdkBuilder.keySpec(keySpec)
+      }
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate. 
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      override fun keyUsageProperty(keyUsageProperty: IResolvable) {
+        cdkBuilder.keyUsageProperty(keyUsageProperty.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate. 
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty) {
+        cdkBuilder.keyUsageProperty(keyUsageProperty.let(KeyUsagePropertyProperty::unwrap))
+      }
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate. 
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ccd5bffefaa9ac6fdcbd555901a072569107b00d07950ec2c4793559eb0cc6d9")
+      override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty.Builder.() -> Unit):
+          Unit = keyUsageProperty(KeyUsagePropertyProperty(keyUsageProperty))
+
+      /**
+       * @param minimalKeyLength Set the minimum key length of the private key. 
+       */
+      override fun minimalKeyLength(minimalKeyLength: Number) {
+        cdkBuilder.minimalKeyLength(minimalKeyLength)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property,
+    ) : CdkObject(cdkObject), PrivateKeyAttributesV3Property {
+      /**
+       * Defines the algorithm used to generate the private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-algorithm)
+       */
+      override fun algorithm(): String = unwrap(this).getAlgorithm()
+
+      /**
+       * Defines the cryptographic providers used to generate the private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-cryptoproviders)
+       */
+      override fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?:
+          emptyList()
+
+      /**
+       * Defines the purpose of the private key.
+       *
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-keyspec)
+       */
+      override fun keySpec(): String = unwrap(this).getKeySpec()
+
+      /**
+       * The key usage property defines the purpose of the private key contained in the certificate.
+       *
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-keyusageproperty)
+       */
+      override fun keyUsageProperty(): Any = unwrap(this).getKeyUsageProperty()
+
+      /**
+       * Set the minimum key length of the private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-minimalkeylength)
+       */
+      override fun minimalKeyLength(): Number = unwrap(this).getMinimalKeyLength()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyAttributesV3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property):
+          PrivateKeyAttributesV3Property = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateKeyAttributesV3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateKeyAttributesV3Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property
+    }
+  }
+
+  /**
+   * Defines the attributes of the private key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * PrivateKeyAttributesV4Property privateKeyAttributesV4Property =
+   * PrivateKeyAttributesV4Property.builder()
+   * .keySpec("keySpec")
+   * .minimalKeyLength(123)
+   * // the properties below are optional
+   * .algorithm("algorithm")
+   * .cryptoProviders(List.of("cryptoProviders"))
+   * .keyUsageProperty(KeyUsagePropertyProperty.builder()
+   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
+   * .decrypt(false)
+   * .keyAgreement(false)
+   * .sign(false)
+   * .build())
+   * .propertyType("propertyType")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html)
+   */
+  public interface PrivateKeyAttributesV4Property {
+    /**
+     * Defines the algorithm used to generate the private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-algorithm)
+     */
+    public fun algorithm(): String? = unwrap(this).getAlgorithm()
+
+    /**
+     * Defines the cryptographic providers used to generate the private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-cryptoproviders)
+     */
+    public fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?: emptyList()
+
+    /**
+     * Defines the purpose of the private key.
+     *
+     * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-keyspec)
+     */
+    public fun keySpec(): String
+
+    /**
+     * The key usage property defines the purpose of the private key contained in the certificate.
+     *
+     * You can specify specific purposes using property flags or all by using property type ALL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-keyusageproperty)
+     */
+    public fun keyUsageProperty(): Any? = unwrap(this).getKeyUsageProperty()
+
+    /**
+     * Set the minimum key length of the private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-minimalkeylength)
+     */
+    public fun minimalKeyLength(): Number
+
+    /**
+     * A builder for [PrivateKeyAttributesV4Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param algorithm Defines the algorithm used to generate the private key.
+       */
+      public fun algorithm(algorithm: String)
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      public fun cryptoProviders(cryptoProviders: List<String>)
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      public fun cryptoProviders(vararg cryptoProviders: String)
+
+      /**
+       * @param keySpec Defines the purpose of the private key. 
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       */
+      public fun keySpec(keySpec: String)
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate.
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      public fun keyUsageProperty(keyUsageProperty: IResolvable)
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate.
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      public fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty)
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate.
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("39c25c064000533e637d6eed426bb566a63aa39c6166838f67748c5adafccb96")
+      public fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty.Builder.() -> Unit)
+
+      /**
+       * @param minimalKeyLength Set the minimum key length of the private key. 
+       */
+      public fun minimalKeyLength(minimalKeyLength: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property.builder()
+
+      /**
+       * @param algorithm Defines the algorithm used to generate the private key.
+       */
+      override fun algorithm(algorithm: String) {
+        cdkBuilder.algorithm(algorithm)
+      }
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      override fun cryptoProviders(cryptoProviders: List<String>) {
+        cdkBuilder.cryptoProviders(cryptoProviders)
+      }
+
+      /**
+       * @param cryptoProviders Defines the cryptographic providers used to generate the private
+       * key.
+       */
+      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
+          cryptoProviders(cryptoProviders.toList())
+
+      /**
+       * @param keySpec Defines the purpose of the private key. 
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       */
+      override fun keySpec(keySpec: String) {
+        cdkBuilder.keySpec(keySpec)
+      }
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate.
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      override fun keyUsageProperty(keyUsageProperty: IResolvable) {
+        cdkBuilder.keyUsageProperty(keyUsageProperty.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate.
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty) {
+        cdkBuilder.keyUsageProperty(keyUsageProperty.let(KeyUsagePropertyProperty::unwrap))
+      }
+
+      /**
+       * @param keyUsageProperty The key usage property defines the purpose of the private key
+       * contained in the certificate.
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("39c25c064000533e637d6eed426bb566a63aa39c6166838f67748c5adafccb96")
+      override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty.Builder.() -> Unit):
+          Unit = keyUsageProperty(KeyUsagePropertyProperty(keyUsageProperty))
+
+      /**
+       * @param minimalKeyLength Set the minimum key length of the private key. 
+       */
+      override fun minimalKeyLength(minimalKeyLength: Number) {
+        cdkBuilder.minimalKeyLength(minimalKeyLength)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property,
+    ) : CdkObject(cdkObject), PrivateKeyAttributesV4Property {
+      /**
+       * Defines the algorithm used to generate the private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-algorithm)
+       */
+      override fun algorithm(): String? = unwrap(this).getAlgorithm()
+
+      /**
+       * Defines the cryptographic providers used to generate the private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-cryptoproviders)
+       */
+      override fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?:
+          emptyList()
+
+      /**
+       * Defines the purpose of the private key.
+       *
+       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-keyspec)
+       */
+      override fun keySpec(): String = unwrap(this).getKeySpec()
+
+      /**
+       * The key usage property defines the purpose of the private key contained in the certificate.
+       *
+       * You can specify specific purposes using property flags or all by using property type ALL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-keyusageproperty)
+       */
+      override fun keyUsageProperty(): Any? = unwrap(this).getKeyUsageProperty()
+
+      /**
+       * Set the minimum key length of the private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-minimalkeylength)
+       */
+      override fun minimalKeyLength(): Number = unwrap(this).getMinimalKeyLength()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyAttributesV4Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property):
+          PrivateKeyAttributesV4Property = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateKeyAttributesV4Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateKeyAttributesV4Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property
+    }
+  }
+
+  /**
+   * Private key flags for v2 templates specify the client compatibility, if the private key can be
+   * exported, and if user input is required when using a private key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * PrivateKeyFlagsV2Property privateKeyFlagsV2Property = PrivateKeyFlagsV2Property.builder()
+   * .clientVersion("clientVersion")
+   * // the properties below are optional
+   * .exportableKey(false)
+   * .strongKeyProtectionRequired(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html)
+   */
+  public interface PrivateKeyFlagsV2Property {
+    /**
+     * Defines the minimum client compatibility.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-clientversion)
+     */
+    public fun clientVersion(): String
+
+    /**
+     * Allows the private key to be exported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-exportablekey)
+     */
+    public fun exportableKey(): Any? = unwrap(this).getExportableKey()
+
+    /**
+     * Require user input when using the private key for enrollment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-strongkeyprotectionrequired)
+     */
+    public fun strongKeyProtectionRequired(): Any? = unwrap(this).getStrongKeyProtectionRequired()
+
+    /**
+     * A builder for [PrivateKeyFlagsV2Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientVersion Defines the minimum client compatibility. 
+       */
+      public fun clientVersion(clientVersion: String)
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      public fun exportableKey(exportableKey: Boolean)
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      public fun exportableKey(exportableKey: IResolvable)
+
+      /**
+       * @param strongKeyProtectionRequired Require user input when using the private key for
+       * enrollment.
+       */
+      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean)
+
+      /**
+       * @param strongKeyProtectionRequired Require user input when using the private key for
+       * enrollment.
+       */
+      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property.builder()
+
+      /**
+       * @param clientVersion Defines the minimum client compatibility. 
+       */
+      override fun clientVersion(clientVersion: String) {
+        cdkBuilder.clientVersion(clientVersion)
+      }
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      override fun exportableKey(exportableKey: Boolean) {
+        cdkBuilder.exportableKey(exportableKey)
+      }
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      override fun exportableKey(exportableKey: IResolvable) {
+        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param strongKeyProtectionRequired Require user input when using the private key for
+       * enrollment.
+       */
+      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean) {
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired)
+      }
+
+      /**
+       * @param strongKeyProtectionRequired Require user input when using the private key for
+       * enrollment.
+       */
+      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property,
+    ) : CdkObject(cdkObject), PrivateKeyFlagsV2Property {
+      /**
+       * Defines the minimum client compatibility.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-clientversion)
+       */
+      override fun clientVersion(): String = unwrap(this).getClientVersion()
+
+      /**
+       * Allows the private key to be exported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-exportablekey)
+       */
+      override fun exportableKey(): Any? = unwrap(this).getExportableKey()
+
+      /**
+       * Require user input when using the private key for enrollment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-strongkeyprotectionrequired)
+       */
+      override fun strongKeyProtectionRequired(): Any? =
+          unwrap(this).getStrongKeyProtectionRequired()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyFlagsV2Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property):
+          PrivateKeyFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateKeyFlagsV2Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateKeyFlagsV2Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property
+    }
+  }
+
+  /**
+   * Private key flags for v3 templates specify the client compatibility, if the private key can be
+   * exported, if user input is required when using a private key, and if an alternate signature
+   * algorithm should be used.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * PrivateKeyFlagsV3Property privateKeyFlagsV3Property = PrivateKeyFlagsV3Property.builder()
+   * .clientVersion("clientVersion")
+   * // the properties below are optional
+   * .exportableKey(false)
+   * .requireAlternateSignatureAlgorithm(false)
+   * .strongKeyProtectionRequired(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html)
+   */
+  public interface PrivateKeyFlagsV3Property {
+    /**
+     * Defines the minimum client compatibility.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-clientversion)
+     */
+    public fun clientVersion(): String
+
+    /**
+     * Allows the private key to be exported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-exportablekey)
+     */
+    public fun exportableKey(): Any? = unwrap(this).getExportableKey()
+
+    /**
+     * Reguires the PKCS #1 v2.1 signature format for certificates. You should verify that your CA,
+     * objects, and applications can accept this signature format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-requirealternatesignaturealgorithm)
+     */
+    public fun requireAlternateSignatureAlgorithm(): Any? =
+        unwrap(this).getRequireAlternateSignatureAlgorithm()
+
+    /**
+     * Requirer user input when using the private key for enrollment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-strongkeyprotectionrequired)
+     */
+    public fun strongKeyProtectionRequired(): Any? = unwrap(this).getStrongKeyProtectionRequired()
+
+    /**
+     * A builder for [PrivateKeyFlagsV3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientVersion Defines the minimum client compatibility. 
+       */
+      public fun clientVersion(clientVersion: String)
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      public fun exportableKey(exportableKey: Boolean)
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      public fun exportableKey(exportableKey: IResolvable)
+
+      /**
+       * @param requireAlternateSignatureAlgorithm Reguires the PKCS #1 v2.1 signature format for
+       * certificates. You should verify that your CA, objects, and applications can accept this
+       * signature format.
+       */
+      public fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: Boolean)
+
+      /**
+       * @param requireAlternateSignatureAlgorithm Reguires the PKCS #1 v2.1 signature format for
+       * certificates. You should verify that your CA, objects, and applications can accept this
+       * signature format.
+       */
+      public fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable)
+
+      /**
+       * @param strongKeyProtectionRequired Requirer user input when using the private key for
+       * enrollment.
+       */
+      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean)
+
+      /**
+       * @param strongKeyProtectionRequired Requirer user input when using the private key for
+       * enrollment.
+       */
+      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property.builder()
+
+      /**
+       * @param clientVersion Defines the minimum client compatibility. 
+       */
+      override fun clientVersion(clientVersion: String) {
+        cdkBuilder.clientVersion(clientVersion)
+      }
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      override fun exportableKey(exportableKey: Boolean) {
+        cdkBuilder.exportableKey(exportableKey)
+      }
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      override fun exportableKey(exportableKey: IResolvable) {
+        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireAlternateSignatureAlgorithm Reguires the PKCS #1 v2.1 signature format for
+       * certificates. You should verify that your CA, objects, and applications can accept this
+       * signature format.
+       */
+      override fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: Boolean) {
+        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm)
+      }
+
+      /**
+       * @param requireAlternateSignatureAlgorithm Reguires the PKCS #1 v2.1 signature format for
+       * certificates. You should verify that your CA, objects, and applications can accept this
+       * signature format.
+       */
+      override
+          fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable) {
+        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param strongKeyProtectionRequired Requirer user input when using the private key for
+       * enrollment.
+       */
+      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean) {
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired)
+      }
+
+      /**
+       * @param strongKeyProtectionRequired Requirer user input when using the private key for
+       * enrollment.
+       */
+      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property,
+    ) : CdkObject(cdkObject), PrivateKeyFlagsV3Property {
+      /**
+       * Defines the minimum client compatibility.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-clientversion)
+       */
+      override fun clientVersion(): String = unwrap(this).getClientVersion()
+
+      /**
+       * Allows the private key to be exported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-exportablekey)
+       */
+      override fun exportableKey(): Any? = unwrap(this).getExportableKey()
+
+      /**
+       * Reguires the PKCS #1 v2.1 signature format for certificates. You should verify that your
+       * CA, objects, and applications can accept this signature format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-requirealternatesignaturealgorithm)
+       */
+      override fun requireAlternateSignatureAlgorithm(): Any? =
+          unwrap(this).getRequireAlternateSignatureAlgorithm()
+
+      /**
+       * Requirer user input when using the private key for enrollment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-strongkeyprotectionrequired)
+       */
+      override fun strongKeyProtectionRequired(): Any? =
+          unwrap(this).getStrongKeyProtectionRequired()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyFlagsV3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property):
+          PrivateKeyFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateKeyFlagsV3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateKeyFlagsV3Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property
+    }
+  }
+
+  /**
+   * Private key flags for v4 templates specify the client compatibility, if the private key can be
+   * exported, if user input is required when using a private key, if an alternate signature algorithm
+   * should be used, and if certificates are renewed using the same private key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * PrivateKeyFlagsV4Property privateKeyFlagsV4Property = PrivateKeyFlagsV4Property.builder()
+   * .clientVersion("clientVersion")
+   * // the properties below are optional
+   * .exportableKey(false)
+   * .requireAlternateSignatureAlgorithm(false)
+   * .requireSameKeyRenewal(false)
+   * .strongKeyProtectionRequired(false)
+   * .useLegacyProvider(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html)
+   */
+  public interface PrivateKeyFlagsV4Property {
+    /**
+     * Defines the minimum client compatibility.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-clientversion)
+     */
+    public fun clientVersion(): String
+
+    /**
+     * Allows the private key to be exported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-exportablekey)
+     */
+    public fun exportableKey(): Any? = unwrap(this).getExportableKey()
+
+    /**
+     * Requires the PKCS #1 v2.1 signature format for certificates. You should verify that your CA,
+     * objects, and applications can accept this signature format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-requirealternatesignaturealgorithm)
+     */
+    public fun requireAlternateSignatureAlgorithm(): Any? =
+        unwrap(this).getRequireAlternateSignatureAlgorithm()
+
+    /**
+     * Renew certificate using the same private key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-requiresamekeyrenewal)
+     */
+    public fun requireSameKeyRenewal(): Any? = unwrap(this).getRequireSameKeyRenewal()
+
+    /**
+     * Require user input when using the private key for enrollment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-strongkeyprotectionrequired)
+     */
+    public fun strongKeyProtectionRequired(): Any? = unwrap(this).getStrongKeyProtectionRequired()
+
+    /**
+     * Specifies the cryptographic service provider category used to generate private keys.
+     *
+     * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
+     * Providers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-uselegacyprovider)
+     */
+    public fun useLegacyProvider(): Any? = unwrap(this).getUseLegacyProvider()
+
+    /**
+     * A builder for [PrivateKeyFlagsV4Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientVersion Defines the minimum client compatibility. 
+       */
+      public fun clientVersion(clientVersion: String)
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      public fun exportableKey(exportableKey: Boolean)
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      public fun exportableKey(exportableKey: IResolvable)
+
+      /**
+       * @param requireAlternateSignatureAlgorithm Requires the PKCS #1 v2.1 signature format for
+       * certificates. You should verify that your CA, objects, and applications can accept this
+       * signature format.
+       */
+      public fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: Boolean)
+
+      /**
+       * @param requireAlternateSignatureAlgorithm Requires the PKCS #1 v2.1 signature format for
+       * certificates. You should verify that your CA, objects, and applications can accept this
+       * signature format.
+       */
+      public fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable)
+
+      /**
+       * @param requireSameKeyRenewal Renew certificate using the same private key.
+       */
+      public fun requireSameKeyRenewal(requireSameKeyRenewal: Boolean)
+
+      /**
+       * @param requireSameKeyRenewal Renew certificate using the same private key.
+       */
+      public fun requireSameKeyRenewal(requireSameKeyRenewal: IResolvable)
+
+      /**
+       * @param strongKeyProtectionRequired Require user input when using the private key for
+       * enrollment.
+       */
+      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean)
+
+      /**
+       * @param strongKeyProtectionRequired Require user input when using the private key for
+       * enrollment.
+       */
+      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable)
+
+      /**
+       * @param useLegacyProvider Specifies the cryptographic service provider category used to
+       * generate private keys.
+       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
+       * Providers.
+       */
+      public fun useLegacyProvider(useLegacyProvider: Boolean)
+
+      /**
+       * @param useLegacyProvider Specifies the cryptographic service provider category used to
+       * generate private keys.
+       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
+       * Providers.
+       */
+      public fun useLegacyProvider(useLegacyProvider: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property.builder()
+
+      /**
+       * @param clientVersion Defines the minimum client compatibility. 
+       */
+      override fun clientVersion(clientVersion: String) {
+        cdkBuilder.clientVersion(clientVersion)
+      }
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      override fun exportableKey(exportableKey: Boolean) {
+        cdkBuilder.exportableKey(exportableKey)
+      }
+
+      /**
+       * @param exportableKey Allows the private key to be exported.
+       */
+      override fun exportableKey(exportableKey: IResolvable) {
+        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireAlternateSignatureAlgorithm Requires the PKCS #1 v2.1 signature format for
+       * certificates. You should verify that your CA, objects, and applications can accept this
+       * signature format.
+       */
+      override fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: Boolean) {
+        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm)
+      }
+
+      /**
+       * @param requireAlternateSignatureAlgorithm Requires the PKCS #1 v2.1 signature format for
+       * certificates. You should verify that your CA, objects, and applications can accept this
+       * signature format.
+       */
+      override
+          fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable) {
+        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireSameKeyRenewal Renew certificate using the same private key.
+       */
+      override fun requireSameKeyRenewal(requireSameKeyRenewal: Boolean) {
+        cdkBuilder.requireSameKeyRenewal(requireSameKeyRenewal)
+      }
+
+      /**
+       * @param requireSameKeyRenewal Renew certificate using the same private key.
+       */
+      override fun requireSameKeyRenewal(requireSameKeyRenewal: IResolvable) {
+        cdkBuilder.requireSameKeyRenewal(requireSameKeyRenewal.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param strongKeyProtectionRequired Require user input when using the private key for
+       * enrollment.
+       */
+      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean) {
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired)
+      }
+
+      /**
+       * @param strongKeyProtectionRequired Require user input when using the private key for
+       * enrollment.
+       */
+      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param useLegacyProvider Specifies the cryptographic service provider category used to
+       * generate private keys.
+       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
+       * Providers.
+       */
+      override fun useLegacyProvider(useLegacyProvider: Boolean) {
+        cdkBuilder.useLegacyProvider(useLegacyProvider)
+      }
+
+      /**
+       * @param useLegacyProvider Specifies the cryptographic service provider category used to
+       * generate private keys.
+       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
+       * Providers.
+       */
+      override fun useLegacyProvider(useLegacyProvider: IResolvable) {
+        cdkBuilder.useLegacyProvider(useLegacyProvider.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property,
+    ) : CdkObject(cdkObject), PrivateKeyFlagsV4Property {
+      /**
+       * Defines the minimum client compatibility.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-clientversion)
+       */
+      override fun clientVersion(): String = unwrap(this).getClientVersion()
+
+      /**
+       * Allows the private key to be exported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-exportablekey)
+       */
+      override fun exportableKey(): Any? = unwrap(this).getExportableKey()
+
+      /**
+       * Requires the PKCS #1 v2.1 signature format for certificates. You should verify that your
+       * CA, objects, and applications can accept this signature format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-requirealternatesignaturealgorithm)
+       */
+      override fun requireAlternateSignatureAlgorithm(): Any? =
+          unwrap(this).getRequireAlternateSignatureAlgorithm()
+
+      /**
+       * Renew certificate using the same private key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-requiresamekeyrenewal)
+       */
+      override fun requireSameKeyRenewal(): Any? = unwrap(this).getRequireSameKeyRenewal()
+
+      /**
+       * Require user input when using the private key for enrollment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-strongkeyprotectionrequired)
+       */
+      override fun strongKeyProtectionRequired(): Any? =
+          unwrap(this).getStrongKeyProtectionRequired()
+
+      /**
+       * Specifies the cryptographic service provider category used to generate private keys.
+       *
+       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
+       * Providers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-uselegacyprovider)
+       */
+      override fun useLegacyProvider(): Any? = unwrap(this).getUseLegacyProvider()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyFlagsV4Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property):
+          PrivateKeyFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateKeyFlagsV4Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateKeyFlagsV4Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property
+    }
+  }
+
+  /**
+   * Information to include in the subject name and alternate subject name of the certificate.
+   *
+   * The subject name can be common name, directory path, DNS as common name, or left blank. You can
+   * optionally include email to the subject name for user templates. If you leave the subject name
+   * blank then you must set a subject alternate name. The subject alternate name (SAN) can include
+   * globally unique identifier (GUID), DNS, domain DNS, email, service principal name (SPN), and user
+   * principal name (UPN). You can leave the SAN blank. If you leave the SAN blank, then you must set a
+   * subject name.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * SubjectNameFlagsV2Property subjectNameFlagsV2Property = SubjectNameFlagsV2Property.builder()
+   * .requireCommonName(false)
+   * .requireDirectoryPath(false)
+   * .requireDnsAsCn(false)
+   * .requireEmail(false)
+   * .sanRequireDirectoryGuid(false)
+   * .sanRequireDns(false)
+   * .sanRequireDomainDns(false)
+   * .sanRequireEmail(false)
+   * .sanRequireSpn(false)
+   * .sanRequireUpn(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html)
+   */
+  public interface SubjectNameFlagsV2Property {
+    /**
+     * Include the common name in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requirecommonname)
+     */
+    public fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
+
+    /**
+     * Include the directory path in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requiredirectorypath)
+     */
+    public fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
+
+    /**
+     * Include the DNS as common name in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requirednsascn)
+     */
+    public fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
+
+    /**
+     * Include the subject's email in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requireemail)
+     */
+    public fun requireEmail(): Any? = unwrap(this).getRequireEmail()
+
+    /**
+     * Include the globally unique identifier (GUID) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredirectoryguid)
+     */
+    public fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
+
+    /**
+     * Include the DNS in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredns)
+     */
+    public fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
+
+    /**
+     * Include the domain DNS in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredomaindns)
+     */
+    public fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
+
+    /**
+     * Include the subject's email in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequireemail)
+     */
+    public fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
+
+    /**
+     * Include the service principal name (SPN) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequirespn)
+     */
+    public fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
+
+    /**
+     * Include the user principal name (UPN) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequireupn)
+     */
+    public fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
+
+    /**
+     * A builder for [SubjectNameFlagsV2Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      public fun requireCommonName(requireCommonName: Boolean)
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      public fun requireCommonName(requireCommonName: IResolvable)
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      public fun requireDirectoryPath(requireDirectoryPath: Boolean)
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      public fun requireDirectoryPath(requireDirectoryPath: IResolvable)
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      public fun requireDnsAsCn(requireDnsAsCn: Boolean)
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      public fun requireDnsAsCn(requireDnsAsCn: IResolvable)
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      public fun requireEmail(requireEmail: Boolean)
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      public fun requireEmail(requireEmail: IResolvable)
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean)
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable)
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      public fun sanRequireDns(sanRequireDns: Boolean)
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      public fun sanRequireDns(sanRequireDns: IResolvable)
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      public fun sanRequireDomainDns(sanRequireDomainDns: Boolean)
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      public fun sanRequireDomainDns(sanRequireDomainDns: IResolvable)
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      public fun sanRequireEmail(sanRequireEmail: Boolean)
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      public fun sanRequireEmail(sanRequireEmail: IResolvable)
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      public fun sanRequireSpn(sanRequireSpn: Boolean)
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      public fun sanRequireSpn(sanRequireSpn: IResolvable)
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      public fun sanRequireUpn(sanRequireUpn: Boolean)
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      public fun sanRequireUpn(sanRequireUpn: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property.builder()
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      override fun requireCommonName(requireCommonName: Boolean) {
+        cdkBuilder.requireCommonName(requireCommonName)
+      }
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      override fun requireCommonName(requireCommonName: IResolvable) {
+        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      override fun requireDirectoryPath(requireDirectoryPath: Boolean) {
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath)
+      }
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      override fun requireDnsAsCn(requireDnsAsCn: Boolean) {
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn)
+      }
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      override fun requireEmail(requireEmail: Boolean) {
+        cdkBuilder.requireEmail(requireEmail)
+      }
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      override fun requireEmail(requireEmail: IResolvable) {
+        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean) {
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid)
+      }
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      override fun sanRequireDns(sanRequireDns: Boolean) {
+        cdkBuilder.sanRequireDns(sanRequireDns)
+      }
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      override fun sanRequireDns(sanRequireDns: IResolvable) {
+        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      override fun sanRequireDomainDns(sanRequireDomainDns: Boolean) {
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns)
+      }
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      override fun sanRequireEmail(sanRequireEmail: Boolean) {
+        cdkBuilder.sanRequireEmail(sanRequireEmail)
+      }
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      override fun sanRequireEmail(sanRequireEmail: IResolvable) {
+        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      override fun sanRequireSpn(sanRequireSpn: Boolean) {
+        cdkBuilder.sanRequireSpn(sanRequireSpn)
+      }
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      override fun sanRequireSpn(sanRequireSpn: IResolvable) {
+        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      override fun sanRequireUpn(sanRequireUpn: Boolean) {
+        cdkBuilder.sanRequireUpn(sanRequireUpn)
+      }
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      override fun sanRequireUpn(sanRequireUpn: IResolvable) {
+        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property,
+    ) : CdkObject(cdkObject), SubjectNameFlagsV2Property {
+      /**
+       * Include the common name in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requirecommonname)
+       */
+      override fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
+
+      /**
+       * Include the directory path in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requiredirectorypath)
+       */
+      override fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
+
+      /**
+       * Include the DNS as common name in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requirednsascn)
+       */
+      override fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
+
+      /**
+       * Include the subject's email in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requireemail)
+       */
+      override fun requireEmail(): Any? = unwrap(this).getRequireEmail()
+
+      /**
+       * Include the globally unique identifier (GUID) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredirectoryguid)
+       */
+      override fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
+
+      /**
+       * Include the DNS in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredns)
+       */
+      override fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
+
+      /**
+       * Include the domain DNS in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredomaindns)
+       */
+      override fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
+
+      /**
+       * Include the subject's email in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequireemail)
+       */
+      override fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
+
+      /**
+       * Include the service principal name (SPN) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequirespn)
+       */
+      override fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
+
+      /**
+       * Include the user principal name (UPN) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequireupn)
+       */
+      override fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubjectNameFlagsV2Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property):
+          SubjectNameFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as?
+          SubjectNameFlagsV2Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubjectNameFlagsV2Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property
+    }
+  }
+
+  /**
+   * Information to include in the subject name and alternate subject name of the certificate.
+   *
+   * The subject name can be common name, directory path, DNS as common name, or left blank. You can
+   * optionally include email to the subject name for user templates. If you leave the subject name
+   * blank then you must set a subject alternate name. The subject alternate name (SAN) can include
+   * globally unique identifier (GUID), DNS, domain DNS, email, service principal name (SPN), and user
+   * principal name (UPN). You can leave the SAN blank. If you leave the SAN blank, then you must set a
+   * subject name.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * SubjectNameFlagsV3Property subjectNameFlagsV3Property = SubjectNameFlagsV3Property.builder()
+   * .requireCommonName(false)
+   * .requireDirectoryPath(false)
+   * .requireDnsAsCn(false)
+   * .requireEmail(false)
+   * .sanRequireDirectoryGuid(false)
+   * .sanRequireDns(false)
+   * .sanRequireDomainDns(false)
+   * .sanRequireEmail(false)
+   * .sanRequireSpn(false)
+   * .sanRequireUpn(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html)
+   */
+  public interface SubjectNameFlagsV3Property {
+    /**
+     * Include the common name in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requirecommonname)
+     */
+    public fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
+
+    /**
+     * Include the directory path in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requiredirectorypath)
+     */
+    public fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
+
+    /**
+     * Include the DNS as common name in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requirednsascn)
+     */
+    public fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
+
+    /**
+     * Include the subject's email in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requireemail)
+     */
+    public fun requireEmail(): Any? = unwrap(this).getRequireEmail()
+
+    /**
+     * Include the globally unique identifier (GUID) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredirectoryguid)
+     */
+    public fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
+
+    /**
+     * Include the DNS in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredns)
+     */
+    public fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
+
+    /**
+     * Include the domain DNS in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredomaindns)
+     */
+    public fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
+
+    /**
+     * Include the subject's email in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequireemail)
+     */
+    public fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
+
+    /**
+     * Include the service principal name (SPN) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequirespn)
+     */
+    public fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
+
+    /**
+     * Include the user principal name (UPN) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequireupn)
+     */
+    public fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
+
+    /**
+     * A builder for [SubjectNameFlagsV3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      public fun requireCommonName(requireCommonName: Boolean)
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      public fun requireCommonName(requireCommonName: IResolvable)
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      public fun requireDirectoryPath(requireDirectoryPath: Boolean)
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      public fun requireDirectoryPath(requireDirectoryPath: IResolvable)
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      public fun requireDnsAsCn(requireDnsAsCn: Boolean)
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      public fun requireDnsAsCn(requireDnsAsCn: IResolvable)
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      public fun requireEmail(requireEmail: Boolean)
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      public fun requireEmail(requireEmail: IResolvable)
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean)
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable)
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      public fun sanRequireDns(sanRequireDns: Boolean)
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      public fun sanRequireDns(sanRequireDns: IResolvable)
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      public fun sanRequireDomainDns(sanRequireDomainDns: Boolean)
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      public fun sanRequireDomainDns(sanRequireDomainDns: IResolvable)
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      public fun sanRequireEmail(sanRequireEmail: Boolean)
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      public fun sanRequireEmail(sanRequireEmail: IResolvable)
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      public fun sanRequireSpn(sanRequireSpn: Boolean)
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      public fun sanRequireSpn(sanRequireSpn: IResolvable)
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      public fun sanRequireUpn(sanRequireUpn: Boolean)
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      public fun sanRequireUpn(sanRequireUpn: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property.builder()
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      override fun requireCommonName(requireCommonName: Boolean) {
+        cdkBuilder.requireCommonName(requireCommonName)
+      }
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      override fun requireCommonName(requireCommonName: IResolvable) {
+        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      override fun requireDirectoryPath(requireDirectoryPath: Boolean) {
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath)
+      }
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      override fun requireDnsAsCn(requireDnsAsCn: Boolean) {
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn)
+      }
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      override fun requireEmail(requireEmail: Boolean) {
+        cdkBuilder.requireEmail(requireEmail)
+      }
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      override fun requireEmail(requireEmail: IResolvable) {
+        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean) {
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid)
+      }
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      override fun sanRequireDns(sanRequireDns: Boolean) {
+        cdkBuilder.sanRequireDns(sanRequireDns)
+      }
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      override fun sanRequireDns(sanRequireDns: IResolvable) {
+        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      override fun sanRequireDomainDns(sanRequireDomainDns: Boolean) {
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns)
+      }
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      override fun sanRequireEmail(sanRequireEmail: Boolean) {
+        cdkBuilder.sanRequireEmail(sanRequireEmail)
+      }
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      override fun sanRequireEmail(sanRequireEmail: IResolvable) {
+        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      override fun sanRequireSpn(sanRequireSpn: Boolean) {
+        cdkBuilder.sanRequireSpn(sanRequireSpn)
+      }
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      override fun sanRequireSpn(sanRequireSpn: IResolvable) {
+        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      override fun sanRequireUpn(sanRequireUpn: Boolean) {
+        cdkBuilder.sanRequireUpn(sanRequireUpn)
+      }
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      override fun sanRequireUpn(sanRequireUpn: IResolvable) {
+        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property,
+    ) : CdkObject(cdkObject), SubjectNameFlagsV3Property {
+      /**
+       * Include the common name in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requirecommonname)
+       */
+      override fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
+
+      /**
+       * Include the directory path in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requiredirectorypath)
+       */
+      override fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
+
+      /**
+       * Include the DNS as common name in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requirednsascn)
+       */
+      override fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
+
+      /**
+       * Include the subject's email in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requireemail)
+       */
+      override fun requireEmail(): Any? = unwrap(this).getRequireEmail()
+
+      /**
+       * Include the globally unique identifier (GUID) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredirectoryguid)
+       */
+      override fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
+
+      /**
+       * Include the DNS in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredns)
+       */
+      override fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
+
+      /**
+       * Include the domain DNS in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredomaindns)
+       */
+      override fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
+
+      /**
+       * Include the subject's email in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequireemail)
+       */
+      override fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
+
+      /**
+       * Include the service principal name (SPN) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequirespn)
+       */
+      override fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
+
+      /**
+       * Include the user principal name (UPN) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequireupn)
+       */
+      override fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubjectNameFlagsV3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property):
+          SubjectNameFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as?
+          SubjectNameFlagsV3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubjectNameFlagsV3Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property
+    }
+  }
+
+  /**
+   * Information to include in the subject name and alternate subject name of the certificate.
+   *
+   * The subject name can be common name, directory path, DNS as common name, or left blank. You can
+   * optionally include email to the subject name for user templates. If you leave the subject name
+   * blank then you must set a subject alternate name. The subject alternate name (SAN) can include
+   * globally unique identifier (GUID), DNS, domain DNS, email, service principal name (SPN), and user
+   * principal name (UPN). You can leave the SAN blank. If you leave the SAN blank, then you must set a
+   * subject name.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * SubjectNameFlagsV4Property subjectNameFlagsV4Property = SubjectNameFlagsV4Property.builder()
+   * .requireCommonName(false)
+   * .requireDirectoryPath(false)
+   * .requireDnsAsCn(false)
+   * .requireEmail(false)
+   * .sanRequireDirectoryGuid(false)
+   * .sanRequireDns(false)
+   * .sanRequireDomainDns(false)
+   * .sanRequireEmail(false)
+   * .sanRequireSpn(false)
+   * .sanRequireUpn(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html)
+   */
+  public interface SubjectNameFlagsV4Property {
+    /**
+     * Include the common name in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requirecommonname)
+     */
+    public fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
+
+    /**
+     * Include the directory path in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requiredirectorypath)
+     */
+    public fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
+
+    /**
+     * Include the DNS as common name in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requirednsascn)
+     */
+    public fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
+
+    /**
+     * Include the subject's email in the subject name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requireemail)
+     */
+    public fun requireEmail(): Any? = unwrap(this).getRequireEmail()
+
+    /**
+     * Include the globally unique identifier (GUID) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredirectoryguid)
+     */
+    public fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
+
+    /**
+     * Include the DNS in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredns)
+     */
+    public fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
+
+    /**
+     * Include the domain DNS in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredomaindns)
+     */
+    public fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
+
+    /**
+     * Include the subject's email in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequireemail)
+     */
+    public fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
+
+    /**
+     * Include the service principal name (SPN) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequirespn)
+     */
+    public fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
+
+    /**
+     * Include the user principal name (UPN) in the subject alternate name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequireupn)
+     */
+    public fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
+
+    /**
+     * A builder for [SubjectNameFlagsV4Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      public fun requireCommonName(requireCommonName: Boolean)
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      public fun requireCommonName(requireCommonName: IResolvable)
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      public fun requireDirectoryPath(requireDirectoryPath: Boolean)
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      public fun requireDirectoryPath(requireDirectoryPath: IResolvable)
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      public fun requireDnsAsCn(requireDnsAsCn: Boolean)
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      public fun requireDnsAsCn(requireDnsAsCn: IResolvable)
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      public fun requireEmail(requireEmail: Boolean)
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      public fun requireEmail(requireEmail: IResolvable)
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean)
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable)
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      public fun sanRequireDns(sanRequireDns: Boolean)
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      public fun sanRequireDns(sanRequireDns: IResolvable)
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      public fun sanRequireDomainDns(sanRequireDomainDns: Boolean)
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      public fun sanRequireDomainDns(sanRequireDomainDns: IResolvable)
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      public fun sanRequireEmail(sanRequireEmail: Boolean)
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      public fun sanRequireEmail(sanRequireEmail: IResolvable)
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      public fun sanRequireSpn(sanRequireSpn: Boolean)
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      public fun sanRequireSpn(sanRequireSpn: IResolvable)
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      public fun sanRequireUpn(sanRequireUpn: Boolean)
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      public fun sanRequireUpn(sanRequireUpn: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property.builder()
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      override fun requireCommonName(requireCommonName: Boolean) {
+        cdkBuilder.requireCommonName(requireCommonName)
+      }
+
+      /**
+       * @param requireCommonName Include the common name in the subject name.
+       */
+      override fun requireCommonName(requireCommonName: IResolvable) {
+        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      override fun requireDirectoryPath(requireDirectoryPath: Boolean) {
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath)
+      }
+
+      /**
+       * @param requireDirectoryPath Include the directory path in the subject name.
+       */
+      override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      override fun requireDnsAsCn(requireDnsAsCn: Boolean) {
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn)
+      }
+
+      /**
+       * @param requireDnsAsCn Include the DNS as common name in the subject name.
+       */
+      override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      override fun requireEmail(requireEmail: Boolean) {
+        cdkBuilder.requireEmail(requireEmail)
+      }
+
+      /**
+       * @param requireEmail Include the subject's email in the subject name.
+       */
+      override fun requireEmail(requireEmail: IResolvable) {
+        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean) {
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid)
+      }
+
+      /**
+       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
+       * alternate name.
+       */
+      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      override fun sanRequireDns(sanRequireDns: Boolean) {
+        cdkBuilder.sanRequireDns(sanRequireDns)
+      }
+
+      /**
+       * @param sanRequireDns Include the DNS in the subject alternate name.
+       */
+      override fun sanRequireDns(sanRequireDns: IResolvable) {
+        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      override fun sanRequireDomainDns(sanRequireDomainDns: Boolean) {
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns)
+      }
+
+      /**
+       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
+       */
+      override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      override fun sanRequireEmail(sanRequireEmail: Boolean) {
+        cdkBuilder.sanRequireEmail(sanRequireEmail)
+      }
+
+      /**
+       * @param sanRequireEmail Include the subject's email in the subject alternate name.
+       */
+      override fun sanRequireEmail(sanRequireEmail: IResolvable) {
+        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      override fun sanRequireSpn(sanRequireSpn: Boolean) {
+        cdkBuilder.sanRequireSpn(sanRequireSpn)
+      }
+
+      /**
+       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
+       * name.
+       */
+      override fun sanRequireSpn(sanRequireSpn: IResolvable) {
+        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      override fun sanRequireUpn(sanRequireUpn: Boolean) {
+        cdkBuilder.sanRequireUpn(sanRequireUpn)
+      }
+
+      /**
+       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
+       */
+      override fun sanRequireUpn(sanRequireUpn: IResolvable) {
+        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property,
+    ) : CdkObject(cdkObject), SubjectNameFlagsV4Property {
+      /**
+       * Include the common name in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requirecommonname)
+       */
+      override fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
+
+      /**
+       * Include the directory path in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requiredirectorypath)
+       */
+      override fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
+
+      /**
+       * Include the DNS as common name in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requirednsascn)
+       */
+      override fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
+
+      /**
+       * Include the subject's email in the subject name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requireemail)
+       */
+      override fun requireEmail(): Any? = unwrap(this).getRequireEmail()
+
+      /**
+       * Include the globally unique identifier (GUID) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredirectoryguid)
+       */
+      override fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
+
+      /**
+       * Include the DNS in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredns)
+       */
+      override fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
+
+      /**
+       * Include the domain DNS in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredomaindns)
+       */
+      override fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
+
+      /**
+       * Include the subject's email in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequireemail)
+       */
+      override fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
+
+      /**
+       * Include the service principal name (SPN) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequirespn)
+       */
+      override fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
+
+      /**
+       * Include the user principal name (UPN) in the subject alternate name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequireupn)
+       */
+      override fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubjectNameFlagsV4Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property):
+          SubjectNameFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as?
+          SubjectNameFlagsV4Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubjectNameFlagsV4Property):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property
+    }
+  }
+
+  /**
+   * Template configuration to define the information included in certificates.
+   *
+   * Define certificate validity and renewal periods, certificate request handling and enrollment
+   * options, key usage extensions, application policies, and cryptography settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
+   * TemplateDefinitionProperty templateDefinitionProperty = TemplateDefinitionProperty.builder()
+   * .templateV2(TemplateV2Property.builder()
+   * .certificateValidity(CertificateValidityProperty.builder()
+   * .renewalPeriod(ValidityPeriodProperty.builder()
+   * .period(123)
+   * .periodType("periodType")
+   * .build())
+   * .validityPeriod(ValidityPeriodProperty.builder()
+   * .period(123)
+   * .periodType("periodType")
+   * .build())
+   * .build())
+   * .enrollmentFlags(EnrollmentFlagsV2Property.builder()
+   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
+   * .includeSymmetricAlgorithms(false)
+   * .noSecurityExtension(false)
+   * .removeInvalidCertificateFromPersonalStore(false)
+   * .userInteractionRequired(false)
+   * .build())
+   * .extensions(ExtensionsV2Property.builder()
+   * .keyUsage(KeyUsageProperty.builder()
+   * .usageFlags(KeyUsageFlagsProperty.builder()
+   * .dataEncipherment(false)
+   * .digitalSignature(false)
+   * .keyAgreement(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * // the properties below are optional
+   * .applicationPolicies(ApplicationPoliciesProperty.builder()
+   * .policies(List.of(ApplicationPolicyProperty.builder()
+   * .policyObjectIdentifier("policyObjectIdentifier")
+   * .policyType("policyType")
+   * .build()))
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * .build())
+   * .generalFlags(GeneralFlagsV2Property.builder()
+   * .autoEnrollment(false)
+   * .machineType(false)
+   * .build())
+   * .privateKeyAttributes(PrivateKeyAttributesV2Property.builder()
+   * .keySpec("keySpec")
+   * .minimalKeyLength(123)
+   * // the properties below are optional
+   * .cryptoProviders(List.of("cryptoProviders"))
+   * .build())
+   * .privateKeyFlags(PrivateKeyFlagsV2Property.builder()
+   * .clientVersion("clientVersion")
+   * // the properties below are optional
+   * .exportableKey(false)
+   * .strongKeyProtectionRequired(false)
+   * .build())
+   * .subjectNameFlags(SubjectNameFlagsV2Property.builder()
+   * .requireCommonName(false)
+   * .requireDirectoryPath(false)
+   * .requireDnsAsCn(false)
+   * .requireEmail(false)
+   * .sanRequireDirectoryGuid(false)
+   * .sanRequireDns(false)
+   * .sanRequireDomainDns(false)
+   * .sanRequireEmail(false)
+   * .sanRequireSpn(false)
+   * .sanRequireUpn(false)
+   * .build())
+   * // the properties below are optional
+   * .supersededTemplates(List.of("supersededTemplates"))
+   * .build())
+   * .templateV3(TemplateV3Property.builder()
+   * .certificateValidity(CertificateValidityProperty.builder()
+   * .renewalPeriod(ValidityPeriodProperty.builder()
+   * .period(123)
+   * .periodType("periodType")
+   * .build())
+   * .validityPeriod(ValidityPeriodProperty.builder()
+   * .period(123)
+   * .periodType("periodType")
+   * .build())
+   * .build())
+   * .enrollmentFlags(EnrollmentFlagsV3Property.builder()
+   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
+   * .includeSymmetricAlgorithms(false)
+   * .noSecurityExtension(false)
+   * .removeInvalidCertificateFromPersonalStore(false)
+   * .userInteractionRequired(false)
+   * .build())
+   * .extensions(ExtensionsV3Property.builder()
+   * .keyUsage(KeyUsageProperty.builder()
+   * .usageFlags(KeyUsageFlagsProperty.builder()
+   * .dataEncipherment(false)
+   * .digitalSignature(false)
+   * .keyAgreement(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * // the properties below are optional
+   * .applicationPolicies(ApplicationPoliciesProperty.builder()
+   * .policies(List.of(ApplicationPolicyProperty.builder()
+   * .policyObjectIdentifier("policyObjectIdentifier")
+   * .policyType("policyType")
+   * .build()))
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * .build())
+   * .generalFlags(GeneralFlagsV3Property.builder()
+   * .autoEnrollment(false)
+   * .machineType(false)
+   * .build())
+   * .hashAlgorithm("hashAlgorithm")
+   * .privateKeyAttributes(PrivateKeyAttributesV3Property.builder()
+   * .algorithm("algorithm")
+   * .keySpec("keySpec")
+   * .keyUsageProperty(KeyUsagePropertyProperty.builder()
+   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
+   * .decrypt(false)
+   * .keyAgreement(false)
+   * .sign(false)
+   * .build())
+   * .propertyType("propertyType")
+   * .build())
+   * .minimalKeyLength(123)
+   * // the properties below are optional
+   * .cryptoProviders(List.of("cryptoProviders"))
+   * .build())
+   * .privateKeyFlags(PrivateKeyFlagsV3Property.builder()
+   * .clientVersion("clientVersion")
+   * // the properties below are optional
+   * .exportableKey(false)
+   * .requireAlternateSignatureAlgorithm(false)
+   * .strongKeyProtectionRequired(false)
+   * .build())
+   * .subjectNameFlags(SubjectNameFlagsV3Property.builder()
+   * .requireCommonName(false)
+   * .requireDirectoryPath(false)
+   * .requireDnsAsCn(false)
+   * .requireEmail(false)
+   * .sanRequireDirectoryGuid(false)
+   * .sanRequireDns(false)
+   * .sanRequireDomainDns(false)
+   * .sanRequireEmail(false)
+   * .sanRequireSpn(false)
+   * .sanRequireUpn(false)
+   * .build())
+   * // the properties below are optional
+   * .supersededTemplates(List.of("supersededTemplates"))
+   * .build())
+   * .templateV4(TemplateV4Property.builder()
+   * .certificateValidity(CertificateValidityProperty.builder()
+   * .renewalPeriod(ValidityPeriodProperty.builder()
+   * .period(123)
+   * .periodType("periodType")
+   * .build())
+   * .validityPeriod(ValidityPeriodProperty.builder()
+   * .period(123)
+   * .periodType("periodType")
+   * .build())
+   * .build())
+   * .enrollmentFlags(EnrollmentFlagsV4Property.builder()
+   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
+   * .includeSymmetricAlgorithms(false)
+   * .noSecurityExtension(false)
+   * .removeInvalidCertificateFromPersonalStore(false)
+   * .userInteractionRequired(false)
+   * .build())
+   * .extensions(ExtensionsV4Property.builder()
+   * .keyUsage(KeyUsageProperty.builder()
+   * .usageFlags(KeyUsageFlagsProperty.builder()
+   * .dataEncipherment(false)
+   * .digitalSignature(false)
+   * .keyAgreement(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * // the properties below are optional
+   * .applicationPolicies(ApplicationPoliciesProperty.builder()
+   * .policies(List.of(ApplicationPolicyProperty.builder()
+   * .policyObjectIdentifier("policyObjectIdentifier")
+   * .policyType("policyType")
+   * .build()))
+   * // the properties below are optional
+   * .critical(false)
+   * .build())
+   * .build())
+   * .generalFlags(GeneralFlagsV4Property.builder()
+   * .autoEnrollment(false)
+   * .machineType(false)
+   * .build())
+   * .privateKeyAttributes(PrivateKeyAttributesV4Property.builder()
+   * .keySpec("keySpec")
+   * .minimalKeyLength(123)
+   * // the properties below are optional
+   * .algorithm("algorithm")
+   * .cryptoProviders(List.of("cryptoProviders"))
+   * .keyUsageProperty(KeyUsagePropertyProperty.builder()
+   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
+   * .decrypt(false)
+   * .keyAgreement(false)
+   * .sign(false)
+   * .build())
+   * .propertyType("propertyType")
+   * .build())
+   * .build())
+   * .privateKeyFlags(PrivateKeyFlagsV4Property.builder()
+   * .clientVersion("clientVersion")
+   * // the properties below are optional
+   * .exportableKey(false)
+   * .requireAlternateSignatureAlgorithm(false)
+   * .requireSameKeyRenewal(false)
+   * .strongKeyProtectionRequired(false)
+   * .useLegacyProvider(false)
+   * .build())
+   * .subjectNameFlags(SubjectNameFlagsV4Property.builder()
+   * .requireCommonName(false)
+   * .requireDirectoryPath(false)
+   * .requireDnsAsCn(false)
+   * .requireEmail(false)
+   * .sanRequireDirectoryGuid(false)
+   * .sanRequireDns(false)
+   * .sanRequireDomainDns(false)
+   * .sanRequireEmail(false)
+   * .sanRequireSpn(false)
+   * .sanRequireUpn(false)
+   * .build())
+   * // the properties below are optional
+   * .hashAlgorithm("hashAlgorithm")
+   * .supersededTemplates(List.of("supersededTemplates"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html)
+   */
+  public interface TemplateDefinitionProperty {
+    /**
+     * Template configuration to define the information included in certificates.
+     *
+     * Define certificate validity and renewal periods, certificate request handling and enrollment
+     * options, key usage extensions, application policies, and cryptography settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev2)
+     */
+    public fun templateV2(): Any? = unwrap(this).getTemplateV2()
+
+    /**
+     * Template configuration to define the information included in certificates.
+     *
+     * Define certificate validity and renewal periods, certificate request handling and enrollment
+     * options, key usage extensions, application policies, and cryptography settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev3)
+     */
+    public fun templateV3(): Any? = unwrap(this).getTemplateV3()
+
+    /**
+     * Template configuration to define the information included in certificates.
+     *
+     * Define certificate validity and renewal periods, certificate request handling and enrollment
+     * options, key usage extensions, application policies, and cryptography settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev4)
+     */
+    public fun templateV4(): Any? = unwrap(this).getTemplateV4()
+
+    /**
+     * A builder for [TemplateDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param templateV2 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      public fun templateV2(templateV2: IResolvable)
+
+      /**
+       * @param templateV2 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      public fun templateV2(templateV2: TemplateV2Property)
+
+      /**
+       * @param templateV2 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("01b45117b08b7836177cd5f5bd6dfea2d426f968546b6c8f9616e636271e91dc")
+      public fun templateV2(templateV2: TemplateV2Property.Builder.() -> Unit)
+
+      /**
+       * @param templateV3 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      public fun templateV3(templateV3: IResolvable)
+
+      /**
+       * @param templateV3 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      public fun templateV3(templateV3: TemplateV3Property)
+
+      /**
+       * @param templateV3 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f5142db8cbb835d2c94551906d0f203a25d0aa36fd7966e642016fae6fef13f6")
+      public fun templateV3(templateV3: TemplateV3Property.Builder.() -> Unit)
+
+      /**
+       * @param templateV4 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      public fun templateV4(templateV4: IResolvable)
+
+      /**
+       * @param templateV4 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      public fun templateV4(templateV4: TemplateV4Property)
+
+      /**
+       * @param templateV4 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a274da345eb1b0d816427862afd3c0b8bb813f2ec62ebf00e8c40e80ee736a4f")
+      public fun templateV4(templateV4: TemplateV4Property.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty.builder()
+
+      /**
+       * @param templateV2 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      override fun templateV2(templateV2: IResolvable) {
+        cdkBuilder.templateV2(templateV2.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param templateV2 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      override fun templateV2(templateV2: TemplateV2Property) {
+        cdkBuilder.templateV2(templateV2.let(TemplateV2Property::unwrap))
+      }
+
+      /**
+       * @param templateV2 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("01b45117b08b7836177cd5f5bd6dfea2d426f968546b6c8f9616e636271e91dc")
+      override fun templateV2(templateV2: TemplateV2Property.Builder.() -> Unit): Unit =
+          templateV2(TemplateV2Property(templateV2))
+
+      /**
+       * @param templateV3 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      override fun templateV3(templateV3: IResolvable) {
+        cdkBuilder.templateV3(templateV3.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param templateV3 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      override fun templateV3(templateV3: TemplateV3Property) {
+        cdkBuilder.templateV3(templateV3.let(TemplateV3Property::unwrap))
+      }
+
+      /**
+       * @param templateV3 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f5142db8cbb835d2c94551906d0f203a25d0aa36fd7966e642016fae6fef13f6")
+      override fun templateV3(templateV3: TemplateV3Property.Builder.() -> Unit): Unit =
+          templateV3(TemplateV3Property(templateV3))
+
+      /**
+       * @param templateV4 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      override fun templateV4(templateV4: IResolvable) {
+        cdkBuilder.templateV4(templateV4.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param templateV4 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      override fun templateV4(templateV4: TemplateV4Property) {
+        cdkBuilder.templateV4(templateV4.let(TemplateV4Property::unwrap))
+      }
+
+      /**
+       * @param templateV4 Template configuration to define the information included in
+       * certificates.
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a274da345eb1b0d816427862afd3c0b8bb813f2ec62ebf00e8c40e80ee736a4f")
+      override fun templateV4(templateV4: TemplateV4Property.Builder.() -> Unit): Unit =
+          templateV4(TemplateV4Property(templateV4))
+
+      public fun build():
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty,
+    ) : CdkObject(cdkObject), TemplateDefinitionProperty {
+      /**
+       * Template configuration to define the information included in certificates.
+       *
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev2)
+       */
+      override fun templateV2(): Any? = unwrap(this).getTemplateV2()
+
+      /**
+       * Template configuration to define the information included in certificates.
+       *
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev3)
+       */
+      override fun templateV3(): Any? = unwrap(this).getTemplateV3()
+
+      /**
+       * Template configuration to define the information included in certificates.
+       *
+       * Define certificate validity and renewal periods, certificate request handling and
+       * enrollment options, key usage extensions, application policies, and cryptography settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev4)
+       */
+      override fun templateV4(): Any? = unwrap(this).getTemplateV4()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TemplateDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty):
+          TemplateDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemplateDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TemplateDefinitionProperty):
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty
     }
   }
 
@@ -1726,170 +7763,6 @@ public open class CfnTemplate internal constructor(
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV2Property = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV2Property
-    }
-  }
-
-  /**
-   * The key usage extension defines the purpose (e.g., encipherment, signature) of the key
-   * contained in the certificate.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * KeyUsageProperty keyUsageProperty = KeyUsageProperty.builder()
-   * .usageFlags(KeyUsageFlagsProperty.builder()
-   * .dataEncipherment(false)
-   * .digitalSignature(false)
-   * .keyAgreement(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * // the properties below are optional
-   * .critical(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html)
-   */
-  public interface KeyUsageProperty {
-    /**
-     * Sets the key usage extension to critical.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html#cfn-pcaconnectorad-template-keyusage-critical)
-     */
-    public fun critical(): Any? = unwrap(this).getCritical()
-
-    /**
-     * The key usage flags represent the purpose (e.g., encipherment, signature) of the key
-     * contained in the certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html#cfn-pcaconnectorad-template-keyusage-usageflags)
-     */
-    public fun usageFlags(): Any
-
-    /**
-     * A builder for [KeyUsageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param critical Sets the key usage extension to critical.
-       */
-      public fun critical(critical: Boolean)
-
-      /**
-       * @param critical Sets the key usage extension to critical.
-       */
-      public fun critical(critical: IResolvable)
-
-      /**
-       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      public fun usageFlags(usageFlags: IResolvable)
-
-      /**
-       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      public fun usageFlags(usageFlags: KeyUsageFlagsProperty)
-
-      /**
-       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ad3e4f3b9ba170b2557434b15baa9537680ce57819b2f576d9ac89d90bd87379")
-      public fun usageFlags(usageFlags: KeyUsageFlagsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty.Builder =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty.builder()
-
-      /**
-       * @param critical Sets the key usage extension to critical.
-       */
-      override fun critical(critical: Boolean) {
-        cdkBuilder.critical(critical)
-      }
-
-      /**
-       * @param critical Sets the key usage extension to critical.
-       */
-      override fun critical(critical: IResolvable) {
-        cdkBuilder.critical(critical.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      override fun usageFlags(usageFlags: IResolvable) {
-        cdkBuilder.usageFlags(usageFlags.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      override fun usageFlags(usageFlags: KeyUsageFlagsProperty) {
-        cdkBuilder.usageFlags(usageFlags.let(KeyUsageFlagsProperty::unwrap))
-      }
-
-      /**
-       * @param usageFlags The key usage flags represent the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ad3e4f3b9ba170b2557434b15baa9537680ce57819b2f576d9ac89d90bd87379")
-      override fun usageFlags(usageFlags: KeyUsageFlagsProperty.Builder.() -> Unit): Unit =
-          usageFlags(KeyUsageFlagsProperty(usageFlags))
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty,
-    ) : CdkObject(cdkObject), KeyUsageProperty {
-      /**
-       * Sets the key usage extension to critical.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html#cfn-pcaconnectorad-template-keyusage-critical)
-       */
-      override fun critical(): Any? = unwrap(this).getCritical()
-
-      /**
-       * The key usage flags represent the purpose (e.g., encipherment, signature) of the key
-       * contained in the certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusage.html#cfn-pcaconnectorad-template-keyusage-usageflags)
-       */
-      override fun usageFlags(): Any = unwrap(this).getUsageFlags()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyUsageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty):
-          KeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyUsageProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KeyUsageProperty):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty
     }
   }
 
@@ -2546,4965 +8419,6 @@ public open class CfnTemplate internal constructor(
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV3Property = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV3Property
-    }
-  }
-
-  /**
-   * Template configuration to define the information included in certificates.
-   *
-   * Define certificate validity and renewal periods, certificate request handling and enrollment
-   * options, key usage extensions, application policies, and cryptography settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * TemplateDefinitionProperty templateDefinitionProperty = TemplateDefinitionProperty.builder()
-   * .templateV2(TemplateV2Property.builder()
-   * .certificateValidity(CertificateValidityProperty.builder()
-   * .renewalPeriod(ValidityPeriodProperty.builder()
-   * .period(123)
-   * .periodType("periodType")
-   * .build())
-   * .validityPeriod(ValidityPeriodProperty.builder()
-   * .period(123)
-   * .periodType("periodType")
-   * .build())
-   * .build())
-   * .enrollmentFlags(EnrollmentFlagsV2Property.builder()
-   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
-   * .includeSymmetricAlgorithms(false)
-   * .noSecurityExtension(false)
-   * .removeInvalidCertificateFromPersonalStore(false)
-   * .userInteractionRequired(false)
-   * .build())
-   * .extensions(ExtensionsV2Property.builder()
-   * .keyUsage(KeyUsageProperty.builder()
-   * .usageFlags(KeyUsageFlagsProperty.builder()
-   * .dataEncipherment(false)
-   * .digitalSignature(false)
-   * .keyAgreement(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * // the properties below are optional
-   * .applicationPolicies(ApplicationPoliciesProperty.builder()
-   * .policies(List.of(ApplicationPolicyProperty.builder()
-   * .policyObjectIdentifier("policyObjectIdentifier")
-   * .policyType("policyType")
-   * .build()))
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * .build())
-   * .generalFlags(GeneralFlagsV2Property.builder()
-   * .autoEnrollment(false)
-   * .machineType(false)
-   * .build())
-   * .privateKeyAttributes(PrivateKeyAttributesV2Property.builder()
-   * .keySpec("keySpec")
-   * .minimalKeyLength(123)
-   * // the properties below are optional
-   * .cryptoProviders(List.of("cryptoProviders"))
-   * .build())
-   * .privateKeyFlags(PrivateKeyFlagsV2Property.builder()
-   * .clientVersion("clientVersion")
-   * // the properties below are optional
-   * .exportableKey(false)
-   * .strongKeyProtectionRequired(false)
-   * .build())
-   * .subjectNameFlags(SubjectNameFlagsV2Property.builder()
-   * .requireCommonName(false)
-   * .requireDirectoryPath(false)
-   * .requireDnsAsCn(false)
-   * .requireEmail(false)
-   * .sanRequireDirectoryGuid(false)
-   * .sanRequireDns(false)
-   * .sanRequireDomainDns(false)
-   * .sanRequireEmail(false)
-   * .sanRequireSpn(false)
-   * .sanRequireUpn(false)
-   * .build())
-   * // the properties below are optional
-   * .supersededTemplates(List.of("supersededTemplates"))
-   * .build())
-   * .templateV3(TemplateV3Property.builder()
-   * .certificateValidity(CertificateValidityProperty.builder()
-   * .renewalPeriod(ValidityPeriodProperty.builder()
-   * .period(123)
-   * .periodType("periodType")
-   * .build())
-   * .validityPeriod(ValidityPeriodProperty.builder()
-   * .period(123)
-   * .periodType("periodType")
-   * .build())
-   * .build())
-   * .enrollmentFlags(EnrollmentFlagsV3Property.builder()
-   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
-   * .includeSymmetricAlgorithms(false)
-   * .noSecurityExtension(false)
-   * .removeInvalidCertificateFromPersonalStore(false)
-   * .userInteractionRequired(false)
-   * .build())
-   * .extensions(ExtensionsV3Property.builder()
-   * .keyUsage(KeyUsageProperty.builder()
-   * .usageFlags(KeyUsageFlagsProperty.builder()
-   * .dataEncipherment(false)
-   * .digitalSignature(false)
-   * .keyAgreement(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * // the properties below are optional
-   * .applicationPolicies(ApplicationPoliciesProperty.builder()
-   * .policies(List.of(ApplicationPolicyProperty.builder()
-   * .policyObjectIdentifier("policyObjectIdentifier")
-   * .policyType("policyType")
-   * .build()))
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * .build())
-   * .generalFlags(GeneralFlagsV3Property.builder()
-   * .autoEnrollment(false)
-   * .machineType(false)
-   * .build())
-   * .hashAlgorithm("hashAlgorithm")
-   * .privateKeyAttributes(PrivateKeyAttributesV3Property.builder()
-   * .algorithm("algorithm")
-   * .keySpec("keySpec")
-   * .keyUsageProperty(KeyUsagePropertyProperty.builder()
-   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
-   * .decrypt(false)
-   * .keyAgreement(false)
-   * .sign(false)
-   * .build())
-   * .propertyType("propertyType")
-   * .build())
-   * .minimalKeyLength(123)
-   * // the properties below are optional
-   * .cryptoProviders(List.of("cryptoProviders"))
-   * .build())
-   * .privateKeyFlags(PrivateKeyFlagsV3Property.builder()
-   * .clientVersion("clientVersion")
-   * // the properties below are optional
-   * .exportableKey(false)
-   * .requireAlternateSignatureAlgorithm(false)
-   * .strongKeyProtectionRequired(false)
-   * .build())
-   * .subjectNameFlags(SubjectNameFlagsV3Property.builder()
-   * .requireCommonName(false)
-   * .requireDirectoryPath(false)
-   * .requireDnsAsCn(false)
-   * .requireEmail(false)
-   * .sanRequireDirectoryGuid(false)
-   * .sanRequireDns(false)
-   * .sanRequireDomainDns(false)
-   * .sanRequireEmail(false)
-   * .sanRequireSpn(false)
-   * .sanRequireUpn(false)
-   * .build())
-   * // the properties below are optional
-   * .supersededTemplates(List.of("supersededTemplates"))
-   * .build())
-   * .templateV4(TemplateV4Property.builder()
-   * .certificateValidity(CertificateValidityProperty.builder()
-   * .renewalPeriod(ValidityPeriodProperty.builder()
-   * .period(123)
-   * .periodType("periodType")
-   * .build())
-   * .validityPeriod(ValidityPeriodProperty.builder()
-   * .period(123)
-   * .periodType("periodType")
-   * .build())
-   * .build())
-   * .enrollmentFlags(EnrollmentFlagsV4Property.builder()
-   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
-   * .includeSymmetricAlgorithms(false)
-   * .noSecurityExtension(false)
-   * .removeInvalidCertificateFromPersonalStore(false)
-   * .userInteractionRequired(false)
-   * .build())
-   * .extensions(ExtensionsV4Property.builder()
-   * .keyUsage(KeyUsageProperty.builder()
-   * .usageFlags(KeyUsageFlagsProperty.builder()
-   * .dataEncipherment(false)
-   * .digitalSignature(false)
-   * .keyAgreement(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * // the properties below are optional
-   * .applicationPolicies(ApplicationPoliciesProperty.builder()
-   * .policies(List.of(ApplicationPolicyProperty.builder()
-   * .policyObjectIdentifier("policyObjectIdentifier")
-   * .policyType("policyType")
-   * .build()))
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * .build())
-   * .generalFlags(GeneralFlagsV4Property.builder()
-   * .autoEnrollment(false)
-   * .machineType(false)
-   * .build())
-   * .privateKeyAttributes(PrivateKeyAttributesV4Property.builder()
-   * .keySpec("keySpec")
-   * .minimalKeyLength(123)
-   * // the properties below are optional
-   * .algorithm("algorithm")
-   * .cryptoProviders(List.of("cryptoProviders"))
-   * .keyUsageProperty(KeyUsagePropertyProperty.builder()
-   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
-   * .decrypt(false)
-   * .keyAgreement(false)
-   * .sign(false)
-   * .build())
-   * .propertyType("propertyType")
-   * .build())
-   * .build())
-   * .privateKeyFlags(PrivateKeyFlagsV4Property.builder()
-   * .clientVersion("clientVersion")
-   * // the properties below are optional
-   * .exportableKey(false)
-   * .requireAlternateSignatureAlgorithm(false)
-   * .requireSameKeyRenewal(false)
-   * .strongKeyProtectionRequired(false)
-   * .useLegacyProvider(false)
-   * .build())
-   * .subjectNameFlags(SubjectNameFlagsV4Property.builder()
-   * .requireCommonName(false)
-   * .requireDirectoryPath(false)
-   * .requireDnsAsCn(false)
-   * .requireEmail(false)
-   * .sanRequireDirectoryGuid(false)
-   * .sanRequireDns(false)
-   * .sanRequireDomainDns(false)
-   * .sanRequireEmail(false)
-   * .sanRequireSpn(false)
-   * .sanRequireUpn(false)
-   * .build())
-   * // the properties below are optional
-   * .hashAlgorithm("hashAlgorithm")
-   * .supersededTemplates(List.of("supersededTemplates"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html)
-   */
-  public interface TemplateDefinitionProperty {
-    /**
-     * Template configuration to define the information included in certificates.
-     *
-     * Define certificate validity and renewal periods, certificate request handling and enrollment
-     * options, key usage extensions, application policies, and cryptography settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev2)
-     */
-    public fun templateV2(): Any? = unwrap(this).getTemplateV2()
-
-    /**
-     * Template configuration to define the information included in certificates.
-     *
-     * Define certificate validity and renewal periods, certificate request handling and enrollment
-     * options, key usage extensions, application policies, and cryptography settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev3)
-     */
-    public fun templateV3(): Any? = unwrap(this).getTemplateV3()
-
-    /**
-     * Template configuration to define the information included in certificates.
-     *
-     * Define certificate validity and renewal periods, certificate request handling and enrollment
-     * options, key usage extensions, application policies, and cryptography settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev4)
-     */
-    public fun templateV4(): Any? = unwrap(this).getTemplateV4()
-
-    /**
-     * A builder for [TemplateDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param templateV2 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      public fun templateV2(templateV2: IResolvable)
-
-      /**
-       * @param templateV2 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      public fun templateV2(templateV2: TemplateV2Property)
-
-      /**
-       * @param templateV2 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("01b45117b08b7836177cd5f5bd6dfea2d426f968546b6c8f9616e636271e91dc")
-      public fun templateV2(templateV2: TemplateV2Property.Builder.() -> Unit)
-
-      /**
-       * @param templateV3 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      public fun templateV3(templateV3: IResolvable)
-
-      /**
-       * @param templateV3 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      public fun templateV3(templateV3: TemplateV3Property)
-
-      /**
-       * @param templateV3 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f5142db8cbb835d2c94551906d0f203a25d0aa36fd7966e642016fae6fef13f6")
-      public fun templateV3(templateV3: TemplateV3Property.Builder.() -> Unit)
-
-      /**
-       * @param templateV4 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      public fun templateV4(templateV4: IResolvable)
-
-      /**
-       * @param templateV4 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      public fun templateV4(templateV4: TemplateV4Property)
-
-      /**
-       * @param templateV4 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a274da345eb1b0d816427862afd3c0b8bb813f2ec62ebf00e8c40e80ee736a4f")
-      public fun templateV4(templateV4: TemplateV4Property.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty.builder()
-
-      /**
-       * @param templateV2 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      override fun templateV2(templateV2: IResolvable) {
-        cdkBuilder.templateV2(templateV2.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param templateV2 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      override fun templateV2(templateV2: TemplateV2Property) {
-        cdkBuilder.templateV2(templateV2.let(TemplateV2Property::unwrap))
-      }
-
-      /**
-       * @param templateV2 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("01b45117b08b7836177cd5f5bd6dfea2d426f968546b6c8f9616e636271e91dc")
-      override fun templateV2(templateV2: TemplateV2Property.Builder.() -> Unit): Unit =
-          templateV2(TemplateV2Property(templateV2))
-
-      /**
-       * @param templateV3 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      override fun templateV3(templateV3: IResolvable) {
-        cdkBuilder.templateV3(templateV3.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param templateV3 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      override fun templateV3(templateV3: TemplateV3Property) {
-        cdkBuilder.templateV3(templateV3.let(TemplateV3Property::unwrap))
-      }
-
-      /**
-       * @param templateV3 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f5142db8cbb835d2c94551906d0f203a25d0aa36fd7966e642016fae6fef13f6")
-      override fun templateV3(templateV3: TemplateV3Property.Builder.() -> Unit): Unit =
-          templateV3(TemplateV3Property(templateV3))
-
-      /**
-       * @param templateV4 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      override fun templateV4(templateV4: IResolvable) {
-        cdkBuilder.templateV4(templateV4.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param templateV4 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      override fun templateV4(templateV4: TemplateV4Property) {
-        cdkBuilder.templateV4(templateV4.let(TemplateV4Property::unwrap))
-      }
-
-      /**
-       * @param templateV4 Template configuration to define the information included in
-       * certificates.
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a274da345eb1b0d816427862afd3c0b8bb813f2ec62ebf00e8c40e80ee736a4f")
-      override fun templateV4(templateV4: TemplateV4Property.Builder.() -> Unit): Unit =
-          templateV4(TemplateV4Property(templateV4))
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty,
-    ) : CdkObject(cdkObject), TemplateDefinitionProperty {
-      /**
-       * Template configuration to define the information included in certificates.
-       *
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev2)
-       */
-      override fun templateV2(): Any? = unwrap(this).getTemplateV2()
-
-      /**
-       * Template configuration to define the information included in certificates.
-       *
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev3)
-       */
-      override fun templateV3(): Any? = unwrap(this).getTemplateV3()
-
-      /**
-       * Template configuration to define the information included in certificates.
-       *
-       * Define certificate validity and renewal periods, certificate request handling and
-       * enrollment options, key usage extensions, application policies, and cryptography settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-templatedefinition.html#cfn-pcaconnectorad-template-templatedefinition-templatev4)
-       */
-      override fun templateV4(): Any? = unwrap(this).getTemplateV4()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TemplateDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty):
-          TemplateDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TemplateDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TemplateDefinitionProperty):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty
-    }
-  }
-
-  /**
-   * The key usage property defines the purpose of the private key contained in the certificate.
-   *
-   * You can specify specific purposes using property flags or all by using property type ALL.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * KeyUsagePropertyProperty keyUsagePropertyProperty = KeyUsagePropertyProperty.builder()
-   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
-   * .decrypt(false)
-   * .keyAgreement(false)
-   * .sign(false)
-   * .build())
-   * .propertyType("propertyType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html)
-   */
-  public interface KeyUsagePropertyProperty {
-    /**
-     * You can specify key usage for encryption, key agreement, and signature.
-     *
-     * You can use property flags or property type but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html#cfn-pcaconnectorad-template-keyusageproperty-propertyflags)
-     */
-    public fun propertyFlags(): Any? = unwrap(this).getPropertyFlags()
-
-    /**
-     * You can specify all key usages using property type ALL.
-     *
-     * You can use property type or property flags but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html#cfn-pcaconnectorad-template-keyusageproperty-propertytype)
-     */
-    public fun propertyType(): String? = unwrap(this).getPropertyType()
-
-    /**
-     * A builder for [KeyUsagePropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param propertyFlags You can specify key usage for encryption, key agreement, and
-       * signature.
-       * You can use property flags or property type but not both.
-       */
-      public fun propertyFlags(propertyFlags: IResolvable)
-
-      /**
-       * @param propertyFlags You can specify key usage for encryption, key agreement, and
-       * signature.
-       * You can use property flags or property type but not both.
-       */
-      public fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty)
-
-      /**
-       * @param propertyFlags You can specify key usage for encryption, key agreement, and
-       * signature.
-       * You can use property flags or property type but not both.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7d650478be89420c8682f59b49461f47f84cdefa1fef1dfc8316cc539e14cce6")
-      public fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty.Builder.() -> Unit)
-
-      /**
-       * @param propertyType You can specify all key usages using property type ALL.
-       * You can use property type or property flags but not both.
-       */
-      public fun propertyType(propertyType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty.builder()
-
-      /**
-       * @param propertyFlags You can specify key usage for encryption, key agreement, and
-       * signature.
-       * You can use property flags or property type but not both.
-       */
-      override fun propertyFlags(propertyFlags: IResolvable) {
-        cdkBuilder.propertyFlags(propertyFlags.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param propertyFlags You can specify key usage for encryption, key agreement, and
-       * signature.
-       * You can use property flags or property type but not both.
-       */
-      override fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty) {
-        cdkBuilder.propertyFlags(propertyFlags.let(KeyUsagePropertyFlagsProperty::unwrap))
-      }
-
-      /**
-       * @param propertyFlags You can specify key usage for encryption, key agreement, and
-       * signature.
-       * You can use property flags or property type but not both.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7d650478be89420c8682f59b49461f47f84cdefa1fef1dfc8316cc539e14cce6")
-      override fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty.Builder.() -> Unit):
-          Unit = propertyFlags(KeyUsagePropertyFlagsProperty(propertyFlags))
-
-      /**
-       * @param propertyType You can specify all key usages using property type ALL.
-       * You can use property type or property flags but not both.
-       */
-      override fun propertyType(propertyType: String) {
-        cdkBuilder.propertyType(propertyType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty,
-    ) : CdkObject(cdkObject), KeyUsagePropertyProperty {
-      /**
-       * You can specify key usage for encryption, key agreement, and signature.
-       *
-       * You can use property flags or property type but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html#cfn-pcaconnectorad-template-keyusageproperty-propertyflags)
-       */
-      override fun propertyFlags(): Any? = unwrap(this).getPropertyFlags()
-
-      /**
-       * You can specify all key usages using property type ALL.
-       *
-       * You can use property type or property flags but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusageproperty.html#cfn-pcaconnectorad-template-keyusageproperty-propertytype)
-       */
-      override fun propertyType(): String? = unwrap(this).getPropertyType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyUsagePropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty):
-          KeyUsagePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyUsagePropertyProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KeyUsagePropertyProperty):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty
-    }
-  }
-
-  /**
-   * Information to include in the subject name and alternate subject name of the certificate.
-   *
-   * The subject name can be common name, directory path, DNS as common name, or left blank. You can
-   * optionally include email to the subject name for user templates. If you leave the subject name
-   * blank then you must set a subject alternate name. The subject alternate name (SAN) can include
-   * globally unique identifier (GUID), DNS, domain DNS, email, service principal name (SPN), and user
-   * principal name (UPN). You can leave the SAN blank. If you leave the SAN blank, then you must set a
-   * subject name.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * SubjectNameFlagsV2Property subjectNameFlagsV2Property = SubjectNameFlagsV2Property.builder()
-   * .requireCommonName(false)
-   * .requireDirectoryPath(false)
-   * .requireDnsAsCn(false)
-   * .requireEmail(false)
-   * .sanRequireDirectoryGuid(false)
-   * .sanRequireDns(false)
-   * .sanRequireDomainDns(false)
-   * .sanRequireEmail(false)
-   * .sanRequireSpn(false)
-   * .sanRequireUpn(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html)
-   */
-  public interface SubjectNameFlagsV2Property {
-    /**
-     * Include the common name in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requirecommonname)
-     */
-    public fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
-
-    /**
-     * Include the directory path in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requiredirectorypath)
-     */
-    public fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
-
-    /**
-     * Include the DNS as common name in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requirednsascn)
-     */
-    public fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
-
-    /**
-     * Include the subject's email in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requireemail)
-     */
-    public fun requireEmail(): Any? = unwrap(this).getRequireEmail()
-
-    /**
-     * Include the globally unique identifier (GUID) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredirectoryguid)
-     */
-    public fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
-
-    /**
-     * Include the DNS in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredns)
-     */
-    public fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
-
-    /**
-     * Include the domain DNS in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredomaindns)
-     */
-    public fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
-
-    /**
-     * Include the subject's email in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequireemail)
-     */
-    public fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
-
-    /**
-     * Include the service principal name (SPN) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequirespn)
-     */
-    public fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
-
-    /**
-     * Include the user principal name (UPN) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequireupn)
-     */
-    public fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
-
-    /**
-     * A builder for [SubjectNameFlagsV2Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      public fun requireCommonName(requireCommonName: Boolean)
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      public fun requireCommonName(requireCommonName: IResolvable)
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      public fun requireDirectoryPath(requireDirectoryPath: Boolean)
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      public fun requireDirectoryPath(requireDirectoryPath: IResolvable)
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      public fun requireDnsAsCn(requireDnsAsCn: Boolean)
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      public fun requireDnsAsCn(requireDnsAsCn: IResolvable)
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      public fun requireEmail(requireEmail: Boolean)
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      public fun requireEmail(requireEmail: IResolvable)
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean)
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable)
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      public fun sanRequireDns(sanRequireDns: Boolean)
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      public fun sanRequireDns(sanRequireDns: IResolvable)
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      public fun sanRequireDomainDns(sanRequireDomainDns: Boolean)
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      public fun sanRequireDomainDns(sanRequireDomainDns: IResolvable)
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      public fun sanRequireEmail(sanRequireEmail: Boolean)
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      public fun sanRequireEmail(sanRequireEmail: IResolvable)
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      public fun sanRequireSpn(sanRequireSpn: Boolean)
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      public fun sanRequireSpn(sanRequireSpn: IResolvable)
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      public fun sanRequireUpn(sanRequireUpn: Boolean)
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      public fun sanRequireUpn(sanRequireUpn: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property.builder()
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      override fun requireCommonName(requireCommonName: Boolean) {
-        cdkBuilder.requireCommonName(requireCommonName)
-      }
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      override fun requireCommonName(requireCommonName: IResolvable) {
-        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      override fun requireDirectoryPath(requireDirectoryPath: Boolean) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath)
-      }
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      override fun requireDnsAsCn(requireDnsAsCn: Boolean) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn)
-      }
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      override fun requireEmail(requireEmail: Boolean) {
-        cdkBuilder.requireEmail(requireEmail)
-      }
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      override fun requireEmail(requireEmail: IResolvable) {
-        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid)
-      }
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      override fun sanRequireDns(sanRequireDns: Boolean) {
-        cdkBuilder.sanRequireDns(sanRequireDns)
-      }
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      override fun sanRequireDns(sanRequireDns: IResolvable) {
-        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      override fun sanRequireDomainDns(sanRequireDomainDns: Boolean) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns)
-      }
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      override fun sanRequireEmail(sanRequireEmail: Boolean) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail)
-      }
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      override fun sanRequireEmail(sanRequireEmail: IResolvable) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      override fun sanRequireSpn(sanRequireSpn: Boolean) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn)
-      }
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      override fun sanRequireSpn(sanRequireSpn: IResolvable) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      override fun sanRequireUpn(sanRequireUpn: Boolean) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn)
-      }
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      override fun sanRequireUpn(sanRequireUpn: IResolvable) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property,
-    ) : CdkObject(cdkObject), SubjectNameFlagsV2Property {
-      /**
-       * Include the common name in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requirecommonname)
-       */
-      override fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
-
-      /**
-       * Include the directory path in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requiredirectorypath)
-       */
-      override fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
-
-      /**
-       * Include the DNS as common name in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requirednsascn)
-       */
-      override fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
-
-      /**
-       * Include the subject's email in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-requireemail)
-       */
-      override fun requireEmail(): Any? = unwrap(this).getRequireEmail()
-
-      /**
-       * Include the globally unique identifier (GUID) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredirectoryguid)
-       */
-      override fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
-
-      /**
-       * Include the DNS in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredns)
-       */
-      override fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
-
-      /**
-       * Include the domain DNS in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequiredomaindns)
-       */
-      override fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
-
-      /**
-       * Include the subject's email in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequireemail)
-       */
-      override fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
-
-      /**
-       * Include the service principal name (SPN) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequirespn)
-       */
-      override fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
-
-      /**
-       * Include the user principal name (UPN) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv2.html#cfn-pcaconnectorad-template-subjectnameflagsv2-sanrequireupn)
-       */
-      override fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubjectNameFlagsV2Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property):
-          SubjectNameFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as?
-          SubjectNameFlagsV2Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubjectNameFlagsV2Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property
-    }
-  }
-
-  /**
-   * Information to include in the subject name and alternate subject name of the certificate.
-   *
-   * The subject name can be common name, directory path, DNS as common name, or left blank. You can
-   * optionally include email to the subject name for user templates. If you leave the subject name
-   * blank then you must set a subject alternate name. The subject alternate name (SAN) can include
-   * globally unique identifier (GUID), DNS, domain DNS, email, service principal name (SPN), and user
-   * principal name (UPN). You can leave the SAN blank. If you leave the SAN blank, then you must set a
-   * subject name.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * SubjectNameFlagsV4Property subjectNameFlagsV4Property = SubjectNameFlagsV4Property.builder()
-   * .requireCommonName(false)
-   * .requireDirectoryPath(false)
-   * .requireDnsAsCn(false)
-   * .requireEmail(false)
-   * .sanRequireDirectoryGuid(false)
-   * .sanRequireDns(false)
-   * .sanRequireDomainDns(false)
-   * .sanRequireEmail(false)
-   * .sanRequireSpn(false)
-   * .sanRequireUpn(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html)
-   */
-  public interface SubjectNameFlagsV4Property {
-    /**
-     * Include the common name in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requirecommonname)
-     */
-    public fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
-
-    /**
-     * Include the directory path in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requiredirectorypath)
-     */
-    public fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
-
-    /**
-     * Include the DNS as common name in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requirednsascn)
-     */
-    public fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
-
-    /**
-     * Include the subject's email in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requireemail)
-     */
-    public fun requireEmail(): Any? = unwrap(this).getRequireEmail()
-
-    /**
-     * Include the globally unique identifier (GUID) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredirectoryguid)
-     */
-    public fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
-
-    /**
-     * Include the DNS in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredns)
-     */
-    public fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
-
-    /**
-     * Include the domain DNS in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredomaindns)
-     */
-    public fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
-
-    /**
-     * Include the subject's email in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequireemail)
-     */
-    public fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
-
-    /**
-     * Include the service principal name (SPN) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequirespn)
-     */
-    public fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
-
-    /**
-     * Include the user principal name (UPN) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequireupn)
-     */
-    public fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
-
-    /**
-     * A builder for [SubjectNameFlagsV4Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      public fun requireCommonName(requireCommonName: Boolean)
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      public fun requireCommonName(requireCommonName: IResolvable)
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      public fun requireDirectoryPath(requireDirectoryPath: Boolean)
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      public fun requireDirectoryPath(requireDirectoryPath: IResolvable)
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      public fun requireDnsAsCn(requireDnsAsCn: Boolean)
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      public fun requireDnsAsCn(requireDnsAsCn: IResolvable)
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      public fun requireEmail(requireEmail: Boolean)
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      public fun requireEmail(requireEmail: IResolvable)
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean)
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable)
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      public fun sanRequireDns(sanRequireDns: Boolean)
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      public fun sanRequireDns(sanRequireDns: IResolvable)
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      public fun sanRequireDomainDns(sanRequireDomainDns: Boolean)
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      public fun sanRequireDomainDns(sanRequireDomainDns: IResolvable)
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      public fun sanRequireEmail(sanRequireEmail: Boolean)
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      public fun sanRequireEmail(sanRequireEmail: IResolvable)
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      public fun sanRequireSpn(sanRequireSpn: Boolean)
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      public fun sanRequireSpn(sanRequireSpn: IResolvable)
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      public fun sanRequireUpn(sanRequireUpn: Boolean)
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      public fun sanRequireUpn(sanRequireUpn: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property.builder()
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      override fun requireCommonName(requireCommonName: Boolean) {
-        cdkBuilder.requireCommonName(requireCommonName)
-      }
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      override fun requireCommonName(requireCommonName: IResolvable) {
-        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      override fun requireDirectoryPath(requireDirectoryPath: Boolean) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath)
-      }
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      override fun requireDnsAsCn(requireDnsAsCn: Boolean) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn)
-      }
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      override fun requireEmail(requireEmail: Boolean) {
-        cdkBuilder.requireEmail(requireEmail)
-      }
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      override fun requireEmail(requireEmail: IResolvable) {
-        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid)
-      }
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      override fun sanRequireDns(sanRequireDns: Boolean) {
-        cdkBuilder.sanRequireDns(sanRequireDns)
-      }
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      override fun sanRequireDns(sanRequireDns: IResolvable) {
-        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      override fun sanRequireDomainDns(sanRequireDomainDns: Boolean) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns)
-      }
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      override fun sanRequireEmail(sanRequireEmail: Boolean) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail)
-      }
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      override fun sanRequireEmail(sanRequireEmail: IResolvable) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      override fun sanRequireSpn(sanRequireSpn: Boolean) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn)
-      }
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      override fun sanRequireSpn(sanRequireSpn: IResolvable) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      override fun sanRequireUpn(sanRequireUpn: Boolean) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn)
-      }
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      override fun sanRequireUpn(sanRequireUpn: IResolvable) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property,
-    ) : CdkObject(cdkObject), SubjectNameFlagsV4Property {
-      /**
-       * Include the common name in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requirecommonname)
-       */
-      override fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
-
-      /**
-       * Include the directory path in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requiredirectorypath)
-       */
-      override fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
-
-      /**
-       * Include the DNS as common name in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requirednsascn)
-       */
-      override fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
-
-      /**
-       * Include the subject's email in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-requireemail)
-       */
-      override fun requireEmail(): Any? = unwrap(this).getRequireEmail()
-
-      /**
-       * Include the globally unique identifier (GUID) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredirectoryguid)
-       */
-      override fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
-
-      /**
-       * Include the DNS in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredns)
-       */
-      override fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
-
-      /**
-       * Include the domain DNS in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequiredomaindns)
-       */
-      override fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
-
-      /**
-       * Include the subject's email in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequireemail)
-       */
-      override fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
-
-      /**
-       * Include the service principal name (SPN) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequirespn)
-       */
-      override fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
-
-      /**
-       * Include the user principal name (UPN) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv4.html#cfn-pcaconnectorad-template-subjectnameflagsv4-sanrequireupn)
-       */
-      override fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubjectNameFlagsV4Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property):
-          SubjectNameFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as?
-          SubjectNameFlagsV4Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubjectNameFlagsV4Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property
-    }
-  }
-
-  /**
-   * General flags for v4 template schema that defines if the template is for a machine or a user
-   * and if the template can be issued using autoenrollment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * GeneralFlagsV4Property generalFlagsV4Property = GeneralFlagsV4Property.builder()
-   * .autoEnrollment(false)
-   * .machineType(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html)
-   */
-  public interface GeneralFlagsV4Property {
-    /**
-     * Allows certificate issuance using autoenrollment.
-     *
-     * Set to TRUE to allow autoenrollment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html#cfn-pcaconnectorad-template-generalflagsv4-autoenrollment)
-     */
-    public fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
-
-    /**
-     * Defines if the template is for machines or users.
-     *
-     * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html#cfn-pcaconnectorad-template-generalflagsv4-machinetype)
-     */
-    public fun machineType(): Any? = unwrap(this).getMachineType()
-
-    /**
-     * A builder for [GeneralFlagsV4Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      public fun autoEnrollment(autoEnrollment: Boolean)
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      public fun autoEnrollment(autoEnrollment: IResolvable)
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       */
-      public fun machineType(machineType: Boolean)
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       */
-      public fun machineType(machineType: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property.builder()
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      override fun autoEnrollment(autoEnrollment: Boolean) {
-        cdkBuilder.autoEnrollment(autoEnrollment)
-      }
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      override fun autoEnrollment(autoEnrollment: IResolvable) {
-        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       */
-      override fun machineType(machineType: Boolean) {
-        cdkBuilder.machineType(machineType)
-      }
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       */
-      override fun machineType(machineType: IResolvable) {
-        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property,
-    ) : CdkObject(cdkObject), GeneralFlagsV4Property {
-      /**
-       * Allows certificate issuance using autoenrollment.
-       *
-       * Set to TRUE to allow autoenrollment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html#cfn-pcaconnectorad-template-generalflagsv4-autoenrollment)
-       */
-      override fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
-
-      /**
-       * Defines if the template is for machines or users.
-       *
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv4.html#cfn-pcaconnectorad-template-generalflagsv4-machinetype)
-       */
-      override fun machineType(): Any? = unwrap(this).getMachineType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralFlagsV4Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property):
-          GeneralFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as? GeneralFlagsV4Property ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GeneralFlagsV4Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property
-    }
-  }
-
-  /**
-   * Defines the attributes of the private key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * PrivateKeyAttributesV2Property privateKeyAttributesV2Property =
-   * PrivateKeyAttributesV2Property.builder()
-   * .keySpec("keySpec")
-   * .minimalKeyLength(123)
-   * // the properties below are optional
-   * .cryptoProviders(List.of("cryptoProviders"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html)
-   */
-  public interface PrivateKeyAttributesV2Property {
-    /**
-     * Defines the cryptographic providers used to generate the private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-cryptoproviders)
-     */
-    public fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?: emptyList()
-
-    /**
-     * Defines the purpose of the private key.
-     *
-     * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-keyspec)
-     */
-    public fun keySpec(): String
-
-    /**
-     * Set the minimum key length of the private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-minimalkeylength)
-     */
-    public fun minimalKeyLength(): Number
-
-    /**
-     * A builder for [PrivateKeyAttributesV2Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      public fun cryptoProviders(cryptoProviders: List<String>)
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      public fun cryptoProviders(vararg cryptoProviders: String)
-
-      /**
-       * @param keySpec Defines the purpose of the private key. 
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       */
-      public fun keySpec(keySpec: String)
-
-      /**
-       * @param minimalKeyLength Set the minimum key length of the private key. 
-       */
-      public fun minimalKeyLength(minimalKeyLength: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property.builder()
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      override fun cryptoProviders(cryptoProviders: List<String>) {
-        cdkBuilder.cryptoProviders(cryptoProviders)
-      }
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
-          cryptoProviders(cryptoProviders.toList())
-
-      /**
-       * @param keySpec Defines the purpose of the private key. 
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       */
-      override fun keySpec(keySpec: String) {
-        cdkBuilder.keySpec(keySpec)
-      }
-
-      /**
-       * @param minimalKeyLength Set the minimum key length of the private key. 
-       */
-      override fun minimalKeyLength(minimalKeyLength: Number) {
-        cdkBuilder.minimalKeyLength(minimalKeyLength)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property,
-    ) : CdkObject(cdkObject), PrivateKeyAttributesV2Property {
-      /**
-       * Defines the cryptographic providers used to generate the private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-cryptoproviders)
-       */
-      override fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?:
-          emptyList()
-
-      /**
-       * Defines the purpose of the private key.
-       *
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-keyspec)
-       */
-      override fun keySpec(): String = unwrap(this).getKeySpec()
-
-      /**
-       * Set the minimum key length of the private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv2.html#cfn-pcaconnectorad-template-privatekeyattributesv2-minimalkeylength)
-       */
-      override fun minimalKeyLength(): Number = unwrap(this).getMinimalKeyLength()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyAttributesV2Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property):
-          PrivateKeyAttributesV2Property = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateKeyAttributesV2Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateKeyAttributesV2Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property
-    }
-  }
-
-  /**
-   * Defines the attributes of the private key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * PrivateKeyAttributesV4Property privateKeyAttributesV4Property =
-   * PrivateKeyAttributesV4Property.builder()
-   * .keySpec("keySpec")
-   * .minimalKeyLength(123)
-   * // the properties below are optional
-   * .algorithm("algorithm")
-   * .cryptoProviders(List.of("cryptoProviders"))
-   * .keyUsageProperty(KeyUsagePropertyProperty.builder()
-   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
-   * .decrypt(false)
-   * .keyAgreement(false)
-   * .sign(false)
-   * .build())
-   * .propertyType("propertyType")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html)
-   */
-  public interface PrivateKeyAttributesV4Property {
-    /**
-     * Defines the algorithm used to generate the private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-algorithm)
-     */
-    public fun algorithm(): String? = unwrap(this).getAlgorithm()
-
-    /**
-     * Defines the cryptographic providers used to generate the private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-cryptoproviders)
-     */
-    public fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?: emptyList()
-
-    /**
-     * Defines the purpose of the private key.
-     *
-     * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-keyspec)
-     */
-    public fun keySpec(): String
-
-    /**
-     * The key usage property defines the purpose of the private key contained in the certificate.
-     *
-     * You can specify specific purposes using property flags or all by using property type ALL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-keyusageproperty)
-     */
-    public fun keyUsageProperty(): Any? = unwrap(this).getKeyUsageProperty()
-
-    /**
-     * Set the minimum key length of the private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-minimalkeylength)
-     */
-    public fun minimalKeyLength(): Number
-
-    /**
-     * A builder for [PrivateKeyAttributesV4Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param algorithm Defines the algorithm used to generate the private key.
-       */
-      public fun algorithm(algorithm: String)
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      public fun cryptoProviders(cryptoProviders: List<String>)
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      public fun cryptoProviders(vararg cryptoProviders: String)
-
-      /**
-       * @param keySpec Defines the purpose of the private key. 
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       */
-      public fun keySpec(keySpec: String)
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate.
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      public fun keyUsageProperty(keyUsageProperty: IResolvable)
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate.
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      public fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty)
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate.
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("39c25c064000533e637d6eed426bb566a63aa39c6166838f67748c5adafccb96")
-      public fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty.Builder.() -> Unit)
-
-      /**
-       * @param minimalKeyLength Set the minimum key length of the private key. 
-       */
-      public fun minimalKeyLength(minimalKeyLength: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property.builder()
-
-      /**
-       * @param algorithm Defines the algorithm used to generate the private key.
-       */
-      override fun algorithm(algorithm: String) {
-        cdkBuilder.algorithm(algorithm)
-      }
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      override fun cryptoProviders(cryptoProviders: List<String>) {
-        cdkBuilder.cryptoProviders(cryptoProviders)
-      }
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
-          cryptoProviders(cryptoProviders.toList())
-
-      /**
-       * @param keySpec Defines the purpose of the private key. 
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       */
-      override fun keySpec(keySpec: String) {
-        cdkBuilder.keySpec(keySpec)
-      }
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate.
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      override fun keyUsageProperty(keyUsageProperty: IResolvable) {
-        cdkBuilder.keyUsageProperty(keyUsageProperty.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate.
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty) {
-        cdkBuilder.keyUsageProperty(keyUsageProperty.let(KeyUsagePropertyProperty::unwrap))
-      }
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate.
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("39c25c064000533e637d6eed426bb566a63aa39c6166838f67748c5adafccb96")
-      override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty.Builder.() -> Unit):
-          Unit = keyUsageProperty(KeyUsagePropertyProperty(keyUsageProperty))
-
-      /**
-       * @param minimalKeyLength Set the minimum key length of the private key. 
-       */
-      override fun minimalKeyLength(minimalKeyLength: Number) {
-        cdkBuilder.minimalKeyLength(minimalKeyLength)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property,
-    ) : CdkObject(cdkObject), PrivateKeyAttributesV4Property {
-      /**
-       * Defines the algorithm used to generate the private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-algorithm)
-       */
-      override fun algorithm(): String? = unwrap(this).getAlgorithm()
-
-      /**
-       * Defines the cryptographic providers used to generate the private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-cryptoproviders)
-       */
-      override fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?:
-          emptyList()
-
-      /**
-       * Defines the purpose of the private key.
-       *
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-keyspec)
-       */
-      override fun keySpec(): String = unwrap(this).getKeySpec()
-
-      /**
-       * The key usage property defines the purpose of the private key contained in the certificate.
-       *
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-keyusageproperty)
-       */
-      override fun keyUsageProperty(): Any? = unwrap(this).getKeyUsageProperty()
-
-      /**
-       * Set the minimum key length of the private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv4.html#cfn-pcaconnectorad-template-privatekeyattributesv4-minimalkeylength)
-       */
-      override fun minimalKeyLength(): Number = unwrap(this).getMinimalKeyLength()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyAttributesV4Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property):
-          PrivateKeyAttributesV4Property = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateKeyAttributesV4Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateKeyAttributesV4Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property
-    }
-  }
-
-  /**
-   * Defines the attributes of the private key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * PrivateKeyAttributesV3Property privateKeyAttributesV3Property =
-   * PrivateKeyAttributesV3Property.builder()
-   * .algorithm("algorithm")
-   * .keySpec("keySpec")
-   * .keyUsageProperty(KeyUsagePropertyProperty.builder()
-   * .propertyFlags(KeyUsagePropertyFlagsProperty.builder()
-   * .decrypt(false)
-   * .keyAgreement(false)
-   * .sign(false)
-   * .build())
-   * .propertyType("propertyType")
-   * .build())
-   * .minimalKeyLength(123)
-   * // the properties below are optional
-   * .cryptoProviders(List.of("cryptoProviders"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html)
-   */
-  public interface PrivateKeyAttributesV3Property {
-    /**
-     * Defines the algorithm used to generate the private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-algorithm)
-     */
-    public fun algorithm(): String
-
-    /**
-     * Defines the cryptographic providers used to generate the private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-cryptoproviders)
-     */
-    public fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?: emptyList()
-
-    /**
-     * Defines the purpose of the private key.
-     *
-     * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-keyspec)
-     */
-    public fun keySpec(): String
-
-    /**
-     * The key usage property defines the purpose of the private key contained in the certificate.
-     *
-     * You can specify specific purposes using property flags or all by using property type ALL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-keyusageproperty)
-     */
-    public fun keyUsageProperty(): Any
-
-    /**
-     * Set the minimum key length of the private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-minimalkeylength)
-     */
-    public fun minimalKeyLength(): Number
-
-    /**
-     * A builder for [PrivateKeyAttributesV3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param algorithm Defines the algorithm used to generate the private key. 
-       */
-      public fun algorithm(algorithm: String)
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      public fun cryptoProviders(cryptoProviders: List<String>)
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      public fun cryptoProviders(vararg cryptoProviders: String)
-
-      /**
-       * @param keySpec Defines the purpose of the private key. 
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       */
-      public fun keySpec(keySpec: String)
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate. 
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      public fun keyUsageProperty(keyUsageProperty: IResolvable)
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate. 
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      public fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty)
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate. 
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ccd5bffefaa9ac6fdcbd555901a072569107b00d07950ec2c4793559eb0cc6d9")
-      public fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty.Builder.() -> Unit)
-
-      /**
-       * @param minimalKeyLength Set the minimum key length of the private key. 
-       */
-      public fun minimalKeyLength(minimalKeyLength: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property.builder()
-
-      /**
-       * @param algorithm Defines the algorithm used to generate the private key. 
-       */
-      override fun algorithm(algorithm: String) {
-        cdkBuilder.algorithm(algorithm)
-      }
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      override fun cryptoProviders(cryptoProviders: List<String>) {
-        cdkBuilder.cryptoProviders(cryptoProviders)
-      }
-
-      /**
-       * @param cryptoProviders Defines the cryptographic providers used to generate the private
-       * key.
-       */
-      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
-          cryptoProviders(cryptoProviders.toList())
-
-      /**
-       * @param keySpec Defines the purpose of the private key. 
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       */
-      override fun keySpec(keySpec: String) {
-        cdkBuilder.keySpec(keySpec)
-      }
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate. 
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      override fun keyUsageProperty(keyUsageProperty: IResolvable) {
-        cdkBuilder.keyUsageProperty(keyUsageProperty.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate. 
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty) {
-        cdkBuilder.keyUsageProperty(keyUsageProperty.let(KeyUsagePropertyProperty::unwrap))
-      }
-
-      /**
-       * @param keyUsageProperty The key usage property defines the purpose of the private key
-       * contained in the certificate. 
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ccd5bffefaa9ac6fdcbd555901a072569107b00d07950ec2c4793559eb0cc6d9")
-      override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty.Builder.() -> Unit):
-          Unit = keyUsageProperty(KeyUsagePropertyProperty(keyUsageProperty))
-
-      /**
-       * @param minimalKeyLength Set the minimum key length of the private key. 
-       */
-      override fun minimalKeyLength(minimalKeyLength: Number) {
-        cdkBuilder.minimalKeyLength(minimalKeyLength)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property,
-    ) : CdkObject(cdkObject), PrivateKeyAttributesV3Property {
-      /**
-       * Defines the algorithm used to generate the private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-algorithm)
-       */
-      override fun algorithm(): String = unwrap(this).getAlgorithm()
-
-      /**
-       * Defines the cryptographic providers used to generate the private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-cryptoproviders)
-       */
-      override fun cryptoProviders(): List<String> = unwrap(this).getCryptoProviders() ?:
-          emptyList()
-
-      /**
-       * Defines the purpose of the private key.
-       *
-       * Set it to "KEY_EXCHANGE" or "SIGNATURE" value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-keyspec)
-       */
-      override fun keySpec(): String = unwrap(this).getKeySpec()
-
-      /**
-       * The key usage property defines the purpose of the private key contained in the certificate.
-       *
-       * You can specify specific purposes using property flags or all by using property type ALL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-keyusageproperty)
-       */
-      override fun keyUsageProperty(): Any = unwrap(this).getKeyUsageProperty()
-
-      /**
-       * Set the minimum key length of the private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyattributesv3.html#cfn-pcaconnectorad-template-privatekeyattributesv3-minimalkeylength)
-       */
-      override fun minimalKeyLength(): Number = unwrap(this).getMinimalKeyLength()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyAttributesV3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property):
-          PrivateKeyAttributesV3Property = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateKeyAttributesV3Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateKeyAttributesV3Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property
-    }
-  }
-
-  /**
-   * Template configurations for v3 template schema.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * EnrollmentFlagsV3Property enrollmentFlagsV3Property = EnrollmentFlagsV3Property.builder()
-   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
-   * .includeSymmetricAlgorithms(false)
-   * .noSecurityExtension(false)
-   * .removeInvalidCertificateFromPersonalStore(false)
-   * .userInteractionRequired(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html)
-   */
-  public interface EnrollmentFlagsV3Property {
-    /**
-     * Allow renewal using the same key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-enablekeyreuseonnttokenkeysetstoragefull)
-     */
-    public fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
-        unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
-
-    /**
-     * Include symmetric algorithms allowed by the subject.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-includesymmetricalgorithms)
-     */
-    public fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
-
-    /**
-     * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
-     * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
-     * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
-     * elevation-of-privilege vulnerability.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-nosecurityextension)
-     */
-    public fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
-
-    /**
-     * Delete expired or revoked certificates instead of archiving them.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-removeinvalidcertificatefrompersonalstore)
-     */
-    public fun removeInvalidCertificateFromPersonalStore(): Any? =
-        unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
-
-    /**
-     * Require user interaction when the subject is enrolled and the private key associated with the
-     * certificate is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-userinteractionrequired)
-     */
-    public fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
-
-    /**
-     * A builder for [EnrollmentFlagsV3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      public
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean)
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      public
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable)
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean)
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable)
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      public fun noSecurityExtension(noSecurityExtension: Boolean)
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      public fun noSecurityExtension(noSecurityExtension: IResolvable)
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      public
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean)
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      public
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable)
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      public fun userInteractionRequired(userInteractionRequired: Boolean)
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      public fun userInteractionRequired(userInteractionRequired: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property.builder()
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      override
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull)
-      }
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      override
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms)
-      }
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      override fun noSecurityExtension(noSecurityExtension: Boolean) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension)
-      }
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      override fun noSecurityExtension(noSecurityExtension: IResolvable) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      override
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore)
-      }
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      override
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      override fun userInteractionRequired(userInteractionRequired: Boolean) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired)
-      }
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      override fun userInteractionRequired(userInteractionRequired: IResolvable) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property,
-    ) : CdkObject(cdkObject), EnrollmentFlagsV3Property {
-      /**
-       * Allow renewal using the same key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-enablekeyreuseonnttokenkeysetstoragefull)
-       */
-      override fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
-          unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
-
-      /**
-       * Include symmetric algorithms allowed by the subject.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-includesymmetricalgorithms)
-       */
-      override fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
-
-      /**
-       * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
-       * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
-       * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
-       * elevation-of-privilege vulnerability.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-nosecurityextension)
-       */
-      override fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
-
-      /**
-       * Delete expired or revoked certificates instead of archiving them.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-removeinvalidcertificatefrompersonalstore)
-       */
-      override fun removeInvalidCertificateFromPersonalStore(): Any? =
-          unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
-
-      /**
-       * Require user interaction when the subject is enrolled and the private key associated with
-       * the certificate is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv3.html#cfn-pcaconnectorad-template-enrollmentflagsv3-userinteractionrequired)
-       */
-      override fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnrollmentFlagsV3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property):
-          EnrollmentFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as?
-          EnrollmentFlagsV3Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnrollmentFlagsV3Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property
-    }
-  }
-
-  /**
-   * Template configurations for v2 template schema.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * EnrollmentFlagsV2Property enrollmentFlagsV2Property = EnrollmentFlagsV2Property.builder()
-   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
-   * .includeSymmetricAlgorithms(false)
-   * .noSecurityExtension(false)
-   * .removeInvalidCertificateFromPersonalStore(false)
-   * .userInteractionRequired(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html)
-   */
-  public interface EnrollmentFlagsV2Property {
-    /**
-     * Allow renewal using the same key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-enablekeyreuseonnttokenkeysetstoragefull)
-     */
-    public fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
-        unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
-
-    /**
-     * Include symmetric algorithms allowed by the subject.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-includesymmetricalgorithms)
-     */
-    public fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
-
-    /**
-     * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
-     * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
-     * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
-     * elevation-of-privilege vulnerability.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-nosecurityextension)
-     */
-    public fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
-
-    /**
-     * Delete expired or revoked certificates instead of archiving them.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-removeinvalidcertificatefrompersonalstore)
-     */
-    public fun removeInvalidCertificateFromPersonalStore(): Any? =
-        unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
-
-    /**
-     * Require user interaction when the subject is enrolled and the private key associated with the
-     * certificate is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-userinteractionrequired)
-     */
-    public fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
-
-    /**
-     * A builder for [EnrollmentFlagsV2Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      public
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean)
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      public
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable)
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean)
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable)
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      public fun noSecurityExtension(noSecurityExtension: Boolean)
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      public fun noSecurityExtension(noSecurityExtension: IResolvable)
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      public
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean)
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      public
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable)
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      public fun userInteractionRequired(userInteractionRequired: Boolean)
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      public fun userInteractionRequired(userInteractionRequired: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property.builder()
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      override
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull)
-      }
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      override
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms)
-      }
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      override fun noSecurityExtension(noSecurityExtension: Boolean) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension)
-      }
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      override fun noSecurityExtension(noSecurityExtension: IResolvable) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      override
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore)
-      }
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      override
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      override fun userInteractionRequired(userInteractionRequired: Boolean) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired)
-      }
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      override fun userInteractionRequired(userInteractionRequired: IResolvable) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property,
-    ) : CdkObject(cdkObject), EnrollmentFlagsV2Property {
-      /**
-       * Allow renewal using the same key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-enablekeyreuseonnttokenkeysetstoragefull)
-       */
-      override fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
-          unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
-
-      /**
-       * Include symmetric algorithms allowed by the subject.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-includesymmetricalgorithms)
-       */
-      override fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
-
-      /**
-       * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
-       * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
-       * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
-       * elevation-of-privilege vulnerability.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-nosecurityextension)
-       */
-      override fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
-
-      /**
-       * Delete expired or revoked certificates instead of archiving them.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-removeinvalidcertificatefrompersonalstore)
-       */
-      override fun removeInvalidCertificateFromPersonalStore(): Any? =
-          unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
-
-      /**
-       * Require user interaction when the subject is enrolled and the private key associated with
-       * the certificate is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv2.html#cfn-pcaconnectorad-template-enrollmentflagsv2-userinteractionrequired)
-       */
-      override fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnrollmentFlagsV2Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property):
-          EnrollmentFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as?
-          EnrollmentFlagsV2Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnrollmentFlagsV2Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property
-    }
-  }
-
-  /**
-   * Application policies describe what the certificate can be used for.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * ApplicationPolicyProperty applicationPolicyProperty = ApplicationPolicyProperty.builder()
-   * .policyObjectIdentifier("policyObjectIdentifier")
-   * .policyType("policyType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html)
-   */
-  public interface ApplicationPolicyProperty {
-    /**
-     * The object identifier (OID) of an application policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html#cfn-pcaconnectorad-template-applicationpolicy-policyobjectidentifier)
-     */
-    public fun policyObjectIdentifier(): String? = unwrap(this).getPolicyObjectIdentifier()
-
-    /**
-     * The type of application policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html#cfn-pcaconnectorad-template-applicationpolicy-policytype)
-     */
-    public fun policyType(): String? = unwrap(this).getPolicyType()
-
-    /**
-     * A builder for [ApplicationPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param policyObjectIdentifier The object identifier (OID) of an application policy.
-       */
-      public fun policyObjectIdentifier(policyObjectIdentifier: String)
-
-      /**
-       * @param policyType The type of application policy.
-       */
-      public fun policyType(policyType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty.builder()
-
-      /**
-       * @param policyObjectIdentifier The object identifier (OID) of an application policy.
-       */
-      override fun policyObjectIdentifier(policyObjectIdentifier: String) {
-        cdkBuilder.policyObjectIdentifier(policyObjectIdentifier)
-      }
-
-      /**
-       * @param policyType The type of application policy.
-       */
-      override fun policyType(policyType: String) {
-        cdkBuilder.policyType(policyType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty,
-    ) : CdkObject(cdkObject), ApplicationPolicyProperty {
-      /**
-       * The object identifier (OID) of an application policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html#cfn-pcaconnectorad-template-applicationpolicy-policyobjectidentifier)
-       */
-      override fun policyObjectIdentifier(): String? = unwrap(this).getPolicyObjectIdentifier()
-
-      /**
-       * The type of application policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicy.html#cfn-pcaconnectorad-template-applicationpolicy-policytype)
-       */
-      override fun policyType(): String? = unwrap(this).getPolicyType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty):
-          ApplicationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ApplicationPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ApplicationPolicyProperty):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty
-    }
-  }
-
-  /**
-   * Application policies describe what the certificate can be used for.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * ApplicationPoliciesProperty applicationPoliciesProperty = ApplicationPoliciesProperty.builder()
-   * .policies(List.of(ApplicationPolicyProperty.builder()
-   * .policyObjectIdentifier("policyObjectIdentifier")
-   * .policyType("policyType")
-   * .build()))
-   * // the properties below are optional
-   * .critical(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html)
-   */
-  public interface ApplicationPoliciesProperty {
-    /**
-     * Marks the application policy extension as critical.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html#cfn-pcaconnectorad-template-applicationpolicies-critical)
-     */
-    public fun critical(): Any? = unwrap(this).getCritical()
-
-    /**
-     * Application policies describe what the certificate can be used for.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html#cfn-pcaconnectorad-template-applicationpolicies-policies)
-     */
-    public fun policies(): Any
-
-    /**
-     * A builder for [ApplicationPoliciesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param critical Marks the application policy extension as critical.
-       */
-      public fun critical(critical: Boolean)
-
-      /**
-       * @param critical Marks the application policy extension as critical.
-       */
-      public fun critical(critical: IResolvable)
-
-      /**
-       * @param policies Application policies describe what the certificate can be used for. 
-       */
-      public fun policies(policies: IResolvable)
-
-      /**
-       * @param policies Application policies describe what the certificate can be used for. 
-       */
-      public fun policies(policies: List<Any>)
-
-      /**
-       * @param policies Application policies describe what the certificate can be used for. 
-       */
-      public fun policies(vararg policies: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty.builder()
-
-      /**
-       * @param critical Marks the application policy extension as critical.
-       */
-      override fun critical(critical: Boolean) {
-        cdkBuilder.critical(critical)
-      }
-
-      /**
-       * @param critical Marks the application policy extension as critical.
-       */
-      override fun critical(critical: IResolvable) {
-        cdkBuilder.critical(critical.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param policies Application policies describe what the certificate can be used for. 
-       */
-      override fun policies(policies: IResolvable) {
-        cdkBuilder.policies(policies.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param policies Application policies describe what the certificate can be used for. 
-       */
-      override fun policies(policies: List<Any>) {
-        cdkBuilder.policies(policies)
-      }
-
-      /**
-       * @param policies Application policies describe what the certificate can be used for. 
-       */
-      override fun policies(vararg policies: Any): Unit = policies(policies.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty,
-    ) : CdkObject(cdkObject), ApplicationPoliciesProperty {
-      /**
-       * Marks the application policy extension as critical.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html#cfn-pcaconnectorad-template-applicationpolicies-critical)
-       */
-      override fun critical(): Any? = unwrap(this).getCritical()
-
-      /**
-       * Application policies describe what the certificate can be used for.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-applicationpolicies.html#cfn-pcaconnectorad-template-applicationpolicies-policies)
-       */
-      override fun policies(): Any = unwrap(this).getPolicies()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationPoliciesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty):
-          ApplicationPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ApplicationPoliciesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ApplicationPoliciesProperty):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty
-    }
-  }
-
-  /**
-   * Specifies key usage.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * KeyUsagePropertyFlagsProperty keyUsagePropertyFlagsProperty =
-   * KeyUsagePropertyFlagsProperty.builder()
-   * .decrypt(false)
-   * .keyAgreement(false)
-   * .sign(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html)
-   */
-  public interface KeyUsagePropertyFlagsProperty {
-    /**
-     * Allows key for encryption and decryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-decrypt)
-     */
-    public fun decrypt(): Any? = unwrap(this).getDecrypt()
-
-    /**
-     * Allows key exchange without encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-keyagreement)
-     */
-    public fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
-
-    /**
-     * Allow key use for digital signature.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-sign)
-     */
-    public fun sign(): Any? = unwrap(this).getSign()
-
-    /**
-     * A builder for [KeyUsagePropertyFlagsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param decrypt Allows key for encryption and decryption.
-       */
-      public fun decrypt(decrypt: Boolean)
-
-      /**
-       * @param decrypt Allows key for encryption and decryption.
-       */
-      public fun decrypt(decrypt: IResolvable)
-
-      /**
-       * @param keyAgreement Allows key exchange without encryption.
-       */
-      public fun keyAgreement(keyAgreement: Boolean)
-
-      /**
-       * @param keyAgreement Allows key exchange without encryption.
-       */
-      public fun keyAgreement(keyAgreement: IResolvable)
-
-      /**
-       * @param sign Allow key use for digital signature.
-       */
-      public fun sign(sign: Boolean)
-
-      /**
-       * @param sign Allow key use for digital signature.
-       */
-      public fun sign(sign: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty.builder()
-
-      /**
-       * @param decrypt Allows key for encryption and decryption.
-       */
-      override fun decrypt(decrypt: Boolean) {
-        cdkBuilder.decrypt(decrypt)
-      }
-
-      /**
-       * @param decrypt Allows key for encryption and decryption.
-       */
-      override fun decrypt(decrypt: IResolvable) {
-        cdkBuilder.decrypt(decrypt.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyAgreement Allows key exchange without encryption.
-       */
-      override fun keyAgreement(keyAgreement: Boolean) {
-        cdkBuilder.keyAgreement(keyAgreement)
-      }
-
-      /**
-       * @param keyAgreement Allows key exchange without encryption.
-       */
-      override fun keyAgreement(keyAgreement: IResolvable) {
-        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sign Allow key use for digital signature.
-       */
-      override fun sign(sign: Boolean) {
-        cdkBuilder.sign(sign)
-      }
-
-      /**
-       * @param sign Allow key use for digital signature.
-       */
-      override fun sign(sign: IResolvable) {
-        cdkBuilder.sign(sign.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty,
-    ) : CdkObject(cdkObject), KeyUsagePropertyFlagsProperty {
-      /**
-       * Allows key for encryption and decryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-decrypt)
-       */
-      override fun decrypt(): Any? = unwrap(this).getDecrypt()
-
-      /**
-       * Allows key exchange without encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-keyagreement)
-       */
-      override fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
-
-      /**
-       * Allow key use for digital signature.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-keyusagepropertyflags.html#cfn-pcaconnectorad-template-keyusagepropertyflags-sign)
-       */
-      override fun sign(): Any? = unwrap(this).getSign()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyUsagePropertyFlagsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty):
-          KeyUsagePropertyFlagsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KeyUsagePropertyFlagsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KeyUsagePropertyFlagsProperty):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty
-    }
-  }
-
-  /**
-   * Certificate extensions for v2 template schema.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * ExtensionsV2Property extensionsV2Property = ExtensionsV2Property.builder()
-   * .keyUsage(KeyUsageProperty.builder()
-   * .usageFlags(KeyUsageFlagsProperty.builder()
-   * .dataEncipherment(false)
-   * .digitalSignature(false)
-   * .keyAgreement(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * // the properties below are optional
-   * .applicationPolicies(ApplicationPoliciesProperty.builder()
-   * .policies(List.of(ApplicationPolicyProperty.builder()
-   * .policyObjectIdentifier("policyObjectIdentifier")
-   * .policyType("policyType")
-   * .build()))
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html)
-   */
-  public interface ExtensionsV2Property {
-    /**
-     * Application policies specify what the certificate is used for and its purpose.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html#cfn-pcaconnectorad-template-extensionsv2-applicationpolicies)
-     */
-    public fun applicationPolicies(): Any? = unwrap(this).getApplicationPolicies()
-
-    /**
-     * The key usage extension defines the purpose (e.g., encipherment, signature, certificate
-     * signing) of the key contained in the certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html#cfn-pcaconnectorad-template-extensionsv2-keyusage)
-     */
-    public fun keyUsage(): Any
-
-    /**
-     * A builder for [ExtensionsV2Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      public fun applicationPolicies(applicationPolicies: IResolvable)
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      public fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty)
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a828670bec1d28e8cc1a2d50058b79d351f6c153d40af2f570d8060b6444d726")
-      public
-          fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty.Builder.() -> Unit)
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
-       * certificate signing) of the key contained in the certificate. 
-       */
-      public fun keyUsage(keyUsage: IResolvable)
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
-       * certificate signing) of the key contained in the certificate. 
-       */
-      public fun keyUsage(keyUsage: KeyUsageProperty)
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
-       * certificate signing) of the key contained in the certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9c693eed2a201cdc50ab632d8b3801ac042a7a5b25b4ead1c4ddc1c28256cf4e")
-      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property.Builder =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property.builder()
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      override fun applicationPolicies(applicationPolicies: IResolvable) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      override fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty::unwrap))
-      }
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a828670bec1d28e8cc1a2d50058b79d351f6c153d40af2f570d8060b6444d726")
-      override
-          fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty.Builder.() -> Unit):
-          Unit = applicationPolicies(ApplicationPoliciesProperty(applicationPolicies))
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
-       * certificate signing) of the key contained in the certificate. 
-       */
-      override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
-       * certificate signing) of the key contained in the certificate. 
-       */
-      override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
-      }
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature,
-       * certificate signing) of the key contained in the certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9c693eed2a201cdc50ab632d8b3801ac042a7a5b25b4ead1c4ddc1c28256cf4e")
-      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
-          keyUsage(KeyUsageProperty(keyUsage))
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property,
-    ) : CdkObject(cdkObject), ExtensionsV2Property {
-      /**
-       * Application policies specify what the certificate is used for and its purpose.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html#cfn-pcaconnectorad-template-extensionsv2-applicationpolicies)
-       */
-      override fun applicationPolicies(): Any? = unwrap(this).getApplicationPolicies()
-
-      /**
-       * The key usage extension defines the purpose (e.g., encipherment, signature, certificate
-       * signing) of the key contained in the certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv2.html#cfn-pcaconnectorad-template-extensionsv2-keyusage)
-       */
-      override fun keyUsage(): Any = unwrap(this).getKeyUsage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExtensionsV2Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property):
-          ExtensionsV2Property = CdkObjectWrappers.wrap(cdkObject) as? ExtensionsV2Property ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExtensionsV2Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property
-    }
-  }
-
-  /**
-   * Information to include in the subject name and alternate subject name of the certificate.
-   *
-   * The subject name can be common name, directory path, DNS as common name, or left blank. You can
-   * optionally include email to the subject name for user templates. If you leave the subject name
-   * blank then you must set a subject alternate name. The subject alternate name (SAN) can include
-   * globally unique identifier (GUID), DNS, domain DNS, email, service principal name (SPN), and user
-   * principal name (UPN). You can leave the SAN blank. If you leave the SAN blank, then you must set a
-   * subject name.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * SubjectNameFlagsV3Property subjectNameFlagsV3Property = SubjectNameFlagsV3Property.builder()
-   * .requireCommonName(false)
-   * .requireDirectoryPath(false)
-   * .requireDnsAsCn(false)
-   * .requireEmail(false)
-   * .sanRequireDirectoryGuid(false)
-   * .sanRequireDns(false)
-   * .sanRequireDomainDns(false)
-   * .sanRequireEmail(false)
-   * .sanRequireSpn(false)
-   * .sanRequireUpn(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html)
-   */
-  public interface SubjectNameFlagsV3Property {
-    /**
-     * Include the common name in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requirecommonname)
-     */
-    public fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
-
-    /**
-     * Include the directory path in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requiredirectorypath)
-     */
-    public fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
-
-    /**
-     * Include the DNS as common name in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requirednsascn)
-     */
-    public fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
-
-    /**
-     * Include the subject's email in the subject name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requireemail)
-     */
-    public fun requireEmail(): Any? = unwrap(this).getRequireEmail()
-
-    /**
-     * Include the globally unique identifier (GUID) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredirectoryguid)
-     */
-    public fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
-
-    /**
-     * Include the DNS in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredns)
-     */
-    public fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
-
-    /**
-     * Include the domain DNS in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredomaindns)
-     */
-    public fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
-
-    /**
-     * Include the subject's email in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequireemail)
-     */
-    public fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
-
-    /**
-     * Include the service principal name (SPN) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequirespn)
-     */
-    public fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
-
-    /**
-     * Include the user principal name (UPN) in the subject alternate name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequireupn)
-     */
-    public fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
-
-    /**
-     * A builder for [SubjectNameFlagsV3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      public fun requireCommonName(requireCommonName: Boolean)
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      public fun requireCommonName(requireCommonName: IResolvable)
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      public fun requireDirectoryPath(requireDirectoryPath: Boolean)
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      public fun requireDirectoryPath(requireDirectoryPath: IResolvable)
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      public fun requireDnsAsCn(requireDnsAsCn: Boolean)
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      public fun requireDnsAsCn(requireDnsAsCn: IResolvable)
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      public fun requireEmail(requireEmail: Boolean)
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      public fun requireEmail(requireEmail: IResolvable)
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean)
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      public fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable)
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      public fun sanRequireDns(sanRequireDns: Boolean)
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      public fun sanRequireDns(sanRequireDns: IResolvable)
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      public fun sanRequireDomainDns(sanRequireDomainDns: Boolean)
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      public fun sanRequireDomainDns(sanRequireDomainDns: IResolvable)
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      public fun sanRequireEmail(sanRequireEmail: Boolean)
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      public fun sanRequireEmail(sanRequireEmail: IResolvable)
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      public fun sanRequireSpn(sanRequireSpn: Boolean)
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      public fun sanRequireSpn(sanRequireSpn: IResolvable)
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      public fun sanRequireUpn(sanRequireUpn: Boolean)
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      public fun sanRequireUpn(sanRequireUpn: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property.builder()
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      override fun requireCommonName(requireCommonName: Boolean) {
-        cdkBuilder.requireCommonName(requireCommonName)
-      }
-
-      /**
-       * @param requireCommonName Include the common name in the subject name.
-       */
-      override fun requireCommonName(requireCommonName: IResolvable) {
-        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      override fun requireDirectoryPath(requireDirectoryPath: Boolean) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath)
-      }
-
-      /**
-       * @param requireDirectoryPath Include the directory path in the subject name.
-       */
-      override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      override fun requireDnsAsCn(requireDnsAsCn: Boolean) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn)
-      }
-
-      /**
-       * @param requireDnsAsCn Include the DNS as common name in the subject name.
-       */
-      override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      override fun requireEmail(requireEmail: Boolean) {
-        cdkBuilder.requireEmail(requireEmail)
-      }
-
-      /**
-       * @param requireEmail Include the subject's email in the subject name.
-       */
-      override fun requireEmail(requireEmail: IResolvable) {
-        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: Boolean) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid)
-      }
-
-      /**
-       * @param sanRequireDirectoryGuid Include the globally unique identifier (GUID) in the subject
-       * alternate name.
-       */
-      override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      override fun sanRequireDns(sanRequireDns: Boolean) {
-        cdkBuilder.sanRequireDns(sanRequireDns)
-      }
-
-      /**
-       * @param sanRequireDns Include the DNS in the subject alternate name.
-       */
-      override fun sanRequireDns(sanRequireDns: IResolvable) {
-        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      override fun sanRequireDomainDns(sanRequireDomainDns: Boolean) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns)
-      }
-
-      /**
-       * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
-       */
-      override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      override fun sanRequireEmail(sanRequireEmail: Boolean) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail)
-      }
-
-      /**
-       * @param sanRequireEmail Include the subject's email in the subject alternate name.
-       */
-      override fun sanRequireEmail(sanRequireEmail: IResolvable) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      override fun sanRequireSpn(sanRequireSpn: Boolean) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn)
-      }
-
-      /**
-       * @param sanRequireSpn Include the service principal name (SPN) in the subject alternate
-       * name.
-       */
-      override fun sanRequireSpn(sanRequireSpn: IResolvable) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      override fun sanRequireUpn(sanRequireUpn: Boolean) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn)
-      }
-
-      /**
-       * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
-       */
-      override fun sanRequireUpn(sanRequireUpn: IResolvable) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property,
-    ) : CdkObject(cdkObject), SubjectNameFlagsV3Property {
-      /**
-       * Include the common name in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requirecommonname)
-       */
-      override fun requireCommonName(): Any? = unwrap(this).getRequireCommonName()
-
-      /**
-       * Include the directory path in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requiredirectorypath)
-       */
-      override fun requireDirectoryPath(): Any? = unwrap(this).getRequireDirectoryPath()
-
-      /**
-       * Include the DNS as common name in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requirednsascn)
-       */
-      override fun requireDnsAsCn(): Any? = unwrap(this).getRequireDnsAsCn()
-
-      /**
-       * Include the subject's email in the subject name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-requireemail)
-       */
-      override fun requireEmail(): Any? = unwrap(this).getRequireEmail()
-
-      /**
-       * Include the globally unique identifier (GUID) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredirectoryguid)
-       */
-      override fun sanRequireDirectoryGuid(): Any? = unwrap(this).getSanRequireDirectoryGuid()
-
-      /**
-       * Include the DNS in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredns)
-       */
-      override fun sanRequireDns(): Any? = unwrap(this).getSanRequireDns()
-
-      /**
-       * Include the domain DNS in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequiredomaindns)
-       */
-      override fun sanRequireDomainDns(): Any? = unwrap(this).getSanRequireDomainDns()
-
-      /**
-       * Include the subject's email in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequireemail)
-       */
-      override fun sanRequireEmail(): Any? = unwrap(this).getSanRequireEmail()
-
-      /**
-       * Include the service principal name (SPN) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequirespn)
-       */
-      override fun sanRequireSpn(): Any? = unwrap(this).getSanRequireSpn()
-
-      /**
-       * Include the user principal name (UPN) in the subject alternate name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-subjectnameflagsv3.html#cfn-pcaconnectorad-template-subjectnameflagsv3-sanrequireupn)
-       */
-      override fun sanRequireUpn(): Any? = unwrap(this).getSanRequireUpn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubjectNameFlagsV3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property):
-          SubjectNameFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as?
-          SubjectNameFlagsV3Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubjectNameFlagsV3Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property
-    }
-  }
-
-  /**
-   * Private key flags for v3 templates specify the client compatibility, if the private key can be
-   * exported, if user input is required when using a private key, and if an alternate signature
-   * algorithm should be used.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * PrivateKeyFlagsV3Property privateKeyFlagsV3Property = PrivateKeyFlagsV3Property.builder()
-   * .clientVersion("clientVersion")
-   * // the properties below are optional
-   * .exportableKey(false)
-   * .requireAlternateSignatureAlgorithm(false)
-   * .strongKeyProtectionRequired(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html)
-   */
-  public interface PrivateKeyFlagsV3Property {
-    /**
-     * Defines the minimum client compatibility.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-clientversion)
-     */
-    public fun clientVersion(): String
-
-    /**
-     * Allows the private key to be exported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-exportablekey)
-     */
-    public fun exportableKey(): Any? = unwrap(this).getExportableKey()
-
-    /**
-     * Reguires the PKCS #1 v2.1 signature format for certificates. You should verify that your CA,
-     * objects, and applications can accept this signature format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-requirealternatesignaturealgorithm)
-     */
-    public fun requireAlternateSignatureAlgorithm(): Any? =
-        unwrap(this).getRequireAlternateSignatureAlgorithm()
-
-    /**
-     * Requirer user input when using the private key for enrollment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-strongkeyprotectionrequired)
-     */
-    public fun strongKeyProtectionRequired(): Any? = unwrap(this).getStrongKeyProtectionRequired()
-
-    /**
-     * A builder for [PrivateKeyFlagsV3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientVersion Defines the minimum client compatibility. 
-       */
-      public fun clientVersion(clientVersion: String)
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      public fun exportableKey(exportableKey: Boolean)
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      public fun exportableKey(exportableKey: IResolvable)
-
-      /**
-       * @param requireAlternateSignatureAlgorithm Reguires the PKCS #1 v2.1 signature format for
-       * certificates. You should verify that your CA, objects, and applications can accept this
-       * signature format.
-       */
-      public fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: Boolean)
-
-      /**
-       * @param requireAlternateSignatureAlgorithm Reguires the PKCS #1 v2.1 signature format for
-       * certificates. You should verify that your CA, objects, and applications can accept this
-       * signature format.
-       */
-      public fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable)
-
-      /**
-       * @param strongKeyProtectionRequired Requirer user input when using the private key for
-       * enrollment.
-       */
-      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean)
-
-      /**
-       * @param strongKeyProtectionRequired Requirer user input when using the private key for
-       * enrollment.
-       */
-      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property.builder()
-
-      /**
-       * @param clientVersion Defines the minimum client compatibility. 
-       */
-      override fun clientVersion(clientVersion: String) {
-        cdkBuilder.clientVersion(clientVersion)
-      }
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      override fun exportableKey(exportableKey: Boolean) {
-        cdkBuilder.exportableKey(exportableKey)
-      }
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      override fun exportableKey(exportableKey: IResolvable) {
-        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireAlternateSignatureAlgorithm Reguires the PKCS #1 v2.1 signature format for
-       * certificates. You should verify that your CA, objects, and applications can accept this
-       * signature format.
-       */
-      override fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: Boolean) {
-        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm)
-      }
-
-      /**
-       * @param requireAlternateSignatureAlgorithm Reguires the PKCS #1 v2.1 signature format for
-       * certificates. You should verify that your CA, objects, and applications can accept this
-       * signature format.
-       */
-      override
-          fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable) {
-        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param strongKeyProtectionRequired Requirer user input when using the private key for
-       * enrollment.
-       */
-      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired)
-      }
-
-      /**
-       * @param strongKeyProtectionRequired Requirer user input when using the private key for
-       * enrollment.
-       */
-      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property,
-    ) : CdkObject(cdkObject), PrivateKeyFlagsV3Property {
-      /**
-       * Defines the minimum client compatibility.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-clientversion)
-       */
-      override fun clientVersion(): String = unwrap(this).getClientVersion()
-
-      /**
-       * Allows the private key to be exported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-exportablekey)
-       */
-      override fun exportableKey(): Any? = unwrap(this).getExportableKey()
-
-      /**
-       * Reguires the PKCS #1 v2.1 signature format for certificates. You should verify that your
-       * CA, objects, and applications can accept this signature format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-requirealternatesignaturealgorithm)
-       */
-      override fun requireAlternateSignatureAlgorithm(): Any? =
-          unwrap(this).getRequireAlternateSignatureAlgorithm()
-
-      /**
-       * Requirer user input when using the private key for enrollment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv3.html#cfn-pcaconnectorad-template-privatekeyflagsv3-strongkeyprotectionrequired)
-       */
-      override fun strongKeyProtectionRequired(): Any? =
-          unwrap(this).getStrongKeyProtectionRequired()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyFlagsV3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property):
-          PrivateKeyFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateKeyFlagsV3Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateKeyFlagsV3Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property
-    }
-  }
-
-  /**
-   * Private key flags for v2 templates specify the client compatibility, if the private key can be
-   * exported, and if user input is required when using a private key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * PrivateKeyFlagsV2Property privateKeyFlagsV2Property = PrivateKeyFlagsV2Property.builder()
-   * .clientVersion("clientVersion")
-   * // the properties below are optional
-   * .exportableKey(false)
-   * .strongKeyProtectionRequired(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html)
-   */
-  public interface PrivateKeyFlagsV2Property {
-    /**
-     * Defines the minimum client compatibility.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-clientversion)
-     */
-    public fun clientVersion(): String
-
-    /**
-     * Allows the private key to be exported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-exportablekey)
-     */
-    public fun exportableKey(): Any? = unwrap(this).getExportableKey()
-
-    /**
-     * Require user input when using the private key for enrollment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-strongkeyprotectionrequired)
-     */
-    public fun strongKeyProtectionRequired(): Any? = unwrap(this).getStrongKeyProtectionRequired()
-
-    /**
-     * A builder for [PrivateKeyFlagsV2Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientVersion Defines the minimum client compatibility. 
-       */
-      public fun clientVersion(clientVersion: String)
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      public fun exportableKey(exportableKey: Boolean)
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      public fun exportableKey(exportableKey: IResolvable)
-
-      /**
-       * @param strongKeyProtectionRequired Require user input when using the private key for
-       * enrollment.
-       */
-      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean)
-
-      /**
-       * @param strongKeyProtectionRequired Require user input when using the private key for
-       * enrollment.
-       */
-      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property.builder()
-
-      /**
-       * @param clientVersion Defines the minimum client compatibility. 
-       */
-      override fun clientVersion(clientVersion: String) {
-        cdkBuilder.clientVersion(clientVersion)
-      }
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      override fun exportableKey(exportableKey: Boolean) {
-        cdkBuilder.exportableKey(exportableKey)
-      }
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      override fun exportableKey(exportableKey: IResolvable) {
-        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param strongKeyProtectionRequired Require user input when using the private key for
-       * enrollment.
-       */
-      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired)
-      }
-
-      /**
-       * @param strongKeyProtectionRequired Require user input when using the private key for
-       * enrollment.
-       */
-      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property,
-    ) : CdkObject(cdkObject), PrivateKeyFlagsV2Property {
-      /**
-       * Defines the minimum client compatibility.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-clientversion)
-       */
-      override fun clientVersion(): String = unwrap(this).getClientVersion()
-
-      /**
-       * Allows the private key to be exported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-exportablekey)
-       */
-      override fun exportableKey(): Any? = unwrap(this).getExportableKey()
-
-      /**
-       * Require user input when using the private key for enrollment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv2.html#cfn-pcaconnectorad-template-privatekeyflagsv2-strongkeyprotectionrequired)
-       */
-      override fun strongKeyProtectionRequired(): Any? =
-          unwrap(this).getStrongKeyProtectionRequired()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyFlagsV2Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property):
-          PrivateKeyFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateKeyFlagsV2Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateKeyFlagsV2Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property
-    }
-  }
-
-  /**
-   * Template configurations for v4 template schema.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * EnrollmentFlagsV4Property enrollmentFlagsV4Property = EnrollmentFlagsV4Property.builder()
-   * .enableKeyReuseOnNtTokenKeysetStorageFull(false)
-   * .includeSymmetricAlgorithms(false)
-   * .noSecurityExtension(false)
-   * .removeInvalidCertificateFromPersonalStore(false)
-   * .userInteractionRequired(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html)
-   */
-  public interface EnrollmentFlagsV4Property {
-    /**
-     * Allow renewal using the same key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-enablekeyreuseonnttokenkeysetstoragefull)
-     */
-    public fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
-        unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
-
-    /**
-     * Include symmetric algorithms allowed by the subject.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-includesymmetricalgorithms)
-     */
-    public fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
-
-    /**
-     * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
-     * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
-     * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
-     * elevation-of-privilege vulnerability.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-nosecurityextension)
-     */
-    public fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
-
-    /**
-     * Delete expired or revoked certificates instead of archiving them.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-removeinvalidcertificatefrompersonalstore)
-     */
-    public fun removeInvalidCertificateFromPersonalStore(): Any? =
-        unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
-
-    /**
-     * Require user interaction when the subject is enrolled and the private key associated with the
-     * certificate is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-userinteractionrequired)
-     */
-    public fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
-
-    /**
-     * A builder for [EnrollmentFlagsV4Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      public
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean)
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      public
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable)
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean)
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      public fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable)
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      public fun noSecurityExtension(noSecurityExtension: Boolean)
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      public fun noSecurityExtension(noSecurityExtension: IResolvable)
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      public
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean)
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      public
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable)
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      public fun userInteractionRequired(userInteractionRequired: Boolean)
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      public fun userInteractionRequired(userInteractionRequired: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property.builder()
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      override
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: Boolean) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull)
-      }
-
-      /**
-       * @param enableKeyReuseOnNtTokenKeysetStorageFull Allow renewal using the same key.
-       */
-      override
-          fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: Boolean) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms)
-      }
-
-      /**
-       * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
-       */
-      override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      override fun noSecurityExtension(noSecurityExtension: Boolean) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension)
-      }
-
-      /**
-       * @param noSecurityExtension This flag instructs the CA to not include the security extension
-       * szOID_NTDS_CA_SECURITY_EXT (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections
-       * 2.2.2.7.7.4 and 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows
-       * Kerberos elevation-of-privilege vulnerability.
-       */
-      override fun noSecurityExtension(noSecurityExtension: IResolvable) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      override
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: Boolean) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore)
-      }
-
-      /**
-       * @param removeInvalidCertificateFromPersonalStore Delete expired or revoked certificates
-       * instead of archiving them.
-       */
-      override
-          fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      override fun userInteractionRequired(userInteractionRequired: Boolean) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired)
-      }
-
-      /**
-       * @param userInteractionRequired Require user interaction when the subject is enrolled and
-       * the private key associated with the certificate is used.
-       */
-      override fun userInteractionRequired(userInteractionRequired: IResolvable) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property,
-    ) : CdkObject(cdkObject), EnrollmentFlagsV4Property {
-      /**
-       * Allow renewal using the same key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-enablekeyreuseonnttokenkeysetstoragefull)
-       */
-      override fun enableKeyReuseOnNtTokenKeysetStorageFull(): Any? =
-          unwrap(this).getEnableKeyReuseOnNtTokenKeysetStorageFull()
-
-      /**
-       * Include symmetric algorithms allowed by the subject.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-includesymmetricalgorithms)
-       */
-      override fun includeSymmetricAlgorithms(): Any? = unwrap(this).getIncludeSymmetricAlgorithms()
-
-      /**
-       * This flag instructs the CA to not include the security extension szOID_NTDS_CA_SECURITY_EXT
-       * (OID:1.3.6.1.4.1.311.25.2), as specified in [MS-WCCE] sections 2.2.2.7.7.4 and
-       * 3.2.2.6.2.1.4.5.9, in the issued certificate. This addresses a Windows Kerberos
-       * elevation-of-privilege vulnerability.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-nosecurityextension)
-       */
-      override fun noSecurityExtension(): Any? = unwrap(this).getNoSecurityExtension()
-
-      /**
-       * Delete expired or revoked certificates instead of archiving them.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-removeinvalidcertificatefrompersonalstore)
-       */
-      override fun removeInvalidCertificateFromPersonalStore(): Any? =
-          unwrap(this).getRemoveInvalidCertificateFromPersonalStore()
-
-      /**
-       * Require user interaction when the subject is enrolled and the private key associated with
-       * the certificate is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-enrollmentflagsv4.html#cfn-pcaconnectorad-template-enrollmentflagsv4-userinteractionrequired)
-       */
-      override fun userInteractionRequired(): Any? = unwrap(this).getUserInteractionRequired()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnrollmentFlagsV4Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property):
-          EnrollmentFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as?
-          EnrollmentFlagsV4Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnrollmentFlagsV4Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property
-    }
-  }
-
-  /**
-   * General flags for v2 template schema that defines if the template is for a machine or a user
-   * and if the template can be issued using autoenrollment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * GeneralFlagsV2Property generalFlagsV2Property = GeneralFlagsV2Property.builder()
-   * .autoEnrollment(false)
-   * .machineType(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html)
-   */
-  public interface GeneralFlagsV2Property {
-    /**
-     * Allows certificate issuance using autoenrollment.
-     *
-     * Set to TRUE to allow autoenrollment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html#cfn-pcaconnectorad-template-generalflagsv2-autoenrollment)
-     */
-    public fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
-
-    /**
-     * Defines if the template is for machines or users.
-     *
-     * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html#cfn-pcaconnectorad-template-generalflagsv2-machinetype)
-     */
-    public fun machineType(): Any? = unwrap(this).getMachineType()
-
-    /**
-     * A builder for [GeneralFlagsV2Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      public fun autoEnrollment(autoEnrollment: Boolean)
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      public fun autoEnrollment(autoEnrollment: IResolvable)
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
-       */
-      public fun machineType(machineType: Boolean)
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
-       */
-      public fun machineType(machineType: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property.builder()
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      override fun autoEnrollment(autoEnrollment: Boolean) {
-        cdkBuilder.autoEnrollment(autoEnrollment)
-      }
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      override fun autoEnrollment(autoEnrollment: IResolvable) {
-        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
-       */
-      override fun machineType(machineType: Boolean) {
-        cdkBuilder.machineType(machineType)
-      }
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
-       */
-      override fun machineType(machineType: IResolvable) {
-        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property,
-    ) : CdkObject(cdkObject), GeneralFlagsV2Property {
-      /**
-       * Allows certificate issuance using autoenrollment.
-       *
-       * Set to TRUE to allow autoenrollment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html#cfn-pcaconnectorad-template-generalflagsv2-autoenrollment)
-       */
-      override fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
-
-      /**
-       * Defines if the template is for machines or users.
-       *
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv2.html#cfn-pcaconnectorad-template-generalflagsv2-machinetype)
-       */
-      override fun machineType(): Any? = unwrap(this).getMachineType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralFlagsV2Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property):
-          GeneralFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as? GeneralFlagsV2Property ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GeneralFlagsV2Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property
     }
   }
 
@@ -8183,920 +9097,6 @@ public open class CfnTemplate internal constructor(
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV4Property = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV4Property
-    }
-  }
-
-  /**
-   * Information describing the end of the validity period of the certificate.
-   *
-   * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-   * period of time during which a certificate is valid. Validity can be expressed as an explicit date
-   * and time when the certificate expires, or as a span of time after issuance, stated in days,
-   * months, or years. For more information, see Validity in RFC 5280. This value is unaffected when
-   * ValidityNotBefore is also specified. For example, if Validity is set to 20 days in the future, the
-   * certificate will expire 20 days from issuance time regardless of the ValidityNotBefore value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * CertificateValidityProperty certificateValidityProperty = CertificateValidityProperty.builder()
-   * .renewalPeriod(ValidityPeriodProperty.builder()
-   * .period(123)
-   * .periodType("periodType")
-   * .build())
-   * .validityPeriod(ValidityPeriodProperty.builder()
-   * .period(123)
-   * .periodType("periodType")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html)
-   */
-  public interface CertificateValidityProperty {
-    /**
-     * Renewal period is the period of time before certificate expiration when a new certificate
-     * will be requested.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html#cfn-pcaconnectorad-template-certificatevalidity-renewalperiod)
-     */
-    public fun renewalPeriod(): Any
-
-    /**
-     * Information describing the end of the validity period of the certificate.
-     *
-     * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-     * period of time during which a certificate is valid. Validity can be expressed as an explicit
-     * date and time when the certificate expires, or as a span of time after issuance, stated in days,
-     * months, or years. For more information, see Validity in RFC 5280. This value is unaffected when
-     * ValidityNotBefore is also specified. For example, if Validity is set to 20 days in the future,
-     * the certificate will expire 20 days from issuance time regardless of the ValidityNotBefore
-     * value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html#cfn-pcaconnectorad-template-certificatevalidity-validityperiod)
-     */
-    public fun validityPeriod(): Any
-
-    /**
-     * A builder for [CertificateValidityProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param renewalPeriod Renewal period is the period of time before certificate expiration
-       * when a new certificate will be requested. 
-       */
-      public fun renewalPeriod(renewalPeriod: IResolvable)
-
-      /**
-       * @param renewalPeriod Renewal period is the period of time before certificate expiration
-       * when a new certificate will be requested. 
-       */
-      public fun renewalPeriod(renewalPeriod: ValidityPeriodProperty)
-
-      /**
-       * @param renewalPeriod Renewal period is the period of time before certificate expiration
-       * when a new certificate will be requested. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("074d06ca33d33e75e9aa8418600945d8d29663f6d1be76c0343c2cf70cff619c")
-      public fun renewalPeriod(renewalPeriod: ValidityPeriodProperty.Builder.() -> Unit)
-
-      /**
-       * @param validityPeriod Information describing the end of the validity period of the
-       * certificate. 
-       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-       * period of time during which a certificate is valid. Validity can be expressed as an explicit
-       * date and time when the certificate expires, or as a span of time after issuance, stated in
-       * days, months, or years. For more information, see Validity in RFC 5280. This value is
-       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
-       * days in the future, the certificate will expire 20 days from issuance time regardless of the
-       * ValidityNotBefore value.
-       */
-      public fun validityPeriod(validityPeriod: IResolvable)
-
-      /**
-       * @param validityPeriod Information describing the end of the validity period of the
-       * certificate. 
-       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-       * period of time during which a certificate is valid. Validity can be expressed as an explicit
-       * date and time when the certificate expires, or as a span of time after issuance, stated in
-       * days, months, or years. For more information, see Validity in RFC 5280. This value is
-       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
-       * days in the future, the certificate will expire 20 days from issuance time regardless of the
-       * ValidityNotBefore value.
-       */
-      public fun validityPeriod(validityPeriod: ValidityPeriodProperty)
-
-      /**
-       * @param validityPeriod Information describing the end of the validity period of the
-       * certificate. 
-       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-       * period of time during which a certificate is valid. Validity can be expressed as an explicit
-       * date and time when the certificate expires, or as a span of time after issuance, stated in
-       * days, months, or years. For more information, see Validity in RFC 5280. This value is
-       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
-       * days in the future, the certificate will expire 20 days from issuance time regardless of the
-       * ValidityNotBefore value.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("762e9ab84bc09a28664eaa5d5953d5389f0fa6cb433ee08b768232b09f3c7410")
-      public fun validityPeriod(validityPeriod: ValidityPeriodProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty.builder()
-
-      /**
-       * @param renewalPeriod Renewal period is the period of time before certificate expiration
-       * when a new certificate will be requested. 
-       */
-      override fun renewalPeriod(renewalPeriod: IResolvable) {
-        cdkBuilder.renewalPeriod(renewalPeriod.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param renewalPeriod Renewal period is the period of time before certificate expiration
-       * when a new certificate will be requested. 
-       */
-      override fun renewalPeriod(renewalPeriod: ValidityPeriodProperty) {
-        cdkBuilder.renewalPeriod(renewalPeriod.let(ValidityPeriodProperty::unwrap))
-      }
-
-      /**
-       * @param renewalPeriod Renewal period is the period of time before certificate expiration
-       * when a new certificate will be requested. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("074d06ca33d33e75e9aa8418600945d8d29663f6d1be76c0343c2cf70cff619c")
-      override fun renewalPeriod(renewalPeriod: ValidityPeriodProperty.Builder.() -> Unit): Unit =
-          renewalPeriod(ValidityPeriodProperty(renewalPeriod))
-
-      /**
-       * @param validityPeriod Information describing the end of the validity period of the
-       * certificate. 
-       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-       * period of time during which a certificate is valid. Validity can be expressed as an explicit
-       * date and time when the certificate expires, or as a span of time after issuance, stated in
-       * days, months, or years. For more information, see Validity in RFC 5280. This value is
-       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
-       * days in the future, the certificate will expire 20 days from issuance time regardless of the
-       * ValidityNotBefore value.
-       */
-      override fun validityPeriod(validityPeriod: IResolvable) {
-        cdkBuilder.validityPeriod(validityPeriod.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param validityPeriod Information describing the end of the validity period of the
-       * certificate. 
-       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-       * period of time during which a certificate is valid. Validity can be expressed as an explicit
-       * date and time when the certificate expires, or as a span of time after issuance, stated in
-       * days, months, or years. For more information, see Validity in RFC 5280. This value is
-       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
-       * days in the future, the certificate will expire 20 days from issuance time regardless of the
-       * ValidityNotBefore value.
-       */
-      override fun validityPeriod(validityPeriod: ValidityPeriodProperty) {
-        cdkBuilder.validityPeriod(validityPeriod.let(ValidityPeriodProperty::unwrap))
-      }
-
-      /**
-       * @param validityPeriod Information describing the end of the validity period of the
-       * certificate. 
-       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-       * period of time during which a certificate is valid. Validity can be expressed as an explicit
-       * date and time when the certificate expires, or as a span of time after issuance, stated in
-       * days, months, or years. For more information, see Validity in RFC 5280. This value is
-       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
-       * days in the future, the certificate will expire 20 days from issuance time regardless of the
-       * ValidityNotBefore value.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("762e9ab84bc09a28664eaa5d5953d5389f0fa6cb433ee08b768232b09f3c7410")
-      override fun validityPeriod(validityPeriod: ValidityPeriodProperty.Builder.() -> Unit): Unit =
-          validityPeriod(ValidityPeriodProperty(validityPeriod))
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty,
-    ) : CdkObject(cdkObject), CertificateValidityProperty {
-      /**
-       * Renewal period is the period of time before certificate expiration when a new certificate
-       * will be requested.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html#cfn-pcaconnectorad-template-certificatevalidity-renewalperiod)
-       */
-      override fun renewalPeriod(): Any = unwrap(this).getRenewalPeriod()
-
-      /**
-       * Information describing the end of the validity period of the certificate.
-       *
-       * This parameter sets the “Not After” date for the certificate. Certificate validity is the
-       * period of time during which a certificate is valid. Validity can be expressed as an explicit
-       * date and time when the certificate expires, or as a span of time after issuance, stated in
-       * days, months, or years. For more information, see Validity in RFC 5280. This value is
-       * unaffected when ValidityNotBefore is also specified. For example, if Validity is set to 20
-       * days in the future, the certificate will expire 20 days from issuance time regardless of the
-       * ValidityNotBefore value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-certificatevalidity.html#cfn-pcaconnectorad-template-certificatevalidity-validityperiod)
-       */
-      override fun validityPeriod(): Any = unwrap(this).getValidityPeriod()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateValidityProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty):
-          CertificateValidityProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CertificateValidityProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CertificateValidityProperty):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty
-    }
-  }
-
-  /**
-   * Private key flags for v4 templates specify the client compatibility, if the private key can be
-   * exported, if user input is required when using a private key, if an alternate signature algorithm
-   * should be used, and if certificates are renewed using the same private key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * PrivateKeyFlagsV4Property privateKeyFlagsV4Property = PrivateKeyFlagsV4Property.builder()
-   * .clientVersion("clientVersion")
-   * // the properties below are optional
-   * .exportableKey(false)
-   * .requireAlternateSignatureAlgorithm(false)
-   * .requireSameKeyRenewal(false)
-   * .strongKeyProtectionRequired(false)
-   * .useLegacyProvider(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html)
-   */
-  public interface PrivateKeyFlagsV4Property {
-    /**
-     * Defines the minimum client compatibility.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-clientversion)
-     */
-    public fun clientVersion(): String
-
-    /**
-     * Allows the private key to be exported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-exportablekey)
-     */
-    public fun exportableKey(): Any? = unwrap(this).getExportableKey()
-
-    /**
-     * Requires the PKCS #1 v2.1 signature format for certificates. You should verify that your CA,
-     * objects, and applications can accept this signature format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-requirealternatesignaturealgorithm)
-     */
-    public fun requireAlternateSignatureAlgorithm(): Any? =
-        unwrap(this).getRequireAlternateSignatureAlgorithm()
-
-    /**
-     * Renew certificate using the same private key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-requiresamekeyrenewal)
-     */
-    public fun requireSameKeyRenewal(): Any? = unwrap(this).getRequireSameKeyRenewal()
-
-    /**
-     * Require user input when using the private key for enrollment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-strongkeyprotectionrequired)
-     */
-    public fun strongKeyProtectionRequired(): Any? = unwrap(this).getStrongKeyProtectionRequired()
-
-    /**
-     * Specifies the cryptographic service provider category used to generate private keys.
-     *
-     * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
-     * Providers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-uselegacyprovider)
-     */
-    public fun useLegacyProvider(): Any? = unwrap(this).getUseLegacyProvider()
-
-    /**
-     * A builder for [PrivateKeyFlagsV4Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientVersion Defines the minimum client compatibility. 
-       */
-      public fun clientVersion(clientVersion: String)
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      public fun exportableKey(exportableKey: Boolean)
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      public fun exportableKey(exportableKey: IResolvable)
-
-      /**
-       * @param requireAlternateSignatureAlgorithm Requires the PKCS #1 v2.1 signature format for
-       * certificates. You should verify that your CA, objects, and applications can accept this
-       * signature format.
-       */
-      public fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: Boolean)
-
-      /**
-       * @param requireAlternateSignatureAlgorithm Requires the PKCS #1 v2.1 signature format for
-       * certificates. You should verify that your CA, objects, and applications can accept this
-       * signature format.
-       */
-      public fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable)
-
-      /**
-       * @param requireSameKeyRenewal Renew certificate using the same private key.
-       */
-      public fun requireSameKeyRenewal(requireSameKeyRenewal: Boolean)
-
-      /**
-       * @param requireSameKeyRenewal Renew certificate using the same private key.
-       */
-      public fun requireSameKeyRenewal(requireSameKeyRenewal: IResolvable)
-
-      /**
-       * @param strongKeyProtectionRequired Require user input when using the private key for
-       * enrollment.
-       */
-      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean)
-
-      /**
-       * @param strongKeyProtectionRequired Require user input when using the private key for
-       * enrollment.
-       */
-      public fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable)
-
-      /**
-       * @param useLegacyProvider Specifies the cryptographic service provider category used to
-       * generate private keys.
-       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
-       * Providers.
-       */
-      public fun useLegacyProvider(useLegacyProvider: Boolean)
-
-      /**
-       * @param useLegacyProvider Specifies the cryptographic service provider category used to
-       * generate private keys.
-       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
-       * Providers.
-       */
-      public fun useLegacyProvider(useLegacyProvider: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property.builder()
-
-      /**
-       * @param clientVersion Defines the minimum client compatibility. 
-       */
-      override fun clientVersion(clientVersion: String) {
-        cdkBuilder.clientVersion(clientVersion)
-      }
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      override fun exportableKey(exportableKey: Boolean) {
-        cdkBuilder.exportableKey(exportableKey)
-      }
-
-      /**
-       * @param exportableKey Allows the private key to be exported.
-       */
-      override fun exportableKey(exportableKey: IResolvable) {
-        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireAlternateSignatureAlgorithm Requires the PKCS #1 v2.1 signature format for
-       * certificates. You should verify that your CA, objects, and applications can accept this
-       * signature format.
-       */
-      override fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: Boolean) {
-        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm)
-      }
-
-      /**
-       * @param requireAlternateSignatureAlgorithm Requires the PKCS #1 v2.1 signature format for
-       * certificates. You should verify that your CA, objects, and applications can accept this
-       * signature format.
-       */
-      override
-          fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable) {
-        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireSameKeyRenewal Renew certificate using the same private key.
-       */
-      override fun requireSameKeyRenewal(requireSameKeyRenewal: Boolean) {
-        cdkBuilder.requireSameKeyRenewal(requireSameKeyRenewal)
-      }
-
-      /**
-       * @param requireSameKeyRenewal Renew certificate using the same private key.
-       */
-      override fun requireSameKeyRenewal(requireSameKeyRenewal: IResolvable) {
-        cdkBuilder.requireSameKeyRenewal(requireSameKeyRenewal.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param strongKeyProtectionRequired Require user input when using the private key for
-       * enrollment.
-       */
-      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: Boolean) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired)
-      }
-
-      /**
-       * @param strongKeyProtectionRequired Require user input when using the private key for
-       * enrollment.
-       */
-      override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param useLegacyProvider Specifies the cryptographic service provider category used to
-       * generate private keys.
-       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
-       * Providers.
-       */
-      override fun useLegacyProvider(useLegacyProvider: Boolean) {
-        cdkBuilder.useLegacyProvider(useLegacyProvider)
-      }
-
-      /**
-       * @param useLegacyProvider Specifies the cryptographic service provider category used to
-       * generate private keys.
-       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
-       * Providers.
-       */
-      override fun useLegacyProvider(useLegacyProvider: IResolvable) {
-        cdkBuilder.useLegacyProvider(useLegacyProvider.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property,
-    ) : CdkObject(cdkObject), PrivateKeyFlagsV4Property {
-      /**
-       * Defines the minimum client compatibility.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-clientversion)
-       */
-      override fun clientVersion(): String = unwrap(this).getClientVersion()
-
-      /**
-       * Allows the private key to be exported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-exportablekey)
-       */
-      override fun exportableKey(): Any? = unwrap(this).getExportableKey()
-
-      /**
-       * Requires the PKCS #1 v2.1 signature format for certificates. You should verify that your
-       * CA, objects, and applications can accept this signature format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-requirealternatesignaturealgorithm)
-       */
-      override fun requireAlternateSignatureAlgorithm(): Any? =
-          unwrap(this).getRequireAlternateSignatureAlgorithm()
-
-      /**
-       * Renew certificate using the same private key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-requiresamekeyrenewal)
-       */
-      override fun requireSameKeyRenewal(): Any? = unwrap(this).getRequireSameKeyRenewal()
-
-      /**
-       * Require user input when using the private key for enrollment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-strongkeyprotectionrequired)
-       */
-      override fun strongKeyProtectionRequired(): Any? =
-          unwrap(this).getStrongKeyProtectionRequired()
-
-      /**
-       * Specifies the cryptographic service provider category used to generate private keys.
-       *
-       * Set to TRUE to use Legacy Cryptographic Service Providers and FALSE to use Key Storage
-       * Providers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-privatekeyflagsv4.html#cfn-pcaconnectorad-template-privatekeyflagsv4-uselegacyprovider)
-       */
-      override fun useLegacyProvider(): Any? = unwrap(this).getUseLegacyProvider()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateKeyFlagsV4Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property):
-          PrivateKeyFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateKeyFlagsV4Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateKeyFlagsV4Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property
-    }
-  }
-
-  /**
-   * Certificate extensions for v4 template schema.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * ExtensionsV4Property extensionsV4Property = ExtensionsV4Property.builder()
-   * .keyUsage(KeyUsageProperty.builder()
-   * .usageFlags(KeyUsageFlagsProperty.builder()
-   * .dataEncipherment(false)
-   * .digitalSignature(false)
-   * .keyAgreement(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * // the properties below are optional
-   * .applicationPolicies(ApplicationPoliciesProperty.builder()
-   * .policies(List.of(ApplicationPolicyProperty.builder()
-   * .policyObjectIdentifier("policyObjectIdentifier")
-   * .policyType("policyType")
-   * .build()))
-   * // the properties below are optional
-   * .critical(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html)
-   */
-  public interface ExtensionsV4Property {
-    /**
-     * Application policies specify what the certificate is used for and its purpose.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html#cfn-pcaconnectorad-template-extensionsv4-applicationpolicies)
-     */
-    public fun applicationPolicies(): Any? = unwrap(this).getApplicationPolicies()
-
-    /**
-     * The key usage extension defines the purpose (e.g., encipherment, signature) of the key
-     * contained in the certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html#cfn-pcaconnectorad-template-extensionsv4-keyusage)
-     */
-    public fun keyUsage(): Any
-
-    /**
-     * A builder for [ExtensionsV4Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      public fun applicationPolicies(applicationPolicies: IResolvable)
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      public fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty)
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("675d22ebbe7e9e9c07c73217c59014a96cdbd81d23ef77e4d48bc82a7ba6ae7b")
-      public
-          fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty.Builder.() -> Unit)
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      public fun keyUsage(keyUsage: IResolvable)
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      public fun keyUsage(keyUsage: KeyUsageProperty)
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("776a28e32dec6f401fe6ac8cef051766a5972ba4f4657a12e9d95cbe6aeaa65a")
-      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property.Builder =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property.builder()
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      override fun applicationPolicies(applicationPolicies: IResolvable) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      override fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty::unwrap))
-      }
-
-      /**
-       * @param applicationPolicies Application policies specify what the certificate is used for
-       * and its purpose.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("675d22ebbe7e9e9c07c73217c59014a96cdbd81d23ef77e4d48bc82a7ba6ae7b")
-      override
-          fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty.Builder.() -> Unit):
-          Unit = applicationPolicies(ApplicationPoliciesProperty(applicationPolicies))
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
-      }
-
-      /**
-       * @param keyUsage The key usage extension defines the purpose (e.g., encipherment, signature)
-       * of the key contained in the certificate. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("776a28e32dec6f401fe6ac8cef051766a5972ba4f4657a12e9d95cbe6aeaa65a")
-      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
-          keyUsage(KeyUsageProperty(keyUsage))
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property,
-    ) : CdkObject(cdkObject), ExtensionsV4Property {
-      /**
-       * Application policies specify what the certificate is used for and its purpose.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html#cfn-pcaconnectorad-template-extensionsv4-applicationpolicies)
-       */
-      override fun applicationPolicies(): Any? = unwrap(this).getApplicationPolicies()
-
-      /**
-       * The key usage extension defines the purpose (e.g., encipherment, signature) of the key
-       * contained in the certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-extensionsv4.html#cfn-pcaconnectorad-template-extensionsv4-keyusage)
-       */
-      override fun keyUsage(): Any = unwrap(this).getKeyUsage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExtensionsV4Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property):
-          ExtensionsV4Property = CdkObjectWrappers.wrap(cdkObject) as? ExtensionsV4Property ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExtensionsV4Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property
-    }
-  }
-
-  /**
-   * General flags for v3 template schema that defines if the template is for a machine or a user
-   * and if the template can be issued using autoenrollment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
-   * GeneralFlagsV3Property generalFlagsV3Property = GeneralFlagsV3Property.builder()
-   * .autoEnrollment(false)
-   * .machineType(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html)
-   */
-  public interface GeneralFlagsV3Property {
-    /**
-     * Allows certificate issuance using autoenrollment.
-     *
-     * Set to TRUE to allow autoenrollment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html#cfn-pcaconnectorad-template-generalflagsv3-autoenrollment)
-     */
-    public fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
-
-    /**
-     * Defines if the template is for machines or users.
-     *
-     * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html#cfn-pcaconnectorad-template-generalflagsv3-machinetype)
-     */
-    public fun machineType(): Any? = unwrap(this).getMachineType()
-
-    /**
-     * A builder for [GeneralFlagsV3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      public fun autoEnrollment(autoEnrollment: Boolean)
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      public fun autoEnrollment(autoEnrollment: IResolvable)
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       */
-      public fun machineType(machineType: Boolean)
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       */
-      public fun machineType(machineType: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property.Builder
-          =
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property.builder()
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      override fun autoEnrollment(autoEnrollment: Boolean) {
-        cdkBuilder.autoEnrollment(autoEnrollment)
-      }
-
-      /**
-       * @param autoEnrollment Allows certificate issuance using autoenrollment.
-       * Set to TRUE to allow autoenrollment.
-       */
-      override fun autoEnrollment(autoEnrollment: IResolvable) {
-        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       */
-      override fun machineType(machineType: Boolean) {
-        cdkBuilder.machineType(machineType)
-      }
-
-      /**
-       * @param machineType Defines if the template is for machines or users.
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       */
-      override fun machineType(machineType: IResolvable) {
-        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property,
-    ) : CdkObject(cdkObject), GeneralFlagsV3Property {
-      /**
-       * Allows certificate issuance using autoenrollment.
-       *
-       * Set to TRUE to allow autoenrollment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html#cfn-pcaconnectorad-template-generalflagsv3-autoenrollment)
-       */
-      override fun autoEnrollment(): Any? = unwrap(this).getAutoEnrollment()
-
-      /**
-       * Defines if the template is for machines or users.
-       *
-       * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-template-generalflagsv3.html#cfn-pcaconnectorad-template-generalflagsv3-machinetype)
-       */
-      override fun machineType(): Any? = unwrap(this).getMachineType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralFlagsV3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property):
-          GeneralFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as? GeneralFlagsV3Property ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GeneralFlagsV3Property):
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property
     }
   }
 

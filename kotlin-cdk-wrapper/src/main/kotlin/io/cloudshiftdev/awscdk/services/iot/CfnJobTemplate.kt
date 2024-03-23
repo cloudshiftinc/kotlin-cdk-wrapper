@@ -773,7 +773,7 @@ public open class CfnJobTemplate internal constructor(
   }
 
   /**
-   * Allows you to create a staged rollout of a job.
+   * The criteria that determine when and how a job abort takes place.
    *
    * Example:
    *
@@ -781,160 +781,103 @@ public open class CfnJobTemplate internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iot.*;
-   * JobExecutionsRolloutConfigProperty jobExecutionsRolloutConfigProperty =
-   * JobExecutionsRolloutConfigProperty.builder()
-   * .exponentialRolloutRate(ExponentialRolloutRateProperty.builder()
-   * .baseRatePerMinute(123)
-   * .incrementFactor(123)
-   * .rateIncreaseCriteria(RateIncreaseCriteriaProperty.builder()
-   * .numberOfNotifiedThings(123)
-   * .numberOfSucceededThings(123)
-   * .build())
-   * .build())
-   * .maximumPerMinute(123)
+   * AbortConfigProperty abortConfigProperty = AbortConfigProperty.builder()
+   * .criteriaList(List.of(AbortCriteriaProperty.builder()
+   * .action("action")
+   * .failureType("failureType")
+   * .minNumberOfExecutedThings(123)
+   * .thresholdPercentage(123)
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-abortconfig.html)
    */
-  public interface JobExecutionsRolloutConfigProperty {
+  public interface AbortConfigProperty {
     /**
-     * The rate of increase for a job rollout.
+     * The list of criteria that determine when and how to abort the job.
      *
-     * This parameter allows you to define an exponential rate for a job rollout.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig-exponentialrolloutrate)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-abortconfig.html#cfn-iot-jobtemplate-abortconfig-criterialist)
      */
-    public fun exponentialRolloutRate(): Any? = unwrap(this).getExponentialRolloutRate()
+    public fun criteriaList(): Any
 
     /**
-     * The maximum number of things that will be notified of a pending job, per minute.
-     *
-     * This parameter allows you to create a staged rollout.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig-maximumperminute)
-     */
-    public fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
-
-    /**
-     * A builder for [JobExecutionsRolloutConfigProperty]
+     * A builder for [AbortConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param exponentialRolloutRate The rate of increase for a job rollout.
-       * This parameter allows you to define an exponential rate for a job rollout.
+       * @param criteriaList The list of criteria that determine when and how to abort the job. 
        */
-      public fun exponentialRolloutRate(exponentialRolloutRate: IResolvable)
+      public fun criteriaList(criteriaList: IResolvable)
 
       /**
-       * @param exponentialRolloutRate The rate of increase for a job rollout.
-       * This parameter allows you to define an exponential rate for a job rollout.
+       * @param criteriaList The list of criteria that determine when and how to abort the job. 
        */
-      public fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty)
+      public fun criteriaList(criteriaList: List<Any>)
 
       /**
-       * @param exponentialRolloutRate The rate of increase for a job rollout.
-       * This parameter allows you to define an exponential rate for a job rollout.
+       * @param criteriaList The list of criteria that determine when and how to abort the job. 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fee8f5419cc352070c35fa37873e10c1fc11252f5336d82a87ac177eca125449")
-      public
-          fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty.Builder.() -> Unit)
-
-      /**
-       * @param maximumPerMinute The maximum number of things that will be notified of a pending
-       * job, per minute.
-       * This parameter allows you to create a staged rollout.
-       */
-      public fun maximumPerMinute(maximumPerMinute: Number)
+      public fun criteriaList(vararg criteriaList: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty.builder()
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty.builder()
 
       /**
-       * @param exponentialRolloutRate The rate of increase for a job rollout.
-       * This parameter allows you to define an exponential rate for a job rollout.
+       * @param criteriaList The list of criteria that determine when and how to abort the job. 
        */
-      override fun exponentialRolloutRate(exponentialRolloutRate: IResolvable) {
-        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(IResolvable::unwrap))
+      override fun criteriaList(criteriaList: IResolvable) {
+        cdkBuilder.criteriaList(criteriaList.let(IResolvable::unwrap))
       }
 
       /**
-       * @param exponentialRolloutRate The rate of increase for a job rollout.
-       * This parameter allows you to define an exponential rate for a job rollout.
+       * @param criteriaList The list of criteria that determine when and how to abort the job. 
        */
-      override fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty) {
-        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(ExponentialRolloutRateProperty::unwrap))
+      override fun criteriaList(criteriaList: List<Any>) {
+        cdkBuilder.criteriaList(criteriaList)
       }
 
       /**
-       * @param exponentialRolloutRate The rate of increase for a job rollout.
-       * This parameter allows you to define an exponential rate for a job rollout.
+       * @param criteriaList The list of criteria that determine when and how to abort the job. 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fee8f5419cc352070c35fa37873e10c1fc11252f5336d82a87ac177eca125449")
-      override
-          fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty.Builder.() -> Unit):
-          Unit = exponentialRolloutRate(ExponentialRolloutRateProperty(exponentialRolloutRate))
+      override fun criteriaList(vararg criteriaList: Any): Unit =
+          criteriaList(criteriaList.toList())
 
-      /**
-       * @param maximumPerMinute The maximum number of things that will be notified of a pending
-       * job, per minute.
-       * This parameter allows you to create a staged rollout.
-       */
-      override fun maximumPerMinute(maximumPerMinute: Number) {
-        cdkBuilder.maximumPerMinute(maximumPerMinute)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty =
+      public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty,
-    ) : CdkObject(cdkObject), JobExecutionsRolloutConfigProperty {
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty,
+    ) : CdkObject(cdkObject), AbortConfigProperty {
       /**
-       * The rate of increase for a job rollout.
+       * The list of criteria that determine when and how to abort the job.
        *
-       * This parameter allows you to define an exponential rate for a job rollout.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig-exponentialrolloutrate)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-abortconfig.html#cfn-iot-jobtemplate-abortconfig-criterialist)
        */
-      override fun exponentialRolloutRate(): Any? = unwrap(this).getExponentialRolloutRate()
-
-      /**
-       * The maximum number of things that will be notified of a pending job, per minute.
-       *
-       * This parameter allows you to create a staged rollout.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig-maximumperminute)
-       */
-      override fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
+      override fun criteriaList(): Any = unwrap(this).getCriteriaList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          JobExecutionsRolloutConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AbortConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty):
-          JobExecutionsRolloutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JobExecutionsRolloutConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty):
+          AbortConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AbortConfigProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: JobExecutionsRolloutConfigProperty):
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty
+      internal fun unwrap(wrapped: AbortConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty
     }
   }
 
@@ -1113,724 +1056,6 @@ public open class CfnJobTemplate internal constructor(
           software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty
-    }
-  }
-
-  /**
-   * Specifies the amount of time each device has to finish its execution of the job.
-   *
-   * A timer is started when the job execution status is set to `IN_PROGRESS` . If the job execution
-   * status is not set to another terminal state before the timer expires, it will be automatically set
-   * to `TIMED_OUT` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * TimeoutConfigProperty timeoutConfigProperty = TimeoutConfigProperty.builder()
-   * .inProgressTimeoutInMinutes(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-timeoutconfig.html)
-   */
-  public interface TimeoutConfigProperty {
-    /**
-     * Specifies the amount of time, in minutes, this device has to finish execution of this job.
-     *
-     * The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The in
-     * progress timer can't be updated and will apply to all job executions for the job. Whenever a job
-     * execution remains in the IN_PROGRESS status for longer than this interval, the job execution
-     * will fail and switch to the terminal `TIMED_OUT` status.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-timeoutconfig.html#cfn-iot-jobtemplate-timeoutconfig-inprogresstimeoutinminutes)
-     */
-    public fun inProgressTimeoutInMinutes(): Number
-
-    /**
-     * A builder for [TimeoutConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param inProgressTimeoutInMinutes Specifies the amount of time, in minutes, this device has
-       * to finish execution of this job. 
-       * The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The
-       * in progress timer can't be updated and will apply to all job executions for the job. Whenever
-       * a job execution remains in the IN_PROGRESS status for longer than this interval, the job
-       * execution will fail and switch to the terminal `TIMED_OUT` status.
-       */
-      public fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty.builder()
-
-      /**
-       * @param inProgressTimeoutInMinutes Specifies the amount of time, in minutes, this device has
-       * to finish execution of this job. 
-       * The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The
-       * in progress timer can't be updated and will apply to all job executions for the job. Whenever
-       * a job execution remains in the IN_PROGRESS status for longer than this interval, the job
-       * execution will fail and switch to the terminal `TIMED_OUT` status.
-       */
-      override fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
-        cdkBuilder.inProgressTimeoutInMinutes(inProgressTimeoutInMinutes)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty,
-    ) : CdkObject(cdkObject), TimeoutConfigProperty {
-      /**
-       * Specifies the amount of time, in minutes, this device has to finish execution of this job.
-       *
-       * The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The
-       * in progress timer can't be updated and will apply to all job executions for the job. Whenever
-       * a job execution remains in the IN_PROGRESS status for longer than this interval, the job
-       * execution will fail and switch to the terminal `TIMED_OUT` status.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-timeoutconfig.html#cfn-iot-jobtemplate-timeoutconfig-inprogresstimeoutinminutes)
-       */
-      override fun inProgressTimeoutInMinutes(): Number =
-          unwrap(this).getInProgressTimeoutInMinutes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimeoutConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty):
-          TimeoutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeoutConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TimeoutConfigProperty):
-          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty
-    }
-  }
-
-  /**
-   * Configuration for pre-signed S3 URLs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * PresignedUrlConfigProperty presignedUrlConfigProperty = PresignedUrlConfigProperty.builder()
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .expiresInSec(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html)
-   */
-  public interface PresignedUrlConfigProperty {
-    /**
-     * How long (in seconds) pre-signed URLs are valid.
-     *
-     * Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are generated
-     * when Jobs receives an MQTT request for the job document.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html#cfn-iot-jobtemplate-presignedurlconfig-expiresinsec)
-     */
-    public fun expiresInSec(): Number? = unwrap(this).getExpiresInSec()
-
-    /**
-     * The ARN of an IAM role that grants grants permission to download files from the S3 bucket
-     * where the job data/updates are stored.
-     *
-     * The role must also grant permission for IoT to download the files.
-     *
-     *
-     * For information about addressing the confused deputy problem, see [cross-service confused
-     * deputy
-     * prevention](https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html)
-     * in the *AWS IoT Core developer guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html#cfn-iot-jobtemplate-presignedurlconfig-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [PresignedUrlConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param expiresInSec How long (in seconds) pre-signed URLs are valid.
-       * Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are
-       * generated when Jobs receives an MQTT request for the job document.
-       */
-      public fun expiresInSec(expiresInSec: Number)
-
-      /**
-       * @param roleArn The ARN of an IAM role that grants grants permission to download files from
-       * the S3 bucket where the job data/updates are stored. 
-       * The role must also grant permission for IoT to download the files.
-       *
-       *
-       * For information about addressing the confused deputy problem, see [cross-service confused
-       * deputy
-       * prevention](https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html)
-       * in the *AWS IoT Core developer guide* .
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty.builder()
-
-      /**
-       * @param expiresInSec How long (in seconds) pre-signed URLs are valid.
-       * Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are
-       * generated when Jobs receives an MQTT request for the job document.
-       */
-      override fun expiresInSec(expiresInSec: Number) {
-        cdkBuilder.expiresInSec(expiresInSec)
-      }
-
-      /**
-       * @param roleArn The ARN of an IAM role that grants grants permission to download files from
-       * the S3 bucket where the job data/updates are stored. 
-       * The role must also grant permission for IoT to download the files.
-       *
-       *
-       * For information about addressing the confused deputy problem, see [cross-service confused
-       * deputy
-       * prevention](https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html)
-       * in the *AWS IoT Core developer guide* .
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty,
-    ) : CdkObject(cdkObject), PresignedUrlConfigProperty {
-      /**
-       * How long (in seconds) pre-signed URLs are valid.
-       *
-       * Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are
-       * generated when Jobs receives an MQTT request for the job document.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html#cfn-iot-jobtemplate-presignedurlconfig-expiresinsec)
-       */
-      override fun expiresInSec(): Number? = unwrap(this).getExpiresInSec()
-
-      /**
-       * The ARN of an IAM role that grants grants permission to download files from the S3 bucket
-       * where the job data/updates are stored.
-       *
-       * The role must also grant permission for IoT to download the files.
-       *
-       *
-       * For information about addressing the confused deputy problem, see [cross-service confused
-       * deputy
-       * prevention](https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html)
-       * in the *AWS IoT Core developer guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html#cfn-iot-jobtemplate-presignedurlconfig-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PresignedUrlConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty):
-          PresignedUrlConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PresignedUrlConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PresignedUrlConfigProperty):
-          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty
-    }
-  }
-
-  /**
-   * The configuration that determines how many retries are allowed for each failure type for a job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * JobExecutionsRetryConfigProperty jobExecutionsRetryConfigProperty =
-   * JobExecutionsRetryConfigProperty.builder()
-   * .retryCriteriaList(List.of(RetryCriteriaProperty.builder()
-   * .failureType("failureType")
-   * .numberOfRetries(123)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html)
-   */
-  public interface JobExecutionsRetryConfigProperty {
-    /**
-     * The list of criteria that determines how many retries are allowed for each failure type for a
-     * job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html#cfn-iot-jobtemplate-jobexecutionsretryconfig-retrycriterialist)
-     */
-    public fun retryCriteriaList(): Any? = unwrap(this).getRetryCriteriaList()
-
-    /**
-     * A builder for [JobExecutionsRetryConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
-       * for each failure type for a job.
-       */
-      public fun retryCriteriaList(retryCriteriaList: IResolvable)
-
-      /**
-       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
-       * for each failure type for a job.
-       */
-      public fun retryCriteriaList(retryCriteriaList: List<Any>)
-
-      /**
-       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
-       * for each failure type for a job.
-       */
-      public fun retryCriteriaList(vararg retryCriteriaList: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty.builder()
-
-      /**
-       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
-       * for each failure type for a job.
-       */
-      override fun retryCriteriaList(retryCriteriaList: IResolvable) {
-        cdkBuilder.retryCriteriaList(retryCriteriaList.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
-       * for each failure type for a job.
-       */
-      override fun retryCriteriaList(retryCriteriaList: List<Any>) {
-        cdkBuilder.retryCriteriaList(retryCriteriaList)
-      }
-
-      /**
-       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
-       * for each failure type for a job.
-       */
-      override fun retryCriteriaList(vararg retryCriteriaList: Any): Unit =
-          retryCriteriaList(retryCriteriaList.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty,
-    ) : CdkObject(cdkObject), JobExecutionsRetryConfigProperty {
-      /**
-       * The list of criteria that determines how many retries are allowed for each failure type for
-       * a job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html#cfn-iot-jobtemplate-jobexecutionsretryconfig-retrycriterialist)
-       */
-      override fun retryCriteriaList(): Any? = unwrap(this).getRetryCriteriaList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JobExecutionsRetryConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty):
-          JobExecutionsRetryConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JobExecutionsRetryConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JobExecutionsRetryConfigProperty):
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty
-    }
-  }
-
-  /**
-   * Allows you to define a criteria to initiate the increase in rate of rollout for a job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * RateIncreaseCriteriaProperty rateIncreaseCriteriaProperty =
-   * RateIncreaseCriteriaProperty.builder()
-   * .numberOfNotifiedThings(123)
-   * .numberOfSucceededThings(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html)
-   */
-  public interface RateIncreaseCriteriaProperty {
-    /**
-     * The threshold for number of notified things that will initiate the increase in rate of
-     * rollout.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html#cfn-iot-jobtemplate-rateincreasecriteria-numberofnotifiedthings)
-     */
-    public fun numberOfNotifiedThings(): Number? = unwrap(this).getNumberOfNotifiedThings()
-
-    /**
-     * The threshold for number of succeeded things that will initiate the increase in rate of
-     * rollout.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html#cfn-iot-jobtemplate-rateincreasecriteria-numberofsucceededthings)
-     */
-    public fun numberOfSucceededThings(): Number? = unwrap(this).getNumberOfSucceededThings()
-
-    /**
-     * A builder for [RateIncreaseCriteriaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param numberOfNotifiedThings The threshold for number of notified things that will
-       * initiate the increase in rate of rollout.
-       */
-      public fun numberOfNotifiedThings(numberOfNotifiedThings: Number)
-
-      /**
-       * @param numberOfSucceededThings The threshold for number of succeeded things that will
-       * initiate the increase in rate of rollout.
-       */
-      public fun numberOfSucceededThings(numberOfSucceededThings: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty.builder()
-
-      /**
-       * @param numberOfNotifiedThings The threshold for number of notified things that will
-       * initiate the increase in rate of rollout.
-       */
-      override fun numberOfNotifiedThings(numberOfNotifiedThings: Number) {
-        cdkBuilder.numberOfNotifiedThings(numberOfNotifiedThings)
-      }
-
-      /**
-       * @param numberOfSucceededThings The threshold for number of succeeded things that will
-       * initiate the increase in rate of rollout.
-       */
-      override fun numberOfSucceededThings(numberOfSucceededThings: Number) {
-        cdkBuilder.numberOfSucceededThings(numberOfSucceededThings)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty,
-    ) : CdkObject(cdkObject), RateIncreaseCriteriaProperty {
-      /**
-       * The threshold for number of notified things that will initiate the increase in rate of
-       * rollout.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html#cfn-iot-jobtemplate-rateincreasecriteria-numberofnotifiedthings)
-       */
-      override fun numberOfNotifiedThings(): Number? = unwrap(this).getNumberOfNotifiedThings()
-
-      /**
-       * The threshold for number of succeeded things that will initiate the increase in rate of
-       * rollout.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html#cfn-iot-jobtemplate-rateincreasecriteria-numberofsucceededthings)
-       */
-      override fun numberOfSucceededThings(): Number? = unwrap(this).getNumberOfSucceededThings()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RateIncreaseCriteriaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty):
-          RateIncreaseCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RateIncreaseCriteriaProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RateIncreaseCriteriaProperty):
-          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty
-    }
-  }
-
-  /**
-   * An optional configuration within the `SchedulingConfig` to setup a recurring maintenance window
-   * with a predetermined start time and duration for the rollout of a job document to all devices in a
-   * target group for a job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * MaintenanceWindowProperty maintenanceWindowProperty = MaintenanceWindowProperty.builder()
-   * .durationInMinutes(123)
-   * .startTime("startTime")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html)
-   */
-  public interface MaintenanceWindowProperty {
-    /**
-     * Displays the duration of the next maintenance window.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html#cfn-iot-jobtemplate-maintenancewindow-durationinminutes)
-     */
-    public fun durationInMinutes(): Number? = unwrap(this).getDurationInMinutes()
-
-    /**
-     * Displays the start time of the next maintenance window.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html#cfn-iot-jobtemplate-maintenancewindow-starttime)
-     */
-    public fun startTime(): String? = unwrap(this).getStartTime()
-
-    /**
-     * A builder for [MaintenanceWindowProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param durationInMinutes Displays the duration of the next maintenance window.
-       */
-      public fun durationInMinutes(durationInMinutes: Number)
-
-      /**
-       * @param startTime Displays the start time of the next maintenance window.
-       */
-      public fun startTime(startTime: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty.builder()
-
-      /**
-       * @param durationInMinutes Displays the duration of the next maintenance window.
-       */
-      override fun durationInMinutes(durationInMinutes: Number) {
-        cdkBuilder.durationInMinutes(durationInMinutes)
-      }
-
-      /**
-       * @param startTime Displays the start time of the next maintenance window.
-       */
-      override fun startTime(startTime: String) {
-        cdkBuilder.startTime(startTime)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowProperty {
-      /**
-       * Displays the duration of the next maintenance window.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html#cfn-iot-jobtemplate-maintenancewindow-durationinminutes)
-       */
-      override fun durationInMinutes(): Number? = unwrap(this).getDurationInMinutes()
-
-      /**
-       * Displays the start time of the next maintenance window.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html#cfn-iot-jobtemplate-maintenancewindow-starttime)
-       */
-      override fun startTime(): String? = unwrap(this).getStartTime()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MaintenanceWindowProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty):
-          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MaintenanceWindowProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MaintenanceWindowProperty):
-          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty
-    }
-  }
-
-  /**
-   * The criteria that determine when and how a job abort takes place.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * AbortConfigProperty abortConfigProperty = AbortConfigProperty.builder()
-   * .criteriaList(List.of(AbortCriteriaProperty.builder()
-   * .action("action")
-   * .failureType("failureType")
-   * .minNumberOfExecutedThings(123)
-   * .thresholdPercentage(123)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-abortconfig.html)
-   */
-  public interface AbortConfigProperty {
-    /**
-     * The list of criteria that determine when and how to abort the job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-abortconfig.html#cfn-iot-jobtemplate-abortconfig-criterialist)
-     */
-    public fun criteriaList(): Any
-
-    /**
-     * A builder for [AbortConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param criteriaList The list of criteria that determine when and how to abort the job. 
-       */
-      public fun criteriaList(criteriaList: IResolvable)
-
-      /**
-       * @param criteriaList The list of criteria that determine when and how to abort the job. 
-       */
-      public fun criteriaList(criteriaList: List<Any>)
-
-      /**
-       * @param criteriaList The list of criteria that determine when and how to abort the job. 
-       */
-      public fun criteriaList(vararg criteriaList: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty.builder()
-
-      /**
-       * @param criteriaList The list of criteria that determine when and how to abort the job. 
-       */
-      override fun criteriaList(criteriaList: IResolvable) {
-        cdkBuilder.criteriaList(criteriaList.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param criteriaList The list of criteria that determine when and how to abort the job. 
-       */
-      override fun criteriaList(criteriaList: List<Any>) {
-        cdkBuilder.criteriaList(criteriaList)
-      }
-
-      /**
-       * @param criteriaList The list of criteria that determine when and how to abort the job. 
-       */
-      override fun criteriaList(vararg criteriaList: Any): Unit =
-          criteriaList(criteriaList.toList())
-
-      public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty,
-    ) : CdkObject(cdkObject), AbortConfigProperty {
-      /**
-       * The list of criteria that determine when and how to abort the job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-abortconfig.html#cfn-iot-jobtemplate-abortconfig-criterialist)
-       */
-      override fun criteriaList(): Any = unwrap(this).getCriteriaList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AbortConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty):
-          AbortConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AbortConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AbortConfigProperty):
-          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty
     }
   }
 
@@ -2027,6 +1252,675 @@ public open class CfnJobTemplate internal constructor(
   }
 
   /**
+   * The configuration that determines how many retries are allowed for each failure type for a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * JobExecutionsRetryConfigProperty jobExecutionsRetryConfigProperty =
+   * JobExecutionsRetryConfigProperty.builder()
+   * .retryCriteriaList(List.of(RetryCriteriaProperty.builder()
+   * .failureType("failureType")
+   * .numberOfRetries(123)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html)
+   */
+  public interface JobExecutionsRetryConfigProperty {
+    /**
+     * The list of criteria that determines how many retries are allowed for each failure type for a
+     * job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html#cfn-iot-jobtemplate-jobexecutionsretryconfig-retrycriterialist)
+     */
+    public fun retryCriteriaList(): Any? = unwrap(this).getRetryCriteriaList()
+
+    /**
+     * A builder for [JobExecutionsRetryConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+       * for each failure type for a job.
+       */
+      public fun retryCriteriaList(retryCriteriaList: IResolvable)
+
+      /**
+       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+       * for each failure type for a job.
+       */
+      public fun retryCriteriaList(retryCriteriaList: List<Any>)
+
+      /**
+       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+       * for each failure type for a job.
+       */
+      public fun retryCriteriaList(vararg retryCriteriaList: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty.builder()
+
+      /**
+       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+       * for each failure type for a job.
+       */
+      override fun retryCriteriaList(retryCriteriaList: IResolvable) {
+        cdkBuilder.retryCriteriaList(retryCriteriaList.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+       * for each failure type for a job.
+       */
+      override fun retryCriteriaList(retryCriteriaList: List<Any>) {
+        cdkBuilder.retryCriteriaList(retryCriteriaList)
+      }
+
+      /**
+       * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+       * for each failure type for a job.
+       */
+      override fun retryCriteriaList(vararg retryCriteriaList: Any): Unit =
+          retryCriteriaList(retryCriteriaList.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty,
+    ) : CdkObject(cdkObject), JobExecutionsRetryConfigProperty {
+      /**
+       * The list of criteria that determines how many retries are allowed for each failure type for
+       * a job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsretryconfig.html#cfn-iot-jobtemplate-jobexecutionsretryconfig-retrycriterialist)
+       */
+      override fun retryCriteriaList(): Any? = unwrap(this).getRetryCriteriaList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JobExecutionsRetryConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty):
+          JobExecutionsRetryConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JobExecutionsRetryConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JobExecutionsRetryConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty
+    }
+  }
+
+  /**
+   * Allows you to create a staged rollout of a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * JobExecutionsRolloutConfigProperty jobExecutionsRolloutConfigProperty =
+   * JobExecutionsRolloutConfigProperty.builder()
+   * .exponentialRolloutRate(ExponentialRolloutRateProperty.builder()
+   * .baseRatePerMinute(123)
+   * .incrementFactor(123)
+   * .rateIncreaseCriteria(RateIncreaseCriteriaProperty.builder()
+   * .numberOfNotifiedThings(123)
+   * .numberOfSucceededThings(123)
+   * .build())
+   * .build())
+   * .maximumPerMinute(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html)
+   */
+  public interface JobExecutionsRolloutConfigProperty {
+    /**
+     * The rate of increase for a job rollout.
+     *
+     * This parameter allows you to define an exponential rate for a job rollout.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig-exponentialrolloutrate)
+     */
+    public fun exponentialRolloutRate(): Any? = unwrap(this).getExponentialRolloutRate()
+
+    /**
+     * The maximum number of things that will be notified of a pending job, per minute.
+     *
+     * This parameter allows you to create a staged rollout.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig-maximumperminute)
+     */
+    public fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
+
+    /**
+     * A builder for [JobExecutionsRolloutConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exponentialRolloutRate The rate of increase for a job rollout.
+       * This parameter allows you to define an exponential rate for a job rollout.
+       */
+      public fun exponentialRolloutRate(exponentialRolloutRate: IResolvable)
+
+      /**
+       * @param exponentialRolloutRate The rate of increase for a job rollout.
+       * This parameter allows you to define an exponential rate for a job rollout.
+       */
+      public fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty)
+
+      /**
+       * @param exponentialRolloutRate The rate of increase for a job rollout.
+       * This parameter allows you to define an exponential rate for a job rollout.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fee8f5419cc352070c35fa37873e10c1fc11252f5336d82a87ac177eca125449")
+      public
+          fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty.Builder.() -> Unit)
+
+      /**
+       * @param maximumPerMinute The maximum number of things that will be notified of a pending
+       * job, per minute.
+       * This parameter allows you to create a staged rollout.
+       */
+      public fun maximumPerMinute(maximumPerMinute: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty.builder()
+
+      /**
+       * @param exponentialRolloutRate The rate of increase for a job rollout.
+       * This parameter allows you to define an exponential rate for a job rollout.
+       */
+      override fun exponentialRolloutRate(exponentialRolloutRate: IResolvable) {
+        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param exponentialRolloutRate The rate of increase for a job rollout.
+       * This parameter allows you to define an exponential rate for a job rollout.
+       */
+      override fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty) {
+        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(ExponentialRolloutRateProperty::unwrap))
+      }
+
+      /**
+       * @param exponentialRolloutRate The rate of increase for a job rollout.
+       * This parameter allows you to define an exponential rate for a job rollout.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fee8f5419cc352070c35fa37873e10c1fc11252f5336d82a87ac177eca125449")
+      override
+          fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty.Builder.() -> Unit):
+          Unit = exponentialRolloutRate(ExponentialRolloutRateProperty(exponentialRolloutRate))
+
+      /**
+       * @param maximumPerMinute The maximum number of things that will be notified of a pending
+       * job, per minute.
+       * This parameter allows you to create a staged rollout.
+       */
+      override fun maximumPerMinute(maximumPerMinute: Number) {
+        cdkBuilder.maximumPerMinute(maximumPerMinute)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty,
+    ) : CdkObject(cdkObject), JobExecutionsRolloutConfigProperty {
+      /**
+       * The rate of increase for a job rollout.
+       *
+       * This parameter allows you to define an exponential rate for a job rollout.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig-exponentialrolloutrate)
+       */
+      override fun exponentialRolloutRate(): Any? = unwrap(this).getExponentialRolloutRate()
+
+      /**
+       * The maximum number of things that will be notified of a pending job, per minute.
+       *
+       * This parameter allows you to create a staged rollout.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig-maximumperminute)
+       */
+      override fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          JobExecutionsRolloutConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty):
+          JobExecutionsRolloutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JobExecutionsRolloutConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JobExecutionsRolloutConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty
+    }
+  }
+
+  /**
+   * An optional configuration within the `SchedulingConfig` to setup a recurring maintenance window
+   * with a predetermined start time and duration for the rollout of a job document to all devices in a
+   * target group for a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * MaintenanceWindowProperty maintenanceWindowProperty = MaintenanceWindowProperty.builder()
+   * .durationInMinutes(123)
+   * .startTime("startTime")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html)
+   */
+  public interface MaintenanceWindowProperty {
+    /**
+     * Displays the duration of the next maintenance window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html#cfn-iot-jobtemplate-maintenancewindow-durationinminutes)
+     */
+    public fun durationInMinutes(): Number? = unwrap(this).getDurationInMinutes()
+
+    /**
+     * Displays the start time of the next maintenance window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html#cfn-iot-jobtemplate-maintenancewindow-starttime)
+     */
+    public fun startTime(): String? = unwrap(this).getStartTime()
+
+    /**
+     * A builder for [MaintenanceWindowProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param durationInMinutes Displays the duration of the next maintenance window.
+       */
+      public fun durationInMinutes(durationInMinutes: Number)
+
+      /**
+       * @param startTime Displays the start time of the next maintenance window.
+       */
+      public fun startTime(startTime: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty.builder()
+
+      /**
+       * @param durationInMinutes Displays the duration of the next maintenance window.
+       */
+      override fun durationInMinutes(durationInMinutes: Number) {
+        cdkBuilder.durationInMinutes(durationInMinutes)
+      }
+
+      /**
+       * @param startTime Displays the start time of the next maintenance window.
+       */
+      override fun startTime(startTime: String) {
+        cdkBuilder.startTime(startTime)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty,
+    ) : CdkObject(cdkObject), MaintenanceWindowProperty {
+      /**
+       * Displays the duration of the next maintenance window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html#cfn-iot-jobtemplate-maintenancewindow-durationinminutes)
+       */
+      override fun durationInMinutes(): Number? = unwrap(this).getDurationInMinutes()
+
+      /**
+       * Displays the start time of the next maintenance window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-maintenancewindow.html#cfn-iot-jobtemplate-maintenancewindow-starttime)
+       */
+      override fun startTime(): String? = unwrap(this).getStartTime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MaintenanceWindowProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty):
+          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceWindowProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MaintenanceWindowProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty
+    }
+  }
+
+  /**
+   * Configuration for pre-signed S3 URLs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * PresignedUrlConfigProperty presignedUrlConfigProperty = PresignedUrlConfigProperty.builder()
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .expiresInSec(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html)
+   */
+  public interface PresignedUrlConfigProperty {
+    /**
+     * How long (in seconds) pre-signed URLs are valid.
+     *
+     * Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are generated
+     * when Jobs receives an MQTT request for the job document.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html#cfn-iot-jobtemplate-presignedurlconfig-expiresinsec)
+     */
+    public fun expiresInSec(): Number? = unwrap(this).getExpiresInSec()
+
+    /**
+     * The ARN of an IAM role that grants grants permission to download files from the S3 bucket
+     * where the job data/updates are stored.
+     *
+     * The role must also grant permission for IoT to download the files.
+     *
+     *
+     * For information about addressing the confused deputy problem, see [cross-service confused
+     * deputy
+     * prevention](https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html)
+     * in the *AWS IoT Core developer guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html#cfn-iot-jobtemplate-presignedurlconfig-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [PresignedUrlConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expiresInSec How long (in seconds) pre-signed URLs are valid.
+       * Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are
+       * generated when Jobs receives an MQTT request for the job document.
+       */
+      public fun expiresInSec(expiresInSec: Number)
+
+      /**
+       * @param roleArn The ARN of an IAM role that grants grants permission to download files from
+       * the S3 bucket where the job data/updates are stored. 
+       * The role must also grant permission for IoT to download the files.
+       *
+       *
+       * For information about addressing the confused deputy problem, see [cross-service confused
+       * deputy
+       * prevention](https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html)
+       * in the *AWS IoT Core developer guide* .
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty.builder()
+
+      /**
+       * @param expiresInSec How long (in seconds) pre-signed URLs are valid.
+       * Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are
+       * generated when Jobs receives an MQTT request for the job document.
+       */
+      override fun expiresInSec(expiresInSec: Number) {
+        cdkBuilder.expiresInSec(expiresInSec)
+      }
+
+      /**
+       * @param roleArn The ARN of an IAM role that grants grants permission to download files from
+       * the S3 bucket where the job data/updates are stored. 
+       * The role must also grant permission for IoT to download the files.
+       *
+       *
+       * For information about addressing the confused deputy problem, see [cross-service confused
+       * deputy
+       * prevention](https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html)
+       * in the *AWS IoT Core developer guide* .
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty,
+    ) : CdkObject(cdkObject), PresignedUrlConfigProperty {
+      /**
+       * How long (in seconds) pre-signed URLs are valid.
+       *
+       * Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are
+       * generated when Jobs receives an MQTT request for the job document.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html#cfn-iot-jobtemplate-presignedurlconfig-expiresinsec)
+       */
+      override fun expiresInSec(): Number? = unwrap(this).getExpiresInSec()
+
+      /**
+       * The ARN of an IAM role that grants grants permission to download files from the S3 bucket
+       * where the job data/updates are stored.
+       *
+       * The role must also grant permission for IoT to download the files.
+       *
+       *
+       * For information about addressing the confused deputy problem, see [cross-service confused
+       * deputy
+       * prevention](https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html)
+       * in the *AWS IoT Core developer guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-presignedurlconfig.html#cfn-iot-jobtemplate-presignedurlconfig-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PresignedUrlConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty):
+          PresignedUrlConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PresignedUrlConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PresignedUrlConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty
+    }
+  }
+
+  /**
+   * Allows you to define a criteria to initiate the increase in rate of rollout for a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * RateIncreaseCriteriaProperty rateIncreaseCriteriaProperty =
+   * RateIncreaseCriteriaProperty.builder()
+   * .numberOfNotifiedThings(123)
+   * .numberOfSucceededThings(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html)
+   */
+  public interface RateIncreaseCriteriaProperty {
+    /**
+     * The threshold for number of notified things that will initiate the increase in rate of
+     * rollout.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html#cfn-iot-jobtemplate-rateincreasecriteria-numberofnotifiedthings)
+     */
+    public fun numberOfNotifiedThings(): Number? = unwrap(this).getNumberOfNotifiedThings()
+
+    /**
+     * The threshold for number of succeeded things that will initiate the increase in rate of
+     * rollout.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html#cfn-iot-jobtemplate-rateincreasecriteria-numberofsucceededthings)
+     */
+    public fun numberOfSucceededThings(): Number? = unwrap(this).getNumberOfSucceededThings()
+
+    /**
+     * A builder for [RateIncreaseCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param numberOfNotifiedThings The threshold for number of notified things that will
+       * initiate the increase in rate of rollout.
+       */
+      public fun numberOfNotifiedThings(numberOfNotifiedThings: Number)
+
+      /**
+       * @param numberOfSucceededThings The threshold for number of succeeded things that will
+       * initiate the increase in rate of rollout.
+       */
+      public fun numberOfSucceededThings(numberOfSucceededThings: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty.builder()
+
+      /**
+       * @param numberOfNotifiedThings The threshold for number of notified things that will
+       * initiate the increase in rate of rollout.
+       */
+      override fun numberOfNotifiedThings(numberOfNotifiedThings: Number) {
+        cdkBuilder.numberOfNotifiedThings(numberOfNotifiedThings)
+      }
+
+      /**
+       * @param numberOfSucceededThings The threshold for number of succeeded things that will
+       * initiate the increase in rate of rollout.
+       */
+      override fun numberOfSucceededThings(numberOfSucceededThings: Number) {
+        cdkBuilder.numberOfSucceededThings(numberOfSucceededThings)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty,
+    ) : CdkObject(cdkObject), RateIncreaseCriteriaProperty {
+      /**
+       * The threshold for number of notified things that will initiate the increase in rate of
+       * rollout.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html#cfn-iot-jobtemplate-rateincreasecriteria-numberofnotifiedthings)
+       */
+      override fun numberOfNotifiedThings(): Number? = unwrap(this).getNumberOfNotifiedThings()
+
+      /**
+       * The threshold for number of succeeded things that will initiate the increase in rate of
+       * rollout.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-rateincreasecriteria.html#cfn-iot-jobtemplate-rateincreasecriteria-numberofsucceededthings)
+       */
+      override fun numberOfSucceededThings(): Number? = unwrap(this).getNumberOfSucceededThings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RateIncreaseCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty):
+          RateIncreaseCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateIncreaseCriteriaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RateIncreaseCriteriaProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty
+    }
+  }
+
+  /**
    * The criteria that determines how many retries are allowed for each failure type for a job.
    *
    * Example:
@@ -2131,6 +2025,112 @@ public open class CfnJobTemplate internal constructor(
           software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty
+    }
+  }
+
+  /**
+   * Specifies the amount of time each device has to finish its execution of the job.
+   *
+   * A timer is started when the job execution status is set to `IN_PROGRESS` . If the job execution
+   * status is not set to another terminal state before the timer expires, it will be automatically set
+   * to `TIMED_OUT` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * TimeoutConfigProperty timeoutConfigProperty = TimeoutConfigProperty.builder()
+   * .inProgressTimeoutInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-timeoutconfig.html)
+   */
+  public interface TimeoutConfigProperty {
+    /**
+     * Specifies the amount of time, in minutes, this device has to finish execution of this job.
+     *
+     * The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The in
+     * progress timer can't be updated and will apply to all job executions for the job. Whenever a job
+     * execution remains in the IN_PROGRESS status for longer than this interval, the job execution
+     * will fail and switch to the terminal `TIMED_OUT` status.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-timeoutconfig.html#cfn-iot-jobtemplate-timeoutconfig-inprogresstimeoutinminutes)
+     */
+    public fun inProgressTimeoutInMinutes(): Number
+
+    /**
+     * A builder for [TimeoutConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inProgressTimeoutInMinutes Specifies the amount of time, in minutes, this device has
+       * to finish execution of this job. 
+       * The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The
+       * in progress timer can't be updated and will apply to all job executions for the job. Whenever
+       * a job execution remains in the IN_PROGRESS status for longer than this interval, the job
+       * execution will fail and switch to the terminal `TIMED_OUT` status.
+       */
+      public fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty.builder()
+
+      /**
+       * @param inProgressTimeoutInMinutes Specifies the amount of time, in minutes, this device has
+       * to finish execution of this job. 
+       * The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The
+       * in progress timer can't be updated and will apply to all job executions for the job. Whenever
+       * a job execution remains in the IN_PROGRESS status for longer than this interval, the job
+       * execution will fail and switch to the terminal `TIMED_OUT` status.
+       */
+      override fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
+        cdkBuilder.inProgressTimeoutInMinutes(inProgressTimeoutInMinutes)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty,
+    ) : CdkObject(cdkObject), TimeoutConfigProperty {
+      /**
+       * Specifies the amount of time, in minutes, this device has to finish execution of this job.
+       *
+       * The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The
+       * in progress timer can't be updated and will apply to all job executions for the job. Whenever
+       * a job execution remains in the IN_PROGRESS status for longer than this interval, the job
+       * execution will fail and switch to the terminal `TIMED_OUT` status.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-timeoutconfig.html#cfn-iot-jobtemplate-timeoutconfig-inprogresstimeoutinminutes)
+       */
+      override fun inProgressTimeoutInMinutes(): Number =
+          unwrap(this).getInProgressTimeoutInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimeoutConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty):
+          TimeoutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeoutConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimeoutConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty
     }
   }
 }

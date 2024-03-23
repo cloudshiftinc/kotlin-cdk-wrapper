@@ -1013,297 +1013,6 @@ public open class CfnApp internal constructor(
   }
 
   /**
-   * Environment variables are key-value pairs that are available at build time.
-   *
-   * Set environment variables for all branches in your app.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplify.*;
-   * EnvironmentVariableProperty environmentVariableProperty = EnvironmentVariableProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html)
-   */
-  public interface EnvironmentVariableProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-name)
-     */
-    public fun name(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [EnvironmentVariableProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name the value to be set. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value the value to be set. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty.Builder =
-          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty.builder()
-
-      /**
-       * @param name the value to be set. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value the value to be set. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), EnvironmentVariableProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentVariableProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty):
-          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EnvironmentVariableProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnvironmentVariableProperty):
-          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty
-    }
-  }
-
-  /**
-   * The CustomRule property type allows you to specify redirects, rewrites, and reverse proxies.
-   *
-   * Redirects enable a web app to reroute navigation from one URL to another.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplify.*;
-   * CustomRuleProperty customRuleProperty = CustomRuleProperty.builder()
-   * .source("source")
-   * .target("target")
-   * // the properties below are optional
-   * .condition("condition")
-   * .status("status")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html)
-   */
-  public interface CustomRuleProperty {
-    /**
-     * The condition for a URL rewrite or redirect rule, such as a country code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-condition)
-     */
-    public fun condition(): String? = unwrap(this).getCondition()
-
-    /**
-     * The source pattern for a URL rewrite or redirect rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-source)
-     */
-    public fun source(): String
-
-    /**
-     * The status code for a URL rewrite or redirect rule.
-     *
-     * * **200** - Represents a 200 rewrite rule.
-     * * **301** - Represents a 301 (moved pemanently) redirect rule. This and all future requests
-     * should be directed to the target URL.
-     * * **302** - Represents a 302 temporary redirect rule.
-     * * **404** - Represents a 404 redirect rule.
-     * * **404-200** - Represents a 404 rewrite rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-status)
-     */
-    public fun status(): String? = unwrap(this).getStatus()
-
-    /**
-     * The target pattern for a URL rewrite or redirect rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-target)
-     */
-    public fun target(): String
-
-    /**
-     * A builder for [CustomRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param condition The condition for a URL rewrite or redirect rule, such as a country code.
-       */
-      public fun condition(condition: String)
-
-      /**
-       * @param source The source pattern for a URL rewrite or redirect rule. 
-       */
-      public fun source(source: String)
-
-      /**
-       * @param status The status code for a URL rewrite or redirect rule.
-       * * **200** - Represents a 200 rewrite rule.
-       * * **301** - Represents a 301 (moved pemanently) redirect rule. This and all future requests
-       * should be directed to the target URL.
-       * * **302** - Represents a 302 temporary redirect rule.
-       * * **404** - Represents a 404 redirect rule.
-       * * **404-200** - Represents a 404 rewrite rule.
-       */
-      public fun status(status: String)
-
-      /**
-       * @param target The target pattern for a URL rewrite or redirect rule. 
-       */
-      public fun target(target: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty.Builder =
-          software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty.builder()
-
-      /**
-       * @param condition The condition for a URL rewrite or redirect rule, such as a country code.
-       */
-      override fun condition(condition: String) {
-        cdkBuilder.condition(condition)
-      }
-
-      /**
-       * @param source The source pattern for a URL rewrite or redirect rule. 
-       */
-      override fun source(source: String) {
-        cdkBuilder.source(source)
-      }
-
-      /**
-       * @param status The status code for a URL rewrite or redirect rule.
-       * * **200** - Represents a 200 rewrite rule.
-       * * **301** - Represents a 301 (moved pemanently) redirect rule. This and all future requests
-       * should be directed to the target URL.
-       * * **302** - Represents a 302 temporary redirect rule.
-       * * **404** - Represents a 404 redirect rule.
-       * * **404-200** - Represents a 404 rewrite rule.
-       */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
-      }
-
-      /**
-       * @param target The target pattern for a URL rewrite or redirect rule. 
-       */
-      override fun target(target: String) {
-        cdkBuilder.target(target)
-      }
-
-      public fun build(): software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty,
-    ) : CdkObject(cdkObject), CustomRuleProperty {
-      /**
-       * The condition for a URL rewrite or redirect rule, such as a country code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-condition)
-       */
-      override fun condition(): String? = unwrap(this).getCondition()
-
-      /**
-       * The source pattern for a URL rewrite or redirect rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-source)
-       */
-      override fun source(): String = unwrap(this).getSource()
-
-      /**
-       * The status code for a URL rewrite or redirect rule.
-       *
-       * * **200** - Represents a 200 rewrite rule.
-       * * **301** - Represents a 301 (moved pemanently) redirect rule. This and all future requests
-       * should be directed to the target URL.
-       * * **302** - Represents a 302 temporary redirect rule.
-       * * **404** - Represents a 404 redirect rule.
-       * * **404-200** - Represents a 404 rewrite rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-status)
-       */
-      override fun status(): String? = unwrap(this).getStatus()
-
-      /**
-       * The target pattern for a URL rewrite or redirect rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-target)
-       */
-      override fun target(): String = unwrap(this).getTarget()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty):
-          CustomRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomRuleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomRuleProperty):
-          software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty
-    }
-  }
-
-  /**
    * Use the AutoBranchCreationConfig property type to automatically create branches that match a
    * certain pattern.
    *
@@ -2082,6 +1791,297 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty
+    }
+  }
+
+  /**
+   * The CustomRule property type allows you to specify redirects, rewrites, and reverse proxies.
+   *
+   * Redirects enable a web app to reroute navigation from one URL to another.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplify.*;
+   * CustomRuleProperty customRuleProperty = CustomRuleProperty.builder()
+   * .source("source")
+   * .target("target")
+   * // the properties below are optional
+   * .condition("condition")
+   * .status("status")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html)
+   */
+  public interface CustomRuleProperty {
+    /**
+     * The condition for a URL rewrite or redirect rule, such as a country code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-condition)
+     */
+    public fun condition(): String? = unwrap(this).getCondition()
+
+    /**
+     * The source pattern for a URL rewrite or redirect rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-source)
+     */
+    public fun source(): String
+
+    /**
+     * The status code for a URL rewrite or redirect rule.
+     *
+     * * **200** - Represents a 200 rewrite rule.
+     * * **301** - Represents a 301 (moved pemanently) redirect rule. This and all future requests
+     * should be directed to the target URL.
+     * * **302** - Represents a 302 temporary redirect rule.
+     * * **404** - Represents a 404 redirect rule.
+     * * **404-200** - Represents a 404 rewrite rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-status)
+     */
+    public fun status(): String? = unwrap(this).getStatus()
+
+    /**
+     * The target pattern for a URL rewrite or redirect rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-target)
+     */
+    public fun target(): String
+
+    /**
+     * A builder for [CustomRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param condition The condition for a URL rewrite or redirect rule, such as a country code.
+       */
+      public fun condition(condition: String)
+
+      /**
+       * @param source The source pattern for a URL rewrite or redirect rule. 
+       */
+      public fun source(source: String)
+
+      /**
+       * @param status The status code for a URL rewrite or redirect rule.
+       * * **200** - Represents a 200 rewrite rule.
+       * * **301** - Represents a 301 (moved pemanently) redirect rule. This and all future requests
+       * should be directed to the target URL.
+       * * **302** - Represents a 302 temporary redirect rule.
+       * * **404** - Represents a 404 redirect rule.
+       * * **404-200** - Represents a 404 rewrite rule.
+       */
+      public fun status(status: String)
+
+      /**
+       * @param target The target pattern for a URL rewrite or redirect rule. 
+       */
+      public fun target(target: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty.Builder =
+          software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty.builder()
+
+      /**
+       * @param condition The condition for a URL rewrite or redirect rule, such as a country code.
+       */
+      override fun condition(condition: String) {
+        cdkBuilder.condition(condition)
+      }
+
+      /**
+       * @param source The source pattern for a URL rewrite or redirect rule. 
+       */
+      override fun source(source: String) {
+        cdkBuilder.source(source)
+      }
+
+      /**
+       * @param status The status code for a URL rewrite or redirect rule.
+       * * **200** - Represents a 200 rewrite rule.
+       * * **301** - Represents a 301 (moved pemanently) redirect rule. This and all future requests
+       * should be directed to the target URL.
+       * * **302** - Represents a 302 temporary redirect rule.
+       * * **404** - Represents a 404 redirect rule.
+       * * **404-200** - Represents a 404 rewrite rule.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      /**
+       * @param target The target pattern for a URL rewrite or redirect rule. 
+       */
+      override fun target(target: String) {
+        cdkBuilder.target(target)
+      }
+
+      public fun build(): software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty,
+    ) : CdkObject(cdkObject), CustomRuleProperty {
+      /**
+       * The condition for a URL rewrite or redirect rule, such as a country code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-condition)
+       */
+      override fun condition(): String? = unwrap(this).getCondition()
+
+      /**
+       * The source pattern for a URL rewrite or redirect rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-source)
+       */
+      override fun source(): String = unwrap(this).getSource()
+
+      /**
+       * The status code for a URL rewrite or redirect rule.
+       *
+       * * **200** - Represents a 200 rewrite rule.
+       * * **301** - Represents a 301 (moved pemanently) redirect rule. This and all future requests
+       * should be directed to the target URL.
+       * * **302** - Represents a 302 temporary redirect rule.
+       * * **404** - Represents a 404 redirect rule.
+       * * **404-200** - Represents a 404 rewrite rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-status)
+       */
+      override fun status(): String? = unwrap(this).getStatus()
+
+      /**
+       * The target pattern for a URL rewrite or redirect rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-target)
+       */
+      override fun target(): String = unwrap(this).getTarget()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty):
+          CustomRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomRuleProperty):
+          software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty
+    }
+  }
+
+  /**
+   * Environment variables are key-value pairs that are available at build time.
+   *
+   * Set environment variables for all branches in your app.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplify.*;
+   * EnvironmentVariableProperty environmentVariableProperty = EnvironmentVariableProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html)
+   */
+  public interface EnvironmentVariableProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-name)
+     */
+    public fun name(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [EnvironmentVariableProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name the value to be set. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value the value to be set. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty.Builder =
+          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty.builder()
+
+      /**
+       * @param name the value to be set. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value the value to be set. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty,
+    ) : CdkObject(cdkObject), EnvironmentVariableProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentVariableProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty):
+          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentVariableProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnvironmentVariableProperty):
+          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty
     }
   }
 }

@@ -549,6 +549,589 @@ public open class CfnFlywheel internal constructor(
   }
 
   /**
+   * Data security configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.comprehend.*;
+   * DataSecurityConfigProperty dataSecurityConfigProperty = DataSecurityConfigProperty.builder()
+   * .dataLakeKmsKeyId("dataLakeKmsKeyId")
+   * .modelKmsKeyId("modelKmsKeyId")
+   * .volumeKmsKeyId("volumeKmsKeyId")
+   * .vpcConfig(VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html)
+   */
+  public interface DataSecurityConfigProperty {
+    /**
+     * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the data in the data lake.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-datalakekmskeyid)
+     */
+    public fun dataLakeKmsKeyId(): String? = unwrap(this).getDataLakeKmsKeyId()
+
+    /**
+     * ID for the AWS KMS key that Amazon Comprehend uses to encrypt trained custom models.
+     *
+     * The ModelKmsKeyId can be either of the following formats:
+     *
+     * * KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+     * * Amazon Resource Name (ARN) of a KMS Key:
+     * `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-modelkmskeyid)
+     */
+    public fun modelKmsKeyId(): String? = unwrap(this).getModelKmsKeyId()
+
+    /**
+     * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-volumekmskeyid)
+     */
+    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+    /**
+     * Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the
+     * resources you are using for the job.
+     *
+     * For more information, see [Amazon
+     * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-vpcconfig)
+     */
+    public fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
+
+    /**
+     * A builder for [DataSecurityConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataLakeKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt the
+       * data in the data lake.
+       */
+      public fun dataLakeKmsKeyId(dataLakeKmsKeyId: String)
+
+      /**
+       * @param modelKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt trained
+       * custom models.
+       * The ModelKmsKeyId can be either of the following formats:
+       *
+       * * KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+       * * Amazon Resource Name (ARN) of a KMS Key:
+       * `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
+       */
+      public fun modelKmsKeyId(modelKmsKeyId: String)
+
+      /**
+       * @param volumeKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt the
+       * volume.
+       */
+      public fun volumeKmsKeyId(volumeKmsKeyId: String)
+
+      /**
+       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
+       * (VPC) containing the resources you are using for the job.
+       * For more information, see [Amazon
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+       */
+      public fun vpcConfig(vpcConfig: IResolvable)
+
+      /**
+       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
+       * (VPC) containing the resources you are using for the job.
+       * For more information, see [Amazon
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+       */
+      public fun vpcConfig(vpcConfig: VpcConfigProperty)
+
+      /**
+       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
+       * (VPC) containing the resources you are using for the job.
+       * For more information, see [Amazon
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ad6014fdcd8de69b64beb8facb1fb63a7f13a50ee6e082c13819782318101c13")
+      public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty.builder()
+
+      /**
+       * @param dataLakeKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt the
+       * data in the data lake.
+       */
+      override fun dataLakeKmsKeyId(dataLakeKmsKeyId: String) {
+        cdkBuilder.dataLakeKmsKeyId(dataLakeKmsKeyId)
+      }
+
+      /**
+       * @param modelKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt trained
+       * custom models.
+       * The ModelKmsKeyId can be either of the following formats:
+       *
+       * * KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+       * * Amazon Resource Name (ARN) of a KMS Key:
+       * `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
+       */
+      override fun modelKmsKeyId(modelKmsKeyId: String) {
+        cdkBuilder.modelKmsKeyId(modelKmsKeyId)
+      }
+
+      /**
+       * @param volumeKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt the
+       * volume.
+       */
+      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
+        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
+      }
+
+      /**
+       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
+       * (VPC) containing the resources you are using for the job.
+       * For more information, see [Amazon
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+       */
+      override fun vpcConfig(vpcConfig: IResolvable) {
+        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
+       * (VPC) containing the resources you are using for the job.
+       * For more information, see [Amazon
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+       */
+      override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      }
+
+      /**
+       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
+       * (VPC) containing the resources you are using for the job.
+       * For more information, see [Amazon
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ad6014fdcd8de69b64beb8facb1fb63a7f13a50ee6e082c13819782318101c13")
+      override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+          vpcConfig(VpcConfigProperty(vpcConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty,
+    ) : CdkObject(cdkObject), DataSecurityConfigProperty {
+      /**
+       * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the data in the data lake.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-datalakekmskeyid)
+       */
+      override fun dataLakeKmsKeyId(): String? = unwrap(this).getDataLakeKmsKeyId()
+
+      /**
+       * ID for the AWS KMS key that Amazon Comprehend uses to encrypt trained custom models.
+       *
+       * The ModelKmsKeyId can be either of the following formats:
+       *
+       * * KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+       * * Amazon Resource Name (ARN) of a KMS Key:
+       * `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-modelkmskeyid)
+       */
+      override fun modelKmsKeyId(): String? = unwrap(this).getModelKmsKeyId()
+
+      /**
+       * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the volume.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-volumekmskeyid)
+       */
+      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+      /**
+       * Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the
+       * resources you are using for the job.
+       *
+       * For more information, see [Amazon
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-vpcconfig)
+       */
+      override fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataSecurityConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty):
+          DataSecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSecurityConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataSecurityConfigProperty):
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty
+    }
+  }
+
+  /**
+   * Configuration required for a document classification model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.comprehend.*;
+   * DocumentClassificationConfigProperty documentClassificationConfigProperty =
+   * DocumentClassificationConfigProperty.builder()
+   * .mode("mode")
+   * // the properties below are optional
+   * .labels(List.of("labels"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html)
+   */
+  public interface DocumentClassificationConfigProperty {
+    /**
+     * One or more labels to associate with the custom classifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-labels)
+     */
+    public fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
+
+    /**
+     * Classification mode indicates whether the documents are `MULTI_CLASS` or `MULTI_LABEL` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-mode)
+     */
+    public fun mode(): String
+
+    /**
+     * A builder for [DocumentClassificationConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param labels One or more labels to associate with the custom classifier.
+       */
+      public fun labels(labels: List<String>)
+
+      /**
+       * @param labels One or more labels to associate with the custom classifier.
+       */
+      public fun labels(vararg labels: String)
+
+      /**
+       * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
+       * `MULTI_LABEL` . 
+       */
+      public fun mode(mode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.builder()
+
+      /**
+       * @param labels One or more labels to associate with the custom classifier.
+       */
+      override fun labels(labels: List<String>) {
+        cdkBuilder.labels(labels)
+      }
+
+      /**
+       * @param labels One or more labels to associate with the custom classifier.
+       */
+      override fun labels(vararg labels: String): Unit = labels(labels.toList())
+
+      /**
+       * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
+       * `MULTI_LABEL` . 
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty,
+    ) : CdkObject(cdkObject), DocumentClassificationConfigProperty {
+      /**
+       * One or more labels to associate with the custom classifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-labels)
+       */
+      override fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
+
+      /**
+       * Classification mode indicates whether the documents are `MULTI_CLASS` or `MULTI_LABEL` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-mode)
+       */
+      override fun mode(): String = unwrap(this).getMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DocumentClassificationConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty):
+          DocumentClassificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentClassificationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DocumentClassificationConfigProperty):
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
+    }
+  }
+
+  /**
+   * Configuration required for an entity recognition model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.comprehend.*;
+   * EntityRecognitionConfigProperty entityRecognitionConfigProperty =
+   * EntityRecognitionConfigProperty.builder()
+   * .entityTypes(List.of(EntityTypesListItemProperty.builder()
+   * .type("type")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entityrecognitionconfig.html)
+   */
+  public interface EntityRecognitionConfigProperty {
+    /**
+     * Up to 25 entity types that the model is trained to recognize.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entityrecognitionconfig.html#cfn-comprehend-flywheel-entityrecognitionconfig-entitytypes)
+     */
+    public fun entityTypes(): Any? = unwrap(this).getEntityTypes()
+
+    /**
+     * A builder for [EntityRecognitionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+       */
+      public fun entityTypes(entityTypes: IResolvable)
+
+      /**
+       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+       */
+      public fun entityTypes(entityTypes: List<Any>)
+
+      /**
+       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+       */
+      public fun entityTypes(vararg entityTypes: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty.builder()
+
+      /**
+       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+       */
+      override fun entityTypes(entityTypes: IResolvable) {
+        cdkBuilder.entityTypes(entityTypes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+       */
+      override fun entityTypes(entityTypes: List<Any>) {
+        cdkBuilder.entityTypes(entityTypes)
+      }
+
+      /**
+       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+       */
+      override fun entityTypes(vararg entityTypes: Any): Unit = entityTypes(entityTypes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty,
+    ) : CdkObject(cdkObject), EntityRecognitionConfigProperty {
+      /**
+       * Up to 25 entity types that the model is trained to recognize.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entityrecognitionconfig.html#cfn-comprehend-flywheel-entityrecognitionconfig-entitytypes)
+       */
+      override fun entityTypes(): Any? = unwrap(this).getEntityTypes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EntityRecognitionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty):
+          EntityRecognitionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EntityRecognitionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EntityRecognitionConfigProperty):
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty
+    }
+  }
+
+  /**
+   * An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom
+   * entity recognizer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.comprehend.*;
+   * EntityTypesListItemProperty entityTypesListItemProperty = EntityTypesListItemProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entitytypeslistitem.html)
+   */
+  public interface EntityTypesListItemProperty {
+    /**
+     * An entity type within a labeled training dataset that Amazon Comprehend uses to train a
+     * custom entity recognizer.
+     *
+     * Entity types must not contain the following invalid characters: \n (line break), \n (escaped
+     * line break, \r (carriage return), \r (escaped carriage return), \t (tab), \t (escaped tab), and
+     * , (comma).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entitytypeslistitem.html#cfn-comprehend-flywheel-entitytypeslistitem-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [EntityTypesListItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type An entity type within a labeled training dataset that Amazon Comprehend uses to
+       * train a custom entity recognizer. 
+       * Entity types must not contain the following invalid characters: \n (line break), \n
+       * (escaped line break, \r (carriage return), \r (escaped carriage return), \t (tab), \t (escaped
+       * tab), and , (comma).
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty.Builder
+          =
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty.builder()
+
+      /**
+       * @param type An entity type within a labeled training dataset that Amazon Comprehend uses to
+       * train a custom entity recognizer. 
+       * Entity types must not contain the following invalid characters: \n (line break), \n
+       * (escaped line break, \r (carriage return), \r (escaped carriage return), \t (tab), \t (escaped
+       * tab), and , (comma).
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty,
+    ) : CdkObject(cdkObject), EntityTypesListItemProperty {
+      /**
+       * An entity type within a labeled training dataset that Amazon Comprehend uses to train a
+       * custom entity recognizer.
+       *
+       * Entity types must not contain the following invalid characters: \n (line break), \n
+       * (escaped line break, \r (carriage return), \r (escaped carriage return), \t (tab), \t (escaped
+       * tab), and , (comma).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entitytypeslistitem.html#cfn-comprehend-flywheel-entitytypeslistitem-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EntityTypesListItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty):
+          EntityTypesListItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EntityTypesListItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EntityTypesListItemProperty):
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty
+    }
+  }
+
+  /**
    * Configuration about the model associated with a flywheel.
    *
    * Example:
@@ -953,589 +1536,6 @@ public open class CfnFlywheel internal constructor(
           software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty
-    }
-  }
-
-  /**
-   * Data security configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * DataSecurityConfigProperty dataSecurityConfigProperty = DataSecurityConfigProperty.builder()
-   * .dataLakeKmsKeyId("dataLakeKmsKeyId")
-   * .modelKmsKeyId("modelKmsKeyId")
-   * .volumeKmsKeyId("volumeKmsKeyId")
-   * .vpcConfig(VpcConfigProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnets(List.of("subnets"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html)
-   */
-  public interface DataSecurityConfigProperty {
-    /**
-     * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the data in the data lake.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-datalakekmskeyid)
-     */
-    public fun dataLakeKmsKeyId(): String? = unwrap(this).getDataLakeKmsKeyId()
-
-    /**
-     * ID for the AWS KMS key that Amazon Comprehend uses to encrypt trained custom models.
-     *
-     * The ModelKmsKeyId can be either of the following formats:
-     *
-     * * KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
-     * * Amazon Resource Name (ARN) of a KMS Key:
-     * `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-modelkmskeyid)
-     */
-    public fun modelKmsKeyId(): String? = unwrap(this).getModelKmsKeyId()
-
-    /**
-     * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the volume.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-volumekmskeyid)
-     */
-    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
-
-    /**
-     * Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the
-     * resources you are using for the job.
-     *
-     * For more information, see [Amazon
-     * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-vpcconfig)
-     */
-    public fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
-
-    /**
-     * A builder for [DataSecurityConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataLakeKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt the
-       * data in the data lake.
-       */
-      public fun dataLakeKmsKeyId(dataLakeKmsKeyId: String)
-
-      /**
-       * @param modelKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt trained
-       * custom models.
-       * The ModelKmsKeyId can be either of the following formats:
-       *
-       * * KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
-       * * Amazon Resource Name (ARN) of a KMS Key:
-       * `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
-       */
-      public fun modelKmsKeyId(modelKmsKeyId: String)
-
-      /**
-       * @param volumeKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt the
-       * volume.
-       */
-      public fun volumeKmsKeyId(volumeKmsKeyId: String)
-
-      /**
-       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
-       * (VPC) containing the resources you are using for the job.
-       * For more information, see [Amazon
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-       */
-      public fun vpcConfig(vpcConfig: IResolvable)
-
-      /**
-       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
-       * (VPC) containing the resources you are using for the job.
-       * For more information, see [Amazon
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-       */
-      public fun vpcConfig(vpcConfig: VpcConfigProperty)
-
-      /**
-       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
-       * (VPC) containing the resources you are using for the job.
-       * For more information, see [Amazon
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ad6014fdcd8de69b64beb8facb1fb63a7f13a50ee6e082c13819782318101c13")
-      public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty.builder()
-
-      /**
-       * @param dataLakeKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt the
-       * data in the data lake.
-       */
-      override fun dataLakeKmsKeyId(dataLakeKmsKeyId: String) {
-        cdkBuilder.dataLakeKmsKeyId(dataLakeKmsKeyId)
-      }
-
-      /**
-       * @param modelKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt trained
-       * custom models.
-       * The ModelKmsKeyId can be either of the following formats:
-       *
-       * * KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
-       * * Amazon Resource Name (ARN) of a KMS Key:
-       * `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
-       */
-      override fun modelKmsKeyId(modelKmsKeyId: String) {
-        cdkBuilder.modelKmsKeyId(modelKmsKeyId)
-      }
-
-      /**
-       * @param volumeKmsKeyId ID for the AWS KMS key that Amazon Comprehend uses to encrypt the
-       * volume.
-       */
-      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
-        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
-      }
-
-      /**
-       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
-       * (VPC) containing the resources you are using for the job.
-       * For more information, see [Amazon
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-       */
-      override fun vpcConfig(vpcConfig: IResolvable) {
-        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
-       * (VPC) containing the resources you are using for the job.
-       * For more information, see [Amazon
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-       */
-      override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
-      }
-
-      /**
-       * @param vpcConfig Configuration parameters for an optional private Virtual Private Cloud
-       * (VPC) containing the resources you are using for the job.
-       * For more information, see [Amazon
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ad6014fdcd8de69b64beb8facb1fb63a7f13a50ee6e082c13819782318101c13")
-      override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
-          vpcConfig(VpcConfigProperty(vpcConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty,
-    ) : CdkObject(cdkObject), DataSecurityConfigProperty {
-      /**
-       * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the data in the data lake.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-datalakekmskeyid)
-       */
-      override fun dataLakeKmsKeyId(): String? = unwrap(this).getDataLakeKmsKeyId()
-
-      /**
-       * ID for the AWS KMS key that Amazon Comprehend uses to encrypt trained custom models.
-       *
-       * The ModelKmsKeyId can be either of the following formats:
-       *
-       * * KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
-       * * Amazon Resource Name (ARN) of a KMS Key:
-       * `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-modelkmskeyid)
-       */
-      override fun modelKmsKeyId(): String? = unwrap(this).getModelKmsKeyId()
-
-      /**
-       * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the volume.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-volumekmskeyid)
-       */
-      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
-
-      /**
-       * Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the
-       * resources you are using for the job.
-       *
-       * For more information, see [Amazon
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html#cfn-comprehend-flywheel-datasecurityconfig-vpcconfig)
-       */
-      override fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataSecurityConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty):
-          DataSecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataSecurityConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataSecurityConfigProperty):
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty
-    }
-  }
-
-  /**
-   * Configuration required for an entity recognition model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * EntityRecognitionConfigProperty entityRecognitionConfigProperty =
-   * EntityRecognitionConfigProperty.builder()
-   * .entityTypes(List.of(EntityTypesListItemProperty.builder()
-   * .type("type")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entityrecognitionconfig.html)
-   */
-  public interface EntityRecognitionConfigProperty {
-    /**
-     * Up to 25 entity types that the model is trained to recognize.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entityrecognitionconfig.html#cfn-comprehend-flywheel-entityrecognitionconfig-entitytypes)
-     */
-    public fun entityTypes(): Any? = unwrap(this).getEntityTypes()
-
-    /**
-     * A builder for [EntityRecognitionConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
-       */
-      public fun entityTypes(entityTypes: IResolvable)
-
-      /**
-       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
-       */
-      public fun entityTypes(entityTypes: List<Any>)
-
-      /**
-       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
-       */
-      public fun entityTypes(vararg entityTypes: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty.builder()
-
-      /**
-       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
-       */
-      override fun entityTypes(entityTypes: IResolvable) {
-        cdkBuilder.entityTypes(entityTypes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
-       */
-      override fun entityTypes(entityTypes: List<Any>) {
-        cdkBuilder.entityTypes(entityTypes)
-      }
-
-      /**
-       * @param entityTypes Up to 25 entity types that the model is trained to recognize.
-       */
-      override fun entityTypes(vararg entityTypes: Any): Unit = entityTypes(entityTypes.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty,
-    ) : CdkObject(cdkObject), EntityRecognitionConfigProperty {
-      /**
-       * Up to 25 entity types that the model is trained to recognize.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entityrecognitionconfig.html#cfn-comprehend-flywheel-entityrecognitionconfig-entitytypes)
-       */
-      override fun entityTypes(): Any? = unwrap(this).getEntityTypes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EntityRecognitionConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty):
-          EntityRecognitionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EntityRecognitionConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EntityRecognitionConfigProperty):
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty
-    }
-  }
-
-  /**
-   * An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom
-   * entity recognizer.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * EntityTypesListItemProperty entityTypesListItemProperty = EntityTypesListItemProperty.builder()
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entitytypeslistitem.html)
-   */
-  public interface EntityTypesListItemProperty {
-    /**
-     * An entity type within a labeled training dataset that Amazon Comprehend uses to train a
-     * custom entity recognizer.
-     *
-     * Entity types must not contain the following invalid characters: \n (line break), \n (escaped
-     * line break, \r (carriage return), \r (escaped carriage return), \t (tab), \t (escaped tab), and
-     * , (comma).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entitytypeslistitem.html#cfn-comprehend-flywheel-entitytypeslistitem-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [EntityTypesListItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type An entity type within a labeled training dataset that Amazon Comprehend uses to
-       * train a custom entity recognizer. 
-       * Entity types must not contain the following invalid characters: \n (line break), \n
-       * (escaped line break, \r (carriage return), \r (escaped carriage return), \t (tab), \t (escaped
-       * tab), and , (comma).
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty.Builder
-          =
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty.builder()
-
-      /**
-       * @param type An entity type within a labeled training dataset that Amazon Comprehend uses to
-       * train a custom entity recognizer. 
-       * Entity types must not contain the following invalid characters: \n (line break), \n
-       * (escaped line break, \r (carriage return), \r (escaped carriage return), \t (tab), \t (escaped
-       * tab), and , (comma).
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty,
-    ) : CdkObject(cdkObject), EntityTypesListItemProperty {
-      /**
-       * An entity type within a labeled training dataset that Amazon Comprehend uses to train a
-       * custom entity recognizer.
-       *
-       * Entity types must not contain the following invalid characters: \n (line break), \n
-       * (escaped line break, \r (carriage return), \r (escaped carriage return), \t (tab), \t (escaped
-       * tab), and , (comma).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entitytypeslistitem.html#cfn-comprehend-flywheel-entitytypeslistitem-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EntityTypesListItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty):
-          EntityTypesListItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EntityTypesListItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EntityTypesListItemProperty):
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty
-    }
-  }
-
-  /**
-   * Configuration required for a document classification model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * DocumentClassificationConfigProperty documentClassificationConfigProperty =
-   * DocumentClassificationConfigProperty.builder()
-   * .mode("mode")
-   * // the properties below are optional
-   * .labels(List.of("labels"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html)
-   */
-  public interface DocumentClassificationConfigProperty {
-    /**
-     * One or more labels to associate with the custom classifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-labels)
-     */
-    public fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
-
-    /**
-     * Classification mode indicates whether the documents are `MULTI_CLASS` or `MULTI_LABEL` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-mode)
-     */
-    public fun mode(): String
-
-    /**
-     * A builder for [DocumentClassificationConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param labels One or more labels to associate with the custom classifier.
-       */
-      public fun labels(labels: List<String>)
-
-      /**
-       * @param labels One or more labels to associate with the custom classifier.
-       */
-      public fun labels(vararg labels: String)
-
-      /**
-       * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
-       * `MULTI_LABEL` . 
-       */
-      public fun mode(mode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.builder()
-
-      /**
-       * @param labels One or more labels to associate with the custom classifier.
-       */
-      override fun labels(labels: List<String>) {
-        cdkBuilder.labels(labels)
-      }
-
-      /**
-       * @param labels One or more labels to associate with the custom classifier.
-       */
-      override fun labels(vararg labels: String): Unit = labels(labels.toList())
-
-      /**
-       * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
-       * `MULTI_LABEL` . 
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty,
-    ) : CdkObject(cdkObject), DocumentClassificationConfigProperty {
-      /**
-       * One or more labels to associate with the custom classifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-labels)
-       */
-      override fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
-
-      /**
-       * Classification mode indicates whether the documents are `MULTI_CLASS` or `MULTI_LABEL` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-mode)
-       */
-      override fun mode(): String = unwrap(this).getMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DocumentClassificationConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty):
-          DocumentClassificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DocumentClassificationConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DocumentClassificationConfigProperty):
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
     }
   }
 }

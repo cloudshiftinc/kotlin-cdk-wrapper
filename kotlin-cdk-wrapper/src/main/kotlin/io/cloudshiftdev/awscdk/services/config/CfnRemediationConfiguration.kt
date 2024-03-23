@@ -586,83 +586,6 @@ public open class CfnRemediationConfiguration internal constructor(
   }
 
   /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * ResourceValueProperty resourceValueProperty = ResourceValueProperty.builder()
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html)
-   */
-  public interface ResourceValueProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ResourceValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value the value to be set.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.builder()
-
-      /**
-       * @param value the value to be set.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty,
-    ) : CdkObject(cdkObject), ResourceValueProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty):
-          ResourceValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourceValueProperty):
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty
-    }
-  }
-
-  /**
    * An ExecutionControls object.
    *
    * Example:
@@ -772,6 +695,256 @@ public open class CfnRemediationConfiguration internal constructor(
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty
+    }
+  }
+
+  /**
+   * The value is either a dynamic (resource) value or a static value.
+   *
+   * You must select either a dynamic value or a static value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * RemediationParameterValueProperty remediationParameterValueProperty =
+   * RemediationParameterValueProperty.builder()
+   * .resourceValue(ResourceValueProperty.builder()
+   * .value("value")
+   * .build())
+   * .staticValue(StaticValueProperty.builder()
+   * .value(List.of("value"))
+   * .values(List.of("values"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html)
+   */
+  public interface RemediationParameterValueProperty {
+    /**
+     * The value is dynamic and changes at run-time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue)
+     */
+    public fun resourceValue(): Any? = unwrap(this).getResourceValue()
+
+    /**
+     * The value is static and does not change at run-time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue)
+     */
+    public fun staticValue(): Any? = unwrap(this).getStaticValue()
+
+    /**
+     * A builder for [RemediationParameterValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceValue The value is dynamic and changes at run-time.
+       */
+      public fun resourceValue(resourceValue: IResolvable)
+
+      /**
+       * @param resourceValue The value is dynamic and changes at run-time.
+       */
+      public fun resourceValue(resourceValue: ResourceValueProperty)
+
+      /**
+       * @param resourceValue The value is dynamic and changes at run-time.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6a1446444839d26f366a9c554c7dad27fe1feaef75c5dbb0601c8b3d433e992f")
+      public fun resourceValue(resourceValue: ResourceValueProperty.Builder.() -> Unit)
+
+      /**
+       * @param staticValue The value is static and does not change at run-time.
+       */
+      public fun staticValue(staticValue: IResolvable)
+
+      /**
+       * @param staticValue The value is static and does not change at run-time.
+       */
+      public fun staticValue(staticValue: StaticValueProperty)
+
+      /**
+       * @param staticValue The value is static and does not change at run-time.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6f05fed1261a019c0caa131c0722b34f856f69966d834f444b31a673c861ea26")
+      public fun staticValue(staticValue: StaticValueProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty.builder()
+
+      /**
+       * @param resourceValue The value is dynamic and changes at run-time.
+       */
+      override fun resourceValue(resourceValue: IResolvable) {
+        cdkBuilder.resourceValue(resourceValue.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resourceValue The value is dynamic and changes at run-time.
+       */
+      override fun resourceValue(resourceValue: ResourceValueProperty) {
+        cdkBuilder.resourceValue(resourceValue.let(ResourceValueProperty::unwrap))
+      }
+
+      /**
+       * @param resourceValue The value is dynamic and changes at run-time.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6a1446444839d26f366a9c554c7dad27fe1feaef75c5dbb0601c8b3d433e992f")
+      override fun resourceValue(resourceValue: ResourceValueProperty.Builder.() -> Unit): Unit =
+          resourceValue(ResourceValueProperty(resourceValue))
+
+      /**
+       * @param staticValue The value is static and does not change at run-time.
+       */
+      override fun staticValue(staticValue: IResolvable) {
+        cdkBuilder.staticValue(staticValue.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param staticValue The value is static and does not change at run-time.
+       */
+      override fun staticValue(staticValue: StaticValueProperty) {
+        cdkBuilder.staticValue(staticValue.let(StaticValueProperty::unwrap))
+      }
+
+      /**
+       * @param staticValue The value is static and does not change at run-time.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6f05fed1261a019c0caa131c0722b34f856f69966d834f444b31a673c861ea26")
+      override fun staticValue(staticValue: StaticValueProperty.Builder.() -> Unit): Unit =
+          staticValue(StaticValueProperty(staticValue))
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty,
+    ) : CdkObject(cdkObject), RemediationParameterValueProperty {
+      /**
+       * The value is dynamic and changes at run-time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue)
+       */
+      override fun resourceValue(): Any? = unwrap(this).getResourceValue()
+
+      /**
+       * The value is static and does not change at run-time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue)
+       */
+      override fun staticValue(): Any? = unwrap(this).getStaticValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RemediationParameterValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty):
+          RemediationParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RemediationParameterValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RemediationParameterValueProperty):
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * ResourceValueProperty resourceValueProperty = ResourceValueProperty.builder()
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html)
+   */
+  public interface ResourceValueProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ResourceValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param value the value to be set.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.builder()
+
+      /**
+       * @param value the value to be set.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty,
+    ) : CdkObject(cdkObject), ResourceValueProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty):
+          ResourceValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceValueProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceValueProperty):
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty
     }
   }
 
@@ -1035,179 +1208,6 @@ public open class CfnRemediationConfiguration internal constructor(
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty
-    }
-  }
-
-  /**
-   * The value is either a dynamic (resource) value or a static value.
-   *
-   * You must select either a dynamic value or a static value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * RemediationParameterValueProperty remediationParameterValueProperty =
-   * RemediationParameterValueProperty.builder()
-   * .resourceValue(ResourceValueProperty.builder()
-   * .value("value")
-   * .build())
-   * .staticValue(StaticValueProperty.builder()
-   * .value(List.of("value"))
-   * .values(List.of("values"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html)
-   */
-  public interface RemediationParameterValueProperty {
-    /**
-     * The value is dynamic and changes at run-time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue)
-     */
-    public fun resourceValue(): Any? = unwrap(this).getResourceValue()
-
-    /**
-     * The value is static and does not change at run-time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue)
-     */
-    public fun staticValue(): Any? = unwrap(this).getStaticValue()
-
-    /**
-     * A builder for [RemediationParameterValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceValue The value is dynamic and changes at run-time.
-       */
-      public fun resourceValue(resourceValue: IResolvable)
-
-      /**
-       * @param resourceValue The value is dynamic and changes at run-time.
-       */
-      public fun resourceValue(resourceValue: ResourceValueProperty)
-
-      /**
-       * @param resourceValue The value is dynamic and changes at run-time.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6a1446444839d26f366a9c554c7dad27fe1feaef75c5dbb0601c8b3d433e992f")
-      public fun resourceValue(resourceValue: ResourceValueProperty.Builder.() -> Unit)
-
-      /**
-       * @param staticValue The value is static and does not change at run-time.
-       */
-      public fun staticValue(staticValue: IResolvable)
-
-      /**
-       * @param staticValue The value is static and does not change at run-time.
-       */
-      public fun staticValue(staticValue: StaticValueProperty)
-
-      /**
-       * @param staticValue The value is static and does not change at run-time.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6f05fed1261a019c0caa131c0722b34f856f69966d834f444b31a673c861ea26")
-      public fun staticValue(staticValue: StaticValueProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty.builder()
-
-      /**
-       * @param resourceValue The value is dynamic and changes at run-time.
-       */
-      override fun resourceValue(resourceValue: IResolvable) {
-        cdkBuilder.resourceValue(resourceValue.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resourceValue The value is dynamic and changes at run-time.
-       */
-      override fun resourceValue(resourceValue: ResourceValueProperty) {
-        cdkBuilder.resourceValue(resourceValue.let(ResourceValueProperty::unwrap))
-      }
-
-      /**
-       * @param resourceValue The value is dynamic and changes at run-time.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6a1446444839d26f366a9c554c7dad27fe1feaef75c5dbb0601c8b3d433e992f")
-      override fun resourceValue(resourceValue: ResourceValueProperty.Builder.() -> Unit): Unit =
-          resourceValue(ResourceValueProperty(resourceValue))
-
-      /**
-       * @param staticValue The value is static and does not change at run-time.
-       */
-      override fun staticValue(staticValue: IResolvable) {
-        cdkBuilder.staticValue(staticValue.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param staticValue The value is static and does not change at run-time.
-       */
-      override fun staticValue(staticValue: StaticValueProperty) {
-        cdkBuilder.staticValue(staticValue.let(StaticValueProperty::unwrap))
-      }
-
-      /**
-       * @param staticValue The value is static and does not change at run-time.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6f05fed1261a019c0caa131c0722b34f856f69966d834f444b31a673c861ea26")
-      override fun staticValue(staticValue: StaticValueProperty.Builder.() -> Unit): Unit =
-          staticValue(StaticValueProperty(staticValue))
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty,
-    ) : CdkObject(cdkObject), RemediationParameterValueProperty {
-      /**
-       * The value is dynamic and changes at run-time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue)
-       */
-      override fun resourceValue(): Any? = unwrap(this).getResourceValue()
-
-      /**
-       * The value is static and does not change at run-time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue)
-       */
-      override fun staticValue(): Any? = unwrap(this).getStaticValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RemediationParameterValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty):
-          RemediationParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RemediationParameterValueProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RemediationParameterValueProperty):
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty
     }
   }
 }

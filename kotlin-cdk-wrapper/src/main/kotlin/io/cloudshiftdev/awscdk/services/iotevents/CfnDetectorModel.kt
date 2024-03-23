@@ -459,3327 +459,6 @@ public open class CfnDetectorModel internal constructor(
   }
 
   /**
-   * Information required to reset the timer.
-   *
-   * The timer is reset to the previously evaluated result of the duration. The duration expression
-   * isn't reevaluated when you reset the timer.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * ResetTimerProperty resetTimerProperty = ResetTimerProperty.builder()
-   * .timerName("timerName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-resettimer.html)
-   */
-  public interface ResetTimerProperty {
-    /**
-     * The name of the timer to reset.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-resettimer.html#cfn-iotevents-detectormodel-resettimer-timername)
-     */
-    public fun timerName(): String
-
-    /**
-     * A builder for [ResetTimerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param timerName The name of the timer to reset. 
-       */
-      public fun timerName(timerName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty.builder()
-
-      /**
-       * @param timerName The name of the timer to reset. 
-       */
-      override fun timerName(timerName: String) {
-        cdkBuilder.timerName(timerName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty,
-    ) : CdkObject(cdkObject), ResetTimerProperty {
-      /**
-       * The name of the timer to reset.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-resettimer.html#cfn-iotevents-detectormodel-resettimer-timername)
-       */
-      override fun timerName(): String = unwrap(this).getTimerName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResetTimerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty):
-          ResetTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? ResetTimerProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResetTimerProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty
-    }
-  }
-
-  /**
-   * Information needed to set the timer.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * SetTimerProperty setTimerProperty = SetTimerProperty.builder()
-   * .timerName("timerName")
-   * // the properties below are optional
-   * .durationExpression("durationExpression")
-   * .seconds(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html)
-   */
-  public interface SetTimerProperty {
-    /**
-     * The duration of the timer, in seconds.
-     *
-     * You can use a string expression that includes numbers, variables (
-     * `$variable.&lt;variable-name&gt;` ), and input values (
-     * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the duration. The range of the duration
-     * is 1-31622400 seconds. To ensure accuracy, the minimum duration is 60 seconds. The evaluated
-     * result of the duration is rounded down to the nearest whole number.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-durationexpression)
-     */
-    public fun durationExpression(): String? = unwrap(this).getDurationExpression()
-
-    /**
-     * The number of seconds until the timer expires.
-     *
-     * The minimum value is 60 seconds to ensure accuracy. The maximum value is 31622400 seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-seconds)
-     */
-    public fun seconds(): Number? = unwrap(this).getSeconds()
-
-    /**
-     * The name of the timer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-timername)
-     */
-    public fun timerName(): String
-
-    /**
-     * A builder for [SetTimerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param durationExpression The duration of the timer, in seconds.
-       * You can use a string expression that includes numbers, variables (
-       * `$variable.&lt;variable-name&gt;` ), and input values (
-       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the duration. The range of the duration
-       * is 1-31622400 seconds. To ensure accuracy, the minimum duration is 60 seconds. The evaluated
-       * result of the duration is rounded down to the nearest whole number.
-       */
-      public fun durationExpression(durationExpression: String)
-
-      /**
-       * @param seconds The number of seconds until the timer expires.
-       * The minimum value is 60 seconds to ensure accuracy. The maximum value is 31622400 seconds.
-       */
-      public fun seconds(seconds: Number)
-
-      /**
-       * @param timerName The name of the timer. 
-       */
-      public fun timerName(timerName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty.builder()
-
-      /**
-       * @param durationExpression The duration of the timer, in seconds.
-       * You can use a string expression that includes numbers, variables (
-       * `$variable.&lt;variable-name&gt;` ), and input values (
-       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the duration. The range of the duration
-       * is 1-31622400 seconds. To ensure accuracy, the minimum duration is 60 seconds. The evaluated
-       * result of the duration is rounded down to the nearest whole number.
-       */
-      override fun durationExpression(durationExpression: String) {
-        cdkBuilder.durationExpression(durationExpression)
-      }
-
-      /**
-       * @param seconds The number of seconds until the timer expires.
-       * The minimum value is 60 seconds to ensure accuracy. The maximum value is 31622400 seconds.
-       */
-      override fun seconds(seconds: Number) {
-        cdkBuilder.seconds(seconds)
-      }
-
-      /**
-       * @param timerName The name of the timer. 
-       */
-      override fun timerName(timerName: String) {
-        cdkBuilder.timerName(timerName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty,
-    ) : CdkObject(cdkObject), SetTimerProperty {
-      /**
-       * The duration of the timer, in seconds.
-       *
-       * You can use a string expression that includes numbers, variables (
-       * `$variable.&lt;variable-name&gt;` ), and input values (
-       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the duration. The range of the duration
-       * is 1-31622400 seconds. To ensure accuracy, the minimum duration is 60 seconds. The evaluated
-       * result of the duration is rounded down to the nearest whole number.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-durationexpression)
-       */
-      override fun durationExpression(): String? = unwrap(this).getDurationExpression()
-
-      /**
-       * The number of seconds until the timer expires.
-       *
-       * The minimum value is 60 seconds to ensure accuracy. The maximum value is 31622400 seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-seconds)
-       */
-      override fun seconds(): Number? = unwrap(this).getSeconds()
-
-      /**
-       * The name of the timer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-timername)
-       */
-      override fun timerName(): String = unwrap(this).getTimerName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SetTimerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty):
-          SetTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? SetTimerProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SetTimerProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty
-    }
-  }
-
-  /**
-   * Information needed to configure the payload.
-   *
-   * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-   * payload contains all attribute-value pairs that have the information about the detector model
-   * instance and the event triggered the action. To configure the action payload, you can use
-   * `contentExpression` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * PayloadProperty payloadProperty = PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html)
-   */
-  public interface PayloadProperty {
-    /**
-     * The content of the payload.
-     *
-     * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ),
-     * variables ( `$variable.&lt;variable-name&gt;` ), input values (
-     * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
-     * that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-contentexpression)
-     */
-    public fun contentExpression(): String
-
-    /**
-     * The value of the payload type can be either `STRING` or `JSON` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [PayloadProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contentExpression The content of the payload. 
-       * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ),
-       * variables ( `$variable.&lt;variable-name&gt;` ), input values (
-       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
-       * that contain `${}` as the content. The recommended maximum size of a content expression is 1
-       * KB.
-       */
-      public fun contentExpression(contentExpression: String)
-
-      /**
-       * @param type The value of the payload type can be either `STRING` or `JSON` . 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty.builder()
-
-      /**
-       * @param contentExpression The content of the payload. 
-       * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ),
-       * variables ( `$variable.&lt;variable-name&gt;` ), input values (
-       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
-       * that contain `${}` as the content. The recommended maximum size of a content expression is 1
-       * KB.
-       */
-      override fun contentExpression(contentExpression: String) {
-        cdkBuilder.contentExpression(contentExpression)
-      }
-
-      /**
-       * @param type The value of the payload type can be either `STRING` or `JSON` . 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty,
-    ) : CdkObject(cdkObject), PayloadProperty {
-      /**
-       * The content of the payload.
-       *
-       * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ),
-       * variables ( `$variable.&lt;variable-name&gt;` ), input values (
-       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
-       * that contain `${}` as the content. The recommended maximum size of a content expression is 1
-       * KB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-contentexpression)
-       */
-      override fun contentExpression(): String = unwrap(this).getContentExpression()
-
-      /**
-       * The value of the payload type can be either `STRING` or `JSON` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PayloadProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty):
-          PayloadProperty = CdkObjectWrappers.wrap(cdkObject) as? PayloadProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PayloadProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty
-    }
-  }
-
-  /**
-   * Specifies the actions performed and the next state entered when a `condition` evaluates to
-   * TRUE.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * TransitionEventProperty transitionEventProperty = TransitionEventProperty.builder()
-   * .condition("condition")
-   * .eventName("eventName")
-   * .nextState("nextState")
-   * // the properties below are optional
-   * .actions(List.of(ActionProperty.builder()
-   * .clearTimer(ClearTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .dynamoDb(DynamoDBProperty.builder()
-   * .hashKeyField("hashKeyField")
-   * .hashKeyValue("hashKeyValue")
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .hashKeyType("hashKeyType")
-   * .operation("operation")
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .payloadField("payloadField")
-   * .rangeKeyField("rangeKeyField")
-   * .rangeKeyType("rangeKeyType")
-   * .rangeKeyValue("rangeKeyValue")
-   * .build())
-   * .dynamoDBv2(DynamoDBv2Property.builder()
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .firehose(FirehoseProperty.builder()
-   * .deliveryStreamName("deliveryStreamName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .separator("separator")
-   * .build())
-   * .iotEvents(IotEventsProperty.builder()
-   * .inputName("inputName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .iotSiteWise(IotSiteWiseProperty.builder()
-   * .propertyValue(AssetPropertyValueProperty.builder()
-   * .value(AssetPropertyVariantProperty.builder()
-   * .booleanValue("booleanValue")
-   * .doubleValue("doubleValue")
-   * .integerValue("integerValue")
-   * .stringValue("stringValue")
-   * .build())
-   * // the properties below are optional
-   * .quality("quality")
-   * .timestamp(AssetPropertyTimestampProperty.builder()
-   * .timeInSeconds("timeInSeconds")
-   * // the properties below are optional
-   * .offsetInNanos("offsetInNanos")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .assetId("assetId")
-   * .entryId("entryId")
-   * .propertyAlias("propertyAlias")
-   * .propertyId("propertyId")
-   * .build())
-   * .iotTopicPublish(IotTopicPublishProperty.builder()
-   * .mqttTopic("mqttTopic")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .lambda(LambdaProperty.builder()
-   * .functionArn("functionArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .resetTimer(ResetTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .setTimer(SetTimerProperty.builder()
-   * .timerName("timerName")
-   * // the properties below are optional
-   * .durationExpression("durationExpression")
-   * .seconds(123)
-   * .build())
-   * .setVariable(SetVariableProperty.builder()
-   * .value("value")
-   * .variableName("variableName")
-   * .build())
-   * .sns(SnsProperty.builder()
-   * .targetArn("targetArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .sqs(SqsProperty.builder()
-   * .queueUrl("queueUrl")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .useBase64(false)
-   * .build())
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html)
-   */
-  public interface TransitionEventProperty {
-    /**
-     * The actions to be performed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-actions)
-     */
-    public fun actions(): Any? = unwrap(this).getActions()
-
-    /**
-     * Required.
-     *
-     * A Boolean expression that when TRUE causes the actions to be performed and the `nextState` to
-     * be entered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-condition)
-     */
-    public fun condition(): String
-
-    /**
-     * The name of the transition event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-eventname)
-     */
-    public fun eventName(): String
-
-    /**
-     * The next state to enter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-nextstate)
-     */
-    public fun nextState(): String
-
-    /**
-     * A builder for [TransitionEventProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actions The actions to be performed.
-       */
-      public fun actions(actions: IResolvable)
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      public fun actions(actions: List<Any>)
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      public fun actions(vararg actions: Any)
-
-      /**
-       * @param condition Required. 
-       * A Boolean expression that when TRUE causes the actions to be performed and the `nextState`
-       * to be entered.
-       */
-      public fun condition(condition: String)
-
-      /**
-       * @param eventName The name of the transition event. 
-       */
-      public fun eventName(eventName: String)
-
-      /**
-       * @param nextState The next state to enter. 
-       */
-      public fun nextState(nextState: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty.Builder
-          =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty.builder()
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
-      }
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
-
-      /**
-       * @param condition Required. 
-       * A Boolean expression that when TRUE causes the actions to be performed and the `nextState`
-       * to be entered.
-       */
-      override fun condition(condition: String) {
-        cdkBuilder.condition(condition)
-      }
-
-      /**
-       * @param eventName The name of the transition event. 
-       */
-      override fun eventName(eventName: String) {
-        cdkBuilder.eventName(eventName)
-      }
-
-      /**
-       * @param nextState The next state to enter. 
-       */
-      override fun nextState(nextState: String) {
-        cdkBuilder.nextState(nextState)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty,
-    ) : CdkObject(cdkObject), TransitionEventProperty {
-      /**
-       * The actions to be performed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-actions)
-       */
-      override fun actions(): Any? = unwrap(this).getActions()
-
-      /**
-       * Required.
-       *
-       * A Boolean expression that when TRUE causes the actions to be performed and the `nextState`
-       * to be entered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-condition)
-       */
-      override fun condition(): String = unwrap(this).getCondition()
-
-      /**
-       * The name of the transition event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-eventname)
-       */
-      override fun eventName(): String = unwrap(this).getEventName()
-
-      /**
-       * The next state to enter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-nextstate)
-       */
-      override fun nextState(): String = unwrap(this).getNextState()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TransitionEventProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty):
-          TransitionEventProperty = CdkObjectWrappers.wrap(cdkObject) as? TransitionEventProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TransitionEventProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty
-    }
-  }
-
-  /**
-   * Sends an AWS IoT Events input, passing in information about the detector model instance and the
-   * event that triggered the action.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * IotEventsProperty iotEventsProperty = IotEventsProperty.builder()
-   * .inputName("inputName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html)
-   */
-  public interface IotEventsProperty {
-    /**
-     * The name of the AWS IoT Events input where the data is sent.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-inputname)
-     */
-    public fun inputName(): String
-
-    /**
-     * You can configure the action payload when you send a message to an AWS IoT Events input.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-payload)
-     */
-    public fun payload(): Any? = unwrap(this).getPayload()
-
-    /**
-     * A builder for [IotEventsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param inputName The name of the AWS IoT Events input where the data is sent. 
-       */
-      public fun inputName(inputName: String)
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an AWS IoT
-       * Events input.
-       */
-      public fun payload(payload: IResolvable)
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an AWS IoT
-       * Events input.
-       */
-      public fun payload(payload: PayloadProperty)
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an AWS IoT
-       * Events input.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ee353d5ad9081f54075a59c294379906f437f7cca9320c9a370872bbd1ab6acd")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty.builder()
-
-      /**
-       * @param inputName The name of the AWS IoT Events input where the data is sent. 
-       */
-      override fun inputName(inputName: String) {
-        cdkBuilder.inputName(inputName)
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an AWS IoT
-       * Events input.
-       */
-      override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an AWS IoT
-       * Events input.
-       */
-      override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an AWS IoT
-       * Events input.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ee353d5ad9081f54075a59c294379906f437f7cca9320c9a370872bbd1ab6acd")
-      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
-          payload(PayloadProperty(payload))
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty,
-    ) : CdkObject(cdkObject), IotEventsProperty {
-      /**
-       * The name of the AWS IoT Events input where the data is sent.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-inputname)
-       */
-      override fun inputName(): String = unwrap(this).getInputName()
-
-      /**
-       * You can configure the action payload when you send a message to an AWS IoT Events input.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-payload)
-       */
-      override fun payload(): Any? = unwrap(this).getPayload()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IotEventsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty):
-          IotEventsProperty = CdkObjectWrappers.wrap(cdkObject) as? IotEventsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IotEventsProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty
-    }
-  }
-
-  /**
-   * Specifies the actions performed when the `condition` evaluates to TRUE.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * OnInputProperty onInputProperty = OnInputProperty.builder()
-   * .events(List.of(EventProperty.builder()
-   * .eventName("eventName")
-   * // the properties below are optional
-   * .actions(List.of(ActionProperty.builder()
-   * .clearTimer(ClearTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .dynamoDb(DynamoDBProperty.builder()
-   * .hashKeyField("hashKeyField")
-   * .hashKeyValue("hashKeyValue")
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .hashKeyType("hashKeyType")
-   * .operation("operation")
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .payloadField("payloadField")
-   * .rangeKeyField("rangeKeyField")
-   * .rangeKeyType("rangeKeyType")
-   * .rangeKeyValue("rangeKeyValue")
-   * .build())
-   * .dynamoDBv2(DynamoDBv2Property.builder()
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .firehose(FirehoseProperty.builder()
-   * .deliveryStreamName("deliveryStreamName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .separator("separator")
-   * .build())
-   * .iotEvents(IotEventsProperty.builder()
-   * .inputName("inputName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .iotSiteWise(IotSiteWiseProperty.builder()
-   * .propertyValue(AssetPropertyValueProperty.builder()
-   * .value(AssetPropertyVariantProperty.builder()
-   * .booleanValue("booleanValue")
-   * .doubleValue("doubleValue")
-   * .integerValue("integerValue")
-   * .stringValue("stringValue")
-   * .build())
-   * // the properties below are optional
-   * .quality("quality")
-   * .timestamp(AssetPropertyTimestampProperty.builder()
-   * .timeInSeconds("timeInSeconds")
-   * // the properties below are optional
-   * .offsetInNanos("offsetInNanos")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .assetId("assetId")
-   * .entryId("entryId")
-   * .propertyAlias("propertyAlias")
-   * .propertyId("propertyId")
-   * .build())
-   * .iotTopicPublish(IotTopicPublishProperty.builder()
-   * .mqttTopic("mqttTopic")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .lambda(LambdaProperty.builder()
-   * .functionArn("functionArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .resetTimer(ResetTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .setTimer(SetTimerProperty.builder()
-   * .timerName("timerName")
-   * // the properties below are optional
-   * .durationExpression("durationExpression")
-   * .seconds(123)
-   * .build())
-   * .setVariable(SetVariableProperty.builder()
-   * .value("value")
-   * .variableName("variableName")
-   * .build())
-   * .sns(SnsProperty.builder()
-   * .targetArn("targetArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .sqs(SqsProperty.builder()
-   * .queueUrl("queueUrl")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .useBase64(false)
-   * .build())
-   * .build()))
-   * .condition("condition")
-   * .build()))
-   * .transitionEvents(List.of(TransitionEventProperty.builder()
-   * .condition("condition")
-   * .eventName("eventName")
-   * .nextState("nextState")
-   * // the properties below are optional
-   * .actions(List.of(ActionProperty.builder()
-   * .clearTimer(ClearTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .dynamoDb(DynamoDBProperty.builder()
-   * .hashKeyField("hashKeyField")
-   * .hashKeyValue("hashKeyValue")
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .hashKeyType("hashKeyType")
-   * .operation("operation")
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .payloadField("payloadField")
-   * .rangeKeyField("rangeKeyField")
-   * .rangeKeyType("rangeKeyType")
-   * .rangeKeyValue("rangeKeyValue")
-   * .build())
-   * .dynamoDBv2(DynamoDBv2Property.builder()
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .firehose(FirehoseProperty.builder()
-   * .deliveryStreamName("deliveryStreamName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .separator("separator")
-   * .build())
-   * .iotEvents(IotEventsProperty.builder()
-   * .inputName("inputName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .iotSiteWise(IotSiteWiseProperty.builder()
-   * .propertyValue(AssetPropertyValueProperty.builder()
-   * .value(AssetPropertyVariantProperty.builder()
-   * .booleanValue("booleanValue")
-   * .doubleValue("doubleValue")
-   * .integerValue("integerValue")
-   * .stringValue("stringValue")
-   * .build())
-   * // the properties below are optional
-   * .quality("quality")
-   * .timestamp(AssetPropertyTimestampProperty.builder()
-   * .timeInSeconds("timeInSeconds")
-   * // the properties below are optional
-   * .offsetInNanos("offsetInNanos")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .assetId("assetId")
-   * .entryId("entryId")
-   * .propertyAlias("propertyAlias")
-   * .propertyId("propertyId")
-   * .build())
-   * .iotTopicPublish(IotTopicPublishProperty.builder()
-   * .mqttTopic("mqttTopic")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .lambda(LambdaProperty.builder()
-   * .functionArn("functionArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .resetTimer(ResetTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .setTimer(SetTimerProperty.builder()
-   * .timerName("timerName")
-   * // the properties below are optional
-   * .durationExpression("durationExpression")
-   * .seconds(123)
-   * .build())
-   * .setVariable(SetVariableProperty.builder()
-   * .value("value")
-   * .variableName("variableName")
-   * .build())
-   * .sns(SnsProperty.builder()
-   * .targetArn("targetArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .sqs(SqsProperty.builder()
-   * .queueUrl("queueUrl")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .useBase64(false)
-   * .build())
-   * .build()))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html)
-   */
-  public interface OnInputProperty {
-    /**
-     * Specifies the actions performed when the `condition` evaluates to TRUE.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-events)
-     */
-    public fun events(): Any? = unwrap(this).getEvents()
-
-    /**
-     * Specifies the actions performed, and the next state entered, when a `condition` evaluates to
-     * TRUE.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-transitionevents)
-     */
-    public fun transitionEvents(): Any? = unwrap(this).getTransitionEvents()
-
-    /**
-     * A builder for [OnInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
-       */
-      public fun events(events: IResolvable)
-
-      /**
-       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
-       */
-      public fun events(events: List<Any>)
-
-      /**
-       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
-       */
-      public fun events(vararg events: Any)
-
-      /**
-       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
-       * `condition` evaluates to TRUE.
-       */
-      public fun transitionEvents(transitionEvents: IResolvable)
-
-      /**
-       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
-       * `condition` evaluates to TRUE.
-       */
-      public fun transitionEvents(transitionEvents: List<Any>)
-
-      /**
-       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
-       * `condition` evaluates to TRUE.
-       */
-      public fun transitionEvents(vararg transitionEvents: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty.builder()
-
-      /**
-       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
-       */
-      override fun events(events: IResolvable) {
-        cdkBuilder.events(events.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
-       */
-      override fun events(events: List<Any>) {
-        cdkBuilder.events(events)
-      }
-
-      /**
-       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
-       */
-      override fun events(vararg events: Any): Unit = events(events.toList())
-
-      /**
-       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
-       * `condition` evaluates to TRUE.
-       */
-      override fun transitionEvents(transitionEvents: IResolvable) {
-        cdkBuilder.transitionEvents(transitionEvents.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
-       * `condition` evaluates to TRUE.
-       */
-      override fun transitionEvents(transitionEvents: List<Any>) {
-        cdkBuilder.transitionEvents(transitionEvents)
-      }
-
-      /**
-       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
-       * `condition` evaluates to TRUE.
-       */
-      override fun transitionEvents(vararg transitionEvents: Any): Unit =
-          transitionEvents(transitionEvents.toList())
-
-      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty,
-    ) : CdkObject(cdkObject), OnInputProperty {
-      /**
-       * Specifies the actions performed when the `condition` evaluates to TRUE.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-events)
-       */
-      override fun events(): Any? = unwrap(this).getEvents()
-
-      /**
-       * Specifies the actions performed, and the next state entered, when a `condition` evaluates
-       * to TRUE.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-transitionevents)
-       */
-      override fun transitionEvents(): Any? = unwrap(this).getTransitionEvents()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OnInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty):
-          OnInputProperty = CdkObjectWrappers.wrap(cdkObject) as? OnInputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnInputProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty
-    }
-  }
-
-  /**
-   * Specifies the `actions` to be performed when the `condition` evaluates to TRUE.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * EventProperty eventProperty = EventProperty.builder()
-   * .eventName("eventName")
-   * // the properties below are optional
-   * .actions(List.of(ActionProperty.builder()
-   * .clearTimer(ClearTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .dynamoDb(DynamoDBProperty.builder()
-   * .hashKeyField("hashKeyField")
-   * .hashKeyValue("hashKeyValue")
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .hashKeyType("hashKeyType")
-   * .operation("operation")
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .payloadField("payloadField")
-   * .rangeKeyField("rangeKeyField")
-   * .rangeKeyType("rangeKeyType")
-   * .rangeKeyValue("rangeKeyValue")
-   * .build())
-   * .dynamoDBv2(DynamoDBv2Property.builder()
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .firehose(FirehoseProperty.builder()
-   * .deliveryStreamName("deliveryStreamName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .separator("separator")
-   * .build())
-   * .iotEvents(IotEventsProperty.builder()
-   * .inputName("inputName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .iotSiteWise(IotSiteWiseProperty.builder()
-   * .propertyValue(AssetPropertyValueProperty.builder()
-   * .value(AssetPropertyVariantProperty.builder()
-   * .booleanValue("booleanValue")
-   * .doubleValue("doubleValue")
-   * .integerValue("integerValue")
-   * .stringValue("stringValue")
-   * .build())
-   * // the properties below are optional
-   * .quality("quality")
-   * .timestamp(AssetPropertyTimestampProperty.builder()
-   * .timeInSeconds("timeInSeconds")
-   * // the properties below are optional
-   * .offsetInNanos("offsetInNanos")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .assetId("assetId")
-   * .entryId("entryId")
-   * .propertyAlias("propertyAlias")
-   * .propertyId("propertyId")
-   * .build())
-   * .iotTopicPublish(IotTopicPublishProperty.builder()
-   * .mqttTopic("mqttTopic")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .lambda(LambdaProperty.builder()
-   * .functionArn("functionArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .resetTimer(ResetTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .setTimer(SetTimerProperty.builder()
-   * .timerName("timerName")
-   * // the properties below are optional
-   * .durationExpression("durationExpression")
-   * .seconds(123)
-   * .build())
-   * .setVariable(SetVariableProperty.builder()
-   * .value("value")
-   * .variableName("variableName")
-   * .build())
-   * .sns(SnsProperty.builder()
-   * .targetArn("targetArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .sqs(SqsProperty.builder()
-   * .queueUrl("queueUrl")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .useBase64(false)
-   * .build())
-   * .build()))
-   * .condition("condition")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html)
-   */
-  public interface EventProperty {
-    /**
-     * The actions to be performed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-actions)
-     */
-    public fun actions(): Any? = unwrap(this).getActions()
-
-    /**
-     * Optional.
-     *
-     * The Boolean expression that, when TRUE, causes the `actions` to be performed. If not present,
-     * the actions are performed (=TRUE). If the expression result is not a Boolean value, the actions
-     * are not performed (=FALSE).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-condition)
-     */
-    public fun condition(): String? = unwrap(this).getCondition()
-
-    /**
-     * The name of the event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-eventname)
-     */
-    public fun eventName(): String
-
-    /**
-     * A builder for [EventProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actions The actions to be performed.
-       */
-      public fun actions(actions: IResolvable)
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      public fun actions(actions: List<Any>)
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      public fun actions(vararg actions: Any)
-
-      /**
-       * @param condition Optional.
-       * The Boolean expression that, when TRUE, causes the `actions` to be performed. If not
-       * present, the actions are performed (=TRUE). If the expression result is not a Boolean value,
-       * the actions are not performed (=FALSE).
-       */
-      public fun condition(condition: String)
-
-      /**
-       * @param eventName The name of the event. 
-       */
-      public fun eventName(eventName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty.builder()
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
-      }
-
-      /**
-       * @param actions The actions to be performed.
-       */
-      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
-
-      /**
-       * @param condition Optional.
-       * The Boolean expression that, when TRUE, causes the `actions` to be performed. If not
-       * present, the actions are performed (=TRUE). If the expression result is not a Boolean value,
-       * the actions are not performed (=FALSE).
-       */
-      override fun condition(condition: String) {
-        cdkBuilder.condition(condition)
-      }
-
-      /**
-       * @param eventName The name of the event. 
-       */
-      override fun eventName(eventName: String) {
-        cdkBuilder.eventName(eventName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty,
-    ) : CdkObject(cdkObject), EventProperty {
-      /**
-       * The actions to be performed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-actions)
-       */
-      override fun actions(): Any? = unwrap(this).getActions()
-
-      /**
-       * Optional.
-       *
-       * The Boolean expression that, when TRUE, causes the `actions` to be performed. If not
-       * present, the actions are performed (=TRUE). If the expression result is not a Boolean value,
-       * the actions are not performed (=FALSE).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-condition)
-       */
-      override fun condition(): String? = unwrap(this).getCondition()
-
-      /**
-       * The name of the event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-eventname)
-       */
-      override fun eventName(): String = unwrap(this).getEventName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty):
-          EventProperty = CdkObjectWrappers.wrap(cdkObject) as? EventProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty
-    }
-  }
-
-  /**
-   * Information required to publish the Amazon SNS message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * SnsProperty snsProperty = SnsProperty.builder()
-   * .targetArn("targetArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html)
-   */
-  public interface SnsProperty {
-    /**
-     * You can configure the action payload when you send a message as an Amazon SNS push
-     * notification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-payload)
-     */
-    public fun payload(): Any? = unwrap(this).getPayload()
-
-    /**
-     * The ARN of the Amazon SNS target where the message is sent.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-targetarn)
-     */
-    public fun targetArn(): String
-
-    /**
-     * A builder for [SnsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param payload You can configure the action payload when you send a message as an Amazon
-       * SNS push notification.
-       */
-      public fun payload(payload: IResolvable)
-
-      /**
-       * @param payload You can configure the action payload when you send a message as an Amazon
-       * SNS push notification.
-       */
-      public fun payload(payload: PayloadProperty)
-
-      /**
-       * @param payload You can configure the action payload when you send a message as an Amazon
-       * SNS push notification.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0e38e9ec707c2083d5fed07bf997a90a6a70e3ebbe1e8aefb34e3837bbdf5085")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
-
-      /**
-       * @param targetArn The ARN of the Amazon SNS target where the message is sent. 
-       */
-      public fun targetArn(targetArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty.builder()
-
-      /**
-       * @param payload You can configure the action payload when you send a message as an Amazon
-       * SNS push notification.
-       */
-      override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message as an Amazon
-       * SNS push notification.
-       */
-      override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message as an Amazon
-       * SNS push notification.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0e38e9ec707c2083d5fed07bf997a90a6a70e3ebbe1e8aefb34e3837bbdf5085")
-      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
-          payload(PayloadProperty(payload))
-
-      /**
-       * @param targetArn The ARN of the Amazon SNS target where the message is sent. 
-       */
-      override fun targetArn(targetArn: String) {
-        cdkBuilder.targetArn(targetArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty,
-    ) : CdkObject(cdkObject), SnsProperty {
-      /**
-       * You can configure the action payload when you send a message as an Amazon SNS push
-       * notification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-payload)
-       */
-      override fun payload(): Any? = unwrap(this).getPayload()
-
-      /**
-       * The ARN of the Amazon SNS target where the message is sent.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-targetarn)
-       */
-      override fun targetArn(): String = unwrap(this).getTargetArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SnsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty):
-          SnsProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnsProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty
-    }
-  }
-
-  /**
-   * Sends information about the detector model instance and the event that triggered the action to
-   * an Amazon Kinesis Data Firehose delivery stream.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * FirehoseProperty firehoseProperty = FirehoseProperty.builder()
-   * .deliveryStreamName("deliveryStreamName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .separator("separator")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html)
-   */
-  public interface FirehoseProperty {
-    /**
-     * The name of the Kinesis Data Firehose delivery stream where the data is written.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-deliverystreamname)
-     */
-    public fun deliveryStreamName(): String
-
-    /**
-     * You can configure the action payload when you send a message to an Amazon Data Firehose
-     * delivery stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-payload)
-     */
-    public fun payload(): Any? = unwrap(this).getPayload()
-
-    /**
-     * A character separator that is used to separate records written to the Kinesis Data Firehose
-     * delivery stream.
-     *
-     * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-separator)
-     */
-    public fun separator(): String? = unwrap(this).getSeparator()
-
-    /**
-     * A builder for [FirehoseProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deliveryStreamName The name of the Kinesis Data Firehose delivery stream where the
-       * data is written. 
-       */
-      public fun deliveryStreamName(deliveryStreamName: String)
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an Amazon
-       * Data Firehose delivery stream.
-       */
-      public fun payload(payload: IResolvable)
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an Amazon
-       * Data Firehose delivery stream.
-       */
-      public fun payload(payload: PayloadProperty)
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an Amazon
-       * Data Firehose delivery stream.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6d6fe46e21f28c628927db685594aa34ebd736bce6212a486e4151fb794fa754")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
-
-      /**
-       * @param separator A character separator that is used to separate records written to the
-       * Kinesis Data Firehose delivery stream.
-       * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
-       */
-      public fun separator(separator: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty.builder()
-
-      /**
-       * @param deliveryStreamName The name of the Kinesis Data Firehose delivery stream where the
-       * data is written. 
-       */
-      override fun deliveryStreamName(deliveryStreamName: String) {
-        cdkBuilder.deliveryStreamName(deliveryStreamName)
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an Amazon
-       * Data Firehose delivery stream.
-       */
-      override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an Amazon
-       * Data Firehose delivery stream.
-       */
-      override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to an Amazon
-       * Data Firehose delivery stream.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6d6fe46e21f28c628927db685594aa34ebd736bce6212a486e4151fb794fa754")
-      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
-          payload(PayloadProperty(payload))
-
-      /**
-       * @param separator A character separator that is used to separate records written to the
-       * Kinesis Data Firehose delivery stream.
-       * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
-       */
-      override fun separator(separator: String) {
-        cdkBuilder.separator(separator)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty,
-    ) : CdkObject(cdkObject), FirehoseProperty {
-      /**
-       * The name of the Kinesis Data Firehose delivery stream where the data is written.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-deliverystreamname)
-       */
-      override fun deliveryStreamName(): String = unwrap(this).getDeliveryStreamName()
-
-      /**
-       * You can configure the action payload when you send a message to an Amazon Data Firehose
-       * delivery stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-payload)
-       */
-      override fun payload(): Any? = unwrap(this).getPayload()
-
-      /**
-       * A character separator that is used to separate records written to the Kinesis Data Firehose
-       * delivery stream.
-       *
-       * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-separator)
-       */
-      override fun separator(): String? = unwrap(this).getSeparator()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FirehoseProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty):
-          FirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as? FirehoseProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FirehoseProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty
-    }
-  }
-
-  /**
-   * Sends information about the detector model instance and the event that triggered the action to
-   * a specified asset property in AWS IoT SiteWise .
-   *
-   * You must use expressions for all parameters in `IotSiteWiseAction` . The expressions accept
-   * literals, operators, functions, references, and substitutions templates.
-   *
-   * **Examples** - For literal values, the expressions must contain single quotes. For example, the
-   * value for the `propertyAlias` parameter can be `'/company/windfarm/3/turbine/7/temperature'` .
-   *
-   * * For references, you must specify either variables or input values. For example, the value for
-   * the `assetId` parameter can be `$input.TurbineInput.assetId1` .
-   * * For a substitution template, you must use `${}` , and the template must be in single quotes.
-   * A substitution template can also contain a combination of literals, operators, functions,
-   * references, and substitution templates.
-   *
-   * In the following example, the value for the `propertyAlias` parameter uses a substitution
-   * template.
-   *
-   * `'company/windfarm/${$input.TemperatureInput.sensorData.windfarmID}/turbine/
-   * ${$input.TemperatureInput.sensorData.turbineID}/temperature'`
-   *
-   * You must specify either `propertyAlias` or both `assetId` and `propertyId` to identify the
-   * target asset property in AWS IoT SiteWise .
-   *
-   * For more information, see
-   * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
-   * in the *AWS IoT Events Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * IotSiteWiseProperty iotSiteWiseProperty = IotSiteWiseProperty.builder()
-   * .propertyValue(AssetPropertyValueProperty.builder()
-   * .value(AssetPropertyVariantProperty.builder()
-   * .booleanValue("booleanValue")
-   * .doubleValue("doubleValue")
-   * .integerValue("integerValue")
-   * .stringValue("stringValue")
-   * .build())
-   * // the properties below are optional
-   * .quality("quality")
-   * .timestamp(AssetPropertyTimestampProperty.builder()
-   * .timeInSeconds("timeInSeconds")
-   * // the properties below are optional
-   * .offsetInNanos("offsetInNanos")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .assetId("assetId")
-   * .entryId("entryId")
-   * .propertyAlias("propertyAlias")
-   * .propertyId("propertyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html)
-   */
-  public interface IotSiteWiseProperty {
-    /**
-     * The ID of the asset that has the specified property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-assetid)
-     */
-    public fun assetId(): String? = unwrap(this).getAssetId()
-
-    /**
-     * A unique identifier for this entry.
-     *
-     * You can use the entry ID to track which data entry causes an error in case of failure. The
-     * default is a new unique identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-entryid)
-     */
-    public fun entryId(): String? = unwrap(this).getEntryId()
-
-    /**
-     * The alias of the asset property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyalias)
-     */
-    public fun propertyAlias(): String? = unwrap(this).getPropertyAlias()
-
-    /**
-     * The ID of the asset property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyid)
-     */
-    public fun propertyId(): String? = unwrap(this).getPropertyId()
-
-    /**
-     * The value to send to the asset property.
-     *
-     * This value contains timestamp, quality, and value (TQV) information.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyvalue)
-     */
-    public fun propertyValue(): Any
-
-    /**
-     * A builder for [IotSiteWiseProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param assetId The ID of the asset that has the specified property.
-       */
-      public fun assetId(assetId: String)
-
-      /**
-       * @param entryId A unique identifier for this entry.
-       * You can use the entry ID to track which data entry causes an error in case of failure. The
-       * default is a new unique identifier.
-       */
-      public fun entryId(entryId: String)
-
-      /**
-       * @param propertyAlias The alias of the asset property.
-       */
-      public fun propertyAlias(propertyAlias: String)
-
-      /**
-       * @param propertyId The ID of the asset property.
-       */
-      public fun propertyId(propertyId: String)
-
-      /**
-       * @param propertyValue The value to send to the asset property. 
-       * This value contains timestamp, quality, and value (TQV) information.
-       */
-      public fun propertyValue(propertyValue: IResolvable)
-
-      /**
-       * @param propertyValue The value to send to the asset property. 
-       * This value contains timestamp, quality, and value (TQV) information.
-       */
-      public fun propertyValue(propertyValue: AssetPropertyValueProperty)
-
-      /**
-       * @param propertyValue The value to send to the asset property. 
-       * This value contains timestamp, quality, and value (TQV) information.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4b0a81d6728ba70e437a86613bfd50d5ce58f813db9dabb984529bd6e6bd215b")
-      public fun propertyValue(propertyValue: AssetPropertyValueProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty.builder()
-
-      /**
-       * @param assetId The ID of the asset that has the specified property.
-       */
-      override fun assetId(assetId: String) {
-        cdkBuilder.assetId(assetId)
-      }
-
-      /**
-       * @param entryId A unique identifier for this entry.
-       * You can use the entry ID to track which data entry causes an error in case of failure. The
-       * default is a new unique identifier.
-       */
-      override fun entryId(entryId: String) {
-        cdkBuilder.entryId(entryId)
-      }
-
-      /**
-       * @param propertyAlias The alias of the asset property.
-       */
-      override fun propertyAlias(propertyAlias: String) {
-        cdkBuilder.propertyAlias(propertyAlias)
-      }
-
-      /**
-       * @param propertyId The ID of the asset property.
-       */
-      override fun propertyId(propertyId: String) {
-        cdkBuilder.propertyId(propertyId)
-      }
-
-      /**
-       * @param propertyValue The value to send to the asset property. 
-       * This value contains timestamp, quality, and value (TQV) information.
-       */
-      override fun propertyValue(propertyValue: IResolvable) {
-        cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param propertyValue The value to send to the asset property. 
-       * This value contains timestamp, quality, and value (TQV) information.
-       */
-      override fun propertyValue(propertyValue: AssetPropertyValueProperty) {
-        cdkBuilder.propertyValue(propertyValue.let(AssetPropertyValueProperty::unwrap))
-      }
-
-      /**
-       * @param propertyValue The value to send to the asset property. 
-       * This value contains timestamp, quality, and value (TQV) information.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4b0a81d6728ba70e437a86613bfd50d5ce58f813db9dabb984529bd6e6bd215b")
-      override fun propertyValue(propertyValue: AssetPropertyValueProperty.Builder.() -> Unit): Unit
-          = propertyValue(AssetPropertyValueProperty(propertyValue))
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty,
-    ) : CdkObject(cdkObject), IotSiteWiseProperty {
-      /**
-       * The ID of the asset that has the specified property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-assetid)
-       */
-      override fun assetId(): String? = unwrap(this).getAssetId()
-
-      /**
-       * A unique identifier for this entry.
-       *
-       * You can use the entry ID to track which data entry causes an error in case of failure. The
-       * default is a new unique identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-entryid)
-       */
-      override fun entryId(): String? = unwrap(this).getEntryId()
-
-      /**
-       * The alias of the asset property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyalias)
-       */
-      override fun propertyAlias(): String? = unwrap(this).getPropertyAlias()
-
-      /**
-       * The ID of the asset property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyid)
-       */
-      override fun propertyId(): String? = unwrap(this).getPropertyId()
-
-      /**
-       * The value to send to the asset property.
-       *
-       * This value contains timestamp, quality, and value (TQV) information.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyvalue)
-       */
-      override fun propertyValue(): Any = unwrap(this).getPropertyValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IotSiteWiseProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty):
-          IotSiteWiseProperty = CdkObjectWrappers.wrap(cdkObject) as? IotSiteWiseProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IotSiteWiseProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty
-    }
-  }
-
-  /**
-   * Information about the variable and its new value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * SetVariableProperty setVariableProperty = SetVariableProperty.builder()
-   * .value("value")
-   * .variableName("variableName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html)
-   */
-  public interface SetVariableProperty {
-    /**
-     * The new value of the variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * The name of the variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-variablename)
-     */
-    public fun variableName(): String
-
-    /**
-     * A builder for [SetVariableProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value The new value of the variable. 
-       */
-      public fun `value`(`value`: String)
-
-      /**
-       * @param variableName The name of the variable. 
-       */
-      public fun variableName(variableName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty.builder()
-
-      /**
-       * @param value The new value of the variable. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      /**
-       * @param variableName The name of the variable. 
-       */
-      override fun variableName(variableName: String) {
-        cdkBuilder.variableName(variableName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty,
-    ) : CdkObject(cdkObject), SetVariableProperty {
-      /**
-       * The new value of the variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-
-      /**
-       * The name of the variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-variablename)
-       */
-      override fun variableName(): String = unwrap(this).getVariableName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SetVariableProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty):
-          SetVariableProperty = CdkObjectWrappers.wrap(cdkObject) as? SetVariableProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SetVariableProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty
-    }
-  }
-
-  /**
-   * Information that defines a state of a detector.
-   *
-   * Example:
-   *
-   * ```
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html)
-   */
-  public interface StateProperty {
-    /**
-     * When entering this state, perform these `actions` if the `condition` is TRUE.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onenter)
-     */
-    public fun onEnter(): Any? = unwrap(this).getOnEnter()
-
-    /**
-     * When exiting this state, perform these `actions` if the specified `condition` is `TRUE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onexit)
-     */
-    public fun onExit(): Any? = unwrap(this).getOnExit()
-
-    /**
-     * When an input is received and the `condition` is TRUE, perform the specified `actions` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-oninput)
-     */
-    public fun onInput(): Any? = unwrap(this).getOnInput()
-
-    /**
-     * The name of the state.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-statename)
-     */
-    public fun stateName(): String
-
-    /**
-     * A builder for [StateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param onEnter When entering this state, perform these `actions` if the `condition` is
-       * TRUE.
-       */
-      public fun onEnter(onEnter: IResolvable)
-
-      /**
-       * @param onEnter When entering this state, perform these `actions` if the `condition` is
-       * TRUE.
-       */
-      public fun onEnter(onEnter: OnEnterProperty)
-
-      /**
-       * @param onEnter When entering this state, perform these `actions` if the `condition` is
-       * TRUE.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("dbe58dcb1ee46d3682f5d957890d6d35ed4f0b55ee4a740236fff99ba95e6019")
-      public fun onEnter(onEnter: OnEnterProperty.Builder.() -> Unit)
-
-      /**
-       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
-       * is `TRUE` .
-       */
-      public fun onExit(onExit: IResolvable)
-
-      /**
-       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
-       * is `TRUE` .
-       */
-      public fun onExit(onExit: OnExitProperty)
-
-      /**
-       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
-       * is `TRUE` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("82574d1c4fd6f6dbdc274d99921b89e2e192d9dc583c55c881c81073a30135eb")
-      public fun onExit(onExit: OnExitProperty.Builder.() -> Unit)
-
-      /**
-       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
-       * `actions` .
-       */
-      public fun onInput(onInput: IResolvable)
-
-      /**
-       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
-       * `actions` .
-       */
-      public fun onInput(onInput: OnInputProperty)
-
-      /**
-       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
-       * `actions` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a872d3afe5265eeedc06502a337e9640e005a3bb2011a2f860fa9510635164f6")
-      public fun onInput(onInput: OnInputProperty.Builder.() -> Unit)
-
-      /**
-       * @param stateName The name of the state. 
-       */
-      public fun stateName(stateName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty.builder()
-
-      /**
-       * @param onEnter When entering this state, perform these `actions` if the `condition` is
-       * TRUE.
-       */
-      override fun onEnter(onEnter: IResolvable) {
-        cdkBuilder.onEnter(onEnter.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param onEnter When entering this state, perform these `actions` if the `condition` is
-       * TRUE.
-       */
-      override fun onEnter(onEnter: OnEnterProperty) {
-        cdkBuilder.onEnter(onEnter.let(OnEnterProperty::unwrap))
-      }
-
-      /**
-       * @param onEnter When entering this state, perform these `actions` if the `condition` is
-       * TRUE.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("dbe58dcb1ee46d3682f5d957890d6d35ed4f0b55ee4a740236fff99ba95e6019")
-      override fun onEnter(onEnter: OnEnterProperty.Builder.() -> Unit): Unit =
-          onEnter(OnEnterProperty(onEnter))
-
-      /**
-       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
-       * is `TRUE` .
-       */
-      override fun onExit(onExit: IResolvable) {
-        cdkBuilder.onExit(onExit.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
-       * is `TRUE` .
-       */
-      override fun onExit(onExit: OnExitProperty) {
-        cdkBuilder.onExit(onExit.let(OnExitProperty::unwrap))
-      }
-
-      /**
-       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
-       * is `TRUE` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("82574d1c4fd6f6dbdc274d99921b89e2e192d9dc583c55c881c81073a30135eb")
-      override fun onExit(onExit: OnExitProperty.Builder.() -> Unit): Unit =
-          onExit(OnExitProperty(onExit))
-
-      /**
-       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
-       * `actions` .
-       */
-      override fun onInput(onInput: IResolvable) {
-        cdkBuilder.onInput(onInput.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
-       * `actions` .
-       */
-      override fun onInput(onInput: OnInputProperty) {
-        cdkBuilder.onInput(onInput.let(OnInputProperty::unwrap))
-      }
-
-      /**
-       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
-       * `actions` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a872d3afe5265eeedc06502a337e9640e005a3bb2011a2f860fa9510635164f6")
-      override fun onInput(onInput: OnInputProperty.Builder.() -> Unit): Unit =
-          onInput(OnInputProperty(onInput))
-
-      /**
-       * @param stateName The name of the state. 
-       */
-      override fun stateName(stateName: String) {
-        cdkBuilder.stateName(stateName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty,
-    ) : CdkObject(cdkObject), StateProperty {
-      /**
-       * When entering this state, perform these `actions` if the `condition` is TRUE.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onenter)
-       */
-      override fun onEnter(): Any? = unwrap(this).getOnEnter()
-
-      /**
-       * When exiting this state, perform these `actions` if the specified `condition` is `TRUE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onexit)
-       */
-      override fun onExit(): Any? = unwrap(this).getOnExit()
-
-      /**
-       * When an input is received and the `condition` is TRUE, perform the specified `actions` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-oninput)
-       */
-      override fun onInput(): Any? = unwrap(this).getOnInput()
-
-      /**
-       * The name of the state.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-statename)
-       */
-      override fun stateName(): String = unwrap(this).getStateName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty):
-          StateProperty = CdkObjectWrappers.wrap(cdkObject) as? StateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StateProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty
-    }
-  }
-
-  /**
-   * Information needed to clear the timer.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * ClearTimerProperty clearTimerProperty = ClearTimerProperty.builder()
-   * .timerName("timerName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-cleartimer.html)
-   */
-  public interface ClearTimerProperty {
-    /**
-     * The name of the timer to clear.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-cleartimer.html#cfn-iotevents-detectormodel-cleartimer-timername)
-     */
-    public fun timerName(): String
-
-    /**
-     * A builder for [ClearTimerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param timerName The name of the timer to clear. 
-       */
-      public fun timerName(timerName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty.builder()
-
-      /**
-       * @param timerName The name of the timer to clear. 
-       */
-      override fun timerName(timerName: String) {
-        cdkBuilder.timerName(timerName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty,
-    ) : CdkObject(cdkObject), ClearTimerProperty {
-      /**
-       * The name of the timer to clear.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-cleartimer.html#cfn-iotevents-detectormodel-cleartimer-timername)
-       */
-      override fun timerName(): String = unwrap(this).getTimerName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClearTimerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty):
-          ClearTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? ClearTimerProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClearTimerProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty
-    }
-  }
-
-  /**
-   * When exiting this state, perform these `actions` if the specified `condition` is `TRUE` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * OnExitProperty onExitProperty = OnExitProperty.builder()
-   * .events(List.of(EventProperty.builder()
-   * .eventName("eventName")
-   * // the properties below are optional
-   * .actions(List.of(ActionProperty.builder()
-   * .clearTimer(ClearTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .dynamoDb(DynamoDBProperty.builder()
-   * .hashKeyField("hashKeyField")
-   * .hashKeyValue("hashKeyValue")
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .hashKeyType("hashKeyType")
-   * .operation("operation")
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .payloadField("payloadField")
-   * .rangeKeyField("rangeKeyField")
-   * .rangeKeyType("rangeKeyType")
-   * .rangeKeyValue("rangeKeyValue")
-   * .build())
-   * .dynamoDBv2(DynamoDBv2Property.builder()
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .firehose(FirehoseProperty.builder()
-   * .deliveryStreamName("deliveryStreamName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .separator("separator")
-   * .build())
-   * .iotEvents(IotEventsProperty.builder()
-   * .inputName("inputName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .iotSiteWise(IotSiteWiseProperty.builder()
-   * .propertyValue(AssetPropertyValueProperty.builder()
-   * .value(AssetPropertyVariantProperty.builder()
-   * .booleanValue("booleanValue")
-   * .doubleValue("doubleValue")
-   * .integerValue("integerValue")
-   * .stringValue("stringValue")
-   * .build())
-   * // the properties below are optional
-   * .quality("quality")
-   * .timestamp(AssetPropertyTimestampProperty.builder()
-   * .timeInSeconds("timeInSeconds")
-   * // the properties below are optional
-   * .offsetInNanos("offsetInNanos")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .assetId("assetId")
-   * .entryId("entryId")
-   * .propertyAlias("propertyAlias")
-   * .propertyId("propertyId")
-   * .build())
-   * .iotTopicPublish(IotTopicPublishProperty.builder()
-   * .mqttTopic("mqttTopic")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .lambda(LambdaProperty.builder()
-   * .functionArn("functionArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .resetTimer(ResetTimerProperty.builder()
-   * .timerName("timerName")
-   * .build())
-   * .setTimer(SetTimerProperty.builder()
-   * .timerName("timerName")
-   * // the properties below are optional
-   * .durationExpression("durationExpression")
-   * .seconds(123)
-   * .build())
-   * .setVariable(SetVariableProperty.builder()
-   * .value("value")
-   * .variableName("variableName")
-   * .build())
-   * .sns(SnsProperty.builder()
-   * .targetArn("targetArn")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build())
-   * .sqs(SqsProperty.builder()
-   * .queueUrl("queueUrl")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .useBase64(false)
-   * .build())
-   * .build()))
-   * .condition("condition")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-onexit.html)
-   */
-  public interface OnExitProperty {
-    /**
-     * Specifies the `actions` that are performed when the state is exited and the `condition` is
-     * `TRUE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-onexit.html#cfn-iotevents-detectormodel-onexit-events)
-     */
-    public fun events(): Any? = unwrap(this).getEvents()
-
-    /**
-     * A builder for [OnExitProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param events Specifies the `actions` that are performed when the state is exited and the
-       * `condition` is `TRUE` .
-       */
-      public fun events(events: IResolvable)
-
-      /**
-       * @param events Specifies the `actions` that are performed when the state is exited and the
-       * `condition` is `TRUE` .
-       */
-      public fun events(events: List<Any>)
-
-      /**
-       * @param events Specifies the `actions` that are performed when the state is exited and the
-       * `condition` is `TRUE` .
-       */
-      public fun events(vararg events: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty.builder()
-
-      /**
-       * @param events Specifies the `actions` that are performed when the state is exited and the
-       * `condition` is `TRUE` .
-       */
-      override fun events(events: IResolvable) {
-        cdkBuilder.events(events.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param events Specifies the `actions` that are performed when the state is exited and the
-       * `condition` is `TRUE` .
-       */
-      override fun events(events: List<Any>) {
-        cdkBuilder.events(events)
-      }
-
-      /**
-       * @param events Specifies the `actions` that are performed when the state is exited and the
-       * `condition` is `TRUE` .
-       */
-      override fun events(vararg events: Any): Unit = events(events.toList())
-
-      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty,
-    ) : CdkObject(cdkObject), OnExitProperty {
-      /**
-       * Specifies the `actions` that are performed when the state is exited and the `condition` is
-       * `TRUE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-onexit.html#cfn-iotevents-detectormodel-onexit-events)
-       */
-      override fun events(): Any? = unwrap(this).getEvents()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OnExitProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty):
-          OnExitProperty = CdkObjectWrappers.wrap(cdkObject) as? OnExitProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnExitProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty
-    }
-  }
-
-  /**
-   * Information required to publish the MQTT message through the AWS IoT message broker.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * IotTopicPublishProperty iotTopicPublishProperty = IotTopicPublishProperty.builder()
-   * .mqttTopic("mqttTopic")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html)
-   */
-  public interface IotTopicPublishProperty {
-    /**
-     * The MQTT topic of the message.
-     *
-     * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;` )
-     * and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic)
-     */
-    public fun mqttTopic(): String
-
-    /**
-     * You can configure the action payload when you publish a message to an AWS IoT Core topic.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-payload)
-     */
-    public fun payload(): Any? = unwrap(this).getPayload()
-
-    /**
-     * A builder for [IotTopicPublishProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mqttTopic The MQTT topic of the message. 
-       * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;`
-       * ) and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
-       */
-      public fun mqttTopic(mqttTopic: String)
-
-      /**
-       * @param payload You can configure the action payload when you publish a message to an AWS
-       * IoT Core topic.
-       */
-      public fun payload(payload: IResolvable)
-
-      /**
-       * @param payload You can configure the action payload when you publish a message to an AWS
-       * IoT Core topic.
-       */
-      public fun payload(payload: PayloadProperty)
-
-      /**
-       * @param payload You can configure the action payload when you publish a message to an AWS
-       * IoT Core topic.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1c17305249a77373a0a0d90b8ca415f03c90b527f54a63a1d107e5d424fc9362")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty.Builder
-          =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty.builder()
-
-      /**
-       * @param mqttTopic The MQTT topic of the message. 
-       * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;`
-       * ) and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
-       */
-      override fun mqttTopic(mqttTopic: String) {
-        cdkBuilder.mqttTopic(mqttTopic)
-      }
-
-      /**
-       * @param payload You can configure the action payload when you publish a message to an AWS
-       * IoT Core topic.
-       */
-      override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you publish a message to an AWS
-       * IoT Core topic.
-       */
-      override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you publish a message to an AWS
-       * IoT Core topic.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1c17305249a77373a0a0d90b8ca415f03c90b527f54a63a1d107e5d424fc9362")
-      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
-          payload(PayloadProperty(payload))
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty,
-    ) : CdkObject(cdkObject), IotTopicPublishProperty {
-      /**
-       * The MQTT topic of the message.
-       *
-       * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;`
-       * ) and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic)
-       */
-      override fun mqttTopic(): String = unwrap(this).getMqttTopic()
-
-      /**
-       * You can configure the action payload when you publish a message to an AWS IoT Core topic.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-payload)
-       */
-      override fun payload(): Any? = unwrap(this).getPayload()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IotTopicPublishProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty):
-          IotTopicPublishProperty = CdkObjectWrappers.wrap(cdkObject) as? IotTopicPublishProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IotTopicPublishProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty
-    }
-  }
-
-  /**
-   * A structure that contains timestamp information. For more information, see
-   * [TimeInNanos](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_TimeInNanos.html)
-   * in the *AWS IoT SiteWise API Reference* .
-   *
-   * You must use expressions for all parameters in `AssetPropertyTimestamp` . The expressions
-   * accept literals, operators, functions, references, and substitution templates.
-   *
-   * **Examples** - For literal values, the expressions must contain single quotes. For example, the
-   * value for the `timeInSeconds` parameter can be `'1586400675'` .
-   *
-   * * For references, you must specify either variables or input values. For example, the value for
-   * the `offsetInNanos` parameter can be `$variable.time` .
-   * * For a substitution template, you must use `${}` , and the template must be in single quotes.
-   * A substitution template can also contain a combination of literals, operators, functions,
-   * references, and substitution templates.
-   *
-   * In the following example, the value for the `timeInSeconds` parameter uses a substitution
-   * template.
-   *
-   * `'${$input.TemperatureInput.sensorData.timestamp / 1000}'`
-   *
-   * For more information, see
-   * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
-   * in the *AWS IoT Events Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * AssetPropertyTimestampProperty assetPropertyTimestampProperty =
-   * AssetPropertyTimestampProperty.builder()
-   * .timeInSeconds("timeInSeconds")
-   * // the properties below are optional
-   * .offsetInNanos("offsetInNanos")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html)
-   */
-  public interface AssetPropertyTimestampProperty {
-    /**
-     * The nanosecond offset converted from `timeInSeconds` .
-     *
-     * The valid range is between 0-999999999.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-offsetinnanos)
-     */
-    public fun offsetInNanos(): String? = unwrap(this).getOffsetInNanos()
-
-    /**
-     * The timestamp, in seconds, in the Unix epoch format.
-     *
-     * The valid range is between 1-31556889864403199.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-timeinseconds)
-     */
-    public fun timeInSeconds(): String
-
-    /**
-     * A builder for [AssetPropertyTimestampProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param offsetInNanos The nanosecond offset converted from `timeInSeconds` .
-       * The valid range is between 0-999999999.
-       */
-      public fun offsetInNanos(offsetInNanos: String)
-
-      /**
-       * @param timeInSeconds The timestamp, in seconds, in the Unix epoch format. 
-       * The valid range is between 1-31556889864403199.
-       */
-      public fun timeInSeconds(timeInSeconds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty.Builder
-          =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty.builder()
-
-      /**
-       * @param offsetInNanos The nanosecond offset converted from `timeInSeconds` .
-       * The valid range is between 0-999999999.
-       */
-      override fun offsetInNanos(offsetInNanos: String) {
-        cdkBuilder.offsetInNanos(offsetInNanos)
-      }
-
-      /**
-       * @param timeInSeconds The timestamp, in seconds, in the Unix epoch format. 
-       * The valid range is between 1-31556889864403199.
-       */
-      override fun timeInSeconds(timeInSeconds: String) {
-        cdkBuilder.timeInSeconds(timeInSeconds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty,
-    ) : CdkObject(cdkObject), AssetPropertyTimestampProperty {
-      /**
-       * The nanosecond offset converted from `timeInSeconds` .
-       *
-       * The valid range is between 0-999999999.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-offsetinnanos)
-       */
-      override fun offsetInNanos(): String? = unwrap(this).getOffsetInNanos()
-
-      /**
-       * The timestamp, in seconds, in the Unix epoch format.
-       *
-       * The valid range is between 1-31556889864403199.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-timeinseconds)
-       */
-      override fun timeInSeconds(): String = unwrap(this).getTimeInSeconds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AssetPropertyTimestampProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty):
-          AssetPropertyTimestampProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AssetPropertyTimestampProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AssetPropertyTimestampProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty
-    }
-  }
-
-  /**
-   * Defines an action to write to the Amazon DynamoDB table that you created.
-   *
-   * The default action payload contains all the information about the detector model instance and
-   * the event that triggered the action. You can customize the
-   * [payload](https://docs.aws.amazon.com/iotevents/latest/apireference/API_Payload.html) . A separate
-   * column of the DynamoDB table receives one attribute-value pair in the payload that you specify.
-   *
-   * You must use expressions for all parameters in `DynamoDBv2Action` . The expressions accept
-   * literals, operators, functions, references, and substitution templates.
-   *
-   * **Examples** - For literal values, the expressions must contain single quotes. For example, the
-   * value for the `tableName` parameter can be `'GreenhouseTemperatureTable'` .
-   *
-   * * For references, you must specify either variables or input values. For example, the value for
-   * the `tableName` parameter can be `$variable.ddbtableName` .
-   * * For a substitution template, you must use `${}` , and the template must be in single quotes.
-   * A substitution template can also contain a combination of literals, operators, functions,
-   * references, and substitution templates.
-   *
-   * In the following example, the value for the `contentExpression` parameter in `Payload` uses a
-   * substitution template.
-   *
-   * `'{\"sensorID\": \"${$input.GreenhouseInput.sensor_id}\", \"temperature\":
-   * \"${$input.GreenhouseInput.temperature * 9 / 5 + 32}\"}'`
-   *
-   * * For a string concatenation, you must use `+` . A string concatenation can also contain a
-   * combination of literals, operators, functions, references, and substitution templates.
-   *
-   * In the following example, the value for the `tableName` parameter uses a string concatenation.
-   *
-   * `'GreenhouseTemperatureTable ' + $input.GreenhouseInput.date`
-   *
-   * For more information, see
-   * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
-   * in the *AWS IoT Events Developer Guide* .
-   *
-   * The value for the `type` parameter in `Payload` must be `JSON` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * DynamoDBv2Property dynamoDBv2Property = DynamoDBv2Property.builder()
-   * .tableName("tableName")
-   * // the properties below are optional
-   * .payload(PayloadProperty.builder()
-   * .contentExpression("contentExpression")
-   * .type("type")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html)
-   */
-  public interface DynamoDBv2Property {
-    /**
-     * Information needed to configure the payload.
-     *
-     * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-     * payload contains all attribute-value pairs that have the information about the detector model
-     * instance and the event triggered the action. To configure the action payload, you can use
-     * `contentExpression` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-payload)
-     */
-    public fun payload(): Any? = unwrap(this).getPayload()
-
-    /**
-     * The name of the DynamoDB table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-tablename)
-     */
-    public fun tableName(): String
-
-    /**
-     * A builder for [DynamoDBv2Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param payload Information needed to configure the payload.
-       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-       * payload contains all attribute-value pairs that have the information about the detector model
-       * instance and the event triggered the action. To configure the action payload, you can use
-       * `contentExpression` .
-       */
-      public fun payload(payload: IResolvable)
-
-      /**
-       * @param payload Information needed to configure the payload.
-       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-       * payload contains all attribute-value pairs that have the information about the detector model
-       * instance and the event triggered the action. To configure the action payload, you can use
-       * `contentExpression` .
-       */
-      public fun payload(payload: PayloadProperty)
-
-      /**
-       * @param payload Information needed to configure the payload.
-       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-       * payload contains all attribute-value pairs that have the information about the detector model
-       * instance and the event triggered the action. To configure the action payload, you can use
-       * `contentExpression` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("92706b11054bb982d6adc246c989d5714835d614a6ccb974ac9b3da004bea6e0")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
-
-      /**
-       * @param tableName The name of the DynamoDB table. 
-       */
-      public fun tableName(tableName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property.builder()
-
-      /**
-       * @param payload Information needed to configure the payload.
-       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-       * payload contains all attribute-value pairs that have the information about the detector model
-       * instance and the event triggered the action. To configure the action payload, you can use
-       * `contentExpression` .
-       */
-      override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param payload Information needed to configure the payload.
-       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-       * payload contains all attribute-value pairs that have the information about the detector model
-       * instance and the event triggered the action. To configure the action payload, you can use
-       * `contentExpression` .
-       */
-      override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
-      }
-
-      /**
-       * @param payload Information needed to configure the payload.
-       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-       * payload contains all attribute-value pairs that have the information about the detector model
-       * instance and the event triggered the action. To configure the action payload, you can use
-       * `contentExpression` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("92706b11054bb982d6adc246c989d5714835d614a6ccb974ac9b3da004bea6e0")
-      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
-          payload(PayloadProperty(payload))
-
-      /**
-       * @param tableName The name of the DynamoDB table. 
-       */
-      override fun tableName(tableName: String) {
-        cdkBuilder.tableName(tableName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property,
-    ) : CdkObject(cdkObject), DynamoDBv2Property {
-      /**
-       * Information needed to configure the payload.
-       *
-       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
-       * payload contains all attribute-value pairs that have the information about the detector model
-       * instance and the event triggered the action. To configure the action payload, you can use
-       * `contentExpression` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-payload)
-       */
-      override fun payload(): Any? = unwrap(this).getPayload()
-
-      /**
-       * The name of the DynamoDB table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-tablename)
-       */
-      override fun tableName(): String = unwrap(this).getTableName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DynamoDBv2Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property):
-          DynamoDBv2Property = CdkObjectWrappers.wrap(cdkObject) as? DynamoDBv2Property ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DynamoDBv2Property):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property
-    }
-  }
-
-  /**
    * An action to be performed when the `condition` is TRUE.
    *
    * Example:
@@ -4787,6 +1466,815 @@ public open class CfnDetectorModel internal constructor(
   }
 
   /**
+   * A structure that contains timestamp information. For more information, see
+   * [TimeInNanos](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_TimeInNanos.html)
+   * in the *AWS IoT SiteWise API Reference* .
+   *
+   * You must use expressions for all parameters in `AssetPropertyTimestamp` . The expressions
+   * accept literals, operators, functions, references, and substitution templates.
+   *
+   * **Examples** - For literal values, the expressions must contain single quotes. For example, the
+   * value for the `timeInSeconds` parameter can be `'1586400675'` .
+   *
+   * * For references, you must specify either variables or input values. For example, the value for
+   * the `offsetInNanos` parameter can be `$variable.time` .
+   * * For a substitution template, you must use `${}` , and the template must be in single quotes.
+   * A substitution template can also contain a combination of literals, operators, functions,
+   * references, and substitution templates.
+   *
+   * In the following example, the value for the `timeInSeconds` parameter uses a substitution
+   * template.
+   *
+   * `'${$input.TemperatureInput.sensorData.timestamp / 1000}'`
+   *
+   * For more information, see
+   * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
+   * in the *AWS IoT Events Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * AssetPropertyTimestampProperty assetPropertyTimestampProperty =
+   * AssetPropertyTimestampProperty.builder()
+   * .timeInSeconds("timeInSeconds")
+   * // the properties below are optional
+   * .offsetInNanos("offsetInNanos")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html)
+   */
+  public interface AssetPropertyTimestampProperty {
+    /**
+     * The nanosecond offset converted from `timeInSeconds` .
+     *
+     * The valid range is between 0-999999999.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-offsetinnanos)
+     */
+    public fun offsetInNanos(): String? = unwrap(this).getOffsetInNanos()
+
+    /**
+     * The timestamp, in seconds, in the Unix epoch format.
+     *
+     * The valid range is between 1-31556889864403199.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-timeinseconds)
+     */
+    public fun timeInSeconds(): String
+
+    /**
+     * A builder for [AssetPropertyTimestampProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param offsetInNanos The nanosecond offset converted from `timeInSeconds` .
+       * The valid range is between 0-999999999.
+       */
+      public fun offsetInNanos(offsetInNanos: String)
+
+      /**
+       * @param timeInSeconds The timestamp, in seconds, in the Unix epoch format. 
+       * The valid range is between 1-31556889864403199.
+       */
+      public fun timeInSeconds(timeInSeconds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty.Builder
+          =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty.builder()
+
+      /**
+       * @param offsetInNanos The nanosecond offset converted from `timeInSeconds` .
+       * The valid range is between 0-999999999.
+       */
+      override fun offsetInNanos(offsetInNanos: String) {
+        cdkBuilder.offsetInNanos(offsetInNanos)
+      }
+
+      /**
+       * @param timeInSeconds The timestamp, in seconds, in the Unix epoch format. 
+       * The valid range is between 1-31556889864403199.
+       */
+      override fun timeInSeconds(timeInSeconds: String) {
+        cdkBuilder.timeInSeconds(timeInSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty,
+    ) : CdkObject(cdkObject), AssetPropertyTimestampProperty {
+      /**
+       * The nanosecond offset converted from `timeInSeconds` .
+       *
+       * The valid range is between 0-999999999.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-offsetinnanos)
+       */
+      override fun offsetInNanos(): String? = unwrap(this).getOffsetInNanos()
+
+      /**
+       * The timestamp, in seconds, in the Unix epoch format.
+       *
+       * The valid range is between 1-31556889864403199.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-timeinseconds)
+       */
+      override fun timeInSeconds(): String = unwrap(this).getTimeInSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AssetPropertyTimestampProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty):
+          AssetPropertyTimestampProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetPropertyTimestampProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AssetPropertyTimestampProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty
+    }
+  }
+
+  /**
+   * A structure that contains value information. For more information, see
+   * [AssetPropertyValue](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetPropertyValue.html)
+   * in the *AWS IoT SiteWise API Reference* .
+   *
+   * You must use expressions for all parameters in `AssetPropertyValue` . The expressions accept
+   * literals, operators, functions, references, and substitution templates.
+   *
+   * **Examples** - For literal values, the expressions must contain single quotes. For example, the
+   * value for the `quality` parameter can be `'GOOD'` .
+   *
+   * * For references, you must specify either variables or input values. For example, the value for
+   * the `quality` parameter can be `$input.TemperatureInput.sensorData.quality` .
+   *
+   * For more information, see
+   * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
+   * in the *AWS IoT Events Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * AssetPropertyValueProperty assetPropertyValueProperty = AssetPropertyValueProperty.builder()
+   * .value(AssetPropertyVariantProperty.builder()
+   * .booleanValue("booleanValue")
+   * .doubleValue("doubleValue")
+   * .integerValue("integerValue")
+   * .stringValue("stringValue")
+   * .build())
+   * // the properties below are optional
+   * .quality("quality")
+   * .timestamp(AssetPropertyTimestampProperty.builder()
+   * .timeInSeconds("timeInSeconds")
+   * // the properties below are optional
+   * .offsetInNanos("offsetInNanos")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html)
+   */
+  public interface AssetPropertyValueProperty {
+    /**
+     * The quality of the asset property value.
+     *
+     * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-quality)
+     */
+    public fun quality(): String? = unwrap(this).getQuality()
+
+    /**
+     * The timestamp associated with the asset property value.
+     *
+     * The default is the current event time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-timestamp)
+     */
+    public fun timestamp(): Any? = unwrap(this).getTimestamp()
+
+    /**
+     * The value to send to an asset property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-value)
+     */
+    public fun `value`(): Any
+
+    /**
+     * A builder for [AssetPropertyValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param quality The quality of the asset property value.
+       * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
+       */
+      public fun quality(quality: String)
+
+      /**
+       * @param timestamp The timestamp associated with the asset property value.
+       * The default is the current event time.
+       */
+      public fun timestamp(timestamp: IResolvable)
+
+      /**
+       * @param timestamp The timestamp associated with the asset property value.
+       * The default is the current event time.
+       */
+      public fun timestamp(timestamp: AssetPropertyTimestampProperty)
+
+      /**
+       * @param timestamp The timestamp associated with the asset property value.
+       * The default is the current event time.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0a3915e8dda48e5ddf58a35ff2a83ed0e79cfbc4a47024cd74aedbf6464daae5")
+      public fun timestamp(timestamp: AssetPropertyTimestampProperty.Builder.() -> Unit)
+
+      /**
+       * @param value The value to send to an asset property. 
+       */
+      public fun `value`(`value`: IResolvable)
+
+      /**
+       * @param value The value to send to an asset property. 
+       */
+      public fun `value`(`value`: AssetPropertyVariantProperty)
+
+      /**
+       * @param value The value to send to an asset property. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("12dad539c739121643e786152c5261d3ace7a3fa50ca93f430aafeddbe78c884")
+      public fun `value`(`value`: AssetPropertyVariantProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty.Builder
+          =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty.builder()
+
+      /**
+       * @param quality The quality of the asset property value.
+       * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
+       */
+      override fun quality(quality: String) {
+        cdkBuilder.quality(quality)
+      }
+
+      /**
+       * @param timestamp The timestamp associated with the asset property value.
+       * The default is the current event time.
+       */
+      override fun timestamp(timestamp: IResolvable) {
+        cdkBuilder.timestamp(timestamp.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param timestamp The timestamp associated with the asset property value.
+       * The default is the current event time.
+       */
+      override fun timestamp(timestamp: AssetPropertyTimestampProperty) {
+        cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty::unwrap))
+      }
+
+      /**
+       * @param timestamp The timestamp associated with the asset property value.
+       * The default is the current event time.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0a3915e8dda48e5ddf58a35ff2a83ed0e79cfbc4a47024cd74aedbf6464daae5")
+      override fun timestamp(timestamp: AssetPropertyTimestampProperty.Builder.() -> Unit): Unit =
+          timestamp(AssetPropertyTimestampProperty(timestamp))
+
+      /**
+       * @param value The value to send to an asset property. 
+       */
+      override fun `value`(`value`: IResolvable) {
+        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param value The value to send to an asset property. 
+       */
+      override fun `value`(`value`: AssetPropertyVariantProperty) {
+        cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty::unwrap))
+      }
+
+      /**
+       * @param value The value to send to an asset property. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("12dad539c739121643e786152c5261d3ace7a3fa50ca93f430aafeddbe78c884")
+      override fun `value`(`value`: AssetPropertyVariantProperty.Builder.() -> Unit): Unit =
+          `value`(AssetPropertyVariantProperty(`value`))
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty,
+    ) : CdkObject(cdkObject), AssetPropertyValueProperty {
+      /**
+       * The quality of the asset property value.
+       *
+       * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-quality)
+       */
+      override fun quality(): String? = unwrap(this).getQuality()
+
+      /**
+       * The timestamp associated with the asset property value.
+       *
+       * The default is the current event time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-timestamp)
+       */
+      override fun timestamp(): Any? = unwrap(this).getTimestamp()
+
+      /**
+       * The value to send to an asset property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-value)
+       */
+      override fun `value`(): Any = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AssetPropertyValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty):
+          AssetPropertyValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetPropertyValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AssetPropertyValueProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty
+    }
+  }
+
+  /**
+   * A structure that contains an asset property value.
+   *
+   * For more information, see
+   * [Variant](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_Variant.html) in the
+   * *AWS IoT SiteWise API Reference* .
+   *
+   * You must use expressions for all parameters in `AssetPropertyVariant` . The expressions accept
+   * literals, operators, functions, references, and substitution templates.
+   *
+   * **Examples** - For literal values, the expressions must contain single quotes. For example, the
+   * value for the `integerValue` parameter can be `'100'` .
+   *
+   * * For references, you must specify either variables or parameters. For example, the value for
+   * the `booleanValue` parameter can be `$variable.offline` .
+   * * For a substitution template, you must use `${}` , and the template must be in single quotes.
+   * A substitution template can also contain a combination of literals, operators, functions,
+   * references, and substitution templates.
+   *
+   * In the following example, the value for the `doubleValue` parameter uses a substitution
+   * template.
+   *
+   * `'${$input.TemperatureInput.sensorData.temperature * 6 / 5 + 32}'`
+   *
+   * For more information, see
+   * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
+   * in the *AWS IoT Events Developer Guide* .
+   *
+   * You must specify one of the following value types, depending on the `dataType` of the specified
+   * asset property. For more information, see
+   * [AssetProperty](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetProperty.html)
+   * in the *AWS IoT SiteWise API Reference* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * AssetPropertyVariantProperty assetPropertyVariantProperty =
+   * AssetPropertyVariantProperty.builder()
+   * .booleanValue("booleanValue")
+   * .doubleValue("doubleValue")
+   * .integerValue("integerValue")
+   * .stringValue("stringValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html)
+   */
+  public interface AssetPropertyVariantProperty {
+    /**
+     * The asset property value is a Boolean value that must be `'TRUE'` or `'FALSE'` .
+     *
+     * You must use an expression, and the evaluated result should be a Boolean value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-booleanvalue)
+     */
+    public fun booleanValue(): String? = unwrap(this).getBooleanValue()
+
+    /**
+     * The asset property value is a double.
+     *
+     * You must use an expression, and the evaluated result should be a double.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-doublevalue)
+     */
+    public fun doubleValue(): String? = unwrap(this).getDoubleValue()
+
+    /**
+     * The asset property value is an integer.
+     *
+     * You must use an expression, and the evaluated result should be an integer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-integervalue)
+     */
+    public fun integerValue(): String? = unwrap(this).getIntegerValue()
+
+    /**
+     * The asset property value is a string.
+     *
+     * You must use an expression, and the evaluated result should be a string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-stringvalue)
+     */
+    public fun stringValue(): String? = unwrap(this).getStringValue()
+
+    /**
+     * A builder for [AssetPropertyVariantProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param booleanValue The asset property value is a Boolean value that must be `'TRUE'` or
+       * `'FALSE'` .
+       * You must use an expression, and the evaluated result should be a Boolean value.
+       */
+      public fun booleanValue(booleanValue: String)
+
+      /**
+       * @param doubleValue The asset property value is a double.
+       * You must use an expression, and the evaluated result should be a double.
+       */
+      public fun doubleValue(doubleValue: String)
+
+      /**
+       * @param integerValue The asset property value is an integer.
+       * You must use an expression, and the evaluated result should be an integer.
+       */
+      public fun integerValue(integerValue: String)
+
+      /**
+       * @param stringValue The asset property value is a string.
+       * You must use an expression, and the evaluated result should be a string.
+       */
+      public fun stringValue(stringValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty.Builder
+          =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty.builder()
+
+      /**
+       * @param booleanValue The asset property value is a Boolean value that must be `'TRUE'` or
+       * `'FALSE'` .
+       * You must use an expression, and the evaluated result should be a Boolean value.
+       */
+      override fun booleanValue(booleanValue: String) {
+        cdkBuilder.booleanValue(booleanValue)
+      }
+
+      /**
+       * @param doubleValue The asset property value is a double.
+       * You must use an expression, and the evaluated result should be a double.
+       */
+      override fun doubleValue(doubleValue: String) {
+        cdkBuilder.doubleValue(doubleValue)
+      }
+
+      /**
+       * @param integerValue The asset property value is an integer.
+       * You must use an expression, and the evaluated result should be an integer.
+       */
+      override fun integerValue(integerValue: String) {
+        cdkBuilder.integerValue(integerValue)
+      }
+
+      /**
+       * @param stringValue The asset property value is a string.
+       * You must use an expression, and the evaluated result should be a string.
+       */
+      override fun stringValue(stringValue: String) {
+        cdkBuilder.stringValue(stringValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty,
+    ) : CdkObject(cdkObject), AssetPropertyVariantProperty {
+      /**
+       * The asset property value is a Boolean value that must be `'TRUE'` or `'FALSE'` .
+       *
+       * You must use an expression, and the evaluated result should be a Boolean value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-booleanvalue)
+       */
+      override fun booleanValue(): String? = unwrap(this).getBooleanValue()
+
+      /**
+       * The asset property value is a double.
+       *
+       * You must use an expression, and the evaluated result should be a double.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-doublevalue)
+       */
+      override fun doubleValue(): String? = unwrap(this).getDoubleValue()
+
+      /**
+       * The asset property value is an integer.
+       *
+       * You must use an expression, and the evaluated result should be an integer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-integervalue)
+       */
+      override fun integerValue(): String? = unwrap(this).getIntegerValue()
+
+      /**
+       * The asset property value is a string.
+       *
+       * You must use an expression, and the evaluated result should be a string.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-stringvalue)
+       */
+      override fun stringValue(): String? = unwrap(this).getStringValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AssetPropertyVariantProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty):
+          AssetPropertyVariantProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetPropertyVariantProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AssetPropertyVariantProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty
+    }
+  }
+
+  /**
+   * Information needed to clear the timer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * ClearTimerProperty clearTimerProperty = ClearTimerProperty.builder()
+   * .timerName("timerName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-cleartimer.html)
+   */
+  public interface ClearTimerProperty {
+    /**
+     * The name of the timer to clear.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-cleartimer.html#cfn-iotevents-detectormodel-cleartimer-timername)
+     */
+    public fun timerName(): String
+
+    /**
+     * A builder for [ClearTimerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param timerName The name of the timer to clear. 
+       */
+      public fun timerName(timerName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty.builder()
+
+      /**
+       * @param timerName The name of the timer to clear. 
+       */
+      override fun timerName(timerName: String) {
+        cdkBuilder.timerName(timerName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty,
+    ) : CdkObject(cdkObject), ClearTimerProperty {
+      /**
+       * The name of the timer to clear.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-cleartimer.html#cfn-iotevents-detectormodel-cleartimer-timername)
+       */
+      override fun timerName(): String = unwrap(this).getTimerName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClearTimerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty):
+          ClearTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? ClearTimerProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClearTimerProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty
+    }
+  }
+
+  /**
+   * Information that defines how a detector operates.
+   *
+   * Example:
+   *
+   * ```
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html)
+   */
+  public interface DetectorModelDefinitionProperty {
+    /**
+     * The state that is entered at the creation of each detector (instance).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename)
+     */
+    public fun initialStateName(): String
+
+    /**
+     * Information about the states of the detector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-states)
+     */
+    public fun states(): Any
+
+    /**
+     * A builder for [DetectorModelDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param initialStateName The state that is entered at the creation of each detector
+       * (instance). 
+       */
+      public fun initialStateName(initialStateName: String)
+
+      /**
+       * @param states Information about the states of the detector. 
+       */
+      public fun states(states: IResolvable)
+
+      /**
+       * @param states Information about the states of the detector. 
+       */
+      public fun states(states: List<Any>)
+
+      /**
+       * @param states Information about the states of the detector. 
+       */
+      public fun states(vararg states: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty.builder()
+
+      /**
+       * @param initialStateName The state that is entered at the creation of each detector
+       * (instance). 
+       */
+      override fun initialStateName(initialStateName: String) {
+        cdkBuilder.initialStateName(initialStateName)
+      }
+
+      /**
+       * @param states Information about the states of the detector. 
+       */
+      override fun states(states: IResolvable) {
+        cdkBuilder.states(states.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param states Information about the states of the detector. 
+       */
+      override fun states(states: List<Any>) {
+        cdkBuilder.states(states)
+      }
+
+      /**
+       * @param states Information about the states of the detector. 
+       */
+      override fun states(vararg states: Any): Unit = states(states.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty,
+    ) : CdkObject(cdkObject), DetectorModelDefinitionProperty {
+      /**
+       * The state that is entered at the creation of each detector (instance).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename)
+       */
+      override fun initialStateName(): String = unwrap(this).getInitialStateName()
+
+      /**
+       * Information about the states of the detector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-states)
+       */
+      override fun states(): Any = unwrap(this).getStates()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DetectorModelDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty):
+          DetectorModelDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DetectorModelDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DetectorModelDefinitionProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty
+    }
+  }
+
+  /**
    * Defines an action to write to the Amazon DynamoDB table that you created.
    *
    * The standard action payload contains all the information about the detector model instance and
@@ -5328,22 +2816,43 @@ public open class CfnDetectorModel internal constructor(
   }
 
   /**
-   * A structure that contains value information. For more information, see
-   * [AssetPropertyValue](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetPropertyValue.html)
-   * in the *AWS IoT SiteWise API Reference* .
+   * Defines an action to write to the Amazon DynamoDB table that you created.
    *
-   * You must use expressions for all parameters in `AssetPropertyValue` . The expressions accept
+   * The default action payload contains all the information about the detector model instance and
+   * the event that triggered the action. You can customize the
+   * [payload](https://docs.aws.amazon.com/iotevents/latest/apireference/API_Payload.html) . A separate
+   * column of the DynamoDB table receives one attribute-value pair in the payload that you specify.
+   *
+   * You must use expressions for all parameters in `DynamoDBv2Action` . The expressions accept
    * literals, operators, functions, references, and substitution templates.
    *
    * **Examples** - For literal values, the expressions must contain single quotes. For example, the
-   * value for the `quality` parameter can be `'GOOD'` .
+   * value for the `tableName` parameter can be `'GreenhouseTemperatureTable'` .
    *
    * * For references, you must specify either variables or input values. For example, the value for
-   * the `quality` parameter can be `$input.TemperatureInput.sensorData.quality` .
+   * the `tableName` parameter can be `$variable.ddbtableName` .
+   * * For a substitution template, you must use `${}` , and the template must be in single quotes.
+   * A substitution template can also contain a combination of literals, operators, functions,
+   * references, and substitution templates.
+   *
+   * In the following example, the value for the `contentExpression` parameter in `Payload` uses a
+   * substitution template.
+   *
+   * `'{\"sensorID\": \"${$input.GreenhouseInput.sensor_id}\", \"temperature\":
+   * \"${$input.GreenhouseInput.temperature * 9 / 5 + 32}\"}'`
+   *
+   * * For a string concatenation, you must use `+` . A string concatenation can also contain a
+   * combination of literals, operators, functions, references, and substitution templates.
+   *
+   * In the following example, the value for the `tableName` parameter uses a string concatenation.
+   *
+   * `'GreenhouseTemperatureTable ' + $input.GreenhouseInput.date`
    *
    * For more information, see
    * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
    * in the *AWS IoT Events Developer Guide* .
+   *
+   * The value for the `type` parameter in `Payload` must be `JSON` .
    *
    * Example:
    *
@@ -5351,7 +2860,230 @@ public open class CfnDetectorModel internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * AssetPropertyValueProperty assetPropertyValueProperty = AssetPropertyValueProperty.builder()
+   * DynamoDBv2Property dynamoDBv2Property = DynamoDBv2Property.builder()
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html)
+   */
+  public interface DynamoDBv2Property {
+    /**
+     * Information needed to configure the payload.
+     *
+     * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+     * payload contains all attribute-value pairs that have the information about the detector model
+     * instance and the event triggered the action. To configure the action payload, you can use
+     * `contentExpression` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-payload)
+     */
+    public fun payload(): Any? = unwrap(this).getPayload()
+
+    /**
+     * The name of the DynamoDB table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * A builder for [DynamoDBv2Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param payload Information needed to configure the payload.
+       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+       * payload contains all attribute-value pairs that have the information about the detector model
+       * instance and the event triggered the action. To configure the action payload, you can use
+       * `contentExpression` .
+       */
+      public fun payload(payload: IResolvable)
+
+      /**
+       * @param payload Information needed to configure the payload.
+       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+       * payload contains all attribute-value pairs that have the information about the detector model
+       * instance and the event triggered the action. To configure the action payload, you can use
+       * `contentExpression` .
+       */
+      public fun payload(payload: PayloadProperty)
+
+      /**
+       * @param payload Information needed to configure the payload.
+       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+       * payload contains all attribute-value pairs that have the information about the detector model
+       * instance and the event triggered the action. To configure the action payload, you can use
+       * `contentExpression` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("92706b11054bb982d6adc246c989d5714835d614a6ccb974ac9b3da004bea6e0")
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
+
+      /**
+       * @param tableName The name of the DynamoDB table. 
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property.builder()
+
+      /**
+       * @param payload Information needed to configure the payload.
+       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+       * payload contains all attribute-value pairs that have the information about the detector model
+       * instance and the event triggered the action. To configure the action payload, you can use
+       * `contentExpression` .
+       */
+      override fun payload(payload: IResolvable) {
+        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param payload Information needed to configure the payload.
+       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+       * payload contains all attribute-value pairs that have the information about the detector model
+       * instance and the event triggered the action. To configure the action payload, you can use
+       * `contentExpression` .
+       */
+      override fun payload(payload: PayloadProperty) {
+        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+      }
+
+      /**
+       * @param payload Information needed to configure the payload.
+       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+       * payload contains all attribute-value pairs that have the information about the detector model
+       * instance and the event triggered the action. To configure the action payload, you can use
+       * `contentExpression` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("92706b11054bb982d6adc246c989d5714835d614a6ccb974ac9b3da004bea6e0")
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+          payload(PayloadProperty(payload))
+
+      /**
+       * @param tableName The name of the DynamoDB table. 
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property,
+    ) : CdkObject(cdkObject), DynamoDBv2Property {
+      /**
+       * Information needed to configure the payload.
+       *
+       * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+       * payload contains all attribute-value pairs that have the information about the detector model
+       * instance and the event triggered the action. To configure the action payload, you can use
+       * `contentExpression` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-payload)
+       */
+      override fun payload(): Any? = unwrap(this).getPayload()
+
+      /**
+       * The name of the DynamoDB table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DynamoDBv2Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property):
+          DynamoDBv2Property = CdkObjectWrappers.wrap(cdkObject) as? DynamoDBv2Property ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DynamoDBv2Property):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property
+    }
+  }
+
+  /**
+   * Specifies the `actions` to be performed when the `condition` evaluates to TRUE.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * EventProperty eventProperty = EventProperty.builder()
+   * .eventName("eventName")
+   * // the properties below are optional
+   * .actions(List.of(ActionProperty.builder()
+   * .clearTimer(ClearTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .dynamoDb(DynamoDBProperty.builder()
+   * .hashKeyField("hashKeyField")
+   * .hashKeyValue("hashKeyValue")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .hashKeyType("hashKeyType")
+   * .operation("operation")
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .payloadField("payloadField")
+   * .rangeKeyField("rangeKeyField")
+   * .rangeKeyType("rangeKeyType")
+   * .rangeKeyValue("rangeKeyValue")
+   * .build())
+   * .dynamoDBv2(DynamoDBv2Property.builder()
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .firehose(FirehoseProperty.builder()
+   * .deliveryStreamName("deliveryStreamName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .separator("separator")
+   * .build())
+   * .iotEvents(IotEventsProperty.builder()
+   * .inputName("inputName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .iotSiteWise(IotSiteWiseProperty.builder()
+   * .propertyValue(AssetPropertyValueProperty.builder()
    * .value(AssetPropertyVariantProperty.builder()
    * .booleanValue("booleanValue")
    * .doubleValue("doubleValue")
@@ -5365,197 +3097,1131 @@ public open class CfnDetectorModel internal constructor(
    * // the properties below are optional
    * .offsetInNanos("offsetInNanos")
    * .build())
+   * .build())
+   * // the properties below are optional
+   * .assetId("assetId")
+   * .entryId("entryId")
+   * .propertyAlias("propertyAlias")
+   * .propertyId("propertyId")
+   * .build())
+   * .iotTopicPublish(IotTopicPublishProperty.builder()
+   * .mqttTopic("mqttTopic")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .lambda(LambdaProperty.builder()
+   * .functionArn("functionArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .resetTimer(ResetTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .setTimer(SetTimerProperty.builder()
+   * .timerName("timerName")
+   * // the properties below are optional
+   * .durationExpression("durationExpression")
+   * .seconds(123)
+   * .build())
+   * .setVariable(SetVariableProperty.builder()
+   * .value("value")
+   * .variableName("variableName")
+   * .build())
+   * .sns(SnsProperty.builder()
+   * .targetArn("targetArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .sqs(SqsProperty.builder()
+   * .queueUrl("queueUrl")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .useBase64(false)
+   * .build())
+   * .build()))
+   * .condition("condition")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html)
    */
-  public interface AssetPropertyValueProperty {
+  public interface EventProperty {
     /**
-     * The quality of the asset property value.
+     * The actions to be performed.
      *
-     * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-quality)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-actions)
      */
-    public fun quality(): String? = unwrap(this).getQuality()
+    public fun actions(): Any? = unwrap(this).getActions()
 
     /**
-     * The timestamp associated with the asset property value.
+     * Optional.
      *
-     * The default is the current event time.
+     * The Boolean expression that, when TRUE, causes the `actions` to be performed. If not present,
+     * the actions are performed (=TRUE). If the expression result is not a Boolean value, the actions
+     * are not performed (=FALSE).
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-timestamp)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-condition)
      */
-    public fun timestamp(): Any? = unwrap(this).getTimestamp()
+    public fun condition(): String? = unwrap(this).getCondition()
 
     /**
-     * The value to send to an asset property.
+     * The name of the event.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-value)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-eventname)
      */
-    public fun `value`(): Any
+    public fun eventName(): String
 
     /**
-     * A builder for [AssetPropertyValueProperty]
+     * A builder for [EventProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param quality The quality of the asset property value.
-       * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
+       * @param actions The actions to be performed.
        */
-      public fun quality(quality: String)
+      public fun actions(actions: IResolvable)
 
       /**
-       * @param timestamp The timestamp associated with the asset property value.
-       * The default is the current event time.
+       * @param actions The actions to be performed.
        */
-      public fun timestamp(timestamp: IResolvable)
+      public fun actions(actions: List<Any>)
 
       /**
-       * @param timestamp The timestamp associated with the asset property value.
-       * The default is the current event time.
+       * @param actions The actions to be performed.
        */
-      public fun timestamp(timestamp: AssetPropertyTimestampProperty)
+      public fun actions(vararg actions: Any)
 
       /**
-       * @param timestamp The timestamp associated with the asset property value.
-       * The default is the current event time.
+       * @param condition Optional.
+       * The Boolean expression that, when TRUE, causes the `actions` to be performed. If not
+       * present, the actions are performed (=TRUE). If the expression result is not a Boolean value,
+       * the actions are not performed (=FALSE).
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0a3915e8dda48e5ddf58a35ff2a83ed0e79cfbc4a47024cd74aedbf6464daae5")
-      public fun timestamp(timestamp: AssetPropertyTimestampProperty.Builder.() -> Unit)
+      public fun condition(condition: String)
 
       /**
-       * @param value The value to send to an asset property. 
+       * @param eventName The name of the event. 
        */
-      public fun `value`(`value`: IResolvable)
-
-      /**
-       * @param value The value to send to an asset property. 
-       */
-      public fun `value`(`value`: AssetPropertyVariantProperty)
-
-      /**
-       * @param value The value to send to an asset property. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("12dad539c739121643e786152c5261d3ace7a3fa50ca93f430aafeddbe78c884")
-      public fun `value`(`value`: AssetPropertyVariantProperty.Builder.() -> Unit)
+      public fun eventName(eventName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty.Builder
-          =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty.builder()
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty.builder()
 
       /**
-       * @param quality The quality of the asset property value.
-       * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
+       * @param actions The actions to be performed.
        */
-      override fun quality(quality: String) {
-        cdkBuilder.quality(quality)
+      override fun actions(actions: IResolvable) {
+        cdkBuilder.actions(actions.let(IResolvable::unwrap))
       }
 
       /**
-       * @param timestamp The timestamp associated with the asset property value.
-       * The default is the current event time.
+       * @param actions The actions to be performed.
        */
-      override fun timestamp(timestamp: IResolvable) {
-        cdkBuilder.timestamp(timestamp.let(IResolvable::unwrap))
+      override fun actions(actions: List<Any>) {
+        cdkBuilder.actions(actions)
       }
 
       /**
-       * @param timestamp The timestamp associated with the asset property value.
-       * The default is the current event time.
+       * @param actions The actions to be performed.
        */
-      override fun timestamp(timestamp: AssetPropertyTimestampProperty) {
-        cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty::unwrap))
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
+      /**
+       * @param condition Optional.
+       * The Boolean expression that, when TRUE, causes the `actions` to be performed. If not
+       * present, the actions are performed (=TRUE). If the expression result is not a Boolean value,
+       * the actions are not performed (=FALSE).
+       */
+      override fun condition(condition: String) {
+        cdkBuilder.condition(condition)
       }
 
       /**
-       * @param timestamp The timestamp associated with the asset property value.
-       * The default is the current event time.
+       * @param eventName The name of the event. 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0a3915e8dda48e5ddf58a35ff2a83ed0e79cfbc4a47024cd74aedbf6464daae5")
-      override fun timestamp(timestamp: AssetPropertyTimestampProperty.Builder.() -> Unit): Unit =
-          timestamp(AssetPropertyTimestampProperty(timestamp))
-
-      /**
-       * @param value The value to send to an asset property. 
-       */
-      override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+      override fun eventName(eventName: String) {
+        cdkBuilder.eventName(eventName)
       }
 
-      /**
-       * @param value The value to send to an asset property. 
-       */
-      override fun `value`(`value`: AssetPropertyVariantProperty) {
-        cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty::unwrap))
-      }
-
-      /**
-       * @param value The value to send to an asset property. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("12dad539c739121643e786152c5261d3ace7a3fa50ca93f430aafeddbe78c884")
-      override fun `value`(`value`: AssetPropertyVariantProperty.Builder.() -> Unit): Unit =
-          `value`(AssetPropertyVariantProperty(`value`))
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty =
+      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty,
-    ) : CdkObject(cdkObject), AssetPropertyValueProperty {
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty,
+    ) : CdkObject(cdkObject), EventProperty {
       /**
-       * The quality of the asset property value.
+       * The actions to be performed.
        *
-       * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-quality)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-actions)
        */
-      override fun quality(): String? = unwrap(this).getQuality()
+      override fun actions(): Any? = unwrap(this).getActions()
 
       /**
-       * The timestamp associated with the asset property value.
+       * Optional.
        *
-       * The default is the current event time.
+       * The Boolean expression that, when TRUE, causes the `actions` to be performed. If not
+       * present, the actions are performed (=TRUE). If the expression result is not a Boolean value,
+       * the actions are not performed (=FALSE).
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-timestamp)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-condition)
        */
-      override fun timestamp(): Any? = unwrap(this).getTimestamp()
+      override fun condition(): String? = unwrap(this).getCondition()
 
       /**
-       * The value to send to an asset property.
+       * The name of the event.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-value)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-eventname)
        */
-      override fun `value`(): Any = unwrap(this).getValue()
+      override fun eventName(): String = unwrap(this).getEventName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AssetPropertyValueProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty):
-          AssetPropertyValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AssetPropertyValueProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty):
+          EventProperty = CdkObjectWrappers.wrap(cdkObject) as? EventProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AssetPropertyValueProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty =
+      internal fun unwrap(wrapped: EventProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty
+    }
+  }
+
+  /**
+   * Sends information about the detector model instance and the event that triggered the action to
+   * an Amazon Kinesis Data Firehose delivery stream.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * FirehoseProperty firehoseProperty = FirehoseProperty.builder()
+   * .deliveryStreamName("deliveryStreamName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .separator("separator")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html)
+   */
+  public interface FirehoseProperty {
+    /**
+     * The name of the Kinesis Data Firehose delivery stream where the data is written.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-deliverystreamname)
+     */
+    public fun deliveryStreamName(): String
+
+    /**
+     * You can configure the action payload when you send a message to an Amazon Data Firehose
+     * delivery stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-payload)
+     */
+    public fun payload(): Any? = unwrap(this).getPayload()
+
+    /**
+     * A character separator that is used to separate records written to the Kinesis Data Firehose
+     * delivery stream.
+     *
+     * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-separator)
+     */
+    public fun separator(): String? = unwrap(this).getSeparator()
+
+    /**
+     * A builder for [FirehoseProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deliveryStreamName The name of the Kinesis Data Firehose delivery stream where the
+       * data is written. 
+       */
+      public fun deliveryStreamName(deliveryStreamName: String)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an Amazon
+       * Data Firehose delivery stream.
+       */
+      public fun payload(payload: IResolvable)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an Amazon
+       * Data Firehose delivery stream.
+       */
+      public fun payload(payload: PayloadProperty)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an Amazon
+       * Data Firehose delivery stream.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d6fe46e21f28c628927db685594aa34ebd736bce6212a486e4151fb794fa754")
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
+
+      /**
+       * @param separator A character separator that is used to separate records written to the
+       * Kinesis Data Firehose delivery stream.
+       * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+       */
+      public fun separator(separator: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty.builder()
+
+      /**
+       * @param deliveryStreamName The name of the Kinesis Data Firehose delivery stream where the
+       * data is written. 
+       */
+      override fun deliveryStreamName(deliveryStreamName: String) {
+        cdkBuilder.deliveryStreamName(deliveryStreamName)
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an Amazon
+       * Data Firehose delivery stream.
+       */
+      override fun payload(payload: IResolvable) {
+        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an Amazon
+       * Data Firehose delivery stream.
+       */
+      override fun payload(payload: PayloadProperty) {
+        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an Amazon
+       * Data Firehose delivery stream.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d6fe46e21f28c628927db685594aa34ebd736bce6212a486e4151fb794fa754")
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+          payload(PayloadProperty(payload))
+
+      /**
+       * @param separator A character separator that is used to separate records written to the
+       * Kinesis Data Firehose delivery stream.
+       * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+       */
+      override fun separator(separator: String) {
+        cdkBuilder.separator(separator)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty,
+    ) : CdkObject(cdkObject), FirehoseProperty {
+      /**
+       * The name of the Kinesis Data Firehose delivery stream where the data is written.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-deliverystreamname)
+       */
+      override fun deliveryStreamName(): String = unwrap(this).getDeliveryStreamName()
+
+      /**
+       * You can configure the action payload when you send a message to an Amazon Data Firehose
+       * delivery stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-payload)
+       */
+      override fun payload(): Any? = unwrap(this).getPayload()
+
+      /**
+       * A character separator that is used to separate records written to the Kinesis Data Firehose
+       * delivery stream.
+       *
+       * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-separator)
+       */
+      override fun separator(): String? = unwrap(this).getSeparator()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FirehoseProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty):
+          FirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as? FirehoseProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FirehoseProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty
+    }
+  }
+
+  /**
+   * Sends an AWS IoT Events input, passing in information about the detector model instance and the
+   * event that triggered the action.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * IotEventsProperty iotEventsProperty = IotEventsProperty.builder()
+   * .inputName("inputName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html)
+   */
+  public interface IotEventsProperty {
+    /**
+     * The name of the AWS IoT Events input where the data is sent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-inputname)
+     */
+    public fun inputName(): String
+
+    /**
+     * You can configure the action payload when you send a message to an AWS IoT Events input.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-payload)
+     */
+    public fun payload(): Any? = unwrap(this).getPayload()
+
+    /**
+     * A builder for [IotEventsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inputName The name of the AWS IoT Events input where the data is sent. 
+       */
+      public fun inputName(inputName: String)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an AWS IoT
+       * Events input.
+       */
+      public fun payload(payload: IResolvable)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an AWS IoT
+       * Events input.
+       */
+      public fun payload(payload: PayloadProperty)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an AWS IoT
+       * Events input.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ee353d5ad9081f54075a59c294379906f437f7cca9320c9a370872bbd1ab6acd")
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty.builder()
+
+      /**
+       * @param inputName The name of the AWS IoT Events input where the data is sent. 
+       */
+      override fun inputName(inputName: String) {
+        cdkBuilder.inputName(inputName)
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an AWS IoT
+       * Events input.
+       */
+      override fun payload(payload: IResolvable) {
+        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an AWS IoT
+       * Events input.
+       */
+      override fun payload(payload: PayloadProperty) {
+        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to an AWS IoT
+       * Events input.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ee353d5ad9081f54075a59c294379906f437f7cca9320c9a370872bbd1ab6acd")
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+          payload(PayloadProperty(payload))
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty,
+    ) : CdkObject(cdkObject), IotEventsProperty {
+      /**
+       * The name of the AWS IoT Events input where the data is sent.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-inputname)
+       */
+      override fun inputName(): String = unwrap(this).getInputName()
+
+      /**
+       * You can configure the action payload when you send a message to an AWS IoT Events input.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-payload)
+       */
+      override fun payload(): Any? = unwrap(this).getPayload()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IotEventsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty):
+          IotEventsProperty = CdkObjectWrappers.wrap(cdkObject) as? IotEventsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IotEventsProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty
+    }
+  }
+
+  /**
+   * Sends information about the detector model instance and the event that triggered the action to
+   * a specified asset property in AWS IoT SiteWise .
+   *
+   * You must use expressions for all parameters in `IotSiteWiseAction` . The expressions accept
+   * literals, operators, functions, references, and substitutions templates.
+   *
+   * **Examples** - For literal values, the expressions must contain single quotes. For example, the
+   * value for the `propertyAlias` parameter can be `'/company/windfarm/3/turbine/7/temperature'` .
+   *
+   * * For references, you must specify either variables or input values. For example, the value for
+   * the `assetId` parameter can be `$input.TurbineInput.assetId1` .
+   * * For a substitution template, you must use `${}` , and the template must be in single quotes.
+   * A substitution template can also contain a combination of literals, operators, functions,
+   * references, and substitution templates.
+   *
+   * In the following example, the value for the `propertyAlias` parameter uses a substitution
+   * template.
+   *
+   * `'company/windfarm/${$input.TemperatureInput.sensorData.windfarmID}/turbine/
+   * ${$input.TemperatureInput.sensorData.turbineID}/temperature'`
+   *
+   * You must specify either `propertyAlias` or both `assetId` and `propertyId` to identify the
+   * target asset property in AWS IoT SiteWise .
+   *
+   * For more information, see
+   * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
+   * in the *AWS IoT Events Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * IotSiteWiseProperty iotSiteWiseProperty = IotSiteWiseProperty.builder()
+   * .propertyValue(AssetPropertyValueProperty.builder()
+   * .value(AssetPropertyVariantProperty.builder()
+   * .booleanValue("booleanValue")
+   * .doubleValue("doubleValue")
+   * .integerValue("integerValue")
+   * .stringValue("stringValue")
+   * .build())
+   * // the properties below are optional
+   * .quality("quality")
+   * .timestamp(AssetPropertyTimestampProperty.builder()
+   * .timeInSeconds("timeInSeconds")
+   * // the properties below are optional
+   * .offsetInNanos("offsetInNanos")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .assetId("assetId")
+   * .entryId("entryId")
+   * .propertyAlias("propertyAlias")
+   * .propertyId("propertyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html)
+   */
+  public interface IotSiteWiseProperty {
+    /**
+     * The ID of the asset that has the specified property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-assetid)
+     */
+    public fun assetId(): String? = unwrap(this).getAssetId()
+
+    /**
+     * A unique identifier for this entry.
+     *
+     * You can use the entry ID to track which data entry causes an error in case of failure. The
+     * default is a new unique identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-entryid)
+     */
+    public fun entryId(): String? = unwrap(this).getEntryId()
+
+    /**
+     * The alias of the asset property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyalias)
+     */
+    public fun propertyAlias(): String? = unwrap(this).getPropertyAlias()
+
+    /**
+     * The ID of the asset property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyid)
+     */
+    public fun propertyId(): String? = unwrap(this).getPropertyId()
+
+    /**
+     * The value to send to the asset property.
+     *
+     * This value contains timestamp, quality, and value (TQV) information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyvalue)
+     */
+    public fun propertyValue(): Any
+
+    /**
+     * A builder for [IotSiteWiseProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param assetId The ID of the asset that has the specified property.
+       */
+      public fun assetId(assetId: String)
+
+      /**
+       * @param entryId A unique identifier for this entry.
+       * You can use the entry ID to track which data entry causes an error in case of failure. The
+       * default is a new unique identifier.
+       */
+      public fun entryId(entryId: String)
+
+      /**
+       * @param propertyAlias The alias of the asset property.
+       */
+      public fun propertyAlias(propertyAlias: String)
+
+      /**
+       * @param propertyId The ID of the asset property.
+       */
+      public fun propertyId(propertyId: String)
+
+      /**
+       * @param propertyValue The value to send to the asset property. 
+       * This value contains timestamp, quality, and value (TQV) information.
+       */
+      public fun propertyValue(propertyValue: IResolvable)
+
+      /**
+       * @param propertyValue The value to send to the asset property. 
+       * This value contains timestamp, quality, and value (TQV) information.
+       */
+      public fun propertyValue(propertyValue: AssetPropertyValueProperty)
+
+      /**
+       * @param propertyValue The value to send to the asset property. 
+       * This value contains timestamp, quality, and value (TQV) information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4b0a81d6728ba70e437a86613bfd50d5ce58f813db9dabb984529bd6e6bd215b")
+      public fun propertyValue(propertyValue: AssetPropertyValueProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty.builder()
+
+      /**
+       * @param assetId The ID of the asset that has the specified property.
+       */
+      override fun assetId(assetId: String) {
+        cdkBuilder.assetId(assetId)
+      }
+
+      /**
+       * @param entryId A unique identifier for this entry.
+       * You can use the entry ID to track which data entry causes an error in case of failure. The
+       * default is a new unique identifier.
+       */
+      override fun entryId(entryId: String) {
+        cdkBuilder.entryId(entryId)
+      }
+
+      /**
+       * @param propertyAlias The alias of the asset property.
+       */
+      override fun propertyAlias(propertyAlias: String) {
+        cdkBuilder.propertyAlias(propertyAlias)
+      }
+
+      /**
+       * @param propertyId The ID of the asset property.
+       */
+      override fun propertyId(propertyId: String) {
+        cdkBuilder.propertyId(propertyId)
+      }
+
+      /**
+       * @param propertyValue The value to send to the asset property. 
+       * This value contains timestamp, quality, and value (TQV) information.
+       */
+      override fun propertyValue(propertyValue: IResolvable) {
+        cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param propertyValue The value to send to the asset property. 
+       * This value contains timestamp, quality, and value (TQV) information.
+       */
+      override fun propertyValue(propertyValue: AssetPropertyValueProperty) {
+        cdkBuilder.propertyValue(propertyValue.let(AssetPropertyValueProperty::unwrap))
+      }
+
+      /**
+       * @param propertyValue The value to send to the asset property. 
+       * This value contains timestamp, quality, and value (TQV) information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4b0a81d6728ba70e437a86613bfd50d5ce58f813db9dabb984529bd6e6bd215b")
+      override fun propertyValue(propertyValue: AssetPropertyValueProperty.Builder.() -> Unit): Unit
+          = propertyValue(AssetPropertyValueProperty(propertyValue))
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty,
+    ) : CdkObject(cdkObject), IotSiteWiseProperty {
+      /**
+       * The ID of the asset that has the specified property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-assetid)
+       */
+      override fun assetId(): String? = unwrap(this).getAssetId()
+
+      /**
+       * A unique identifier for this entry.
+       *
+       * You can use the entry ID to track which data entry causes an error in case of failure. The
+       * default is a new unique identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-entryid)
+       */
+      override fun entryId(): String? = unwrap(this).getEntryId()
+
+      /**
+       * The alias of the asset property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyalias)
+       */
+      override fun propertyAlias(): String? = unwrap(this).getPropertyAlias()
+
+      /**
+       * The ID of the asset property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyid)
+       */
+      override fun propertyId(): String? = unwrap(this).getPropertyId()
+
+      /**
+       * The value to send to the asset property.
+       *
+       * This value contains timestamp, quality, and value (TQV) information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyvalue)
+       */
+      override fun propertyValue(): Any = unwrap(this).getPropertyValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IotSiteWiseProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty):
+          IotSiteWiseProperty = CdkObjectWrappers.wrap(cdkObject) as? IotSiteWiseProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IotSiteWiseProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty
+    }
+  }
+
+  /**
+   * Information required to publish the MQTT message through the AWS IoT message broker.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * IotTopicPublishProperty iotTopicPublishProperty = IotTopicPublishProperty.builder()
+   * .mqttTopic("mqttTopic")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html)
+   */
+  public interface IotTopicPublishProperty {
+    /**
+     * The MQTT topic of the message.
+     *
+     * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;` )
+     * and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic)
+     */
+    public fun mqttTopic(): String
+
+    /**
+     * You can configure the action payload when you publish a message to an AWS IoT Core topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-payload)
+     */
+    public fun payload(): Any? = unwrap(this).getPayload()
+
+    /**
+     * A builder for [IotTopicPublishProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mqttTopic The MQTT topic of the message. 
+       * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;`
+       * ) and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
+       */
+      public fun mqttTopic(mqttTopic: String)
+
+      /**
+       * @param payload You can configure the action payload when you publish a message to an AWS
+       * IoT Core topic.
+       */
+      public fun payload(payload: IResolvable)
+
+      /**
+       * @param payload You can configure the action payload when you publish a message to an AWS
+       * IoT Core topic.
+       */
+      public fun payload(payload: PayloadProperty)
+
+      /**
+       * @param payload You can configure the action payload when you publish a message to an AWS
+       * IoT Core topic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1c17305249a77373a0a0d90b8ca415f03c90b527f54a63a1d107e5d424fc9362")
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty.Builder
+          =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty.builder()
+
+      /**
+       * @param mqttTopic The MQTT topic of the message. 
+       * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;`
+       * ) and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
+       */
+      override fun mqttTopic(mqttTopic: String) {
+        cdkBuilder.mqttTopic(mqttTopic)
+      }
+
+      /**
+       * @param payload You can configure the action payload when you publish a message to an AWS
+       * IoT Core topic.
+       */
+      override fun payload(payload: IResolvable) {
+        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you publish a message to an AWS
+       * IoT Core topic.
+       */
+      override fun payload(payload: PayloadProperty) {
+        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you publish a message to an AWS
+       * IoT Core topic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1c17305249a77373a0a0d90b8ca415f03c90b527f54a63a1d107e5d424fc9362")
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+          payload(PayloadProperty(payload))
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty,
+    ) : CdkObject(cdkObject), IotTopicPublishProperty {
+      /**
+       * The MQTT topic of the message.
+       *
+       * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;`
+       * ) and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic)
+       */
+      override fun mqttTopic(): String = unwrap(this).getMqttTopic()
+
+      /**
+       * You can configure the action payload when you publish a message to an AWS IoT Core topic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-payload)
+       */
+      override fun payload(): Any? = unwrap(this).getPayload()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IotTopicPublishProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty):
+          IotTopicPublishProperty = CdkObjectWrappers.wrap(cdkObject) as? IotTopicPublishProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IotTopicPublishProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty
+    }
+  }
+
+  /**
+   * Calls a Lambda function, passing in information about the detector model instance and the event
+   * that triggered the action.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * LambdaProperty lambdaProperty = LambdaProperty.builder()
+   * .functionArn("functionArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html)
+   */
+  public interface LambdaProperty {
+    /**
+     * The ARN of the Lambda function that is executed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-functionarn)
+     */
+    public fun functionArn(): String
+
+    /**
+     * You can configure the action payload when you send a message to a Lambda function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-payload)
+     */
+    public fun payload(): Any? = unwrap(this).getPayload()
+
+    /**
+     * A builder for [LambdaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param functionArn The ARN of the Lambda function that is executed. 
+       */
+      public fun functionArn(functionArn: String)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to a Lambda
+       * function.
+       */
+      public fun payload(payload: IResolvable)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to a Lambda
+       * function.
+       */
+      public fun payload(payload: PayloadProperty)
+
+      /**
+       * @param payload You can configure the action payload when you send a message to a Lambda
+       * function.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5f2a77b53098ccda137f1f71ae68c5e7b9f724aabb6bfdb499f7b6d771206ab7")
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty.builder()
+
+      /**
+       * @param functionArn The ARN of the Lambda function that is executed. 
+       */
+      override fun functionArn(functionArn: String) {
+        cdkBuilder.functionArn(functionArn)
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to a Lambda
+       * function.
+       */
+      override fun payload(payload: IResolvable) {
+        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to a Lambda
+       * function.
+       */
+      override fun payload(payload: PayloadProperty) {
+        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message to a Lambda
+       * function.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5f2a77b53098ccda137f1f71ae68c5e7b9f724aabb6bfdb499f7b6d771206ab7")
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+          payload(PayloadProperty(payload))
+
+      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty,
+    ) : CdkObject(cdkObject), LambdaProperty {
+      /**
+       * The ARN of the Lambda function that is executed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-functionarn)
+       */
+      override fun functionArn(): String = unwrap(this).getFunctionArn()
+
+      /**
+       * You can configure the action payload when you send a message to a Lambda function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-payload)
+       */
+      override fun payload(): Any? = unwrap(this).getPayload()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty):
+          LambdaProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty
     }
   }
 
@@ -5789,6 +4455,1272 @@ public open class CfnDetectorModel internal constructor(
   }
 
   /**
+   * When exiting this state, perform these `actions` if the specified `condition` is `TRUE` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * OnExitProperty onExitProperty = OnExitProperty.builder()
+   * .events(List.of(EventProperty.builder()
+   * .eventName("eventName")
+   * // the properties below are optional
+   * .actions(List.of(ActionProperty.builder()
+   * .clearTimer(ClearTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .dynamoDb(DynamoDBProperty.builder()
+   * .hashKeyField("hashKeyField")
+   * .hashKeyValue("hashKeyValue")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .hashKeyType("hashKeyType")
+   * .operation("operation")
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .payloadField("payloadField")
+   * .rangeKeyField("rangeKeyField")
+   * .rangeKeyType("rangeKeyType")
+   * .rangeKeyValue("rangeKeyValue")
+   * .build())
+   * .dynamoDBv2(DynamoDBv2Property.builder()
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .firehose(FirehoseProperty.builder()
+   * .deliveryStreamName("deliveryStreamName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .separator("separator")
+   * .build())
+   * .iotEvents(IotEventsProperty.builder()
+   * .inputName("inputName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .iotSiteWise(IotSiteWiseProperty.builder()
+   * .propertyValue(AssetPropertyValueProperty.builder()
+   * .value(AssetPropertyVariantProperty.builder()
+   * .booleanValue("booleanValue")
+   * .doubleValue("doubleValue")
+   * .integerValue("integerValue")
+   * .stringValue("stringValue")
+   * .build())
+   * // the properties below are optional
+   * .quality("quality")
+   * .timestamp(AssetPropertyTimestampProperty.builder()
+   * .timeInSeconds("timeInSeconds")
+   * // the properties below are optional
+   * .offsetInNanos("offsetInNanos")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .assetId("assetId")
+   * .entryId("entryId")
+   * .propertyAlias("propertyAlias")
+   * .propertyId("propertyId")
+   * .build())
+   * .iotTopicPublish(IotTopicPublishProperty.builder()
+   * .mqttTopic("mqttTopic")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .lambda(LambdaProperty.builder()
+   * .functionArn("functionArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .resetTimer(ResetTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .setTimer(SetTimerProperty.builder()
+   * .timerName("timerName")
+   * // the properties below are optional
+   * .durationExpression("durationExpression")
+   * .seconds(123)
+   * .build())
+   * .setVariable(SetVariableProperty.builder()
+   * .value("value")
+   * .variableName("variableName")
+   * .build())
+   * .sns(SnsProperty.builder()
+   * .targetArn("targetArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .sqs(SqsProperty.builder()
+   * .queueUrl("queueUrl")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .useBase64(false)
+   * .build())
+   * .build()))
+   * .condition("condition")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-onexit.html)
+   */
+  public interface OnExitProperty {
+    /**
+     * Specifies the `actions` that are performed when the state is exited and the `condition` is
+     * `TRUE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-onexit.html#cfn-iotevents-detectormodel-onexit-events)
+     */
+    public fun events(): Any? = unwrap(this).getEvents()
+
+    /**
+     * A builder for [OnExitProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param events Specifies the `actions` that are performed when the state is exited and the
+       * `condition` is `TRUE` .
+       */
+      public fun events(events: IResolvable)
+
+      /**
+       * @param events Specifies the `actions` that are performed when the state is exited and the
+       * `condition` is `TRUE` .
+       */
+      public fun events(events: List<Any>)
+
+      /**
+       * @param events Specifies the `actions` that are performed when the state is exited and the
+       * `condition` is `TRUE` .
+       */
+      public fun events(vararg events: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty.builder()
+
+      /**
+       * @param events Specifies the `actions` that are performed when the state is exited and the
+       * `condition` is `TRUE` .
+       */
+      override fun events(events: IResolvable) {
+        cdkBuilder.events(events.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param events Specifies the `actions` that are performed when the state is exited and the
+       * `condition` is `TRUE` .
+       */
+      override fun events(events: List<Any>) {
+        cdkBuilder.events(events)
+      }
+
+      /**
+       * @param events Specifies the `actions` that are performed when the state is exited and the
+       * `condition` is `TRUE` .
+       */
+      override fun events(vararg events: Any): Unit = events(events.toList())
+
+      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty,
+    ) : CdkObject(cdkObject), OnExitProperty {
+      /**
+       * Specifies the `actions` that are performed when the state is exited and the `condition` is
+       * `TRUE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-onexit.html#cfn-iotevents-detectormodel-onexit-events)
+       */
+      override fun events(): Any? = unwrap(this).getEvents()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OnExitProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty):
+          OnExitProperty = CdkObjectWrappers.wrap(cdkObject) as? OnExitProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnExitProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty
+    }
+  }
+
+  /**
+   * Specifies the actions performed when the `condition` evaluates to TRUE.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * OnInputProperty onInputProperty = OnInputProperty.builder()
+   * .events(List.of(EventProperty.builder()
+   * .eventName("eventName")
+   * // the properties below are optional
+   * .actions(List.of(ActionProperty.builder()
+   * .clearTimer(ClearTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .dynamoDb(DynamoDBProperty.builder()
+   * .hashKeyField("hashKeyField")
+   * .hashKeyValue("hashKeyValue")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .hashKeyType("hashKeyType")
+   * .operation("operation")
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .payloadField("payloadField")
+   * .rangeKeyField("rangeKeyField")
+   * .rangeKeyType("rangeKeyType")
+   * .rangeKeyValue("rangeKeyValue")
+   * .build())
+   * .dynamoDBv2(DynamoDBv2Property.builder()
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .firehose(FirehoseProperty.builder()
+   * .deliveryStreamName("deliveryStreamName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .separator("separator")
+   * .build())
+   * .iotEvents(IotEventsProperty.builder()
+   * .inputName("inputName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .iotSiteWise(IotSiteWiseProperty.builder()
+   * .propertyValue(AssetPropertyValueProperty.builder()
+   * .value(AssetPropertyVariantProperty.builder()
+   * .booleanValue("booleanValue")
+   * .doubleValue("doubleValue")
+   * .integerValue("integerValue")
+   * .stringValue("stringValue")
+   * .build())
+   * // the properties below are optional
+   * .quality("quality")
+   * .timestamp(AssetPropertyTimestampProperty.builder()
+   * .timeInSeconds("timeInSeconds")
+   * // the properties below are optional
+   * .offsetInNanos("offsetInNanos")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .assetId("assetId")
+   * .entryId("entryId")
+   * .propertyAlias("propertyAlias")
+   * .propertyId("propertyId")
+   * .build())
+   * .iotTopicPublish(IotTopicPublishProperty.builder()
+   * .mqttTopic("mqttTopic")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .lambda(LambdaProperty.builder()
+   * .functionArn("functionArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .resetTimer(ResetTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .setTimer(SetTimerProperty.builder()
+   * .timerName("timerName")
+   * // the properties below are optional
+   * .durationExpression("durationExpression")
+   * .seconds(123)
+   * .build())
+   * .setVariable(SetVariableProperty.builder()
+   * .value("value")
+   * .variableName("variableName")
+   * .build())
+   * .sns(SnsProperty.builder()
+   * .targetArn("targetArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .sqs(SqsProperty.builder()
+   * .queueUrl("queueUrl")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .useBase64(false)
+   * .build())
+   * .build()))
+   * .condition("condition")
+   * .build()))
+   * .transitionEvents(List.of(TransitionEventProperty.builder()
+   * .condition("condition")
+   * .eventName("eventName")
+   * .nextState("nextState")
+   * // the properties below are optional
+   * .actions(List.of(ActionProperty.builder()
+   * .clearTimer(ClearTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .dynamoDb(DynamoDBProperty.builder()
+   * .hashKeyField("hashKeyField")
+   * .hashKeyValue("hashKeyValue")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .hashKeyType("hashKeyType")
+   * .operation("operation")
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .payloadField("payloadField")
+   * .rangeKeyField("rangeKeyField")
+   * .rangeKeyType("rangeKeyType")
+   * .rangeKeyValue("rangeKeyValue")
+   * .build())
+   * .dynamoDBv2(DynamoDBv2Property.builder()
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .firehose(FirehoseProperty.builder()
+   * .deliveryStreamName("deliveryStreamName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .separator("separator")
+   * .build())
+   * .iotEvents(IotEventsProperty.builder()
+   * .inputName("inputName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .iotSiteWise(IotSiteWiseProperty.builder()
+   * .propertyValue(AssetPropertyValueProperty.builder()
+   * .value(AssetPropertyVariantProperty.builder()
+   * .booleanValue("booleanValue")
+   * .doubleValue("doubleValue")
+   * .integerValue("integerValue")
+   * .stringValue("stringValue")
+   * .build())
+   * // the properties below are optional
+   * .quality("quality")
+   * .timestamp(AssetPropertyTimestampProperty.builder()
+   * .timeInSeconds("timeInSeconds")
+   * // the properties below are optional
+   * .offsetInNanos("offsetInNanos")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .assetId("assetId")
+   * .entryId("entryId")
+   * .propertyAlias("propertyAlias")
+   * .propertyId("propertyId")
+   * .build())
+   * .iotTopicPublish(IotTopicPublishProperty.builder()
+   * .mqttTopic("mqttTopic")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .lambda(LambdaProperty.builder()
+   * .functionArn("functionArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .resetTimer(ResetTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .setTimer(SetTimerProperty.builder()
+   * .timerName("timerName")
+   * // the properties below are optional
+   * .durationExpression("durationExpression")
+   * .seconds(123)
+   * .build())
+   * .setVariable(SetVariableProperty.builder()
+   * .value("value")
+   * .variableName("variableName")
+   * .build())
+   * .sns(SnsProperty.builder()
+   * .targetArn("targetArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .sqs(SqsProperty.builder()
+   * .queueUrl("queueUrl")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .useBase64(false)
+   * .build())
+   * .build()))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html)
+   */
+  public interface OnInputProperty {
+    /**
+     * Specifies the actions performed when the `condition` evaluates to TRUE.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-events)
+     */
+    public fun events(): Any? = unwrap(this).getEvents()
+
+    /**
+     * Specifies the actions performed, and the next state entered, when a `condition` evaluates to
+     * TRUE.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-transitionevents)
+     */
+    public fun transitionEvents(): Any? = unwrap(this).getTransitionEvents()
+
+    /**
+     * A builder for [OnInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+       */
+      public fun events(events: IResolvable)
+
+      /**
+       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+       */
+      public fun events(events: List<Any>)
+
+      /**
+       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+       */
+      public fun events(vararg events: Any)
+
+      /**
+       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+       * `condition` evaluates to TRUE.
+       */
+      public fun transitionEvents(transitionEvents: IResolvable)
+
+      /**
+       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+       * `condition` evaluates to TRUE.
+       */
+      public fun transitionEvents(transitionEvents: List<Any>)
+
+      /**
+       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+       * `condition` evaluates to TRUE.
+       */
+      public fun transitionEvents(vararg transitionEvents: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty.builder()
+
+      /**
+       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+       */
+      override fun events(events: IResolvable) {
+        cdkBuilder.events(events.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+       */
+      override fun events(events: List<Any>) {
+        cdkBuilder.events(events)
+      }
+
+      /**
+       * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+       */
+      override fun events(vararg events: Any): Unit = events(events.toList())
+
+      /**
+       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+       * `condition` evaluates to TRUE.
+       */
+      override fun transitionEvents(transitionEvents: IResolvable) {
+        cdkBuilder.transitionEvents(transitionEvents.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+       * `condition` evaluates to TRUE.
+       */
+      override fun transitionEvents(transitionEvents: List<Any>) {
+        cdkBuilder.transitionEvents(transitionEvents)
+      }
+
+      /**
+       * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+       * `condition` evaluates to TRUE.
+       */
+      override fun transitionEvents(vararg transitionEvents: Any): Unit =
+          transitionEvents(transitionEvents.toList())
+
+      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty,
+    ) : CdkObject(cdkObject), OnInputProperty {
+      /**
+       * Specifies the actions performed when the `condition` evaluates to TRUE.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-events)
+       */
+      override fun events(): Any? = unwrap(this).getEvents()
+
+      /**
+       * Specifies the actions performed, and the next state entered, when a `condition` evaluates
+       * to TRUE.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-transitionevents)
+       */
+      override fun transitionEvents(): Any? = unwrap(this).getTransitionEvents()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OnInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty):
+          OnInputProperty = CdkObjectWrappers.wrap(cdkObject) as? OnInputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnInputProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty
+    }
+  }
+
+  /**
+   * Information needed to configure the payload.
+   *
+   * By default, AWS IoT Events generates a standard payload in JSON for any action. This action
+   * payload contains all attribute-value pairs that have the information about the detector model
+   * instance and the event triggered the action. To configure the action payload, you can use
+   * `contentExpression` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * PayloadProperty payloadProperty = PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html)
+   */
+  public interface PayloadProperty {
+    /**
+     * The content of the payload.
+     *
+     * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ),
+     * variables ( `$variable.&lt;variable-name&gt;` ), input values (
+     * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
+     * that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-contentexpression)
+     */
+    public fun contentExpression(): String
+
+    /**
+     * The value of the payload type can be either `STRING` or `JSON` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [PayloadProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contentExpression The content of the payload. 
+       * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ),
+       * variables ( `$variable.&lt;variable-name&gt;` ), input values (
+       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
+       * that contain `${}` as the content. The recommended maximum size of a content expression is 1
+       * KB.
+       */
+      public fun contentExpression(contentExpression: String)
+
+      /**
+       * @param type The value of the payload type can be either `STRING` or `JSON` . 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty.builder()
+
+      /**
+       * @param contentExpression The content of the payload. 
+       * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ),
+       * variables ( `$variable.&lt;variable-name&gt;` ), input values (
+       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
+       * that contain `${}` as the content. The recommended maximum size of a content expression is 1
+       * KB.
+       */
+      override fun contentExpression(contentExpression: String) {
+        cdkBuilder.contentExpression(contentExpression)
+      }
+
+      /**
+       * @param type The value of the payload type can be either `STRING` or `JSON` . 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty,
+    ) : CdkObject(cdkObject), PayloadProperty {
+      /**
+       * The content of the payload.
+       *
+       * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ),
+       * variables ( `$variable.&lt;variable-name&gt;` ), input values (
+       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
+       * that contain `${}` as the content. The recommended maximum size of a content expression is 1
+       * KB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-contentexpression)
+       */
+      override fun contentExpression(): String = unwrap(this).getContentExpression()
+
+      /**
+       * The value of the payload type can be either `STRING` or `JSON` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PayloadProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty):
+          PayloadProperty = CdkObjectWrappers.wrap(cdkObject) as? PayloadProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PayloadProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty
+    }
+  }
+
+  /**
+   * Information required to reset the timer.
+   *
+   * The timer is reset to the previously evaluated result of the duration. The duration expression
+   * isn't reevaluated when you reset the timer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * ResetTimerProperty resetTimerProperty = ResetTimerProperty.builder()
+   * .timerName("timerName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-resettimer.html)
+   */
+  public interface ResetTimerProperty {
+    /**
+     * The name of the timer to reset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-resettimer.html#cfn-iotevents-detectormodel-resettimer-timername)
+     */
+    public fun timerName(): String
+
+    /**
+     * A builder for [ResetTimerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param timerName The name of the timer to reset. 
+       */
+      public fun timerName(timerName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty.builder()
+
+      /**
+       * @param timerName The name of the timer to reset. 
+       */
+      override fun timerName(timerName: String) {
+        cdkBuilder.timerName(timerName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty,
+    ) : CdkObject(cdkObject), ResetTimerProperty {
+      /**
+       * The name of the timer to reset.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-resettimer.html#cfn-iotevents-detectormodel-resettimer-timername)
+       */
+      override fun timerName(): String = unwrap(this).getTimerName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResetTimerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty):
+          ResetTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? ResetTimerProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResetTimerProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty
+    }
+  }
+
+  /**
+   * Information needed to set the timer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * SetTimerProperty setTimerProperty = SetTimerProperty.builder()
+   * .timerName("timerName")
+   * // the properties below are optional
+   * .durationExpression("durationExpression")
+   * .seconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html)
+   */
+  public interface SetTimerProperty {
+    /**
+     * The duration of the timer, in seconds.
+     *
+     * You can use a string expression that includes numbers, variables (
+     * `$variable.&lt;variable-name&gt;` ), and input values (
+     * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the duration. The range of the duration
+     * is 1-31622400 seconds. To ensure accuracy, the minimum duration is 60 seconds. The evaluated
+     * result of the duration is rounded down to the nearest whole number.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-durationexpression)
+     */
+    public fun durationExpression(): String? = unwrap(this).getDurationExpression()
+
+    /**
+     * The number of seconds until the timer expires.
+     *
+     * The minimum value is 60 seconds to ensure accuracy. The maximum value is 31622400 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-seconds)
+     */
+    public fun seconds(): Number? = unwrap(this).getSeconds()
+
+    /**
+     * The name of the timer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-timername)
+     */
+    public fun timerName(): String
+
+    /**
+     * A builder for [SetTimerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param durationExpression The duration of the timer, in seconds.
+       * You can use a string expression that includes numbers, variables (
+       * `$variable.&lt;variable-name&gt;` ), and input values (
+       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the duration. The range of the duration
+       * is 1-31622400 seconds. To ensure accuracy, the minimum duration is 60 seconds. The evaluated
+       * result of the duration is rounded down to the nearest whole number.
+       */
+      public fun durationExpression(durationExpression: String)
+
+      /**
+       * @param seconds The number of seconds until the timer expires.
+       * The minimum value is 60 seconds to ensure accuracy. The maximum value is 31622400 seconds.
+       */
+      public fun seconds(seconds: Number)
+
+      /**
+       * @param timerName The name of the timer. 
+       */
+      public fun timerName(timerName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty.builder()
+
+      /**
+       * @param durationExpression The duration of the timer, in seconds.
+       * You can use a string expression that includes numbers, variables (
+       * `$variable.&lt;variable-name&gt;` ), and input values (
+       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the duration. The range of the duration
+       * is 1-31622400 seconds. To ensure accuracy, the minimum duration is 60 seconds. The evaluated
+       * result of the duration is rounded down to the nearest whole number.
+       */
+      override fun durationExpression(durationExpression: String) {
+        cdkBuilder.durationExpression(durationExpression)
+      }
+
+      /**
+       * @param seconds The number of seconds until the timer expires.
+       * The minimum value is 60 seconds to ensure accuracy. The maximum value is 31622400 seconds.
+       */
+      override fun seconds(seconds: Number) {
+        cdkBuilder.seconds(seconds)
+      }
+
+      /**
+       * @param timerName The name of the timer. 
+       */
+      override fun timerName(timerName: String) {
+        cdkBuilder.timerName(timerName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty,
+    ) : CdkObject(cdkObject), SetTimerProperty {
+      /**
+       * The duration of the timer, in seconds.
+       *
+       * You can use a string expression that includes numbers, variables (
+       * `$variable.&lt;variable-name&gt;` ), and input values (
+       * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the duration. The range of the duration
+       * is 1-31622400 seconds. To ensure accuracy, the minimum duration is 60 seconds. The evaluated
+       * result of the duration is rounded down to the nearest whole number.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-durationexpression)
+       */
+      override fun durationExpression(): String? = unwrap(this).getDurationExpression()
+
+      /**
+       * The number of seconds until the timer expires.
+       *
+       * The minimum value is 60 seconds to ensure accuracy. The maximum value is 31622400 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-seconds)
+       */
+      override fun seconds(): Number? = unwrap(this).getSeconds()
+
+      /**
+       * The name of the timer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-timername)
+       */
+      override fun timerName(): String = unwrap(this).getTimerName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SetTimerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty):
+          SetTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? SetTimerProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SetTimerProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty
+    }
+  }
+
+  /**
+   * Information about the variable and its new value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * SetVariableProperty setVariableProperty = SetVariableProperty.builder()
+   * .value("value")
+   * .variableName("variableName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html)
+   */
+  public interface SetVariableProperty {
+    /**
+     * The new value of the variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * The name of the variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-variablename)
+     */
+    public fun variableName(): String
+
+    /**
+     * A builder for [SetVariableProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param value The new value of the variable. 
+       */
+      public fun `value`(`value`: String)
+
+      /**
+       * @param variableName The name of the variable. 
+       */
+      public fun variableName(variableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty.builder()
+
+      /**
+       * @param value The new value of the variable. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      /**
+       * @param variableName The name of the variable. 
+       */
+      override fun variableName(variableName: String) {
+        cdkBuilder.variableName(variableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty,
+    ) : CdkObject(cdkObject), SetVariableProperty {
+      /**
+       * The new value of the variable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+
+      /**
+       * The name of the variable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-variablename)
+       */
+      override fun variableName(): String = unwrap(this).getVariableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SetVariableProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty):
+          SetVariableProperty = CdkObjectWrappers.wrap(cdkObject) as? SetVariableProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SetVariableProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty
+    }
+  }
+
+  /**
+   * Information required to publish the Amazon SNS message.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotevents.*;
+   * SnsProperty snsProperty = SnsProperty.builder()
+   * .targetArn("targetArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html)
+   */
+  public interface SnsProperty {
+    /**
+     * You can configure the action payload when you send a message as an Amazon SNS push
+     * notification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-payload)
+     */
+    public fun payload(): Any? = unwrap(this).getPayload()
+
+    /**
+     * The ARN of the Amazon SNS target where the message is sent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-targetarn)
+     */
+    public fun targetArn(): String
+
+    /**
+     * A builder for [SnsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param payload You can configure the action payload when you send a message as an Amazon
+       * SNS push notification.
+       */
+      public fun payload(payload: IResolvable)
+
+      /**
+       * @param payload You can configure the action payload when you send a message as an Amazon
+       * SNS push notification.
+       */
+      public fun payload(payload: PayloadProperty)
+
+      /**
+       * @param payload You can configure the action payload when you send a message as an Amazon
+       * SNS push notification.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0e38e9ec707c2083d5fed07bf997a90a6a70e3ebbe1e8aefb34e3837bbdf5085")
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
+
+      /**
+       * @param targetArn The ARN of the Amazon SNS target where the message is sent. 
+       */
+      public fun targetArn(targetArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty.builder()
+
+      /**
+       * @param payload You can configure the action payload when you send a message as an Amazon
+       * SNS push notification.
+       */
+      override fun payload(payload: IResolvable) {
+        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message as an Amazon
+       * SNS push notification.
+       */
+      override fun payload(payload: PayloadProperty) {
+        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+      }
+
+      /**
+       * @param payload You can configure the action payload when you send a message as an Amazon
+       * SNS push notification.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0e38e9ec707c2083d5fed07bf997a90a6a70e3ebbe1e8aefb34e3837bbdf5085")
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+          payload(PayloadProperty(payload))
+
+      /**
+       * @param targetArn The ARN of the Amazon SNS target where the message is sent. 
+       */
+      override fun targetArn(targetArn: String) {
+        cdkBuilder.targetArn(targetArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty,
+    ) : CdkObject(cdkObject), SnsProperty {
+      /**
+       * You can configure the action payload when you send a message as an Amazon SNS push
+       * notification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-payload)
+       */
+      override fun payload(): Any? = unwrap(this).getPayload()
+
+      /**
+       * The ARN of the Amazon SNS target where the message is sent.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-targetarn)
+       */
+      override fun targetArn(): String = unwrap(this).getTargetArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty):
+          SnsProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnsProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty
+    }
+  }
+
+  /**
    * Sends information about the detector model instance and the event that triggered the action to
    * an Amazon SQS queue.
    *
@@ -5987,8 +5919,259 @@ public open class CfnDetectorModel internal constructor(
   }
 
   /**
-   * Calls a Lambda function, passing in information about the detector model instance and the event
-   * that triggered the action.
+   * Information that defines a state of a detector.
+   *
+   * Example:
+   *
+   * ```
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html)
+   */
+  public interface StateProperty {
+    /**
+     * When entering this state, perform these `actions` if the `condition` is TRUE.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onenter)
+     */
+    public fun onEnter(): Any? = unwrap(this).getOnEnter()
+
+    /**
+     * When exiting this state, perform these `actions` if the specified `condition` is `TRUE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onexit)
+     */
+    public fun onExit(): Any? = unwrap(this).getOnExit()
+
+    /**
+     * When an input is received and the `condition` is TRUE, perform the specified `actions` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-oninput)
+     */
+    public fun onInput(): Any? = unwrap(this).getOnInput()
+
+    /**
+     * The name of the state.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-statename)
+     */
+    public fun stateName(): String
+
+    /**
+     * A builder for [StateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param onEnter When entering this state, perform these `actions` if the `condition` is
+       * TRUE.
+       */
+      public fun onEnter(onEnter: IResolvable)
+
+      /**
+       * @param onEnter When entering this state, perform these `actions` if the `condition` is
+       * TRUE.
+       */
+      public fun onEnter(onEnter: OnEnterProperty)
+
+      /**
+       * @param onEnter When entering this state, perform these `actions` if the `condition` is
+       * TRUE.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dbe58dcb1ee46d3682f5d957890d6d35ed4f0b55ee4a740236fff99ba95e6019")
+      public fun onEnter(onEnter: OnEnterProperty.Builder.() -> Unit)
+
+      /**
+       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
+       * is `TRUE` .
+       */
+      public fun onExit(onExit: IResolvable)
+
+      /**
+       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
+       * is `TRUE` .
+       */
+      public fun onExit(onExit: OnExitProperty)
+
+      /**
+       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
+       * is `TRUE` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("82574d1c4fd6f6dbdc274d99921b89e2e192d9dc583c55c881c81073a30135eb")
+      public fun onExit(onExit: OnExitProperty.Builder.() -> Unit)
+
+      /**
+       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
+       * `actions` .
+       */
+      public fun onInput(onInput: IResolvable)
+
+      /**
+       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
+       * `actions` .
+       */
+      public fun onInput(onInput: OnInputProperty)
+
+      /**
+       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
+       * `actions` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a872d3afe5265eeedc06502a337e9640e005a3bb2011a2f860fa9510635164f6")
+      public fun onInput(onInput: OnInputProperty.Builder.() -> Unit)
+
+      /**
+       * @param stateName The name of the state. 
+       */
+      public fun stateName(stateName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty.Builder =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty.builder()
+
+      /**
+       * @param onEnter When entering this state, perform these `actions` if the `condition` is
+       * TRUE.
+       */
+      override fun onEnter(onEnter: IResolvable) {
+        cdkBuilder.onEnter(onEnter.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param onEnter When entering this state, perform these `actions` if the `condition` is
+       * TRUE.
+       */
+      override fun onEnter(onEnter: OnEnterProperty) {
+        cdkBuilder.onEnter(onEnter.let(OnEnterProperty::unwrap))
+      }
+
+      /**
+       * @param onEnter When entering this state, perform these `actions` if the `condition` is
+       * TRUE.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dbe58dcb1ee46d3682f5d957890d6d35ed4f0b55ee4a740236fff99ba95e6019")
+      override fun onEnter(onEnter: OnEnterProperty.Builder.() -> Unit): Unit =
+          onEnter(OnEnterProperty(onEnter))
+
+      /**
+       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
+       * is `TRUE` .
+       */
+      override fun onExit(onExit: IResolvable) {
+        cdkBuilder.onExit(onExit.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
+       * is `TRUE` .
+       */
+      override fun onExit(onExit: OnExitProperty) {
+        cdkBuilder.onExit(onExit.let(OnExitProperty::unwrap))
+      }
+
+      /**
+       * @param onExit When exiting this state, perform these `actions` if the specified `condition`
+       * is `TRUE` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("82574d1c4fd6f6dbdc274d99921b89e2e192d9dc583c55c881c81073a30135eb")
+      override fun onExit(onExit: OnExitProperty.Builder.() -> Unit): Unit =
+          onExit(OnExitProperty(onExit))
+
+      /**
+       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
+       * `actions` .
+       */
+      override fun onInput(onInput: IResolvable) {
+        cdkBuilder.onInput(onInput.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
+       * `actions` .
+       */
+      override fun onInput(onInput: OnInputProperty) {
+        cdkBuilder.onInput(onInput.let(OnInputProperty::unwrap))
+      }
+
+      /**
+       * @param onInput When an input is received and the `condition` is TRUE, perform the specified
+       * `actions` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a872d3afe5265eeedc06502a337e9640e005a3bb2011a2f860fa9510635164f6")
+      override fun onInput(onInput: OnInputProperty.Builder.() -> Unit): Unit =
+          onInput(OnInputProperty(onInput))
+
+      /**
+       * @param stateName The name of the state. 
+       */
+      override fun stateName(stateName: String) {
+        cdkBuilder.stateName(stateName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty,
+    ) : CdkObject(cdkObject), StateProperty {
+      /**
+       * When entering this state, perform these `actions` if the `condition` is TRUE.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onenter)
+       */
+      override fun onEnter(): Any? = unwrap(this).getOnEnter()
+
+      /**
+       * When exiting this state, perform these `actions` if the specified `condition` is `TRUE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onexit)
+       */
+      override fun onExit(): Any? = unwrap(this).getOnExit()
+
+      /**
+       * When an input is received and the `condition` is TRUE, perform the specified `actions` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-oninput)
+       */
+      override fun onInput(): Any? = unwrap(this).getOnInput()
+
+      /**
+       * The name of the state.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-statename)
+       */
+      override fun stateName(): String = unwrap(this).getStateName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty):
+          StateProperty = CdkObjectWrappers.wrap(cdkObject) as? StateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StateProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty
+    }
+  }
+
+  /**
+   * Specifies the actions performed and the next state entered when a `condition` evaluates to
+   * TRUE.
    *
    * Example:
    *
@@ -5996,487 +6179,304 @@ public open class CfnDetectorModel internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * LambdaProperty lambdaProperty = LambdaProperty.builder()
+   * TransitionEventProperty transitionEventProperty = TransitionEventProperty.builder()
+   * .condition("condition")
+   * .eventName("eventName")
+   * .nextState("nextState")
+   * // the properties below are optional
+   * .actions(List.of(ActionProperty.builder()
+   * .clearTimer(ClearTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .dynamoDb(DynamoDBProperty.builder()
+   * .hashKeyField("hashKeyField")
+   * .hashKeyValue("hashKeyValue")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .hashKeyType("hashKeyType")
+   * .operation("operation")
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .payloadField("payloadField")
+   * .rangeKeyField("rangeKeyField")
+   * .rangeKeyType("rangeKeyType")
+   * .rangeKeyValue("rangeKeyValue")
+   * .build())
+   * .dynamoDBv2(DynamoDBv2Property.builder()
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .firehose(FirehoseProperty.builder()
+   * .deliveryStreamName("deliveryStreamName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .separator("separator")
+   * .build())
+   * .iotEvents(IotEventsProperty.builder()
+   * .inputName("inputName")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .iotSiteWise(IotSiteWiseProperty.builder()
+   * .propertyValue(AssetPropertyValueProperty.builder()
+   * .value(AssetPropertyVariantProperty.builder()
+   * .booleanValue("booleanValue")
+   * .doubleValue("doubleValue")
+   * .integerValue("integerValue")
+   * .stringValue("stringValue")
+   * .build())
+   * // the properties below are optional
+   * .quality("quality")
+   * .timestamp(AssetPropertyTimestampProperty.builder()
+   * .timeInSeconds("timeInSeconds")
+   * // the properties below are optional
+   * .offsetInNanos("offsetInNanos")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .assetId("assetId")
+   * .entryId("entryId")
+   * .propertyAlias("propertyAlias")
+   * .propertyId("propertyId")
+   * .build())
+   * .iotTopicPublish(IotTopicPublishProperty.builder()
+   * .mqttTopic("mqttTopic")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .lambda(LambdaProperty.builder()
    * .functionArn("functionArn")
    * // the properties below are optional
    * .payload(PayloadProperty.builder()
    * .contentExpression("contentExpression")
    * .type("type")
    * .build())
+   * .build())
+   * .resetTimer(ResetTimerProperty.builder()
+   * .timerName("timerName")
+   * .build())
+   * .setTimer(SetTimerProperty.builder()
+   * .timerName("timerName")
+   * // the properties below are optional
+   * .durationExpression("durationExpression")
+   * .seconds(123)
+   * .build())
+   * .setVariable(SetVariableProperty.builder()
+   * .value("value")
+   * .variableName("variableName")
+   * .build())
+   * .sns(SnsProperty.builder()
+   * .targetArn("targetArn")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .build())
+   * .sqs(SqsProperty.builder()
+   * .queueUrl("queueUrl")
+   * // the properties below are optional
+   * .payload(PayloadProperty.builder()
+   * .contentExpression("contentExpression")
+   * .type("type")
+   * .build())
+   * .useBase64(false)
+   * .build())
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html)
    */
-  public interface LambdaProperty {
+  public interface TransitionEventProperty {
     /**
-     * The ARN of the Lambda function that is executed.
+     * The actions to be performed.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-functionarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-actions)
      */
-    public fun functionArn(): String
+    public fun actions(): Any? = unwrap(this).getActions()
 
     /**
-     * You can configure the action payload when you send a message to a Lambda function.
+     * Required.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-payload)
+     * A Boolean expression that when TRUE causes the actions to be performed and the `nextState` to
+     * be entered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-condition)
      */
-    public fun payload(): Any? = unwrap(this).getPayload()
+    public fun condition(): String
 
     /**
-     * A builder for [LambdaProperty]
+     * The name of the transition event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-eventname)
+     */
+    public fun eventName(): String
+
+    /**
+     * The next state to enter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-nextstate)
+     */
+    public fun nextState(): String
+
+    /**
+     * A builder for [TransitionEventProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param functionArn The ARN of the Lambda function that is executed. 
+       * @param actions The actions to be performed.
        */
-      public fun functionArn(functionArn: String)
+      public fun actions(actions: IResolvable)
 
       /**
-       * @param payload You can configure the action payload when you send a message to a Lambda
-       * function.
+       * @param actions The actions to be performed.
        */
-      public fun payload(payload: IResolvable)
+      public fun actions(actions: List<Any>)
 
       /**
-       * @param payload You can configure the action payload when you send a message to a Lambda
-       * function.
+       * @param actions The actions to be performed.
        */
-      public fun payload(payload: PayloadProperty)
+      public fun actions(vararg actions: Any)
 
       /**
-       * @param payload You can configure the action payload when you send a message to a Lambda
-       * function.
+       * @param condition Required. 
+       * A Boolean expression that when TRUE causes the actions to be performed and the `nextState`
+       * to be entered.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5f2a77b53098ccda137f1f71ae68c5e7b9f724aabb6bfdb499f7b6d771206ab7")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
+      public fun condition(condition: String)
+
+      /**
+       * @param eventName The name of the transition event. 
+       */
+      public fun eventName(eventName: String)
+
+      /**
+       * @param nextState The next state to enter. 
+       */
+      public fun nextState(nextState: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty.Builder =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty.builder()
-
-      /**
-       * @param functionArn The ARN of the Lambda function that is executed. 
-       */
-      override fun functionArn(functionArn: String) {
-        cdkBuilder.functionArn(functionArn)
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to a Lambda
-       * function.
-       */
-      override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to a Lambda
-       * function.
-       */
-      override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
-      }
-
-      /**
-       * @param payload You can configure the action payload when you send a message to a Lambda
-       * function.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5f2a77b53098ccda137f1f71ae68c5e7b9f724aabb6bfdb499f7b6d771206ab7")
-      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
-          payload(PayloadProperty(payload))
-
-      public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty,
-    ) : CdkObject(cdkObject), LambdaProperty {
-      /**
-       * The ARN of the Lambda function that is executed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-functionarn)
-       */
-      override fun functionArn(): String = unwrap(this).getFunctionArn()
-
-      /**
-       * You can configure the action payload when you send a message to a Lambda function.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-payload)
-       */
-      override fun payload(): Any? = unwrap(this).getPayload()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty):
-          LambdaProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty
-    }
-  }
-
-  /**
-   * Information that defines how a detector operates.
-   *
-   * Example:
-   *
-   * ```
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html)
-   */
-  public interface DetectorModelDefinitionProperty {
-    /**
-     * The state that is entered at the creation of each detector (instance).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename)
-     */
-    public fun initialStateName(): String
-
-    /**
-     * Information about the states of the detector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-states)
-     */
-    public fun states(): Any
-
-    /**
-     * A builder for [DetectorModelDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param initialStateName The state that is entered at the creation of each detector
-       * (instance). 
-       */
-      public fun initialStateName(initialStateName: String)
-
-      /**
-       * @param states Information about the states of the detector. 
-       */
-      public fun states(states: IResolvable)
-
-      /**
-       * @param states Information about the states of the detector. 
-       */
-      public fun states(states: List<Any>)
-
-      /**
-       * @param states Information about the states of the detector. 
-       */
-      public fun states(vararg states: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty.Builder
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty.Builder
           =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty.builder()
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty.builder()
 
       /**
-       * @param initialStateName The state that is entered at the creation of each detector
-       * (instance). 
+       * @param actions The actions to be performed.
        */
-      override fun initialStateName(initialStateName: String) {
-        cdkBuilder.initialStateName(initialStateName)
+      override fun actions(actions: IResolvable) {
+        cdkBuilder.actions(actions.let(IResolvable::unwrap))
       }
 
       /**
-       * @param states Information about the states of the detector. 
+       * @param actions The actions to be performed.
        */
-      override fun states(states: IResolvable) {
-        cdkBuilder.states(states.let(IResolvable::unwrap))
+      override fun actions(actions: List<Any>) {
+        cdkBuilder.actions(actions)
       }
 
       /**
-       * @param states Information about the states of the detector. 
+       * @param actions The actions to be performed.
        */
-      override fun states(states: List<Any>) {
-        cdkBuilder.states(states)
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
+      /**
+       * @param condition Required. 
+       * A Boolean expression that when TRUE causes the actions to be performed and the `nextState`
+       * to be entered.
+       */
+      override fun condition(condition: String) {
+        cdkBuilder.condition(condition)
       }
 
       /**
-       * @param states Information about the states of the detector. 
+       * @param eventName The name of the transition event. 
        */
-      override fun states(vararg states: Any): Unit = states(states.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty,
-    ) : CdkObject(cdkObject), DetectorModelDefinitionProperty {
-      /**
-       * The state that is entered at the creation of each detector (instance).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename)
-       */
-      override fun initialStateName(): String = unwrap(this).getInitialStateName()
-
-      /**
-       * Information about the states of the detector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-states)
-       */
-      override fun states(): Any = unwrap(this).getStates()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DetectorModelDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty):
-          DetectorModelDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DetectorModelDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DetectorModelDefinitionProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty
-    }
-  }
-
-  /**
-   * A structure that contains an asset property value.
-   *
-   * For more information, see
-   * [Variant](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_Variant.html) in the
-   * *AWS IoT SiteWise API Reference* .
-   *
-   * You must use expressions for all parameters in `AssetPropertyVariant` . The expressions accept
-   * literals, operators, functions, references, and substitution templates.
-   *
-   * **Examples** - For literal values, the expressions must contain single quotes. For example, the
-   * value for the `integerValue` parameter can be `'100'` .
-   *
-   * * For references, you must specify either variables or parameters. For example, the value for
-   * the `booleanValue` parameter can be `$variable.offline` .
-   * * For a substitution template, you must use `${}` , and the template must be in single quotes.
-   * A substitution template can also contain a combination of literals, operators, functions,
-   * references, and substitution templates.
-   *
-   * In the following example, the value for the `doubleValue` parameter uses a substitution
-   * template.
-   *
-   * `'${$input.TemperatureInput.sensorData.temperature * 6 / 5 + 32}'`
-   *
-   * For more information, see
-   * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
-   * in the *AWS IoT Events Developer Guide* .
-   *
-   * You must specify one of the following value types, depending on the `dataType` of the specified
-   * asset property. For more information, see
-   * [AssetProperty](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetProperty.html)
-   * in the *AWS IoT SiteWise API Reference* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotevents.*;
-   * AssetPropertyVariantProperty assetPropertyVariantProperty =
-   * AssetPropertyVariantProperty.builder()
-   * .booleanValue("booleanValue")
-   * .doubleValue("doubleValue")
-   * .integerValue("integerValue")
-   * .stringValue("stringValue")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html)
-   */
-  public interface AssetPropertyVariantProperty {
-    /**
-     * The asset property value is a Boolean value that must be `'TRUE'` or `'FALSE'` .
-     *
-     * You must use an expression, and the evaluated result should be a Boolean value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-booleanvalue)
-     */
-    public fun booleanValue(): String? = unwrap(this).getBooleanValue()
-
-    /**
-     * The asset property value is a double.
-     *
-     * You must use an expression, and the evaluated result should be a double.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-doublevalue)
-     */
-    public fun doubleValue(): String? = unwrap(this).getDoubleValue()
-
-    /**
-     * The asset property value is an integer.
-     *
-     * You must use an expression, and the evaluated result should be an integer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-integervalue)
-     */
-    public fun integerValue(): String? = unwrap(this).getIntegerValue()
-
-    /**
-     * The asset property value is a string.
-     *
-     * You must use an expression, and the evaluated result should be a string.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-stringvalue)
-     */
-    public fun stringValue(): String? = unwrap(this).getStringValue()
-
-    /**
-     * A builder for [AssetPropertyVariantProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param booleanValue The asset property value is a Boolean value that must be `'TRUE'` or
-       * `'FALSE'` .
-       * You must use an expression, and the evaluated result should be a Boolean value.
-       */
-      public fun booleanValue(booleanValue: String)
-
-      /**
-       * @param doubleValue The asset property value is a double.
-       * You must use an expression, and the evaluated result should be a double.
-       */
-      public fun doubleValue(doubleValue: String)
-
-      /**
-       * @param integerValue The asset property value is an integer.
-       * You must use an expression, and the evaluated result should be an integer.
-       */
-      public fun integerValue(integerValue: String)
-
-      /**
-       * @param stringValue The asset property value is a string.
-       * You must use an expression, and the evaluated result should be a string.
-       */
-      public fun stringValue(stringValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty.Builder
-          =
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty.builder()
-
-      /**
-       * @param booleanValue The asset property value is a Boolean value that must be `'TRUE'` or
-       * `'FALSE'` .
-       * You must use an expression, and the evaluated result should be a Boolean value.
-       */
-      override fun booleanValue(booleanValue: String) {
-        cdkBuilder.booleanValue(booleanValue)
+      override fun eventName(eventName: String) {
+        cdkBuilder.eventName(eventName)
       }
 
       /**
-       * @param doubleValue The asset property value is a double.
-       * You must use an expression, and the evaluated result should be a double.
+       * @param nextState The next state to enter. 
        */
-      override fun doubleValue(doubleValue: String) {
-        cdkBuilder.doubleValue(doubleValue)
-      }
-
-      /**
-       * @param integerValue The asset property value is an integer.
-       * You must use an expression, and the evaluated result should be an integer.
-       */
-      override fun integerValue(integerValue: String) {
-        cdkBuilder.integerValue(integerValue)
-      }
-
-      /**
-       * @param stringValue The asset property value is a string.
-       * You must use an expression, and the evaluated result should be a string.
-       */
-      override fun stringValue(stringValue: String) {
-        cdkBuilder.stringValue(stringValue)
+      override fun nextState(nextState: String) {
+        cdkBuilder.nextState(nextState)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty =
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty,
-    ) : CdkObject(cdkObject), AssetPropertyVariantProperty {
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty,
+    ) : CdkObject(cdkObject), TransitionEventProperty {
       /**
-       * The asset property value is a Boolean value that must be `'TRUE'` or `'FALSE'` .
+       * The actions to be performed.
        *
-       * You must use an expression, and the evaluated result should be a Boolean value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-booleanvalue)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-actions)
        */
-      override fun booleanValue(): String? = unwrap(this).getBooleanValue()
+      override fun actions(): Any? = unwrap(this).getActions()
 
       /**
-       * The asset property value is a double.
+       * Required.
        *
-       * You must use an expression, and the evaluated result should be a double.
+       * A Boolean expression that when TRUE causes the actions to be performed and the `nextState`
+       * to be entered.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-doublevalue)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-condition)
        */
-      override fun doubleValue(): String? = unwrap(this).getDoubleValue()
+      override fun condition(): String = unwrap(this).getCondition()
 
       /**
-       * The asset property value is an integer.
+       * The name of the transition event.
        *
-       * You must use an expression, and the evaluated result should be an integer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-integervalue)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-eventname)
        */
-      override fun integerValue(): String? = unwrap(this).getIntegerValue()
+      override fun eventName(): String = unwrap(this).getEventName()
 
       /**
-       * The asset property value is a string.
+       * The next state to enter.
        *
-       * You must use an expression, and the evaluated result should be a string.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-stringvalue)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-nextstate)
        */
-      override fun stringValue(): String? = unwrap(this).getStringValue()
+      override fun nextState(): String = unwrap(this).getNextState()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AssetPropertyVariantProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TransitionEventProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty):
-          AssetPropertyVariantProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AssetPropertyVariantProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty):
+          TransitionEventProperty = CdkObjectWrappers.wrap(cdkObject) as? TransitionEventProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AssetPropertyVariantProperty):
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty =
+      internal fun unwrap(wrapped: TransitionEventProperty):
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty
+          software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty
     }
   }
 }

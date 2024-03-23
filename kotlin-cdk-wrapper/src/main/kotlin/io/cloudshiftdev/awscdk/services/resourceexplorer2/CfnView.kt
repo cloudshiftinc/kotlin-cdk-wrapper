@@ -521,6 +521,165 @@ public open class CfnView internal constructor(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.resourceexplorer2.*;
+   * FiltersProperty filtersProperty = FiltersProperty.builder()
+   * .filterString("filterString")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html)
+   */
+  public interface FiltersProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html#cfn-resourceexplorer2-view-filters-filterstring)
+     */
+    public fun filterString(): String
+
+    /**
+     * A builder for [FiltersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param filterString the value to be set. 
+       */
+      public fun filterString(filterString: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty.Builder =
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty.builder()
+
+      /**
+       * @param filterString the value to be set. 
+       */
+      override fun filterString(filterString: String) {
+        cdkBuilder.filterString(filterString)
+      }
+
+      public fun build(): software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty,
+    ) : CdkObject(cdkObject), FiltersProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html#cfn-resourceexplorer2-view-filters-filterstring)
+       */
+      override fun filterString(): String = unwrap(this).getFilterString()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FiltersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty):
+          FiltersProperty = CdkObjectWrappers.wrap(cdkObject) as? FiltersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FiltersProperty):
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty
+    }
+  }
+
+  /**
+   * Information about an additional property that describes a resource, that you can optionally
+   * include in a view.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.resourceexplorer2.*;
+   * IncludedPropertyProperty includedPropertyProperty = IncludedPropertyProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-includedproperty.html)
+   */
+  public interface IncludedPropertyProperty {
+    /**
+     * The name of the property that is included in this view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-includedproperty.html#cfn-resourceexplorer2-view-includedproperty-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [IncludedPropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the property that is included in this view. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty.Builder
+          =
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty.builder()
+
+      /**
+       * @param name The name of the property that is included in this view. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty,
+    ) : CdkObject(cdkObject), IncludedPropertyProperty {
+      /**
+       * The name of the property that is included in this view.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-includedproperty.html#cfn-resourceexplorer2-view-includedproperty-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IncludedPropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty):
+          IncludedPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? IncludedPropertyProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IncludedPropertyProperty):
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty
+    }
+  }
+
+  /**
    * A search filter defines which resources can be part of a search query result set.
    *
    * Example:
@@ -655,165 +814,6 @@ public open class CfnView internal constructor(
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty
-    }
-  }
-
-  /**
-   * Information about an additional property that describes a resource, that you can optionally
-   * include in a view.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.resourceexplorer2.*;
-   * IncludedPropertyProperty includedPropertyProperty = IncludedPropertyProperty.builder()
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-includedproperty.html)
-   */
-  public interface IncludedPropertyProperty {
-    /**
-     * The name of the property that is included in this view.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-includedproperty.html#cfn-resourceexplorer2-view-includedproperty-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [IncludedPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the property that is included in this view. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty.Builder
-          =
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty.builder()
-
-      /**
-       * @param name The name of the property that is included in this view. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty,
-    ) : CdkObject(cdkObject), IncludedPropertyProperty {
-      /**
-       * The name of the property that is included in this view.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-includedproperty.html#cfn-resourceexplorer2-view-includedproperty-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IncludedPropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty):
-          IncludedPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? IncludedPropertyProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IncludedPropertyProperty):
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.resourceexplorer2.*;
-   * FiltersProperty filtersProperty = FiltersProperty.builder()
-   * .filterString("filterString")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html)
-   */
-  public interface FiltersProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html#cfn-resourceexplorer2-view-filters-filterstring)
-     */
-    public fun filterString(): String
-
-    /**
-     * A builder for [FiltersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param filterString the value to be set. 
-       */
-      public fun filterString(filterString: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty.Builder =
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty.builder()
-
-      /**
-       * @param filterString the value to be set. 
-       */
-      override fun filterString(filterString: String) {
-        cdkBuilder.filterString(filterString)
-      }
-
-      public fun build(): software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty,
-    ) : CdkObject(cdkObject), FiltersProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html#cfn-resourceexplorer2-view-filters-filterstring)
-       */
-      override fun filterString(): String = unwrap(this).getFilterString()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FiltersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty):
-          FiltersProperty = CdkObjectWrappers.wrap(cdkObject) as? FiltersProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FiltersProperty):
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty
     }
   }
 }

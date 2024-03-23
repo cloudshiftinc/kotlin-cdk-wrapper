@@ -1776,329 +1776,6 @@ public open class CfnEventSourceMapping internal constructor(
   }
 
   /**
-   * Specific configuration settings for a self-managed Apache Kafka event source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * SelfManagedKafkaEventSourceConfigProperty selfManagedKafkaEventSourceConfigProperty =
-   * SelfManagedKafkaEventSourceConfigProperty.builder()
-   * .consumerGroupId("consumerGroupId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html)
-   */
-  public interface SelfManagedKafkaEventSourceConfigProperty {
-    /**
-     * The identifier for the Kafka consumer group to join.
-     *
-     * The consumer group ID must be unique among all your Kafka event sources. After creating a
-     * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-     * For more information, see [Customizable consumer group
-     * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
-     */
-    public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
-
-    /**
-     * A builder for [SelfManagedKafkaEventSourceConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param consumerGroupId The identifier for the Kafka consumer group to join.
-       * The consumer group ID must be unique among all your Kafka event sources. After creating a
-       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-       * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
-       * .
-       */
-      public fun consumerGroupId(consumerGroupId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.builder()
-
-      /**
-       * @param consumerGroupId The identifier for the Kafka consumer group to join.
-       * The consumer group ID must be unique among all your Kafka event sources. After creating a
-       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-       * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
-       * .
-       */
-      override fun consumerGroupId(consumerGroupId: String) {
-        cdkBuilder.consumerGroupId(consumerGroupId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty,
-    ) : CdkObject(cdkObject), SelfManagedKafkaEventSourceConfigProperty {
-      /**
-       * The identifier for the Kafka consumer group to join.
-       *
-       * The consumer group ID must be unique among all your Kafka event sources. After creating a
-       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-       * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
-       */
-      override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SelfManagedKafkaEventSourceConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty):
-          SelfManagedKafkaEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SelfManagedKafkaEventSourceConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SelfManagedKafkaEventSourceConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
-    }
-  }
-
-  /**
-   * A structure within a `FilterCriteria` object that defines an event filtering pattern.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * FilterProperty filterProperty = FilterProperty.builder()
-   * .pattern("pattern")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html)
-   */
-  public interface FilterProperty {
-    /**
-     * A filter pattern.
-     *
-     * For more information on the syntax of a filter pattern, see [Filter rule
-     * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html#cfn-lambda-eventsourcemapping-filter-pattern)
-     */
-    public fun pattern(): String? = unwrap(this).getPattern()
-
-    /**
-     * A builder for [FilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pattern A filter pattern.
-       * For more information on the syntax of a filter pattern, see [Filter rule
-       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
-       * .
-       */
-      public fun pattern(pattern: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.builder()
-
-      /**
-       * @param pattern A filter pattern.
-       * For more information on the syntax of a filter pattern, see [Filter rule
-       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
-       * .
-       */
-      override fun pattern(pattern: String) {
-        cdkBuilder.pattern(pattern)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
-      /**
-       * A filter pattern.
-       *
-       * For more information on the syntax of a filter pattern, see [Filter rule
-       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html#cfn-lambda-eventsourcemapping-filter-pattern)
-       */
-      override fun pattern(): String? = unwrap(this).getPattern()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty
-    }
-  }
-
-  /**
-   * The self-managed Apache Kafka cluster for your event source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * SelfManagedEventSourceProperty selfManagedEventSourceProperty =
-   * SelfManagedEventSourceProperty.builder()
-   * .endpoints(EndpointsProperty.builder()
-   * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html)
-   */
-  public interface SelfManagedEventSourceProperty {
-    /**
-     * The list of bootstrap servers for your Kafka brokers in the following format:
-     * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource-endpoints)
-     */
-    public fun endpoints(): Any? = unwrap(this).getEndpoints()
-
-    /**
-     * A builder for [SelfManagedEventSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      public fun endpoints(endpoints: IResolvable)
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      public fun endpoints(endpoints: EndpointsProperty)
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
-      public fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.builder()
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      override fun endpoints(endpoints: IResolvable) {
-        cdkBuilder.endpoints(endpoints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      override fun endpoints(endpoints: EndpointsProperty) {
-        cdkBuilder.endpoints(endpoints.let(EndpointsProperty::unwrap))
-      }
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
-      override fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit): Unit =
-          endpoints(EndpointsProperty(endpoints))
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty,
-    ) : CdkObject(cdkObject), SelfManagedEventSourceProperty {
-      /**
-       * The list of bootstrap servers for your Kafka brokers in the following format:
-       * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource-endpoints)
-       */
-      override fun endpoints(): Any? = unwrap(this).getEndpoints()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SelfManagedEventSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty):
-          SelfManagedEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SelfManagedEventSourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SelfManagedEventSourceProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
-    }
-  }
-
-  /**
    * Specific configuration settings for an Amazon Managed Streaming for Apache Kafka (Amazon MSK)
    * event source.
    *
@@ -2202,257 +1879,6 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty
-    }
-  }
-
-  /**
-   * An object that contains the filters for an event source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * FilterCriteriaProperty filterCriteriaProperty = FilterCriteriaProperty.builder()
-   * .filters(List.of(FilterProperty.builder()
-   * .pattern("pattern")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filtercriteria.html)
-   */
-  public interface FilterCriteriaProperty {
-    /**
-     * A list of filters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filtercriteria.html#cfn-lambda-eventsourcemapping-filtercriteria-filters)
-     */
-    public fun filters(): Any? = unwrap(this).getFilters()
-
-    /**
-     * A builder for [FilterCriteriaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param filters A list of filters.
-       */
-      public fun filters(filters: IResolvable)
-
-      /**
-       * @param filters A list of filters.
-       */
-      public fun filters(filters: List<Any>)
-
-      /**
-       * @param filters A list of filters.
-       */
-      public fun filters(vararg filters: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty.builder()
-
-      /**
-       * @param filters A list of filters.
-       */
-      override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filters A list of filters.
-       */
-      override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
-      }
-
-      /**
-       * @param filters A list of filters.
-       */
-      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty,
-    ) : CdkObject(cdkObject), FilterCriteriaProperty {
-      /**
-       * A list of filters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filtercriteria.html#cfn-lambda-eventsourcemapping-filtercriteria-filters)
-       */
-      override fun filters(): Any? = unwrap(this).getFilters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterCriteriaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty):
-          FilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterCriteriaProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterCriteriaProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty
-    }
-  }
-
-  /**
-   * A destination for events that failed processing.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * OnFailureProperty onFailureProperty = OnFailureProperty.builder()
-   * .destination("destination")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html)
-   */
-  public interface OnFailureProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the destination resource.
-     *
-     * To retain records of [asynchronous
-     * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-     * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-     * EventBridge event bus as the destination.
-     *
-     * To retain records of failed invocations from [Kinesis and DynamoDB event
-     * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-     * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-     *
-     * To retain records of failed invocations from [self-managed
-     * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
-     * or [Amazon
-     * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
-     * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
-     * destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html#cfn-lambda-eventsourcemapping-onfailure-destination)
-     */
-    public fun destination(): String? = unwrap(this).getDestination()
-
-    /**
-     * A builder for [OnFailureProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destination The Amazon Resource Name (ARN) of the destination resource.
-       * To retain records of [asynchronous
-       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
-       *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
-       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
-       * or [Amazon
-       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
-       * destination.
-       */
-      public fun destination(destination: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty.builder()
-
-      /**
-       * @param destination The Amazon Resource Name (ARN) of the destination resource.
-       * To retain records of [asynchronous
-       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
-       *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
-       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
-       * or [Amazon
-       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
-       * destination.
-       */
-      override fun destination(destination: String) {
-        cdkBuilder.destination(destination)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty,
-    ) : CdkObject(cdkObject), OnFailureProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the destination resource.
-       *
-       * To retain records of [asynchronous
-       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
-       *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
-       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
-       * or [Amazon
-       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
-       * destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html#cfn-lambda-eventsourcemapping-onfailure-destination)
-       */
-      override fun destination(): String? = unwrap(this).getDestination()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OnFailureProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty):
-          OnFailureProperty = CdkObjectWrappers.wrap(cdkObject) as? OnFailureProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnFailureProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty
     }
   }
 
@@ -2565,314 +1991,6 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty
-    }
-  }
-
-  /**
-   * An array of the authentication protocol, VPC components, or virtual host to secure and define
-   * your event source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * SourceAccessConfigurationProperty sourceAccessConfigurationProperty =
-   * SourceAccessConfigurationProperty.builder()
-   * .type("type")
-   * .uri("uri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html)
-   */
-  public interface SourceAccessConfigurationProperty {
-    /**
-     * The type of authentication protocol, VPC components, or virtual host for your event source.
-     * For example: `"Type":"SASL_SCRAM_512_AUTH"` .
-     *
-     * * `BASIC_AUTH` – (Amazon MQ) The AWS Secrets Manager secret that stores your broker
-     * credentials.
-     * * `BASIC_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key used
-     * for SASL/PLAIN authentication of your Apache Kafka brokers.
-     * * `VPC_SUBNET` – (Self-managed Apache Kafka) The subnets associated with your VPC. Lambda
-     * connects to these subnets to fetch data from your self-managed Apache Kafka cluster.
-     * * `VPC_SECURITY_GROUP` – (Self-managed Apache Kafka) The VPC security group used to manage
-     * access to your self-managed Apache Kafka brokers.
-     * * `SASL_SCRAM_256_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret
-     * key used for SASL SCRAM-256 authentication of your self-managed Apache Kafka brokers.
-     * * `SASL_SCRAM_512_AUTH` – (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN of
-     * your secret key used for SASL SCRAM-512 authentication of your self-managed Apache Kafka
-     * brokers.
-     * * `VIRTUAL_HOST` –- (RabbitMQ) The name of the virtual host in your RabbitMQ broker. Lambda
-     * uses this RabbitMQ host as the event source. This property cannot be specified in an
-     * UpdateEventSourceMapping API call.
-     * * `CLIENT_CERTIFICATE_TLS_AUTH` – (Amazon MSK, self-managed Apache Kafka) The Secrets Manager
-     * ARN of your secret key containing the certificate chain (X.509 PEM), private key (PKCS#8 PEM),
-     * and private key password (optional) used for mutual TLS authentication of your MSK/Apache Kafka
-     * brokers.
-     * * `SERVER_ROOT_CA_CERTIFICATE` – (Self-managed Apache Kafka) The Secrets Manager ARN of your
-     * secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your Apache
-     * Kafka brokers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * The value for your chosen configuration in `Type` .
-     *
-     * For example: `"URI":
-     * "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-uri)
-     */
-    public fun uri(): String? = unwrap(this).getUri()
-
-    /**
-     * A builder for [SourceAccessConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The type of authentication protocol, VPC components, or virtual host for your
-       * event source. For example: `"Type":"SASL_SCRAM_512_AUTH"` .
-       * * `BASIC_AUTH` – (Amazon MQ) The AWS Secrets Manager secret that stores your broker
-       * credentials.
-       * * `BASIC_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key
-       * used for SASL/PLAIN authentication of your Apache Kafka brokers.
-       * * `VPC_SUBNET` – (Self-managed Apache Kafka) The subnets associated with your VPC. Lambda
-       * connects to these subnets to fetch data from your self-managed Apache Kafka cluster.
-       * * `VPC_SECURITY_GROUP` – (Self-managed Apache Kafka) The VPC security group used to manage
-       * access to your self-managed Apache Kafka brokers.
-       * * `SASL_SCRAM_256_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your
-       * secret key used for SASL SCRAM-256 authentication of your self-managed Apache Kafka brokers.
-       * * `SASL_SCRAM_512_AUTH` – (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN
-       * of your secret key used for SASL SCRAM-512 authentication of your self-managed Apache Kafka
-       * brokers.
-       * * `VIRTUAL_HOST` –- (RabbitMQ) The name of the virtual host in your RabbitMQ broker. Lambda
-       * uses this RabbitMQ host as the event source. This property cannot be specified in an
-       * UpdateEventSourceMapping API call.
-       * * `CLIENT_CERTIFICATE_TLS_AUTH` – (Amazon MSK, self-managed Apache Kafka) The Secrets
-       * Manager ARN of your secret key containing the certificate chain (X.509 PEM), private key
-       * (PKCS#8 PEM), and private key password (optional) used for mutual TLS authentication of your
-       * MSK/Apache Kafka brokers.
-       * * `SERVER_ROOT_CA_CERTIFICATE` – (Self-managed Apache Kafka) The Secrets Manager ARN of
-       * your secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your
-       * Apache Kafka brokers.
-       */
-      public fun type(type: String)
-
-      /**
-       * @param uri The value for your chosen configuration in `Type` .
-       * For example: `"URI":
-       * "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"` .
-       */
-      public fun uri(uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty.builder()
-
-      /**
-       * @param type The type of authentication protocol, VPC components, or virtual host for your
-       * event source. For example: `"Type":"SASL_SCRAM_512_AUTH"` .
-       * * `BASIC_AUTH` – (Amazon MQ) The AWS Secrets Manager secret that stores your broker
-       * credentials.
-       * * `BASIC_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key
-       * used for SASL/PLAIN authentication of your Apache Kafka brokers.
-       * * `VPC_SUBNET` – (Self-managed Apache Kafka) The subnets associated with your VPC. Lambda
-       * connects to these subnets to fetch data from your self-managed Apache Kafka cluster.
-       * * `VPC_SECURITY_GROUP` – (Self-managed Apache Kafka) The VPC security group used to manage
-       * access to your self-managed Apache Kafka brokers.
-       * * `SASL_SCRAM_256_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your
-       * secret key used for SASL SCRAM-256 authentication of your self-managed Apache Kafka brokers.
-       * * `SASL_SCRAM_512_AUTH` – (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN
-       * of your secret key used for SASL SCRAM-512 authentication of your self-managed Apache Kafka
-       * brokers.
-       * * `VIRTUAL_HOST` –- (RabbitMQ) The name of the virtual host in your RabbitMQ broker. Lambda
-       * uses this RabbitMQ host as the event source. This property cannot be specified in an
-       * UpdateEventSourceMapping API call.
-       * * `CLIENT_CERTIFICATE_TLS_AUTH` – (Amazon MSK, self-managed Apache Kafka) The Secrets
-       * Manager ARN of your secret key containing the certificate chain (X.509 PEM), private key
-       * (PKCS#8 PEM), and private key password (optional) used for mutual TLS authentication of your
-       * MSK/Apache Kafka brokers.
-       * * `SERVER_ROOT_CA_CERTIFICATE` – (Self-managed Apache Kafka) The Secrets Manager ARN of
-       * your secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your
-       * Apache Kafka brokers.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param uri The value for your chosen configuration in `Type` .
-       * For example: `"URI":
-       * "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"` .
-       */
-      override fun uri(uri: String) {
-        cdkBuilder.uri(uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty,
-    ) : CdkObject(cdkObject), SourceAccessConfigurationProperty {
-      /**
-       * The type of authentication protocol, VPC components, or virtual host for your event source.
-       * For example: `"Type":"SASL_SCRAM_512_AUTH"` .
-       *
-       * * `BASIC_AUTH` – (Amazon MQ) The AWS Secrets Manager secret that stores your broker
-       * credentials.
-       * * `BASIC_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key
-       * used for SASL/PLAIN authentication of your Apache Kafka brokers.
-       * * `VPC_SUBNET` – (Self-managed Apache Kafka) The subnets associated with your VPC. Lambda
-       * connects to these subnets to fetch data from your self-managed Apache Kafka cluster.
-       * * `VPC_SECURITY_GROUP` – (Self-managed Apache Kafka) The VPC security group used to manage
-       * access to your self-managed Apache Kafka brokers.
-       * * `SASL_SCRAM_256_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your
-       * secret key used for SASL SCRAM-256 authentication of your self-managed Apache Kafka brokers.
-       * * `SASL_SCRAM_512_AUTH` – (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN
-       * of your secret key used for SASL SCRAM-512 authentication of your self-managed Apache Kafka
-       * brokers.
-       * * `VIRTUAL_HOST` –- (RabbitMQ) The name of the virtual host in your RabbitMQ broker. Lambda
-       * uses this RabbitMQ host as the event source. This property cannot be specified in an
-       * UpdateEventSourceMapping API call.
-       * * `CLIENT_CERTIFICATE_TLS_AUTH` – (Amazon MSK, self-managed Apache Kafka) The Secrets
-       * Manager ARN of your secret key containing the certificate chain (X.509 PEM), private key
-       * (PKCS#8 PEM), and private key password (optional) used for mutual TLS authentication of your
-       * MSK/Apache Kafka brokers.
-       * * `SERVER_ROOT_CA_CERTIFICATE` – (Self-managed Apache Kafka) The Secrets Manager ARN of
-       * your secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your
-       * Apache Kafka brokers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-
-      /**
-       * The value for your chosen configuration in `Type` .
-       *
-       * For example: `"URI":
-       * "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-uri)
-       */
-      override fun uri(): String? = unwrap(this).getUri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SourceAccessConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty):
-          SourceAccessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SourceAccessConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceAccessConfigurationProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
-    }
-  }
-
-  /**
-   * (Amazon SQS only) The scaling configuration for the event source.
-   *
-   * To remove the configuration, pass an empty value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * ScalingConfigProperty scalingConfigProperty = ScalingConfigProperty.builder()
-   * .maximumConcurrency(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html)
-   */
-  public interface ScalingConfigProperty {
-    /**
-     * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html#cfn-lambda-eventsourcemapping-scalingconfig-maximumconcurrency)
-     */
-    public fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
-
-    /**
-     * A builder for [ScalingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS
-       * event source can invoke.
-       */
-      public fun maximumConcurrency(maximumConcurrency: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.builder()
-
-      /**
-       * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS
-       * event source can invoke.
-       */
-      override fun maximumConcurrency(maximumConcurrency: Number) {
-        cdkBuilder.maximumConcurrency(maximumConcurrency)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty,
-    ) : CdkObject(cdkObject), ScalingConfigProperty {
-      /**
-       * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html#cfn-lambda-eventsourcemapping-scalingconfig-maximumconcurrency)
-       */
-      override fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty):
-          ScalingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScalingConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty
     }
   }
 
@@ -3136,6 +2254,888 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty
+    }
+  }
+
+  /**
+   * An object that contains the filters for an event source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * FilterCriteriaProperty filterCriteriaProperty = FilterCriteriaProperty.builder()
+   * .filters(List.of(FilterProperty.builder()
+   * .pattern("pattern")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filtercriteria.html)
+   */
+  public interface FilterCriteriaProperty {
+    /**
+     * A list of filters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filtercriteria.html#cfn-lambda-eventsourcemapping-filtercriteria-filters)
+     */
+    public fun filters(): Any? = unwrap(this).getFilters()
+
+    /**
+     * A builder for [FilterCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param filters A list of filters.
+       */
+      public fun filters(filters: IResolvable)
+
+      /**
+       * @param filters A list of filters.
+       */
+      public fun filters(filters: List<Any>)
+
+      /**
+       * @param filters A list of filters.
+       */
+      public fun filters(vararg filters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty.builder()
+
+      /**
+       * @param filters A list of filters.
+       */
+      override fun filters(filters: IResolvable) {
+        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param filters A list of filters.
+       */
+      override fun filters(filters: List<Any>) {
+        cdkBuilder.filters(filters)
+      }
+
+      /**
+       * @param filters A list of filters.
+       */
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty,
+    ) : CdkObject(cdkObject), FilterCriteriaProperty {
+      /**
+       * A list of filters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filtercriteria.html#cfn-lambda-eventsourcemapping-filtercriteria-filters)
+       */
+      override fun filters(): Any? = unwrap(this).getFilters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty):
+          FilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterCriteriaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterCriteriaProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty
+    }
+  }
+
+  /**
+   * A structure within a `FilterCriteria` object that defines an event filtering pattern.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * FilterProperty filterProperty = FilterProperty.builder()
+   * .pattern("pattern")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html)
+   */
+  public interface FilterProperty {
+    /**
+     * A filter pattern.
+     *
+     * For more information on the syntax of a filter pattern, see [Filter rule
+     * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html#cfn-lambda-eventsourcemapping-filter-pattern)
+     */
+    public fun pattern(): String? = unwrap(this).getPattern()
+
+    /**
+     * A builder for [FilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pattern A filter pattern.
+       * For more information on the syntax of a filter pattern, see [Filter rule
+       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
+       * .
+       */
+      public fun pattern(pattern: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.builder()
+
+      /**
+       * @param pattern A filter pattern.
+       * For more information on the syntax of a filter pattern, see [Filter rule
+       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
+       * .
+       */
+      override fun pattern(pattern: String) {
+        cdkBuilder.pattern(pattern)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty,
+    ) : CdkObject(cdkObject), FilterProperty {
+      /**
+       * A filter pattern.
+       *
+       * For more information on the syntax of a filter pattern, see [Filter rule
+       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html#cfn-lambda-eventsourcemapping-filter-pattern)
+       */
+      override fun pattern(): String? = unwrap(this).getPattern()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty):
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty
+    }
+  }
+
+  /**
+   * A destination for events that failed processing.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * OnFailureProperty onFailureProperty = OnFailureProperty.builder()
+   * .destination("destination")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html)
+   */
+  public interface OnFailureProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the destination resource.
+     *
+     * To retain records of [asynchronous
+     * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+     * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
+     * EventBridge event bus as the destination.
+     *
+     * To retain records of failed invocations from [Kinesis and DynamoDB event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
+     * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     *
+     * To retain records of failed invocations from [self-managed
+     * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
+     * or [Amazon
+     * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
+     * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+     * destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html#cfn-lambda-eventsourcemapping-onfailure-destination)
+     */
+    public fun destination(): String? = unwrap(this).getDestination()
+
+    /**
+     * A builder for [OnFailureProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destination The Amazon Resource Name (ARN) of the destination resource.
+       * To retain records of [asynchronous
+       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
+       * EventBridge event bus as the destination.
+       *
+       * To retain records of failed invocations from [Kinesis and DynamoDB event
+       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
+       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+       *
+       * To retain records of failed invocations from [self-managed
+       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
+       * or [Amazon
+       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+       * destination.
+       */
+      public fun destination(destination: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty.builder()
+
+      /**
+       * @param destination The Amazon Resource Name (ARN) of the destination resource.
+       * To retain records of [asynchronous
+       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
+       * EventBridge event bus as the destination.
+       *
+       * To retain records of failed invocations from [Kinesis and DynamoDB event
+       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
+       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+       *
+       * To retain records of failed invocations from [self-managed
+       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
+       * or [Amazon
+       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+       * destination.
+       */
+      override fun destination(destination: String) {
+        cdkBuilder.destination(destination)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty,
+    ) : CdkObject(cdkObject), OnFailureProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the destination resource.
+       *
+       * To retain records of [asynchronous
+       * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
+       * EventBridge event bus as the destination.
+       *
+       * To retain records of failed invocations from [Kinesis and DynamoDB event
+       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
+       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+       *
+       * To retain records of failed invocations from [self-managed
+       * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
+       * or [Amazon
+       * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+       * destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html#cfn-lambda-eventsourcemapping-onfailure-destination)
+       */
+      override fun destination(): String? = unwrap(this).getDestination()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OnFailureProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty):
+          OnFailureProperty = CdkObjectWrappers.wrap(cdkObject) as? OnFailureProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnFailureProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty
+    }
+  }
+
+  /**
+   * (Amazon SQS only) The scaling configuration for the event source.
+   *
+   * To remove the configuration, pass an empty value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * ScalingConfigProperty scalingConfigProperty = ScalingConfigProperty.builder()
+   * .maximumConcurrency(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html)
+   */
+  public interface ScalingConfigProperty {
+    /**
+     * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html#cfn-lambda-eventsourcemapping-scalingconfig-maximumconcurrency)
+     */
+    public fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
+
+    /**
+     * A builder for [ScalingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS
+       * event source can invoke.
+       */
+      public fun maximumConcurrency(maximumConcurrency: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.builder()
+
+      /**
+       * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS
+       * event source can invoke.
+       */
+      override fun maximumConcurrency(maximumConcurrency: Number) {
+        cdkBuilder.maximumConcurrency(maximumConcurrency)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty,
+    ) : CdkObject(cdkObject), ScalingConfigProperty {
+      /**
+       * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html#cfn-lambda-eventsourcemapping-scalingconfig-maximumconcurrency)
+       */
+      override fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty):
+          ScalingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScalingConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty
+    }
+  }
+
+  /**
+   * The self-managed Apache Kafka cluster for your event source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SelfManagedEventSourceProperty selfManagedEventSourceProperty =
+   * SelfManagedEventSourceProperty.builder()
+   * .endpoints(EndpointsProperty.builder()
+   * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html)
+   */
+  public interface SelfManagedEventSourceProperty {
+    /**
+     * The list of bootstrap servers for your Kafka brokers in the following format:
+     * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource-endpoints)
+     */
+    public fun endpoints(): Any? = unwrap(this).getEndpoints()
+
+    /**
+     * A builder for [SelfManagedEventSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      public fun endpoints(endpoints: IResolvable)
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      public fun endpoints(endpoints: EndpointsProperty)
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
+      public fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.builder()
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      override fun endpoints(endpoints: IResolvable) {
+        cdkBuilder.endpoints(endpoints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      override fun endpoints(endpoints: EndpointsProperty) {
+        cdkBuilder.endpoints(endpoints.let(EndpointsProperty::unwrap))
+      }
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
+      override fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit): Unit =
+          endpoints(EndpointsProperty(endpoints))
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty,
+    ) : CdkObject(cdkObject), SelfManagedEventSourceProperty {
+      /**
+       * The list of bootstrap servers for your Kafka brokers in the following format:
+       * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource-endpoints)
+       */
+      override fun endpoints(): Any? = unwrap(this).getEndpoints()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SelfManagedEventSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty):
+          SelfManagedEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedEventSourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SelfManagedEventSourceProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
+    }
+  }
+
+  /**
+   * Specific configuration settings for a self-managed Apache Kafka event source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SelfManagedKafkaEventSourceConfigProperty selfManagedKafkaEventSourceConfigProperty =
+   * SelfManagedKafkaEventSourceConfigProperty.builder()
+   * .consumerGroupId("consumerGroupId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html)
+   */
+  public interface SelfManagedKafkaEventSourceConfigProperty {
+    /**
+     * The identifier for the Kafka consumer group to join.
+     *
+     * The consumer group ID must be unique among all your Kafka event sources. After creating a
+     * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
+     * For more information, see [Customizable consumer group
+     * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
+     */
+    public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+
+    /**
+     * A builder for [SelfManagedKafkaEventSourceConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param consumerGroupId The identifier for the Kafka consumer group to join.
+       * The consumer group ID must be unique among all your Kafka event sources. After creating a
+       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
+       * For more information, see [Customizable consumer group
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * .
+       */
+      public fun consumerGroupId(consumerGroupId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.builder()
+
+      /**
+       * @param consumerGroupId The identifier for the Kafka consumer group to join.
+       * The consumer group ID must be unique among all your Kafka event sources. After creating a
+       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
+       * For more information, see [Customizable consumer group
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * .
+       */
+      override fun consumerGroupId(consumerGroupId: String) {
+        cdkBuilder.consumerGroupId(consumerGroupId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty,
+    ) : CdkObject(cdkObject), SelfManagedKafkaEventSourceConfigProperty {
+      /**
+       * The identifier for the Kafka consumer group to join.
+       *
+       * The consumer group ID must be unique among all your Kafka event sources. After creating a
+       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
+       * For more information, see [Customizable consumer group
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
+       */
+      override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SelfManagedKafkaEventSourceConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty):
+          SelfManagedKafkaEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedKafkaEventSourceConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SelfManagedKafkaEventSourceConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
+    }
+  }
+
+  /**
+   * An array of the authentication protocol, VPC components, or virtual host to secure and define
+   * your event source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SourceAccessConfigurationProperty sourceAccessConfigurationProperty =
+   * SourceAccessConfigurationProperty.builder()
+   * .type("type")
+   * .uri("uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html)
+   */
+  public interface SourceAccessConfigurationProperty {
+    /**
+     * The type of authentication protocol, VPC components, or virtual host for your event source.
+     * For example: `"Type":"SASL_SCRAM_512_AUTH"` .
+     *
+     * * `BASIC_AUTH` – (Amazon MQ) The AWS Secrets Manager secret that stores your broker
+     * credentials.
+     * * `BASIC_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key used
+     * for SASL/PLAIN authentication of your Apache Kafka brokers.
+     * * `VPC_SUBNET` – (Self-managed Apache Kafka) The subnets associated with your VPC. Lambda
+     * connects to these subnets to fetch data from your self-managed Apache Kafka cluster.
+     * * `VPC_SECURITY_GROUP` – (Self-managed Apache Kafka) The VPC security group used to manage
+     * access to your self-managed Apache Kafka brokers.
+     * * `SASL_SCRAM_256_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret
+     * key used for SASL SCRAM-256 authentication of your self-managed Apache Kafka brokers.
+     * * `SASL_SCRAM_512_AUTH` – (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN of
+     * your secret key used for SASL SCRAM-512 authentication of your self-managed Apache Kafka
+     * brokers.
+     * * `VIRTUAL_HOST` –- (RabbitMQ) The name of the virtual host in your RabbitMQ broker. Lambda
+     * uses this RabbitMQ host as the event source. This property cannot be specified in an
+     * UpdateEventSourceMapping API call.
+     * * `CLIENT_CERTIFICATE_TLS_AUTH` – (Amazon MSK, self-managed Apache Kafka) The Secrets Manager
+     * ARN of your secret key containing the certificate chain (X.509 PEM), private key (PKCS#8 PEM),
+     * and private key password (optional) used for mutual TLS authentication of your MSK/Apache Kafka
+     * brokers.
+     * * `SERVER_ROOT_CA_CERTIFICATE` – (Self-managed Apache Kafka) The Secrets Manager ARN of your
+     * secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your Apache
+     * Kafka brokers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * The value for your chosen configuration in `Type` .
+     *
+     * For example: `"URI":
+     * "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-uri)
+     */
+    public fun uri(): String? = unwrap(this).getUri()
+
+    /**
+     * A builder for [SourceAccessConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The type of authentication protocol, VPC components, or virtual host for your
+       * event source. For example: `"Type":"SASL_SCRAM_512_AUTH"` .
+       * * `BASIC_AUTH` – (Amazon MQ) The AWS Secrets Manager secret that stores your broker
+       * credentials.
+       * * `BASIC_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key
+       * used for SASL/PLAIN authentication of your Apache Kafka brokers.
+       * * `VPC_SUBNET` – (Self-managed Apache Kafka) The subnets associated with your VPC. Lambda
+       * connects to these subnets to fetch data from your self-managed Apache Kafka cluster.
+       * * `VPC_SECURITY_GROUP` – (Self-managed Apache Kafka) The VPC security group used to manage
+       * access to your self-managed Apache Kafka brokers.
+       * * `SASL_SCRAM_256_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your
+       * secret key used for SASL SCRAM-256 authentication of your self-managed Apache Kafka brokers.
+       * * `SASL_SCRAM_512_AUTH` – (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN
+       * of your secret key used for SASL SCRAM-512 authentication of your self-managed Apache Kafka
+       * brokers.
+       * * `VIRTUAL_HOST` –- (RabbitMQ) The name of the virtual host in your RabbitMQ broker. Lambda
+       * uses this RabbitMQ host as the event source. This property cannot be specified in an
+       * UpdateEventSourceMapping API call.
+       * * `CLIENT_CERTIFICATE_TLS_AUTH` – (Amazon MSK, self-managed Apache Kafka) The Secrets
+       * Manager ARN of your secret key containing the certificate chain (X.509 PEM), private key
+       * (PKCS#8 PEM), and private key password (optional) used for mutual TLS authentication of your
+       * MSK/Apache Kafka brokers.
+       * * `SERVER_ROOT_CA_CERTIFICATE` – (Self-managed Apache Kafka) The Secrets Manager ARN of
+       * your secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your
+       * Apache Kafka brokers.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param uri The value for your chosen configuration in `Type` .
+       * For example: `"URI":
+       * "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"` .
+       */
+      public fun uri(uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty.builder()
+
+      /**
+       * @param type The type of authentication protocol, VPC components, or virtual host for your
+       * event source. For example: `"Type":"SASL_SCRAM_512_AUTH"` .
+       * * `BASIC_AUTH` – (Amazon MQ) The AWS Secrets Manager secret that stores your broker
+       * credentials.
+       * * `BASIC_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key
+       * used for SASL/PLAIN authentication of your Apache Kafka brokers.
+       * * `VPC_SUBNET` – (Self-managed Apache Kafka) The subnets associated with your VPC. Lambda
+       * connects to these subnets to fetch data from your self-managed Apache Kafka cluster.
+       * * `VPC_SECURITY_GROUP` – (Self-managed Apache Kafka) The VPC security group used to manage
+       * access to your self-managed Apache Kafka brokers.
+       * * `SASL_SCRAM_256_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your
+       * secret key used for SASL SCRAM-256 authentication of your self-managed Apache Kafka brokers.
+       * * `SASL_SCRAM_512_AUTH` – (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN
+       * of your secret key used for SASL SCRAM-512 authentication of your self-managed Apache Kafka
+       * brokers.
+       * * `VIRTUAL_HOST` –- (RabbitMQ) The name of the virtual host in your RabbitMQ broker. Lambda
+       * uses this RabbitMQ host as the event source. This property cannot be specified in an
+       * UpdateEventSourceMapping API call.
+       * * `CLIENT_CERTIFICATE_TLS_AUTH` – (Amazon MSK, self-managed Apache Kafka) The Secrets
+       * Manager ARN of your secret key containing the certificate chain (X.509 PEM), private key
+       * (PKCS#8 PEM), and private key password (optional) used for mutual TLS authentication of your
+       * MSK/Apache Kafka brokers.
+       * * `SERVER_ROOT_CA_CERTIFICATE` – (Self-managed Apache Kafka) The Secrets Manager ARN of
+       * your secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your
+       * Apache Kafka brokers.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param uri The value for your chosen configuration in `Type` .
+       * For example: `"URI":
+       * "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"` .
+       */
+      override fun uri(uri: String) {
+        cdkBuilder.uri(uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty,
+    ) : CdkObject(cdkObject), SourceAccessConfigurationProperty {
+      /**
+       * The type of authentication protocol, VPC components, or virtual host for your event source.
+       * For example: `"Type":"SASL_SCRAM_512_AUTH"` .
+       *
+       * * `BASIC_AUTH` – (Amazon MQ) The AWS Secrets Manager secret that stores your broker
+       * credentials.
+       * * `BASIC_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key
+       * used for SASL/PLAIN authentication of your Apache Kafka brokers.
+       * * `VPC_SUBNET` – (Self-managed Apache Kafka) The subnets associated with your VPC. Lambda
+       * connects to these subnets to fetch data from your self-managed Apache Kafka cluster.
+       * * `VPC_SECURITY_GROUP` – (Self-managed Apache Kafka) The VPC security group used to manage
+       * access to your self-managed Apache Kafka brokers.
+       * * `SASL_SCRAM_256_AUTH` – (Self-managed Apache Kafka) The Secrets Manager ARN of your
+       * secret key used for SASL SCRAM-256 authentication of your self-managed Apache Kafka brokers.
+       * * `SASL_SCRAM_512_AUTH` – (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN
+       * of your secret key used for SASL SCRAM-512 authentication of your self-managed Apache Kafka
+       * brokers.
+       * * `VIRTUAL_HOST` –- (RabbitMQ) The name of the virtual host in your RabbitMQ broker. Lambda
+       * uses this RabbitMQ host as the event source. This property cannot be specified in an
+       * UpdateEventSourceMapping API call.
+       * * `CLIENT_CERTIFICATE_TLS_AUTH` – (Amazon MSK, self-managed Apache Kafka) The Secrets
+       * Manager ARN of your secret key containing the certificate chain (X.509 PEM), private key
+       * (PKCS#8 PEM), and private key password (optional) used for mutual TLS authentication of your
+       * MSK/Apache Kafka brokers.
+       * * `SERVER_ROOT_CA_CERTIFICATE` – (Self-managed Apache Kafka) The Secrets Manager ARN of
+       * your secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your
+       * Apache Kafka brokers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * The value for your chosen configuration in `Type` .
+       *
+       * For example: `"URI":
+       * "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-uri)
+       */
+      override fun uri(): String? = unwrap(this).getUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SourceAccessConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty):
+          SourceAccessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceAccessConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceAccessConfigurationProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
     }
   }
 }

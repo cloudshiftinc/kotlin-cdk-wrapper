@@ -357,736 +357,6 @@ public open class CfnRecordSetGroup internal constructor(
   }
 
   /**
-   * A complex type that lists the coordinates for a geoproximity resource record.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.route53.*;
-   * CoordinatesProperty coordinatesProperty = CoordinatesProperty.builder()
-   * .latitude("latitude")
-   * .longitude("longitude")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html)
-   */
-  public interface CoordinatesProperty {
-    /**
-     * Specifies a coordinate of the north–south position of a geographic point on the surface of
-     * the Earth (-90 - 90).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html#cfn-route53-recordsetgroup-coordinates-latitude)
-     */
-    public fun latitude(): String
-
-    /**
-     * Specifies a coordinate of the east–west position of a geographic point on the surface of the
-     * Earth (-180 - 180).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html#cfn-route53-recordsetgroup-coordinates-longitude)
-     */
-    public fun longitude(): String
-
-    /**
-     * A builder for [CoordinatesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param latitude Specifies a coordinate of the north–south position of a geographic point on
-       * the surface of the Earth (-90 - 90). 
-       */
-      public fun latitude(latitude: String)
-
-      /**
-       * @param longitude Specifies a coordinate of the east–west position of a geographic point on
-       * the surface of the Earth (-180 - 180). 
-       */
-      public fun longitude(longitude: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty.Builder =
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty.builder()
-
-      /**
-       * @param latitude Specifies a coordinate of the north–south position of a geographic point on
-       * the surface of the Earth (-90 - 90). 
-       */
-      override fun latitude(latitude: String) {
-        cdkBuilder.latitude(latitude)
-      }
-
-      /**
-       * @param longitude Specifies a coordinate of the east–west position of a geographic point on
-       * the surface of the Earth (-180 - 180). 
-       */
-      override fun longitude(longitude: String) {
-        cdkBuilder.longitude(longitude)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty,
-    ) : CdkObject(cdkObject), CoordinatesProperty {
-      /**
-       * Specifies a coordinate of the north–south position of a geographic point on the surface of
-       * the Earth (-90 - 90).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html#cfn-route53-recordsetgroup-coordinates-latitude)
-       */
-      override fun latitude(): String = unwrap(this).getLatitude()
-
-      /**
-       * Specifies a coordinate of the east–west position of a geographic point on the surface of
-       * the Earth (-180 - 180).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html#cfn-route53-recordsetgroup-coordinates-longitude)
-       */
-      override fun longitude(): String = unwrap(this).getLongitude()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CoordinatesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty):
-          CoordinatesProperty = CdkObjectWrappers.wrap(cdkObject) as? CoordinatesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CoordinatesProperty):
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty
-    }
-  }
-
-  /**
-   * (Resource record sets only): A complex type that lets you specify where your resources are
-   * located.
-   *
-   * Only one of `LocalZoneGroup` , `Coordinates` , or `AWS Region` is allowed per request at a
-   * time.
-   *
-   * For more information about geoproximity routing, see [Geoproximity
-   * routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-geoproximity.html)
-   * in the *Amazon Route 53 Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.route53.*;
-   * GeoProximityLocationProperty geoProximityLocationProperty =
-   * GeoProximityLocationProperty.builder()
-   * .awsRegion("awsRegion")
-   * .bias(123)
-   * .coordinates(CoordinatesProperty.builder()
-   * .latitude("latitude")
-   * .longitude("longitude")
-   * .build())
-   * .localZoneGroup("localZoneGroup")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html)
-   */
-  public interface GeoProximityLocationProperty {
-    /**
-     * The AWS Region the resource you are directing DNS traffic to, is in.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-awsregion)
-     */
-    public fun awsRegion(): String? = unwrap(this).getAwsRegion()
-
-    /**
-     * The bias increases or decreases the size of the geographic region from which Route 53 routes
-     * traffic to a resource.
-     *
-     * To use `Bias` to change the size of the geographic region, specify the applicable value for
-     * the bias:
-     *
-     * * To expand the size of the geographic region from which Route 53 routes traffic to a
-     * resource, specify a positive integer from 1 to 99 for the bias. Route 53 shrinks the size of
-     * adjacent regions.
-     * * To shrink the size of the geographic region from which Route 53 routes traffic to a
-     * resource, specify a negative bias of -1 to -99. Route 53 expands the size of adjacent regions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-bias)
-     */
-    public fun bias(): Number? = unwrap(this).getBias()
-
-    /**
-     * Contains the longitude and latitude for a geographic region.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-coordinates)
-     */
-    public fun coordinates(): Any? = unwrap(this).getCoordinates()
-
-    /**
-     * Specifies an AWS Local Zone Group.
-     *
-     * A local Zone Group is usually the Local Zone code without the ending character. For example,
-     * if the Local Zone is `us-east-1-bue-1a` the Local Zone Group is `us-east-1-bue-1` .
-     *
-     * You can identify the Local Zones Group for a specific Local Zone by using the
-     * [describe-availability-zones](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-availability-zones.html)
-     * CLI command:
-     *
-     * This command returns: `"GroupName": "us-west-2-den-1"` , specifying that the Local Zone
-     * `us-west-2-den-1a` belongs to the Local Zone Group `us-west-2-den-1` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-localzonegroup)
-     */
-    public fun localZoneGroup(): String? = unwrap(this).getLocalZoneGroup()
-
-    /**
-     * A builder for [GeoProximityLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param awsRegion The AWS Region the resource you are directing DNS traffic to, is in.
-       */
-      public fun awsRegion(awsRegion: String)
-
-      /**
-       * @param bias The bias increases or decreases the size of the geographic region from which
-       * Route 53 routes traffic to a resource.
-       * To use `Bias` to change the size of the geographic region, specify the applicable value for
-       * the bias:
-       *
-       * * To expand the size of the geographic region from which Route 53 routes traffic to a
-       * resource, specify a positive integer from 1 to 99 for the bias. Route 53 shrinks the size of
-       * adjacent regions.
-       * * To shrink the size of the geographic region from which Route 53 routes traffic to a
-       * resource, specify a negative bias of -1 to -99. Route 53 expands the size of adjacent regions.
-       */
-      public fun bias(bias: Number)
-
-      /**
-       * @param coordinates Contains the longitude and latitude for a geographic region.
-       */
-      public fun coordinates(coordinates: IResolvable)
-
-      /**
-       * @param coordinates Contains the longitude and latitude for a geographic region.
-       */
-      public fun coordinates(coordinates: CoordinatesProperty)
-
-      /**
-       * @param coordinates Contains the longitude and latitude for a geographic region.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("403c1cd48607f49f91e0e983b38dbdc5005b4fddb480ba24dc6ac49f3e4e1609")
-      public fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit)
-
-      /**
-       * @param localZoneGroup Specifies an AWS Local Zone Group.
-       * A local Zone Group is usually the Local Zone code without the ending character. For
-       * example, if the Local Zone is `us-east-1-bue-1a` the Local Zone Group is `us-east-1-bue-1` .
-       *
-       * You can identify the Local Zones Group for a specific Local Zone by using the
-       * [describe-availability-zones](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-availability-zones.html)
-       * CLI command:
-       *
-       * This command returns: `"GroupName": "us-west-2-den-1"` , specifying that the Local Zone
-       * `us-west-2-den-1a` belongs to the Local Zone Group `us-west-2-den-1` .
-       */
-      public fun localZoneGroup(localZoneGroup: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty.Builder
-          =
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty.builder()
-
-      /**
-       * @param awsRegion The AWS Region the resource you are directing DNS traffic to, is in.
-       */
-      override fun awsRegion(awsRegion: String) {
-        cdkBuilder.awsRegion(awsRegion)
-      }
-
-      /**
-       * @param bias The bias increases or decreases the size of the geographic region from which
-       * Route 53 routes traffic to a resource.
-       * To use `Bias` to change the size of the geographic region, specify the applicable value for
-       * the bias:
-       *
-       * * To expand the size of the geographic region from which Route 53 routes traffic to a
-       * resource, specify a positive integer from 1 to 99 for the bias. Route 53 shrinks the size of
-       * adjacent regions.
-       * * To shrink the size of the geographic region from which Route 53 routes traffic to a
-       * resource, specify a negative bias of -1 to -99. Route 53 expands the size of adjacent regions.
-       */
-      override fun bias(bias: Number) {
-        cdkBuilder.bias(bias)
-      }
-
-      /**
-       * @param coordinates Contains the longitude and latitude for a geographic region.
-       */
-      override fun coordinates(coordinates: IResolvable) {
-        cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param coordinates Contains the longitude and latitude for a geographic region.
-       */
-      override fun coordinates(coordinates: CoordinatesProperty) {
-        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
-      }
-
-      /**
-       * @param coordinates Contains the longitude and latitude for a geographic region.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("403c1cd48607f49f91e0e983b38dbdc5005b4fddb480ba24dc6ac49f3e4e1609")
-      override fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit): Unit =
-          coordinates(CoordinatesProperty(coordinates))
-
-      /**
-       * @param localZoneGroup Specifies an AWS Local Zone Group.
-       * A local Zone Group is usually the Local Zone code without the ending character. For
-       * example, if the Local Zone is `us-east-1-bue-1a` the Local Zone Group is `us-east-1-bue-1` .
-       *
-       * You can identify the Local Zones Group for a specific Local Zone by using the
-       * [describe-availability-zones](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-availability-zones.html)
-       * CLI command:
-       *
-       * This command returns: `"GroupName": "us-west-2-den-1"` , specifying that the Local Zone
-       * `us-west-2-den-1a` belongs to the Local Zone Group `us-west-2-den-1` .
-       */
-      override fun localZoneGroup(localZoneGroup: String) {
-        cdkBuilder.localZoneGroup(localZoneGroup)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty,
-    ) : CdkObject(cdkObject), GeoProximityLocationProperty {
-      /**
-       * The AWS Region the resource you are directing DNS traffic to, is in.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-awsregion)
-       */
-      override fun awsRegion(): String? = unwrap(this).getAwsRegion()
-
-      /**
-       * The bias increases or decreases the size of the geographic region from which Route 53
-       * routes traffic to a resource.
-       *
-       * To use `Bias` to change the size of the geographic region, specify the applicable value for
-       * the bias:
-       *
-       * * To expand the size of the geographic region from which Route 53 routes traffic to a
-       * resource, specify a positive integer from 1 to 99 for the bias. Route 53 shrinks the size of
-       * adjacent regions.
-       * * To shrink the size of the geographic region from which Route 53 routes traffic to a
-       * resource, specify a negative bias of -1 to -99. Route 53 expands the size of adjacent regions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-bias)
-       */
-      override fun bias(): Number? = unwrap(this).getBias()
-
-      /**
-       * Contains the longitude and latitude for a geographic region.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-coordinates)
-       */
-      override fun coordinates(): Any? = unwrap(this).getCoordinates()
-
-      /**
-       * Specifies an AWS Local Zone Group.
-       *
-       * A local Zone Group is usually the Local Zone code without the ending character. For
-       * example, if the Local Zone is `us-east-1-bue-1a` the Local Zone Group is `us-east-1-bue-1` .
-       *
-       * You can identify the Local Zones Group for a specific Local Zone by using the
-       * [describe-availability-zones](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-availability-zones.html)
-       * CLI command:
-       *
-       * This command returns: `"GroupName": "us-west-2-den-1"` , specifying that the Local Zone
-       * `us-west-2-den-1a` belongs to the Local Zone Group `us-west-2-den-1` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-localzonegroup)
-       */
-      override fun localZoneGroup(): String? = unwrap(this).getLocalZoneGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GeoProximityLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty):
-          GeoProximityLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GeoProximityLocationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GeoProximityLocationProperty):
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty
-    }
-  }
-
-  /**
-   * The object that is specified in resource record set object when you are linking a resource
-   * record set to a CIDR location.
-   *
-   * A `LocationName` with an asterisk “*” can be used to create a default CIDR record.
-   * `CollectionId` is still required for default record.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.route53.*;
-   * CidrRoutingConfigProperty cidrRoutingConfigProperty = CidrRoutingConfigProperty.builder()
-   * .collectionId("collectionId")
-   * .locationName("locationName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html)
-   */
-  public interface CidrRoutingConfigProperty {
-    /**
-     * The CIDR collection ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html#cfn-route53-recordsetgroup-cidrroutingconfig-collectionid)
-     */
-    public fun collectionId(): String
-
-    /**
-     * The CIDR collection location name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html#cfn-route53-recordsetgroup-cidrroutingconfig-locationname)
-     */
-    public fun locationName(): String
-
-    /**
-     * A builder for [CidrRoutingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param collectionId The CIDR collection ID. 
-       */
-      public fun collectionId(collectionId: String)
-
-      /**
-       * @param locationName The CIDR collection location name. 
-       */
-      public fun locationName(locationName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty.builder()
-
-      /**
-       * @param collectionId The CIDR collection ID. 
-       */
-      override fun collectionId(collectionId: String) {
-        cdkBuilder.collectionId(collectionId)
-      }
-
-      /**
-       * @param locationName The CIDR collection location name. 
-       */
-      override fun locationName(locationName: String) {
-        cdkBuilder.locationName(locationName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty,
-    ) : CdkObject(cdkObject), CidrRoutingConfigProperty {
-      /**
-       * The CIDR collection ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html#cfn-route53-recordsetgroup-cidrroutingconfig-collectionid)
-       */
-      override fun collectionId(): String = unwrap(this).getCollectionId()
-
-      /**
-       * The CIDR collection location name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html#cfn-route53-recordsetgroup-cidrroutingconfig-locationname)
-       */
-      override fun locationName(): String = unwrap(this).getLocationName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CidrRoutingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty):
-          CidrRoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CidrRoutingConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CidrRoutingConfigProperty):
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty
-    }
-  }
-
-  /**
-   * A complex type that contains information about a geographic location.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.route53.*;
-   * GeoLocationProperty geoLocationProperty = GeoLocationProperty.builder()
-   * .continentCode("continentCode")
-   * .countryCode("countryCode")
-   * .subdivisionCode("subdivisionCode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html)
-   */
-  public interface GeoLocationProperty {
-    /**
-     * For geolocation resource record sets, a two-letter abbreviation that identifies a continent.
-     * Route 53 supports the following continent codes:.
-     *
-     * * *AF* : Africa
-     * * *AN* : Antarctica
-     * * *AS* : Asia
-     * * *EU* : Europe
-     * * *OC* : Oceania
-     * * *NA* : North America
-     * * *SA* : South America
-     *
-     * Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode` returns
-     * an `InvalidInput` error.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode)
-     */
-    public fun continentCode(): String? = unwrap(this).getContinentCode()
-
-    /**
-     * For geolocation resource record sets, the two-letter code for a country.
-     *
-     * Route 53 uses the two-letter country codes that are specified in [ISO standard 3166-1
-     * alpha-2](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-countrycode)
-     */
-    public fun countryCode(): String? = unwrap(this).getCountryCode()
-
-    /**
-     * For geolocation resource record sets, the two-letter code for a state of the United States.
-     *
-     * Route 53 doesn't support any other values for `SubdivisionCode` . For a list of state
-     * abbreviations, see [Appendix B: Two–Letter State and Possession
-     * Abbreviations](https://docs.aws.amazon.com/https://pe.usps.com/text/pub28/28apb.htm) on the
-     * United States Postal Service website.
-     *
-     * If you specify `subdivisioncode` , you must also specify `US` for `CountryCode` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-subdivisioncode)
-     */
-    public fun subdivisionCode(): String? = unwrap(this).getSubdivisionCode()
-
-    /**
-     * A builder for [GeoLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param continentCode For geolocation resource record sets, a two-letter abbreviation that
-       * identifies a continent. Route 53 supports the following continent codes:.
-       * * *AF* : Africa
-       * * *AN* : Antarctica
-       * * *AS* : Asia
-       * * *EU* : Europe
-       * * *OC* : Oceania
-       * * *NA* : North America
-       * * *SA* : South America
-       *
-       * Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode`
-       * returns an `InvalidInput` error.
-       */
-      public fun continentCode(continentCode: String)
-
-      /**
-       * @param countryCode For geolocation resource record sets, the two-letter code for a country.
-       * Route 53 uses the two-letter country codes that are specified in [ISO standard 3166-1
-       * alpha-2](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) .
-       */
-      public fun countryCode(countryCode: String)
-
-      /**
-       * @param subdivisionCode For geolocation resource record sets, the two-letter code for a
-       * state of the United States.
-       * Route 53 doesn't support any other values for `SubdivisionCode` . For a list of state
-       * abbreviations, see [Appendix B: Two–Letter State and Possession
-       * Abbreviations](https://docs.aws.amazon.com/https://pe.usps.com/text/pub28/28apb.htm) on the
-       * United States Postal Service website.
-       *
-       * If you specify `subdivisioncode` , you must also specify `US` for `CountryCode` .
-       */
-      public fun subdivisionCode(subdivisionCode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty.Builder =
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty.builder()
-
-      /**
-       * @param continentCode For geolocation resource record sets, a two-letter abbreviation that
-       * identifies a continent. Route 53 supports the following continent codes:.
-       * * *AF* : Africa
-       * * *AN* : Antarctica
-       * * *AS* : Asia
-       * * *EU* : Europe
-       * * *OC* : Oceania
-       * * *NA* : North America
-       * * *SA* : South America
-       *
-       * Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode`
-       * returns an `InvalidInput` error.
-       */
-      override fun continentCode(continentCode: String) {
-        cdkBuilder.continentCode(continentCode)
-      }
-
-      /**
-       * @param countryCode For geolocation resource record sets, the two-letter code for a country.
-       * Route 53 uses the two-letter country codes that are specified in [ISO standard 3166-1
-       * alpha-2](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) .
-       */
-      override fun countryCode(countryCode: String) {
-        cdkBuilder.countryCode(countryCode)
-      }
-
-      /**
-       * @param subdivisionCode For geolocation resource record sets, the two-letter code for a
-       * state of the United States.
-       * Route 53 doesn't support any other values for `SubdivisionCode` . For a list of state
-       * abbreviations, see [Appendix B: Two–Letter State and Possession
-       * Abbreviations](https://docs.aws.amazon.com/https://pe.usps.com/text/pub28/28apb.htm) on the
-       * United States Postal Service website.
-       *
-       * If you specify `subdivisioncode` , you must also specify `US` for `CountryCode` .
-       */
-      override fun subdivisionCode(subdivisionCode: String) {
-        cdkBuilder.subdivisionCode(subdivisionCode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty,
-    ) : CdkObject(cdkObject), GeoLocationProperty {
-      /**
-       * For geolocation resource record sets, a two-letter abbreviation that identifies a
-       * continent. Route 53 supports the following continent codes:.
-       *
-       * * *AF* : Africa
-       * * *AN* : Antarctica
-       * * *AS* : Asia
-       * * *EU* : Europe
-       * * *OC* : Oceania
-       * * *NA* : North America
-       * * *SA* : South America
-       *
-       * Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode`
-       * returns an `InvalidInput` error.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode)
-       */
-      override fun continentCode(): String? = unwrap(this).getContinentCode()
-
-      /**
-       * For geolocation resource record sets, the two-letter code for a country.
-       *
-       * Route 53 uses the two-letter country codes that are specified in [ISO standard 3166-1
-       * alpha-2](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-countrycode)
-       */
-      override fun countryCode(): String? = unwrap(this).getCountryCode()
-
-      /**
-       * For geolocation resource record sets, the two-letter code for a state of the United States.
-       *
-       * Route 53 doesn't support any other values for `SubdivisionCode` . For a list of state
-       * abbreviations, see [Appendix B: Two–Letter State and Possession
-       * Abbreviations](https://docs.aws.amazon.com/https://pe.usps.com/text/pub28/28apb.htm) on the
-       * United States Postal Service website.
-       *
-       * If you specify `subdivisioncode` , you must also specify `US` for `CountryCode` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-subdivisioncode)
-       */
-      override fun subdivisionCode(): String? = unwrap(this).getSubdivisionCode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GeoLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty):
-          GeoLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? GeoLocationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GeoLocationProperty):
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty
-    }
-  }
-
-  /**
    * *Alias records only:* Information about the AWS resource, such as a CloudFront distribution or
    * an Amazon S3 bucket, that you want to route traffic to.
    *
@@ -2328,6 +1598,736 @@ public open class CfnRecordSetGroup internal constructor(
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty
+    }
+  }
+
+  /**
+   * The object that is specified in resource record set object when you are linking a resource
+   * record set to a CIDR location.
+   *
+   * A `LocationName` with an asterisk “*” can be used to create a default CIDR record.
+   * `CollectionId` is still required for default record.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.route53.*;
+   * CidrRoutingConfigProperty cidrRoutingConfigProperty = CidrRoutingConfigProperty.builder()
+   * .collectionId("collectionId")
+   * .locationName("locationName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html)
+   */
+  public interface CidrRoutingConfigProperty {
+    /**
+     * The CIDR collection ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html#cfn-route53-recordsetgroup-cidrroutingconfig-collectionid)
+     */
+    public fun collectionId(): String
+
+    /**
+     * The CIDR collection location name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html#cfn-route53-recordsetgroup-cidrroutingconfig-locationname)
+     */
+    public fun locationName(): String
+
+    /**
+     * A builder for [CidrRoutingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param collectionId The CIDR collection ID. 
+       */
+      public fun collectionId(collectionId: String)
+
+      /**
+       * @param locationName The CIDR collection location name. 
+       */
+      public fun locationName(locationName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty.builder()
+
+      /**
+       * @param collectionId The CIDR collection ID. 
+       */
+      override fun collectionId(collectionId: String) {
+        cdkBuilder.collectionId(collectionId)
+      }
+
+      /**
+       * @param locationName The CIDR collection location name. 
+       */
+      override fun locationName(locationName: String) {
+        cdkBuilder.locationName(locationName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty,
+    ) : CdkObject(cdkObject), CidrRoutingConfigProperty {
+      /**
+       * The CIDR collection ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html#cfn-route53-recordsetgroup-cidrroutingconfig-collectionid)
+       */
+      override fun collectionId(): String = unwrap(this).getCollectionId()
+
+      /**
+       * The CIDR collection location name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-cidrroutingconfig.html#cfn-route53-recordsetgroup-cidrroutingconfig-locationname)
+       */
+      override fun locationName(): String = unwrap(this).getLocationName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CidrRoutingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty):
+          CidrRoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CidrRoutingConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CidrRoutingConfigProperty):
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty
+    }
+  }
+
+  /**
+   * A complex type that lists the coordinates for a geoproximity resource record.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.route53.*;
+   * CoordinatesProperty coordinatesProperty = CoordinatesProperty.builder()
+   * .latitude("latitude")
+   * .longitude("longitude")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html)
+   */
+  public interface CoordinatesProperty {
+    /**
+     * Specifies a coordinate of the north–south position of a geographic point on the surface of
+     * the Earth (-90 - 90).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html#cfn-route53-recordsetgroup-coordinates-latitude)
+     */
+    public fun latitude(): String
+
+    /**
+     * Specifies a coordinate of the east–west position of a geographic point on the surface of the
+     * Earth (-180 - 180).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html#cfn-route53-recordsetgroup-coordinates-longitude)
+     */
+    public fun longitude(): String
+
+    /**
+     * A builder for [CoordinatesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param latitude Specifies a coordinate of the north–south position of a geographic point on
+       * the surface of the Earth (-90 - 90). 
+       */
+      public fun latitude(latitude: String)
+
+      /**
+       * @param longitude Specifies a coordinate of the east–west position of a geographic point on
+       * the surface of the Earth (-180 - 180). 
+       */
+      public fun longitude(longitude: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty.Builder =
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty.builder()
+
+      /**
+       * @param latitude Specifies a coordinate of the north–south position of a geographic point on
+       * the surface of the Earth (-90 - 90). 
+       */
+      override fun latitude(latitude: String) {
+        cdkBuilder.latitude(latitude)
+      }
+
+      /**
+       * @param longitude Specifies a coordinate of the east–west position of a geographic point on
+       * the surface of the Earth (-180 - 180). 
+       */
+      override fun longitude(longitude: String) {
+        cdkBuilder.longitude(longitude)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty,
+    ) : CdkObject(cdkObject), CoordinatesProperty {
+      /**
+       * Specifies a coordinate of the north–south position of a geographic point on the surface of
+       * the Earth (-90 - 90).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html#cfn-route53-recordsetgroup-coordinates-latitude)
+       */
+      override fun latitude(): String = unwrap(this).getLatitude()
+
+      /**
+       * Specifies a coordinate of the east–west position of a geographic point on the surface of
+       * the Earth (-180 - 180).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-coordinates.html#cfn-route53-recordsetgroup-coordinates-longitude)
+       */
+      override fun longitude(): String = unwrap(this).getLongitude()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CoordinatesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty):
+          CoordinatesProperty = CdkObjectWrappers.wrap(cdkObject) as? CoordinatesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CoordinatesProperty):
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty
+    }
+  }
+
+  /**
+   * A complex type that contains information about a geographic location.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.route53.*;
+   * GeoLocationProperty geoLocationProperty = GeoLocationProperty.builder()
+   * .continentCode("continentCode")
+   * .countryCode("countryCode")
+   * .subdivisionCode("subdivisionCode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html)
+   */
+  public interface GeoLocationProperty {
+    /**
+     * For geolocation resource record sets, a two-letter abbreviation that identifies a continent.
+     * Route 53 supports the following continent codes:.
+     *
+     * * *AF* : Africa
+     * * *AN* : Antarctica
+     * * *AS* : Asia
+     * * *EU* : Europe
+     * * *OC* : Oceania
+     * * *NA* : North America
+     * * *SA* : South America
+     *
+     * Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode` returns
+     * an `InvalidInput` error.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode)
+     */
+    public fun continentCode(): String? = unwrap(this).getContinentCode()
+
+    /**
+     * For geolocation resource record sets, the two-letter code for a country.
+     *
+     * Route 53 uses the two-letter country codes that are specified in [ISO standard 3166-1
+     * alpha-2](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-countrycode)
+     */
+    public fun countryCode(): String? = unwrap(this).getCountryCode()
+
+    /**
+     * For geolocation resource record sets, the two-letter code for a state of the United States.
+     *
+     * Route 53 doesn't support any other values for `SubdivisionCode` . For a list of state
+     * abbreviations, see [Appendix B: Two–Letter State and Possession
+     * Abbreviations](https://docs.aws.amazon.com/https://pe.usps.com/text/pub28/28apb.htm) on the
+     * United States Postal Service website.
+     *
+     * If you specify `subdivisioncode` , you must also specify `US` for `CountryCode` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-subdivisioncode)
+     */
+    public fun subdivisionCode(): String? = unwrap(this).getSubdivisionCode()
+
+    /**
+     * A builder for [GeoLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param continentCode For geolocation resource record sets, a two-letter abbreviation that
+       * identifies a continent. Route 53 supports the following continent codes:.
+       * * *AF* : Africa
+       * * *AN* : Antarctica
+       * * *AS* : Asia
+       * * *EU* : Europe
+       * * *OC* : Oceania
+       * * *NA* : North America
+       * * *SA* : South America
+       *
+       * Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode`
+       * returns an `InvalidInput` error.
+       */
+      public fun continentCode(continentCode: String)
+
+      /**
+       * @param countryCode For geolocation resource record sets, the two-letter code for a country.
+       * Route 53 uses the two-letter country codes that are specified in [ISO standard 3166-1
+       * alpha-2](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) .
+       */
+      public fun countryCode(countryCode: String)
+
+      /**
+       * @param subdivisionCode For geolocation resource record sets, the two-letter code for a
+       * state of the United States.
+       * Route 53 doesn't support any other values for `SubdivisionCode` . For a list of state
+       * abbreviations, see [Appendix B: Two–Letter State and Possession
+       * Abbreviations](https://docs.aws.amazon.com/https://pe.usps.com/text/pub28/28apb.htm) on the
+       * United States Postal Service website.
+       *
+       * If you specify `subdivisioncode` , you must also specify `US` for `CountryCode` .
+       */
+      public fun subdivisionCode(subdivisionCode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty.Builder =
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty.builder()
+
+      /**
+       * @param continentCode For geolocation resource record sets, a two-letter abbreviation that
+       * identifies a continent. Route 53 supports the following continent codes:.
+       * * *AF* : Africa
+       * * *AN* : Antarctica
+       * * *AS* : Asia
+       * * *EU* : Europe
+       * * *OC* : Oceania
+       * * *NA* : North America
+       * * *SA* : South America
+       *
+       * Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode`
+       * returns an `InvalidInput` error.
+       */
+      override fun continentCode(continentCode: String) {
+        cdkBuilder.continentCode(continentCode)
+      }
+
+      /**
+       * @param countryCode For geolocation resource record sets, the two-letter code for a country.
+       * Route 53 uses the two-letter country codes that are specified in [ISO standard 3166-1
+       * alpha-2](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) .
+       */
+      override fun countryCode(countryCode: String) {
+        cdkBuilder.countryCode(countryCode)
+      }
+
+      /**
+       * @param subdivisionCode For geolocation resource record sets, the two-letter code for a
+       * state of the United States.
+       * Route 53 doesn't support any other values for `SubdivisionCode` . For a list of state
+       * abbreviations, see [Appendix B: Two–Letter State and Possession
+       * Abbreviations](https://docs.aws.amazon.com/https://pe.usps.com/text/pub28/28apb.htm) on the
+       * United States Postal Service website.
+       *
+       * If you specify `subdivisioncode` , you must also specify `US` for `CountryCode` .
+       */
+      override fun subdivisionCode(subdivisionCode: String) {
+        cdkBuilder.subdivisionCode(subdivisionCode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty,
+    ) : CdkObject(cdkObject), GeoLocationProperty {
+      /**
+       * For geolocation resource record sets, a two-letter abbreviation that identifies a
+       * continent. Route 53 supports the following continent codes:.
+       *
+       * * *AF* : Africa
+       * * *AN* : Antarctica
+       * * *AS* : Asia
+       * * *EU* : Europe
+       * * *OC* : Oceania
+       * * *NA* : North America
+       * * *SA* : South America
+       *
+       * Constraint: Specifying `ContinentCode` with either `CountryCode` or `SubdivisionCode`
+       * returns an `InvalidInput` error.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode)
+       */
+      override fun continentCode(): String? = unwrap(this).getContinentCode()
+
+      /**
+       * For geolocation resource record sets, the two-letter code for a country.
+       *
+       * Route 53 uses the two-letter country codes that are specified in [ISO standard 3166-1
+       * alpha-2](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-countrycode)
+       */
+      override fun countryCode(): String? = unwrap(this).getCountryCode()
+
+      /**
+       * For geolocation resource record sets, the two-letter code for a state of the United States.
+       *
+       * Route 53 doesn't support any other values for `SubdivisionCode` . For a list of state
+       * abbreviations, see [Appendix B: Two–Letter State and Possession
+       * Abbreviations](https://docs.aws.amazon.com/https://pe.usps.com/text/pub28/28apb.htm) on the
+       * United States Postal Service website.
+       *
+       * If you specify `subdivisioncode` , you must also specify `US` for `CountryCode` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geolocation.html#cfn-route53-recordsetgroup-geolocation-subdivisioncode)
+       */
+      override fun subdivisionCode(): String? = unwrap(this).getSubdivisionCode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GeoLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty):
+          GeoLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? GeoLocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GeoLocationProperty):
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty
+    }
+  }
+
+  /**
+   * (Resource record sets only): A complex type that lets you specify where your resources are
+   * located.
+   *
+   * Only one of `LocalZoneGroup` , `Coordinates` , or `AWS Region` is allowed per request at a
+   * time.
+   *
+   * For more information about geoproximity routing, see [Geoproximity
+   * routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-geoproximity.html)
+   * in the *Amazon Route 53 Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.route53.*;
+   * GeoProximityLocationProperty geoProximityLocationProperty =
+   * GeoProximityLocationProperty.builder()
+   * .awsRegion("awsRegion")
+   * .bias(123)
+   * .coordinates(CoordinatesProperty.builder()
+   * .latitude("latitude")
+   * .longitude("longitude")
+   * .build())
+   * .localZoneGroup("localZoneGroup")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html)
+   */
+  public interface GeoProximityLocationProperty {
+    /**
+     * The AWS Region the resource you are directing DNS traffic to, is in.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-awsregion)
+     */
+    public fun awsRegion(): String? = unwrap(this).getAwsRegion()
+
+    /**
+     * The bias increases or decreases the size of the geographic region from which Route 53 routes
+     * traffic to a resource.
+     *
+     * To use `Bias` to change the size of the geographic region, specify the applicable value for
+     * the bias:
+     *
+     * * To expand the size of the geographic region from which Route 53 routes traffic to a
+     * resource, specify a positive integer from 1 to 99 for the bias. Route 53 shrinks the size of
+     * adjacent regions.
+     * * To shrink the size of the geographic region from which Route 53 routes traffic to a
+     * resource, specify a negative bias of -1 to -99. Route 53 expands the size of adjacent regions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-bias)
+     */
+    public fun bias(): Number? = unwrap(this).getBias()
+
+    /**
+     * Contains the longitude and latitude for a geographic region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-coordinates)
+     */
+    public fun coordinates(): Any? = unwrap(this).getCoordinates()
+
+    /**
+     * Specifies an AWS Local Zone Group.
+     *
+     * A local Zone Group is usually the Local Zone code without the ending character. For example,
+     * if the Local Zone is `us-east-1-bue-1a` the Local Zone Group is `us-east-1-bue-1` .
+     *
+     * You can identify the Local Zones Group for a specific Local Zone by using the
+     * [describe-availability-zones](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-availability-zones.html)
+     * CLI command:
+     *
+     * This command returns: `"GroupName": "us-west-2-den-1"` , specifying that the Local Zone
+     * `us-west-2-den-1a` belongs to the Local Zone Group `us-west-2-den-1` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-localzonegroup)
+     */
+    public fun localZoneGroup(): String? = unwrap(this).getLocalZoneGroup()
+
+    /**
+     * A builder for [GeoProximityLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param awsRegion The AWS Region the resource you are directing DNS traffic to, is in.
+       */
+      public fun awsRegion(awsRegion: String)
+
+      /**
+       * @param bias The bias increases or decreases the size of the geographic region from which
+       * Route 53 routes traffic to a resource.
+       * To use `Bias` to change the size of the geographic region, specify the applicable value for
+       * the bias:
+       *
+       * * To expand the size of the geographic region from which Route 53 routes traffic to a
+       * resource, specify a positive integer from 1 to 99 for the bias. Route 53 shrinks the size of
+       * adjacent regions.
+       * * To shrink the size of the geographic region from which Route 53 routes traffic to a
+       * resource, specify a negative bias of -1 to -99. Route 53 expands the size of adjacent regions.
+       */
+      public fun bias(bias: Number)
+
+      /**
+       * @param coordinates Contains the longitude and latitude for a geographic region.
+       */
+      public fun coordinates(coordinates: IResolvable)
+
+      /**
+       * @param coordinates Contains the longitude and latitude for a geographic region.
+       */
+      public fun coordinates(coordinates: CoordinatesProperty)
+
+      /**
+       * @param coordinates Contains the longitude and latitude for a geographic region.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("403c1cd48607f49f91e0e983b38dbdc5005b4fddb480ba24dc6ac49f3e4e1609")
+      public fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit)
+
+      /**
+       * @param localZoneGroup Specifies an AWS Local Zone Group.
+       * A local Zone Group is usually the Local Zone code without the ending character. For
+       * example, if the Local Zone is `us-east-1-bue-1a` the Local Zone Group is `us-east-1-bue-1` .
+       *
+       * You can identify the Local Zones Group for a specific Local Zone by using the
+       * [describe-availability-zones](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-availability-zones.html)
+       * CLI command:
+       *
+       * This command returns: `"GroupName": "us-west-2-den-1"` , specifying that the Local Zone
+       * `us-west-2-den-1a` belongs to the Local Zone Group `us-west-2-den-1` .
+       */
+      public fun localZoneGroup(localZoneGroup: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty.Builder
+          =
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty.builder()
+
+      /**
+       * @param awsRegion The AWS Region the resource you are directing DNS traffic to, is in.
+       */
+      override fun awsRegion(awsRegion: String) {
+        cdkBuilder.awsRegion(awsRegion)
+      }
+
+      /**
+       * @param bias The bias increases or decreases the size of the geographic region from which
+       * Route 53 routes traffic to a resource.
+       * To use `Bias` to change the size of the geographic region, specify the applicable value for
+       * the bias:
+       *
+       * * To expand the size of the geographic region from which Route 53 routes traffic to a
+       * resource, specify a positive integer from 1 to 99 for the bias. Route 53 shrinks the size of
+       * adjacent regions.
+       * * To shrink the size of the geographic region from which Route 53 routes traffic to a
+       * resource, specify a negative bias of -1 to -99. Route 53 expands the size of adjacent regions.
+       */
+      override fun bias(bias: Number) {
+        cdkBuilder.bias(bias)
+      }
+
+      /**
+       * @param coordinates Contains the longitude and latitude for a geographic region.
+       */
+      override fun coordinates(coordinates: IResolvable) {
+        cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param coordinates Contains the longitude and latitude for a geographic region.
+       */
+      override fun coordinates(coordinates: CoordinatesProperty) {
+        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
+      }
+
+      /**
+       * @param coordinates Contains the longitude and latitude for a geographic region.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("403c1cd48607f49f91e0e983b38dbdc5005b4fddb480ba24dc6ac49f3e4e1609")
+      override fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit): Unit =
+          coordinates(CoordinatesProperty(coordinates))
+
+      /**
+       * @param localZoneGroup Specifies an AWS Local Zone Group.
+       * A local Zone Group is usually the Local Zone code without the ending character. For
+       * example, if the Local Zone is `us-east-1-bue-1a` the Local Zone Group is `us-east-1-bue-1` .
+       *
+       * You can identify the Local Zones Group for a specific Local Zone by using the
+       * [describe-availability-zones](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-availability-zones.html)
+       * CLI command:
+       *
+       * This command returns: `"GroupName": "us-west-2-den-1"` , specifying that the Local Zone
+       * `us-west-2-den-1a` belongs to the Local Zone Group `us-west-2-den-1` .
+       */
+      override fun localZoneGroup(localZoneGroup: String) {
+        cdkBuilder.localZoneGroup(localZoneGroup)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty,
+    ) : CdkObject(cdkObject), GeoProximityLocationProperty {
+      /**
+       * The AWS Region the resource you are directing DNS traffic to, is in.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-awsregion)
+       */
+      override fun awsRegion(): String? = unwrap(this).getAwsRegion()
+
+      /**
+       * The bias increases or decreases the size of the geographic region from which Route 53
+       * routes traffic to a resource.
+       *
+       * To use `Bias` to change the size of the geographic region, specify the applicable value for
+       * the bias:
+       *
+       * * To expand the size of the geographic region from which Route 53 routes traffic to a
+       * resource, specify a positive integer from 1 to 99 for the bias. Route 53 shrinks the size of
+       * adjacent regions.
+       * * To shrink the size of the geographic region from which Route 53 routes traffic to a
+       * resource, specify a negative bias of -1 to -99. Route 53 expands the size of adjacent regions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-bias)
+       */
+      override fun bias(): Number? = unwrap(this).getBias()
+
+      /**
+       * Contains the longitude and latitude for a geographic region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-coordinates)
+       */
+      override fun coordinates(): Any? = unwrap(this).getCoordinates()
+
+      /**
+       * Specifies an AWS Local Zone Group.
+       *
+       * A local Zone Group is usually the Local Zone code without the ending character. For
+       * example, if the Local Zone is `us-east-1-bue-1a` the Local Zone Group is `us-east-1-bue-1` .
+       *
+       * You can identify the Local Zones Group for a specific Local Zone by using the
+       * [describe-availability-zones](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-availability-zones.html)
+       * CLI command:
+       *
+       * This command returns: `"GroupName": "us-west-2-den-1"` , specifying that the Local Zone
+       * `us-west-2-den-1a` belongs to the Local Zone Group `us-west-2-den-1` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-geoproximitylocation.html#cfn-route53-recordsetgroup-geoproximitylocation-localzonegroup)
+       */
+      override fun localZoneGroup(): String? = unwrap(this).getLocalZoneGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GeoProximityLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty):
+          GeoProximityLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GeoProximityLocationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GeoProximityLocationProperty):
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty
     }
   }
 

@@ -403,6 +403,133 @@ public open class CfnWebACL internal constructor(
   }
 
   /**
+   * Specifies the action AWS WAF takes when a web request matches or doesn't match all rule
+   * conditions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.waf.regional.*;
+   * ActionProperty actionProperty = ActionProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html)
+   */
+  public interface ActionProperty {
+    /**
+     * For actions that are associated with a rule, the action that AWS WAF takes when a web request
+     * matches all conditions in a rule.
+     *
+     * For the default action of a web access control list (ACL), the action that AWS WAF takes when
+     * a web request doesn't match all conditions in any rule.
+     *
+     * Valid settings include the following:
+     *
+     * * `ALLOW` : AWS WAF allows requests
+     * * `BLOCK` : AWS WAF blocks requests
+     * * `COUNT` : AWS WAF increments a counter of the requests that match all of the conditions in
+     * the rule. AWS WAF then continues to inspect the web request based on the remaining rules in the
+     * web ACL. You can't specify `COUNT` for the default action for a WebACL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [ActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type For actions that are associated with a rule, the action that AWS WAF takes when
+       * a web request matches all conditions in a rule. 
+       * For the default action of a web access control list (ACL), the action that AWS WAF takes
+       * when a web request doesn't match all conditions in any rule.
+       *
+       * Valid settings include the following:
+       *
+       * * `ALLOW` : AWS WAF allows requests
+       * * `BLOCK` : AWS WAF blocks requests
+       * * `COUNT` : AWS WAF increments a counter of the requests that match all of the conditions
+       * in the rule. AWS WAF then continues to inspect the web request based on the remaining rules in
+       * the web ACL. You can't specify `COUNT` for the default action for a WebACL.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty.Builder =
+          software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty.builder()
+
+      /**
+       * @param type For actions that are associated with a rule, the action that AWS WAF takes when
+       * a web request matches all conditions in a rule. 
+       * For the default action of a web access control list (ACL), the action that AWS WAF takes
+       * when a web request doesn't match all conditions in any rule.
+       *
+       * Valid settings include the following:
+       *
+       * * `ALLOW` : AWS WAF allows requests
+       * * `BLOCK` : AWS WAF blocks requests
+       * * `COUNT` : AWS WAF increments a counter of the requests that match all of the conditions
+       * in the rule. AWS WAF then continues to inspect the web request based on the remaining rules in
+       * the web ACL. You can't specify `COUNT` for the default action for a WebACL.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty,
+    ) : CdkObject(cdkObject), ActionProperty {
+      /**
+       * For actions that are associated with a rule, the action that AWS WAF takes when a web
+       * request matches all conditions in a rule.
+       *
+       * For the default action of a web access control list (ACL), the action that AWS WAF takes
+       * when a web request doesn't match all conditions in any rule.
+       *
+       * Valid settings include the following:
+       *
+       * * `ALLOW` : AWS WAF allows requests
+       * * `BLOCK` : AWS WAF blocks requests
+       * * `COUNT` : AWS WAF increments a counter of the requests that match all of the conditions
+       * in the rule. AWS WAF then continues to inspect the web request based on the remaining rules in
+       * the web ACL. You can't specify `COUNT` for the default action for a WebACL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty):
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ActionProperty):
+          software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty
+    }
+  }
+
+  /**
    * A combination of `ByteMatchSet` , `IPSet` , and/or `SqlInjectionMatchSet` objects that identify
    * the web requests that you want to allow, block, or count.
    *
@@ -594,133 +721,6 @@ public open class CfnWebACL internal constructor(
           software.amazon.awscdk.services.waf.regional.CfnWebACL.RuleProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.waf.regional.CfnWebACL.RuleProperty
-    }
-  }
-
-  /**
-   * Specifies the action AWS WAF takes when a web request matches or doesn't match all rule
-   * conditions.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.waf.regional.*;
-   * ActionProperty actionProperty = ActionProperty.builder()
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html)
-   */
-  public interface ActionProperty {
-    /**
-     * For actions that are associated with a rule, the action that AWS WAF takes when a web request
-     * matches all conditions in a rule.
-     *
-     * For the default action of a web access control list (ACL), the action that AWS WAF takes when
-     * a web request doesn't match all conditions in any rule.
-     *
-     * Valid settings include the following:
-     *
-     * * `ALLOW` : AWS WAF allows requests
-     * * `BLOCK` : AWS WAF blocks requests
-     * * `COUNT` : AWS WAF increments a counter of the requests that match all of the conditions in
-     * the rule. AWS WAF then continues to inspect the web request based on the remaining rules in the
-     * web ACL. You can't specify `COUNT` for the default action for a WebACL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [ActionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type For actions that are associated with a rule, the action that AWS WAF takes when
-       * a web request matches all conditions in a rule. 
-       * For the default action of a web access control list (ACL), the action that AWS WAF takes
-       * when a web request doesn't match all conditions in any rule.
-       *
-       * Valid settings include the following:
-       *
-       * * `ALLOW` : AWS WAF allows requests
-       * * `BLOCK` : AWS WAF blocks requests
-       * * `COUNT` : AWS WAF increments a counter of the requests that match all of the conditions
-       * in the rule. AWS WAF then continues to inspect the web request based on the remaining rules in
-       * the web ACL. You can't specify `COUNT` for the default action for a WebACL.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty.Builder =
-          software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty.builder()
-
-      /**
-       * @param type For actions that are associated with a rule, the action that AWS WAF takes when
-       * a web request matches all conditions in a rule. 
-       * For the default action of a web access control list (ACL), the action that AWS WAF takes
-       * when a web request doesn't match all conditions in any rule.
-       *
-       * Valid settings include the following:
-       *
-       * * `ALLOW` : AWS WAF allows requests
-       * * `BLOCK` : AWS WAF blocks requests
-       * * `COUNT` : AWS WAF increments a counter of the requests that match all of the conditions
-       * in the rule. AWS WAF then continues to inspect the web request based on the remaining rules in
-       * the web ACL. You can't specify `COUNT` for the default action for a WebACL.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
-      /**
-       * For actions that are associated with a rule, the action that AWS WAF takes when a web
-       * request matches all conditions in a rule.
-       *
-       * For the default action of a web access control list (ACL), the action that AWS WAF takes
-       * when a web request doesn't match all conditions in any rule.
-       *
-       * Valid settings include the following:
-       *
-       * * `ALLOW` : AWS WAF allows requests
-       * * `BLOCK` : AWS WAF blocks requests
-       * * `COUNT` : AWS WAF increments a counter of the requests that match all of the conditions
-       * in the rule. AWS WAF then continues to inspect the web request based on the remaining rules in
-       * the web ACL. You can't specify `COUNT` for the default action for a WebACL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ActionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActionProperty):
-          software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty
     }
   }
 }

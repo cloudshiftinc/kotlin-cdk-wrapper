@@ -1185,6 +1185,116 @@ public open class CfnServerlessCache internal constructor(
   }
 
   /**
+   * The data storage limit.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticache.*;
+   * DataStorageProperty dataStorageProperty = DataStorageProperty.builder()
+   * .maximum(123)
+   * .unit("unit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html)
+   */
+  public interface DataStorageProperty {
+    /**
+     * The upper limit for data storage the cache is set to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-maximum)
+     */
+    public fun maximum(): Number
+
+    /**
+     * The unit that the storage is measured in, in GB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-unit)
+     */
+    public fun unit(): String
+
+    /**
+     * A builder for [DataStorageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximum The upper limit for data storage the cache is set to use. 
+       */
+      public fun maximum(maximum: Number)
+
+      /**
+       * @param unit The unit that the storage is measured in, in GB. 
+       */
+      public fun unit(unit: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty.builder()
+
+      /**
+       * @param maximum The upper limit for data storage the cache is set to use. 
+       */
+      override fun maximum(maximum: Number) {
+        cdkBuilder.maximum(maximum)
+      }
+
+      /**
+       * @param unit The unit that the storage is measured in, in GB. 
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty,
+    ) : CdkObject(cdkObject), DataStorageProperty {
+      /**
+       * The upper limit for data storage the cache is set to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-maximum)
+       */
+      override fun maximum(): Number = unwrap(this).getMaximum()
+
+      /**
+       * The unit that the storage is measured in, in GB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-unit)
+       */
+      override fun unit(): String = unwrap(this).getUnit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataStorageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty):
+          DataStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? DataStorageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataStorageProperty):
+          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty
+    }
+  }
+
+  /**
    * The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume
    * per second.
    *
@@ -1378,116 +1488,6 @@ public open class CfnServerlessCache internal constructor(
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty
-    }
-  }
-
-  /**
-   * The data storage limit.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticache.*;
-   * DataStorageProperty dataStorageProperty = DataStorageProperty.builder()
-   * .maximum(123)
-   * .unit("unit")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html)
-   */
-  public interface DataStorageProperty {
-    /**
-     * The upper limit for data storage the cache is set to use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-maximum)
-     */
-    public fun maximum(): Number
-
-    /**
-     * The unit that the storage is measured in, in GB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-unit)
-     */
-    public fun unit(): String
-
-    /**
-     * A builder for [DataStorageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maximum The upper limit for data storage the cache is set to use. 
-       */
-      public fun maximum(maximum: Number)
-
-      /**
-       * @param unit The unit that the storage is measured in, in GB. 
-       */
-      public fun unit(unit: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty.builder()
-
-      /**
-       * @param maximum The upper limit for data storage the cache is set to use. 
-       */
-      override fun maximum(maximum: Number) {
-        cdkBuilder.maximum(maximum)
-      }
-
-      /**
-       * @param unit The unit that the storage is measured in, in GB. 
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty,
-    ) : CdkObject(cdkObject), DataStorageProperty {
-      /**
-       * The upper limit for data storage the cache is set to use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-maximum)
-       */
-      override fun maximum(): Number = unwrap(this).getMaximum()
-
-      /**
-       * The unit that the storage is measured in, in GB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-unit)
-       */
-      override fun unit(): String = unwrap(this).getUnit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataStorageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty):
-          DataStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? DataStorageProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataStorageProperty):
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty
     }
   }
 }

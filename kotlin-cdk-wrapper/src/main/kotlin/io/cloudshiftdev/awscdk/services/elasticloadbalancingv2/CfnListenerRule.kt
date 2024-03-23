@@ -493,284 +493,6 @@ public open class CfnListenerRule internal constructor(
   }
 
   /**
-   * Information about a redirect action.
-   *
-   * A URI consists of the following components: protocol://hostname:port/path?query. You must
-   * modify at least one of the following components to avoid a redirect loop: protocol, hostname,
-   * port, or path. Any components that you do not modify retain their original values.
-   *
-   * You can reuse URI components using the following reserved keywords:
-   *
-   * * #{protocol}
-   * * #{host}
-   * * #{port}
-   * * #{path} (the leading "/" is removed)
-   * * #{query}
-   *
-   * For example, you can change the path to "/new/#{path}", the hostname to "example.#{host}", or
-   * the query to "#{query}&amp;value=xyz".
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * RedirectConfigProperty redirectConfigProperty = RedirectConfigProperty.builder()
-   * .statusCode("statusCode")
-   * // the properties below are optional
-   * .host("host")
-   * .path("path")
-   * .port("port")
-   * .protocol("protocol")
-   * .query("query")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html)
-   */
-  public interface RedirectConfigProperty {
-    /**
-     * The hostname.
-     *
-     * This component is not percent-encoded. The hostname can contain #{host}.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-host)
-     */
-    public fun host(): String? = unwrap(this).getHost()
-
-    /**
-     * The absolute path, starting with the leading "/".
-     *
-     * This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * The port.
-     *
-     * You can specify a value from 1 to 65535 or #{port}.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-port)
-     */
-    public fun port(): String? = unwrap(this).getPort()
-
-    /**
-     * The protocol.
-     *
-     * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
-     * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-protocol)
-     */
-    public fun protocol(): String? = unwrap(this).getProtocol()
-
-    /**
-     * The query parameters, URL-encoded when necessary, but not percent-encoded.
-     *
-     * Do not include the leading "?", as it is automatically added. You can specify any of the
-     * reserved keywords.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-query)
-     */
-    public fun query(): String? = unwrap(this).getQuery()
-
-    /**
-     * The HTTP redirect code.
-     *
-     * The redirect is either permanent (HTTP 301) or temporary (HTTP 302).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-statuscode)
-     */
-    public fun statusCode(): String
-
-    /**
-     * A builder for [RedirectConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param host The hostname.
-       * This component is not percent-encoded. The hostname can contain #{host}.
-       */
-      public fun host(host: String)
-
-      /**
-       * @param path The absolute path, starting with the leading "/".
-       * This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}.
-       */
-      public fun path(path: String)
-
-      /**
-       * @param port The port.
-       * You can specify a value from 1 to 65535 or #{port}.
-       */
-      public fun port(port: String)
-
-      /**
-       * @param protocol The protocol.
-       * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
-       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
-       */
-      public fun protocol(protocol: String)
-
-      /**
-       * @param query The query parameters, URL-encoded when necessary, but not percent-encoded.
-       * Do not include the leading "?", as it is automatically added. You can specify any of the
-       * reserved keywords.
-       */
-      public fun query(query: String)
-
-      /**
-       * @param statusCode The HTTP redirect code. 
-       * The redirect is either permanent (HTTP 301) or temporary (HTTP 302).
-       */
-      public fun statusCode(statusCode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty.builder()
-
-      /**
-       * @param host The hostname.
-       * This component is not percent-encoded. The hostname can contain #{host}.
-       */
-      override fun host(host: String) {
-        cdkBuilder.host(host)
-      }
-
-      /**
-       * @param path The absolute path, starting with the leading "/".
-       * This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}.
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      /**
-       * @param port The port.
-       * You can specify a value from 1 to 65535 or #{port}.
-       */
-      override fun port(port: String) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param protocol The protocol.
-       * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
-       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param query The query parameters, URL-encoded when necessary, but not percent-encoded.
-       * Do not include the leading "?", as it is automatically added. You can specify any of the
-       * reserved keywords.
-       */
-      override fun query(query: String) {
-        cdkBuilder.query(query)
-      }
-
-      /**
-       * @param statusCode The HTTP redirect code. 
-       * The redirect is either permanent (HTTP 301) or temporary (HTTP 302).
-       */
-      override fun statusCode(statusCode: String) {
-        cdkBuilder.statusCode(statusCode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty,
-    ) : CdkObject(cdkObject), RedirectConfigProperty {
-      /**
-       * The hostname.
-       *
-       * This component is not percent-encoded. The hostname can contain #{host}.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-host)
-       */
-      override fun host(): String? = unwrap(this).getHost()
-
-      /**
-       * The absolute path, starting with the leading "/".
-       *
-       * This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-
-      /**
-       * The port.
-       *
-       * You can specify a value from 1 to 65535 or #{port}.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-port)
-       */
-      override fun port(): String? = unwrap(this).getPort()
-
-      /**
-       * The protocol.
-       *
-       * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
-       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-protocol)
-       */
-      override fun protocol(): String? = unwrap(this).getProtocol()
-
-      /**
-       * The query parameters, URL-encoded when necessary, but not percent-encoded.
-       *
-       * Do not include the leading "?", as it is automatically added. You can specify any of the
-       * reserved keywords.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-query)
-       */
-      override fun query(): String? = unwrap(this).getQuery()
-
-      /**
-       * The HTTP redirect code.
-       *
-       * The redirect is either permanent (HTTP 301) or temporary (HTTP 302).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-statuscode)
-       */
-      override fun statusCode(): String = unwrap(this).getStatusCode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RedirectConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty):
-          RedirectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RedirectConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedirectConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty
-    }
-  }
-
-  /**
    * Specifies an action for a listener rule.
    *
    * Example:
@@ -1365,6 +1087,1790 @@ public open class CfnListenerRule internal constructor(
   }
 
   /**
+   * Specifies information required when integrating with Amazon Cognito to authenticate users.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * AuthenticateCognitoConfigProperty authenticateCognitoConfigProperty =
+   * AuthenticateCognitoConfigProperty.builder()
+   * .userPoolArn("userPoolArn")
+   * .userPoolClientId("userPoolClientId")
+   * .userPoolDomain("userPoolDomain")
+   * // the properties below are optional
+   * .authenticationRequestExtraParams(Map.of(
+   * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
+   * .onUnauthenticatedRequest("onUnauthenticatedRequest")
+   * .scope("scope")
+   * .sessionCookieName("sessionCookieName")
+   * .sessionTimeout(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html)
+   */
+  public interface AuthenticateCognitoConfigProperty {
+    /**
+     * The query parameters (up to 10) to include in the redirect request to the authorization
+     * endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-authenticationrequestextraparams)
+     */
+    public fun authenticationRequestExtraParams(): Any? =
+        unwrap(this).getAuthenticationRequestExtraParams()
+
+    /**
+     * The behavior if the user is not authenticated. The following are possible values:.
+     *
+     * * deny `` - Return an HTTP 401 Unauthorized error.
+     * * allow `` - Allow the request to be forwarded to the target.
+     * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+     * default value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-onunauthenticatedrequest)
+     */
+    public fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
+
+    /**
+     * The set of user claims to be requested from the IdP. The default is `openid` .
+     *
+     * To verify which scope values your IdP supports and how to separate multiple values, see the
+     * documentation for your IdP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope)
+     */
+    public fun scope(): String? = unwrap(this).getScope()
+
+    /**
+     * The name of the cookie used to maintain session information.
+     *
+     * The default is AWSELBAuthSessionCookie.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessioncookiename)
+     */
+    public fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
+
+    /**
+     * The maximum duration of the authentication session, in seconds.
+     *
+     * The default is 604800 seconds (7 days).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout)
+     */
+    public fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn)
+     */
+    public fun userPoolArn(): String
+
+    /**
+     * The ID of the Amazon Cognito user pool client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolclientid)
+     */
+    public fun userPoolClientId(): String
+
+    /**
+     * The domain prefix or fully-qualified domain name of the Amazon Cognito user pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpooldomain)
+     */
+    public fun userPoolDomain(): String
+
+    /**
+     * A builder for [AuthenticateCognitoConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      public
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+
+      /**
+       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
+       * following are possible values:.
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       */
+      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String)
+
+      /**
+       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       */
+      public fun scope(scope: String)
+
+      /**
+       * @param sessionCookieName The name of the cookie used to maintain session information.
+       * The default is AWSELBAuthSessionCookie.
+       */
+      public fun sessionCookieName(sessionCookieName: String)
+
+      /**
+       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
+       * The default is 604800 seconds (7 days).
+       */
+      public fun sessionTimeout(sessionTimeout: Number)
+
+      /**
+       * @param userPoolArn The Amazon Resource Name (ARN) of the Amazon Cognito user pool. 
+       */
+      public fun userPoolArn(userPoolArn: String)
+
+      /**
+       * @param userPoolClientId The ID of the Amazon Cognito user pool client. 
+       */
+      public fun userPoolClientId(userPoolClientId: String)
+
+      /**
+       * @param userPoolDomain The domain prefix or fully-qualified domain name of the Amazon
+       * Cognito user pool. 
+       */
+      public fun userPoolDomain(userPoolDomain: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty.builder()
+
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      override
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      }
+
+      /**
+       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
+       * following are possible values:.
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       */
+      override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
+        cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest)
+      }
+
+      /**
+       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       */
+      override fun scope(scope: String) {
+        cdkBuilder.scope(scope)
+      }
+
+      /**
+       * @param sessionCookieName The name of the cookie used to maintain session information.
+       * The default is AWSELBAuthSessionCookie.
+       */
+      override fun sessionCookieName(sessionCookieName: String) {
+        cdkBuilder.sessionCookieName(sessionCookieName)
+      }
+
+      /**
+       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
+       * The default is 604800 seconds (7 days).
+       */
+      override fun sessionTimeout(sessionTimeout: Number) {
+        cdkBuilder.sessionTimeout(sessionTimeout)
+      }
+
+      /**
+       * @param userPoolArn The Amazon Resource Name (ARN) of the Amazon Cognito user pool. 
+       */
+      override fun userPoolArn(userPoolArn: String) {
+        cdkBuilder.userPoolArn(userPoolArn)
+      }
+
+      /**
+       * @param userPoolClientId The ID of the Amazon Cognito user pool client. 
+       */
+      override fun userPoolClientId(userPoolClientId: String) {
+        cdkBuilder.userPoolClientId(userPoolClientId)
+      }
+
+      /**
+       * @param userPoolDomain The domain prefix or fully-qualified domain name of the Amazon
+       * Cognito user pool. 
+       */
+      override fun userPoolDomain(userPoolDomain: String) {
+        cdkBuilder.userPoolDomain(userPoolDomain)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty,
+    ) : CdkObject(cdkObject), AuthenticateCognitoConfigProperty {
+      /**
+       * The query parameters (up to 10) to include in the redirect request to the authorization
+       * endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-authenticationrequestextraparams)
+       */
+      override fun authenticationRequestExtraParams(): Any? =
+          unwrap(this).getAuthenticationRequestExtraParams()
+
+      /**
+       * The behavior if the user is not authenticated. The following are possible values:.
+       *
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-onunauthenticatedrequest)
+       */
+      override fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
+
+      /**
+       * The set of user claims to be requested from the IdP. The default is `openid` .
+       *
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope)
+       */
+      override fun scope(): String? = unwrap(this).getScope()
+
+      /**
+       * The name of the cookie used to maintain session information.
+       *
+       * The default is AWSELBAuthSessionCookie.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessioncookiename)
+       */
+      override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
+
+      /**
+       * The maximum duration of the authentication session, in seconds.
+       *
+       * The default is 604800 seconds (7 days).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout)
+       */
+      override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn)
+       */
+      override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
+
+      /**
+       * The ID of the Amazon Cognito user pool client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolclientid)
+       */
+      override fun userPoolClientId(): String = unwrap(this).getUserPoolClientId()
+
+      /**
+       * The domain prefix or fully-qualified domain name of the Amazon Cognito user pool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpooldomain)
+       */
+      override fun userPoolDomain(): String = unwrap(this).getUserPoolDomain()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AuthenticateCognitoConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty):
+          AuthenticateCognitoConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthenticateCognitoConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AuthenticateCognitoConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty
+    }
+  }
+
+  /**
+   * Specifies information required using an identity provide (IdP) that is compliant with OpenID
+   * Connect (OIDC) to authenticate users.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * AuthenticateOidcConfigProperty authenticateOidcConfigProperty =
+   * AuthenticateOidcConfigProperty.builder()
+   * .authorizationEndpoint("authorizationEndpoint")
+   * .clientId("clientId")
+   * .issuer("issuer")
+   * .tokenEndpoint("tokenEndpoint")
+   * .userInfoEndpoint("userInfoEndpoint")
+   * // the properties below are optional
+   * .authenticationRequestExtraParams(Map.of(
+   * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
+   * .clientSecret("clientSecret")
+   * .onUnauthenticatedRequest("onUnauthenticatedRequest")
+   * .scope("scope")
+   * .sessionCookieName("sessionCookieName")
+   * .sessionTimeout(123)
+   * .useExistingClientSecret(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html)
+   */
+  public interface AuthenticateOidcConfigProperty {
+    /**
+     * The query parameters (up to 10) to include in the redirect request to the authorization
+     * endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authenticationrequestextraparams)
+     */
+    public fun authenticationRequestExtraParams(): Any? =
+        unwrap(this).getAuthenticationRequestExtraParams()
+
+    /**
+     * The authorization endpoint of the IdP.
+     *
+     * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authorizationendpoint)
+     */
+    public fun authorizationEndpoint(): String
+
+    /**
+     * The OAuth 2.0 client identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientid)
+     */
+    public fun clientId(): String
+
+    /**
+     * The OAuth 2.0 client secret. This parameter is required if you are creating a rule. If you
+     * are modifying a rule, you can omit this parameter if you set `UseExistingClientSecret` to true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientsecret)
+     */
+    public fun clientSecret(): String? = unwrap(this).getClientSecret()
+
+    /**
+     * The OIDC issuer identifier of the IdP.
+     *
+     * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-issuer)
+     */
+    public fun issuer(): String
+
+    /**
+     * The behavior if the user is not authenticated. The following are possible values:.
+     *
+     * * deny `` - Return an HTTP 401 Unauthorized error.
+     * * allow `` - Allow the request to be forwarded to the target.
+     * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+     * default value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-onunauthenticatedrequest)
+     */
+    public fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
+
+    /**
+     * The set of user claims to be requested from the IdP. The default is `openid` .
+     *
+     * To verify which scope values your IdP supports and how to separate multiple values, see the
+     * documentation for your IdP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-scope)
+     */
+    public fun scope(): String? = unwrap(this).getScope()
+
+    /**
+     * The name of the cookie used to maintain session information.
+     *
+     * The default is AWSELBAuthSessionCookie.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessioncookiename)
+     */
+    public fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
+
+    /**
+     * The maximum duration of the authentication session, in seconds.
+     *
+     * The default is 604800 seconds (7 days).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout)
+     */
+    public fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
+
+    /**
+     * The token endpoint of the IdP.
+     *
+     * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-tokenendpoint)
+     */
+    public fun tokenEndpoint(): String
+
+    /**
+     * Indicates whether to use the existing client secret when modifying a rule.
+     *
+     * If you are creating a rule, you can omit this parameter or set it to false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-useexistingclientsecret)
+     */
+    public fun useExistingClientSecret(): Any? = unwrap(this).getUseExistingClientSecret()
+
+    /**
+     * The user info endpoint of the IdP.
+     *
+     * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-userinfoendpoint)
+     */
+    public fun userInfoEndpoint(): String
+
+    /**
+     * A builder for [AuthenticateOidcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      public
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+
+      /**
+       * @param authorizationEndpoint The authorization endpoint of the IdP. 
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       */
+      public fun authorizationEndpoint(authorizationEndpoint: String)
+
+      /**
+       * @param clientId The OAuth 2.0 client identifier. 
+       */
+      public fun clientId(clientId: String)
+
+      /**
+       * @param clientSecret The OAuth 2.0 client secret. This parameter is required if you are
+       * creating a rule. If you are modifying a rule, you can omit this parameter if you set
+       * `UseExistingClientSecret` to true.
+       */
+      public fun clientSecret(clientSecret: String)
+
+      /**
+       * @param issuer The OIDC issuer identifier of the IdP. 
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       */
+      public fun issuer(issuer: String)
+
+      /**
+       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
+       * following are possible values:.
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       */
+      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String)
+
+      /**
+       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       */
+      public fun scope(scope: String)
+
+      /**
+       * @param sessionCookieName The name of the cookie used to maintain session information.
+       * The default is AWSELBAuthSessionCookie.
+       */
+      public fun sessionCookieName(sessionCookieName: String)
+
+      /**
+       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
+       * The default is 604800 seconds (7 days).
+       */
+      public fun sessionTimeout(sessionTimeout: Number)
+
+      /**
+       * @param tokenEndpoint The token endpoint of the IdP. 
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       */
+      public fun tokenEndpoint(tokenEndpoint: String)
+
+      /**
+       * @param useExistingClientSecret Indicates whether to use the existing client secret when
+       * modifying a rule.
+       * If you are creating a rule, you can omit this parameter or set it to false.
+       */
+      public fun useExistingClientSecret(useExistingClientSecret: Boolean)
+
+      /**
+       * @param useExistingClientSecret Indicates whether to use the existing client secret when
+       * modifying a rule.
+       * If you are creating a rule, you can omit this parameter or set it to false.
+       */
+      public fun useExistingClientSecret(useExistingClientSecret: IResolvable)
+
+      /**
+       * @param userInfoEndpoint The user info endpoint of the IdP. 
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       */
+      public fun userInfoEndpoint(userInfoEndpoint: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty.builder()
+
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
+       * redirect request to the authorization endpoint.
+       */
+      override
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      }
+
+      /**
+       * @param authorizationEndpoint The authorization endpoint of the IdP. 
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       */
+      override fun authorizationEndpoint(authorizationEndpoint: String) {
+        cdkBuilder.authorizationEndpoint(authorizationEndpoint)
+      }
+
+      /**
+       * @param clientId The OAuth 2.0 client identifier. 
+       */
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param clientSecret The OAuth 2.0 client secret. This parameter is required if you are
+       * creating a rule. If you are modifying a rule, you can omit this parameter if you set
+       * `UseExistingClientSecret` to true.
+       */
+      override fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
+      }
+
+      /**
+       * @param issuer The OIDC issuer identifier of the IdP. 
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       */
+      override fun issuer(issuer: String) {
+        cdkBuilder.issuer(issuer)
+      }
+
+      /**
+       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
+       * following are possible values:.
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       */
+      override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
+        cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest)
+      }
+
+      /**
+       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       */
+      override fun scope(scope: String) {
+        cdkBuilder.scope(scope)
+      }
+
+      /**
+       * @param sessionCookieName The name of the cookie used to maintain session information.
+       * The default is AWSELBAuthSessionCookie.
+       */
+      override fun sessionCookieName(sessionCookieName: String) {
+        cdkBuilder.sessionCookieName(sessionCookieName)
+      }
+
+      /**
+       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
+       * The default is 604800 seconds (7 days).
+       */
+      override fun sessionTimeout(sessionTimeout: Number) {
+        cdkBuilder.sessionTimeout(sessionTimeout)
+      }
+
+      /**
+       * @param tokenEndpoint The token endpoint of the IdP. 
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       */
+      override fun tokenEndpoint(tokenEndpoint: String) {
+        cdkBuilder.tokenEndpoint(tokenEndpoint)
+      }
+
+      /**
+       * @param useExistingClientSecret Indicates whether to use the existing client secret when
+       * modifying a rule.
+       * If you are creating a rule, you can omit this parameter or set it to false.
+       */
+      override fun useExistingClientSecret(useExistingClientSecret: Boolean) {
+        cdkBuilder.useExistingClientSecret(useExistingClientSecret)
+      }
+
+      /**
+       * @param useExistingClientSecret Indicates whether to use the existing client secret when
+       * modifying a rule.
+       * If you are creating a rule, you can omit this parameter or set it to false.
+       */
+      override fun useExistingClientSecret(useExistingClientSecret: IResolvable) {
+        cdkBuilder.useExistingClientSecret(useExistingClientSecret.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param userInfoEndpoint The user info endpoint of the IdP. 
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       */
+      override fun userInfoEndpoint(userInfoEndpoint: String) {
+        cdkBuilder.userInfoEndpoint(userInfoEndpoint)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty,
+    ) : CdkObject(cdkObject), AuthenticateOidcConfigProperty {
+      /**
+       * The query parameters (up to 10) to include in the redirect request to the authorization
+       * endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authenticationrequestextraparams)
+       */
+      override fun authenticationRequestExtraParams(): Any? =
+          unwrap(this).getAuthenticationRequestExtraParams()
+
+      /**
+       * The authorization endpoint of the IdP.
+       *
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authorizationendpoint)
+       */
+      override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
+
+      /**
+       * The OAuth 2.0 client identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientid)
+       */
+      override fun clientId(): String = unwrap(this).getClientId()
+
+      /**
+       * The OAuth 2.0 client secret. This parameter is required if you are creating a rule. If you
+       * are modifying a rule, you can omit this parameter if you set `UseExistingClientSecret` to
+       * true.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientsecret)
+       */
+      override fun clientSecret(): String? = unwrap(this).getClientSecret()
+
+      /**
+       * The OIDC issuer identifier of the IdP.
+       *
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-issuer)
+       */
+      override fun issuer(): String = unwrap(this).getIssuer()
+
+      /**
+       * The behavior if the user is not authenticated. The following are possible values:.
+       *
+       * * deny `` - Return an HTTP 401 Unauthorized error.
+       * * allow `` - Allow the request to be forwarded to the target.
+       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
+       * default value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-onunauthenticatedrequest)
+       */
+      override fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
+
+      /**
+       * The set of user claims to be requested from the IdP. The default is `openid` .
+       *
+       * To verify which scope values your IdP supports and how to separate multiple values, see the
+       * documentation for your IdP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-scope)
+       */
+      override fun scope(): String? = unwrap(this).getScope()
+
+      /**
+       * The name of the cookie used to maintain session information.
+       *
+       * The default is AWSELBAuthSessionCookie.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessioncookiename)
+       */
+      override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
+
+      /**
+       * The maximum duration of the authentication session, in seconds.
+       *
+       * The default is 604800 seconds (7 days).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout)
+       */
+      override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
+
+      /**
+       * The token endpoint of the IdP.
+       *
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-tokenendpoint)
+       */
+      override fun tokenEndpoint(): String = unwrap(this).getTokenEndpoint()
+
+      /**
+       * Indicates whether to use the existing client secret when modifying a rule.
+       *
+       * If you are creating a rule, you can omit this parameter or set it to false.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-useexistingclientsecret)
+       */
+      override fun useExistingClientSecret(): Any? = unwrap(this).getUseExistingClientSecret()
+
+      /**
+       * The user info endpoint of the IdP.
+       *
+       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-userinfoendpoint)
+       */
+      override fun userInfoEndpoint(): String = unwrap(this).getUserInfoEndpoint()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AuthenticateOidcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty):
+          AuthenticateOidcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthenticateOidcConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AuthenticateOidcConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty
+    }
+  }
+
+  /**
+   * Specifies information required when returning a custom HTTP response.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * FixedResponseConfigProperty fixedResponseConfigProperty = FixedResponseConfigProperty.builder()
+   * .statusCode("statusCode")
+   * // the properties below are optional
+   * .contentType("contentType")
+   * .messageBody("messageBody")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html)
+   */
+  public interface FixedResponseConfigProperty {
+    /**
+     * The content type.
+     *
+     * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-contenttype)
+     */
+    public fun contentType(): String? = unwrap(this).getContentType()
+
+    /**
+     * The message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-messagebody)
+     */
+    public fun messageBody(): String? = unwrap(this).getMessageBody()
+
+    /**
+     * The HTTP response code (2XX, 4XX, or 5XX).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-statuscode)
+     */
+    public fun statusCode(): String
+
+    /**
+     * A builder for [FixedResponseConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contentType The content type.
+       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+       */
+      public fun contentType(contentType: String)
+
+      /**
+       * @param messageBody The message.
+       */
+      public fun messageBody(messageBody: String)
+
+      /**
+       * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
+       */
+      public fun statusCode(statusCode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty.builder()
+
+      /**
+       * @param contentType The content type.
+       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+       */
+      override fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+      }
+
+      /**
+       * @param messageBody The message.
+       */
+      override fun messageBody(messageBody: String) {
+        cdkBuilder.messageBody(messageBody)
+      }
+
+      /**
+       * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
+       */
+      override fun statusCode(statusCode: String) {
+        cdkBuilder.statusCode(statusCode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty,
+    ) : CdkObject(cdkObject), FixedResponseConfigProperty {
+      /**
+       * The content type.
+       *
+       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-contenttype)
+       */
+      override fun contentType(): String? = unwrap(this).getContentType()
+
+      /**
+       * The message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-messagebody)
+       */
+      override fun messageBody(): String? = unwrap(this).getMessageBody()
+
+      /**
+       * The HTTP response code (2XX, 4XX, or 5XX).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-statuscode)
+       */
+      override fun statusCode(): String = unwrap(this).getStatusCode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FixedResponseConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty):
+          FixedResponseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FixedResponseConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FixedResponseConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty
+    }
+  }
+
+  /**
+   * Information for creating an action that distributes requests among one or more target groups.
+   *
+   * For Network Load Balancers, you can specify a single target group. Specify only when `Type` is
+   * `forward` . If you specify both `ForwardConfig` and `TargetGroupArn` , you can specify only one
+   * target group using `ForwardConfig` and it must be the same target group specified in
+   * `TargetGroupArn` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * ForwardConfigProperty forwardConfigProperty = ForwardConfigProperty.builder()
+   * .targetGroups(List.of(TargetGroupTupleProperty.builder()
+   * .targetGroupArn("targetGroupArn")
+   * .weight(123)
+   * .build()))
+   * .targetGroupStickinessConfig(TargetGroupStickinessConfigProperty.builder()
+   * .durationSeconds(123)
+   * .enabled(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html)
+   */
+  public interface ForwardConfigProperty {
+    /**
+     * Information about the target group stickiness for a rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroupstickinessconfig)
+     */
+    public fun targetGroupStickinessConfig(): Any? = unwrap(this).getTargetGroupStickinessConfig()
+
+    /**
+     * Information about how traffic will be distributed between multiple target groups in a forward
+     * rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroups)
+     */
+    public fun targetGroups(): Any? = unwrap(this).getTargetGroups()
+
+    /**
+     * A builder for [ForwardConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      public fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable)
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      public
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty)
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8346cc062be8b2d02d334cf94fabe9c105928903dc00dd8ad5a858022fdf5d88")
+      public
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      public fun targetGroups(targetGroups: IResolvable)
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      public fun targetGroups(targetGroups: List<Any>)
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      public fun targetGroups(vararg targetGroups: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty.builder()
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      override fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
+        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      override
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty) {
+        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(TargetGroupStickinessConfigProperty::unwrap))
+      }
+
+      /**
+       * @param targetGroupStickinessConfig Information about the target group stickiness for a
+       * rule.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8346cc062be8b2d02d334cf94fabe9c105928903dc00dd8ad5a858022fdf5d88")
+      override
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit):
+          Unit =
+          targetGroupStickinessConfig(TargetGroupStickinessConfigProperty(targetGroupStickinessConfig))
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      override fun targetGroups(targetGroups: IResolvable) {
+        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      override fun targetGroups(targetGroups: List<Any>) {
+        cdkBuilder.targetGroups(targetGroups)
+      }
+
+      /**
+       * @param targetGroups Information about how traffic will be distributed between multiple
+       * target groups in a forward rule.
+       */
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty,
+    ) : CdkObject(cdkObject), ForwardConfigProperty {
+      /**
+       * Information about the target group stickiness for a rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroupstickinessconfig)
+       */
+      override fun targetGroupStickinessConfig(): Any? =
+          unwrap(this).getTargetGroupStickinessConfig()
+
+      /**
+       * Information about how traffic will be distributed between multiple target groups in a
+       * forward rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroups)
+       */
+      override fun targetGroups(): Any? = unwrap(this).getTargetGroups()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ForwardConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty):
+          ForwardConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ForwardConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ForwardConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty
+    }
+  }
+
+  /**
+   * Information about a host header condition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * HostHeaderConfigProperty hostHeaderConfigProperty = HostHeaderConfigProperty.builder()
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.html)
+   */
+  public interface HostHeaderConfigProperty {
+    /**
+     * The host names.
+     *
+     * The maximum size of each name is 128 characters. The comparison is case insensitive. The
+     * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+     * exactly 1 character).
+     *
+     * If you specify multiple strings, the condition is satisfied if one of the strings matches the
+     * host name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-hostheaderconfig-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [HostHeaderConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param values The host names.
+       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the host name.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The host names.
+       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the host name.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty.builder()
+
+      /**
+       * @param values The host names.
+       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the host name.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The host names.
+       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the host name.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty,
+    ) : CdkObject(cdkObject), HostHeaderConfigProperty {
+      /**
+       * The host names.
+       *
+       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the host name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-hostheaderconfig-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HostHeaderConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty):
+          HostHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HostHeaderConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HostHeaderConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty
+    }
+  }
+
+  /**
+   * Information about an HTTP header condition.
+   *
+   * There is a set of standard HTTP header fields. You can also define custom HTTP header fields.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * HttpHeaderConfigProperty httpHeaderConfigProperty = HttpHeaderConfigProperty.builder()
+   * .httpHeaderName("httpHeaderName")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html)
+   */
+  public interface HttpHeaderConfigProperty {
+    /**
+     * The name of the HTTP header field.
+     *
+     * The maximum size is 40 characters. The header name is case insensitive. The allowed
+     * characters are specified by RFC 7230. Wildcards are not supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-httpheadername)
+     */
+    public fun httpHeaderName(): String? = unwrap(this).getHttpHeaderName()
+
+    /**
+     * The strings to compare against the value of the HTTP header.
+     *
+     * The maximum size of each string is 128 characters. The comparison strings are case
+     * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
+     * and ? (matches exactly 1 character).
+     *
+     * If the same header appears multiple times in the request, we search them in order until a
+     * match is found.
+     *
+     * If you specify multiple strings, the condition is satisfied if one of the strings matches the
+     * value of the HTTP header. To require that all of the strings are a match, create one condition
+     * per string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [HttpHeaderConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param httpHeaderName The name of the HTTP header field.
+       * The maximum size is 40 characters. The header name is case insensitive. The allowed
+       * characters are specified by RFC 7230. Wildcards are not supported.
+       */
+      public fun httpHeaderName(httpHeaderName: String)
+
+      /**
+       * @param values The strings to compare against the value of the HTTP header.
+       * The maximum size of each string is 128 characters. The comparison strings are case
+       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
+       * and ? (matches exactly 1 character).
+       *
+       * If the same header appears multiple times in the request, we search them in order until a
+       * match is found.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the value of the HTTP header. To require that all of the strings are a match, create one
+       * condition per string.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The strings to compare against the value of the HTTP header.
+       * The maximum size of each string is 128 characters. The comparison strings are case
+       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
+       * and ? (matches exactly 1 character).
+       *
+       * If the same header appears multiple times in the request, we search them in order until a
+       * match is found.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the value of the HTTP header. To require that all of the strings are a match, create one
+       * condition per string.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty.builder()
+
+      /**
+       * @param httpHeaderName The name of the HTTP header field.
+       * The maximum size is 40 characters. The header name is case insensitive. The allowed
+       * characters are specified by RFC 7230. Wildcards are not supported.
+       */
+      override fun httpHeaderName(httpHeaderName: String) {
+        cdkBuilder.httpHeaderName(httpHeaderName)
+      }
+
+      /**
+       * @param values The strings to compare against the value of the HTTP header.
+       * The maximum size of each string is 128 characters. The comparison strings are case
+       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
+       * and ? (matches exactly 1 character).
+       *
+       * If the same header appears multiple times in the request, we search them in order until a
+       * match is found.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the value of the HTTP header. To require that all of the strings are a match, create one
+       * condition per string.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The strings to compare against the value of the HTTP header.
+       * The maximum size of each string is 128 characters. The comparison strings are case
+       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
+       * and ? (matches exactly 1 character).
+       *
+       * If the same header appears multiple times in the request, we search them in order until a
+       * match is found.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the value of the HTTP header. To require that all of the strings are a match, create one
+       * condition per string.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty,
+    ) : CdkObject(cdkObject), HttpHeaderConfigProperty {
+      /**
+       * The name of the HTTP header field.
+       *
+       * The maximum size is 40 characters. The header name is case insensitive. The allowed
+       * characters are specified by RFC 7230. Wildcards are not supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-httpheadername)
+       */
+      override fun httpHeaderName(): String? = unwrap(this).getHttpHeaderName()
+
+      /**
+       * The strings to compare against the value of the HTTP header.
+       *
+       * The maximum size of each string is 128 characters. The comparison strings are case
+       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
+       * and ? (matches exactly 1 character).
+       *
+       * If the same header appears multiple times in the request, we search them in order until a
+       * match is found.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the value of the HTTP header. To require that all of the strings are a match, create one
+       * condition per string.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HttpHeaderConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty):
+          HttpHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpHeaderConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HttpHeaderConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty
+    }
+  }
+
+  /**
+   * Information about an HTTP method condition.
+   *
+   * HTTP defines a set of request methods, also referred to as HTTP verbs. For more information,
+   * see the [HTTP Method
+   * Registry](https://docs.aws.amazon.com/https://www.iana.org/assignments/http-methods/http-methods.xhtml)
+   * . You can also define custom HTTP methods.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * HttpRequestMethodConfigProperty httpRequestMethodConfigProperty =
+   * HttpRequestMethodConfigProperty.builder()
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.html)
+   */
+  public interface HttpRequestMethodConfigProperty {
+    /**
+     * The name of the request method.
+     *
+     * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and underscore
+     * (_). The comparison is case sensitive. Wildcards are not supported; therefore, the method name
+     * must be an exact match.
+     *
+     * If you specify multiple strings, the condition is satisfied if one of the strings matches the
+     * HTTP request method. We recommend that you route GET and HEAD requests in the same way, because
+     * the response to a HEAD request may be cached.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.html#cfn-elasticloadbalancingv2-listenerrule-httprequestmethodconfig-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [HttpRequestMethodConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param values The name of the request method.
+       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
+       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
+       * method name must be an exact match.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
+       * because the response to a HEAD request may be cached.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The name of the request method.
+       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
+       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
+       * method name must be an exact match.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
+       * because the response to a HEAD request may be cached.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty.builder()
+
+      /**
+       * @param values The name of the request method.
+       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
+       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
+       * method name must be an exact match.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
+       * because the response to a HEAD request may be cached.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The name of the request method.
+       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
+       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
+       * method name must be an exact match.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
+       * because the response to a HEAD request may be cached.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty,
+    ) : CdkObject(cdkObject), HttpRequestMethodConfigProperty {
+      /**
+       * The name of the request method.
+       *
+       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
+       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
+       * method name must be an exact match.
+       *
+       * If you specify multiple strings, the condition is satisfied if one of the strings matches
+       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
+       * because the response to a HEAD request may be cached.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.html#cfn-elasticloadbalancingv2-listenerrule-httprequestmethodconfig-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HttpRequestMethodConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty):
+          HttpRequestMethodConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpRequestMethodConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HttpRequestMethodConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty
+    }
+  }
+
+  /**
+   * Information about a path pattern condition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * PathPatternConfigProperty pathPatternConfigProperty = PathPatternConfigProperty.builder()
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.html)
+   */
+  public interface PathPatternConfigProperty {
+    /**
+     * The path patterns to compare against the request URL.
+     *
+     * The maximum size of each string is 128 characters. The comparison is case sensitive. The
+     * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+     * exactly 1 character).
+     *
+     * If you specify multiple strings, the condition is satisfied if one of them matches the
+     * request URL. The path pattern is compared only to the path of the URL, not to its query string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.html#cfn-elasticloadbalancingv2-listenerrule-pathpatternconfig-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [PathPatternConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param values The path patterns to compare against the request URL.
+       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of them matches the
+       * request URL. The path pattern is compared only to the path of the URL, not to its query
+       * string.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The path patterns to compare against the request URL.
+       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of them matches the
+       * request URL. The path pattern is compared only to the path of the URL, not to its query
+       * string.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty.builder()
+
+      /**
+       * @param values The path patterns to compare against the request URL.
+       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of them matches the
+       * request URL. The path pattern is compared only to the path of the URL, not to its query
+       * string.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The path patterns to compare against the request URL.
+       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of them matches the
+       * request URL. The path pattern is compared only to the path of the URL, not to its query
+       * string.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty,
+    ) : CdkObject(cdkObject), PathPatternConfigProperty {
+      /**
+       * The path patterns to compare against the request URL.
+       *
+       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
+       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+       * exactly 1 character).
+       *
+       * If you specify multiple strings, the condition is satisfied if one of them matches the
+       * request URL. The path pattern is compared only to the path of the URL, not to its query
+       * string.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.html#cfn-elasticloadbalancingv2-listenerrule-pathpatternconfig-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PathPatternConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty):
+          PathPatternConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PathPatternConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PathPatternConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty
+    }
+  }
+
+  /**
    * Information about a query string condition.
    *
    * The query string component of a URI starts after the first '?' character and is terminated by
@@ -1536,7 +3042,7 @@ public open class CfnListenerRule internal constructor(
   }
 
   /**
-   * Information about a path pattern condition.
+   * Information about a key/value pair.
    *
    * Example:
    *
@@ -1544,135 +3050,130 @@ public open class CfnListenerRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * PathPatternConfigProperty pathPatternConfigProperty = PathPatternConfigProperty.builder()
-   * .values(List.of("values"))
+   * QueryStringKeyValueProperty queryStringKeyValueProperty = QueryStringKeyValueProperty.builder()
+   * .key("key")
+   * .value("value")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html)
    */
-  public interface PathPatternConfigProperty {
+  public interface QueryStringKeyValueProperty {
     /**
-     * The path patterns to compare against the request URL.
+     * The key.
      *
-     * The maximum size of each string is 128 characters. The comparison is case sensitive. The
-     * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-     * exactly 1 character).
+     * You can omit the key.
      *
-     * If you specify multiple strings, the condition is satisfied if one of them matches the
-     * request URL. The path pattern is compared only to the path of the URL, not to its query string.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.html#cfn-elasticloadbalancingv2-listenerrule-pathpatternconfig-values)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-key)
      */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    public fun key(): String? = unwrap(this).getKey()
 
     /**
-     * A builder for [PathPatternConfigProperty]
+     * The value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [QueryStringKeyValueProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param values The path patterns to compare against the request URL.
-       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of them matches the
-       * request URL. The path pattern is compared only to the path of the URL, not to its query
-       * string.
+       * @param key The key.
+       * You can omit the key.
        */
-      public fun values(values: List<String>)
+      public fun key(key: String)
 
       /**
-       * @param values The path patterns to compare against the request URL.
-       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of them matches the
-       * request URL. The path pattern is compared only to the path of the URL, not to its query
-       * string.
+       * @param value The value.
        */
-      public fun values(vararg values: String)
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty.Builder
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty.Builder
           =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty.builder()
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty.builder()
 
       /**
-       * @param values The path patterns to compare against the request URL.
-       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of them matches the
-       * request URL. The path pattern is compared only to the path of the URL, not to its query
-       * string.
+       * @param key The key.
+       * You can omit the key.
        */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
+      override fun key(key: String) {
+        cdkBuilder.key(key)
       }
 
       /**
-       * @param values The path patterns to compare against the request URL.
-       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of them matches the
-       * request URL. The path pattern is compared only to the path of the URL, not to its query
-       * string.
+       * @param value The value.
        */
-      override fun values(vararg values: String): Unit = values(values.toList())
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty,
-    ) : CdkObject(cdkObject), PathPatternConfigProperty {
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty,
+    ) : CdkObject(cdkObject), QueryStringKeyValueProperty {
       /**
-       * The path patterns to compare against the request URL.
+       * The key.
        *
-       * The maximum size of each string is 128 characters. The comparison is case sensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
+       * You can omit the key.
        *
-       * If you specify multiple strings, the condition is satisfied if one of them matches the
-       * request URL. The path pattern is compared only to the path of the URL, not to its query
-       * string.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.html#cfn-elasticloadbalancingv2-listenerrule-pathpatternconfig-values)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-key)
        */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PathPatternConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QueryStringKeyValueProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty):
-          PathPatternConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PathPatternConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty):
+          QueryStringKeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryStringKeyValueProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PathPatternConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty
+      internal fun unwrap(wrapped: QueryStringKeyValueProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty
     }
   }
 
   /**
-   * Information about the target group stickiness for a rule.
+   * Information about a redirect action.
+   *
+   * A URI consists of the following components: protocol://hostname:port/path?query. You must
+   * modify at least one of the following components to avoid a redirect loop: protocol, hostname,
+   * port, or path. Any components that you do not modify retain their original values.
+   *
+   * You can reuse URI components using the following reserved keywords:
+   *
+   * * #{protocol}
+   * * #{host}
+   * * #{port}
+   * * #{path} (the leading "/" is removed)
+   * * #{query}
+   *
+   * For example, you can change the path to "/new/#{path}", the hostname to "example.#{host}", or
+   * the query to "#{query}&amp;value=xyz".
    *
    * Example:
    *
@@ -1680,245 +3181,257 @@ public open class CfnListenerRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * TargetGroupStickinessConfigProperty targetGroupStickinessConfigProperty =
-   * TargetGroupStickinessConfigProperty.builder()
-   * .durationSeconds(123)
-   * .enabled(false)
+   * RedirectConfigProperty redirectConfigProperty = RedirectConfigProperty.builder()
+   * .statusCode("statusCode")
+   * // the properties below are optional
+   * .host("host")
+   * .path("path")
+   * .port("port")
+   * .protocol("protocol")
+   * .query("query")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html)
    */
-  public interface TargetGroupStickinessConfigProperty {
+  public interface RedirectConfigProperty {
     /**
-     * The time period, in seconds, during which requests from a client should be routed to the same
-     * target group.
+     * The hostname.
      *
-     * The range is 1-604800 seconds (7 days).
+     * This component is not percent-encoded. The hostname can contain #{host}.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-durationseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-host)
      */
-    public fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
+    public fun host(): String? = unwrap(this).getHost()
 
     /**
-     * Indicates whether target group stickiness is enabled.
+     * The absolute path, starting with the leading "/".
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-enabled)
+     * This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-path)
      */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
+    public fun path(): String? = unwrap(this).getPath()
 
     /**
-     * A builder for [TargetGroupStickinessConfigProperty]
+     * The port.
+     *
+     * You can specify a value from 1 to 65535 or #{port}.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-port)
+     */
+    public fun port(): String? = unwrap(this).getPort()
+
+    /**
+     * The protocol.
+     *
+     * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
+     * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-protocol)
+     */
+    public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * The query parameters, URL-encoded when necessary, but not percent-encoded.
+     *
+     * Do not include the leading "?", as it is automatically added. You can specify any of the
+     * reserved keywords.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-query)
+     */
+    public fun query(): String? = unwrap(this).getQuery()
+
+    /**
+     * The HTTP redirect code.
+     *
+     * The redirect is either permanent (HTTP 301) or temporary (HTTP 302).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-statuscode)
+     */
+    public fun statusCode(): String
+
+    /**
+     * A builder for [RedirectConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param durationSeconds The time period, in seconds, during which requests from a client
-       * should be routed to the same target group.
-       * The range is 1-604800 seconds (7 days).
+       * @param host The hostname.
+       * This component is not percent-encoded. The hostname can contain #{host}.
        */
-      public fun durationSeconds(durationSeconds: Number)
+      public fun host(host: String)
 
       /**
-       * @param enabled Indicates whether target group stickiness is enabled.
+       * @param path The absolute path, starting with the leading "/".
+       * This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}.
        */
-      public fun enabled(enabled: Boolean)
+      public fun path(path: String)
 
       /**
-       * @param enabled Indicates whether target group stickiness is enabled.
+       * @param port The port.
+       * You can specify a value from 1 to 65535 or #{port}.
        */
-      public fun enabled(enabled: IResolvable)
+      public fun port(port: String)
+
+      /**
+       * @param protocol The protocol.
+       * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
+       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param query The query parameters, URL-encoded when necessary, but not percent-encoded.
+       * Do not include the leading "?", as it is automatically added. You can specify any of the
+       * reserved keywords.
+       */
+      public fun query(query: String)
+
+      /**
+       * @param statusCode The HTTP redirect code. 
+       * The redirect is either permanent (HTTP 301) or temporary (HTTP 302).
+       */
+      public fun statusCode(statusCode: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty.Builder
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty.Builder
           =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty.builder()
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty.builder()
 
       /**
-       * @param durationSeconds The time period, in seconds, during which requests from a client
-       * should be routed to the same target group.
-       * The range is 1-604800 seconds (7 days).
+       * @param host The hostname.
+       * This component is not percent-encoded. The hostname can contain #{host}.
        */
-      override fun durationSeconds(durationSeconds: Number) {
-        cdkBuilder.durationSeconds(durationSeconds)
+      override fun host(host: String) {
+        cdkBuilder.host(host)
       }
 
       /**
-       * @param enabled Indicates whether target group stickiness is enabled.
+       * @param path The absolute path, starting with the leading "/".
+       * This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}.
        */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
+      override fun path(path: String) {
+        cdkBuilder.path(path)
       }
 
       /**
-       * @param enabled Indicates whether target group stickiness is enabled.
+       * @param port The port.
+       * You can specify a value from 1 to 65535 or #{port}.
        */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      override fun port(port: String) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param protocol The protocol.
+       * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
+       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param query The query parameters, URL-encoded when necessary, but not percent-encoded.
+       * Do not include the leading "?", as it is automatically added. You can specify any of the
+       * reserved keywords.
+       */
+      override fun query(query: String) {
+        cdkBuilder.query(query)
+      }
+
+      /**
+       * @param statusCode The HTTP redirect code. 
+       * The redirect is either permanent (HTTP 301) or temporary (HTTP 302).
+       */
+      override fun statusCode(statusCode: String) {
+        cdkBuilder.statusCode(statusCode)
       }
 
       public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty,
-    ) : CdkObject(cdkObject), TargetGroupStickinessConfigProperty {
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty,
+    ) : CdkObject(cdkObject), RedirectConfigProperty {
       /**
-       * The time period, in seconds, during which requests from a client should be routed to the
-       * same target group.
+       * The hostname.
        *
-       * The range is 1-604800 seconds (7 days).
+       * This component is not percent-encoded. The hostname can contain #{host}.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-durationseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-host)
        */
-      override fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
+      override fun host(): String? = unwrap(this).getHost()
 
       /**
-       * Indicates whether target group stickiness is enabled.
+       * The absolute path, starting with the leading "/".
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-enabled)
+       * This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-path)
        */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun path(): String? = unwrap(this).getPath()
+
+      /**
+       * The port.
+       *
+       * You can specify a value from 1 to 65535 or #{port}.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-port)
+       */
+      override fun port(): String? = unwrap(this).getPort()
+
+      /**
+       * The protocol.
+       *
+       * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
+       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-protocol)
+       */
+      override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * The query parameters, URL-encoded when necessary, but not percent-encoded.
+       *
+       * Do not include the leading "?", as it is automatically added. You can specify any of the
+       * reserved keywords.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-query)
+       */
+      override fun query(): String? = unwrap(this).getQuery()
+
+      /**
+       * The HTTP redirect code.
+       *
+       * The redirect is either permanent (HTTP 301) or temporary (HTTP 302).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-statuscode)
+       */
+      override fun statusCode(): String = unwrap(this).getStatusCode()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetGroupStickinessConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedirectConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty):
-          TargetGroupStickinessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetGroupStickinessConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty):
+          RedirectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RedirectConfigProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TargetGroupStickinessConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty
+      internal fun unwrap(wrapped: RedirectConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty
-    }
-  }
-
-  /**
-   * Information about how traffic will be distributed between multiple target groups in a forward
-   * rule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * TargetGroupTupleProperty targetGroupTupleProperty = TargetGroupTupleProperty.builder()
-   * .targetGroupArn("targetGroupArn")
-   * .weight(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html)
-   */
-  public interface TargetGroupTupleProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the target group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-targetgrouparn)
-     */
-    public fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
-
-    /**
-     * The weight.
-     *
-     * The range is 0 to 999.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-weight)
-     */
-    public fun weight(): Number? = unwrap(this).getWeight()
-
-    /**
-     * A builder for [TargetGroupTupleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
-       */
-      public fun targetGroupArn(targetGroupArn: String)
-
-      /**
-       * @param weight The weight.
-       * The range is 0 to 999.
-       */
-      public fun weight(weight: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty.builder()
-
-      /**
-       * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
-       */
-      override fun targetGroupArn(targetGroupArn: String) {
-        cdkBuilder.targetGroupArn(targetGroupArn)
-      }
-
-      /**
-       * @param weight The weight.
-       * The range is 0 to 999.
-       */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty,
-    ) : CdkObject(cdkObject), TargetGroupTupleProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the target group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-targetgrouparn)
-       */
-      override fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
-
-      /**
-       * The weight.
-       *
-       * The range is 0 to 999.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-weight)
-       */
-      override fun weight(): Number? = unwrap(this).getWeight()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TargetGroupTupleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty):
-          TargetGroupTupleProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupTupleProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetGroupTupleProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty
     }
   }
 
@@ -2638,1123 +4151,6 @@ public open class CfnListenerRule internal constructor(
   }
 
   /**
-   * Information about a key/value pair.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * QueryStringKeyValueProperty queryStringKeyValueProperty = QueryStringKeyValueProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html)
-   */
-  public interface QueryStringKeyValueProperty {
-    /**
-     * The key.
-     *
-     * You can omit the key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [QueryStringKeyValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The key.
-       * You can omit the key.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty.builder()
-
-      /**
-       * @param key The key.
-       * You can omit the key.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty,
-    ) : CdkObject(cdkObject), QueryStringKeyValueProperty {
-      /**
-       * The key.
-       *
-       * You can omit the key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * The value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): QueryStringKeyValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty):
-          QueryStringKeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          QueryStringKeyValueProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: QueryStringKeyValueProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty
-    }
-  }
-
-  /**
-   * Information about an HTTP method condition.
-   *
-   * HTTP defines a set of request methods, also referred to as HTTP verbs. For more information,
-   * see the [HTTP Method
-   * Registry](https://docs.aws.amazon.com/https://www.iana.org/assignments/http-methods/http-methods.xhtml)
-   * . You can also define custom HTTP methods.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * HttpRequestMethodConfigProperty httpRequestMethodConfigProperty =
-   * HttpRequestMethodConfigProperty.builder()
-   * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.html)
-   */
-  public interface HttpRequestMethodConfigProperty {
-    /**
-     * The name of the request method.
-     *
-     * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and underscore
-     * (_). The comparison is case sensitive. Wildcards are not supported; therefore, the method name
-     * must be an exact match.
-     *
-     * If you specify multiple strings, the condition is satisfied if one of the strings matches the
-     * HTTP request method. We recommend that you route GET and HEAD requests in the same way, because
-     * the response to a HEAD request may be cached.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.html#cfn-elasticloadbalancingv2-listenerrule-httprequestmethodconfig-values)
-     */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-
-    /**
-     * A builder for [HttpRequestMethodConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param values The name of the request method.
-       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
-       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
-       * method name must be an exact match.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
-       * because the response to a HEAD request may be cached.
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The name of the request method.
-       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
-       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
-       * method name must be an exact match.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
-       * because the response to a HEAD request may be cached.
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty.builder()
-
-      /**
-       * @param values The name of the request method.
-       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
-       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
-       * method name must be an exact match.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
-       * because the response to a HEAD request may be cached.
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The name of the request method.
-       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
-       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
-       * method name must be an exact match.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
-       * because the response to a HEAD request may be cached.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty,
-    ) : CdkObject(cdkObject), HttpRequestMethodConfigProperty {
-      /**
-       * The name of the request method.
-       *
-       * The maximum size is 40 characters. The allowed characters are A-Z, hyphen (-), and
-       * underscore (_). The comparison is case sensitive. Wildcards are not supported; therefore, the
-       * method name must be an exact match.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the HTTP request method. We recommend that you route GET and HEAD requests in the same way,
-       * because the response to a HEAD request may be cached.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.html#cfn-elasticloadbalancingv2-listenerrule-httprequestmethodconfig-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HttpRequestMethodConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty):
-          HttpRequestMethodConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HttpRequestMethodConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HttpRequestMethodConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty
-    }
-  }
-
-  /**
-   * Information for creating an action that distributes requests among one or more target groups.
-   *
-   * For Network Load Balancers, you can specify a single target group. Specify only when `Type` is
-   * `forward` . If you specify both `ForwardConfig` and `TargetGroupArn` , you can specify only one
-   * target group using `ForwardConfig` and it must be the same target group specified in
-   * `TargetGroupArn` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * ForwardConfigProperty forwardConfigProperty = ForwardConfigProperty.builder()
-   * .targetGroups(List.of(TargetGroupTupleProperty.builder()
-   * .targetGroupArn("targetGroupArn")
-   * .weight(123)
-   * .build()))
-   * .targetGroupStickinessConfig(TargetGroupStickinessConfigProperty.builder()
-   * .durationSeconds(123)
-   * .enabled(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html)
-   */
-  public interface ForwardConfigProperty {
-    /**
-     * Information about the target group stickiness for a rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroupstickinessconfig)
-     */
-    public fun targetGroupStickinessConfig(): Any? = unwrap(this).getTargetGroupStickinessConfig()
-
-    /**
-     * Information about how traffic will be distributed between multiple target groups in a forward
-     * rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroups)
-     */
-    public fun targetGroups(): Any? = unwrap(this).getTargetGroups()
-
-    /**
-     * A builder for [ForwardConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      public fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable)
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      public
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty)
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8346cc062be8b2d02d334cf94fabe9c105928903dc00dd8ad5a858022fdf5d88")
-      public
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      public fun targetGroups(targetGroups: IResolvable)
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      public fun targetGroups(targetGroups: List<Any>)
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      public fun targetGroups(vararg targetGroups: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty.builder()
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      override fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
-        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      override
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty) {
-        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(TargetGroupStickinessConfigProperty::unwrap))
-      }
-
-      /**
-       * @param targetGroupStickinessConfig Information about the target group stickiness for a
-       * rule.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8346cc062be8b2d02d334cf94fabe9c105928903dc00dd8ad5a858022fdf5d88")
-      override
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit):
-          Unit =
-          targetGroupStickinessConfig(TargetGroupStickinessConfigProperty(targetGroupStickinessConfig))
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      override fun targetGroups(targetGroups: IResolvable) {
-        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
-      }
-
-      /**
-       * @param targetGroups Information about how traffic will be distributed between multiple
-       * target groups in a forward rule.
-       */
-      override fun targetGroups(vararg targetGroups: Any): Unit =
-          targetGroups(targetGroups.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty,
-    ) : CdkObject(cdkObject), ForwardConfigProperty {
-      /**
-       * Information about the target group stickiness for a rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroupstickinessconfig)
-       */
-      override fun targetGroupStickinessConfig(): Any? =
-          unwrap(this).getTargetGroupStickinessConfig()
-
-      /**
-       * Information about how traffic will be distributed between multiple target groups in a
-       * forward rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroups)
-       */
-      override fun targetGroups(): Any? = unwrap(this).getTargetGroups()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ForwardConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty):
-          ForwardConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ForwardConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ForwardConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty
-    }
-  }
-
-  /**
-   * Information about an HTTP header condition.
-   *
-   * There is a set of standard HTTP header fields. You can also define custom HTTP header fields.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * HttpHeaderConfigProperty httpHeaderConfigProperty = HttpHeaderConfigProperty.builder()
-   * .httpHeaderName("httpHeaderName")
-   * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html)
-   */
-  public interface HttpHeaderConfigProperty {
-    /**
-     * The name of the HTTP header field.
-     *
-     * The maximum size is 40 characters. The header name is case insensitive. The allowed
-     * characters are specified by RFC 7230. Wildcards are not supported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-httpheadername)
-     */
-    public fun httpHeaderName(): String? = unwrap(this).getHttpHeaderName()
-
-    /**
-     * The strings to compare against the value of the HTTP header.
-     *
-     * The maximum size of each string is 128 characters. The comparison strings are case
-     * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
-     * and ? (matches exactly 1 character).
-     *
-     * If the same header appears multiple times in the request, we search them in order until a
-     * match is found.
-     *
-     * If you specify multiple strings, the condition is satisfied if one of the strings matches the
-     * value of the HTTP header. To require that all of the strings are a match, create one condition
-     * per string.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-values)
-     */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-
-    /**
-     * A builder for [HttpHeaderConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param httpHeaderName The name of the HTTP header field.
-       * The maximum size is 40 characters. The header name is case insensitive. The allowed
-       * characters are specified by RFC 7230. Wildcards are not supported.
-       */
-      public fun httpHeaderName(httpHeaderName: String)
-
-      /**
-       * @param values The strings to compare against the value of the HTTP header.
-       * The maximum size of each string is 128 characters. The comparison strings are case
-       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
-       * and ? (matches exactly 1 character).
-       *
-       * If the same header appears multiple times in the request, we search them in order until a
-       * match is found.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the value of the HTTP header. To require that all of the strings are a match, create one
-       * condition per string.
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The strings to compare against the value of the HTTP header.
-       * The maximum size of each string is 128 characters. The comparison strings are case
-       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
-       * and ? (matches exactly 1 character).
-       *
-       * If the same header appears multiple times in the request, we search them in order until a
-       * match is found.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the value of the HTTP header. To require that all of the strings are a match, create one
-       * condition per string.
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty.builder()
-
-      /**
-       * @param httpHeaderName The name of the HTTP header field.
-       * The maximum size is 40 characters. The header name is case insensitive. The allowed
-       * characters are specified by RFC 7230. Wildcards are not supported.
-       */
-      override fun httpHeaderName(httpHeaderName: String) {
-        cdkBuilder.httpHeaderName(httpHeaderName)
-      }
-
-      /**
-       * @param values The strings to compare against the value of the HTTP header.
-       * The maximum size of each string is 128 characters. The comparison strings are case
-       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
-       * and ? (matches exactly 1 character).
-       *
-       * If the same header appears multiple times in the request, we search them in order until a
-       * match is found.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the value of the HTTP header. To require that all of the strings are a match, create one
-       * condition per string.
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The strings to compare against the value of the HTTP header.
-       * The maximum size of each string is 128 characters. The comparison strings are case
-       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
-       * and ? (matches exactly 1 character).
-       *
-       * If the same header appears multiple times in the request, we search them in order until a
-       * match is found.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the value of the HTTP header. To require that all of the strings are a match, create one
-       * condition per string.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty,
-    ) : CdkObject(cdkObject), HttpHeaderConfigProperty {
-      /**
-       * The name of the HTTP header field.
-       *
-       * The maximum size is 40 characters. The header name is case insensitive. The allowed
-       * characters are specified by RFC 7230. Wildcards are not supported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-httpheadername)
-       */
-      override fun httpHeaderName(): String? = unwrap(this).getHttpHeaderName()
-
-      /**
-       * The strings to compare against the value of the HTTP header.
-       *
-       * The maximum size of each string is 128 characters. The comparison strings are case
-       * insensitive. The following wildcard characters are supported: * (matches 0 or more characters)
-       * and ? (matches exactly 1 character).
-       *
-       * If the same header appears multiple times in the request, we search them in order until a
-       * match is found.
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the value of the HTTP header. To require that all of the strings are a match, create one
-       * condition per string.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HttpHeaderConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty):
-          HttpHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpHeaderConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HttpHeaderConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty
-    }
-  }
-
-  /**
-   * Specifies information required when integrating with Amazon Cognito to authenticate users.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * AuthenticateCognitoConfigProperty authenticateCognitoConfigProperty =
-   * AuthenticateCognitoConfigProperty.builder()
-   * .userPoolArn("userPoolArn")
-   * .userPoolClientId("userPoolClientId")
-   * .userPoolDomain("userPoolDomain")
-   * // the properties below are optional
-   * .authenticationRequestExtraParams(Map.of(
-   * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
-   * .onUnauthenticatedRequest("onUnauthenticatedRequest")
-   * .scope("scope")
-   * .sessionCookieName("sessionCookieName")
-   * .sessionTimeout(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html)
-   */
-  public interface AuthenticateCognitoConfigProperty {
-    /**
-     * The query parameters (up to 10) to include in the redirect request to the authorization
-     * endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-authenticationrequestextraparams)
-     */
-    public fun authenticationRequestExtraParams(): Any? =
-        unwrap(this).getAuthenticationRequestExtraParams()
-
-    /**
-     * The behavior if the user is not authenticated. The following are possible values:.
-     *
-     * * deny `` - Return an HTTP 401 Unauthorized error.
-     * * allow `` - Allow the request to be forwarded to the target.
-     * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-     * default value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-onunauthenticatedrequest)
-     */
-    public fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
-
-    /**
-     * The set of user claims to be requested from the IdP. The default is `openid` .
-     *
-     * To verify which scope values your IdP supports and how to separate multiple values, see the
-     * documentation for your IdP.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope)
-     */
-    public fun scope(): String? = unwrap(this).getScope()
-
-    /**
-     * The name of the cookie used to maintain session information.
-     *
-     * The default is AWSELBAuthSessionCookie.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessioncookiename)
-     */
-    public fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
-
-    /**
-     * The maximum duration of the authentication session, in seconds.
-     *
-     * The default is 604800 seconds (7 days).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout)
-     */
-    public fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
-
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn)
-     */
-    public fun userPoolArn(): String
-
-    /**
-     * The ID of the Amazon Cognito user pool client.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolclientid)
-     */
-    public fun userPoolClientId(): String
-
-    /**
-     * The domain prefix or fully-qualified domain name of the Amazon Cognito user pool.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpooldomain)
-     */
-    public fun userPoolDomain(): String
-
-    /**
-     * A builder for [AuthenticateCognitoConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
-       */
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
-
-      /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
-       */
-      public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
-
-      /**
-       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
-       * following are possible values:.
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
-       */
-      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String)
-
-      /**
-       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       */
-      public fun scope(scope: String)
-
-      /**
-       * @param sessionCookieName The name of the cookie used to maintain session information.
-       * The default is AWSELBAuthSessionCookie.
-       */
-      public fun sessionCookieName(sessionCookieName: String)
-
-      /**
-       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
-       * The default is 604800 seconds (7 days).
-       */
-      public fun sessionTimeout(sessionTimeout: Number)
-
-      /**
-       * @param userPoolArn The Amazon Resource Name (ARN) of the Amazon Cognito user pool. 
-       */
-      public fun userPoolArn(userPoolArn: String)
-
-      /**
-       * @param userPoolClientId The ID of the Amazon Cognito user pool client. 
-       */
-      public fun userPoolClientId(userPoolClientId: String)
-
-      /**
-       * @param userPoolDomain The domain prefix or fully-qualified domain name of the Amazon
-       * Cognito user pool. 
-       */
-      public fun userPoolDomain(userPoolDomain: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty.builder()
-
-      /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
-       */
-      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
-       */
-      override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
-      }
-
-      /**
-       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
-       * following are possible values:.
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
-       */
-      override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
-        cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest)
-      }
-
-      /**
-       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       */
-      override fun scope(scope: String) {
-        cdkBuilder.scope(scope)
-      }
-
-      /**
-       * @param sessionCookieName The name of the cookie used to maintain session information.
-       * The default is AWSELBAuthSessionCookie.
-       */
-      override fun sessionCookieName(sessionCookieName: String) {
-        cdkBuilder.sessionCookieName(sessionCookieName)
-      }
-
-      /**
-       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
-       * The default is 604800 seconds (7 days).
-       */
-      override fun sessionTimeout(sessionTimeout: Number) {
-        cdkBuilder.sessionTimeout(sessionTimeout)
-      }
-
-      /**
-       * @param userPoolArn The Amazon Resource Name (ARN) of the Amazon Cognito user pool. 
-       */
-      override fun userPoolArn(userPoolArn: String) {
-        cdkBuilder.userPoolArn(userPoolArn)
-      }
-
-      /**
-       * @param userPoolClientId The ID of the Amazon Cognito user pool client. 
-       */
-      override fun userPoolClientId(userPoolClientId: String) {
-        cdkBuilder.userPoolClientId(userPoolClientId)
-      }
-
-      /**
-       * @param userPoolDomain The domain prefix or fully-qualified domain name of the Amazon
-       * Cognito user pool. 
-       */
-      override fun userPoolDomain(userPoolDomain: String) {
-        cdkBuilder.userPoolDomain(userPoolDomain)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty,
-    ) : CdkObject(cdkObject), AuthenticateCognitoConfigProperty {
-      /**
-       * The query parameters (up to 10) to include in the redirect request to the authorization
-       * endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-authenticationrequestextraparams)
-       */
-      override fun authenticationRequestExtraParams(): Any? =
-          unwrap(this).getAuthenticationRequestExtraParams()
-
-      /**
-       * The behavior if the user is not authenticated. The following are possible values:.
-       *
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-onunauthenticatedrequest)
-       */
-      override fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
-
-      /**
-       * The set of user claims to be requested from the IdP. The default is `openid` .
-       *
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope)
-       */
-      override fun scope(): String? = unwrap(this).getScope()
-
-      /**
-       * The name of the cookie used to maintain session information.
-       *
-       * The default is AWSELBAuthSessionCookie.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessioncookiename)
-       */
-      override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
-
-      /**
-       * The maximum duration of the authentication session, in seconds.
-       *
-       * The default is 604800 seconds (7 days).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout)
-       */
-      override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn)
-       */
-      override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
-
-      /**
-       * The ID of the Amazon Cognito user pool client.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolclientid)
-       */
-      override fun userPoolClientId(): String = unwrap(this).getUserPoolClientId()
-
-      /**
-       * The domain prefix or fully-qualified domain name of the Amazon Cognito user pool.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpooldomain)
-       */
-      override fun userPoolDomain(): String = unwrap(this).getUserPoolDomain()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AuthenticateCognitoConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty):
-          AuthenticateCognitoConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AuthenticateCognitoConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuthenticateCognitoConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty
-    }
-  }
-
-  /**
-   * Information about a host header condition.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * HostHeaderConfigProperty hostHeaderConfigProperty = HostHeaderConfigProperty.builder()
-   * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.html)
-   */
-  public interface HostHeaderConfigProperty {
-    /**
-     * The host names.
-     *
-     * The maximum size of each name is 128 characters. The comparison is case insensitive. The
-     * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-     * exactly 1 character).
-     *
-     * If you specify multiple strings, the condition is satisfied if one of the strings matches the
-     * host name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-hostheaderconfig-values)
-     */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-
-    /**
-     * A builder for [HostHeaderConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param values The host names.
-       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the host name.
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The host names.
-       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the host name.
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty.builder()
-
-      /**
-       * @param values The host names.
-       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the host name.
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The host names.
-       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the host name.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty,
-    ) : CdkObject(cdkObject), HostHeaderConfigProperty {
-      /**
-       * The host names.
-       *
-       * The maximum size of each name is 128 characters. The comparison is case insensitive. The
-       * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
-       *
-       * If you specify multiple strings, the condition is satisfied if one of the strings matches
-       * the host name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-hostheaderconfig-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HostHeaderConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty):
-          HostHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HostHeaderConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HostHeaderConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty
-    }
-  }
-
-  /**
    * Information about a source IP condition.
    *
    * You can use this condition to route based on the IP address of the source that connects to the
@@ -3878,8 +4274,7 @@ public open class CfnListenerRule internal constructor(
   }
 
   /**
-   * Specifies information required using an identity provide (IdP) that is compliant with OpenID
-   * Connect (OIDC) to authenticate users.
+   * Information about the target group stickiness for a rule.
    *
    * Example:
    *
@@ -3887,501 +4282,134 @@ public open class CfnListenerRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * AuthenticateOidcConfigProperty authenticateOidcConfigProperty =
-   * AuthenticateOidcConfigProperty.builder()
-   * .authorizationEndpoint("authorizationEndpoint")
-   * .clientId("clientId")
-   * .issuer("issuer")
-   * .tokenEndpoint("tokenEndpoint")
-   * .userInfoEndpoint("userInfoEndpoint")
-   * // the properties below are optional
-   * .authenticationRequestExtraParams(Map.of(
-   * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
-   * .clientSecret("clientSecret")
-   * .onUnauthenticatedRequest("onUnauthenticatedRequest")
-   * .scope("scope")
-   * .sessionCookieName("sessionCookieName")
-   * .sessionTimeout(123)
-   * .useExistingClientSecret(false)
+   * TargetGroupStickinessConfigProperty targetGroupStickinessConfigProperty =
+   * TargetGroupStickinessConfigProperty.builder()
+   * .durationSeconds(123)
+   * .enabled(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html)
    */
-  public interface AuthenticateOidcConfigProperty {
+  public interface TargetGroupStickinessConfigProperty {
     /**
-     * The query parameters (up to 10) to include in the redirect request to the authorization
-     * endpoint.
+     * The time period, in seconds, during which requests from a client should be routed to the same
+     * target group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authenticationrequestextraparams)
+     * The range is 1-604800 seconds (7 days).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-durationseconds)
      */
-    public fun authenticationRequestExtraParams(): Any? =
-        unwrap(this).getAuthenticationRequestExtraParams()
+    public fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
 
     /**
-     * The authorization endpoint of the IdP.
+     * Indicates whether target group stickiness is enabled.
      *
-     * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authorizationendpoint)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-enabled)
      */
-    public fun authorizationEndpoint(): String
+    public fun enabled(): Any? = unwrap(this).getEnabled()
 
     /**
-     * The OAuth 2.0 client identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientid)
-     */
-    public fun clientId(): String
-
-    /**
-     * The OAuth 2.0 client secret. This parameter is required if you are creating a rule. If you
-     * are modifying a rule, you can omit this parameter if you set `UseExistingClientSecret` to true.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientsecret)
-     */
-    public fun clientSecret(): String? = unwrap(this).getClientSecret()
-
-    /**
-     * The OIDC issuer identifier of the IdP.
-     *
-     * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-issuer)
-     */
-    public fun issuer(): String
-
-    /**
-     * The behavior if the user is not authenticated. The following are possible values:.
-     *
-     * * deny `` - Return an HTTP 401 Unauthorized error.
-     * * allow `` - Allow the request to be forwarded to the target.
-     * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-     * default value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-onunauthenticatedrequest)
-     */
-    public fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
-
-    /**
-     * The set of user claims to be requested from the IdP. The default is `openid` .
-     *
-     * To verify which scope values your IdP supports and how to separate multiple values, see the
-     * documentation for your IdP.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-scope)
-     */
-    public fun scope(): String? = unwrap(this).getScope()
-
-    /**
-     * The name of the cookie used to maintain session information.
-     *
-     * The default is AWSELBAuthSessionCookie.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessioncookiename)
-     */
-    public fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
-
-    /**
-     * The maximum duration of the authentication session, in seconds.
-     *
-     * The default is 604800 seconds (7 days).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout)
-     */
-    public fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
-
-    /**
-     * The token endpoint of the IdP.
-     *
-     * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-tokenendpoint)
-     */
-    public fun tokenEndpoint(): String
-
-    /**
-     * Indicates whether to use the existing client secret when modifying a rule.
-     *
-     * If you are creating a rule, you can omit this parameter or set it to false.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-useexistingclientsecret)
-     */
-    public fun useExistingClientSecret(): Any? = unwrap(this).getUseExistingClientSecret()
-
-    /**
-     * The user info endpoint of the IdP.
-     *
-     * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-userinfoendpoint)
-     */
-    public fun userInfoEndpoint(): String
-
-    /**
-     * A builder for [AuthenticateOidcConfigProperty]
+     * A builder for [TargetGroupStickinessConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
+       * @param durationSeconds The time period, in seconds, during which requests from a client
+       * should be routed to the same target group.
+       * The range is 1-604800 seconds (7 days).
        */
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+      public fun durationSeconds(durationSeconds: Number)
 
       /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
+       * @param enabled Indicates whether target group stickiness is enabled.
        */
-      public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+      public fun enabled(enabled: Boolean)
 
       /**
-       * @param authorizationEndpoint The authorization endpoint of the IdP. 
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       * @param enabled Indicates whether target group stickiness is enabled.
        */
-      public fun authorizationEndpoint(authorizationEndpoint: String)
-
-      /**
-       * @param clientId The OAuth 2.0 client identifier. 
-       */
-      public fun clientId(clientId: String)
-
-      /**
-       * @param clientSecret The OAuth 2.0 client secret. This parameter is required if you are
-       * creating a rule. If you are modifying a rule, you can omit this parameter if you set
-       * `UseExistingClientSecret` to true.
-       */
-      public fun clientSecret(clientSecret: String)
-
-      /**
-       * @param issuer The OIDC issuer identifier of the IdP. 
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       */
-      public fun issuer(issuer: String)
-
-      /**
-       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
-       * following are possible values:.
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
-       */
-      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String)
-
-      /**
-       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       */
-      public fun scope(scope: String)
-
-      /**
-       * @param sessionCookieName The name of the cookie used to maintain session information.
-       * The default is AWSELBAuthSessionCookie.
-       */
-      public fun sessionCookieName(sessionCookieName: String)
-
-      /**
-       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
-       * The default is 604800 seconds (7 days).
-       */
-      public fun sessionTimeout(sessionTimeout: Number)
-
-      /**
-       * @param tokenEndpoint The token endpoint of the IdP. 
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       */
-      public fun tokenEndpoint(tokenEndpoint: String)
-
-      /**
-       * @param useExistingClientSecret Indicates whether to use the existing client secret when
-       * modifying a rule.
-       * If you are creating a rule, you can omit this parameter or set it to false.
-       */
-      public fun useExistingClientSecret(useExistingClientSecret: Boolean)
-
-      /**
-       * @param useExistingClientSecret Indicates whether to use the existing client secret when
-       * modifying a rule.
-       * If you are creating a rule, you can omit this parameter or set it to false.
-       */
-      public fun useExistingClientSecret(useExistingClientSecret: IResolvable)
-
-      /**
-       * @param userInfoEndpoint The user info endpoint of the IdP. 
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       */
-      public fun userInfoEndpoint(userInfoEndpoint: String)
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty.Builder
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty.Builder
           =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty.builder()
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty.builder()
 
       /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
+       * @param durationSeconds The time period, in seconds, during which requests from a client
+       * should be routed to the same target group.
+       * The range is 1-604800 seconds (7 days).
        */
-      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable::unwrap))
+      override fun durationSeconds(durationSeconds: Number) {
+        cdkBuilder.durationSeconds(durationSeconds)
       }
 
       /**
-       * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
-       * redirect request to the authorization endpoint.
+       * @param enabled Indicates whether target group stickiness is enabled.
        */
-      override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param authorizationEndpoint The authorization endpoint of the IdP. 
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
+       * @param enabled Indicates whether target group stickiness is enabled.
        */
-      override fun authorizationEndpoint(authorizationEndpoint: String) {
-        cdkBuilder.authorizationEndpoint(authorizationEndpoint)
-      }
-
-      /**
-       * @param clientId The OAuth 2.0 client identifier. 
-       */
-      override fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-      }
-
-      /**
-       * @param clientSecret The OAuth 2.0 client secret. This parameter is required if you are
-       * creating a rule. If you are modifying a rule, you can omit this parameter if you set
-       * `UseExistingClientSecret` to true.
-       */
-      override fun clientSecret(clientSecret: String) {
-        cdkBuilder.clientSecret(clientSecret)
-      }
-
-      /**
-       * @param issuer The OIDC issuer identifier of the IdP. 
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       */
-      override fun issuer(issuer: String) {
-        cdkBuilder.issuer(issuer)
-      }
-
-      /**
-       * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
-       * following are possible values:.
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
-       */
-      override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
-        cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest)
-      }
-
-      /**
-       * @param scope The set of user claims to be requested from the IdP. The default is `openid` .
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       */
-      override fun scope(scope: String) {
-        cdkBuilder.scope(scope)
-      }
-
-      /**
-       * @param sessionCookieName The name of the cookie used to maintain session information.
-       * The default is AWSELBAuthSessionCookie.
-       */
-      override fun sessionCookieName(sessionCookieName: String) {
-        cdkBuilder.sessionCookieName(sessionCookieName)
-      }
-
-      /**
-       * @param sessionTimeout The maximum duration of the authentication session, in seconds.
-       * The default is 604800 seconds (7 days).
-       */
-      override fun sessionTimeout(sessionTimeout: Number) {
-        cdkBuilder.sessionTimeout(sessionTimeout)
-      }
-
-      /**
-       * @param tokenEndpoint The token endpoint of the IdP. 
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       */
-      override fun tokenEndpoint(tokenEndpoint: String) {
-        cdkBuilder.tokenEndpoint(tokenEndpoint)
-      }
-
-      /**
-       * @param useExistingClientSecret Indicates whether to use the existing client secret when
-       * modifying a rule.
-       * If you are creating a rule, you can omit this parameter or set it to false.
-       */
-      override fun useExistingClientSecret(useExistingClientSecret: Boolean) {
-        cdkBuilder.useExistingClientSecret(useExistingClientSecret)
-      }
-
-      /**
-       * @param useExistingClientSecret Indicates whether to use the existing client secret when
-       * modifying a rule.
-       * If you are creating a rule, you can omit this parameter or set it to false.
-       */
-      override fun useExistingClientSecret(useExistingClientSecret: IResolvable) {
-        cdkBuilder.useExistingClientSecret(useExistingClientSecret.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param userInfoEndpoint The user info endpoint of the IdP. 
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       */
-      override fun userInfoEndpoint(userInfoEndpoint: String) {
-        cdkBuilder.userInfoEndpoint(userInfoEndpoint)
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty,
-    ) : CdkObject(cdkObject), AuthenticateOidcConfigProperty {
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty,
+    ) : CdkObject(cdkObject), TargetGroupStickinessConfigProperty {
       /**
-       * The query parameters (up to 10) to include in the redirect request to the authorization
-       * endpoint.
+       * The time period, in seconds, during which requests from a client should be routed to the
+       * same target group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authenticationrequestextraparams)
+       * The range is 1-604800 seconds (7 days).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-durationseconds)
        */
-      override fun authenticationRequestExtraParams(): Any? =
-          unwrap(this).getAuthenticationRequestExtraParams()
+      override fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
 
       /**
-       * The authorization endpoint of the IdP.
+       * Indicates whether target group stickiness is enabled.
        *
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-authorizationendpoint)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-enabled)
        */
-      override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
-
-      /**
-       * The OAuth 2.0 client identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientid)
-       */
-      override fun clientId(): String = unwrap(this).getClientId()
-
-      /**
-       * The OAuth 2.0 client secret. This parameter is required if you are creating a rule. If you
-       * are modifying a rule, you can omit this parameter if you set `UseExistingClientSecret` to
-       * true.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-clientsecret)
-       */
-      override fun clientSecret(): String? = unwrap(this).getClientSecret()
-
-      /**
-       * The OIDC issuer identifier of the IdP.
-       *
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-issuer)
-       */
-      override fun issuer(): String = unwrap(this).getIssuer()
-
-      /**
-       * The behavior if the user is not authenticated. The following are possible values:.
-       *
-       * * deny `` - Return an HTTP 401 Unauthorized error.
-       * * allow `` - Allow the request to be forwarded to the target.
-       * * authenticate `` - Redirect the request to the IdP authorization endpoint. This is the
-       * default value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-onunauthenticatedrequest)
-       */
-      override fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
-
-      /**
-       * The set of user claims to be requested from the IdP. The default is `openid` .
-       *
-       * To verify which scope values your IdP supports and how to separate multiple values, see the
-       * documentation for your IdP.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-scope)
-       */
-      override fun scope(): String? = unwrap(this).getScope()
-
-      /**
-       * The name of the cookie used to maintain session information.
-       *
-       * The default is AWSELBAuthSessionCookie.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessioncookiename)
-       */
-      override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
-
-      /**
-       * The maximum duration of the authentication session, in seconds.
-       *
-       * The default is 604800 seconds (7 days).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout)
-       */
-      override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
-
-      /**
-       * The token endpoint of the IdP.
-       *
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-tokenendpoint)
-       */
-      override fun tokenEndpoint(): String = unwrap(this).getTokenEndpoint()
-
-      /**
-       * Indicates whether to use the existing client secret when modifying a rule.
-       *
-       * If you are creating a rule, you can omit this parameter or set it to false.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-useexistingclientsecret)
-       */
-      override fun useExistingClientSecret(): Any? = unwrap(this).getUseExistingClientSecret()
-
-      /**
-       * The user info endpoint of the IdP.
-       *
-       * This must be a full URL, including the HTTPS protocol, the domain, and the path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.html#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-userinfoendpoint)
-       */
-      override fun userInfoEndpoint(): String = unwrap(this).getUserInfoEndpoint()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AuthenticateOidcConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TargetGroupStickinessConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty):
-          AuthenticateOidcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AuthenticateOidcConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty):
+          TargetGroupStickinessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetGroupStickinessConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AuthenticateOidcConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty
+      internal fun unwrap(wrapped: TargetGroupStickinessConfigProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty
     }
   }
 
   /**
-   * Specifies information required when returning a custom HTTP response.
+   * Information about how traffic will be distributed between multiple target groups in a forward
+   * rule.
    *
    * Example:
    *
@@ -4389,138 +4417,110 @@ public open class CfnListenerRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
-   * FixedResponseConfigProperty fixedResponseConfigProperty = FixedResponseConfigProperty.builder()
-   * .statusCode("statusCode")
-   * // the properties below are optional
-   * .contentType("contentType")
-   * .messageBody("messageBody")
+   * TargetGroupTupleProperty targetGroupTupleProperty = TargetGroupTupleProperty.builder()
+   * .targetGroupArn("targetGroupArn")
+   * .weight(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html)
    */
-  public interface FixedResponseConfigProperty {
+  public interface TargetGroupTupleProperty {
     /**
-     * The content type.
+     * The Amazon Resource Name (ARN) of the target group.
      *
-     * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-contenttype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-targetgrouparn)
      */
-    public fun contentType(): String? = unwrap(this).getContentType()
+    public fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
 
     /**
-     * The message.
+     * The weight.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-messagebody)
+     * The range is 0 to 999.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-weight)
      */
-    public fun messageBody(): String? = unwrap(this).getMessageBody()
+    public fun weight(): Number? = unwrap(this).getWeight()
 
     /**
-     * The HTTP response code (2XX, 4XX, or 5XX).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-statuscode)
-     */
-    public fun statusCode(): String
-
-    /**
-     * A builder for [FixedResponseConfigProperty]
+     * A builder for [TargetGroupTupleProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param contentType The content type.
-       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+       * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
        */
-      public fun contentType(contentType: String)
+      public fun targetGroupArn(targetGroupArn: String)
 
       /**
-       * @param messageBody The message.
+       * @param weight The weight.
+       * The range is 0 to 999.
        */
-      public fun messageBody(messageBody: String)
-
-      /**
-       * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
-       */
-      public fun statusCode(statusCode: String)
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty.Builder
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty.Builder
           =
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty.builder()
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty.builder()
 
       /**
-       * @param contentType The content type.
-       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+       * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
        */
-      override fun contentType(contentType: String) {
-        cdkBuilder.contentType(contentType)
+      override fun targetGroupArn(targetGroupArn: String) {
+        cdkBuilder.targetGroupArn(targetGroupArn)
       }
 
       /**
-       * @param messageBody The message.
+       * @param weight The weight.
+       * The range is 0 to 999.
        */
-      override fun messageBody(messageBody: String) {
-        cdkBuilder.messageBody(messageBody)
-      }
-
-      /**
-       * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
-       */
-      override fun statusCode(statusCode: String) {
-        cdkBuilder.statusCode(statusCode)
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
       }
 
       public fun build():
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty,
-    ) : CdkObject(cdkObject), FixedResponseConfigProperty {
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty,
+    ) : CdkObject(cdkObject), TargetGroupTupleProperty {
       /**
-       * The content type.
+       * The Amazon Resource Name (ARN) of the target group.
        *
-       * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-contenttype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-targetgrouparn)
        */
-      override fun contentType(): String? = unwrap(this).getContentType()
+      override fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
 
       /**
-       * The message.
+       * The weight.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-messagebody)
-       */
-      override fun messageBody(): String? = unwrap(this).getMessageBody()
-
-      /**
-       * The HTTP response code (2XX, 4XX, or 5XX).
+       * The range is 0 to 999.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.html#cfn-elasticloadbalancingv2-listenerrule-fixedresponseconfig-statuscode)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-weight)
        */
-      override fun statusCode(): String = unwrap(this).getStatusCode()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FixedResponseConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TargetGroupTupleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty):
-          FixedResponseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FixedResponseConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty):
+          TargetGroupTupleProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupTupleProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FixedResponseConfigProperty):
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty
+      internal fun unwrap(wrapped: TargetGroupTupleProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty
     }
   }
 }

@@ -732,6 +732,272 @@ public open class CfnFeatureGroup internal constructor(
   }
 
   /**
+   * The meta data of the Glue table which serves as data catalog for the `OfflineStore` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DataCatalogConfigProperty dataCatalogConfigProperty = DataCatalogConfigProperty.builder()
+   * .catalog("catalog")
+   * .database("database")
+   * .tableName("tableName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html)
+   */
+  public interface DataCatalogConfigProperty {
+    /**
+     * The name of the Glue table catalog.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-catalog)
+     */
+    public fun catalog(): String
+
+    /**
+     * The name of the Glue table database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-database)
+     */
+    public fun database(): String
+
+    /**
+     * The name of the Glue table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * A builder for [DataCatalogConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalog The name of the Glue table catalog. 
+       */
+      public fun catalog(catalog: String)
+
+      /**
+       * @param database The name of the Glue table database. 
+       */
+      public fun database(database: String)
+
+      /**
+       * @param tableName The name of the Glue table. 
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty.builder()
+
+      /**
+       * @param catalog The name of the Glue table catalog. 
+       */
+      override fun catalog(catalog: String) {
+        cdkBuilder.catalog(catalog)
+      }
+
+      /**
+       * @param database The name of the Glue table database. 
+       */
+      override fun database(database: String) {
+        cdkBuilder.database(database)
+      }
+
+      /**
+       * @param tableName The name of the Glue table. 
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty,
+    ) : CdkObject(cdkObject), DataCatalogConfigProperty {
+      /**
+       * The name of the Glue table catalog.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-catalog)
+       */
+      override fun catalog(): String = unwrap(this).getCatalog()
+
+      /**
+       * The name of the Glue table database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-database)
+       */
+      override fun database(): String = unwrap(this).getDatabase()
+
+      /**
+       * The name of the Glue table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataCatalogConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty):
+          DataCatalogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCatalogConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataCatalogConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty
+    }
+  }
+
+  /**
+   * A list of features.
+   *
+   * You must include `FeatureName` and `FeatureType` . Valid feature `FeatureType` s are `Integral`
+   * , `Fractional` and `String` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * FeatureDefinitionProperty featureDefinitionProperty = FeatureDefinitionProperty.builder()
+   * .featureName("featureName")
+   * .featureType("featureType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html)
+   */
+  public interface FeatureDefinitionProperty {
+    /**
+     * The name of a feature.
+     *
+     * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
+     * `write_time` , `api_invocation_time` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featurename)
+     */
+    public fun featureName(): String
+
+    /**
+     * The value type of a feature.
+     *
+     * Valid values are Integral, Fractional, or String.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featuretype)
+     */
+    public fun featureType(): String
+
+    /**
+     * A builder for [FeatureDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param featureName The name of a feature. 
+       * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
+       * `write_time` , `api_invocation_time` .
+       */
+      public fun featureName(featureName: String)
+
+      /**
+       * @param featureType The value type of a feature. 
+       * Valid values are Integral, Fractional, or String.
+       */
+      public fun featureType(featureType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty.builder()
+
+      /**
+       * @param featureName The name of a feature. 
+       * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
+       * `write_time` , `api_invocation_time` .
+       */
+      override fun featureName(featureName: String) {
+        cdkBuilder.featureName(featureName)
+      }
+
+      /**
+       * @param featureType The value type of a feature. 
+       * Valid values are Integral, Fractional, or String.
+       */
+      override fun featureType(featureType: String) {
+        cdkBuilder.featureType(featureType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty,
+    ) : CdkObject(cdkObject), FeatureDefinitionProperty {
+      /**
+       * The name of a feature.
+       *
+       * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
+       * `write_time` , `api_invocation_time` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featurename)
+       */
+      override fun featureName(): String = unwrap(this).getFeatureName()
+
+      /**
+       * The value type of a feature.
+       *
+       * Valid values are Integral, Fractional, or String.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featuretype)
+       */
+      override fun featureType(): String = unwrap(this).getFeatureType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FeatureDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty):
+          FeatureDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FeatureDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FeatureDefinitionProperty):
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty
+    }
+  }
+
+  /**
    * The configuration of an `OfflineStore` .
    *
    * Provide an `OfflineStoreConfig` in a request to `CreateFeatureGroup` to create an
@@ -1034,731 +1300,6 @@ public open class CfnFeatureGroup internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OfflineStoreConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OfflineStoreConfigProperty
-    }
-  }
-
-  /**
-   * Used to set feature group throughput configuration.
-   *
-   * There are two modes: `ON_DEMAND` and `PROVISIONED` . With on-demand mode, you are charged for
-   * data reads and writes that your application performs on your feature group. You do not need to
-   * specify read and write throughput because Feature Store accommodates your workloads as they ramp
-   * up and down. You can switch a feature group to on-demand only once in a 24 hour period. With
-   * provisioned throughput mode, you specify the read and write capacity per second that you expect
-   * your application to require, and you are billed based on those limits. Exceeding provisioned
-   * throughput will result in your requests being throttled.
-   *
-   * Note: `PROVISIONED` throughput mode is supported only for feature groups that are offline-only,
-   * or use the
-   * [`Standard`](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OnlineStoreConfig.html#sagemaker-Type-OnlineStoreConfig-StorageType)
-   * tier online store.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ThroughputConfigProperty throughputConfigProperty = ThroughputConfigProperty.builder()
-   * .throughputMode("throughputMode")
-   * // the properties below are optional
-   * .provisionedReadCapacityUnits(123)
-   * .provisionedWriteCapacityUnits(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html)
-   */
-  public interface ThroughputConfigProperty {
-    /**
-     * For provisioned feature groups with online store enabled, this indicates the read throughput
-     * you are billed for and can consume without throttling.
-     *
-     * This field is not applicable for on-demand feature groups.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-provisionedreadcapacityunits)
-     */
-    public fun provisionedReadCapacityUnits(): Number? =
-        unwrap(this).getProvisionedReadCapacityUnits()
-
-    /**
-     * For provisioned feature groups, this indicates the write throughput you are billed for and
-     * can consume without throttling.
-     *
-     * This field is not applicable for on-demand feature groups.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-provisionedwritecapacityunits)
-     */
-    public fun provisionedWriteCapacityUnits(): Number? =
-        unwrap(this).getProvisionedWriteCapacityUnits()
-
-    /**
-     * The mode used for your feature group throughput: `ON_DEMAND` or `PROVISIONED` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-throughputmode)
-     */
-    public fun throughputMode(): String
-
-    /**
-     * A builder for [ThroughputConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param provisionedReadCapacityUnits For provisioned feature groups with online store
-       * enabled, this indicates the read throughput you are billed for and can consume without
-       * throttling.
-       * This field is not applicable for on-demand feature groups.
-       */
-      public fun provisionedReadCapacityUnits(provisionedReadCapacityUnits: Number)
-
-      /**
-       * @param provisionedWriteCapacityUnits For provisioned feature groups, this indicates the
-       * write throughput you are billed for and can consume without throttling.
-       * This field is not applicable for on-demand feature groups.
-       */
-      public fun provisionedWriteCapacityUnits(provisionedWriteCapacityUnits: Number)
-
-      /**
-       * @param throughputMode The mode used for your feature group throughput: `ON_DEMAND` or
-       * `PROVISIONED` . 
-       */
-      public fun throughputMode(throughputMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty.builder()
-
-      /**
-       * @param provisionedReadCapacityUnits For provisioned feature groups with online store
-       * enabled, this indicates the read throughput you are billed for and can consume without
-       * throttling.
-       * This field is not applicable for on-demand feature groups.
-       */
-      override fun provisionedReadCapacityUnits(provisionedReadCapacityUnits: Number) {
-        cdkBuilder.provisionedReadCapacityUnits(provisionedReadCapacityUnits)
-      }
-
-      /**
-       * @param provisionedWriteCapacityUnits For provisioned feature groups, this indicates the
-       * write throughput you are billed for and can consume without throttling.
-       * This field is not applicable for on-demand feature groups.
-       */
-      override fun provisionedWriteCapacityUnits(provisionedWriteCapacityUnits: Number) {
-        cdkBuilder.provisionedWriteCapacityUnits(provisionedWriteCapacityUnits)
-      }
-
-      /**
-       * @param throughputMode The mode used for your feature group throughput: `ON_DEMAND` or
-       * `PROVISIONED` . 
-       */
-      override fun throughputMode(throughputMode: String) {
-        cdkBuilder.throughputMode(throughputMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty,
-    ) : CdkObject(cdkObject), ThroughputConfigProperty {
-      /**
-       * For provisioned feature groups with online store enabled, this indicates the read
-       * throughput you are billed for and can consume without throttling.
-       *
-       * This field is not applicable for on-demand feature groups.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-provisionedreadcapacityunits)
-       */
-      override fun provisionedReadCapacityUnits(): Number? =
-          unwrap(this).getProvisionedReadCapacityUnits()
-
-      /**
-       * For provisioned feature groups, this indicates the write throughput you are billed for and
-       * can consume without throttling.
-       *
-       * This field is not applicable for on-demand feature groups.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-provisionedwritecapacityunits)
-       */
-      override fun provisionedWriteCapacityUnits(): Number? =
-          unwrap(this).getProvisionedWriteCapacityUnits()
-
-      /**
-       * The mode used for your feature group throughput: `ON_DEMAND` or `PROVISIONED` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-throughputmode)
-       */
-      override fun throughputMode(): String = unwrap(this).getThroughputMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ThroughputConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty):
-          ThroughputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ThroughputConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ThroughputConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty
-    }
-  }
-
-  /**
-   * The security configuration for `OnlineStore` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * OnlineStoreSecurityConfigProperty onlineStoreSecurityConfigProperty =
-   * OnlineStoreSecurityConfigProperty.builder()
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-onlinestoresecurityconfig.html)
-   */
-  public interface OnlineStoreSecurityConfigProperty {
-    /**
-     * The AWS Key Management Service (KMS) key ARN that SageMaker Feature Store uses to encrypt the
-     * Amazon S3 objects at rest using Amazon S3 server-side encryption.
-     *
-     * The caller (either user or IAM role) of `CreateFeatureGroup` must have below permissions to
-     * the `OnlineStore` `KmsKeyId` :
-     *
-     * * `"kms:Encrypt"`
-     * * `"kms:Decrypt"`
-     * * `"kms:DescribeKey"`
-     * * `"kms:CreateGrant"`
-     * * `"kms:RetireGrant"`
-     * * `"kms:ReEncryptFrom"`
-     * * `"kms:ReEncryptTo"`
-     * * `"kms:GenerateDataKey"`
-     * * `"kms:ListAliases"`
-     * * `"kms:ListGrants"`
-     * * `"kms:RevokeGrant"`
-     *
-     * The caller (either user or IAM role) to all DataPlane operations ( `PutRecord` , `GetRecord`
-     * , `DeleteRecord` ) must have the following permissions to the `KmsKeyId` :
-     *
-     * * `"kms:Decrypt"`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-onlinestoresecurityconfig.html#cfn-sagemaker-featuregroup-onlinestoresecurityconfig-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * A builder for [OnlineStoreSecurityConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The AWS Key Management Service (KMS) key ARN that SageMaker Feature Store
-       * uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-       * The caller (either user or IAM role) of `CreateFeatureGroup` must have below permissions to
-       * the `OnlineStore` `KmsKeyId` :
-       *
-       * * `"kms:Encrypt"`
-       * * `"kms:Decrypt"`
-       * * `"kms:DescribeKey"`
-       * * `"kms:CreateGrant"`
-       * * `"kms:RetireGrant"`
-       * * `"kms:ReEncryptFrom"`
-       * * `"kms:ReEncryptTo"`
-       * * `"kms:GenerateDataKey"`
-       * * `"kms:ListAliases"`
-       * * `"kms:ListGrants"`
-       * * `"kms:RevokeGrant"`
-       *
-       * The caller (either user or IAM role) to all DataPlane operations ( `PutRecord` ,
-       * `GetRecord` , `DeleteRecord` ) must have the following permissions to the `KmsKeyId` :
-       *
-       * * `"kms:Decrypt"`
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty.builder()
-
-      /**
-       * @param kmsKeyId The AWS Key Management Service (KMS) key ARN that SageMaker Feature Store
-       * uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-       * The caller (either user or IAM role) of `CreateFeatureGroup` must have below permissions to
-       * the `OnlineStore` `KmsKeyId` :
-       *
-       * * `"kms:Encrypt"`
-       * * `"kms:Decrypt"`
-       * * `"kms:DescribeKey"`
-       * * `"kms:CreateGrant"`
-       * * `"kms:RetireGrant"`
-       * * `"kms:ReEncryptFrom"`
-       * * `"kms:ReEncryptTo"`
-       * * `"kms:GenerateDataKey"`
-       * * `"kms:ListAliases"`
-       * * `"kms:ListGrants"`
-       * * `"kms:RevokeGrant"`
-       *
-       * The caller (either user or IAM role) to all DataPlane operations ( `PutRecord` ,
-       * `GetRecord` , `DeleteRecord` ) must have the following permissions to the `KmsKeyId` :
-       *
-       * * `"kms:Decrypt"`
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty,
-    ) : CdkObject(cdkObject), OnlineStoreSecurityConfigProperty {
-      /**
-       * The AWS Key Management Service (KMS) key ARN that SageMaker Feature Store uses to encrypt
-       * the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-       *
-       * The caller (either user or IAM role) of `CreateFeatureGroup` must have below permissions to
-       * the `OnlineStore` `KmsKeyId` :
-       *
-       * * `"kms:Encrypt"`
-       * * `"kms:Decrypt"`
-       * * `"kms:DescribeKey"`
-       * * `"kms:CreateGrant"`
-       * * `"kms:RetireGrant"`
-       * * `"kms:ReEncryptFrom"`
-       * * `"kms:ReEncryptTo"`
-       * * `"kms:GenerateDataKey"`
-       * * `"kms:ListAliases"`
-       * * `"kms:ListGrants"`
-       * * `"kms:RevokeGrant"`
-       *
-       * The caller (either user or IAM role) to all DataPlane operations ( `PutRecord` ,
-       * `GetRecord` , `DeleteRecord` ) must have the following permissions to the `KmsKeyId` :
-       *
-       * * `"kms:Decrypt"`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-onlinestoresecurityconfig.html#cfn-sagemaker-featuregroup-onlinestoresecurityconfig-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          OnlineStoreSecurityConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty):
-          OnlineStoreSecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OnlineStoreSecurityConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnlineStoreSecurityConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty
-    }
-  }
-
-  /**
-   * A list of features.
-   *
-   * You must include `FeatureName` and `FeatureType` . Valid feature `FeatureType` s are `Integral`
-   * , `Fractional` and `String` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * FeatureDefinitionProperty featureDefinitionProperty = FeatureDefinitionProperty.builder()
-   * .featureName("featureName")
-   * .featureType("featureType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html)
-   */
-  public interface FeatureDefinitionProperty {
-    /**
-     * The name of a feature.
-     *
-     * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
-     * `write_time` , `api_invocation_time` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featurename)
-     */
-    public fun featureName(): String
-
-    /**
-     * The value type of a feature.
-     *
-     * Valid values are Integral, Fractional, or String.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featuretype)
-     */
-    public fun featureType(): String
-
-    /**
-     * A builder for [FeatureDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param featureName The name of a feature. 
-       * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
-       * `write_time` , `api_invocation_time` .
-       */
-      public fun featureName(featureName: String)
-
-      /**
-       * @param featureType The value type of a feature. 
-       * Valid values are Integral, Fractional, or String.
-       */
-      public fun featureType(featureType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty.builder()
-
-      /**
-       * @param featureName The name of a feature. 
-       * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
-       * `write_time` , `api_invocation_time` .
-       */
-      override fun featureName(featureName: String) {
-        cdkBuilder.featureName(featureName)
-      }
-
-      /**
-       * @param featureType The value type of a feature. 
-       * Valid values are Integral, Fractional, or String.
-       */
-      override fun featureType(featureType: String) {
-        cdkBuilder.featureType(featureType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty,
-    ) : CdkObject(cdkObject), FeatureDefinitionProperty {
-      /**
-       * The name of a feature.
-       *
-       * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
-       * `write_time` , `api_invocation_time` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featurename)
-       */
-      override fun featureName(): String = unwrap(this).getFeatureName()
-
-      /**
-       * The value type of a feature.
-       *
-       * Valid values are Integral, Fractional, or String.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featuretype)
-       */
-      override fun featureType(): String = unwrap(this).getFeatureType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FeatureDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty):
-          FeatureDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FeatureDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FeatureDefinitionProperty):
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty
-    }
-  }
-
-  /**
-   * The meta data of the Glue table which serves as data catalog for the `OfflineStore` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DataCatalogConfigProperty dataCatalogConfigProperty = DataCatalogConfigProperty.builder()
-   * .catalog("catalog")
-   * .database("database")
-   * .tableName("tableName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html)
-   */
-  public interface DataCatalogConfigProperty {
-    /**
-     * The name of the Glue table catalog.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-catalog)
-     */
-    public fun catalog(): String
-
-    /**
-     * The name of the Glue table database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-database)
-     */
-    public fun database(): String
-
-    /**
-     * The name of the Glue table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-tablename)
-     */
-    public fun tableName(): String
-
-    /**
-     * A builder for [DataCatalogConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalog The name of the Glue table catalog. 
-       */
-      public fun catalog(catalog: String)
-
-      /**
-       * @param database The name of the Glue table database. 
-       */
-      public fun database(database: String)
-
-      /**
-       * @param tableName The name of the Glue table. 
-       */
-      public fun tableName(tableName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty.builder()
-
-      /**
-       * @param catalog The name of the Glue table catalog. 
-       */
-      override fun catalog(catalog: String) {
-        cdkBuilder.catalog(catalog)
-      }
-
-      /**
-       * @param database The name of the Glue table database. 
-       */
-      override fun database(database: String) {
-        cdkBuilder.database(database)
-      }
-
-      /**
-       * @param tableName The name of the Glue table. 
-       */
-      override fun tableName(tableName: String) {
-        cdkBuilder.tableName(tableName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty,
-    ) : CdkObject(cdkObject), DataCatalogConfigProperty {
-      /**
-       * The name of the Glue table catalog.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-catalog)
-       */
-      override fun catalog(): String = unwrap(this).getCatalog()
-
-      /**
-       * The name of the Glue table database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-database)
-       */
-      override fun database(): String = unwrap(this).getDatabase()
-
-      /**
-       * The name of the Glue table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html#cfn-sagemaker-featuregroup-datacatalogconfig-tablename)
-       */
-      override fun tableName(): String = unwrap(this).getTableName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataCatalogConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty):
-          DataCatalogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataCatalogConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataCatalogConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty
-    }
-  }
-
-  /**
-   * Time to live duration, where the record is hard deleted after the expiration time is reached;
-   *
-   * `ExpiresAt` = `EventTime` + `TtlDuration` . For information on HardDelete, see the
-   * [DeleteRecord](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html)
-   * API in the Amazon SageMaker API Reference guide.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * TtlDurationProperty ttlDurationProperty = TtlDurationProperty.builder()
-   * .unit("unit")
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html)
-   */
-  public interface TtlDurationProperty {
-    /**
-     * `TtlDuration` time unit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html#cfn-sagemaker-featuregroup-ttlduration-unit)
-     */
-    public fun unit(): String? = unwrap(this).getUnit()
-
-    /**
-     * `TtlDuration` time value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html#cfn-sagemaker-featuregroup-ttlduration-value)
-     */
-    public fun `value`(): Number? = unwrap(this).getValue()
-
-    /**
-     * A builder for [TtlDurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param unit `TtlDuration` time unit.
-       */
-      public fun unit(unit: String)
-
-      /**
-       * @param value `TtlDuration` time value.
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty.builder()
-
-      /**
-       * @param unit `TtlDuration` time unit.
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      /**
-       * @param value `TtlDuration` time value.
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty,
-    ) : CdkObject(cdkObject), TtlDurationProperty {
-      /**
-       * `TtlDuration` time unit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html#cfn-sagemaker-featuregroup-ttlduration-unit)
-       */
-      override fun unit(): String? = unwrap(this).getUnit()
-
-      /**
-       * `TtlDuration` time value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html#cfn-sagemaker-featuregroup-ttlduration-value)
-       */
-      override fun `value`(): Number? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TtlDurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty):
-          TtlDurationProperty = CdkObjectWrappers.wrap(cdkObject) as? TtlDurationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TtlDurationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty
     }
   }
 
@@ -2085,6 +1626,173 @@ public open class CfnFeatureGroup internal constructor(
   }
 
   /**
+   * The security configuration for `OnlineStore` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * OnlineStoreSecurityConfigProperty onlineStoreSecurityConfigProperty =
+   * OnlineStoreSecurityConfigProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-onlinestoresecurityconfig.html)
+   */
+  public interface OnlineStoreSecurityConfigProperty {
+    /**
+     * The AWS Key Management Service (KMS) key ARN that SageMaker Feature Store uses to encrypt the
+     * Amazon S3 objects at rest using Amazon S3 server-side encryption.
+     *
+     * The caller (either user or IAM role) of `CreateFeatureGroup` must have below permissions to
+     * the `OnlineStore` `KmsKeyId` :
+     *
+     * * `"kms:Encrypt"`
+     * * `"kms:Decrypt"`
+     * * `"kms:DescribeKey"`
+     * * `"kms:CreateGrant"`
+     * * `"kms:RetireGrant"`
+     * * `"kms:ReEncryptFrom"`
+     * * `"kms:ReEncryptTo"`
+     * * `"kms:GenerateDataKey"`
+     * * `"kms:ListAliases"`
+     * * `"kms:ListGrants"`
+     * * `"kms:RevokeGrant"`
+     *
+     * The caller (either user or IAM role) to all DataPlane operations ( `PutRecord` , `GetRecord`
+     * , `DeleteRecord` ) must have the following permissions to the `KmsKeyId` :
+     *
+     * * `"kms:Decrypt"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-onlinestoresecurityconfig.html#cfn-sagemaker-featuregroup-onlinestoresecurityconfig-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * A builder for [OnlineStoreSecurityConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The AWS Key Management Service (KMS) key ARN that SageMaker Feature Store
+       * uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
+       * The caller (either user or IAM role) of `CreateFeatureGroup` must have below permissions to
+       * the `OnlineStore` `KmsKeyId` :
+       *
+       * * `"kms:Encrypt"`
+       * * `"kms:Decrypt"`
+       * * `"kms:DescribeKey"`
+       * * `"kms:CreateGrant"`
+       * * `"kms:RetireGrant"`
+       * * `"kms:ReEncryptFrom"`
+       * * `"kms:ReEncryptTo"`
+       * * `"kms:GenerateDataKey"`
+       * * `"kms:ListAliases"`
+       * * `"kms:ListGrants"`
+       * * `"kms:RevokeGrant"`
+       *
+       * The caller (either user or IAM role) to all DataPlane operations ( `PutRecord` ,
+       * `GetRecord` , `DeleteRecord` ) must have the following permissions to the `KmsKeyId` :
+       *
+       * * `"kms:Decrypt"`
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty.builder()
+
+      /**
+       * @param kmsKeyId The AWS Key Management Service (KMS) key ARN that SageMaker Feature Store
+       * uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
+       * The caller (either user or IAM role) of `CreateFeatureGroup` must have below permissions to
+       * the `OnlineStore` `KmsKeyId` :
+       *
+       * * `"kms:Encrypt"`
+       * * `"kms:Decrypt"`
+       * * `"kms:DescribeKey"`
+       * * `"kms:CreateGrant"`
+       * * `"kms:RetireGrant"`
+       * * `"kms:ReEncryptFrom"`
+       * * `"kms:ReEncryptTo"`
+       * * `"kms:GenerateDataKey"`
+       * * `"kms:ListAliases"`
+       * * `"kms:ListGrants"`
+       * * `"kms:RevokeGrant"`
+       *
+       * The caller (either user or IAM role) to all DataPlane operations ( `PutRecord` ,
+       * `GetRecord` , `DeleteRecord` ) must have the following permissions to the `KmsKeyId` :
+       *
+       * * `"kms:Decrypt"`
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty,
+    ) : CdkObject(cdkObject), OnlineStoreSecurityConfigProperty {
+      /**
+       * The AWS Key Management Service (KMS) key ARN that SageMaker Feature Store uses to encrypt
+       * the Amazon S3 objects at rest using Amazon S3 server-side encryption.
+       *
+       * The caller (either user or IAM role) of `CreateFeatureGroup` must have below permissions to
+       * the `OnlineStore` `KmsKeyId` :
+       *
+       * * `"kms:Encrypt"`
+       * * `"kms:Decrypt"`
+       * * `"kms:DescribeKey"`
+       * * `"kms:CreateGrant"`
+       * * `"kms:RetireGrant"`
+       * * `"kms:ReEncryptFrom"`
+       * * `"kms:ReEncryptTo"`
+       * * `"kms:GenerateDataKey"`
+       * * `"kms:ListAliases"`
+       * * `"kms:ListGrants"`
+       * * `"kms:RevokeGrant"`
+       *
+       * The caller (either user or IAM role) to all DataPlane operations ( `PutRecord` ,
+       * `GetRecord` , `DeleteRecord` ) must have the following permissions to the `KmsKeyId` :
+       *
+       * * `"kms:Decrypt"`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-onlinestoresecurityconfig.html#cfn-sagemaker-featuregroup-onlinestoresecurityconfig-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OnlineStoreSecurityConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty):
+          OnlineStoreSecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnlineStoreSecurityConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnlineStoreSecurityConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty
+    }
+  }
+
+  /**
    * The Amazon Simple Storage (Amazon S3) location and and security configuration for
    * `OfflineStore` .
    *
@@ -2221,6 +1929,298 @@ public open class CfnFeatureGroup internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.S3StorageConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.S3StorageConfigProperty
+    }
+  }
+
+  /**
+   * Used to set feature group throughput configuration.
+   *
+   * There are two modes: `ON_DEMAND` and `PROVISIONED` . With on-demand mode, you are charged for
+   * data reads and writes that your application performs on your feature group. You do not need to
+   * specify read and write throughput because Feature Store accommodates your workloads as they ramp
+   * up and down. You can switch a feature group to on-demand only once in a 24 hour period. With
+   * provisioned throughput mode, you specify the read and write capacity per second that you expect
+   * your application to require, and you are billed based on those limits. Exceeding provisioned
+   * throughput will result in your requests being throttled.
+   *
+   * Note: `PROVISIONED` throughput mode is supported only for feature groups that are offline-only,
+   * or use the
+   * [`Standard`](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OnlineStoreConfig.html#sagemaker-Type-OnlineStoreConfig-StorageType)
+   * tier online store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ThroughputConfigProperty throughputConfigProperty = ThroughputConfigProperty.builder()
+   * .throughputMode("throughputMode")
+   * // the properties below are optional
+   * .provisionedReadCapacityUnits(123)
+   * .provisionedWriteCapacityUnits(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html)
+   */
+  public interface ThroughputConfigProperty {
+    /**
+     * For provisioned feature groups with online store enabled, this indicates the read throughput
+     * you are billed for and can consume without throttling.
+     *
+     * This field is not applicable for on-demand feature groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-provisionedreadcapacityunits)
+     */
+    public fun provisionedReadCapacityUnits(): Number? =
+        unwrap(this).getProvisionedReadCapacityUnits()
+
+    /**
+     * For provisioned feature groups, this indicates the write throughput you are billed for and
+     * can consume without throttling.
+     *
+     * This field is not applicable for on-demand feature groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-provisionedwritecapacityunits)
+     */
+    public fun provisionedWriteCapacityUnits(): Number? =
+        unwrap(this).getProvisionedWriteCapacityUnits()
+
+    /**
+     * The mode used for your feature group throughput: `ON_DEMAND` or `PROVISIONED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-throughputmode)
+     */
+    public fun throughputMode(): String
+
+    /**
+     * A builder for [ThroughputConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param provisionedReadCapacityUnits For provisioned feature groups with online store
+       * enabled, this indicates the read throughput you are billed for and can consume without
+       * throttling.
+       * This field is not applicable for on-demand feature groups.
+       */
+      public fun provisionedReadCapacityUnits(provisionedReadCapacityUnits: Number)
+
+      /**
+       * @param provisionedWriteCapacityUnits For provisioned feature groups, this indicates the
+       * write throughput you are billed for and can consume without throttling.
+       * This field is not applicable for on-demand feature groups.
+       */
+      public fun provisionedWriteCapacityUnits(provisionedWriteCapacityUnits: Number)
+
+      /**
+       * @param throughputMode The mode used for your feature group throughput: `ON_DEMAND` or
+       * `PROVISIONED` . 
+       */
+      public fun throughputMode(throughputMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty.builder()
+
+      /**
+       * @param provisionedReadCapacityUnits For provisioned feature groups with online store
+       * enabled, this indicates the read throughput you are billed for and can consume without
+       * throttling.
+       * This field is not applicable for on-demand feature groups.
+       */
+      override fun provisionedReadCapacityUnits(provisionedReadCapacityUnits: Number) {
+        cdkBuilder.provisionedReadCapacityUnits(provisionedReadCapacityUnits)
+      }
+
+      /**
+       * @param provisionedWriteCapacityUnits For provisioned feature groups, this indicates the
+       * write throughput you are billed for and can consume without throttling.
+       * This field is not applicable for on-demand feature groups.
+       */
+      override fun provisionedWriteCapacityUnits(provisionedWriteCapacityUnits: Number) {
+        cdkBuilder.provisionedWriteCapacityUnits(provisionedWriteCapacityUnits)
+      }
+
+      /**
+       * @param throughputMode The mode used for your feature group throughput: `ON_DEMAND` or
+       * `PROVISIONED` . 
+       */
+      override fun throughputMode(throughputMode: String) {
+        cdkBuilder.throughputMode(throughputMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty,
+    ) : CdkObject(cdkObject), ThroughputConfigProperty {
+      /**
+       * For provisioned feature groups with online store enabled, this indicates the read
+       * throughput you are billed for and can consume without throttling.
+       *
+       * This field is not applicable for on-demand feature groups.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-provisionedreadcapacityunits)
+       */
+      override fun provisionedReadCapacityUnits(): Number? =
+          unwrap(this).getProvisionedReadCapacityUnits()
+
+      /**
+       * For provisioned feature groups, this indicates the write throughput you are billed for and
+       * can consume without throttling.
+       *
+       * This field is not applicable for on-demand feature groups.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-provisionedwritecapacityunits)
+       */
+      override fun provisionedWriteCapacityUnits(): Number? =
+          unwrap(this).getProvisionedWriteCapacityUnits()
+
+      /**
+       * The mode used for your feature group throughput: `ON_DEMAND` or `PROVISIONED` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-throughputconfig.html#cfn-sagemaker-featuregroup-throughputconfig-throughputmode)
+       */
+      override fun throughputMode(): String = unwrap(this).getThroughputMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ThroughputConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty):
+          ThroughputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ThroughputConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ThroughputConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty
+    }
+  }
+
+  /**
+   * Time to live duration, where the record is hard deleted after the expiration time is reached;
+   *
+   * `ExpiresAt` = `EventTime` + `TtlDuration` . For information on HardDelete, see the
+   * [DeleteRecord](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html)
+   * API in the Amazon SageMaker API Reference guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * TtlDurationProperty ttlDurationProperty = TtlDurationProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html)
+   */
+  public interface TtlDurationProperty {
+    /**
+     * `TtlDuration` time unit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html#cfn-sagemaker-featuregroup-ttlduration-unit)
+     */
+    public fun unit(): String? = unwrap(this).getUnit()
+
+    /**
+     * `TtlDuration` time value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html#cfn-sagemaker-featuregroup-ttlduration-value)
+     */
+    public fun `value`(): Number? = unwrap(this).getValue()
+
+    /**
+     * A builder for [TtlDurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param unit `TtlDuration` time unit.
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value `TtlDuration` time value.
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty.builder()
+
+      /**
+       * @param unit `TtlDuration` time unit.
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value `TtlDuration` time value.
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty,
+    ) : CdkObject(cdkObject), TtlDurationProperty {
+      /**
+       * `TtlDuration` time unit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html#cfn-sagemaker-featuregroup-ttlduration-unit)
+       */
+      override fun unit(): String? = unwrap(this).getUnit()
+
+      /**
+       * `TtlDuration` time value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-ttlduration.html#cfn-sagemaker-featuregroup-ttlduration-value)
+       */
+      override fun `value`(): Number? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TtlDurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty):
+          TtlDurationProperty = CdkObjectWrappers.wrap(cdkObject) as? TtlDurationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TtlDurationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty
     }
   }
 }

@@ -567,106 +567,6 @@ public open class CfnMissionProfile internal constructor(
   }
 
   /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.groundstation.*;
-   * StreamsKmsKeyProperty streamsKmsKeyProperty = StreamsKmsKeyProperty.builder()
-   * .kmsAliasArn("kmsAliasArn")
-   * .kmsKeyArn("kmsKeyArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html)
-   */
-  public interface StreamsKmsKeyProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasarn)
-     */
-    public fun kmsAliasArn(): String? = unwrap(this).getKmsAliasArn()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmskeyarn)
-     */
-    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-
-    /**
-     * A builder for [StreamsKmsKeyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsAliasArn the value to be set.
-       */
-      public fun kmsAliasArn(kmsAliasArn: String)
-
-      /**
-       * @param kmsKeyArn the value to be set.
-       */
-      public fun kmsKeyArn(kmsKeyArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty.Builder
-          =
-          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty.builder()
-
-      /**
-       * @param kmsAliasArn the value to be set.
-       */
-      override fun kmsAliasArn(kmsAliasArn: String) {
-        cdkBuilder.kmsAliasArn(kmsAliasArn)
-      }
-
-      /**
-       * @param kmsKeyArn the value to be set.
-       */
-      override fun kmsKeyArn(kmsKeyArn: String) {
-        cdkBuilder.kmsKeyArn(kmsKeyArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty,
-    ) : CdkObject(cdkObject), StreamsKmsKeyProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasarn)
-       */
-      override fun kmsAliasArn(): String? = unwrap(this).getKmsAliasArn()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmskeyarn)
-       */
-      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StreamsKmsKeyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty):
-          StreamsKmsKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? StreamsKmsKeyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StreamsKmsKeyProperty):
-          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty
-    }
-  }
-
-  /**
    * A dataflow edge defines from where and to where data will flow during a contact.
    *
    * Example:
@@ -793,6 +693,106 @@ public open class CfnMissionProfile internal constructor(
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.groundstation.*;
+   * StreamsKmsKeyProperty streamsKmsKeyProperty = StreamsKmsKeyProperty.builder()
+   * .kmsAliasArn("kmsAliasArn")
+   * .kmsKeyArn("kmsKeyArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html)
+   */
+  public interface StreamsKmsKeyProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasarn)
+     */
+    public fun kmsAliasArn(): String? = unwrap(this).getKmsAliasArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmskeyarn)
+     */
+    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+
+    /**
+     * A builder for [StreamsKmsKeyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsAliasArn the value to be set.
+       */
+      public fun kmsAliasArn(kmsAliasArn: String)
+
+      /**
+       * @param kmsKeyArn the value to be set.
+       */
+      public fun kmsKeyArn(kmsKeyArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty.Builder
+          =
+          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty.builder()
+
+      /**
+       * @param kmsAliasArn the value to be set.
+       */
+      override fun kmsAliasArn(kmsAliasArn: String) {
+        cdkBuilder.kmsAliasArn(kmsAliasArn)
+      }
+
+      /**
+       * @param kmsKeyArn the value to be set.
+       */
+      override fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty,
+    ) : CdkObject(cdkObject), StreamsKmsKeyProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasarn)
+       */
+      override fun kmsAliasArn(): String? = unwrap(this).getKmsAliasArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmskeyarn)
+       */
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StreamsKmsKeyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty):
+          StreamsKmsKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? StreamsKmsKeyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StreamsKmsKeyProperty):
+          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty
     }
   }
 }

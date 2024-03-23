@@ -10,6 +10,7 @@ import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import cloudshift.awscdkdsl.build.dsl.model.CdkModel
 import com.squareup.kotlinpoet.ANY
 import com.squareup.kotlinpoet.ClassName
+import com.squareup.kotlinpoet.CodeBlock
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
@@ -322,6 +323,7 @@ internal object WrapperTypeGenerator {
         val innerClasses = ctx.model.innerClasses(cdkClass.className)
             .filter { it.isCdkClass && !it.isJssiClass && !it.isBuilderClass }
             .map { ctx.model.resolveClass(it) }
+            .sortedBy { it.className }
             .map { innerClass ->
                 generateWrapperType(innerClass.className, innerClass, ctx)
             }.toList()
@@ -341,6 +343,9 @@ internal object WrapperTypeGenerator {
                     .addModifiers(KModifier.INTERNAL, KModifier.OPEN)
                     .initializer(CdkObjectName)
                     .build(),
+            )
+            .addInitializerBlock(
+                CodeBlock.of(" %T.register(this)", CdkWrappersGenerator.ClassName,),
             )
             .build()
 

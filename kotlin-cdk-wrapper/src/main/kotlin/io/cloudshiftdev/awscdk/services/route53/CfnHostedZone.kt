@@ -1198,6 +1198,245 @@ public open class CfnHostedZone internal constructor(
   }
 
   /**
+   * A complex type that contains an optional comment about your hosted zone.
+   *
+   * If you don't want to specify a comment, omit both the `HostedZoneConfig` and `Comment`
+   * elements.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.route53.*;
+   * HostedZoneConfigProperty hostedZoneConfigProperty = HostedZoneConfigProperty.builder()
+   * .comment("comment")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html)
+   */
+  public interface HostedZoneConfigProperty {
+    /**
+     * Any comments that you want to include about the hosted zone.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment)
+     */
+    public fun comment(): String? = unwrap(this).getComment()
+
+    /**
+     * A builder for [HostedZoneConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param comment Any comments that you want to include about the hosted zone.
+       */
+      public fun comment(comment: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty.Builder =
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty.builder()
+
+      /**
+       * @param comment Any comments that you want to include about the hosted zone.
+       */
+      override fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty,
+    ) : CdkObject(cdkObject), HostedZoneConfigProperty {
+      /**
+       * Any comments that you want to include about the hosted zone.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment)
+       */
+      override fun comment(): String? = unwrap(this).getComment()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HostedZoneConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty):
+          HostedZoneConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HostedZoneConfigProperty):
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty
+    }
+  }
+
+  /**
+   * A complex type that contains information about a tag that you want to add or edit for the
+   * specified health check or hosted zone.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.route53.*;
+   * HostedZoneTagProperty hostedZoneTagProperty = HostedZoneTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html)
+   */
+  public interface HostedZoneTagProperty {
+    /**
+     * The value of `Key` depends on the operation that you want to perform:.
+     *
+     * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give the
+     * new tag.
+     * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
+     * * *Delete a key* : `Key` is the name of the tag you want to remove.
+     * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
+     * console, the list of your health checks includes a *Name* column that lets you see the name that
+     * you've given to each health check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of `Value` depends on the operation that you want to perform:.
+     *
+     * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
+     * the new tag.
+     * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [HostedZoneTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The value of `Key` depends on the operation that you want to perform:. 
+       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
+       * * *Delete a key* : `Key` is the name of the tag you want to remove.
+       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
+       * console, the list of your health checks includes a *Name* column that lets you see the name
+       * that you've given to each health check.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of `Value` depends on the operation that you want to perform:. 
+       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty.Builder =
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty.builder()
+
+      /**
+       * @param key The value of `Key` depends on the operation that you want to perform:. 
+       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
+       * * *Delete a key* : `Key` is the name of the tag you want to remove.
+       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
+       * console, the list of your health checks includes a *Name* column that lets you see the name
+       * that you've given to each health check.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of `Value` depends on the operation that you want to perform:. 
+       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty,
+    ) : CdkObject(cdkObject), HostedZoneTagProperty {
+      /**
+       * The value of `Key` depends on the operation that you want to perform:.
+       *
+       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
+       * * *Delete a key* : `Key` is the name of the tag you want to remove.
+       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
+       * console, the list of your health checks includes a *Name* column that lets you see the name
+       * that you've given to each health check.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of `Value` depends on the operation that you want to perform:.
+       *
+       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
+       * the new tag.
+       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HostedZoneTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty):
+          HostedZoneTagProperty = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HostedZoneTagProperty):
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty
+    }
+  }
+
+  /**
    * A complex type that contains information about a configuration for DNS query logging.
    *
    * Example:
@@ -1417,245 +1656,6 @@ public open class CfnHostedZone internal constructor(
       internal fun unwrap(wrapped: VPCProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty
-    }
-  }
-
-  /**
-   * A complex type that contains information about a tag that you want to add or edit for the
-   * specified health check or hosted zone.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.route53.*;
-   * HostedZoneTagProperty hostedZoneTagProperty = HostedZoneTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html)
-   */
-  public interface HostedZoneTagProperty {
-    /**
-     * The value of `Key` depends on the operation that you want to perform:.
-     *
-     * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give the
-     * new tag.
-     * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
-     * * *Delete a key* : `Key` is the name of the tag you want to remove.
-     * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
-     * console, the list of your health checks includes a *Name* column that lets you see the name that
-     * you've given to each health check.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value of `Value` depends on the operation that you want to perform:.
-     *
-     * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
-     * the new tag.
-     * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [HostedZoneTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The value of `Key` depends on the operation that you want to perform:. 
-       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
-       * * *Delete a key* : `Key` is the name of the tag you want to remove.
-       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
-       * console, the list of your health checks includes a *Name* column that lets you see the name
-       * that you've given to each health check.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of `Value` depends on the operation that you want to perform:. 
-       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty.Builder =
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty.builder()
-
-      /**
-       * @param key The value of `Key` depends on the operation that you want to perform:. 
-       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
-       * * *Delete a key* : `Key` is the name of the tag you want to remove.
-       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
-       * console, the list of your health checks includes a *Name* column that lets you see the name
-       * that you've given to each health check.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of `Value` depends on the operation that you want to perform:. 
-       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty,
-    ) : CdkObject(cdkObject), HostedZoneTagProperty {
-      /**
-       * The value of `Key` depends on the operation that you want to perform:.
-       *
-       * * *Add a tag to a health check or hosted zone* : `Key` is the name that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Key` is the name of the tag that you want to change the `Value` for.
-       * * *Delete a key* : `Key` is the name of the tag you want to remove.
-       * * *Give a name to a health check* : Edit the default `Name` tag. In the Amazon Route 53
-       * console, the list of your health checks includes a *Name* column that lets you see the name
-       * that you've given to each health check.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value of `Value` depends on the operation that you want to perform:.
-       *
-       * * *Add a tag to a health check or hosted zone* : `Value` is the value that you want to give
-       * the new tag.
-       * * *Edit a tag* : `Value` is the new value that you want to assign the tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HostedZoneTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty):
-          HostedZoneTagProperty = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneTagProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HostedZoneTagProperty):
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty
-    }
-  }
-
-  /**
-   * A complex type that contains an optional comment about your hosted zone.
-   *
-   * If you don't want to specify a comment, omit both the `HostedZoneConfig` and `Comment`
-   * elements.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.route53.*;
-   * HostedZoneConfigProperty hostedZoneConfigProperty = HostedZoneConfigProperty.builder()
-   * .comment("comment")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html)
-   */
-  public interface HostedZoneConfigProperty {
-    /**
-     * Any comments that you want to include about the hosted zone.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment)
-     */
-    public fun comment(): String? = unwrap(this).getComment()
-
-    /**
-     * A builder for [HostedZoneConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comment Any comments that you want to include about the hosted zone.
-       */
-      public fun comment(comment: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty.Builder =
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty.builder()
-
-      /**
-       * @param comment Any comments that you want to include about the hosted zone.
-       */
-      override fun comment(comment: String) {
-        cdkBuilder.comment(comment)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty,
-    ) : CdkObject(cdkObject), HostedZoneConfigProperty {
-      /**
-       * Any comments that you want to include about the hosted zone.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment)
-       */
-      override fun comment(): String? = unwrap(this).getComment()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HostedZoneConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty):
-          HostedZoneConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HostedZoneConfigProperty):
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty
     }
   }
 }

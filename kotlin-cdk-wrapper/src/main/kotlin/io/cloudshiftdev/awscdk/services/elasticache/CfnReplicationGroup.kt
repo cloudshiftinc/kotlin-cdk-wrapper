@@ -2689,6 +2689,315 @@ public open class CfnReplicationGroup internal constructor(
   }
 
   /**
+   * The configuration details of the CloudWatch Logs destination.
+   *
+   * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+   * destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticache.*;
+   * CloudWatchLogsDestinationDetailsProperty cloudWatchLogsDestinationDetailsProperty =
+   * CloudWatchLogsDestinationDetailsProperty.builder()
+   * .logGroup("logGroup")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-cloudwatchlogsdestinationdetails.html)
+   */
+  public interface CloudWatchLogsDestinationDetailsProperty {
+    /**
+     * The name of the CloudWatch Logs log group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-cloudwatchlogsdestinationdetails.html#cfn-elasticache-replicationgroup-cloudwatchlogsdestinationdetails-loggroup)
+     */
+    public fun logGroup(): String
+
+    /**
+     * A builder for [CloudWatchLogsDestinationDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logGroup The name of the CloudWatch Logs log group. 
+       */
+      public fun logGroup(logGroup: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty.builder()
+
+      /**
+       * @param logGroup The name of the CloudWatch Logs log group. 
+       */
+      override fun logGroup(logGroup: String) {
+        cdkBuilder.logGroup(logGroup)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogsDestinationDetailsProperty {
+      /**
+       * The name of the CloudWatch Logs log group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-cloudwatchlogsdestinationdetails.html#cfn-elasticache-replicationgroup-cloudwatchlogsdestinationdetails-loggroup)
+       */
+      override fun logGroup(): String = unwrap(this).getLogGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CloudWatchLogsDestinationDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty):
+          CloudWatchLogsDestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsDestinationDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchLogsDestinationDetailsProperty):
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty
+    }
+  }
+
+  /**
+   * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose
+   * destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticache.*;
+   * DestinationDetailsProperty destinationDetailsProperty = DestinationDetailsProperty.builder()
+   * .cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty.builder()
+   * .logGroup("logGroup")
+   * .build())
+   * .kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty.builder()
+   * .deliveryStream("deliveryStream")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html)
+   */
+  public interface DestinationDetailsProperty {
+    /**
+     * The configuration details of the CloudWatch Logs destination.
+     *
+     * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+     * destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html#cfn-elasticache-replicationgroup-destinationdetails-cloudwatchlogsdetails)
+     */
+    public fun cloudWatchLogsDetails(): Any? = unwrap(this).getCloudWatchLogsDetails()
+
+    /**
+     * The configuration details of the Kinesis Data Firehose destination.
+     *
+     * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
+     * the destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html#cfn-elasticache-replicationgroup-destinationdetails-kinesisfirehosedetails)
+     */
+    public fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
+
+    /**
+     * A builder for [DestinationDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
+       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+       * destination.
+       */
+      public fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable)
+
+      /**
+       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
+       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+       * destination.
+       */
+      public
+          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty)
+
+      /**
+       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
+       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+       * destination.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2c0fab66a7b11abd79b203e0c3dcd007cb3c43e229073b97666d0f57dd609f1a")
+      public
+          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit)
+
+      /**
+       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
+       * destination.
+       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
+       * the destination.
+       */
+      public fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable)
+
+      /**
+       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
+       * destination.
+       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
+       * the destination.
+       */
+      public
+          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty)
+
+      /**
+       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
+       * destination.
+       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
+       * the destination.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7e9071715f9eb9442b214016e6a2cd9f3d2d209b1f152746058d8f7ab17ec8a4")
+      public
+          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty.builder()
+
+      /**
+       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
+       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+       * destination.
+       */
+      override fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
+        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
+       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+       * destination.
+       */
+      override
+          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty) {
+        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(CloudWatchLogsDestinationDetailsProperty::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
+       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+       * destination.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2c0fab66a7b11abd79b203e0c3dcd007cb3c43e229073b97666d0f57dd609f1a")
+      override
+          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit):
+          Unit =
+          cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty(cloudWatchLogsDetails))
+
+      /**
+       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
+       * destination.
+       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
+       * the destination.
+       */
+      override fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
+        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
+       * destination.
+       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
+       * the destination.
+       */
+      override
+          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty) {
+        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(KinesisFirehoseDestinationDetailsProperty::unwrap))
+      }
+
+      /**
+       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
+       * destination.
+       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
+       * the destination.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7e9071715f9eb9442b214016e6a2cd9f3d2d209b1f152746058d8f7ab17ec8a4")
+      override
+          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit):
+          Unit =
+          kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty(kinesisFirehoseDetails))
+
+      public fun build():
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty,
+    ) : CdkObject(cdkObject), DestinationDetailsProperty {
+      /**
+       * The configuration details of the CloudWatch Logs destination.
+       *
+       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
+       * destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html#cfn-elasticache-replicationgroup-destinationdetails-cloudwatchlogsdetails)
+       */
+      override fun cloudWatchLogsDetails(): Any? = unwrap(this).getCloudWatchLogsDetails()
+
+      /**
+       * The configuration details of the Kinesis Data Firehose destination.
+       *
+       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
+       * the destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html#cfn-elasticache-replicationgroup-destinationdetails-kinesisfirehosedetails)
+       */
+      override fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty):
+          DestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DestinationDetailsProperty):
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty
+    }
+  }
+
+  /**
    * The configuration details of the Kinesis Data Firehose destination.
    *
    * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as the
@@ -3283,315 +3592,6 @@ public open class CfnReplicationGroup internal constructor(
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty
-    }
-  }
-
-  /**
-   * The configuration details of the CloudWatch Logs destination.
-   *
-   * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-   * destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticache.*;
-   * CloudWatchLogsDestinationDetailsProperty cloudWatchLogsDestinationDetailsProperty =
-   * CloudWatchLogsDestinationDetailsProperty.builder()
-   * .logGroup("logGroup")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-cloudwatchlogsdestinationdetails.html)
-   */
-  public interface CloudWatchLogsDestinationDetailsProperty {
-    /**
-     * The name of the CloudWatch Logs log group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-cloudwatchlogsdestinationdetails.html#cfn-elasticache-replicationgroup-cloudwatchlogsdestinationdetails-loggroup)
-     */
-    public fun logGroup(): String
-
-    /**
-     * A builder for [CloudWatchLogsDestinationDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param logGroup The name of the CloudWatch Logs log group. 
-       */
-      public fun logGroup(logGroup: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty.builder()
-
-      /**
-       * @param logGroup The name of the CloudWatch Logs log group. 
-       */
-      override fun logGroup(logGroup: String) {
-        cdkBuilder.logGroup(logGroup)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsDestinationDetailsProperty {
-      /**
-       * The name of the CloudWatch Logs log group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-cloudwatchlogsdestinationdetails.html#cfn-elasticache-replicationgroup-cloudwatchlogsdestinationdetails-loggroup)
-       */
-      override fun logGroup(): String = unwrap(this).getLogGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CloudWatchLogsDestinationDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty):
-          CloudWatchLogsDestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogsDestinationDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogsDestinationDetailsProperty):
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty
-    }
-  }
-
-  /**
-   * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose
-   * destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticache.*;
-   * DestinationDetailsProperty destinationDetailsProperty = DestinationDetailsProperty.builder()
-   * .cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty.builder()
-   * .logGroup("logGroup")
-   * .build())
-   * .kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty.builder()
-   * .deliveryStream("deliveryStream")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html)
-   */
-  public interface DestinationDetailsProperty {
-    /**
-     * The configuration details of the CloudWatch Logs destination.
-     *
-     * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-     * destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html#cfn-elasticache-replicationgroup-destinationdetails-cloudwatchlogsdetails)
-     */
-    public fun cloudWatchLogsDetails(): Any? = unwrap(this).getCloudWatchLogsDetails()
-
-    /**
-     * The configuration details of the Kinesis Data Firehose destination.
-     *
-     * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
-     * the destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html#cfn-elasticache-replicationgroup-destinationdetails-kinesisfirehosedetails)
-     */
-    public fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
-
-    /**
-     * A builder for [DestinationDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
-       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-       * destination.
-       */
-      public fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable)
-
-      /**
-       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
-       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-       * destination.
-       */
-      public
-          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty)
-
-      /**
-       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
-       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-       * destination.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2c0fab66a7b11abd79b203e0c3dcd007cb3c43e229073b97666d0f57dd609f1a")
-      public
-          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit)
-
-      /**
-       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
-       * destination.
-       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
-       * the destination.
-       */
-      public fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable)
-
-      /**
-       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
-       * destination.
-       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
-       * the destination.
-       */
-      public
-          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty)
-
-      /**
-       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
-       * destination.
-       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
-       * the destination.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7e9071715f9eb9442b214016e6a2cd9f3d2d209b1f152746058d8f7ab17ec8a4")
-      public
-          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty.builder()
-
-      /**
-       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
-       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-       * destination.
-       */
-      override fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
-        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
-       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-       * destination.
-       */
-      override
-          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty) {
-        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(CloudWatchLogsDestinationDetailsProperty::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLogsDetails The configuration details of the CloudWatch Logs destination.
-       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-       * destination.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2c0fab66a7b11abd79b203e0c3dcd007cb3c43e229073b97666d0f57dd609f1a")
-      override
-          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit):
-          Unit =
-          cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty(cloudWatchLogsDetails))
-
-      /**
-       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
-       * destination.
-       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
-       * the destination.
-       */
-      override fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
-        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
-       * destination.
-       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
-       * the destination.
-       */
-      override
-          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty) {
-        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(KinesisFirehoseDestinationDetailsProperty::unwrap))
-      }
-
-      /**
-       * @param kinesisFirehoseDetails The configuration details of the Kinesis Data Firehose
-       * destination.
-       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
-       * the destination.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7e9071715f9eb9442b214016e6a2cd9f3d2d209b1f152746058d8f7ab17ec8a4")
-      override
-          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit):
-          Unit =
-          kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty(kinesisFirehoseDetails))
-
-      public fun build():
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty,
-    ) : CdkObject(cdkObject), DestinationDetailsProperty {
-      /**
-       * The configuration details of the CloudWatch Logs destination.
-       *
-       * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
-       * destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html#cfn-elasticache-replicationgroup-destinationdetails-cloudwatchlogsdetails)
-       */
-      override fun cloudWatchLogsDetails(): Any? = unwrap(this).getCloudWatchLogsDetails()
-
-      /**
-       * The configuration details of the Kinesis Data Firehose destination.
-       *
-       * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as
-       * the destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-destinationdetails.html#cfn-elasticache-replicationgroup-destinationdetails-kinesisfirehosedetails)
-       */
-      override fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty):
-          DestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DestinationDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DestinationDetailsProperty):
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty
     }
   }
 }

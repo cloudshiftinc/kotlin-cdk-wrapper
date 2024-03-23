@@ -287,6 +287,90 @@ public open class CfnBotVersion internal constructor(
   }
 
   /**
+   * The version of a bot used for a bot locale.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BotVersionLocaleDetailsProperty botVersionLocaleDetailsProperty =
+   * BotVersionLocaleDetailsProperty.builder()
+   * .sourceBotVersion("sourceBotVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botversion-botversionlocaledetails.html)
+   */
+  public interface BotVersionLocaleDetailsProperty {
+    /**
+     * The version of a bot used for a bot locale.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botversion-botversionlocaledetails.html#cfn-lex-botversion-botversionlocaledetails-sourcebotversion)
+     */
+    public fun sourceBotVersion(): String
+
+    /**
+     * A builder for [BotVersionLocaleDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sourceBotVersion The version of a bot used for a bot locale. 
+       */
+      public fun sourceBotVersion(sourceBotVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty.builder()
+
+      /**
+       * @param sourceBotVersion The version of a bot used for a bot locale. 
+       */
+      override fun sourceBotVersion(sourceBotVersion: String) {
+        cdkBuilder.sourceBotVersion(sourceBotVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty,
+    ) : CdkObject(cdkObject), BotVersionLocaleDetailsProperty {
+      /**
+       * The version of a bot used for a bot locale.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botversion-botversionlocaledetails.html#cfn-lex-botversion-botversionlocaledetails-sourcebotversion)
+       */
+      override fun sourceBotVersion(): String = unwrap(this).getSourceBotVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BotVersionLocaleDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty):
+          BotVersionLocaleDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BotVersionLocaleDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BotVersionLocaleDetailsProperty):
+          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty
+    }
+  }
+
+  /**
    * Specifies the locale that Amazon Lex adds to this version.
    *
    * You can choose the Draft version or any other previously published version for each locale.
@@ -431,90 +515,6 @@ public open class CfnBotVersion internal constructor(
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty
-    }
-  }
-
-  /**
-   * The version of a bot used for a bot locale.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lex.*;
-   * BotVersionLocaleDetailsProperty botVersionLocaleDetailsProperty =
-   * BotVersionLocaleDetailsProperty.builder()
-   * .sourceBotVersion("sourceBotVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botversion-botversionlocaledetails.html)
-   */
-  public interface BotVersionLocaleDetailsProperty {
-    /**
-     * The version of a bot used for a bot locale.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botversion-botversionlocaledetails.html#cfn-lex-botversion-botversionlocaledetails-sourcebotversion)
-     */
-    public fun sourceBotVersion(): String
-
-    /**
-     * A builder for [BotVersionLocaleDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param sourceBotVersion The version of a bot used for a bot locale. 
-       */
-      public fun sourceBotVersion(sourceBotVersion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty.builder()
-
-      /**
-       * @param sourceBotVersion The version of a bot used for a bot locale. 
-       */
-      override fun sourceBotVersion(sourceBotVersion: String) {
-        cdkBuilder.sourceBotVersion(sourceBotVersion)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty,
-    ) : CdkObject(cdkObject), BotVersionLocaleDetailsProperty {
-      /**
-       * The version of a bot used for a bot locale.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botversion-botversionlocaledetails.html#cfn-lex-botversion-botversionlocaledetails-sourcebotversion)
-       */
-      override fun sourceBotVersion(): String = unwrap(this).getSourceBotVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BotVersionLocaleDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty):
-          BotVersionLocaleDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BotVersionLocaleDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BotVersionLocaleDetailsProperty):
-          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty
     }
   }
 }

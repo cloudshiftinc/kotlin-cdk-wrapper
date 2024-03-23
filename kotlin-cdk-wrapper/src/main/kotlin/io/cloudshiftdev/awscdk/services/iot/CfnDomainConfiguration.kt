@@ -765,132 +765,6 @@ public open class CfnDomainConfiguration internal constructor(
   }
 
   /**
-   * The server certificate configuration.
-   *
-   * For more information, see [Configurable
-   * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
-   * from the AWS IoT Core Developer Guide.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * ServerCertificateConfigProperty serverCertificateConfigProperty =
-   * ServerCertificateConfigProperty.builder()
-   * .enableOcspCheck(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html)
-   */
-  public interface ServerCertificateConfigProperty {
-    /**
-     * A Boolean value that indicates whether Online Certificate Status Protocol (OCSP) server
-     * certificate check is enabled or not.
-     *
-     * For more information, see [Configurable
-     * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
-     * from the AWS IoT Core Developer Guide.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-enableocspcheck)
-     */
-    public fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
-
-    /**
-     * A builder for [ServerCertificateConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableOcspCheck A Boolean value that indicates whether Online Certificate Status
-       * Protocol (OCSP) server certificate check is enabled or not.
-       * For more information, see [Configurable
-       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
-       * from the AWS IoT Core Developer Guide.
-       */
-      public fun enableOcspCheck(enableOcspCheck: Boolean)
-
-      /**
-       * @param enableOcspCheck A Boolean value that indicates whether Online Certificate Status
-       * Protocol (OCSP) server certificate check is enabled or not.
-       * For more information, see [Configurable
-       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
-       * from the AWS IoT Core Developer Guide.
-       */
-      public fun enableOcspCheck(enableOcspCheck: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty.builder()
-
-      /**
-       * @param enableOcspCheck A Boolean value that indicates whether Online Certificate Status
-       * Protocol (OCSP) server certificate check is enabled or not.
-       * For more information, see [Configurable
-       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
-       * from the AWS IoT Core Developer Guide.
-       */
-      override fun enableOcspCheck(enableOcspCheck: Boolean) {
-        cdkBuilder.enableOcspCheck(enableOcspCheck)
-      }
-
-      /**
-       * @param enableOcspCheck A Boolean value that indicates whether Online Certificate Status
-       * Protocol (OCSP) server certificate check is enabled or not.
-       * For more information, see [Configurable
-       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
-       * from the AWS IoT Core Developer Guide.
-       */
-      override fun enableOcspCheck(enableOcspCheck: IResolvable) {
-        cdkBuilder.enableOcspCheck(enableOcspCheck.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty,
-    ) : CdkObject(cdkObject), ServerCertificateConfigProperty {
-      /**
-       * A Boolean value that indicates whether Online Certificate Status Protocol (OCSP) server
-       * certificate check is enabled or not.
-       *
-       * For more information, see [Configurable
-       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
-       * from the AWS IoT Core Developer Guide.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-enableocspcheck)
-       */
-      override fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ServerCertificateConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty):
-          ServerCertificateConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServerCertificateConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServerCertificateConfigProperty):
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty
-    }
-  }
-
-  /**
    * An object that specifies the authorization service for a domain.
    *
    * Example:
@@ -1021,7 +895,11 @@ public open class CfnDomainConfiguration internal constructor(
   }
 
   /**
-   * An object that specifies the TLS configuration for a domain.
+   * The server certificate configuration.
+   *
+   * For more information, see [Configurable
+   * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+   * from the AWS IoT Core Developer Guide.
    *
    * Example:
    *
@@ -1029,90 +907,116 @@ public open class CfnDomainConfiguration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iot.*;
-   * TlsConfigProperty tlsConfigProperty = TlsConfigProperty.builder()
-   * .securityPolicy("securityPolicy")
+   * ServerCertificateConfigProperty serverCertificateConfigProperty =
+   * ServerCertificateConfigProperty.builder()
+   * .enableOcspCheck(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html)
    */
-  public interface TlsConfigProperty {
+  public interface ServerCertificateConfigProperty {
     /**
-     * The security policy for a domain configuration.
+     * A Boolean value that indicates whether Online Certificate Status Protocol (OCSP) server
+     * certificate check is enabled or not.
      *
-     * For more information, see [Security
-     * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
-     * in the *AWS IoT Core developer guide* .
+     * For more information, see [Configurable
+     * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+     * from the AWS IoT Core Developer Guide.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html#cfn-iot-domainconfiguration-tlsconfig-securitypolicy)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-enableocspcheck)
      */
-    public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+    public fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
 
     /**
-     * A builder for [TlsConfigProperty]
+     * A builder for [ServerCertificateConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param securityPolicy The security policy for a domain configuration.
-       * For more information, see [Security
-       * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
-       * in the *AWS IoT Core developer guide* .
+       * @param enableOcspCheck A Boolean value that indicates whether Online Certificate Status
+       * Protocol (OCSP) server certificate check is enabled or not.
+       * For more information, see [Configurable
+       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+       * from the AWS IoT Core Developer Guide.
        */
-      public fun securityPolicy(securityPolicy: String)
+      public fun enableOcspCheck(enableOcspCheck: Boolean)
+
+      /**
+       * @param enableOcspCheck A Boolean value that indicates whether Online Certificate Status
+       * Protocol (OCSP) server certificate check is enabled or not.
+       * For more information, see [Configurable
+       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+       * from the AWS IoT Core Developer Guide.
+       */
+      public fun enableOcspCheck(enableOcspCheck: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty.Builder =
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty.builder()
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty.builder()
 
       /**
-       * @param securityPolicy The security policy for a domain configuration.
-       * For more information, see [Security
-       * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
-       * in the *AWS IoT Core developer guide* .
+       * @param enableOcspCheck A Boolean value that indicates whether Online Certificate Status
+       * Protocol (OCSP) server certificate check is enabled or not.
+       * For more information, see [Configurable
+       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+       * from the AWS IoT Core Developer Guide.
        */
-      override fun securityPolicy(securityPolicy: String) {
-        cdkBuilder.securityPolicy(securityPolicy)
+      override fun enableOcspCheck(enableOcspCheck: Boolean) {
+        cdkBuilder.enableOcspCheck(enableOcspCheck)
+      }
+
+      /**
+       * @param enableOcspCheck A Boolean value that indicates whether Online Certificate Status
+       * Protocol (OCSP) server certificate check is enabled or not.
+       * For more information, see [Configurable
+       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+       * from the AWS IoT Core Developer Guide.
+       */
+      override fun enableOcspCheck(enableOcspCheck: IResolvable) {
+        cdkBuilder.enableOcspCheck(enableOcspCheck.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty,
-    ) : CdkObject(cdkObject), TlsConfigProperty {
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty,
+    ) : CdkObject(cdkObject), ServerCertificateConfigProperty {
       /**
-       * The security policy for a domain configuration.
+       * A Boolean value that indicates whether Online Certificate Status Protocol (OCSP) server
+       * certificate check is enabled or not.
        *
-       * For more information, see [Security
-       * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
-       * in the *AWS IoT Core developer guide* .
+       * For more information, see [Configurable
+       * endpoints](https://docs.aws.amazon.com//iot/latest/developerguide/iot-custom-endpoints-configurable.html)
+       * from the AWS IoT Core Developer Guide.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html#cfn-iot-domainconfiguration-tlsconfig-securitypolicy)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-enableocspcheck)
        */
-      override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+      override fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TlsConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ServerCertificateConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty):
-          TlsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TlsConfigProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty):
+          ServerCertificateConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerCertificateConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TlsConfigProperty):
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty
+      internal fun unwrap(wrapped: ServerCertificateConfigProperty):
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty
     }
   }
 
@@ -1255,6 +1159,102 @@ public open class CfnDomainConfiguration internal constructor(
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty
+    }
+  }
+
+  /**
+   * An object that specifies the TLS configuration for a domain.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * TlsConfigProperty tlsConfigProperty = TlsConfigProperty.builder()
+   * .securityPolicy("securityPolicy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html)
+   */
+  public interface TlsConfigProperty {
+    /**
+     * The security policy for a domain configuration.
+     *
+     * For more information, see [Security
+     * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
+     * in the *AWS IoT Core developer guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html#cfn-iot-domainconfiguration-tlsconfig-securitypolicy)
+     */
+    public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+
+    /**
+     * A builder for [TlsConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityPolicy The security policy for a domain configuration.
+       * For more information, see [Security
+       * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
+       * in the *AWS IoT Core developer guide* .
+       */
+      public fun securityPolicy(securityPolicy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty.builder()
+
+      /**
+       * @param securityPolicy The security policy for a domain configuration.
+       * For more information, see [Security
+       * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
+       * in the *AWS IoT Core developer guide* .
+       */
+      override fun securityPolicy(securityPolicy: String) {
+        cdkBuilder.securityPolicy(securityPolicy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty,
+    ) : CdkObject(cdkObject), TlsConfigProperty {
+      /**
+       * The security policy for a domain configuration.
+       *
+       * For more information, see [Security
+       * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
+       * in the *AWS IoT Core developer guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html#cfn-iot-domainconfiguration-tlsconfig-securitypolicy)
+       */
+      override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TlsConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty):
+          TlsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TlsConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TlsConfigProperty):
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty
     }
   }
 }

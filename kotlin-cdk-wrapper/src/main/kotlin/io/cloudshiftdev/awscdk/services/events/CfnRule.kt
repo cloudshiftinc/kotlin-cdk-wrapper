@@ -1210,11 +1210,8 @@ public open class CfnRule internal constructor(
   }
 
   /**
-   * The task placement strategy for a task or service.
-   *
-   * To learn more, see [Task Placement
-   * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html)
-   * in the Amazon Elastic Container Service Service Developer Guide.
+   * Contains the GraphQL operation to be parsed and executed, if the event target is an AWS AppSync
+   * API.
    *
    * Example:
    *
@@ -1222,1512 +1219,93 @@ public open class CfnRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.events.*;
-   * PlacementStrategyProperty placementStrategyProperty = PlacementStrategyProperty.builder()
-   * .field("field")
-   * .type("type")
+   * AppSyncParametersProperty appSyncParametersProperty = AppSyncParametersProperty.builder()
+   * .graphQlOperation("graphQlOperation")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-appsyncparameters.html)
    */
-  public interface PlacementStrategyProperty {
+  public interface AppSyncParametersProperty {
     /**
-     * The field to apply the placement strategy against.
+     * The GraphQL operation; that is, the query, mutation, or subscription to be parsed and
+     * executed by the GraphQL service.
      *
-     * For the spread placement strategy, valid values are instanceId (or host, which has the same
-     * effect), or any platform or custom attribute that is applied to a container instance, such as
-     * attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
-     * memory. For the random placement strategy, this field is not used.
+     * For more information, see
+     * [Operations](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-architecture.html#graphql-operations)
+     * in the *AWS AppSync User Guide* .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html#cfn-events-rule-placementstrategy-field)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-appsyncparameters.html#cfn-events-rule-appsyncparameters-graphqloperation)
      */
-    public fun `field`(): String? = unwrap(this).getField()
+    public fun graphQlOperation(): String
 
     /**
-     * The type of placement strategy.
-     *
-     * The random placement strategy randomly places tasks on available candidates. The spread
-     * placement strategy spreads placement across available candidates evenly based on the field
-     * parameter. The binpack strategy places tasks on available candidates that have the least
-     * available amount of the resource that is specified with the field parameter. For example, if you
-     * binpack on memory, a task is placed on the instance with the least amount of remaining memory
-     * (but still enough to run the task).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html#cfn-events-rule-placementstrategy-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [PlacementStrategyProperty]
+     * A builder for [AppSyncParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param field The field to apply the placement strategy against.
-       * For the spread placement strategy, valid values are instanceId (or host, which has the same
-       * effect), or any platform or custom attribute that is applied to a container instance, such as
-       * attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
-       * memory. For the random placement strategy, this field is not used.
+       * @param graphQlOperation The GraphQL operation; that is, the query, mutation, or
+       * subscription to be parsed and executed by the GraphQL service. 
+       * For more information, see
+       * [Operations](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-architecture.html#graphql-operations)
+       * in the *AWS AppSync User Guide* .
        */
-      public fun `field`(`field`: String)
-
-      /**
-       * @param type The type of placement strategy.
-       * The random placement strategy randomly places tasks on available candidates. The spread
-       * placement strategy spreads placement across available candidates evenly based on the field
-       * parameter. The binpack strategy places tasks on available candidates that have the least
-       * available amount of the resource that is specified with the field parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory (but still enough to run the task).
-       */
-      public fun type(type: String)
+      public fun graphQlOperation(graphQlOperation: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty.builder()
+          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty.builder()
 
       /**
-       * @param field The field to apply the placement strategy against.
-       * For the spread placement strategy, valid values are instanceId (or host, which has the same
-       * effect), or any platform or custom attribute that is applied to a container instance, such as
-       * attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
-       * memory. For the random placement strategy, this field is not used.
+       * @param graphQlOperation The GraphQL operation; that is, the query, mutation, or
+       * subscription to be parsed and executed by the GraphQL service. 
+       * For more information, see
+       * [Operations](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-architecture.html#graphql-operations)
+       * in the *AWS AppSync User Guide* .
        */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
+      override fun graphQlOperation(graphQlOperation: String) {
+        cdkBuilder.graphQlOperation(graphQlOperation)
       }
 
-      /**
-       * @param type The type of placement strategy.
-       * The random placement strategy randomly places tasks on available candidates. The spread
-       * placement strategy spreads placement across available candidates evenly based on the field
-       * parameter. The binpack strategy places tasks on available candidates that have the least
-       * available amount of the resource that is specified with the field parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory (but still enough to run the task).
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty =
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty,
-    ) : CdkObject(cdkObject), PlacementStrategyProperty {
+          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty,
+    ) : CdkObject(cdkObject), AppSyncParametersProperty {
       /**
-       * The field to apply the placement strategy against.
+       * The GraphQL operation; that is, the query, mutation, or subscription to be parsed and
+       * executed by the GraphQL service.
        *
-       * For the spread placement strategy, valid values are instanceId (or host, which has the same
-       * effect), or any platform or custom attribute that is applied to a container instance, such as
-       * attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
-       * memory. For the random placement strategy, this field is not used.
+       * For more information, see
+       * [Operations](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-architecture.html#graphql-operations)
+       * in the *AWS AppSync User Guide* .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html#cfn-events-rule-placementstrategy-field)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-appsyncparameters.html#cfn-events-rule-appsyncparameters-graphqloperation)
        */
-      override fun `field`(): String? = unwrap(this).getField()
-
-      /**
-       * The type of placement strategy.
-       *
-       * The random placement strategy randomly places tasks on available candidates. The spread
-       * placement strategy spreads placement across available candidates evenly based on the field
-       * parameter. The binpack strategy places tasks on available candidates that have the least
-       * available amount of the resource that is specified with the field parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory (but still enough to run the task).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html#cfn-events-rule-placementstrategy-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
+      override fun graphQlOperation(): String = unwrap(this).getGraphQlOperation()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementStrategyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AppSyncParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty):
-          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PlacementStrategyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty):
+          AppSyncParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AppSyncParametersProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PlacementStrategyProperty):
-          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty = (wrapped as
+      internal fun unwrap(wrapped: AppSyncParametersProperty):
+          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty
-    }
-  }
-
-  /**
-   * A key-value pair associated with an ECS Target of an EventBridge rule.
-   *
-   * The tag will be propagated to ECS by EventBridge when starting an ECS task based on a matched
-   * event.
-   *
-   *
-   * Currently, tags are only available when using ECS with EventBridge .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * TagProperty tagProperty = TagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html)
-   */
-  public interface TagProperty {
-    /**
-     * A string you can use to assign a value.
-     *
-     * The combination of tag keys and values can help you organize and categorize your resources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html#cfn-events-rule-tag-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The value for the specified tag key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html#cfn-events-rule-tag-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [TagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key A string you can use to assign a value.
-       * The combination of tag keys and values can help you organize and categorize your resources.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value for the specified tag key.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.events.CfnRule.TagProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.TagProperty.builder()
-
-      /**
-       * @param key A string you can use to assign a value.
-       * The combination of tag keys and values can help you organize and categorize your resources.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value for the specified tag key.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.TagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.TagProperty,
-    ) : CdkObject(cdkObject), TagProperty {
-      /**
-       * A string you can use to assign a value.
-       *
-       * The combination of tag keys and values can help you organize and categorize your resources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html#cfn-events-rule-tag-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * The value for the specified tag key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html#cfn-events-rule-tag-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.TagProperty):
-          TagProperty = CdkObjectWrappers.wrap(cdkObject) as? TagProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TagProperty):
-          software.amazon.awscdk.services.events.CfnRule.TagProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.events.CfnRule.TagProperty
-    }
-  }
-
-  /**
-   * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke
-   * the Amazon Redshift Data API ExecuteStatement based on EventBridge events.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * RedshiftDataParametersProperty redshiftDataParametersProperty =
-   * RedshiftDataParametersProperty.builder()
-   * .database("database")
-   * // the properties below are optional
-   * .dbUser("dbUser")
-   * .secretManagerArn("secretManagerArn")
-   * .sql("sql")
-   * .sqls(List.of("sqls"))
-   * .statementName("statementName")
-   * .withEvent(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html)
-   */
-  public interface RedshiftDataParametersProperty {
-    /**
-     * The name of the database.
-     *
-     * Required when authenticating using temporary credentials.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-database)
-     */
-    public fun database(): String
-
-    /**
-     * The database user name.
-     *
-     * Required when authenticating using temporary credentials.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-dbuser)
-     */
-    public fun dbUser(): String? = unwrap(this).getDbUser()
-
-    /**
-     * The name or ARN of the secret that enables access to the database.
-     *
-     * Required when authenticating using AWS Secrets Manager.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-secretmanagerarn)
-     */
-    public fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
-
-    /**
-     * The SQL statement text to run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sql)
-     */
-    public fun sql(): String? = unwrap(this).getSql()
-
-    /**
-     * One or more SQL statements to run.
-     *
-     * The SQL statements are run as a single transaction. They run serially in the order of the
-     * array. Subsequent SQL statements don't start until the previous statement in the array
-     * completes. If any SQL statement fails, then because they are run as one transaction, all work is
-     * rolled back.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sqls)
-     */
-    public fun sqls(): List<String> = unwrap(this).getSqls() ?: emptyList()
-
-    /**
-     * The name of the SQL statement.
-     *
-     * You can name the SQL statement when you create it to identify the query.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-statementname)
-     */
-    public fun statementName(): String? = unwrap(this).getStatementName()
-
-    /**
-     * Indicates whether to send an event back to EventBridge after the SQL statement runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-withevent)
-     */
-    public fun withEvent(): Any? = unwrap(this).getWithEvent()
-
-    /**
-     * A builder for [RedshiftDataParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param database The name of the database. 
-       * Required when authenticating using temporary credentials.
-       */
-      public fun database(database: String)
-
-      /**
-       * @param dbUser The database user name.
-       * Required when authenticating using temporary credentials.
-       */
-      public fun dbUser(dbUser: String)
-
-      /**
-       * @param secretManagerArn The name or ARN of the secret that enables access to the database.
-       * Required when authenticating using AWS Secrets Manager.
-       */
-      public fun secretManagerArn(secretManagerArn: String)
-
-      /**
-       * @param sql The SQL statement text to run.
-       */
-      public fun sql(sql: String)
-
-      /**
-       * @param sqls One or more SQL statements to run.
-       * The SQL statements are run as a single transaction. They run serially in the order of the
-       * array. Subsequent SQL statements don't start until the previous statement in the array
-       * completes. If any SQL statement fails, then because they are run as one transaction, all work
-       * is rolled back.
-       */
-      public fun sqls(sqls: List<String>)
-
-      /**
-       * @param sqls One or more SQL statements to run.
-       * The SQL statements are run as a single transaction. They run serially in the order of the
-       * array. Subsequent SQL statements don't start until the previous statement in the array
-       * completes. If any SQL statement fails, then because they are run as one transaction, all work
-       * is rolled back.
-       */
-      public fun sqls(vararg sqls: String)
-
-      /**
-       * @param statementName The name of the SQL statement.
-       * You can name the SQL statement when you create it to identify the query.
-       */
-      public fun statementName(statementName: String)
-
-      /**
-       * @param withEvent Indicates whether to send an event back to EventBridge after the SQL
-       * statement runs.
-       */
-      public fun withEvent(withEvent: Boolean)
-
-      /**
-       * @param withEvent Indicates whether to send an event back to EventBridge after the SQL
-       * statement runs.
-       */
-      public fun withEvent(withEvent: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty.builder()
-
-      /**
-       * @param database The name of the database. 
-       * Required when authenticating using temporary credentials.
-       */
-      override fun database(database: String) {
-        cdkBuilder.database(database)
-      }
-
-      /**
-       * @param dbUser The database user name.
-       * Required when authenticating using temporary credentials.
-       */
-      override fun dbUser(dbUser: String) {
-        cdkBuilder.dbUser(dbUser)
-      }
-
-      /**
-       * @param secretManagerArn The name or ARN of the secret that enables access to the database.
-       * Required when authenticating using AWS Secrets Manager.
-       */
-      override fun secretManagerArn(secretManagerArn: String) {
-        cdkBuilder.secretManagerArn(secretManagerArn)
-      }
-
-      /**
-       * @param sql The SQL statement text to run.
-       */
-      override fun sql(sql: String) {
-        cdkBuilder.sql(sql)
-      }
-
-      /**
-       * @param sqls One or more SQL statements to run.
-       * The SQL statements are run as a single transaction. They run serially in the order of the
-       * array. Subsequent SQL statements don't start until the previous statement in the array
-       * completes. If any SQL statement fails, then because they are run as one transaction, all work
-       * is rolled back.
-       */
-      override fun sqls(sqls: List<String>) {
-        cdkBuilder.sqls(sqls)
-      }
-
-      /**
-       * @param sqls One or more SQL statements to run.
-       * The SQL statements are run as a single transaction. They run serially in the order of the
-       * array. Subsequent SQL statements don't start until the previous statement in the array
-       * completes. If any SQL statement fails, then because they are run as one transaction, all work
-       * is rolled back.
-       */
-      override fun sqls(vararg sqls: String): Unit = sqls(sqls.toList())
-
-      /**
-       * @param statementName The name of the SQL statement.
-       * You can name the SQL statement when you create it to identify the query.
-       */
-      override fun statementName(statementName: String) {
-        cdkBuilder.statementName(statementName)
-      }
-
-      /**
-       * @param withEvent Indicates whether to send an event back to EventBridge after the SQL
-       * statement runs.
-       */
-      override fun withEvent(withEvent: Boolean) {
-        cdkBuilder.withEvent(withEvent)
-      }
-
-      /**
-       * @param withEvent Indicates whether to send an event back to EventBridge after the SQL
-       * statement runs.
-       */
-      override fun withEvent(withEvent: IResolvable) {
-        cdkBuilder.withEvent(withEvent.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty,
-    ) : CdkObject(cdkObject), RedshiftDataParametersProperty {
-      /**
-       * The name of the database.
-       *
-       * Required when authenticating using temporary credentials.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-database)
-       */
-      override fun database(): String = unwrap(this).getDatabase()
-
-      /**
-       * The database user name.
-       *
-       * Required when authenticating using temporary credentials.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-dbuser)
-       */
-      override fun dbUser(): String? = unwrap(this).getDbUser()
-
-      /**
-       * The name or ARN of the secret that enables access to the database.
-       *
-       * Required when authenticating using AWS Secrets Manager.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-secretmanagerarn)
-       */
-      override fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
-
-      /**
-       * The SQL statement text to run.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sql)
-       */
-      override fun sql(): String? = unwrap(this).getSql()
-
-      /**
-       * One or more SQL statements to run.
-       *
-       * The SQL statements are run as a single transaction. They run serially in the order of the
-       * array. Subsequent SQL statements don't start until the previous statement in the array
-       * completes. If any SQL statement fails, then because they are run as one transaction, all work
-       * is rolled back.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sqls)
-       */
-      override fun sqls(): List<String> = unwrap(this).getSqls() ?: emptyList()
-
-      /**
-       * The name of the SQL statement.
-       *
-       * You can name the SQL statement when you create it to identify the query.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-statementname)
-       */
-      override fun statementName(): String? = unwrap(this).getStatementName()
-
-      /**
-       * Indicates whether to send an event back to EventBridge after the SQL statement runs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-withevent)
-       */
-      override fun withEvent(): Any? = unwrap(this).getWithEvent()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftDataParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty):
-          RedshiftDataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RedshiftDataParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedshiftDataParametersProperty):
-          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty
-    }
-  }
-
-  /**
-   * A `RetryPolicy` object that includes information about the retry policy settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * RetryPolicyProperty retryPolicyProperty = RetryPolicyProperty.builder()
-   * .maximumEventAgeInSeconds(123)
-   * .maximumRetryAttempts(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html)
-   */
-  public interface RetryPolicyProperty {
-    /**
-     * The maximum amount of time, in seconds, to continue to make retry attempts.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html#cfn-events-rule-retrypolicy-maximumeventageinseconds)
-     */
-    public fun maximumEventAgeInSeconds(): Number? = unwrap(this).getMaximumEventAgeInSeconds()
-
-    /**
-     * The maximum number of retry attempts to make before the request fails.
-     *
-     * Retry attempts continue until either the maximum number of attempts is made or until the
-     * duration of the `MaximumEventAgeInSeconds` is met.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html#cfn-events-rule-retrypolicy-maximumretryattempts)
-     */
-    public fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
-
-    /**
-     * A builder for [RetryPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
-       * retry attempts.
-       */
-      public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number)
-
-      /**
-       * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
-       * fails.
-       * Retry attempts continue until either the maximum number of attempts is made or until the
-       * duration of the `MaximumEventAgeInSeconds` is met.
-       */
-      public fun maximumRetryAttempts(maximumRetryAttempts: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty.builder()
-
-      /**
-       * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
-       * retry attempts.
-       */
-      override fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
-        cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
-      }
-
-      /**
-       * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
-       * fails.
-       * Retry attempts continue until either the maximum number of attempts is made or until the
-       * duration of the `MaximumEventAgeInSeconds` is met.
-       */
-      override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
-        cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty,
-    ) : CdkObject(cdkObject), RetryPolicyProperty {
-      /**
-       * The maximum amount of time, in seconds, to continue to make retry attempts.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html#cfn-events-rule-retrypolicy-maximumeventageinseconds)
-       */
-      override fun maximumEventAgeInSeconds(): Number? = unwrap(this).getMaximumEventAgeInSeconds()
-
-      /**
-       * The maximum number of retry attempts to make before the request fails.
-       *
-       * Retry attempts continue until either the maximum number of attempts is made or until the
-       * duration of the `MaximumEventAgeInSeconds` is met.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html#cfn-events-rule-retrypolicy-maximumretryattempts)
-       */
-      override fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RetryPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty):
-          RetryPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RetryPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RetryPolicyProperty):
-          software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty
-    }
-  }
-
-  /**
-   * This structure includes the custom parameter to be used when the target is an SQS FIFO queue.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * SqsParametersProperty sqsParametersProperty = SqsParametersProperty.builder()
-   * .messageGroupId("messageGroupId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html)
-   */
-  public interface SqsParametersProperty {
-    /**
-     * The FIFO message group ID to use as the target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid)
-     */
-    public fun messageGroupId(): String
-
-    /**
-     * A builder for [SqsParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param messageGroupId The FIFO message group ID to use as the target. 
-       */
-      public fun messageGroupId(messageGroupId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty.builder()
-
-      /**
-       * @param messageGroupId The FIFO message group ID to use as the target. 
-       */
-      override fun messageGroupId(messageGroupId: String) {
-        cdkBuilder.messageGroupId(messageGroupId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty,
-    ) : CdkObject(cdkObject), SqsParametersProperty {
-      /**
-       * The FIFO message group ID to use as the target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid)
-       */
-      override fun messageGroupId(): String = unwrap(this).getMessageGroupId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SqsParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty):
-          SqsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? SqsParametersProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SqsParametersProperty):
-          software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty
-    }
-  }
-
-  /**
-   * Contains the parameters needed for you to provide custom input to a target based on one or more
-   * pieces of data extracted from the event.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * InputTransformerProperty inputTransformerProperty = InputTransformerProperty.builder()
-   * .inputTemplate("inputTemplate")
-   * // the properties below are optional
-   * .inputPathsMap(Map.of(
-   * "inputPathsMapKey", "inputPathsMap"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html)
-   */
-  public interface InputTransformerProperty {
-    /**
-     * Map of JSON paths to be extracted from the event.
-     *
-     * You can then insert these in the template in `InputTemplate` to produce the output you want
-     * to be sent to the target.
-     *
-     * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
-     * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
-     *
-     * The keys cannot start with " AWS ."
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputpathsmap)
-     */
-    public fun inputPathsMap(): Any? = unwrap(this).getInputPathsMap()
-
-    /**
-     * Input template where you specify placeholders that will be filled with the values of the keys
-     * from `InputPathsMap` to customize the data sent to the target.
-     *
-     * Enclose each `InputPathsMaps` value in brackets: &lt; *value* &gt;
-     *
-     * If `InputTemplate` is a JSON object (surrounded by curly braces), the following restrictions
-     * apply:
-     *
-     * * The placeholder cannot be used as an object key.
-     *
-     * The following example shows the syntax for using `InputPathsMap` and `InputTemplate` .
-     *
-     * `"InputTransformer":`
-     *
-     * `{`
-     *
-     * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-     *
-     * `"InputTemplate": "&lt;instance&gt; is in state &lt;status&gt;"`
-     *
-     * `}`
-     *
-     * To have the `InputTemplate` include quote marks within a JSON string, escape each quote marks
-     * with a slash, as in the following example:
-     *
-     * `"InputTransformer":`
-     *
-     * `{`
-     *
-     * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-     *
-     * `"InputTemplate": "&lt;instance&gt; is in state \"&lt;status&gt;\""`
-     *
-     * `}`
-     *
-     * The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in the
-     * following example:
-     *
-     * `"InputTransformer":`
-     *
-     * `{`
-     *
-     * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-     *
-     * `"InputTemplate": '{"myInstance": &lt;instance&gt;,"myStatus": "&lt;instance&gt; is in state
-     * \"&lt;status&gt;\""}'`
-     *
-     * `}`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputtemplate)
-     */
-    public fun inputTemplate(): String
-
-    /**
-     * A builder for [InputTransformerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param inputPathsMap Map of JSON paths to be extracted from the event.
-       * You can then insert these in the template in `InputTemplate` to produce the output you want
-       * to be sent to the target.
-       *
-       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
-       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
-       *
-       * The keys cannot start with " AWS ."
-       */
-      public fun inputPathsMap(inputPathsMap: IResolvable)
-
-      /**
-       * @param inputPathsMap Map of JSON paths to be extracted from the event.
-       * You can then insert these in the template in `InputTemplate` to produce the output you want
-       * to be sent to the target.
-       *
-       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
-       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
-       *
-       * The keys cannot start with " AWS ."
-       */
-      public fun inputPathsMap(inputPathsMap: Map<String, String>)
-
-      /**
-       * @param inputTemplate Input template where you specify placeholders that will be filled with
-       * the values of the keys from `InputPathsMap` to customize the data sent to the target. 
-       * Enclose each `InputPathsMaps` value in brackets: &lt; *value* &gt;
-       *
-       * If `InputTemplate` is a JSON object (surrounded by curly braces), the following
-       * restrictions apply:
-       *
-       * * The placeholder cannot be used as an object key.
-       *
-       * The following example shows the syntax for using `InputPathsMap` and `InputTemplate` .
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": "&lt;instance&gt; is in state &lt;status&gt;"`
-       *
-       * `}`
-       *
-       * To have the `InputTemplate` include quote marks within a JSON string, escape each quote
-       * marks with a slash, as in the following example:
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": "&lt;instance&gt; is in state \"&lt;status&gt;\""`
-       *
-       * `}`
-       *
-       * The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in the
-       * following example:
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": '{"myInstance": &lt;instance&gt;,"myStatus": "&lt;instance&gt; is in
-       * state \"&lt;status&gt;\""}'`
-       *
-       * `}`
-       */
-      public fun inputTemplate(inputTemplate: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty.builder()
-
-      /**
-       * @param inputPathsMap Map of JSON paths to be extracted from the event.
-       * You can then insert these in the template in `InputTemplate` to produce the output you want
-       * to be sent to the target.
-       *
-       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
-       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
-       *
-       * The keys cannot start with " AWS ."
-       */
-      override fun inputPathsMap(inputPathsMap: IResolvable) {
-        cdkBuilder.inputPathsMap(inputPathsMap.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param inputPathsMap Map of JSON paths to be extracted from the event.
-       * You can then insert these in the template in `InputTemplate` to produce the output you want
-       * to be sent to the target.
-       *
-       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
-       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
-       *
-       * The keys cannot start with " AWS ."
-       */
-      override fun inputPathsMap(inputPathsMap: Map<String, String>) {
-        cdkBuilder.inputPathsMap(inputPathsMap)
-      }
-
-      /**
-       * @param inputTemplate Input template where you specify placeholders that will be filled with
-       * the values of the keys from `InputPathsMap` to customize the data sent to the target. 
-       * Enclose each `InputPathsMaps` value in brackets: &lt; *value* &gt;
-       *
-       * If `InputTemplate` is a JSON object (surrounded by curly braces), the following
-       * restrictions apply:
-       *
-       * * The placeholder cannot be used as an object key.
-       *
-       * The following example shows the syntax for using `InputPathsMap` and `InputTemplate` .
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": "&lt;instance&gt; is in state &lt;status&gt;"`
-       *
-       * `}`
-       *
-       * To have the `InputTemplate` include quote marks within a JSON string, escape each quote
-       * marks with a slash, as in the following example:
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": "&lt;instance&gt; is in state \"&lt;status&gt;\""`
-       *
-       * `}`
-       *
-       * The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in the
-       * following example:
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": '{"myInstance": &lt;instance&gt;,"myStatus": "&lt;instance&gt; is in
-       * state \"&lt;status&gt;\""}'`
-       *
-       * `}`
-       */
-      override fun inputTemplate(inputTemplate: String) {
-        cdkBuilder.inputTemplate(inputTemplate)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty,
-    ) : CdkObject(cdkObject), InputTransformerProperty {
-      /**
-       * Map of JSON paths to be extracted from the event.
-       *
-       * You can then insert these in the template in `InputTemplate` to produce the output you want
-       * to be sent to the target.
-       *
-       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
-       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
-       *
-       * The keys cannot start with " AWS ."
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputpathsmap)
-       */
-      override fun inputPathsMap(): Any? = unwrap(this).getInputPathsMap()
-
-      /**
-       * Input template where you specify placeholders that will be filled with the values of the
-       * keys from `InputPathsMap` to customize the data sent to the target.
-       *
-       * Enclose each `InputPathsMaps` value in brackets: &lt; *value* &gt;
-       *
-       * If `InputTemplate` is a JSON object (surrounded by curly braces), the following
-       * restrictions apply:
-       *
-       * * The placeholder cannot be used as an object key.
-       *
-       * The following example shows the syntax for using `InputPathsMap` and `InputTemplate` .
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": "&lt;instance&gt; is in state &lt;status&gt;"`
-       *
-       * `}`
-       *
-       * To have the `InputTemplate` include quote marks within a JSON string, escape each quote
-       * marks with a slash, as in the following example:
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": "&lt;instance&gt; is in state \"&lt;status&gt;\""`
-       *
-       * `}`
-       *
-       * The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in the
-       * following example:
-       *
-       * `"InputTransformer":`
-       *
-       * `{`
-       *
-       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
-       *
-       * `"InputTemplate": '{"myInstance": &lt;instance&gt;,"myStatus": "&lt;instance&gt; is in
-       * state \"&lt;status&gt;\""}'`
-       *
-       * `}`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputtemplate)
-       */
-      override fun inputTemplate(): String = unwrap(this).getInputTemplate()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputTransformerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty):
-          InputTransformerProperty = CdkObjectWrappers.wrap(cdkObject) as? InputTransformerProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputTransformerProperty):
-          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty
-    }
-  }
-
-  /**
-   * An object representing a constraint on task placement.
-   *
-   * To learn more, see [Task Placement
-   * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
-   * in the Amazon Elastic Container Service Developer Guide.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * PlacementConstraintProperty placementConstraintProperty = PlacementConstraintProperty.builder()
-   * .expression("expression")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html)
-   */
-  public interface PlacementConstraintProperty {
-    /**
-     * A cluster query language expression to apply to the constraint.
-     *
-     * You cannot specify an expression if the constraint type is `distinctInstance` . To learn
-     * more, see [Cluster Query
-     * Language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-     * in the Amazon Elastic Container Service Developer Guide.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html#cfn-events-rule-placementconstraint-expression)
-     */
-    public fun expression(): String? = unwrap(this).getExpression()
-
-    /**
-     * The type of constraint.
-     *
-     * Use distinctInstance to ensure that each task in a particular group is running on a different
-     * container instance. Use memberOf to restrict the selection to a group of valid candidates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html#cfn-events-rule-placementconstraint-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [PlacementConstraintProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param expression A cluster query language expression to apply to the constraint.
-       * You cannot specify an expression if the constraint type is `distinctInstance` . To learn
-       * more, see [Cluster Query
-       * Language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the Amazon Elastic Container Service Developer Guide.
-       */
-      public fun expression(expression: String)
-
-      /**
-       * @param type The type of constraint.
-       * Use distinctInstance to ensure that each task in a particular group is running on a
-       * different container instance. Use memberOf to restrict the selection to a group of valid
-       * candidates.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty.builder()
-
-      /**
-       * @param expression A cluster query language expression to apply to the constraint.
-       * You cannot specify an expression if the constraint type is `distinctInstance` . To learn
-       * more, see [Cluster Query
-       * Language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the Amazon Elastic Container Service Developer Guide.
-       */
-      override fun expression(expression: String) {
-        cdkBuilder.expression(expression)
-      }
-
-      /**
-       * @param type The type of constraint.
-       * Use distinctInstance to ensure that each task in a particular group is running on a
-       * different container instance. Use memberOf to restrict the selection to a group of valid
-       * candidates.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty,
-    ) : CdkObject(cdkObject), PlacementConstraintProperty {
-      /**
-       * A cluster query language expression to apply to the constraint.
-       *
-       * You cannot specify an expression if the constraint type is `distinctInstance` . To learn
-       * more, see [Cluster Query
-       * Language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the Amazon Elastic Container Service Developer Guide.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html#cfn-events-rule-placementconstraint-expression)
-       */
-      override fun expression(): String? = unwrap(this).getExpression()
-
-      /**
-       * The type of constraint.
-       *
-       * Use distinctInstance to ensure that each task in a particular group is running on a
-       * different container instance. Use memberOf to restrict the selection to a group of valid
-       * candidates.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html#cfn-events-rule-placementconstraint-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementConstraintProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty):
-          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PlacementConstraintProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PlacementConstraintProperty):
-          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty
-    }
-  }
-
-  /**
-   * Information about the EC2 instances that are to be sent the command, specified as key-value
-   * pairs.
-   *
-   * Each `RunCommandTarget` block can include only one key, but this key may specify multiple
-   * values.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * RunCommandTargetProperty runCommandTargetProperty = RunCommandTargetProperty.builder()
-   * .key("key")
-   * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html)
-   */
-  public interface RunCommandTargetProperty {
-    /**
-     * Can be either `tag:` *tag-key* or `InstanceIds` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key)
-     */
-    public fun key(): String
-
-    /**
-     * If `Key` is `tag:` *tag-key* , `Values` is a list of tag values.
-     *
-     * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values)
-     */
-    public fun values(): List<String>
-
-    /**
-     * A builder for [RunCommandTargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key Can be either `tag:` *tag-key* or `InstanceIds` . 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param values If `Key` is `tag:` *tag-key* , `Values` is a list of tag values. 
-       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values If `Key` is `tag:` *tag-key* , `Values` is a list of tag values. 
-       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty.builder()
-
-      /**
-       * @param key Can be either `tag:` *tag-key* or `InstanceIds` . 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param values If `Key` is `tag:` *tag-key* , `Values` is a list of tag values. 
-       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values If `Key` is `tag:` *tag-key* , `Values` is a list of tag values. 
-       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty,
-    ) : CdkObject(cdkObject), RunCommandTargetProperty {
-      /**
-       * Can be either `tag:` *tag-key* or `InstanceIds` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * If `Key` is `tag:` *tag-key* , `Values` is a list of tag values.
-       *
-       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RunCommandTargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty):
-          RunCommandTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? RunCommandTargetProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RunCommandTargetProperty):
-          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty
-    }
-  }
-
-  /**
-   * This object enables you to specify a JSON path to extract from the event and use as the
-   * partition key for the Amazon Kinesis data stream, so that you can control the shard to which the
-   * event goes.
-   *
-   * If you do not include this parameter, the default is to use the `eventId` as the partition key.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * KinesisParametersProperty kinesisParametersProperty = KinesisParametersProperty.builder()
-   * .partitionKeyPath("partitionKeyPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-kinesisparameters.html)
-   */
-  public interface KinesisParametersProperty {
-    /**
-     * The JSON path to be extracted from the event and used as the partition key.
-     *
-     * For more information, see [Amazon Kinesis Streams Key
-     * Concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in the
-     * *Amazon Kinesis Streams Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-kinesisparameters.html#cfn-events-rule-kinesisparameters-partitionkeypath)
-     */
-    public fun partitionKeyPath(): String
-
-    /**
-     * A builder for [KinesisParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param partitionKeyPath The JSON path to be extracted from the event and used as the
-       * partition key. 
-       * For more information, see [Amazon Kinesis Streams Key
-       * Concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in
-       * the *Amazon Kinesis Streams Developer Guide* .
-       */
-      public fun partitionKeyPath(partitionKeyPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty.builder()
-
-      /**
-       * @param partitionKeyPath The JSON path to be extracted from the event and used as the
-       * partition key. 
-       * For more information, see [Amazon Kinesis Streams Key
-       * Concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in
-       * the *Amazon Kinesis Streams Developer Guide* .
-       */
-      override fun partitionKeyPath(partitionKeyPath: String) {
-        cdkBuilder.partitionKeyPath(partitionKeyPath)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty,
-    ) : CdkObject(cdkObject), KinesisParametersProperty {
-      /**
-       * The JSON path to be extracted from the event and used as the partition key.
-       *
-       * For more information, see [Amazon Kinesis Streams Key
-       * Concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in
-       * the *Amazon Kinesis Streams Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-kinesisparameters.html#cfn-events-rule-kinesisparameters-partitionkeypath)
-       */
-      override fun partitionKeyPath(): String = unwrap(this).getPartitionKeyPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty):
-          KinesisParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisParametersProperty):
-          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty
+          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty
     }
   }
 
@@ -2923,6 +1501,728 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.events.CfnRule.AwsVpcConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.events.CfnRule.AwsVpcConfigurationProperty
+    }
+  }
+
+  /**
+   * The array properties for the submitted job, such as the size of the array.
+   *
+   * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+   * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * BatchArrayPropertiesProperty batchArrayPropertiesProperty =
+   * BatchArrayPropertiesProperty.builder()
+   * .size(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batcharrayproperties.html)
+   */
+  public interface BatchArrayPropertiesProperty {
+    /**
+     * The size of the array, if this is an array batch job.
+     *
+     * Valid values are integers between 2 and 10,000.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batcharrayproperties.html#cfn-events-rule-batcharrayproperties-size)
+     */
+    public fun size(): Number? = unwrap(this).getSize()
+
+    /**
+     * A builder for [BatchArrayPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param size The size of the array, if this is an array batch job.
+       * Valid values are integers between 2 and 10,000.
+       */
+      public fun size(size: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty.builder()
+
+      /**
+       * @param size The size of the array, if this is an array batch job.
+       * Valid values are integers between 2 and 10,000.
+       */
+      override fun size(size: Number) {
+        cdkBuilder.size(size)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty,
+    ) : CdkObject(cdkObject), BatchArrayPropertiesProperty {
+      /**
+       * The size of the array, if this is an array batch job.
+       *
+       * Valid values are integers between 2 and 10,000.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batcharrayproperties.html#cfn-events-rule-batcharrayproperties-size)
+       */
+      override fun size(): Number? = unwrap(this).getSize()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BatchArrayPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty):
+          BatchArrayPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchArrayPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BatchArrayPropertiesProperty):
+          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty
+    }
+  }
+
+  /**
+   * The custom parameters to be used when the target is an AWS Batch job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * BatchParametersProperty batchParametersProperty = BatchParametersProperty.builder()
+   * .jobDefinition("jobDefinition")
+   * .jobName("jobName")
+   * // the properties below are optional
+   * .arrayProperties(BatchArrayPropertiesProperty.builder()
+   * .size(123)
+   * .build())
+   * .retryStrategy(BatchRetryStrategyProperty.builder()
+   * .attempts(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html)
+   */
+  public interface BatchParametersProperty {
+    /**
+     * The array properties for the submitted job, such as the size of the array.
+     *
+     * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+     * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-arrayproperties)
+     */
+    public fun arrayProperties(): Any? = unwrap(this).getArrayProperties()
+
+    /**
+     * The ARN or name of the job definition to use if the event target is an AWS Batch job.
+     *
+     * This job definition must already exist.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobdefinition)
+     */
+    public fun jobDefinition(): String
+
+    /**
+     * The name to use for this execution of the job, if the target is an AWS Batch job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobname)
+     */
+    public fun jobName(): String
+
+    /**
+     * The retry strategy to use for failed jobs, if the target is an AWS Batch job.
+     *
+     * The retry strategy is the number of times to retry the failed job execution. Valid values are
+     * 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in the job
+     * definition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-retrystrategy)
+     */
+    public fun retryStrategy(): Any? = unwrap(this).getRetryStrategy()
+
+    /**
+     * A builder for [BatchParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arrayProperties The array properties for the submitted job, such as the size of the
+       * array.
+       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       */
+      public fun arrayProperties(arrayProperties: IResolvable)
+
+      /**
+       * @param arrayProperties The array properties for the submitted job, such as the size of the
+       * array.
+       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       */
+      public fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty)
+
+      /**
+       * @param arrayProperties The array properties for the submitted job, such as the size of the
+       * array.
+       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e429329971427039d0e843a7a4df3f41683a0f5c699fba7b4c40cbf5a7a6ceaf")
+      public fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param jobDefinition The ARN or name of the job definition to use if the event target is an
+       * AWS Batch job. 
+       * This job definition must already exist.
+       */
+      public fun jobDefinition(jobDefinition: String)
+
+      /**
+       * @param jobName The name to use for this execution of the job, if the target is an AWS Batch
+       * job. 
+       */
+      public fun jobName(jobName: String)
+
+      /**
+       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
+       * Batch job.
+       * The retry strategy is the number of times to retry the failed job execution. Valid values
+       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
+       * the job definition.
+       */
+      public fun retryStrategy(retryStrategy: IResolvable)
+
+      /**
+       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
+       * Batch job.
+       * The retry strategy is the number of times to retry the failed job execution. Valid values
+       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
+       * the job definition.
+       */
+      public fun retryStrategy(retryStrategy: BatchRetryStrategyProperty)
+
+      /**
+       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
+       * Batch job.
+       * The retry strategy is the number of times to retry the failed job execution. Valid values
+       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
+       * the job definition.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e3d0ec99b93e657097bc00083ade70aa50728d7305df6d44525abd733e293a08")
+      public fun retryStrategy(retryStrategy: BatchRetryStrategyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty.builder()
+
+      /**
+       * @param arrayProperties The array properties for the submitted job, such as the size of the
+       * array.
+       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       */
+      override fun arrayProperties(arrayProperties: IResolvable) {
+        cdkBuilder.arrayProperties(arrayProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param arrayProperties The array properties for the submitted job, such as the size of the
+       * array.
+       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       */
+      override fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty) {
+        cdkBuilder.arrayProperties(arrayProperties.let(BatchArrayPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param arrayProperties The array properties for the submitted job, such as the size of the
+       * array.
+       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e429329971427039d0e843a7a4df3f41683a0f5c699fba7b4c40cbf5a7a6ceaf")
+      override
+          fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty.Builder.() -> Unit):
+          Unit = arrayProperties(BatchArrayPropertiesProperty(arrayProperties))
+
+      /**
+       * @param jobDefinition The ARN or name of the job definition to use if the event target is an
+       * AWS Batch job. 
+       * This job definition must already exist.
+       */
+      override fun jobDefinition(jobDefinition: String) {
+        cdkBuilder.jobDefinition(jobDefinition)
+      }
+
+      /**
+       * @param jobName The name to use for this execution of the job, if the target is an AWS Batch
+       * job. 
+       */
+      override fun jobName(jobName: String) {
+        cdkBuilder.jobName(jobName)
+      }
+
+      /**
+       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
+       * Batch job.
+       * The retry strategy is the number of times to retry the failed job execution. Valid values
+       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
+       * the job definition.
+       */
+      override fun retryStrategy(retryStrategy: IResolvable) {
+        cdkBuilder.retryStrategy(retryStrategy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
+       * Batch job.
+       * The retry strategy is the number of times to retry the failed job execution. Valid values
+       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
+       * the job definition.
+       */
+      override fun retryStrategy(retryStrategy: BatchRetryStrategyProperty) {
+        cdkBuilder.retryStrategy(retryStrategy.let(BatchRetryStrategyProperty::unwrap))
+      }
+
+      /**
+       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
+       * Batch job.
+       * The retry strategy is the number of times to retry the failed job execution. Valid values
+       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
+       * the job definition.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e3d0ec99b93e657097bc00083ade70aa50728d7305df6d44525abd733e293a08")
+      override fun retryStrategy(retryStrategy: BatchRetryStrategyProperty.Builder.() -> Unit): Unit
+          = retryStrategy(BatchRetryStrategyProperty(retryStrategy))
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty,
+    ) : CdkObject(cdkObject), BatchParametersProperty {
+      /**
+       * The array properties for the submitted job, such as the size of the array.
+       *
+       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
+       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-arrayproperties)
+       */
+      override fun arrayProperties(): Any? = unwrap(this).getArrayProperties()
+
+      /**
+       * The ARN or name of the job definition to use if the event target is an AWS Batch job.
+       *
+       * This job definition must already exist.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobdefinition)
+       */
+      override fun jobDefinition(): String = unwrap(this).getJobDefinition()
+
+      /**
+       * The name to use for this execution of the job, if the target is an AWS Batch job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobname)
+       */
+      override fun jobName(): String = unwrap(this).getJobName()
+
+      /**
+       * The retry strategy to use for failed jobs, if the target is an AWS Batch job.
+       *
+       * The retry strategy is the number of times to retry the failed job execution. Valid values
+       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
+       * the job definition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-retrystrategy)
+       */
+      override fun retryStrategy(): Any? = unwrap(this).getRetryStrategy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BatchParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty):
+          BatchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? BatchParametersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BatchParametersProperty):
+          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty
+    }
+  }
+
+  /**
+   * The retry strategy to use for failed jobs, if the target is an AWS Batch job.
+   *
+   * If you specify a retry strategy here, it overrides the retry strategy defined in the job
+   * definition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * BatchRetryStrategyProperty batchRetryStrategyProperty = BatchRetryStrategyProperty.builder()
+   * .attempts(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchretrystrategy.html)
+   */
+  public interface BatchRetryStrategyProperty {
+    /**
+     * The number of times to attempt to retry, if the job fails.
+     *
+     * Valid values are 1–10.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchretrystrategy.html#cfn-events-rule-batchretrystrategy-attempts)
+     */
+    public fun attempts(): Number? = unwrap(this).getAttempts()
+
+    /**
+     * A builder for [BatchRetryStrategyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attempts The number of times to attempt to retry, if the job fails.
+       * Valid values are 1–10.
+       */
+      public fun attempts(attempts: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty.builder()
+
+      /**
+       * @param attempts The number of times to attempt to retry, if the job fails.
+       * Valid values are 1–10.
+       */
+      override fun attempts(attempts: Number) {
+        cdkBuilder.attempts(attempts)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty,
+    ) : CdkObject(cdkObject), BatchRetryStrategyProperty {
+      /**
+       * The number of times to attempt to retry, if the job fails.
+       *
+       * Valid values are 1–10.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchretrystrategy.html#cfn-events-rule-batchretrystrategy-attempts)
+       */
+      override fun attempts(): Number? = unwrap(this).getAttempts()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BatchRetryStrategyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty):
+          BatchRetryStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchRetryStrategyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BatchRetryStrategyProperty):
+          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty
+    }
+  }
+
+  /**
+   * The details of a capacity provider strategy.
+   *
+   * To learn more, see
+   * [CapacityProviderStrategyItem](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CapacityProviderStrategyItem.html)
+   * in the Amazon ECS API Reference.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+   * CapacityProviderStrategyItemProperty.builder()
+   * .capacityProvider("capacityProvider")
+   * // the properties below are optional
+   * .base(123)
+   * .weight(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html)
+   */
+  public interface CapacityProviderStrategyItemProperty {
+    /**
+     * The base value designates how many tasks, at a minimum, to run on the specified capacity
+     * provider.
+     *
+     * Only one capacity provider in a capacity provider strategy can have a base defined. If no
+     * value is specified, the default value of 0 is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-base)
+     */
+    public fun base(): Number? = unwrap(this).getBase()
+
+    /**
+     * The short name of the capacity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-capacityprovider)
+     */
+    public fun capacityProvider(): String
+
+    /**
+     * The weight value designates the relative percentage of the total number of tasks launched
+     * that should use the specified capacity provider.
+     *
+     * The weight value is taken into consideration after the base value, if defined, is satisfied.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-weight)
+     */
+    public fun weight(): Number? = unwrap(this).getWeight()
+
+    /**
+     * A builder for [CapacityProviderStrategyItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param base The base value designates how many tasks, at a minimum, to run on the specified
+       * capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
+       * value is specified, the default value of 0 is used.
+       */
+      public fun base(base: Number)
+
+      /**
+       * @param capacityProvider The short name of the capacity provider. 
+       */
+      public fun capacityProvider(capacityProvider: String)
+
+      /**
+       * @param weight The weight value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The weight value is taken into consideration after the base value, if defined, is
+       * satisfied.
+       */
+      public fun weight(weight: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty.Builder
+          =
+          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty.builder()
+
+      /**
+       * @param base The base value designates how many tasks, at a minimum, to run on the specified
+       * capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
+       * value is specified, the default value of 0 is used.
+       */
+      override fun base(base: Number) {
+        cdkBuilder.base(base)
+      }
+
+      /**
+       * @param capacityProvider The short name of the capacity provider. 
+       */
+      override fun capacityProvider(capacityProvider: String) {
+        cdkBuilder.capacityProvider(capacityProvider)
+      }
+
+      /**
+       * @param weight The weight value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The weight value is taken into consideration after the base value, if defined, is
+       * satisfied.
+       */
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty,
+    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
+      /**
+       * The base value designates how many tasks, at a minimum, to run on the specified capacity
+       * provider.
+       *
+       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
+       * value is specified, the default value of 0 is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-base)
+       */
+      override fun base(): Number? = unwrap(this).getBase()
+
+      /**
+       * The short name of the capacity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-capacityprovider)
+       */
+      override fun capacityProvider(): String = unwrap(this).getCapacityProvider()
+
+      /**
+       * The weight value designates the relative percentage of the total number of tasks launched
+       * that should use the specified capacity provider.
+       *
+       * The weight value is taken into consideration after the base value, if defined, is
+       * satisfied.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-weight)
+       */
+      override fun weight(): Number? = unwrap(this).getWeight()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityProviderStrategyItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty):
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
+          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty
+    }
+  }
+
+  /**
+   * A `DeadLetterConfig` object that contains information about a dead-letter queue configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * DeadLetterConfigProperty deadLetterConfigProperty = DeadLetterConfigProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html)
+   */
+  public interface DeadLetterConfigProperty {
+    /**
+     * The ARN of the SQS queue specified as the target for the dead-letter queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html#cfn-events-rule-deadletterconfig-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * A builder for [DeadLetterConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The ARN of the SQS queue specified as the target for the dead-letter queue.
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty.builder()
+
+      /**
+       * @param arn The ARN of the SQS queue specified as the target for the dead-letter queue.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty,
+    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
+      /**
+       * The ARN of the SQS queue specified as the target for the dead-letter queue.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html#cfn-events-rule-deadletterconfig-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeadLetterConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty):
+          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeadLetterConfigProperty):
+          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty
     }
   }
 
@@ -3788,7 +3088,11 @@ public open class CfnRule internal constructor(
   }
 
   /**
-   * The custom parameters to be used when the target is an AWS Batch job.
+   * These are custom parameter to be used when the target is an API Gateway APIs or EventBridge
+   * ApiDestinations.
+   *
+   * In the latter case, these are merged with any InvocationParameters specified on the Connection,
+   * with any values from the Connection taking precedence.
    *
    * Example:
    *
@@ -3796,290 +3100,191 @@ public open class CfnRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.events.*;
-   * BatchParametersProperty batchParametersProperty = BatchParametersProperty.builder()
-   * .jobDefinition("jobDefinition")
-   * .jobName("jobName")
-   * // the properties below are optional
-   * .arrayProperties(BatchArrayPropertiesProperty.builder()
-   * .size(123)
-   * .build())
-   * .retryStrategy(BatchRetryStrategyProperty.builder()
-   * .attempts(123)
-   * .build())
+   * HttpParametersProperty httpParametersProperty = HttpParametersProperty.builder()
+   * .headerParameters(Map.of(
+   * "headerParametersKey", "headerParameters"))
+   * .pathParameterValues(List.of("pathParameterValues"))
+   * .queryStringParameters(Map.of(
+   * "queryStringParametersKey", "queryStringParameters"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html)
    */
-  public interface BatchParametersProperty {
+  public interface HttpParametersProperty {
     /**
-     * The array properties for the submitted job, such as the size of the array.
+     * The headers that need to be sent as part of request invoking the API Gateway API or
+     * EventBridge ApiDestination.
      *
-     * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-     * becomes an array job. This parameter is used only if the target is an AWS Batch job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-arrayproperties)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-headerparameters)
      */
-    public fun arrayProperties(): Any? = unwrap(this).getArrayProperties()
+    public fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
 
     /**
-     * The ARN or name of the job definition to use if the event target is an AWS Batch job.
+     * The path parameter values to be used to populate API Gateway API or EventBridge
+     * ApiDestination path wildcards ("*").
      *
-     * This job definition must already exist.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobdefinition)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-pathparametervalues)
      */
-    public fun jobDefinition(): String
+    public fun pathParameterValues(): List<String> = unwrap(this).getPathParameterValues() ?:
+        emptyList()
 
     /**
-     * The name to use for this execution of the job, if the target is an AWS Batch job.
+     * The query string keys/values that need to be sent as part of request invoking the API Gateway
+     * API or EventBridge ApiDestination.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-querystringparameters)
      */
-    public fun jobName(): String
+    public fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
 
     /**
-     * The retry strategy to use for failed jobs, if the target is an AWS Batch job.
-     *
-     * The retry strategy is the number of times to retry the failed job execution. Valid values are
-     * 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in the job
-     * definition.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-retrystrategy)
-     */
-    public fun retryStrategy(): Any? = unwrap(this).getRetryStrategy()
-
-    /**
-     * A builder for [BatchParametersProperty]
+     * A builder for [HttpParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param arrayProperties The array properties for the submitted job, such as the size of the
-       * array.
-       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       * @param headerParameters The headers that need to be sent as part of request invoking the
+       * API Gateway API or EventBridge ApiDestination.
        */
-      public fun arrayProperties(arrayProperties: IResolvable)
+      public fun headerParameters(headerParameters: IResolvable)
 
       /**
-       * @param arrayProperties The array properties for the submitted job, such as the size of the
-       * array.
-       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       * @param headerParameters The headers that need to be sent as part of request invoking the
+       * API Gateway API or EventBridge ApiDestination.
        */
-      public fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty)
+      public fun headerParameters(headerParameters: Map<String, String>)
 
       /**
-       * @param arrayProperties The array properties for the submitted job, such as the size of the
-       * array.
-       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       * @param pathParameterValues The path parameter values to be used to populate API Gateway API
+       * or EventBridge ApiDestination path wildcards ("*").
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e429329971427039d0e843a7a4df3f41683a0f5c699fba7b4c40cbf5a7a6ceaf")
-      public fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty.Builder.() -> Unit)
+      public fun pathParameterValues(pathParameterValues: List<String>)
 
       /**
-       * @param jobDefinition The ARN or name of the job definition to use if the event target is an
-       * AWS Batch job. 
-       * This job definition must already exist.
+       * @param pathParameterValues The path parameter values to be used to populate API Gateway API
+       * or EventBridge ApiDestination path wildcards ("*").
        */
-      public fun jobDefinition(jobDefinition: String)
+      public fun pathParameterValues(vararg pathParameterValues: String)
 
       /**
-       * @param jobName The name to use for this execution of the job, if the target is an AWS Batch
-       * job. 
+       * @param queryStringParameters The query string keys/values that need to be sent as part of
+       * request invoking the API Gateway API or EventBridge ApiDestination.
        */
-      public fun jobName(jobName: String)
+      public fun queryStringParameters(queryStringParameters: IResolvable)
 
       /**
-       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
-       * Batch job.
-       * The retry strategy is the number of times to retry the failed job execution. Valid values
-       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
-       * the job definition.
+       * @param queryStringParameters The query string keys/values that need to be sent as part of
+       * request invoking the API Gateway API or EventBridge ApiDestination.
        */
-      public fun retryStrategy(retryStrategy: IResolvable)
-
-      /**
-       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
-       * Batch job.
-       * The retry strategy is the number of times to retry the failed job execution. Valid values
-       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
-       * the job definition.
-       */
-      public fun retryStrategy(retryStrategy: BatchRetryStrategyProperty)
-
-      /**
-       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
-       * Batch job.
-       * The retry strategy is the number of times to retry the failed job execution. Valid values
-       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
-       * the job definition.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e3d0ec99b93e657097bc00083ade70aa50728d7305df6d44525abd733e293a08")
-      public fun retryStrategy(retryStrategy: BatchRetryStrategyProperty.Builder.() -> Unit)
+      public fun queryStringParameters(queryStringParameters: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty.builder()
+          software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty.builder()
 
       /**
-       * @param arrayProperties The array properties for the submitted job, such as the size of the
-       * array.
-       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       * @param headerParameters The headers that need to be sent as part of request invoking the
+       * API Gateway API or EventBridge ApiDestination.
        */
-      override fun arrayProperties(arrayProperties: IResolvable) {
-        cdkBuilder.arrayProperties(arrayProperties.let(IResolvable::unwrap))
+      override fun headerParameters(headerParameters: IResolvable) {
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
       }
 
       /**
-       * @param arrayProperties The array properties for the submitted job, such as the size of the
-       * array.
-       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       * @param headerParameters The headers that need to be sent as part of request invoking the
+       * API Gateway API or EventBridge ApiDestination.
        */
-      override fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty) {
-        cdkBuilder.arrayProperties(arrayProperties.let(BatchArrayPropertiesProperty::unwrap))
+      override fun headerParameters(headerParameters: Map<String, String>) {
+        cdkBuilder.headerParameters(headerParameters)
       }
 
       /**
-       * @param arrayProperties The array properties for the submitted job, such as the size of the
-       * array.
-       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
+       * @param pathParameterValues The path parameter values to be used to populate API Gateway API
+       * or EventBridge ApiDestination path wildcards ("*").
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e429329971427039d0e843a7a4df3f41683a0f5c699fba7b4c40cbf5a7a6ceaf")
-      override
-          fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty.Builder.() -> Unit):
-          Unit = arrayProperties(BatchArrayPropertiesProperty(arrayProperties))
-
-      /**
-       * @param jobDefinition The ARN or name of the job definition to use if the event target is an
-       * AWS Batch job. 
-       * This job definition must already exist.
-       */
-      override fun jobDefinition(jobDefinition: String) {
-        cdkBuilder.jobDefinition(jobDefinition)
+      override fun pathParameterValues(pathParameterValues: List<String>) {
+        cdkBuilder.pathParameterValues(pathParameterValues)
       }
 
       /**
-       * @param jobName The name to use for this execution of the job, if the target is an AWS Batch
-       * job. 
+       * @param pathParameterValues The path parameter values to be used to populate API Gateway API
+       * or EventBridge ApiDestination path wildcards ("*").
        */
-      override fun jobName(jobName: String) {
-        cdkBuilder.jobName(jobName)
+      override fun pathParameterValues(vararg pathParameterValues: String): Unit =
+          pathParameterValues(pathParameterValues.toList())
+
+      /**
+       * @param queryStringParameters The query string keys/values that need to be sent as part of
+       * request invoking the API Gateway API or EventBridge ApiDestination.
+       */
+      override fun queryStringParameters(queryStringParameters: IResolvable) {
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
       }
 
       /**
-       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
-       * Batch job.
-       * The retry strategy is the number of times to retry the failed job execution. Valid values
-       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
-       * the job definition.
+       * @param queryStringParameters The query string keys/values that need to be sent as part of
+       * request invoking the API Gateway API or EventBridge ApiDestination.
        */
-      override fun retryStrategy(retryStrategy: IResolvable) {
-        cdkBuilder.retryStrategy(retryStrategy.let(IResolvable::unwrap))
+      override fun queryStringParameters(queryStringParameters: Map<String, String>) {
+        cdkBuilder.queryStringParameters(queryStringParameters)
       }
 
-      /**
-       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
-       * Batch job.
-       * The retry strategy is the number of times to retry the failed job execution. Valid values
-       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
-       * the job definition.
-       */
-      override fun retryStrategy(retryStrategy: BatchRetryStrategyProperty) {
-        cdkBuilder.retryStrategy(retryStrategy.let(BatchRetryStrategyProperty::unwrap))
-      }
-
-      /**
-       * @param retryStrategy The retry strategy to use for failed jobs, if the target is an AWS
-       * Batch job.
-       * The retry strategy is the number of times to retry the failed job execution. Valid values
-       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
-       * the job definition.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e3d0ec99b93e657097bc00083ade70aa50728d7305df6d44525abd733e293a08")
-      override fun retryStrategy(retryStrategy: BatchRetryStrategyProperty.Builder.() -> Unit): Unit
-          = retryStrategy(BatchRetryStrategyProperty(retryStrategy))
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty =
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty,
-    ) : CdkObject(cdkObject), BatchParametersProperty {
+      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty,
+    ) : CdkObject(cdkObject), HttpParametersProperty {
       /**
-       * The array properties for the submitted job, such as the size of the array.
+       * The headers that need to be sent as part of request invoking the API Gateway API or
+       * EventBridge ApiDestination.
        *
-       * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-       * becomes an array job. This parameter is used only if the target is an AWS Batch job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-arrayproperties)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-headerparameters)
        */
-      override fun arrayProperties(): Any? = unwrap(this).getArrayProperties()
+      override fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
 
       /**
-       * The ARN or name of the job definition to use if the event target is an AWS Batch job.
+       * The path parameter values to be used to populate API Gateway API or EventBridge
+       * ApiDestination path wildcards ("*").
        *
-       * This job definition must already exist.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobdefinition)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-pathparametervalues)
        */
-      override fun jobDefinition(): String = unwrap(this).getJobDefinition()
+      override fun pathParameterValues(): List<String> = unwrap(this).getPathParameterValues() ?:
+          emptyList()
 
       /**
-       * The name to use for this execution of the job, if the target is an AWS Batch job.
+       * The query string keys/values that need to be sent as part of request invoking the API
+       * Gateway API or EventBridge ApiDestination.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-querystringparameters)
        */
-      override fun jobName(): String = unwrap(this).getJobName()
-
-      /**
-       * The retry strategy to use for failed jobs, if the target is an AWS Batch job.
-       *
-       * The retry strategy is the number of times to retry the failed job execution. Valid values
-       * are 1–10. When you specify a retry strategy here, it overrides the retry strategy defined in
-       * the job definition.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-retrystrategy)
-       */
-      override fun retryStrategy(): Any? = unwrap(this).getRetryStrategy()
+      override fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BatchParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HttpParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty):
-          BatchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? BatchParametersProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty):
+          HttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpParametersProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BatchParametersProperty):
-          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty = (wrapped as
+      internal fun unwrap(wrapped: HttpParametersProperty):
+          software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty
+          software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty
     }
   }
 
   /**
-   * The retry strategy to use for failed jobs, if the target is an AWS Batch job.
-   *
-   * If you specify a retry strategy here, it overrides the retry strategy defined in the job
-   * definition.
+   * Contains the parameters needed for you to provide custom input to a target based on one or more
+   * pieces of data extracted from the event.
    *
    * Example:
    *
@@ -4087,86 +3292,734 @@ public open class CfnRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.events.*;
-   * BatchRetryStrategyProperty batchRetryStrategyProperty = BatchRetryStrategyProperty.builder()
-   * .attempts(123)
+   * InputTransformerProperty inputTransformerProperty = InputTransformerProperty.builder()
+   * .inputTemplate("inputTemplate")
+   * // the properties below are optional
+   * .inputPathsMap(Map.of(
+   * "inputPathsMapKey", "inputPathsMap"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchretrystrategy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html)
    */
-  public interface BatchRetryStrategyProperty {
+  public interface InputTransformerProperty {
     /**
-     * The number of times to attempt to retry, if the job fails.
+     * Map of JSON paths to be extracted from the event.
      *
-     * Valid values are 1–10.
+     * You can then insert these in the template in `InputTemplate` to produce the output you want
+     * to be sent to the target.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchretrystrategy.html#cfn-events-rule-batchretrystrategy-attempts)
+     * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
+     * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
+     *
+     * The keys cannot start with " AWS ."
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputpathsmap)
      */
-    public fun attempts(): Number? = unwrap(this).getAttempts()
+    public fun inputPathsMap(): Any? = unwrap(this).getInputPathsMap()
 
     /**
-     * A builder for [BatchRetryStrategyProperty]
+     * Input template where you specify placeholders that will be filled with the values of the keys
+     * from `InputPathsMap` to customize the data sent to the target.
+     *
+     * Enclose each `InputPathsMaps` value in brackets: &lt; *value* &gt;
+     *
+     * If `InputTemplate` is a JSON object (surrounded by curly braces), the following restrictions
+     * apply:
+     *
+     * * The placeholder cannot be used as an object key.
+     *
+     * The following example shows the syntax for using `InputPathsMap` and `InputTemplate` .
+     *
+     * `"InputTransformer":`
+     *
+     * `{`
+     *
+     * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+     *
+     * `"InputTemplate": "&lt;instance&gt; is in state &lt;status&gt;"`
+     *
+     * `}`
+     *
+     * To have the `InputTemplate` include quote marks within a JSON string, escape each quote marks
+     * with a slash, as in the following example:
+     *
+     * `"InputTransformer":`
+     *
+     * `{`
+     *
+     * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+     *
+     * `"InputTemplate": "&lt;instance&gt; is in state \"&lt;status&gt;\""`
+     *
+     * `}`
+     *
+     * The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in the
+     * following example:
+     *
+     * `"InputTransformer":`
+     *
+     * `{`
+     *
+     * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+     *
+     * `"InputTemplate": '{"myInstance": &lt;instance&gt;,"myStatus": "&lt;instance&gt; is in state
+     * \"&lt;status&gt;\""}'`
+     *
+     * `}`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputtemplate)
+     */
+    public fun inputTemplate(): String
+
+    /**
+     * A builder for [InputTransformerProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attempts The number of times to attempt to retry, if the job fails.
-       * Valid values are 1–10.
+       * @param inputPathsMap Map of JSON paths to be extracted from the event.
+       * You can then insert these in the template in `InputTemplate` to produce the output you want
+       * to be sent to the target.
+       *
+       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
+       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
+       *
+       * The keys cannot start with " AWS ."
        */
-      public fun attempts(attempts: Number)
+      public fun inputPathsMap(inputPathsMap: IResolvable)
+
+      /**
+       * @param inputPathsMap Map of JSON paths to be extracted from the event.
+       * You can then insert these in the template in `InputTemplate` to produce the output you want
+       * to be sent to the target.
+       *
+       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
+       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
+       *
+       * The keys cannot start with " AWS ."
+       */
+      public fun inputPathsMap(inputPathsMap: Map<String, String>)
+
+      /**
+       * @param inputTemplate Input template where you specify placeholders that will be filled with
+       * the values of the keys from `InputPathsMap` to customize the data sent to the target. 
+       * Enclose each `InputPathsMaps` value in brackets: &lt; *value* &gt;
+       *
+       * If `InputTemplate` is a JSON object (surrounded by curly braces), the following
+       * restrictions apply:
+       *
+       * * The placeholder cannot be used as an object key.
+       *
+       * The following example shows the syntax for using `InputPathsMap` and `InputTemplate` .
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": "&lt;instance&gt; is in state &lt;status&gt;"`
+       *
+       * `}`
+       *
+       * To have the `InputTemplate` include quote marks within a JSON string, escape each quote
+       * marks with a slash, as in the following example:
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": "&lt;instance&gt; is in state \"&lt;status&gt;\""`
+       *
+       * `}`
+       *
+       * The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in the
+       * following example:
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": '{"myInstance": &lt;instance&gt;,"myStatus": "&lt;instance&gt; is in
+       * state \"&lt;status&gt;\""}'`
+       *
+       * `}`
+       */
+      public fun inputTemplate(inputTemplate: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty.builder()
+          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty.builder()
 
       /**
-       * @param attempts The number of times to attempt to retry, if the job fails.
-       * Valid values are 1–10.
+       * @param inputPathsMap Map of JSON paths to be extracted from the event.
+       * You can then insert these in the template in `InputTemplate` to produce the output you want
+       * to be sent to the target.
+       *
+       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
+       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
+       *
+       * The keys cannot start with " AWS ."
        */
-      override fun attempts(attempts: Number) {
-        cdkBuilder.attempts(attempts)
+      override fun inputPathsMap(inputPathsMap: IResolvable) {
+        cdkBuilder.inputPathsMap(inputPathsMap.let(IResolvable::unwrap))
       }
 
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty
+      /**
+       * @param inputPathsMap Map of JSON paths to be extracted from the event.
+       * You can then insert these in the template in `InputTemplate` to produce the output you want
+       * to be sent to the target.
+       *
+       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
+       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
+       *
+       * The keys cannot start with " AWS ."
+       */
+      override fun inputPathsMap(inputPathsMap: Map<String, String>) {
+        cdkBuilder.inputPathsMap(inputPathsMap)
+      }
+
+      /**
+       * @param inputTemplate Input template where you specify placeholders that will be filled with
+       * the values of the keys from `InputPathsMap` to customize the data sent to the target. 
+       * Enclose each `InputPathsMaps` value in brackets: &lt; *value* &gt;
+       *
+       * If `InputTemplate` is a JSON object (surrounded by curly braces), the following
+       * restrictions apply:
+       *
+       * * The placeholder cannot be used as an object key.
+       *
+       * The following example shows the syntax for using `InputPathsMap` and `InputTemplate` .
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": "&lt;instance&gt; is in state &lt;status&gt;"`
+       *
+       * `}`
+       *
+       * To have the `InputTemplate` include quote marks within a JSON string, escape each quote
+       * marks with a slash, as in the following example:
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": "&lt;instance&gt; is in state \"&lt;status&gt;\""`
+       *
+       * `}`
+       *
+       * The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in the
+       * following example:
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": '{"myInstance": &lt;instance&gt;,"myStatus": "&lt;instance&gt; is in
+       * state \"&lt;status&gt;\""}'`
+       *
+       * `}`
+       */
+      override fun inputTemplate(inputTemplate: String) {
+        cdkBuilder.inputTemplate(inputTemplate)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty,
+    ) : CdkObject(cdkObject), InputTransformerProperty {
+      /**
+       * Map of JSON paths to be extracted from the event.
+       *
+       * You can then insert these in the template in `InputTemplate` to produce the output you want
+       * to be sent to the target.
+       *
+       * `InputPathsMap` is an array key-value pairs, where each value is a valid JSON path. You can
+       * have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
+       *
+       * The keys cannot start with " AWS ."
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputpathsmap)
+       */
+      override fun inputPathsMap(): Any? = unwrap(this).getInputPathsMap()
+
+      /**
+       * Input template where you specify placeholders that will be filled with the values of the
+       * keys from `InputPathsMap` to customize the data sent to the target.
+       *
+       * Enclose each `InputPathsMaps` value in brackets: &lt; *value* &gt;
+       *
+       * If `InputTemplate` is a JSON object (surrounded by curly braces), the following
+       * restrictions apply:
+       *
+       * * The placeholder cannot be used as an object key.
+       *
+       * The following example shows the syntax for using `InputPathsMap` and `InputTemplate` .
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": "&lt;instance&gt; is in state &lt;status&gt;"`
+       *
+       * `}`
+       *
+       * To have the `InputTemplate` include quote marks within a JSON string, escape each quote
+       * marks with a slash, as in the following example:
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": "&lt;instance&gt; is in state \"&lt;status&gt;\""`
+       *
+       * `}`
+       *
+       * The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in the
+       * following example:
+       *
+       * `"InputTransformer":`
+       *
+       * `{`
+       *
+       * `"InputPathsMap": {"instance": "$.detail.instance","status": "$.detail.status"},`
+       *
+       * `"InputTemplate": '{"myInstance": &lt;instance&gt;,"myStatus": "&lt;instance&gt; is in
+       * state \"&lt;status&gt;\""}'`
+       *
+       * `}`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputtemplate)
+       */
+      override fun inputTemplate(): String = unwrap(this).getInputTemplate()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputTransformerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty):
+          InputTransformerProperty = CdkObjectWrappers.wrap(cdkObject) as? InputTransformerProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputTransformerProperty):
+          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty
+    }
+  }
+
+  /**
+   * This object enables you to specify a JSON path to extract from the event and use as the
+   * partition key for the Amazon Kinesis data stream, so that you can control the shard to which the
+   * event goes.
+   *
+   * If you do not include this parameter, the default is to use the `eventId` as the partition key.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * KinesisParametersProperty kinesisParametersProperty = KinesisParametersProperty.builder()
+   * .partitionKeyPath("partitionKeyPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-kinesisparameters.html)
+   */
+  public interface KinesisParametersProperty {
+    /**
+     * The JSON path to be extracted from the event and used as the partition key.
+     *
+     * For more information, see [Amazon Kinesis Streams Key
+     * Concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in the
+     * *Amazon Kinesis Streams Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-kinesisparameters.html#cfn-events-rule-kinesisparameters-partitionkeypath)
+     */
+    public fun partitionKeyPath(): String
+
+    /**
+     * A builder for [KinesisParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param partitionKeyPath The JSON path to be extracted from the event and used as the
+       * partition key. 
+       * For more information, see [Amazon Kinesis Streams Key
+       * Concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in
+       * the *Amazon Kinesis Streams Developer Guide* .
+       */
+      public fun partitionKeyPath(partitionKeyPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty.builder()
+
+      /**
+       * @param partitionKeyPath The JSON path to be extracted from the event and used as the
+       * partition key. 
+       * For more information, see [Amazon Kinesis Streams Key
+       * Concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in
+       * the *Amazon Kinesis Streams Developer Guide* .
+       */
+      override fun partitionKeyPath(partitionKeyPath: String) {
+        cdkBuilder.partitionKeyPath(partitionKeyPath)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty,
+    ) : CdkObject(cdkObject), KinesisParametersProperty {
+      /**
+       * The JSON path to be extracted from the event and used as the partition key.
+       *
+       * For more information, see [Amazon Kinesis Streams Key
+       * Concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) in
+       * the *Amazon Kinesis Streams Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-kinesisparameters.html#cfn-events-rule-kinesisparameters-partitionkeypath)
+       */
+      override fun partitionKeyPath(): String = unwrap(this).getPartitionKeyPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty):
+          KinesisParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisParametersProperty):
+          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty
+    }
+  }
+
+  /**
+   * This structure specifies the network configuration for an ECS task.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * NetworkConfigurationProperty networkConfigurationProperty =
+   * NetworkConfigurationProperty.builder()
+   * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
+   * .subnets(List.of("subnets"))
+   * // the properties below are optional
+   * .assignPublicIp("assignPublicIp")
+   * .securityGroups(List.of("securityGroups"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-networkconfiguration.html)
+   */
+  public interface NetworkConfigurationProperty {
+    /**
+     * Use this structure to specify the VPC subnets and security groups for the task, and whether a
+     * public IP address is to be used.
+     *
+     * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-networkconfiguration.html#cfn-events-rule-networkconfiguration-awsvpcconfiguration)
+     */
+    public fun awsVpcConfiguration(): Any? = unwrap(this).getAwsVpcConfiguration()
+
+    /**
+     * A builder for [NetworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
+       * groups for the task, and whether a public IP address is to be used.
+       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+       */
+      public fun awsVpcConfiguration(awsVpcConfiguration: IResolvable)
+
+      /**
+       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
+       * groups for the task, and whether a public IP address is to be used.
+       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+       */
+      public fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty)
+
+      /**
+       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
+       * groups for the task, and whether a public IP address is to be used.
+       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c6ea4a14f17bc1f53e0aaaea09129ec4ebd9943a3b87f85d40a3b0797c144160")
+      public
+          fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty.builder()
+
+      /**
+       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
+       * groups for the task, and whether a public IP address is to be used.
+       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+       */
+      override fun awsVpcConfiguration(awsVpcConfiguration: IResolvable) {
+        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
+       * groups for the task, and whether a public IP address is to be used.
+       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+       */
+      override fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty) {
+        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
+       * groups for the task, and whether a public IP address is to be used.
+       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c6ea4a14f17bc1f53e0aaaea09129ec4ebd9943a3b87f85d40a3b0797c144160")
+      override
+          fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit):
+          Unit = awsVpcConfiguration(AwsVpcConfigurationProperty(awsVpcConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty,
+    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+      /**
+       * Use this structure to specify the VPC subnets and security groups for the task, and whether
+       * a public IP address is to be used.
+       *
+       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-networkconfiguration.html#cfn-events-rule-networkconfiguration-awsvpcconfiguration)
+       */
+      override fun awsVpcConfiguration(): Any? = unwrap(this).getAwsVpcConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty):
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkConfigurationProperty):
+          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty
+    }
+  }
+
+  /**
+   * An object representing a constraint on task placement.
+   *
+   * To learn more, see [Task Placement
+   * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
+   * in the Amazon Elastic Container Service Developer Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * PlacementConstraintProperty placementConstraintProperty = PlacementConstraintProperty.builder()
+   * .expression("expression")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html)
+   */
+  public interface PlacementConstraintProperty {
+    /**
+     * A cluster query language expression to apply to the constraint.
+     *
+     * You cannot specify an expression if the constraint type is `distinctInstance` . To learn
+     * more, see [Cluster Query
+     * Language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+     * in the Amazon Elastic Container Service Developer Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html#cfn-events-rule-placementconstraint-expression)
+     */
+    public fun expression(): String? = unwrap(this).getExpression()
+
+    /**
+     * The type of constraint.
+     *
+     * Use distinctInstance to ensure that each task in a particular group is running on a different
+     * container instance. Use memberOf to restrict the selection to a group of valid candidates.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html#cfn-events-rule-placementconstraint-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [PlacementConstraintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expression A cluster query language expression to apply to the constraint.
+       * You cannot specify an expression if the constraint type is `distinctInstance` . To learn
+       * more, see [Cluster Query
+       * Language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the Amazon Elastic Container Service Developer Guide.
+       */
+      public fun expression(expression: String)
+
+      /**
+       * @param type The type of constraint.
+       * Use distinctInstance to ensure that each task in a particular group is running on a
+       * different container instance. Use memberOf to restrict the selection to a group of valid
+       * candidates.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty.builder()
+
+      /**
+       * @param expression A cluster query language expression to apply to the constraint.
+       * You cannot specify an expression if the constraint type is `distinctInstance` . To learn
+       * more, see [Cluster Query
+       * Language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the Amazon Elastic Container Service Developer Guide.
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      /**
+       * @param type The type of constraint.
+       * Use distinctInstance to ensure that each task in a particular group is running on a
+       * different container instance. Use memberOf to restrict the selection to a group of valid
+       * candidates.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty,
-    ) : CdkObject(cdkObject), BatchRetryStrategyProperty {
+          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty,
+    ) : CdkObject(cdkObject), PlacementConstraintProperty {
       /**
-       * The number of times to attempt to retry, if the job fails.
+       * A cluster query language expression to apply to the constraint.
        *
-       * Valid values are 1–10.
+       * You cannot specify an expression if the constraint type is `distinctInstance` . To learn
+       * more, see [Cluster Query
+       * Language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the Amazon Elastic Container Service Developer Guide.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchretrystrategy.html#cfn-events-rule-batchretrystrategy-attempts)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html#cfn-events-rule-placementconstraint-expression)
        */
-      override fun attempts(): Number? = unwrap(this).getAttempts()
+      override fun expression(): String? = unwrap(this).getExpression()
+
+      /**
+       * The type of constraint.
+       *
+       * Use distinctInstance to ensure that each task in a particular group is running on a
+       * different container instance. Use memberOf to restrict the selection to a group of valid
+       * candidates.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html#cfn-events-rule-placementconstraint-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BatchRetryStrategyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementConstraintProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty):
-          BatchRetryStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BatchRetryStrategyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty):
+          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementConstraintProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BatchRetryStrategyProperty):
-          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty = (wrapped as
+      internal fun unwrap(wrapped: PlacementConstraintProperty):
+          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty
+          software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty
     }
   }
 
   /**
-   * A `DeadLetterConfig` object that contains information about a dead-letter queue configuration.
+   * The task placement strategy for a task or service.
+   *
+   * To learn more, see [Task Placement
+   * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html)
+   * in the Amazon Elastic Container Service Service Developer Guide.
    *
    * Example:
    *
@@ -4174,75 +4027,949 @@ public open class CfnRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.events.*;
-   * DeadLetterConfigProperty deadLetterConfigProperty = DeadLetterConfigProperty.builder()
-   * .arn("arn")
+   * PlacementStrategyProperty placementStrategyProperty = PlacementStrategyProperty.builder()
+   * .field("field")
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html)
    */
-  public interface DeadLetterConfigProperty {
+  public interface PlacementStrategyProperty {
     /**
-     * The ARN of the SQS queue specified as the target for the dead-letter queue.
+     * The field to apply the placement strategy against.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html#cfn-events-rule-deadletterconfig-arn)
+     * For the spread placement strategy, valid values are instanceId (or host, which has the same
+     * effect), or any platform or custom attribute that is applied to a container instance, such as
+     * attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
+     * memory. For the random placement strategy, this field is not used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html#cfn-events-rule-placementstrategy-field)
      */
-    public fun arn(): String? = unwrap(this).getArn()
+    public fun `field`(): String? = unwrap(this).getField()
 
     /**
-     * A builder for [DeadLetterConfigProperty]
+     * The type of placement strategy.
+     *
+     * The random placement strategy randomly places tasks on available candidates. The spread
+     * placement strategy spreads placement across available candidates evenly based on the field
+     * parameter. The binpack strategy places tasks on available candidates that have the least
+     * available amount of the resource that is specified with the field parameter. For example, if you
+     * binpack on memory, a task is placed on the instance with the least amount of remaining memory
+     * (but still enough to run the task).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html#cfn-events-rule-placementstrategy-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [PlacementStrategyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param arn The ARN of the SQS queue specified as the target for the dead-letter queue.
+       * @param field The field to apply the placement strategy against.
+       * For the spread placement strategy, valid values are instanceId (or host, which has the same
+       * effect), or any platform or custom attribute that is applied to a container instance, such as
+       * attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
+       * memory. For the random placement strategy, this field is not used.
        */
-      public fun arn(arn: String)
+      public fun `field`(`field`: String)
+
+      /**
+       * @param type The type of placement strategy.
+       * The random placement strategy randomly places tasks on available candidates. The spread
+       * placement strategy spreads placement across available candidates evenly based on the field
+       * parameter. The binpack strategy places tasks on available candidates that have the least
+       * available amount of the resource that is specified with the field parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory (but still enough to run the task).
+       */
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty.builder()
+          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty.builder()
 
       /**
-       * @param arn The ARN of the SQS queue specified as the target for the dead-letter queue.
+       * @param field The field to apply the placement strategy against.
+       * For the spread placement strategy, valid values are instanceId (or host, which has the same
+       * effect), or any platform or custom attribute that is applied to a container instance, such as
+       * attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
+       * memory. For the random placement strategy, this field is not used.
        */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
       }
 
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty =
+      /**
+       * @param type The type of placement strategy.
+       * The random placement strategy randomly places tasks on available candidates. The spread
+       * placement strategy spreads placement across available candidates evenly based on the field
+       * parameter. The binpack strategy places tasks on available candidates that have the least
+       * available amount of the resource that is specified with the field parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory (but still enough to run the task).
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty,
-    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
+          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty,
+    ) : CdkObject(cdkObject), PlacementStrategyProperty {
       /**
-       * The ARN of the SQS queue specified as the target for the dead-letter queue.
+       * The field to apply the placement strategy against.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html#cfn-events-rule-deadletterconfig-arn)
+       * For the spread placement strategy, valid values are instanceId (or host, which has the same
+       * effect), or any platform or custom attribute that is applied to a container instance, such as
+       * attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
+       * memory. For the random placement strategy, this field is not used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html#cfn-events-rule-placementstrategy-field)
        */
-      override fun arn(): String? = unwrap(this).getArn()
+      override fun `field`(): String? = unwrap(this).getField()
+
+      /**
+       * The type of placement strategy.
+       *
+       * The random placement strategy randomly places tasks on available candidates. The spread
+       * placement strategy spreads placement across available candidates evenly based on the field
+       * parameter. The binpack strategy places tasks on available candidates that have the least
+       * available amount of the resource that is specified with the field parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory (but still enough to run the task).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html#cfn-events-rule-placementstrategy-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeadLetterConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementStrategyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty):
-          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty):
+          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementStrategyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementStrategyProperty):
+          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty
+    }
+  }
+
+  /**
+   * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke
+   * the Amazon Redshift Data API ExecuteStatement based on EventBridge events.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * RedshiftDataParametersProperty redshiftDataParametersProperty =
+   * RedshiftDataParametersProperty.builder()
+   * .database("database")
+   * // the properties below are optional
+   * .dbUser("dbUser")
+   * .secretManagerArn("secretManagerArn")
+   * .sql("sql")
+   * .sqls(List.of("sqls"))
+   * .statementName("statementName")
+   * .withEvent(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html)
+   */
+  public interface RedshiftDataParametersProperty {
+    /**
+     * The name of the database.
+     *
+     * Required when authenticating using temporary credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-database)
+     */
+    public fun database(): String
+
+    /**
+     * The database user name.
+     *
+     * Required when authenticating using temporary credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-dbuser)
+     */
+    public fun dbUser(): String? = unwrap(this).getDbUser()
+
+    /**
+     * The name or ARN of the secret that enables access to the database.
+     *
+     * Required when authenticating using AWS Secrets Manager.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-secretmanagerarn)
+     */
+    public fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
+
+    /**
+     * The SQL statement text to run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sql)
+     */
+    public fun sql(): String? = unwrap(this).getSql()
+
+    /**
+     * One or more SQL statements to run.
+     *
+     * The SQL statements are run as a single transaction. They run serially in the order of the
+     * array. Subsequent SQL statements don't start until the previous statement in the array
+     * completes. If any SQL statement fails, then because they are run as one transaction, all work is
+     * rolled back.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sqls)
+     */
+    public fun sqls(): List<String> = unwrap(this).getSqls() ?: emptyList()
+
+    /**
+     * The name of the SQL statement.
+     *
+     * You can name the SQL statement when you create it to identify the query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-statementname)
+     */
+    public fun statementName(): String? = unwrap(this).getStatementName()
+
+    /**
+     * Indicates whether to send an event back to EventBridge after the SQL statement runs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-withevent)
+     */
+    public fun withEvent(): Any? = unwrap(this).getWithEvent()
+
+    /**
+     * A builder for [RedshiftDataParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param database The name of the database. 
+       * Required when authenticating using temporary credentials.
+       */
+      public fun database(database: String)
+
+      /**
+       * @param dbUser The database user name.
+       * Required when authenticating using temporary credentials.
+       */
+      public fun dbUser(dbUser: String)
+
+      /**
+       * @param secretManagerArn The name or ARN of the secret that enables access to the database.
+       * Required when authenticating using AWS Secrets Manager.
+       */
+      public fun secretManagerArn(secretManagerArn: String)
+
+      /**
+       * @param sql The SQL statement text to run.
+       */
+      public fun sql(sql: String)
+
+      /**
+       * @param sqls One or more SQL statements to run.
+       * The SQL statements are run as a single transaction. They run serially in the order of the
+       * array. Subsequent SQL statements don't start until the previous statement in the array
+       * completes. If any SQL statement fails, then because they are run as one transaction, all work
+       * is rolled back.
+       */
+      public fun sqls(sqls: List<String>)
+
+      /**
+       * @param sqls One or more SQL statements to run.
+       * The SQL statements are run as a single transaction. They run serially in the order of the
+       * array. Subsequent SQL statements don't start until the previous statement in the array
+       * completes. If any SQL statement fails, then because they are run as one transaction, all work
+       * is rolled back.
+       */
+      public fun sqls(vararg sqls: String)
+
+      /**
+       * @param statementName The name of the SQL statement.
+       * You can name the SQL statement when you create it to identify the query.
+       */
+      public fun statementName(statementName: String)
+
+      /**
+       * @param withEvent Indicates whether to send an event back to EventBridge after the SQL
+       * statement runs.
+       */
+      public fun withEvent(withEvent: Boolean)
+
+      /**
+       * @param withEvent Indicates whether to send an event back to EventBridge after the SQL
+       * statement runs.
+       */
+      public fun withEvent(withEvent: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty.builder()
+
+      /**
+       * @param database The name of the database. 
+       * Required when authenticating using temporary credentials.
+       */
+      override fun database(database: String) {
+        cdkBuilder.database(database)
+      }
+
+      /**
+       * @param dbUser The database user name.
+       * Required when authenticating using temporary credentials.
+       */
+      override fun dbUser(dbUser: String) {
+        cdkBuilder.dbUser(dbUser)
+      }
+
+      /**
+       * @param secretManagerArn The name or ARN of the secret that enables access to the database.
+       * Required when authenticating using AWS Secrets Manager.
+       */
+      override fun secretManagerArn(secretManagerArn: String) {
+        cdkBuilder.secretManagerArn(secretManagerArn)
+      }
+
+      /**
+       * @param sql The SQL statement text to run.
+       */
+      override fun sql(sql: String) {
+        cdkBuilder.sql(sql)
+      }
+
+      /**
+       * @param sqls One or more SQL statements to run.
+       * The SQL statements are run as a single transaction. They run serially in the order of the
+       * array. Subsequent SQL statements don't start until the previous statement in the array
+       * completes. If any SQL statement fails, then because they are run as one transaction, all work
+       * is rolled back.
+       */
+      override fun sqls(sqls: List<String>) {
+        cdkBuilder.sqls(sqls)
+      }
+
+      /**
+       * @param sqls One or more SQL statements to run.
+       * The SQL statements are run as a single transaction. They run serially in the order of the
+       * array. Subsequent SQL statements don't start until the previous statement in the array
+       * completes. If any SQL statement fails, then because they are run as one transaction, all work
+       * is rolled back.
+       */
+      override fun sqls(vararg sqls: String): Unit = sqls(sqls.toList())
+
+      /**
+       * @param statementName The name of the SQL statement.
+       * You can name the SQL statement when you create it to identify the query.
+       */
+      override fun statementName(statementName: String) {
+        cdkBuilder.statementName(statementName)
+      }
+
+      /**
+       * @param withEvent Indicates whether to send an event back to EventBridge after the SQL
+       * statement runs.
+       */
+      override fun withEvent(withEvent: Boolean) {
+        cdkBuilder.withEvent(withEvent)
+      }
+
+      /**
+       * @param withEvent Indicates whether to send an event back to EventBridge after the SQL
+       * statement runs.
+       */
+      override fun withEvent(withEvent: IResolvable) {
+        cdkBuilder.withEvent(withEvent.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty,
+    ) : CdkObject(cdkObject), RedshiftDataParametersProperty {
+      /**
+       * The name of the database.
+       *
+       * Required when authenticating using temporary credentials.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-database)
+       */
+      override fun database(): String = unwrap(this).getDatabase()
+
+      /**
+       * The database user name.
+       *
+       * Required when authenticating using temporary credentials.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-dbuser)
+       */
+      override fun dbUser(): String? = unwrap(this).getDbUser()
+
+      /**
+       * The name or ARN of the secret that enables access to the database.
+       *
+       * Required when authenticating using AWS Secrets Manager.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-secretmanagerarn)
+       */
+      override fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
+
+      /**
+       * The SQL statement text to run.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sql)
+       */
+      override fun sql(): String? = unwrap(this).getSql()
+
+      /**
+       * One or more SQL statements to run.
+       *
+       * The SQL statements are run as a single transaction. They run serially in the order of the
+       * array. Subsequent SQL statements don't start until the previous statement in the array
+       * completes. If any SQL statement fails, then because they are run as one transaction, all work
+       * is rolled back.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-sqls)
+       */
+      override fun sqls(): List<String> = unwrap(this).getSqls() ?: emptyList()
+
+      /**
+       * The name of the SQL statement.
+       *
+       * You can name the SQL statement when you create it to identify the query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-statementname)
+       */
+      override fun statementName(): String? = unwrap(this).getStatementName()
+
+      /**
+       * Indicates whether to send an event back to EventBridge after the SQL statement runs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html#cfn-events-rule-redshiftdataparameters-withevent)
+       */
+      override fun withEvent(): Any? = unwrap(this).getWithEvent()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftDataParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty):
+          RedshiftDataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftDataParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftDataParametersProperty):
+          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty
+    }
+  }
+
+  /**
+   * A `RetryPolicy` object that includes information about the retry policy settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * RetryPolicyProperty retryPolicyProperty = RetryPolicyProperty.builder()
+   * .maximumEventAgeInSeconds(123)
+   * .maximumRetryAttempts(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html)
+   */
+  public interface RetryPolicyProperty {
+    /**
+     * The maximum amount of time, in seconds, to continue to make retry attempts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html#cfn-events-rule-retrypolicy-maximumeventageinseconds)
+     */
+    public fun maximumEventAgeInSeconds(): Number? = unwrap(this).getMaximumEventAgeInSeconds()
+
+    /**
+     * The maximum number of retry attempts to make before the request fails.
+     *
+     * Retry attempts continue until either the maximum number of attempts is made or until the
+     * duration of the `MaximumEventAgeInSeconds` is met.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html#cfn-events-rule-retrypolicy-maximumretryattempts)
+     */
+    public fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
+
+    /**
+     * A builder for [RetryPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
+       * retry attempts.
+       */
+      public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number)
+
+      /**
+       * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
+       * fails.
+       * Retry attempts continue until either the maximum number of attempts is made or until the
+       * duration of the `MaximumEventAgeInSeconds` is met.
+       */
+      public fun maximumRetryAttempts(maximumRetryAttempts: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty.builder()
+
+      /**
+       * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
+       * retry attempts.
+       */
+      override fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
+        cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
+      }
+
+      /**
+       * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
+       * fails.
+       * Retry attempts continue until either the maximum number of attempts is made or until the
+       * duration of the `MaximumEventAgeInSeconds` is met.
+       */
+      override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
+        cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty,
+    ) : CdkObject(cdkObject), RetryPolicyProperty {
+      /**
+       * The maximum amount of time, in seconds, to continue to make retry attempts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html#cfn-events-rule-retrypolicy-maximumeventageinseconds)
+       */
+      override fun maximumEventAgeInSeconds(): Number? = unwrap(this).getMaximumEventAgeInSeconds()
+
+      /**
+       * The maximum number of retry attempts to make before the request fails.
+       *
+       * Retry attempts continue until either the maximum number of attempts is made or until the
+       * duration of the `MaximumEventAgeInSeconds` is met.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html#cfn-events-rule-retrypolicy-maximumretryattempts)
+       */
+      override fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetryPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty):
+          RetryPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RetryPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RetryPolicyProperty):
+          software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty
+    }
+  }
+
+  /**
+   * This parameter contains the criteria (either InstanceIds or a tag) used to specify which EC2
+   * instances are to be sent the command.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * RunCommandParametersProperty runCommandParametersProperty =
+   * RunCommandParametersProperty.builder()
+   * .runCommandTargets(List.of(RunCommandTargetProperty.builder()
+   * .key("key")
+   * .values(List.of("values"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandparameters.html)
+   */
+  public interface RunCommandParametersProperty {
+    /**
+     * Currently, we support including only one RunCommandTarget block, which specifies either an
+     * array of InstanceIds or a tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandparameters.html#cfn-events-rule-runcommandparameters-runcommandtargets)
+     */
+    public fun runCommandTargets(): Any
+
+    /**
+     * A builder for [RunCommandParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+       * which specifies either an array of InstanceIds or a tag. 
+       */
+      public fun runCommandTargets(runCommandTargets: IResolvable)
+
+      /**
+       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+       * which specifies either an array of InstanceIds or a tag. 
+       */
+      public fun runCommandTargets(runCommandTargets: List<Any>)
+
+      /**
+       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+       * which specifies either an array of InstanceIds or a tag. 
+       */
+      public fun runCommandTargets(vararg runCommandTargets: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty.builder()
+
+      /**
+       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+       * which specifies either an array of InstanceIds or a tag. 
+       */
+      override fun runCommandTargets(runCommandTargets: IResolvable) {
+        cdkBuilder.runCommandTargets(runCommandTargets.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+       * which specifies either an array of InstanceIds or a tag. 
+       */
+      override fun runCommandTargets(runCommandTargets: List<Any>) {
+        cdkBuilder.runCommandTargets(runCommandTargets)
+      }
+
+      /**
+       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+       * which specifies either an array of InstanceIds or a tag. 
+       */
+      override fun runCommandTargets(vararg runCommandTargets: Any): Unit =
+          runCommandTargets(runCommandTargets.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty,
+    ) : CdkObject(cdkObject), RunCommandParametersProperty {
+      /**
+       * Currently, we support including only one RunCommandTarget block, which specifies either an
+       * array of InstanceIds or a tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandparameters.html#cfn-events-rule-runcommandparameters-runcommandtargets)
+       */
+      override fun runCommandTargets(): Any = unwrap(this).getRunCommandTargets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RunCommandParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty):
+          RunCommandParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RunCommandParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RunCommandParametersProperty):
+          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty
+    }
+  }
+
+  /**
+   * Information about the EC2 instances that are to be sent the command, specified as key-value
+   * pairs.
+   *
+   * Each `RunCommandTarget` block can include only one key, but this key may specify multiple
+   * values.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * RunCommandTargetProperty runCommandTargetProperty = RunCommandTargetProperty.builder()
+   * .key("key")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html)
+   */
+  public interface RunCommandTargetProperty {
+    /**
+     * Can be either `tag:` *tag-key* or `InstanceIds` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key)
+     */
+    public fun key(): String
+
+    /**
+     * If `Key` is `tag:` *tag-key* , `Values` is a list of tag values.
+     *
+     * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values)
+     */
+    public fun values(): List<String>
+
+    /**
+     * A builder for [RunCommandTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key Can be either `tag:` *tag-key* or `InstanceIds` . 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param values If `Key` is `tag:` *tag-key* , `Values` is a list of tag values. 
+       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values If `Key` is `tag:` *tag-key* , `Values` is a list of tag values. 
+       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty.builder()
+
+      /**
+       * @param key Can be either `tag:` *tag-key* or `InstanceIds` . 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param values If `Key` is `tag:` *tag-key* , `Values` is a list of tag values. 
+       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values If `Key` is `tag:` *tag-key* , `Values` is a list of tag values. 
+       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty,
+    ) : CdkObject(cdkObject), RunCommandTargetProperty {
+      /**
+       * Can be either `tag:` *tag-key* or `InstanceIds` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * If `Key` is `tag:` *tag-key* , `Values` is a list of tag values.
+       *
+       * If `Key` is `InstanceIds` , `Values` is a list of Amazon EC2 instance IDs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RunCommandTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty):
+          RunCommandTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? RunCommandTargetProperty
           ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DeadLetterConfigProperty):
-          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty = (wrapped as
+      internal fun unwrap(wrapped: RunCommandTargetProperty):
+          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty
+          software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty
+    }
+  }
+
+  /**
+   * Name/Value pair of a parameter to start execution of a SageMaker Model Building Pipeline.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * SageMakerPipelineParameterProperty sageMakerPipelineParameterProperty =
+   * SageMakerPipelineParameterProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html)
+   */
+  public interface SageMakerPipelineParameterProperty {
+    /**
+     * Name of parameter to start execution of a SageMaker Model Building Pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-name)
+     */
+    public fun name(): String
+
+    /**
+     * Value of parameter to start execution of a SageMaker Model Building Pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [SageMakerPipelineParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty.Builder
+          =
+          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty.builder()
+
+      /**
+       * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty,
+    ) : CdkObject(cdkObject), SageMakerPipelineParameterProperty {
+      /**
+       * Name of parameter to start execution of a SageMaker Model Building Pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Value of parameter to start execution of a SageMaker Model Building Pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SageMakerPipelineParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty):
+          SageMakerPipelineParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerPipelineParameterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SageMakerPipelineParameterProperty):
+          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty
     }
   }
 
@@ -4365,8 +5092,7 @@ public open class CfnRule internal constructor(
   }
 
   /**
-   * Contains the GraphQL operation to be parsed and executed, if the event target is an AWS AppSync
-   * API.
+   * This structure includes the custom parameter to be used when the target is an SQS FIFO queue.
    *
    * Example:
    *
@@ -4374,93 +5100,190 @@ public open class CfnRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.events.*;
-   * AppSyncParametersProperty appSyncParametersProperty = AppSyncParametersProperty.builder()
-   * .graphQlOperation("graphQlOperation")
+   * SqsParametersProperty sqsParametersProperty = SqsParametersProperty.builder()
+   * .messageGroupId("messageGroupId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-appsyncparameters.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html)
    */
-  public interface AppSyncParametersProperty {
+  public interface SqsParametersProperty {
     /**
-     * The GraphQL operation; that is, the query, mutation, or subscription to be parsed and
-     * executed by the GraphQL service.
+     * The FIFO message group ID to use as the target.
      *
-     * For more information, see
-     * [Operations](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-architecture.html#graphql-operations)
-     * in the *AWS AppSync User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-appsyncparameters.html#cfn-events-rule-appsyncparameters-graphqloperation)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid)
      */
-    public fun graphQlOperation(): String
+    public fun messageGroupId(): String
 
     /**
-     * A builder for [AppSyncParametersProperty]
+     * A builder for [SqsParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param graphQlOperation The GraphQL operation; that is, the query, mutation, or
-       * subscription to be parsed and executed by the GraphQL service. 
-       * For more information, see
-       * [Operations](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-architecture.html#graphql-operations)
-       * in the *AWS AppSync User Guide* .
+       * @param messageGroupId The FIFO message group ID to use as the target. 
        */
-      public fun graphQlOperation(graphQlOperation: String)
+      public fun messageGroupId(messageGroupId: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty.builder()
+          software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty.builder()
 
       /**
-       * @param graphQlOperation The GraphQL operation; that is, the query, mutation, or
-       * subscription to be parsed and executed by the GraphQL service. 
-       * For more information, see
-       * [Operations](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-architecture.html#graphql-operations)
-       * in the *AWS AppSync User Guide* .
+       * @param messageGroupId The FIFO message group ID to use as the target. 
        */
-      override fun graphQlOperation(graphQlOperation: String) {
-        cdkBuilder.graphQlOperation(graphQlOperation)
+      override fun messageGroupId(messageGroupId: String) {
+        cdkBuilder.messageGroupId(messageGroupId)
       }
 
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty =
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty,
-    ) : CdkObject(cdkObject), AppSyncParametersProperty {
+      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty,
+    ) : CdkObject(cdkObject), SqsParametersProperty {
       /**
-       * The GraphQL operation; that is, the query, mutation, or subscription to be parsed and
-       * executed by the GraphQL service.
+       * The FIFO message group ID to use as the target.
        *
-       * For more information, see
-       * [Operations](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-architecture.html#graphql-operations)
-       * in the *AWS AppSync User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-appsyncparameters.html#cfn-events-rule-appsyncparameters-graphqloperation)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid)
        */
-      override fun graphQlOperation(): String = unwrap(this).getGraphQlOperation()
+      override fun messageGroupId(): String = unwrap(this).getMessageGroupId()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AppSyncParametersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SqsParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty):
-          AppSyncParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AppSyncParametersProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty):
+          SqsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? SqsParametersProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AppSyncParametersProperty):
-          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty = (wrapped as
+      internal fun unwrap(wrapped: SqsParametersProperty):
+          software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty
+          software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty
+    }
+  }
+
+  /**
+   * A key-value pair associated with an ECS Target of an EventBridge rule.
+   *
+   * The tag will be propagated to ECS by EventBridge when starting an ECS task based on a matched
+   * event.
+   *
+   *
+   * Currently, tags are only available when using ECS with EventBridge .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * TagProperty tagProperty = TagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html)
+   */
+  public interface TagProperty {
+    /**
+     * A string you can use to assign a value.
+     *
+     * The combination of tag keys and values can help you organize and categorize your resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html#cfn-events-rule-tag-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The value for the specified tag key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html#cfn-events-rule-tag-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [TagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key A string you can use to assign a value.
+       * The combination of tag keys and values can help you organize and categorize your resources.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value for the specified tag key.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.events.CfnRule.TagProperty.Builder =
+          software.amazon.awscdk.services.events.CfnRule.TagProperty.builder()
+
+      /**
+       * @param key A string you can use to assign a value.
+       * The combination of tag keys and values can help you organize and categorize your resources.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value for the specified tag key.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnRule.TagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.TagProperty,
+    ) : CdkObject(cdkObject), TagProperty {
+      /**
+       * A string you can use to assign a value.
+       *
+       * The combination of tag keys and values can help you organize and categorize your resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html#cfn-events-rule-tag-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The value for the specified tag key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html#cfn-events-rule-tag-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.TagProperty):
+          TagProperty = CdkObjectWrappers.wrap(cdkObject) as? TagProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TagProperty):
+          software.amazon.awscdk.services.events.CfnRule.TagProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.events.CfnRule.TagProperty
     }
   }
 
@@ -5726,829 +6549,6 @@ public open class CfnRule internal constructor(
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.events.CfnRule.TargetProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.events.CfnRule.TargetProperty
-    }
-  }
-
-  /**
-   * The array properties for the submitted job, such as the size of the array.
-   *
-   * The array size can be between 2 and 10,000. If you specify array properties for a job, it
-   * becomes an array job. This parameter is used only if the target is an AWS Batch job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * BatchArrayPropertiesProperty batchArrayPropertiesProperty =
-   * BatchArrayPropertiesProperty.builder()
-   * .size(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batcharrayproperties.html)
-   */
-  public interface BatchArrayPropertiesProperty {
-    /**
-     * The size of the array, if this is an array batch job.
-     *
-     * Valid values are integers between 2 and 10,000.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batcharrayproperties.html#cfn-events-rule-batcharrayproperties-size)
-     */
-    public fun size(): Number? = unwrap(this).getSize()
-
-    /**
-     * A builder for [BatchArrayPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param size The size of the array, if this is an array batch job.
-       * Valid values are integers between 2 and 10,000.
-       */
-      public fun size(size: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty.builder()
-
-      /**
-       * @param size The size of the array, if this is an array batch job.
-       * Valid values are integers between 2 and 10,000.
-       */
-      override fun size(size: Number) {
-        cdkBuilder.size(size)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty,
-    ) : CdkObject(cdkObject), BatchArrayPropertiesProperty {
-      /**
-       * The size of the array, if this is an array batch job.
-       *
-       * Valid values are integers between 2 and 10,000.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batcharrayproperties.html#cfn-events-rule-batcharrayproperties-size)
-       */
-      override fun size(): Number? = unwrap(this).getSize()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BatchArrayPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty):
-          BatchArrayPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BatchArrayPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BatchArrayPropertiesProperty):
-          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty
-    }
-  }
-
-  /**
-   * This parameter contains the criteria (either InstanceIds or a tag) used to specify which EC2
-   * instances are to be sent the command.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * RunCommandParametersProperty runCommandParametersProperty =
-   * RunCommandParametersProperty.builder()
-   * .runCommandTargets(List.of(RunCommandTargetProperty.builder()
-   * .key("key")
-   * .values(List.of("values"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandparameters.html)
-   */
-  public interface RunCommandParametersProperty {
-    /**
-     * Currently, we support including only one RunCommandTarget block, which specifies either an
-     * array of InstanceIds or a tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandparameters.html#cfn-events-rule-runcommandparameters-runcommandtargets)
-     */
-    public fun runCommandTargets(): Any
-
-    /**
-     * A builder for [RunCommandParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
-       * which specifies either an array of InstanceIds or a tag. 
-       */
-      public fun runCommandTargets(runCommandTargets: IResolvable)
-
-      /**
-       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
-       * which specifies either an array of InstanceIds or a tag. 
-       */
-      public fun runCommandTargets(runCommandTargets: List<Any>)
-
-      /**
-       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
-       * which specifies either an array of InstanceIds or a tag. 
-       */
-      public fun runCommandTargets(vararg runCommandTargets: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty.builder()
-
-      /**
-       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
-       * which specifies either an array of InstanceIds or a tag. 
-       */
-      override fun runCommandTargets(runCommandTargets: IResolvable) {
-        cdkBuilder.runCommandTargets(runCommandTargets.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
-       * which specifies either an array of InstanceIds or a tag. 
-       */
-      override fun runCommandTargets(runCommandTargets: List<Any>) {
-        cdkBuilder.runCommandTargets(runCommandTargets)
-      }
-
-      /**
-       * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
-       * which specifies either an array of InstanceIds or a tag. 
-       */
-      override fun runCommandTargets(vararg runCommandTargets: Any): Unit =
-          runCommandTargets(runCommandTargets.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty,
-    ) : CdkObject(cdkObject), RunCommandParametersProperty {
-      /**
-       * Currently, we support including only one RunCommandTarget block, which specifies either an
-       * array of InstanceIds or a tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandparameters.html#cfn-events-rule-runcommandparameters-runcommandtargets)
-       */
-      override fun runCommandTargets(): Any = unwrap(this).getRunCommandTargets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RunCommandParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty):
-          RunCommandParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RunCommandParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RunCommandParametersProperty):
-          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty
-    }
-  }
-
-  /**
-   * These are custom parameter to be used when the target is an API Gateway APIs or EventBridge
-   * ApiDestinations.
-   *
-   * In the latter case, these are merged with any InvocationParameters specified on the Connection,
-   * with any values from the Connection taking precedence.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * HttpParametersProperty httpParametersProperty = HttpParametersProperty.builder()
-   * .headerParameters(Map.of(
-   * "headerParametersKey", "headerParameters"))
-   * .pathParameterValues(List.of("pathParameterValues"))
-   * .queryStringParameters(Map.of(
-   * "queryStringParametersKey", "queryStringParameters"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html)
-   */
-  public interface HttpParametersProperty {
-    /**
-     * The headers that need to be sent as part of request invoking the API Gateway API or
-     * EventBridge ApiDestination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-headerparameters)
-     */
-    public fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
-
-    /**
-     * The path parameter values to be used to populate API Gateway API or EventBridge
-     * ApiDestination path wildcards ("*").
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-pathparametervalues)
-     */
-    public fun pathParameterValues(): List<String> = unwrap(this).getPathParameterValues() ?:
-        emptyList()
-
-    /**
-     * The query string keys/values that need to be sent as part of request invoking the API Gateway
-     * API or EventBridge ApiDestination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-querystringparameters)
-     */
-    public fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
-
-    /**
-     * A builder for [HttpParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param headerParameters The headers that need to be sent as part of request invoking the
-       * API Gateway API or EventBridge ApiDestination.
-       */
-      public fun headerParameters(headerParameters: IResolvable)
-
-      /**
-       * @param headerParameters The headers that need to be sent as part of request invoking the
-       * API Gateway API or EventBridge ApiDestination.
-       */
-      public fun headerParameters(headerParameters: Map<String, String>)
-
-      /**
-       * @param pathParameterValues The path parameter values to be used to populate API Gateway API
-       * or EventBridge ApiDestination path wildcards ("*").
-       */
-      public fun pathParameterValues(pathParameterValues: List<String>)
-
-      /**
-       * @param pathParameterValues The path parameter values to be used to populate API Gateway API
-       * or EventBridge ApiDestination path wildcards ("*").
-       */
-      public fun pathParameterValues(vararg pathParameterValues: String)
-
-      /**
-       * @param queryStringParameters The query string keys/values that need to be sent as part of
-       * request invoking the API Gateway API or EventBridge ApiDestination.
-       */
-      public fun queryStringParameters(queryStringParameters: IResolvable)
-
-      /**
-       * @param queryStringParameters The query string keys/values that need to be sent as part of
-       * request invoking the API Gateway API or EventBridge ApiDestination.
-       */
-      public fun queryStringParameters(queryStringParameters: Map<String, String>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty.builder()
-
-      /**
-       * @param headerParameters The headers that need to be sent as part of request invoking the
-       * API Gateway API or EventBridge ApiDestination.
-       */
-      override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param headerParameters The headers that need to be sent as part of request invoking the
-       * API Gateway API or EventBridge ApiDestination.
-       */
-      override fun headerParameters(headerParameters: Map<String, String>) {
-        cdkBuilder.headerParameters(headerParameters)
-      }
-
-      /**
-       * @param pathParameterValues The path parameter values to be used to populate API Gateway API
-       * or EventBridge ApiDestination path wildcards ("*").
-       */
-      override fun pathParameterValues(pathParameterValues: List<String>) {
-        cdkBuilder.pathParameterValues(pathParameterValues)
-      }
-
-      /**
-       * @param pathParameterValues The path parameter values to be used to populate API Gateway API
-       * or EventBridge ApiDestination path wildcards ("*").
-       */
-      override fun pathParameterValues(vararg pathParameterValues: String): Unit =
-          pathParameterValues(pathParameterValues.toList())
-
-      /**
-       * @param queryStringParameters The query string keys/values that need to be sent as part of
-       * request invoking the API Gateway API or EventBridge ApiDestination.
-       */
-      override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param queryStringParameters The query string keys/values that need to be sent as part of
-       * request invoking the API Gateway API or EventBridge ApiDestination.
-       */
-      override fun queryStringParameters(queryStringParameters: Map<String, String>) {
-        cdkBuilder.queryStringParameters(queryStringParameters)
-      }
-
-      public fun build(): software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty,
-    ) : CdkObject(cdkObject), HttpParametersProperty {
-      /**
-       * The headers that need to be sent as part of request invoking the API Gateway API or
-       * EventBridge ApiDestination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-headerparameters)
-       */
-      override fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
-
-      /**
-       * The path parameter values to be used to populate API Gateway API or EventBridge
-       * ApiDestination path wildcards ("*").
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-pathparametervalues)
-       */
-      override fun pathParameterValues(): List<String> = unwrap(this).getPathParameterValues() ?:
-          emptyList()
-
-      /**
-       * The query string keys/values that need to be sent as part of request invoking the API
-       * Gateway API or EventBridge ApiDestination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html#cfn-events-rule-httpparameters-querystringparameters)
-       */
-      override fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HttpParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty):
-          HttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpParametersProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HttpParametersProperty):
-          software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty
-    }
-  }
-
-  /**
-   * Name/Value pair of a parameter to start execution of a SageMaker Model Building Pipeline.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * SageMakerPipelineParameterProperty sageMakerPipelineParameterProperty =
-   * SageMakerPipelineParameterProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html)
-   */
-  public interface SageMakerPipelineParameterProperty {
-    /**
-     * Name of parameter to start execution of a SageMaker Model Building Pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-name)
-     */
-    public fun name(): String
-
-    /**
-     * Value of parameter to start execution of a SageMaker Model Building Pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [SageMakerPipelineParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty.builder()
-
-      /**
-       * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty,
-    ) : CdkObject(cdkObject), SageMakerPipelineParameterProperty {
-      /**
-       * Name of parameter to start execution of a SageMaker Model Building Pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Value of parameter to start execution of a SageMaker Model Building Pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SageMakerPipelineParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty):
-          SageMakerPipelineParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SageMakerPipelineParameterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SageMakerPipelineParameterProperty):
-          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty
-    }
-  }
-
-  /**
-   * The details of a capacity provider strategy.
-   *
-   * To learn more, see
-   * [CapacityProviderStrategyItem](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CapacityProviderStrategyItem.html)
-   * in the Amazon ECS API Reference.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
-   * CapacityProviderStrategyItemProperty.builder()
-   * .capacityProvider("capacityProvider")
-   * // the properties below are optional
-   * .base(123)
-   * .weight(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html)
-   */
-  public interface CapacityProviderStrategyItemProperty {
-    /**
-     * The base value designates how many tasks, at a minimum, to run on the specified capacity
-     * provider.
-     *
-     * Only one capacity provider in a capacity provider strategy can have a base defined. If no
-     * value is specified, the default value of 0 is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-base)
-     */
-    public fun base(): Number? = unwrap(this).getBase()
-
-    /**
-     * The short name of the capacity provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-capacityprovider)
-     */
-    public fun capacityProvider(): String
-
-    /**
-     * The weight value designates the relative percentage of the total number of tasks launched
-     * that should use the specified capacity provider.
-     *
-     * The weight value is taken into consideration after the base value, if defined, is satisfied.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-weight)
-     */
-    public fun weight(): Number? = unwrap(this).getWeight()
-
-    /**
-     * A builder for [CapacityProviderStrategyItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param base The base value designates how many tasks, at a minimum, to run on the specified
-       * capacity provider.
-       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
-       * value is specified, the default value of 0 is used.
-       */
-      public fun base(base: Number)
-
-      /**
-       * @param capacityProvider The short name of the capacity provider. 
-       */
-      public fun capacityProvider(capacityProvider: String)
-
-      /**
-       * @param weight The weight value designates the relative percentage of the total number of
-       * tasks launched that should use the specified capacity provider.
-       * The weight value is taken into consideration after the base value, if defined, is
-       * satisfied.
-       */
-      public fun weight(weight: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty.Builder
-          =
-          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty.builder()
-
-      /**
-       * @param base The base value designates how many tasks, at a minimum, to run on the specified
-       * capacity provider.
-       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
-       * value is specified, the default value of 0 is used.
-       */
-      override fun base(base: Number) {
-        cdkBuilder.base(base)
-      }
-
-      /**
-       * @param capacityProvider The short name of the capacity provider. 
-       */
-      override fun capacityProvider(capacityProvider: String) {
-        cdkBuilder.capacityProvider(capacityProvider)
-      }
-
-      /**
-       * @param weight The weight value designates the relative percentage of the total number of
-       * tasks launched that should use the specified capacity provider.
-       * The weight value is taken into consideration after the base value, if defined, is
-       * satisfied.
-       */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
-      /**
-       * The base value designates how many tasks, at a minimum, to run on the specified capacity
-       * provider.
-       *
-       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
-       * value is specified, the default value of 0 is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-base)
-       */
-      override fun base(): Number? = unwrap(this).getBase()
-
-      /**
-       * The short name of the capacity provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-capacityprovider)
-       */
-      override fun capacityProvider(): String = unwrap(this).getCapacityProvider()
-
-      /**
-       * The weight value designates the relative percentage of the total number of tasks launched
-       * that should use the specified capacity provider.
-       *
-       * The weight value is taken into consideration after the base value, if defined, is
-       * satisfied.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html#cfn-events-rule-capacityproviderstrategyitem-weight)
-       */
-      override fun weight(): Number? = unwrap(this).getWeight()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CapacityProviderStrategyItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
-          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty
-    }
-  }
-
-  /**
-   * This structure specifies the network configuration for an ECS task.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * NetworkConfigurationProperty networkConfigurationProperty =
-   * NetworkConfigurationProperty.builder()
-   * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
-   * .subnets(List.of("subnets"))
-   * // the properties below are optional
-   * .assignPublicIp("assignPublicIp")
-   * .securityGroups(List.of("securityGroups"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-networkconfiguration.html)
-   */
-  public interface NetworkConfigurationProperty {
-    /**
-     * Use this structure to specify the VPC subnets and security groups for the task, and whether a
-     * public IP address is to be used.
-     *
-     * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-networkconfiguration.html#cfn-events-rule-networkconfiguration-awsvpcconfiguration)
-     */
-    public fun awsVpcConfiguration(): Any? = unwrap(this).getAwsVpcConfiguration()
-
-    /**
-     * A builder for [NetworkConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
-       * groups for the task, and whether a public IP address is to be used.
-       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
-       */
-      public fun awsVpcConfiguration(awsVpcConfiguration: IResolvable)
-
-      /**
-       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
-       * groups for the task, and whether a public IP address is to be used.
-       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
-       */
-      public fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty)
-
-      /**
-       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
-       * groups for the task, and whether a public IP address is to be used.
-       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c6ea4a14f17bc1f53e0aaaea09129ec4ebd9943a3b87f85d40a3b0797c144160")
-      public
-          fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty.Builder =
-          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty.builder()
-
-      /**
-       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
-       * groups for the task, and whether a public IP address is to be used.
-       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
-       */
-      override fun awsVpcConfiguration(awsVpcConfiguration: IResolvable) {
-        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
-       * groups for the task, and whether a public IP address is to be used.
-       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
-       */
-      override fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty) {
-        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param awsVpcConfiguration Use this structure to specify the VPC subnets and security
-       * groups for the task, and whether a public IP address is to be used.
-       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c6ea4a14f17bc1f53e0aaaea09129ec4ebd9943a3b87f85d40a3b0797c144160")
-      override
-          fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit):
-          Unit = awsVpcConfiguration(AwsVpcConfigurationProperty(awsVpcConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
-      /**
-       * Use this structure to specify the VPC subnets and security groups for the task, and whether
-       * a public IP address is to be used.
-       *
-       * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-networkconfiguration.html#cfn-events-rule-networkconfiguration-awsvpcconfiguration)
-       */
-      override fun awsVpcConfiguration(): Any? = unwrap(this).getAwsVpcConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkConfigurationProperty):
-          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty
     }
   }
 }

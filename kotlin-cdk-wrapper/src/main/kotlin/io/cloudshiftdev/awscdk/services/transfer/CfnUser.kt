@@ -913,175 +913,6 @@ public open class CfnUser internal constructor(
   }
 
   /**
-   * The full POSIX identity, including user ID ( `Uid` ), group ID ( `Gid` ), and any secondary
-   * groups IDs ( `SecondaryGids` ), that controls your users' access to your Amazon EFS file systems.
-   *
-   * The POSIX permissions that are set on files and directories in your file system determine the
-   * level of access your users get when transferring files into and out of your Amazon EFS file
-   * systems.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.transfer.*;
-   * PosixProfileProperty posixProfileProperty = PosixProfileProperty.builder()
-   * .gid(123)
-   * .uid(123)
-   * // the properties below are optional
-   * .secondaryGids(List.of(123))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html)
-   */
-  public interface PosixProfileProperty {
-    /**
-     * The POSIX group ID used for all EFS operations by this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-gid)
-     */
-    public fun gid(): Number
-
-    /**
-     * The secondary POSIX group IDs used for all EFS operations by this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-secondarygids)
-     */
-    public fun secondaryGids(): Any? = unwrap(this).getSecondaryGids()
-
-    /**
-     * The POSIX user ID used for all EFS operations by this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-uid)
-     */
-    public fun uid(): Number
-
-    /**
-     * A builder for [PosixProfileProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param gid The POSIX group ID used for all EFS operations by this user. 
-       */
-      public fun gid(gid: Number)
-
-      /**
-       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
-       * user.
-       */
-      public fun secondaryGids(secondaryGids: IResolvable)
-
-      /**
-       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
-       * user.
-       */
-      public fun secondaryGids(secondaryGids: List<Number>)
-
-      /**
-       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
-       * user.
-       */
-      public fun secondaryGids(vararg secondaryGids: Number)
-
-      /**
-       * @param uid The POSIX user ID used for all EFS operations by this user. 
-       */
-      public fun uid(uid: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty.builder()
-
-      /**
-       * @param gid The POSIX group ID used for all EFS operations by this user. 
-       */
-      override fun gid(gid: Number) {
-        cdkBuilder.gid(gid)
-      }
-
-      /**
-       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
-       * user.
-       */
-      override fun secondaryGids(secondaryGids: IResolvable) {
-        cdkBuilder.secondaryGids(secondaryGids.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
-       * user.
-       */
-      override fun secondaryGids(secondaryGids: List<Number>) {
-        cdkBuilder.secondaryGids(secondaryGids)
-      }
-
-      /**
-       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
-       * user.
-       */
-      override fun secondaryGids(vararg secondaryGids: Number): Unit =
-          secondaryGids(secondaryGids.toList())
-
-      /**
-       * @param uid The POSIX user ID used for all EFS operations by this user. 
-       */
-      override fun uid(uid: Number) {
-        cdkBuilder.uid(uid)
-      }
-
-      public fun build(): software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty,
-    ) : CdkObject(cdkObject), PosixProfileProperty {
-      /**
-       * The POSIX group ID used for all EFS operations by this user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-gid)
-       */
-      override fun gid(): Number = unwrap(this).getGid()
-
-      /**
-       * The secondary POSIX group IDs used for all EFS operations by this user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-secondarygids)
-       */
-      override fun secondaryGids(): Any? = unwrap(this).getSecondaryGids()
-
-      /**
-       * The POSIX user ID used for all EFS operations by this user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-uid)
-       */
-      override fun uid(): Number = unwrap(this).getUid()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PosixProfileProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty):
-          PosixProfileProperty = CdkObjectWrappers.wrap(cdkObject) as? PosixProfileProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PosixProfileProperty):
-          software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty
-    }
-  }
-
-  /**
    * Represents an object that contains entries and targets for `HomeDirectoryMappings` .
    *
    * Example:
@@ -1248,6 +1079,175 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty
+    }
+  }
+
+  /**
+   * The full POSIX identity, including user ID ( `Uid` ), group ID ( `Gid` ), and any secondary
+   * groups IDs ( `SecondaryGids` ), that controls your users' access to your Amazon EFS file systems.
+   *
+   * The POSIX permissions that are set on files and directories in your file system determine the
+   * level of access your users get when transferring files into and out of your Amazon EFS file
+   * systems.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.transfer.*;
+   * PosixProfileProperty posixProfileProperty = PosixProfileProperty.builder()
+   * .gid(123)
+   * .uid(123)
+   * // the properties below are optional
+   * .secondaryGids(List.of(123))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html)
+   */
+  public interface PosixProfileProperty {
+    /**
+     * The POSIX group ID used for all EFS operations by this user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-gid)
+     */
+    public fun gid(): Number
+
+    /**
+     * The secondary POSIX group IDs used for all EFS operations by this user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-secondarygids)
+     */
+    public fun secondaryGids(): Any? = unwrap(this).getSecondaryGids()
+
+    /**
+     * The POSIX user ID used for all EFS operations by this user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-uid)
+     */
+    public fun uid(): Number
+
+    /**
+     * A builder for [PosixProfileProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param gid The POSIX group ID used for all EFS operations by this user. 
+       */
+      public fun gid(gid: Number)
+
+      /**
+       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
+       * user.
+       */
+      public fun secondaryGids(secondaryGids: IResolvable)
+
+      /**
+       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
+       * user.
+       */
+      public fun secondaryGids(secondaryGids: List<Number>)
+
+      /**
+       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
+       * user.
+       */
+      public fun secondaryGids(vararg secondaryGids: Number)
+
+      /**
+       * @param uid The POSIX user ID used for all EFS operations by this user. 
+       */
+      public fun uid(uid: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty.builder()
+
+      /**
+       * @param gid The POSIX group ID used for all EFS operations by this user. 
+       */
+      override fun gid(gid: Number) {
+        cdkBuilder.gid(gid)
+      }
+
+      /**
+       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
+       * user.
+       */
+      override fun secondaryGids(secondaryGids: IResolvable) {
+        cdkBuilder.secondaryGids(secondaryGids.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
+       * user.
+       */
+      override fun secondaryGids(secondaryGids: List<Number>) {
+        cdkBuilder.secondaryGids(secondaryGids)
+      }
+
+      /**
+       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
+       * user.
+       */
+      override fun secondaryGids(vararg secondaryGids: Number): Unit =
+          secondaryGids(secondaryGids.toList())
+
+      /**
+       * @param uid The POSIX user ID used for all EFS operations by this user. 
+       */
+      override fun uid(uid: Number) {
+        cdkBuilder.uid(uid)
+      }
+
+      public fun build(): software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty,
+    ) : CdkObject(cdkObject), PosixProfileProperty {
+      /**
+       * The POSIX group ID used for all EFS operations by this user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-gid)
+       */
+      override fun gid(): Number = unwrap(this).getGid()
+
+      /**
+       * The secondary POSIX group IDs used for all EFS operations by this user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-secondarygids)
+       */
+      override fun secondaryGids(): Any? = unwrap(this).getSecondaryGids()
+
+      /**
+       * The POSIX user ID used for all EFS operations by this user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html#cfn-transfer-user-posixprofile-uid)
+       */
+      override fun uid(): Number = unwrap(this).getUid()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PosixProfileProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty):
+          PosixProfileProperty = CdkObjectWrappers.wrap(cdkObject) as? PosixProfileProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PosixProfileProperty):
+          software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty
     }
   }
 }

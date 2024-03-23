@@ -863,23 +863,10 @@ public open class CfnDocumentClassifier internal constructor(
   }
 
   /**
-   * Provides configuration parameters to override the default actions for extracting text from PDF
-   * documents and image files.
+   * An augmented manifest file that provides training data for your custom model.
    *
-   * By default, Amazon Comprehend performs the following actions to extract text from files, based
-   * on the input file type:
-   *
-   * * *Word files* - Amazon Comprehend parser extracts the text.
-   * * *Digital PDF files* - Amazon Comprehend parser extracts the text.
-   * * *Image files and scanned PDF files* - Amazon Comprehend uses the Amazon Textract
-   * `DetectDocumentText` API to extract the text.
-   *
-   * `DocumentReaderConfig` does not apply to plain text files or Word files.
-   *
-   * For image files and PDF documents, you can override these default actions using the fields
-   * listed below. For more information, see [Setting text extraction
-   * options](https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html) in the
-   * Comprehend Developer Guide.
+   * An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground
+   * Truth.
    *
    * Example:
    *
@@ -887,234 +874,235 @@ public open class CfnDocumentClassifier internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * DocumentReaderConfigProperty documentReaderConfigProperty =
-   * DocumentReaderConfigProperty.builder()
-   * .documentReadAction("documentReadAction")
+   * AugmentedManifestsListItemProperty augmentedManifestsListItemProperty =
+   * AugmentedManifestsListItemProperty.builder()
+   * .attributeNames(List.of("attributeNames"))
+   * .s3Uri("s3Uri")
    * // the properties below are optional
-   * .documentReadMode("documentReadMode")
-   * .featureTypes(List.of("featureTypes"))
+   * .split("split")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html)
    */
-  public interface DocumentReaderConfigProperty {
+  public interface AugmentedManifestsListItemProperty {
     /**
-     * This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract
-     * text from PDF files and image files.
+     * The JSON attribute that contains the annotations for your training documents.
      *
-     * Enter one of the following values:
+     * The number of attribute names that you specify depends on whether your augmented manifest
+     * file is the output of a single labeling job or a chained labeling job.
      *
-     * * `TEXTRACT_DETECT_DOCUMENT_TEXT` - The Amazon Comprehend service uses the
-     * `DetectDocumentText` API operation.
-     * * `TEXTRACT_ANALYZE_DOCUMENT` - The Amazon Comprehend service uses the `AnalyzeDocument` API
-     * operation.
+     * If your file is the output of a single labeling job, specify the LabelAttributeName key that
+     * was used when the job was created in Ground Truth.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-documentreadaction)
+     * If your file is the output of a chained labeling job, specify the LabelAttributeName key for
+     * one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an
+     * individual job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-attributenames)
      */
-    public fun documentReadAction(): String
+    public fun attributeNames(): List<String>
 
     /**
-     * Determines the text extraction actions for PDF files. Enter one of the following values:.
+     * The Amazon S3 location of the augmented manifest file.
      *
-     * * `SERVICE_DEFAULT` - use the Amazon Comprehend service defaults for PDF files.
-     * * `FORCE_DOCUMENT_READ_ACTION` - Amazon Comprehend uses the Textract API specified by
-     * DocumentReadAction for all PDF files, including digital PDF files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-documentreadmode)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-s3uri)
      */
-    public fun documentReadMode(): String? = unwrap(this).getDocumentReadMode()
+    public fun s3Uri(): String
 
     /**
-     * Specifies the type of Amazon Textract features to apply.
+     * The purpose of the data you've provided in the augmented manifest.
      *
-     * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both of
-     * the following values:
+     * You can either train or test this data. If you don't specify, the default is train.
      *
-     * * `TABLES` - Returns additional information about any tables that are detected in the input
-     * document.
-     * * `FORMS` - Returns additional information about any forms that are detected in the input
-     * document.
+     * TRAIN - all of the documents in the manifest will be used for training. If no test documents
+     * are provided, Amazon Comprehend will automatically reserve a portion of the training documents
+     * for testing.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-featuretypes)
+     * TEST - all of the documents in the manifest will be used for testing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-split)
      */
-    public fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?: emptyList()
+    public fun split(): String? = unwrap(this).getSplit()
 
     /**
-     * A builder for [DocumentReaderConfigProperty]
+     * A builder for [AugmentedManifestsListItemProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param documentReadAction This field defines the Amazon Textract API operation that Amazon
-       * Comprehend uses to extract text from PDF files and image files. 
-       * Enter one of the following values:
+       * @param attributeNames The JSON attribute that contains the annotations for your training
+       * documents. 
+       * The number of attribute names that you specify depends on whether your augmented manifest
+       * file is the output of a single labeling job or a chained labeling job.
        *
-       * * `TEXTRACT_DETECT_DOCUMENT_TEXT` - The Amazon Comprehend service uses the
-       * `DetectDocumentText` API operation.
-       * * `TEXTRACT_ANALYZE_DOCUMENT` - The Amazon Comprehend service uses the `AnalyzeDocument`
-       * API operation.
+       * If your file is the output of a single labeling job, specify the LabelAttributeName key
+       * that was used when the job was created in Ground Truth.
+       *
+       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
+       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
+       * an individual job.
        */
-      public fun documentReadAction(documentReadAction: String)
+      public fun attributeNames(attributeNames: List<String>)
 
       /**
-       * @param documentReadMode Determines the text extraction actions for PDF files. Enter one of
-       * the following values:.
-       * * `SERVICE_DEFAULT` - use the Amazon Comprehend service defaults for PDF files.
-       * * `FORCE_DOCUMENT_READ_ACTION` - Amazon Comprehend uses the Textract API specified by
-       * DocumentReadAction for all PDF files, including digital PDF files.
+       * @param attributeNames The JSON attribute that contains the annotations for your training
+       * documents. 
+       * The number of attribute names that you specify depends on whether your augmented manifest
+       * file is the output of a single labeling job or a chained labeling job.
+       *
+       * If your file is the output of a single labeling job, specify the LabelAttributeName key
+       * that was used when the job was created in Ground Truth.
+       *
+       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
+       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
+       * an individual job.
        */
-      public fun documentReadMode(documentReadMode: String)
+      public fun attributeNames(vararg attributeNames: String)
 
       /**
-       * @param featureTypes Specifies the type of Amazon Textract features to apply.
-       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
-       * of the following values:
-       *
-       * * `TABLES` - Returns additional information about any tables that are detected in the input
-       * document.
-       * * `FORMS` - Returns additional information about any forms that are detected in the input
-       * document.
+       * @param s3Uri The Amazon S3 location of the augmented manifest file. 
        */
-      public fun featureTypes(featureTypes: List<String>)
+      public fun s3Uri(s3Uri: String)
 
       /**
-       * @param featureTypes Specifies the type of Amazon Textract features to apply.
-       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
-       * of the following values:
+       * @param split The purpose of the data you've provided in the augmented manifest.
+       * You can either train or test this data. If you don't specify, the default is train.
        *
-       * * `TABLES` - Returns additional information about any tables that are detected in the input
-       * document.
-       * * `FORMS` - Returns additional information about any forms that are detected in the input
-       * document.
+       * TRAIN - all of the documents in the manifest will be used for training. If no test
+       * documents are provided, Amazon Comprehend will automatically reserve a portion of the training
+       * documents for testing.
+       *
+       * TEST - all of the documents in the manifest will be used for testing.
        */
-      public fun featureTypes(vararg featureTypes: String)
+      public fun split(split: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty.Builder
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty.Builder
           =
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty.builder()
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty.builder()
 
       /**
-       * @param documentReadAction This field defines the Amazon Textract API operation that Amazon
-       * Comprehend uses to extract text from PDF files and image files. 
-       * Enter one of the following values:
+       * @param attributeNames The JSON attribute that contains the annotations for your training
+       * documents. 
+       * The number of attribute names that you specify depends on whether your augmented manifest
+       * file is the output of a single labeling job or a chained labeling job.
        *
-       * * `TEXTRACT_DETECT_DOCUMENT_TEXT` - The Amazon Comprehend service uses the
-       * `DetectDocumentText` API operation.
-       * * `TEXTRACT_ANALYZE_DOCUMENT` - The Amazon Comprehend service uses the `AnalyzeDocument`
-       * API operation.
+       * If your file is the output of a single labeling job, specify the LabelAttributeName key
+       * that was used when the job was created in Ground Truth.
+       *
+       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
+       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
+       * an individual job.
        */
-      override fun documentReadAction(documentReadAction: String) {
-        cdkBuilder.documentReadAction(documentReadAction)
+      override fun attributeNames(attributeNames: List<String>) {
+        cdkBuilder.attributeNames(attributeNames)
       }
 
       /**
-       * @param documentReadMode Determines the text extraction actions for PDF files. Enter one of
-       * the following values:.
-       * * `SERVICE_DEFAULT` - use the Amazon Comprehend service defaults for PDF files.
-       * * `FORCE_DOCUMENT_READ_ACTION` - Amazon Comprehend uses the Textract API specified by
-       * DocumentReadAction for all PDF files, including digital PDF files.
+       * @param attributeNames The JSON attribute that contains the annotations for your training
+       * documents. 
+       * The number of attribute names that you specify depends on whether your augmented manifest
+       * file is the output of a single labeling job or a chained labeling job.
+       *
+       * If your file is the output of a single labeling job, specify the LabelAttributeName key
+       * that was used when the job was created in Ground Truth.
+       *
+       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
+       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
+       * an individual job.
        */
-      override fun documentReadMode(documentReadMode: String) {
-        cdkBuilder.documentReadMode(documentReadMode)
+      override fun attributeNames(vararg attributeNames: String): Unit =
+          attributeNames(attributeNames.toList())
+
+      /**
+       * @param s3Uri The Amazon S3 location of the augmented manifest file. 
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
       }
 
       /**
-       * @param featureTypes Specifies the type of Amazon Textract features to apply.
-       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
-       * of the following values:
+       * @param split The purpose of the data you've provided in the augmented manifest.
+       * You can either train or test this data. If you don't specify, the default is train.
        *
-       * * `TABLES` - Returns additional information about any tables that are detected in the input
-       * document.
-       * * `FORMS` - Returns additional information about any forms that are detected in the input
-       * document.
+       * TRAIN - all of the documents in the manifest will be used for training. If no test
+       * documents are provided, Amazon Comprehend will automatically reserve a portion of the training
+       * documents for testing.
+       *
+       * TEST - all of the documents in the manifest will be used for testing.
        */
-      override fun featureTypes(featureTypes: List<String>) {
-        cdkBuilder.featureTypes(featureTypes)
+      override fun split(split: String) {
+        cdkBuilder.split(split)
       }
-
-      /**
-       * @param featureTypes Specifies the type of Amazon Textract features to apply.
-       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
-       * of the following values:
-       *
-       * * `TABLES` - Returns additional information about any tables that are detected in the input
-       * document.
-       * * `FORMS` - Returns additional information about any forms that are detected in the input
-       * document.
-       */
-      override fun featureTypes(vararg featureTypes: String): Unit =
-          featureTypes(featureTypes.toList())
 
       public fun build():
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty,
-    ) : CdkObject(cdkObject), DocumentReaderConfigProperty {
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty,
+    ) : CdkObject(cdkObject), AugmentedManifestsListItemProperty {
       /**
-       * This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract
-       * text from PDF files and image files.
+       * The JSON attribute that contains the annotations for your training documents.
        *
-       * Enter one of the following values:
+       * The number of attribute names that you specify depends on whether your augmented manifest
+       * file is the output of a single labeling job or a chained labeling job.
        *
-       * * `TEXTRACT_DETECT_DOCUMENT_TEXT` - The Amazon Comprehend service uses the
-       * `DetectDocumentText` API operation.
-       * * `TEXTRACT_ANALYZE_DOCUMENT` - The Amazon Comprehend service uses the `AnalyzeDocument`
-       * API operation.
+       * If your file is the output of a single labeling job, specify the LabelAttributeName key
+       * that was used when the job was created in Ground Truth.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-documentreadaction)
+       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
+       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
+       * an individual job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-attributenames)
        */
-      override fun documentReadAction(): String = unwrap(this).getDocumentReadAction()
+      override fun attributeNames(): List<String> = unwrap(this).getAttributeNames()
 
       /**
-       * Determines the text extraction actions for PDF files. Enter one of the following values:.
+       * The Amazon S3 location of the augmented manifest file.
        *
-       * * `SERVICE_DEFAULT` - use the Amazon Comprehend service defaults for PDF files.
-       * * `FORCE_DOCUMENT_READ_ACTION` - Amazon Comprehend uses the Textract API specified by
-       * DocumentReadAction for all PDF files, including digital PDF files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-documentreadmode)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-s3uri)
        */
-      override fun documentReadMode(): String? = unwrap(this).getDocumentReadMode()
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
 
       /**
-       * Specifies the type of Amazon Textract features to apply.
+       * The purpose of the data you've provided in the augmented manifest.
        *
-       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
-       * of the following values:
+       * You can either train or test this data. If you don't specify, the default is train.
        *
-       * * `TABLES` - Returns additional information about any tables that are detected in the input
-       * document.
-       * * `FORMS` - Returns additional information about any forms that are detected in the input
-       * document.
+       * TRAIN - all of the documents in the manifest will be used for training. If no test
+       * documents are provided, Amazon Comprehend will automatically reserve a portion of the training
+       * documents for testing.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-featuretypes)
+       * TEST - all of the documents in the manifest will be used for testing.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-split)
        */
-      override fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?: emptyList()
+      override fun split(): String? = unwrap(this).getSplit()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DocumentReaderConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AugmentedManifestsListItemProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty):
-          DocumentReaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DocumentReaderConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty):
+          AugmentedManifestsListItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AugmentedManifestsListItemProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DocumentReaderConfigProperty):
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty
+      internal fun unwrap(wrapped: AugmentedManifestsListItemProperty):
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty
     }
   }
 
@@ -1958,10 +1946,23 @@ public open class CfnDocumentClassifier internal constructor(
   }
 
   /**
-   * An augmented manifest file that provides training data for your custom model.
+   * Provides configuration parameters to override the default actions for extracting text from PDF
+   * documents and image files.
    *
-   * An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground
-   * Truth.
+   * By default, Amazon Comprehend performs the following actions to extract text from files, based
+   * on the input file type:
+   *
+   * * *Word files* - Amazon Comprehend parser extracts the text.
+   * * *Digital PDF files* - Amazon Comprehend parser extracts the text.
+   * * *Image files and scanned PDF files* - Amazon Comprehend uses the Amazon Textract
+   * `DetectDocumentText` API to extract the text.
+   *
+   * `DocumentReaderConfig` does not apply to plain text files or Word files.
+   *
+   * For image files and PDF documents, you can override these default actions using the fields
+   * listed below. For more information, see [Setting text extraction
+   * options](https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html) in the
+   * Comprehend Developer Guide.
    *
    * Example:
    *
@@ -1969,235 +1970,234 @@ public open class CfnDocumentClassifier internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * AugmentedManifestsListItemProperty augmentedManifestsListItemProperty =
-   * AugmentedManifestsListItemProperty.builder()
-   * .attributeNames(List.of("attributeNames"))
-   * .s3Uri("s3Uri")
+   * DocumentReaderConfigProperty documentReaderConfigProperty =
+   * DocumentReaderConfigProperty.builder()
+   * .documentReadAction("documentReadAction")
    * // the properties below are optional
-   * .split("split")
+   * .documentReadMode("documentReadMode")
+   * .featureTypes(List.of("featureTypes"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html)
    */
-  public interface AugmentedManifestsListItemProperty {
+  public interface DocumentReaderConfigProperty {
     /**
-     * The JSON attribute that contains the annotations for your training documents.
+     * This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract
+     * text from PDF files and image files.
      *
-     * The number of attribute names that you specify depends on whether your augmented manifest
-     * file is the output of a single labeling job or a chained labeling job.
+     * Enter one of the following values:
      *
-     * If your file is the output of a single labeling job, specify the LabelAttributeName key that
-     * was used when the job was created in Ground Truth.
+     * * `TEXTRACT_DETECT_DOCUMENT_TEXT` - The Amazon Comprehend service uses the
+     * `DetectDocumentText` API operation.
+     * * `TEXTRACT_ANALYZE_DOCUMENT` - The Amazon Comprehend service uses the `AnalyzeDocument` API
+     * operation.
      *
-     * If your file is the output of a chained labeling job, specify the LabelAttributeName key for
-     * one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an
-     * individual job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-attributenames)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-documentreadaction)
      */
-    public fun attributeNames(): List<String>
+    public fun documentReadAction(): String
 
     /**
-     * The Amazon S3 location of the augmented manifest file.
+     * Determines the text extraction actions for PDF files. Enter one of the following values:.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-s3uri)
+     * * `SERVICE_DEFAULT` - use the Amazon Comprehend service defaults for PDF files.
+     * * `FORCE_DOCUMENT_READ_ACTION` - Amazon Comprehend uses the Textract API specified by
+     * DocumentReadAction for all PDF files, including digital PDF files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-documentreadmode)
      */
-    public fun s3Uri(): String
+    public fun documentReadMode(): String? = unwrap(this).getDocumentReadMode()
 
     /**
-     * The purpose of the data you've provided in the augmented manifest.
+     * Specifies the type of Amazon Textract features to apply.
      *
-     * You can either train or test this data. If you don't specify, the default is train.
+     * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both of
+     * the following values:
      *
-     * TRAIN - all of the documents in the manifest will be used for training. If no test documents
-     * are provided, Amazon Comprehend will automatically reserve a portion of the training documents
-     * for testing.
+     * * `TABLES` - Returns additional information about any tables that are detected in the input
+     * document.
+     * * `FORMS` - Returns additional information about any forms that are detected in the input
+     * document.
      *
-     * TEST - all of the documents in the manifest will be used for testing.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-split)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-featuretypes)
      */
-    public fun split(): String? = unwrap(this).getSplit()
+    public fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?: emptyList()
 
     /**
-     * A builder for [AugmentedManifestsListItemProperty]
+     * A builder for [DocumentReaderConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attributeNames The JSON attribute that contains the annotations for your training
-       * documents. 
-       * The number of attribute names that you specify depends on whether your augmented manifest
-       * file is the output of a single labeling job or a chained labeling job.
+       * @param documentReadAction This field defines the Amazon Textract API operation that Amazon
+       * Comprehend uses to extract text from PDF files and image files. 
+       * Enter one of the following values:
        *
-       * If your file is the output of a single labeling job, specify the LabelAttributeName key
-       * that was used when the job was created in Ground Truth.
-       *
-       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
-       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
-       * an individual job.
+       * * `TEXTRACT_DETECT_DOCUMENT_TEXT` - The Amazon Comprehend service uses the
+       * `DetectDocumentText` API operation.
+       * * `TEXTRACT_ANALYZE_DOCUMENT` - The Amazon Comprehend service uses the `AnalyzeDocument`
+       * API operation.
        */
-      public fun attributeNames(attributeNames: List<String>)
+      public fun documentReadAction(documentReadAction: String)
 
       /**
-       * @param attributeNames The JSON attribute that contains the annotations for your training
-       * documents. 
-       * The number of attribute names that you specify depends on whether your augmented manifest
-       * file is the output of a single labeling job or a chained labeling job.
-       *
-       * If your file is the output of a single labeling job, specify the LabelAttributeName key
-       * that was used when the job was created in Ground Truth.
-       *
-       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
-       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
-       * an individual job.
+       * @param documentReadMode Determines the text extraction actions for PDF files. Enter one of
+       * the following values:.
+       * * `SERVICE_DEFAULT` - use the Amazon Comprehend service defaults for PDF files.
+       * * `FORCE_DOCUMENT_READ_ACTION` - Amazon Comprehend uses the Textract API specified by
+       * DocumentReadAction for all PDF files, including digital PDF files.
        */
-      public fun attributeNames(vararg attributeNames: String)
+      public fun documentReadMode(documentReadMode: String)
 
       /**
-       * @param s3Uri The Amazon S3 location of the augmented manifest file. 
+       * @param featureTypes Specifies the type of Amazon Textract features to apply.
+       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
+       * of the following values:
+       *
+       * * `TABLES` - Returns additional information about any tables that are detected in the input
+       * document.
+       * * `FORMS` - Returns additional information about any forms that are detected in the input
+       * document.
        */
-      public fun s3Uri(s3Uri: String)
+      public fun featureTypes(featureTypes: List<String>)
 
       /**
-       * @param split The purpose of the data you've provided in the augmented manifest.
-       * You can either train or test this data. If you don't specify, the default is train.
+       * @param featureTypes Specifies the type of Amazon Textract features to apply.
+       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
+       * of the following values:
        *
-       * TRAIN - all of the documents in the manifest will be used for training. If no test
-       * documents are provided, Amazon Comprehend will automatically reserve a portion of the training
-       * documents for testing.
-       *
-       * TEST - all of the documents in the manifest will be used for testing.
+       * * `TABLES` - Returns additional information about any tables that are detected in the input
+       * document.
+       * * `FORMS` - Returns additional information about any forms that are detected in the input
+       * document.
        */
-      public fun split(split: String)
+      public fun featureTypes(vararg featureTypes: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty.Builder
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty.Builder
           =
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty.builder()
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty.builder()
 
       /**
-       * @param attributeNames The JSON attribute that contains the annotations for your training
-       * documents. 
-       * The number of attribute names that you specify depends on whether your augmented manifest
-       * file is the output of a single labeling job or a chained labeling job.
+       * @param documentReadAction This field defines the Amazon Textract API operation that Amazon
+       * Comprehend uses to extract text from PDF files and image files. 
+       * Enter one of the following values:
        *
-       * If your file is the output of a single labeling job, specify the LabelAttributeName key
-       * that was used when the job was created in Ground Truth.
-       *
-       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
-       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
-       * an individual job.
+       * * `TEXTRACT_DETECT_DOCUMENT_TEXT` - The Amazon Comprehend service uses the
+       * `DetectDocumentText` API operation.
+       * * `TEXTRACT_ANALYZE_DOCUMENT` - The Amazon Comprehend service uses the `AnalyzeDocument`
+       * API operation.
        */
-      override fun attributeNames(attributeNames: List<String>) {
-        cdkBuilder.attributeNames(attributeNames)
+      override fun documentReadAction(documentReadAction: String) {
+        cdkBuilder.documentReadAction(documentReadAction)
       }
 
       /**
-       * @param attributeNames The JSON attribute that contains the annotations for your training
-       * documents. 
-       * The number of attribute names that you specify depends on whether your augmented manifest
-       * file is the output of a single labeling job or a chained labeling job.
-       *
-       * If your file is the output of a single labeling job, specify the LabelAttributeName key
-       * that was used when the job was created in Ground Truth.
-       *
-       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
-       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
-       * an individual job.
+       * @param documentReadMode Determines the text extraction actions for PDF files. Enter one of
+       * the following values:.
+       * * `SERVICE_DEFAULT` - use the Amazon Comprehend service defaults for PDF files.
+       * * `FORCE_DOCUMENT_READ_ACTION` - Amazon Comprehend uses the Textract API specified by
+       * DocumentReadAction for all PDF files, including digital PDF files.
        */
-      override fun attributeNames(vararg attributeNames: String): Unit =
-          attributeNames(attributeNames.toList())
-
-      /**
-       * @param s3Uri The Amazon S3 location of the augmented manifest file. 
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
+      override fun documentReadMode(documentReadMode: String) {
+        cdkBuilder.documentReadMode(documentReadMode)
       }
 
       /**
-       * @param split The purpose of the data you've provided in the augmented manifest.
-       * You can either train or test this data. If you don't specify, the default is train.
+       * @param featureTypes Specifies the type of Amazon Textract features to apply.
+       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
+       * of the following values:
        *
-       * TRAIN - all of the documents in the manifest will be used for training. If no test
-       * documents are provided, Amazon Comprehend will automatically reserve a portion of the training
-       * documents for testing.
-       *
-       * TEST - all of the documents in the manifest will be used for testing.
+       * * `TABLES` - Returns additional information about any tables that are detected in the input
+       * document.
+       * * `FORMS` - Returns additional information about any forms that are detected in the input
+       * document.
        */
-      override fun split(split: String) {
-        cdkBuilder.split(split)
+      override fun featureTypes(featureTypes: List<String>) {
+        cdkBuilder.featureTypes(featureTypes)
       }
+
+      /**
+       * @param featureTypes Specifies the type of Amazon Textract features to apply.
+       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
+       * of the following values:
+       *
+       * * `TABLES` - Returns additional information about any tables that are detected in the input
+       * document.
+       * * `FORMS` - Returns additional information about any forms that are detected in the input
+       * document.
+       */
+      override fun featureTypes(vararg featureTypes: String): Unit =
+          featureTypes(featureTypes.toList())
 
       public fun build():
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty,
-    ) : CdkObject(cdkObject), AugmentedManifestsListItemProperty {
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty,
+    ) : CdkObject(cdkObject), DocumentReaderConfigProperty {
       /**
-       * The JSON attribute that contains the annotations for your training documents.
+       * This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract
+       * text from PDF files and image files.
        *
-       * The number of attribute names that you specify depends on whether your augmented manifest
-       * file is the output of a single labeling job or a chained labeling job.
+       * Enter one of the following values:
        *
-       * If your file is the output of a single labeling job, specify the LabelAttributeName key
-       * that was used when the job was created in Ground Truth.
+       * * `TEXTRACT_DETECT_DOCUMENT_TEXT` - The Amazon Comprehend service uses the
+       * `DetectDocumentText` API operation.
+       * * `TEXTRACT_ANALYZE_DOCUMENT` - The Amazon Comprehend service uses the `AnalyzeDocument`
+       * API operation.
        *
-       * If your file is the output of a chained labeling job, specify the LabelAttributeName key
-       * for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from
-       * an individual job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-attributenames)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-documentreadaction)
        */
-      override fun attributeNames(): List<String> = unwrap(this).getAttributeNames()
+      override fun documentReadAction(): String = unwrap(this).getDocumentReadAction()
 
       /**
-       * The Amazon S3 location of the augmented manifest file.
+       * Determines the text extraction actions for PDF files. Enter one of the following values:.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-s3uri)
+       * * `SERVICE_DEFAULT` - use the Amazon Comprehend service defaults for PDF files.
+       * * `FORCE_DOCUMENT_READ_ACTION` - Amazon Comprehend uses the Textract API specified by
+       * DocumentReadAction for all PDF files, including digital PDF files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-documentreadmode)
        */
-      override fun s3Uri(): String = unwrap(this).getS3Uri()
+      override fun documentReadMode(): String? = unwrap(this).getDocumentReadMode()
 
       /**
-       * The purpose of the data you've provided in the augmented manifest.
+       * Specifies the type of Amazon Textract features to apply.
        *
-       * You can either train or test this data. If you don't specify, the default is train.
+       * If you chose `TEXTRACT_ANALYZE_DOCUMENT` as the read action, you must specify one or both
+       * of the following values:
        *
-       * TRAIN - all of the documents in the manifest will be used for training. If no test
-       * documents are provided, Amazon Comprehend will automatically reserve a portion of the training
-       * documents for testing.
+       * * `TABLES` - Returns additional information about any tables that are detected in the input
+       * document.
+       * * `FORMS` - Returns additional information about any forms that are detected in the input
+       * document.
        *
-       * TEST - all of the documents in the manifest will be used for testing.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html#cfn-comprehend-documentclassifier-augmentedmanifestslistitem-split)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html#cfn-comprehend-documentclassifier-documentreaderconfig-featuretypes)
        */
-      override fun split(): String? = unwrap(this).getSplit()
+      override fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AugmentedManifestsListItemProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DocumentReaderConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty):
-          AugmentedManifestsListItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AugmentedManifestsListItemProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty):
+          DocumentReaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentReaderConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AugmentedManifestsListItemProperty):
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty
+      internal fun unwrap(wrapped: DocumentReaderConfigProperty):
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty
+          software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty
     }
   }
 

@@ -716,6 +716,114 @@ public open class CfnConfigurationSet internal constructor(
   }
 
   /**
+   * Enable or disable collection of reputation metrics for emails that you send using this
+   * configuration set in the current AWS Region.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpointemail.*;
+   * ReputationOptionsProperty reputationOptionsProperty = ReputationOptionsProperty.builder()
+   * .reputationMetricsEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-reputationoptions.html)
+   */
+  public interface ReputationOptionsProperty {
+    /**
+     * If `true` , tracking of reputation metrics is enabled for the configuration set.
+     *
+     * If `false` , tracking of reputation metrics is disabled for the configuration set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-reputationoptions.html#cfn-pinpointemail-configurationset-reputationoptions-reputationmetricsenabled)
+     */
+    public fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
+
+    /**
+     * A builder for [ReputationOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
+       * the configuration set.
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
+       */
+      public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean)
+
+      /**
+       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
+       * the configuration set.
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
+       */
+      public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty.builder()
+
+      /**
+       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
+       * the configuration set.
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
+       */
+      override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
+      }
+
+      /**
+       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
+       * the configuration set.
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
+       */
+      override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty,
+    ) : CdkObject(cdkObject), ReputationOptionsProperty {
+      /**
+       * If `true` , tracking of reputation metrics is enabled for the configuration set.
+       *
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-reputationoptions.html#cfn-pinpointemail-configurationset-reputationoptions-reputationmetricsenabled)
+       */
+      override fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReputationOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty):
+          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReputationOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReputationOptionsProperty):
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty
+    }
+  }
+
+  /**
    * Used to enable or disable email sending for messages that use this configuration set in the
    * current AWS Region.
    *
@@ -908,114 +1016,6 @@ public open class CfnConfigurationSet internal constructor(
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty
-    }
-  }
-
-  /**
-   * Enable or disable collection of reputation metrics for emails that you send using this
-   * configuration set in the current AWS Region.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpointemail.*;
-   * ReputationOptionsProperty reputationOptionsProperty = ReputationOptionsProperty.builder()
-   * .reputationMetricsEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-reputationoptions.html)
-   */
-  public interface ReputationOptionsProperty {
-    /**
-     * If `true` , tracking of reputation metrics is enabled for the configuration set.
-     *
-     * If `false` , tracking of reputation metrics is disabled for the configuration set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-reputationoptions.html#cfn-pinpointemail-configurationset-reputationoptions-reputationmetricsenabled)
-     */
-    public fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
-
-    /**
-     * A builder for [ReputationOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
-       * the configuration set.
-       * If `false` , tracking of reputation metrics is disabled for the configuration set.
-       */
-      public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean)
-
-      /**
-       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
-       * the configuration set.
-       * If `false` , tracking of reputation metrics is disabled for the configuration set.
-       */
-      public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty.builder()
-
-      /**
-       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
-       * the configuration set.
-       * If `false` , tracking of reputation metrics is disabled for the configuration set.
-       */
-      override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
-        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
-      }
-
-      /**
-       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
-       * the configuration set.
-       * If `false` , tracking of reputation metrics is disabled for the configuration set.
-       */
-      override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
-        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty,
-    ) : CdkObject(cdkObject), ReputationOptionsProperty {
-      /**
-       * If `true` , tracking of reputation metrics is enabled for the configuration set.
-       *
-       * If `false` , tracking of reputation metrics is disabled for the configuration set.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-reputationoptions.html#cfn-pinpointemail-configurationset-reputationoptions-reputationmetricsenabled)
-       */
-      override fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReputationOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty):
-          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReputationOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReputationOptionsProperty):
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty
     }
   }
 }

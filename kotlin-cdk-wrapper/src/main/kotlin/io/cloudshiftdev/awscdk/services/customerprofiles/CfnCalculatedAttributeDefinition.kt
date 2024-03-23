@@ -534,89 +534,6 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
   }
 
   /**
-   * The details of a single attribute item specified in the mathematical expression.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * AttributeItemProperty attributeItemProperty = AttributeItemProperty.builder()
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-attributeitem.html)
-   */
-  public interface AttributeItemProperty {
-    /**
-     * The unique name of the calculated attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-attributeitem.html#cfn-customerprofiles-calculatedattributedefinition-attributeitem-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [AttributeItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The unique name of the calculated attribute. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty.builder()
-
-      /**
-       * @param name The unique name of the calculated attribute. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty,
-    ) : CdkObject(cdkObject), AttributeItemProperty {
-      /**
-       * The unique name of the calculated attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-attributeitem.html#cfn-customerprofiles-calculatedattributedefinition-attributeitem-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty):
-          AttributeItemProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeItemProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AttributeItemProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty
-    }
-  }
-
-  /**
    * Mathematical expression and a list of attribute items specified in that expression.
    *
    * Example:
@@ -770,7 +687,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
   }
 
   /**
-   * The threshold for the calculated attribute.
+   * The details of a single attribute item specified in the mathematical expression.
    *
    * Example:
    *
@@ -778,213 +695,77 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * ThresholdProperty thresholdProperty = ThresholdProperty.builder()
-   * .operator("operator")
-   * .value("value")
+   * AttributeItemProperty attributeItemProperty = AttributeItemProperty.builder()
+   * .name("name")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-attributeitem.html)
    */
-  public interface ThresholdProperty {
+  public interface AttributeItemProperty {
     /**
-     * The operator of the threshold.
+     * The unique name of the calculated attribute.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html#cfn-customerprofiles-calculatedattributedefinition-threshold-operator)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-attributeitem.html#cfn-customerprofiles-calculatedattributedefinition-attributeitem-name)
      */
-    public fun `operator`(): String
+    public fun name(): String
 
     /**
-     * The value of the threshold.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html#cfn-customerprofiles-calculatedattributedefinition-threshold-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [ThresholdProperty]
+     * A builder for [AttributeItemProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param operator The operator of the threshold. 
+       * @param name The unique name of the calculated attribute. 
        */
-      public fun `operator`(`operator`: String)
-
-      /**
-       * @param value The value of the threshold. 
-       */
-      public fun `value`(`value`: String)
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty.Builder
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty.Builder
           =
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty.builder()
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty.builder()
 
       /**
-       * @param operator The operator of the threshold. 
+       * @param name The unique name of the calculated attribute. 
        */
-      override fun `operator`(`operator`: String) {
-        cdkBuilder.`operator`(`operator`)
-      }
-
-      /**
-       * @param value The value of the threshold. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty,
-    ) : CdkObject(cdkObject), ThresholdProperty {
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty,
+    ) : CdkObject(cdkObject), AttributeItemProperty {
       /**
-       * The operator of the threshold.
+       * The unique name of the calculated attribute.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html#cfn-customerprofiles-calculatedattributedefinition-threshold-operator)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-attributeitem.html#cfn-customerprofiles-calculatedattributedefinition-attributeitem-name)
        */
-      override fun `operator`(): String = unwrap(this).getOperator()
-
-      /**
-       * The value of the threshold.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html#cfn-customerprofiles-calculatedattributedefinition-threshold-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ThresholdProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeItemProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty):
-          ThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as? ThresholdProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty):
+          AttributeItemProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeItemProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ThresholdProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
+      internal fun unwrap(wrapped: AttributeItemProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
-    }
-  }
-
-  /**
-   * The relative time period over which data is included in the aggregation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * RangeProperty rangeProperty = RangeProperty.builder()
-   * .unit("unit")
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html)
-   */
-  public interface RangeProperty {
-    /**
-     * The unit of time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-unit)
-     */
-    public fun unit(): String
-
-    /**
-     * The amount of time of the specified unit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-value)
-     */
-    public fun `value`(): Number
-
-    /**
-     * A builder for [RangeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param unit The unit of time. 
-       */
-      public fun unit(unit: String)
-
-      /**
-       * @param value The amount of time of the specified unit. 
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty.builder()
-
-      /**
-       * @param unit The unit of time. 
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      /**
-       * @param value The amount of time of the specified unit. 
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty,
-    ) : CdkObject(cdkObject), RangeProperty {
-      /**
-       * The unit of time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-unit)
-       */
-      override fun unit(): String = unwrap(this).getUnit()
-
-      /**
-       * The amount of time of the specified unit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-value)
-       */
-      override fun `value`(): Number = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RangeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty):
-          RangeProperty = CdkObjectWrappers.wrap(cdkObject) as? RangeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RangeProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty
     }
   }
 
@@ -1182,6 +963,225 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty
+    }
+  }
+
+  /**
+   * The relative time period over which data is included in the aggregation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * RangeProperty rangeProperty = RangeProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html)
+   */
+  public interface RangeProperty {
+    /**
+     * The unit of time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-unit)
+     */
+    public fun unit(): String
+
+    /**
+     * The amount of time of the specified unit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [RangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param unit The unit of time. 
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value The amount of time of the specified unit. 
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty.builder()
+
+      /**
+       * @param unit The unit of time. 
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value The amount of time of the specified unit. 
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty,
+    ) : CdkObject(cdkObject), RangeProperty {
+      /**
+       * The unit of time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-unit)
+       */
+      override fun unit(): String = unwrap(this).getUnit()
+
+      /**
+       * The amount of time of the specified unit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty):
+          RangeProperty = CdkObjectWrappers.wrap(cdkObject) as? RangeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RangeProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
+    }
+  }
+
+  /**
+   * The threshold for the calculated attribute.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * ThresholdProperty thresholdProperty = ThresholdProperty.builder()
+   * .operator("operator")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html)
+   */
+  public interface ThresholdProperty {
+    /**
+     * The operator of the threshold.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html#cfn-customerprofiles-calculatedattributedefinition-threshold-operator)
+     */
+    public fun `operator`(): String
+
+    /**
+     * The value of the threshold.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html#cfn-customerprofiles-calculatedattributedefinition-threshold-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [ThresholdProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param operator The operator of the threshold. 
+       */
+      public fun `operator`(`operator`: String)
+
+      /**
+       * @param value The value of the threshold. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty.builder()
+
+      /**
+       * @param operator The operator of the threshold. 
+       */
+      override fun `operator`(`operator`: String) {
+        cdkBuilder.`operator`(`operator`)
+      }
+
+      /**
+       * @param value The value of the threshold. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty,
+    ) : CdkObject(cdkObject), ThresholdProperty {
+      /**
+       * The operator of the threshold.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html#cfn-customerprofiles-calculatedattributedefinition-threshold-operator)
+       */
+      override fun `operator`(): String = unwrap(this).getOperator()
+
+      /**
+       * The value of the threshold.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-threshold.html#cfn-customerprofiles-calculatedattributedefinition-threshold-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ThresholdProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty):
+          ThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as? ThresholdProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ThresholdProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
     }
   }
 }

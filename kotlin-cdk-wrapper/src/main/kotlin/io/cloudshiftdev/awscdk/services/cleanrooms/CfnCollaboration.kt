@@ -698,8 +698,7 @@ public open class CfnCollaboration internal constructor(
   }
 
   /**
-   * An object representing the collaboration member's payment responsibilities set by the
-   * collaboration creator.
+   * The settings for client-side encryption for cryptographic computing.
    *
    * Example:
    *
@@ -707,115 +706,242 @@ public open class CfnCollaboration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * PaymentConfigurationProperty paymentConfigurationProperty =
-   * PaymentConfigurationProperty.builder()
-   * .queryCompute(QueryComputePaymentConfigProperty.builder()
-   * .isResponsible(false)
-   * .build())
+   * DataEncryptionMetadataProperty dataEncryptionMetadataProperty =
+   * DataEncryptionMetadataProperty.builder()
+   * .allowCleartext(false)
+   * .allowDuplicates(false)
+   * .allowJoinsOnColumnsWithDifferentNames(false)
+   * .preserveNulls(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html)
    */
-  public interface PaymentConfigurationProperty {
+  public interface DataEncryptionMetadataProperty {
     /**
-     * The collaboration member's payment responsibilities set by the collaboration creator for
-     * query compute costs.
+     * Indicates whether encrypted tables can contain cleartext data ( `TRUE` ) or are to
+     * cryptographically process every column ( `FALSE` ).
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html#cfn-cleanrooms-collaboration-paymentconfiguration-querycompute)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowcleartext)
      */
-    public fun queryCompute(): Any
+    public fun allowCleartext(): Any
 
     /**
-     * A builder for [PaymentConfigurationProperty]
+     * Indicates whether Fingerprint columns can contain duplicate entries ( `TRUE` ) or are to
+     * contain only non-repeated values ( `FALSE` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowduplicates)
+     */
+    public fun allowDuplicates(): Any
+
+    /**
+     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a
+     * different name ( `TRUE` ) or can only be joined on Fingerprint columns of the same name (
+     * `FALSE` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowjoinsoncolumnswithdifferentnames)
+     */
+    public fun allowJoinsOnColumnsWithDifferentNames(): Any
+
+    /**
+     * Indicates whether NULL values are to be copied as NULL to encrypted tables ( `TRUE` ) or
+     * cryptographically processed ( `FALSE` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-preservenulls)
+     */
+    public fun preserveNulls(): Any
+
+    /**
+     * A builder for [DataEncryptionMetadataProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
+       * @param allowCleartext Indicates whether encrypted tables can contain cleartext data (
+       * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
        */
-      public fun queryCompute(queryCompute: IResolvable)
+      public fun allowCleartext(allowCleartext: Boolean)
 
       /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
+       * @param allowCleartext Indicates whether encrypted tables can contain cleartext data (
+       * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
        */
-      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty)
+      public fun allowCleartext(allowCleartext: IResolvable)
 
       /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
+       * @param allowDuplicates Indicates whether Fingerprint columns can contain duplicate entries
+       * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
-      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit)
+      public fun allowDuplicates(allowDuplicates: Boolean)
+
+      /**
+       * @param allowDuplicates Indicates whether Fingerprint columns can contain duplicate entries
+       * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
+       */
+      public fun allowDuplicates(allowDuplicates: IResolvable)
+
+      /**
+       * @param allowJoinsOnColumnsWithDifferentNames Indicates whether Fingerprint columns can be
+       * joined on any other Fingerprint column with a different name ( `TRUE` ) or can only be joined
+       * on Fingerprint columns of the same name ( `FALSE` ). 
+       */
+      public
+          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: Boolean)
+
+      /**
+       * @param allowJoinsOnColumnsWithDifferentNames Indicates whether Fingerprint columns can be
+       * joined on any other Fingerprint column with a different name ( `TRUE` ) or can only be joined
+       * on Fingerprint columns of the same name ( `FALSE` ). 
+       */
+      public
+          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: IResolvable)
+
+      /**
+       * @param preserveNulls Indicates whether NULL values are to be copied as NULL to encrypted
+       * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
+       */
+      public fun preserveNulls(preserveNulls: Boolean)
+
+      /**
+       * @param preserveNulls Indicates whether NULL values are to be copied as NULL to encrypted
+       * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
+       */
+      public fun preserveNulls(preserveNulls: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.Builder
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty.Builder
           =
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.builder()
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty.builder()
 
       /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
+       * @param allowCleartext Indicates whether encrypted tables can contain cleartext data (
+       * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
        */
-      override fun queryCompute(queryCompute: IResolvable) {
-        cdkBuilder.queryCompute(queryCompute.let(IResolvable::unwrap))
+      override fun allowCleartext(allowCleartext: Boolean) {
+        cdkBuilder.allowCleartext(allowCleartext)
       }
 
       /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
+       * @param allowCleartext Indicates whether encrypted tables can contain cleartext data (
+       * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
        */
-      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty) {
-        cdkBuilder.queryCompute(queryCompute.let(QueryComputePaymentConfigProperty::unwrap))
+      override fun allowCleartext(allowCleartext: IResolvable) {
+        cdkBuilder.allowCleartext(allowCleartext.let(IResolvable::unwrap))
       }
 
       /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
+       * @param allowDuplicates Indicates whether Fingerprint columns can contain duplicate entries
+       * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
-      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit):
-          Unit = queryCompute(QueryComputePaymentConfigProperty(queryCompute))
+      override fun allowDuplicates(allowDuplicates: Boolean) {
+        cdkBuilder.allowDuplicates(allowDuplicates)
+      }
+
+      /**
+       * @param allowDuplicates Indicates whether Fingerprint columns can contain duplicate entries
+       * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
+       */
+      override fun allowDuplicates(allowDuplicates: IResolvable) {
+        cdkBuilder.allowDuplicates(allowDuplicates.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param allowJoinsOnColumnsWithDifferentNames Indicates whether Fingerprint columns can be
+       * joined on any other Fingerprint column with a different name ( `TRUE` ) or can only be joined
+       * on Fingerprint columns of the same name ( `FALSE` ). 
+       */
+      override
+          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: Boolean) {
+        cdkBuilder.allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames)
+      }
+
+      /**
+       * @param allowJoinsOnColumnsWithDifferentNames Indicates whether Fingerprint columns can be
+       * joined on any other Fingerprint column with a different name ( `TRUE` ) or can only be joined
+       * on Fingerprint columns of the same name ( `FALSE` ). 
+       */
+      override
+          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: IResolvable) {
+        cdkBuilder.allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param preserveNulls Indicates whether NULL values are to be copied as NULL to encrypted
+       * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
+       */
+      override fun preserveNulls(preserveNulls: Boolean) {
+        cdkBuilder.preserveNulls(preserveNulls)
+      }
+
+      /**
+       * @param preserveNulls Indicates whether NULL values are to be copied as NULL to encrypted
+       * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
+       */
+      override fun preserveNulls(preserveNulls: IResolvable) {
+        cdkBuilder.preserveNulls(preserveNulls.let(IResolvable::unwrap))
+      }
 
       public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty,
-    ) : CdkObject(cdkObject), PaymentConfigurationProperty {
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty,
+    ) : CdkObject(cdkObject), DataEncryptionMetadataProperty {
       /**
-       * The collaboration member's payment responsibilities set by the collaboration creator for
-       * query compute costs.
+       * Indicates whether encrypted tables can contain cleartext data ( `TRUE` ) or are to
+       * cryptographically process every column ( `FALSE` ).
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html#cfn-cleanrooms-collaboration-paymentconfiguration-querycompute)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowcleartext)
        */
-      override fun queryCompute(): Any = unwrap(this).getQueryCompute()
+      override fun allowCleartext(): Any = unwrap(this).getAllowCleartext()
+
+      /**
+       * Indicates whether Fingerprint columns can contain duplicate entries ( `TRUE` ) or are to
+       * contain only non-repeated values ( `FALSE` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowduplicates)
+       */
+      override fun allowDuplicates(): Any = unwrap(this).getAllowDuplicates()
+
+      /**
+       * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a
+       * different name ( `TRUE` ) or can only be joined on Fingerprint columns of the same name (
+       * `FALSE` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowjoinsoncolumnswithdifferentnames)
+       */
+      override fun allowJoinsOnColumnsWithDifferentNames(): Any =
+          unwrap(this).getAllowJoinsOnColumnsWithDifferentNames()
+
+      /**
+       * Indicates whether NULL values are to be copied as NULL to encrypted tables ( `TRUE` ) or
+       * cryptographically processed ( `FALSE` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-preservenulls)
+       */
+      override fun preserveNulls(): Any = unwrap(this).getPreserveNulls()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PaymentConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataEncryptionMetadataProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty):
-          PaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PaymentConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty):
+          DataEncryptionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataEncryptionMetadataProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PaymentConfigurationProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty
+      internal fun unwrap(wrapped: DataEncryptionMetadataProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty
     }
   }
 
@@ -1068,6 +1194,128 @@ public open class CfnCollaboration internal constructor(
 
   /**
    * An object representing the collaboration member's payment responsibilities set by the
+   * collaboration creator.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * PaymentConfigurationProperty paymentConfigurationProperty =
+   * PaymentConfigurationProperty.builder()
+   * .queryCompute(QueryComputePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html)
+   */
+  public interface PaymentConfigurationProperty {
+    /**
+     * The collaboration member's payment responsibilities set by the collaboration creator for
+     * query compute costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html#cfn-cleanrooms-collaboration-paymentconfiguration-querycompute)
+     */
+    public fun queryCompute(): Any
+
+    /**
+     * A builder for [PaymentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      public fun queryCompute(queryCompute: IResolvable)
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty)
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
+      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.builder()
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      override fun queryCompute(queryCompute: IResolvable) {
+        cdkBuilder.queryCompute(queryCompute.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty) {
+        cdkBuilder.queryCompute(queryCompute.let(QueryComputePaymentConfigProperty::unwrap))
+      }
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
+      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit):
+          Unit = queryCompute(QueryComputePaymentConfigProperty(queryCompute))
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty,
+    ) : CdkObject(cdkObject), PaymentConfigurationProperty {
+      /**
+       * The collaboration member's payment responsibilities set by the collaboration creator for
+       * query compute costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html#cfn-cleanrooms-collaboration-paymentconfiguration-querycompute)
+       */
+      override fun queryCompute(): Any = unwrap(this).getQueryCompute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PaymentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty):
+          PaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PaymentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PaymentConfigurationProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty
+    }
+  }
+
+  /**
+   * An object representing the collaboration member's payment responsibilities set by the
    * collaboration creator for query compute costs.
    *
    * Example:
@@ -1216,254 +1464,6 @@ public open class CfnCollaboration internal constructor(
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
-    }
-  }
-
-  /**
-   * The settings for client-side encryption for cryptographic computing.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * DataEncryptionMetadataProperty dataEncryptionMetadataProperty =
-   * DataEncryptionMetadataProperty.builder()
-   * .allowCleartext(false)
-   * .allowDuplicates(false)
-   * .allowJoinsOnColumnsWithDifferentNames(false)
-   * .preserveNulls(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html)
-   */
-  public interface DataEncryptionMetadataProperty {
-    /**
-     * Indicates whether encrypted tables can contain cleartext data ( `TRUE` ) or are to
-     * cryptographically process every column ( `FALSE` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowcleartext)
-     */
-    public fun allowCleartext(): Any
-
-    /**
-     * Indicates whether Fingerprint columns can contain duplicate entries ( `TRUE` ) or are to
-     * contain only non-repeated values ( `FALSE` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowduplicates)
-     */
-    public fun allowDuplicates(): Any
-
-    /**
-     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a
-     * different name ( `TRUE` ) or can only be joined on Fingerprint columns of the same name (
-     * `FALSE` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowjoinsoncolumnswithdifferentnames)
-     */
-    public fun allowJoinsOnColumnsWithDifferentNames(): Any
-
-    /**
-     * Indicates whether NULL values are to be copied as NULL to encrypted tables ( `TRUE` ) or
-     * cryptographically processed ( `FALSE` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-preservenulls)
-     */
-    public fun preserveNulls(): Any
-
-    /**
-     * A builder for [DataEncryptionMetadataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allowCleartext Indicates whether encrypted tables can contain cleartext data (
-       * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
-       */
-      public fun allowCleartext(allowCleartext: Boolean)
-
-      /**
-       * @param allowCleartext Indicates whether encrypted tables can contain cleartext data (
-       * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
-       */
-      public fun allowCleartext(allowCleartext: IResolvable)
-
-      /**
-       * @param allowDuplicates Indicates whether Fingerprint columns can contain duplicate entries
-       * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
-       */
-      public fun allowDuplicates(allowDuplicates: Boolean)
-
-      /**
-       * @param allowDuplicates Indicates whether Fingerprint columns can contain duplicate entries
-       * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
-       */
-      public fun allowDuplicates(allowDuplicates: IResolvable)
-
-      /**
-       * @param allowJoinsOnColumnsWithDifferentNames Indicates whether Fingerprint columns can be
-       * joined on any other Fingerprint column with a different name ( `TRUE` ) or can only be joined
-       * on Fingerprint columns of the same name ( `FALSE` ). 
-       */
-      public
-          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: Boolean)
-
-      /**
-       * @param allowJoinsOnColumnsWithDifferentNames Indicates whether Fingerprint columns can be
-       * joined on any other Fingerprint column with a different name ( `TRUE` ) or can only be joined
-       * on Fingerprint columns of the same name ( `FALSE` ). 
-       */
-      public
-          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: IResolvable)
-
-      /**
-       * @param preserveNulls Indicates whether NULL values are to be copied as NULL to encrypted
-       * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
-       */
-      public fun preserveNulls(preserveNulls: Boolean)
-
-      /**
-       * @param preserveNulls Indicates whether NULL values are to be copied as NULL to encrypted
-       * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
-       */
-      public fun preserveNulls(preserveNulls: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty.builder()
-
-      /**
-       * @param allowCleartext Indicates whether encrypted tables can contain cleartext data (
-       * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
-       */
-      override fun allowCleartext(allowCleartext: Boolean) {
-        cdkBuilder.allowCleartext(allowCleartext)
-      }
-
-      /**
-       * @param allowCleartext Indicates whether encrypted tables can contain cleartext data (
-       * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
-       */
-      override fun allowCleartext(allowCleartext: IResolvable) {
-        cdkBuilder.allowCleartext(allowCleartext.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param allowDuplicates Indicates whether Fingerprint columns can contain duplicate entries
-       * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
-       */
-      override fun allowDuplicates(allowDuplicates: Boolean) {
-        cdkBuilder.allowDuplicates(allowDuplicates)
-      }
-
-      /**
-       * @param allowDuplicates Indicates whether Fingerprint columns can contain duplicate entries
-       * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
-       */
-      override fun allowDuplicates(allowDuplicates: IResolvable) {
-        cdkBuilder.allowDuplicates(allowDuplicates.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param allowJoinsOnColumnsWithDifferentNames Indicates whether Fingerprint columns can be
-       * joined on any other Fingerprint column with a different name ( `TRUE` ) or can only be joined
-       * on Fingerprint columns of the same name ( `FALSE` ). 
-       */
-      override
-          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: Boolean) {
-        cdkBuilder.allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames)
-      }
-
-      /**
-       * @param allowJoinsOnColumnsWithDifferentNames Indicates whether Fingerprint columns can be
-       * joined on any other Fingerprint column with a different name ( `TRUE` ) or can only be joined
-       * on Fingerprint columns of the same name ( `FALSE` ). 
-       */
-      override
-          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: IResolvable) {
-        cdkBuilder.allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param preserveNulls Indicates whether NULL values are to be copied as NULL to encrypted
-       * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
-       */
-      override fun preserveNulls(preserveNulls: Boolean) {
-        cdkBuilder.preserveNulls(preserveNulls)
-      }
-
-      /**
-       * @param preserveNulls Indicates whether NULL values are to be copied as NULL to encrypted
-       * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
-       */
-      override fun preserveNulls(preserveNulls: IResolvable) {
-        cdkBuilder.preserveNulls(preserveNulls.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty,
-    ) : CdkObject(cdkObject), DataEncryptionMetadataProperty {
-      /**
-       * Indicates whether encrypted tables can contain cleartext data ( `TRUE` ) or are to
-       * cryptographically process every column ( `FALSE` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowcleartext)
-       */
-      override fun allowCleartext(): Any = unwrap(this).getAllowCleartext()
-
-      /**
-       * Indicates whether Fingerprint columns can contain duplicate entries ( `TRUE` ) or are to
-       * contain only non-repeated values ( `FALSE` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowduplicates)
-       */
-      override fun allowDuplicates(): Any = unwrap(this).getAllowDuplicates()
-
-      /**
-       * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a
-       * different name ( `TRUE` ) or can only be joined on Fingerprint columns of the same name (
-       * `FALSE` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-allowjoinsoncolumnswithdifferentnames)
-       */
-      override fun allowJoinsOnColumnsWithDifferentNames(): Any =
-          unwrap(this).getAllowJoinsOnColumnsWithDifferentNames()
-
-      /**
-       * Indicates whether NULL values are to be copied as NULL to encrypted tables ( `TRUE` ) or
-       * cryptographically processed ( `FALSE` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-dataencryptionmetadata.html#cfn-cleanrooms-collaboration-dataencryptionmetadata-preservenulls)
-       */
-      override fun preserveNulls(): Any = unwrap(this).getPreserveNulls()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataEncryptionMetadataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty):
-          DataEncryptionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataEncryptionMetadataProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataEncryptionMetadataProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty
     }
   }
 }

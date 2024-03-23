@@ -318,6 +318,127 @@ public open class CfnRecipe internal constructor(
   }
 
   /**
+   * Represents a transformation and associated parameters that are used to apply a change to an AWS
+   * Glue DataBrew dataset.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * ActionProperty actionProperty = ActionProperty.builder()
+   * .operation("operation")
+   * // the properties below are optional
+   * .parameters(Map.of(
+   * "parametersKey", "parameters"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html)
+   */
+  public interface ActionProperty {
+    /**
+     * The name of a valid DataBrew transformation to be performed on the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html#cfn-databrew-recipe-action-operation)
+     */
+    public fun operation(): String
+
+    /**
+     * Contextual parameters for the transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html#cfn-databrew-recipe-action-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * A builder for [ActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param operation The name of a valid DataBrew transformation to be performed on the data. 
+       */
+      public fun operation(operation: String)
+
+      /**
+       * @param parameters Contextual parameters for the transformation.
+       */
+      public fun parameters(parameters: IResolvable)
+
+      /**
+       * @param parameters Contextual parameters for the transformation.
+       */
+      public fun parameters(parameters: Map<String, String>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty.builder()
+
+      /**
+       * @param operation The name of a valid DataBrew transformation to be performed on the data. 
+       */
+      override fun operation(operation: String) {
+        cdkBuilder.operation(operation)
+      }
+
+      /**
+       * @param parameters Contextual parameters for the transformation.
+       */
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parameters Contextual parameters for the transformation.
+       */
+      override fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty,
+    ) : CdkObject(cdkObject), ActionProperty {
+      /**
+       * The name of a valid DataBrew transformation to be performed on the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html#cfn-databrew-recipe-action-operation)
+       */
+      override fun operation(): String = unwrap(this).getOperation()
+
+      /**
+       * Contextual parameters for the transformation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html#cfn-databrew-recipe-action-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty):
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ActionProperty):
+          software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty
+    }
+  }
+
+  /**
    * Represents an individual condition that evaluates to true or false.
    *
    * Conditions are used with recipe actions. The action is only performed for column values where
@@ -683,236 +804,6 @@ public open class CfnRecipe internal constructor(
           software.amazon.awscdk.services.databrew.CfnRecipe.DataCatalogInputDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.databrew.CfnRecipe.DataCatalogInputDefinitionProperty
-    }
-  }
-
-  /**
-   * Represents a transformation and associated parameters that are used to apply a change to an AWS
-   * Glue DataBrew dataset.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * ActionProperty actionProperty = ActionProperty.builder()
-   * .operation("operation")
-   * // the properties below are optional
-   * .parameters(Map.of(
-   * "parametersKey", "parameters"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html)
-   */
-  public interface ActionProperty {
-    /**
-     * The name of a valid DataBrew transformation to be performed on the data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html#cfn-databrew-recipe-action-operation)
-     */
-    public fun operation(): String
-
-    /**
-     * Contextual parameters for the transformation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html#cfn-databrew-recipe-action-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * A builder for [ActionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param operation The name of a valid DataBrew transformation to be performed on the data. 
-       */
-      public fun operation(operation: String)
-
-      /**
-       * @param parameters Contextual parameters for the transformation.
-       */
-      public fun parameters(parameters: IResolvable)
-
-      /**
-       * @param parameters Contextual parameters for the transformation.
-       */
-      public fun parameters(parameters: Map<String, String>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty.builder()
-
-      /**
-       * @param operation The name of a valid DataBrew transformation to be performed on the data. 
-       */
-      override fun operation(operation: String) {
-        cdkBuilder.operation(operation)
-      }
-
-      /**
-       * @param parameters Contextual parameters for the transformation.
-       */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parameters Contextual parameters for the transformation.
-       */
-      override fun parameters(parameters: Map<String, String>) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
-      /**
-       * The name of a valid DataBrew transformation to be performed on the data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html#cfn-databrew-recipe-action-operation)
-       */
-      override fun operation(): String = unwrap(this).getOperation()
-
-      /**
-       * Contextual parameters for the transformation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html#cfn-databrew-recipe-action-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ActionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActionProperty):
-          software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty
-    }
-  }
-
-  /**
-   * Represents an Amazon S3 location (bucket name, bucket owner, and object key) where DataBrew can
-   * read input data, or write output from a job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .key("key")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html)
-   */
-  public interface S3LocationProperty {
-    /**
-     * The Amazon S3 bucket name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html#cfn-databrew-recipe-s3location-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * The unique name of the object in the bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html#cfn-databrew-recipe-s3location-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * A builder for [S3LocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket The Amazon S3 bucket name. 
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param key The unique name of the object in the bucket.
-       */
-      public fun key(key: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty.builder()
-
-      /**
-       * @param bucket The Amazon S3 bucket name. 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param key The unique name of the object in the bucket.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
-      /**
-       * The Amazon S3 bucket name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html#cfn-databrew-recipe-s3location-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * The unique name of the object in the bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html#cfn-databrew-recipe-s3location-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty
     }
   }
 
@@ -4097,186 +3988,6 @@ public open class CfnRecipe internal constructor(
   }
 
   /**
-   * Represents secondary inputs in a UNION transform.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.databrew.*;
-   * SecondaryInputProperty secondaryInputProperty = SecondaryInputProperty.builder()
-   * .dataCatalogInputDefinition(DataCatalogInputDefinitionProperty.builder()
-   * .catalogId("catalogId")
-   * .databaseName("databaseName")
-   * .tableName("tableName")
-   * .tempDirectory(S3LocationProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .key("key")
-   * .build())
-   * .build())
-   * .s3InputDefinition(S3LocationProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .key("key")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html)
-   */
-  public interface SecondaryInputProperty {
-    /**
-     * The AWS Glue Data Catalog parameters for the data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html#cfn-databrew-recipe-secondaryinput-datacataloginputdefinition)
-     */
-    public fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
-
-    /**
-     * The Amazon S3 location where the data is stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html#cfn-databrew-recipe-secondaryinput-s3inputdefinition)
-     */
-    public fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
-
-    /**
-     * A builder for [SecondaryInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
-       */
-      public fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable)
-
-      /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
-       */
-      public
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty)
-
-      /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("07da4ac2449a81015b910b3e9adc3ab24c1dc9965866359eb1600c78a9eda524")
-      public
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit)
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      public fun s3InputDefinition(s3InputDefinition: IResolvable)
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty)
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7d4ac9f8d0cc6f72eaea2c632b63ce2f084a2c189df00c23b3a1ddc4cdc0e152")
-      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty.Builder =
-          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty.builder()
-
-      /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
-       */
-      override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
-       */
-      override
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty::unwrap))
-      }
-
-      /**
-       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("07da4ac2449a81015b910b3e9adc3ab24c1dc9965866359eb1600c78a9eda524")
-      override
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit):
-          Unit =
-          dataCatalogInputDefinition(DataCatalogInputDefinitionProperty(dataCatalogInputDefinition))
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      override fun s3InputDefinition(s3InputDefinition: IResolvable) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty::unwrap))
-      }
-
-      /**
-       * @param s3InputDefinition The Amazon S3 location where the data is stored.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7d4ac9f8d0cc6f72eaea2c632b63ce2f084a2c189df00c23b3a1ddc4cdc0e152")
-      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit): Unit
-          = s3InputDefinition(S3LocationProperty(s3InputDefinition))
-
-      public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty,
-    ) : CdkObject(cdkObject), SecondaryInputProperty {
-      /**
-       * The AWS Glue Data Catalog parameters for the data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html#cfn-databrew-recipe-secondaryinput-datacataloginputdefinition)
-       */
-      override fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
-
-      /**
-       * The Amazon S3 location where the data is stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html#cfn-databrew-recipe-secondaryinput-s3inputdefinition)
-       */
-      override fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SecondaryInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty):
-          SecondaryInputProperty = CdkObjectWrappers.wrap(cdkObject) as? SecondaryInputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SecondaryInputProperty):
-          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty
-    }
-  }
-
-  /**
    * Represents a single step from a DataBrew recipe to be performed.
    *
    * Example:
@@ -4475,6 +4186,295 @@ public open class CfnRecipe internal constructor(
           software.amazon.awscdk.services.databrew.CfnRecipe.RecipeStepProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.databrew.CfnRecipe.RecipeStepProperty
+    }
+  }
+
+  /**
+   * Represents an Amazon S3 location (bucket name, bucket owner, and object key) where DataBrew can
+   * read input data, or write output from a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .key("key")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html)
+   */
+  public interface S3LocationProperty {
+    /**
+     * The Amazon S3 bucket name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html#cfn-databrew-recipe-s3location-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * The unique name of the object in the bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html#cfn-databrew-recipe-s3location-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * A builder for [S3LocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The Amazon S3 bucket name. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param key The unique name of the object in the bucket.
+       */
+      public fun key(key: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty.builder()
+
+      /**
+       * @param bucket The Amazon S3 bucket name. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param key The unique name of the object in the bucket.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty,
+    ) : CdkObject(cdkObject), S3LocationProperty {
+      /**
+       * The Amazon S3 bucket name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html#cfn-databrew-recipe-s3location-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * The unique name of the object in the bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html#cfn-databrew-recipe-s3location-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty
+    }
+  }
+
+  /**
+   * Represents secondary inputs in a UNION transform.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.databrew.*;
+   * SecondaryInputProperty secondaryInputProperty = SecondaryInputProperty.builder()
+   * .dataCatalogInputDefinition(DataCatalogInputDefinitionProperty.builder()
+   * .catalogId("catalogId")
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .tempDirectory(S3LocationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .key("key")
+   * .build())
+   * .build())
+   * .s3InputDefinition(S3LocationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .key("key")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html)
+   */
+  public interface SecondaryInputProperty {
+    /**
+     * The AWS Glue Data Catalog parameters for the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html#cfn-databrew-recipe-secondaryinput-datacataloginputdefinition)
+     */
+    public fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
+
+    /**
+     * The Amazon S3 location where the data is stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html#cfn-databrew-recipe-secondaryinput-s3inputdefinition)
+     */
+    public fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
+
+    /**
+     * A builder for [SecondaryInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      public fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable)
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      public
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty)
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("07da4ac2449a81015b910b3e9adc3ab24c1dc9965866359eb1600c78a9eda524")
+      public
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      public fun s3InputDefinition(s3InputDefinition: IResolvable)
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty)
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7d4ac9f8d0cc6f72eaea2c632b63ce2f084a2c189df00c23b3a1ddc4cdc0e152")
+      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty.Builder =
+          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty.builder()
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      override
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty::unwrap))
+      }
+
+      /**
+       * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("07da4ac2449a81015b910b3e9adc3ab24c1dc9965866359eb1600c78a9eda524")
+      override
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit):
+          Unit =
+          dataCatalogInputDefinition(DataCatalogInputDefinitionProperty(dataCatalogInputDefinition))
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      override fun s3InputDefinition(s3InputDefinition: IResolvable) {
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty::unwrap))
+      }
+
+      /**
+       * @param s3InputDefinition The Amazon S3 location where the data is stored.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7d4ac9f8d0cc6f72eaea2c632b63ce2f084a2c189df00c23b3a1ddc4cdc0e152")
+      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit): Unit
+          = s3InputDefinition(S3LocationProperty(s3InputDefinition))
+
+      public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty,
+    ) : CdkObject(cdkObject), SecondaryInputProperty {
+      /**
+       * The AWS Glue Data Catalog parameters for the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html#cfn-databrew-recipe-secondaryinput-datacataloginputdefinition)
+       */
+      override fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
+
+      /**
+       * The Amazon S3 location where the data is stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html#cfn-databrew-recipe-secondaryinput-s3inputdefinition)
+       */
+      override fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SecondaryInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty):
+          SecondaryInputProperty = CdkObjectWrappers.wrap(cdkObject) as? SecondaryInputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SecondaryInputProperty):
+          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty
     }
   }
 }

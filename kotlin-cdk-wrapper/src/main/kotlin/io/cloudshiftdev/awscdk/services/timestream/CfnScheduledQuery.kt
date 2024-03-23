@@ -976,6 +976,1148 @@ public open class CfnScheduledQuery internal constructor(
   }
 
   /**
+   * Configuration required for error reporting.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * ErrorReportConfigurationProperty errorReportConfigurationProperty =
+   * ErrorReportConfigurationProperty.builder()
+   * .s3Configuration(S3ConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .encryptionOption("encryptionOption")
+   * .objectKeyPrefix("objectKeyPrefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-errorreportconfiguration.html)
+   */
+  public interface ErrorReportConfigurationProperty {
+    /**
+     * The S3 configuration for the error reports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-errorreportconfiguration.html#cfn-timestream-scheduledquery-errorreportconfiguration-s3configuration)
+     */
+    public fun s3Configuration(): Any
+
+    /**
+     * A builder for [ErrorReportConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Configuration The S3 configuration for the error reports. 
+       */
+      public fun s3Configuration(s3Configuration: IResolvable)
+
+      /**
+       * @param s3Configuration The S3 configuration for the error reports. 
+       */
+      public fun s3Configuration(s3Configuration: S3ConfigurationProperty)
+
+      /**
+       * @param s3Configuration The S3 configuration for the error reports. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2b4d8f1b5c3437012e697fbcab384cbae30b7a7c335885984356212fa9d386e5")
+      public fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty.builder()
+
+      /**
+       * @param s3Configuration The S3 configuration for the error reports. 
+       */
+      override fun s3Configuration(s3Configuration: IResolvable) {
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Configuration The S3 configuration for the error reports. 
+       */
+      override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
+        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param s3Configuration The S3 configuration for the error reports. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2b4d8f1b5c3437012e697fbcab384cbae30b7a7c335885984356212fa9d386e5")
+      override fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit):
+          Unit = s3Configuration(S3ConfigurationProperty(s3Configuration))
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty,
+    ) : CdkObject(cdkObject), ErrorReportConfigurationProperty {
+      /**
+       * The S3 configuration for the error reports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-errorreportconfiguration.html#cfn-timestream-scheduledquery-errorreportconfiguration-s3configuration)
+       */
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ErrorReportConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty):
+          ErrorReportConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ErrorReportConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ErrorReportConfigurationProperty):
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty
+    }
+  }
+
+  /**
+   * MixedMeasureMappings are mappings that can be used to ingest data into a mixture of narrow and
+   * multi measures in the derived table.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * MixedMeasureMappingProperty mixedMeasureMappingProperty = MixedMeasureMappingProperty.builder()
+   * .measureValueType("measureValueType")
+   * // the properties below are optional
+   * .measureName("measureName")
+   * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
+   * .measureValueType("measureValueType")
+   * .sourceColumn("sourceColumn")
+   * // the properties below are optional
+   * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
+   * .build()))
+   * .sourceColumn("sourceColumn")
+   * .targetMeasureName("targetMeasureName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html)
+   */
+  public interface MixedMeasureMappingProperty {
+    /**
+     * Refers to the value of measure_name in a result row.
+     *
+     * This field is required if MeasureNameColumn is provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-measurename)
+     */
+    public fun measureName(): String? = unwrap(this).getMeasureName()
+
+    /**
+     * Type of the value that is to be read from sourceColumn.
+     *
+     * If the mapping is for MULTI, use MeasureValueType.MULTI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-measurevaluetype)
+     */
+    public fun measureValueType(): String
+
+    /**
+     * Required when measureValueType is MULTI.
+     *
+     * Attribute mappings for MULTI value measures.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-multimeasureattributemappings)
+     */
+    public fun multiMeasureAttributeMappings(): Any? =
+        unwrap(this).getMultiMeasureAttributeMappings()
+
+    /**
+     * This field refers to the source column from which measure-value is to be read for result
+     * materialization.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-sourcecolumn)
+     */
+    public fun sourceColumn(): String? = unwrap(this).getSourceColumn()
+
+    /**
+     * Target measure name to be used.
+     *
+     * If not provided, the target measure name by default would be measure-name if provided, or
+     * sourceColumn otherwise.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-targetmeasurename)
+     */
+    public fun targetMeasureName(): String? = unwrap(this).getTargetMeasureName()
+
+    /**
+     * A builder for [MixedMeasureMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param measureName Refers to the value of measure_name in a result row.
+       * This field is required if MeasureNameColumn is provided.
+       */
+      public fun measureName(measureName: String)
+
+      /**
+       * @param measureValueType Type of the value that is to be read from sourceColumn. 
+       * If the mapping is for MULTI, use MeasureValueType.MULTI.
+       */
+      public fun measureValueType(measureValueType: String)
+
+      /**
+       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
+       * Attribute mappings for MULTI value measures.
+       */
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable)
+
+      /**
+       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
+       * Attribute mappings for MULTI value measures.
+       */
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
+
+      /**
+       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
+       * Attribute mappings for MULTI value measures.
+       */
+      public fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any)
+
+      /**
+       * @param sourceColumn This field refers to the source column from which measure-value is to
+       * be read for result materialization.
+       */
+      public fun sourceColumn(sourceColumn: String)
+
+      /**
+       * @param targetMeasureName Target measure name to be used.
+       * If not provided, the target measure name by default would be measure-name if provided, or
+       * sourceColumn otherwise.
+       */
+      public fun targetMeasureName(targetMeasureName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty.builder()
+
+      /**
+       * @param measureName Refers to the value of measure_name in a result row.
+       * This field is required if MeasureNameColumn is provided.
+       */
+      override fun measureName(measureName: String) {
+        cdkBuilder.measureName(measureName)
+      }
+
+      /**
+       * @param measureValueType Type of the value that is to be read from sourceColumn. 
+       * If the mapping is for MULTI, use MeasureValueType.MULTI.
+       */
+      override fun measureValueType(measureValueType: String) {
+        cdkBuilder.measureValueType(measureValueType)
+      }
+
+      /**
+       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
+       * Attribute mappings for MULTI value measures.
+       */
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
+       * Attribute mappings for MULTI value measures.
+       */
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
+      }
+
+      /**
+       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
+       * Attribute mappings for MULTI value measures.
+       */
+      override fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any): Unit =
+          multiMeasureAttributeMappings(multiMeasureAttributeMappings.toList())
+
+      /**
+       * @param sourceColumn This field refers to the source column from which measure-value is to
+       * be read for result materialization.
+       */
+      override fun sourceColumn(sourceColumn: String) {
+        cdkBuilder.sourceColumn(sourceColumn)
+      }
+
+      /**
+       * @param targetMeasureName Target measure name to be used.
+       * If not provided, the target measure name by default would be measure-name if provided, or
+       * sourceColumn otherwise.
+       */
+      override fun targetMeasureName(targetMeasureName: String) {
+        cdkBuilder.targetMeasureName(targetMeasureName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty,
+    ) : CdkObject(cdkObject), MixedMeasureMappingProperty {
+      /**
+       * Refers to the value of measure_name in a result row.
+       *
+       * This field is required if MeasureNameColumn is provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-measurename)
+       */
+      override fun measureName(): String? = unwrap(this).getMeasureName()
+
+      /**
+       * Type of the value that is to be read from sourceColumn.
+       *
+       * If the mapping is for MULTI, use MeasureValueType.MULTI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-measurevaluetype)
+       */
+      override fun measureValueType(): String = unwrap(this).getMeasureValueType()
+
+      /**
+       * Required when measureValueType is MULTI.
+       *
+       * Attribute mappings for MULTI value measures.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-multimeasureattributemappings)
+       */
+      override fun multiMeasureAttributeMappings(): Any? =
+          unwrap(this).getMultiMeasureAttributeMappings()
+
+      /**
+       * This field refers to the source column from which measure-value is to be read for result
+       * materialization.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-sourcecolumn)
+       */
+      override fun sourceColumn(): String? = unwrap(this).getSourceColumn()
+
+      /**
+       * Target measure name to be used.
+       *
+       * If not provided, the target measure name by default would be measure-name if provided, or
+       * sourceColumn otherwise.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-targetmeasurename)
+       */
+      override fun targetMeasureName(): String? = unwrap(this).getTargetMeasureName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MixedMeasureMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty):
+          MixedMeasureMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MixedMeasureMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MixedMeasureMappingProperty):
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty
+    }
+  }
+
+  /**
+   * Attribute mapping for MULTI value measures.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * MultiMeasureAttributeMappingProperty multiMeasureAttributeMappingProperty =
+   * MultiMeasureAttributeMappingProperty.builder()
+   * .measureValueType("measureValueType")
+   * .sourceColumn("sourceColumn")
+   * // the properties below are optional
+   * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html)
+   */
+  public interface MultiMeasureAttributeMappingProperty {
+    /**
+     * Type of the attribute to be read from the source column.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-measurevaluetype)
+     */
+    public fun measureValueType(): String
+
+    /**
+     * Source column from where the attribute value is to be read.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-sourcecolumn)
+     */
+    public fun sourceColumn(): String
+
+    /**
+     * Custom name to be used for attribute name in derived table.
+     *
+     * If not provided, source column name would be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-targetmultimeasureattributename)
+     */
+    public fun targetMultiMeasureAttributeName(): String? =
+        unwrap(this).getTargetMultiMeasureAttributeName()
+
+    /**
+     * A builder for [MultiMeasureAttributeMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param measureValueType Type of the attribute to be read from the source column. 
+       */
+      public fun measureValueType(measureValueType: String)
+
+      /**
+       * @param sourceColumn Source column from where the attribute value is to be read. 
+       */
+      public fun sourceColumn(sourceColumn: String)
+
+      /**
+       * @param targetMultiMeasureAttributeName Custom name to be used for attribute name in derived
+       * table.
+       * If not provided, source column name would be used.
+       */
+      public fun targetMultiMeasureAttributeName(targetMultiMeasureAttributeName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty.builder()
+
+      /**
+       * @param measureValueType Type of the attribute to be read from the source column. 
+       */
+      override fun measureValueType(measureValueType: String) {
+        cdkBuilder.measureValueType(measureValueType)
+      }
+
+      /**
+       * @param sourceColumn Source column from where the attribute value is to be read. 
+       */
+      override fun sourceColumn(sourceColumn: String) {
+        cdkBuilder.sourceColumn(sourceColumn)
+      }
+
+      /**
+       * @param targetMultiMeasureAttributeName Custom name to be used for attribute name in derived
+       * table.
+       * If not provided, source column name would be used.
+       */
+      override fun targetMultiMeasureAttributeName(targetMultiMeasureAttributeName: String) {
+        cdkBuilder.targetMultiMeasureAttributeName(targetMultiMeasureAttributeName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty,
+    ) : CdkObject(cdkObject), MultiMeasureAttributeMappingProperty {
+      /**
+       * Type of the attribute to be read from the source column.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-measurevaluetype)
+       */
+      override fun measureValueType(): String = unwrap(this).getMeasureValueType()
+
+      /**
+       * Source column from where the attribute value is to be read.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-sourcecolumn)
+       */
+      override fun sourceColumn(): String = unwrap(this).getSourceColumn()
+
+      /**
+       * Custom name to be used for attribute name in derived table.
+       *
+       * If not provided, source column name would be used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-targetmultimeasureattributename)
+       */
+      override fun targetMultiMeasureAttributeName(): String? =
+          unwrap(this).getTargetMultiMeasureAttributeName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MultiMeasureAttributeMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty):
+          MultiMeasureAttributeMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiMeasureAttributeMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiMeasureAttributeMappingProperty):
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty
+    }
+  }
+
+  /**
+   * Only one of MixedMeasureMappings or MultiMeasureMappings is to be provided.
+   *
+   * MultiMeasureMappings can be used to ingest data as multi measures in the derived table.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * MultiMeasureMappingsProperty multiMeasureMappingsProperty =
+   * MultiMeasureMappingsProperty.builder()
+   * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
+   * .measureValueType("measureValueType")
+   * .sourceColumn("sourceColumn")
+   * // the properties below are optional
+   * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
+   * .build()))
+   * // the properties below are optional
+   * .targetMultiMeasureName("targetMultiMeasureName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html)
+   */
+  public interface MultiMeasureMappingsProperty {
+    /**
+     * Required.
+     *
+     * Attribute mappings to be used for mapping query results to ingest data for multi-measure
+     * attributes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html#cfn-timestream-scheduledquery-multimeasuremappings-multimeasureattributemappings)
+     */
+    public fun multiMeasureAttributeMappings(): Any
+
+    /**
+     * The name of the target multi-measure name in the derived table.
+     *
+     * This input is required when measureNameColumn is not provided. If MeasureNameColumn is
+     * provided, then value from that column will be used as multi-measure name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html#cfn-timestream-scheduledquery-multimeasuremappings-targetmultimeasurename)
+     */
+    public fun targetMultiMeasureName(): String? = unwrap(this).getTargetMultiMeasureName()
+
+    /**
+     * A builder for [MultiMeasureMappingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param multiMeasureAttributeMappings Required. 
+       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
+       * attributes.
+       */
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable)
+
+      /**
+       * @param multiMeasureAttributeMappings Required. 
+       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
+       * attributes.
+       */
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
+
+      /**
+       * @param multiMeasureAttributeMappings Required. 
+       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
+       * attributes.
+       */
+      public fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any)
+
+      /**
+       * @param targetMultiMeasureName The name of the target multi-measure name in the derived
+       * table.
+       * This input is required when measureNameColumn is not provided. If MeasureNameColumn is
+       * provided, then value from that column will be used as multi-measure name.
+       */
+      public fun targetMultiMeasureName(targetMultiMeasureName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty.builder()
+
+      /**
+       * @param multiMeasureAttributeMappings Required. 
+       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
+       * attributes.
+       */
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param multiMeasureAttributeMappings Required. 
+       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
+       * attributes.
+       */
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
+      }
+
+      /**
+       * @param multiMeasureAttributeMappings Required. 
+       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
+       * attributes.
+       */
+      override fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any): Unit =
+          multiMeasureAttributeMappings(multiMeasureAttributeMappings.toList())
+
+      /**
+       * @param targetMultiMeasureName The name of the target multi-measure name in the derived
+       * table.
+       * This input is required when measureNameColumn is not provided. If MeasureNameColumn is
+       * provided, then value from that column will be used as multi-measure name.
+       */
+      override fun targetMultiMeasureName(targetMultiMeasureName: String) {
+        cdkBuilder.targetMultiMeasureName(targetMultiMeasureName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty,
+    ) : CdkObject(cdkObject), MultiMeasureMappingsProperty {
+      /**
+       * Required.
+       *
+       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
+       * attributes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html#cfn-timestream-scheduledquery-multimeasuremappings-multimeasureattributemappings)
+       */
+      override fun multiMeasureAttributeMappings(): Any =
+          unwrap(this).getMultiMeasureAttributeMappings()
+
+      /**
+       * The name of the target multi-measure name in the derived table.
+       *
+       * This input is required when measureNameColumn is not provided. If MeasureNameColumn is
+       * provided, then value from that column will be used as multi-measure name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html#cfn-timestream-scheduledquery-multimeasuremappings-targetmultimeasurename)
+       */
+      override fun targetMultiMeasureName(): String? = unwrap(this).getTargetMultiMeasureName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MultiMeasureMappingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty):
+          MultiMeasureMappingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiMeasureMappingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiMeasureMappingsProperty):
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty
+    }
+  }
+
+  /**
+   * Notification configuration for a scheduled query.
+   *
+   * A notification is sent by Timestream when a scheduled query is created, its state is updated or
+   * when it is deleted.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * NotificationConfigurationProperty notificationConfigurationProperty =
+   * NotificationConfigurationProperty.builder()
+   * .snsConfiguration(SnsConfigurationProperty.builder()
+   * .topicArn("topicArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-notificationconfiguration.html)
+   */
+  public interface NotificationConfigurationProperty {
+    /**
+     * Details on SNS configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-notificationconfiguration.html#cfn-timestream-scheduledquery-notificationconfiguration-snsconfiguration)
+     */
+    public fun snsConfiguration(): Any
+
+    /**
+     * A builder for [NotificationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param snsConfiguration Details on SNS configuration. 
+       */
+      public fun snsConfiguration(snsConfiguration: IResolvable)
+
+      /**
+       * @param snsConfiguration Details on SNS configuration. 
+       */
+      public fun snsConfiguration(snsConfiguration: SnsConfigurationProperty)
+
+      /**
+       * @param snsConfiguration Details on SNS configuration. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8247785498329ea3a738659a4497f5286a4da42d7f30083f3f27a84af446aeb9")
+      public fun snsConfiguration(snsConfiguration: SnsConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty.builder()
+
+      /**
+       * @param snsConfiguration Details on SNS configuration. 
+       */
+      override fun snsConfiguration(snsConfiguration: IResolvable) {
+        cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param snsConfiguration Details on SNS configuration. 
+       */
+      override fun snsConfiguration(snsConfiguration: SnsConfigurationProperty) {
+        cdkBuilder.snsConfiguration(snsConfiguration.let(SnsConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param snsConfiguration Details on SNS configuration. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8247785498329ea3a738659a4497f5286a4da42d7f30083f3f27a84af446aeb9")
+      override fun snsConfiguration(snsConfiguration: SnsConfigurationProperty.Builder.() -> Unit):
+          Unit = snsConfiguration(SnsConfigurationProperty(snsConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty,
+    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
+      /**
+       * Details on SNS configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-notificationconfiguration.html#cfn-timestream-scheduledquery-notificationconfiguration-snsconfiguration)
+       */
+      override fun snsConfiguration(): Any = unwrap(this).getSnsConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NotificationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty):
+          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationConfigurationProperty):
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty
+    }
+  }
+
+  /**
+   * Details on S3 location for error reports that result from running a query.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * S3ConfigurationProperty s3ConfigurationProperty = S3ConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .encryptionOption("encryptionOption")
+   * .objectKeyPrefix("objectKeyPrefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html)
+   */
+  public interface S3ConfigurationProperty {
+    /**
+     * Name of the S3 bucket under which error reports will be created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * Encryption at rest options for the error reports.
+     *
+     * If no encryption option is specified, Timestream will choose SSE_S3 as default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-encryptionoption)
+     */
+    public fun encryptionOption(): String? = unwrap(this).getEncryptionOption()
+
+    /**
+     * Prefix for the error report key.
+     *
+     * Timestream by default adds the following prefix to the error report path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-objectkeyprefix)
+     */
+    public fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
+
+    /**
+     * A builder for [S3ConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName Name of the S3 bucket under which error reports will be created. 
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param encryptionOption Encryption at rest options for the error reports.
+       * If no encryption option is specified, Timestream will choose SSE_S3 as default.
+       */
+      public fun encryptionOption(encryptionOption: String)
+
+      /**
+       * @param objectKeyPrefix Prefix for the error report key.
+       * Timestream by default adds the following prefix to the error report path.
+       */
+      public fun objectKeyPrefix(objectKeyPrefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty.builder()
+
+      /**
+       * @param bucketName Name of the S3 bucket under which error reports will be created. 
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param encryptionOption Encryption at rest options for the error reports.
+       * If no encryption option is specified, Timestream will choose SSE_S3 as default.
+       */
+      override fun encryptionOption(encryptionOption: String) {
+        cdkBuilder.encryptionOption(encryptionOption)
+      }
+
+      /**
+       * @param objectKeyPrefix Prefix for the error report key.
+       * Timestream by default adds the following prefix to the error report path.
+       */
+      override fun objectKeyPrefix(objectKeyPrefix: String) {
+        cdkBuilder.objectKeyPrefix(objectKeyPrefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty,
+    ) : CdkObject(cdkObject), S3ConfigurationProperty {
+      /**
+       * Name of the S3 bucket under which error reports will be created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+
+      /**
+       * Encryption at rest options for the error reports.
+       *
+       * If no encryption option is specified, Timestream will choose SSE_S3 as default.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-encryptionoption)
+       */
+      override fun encryptionOption(): String? = unwrap(this).getEncryptionOption()
+
+      /**
+       * Prefix for the error report key.
+       *
+       * Timestream by default adds the following prefix to the error report path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-objectkeyprefix)
+       */
+      override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3ConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty):
+          S3ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ConfigurationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3ConfigurationProperty):
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration of the schedule of the query.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * ScheduleConfigurationProperty scheduleConfigurationProperty =
+   * ScheduleConfigurationProperty.builder()
+   * .scheduleExpression("scheduleExpression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-scheduleconfiguration.html)
+   */
+  public interface ScheduleConfigurationProperty {
+    /**
+     * An expression that denotes when to trigger the scheduled query run.
+     *
+     * This can be a cron expression or a rate expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-scheduleconfiguration.html#cfn-timestream-scheduledquery-scheduleconfiguration-scheduleexpression)
+     */
+    public fun scheduleExpression(): String
+
+    /**
+     * A builder for [ScheduleConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param scheduleExpression An expression that denotes when to trigger the scheduled query
+       * run. 
+       * This can be a cron expression or a rate expression.
+       */
+      public fun scheduleExpression(scheduleExpression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty.builder()
+
+      /**
+       * @param scheduleExpression An expression that denotes when to trigger the scheduled query
+       * run. 
+       * This can be a cron expression or a rate expression.
+       */
+      override fun scheduleExpression(scheduleExpression: String) {
+        cdkBuilder.scheduleExpression(scheduleExpression)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty,
+    ) : CdkObject(cdkObject), ScheduleConfigurationProperty {
+      /**
+       * An expression that denotes when to trigger the scheduled query run.
+       *
+       * This can be a cron expression or a rate expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-scheduleconfiguration.html#cfn-timestream-scheduledquery-scheduleconfiguration-scheduleexpression)
+       */
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty):
+          ScheduleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduleConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScheduleConfigurationProperty):
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty
+    }
+  }
+
+  /**
+   * Details on SNS that are required to send the notification.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * SnsConfigurationProperty snsConfigurationProperty = SnsConfigurationProperty.builder()
+   * .topicArn("topicArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-snsconfiguration.html)
+   */
+  public interface SnsConfigurationProperty {
+    /**
+     * SNS topic ARN that the scheduled query status notifications will be sent to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-snsconfiguration.html#cfn-timestream-scheduledquery-snsconfiguration-topicarn)
+     */
+    public fun topicArn(): String
+
+    /**
+     * A builder for [SnsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param topicArn SNS topic ARN that the scheduled query status notifications will be sent
+       * to. 
+       */
+      public fun topicArn(topicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty.builder()
+
+      /**
+       * @param topicArn SNS topic ARN that the scheduled query status notifications will be sent
+       * to. 
+       */
+      override fun topicArn(topicArn: String) {
+        cdkBuilder.topicArn(topicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty,
+    ) : CdkObject(cdkObject), SnsConfigurationProperty {
+      /**
+       * SNS topic ARN that the scheduled query status notifications will be sent to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-snsconfiguration.html#cfn-timestream-scheduledquery-snsconfiguration-topicarn)
+       */
+      override fun topicArn(): String = unwrap(this).getTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty):
+          SnsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnsConfigurationProperty):
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty
+    }
+  }
+
+  /**
    * Configuration used for writing the output of a query.
    *
    * Example:
@@ -1505,1148 +2647,6 @@ public open class CfnScheduledQuery internal constructor(
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.TimestreamConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.TimestreamConfigurationProperty
-    }
-  }
-
-  /**
-   * Details on SNS that are required to send the notification.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * SnsConfigurationProperty snsConfigurationProperty = SnsConfigurationProperty.builder()
-   * .topicArn("topicArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-snsconfiguration.html)
-   */
-  public interface SnsConfigurationProperty {
-    /**
-     * SNS topic ARN that the scheduled query status notifications will be sent to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-snsconfiguration.html#cfn-timestream-scheduledquery-snsconfiguration-topicarn)
-     */
-    public fun topicArn(): String
-
-    /**
-     * A builder for [SnsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param topicArn SNS topic ARN that the scheduled query status notifications will be sent
-       * to. 
-       */
-      public fun topicArn(topicArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty.builder()
-
-      /**
-       * @param topicArn SNS topic ARN that the scheduled query status notifications will be sent
-       * to. 
-       */
-      override fun topicArn(topicArn: String) {
-        cdkBuilder.topicArn(topicArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty,
-    ) : CdkObject(cdkObject), SnsConfigurationProperty {
-      /**
-       * SNS topic ARN that the scheduled query status notifications will be sent to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-snsconfiguration.html#cfn-timestream-scheduledquery-snsconfiguration-topicarn)
-       */
-      override fun topicArn(): String = unwrap(this).getTopicArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SnsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty):
-          SnsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnsConfigurationProperty):
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty
-    }
-  }
-
-  /**
-   * Attribute mapping for MULTI value measures.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * MultiMeasureAttributeMappingProperty multiMeasureAttributeMappingProperty =
-   * MultiMeasureAttributeMappingProperty.builder()
-   * .measureValueType("measureValueType")
-   * .sourceColumn("sourceColumn")
-   * // the properties below are optional
-   * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html)
-   */
-  public interface MultiMeasureAttributeMappingProperty {
-    /**
-     * Type of the attribute to be read from the source column.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-measurevaluetype)
-     */
-    public fun measureValueType(): String
-
-    /**
-     * Source column from where the attribute value is to be read.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-sourcecolumn)
-     */
-    public fun sourceColumn(): String
-
-    /**
-     * Custom name to be used for attribute name in derived table.
-     *
-     * If not provided, source column name would be used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-targetmultimeasureattributename)
-     */
-    public fun targetMultiMeasureAttributeName(): String? =
-        unwrap(this).getTargetMultiMeasureAttributeName()
-
-    /**
-     * A builder for [MultiMeasureAttributeMappingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param measureValueType Type of the attribute to be read from the source column. 
-       */
-      public fun measureValueType(measureValueType: String)
-
-      /**
-       * @param sourceColumn Source column from where the attribute value is to be read. 
-       */
-      public fun sourceColumn(sourceColumn: String)
-
-      /**
-       * @param targetMultiMeasureAttributeName Custom name to be used for attribute name in derived
-       * table.
-       * If not provided, source column name would be used.
-       */
-      public fun targetMultiMeasureAttributeName(targetMultiMeasureAttributeName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty.builder()
-
-      /**
-       * @param measureValueType Type of the attribute to be read from the source column. 
-       */
-      override fun measureValueType(measureValueType: String) {
-        cdkBuilder.measureValueType(measureValueType)
-      }
-
-      /**
-       * @param sourceColumn Source column from where the attribute value is to be read. 
-       */
-      override fun sourceColumn(sourceColumn: String) {
-        cdkBuilder.sourceColumn(sourceColumn)
-      }
-
-      /**
-       * @param targetMultiMeasureAttributeName Custom name to be used for attribute name in derived
-       * table.
-       * If not provided, source column name would be used.
-       */
-      override fun targetMultiMeasureAttributeName(targetMultiMeasureAttributeName: String) {
-        cdkBuilder.targetMultiMeasureAttributeName(targetMultiMeasureAttributeName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty,
-    ) : CdkObject(cdkObject), MultiMeasureAttributeMappingProperty {
-      /**
-       * Type of the attribute to be read from the source column.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-measurevaluetype)
-       */
-      override fun measureValueType(): String = unwrap(this).getMeasureValueType()
-
-      /**
-       * Source column from where the attribute value is to be read.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-sourcecolumn)
-       */
-      override fun sourceColumn(): String = unwrap(this).getSourceColumn()
-
-      /**
-       * Custom name to be used for attribute name in derived table.
-       *
-       * If not provided, source column name would be used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html#cfn-timestream-scheduledquery-multimeasureattributemapping-targetmultimeasureattributename)
-       */
-      override fun targetMultiMeasureAttributeName(): String? =
-          unwrap(this).getTargetMultiMeasureAttributeName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MultiMeasureAttributeMappingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty):
-          MultiMeasureAttributeMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MultiMeasureAttributeMappingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MultiMeasureAttributeMappingProperty):
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty
-    }
-  }
-
-  /**
-   * Configuration of the schedule of the query.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * ScheduleConfigurationProperty scheduleConfigurationProperty =
-   * ScheduleConfigurationProperty.builder()
-   * .scheduleExpression("scheduleExpression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-scheduleconfiguration.html)
-   */
-  public interface ScheduleConfigurationProperty {
-    /**
-     * An expression that denotes when to trigger the scheduled query run.
-     *
-     * This can be a cron expression or a rate expression.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-scheduleconfiguration.html#cfn-timestream-scheduledquery-scheduleconfiguration-scheduleexpression)
-     */
-    public fun scheduleExpression(): String
-
-    /**
-     * A builder for [ScheduleConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param scheduleExpression An expression that denotes when to trigger the scheduled query
-       * run. 
-       * This can be a cron expression or a rate expression.
-       */
-      public fun scheduleExpression(scheduleExpression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty.builder()
-
-      /**
-       * @param scheduleExpression An expression that denotes when to trigger the scheduled query
-       * run. 
-       * This can be a cron expression or a rate expression.
-       */
-      override fun scheduleExpression(scheduleExpression: String) {
-        cdkBuilder.scheduleExpression(scheduleExpression)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty,
-    ) : CdkObject(cdkObject), ScheduleConfigurationProperty {
-      /**
-       * An expression that denotes when to trigger the scheduled query run.
-       *
-       * This can be a cron expression or a rate expression.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-scheduleconfiguration.html#cfn-timestream-scheduledquery-scheduleconfiguration-scheduleexpression)
-       */
-      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty):
-          ScheduleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ScheduleConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduleConfigurationProperty):
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty
-    }
-  }
-
-  /**
-   * Details on S3 location for error reports that result from running a query.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * S3ConfigurationProperty s3ConfigurationProperty = S3ConfigurationProperty.builder()
-   * .bucketName("bucketName")
-   * // the properties below are optional
-   * .encryptionOption("encryptionOption")
-   * .objectKeyPrefix("objectKeyPrefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html)
-   */
-  public interface S3ConfigurationProperty {
-    /**
-     * Name of the S3 bucket under which error reports will be created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-bucketname)
-     */
-    public fun bucketName(): String
-
-    /**
-     * Encryption at rest options for the error reports.
-     *
-     * If no encryption option is specified, Timestream will choose SSE_S3 as default.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-encryptionoption)
-     */
-    public fun encryptionOption(): String? = unwrap(this).getEncryptionOption()
-
-    /**
-     * Prefix for the error report key.
-     *
-     * Timestream by default adds the following prefix to the error report path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-objectkeyprefix)
-     */
-    public fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
-
-    /**
-     * A builder for [S3ConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketName Name of the S3 bucket under which error reports will be created. 
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param encryptionOption Encryption at rest options for the error reports.
-       * If no encryption option is specified, Timestream will choose SSE_S3 as default.
-       */
-      public fun encryptionOption(encryptionOption: String)
-
-      /**
-       * @param objectKeyPrefix Prefix for the error report key.
-       * Timestream by default adds the following prefix to the error report path.
-       */
-      public fun objectKeyPrefix(objectKeyPrefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty.builder()
-
-      /**
-       * @param bucketName Name of the S3 bucket under which error reports will be created. 
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param encryptionOption Encryption at rest options for the error reports.
-       * If no encryption option is specified, Timestream will choose SSE_S3 as default.
-       */
-      override fun encryptionOption(encryptionOption: String) {
-        cdkBuilder.encryptionOption(encryptionOption)
-      }
-
-      /**
-       * @param objectKeyPrefix Prefix for the error report key.
-       * Timestream by default adds the following prefix to the error report path.
-       */
-      override fun objectKeyPrefix(objectKeyPrefix: String) {
-        cdkBuilder.objectKeyPrefix(objectKeyPrefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty,
-    ) : CdkObject(cdkObject), S3ConfigurationProperty {
-      /**
-       * Name of the S3 bucket under which error reports will be created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-bucketname)
-       */
-      override fun bucketName(): String = unwrap(this).getBucketName()
-
-      /**
-       * Encryption at rest options for the error reports.
-       *
-       * If no encryption option is specified, Timestream will choose SSE_S3 as default.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-encryptionoption)
-       */
-      override fun encryptionOption(): String? = unwrap(this).getEncryptionOption()
-
-      /**
-       * Prefix for the error report key.
-       *
-       * Timestream by default adds the following prefix to the error report path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-s3configuration.html#cfn-timestream-scheduledquery-s3configuration-objectkeyprefix)
-       */
-      override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3ConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty):
-          S3ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ConfigurationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3ConfigurationProperty):
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty
-    }
-  }
-
-  /**
-   * Notification configuration for a scheduled query.
-   *
-   * A notification is sent by Timestream when a scheduled query is created, its state is updated or
-   * when it is deleted.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * NotificationConfigurationProperty notificationConfigurationProperty =
-   * NotificationConfigurationProperty.builder()
-   * .snsConfiguration(SnsConfigurationProperty.builder()
-   * .topicArn("topicArn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-notificationconfiguration.html)
-   */
-  public interface NotificationConfigurationProperty {
-    /**
-     * Details on SNS configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-notificationconfiguration.html#cfn-timestream-scheduledquery-notificationconfiguration-snsconfiguration)
-     */
-    public fun snsConfiguration(): Any
-
-    /**
-     * A builder for [NotificationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param snsConfiguration Details on SNS configuration. 
-       */
-      public fun snsConfiguration(snsConfiguration: IResolvable)
-
-      /**
-       * @param snsConfiguration Details on SNS configuration. 
-       */
-      public fun snsConfiguration(snsConfiguration: SnsConfigurationProperty)
-
-      /**
-       * @param snsConfiguration Details on SNS configuration. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8247785498329ea3a738659a4497f5286a4da42d7f30083f3f27a84af446aeb9")
-      public fun snsConfiguration(snsConfiguration: SnsConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty.builder()
-
-      /**
-       * @param snsConfiguration Details on SNS configuration. 
-       */
-      override fun snsConfiguration(snsConfiguration: IResolvable) {
-        cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param snsConfiguration Details on SNS configuration. 
-       */
-      override fun snsConfiguration(snsConfiguration: SnsConfigurationProperty) {
-        cdkBuilder.snsConfiguration(snsConfiguration.let(SnsConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param snsConfiguration Details on SNS configuration. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8247785498329ea3a738659a4497f5286a4da42d7f30083f3f27a84af446aeb9")
-      override fun snsConfiguration(snsConfiguration: SnsConfigurationProperty.Builder.() -> Unit):
-          Unit = snsConfiguration(SnsConfigurationProperty(snsConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty,
-    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
-      /**
-       * Details on SNS configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-notificationconfiguration.html#cfn-timestream-scheduledquery-notificationconfiguration-snsconfiguration)
-       */
-      override fun snsConfiguration(): Any = unwrap(this).getSnsConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NotificationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty):
-          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationConfigurationProperty):
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty
-    }
-  }
-
-  /**
-   * MixedMeasureMappings are mappings that can be used to ingest data into a mixture of narrow and
-   * multi measures in the derived table.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * MixedMeasureMappingProperty mixedMeasureMappingProperty = MixedMeasureMappingProperty.builder()
-   * .measureValueType("measureValueType")
-   * // the properties below are optional
-   * .measureName("measureName")
-   * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
-   * .measureValueType("measureValueType")
-   * .sourceColumn("sourceColumn")
-   * // the properties below are optional
-   * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
-   * .build()))
-   * .sourceColumn("sourceColumn")
-   * .targetMeasureName("targetMeasureName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html)
-   */
-  public interface MixedMeasureMappingProperty {
-    /**
-     * Refers to the value of measure_name in a result row.
-     *
-     * This field is required if MeasureNameColumn is provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-measurename)
-     */
-    public fun measureName(): String? = unwrap(this).getMeasureName()
-
-    /**
-     * Type of the value that is to be read from sourceColumn.
-     *
-     * If the mapping is for MULTI, use MeasureValueType.MULTI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-measurevaluetype)
-     */
-    public fun measureValueType(): String
-
-    /**
-     * Required when measureValueType is MULTI.
-     *
-     * Attribute mappings for MULTI value measures.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-multimeasureattributemappings)
-     */
-    public fun multiMeasureAttributeMappings(): Any? =
-        unwrap(this).getMultiMeasureAttributeMappings()
-
-    /**
-     * This field refers to the source column from which measure-value is to be read for result
-     * materialization.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-sourcecolumn)
-     */
-    public fun sourceColumn(): String? = unwrap(this).getSourceColumn()
-
-    /**
-     * Target measure name to be used.
-     *
-     * If not provided, the target measure name by default would be measure-name if provided, or
-     * sourceColumn otherwise.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-targetmeasurename)
-     */
-    public fun targetMeasureName(): String? = unwrap(this).getTargetMeasureName()
-
-    /**
-     * A builder for [MixedMeasureMappingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param measureName Refers to the value of measure_name in a result row.
-       * This field is required if MeasureNameColumn is provided.
-       */
-      public fun measureName(measureName: String)
-
-      /**
-       * @param measureValueType Type of the value that is to be read from sourceColumn. 
-       * If the mapping is for MULTI, use MeasureValueType.MULTI.
-       */
-      public fun measureValueType(measureValueType: String)
-
-      /**
-       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
-       * Attribute mappings for MULTI value measures.
-       */
-      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable)
-
-      /**
-       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
-       * Attribute mappings for MULTI value measures.
-       */
-      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
-
-      /**
-       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
-       * Attribute mappings for MULTI value measures.
-       */
-      public fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any)
-
-      /**
-       * @param sourceColumn This field refers to the source column from which measure-value is to
-       * be read for result materialization.
-       */
-      public fun sourceColumn(sourceColumn: String)
-
-      /**
-       * @param targetMeasureName Target measure name to be used.
-       * If not provided, the target measure name by default would be measure-name if provided, or
-       * sourceColumn otherwise.
-       */
-      public fun targetMeasureName(targetMeasureName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty.builder()
-
-      /**
-       * @param measureName Refers to the value of measure_name in a result row.
-       * This field is required if MeasureNameColumn is provided.
-       */
-      override fun measureName(measureName: String) {
-        cdkBuilder.measureName(measureName)
-      }
-
-      /**
-       * @param measureValueType Type of the value that is to be read from sourceColumn. 
-       * If the mapping is for MULTI, use MeasureValueType.MULTI.
-       */
-      override fun measureValueType(measureValueType: String) {
-        cdkBuilder.measureValueType(measureValueType)
-      }
-
-      /**
-       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
-       * Attribute mappings for MULTI value measures.
-       */
-      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
-        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
-       * Attribute mappings for MULTI value measures.
-       */
-      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
-        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
-      }
-
-      /**
-       * @param multiMeasureAttributeMappings Required when measureValueType is MULTI.
-       * Attribute mappings for MULTI value measures.
-       */
-      override fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any): Unit =
-          multiMeasureAttributeMappings(multiMeasureAttributeMappings.toList())
-
-      /**
-       * @param sourceColumn This field refers to the source column from which measure-value is to
-       * be read for result materialization.
-       */
-      override fun sourceColumn(sourceColumn: String) {
-        cdkBuilder.sourceColumn(sourceColumn)
-      }
-
-      /**
-       * @param targetMeasureName Target measure name to be used.
-       * If not provided, the target measure name by default would be measure-name if provided, or
-       * sourceColumn otherwise.
-       */
-      override fun targetMeasureName(targetMeasureName: String) {
-        cdkBuilder.targetMeasureName(targetMeasureName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty,
-    ) : CdkObject(cdkObject), MixedMeasureMappingProperty {
-      /**
-       * Refers to the value of measure_name in a result row.
-       *
-       * This field is required if MeasureNameColumn is provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-measurename)
-       */
-      override fun measureName(): String? = unwrap(this).getMeasureName()
-
-      /**
-       * Type of the value that is to be read from sourceColumn.
-       *
-       * If the mapping is for MULTI, use MeasureValueType.MULTI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-measurevaluetype)
-       */
-      override fun measureValueType(): String = unwrap(this).getMeasureValueType()
-
-      /**
-       * Required when measureValueType is MULTI.
-       *
-       * Attribute mappings for MULTI value measures.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-multimeasureattributemappings)
-       */
-      override fun multiMeasureAttributeMappings(): Any? =
-          unwrap(this).getMultiMeasureAttributeMappings()
-
-      /**
-       * This field refers to the source column from which measure-value is to be read for result
-       * materialization.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-sourcecolumn)
-       */
-      override fun sourceColumn(): String? = unwrap(this).getSourceColumn()
-
-      /**
-       * Target measure name to be used.
-       *
-       * If not provided, the target measure name by default would be measure-name if provided, or
-       * sourceColumn otherwise.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html#cfn-timestream-scheduledquery-mixedmeasuremapping-targetmeasurename)
-       */
-      override fun targetMeasureName(): String? = unwrap(this).getTargetMeasureName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MixedMeasureMappingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty):
-          MixedMeasureMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MixedMeasureMappingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MixedMeasureMappingProperty):
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty
-    }
-  }
-
-  /**
-   * Only one of MixedMeasureMappings or MultiMeasureMappings is to be provided.
-   *
-   * MultiMeasureMappings can be used to ingest data as multi measures in the derived table.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * MultiMeasureMappingsProperty multiMeasureMappingsProperty =
-   * MultiMeasureMappingsProperty.builder()
-   * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
-   * .measureValueType("measureValueType")
-   * .sourceColumn("sourceColumn")
-   * // the properties below are optional
-   * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
-   * .build()))
-   * // the properties below are optional
-   * .targetMultiMeasureName("targetMultiMeasureName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html)
-   */
-  public interface MultiMeasureMappingsProperty {
-    /**
-     * Required.
-     *
-     * Attribute mappings to be used for mapping query results to ingest data for multi-measure
-     * attributes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html#cfn-timestream-scheduledquery-multimeasuremappings-multimeasureattributemappings)
-     */
-    public fun multiMeasureAttributeMappings(): Any
-
-    /**
-     * The name of the target multi-measure name in the derived table.
-     *
-     * This input is required when measureNameColumn is not provided. If MeasureNameColumn is
-     * provided, then value from that column will be used as multi-measure name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html#cfn-timestream-scheduledquery-multimeasuremappings-targetmultimeasurename)
-     */
-    public fun targetMultiMeasureName(): String? = unwrap(this).getTargetMultiMeasureName()
-
-    /**
-     * A builder for [MultiMeasureMappingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param multiMeasureAttributeMappings Required. 
-       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
-       * attributes.
-       */
-      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable)
-
-      /**
-       * @param multiMeasureAttributeMappings Required. 
-       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
-       * attributes.
-       */
-      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
-
-      /**
-       * @param multiMeasureAttributeMappings Required. 
-       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
-       * attributes.
-       */
-      public fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any)
-
-      /**
-       * @param targetMultiMeasureName The name of the target multi-measure name in the derived
-       * table.
-       * This input is required when measureNameColumn is not provided. If MeasureNameColumn is
-       * provided, then value from that column will be used as multi-measure name.
-       */
-      public fun targetMultiMeasureName(targetMultiMeasureName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty.builder()
-
-      /**
-       * @param multiMeasureAttributeMappings Required. 
-       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
-       * attributes.
-       */
-      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
-        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param multiMeasureAttributeMappings Required. 
-       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
-       * attributes.
-       */
-      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
-        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
-      }
-
-      /**
-       * @param multiMeasureAttributeMappings Required. 
-       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
-       * attributes.
-       */
-      override fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any): Unit =
-          multiMeasureAttributeMappings(multiMeasureAttributeMappings.toList())
-
-      /**
-       * @param targetMultiMeasureName The name of the target multi-measure name in the derived
-       * table.
-       * This input is required when measureNameColumn is not provided. If MeasureNameColumn is
-       * provided, then value from that column will be used as multi-measure name.
-       */
-      override fun targetMultiMeasureName(targetMultiMeasureName: String) {
-        cdkBuilder.targetMultiMeasureName(targetMultiMeasureName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty,
-    ) : CdkObject(cdkObject), MultiMeasureMappingsProperty {
-      /**
-       * Required.
-       *
-       * Attribute mappings to be used for mapping query results to ingest data for multi-measure
-       * attributes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html#cfn-timestream-scheduledquery-multimeasuremappings-multimeasureattributemappings)
-       */
-      override fun multiMeasureAttributeMappings(): Any =
-          unwrap(this).getMultiMeasureAttributeMappings()
-
-      /**
-       * The name of the target multi-measure name in the derived table.
-       *
-       * This input is required when measureNameColumn is not provided. If MeasureNameColumn is
-       * provided, then value from that column will be used as multi-measure name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html#cfn-timestream-scheduledquery-multimeasuremappings-targetmultimeasurename)
-       */
-      override fun targetMultiMeasureName(): String? = unwrap(this).getTargetMultiMeasureName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MultiMeasureMappingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty):
-          MultiMeasureMappingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MultiMeasureMappingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MultiMeasureMappingsProperty):
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty
-    }
-  }
-
-  /**
-   * Configuration required for error reporting.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * ErrorReportConfigurationProperty errorReportConfigurationProperty =
-   * ErrorReportConfigurationProperty.builder()
-   * .s3Configuration(S3ConfigurationProperty.builder()
-   * .bucketName("bucketName")
-   * // the properties below are optional
-   * .encryptionOption("encryptionOption")
-   * .objectKeyPrefix("objectKeyPrefix")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-errorreportconfiguration.html)
-   */
-  public interface ErrorReportConfigurationProperty {
-    /**
-     * The S3 configuration for the error reports.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-errorreportconfiguration.html#cfn-timestream-scheduledquery-errorreportconfiguration-s3configuration)
-     */
-    public fun s3Configuration(): Any
-
-    /**
-     * A builder for [ErrorReportConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Configuration The S3 configuration for the error reports. 
-       */
-      public fun s3Configuration(s3Configuration: IResolvable)
-
-      /**
-       * @param s3Configuration The S3 configuration for the error reports. 
-       */
-      public fun s3Configuration(s3Configuration: S3ConfigurationProperty)
-
-      /**
-       * @param s3Configuration The S3 configuration for the error reports. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2b4d8f1b5c3437012e697fbcab384cbae30b7a7c335885984356212fa9d386e5")
-      public fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty.builder()
-
-      /**
-       * @param s3Configuration The S3 configuration for the error reports. 
-       */
-      override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3Configuration The S3 configuration for the error reports. 
-       */
-      override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param s3Configuration The S3 configuration for the error reports. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2b4d8f1b5c3437012e697fbcab384cbae30b7a7c335885984356212fa9d386e5")
-      override fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit):
-          Unit = s3Configuration(S3ConfigurationProperty(s3Configuration))
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty,
-    ) : CdkObject(cdkObject), ErrorReportConfigurationProperty {
-      /**
-       * The S3 configuration for the error reports.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-errorreportconfiguration.html#cfn-timestream-scheduledquery-errorreportconfiguration-s3configuration)
-       */
-      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ErrorReportConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty):
-          ErrorReportConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ErrorReportConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ErrorReportConfigurationProperty):
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty
     }
   }
 }

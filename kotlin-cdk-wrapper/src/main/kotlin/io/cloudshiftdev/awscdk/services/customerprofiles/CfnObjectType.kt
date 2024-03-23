@@ -665,6 +665,440 @@ public open class CfnObjectType internal constructor(
   }
 
   /**
+   * A map of the name and ObjectType field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * FieldMapProperty fieldMapProperty = FieldMapProperty.builder()
+   * .name("name")
+   * .objectTypeField(ObjectTypeFieldProperty.builder()
+   * .contentType("contentType")
+   * .source("source")
+   * .target("target")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html)
+   */
+  public interface FieldMapProperty {
+    /**
+     * Name of the field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * Represents a field in a ProfileObjectType.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-objecttypefield)
+     */
+    public fun objectTypeField(): Any? = unwrap(this).getObjectTypeField()
+
+    /**
+     * A builder for [FieldMapProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name Name of the field.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param objectTypeField Represents a field in a ProfileObjectType.
+       */
+      public fun objectTypeField(objectTypeField: IResolvable)
+
+      /**
+       * @param objectTypeField Represents a field in a ProfileObjectType.
+       */
+      public fun objectTypeField(objectTypeField: ObjectTypeFieldProperty)
+
+      /**
+       * @param objectTypeField Represents a field in a ProfileObjectType.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6a36b474874f8982034c00f59853506f065262c2bd05f5ce8aa93d6089d5ceb5")
+      public fun objectTypeField(objectTypeField: ObjectTypeFieldProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty.Builder =
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty.builder()
+
+      /**
+       * @param name Name of the field.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param objectTypeField Represents a field in a ProfileObjectType.
+       */
+      override fun objectTypeField(objectTypeField: IResolvable) {
+        cdkBuilder.objectTypeField(objectTypeField.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param objectTypeField Represents a field in a ProfileObjectType.
+       */
+      override fun objectTypeField(objectTypeField: ObjectTypeFieldProperty) {
+        cdkBuilder.objectTypeField(objectTypeField.let(ObjectTypeFieldProperty::unwrap))
+      }
+
+      /**
+       * @param objectTypeField Represents a field in a ProfileObjectType.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6a36b474874f8982034c00f59853506f065262c2bd05f5ce8aa93d6089d5ceb5")
+      override fun objectTypeField(objectTypeField: ObjectTypeFieldProperty.Builder.() -> Unit):
+          Unit = objectTypeField(ObjectTypeFieldProperty(objectTypeField))
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty,
+    ) : CdkObject(cdkObject), FieldMapProperty {
+      /**
+       * Name of the field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * Represents a field in a ProfileObjectType.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-objecttypefield)
+       */
+      override fun objectTypeField(): Any? = unwrap(this).getObjectTypeField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FieldMapProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty):
+          FieldMapProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldMapProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FieldMapProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty
+    }
+  }
+
+  /**
+   * A unique key map that can be used to map data to the profile.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * KeyMapProperty keyMapProperty = KeyMapProperty.builder()
+   * .name("name")
+   * .objectTypeKeyList(List.of(ObjectTypeKeyProperty.builder()
+   * .fieldNames(List.of("fieldNames"))
+   * .standardIdentifiers(List.of("standardIdentifiers"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html)
+   */
+  public interface KeyMapProperty {
+    /**
+     * Name of the key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A list of ObjectTypeKey.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-objecttypekeylist)
+     */
+    public fun objectTypeKeyList(): Any? = unwrap(this).getObjectTypeKeyList()
+
+    /**
+     * A builder for [KeyMapProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name Name of the key.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param objectTypeKeyList A list of ObjectTypeKey.
+       */
+      public fun objectTypeKeyList(objectTypeKeyList: IResolvable)
+
+      /**
+       * @param objectTypeKeyList A list of ObjectTypeKey.
+       */
+      public fun objectTypeKeyList(objectTypeKeyList: List<Any>)
+
+      /**
+       * @param objectTypeKeyList A list of ObjectTypeKey.
+       */
+      public fun objectTypeKeyList(vararg objectTypeKeyList: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty.Builder =
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty.builder()
+
+      /**
+       * @param name Name of the key.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param objectTypeKeyList A list of ObjectTypeKey.
+       */
+      override fun objectTypeKeyList(objectTypeKeyList: IResolvable) {
+        cdkBuilder.objectTypeKeyList(objectTypeKeyList.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param objectTypeKeyList A list of ObjectTypeKey.
+       */
+      override fun objectTypeKeyList(objectTypeKeyList: List<Any>) {
+        cdkBuilder.objectTypeKeyList(objectTypeKeyList)
+      }
+
+      /**
+       * @param objectTypeKeyList A list of ObjectTypeKey.
+       */
+      override fun objectTypeKeyList(vararg objectTypeKeyList: Any): Unit =
+          objectTypeKeyList(objectTypeKeyList.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty,
+    ) : CdkObject(cdkObject), KeyMapProperty {
+      /**
+       * Name of the key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * A list of ObjectTypeKey.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-objecttypekeylist)
+       */
+      override fun objectTypeKeyList(): Any? = unwrap(this).getObjectTypeKeyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyMapProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty):
+          KeyMapProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyMapProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeyMapProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty
+    }
+  }
+
+  /**
+   * Represents a field in a ProfileObjectType.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * ObjectTypeFieldProperty objectTypeFieldProperty = ObjectTypeFieldProperty.builder()
+   * .contentType("contentType")
+   * .source("source")
+   * .target("target")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html)
+   */
+  public interface ObjectTypeFieldProperty {
+    /**
+     * The content type of the field.
+     *
+     * Used for determining equality when searching.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-contenttype)
+     */
+    public fun contentType(): String? = unwrap(this).getContentType()
+
+    /**
+     * A field of a ProfileObject.
+     *
+     * For example: _source.FirstName, where “_source” is a ProfileObjectType of a Zendesk user and
+     * “FirstName” is a field in that ObjectType.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-source)
+     */
+    public fun source(): String? = unwrap(this).getSource()
+
+    /**
+     * The location of the data in the standard ProfileObject model.
+     *
+     * For example: _profile.Address.PostalCode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-target)
+     */
+    public fun target(): String? = unwrap(this).getTarget()
+
+    /**
+     * A builder for [ObjectTypeFieldProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contentType The content type of the field.
+       * Used for determining equality when searching.
+       */
+      public fun contentType(contentType: String)
+
+      /**
+       * @param source A field of a ProfileObject.
+       * For example: _source.FirstName, where “_source” is a ProfileObjectType of a Zendesk user
+       * and “FirstName” is a field in that ObjectType.
+       */
+      public fun source(source: String)
+
+      /**
+       * @param target The location of the data in the standard ProfileObject model.
+       * For example: _profile.Address.PostalCode.
+       */
+      public fun target(target: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty.builder()
+
+      /**
+       * @param contentType The content type of the field.
+       * Used for determining equality when searching.
+       */
+      override fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+      }
+
+      /**
+       * @param source A field of a ProfileObject.
+       * For example: _source.FirstName, where “_source” is a ProfileObjectType of a Zendesk user
+       * and “FirstName” is a field in that ObjectType.
+       */
+      override fun source(source: String) {
+        cdkBuilder.source(source)
+      }
+
+      /**
+       * @param target The location of the data in the standard ProfileObject model.
+       * For example: _profile.Address.PostalCode.
+       */
+      override fun target(target: String) {
+        cdkBuilder.target(target)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty,
+    ) : CdkObject(cdkObject), ObjectTypeFieldProperty {
+      /**
+       * The content type of the field.
+       *
+       * Used for determining equality when searching.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-contenttype)
+       */
+      override fun contentType(): String? = unwrap(this).getContentType()
+
+      /**
+       * A field of a ProfileObject.
+       *
+       * For example: _source.FirstName, where “_source” is a ProfileObjectType of a Zendesk user
+       * and “FirstName” is a field in that ObjectType.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-source)
+       */
+      override fun source(): String? = unwrap(this).getSource()
+
+      /**
+       * The location of the data in the standard ProfileObject model.
+       *
+       * For example: _profile.Address.PostalCode.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-target)
+       */
+      override fun target(): String? = unwrap(this).getTarget()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ObjectTypeFieldProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty):
+          ObjectTypeFieldProperty = CdkObjectWrappers.wrap(cdkObject) as? ObjectTypeFieldProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ObjectTypeFieldProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty
+    }
+  }
+
+  /**
    * An object that defines the Key element of a ProfileObject.
    *
    * A Key is a special element that can be used to search for a customer profile.
@@ -840,440 +1274,6 @@ public open class CfnObjectType internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty
-    }
-  }
-
-  /**
-   * A map of the name and ObjectType field.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * FieldMapProperty fieldMapProperty = FieldMapProperty.builder()
-   * .name("name")
-   * .objectTypeField(ObjectTypeFieldProperty.builder()
-   * .contentType("contentType")
-   * .source("source")
-   * .target("target")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html)
-   */
-  public interface FieldMapProperty {
-    /**
-     * Name of the field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * Represents a field in a ProfileObjectType.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-objecttypefield)
-     */
-    public fun objectTypeField(): Any? = unwrap(this).getObjectTypeField()
-
-    /**
-     * A builder for [FieldMapProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name Name of the field.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param objectTypeField Represents a field in a ProfileObjectType.
-       */
-      public fun objectTypeField(objectTypeField: IResolvable)
-
-      /**
-       * @param objectTypeField Represents a field in a ProfileObjectType.
-       */
-      public fun objectTypeField(objectTypeField: ObjectTypeFieldProperty)
-
-      /**
-       * @param objectTypeField Represents a field in a ProfileObjectType.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6a36b474874f8982034c00f59853506f065262c2bd05f5ce8aa93d6089d5ceb5")
-      public fun objectTypeField(objectTypeField: ObjectTypeFieldProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty.builder()
-
-      /**
-       * @param name Name of the field.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param objectTypeField Represents a field in a ProfileObjectType.
-       */
-      override fun objectTypeField(objectTypeField: IResolvable) {
-        cdkBuilder.objectTypeField(objectTypeField.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param objectTypeField Represents a field in a ProfileObjectType.
-       */
-      override fun objectTypeField(objectTypeField: ObjectTypeFieldProperty) {
-        cdkBuilder.objectTypeField(objectTypeField.let(ObjectTypeFieldProperty::unwrap))
-      }
-
-      /**
-       * @param objectTypeField Represents a field in a ProfileObjectType.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6a36b474874f8982034c00f59853506f065262c2bd05f5ce8aa93d6089d5ceb5")
-      override fun objectTypeField(objectTypeField: ObjectTypeFieldProperty.Builder.() -> Unit):
-          Unit = objectTypeField(ObjectTypeFieldProperty(objectTypeField))
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty,
-    ) : CdkObject(cdkObject), FieldMapProperty {
-      /**
-       * Name of the field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * Represents a field in a ProfileObjectType.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-objecttypefield)
-       */
-      override fun objectTypeField(): Any? = unwrap(this).getObjectTypeField()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FieldMapProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty):
-          FieldMapProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldMapProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FieldMapProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty
-    }
-  }
-
-  /**
-   * Represents a field in a ProfileObjectType.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * ObjectTypeFieldProperty objectTypeFieldProperty = ObjectTypeFieldProperty.builder()
-   * .contentType("contentType")
-   * .source("source")
-   * .target("target")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html)
-   */
-  public interface ObjectTypeFieldProperty {
-    /**
-     * The content type of the field.
-     *
-     * Used for determining equality when searching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-contenttype)
-     */
-    public fun contentType(): String? = unwrap(this).getContentType()
-
-    /**
-     * A field of a ProfileObject.
-     *
-     * For example: _source.FirstName, where “_source” is a ProfileObjectType of a Zendesk user and
-     * “FirstName” is a field in that ObjectType.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-source)
-     */
-    public fun source(): String? = unwrap(this).getSource()
-
-    /**
-     * The location of the data in the standard ProfileObject model.
-     *
-     * For example: _profile.Address.PostalCode.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-target)
-     */
-    public fun target(): String? = unwrap(this).getTarget()
-
-    /**
-     * A builder for [ObjectTypeFieldProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contentType The content type of the field.
-       * Used for determining equality when searching.
-       */
-      public fun contentType(contentType: String)
-
-      /**
-       * @param source A field of a ProfileObject.
-       * For example: _source.FirstName, where “_source” is a ProfileObjectType of a Zendesk user
-       * and “FirstName” is a field in that ObjectType.
-       */
-      public fun source(source: String)
-
-      /**
-       * @param target The location of the data in the standard ProfileObject model.
-       * For example: _profile.Address.PostalCode.
-       */
-      public fun target(target: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty.builder()
-
-      /**
-       * @param contentType The content type of the field.
-       * Used for determining equality when searching.
-       */
-      override fun contentType(contentType: String) {
-        cdkBuilder.contentType(contentType)
-      }
-
-      /**
-       * @param source A field of a ProfileObject.
-       * For example: _source.FirstName, where “_source” is a ProfileObjectType of a Zendesk user
-       * and “FirstName” is a field in that ObjectType.
-       */
-      override fun source(source: String) {
-        cdkBuilder.source(source)
-      }
-
-      /**
-       * @param target The location of the data in the standard ProfileObject model.
-       * For example: _profile.Address.PostalCode.
-       */
-      override fun target(target: String) {
-        cdkBuilder.target(target)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty,
-    ) : CdkObject(cdkObject), ObjectTypeFieldProperty {
-      /**
-       * The content type of the field.
-       *
-       * Used for determining equality when searching.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-contenttype)
-       */
-      override fun contentType(): String? = unwrap(this).getContentType()
-
-      /**
-       * A field of a ProfileObject.
-       *
-       * For example: _source.FirstName, where “_source” is a ProfileObjectType of a Zendesk user
-       * and “FirstName” is a field in that ObjectType.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-source)
-       */
-      override fun source(): String? = unwrap(this).getSource()
-
-      /**
-       * The location of the data in the standard ProfileObject model.
-       *
-       * For example: _profile.Address.PostalCode.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-target)
-       */
-      override fun target(): String? = unwrap(this).getTarget()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ObjectTypeFieldProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty):
-          ObjectTypeFieldProperty = CdkObjectWrappers.wrap(cdkObject) as? ObjectTypeFieldProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ObjectTypeFieldProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty
-    }
-  }
-
-  /**
-   * A unique key map that can be used to map data to the profile.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * KeyMapProperty keyMapProperty = KeyMapProperty.builder()
-   * .name("name")
-   * .objectTypeKeyList(List.of(ObjectTypeKeyProperty.builder()
-   * .fieldNames(List.of("fieldNames"))
-   * .standardIdentifiers(List.of("standardIdentifiers"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html)
-   */
-  public interface KeyMapProperty {
-    /**
-     * Name of the key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A list of ObjectTypeKey.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-objecttypekeylist)
-     */
-    public fun objectTypeKeyList(): Any? = unwrap(this).getObjectTypeKeyList()
-
-    /**
-     * A builder for [KeyMapProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name Name of the key.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param objectTypeKeyList A list of ObjectTypeKey.
-       */
-      public fun objectTypeKeyList(objectTypeKeyList: IResolvable)
-
-      /**
-       * @param objectTypeKeyList A list of ObjectTypeKey.
-       */
-      public fun objectTypeKeyList(objectTypeKeyList: List<Any>)
-
-      /**
-       * @param objectTypeKeyList A list of ObjectTypeKey.
-       */
-      public fun objectTypeKeyList(vararg objectTypeKeyList: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty.builder()
-
-      /**
-       * @param name Name of the key.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param objectTypeKeyList A list of ObjectTypeKey.
-       */
-      override fun objectTypeKeyList(objectTypeKeyList: IResolvable) {
-        cdkBuilder.objectTypeKeyList(objectTypeKeyList.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param objectTypeKeyList A list of ObjectTypeKey.
-       */
-      override fun objectTypeKeyList(objectTypeKeyList: List<Any>) {
-        cdkBuilder.objectTypeKeyList(objectTypeKeyList)
-      }
-
-      /**
-       * @param objectTypeKeyList A list of ObjectTypeKey.
-       */
-      override fun objectTypeKeyList(vararg objectTypeKeyList: Any): Unit =
-          objectTypeKeyList(objectTypeKeyList.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty,
-    ) : CdkObject(cdkObject), KeyMapProperty {
-      /**
-       * Name of the key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * A list of ObjectTypeKey.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-objecttypekeylist)
-       */
-      override fun objectTypeKeyList(): Any? = unwrap(this).getObjectTypeKeyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyMapProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty):
-          KeyMapProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyMapProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KeyMapProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty
     }
   }
 }

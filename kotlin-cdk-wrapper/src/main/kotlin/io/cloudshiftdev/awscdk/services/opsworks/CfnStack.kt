@@ -1911,112 +1911,6 @@ public open class CfnStack internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * ElasticIpProperty elasticIpProperty = ElasticIpProperty.builder()
-   * .ip("ip")
-   * // the properties below are optional
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html)
-   */
-  public interface ElasticIpProperty {
-    /**
-     * The IP address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-ip)
-     */
-    public fun ip(): String
-
-    /**
-     * The name, which can be a maximum of 32 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [ElasticIpProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ip The IP address. 
-       */
-      public fun ip(ip: String)
-
-      /**
-       * @param name The name, which can be a maximum of 32 characters.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty.Builder =
-          software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty.builder()
-
-      /**
-       * @param ip The IP address. 
-       */
-      override fun ip(ip: String) {
-        cdkBuilder.ip(ip)
-      }
-
-      /**
-       * @param name The name, which can be a maximum of 32 characters.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build(): software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty,
-    ) : CdkObject(cdkObject), ElasticIpProperty {
-      /**
-       * The IP address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-ip)
-       */
-      override fun ip(): String = unwrap(this).getIp()
-
-      /**
-       * The name, which can be a maximum of 32 characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticIpProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty):
-          ElasticIpProperty = CdkObjectWrappers.wrap(cdkObject) as? ElasticIpProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ElasticIpProperty):
-          software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opsworks.*;
    * ChefConfigurationProperty chefConfigurationProperty = ChefConfigurationProperty.builder()
    * .berkshelfVersion("berkshelfVersion")
    * .manageBerkshelf(false)
@@ -2136,122 +2030,237 @@ public open class CfnStack internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * StackConfigurationManagerProperty stackConfigurationManagerProperty =
-   * StackConfigurationManagerProperty.builder()
+   * ElasticIpProperty elasticIpProperty = ElasticIpProperty.builder()
+   * .ip("ip")
+   * // the properties below are optional
    * .name("name")
-   * .version("version")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html)
    */
-  public interface StackConfigurationManagerProperty {
+  public interface ElasticIpProperty {
     /**
-     * The name.
+     * The IP address.
      *
-     * This parameter must be set to `Chef` .
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-ip)
+     */
+    public fun ip(): String
+
+    /**
+     * The name, which can be a maximum of 32 characters.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html#cfn-opsworks-stack-stackconfigurationmanager-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name)
      */
     public fun name(): String? = unwrap(this).getName()
 
     /**
-     * The Chef version.
-     *
-     * This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows
-     * stacks. The default value for Linux stacks is 12.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html#cfn-opsworks-stack-stackconfigurationmanager-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [StackConfigurationManagerProperty]
+     * A builder for [ElasticIpProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name.
-       * This parameter must be set to `Chef` .
+       * @param ip The IP address. 
        */
-      public fun name(name: String)
+      public fun ip(ip: String)
 
       /**
-       * @param version The Chef version.
-       * This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows
-       * stacks. The default value for Linux stacks is 12.
+       * @param name The name, which can be a maximum of 32 characters.
        */
-      public fun version(version: String)
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty.Builder
-          =
-          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty.builder()
+          software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty.Builder =
+          software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty.builder()
 
       /**
-       * @param name The name.
-       * This parameter must be set to `Chef` .
+       * @param ip The IP address. 
+       */
+      override fun ip(ip: String) {
+        cdkBuilder.ip(ip)
+      }
+
+      /**
+       * @param name The name, which can be a maximum of 32 characters.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      /**
-       * @param version The Chef version.
-       * This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows
-       * stacks. The default value for Linux stacks is 12.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty =
+      public fun build(): software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty,
-    ) : CdkObject(cdkObject), StackConfigurationManagerProperty {
+      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty,
+    ) : CdkObject(cdkObject), ElasticIpProperty {
       /**
-       * The name.
+       * The IP address.
        *
-       * This parameter must be set to `Chef` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html#cfn-opsworks-stack-stackconfigurationmanager-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-ip)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun ip(): String = unwrap(this).getIp()
 
       /**
-       * The Chef version.
+       * The name, which can be a maximum of 32 characters.
        *
-       * This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows
-       * stacks. The default value for Linux stacks is 12.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html#cfn-opsworks-stack-stackconfigurationmanager-version)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name)
        */
-      override fun version(): String? = unwrap(this).getVersion()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          StackConfigurationManagerProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticIpProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty):
-          StackConfigurationManagerProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StackConfigurationManagerProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty):
+          ElasticIpProperty = CdkObjectWrappers.wrap(cdkObject) as? ElasticIpProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StackConfigurationManagerProperty):
-          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty
+      internal fun unwrap(wrapped: ElasticIpProperty):
+          software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opsworks.*;
+   * RdsDbInstanceProperty rdsDbInstanceProperty = RdsDbInstanceProperty.builder()
+   * .dbPassword("dbPassword")
+   * .dbUser("dbUser")
+   * .rdsDbInstanceArn("rdsDbInstanceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html)
+   */
+  public interface RdsDbInstanceProperty {
+    /**
+     * AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword)
+     */
+    public fun dbPassword(): String
+
+    /**
+     * The master user name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser)
+     */
+    public fun dbUser(): String
+
+    /**
+     * The instance's ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)
+     */
+    public fun rdsDbInstanceArn(): String
+
+    /**
+     * A builder for [RdsDbInstanceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dbPassword AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual
+       * value. 
+       */
+      public fun dbPassword(dbPassword: String)
+
+      /**
+       * @param dbUser The master user name. 
+       */
+      public fun dbUser(dbUser: String)
+
+      /**
+       * @param rdsDbInstanceArn The instance's ARN. 
+       */
+      public fun rdsDbInstanceArn(rdsDbInstanceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty.Builder =
+          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty.builder()
+
+      /**
+       * @param dbPassword AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual
+       * value. 
+       */
+      override fun dbPassword(dbPassword: String) {
+        cdkBuilder.dbPassword(dbPassword)
+      }
+
+      /**
+       * @param dbUser The master user name. 
+       */
+      override fun dbUser(dbUser: String) {
+        cdkBuilder.dbUser(dbUser)
+      }
+
+      /**
+       * @param rdsDbInstanceArn The instance's ARN. 
+       */
+      override fun rdsDbInstanceArn(rdsDbInstanceArn: String) {
+        cdkBuilder.rdsDbInstanceArn(rdsDbInstanceArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty,
+    ) : CdkObject(cdkObject), RdsDbInstanceProperty {
+      /**
+       * AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword)
+       */
+      override fun dbPassword(): String = unwrap(this).getDbPassword()
+
+      /**
+       * The master user name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser)
+       */
+      override fun dbUser(): String = unwrap(this).getDbUser()
+
+      /**
+       * The instance's ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)
+       */
+      override fun rdsDbInstanceArn(): String = unwrap(this).getRdsDbInstanceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RdsDbInstanceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty):
+          RdsDbInstanceProperty = CdkObjectWrappers.wrap(cdkObject) as? RdsDbInstanceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RdsDbInstanceProperty):
+          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty
     }
   }
 
@@ -2579,131 +2588,122 @@ public open class CfnStack internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * RdsDbInstanceProperty rdsDbInstanceProperty = RdsDbInstanceProperty.builder()
-   * .dbPassword("dbPassword")
-   * .dbUser("dbUser")
-   * .rdsDbInstanceArn("rdsDbInstanceArn")
+   * StackConfigurationManagerProperty stackConfigurationManagerProperty =
+   * StackConfigurationManagerProperty.builder()
+   * .name("name")
+   * .version("version")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html)
    */
-  public interface RdsDbInstanceProperty {
+  public interface StackConfigurationManagerProperty {
     /**
-     * AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual value.
+     * The name.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword)
+     * This parameter must be set to `Chef` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html#cfn-opsworks-stack-stackconfigurationmanager-name)
      */
-    public fun dbPassword(): String
+    public fun name(): String? = unwrap(this).getName()
 
     /**
-     * The master user name.
+     * The Chef version.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser)
+     * This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows
+     * stacks. The default value for Linux stacks is 12.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html#cfn-opsworks-stack-stackconfigurationmanager-version)
      */
-    public fun dbUser(): String
+    public fun version(): String? = unwrap(this).getVersion()
 
     /**
-     * The instance's ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)
-     */
-    public fun rdsDbInstanceArn(): String
-
-    /**
-     * A builder for [RdsDbInstanceProperty]
+     * A builder for [StackConfigurationManagerProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dbPassword AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual
-       * value. 
+       * @param name The name.
+       * This parameter must be set to `Chef` .
        */
-      public fun dbPassword(dbPassword: String)
+      public fun name(name: String)
 
       /**
-       * @param dbUser The master user name. 
+       * @param version The Chef version.
+       * This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows
+       * stacks. The default value for Linux stacks is 12.
        */
-      public fun dbUser(dbUser: String)
-
-      /**
-       * @param rdsDbInstanceArn The instance's ARN. 
-       */
-      public fun rdsDbInstanceArn(rdsDbInstanceArn: String)
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty.Builder =
-          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty.builder()
+          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty.Builder
+          =
+          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty.builder()
 
       /**
-       * @param dbPassword AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual
-       * value. 
+       * @param name The name.
+       * This parameter must be set to `Chef` .
        */
-      override fun dbPassword(dbPassword: String) {
-        cdkBuilder.dbPassword(dbPassword)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param dbUser The master user name. 
+       * @param version The Chef version.
+       * This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows
+       * stacks. The default value for Linux stacks is 12.
        */
-      override fun dbUser(dbUser: String) {
-        cdkBuilder.dbUser(dbUser)
+      override fun version(version: String) {
+        cdkBuilder.version(version)
       }
 
-      /**
-       * @param rdsDbInstanceArn The instance's ARN. 
-       */
-      override fun rdsDbInstanceArn(rdsDbInstanceArn: String) {
-        cdkBuilder.rdsDbInstanceArn(rdsDbInstanceArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty =
+      public fun build():
+          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty,
-    ) : CdkObject(cdkObject), RdsDbInstanceProperty {
+          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty,
+    ) : CdkObject(cdkObject), StackConfigurationManagerProperty {
       /**
-       * AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual value.
+       * The name.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword)
+       * This parameter must be set to `Chef` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html#cfn-opsworks-stack-stackconfigurationmanager-name)
        */
-      override fun dbPassword(): String = unwrap(this).getDbPassword()
+      override fun name(): String? = unwrap(this).getName()
 
       /**
-       * The master user name.
+       * The Chef version.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser)
-       */
-      override fun dbUser(): String = unwrap(this).getDbUser()
-
-      /**
-       * The instance's ARN.
+       * This parameter must be set to 12, 11.10, or 11.4 for Linux stacks, and to 12.2 for Windows
+       * stacks. The default value for Linux stacks is 12.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigurationmanager.html#cfn-opsworks-stack-stackconfigurationmanager-version)
        */
-      override fun rdsDbInstanceArn(): String = unwrap(this).getRdsDbInstanceArn()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RdsDbInstanceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          StackConfigurationManagerProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty):
-          RdsDbInstanceProperty = CdkObjectWrappers.wrap(cdkObject) as? RdsDbInstanceProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty):
+          StackConfigurationManagerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StackConfigurationManagerProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RdsDbInstanceProperty):
-          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty
+      internal fun unwrap(wrapped: StackConfigurationManagerProperty):
+          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty
     }
   }
 }

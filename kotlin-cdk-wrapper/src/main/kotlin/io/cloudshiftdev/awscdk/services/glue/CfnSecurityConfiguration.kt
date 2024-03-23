@@ -247,6 +247,119 @@ public open class CfnSecurityConfiguration internal constructor(
   }
 
   /**
+   * Specifies how Amazon CloudWatch data should be encrypted.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * CloudWatchEncryptionProperty cloudWatchEncryptionProperty =
+   * CloudWatchEncryptionProperty.builder()
+   * .cloudWatchEncryptionMode("cloudWatchEncryptionMode")
+   * .kmsKeyArn("kmsKeyArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html)
+   */
+  public interface CloudWatchEncryptionProperty {
+    /**
+     * The encryption mode to use for CloudWatch data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode)
+     */
+    public fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
+
+    /**
+     * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn)
+     */
+    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+
+    /**
+     * A builder for [CloudWatchEncryptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchEncryptionMode The encryption mode to use for CloudWatch data.
+       */
+      public fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String)
+
+      /**
+       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
+       * data.
+       */
+      public fun kmsKeyArn(kmsKeyArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.Builder
+          =
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.builder()
+
+      /**
+       * @param cloudWatchEncryptionMode The encryption mode to use for CloudWatch data.
+       */
+      override fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String) {
+        cdkBuilder.cloudWatchEncryptionMode(cloudWatchEncryptionMode)
+      }
+
+      /**
+       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
+       * data.
+       */
+      override fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty,
+    ) : CdkObject(cdkObject), CloudWatchEncryptionProperty {
+      /**
+       * The encryption mode to use for CloudWatch data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode)
+       */
+      override fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
+
+      /**
+       * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn)
+       */
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchEncryptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty):
+          CloudWatchEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchEncryptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchEncryptionProperty):
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+    }
+  }
+
+  /**
    * Specifies an encryption configuration.
    *
    * Example:
@@ -481,7 +594,7 @@ public open class CfnSecurityConfiguration internal constructor(
   }
 
   /**
-   * Specifies how Amazon CloudWatch data should be encrypted.
+   * Specifies how job bookmark data should be encrypted.
    *
    * Example:
    *
@@ -489,39 +602,39 @@ public open class CfnSecurityConfiguration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.glue.*;
-   * CloudWatchEncryptionProperty cloudWatchEncryptionProperty =
-   * CloudWatchEncryptionProperty.builder()
-   * .cloudWatchEncryptionMode("cloudWatchEncryptionMode")
+   * JobBookmarksEncryptionProperty jobBookmarksEncryptionProperty =
+   * JobBookmarksEncryptionProperty.builder()
+   * .jobBookmarksEncryptionMode("jobBookmarksEncryptionMode")
    * .kmsKeyArn("kmsKeyArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html)
    */
-  public interface CloudWatchEncryptionProperty {
+  public interface JobBookmarksEncryptionProperty {
     /**
-     * The encryption mode to use for CloudWatch data.
+     * The encryption mode to use for job bookmarks data.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-jobbookmarksencryptionmode)
      */
-    public fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
+    public fun jobBookmarksEncryptionMode(): String? = unwrap(this).getJobBookmarksEncryptionMode()
 
     /**
      * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-kmskeyarn)
      */
     public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     /**
-     * A builder for [CloudWatchEncryptionProperty]
+     * A builder for [JobBookmarksEncryptionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param cloudWatchEncryptionMode The encryption mode to use for CloudWatch data.
+       * @param jobBookmarksEncryptionMode The encryption mode to use for job bookmarks data.
        */
-      public fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String)
+      public fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String)
 
       /**
        * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
@@ -532,15 +645,15 @@ public open class CfnSecurityConfiguration internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.Builder
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty.Builder
           =
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.builder()
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty.builder()
 
       /**
-       * @param cloudWatchEncryptionMode The encryption mode to use for CloudWatch data.
+       * @param jobBookmarksEncryptionMode The encryption mode to use for job bookmarks data.
        */
-      override fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String) {
-        cdkBuilder.cloudWatchEncryptionMode(cloudWatchEncryptionMode)
+      override fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String) {
+        cdkBuilder.jobBookmarksEncryptionMode(jobBookmarksEncryptionMode)
       }
 
       /**
@@ -552,44 +665,45 @@ public open class CfnSecurityConfiguration internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty,
-    ) : CdkObject(cdkObject), CloudWatchEncryptionProperty {
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty,
+    ) : CdkObject(cdkObject), JobBookmarksEncryptionProperty {
       /**
-       * The encryption mode to use for CloudWatch data.
+       * The encryption mode to use for job bookmarks data.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-jobbookmarksencryptionmode)
        */
-      override fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
+      override fun jobBookmarksEncryptionMode(): String? =
+          unwrap(this).getJobBookmarksEncryptionMode()
 
       /**
        * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-kmskeyarn)
        */
       override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchEncryptionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JobBookmarksEncryptionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty):
-          CloudWatchEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchEncryptionProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty):
+          JobBookmarksEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JobBookmarksEncryptionProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CloudWatchEncryptionProperty):
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+      internal fun unwrap(wrapped: JobBookmarksEncryptionProperty):
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty
     }
   }
 
@@ -702,120 +816,6 @@ public open class CfnSecurityConfiguration internal constructor(
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty
-    }
-  }
-
-  /**
-   * Specifies how job bookmark data should be encrypted.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * JobBookmarksEncryptionProperty jobBookmarksEncryptionProperty =
-   * JobBookmarksEncryptionProperty.builder()
-   * .jobBookmarksEncryptionMode("jobBookmarksEncryptionMode")
-   * .kmsKeyArn("kmsKeyArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html)
-   */
-  public interface JobBookmarksEncryptionProperty {
-    /**
-     * The encryption mode to use for job bookmarks data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-jobbookmarksencryptionmode)
-     */
-    public fun jobBookmarksEncryptionMode(): String? = unwrap(this).getJobBookmarksEncryptionMode()
-
-    /**
-     * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-kmskeyarn)
-     */
-    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-
-    /**
-     * A builder for [JobBookmarksEncryptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param jobBookmarksEncryptionMode The encryption mode to use for job bookmarks data.
-       */
-      public fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String)
-
-      /**
-       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
-       * data.
-       */
-      public fun kmsKeyArn(kmsKeyArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty.Builder
-          =
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty.builder()
-
-      /**
-       * @param jobBookmarksEncryptionMode The encryption mode to use for job bookmarks data.
-       */
-      override fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String) {
-        cdkBuilder.jobBookmarksEncryptionMode(jobBookmarksEncryptionMode)
-      }
-
-      /**
-       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
-       * data.
-       */
-      override fun kmsKeyArn(kmsKeyArn: String) {
-        cdkBuilder.kmsKeyArn(kmsKeyArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty,
-    ) : CdkObject(cdkObject), JobBookmarksEncryptionProperty {
-      /**
-       * The encryption mode to use for job bookmarks data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-jobbookmarksencryptionmode)
-       */
-      override fun jobBookmarksEncryptionMode(): String? =
-          unwrap(this).getJobBookmarksEncryptionMode()
-
-      /**
-       * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-kmskeyarn)
-       */
-      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JobBookmarksEncryptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty):
-          JobBookmarksEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JobBookmarksEncryptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JobBookmarksEncryptionProperty):
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty
     }
   }
 }

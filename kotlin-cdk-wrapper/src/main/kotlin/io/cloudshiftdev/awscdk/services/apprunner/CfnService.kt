@@ -996,8 +996,9 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * Describes configuration settings related to outbound network traffic of an AWS App Runner
-   * service.
+   * Describes resources needed to authenticate access to some source repositories.
+   *
+   * The specific resource depends on the repository provider.
    *
    * Example:
    *
@@ -1005,133 +1006,132 @@ public open class CfnService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * EgressConfigurationProperty egressConfigurationProperty = EgressConfigurationProperty.builder()
-   * .egressType("egressType")
-   * // the properties below are optional
-   * .vpcConnectorArn("vpcConnectorArn")
+   * AuthenticationConfigurationProperty authenticationConfigurationProperty =
+   * AuthenticationConfigurationProperty.builder()
+   * .accessRoleArn("accessRoleArn")
+   * .connectionArn("connectionArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html)
    */
-  public interface EgressConfigurationProperty {
+  public interface AuthenticationConfigurationProperty {
     /**
-     * The type of egress configuration.
+     * The Amazon Resource Name (ARN) of the IAM role that grants the App Runner service access to a
+     * source repository.
      *
-     * Set to `DEFAULT` for access to resources hosted on public networks.
+     * It's required for ECR image repositories (but not for ECR Public repositories).
      *
-     * Set to `VPC` to associate your service to a custom VPC specified by `VpcConnectorArn` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html#cfn-apprunner-service-egressconfiguration-egresstype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-accessrolearn)
      */
-    public fun egressType(): String
+    public fun accessRoleArn(): String? = unwrap(this).getAccessRoleArn()
 
     /**
-     * The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to associate
-     * with your App Runner service.
+     * The Amazon Resource Name (ARN) of the App Runner connection that enables the App Runner
+     * service to connect to a source repository.
      *
-     * Only valid when `EgressType = VPC` .
+     * It's required for GitHub code repositories.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html#cfn-apprunner-service-egressconfiguration-vpcconnectorarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-connectionarn)
      */
-    public fun vpcConnectorArn(): String? = unwrap(this).getVpcConnectorArn()
+    public fun connectionArn(): String? = unwrap(this).getConnectionArn()
 
     /**
-     * A builder for [EgressConfigurationProperty]
+     * A builder for [AuthenticationConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param egressType The type of egress configuration. 
-       * Set to `DEFAULT` for access to resources hosted on public networks.
-       *
-       * Set to `VPC` to associate your service to a custom VPC specified by `VpcConnectorArn` .
+       * @param accessRoleArn The Amazon Resource Name (ARN) of the IAM role that grants the App
+       * Runner service access to a source repository.
+       * It's required for ECR image repositories (but not for ECR Public repositories).
        */
-      public fun egressType(egressType: String)
+      public fun accessRoleArn(accessRoleArn: String)
 
       /**
-       * @param vpcConnectorArn The Amazon Resource Name (ARN) of the App Runner VPC connector that
-       * you want to associate with your App Runner service.
-       * Only valid when `EgressType = VPC` .
+       * @param connectionArn The Amazon Resource Name (ARN) of the App Runner connection that
+       * enables the App Runner service to connect to a source repository.
+       * It's required for GitHub code repositories.
        */
-      public fun vpcConnectorArn(vpcConnectorArn: String)
+      public fun connectionArn(connectionArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty.Builder =
-          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty.builder()
+          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty.builder()
 
       /**
-       * @param egressType The type of egress configuration. 
-       * Set to `DEFAULT` for access to resources hosted on public networks.
-       *
-       * Set to `VPC` to associate your service to a custom VPC specified by `VpcConnectorArn` .
+       * @param accessRoleArn The Amazon Resource Name (ARN) of the IAM role that grants the App
+       * Runner service access to a source repository.
+       * It's required for ECR image repositories (but not for ECR Public repositories).
        */
-      override fun egressType(egressType: String) {
-        cdkBuilder.egressType(egressType)
+      override fun accessRoleArn(accessRoleArn: String) {
+        cdkBuilder.accessRoleArn(accessRoleArn)
       }
 
       /**
-       * @param vpcConnectorArn The Amazon Resource Name (ARN) of the App Runner VPC connector that
-       * you want to associate with your App Runner service.
-       * Only valid when `EgressType = VPC` .
+       * @param connectionArn The Amazon Resource Name (ARN) of the App Runner connection that
+       * enables the App Runner service to connect to a source repository.
+       * It's required for GitHub code repositories.
        */
-      override fun vpcConnectorArn(vpcConnectorArn: String) {
-        cdkBuilder.vpcConnectorArn(vpcConnectorArn)
+      override fun connectionArn(connectionArn: String) {
+        cdkBuilder.connectionArn(connectionArn)
       }
 
       public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty =
+          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty,
-    ) : CdkObject(cdkObject), EgressConfigurationProperty {
+          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty,
+    ) : CdkObject(cdkObject), AuthenticationConfigurationProperty {
       /**
-       * The type of egress configuration.
+       * The Amazon Resource Name (ARN) of the IAM role that grants the App Runner service access to
+       * a source repository.
        *
-       * Set to `DEFAULT` for access to resources hosted on public networks.
+       * It's required for ECR image repositories (but not for ECR Public repositories).
        *
-       * Set to `VPC` to associate your service to a custom VPC specified by `VpcConnectorArn` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html#cfn-apprunner-service-egressconfiguration-egresstype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-accessrolearn)
        */
-      override fun egressType(): String = unwrap(this).getEgressType()
+      override fun accessRoleArn(): String? = unwrap(this).getAccessRoleArn()
 
       /**
-       * The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to associate
-       * with your App Runner service.
+       * The Amazon Resource Name (ARN) of the App Runner connection that enables the App Runner
+       * service to connect to a source repository.
        *
-       * Only valid when `EgressType = VPC` .
+       * It's required for GitHub code repositories.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html#cfn-apprunner-service-egressconfiguration-vpcconnectorarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-connectionarn)
        */
-      override fun vpcConnectorArn(): String? = unwrap(this).getVpcConnectorArn()
+      override fun connectionArn(): String? = unwrap(this).getConnectionArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EgressConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AuthenticationConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty):
-          EgressConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EgressConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty):
+          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthenticationConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EgressConfigurationProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty =
+      internal fun unwrap(wrapped: AuthenticationConfigurationProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty
+          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty
     }
   }
 
   /**
-   * Describes a key-value pair, which is a string-to-string mapping.
+   * Describes the configuration that AWS App Runner uses to build and run an App Runner service
+   * from a source code repository.
    *
    * Example:
    *
@@ -1139,102 +1139,580 @@ public open class CfnService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * KeyValuePairProperty keyValuePairProperty = KeyValuePairProperty.builder()
+   * CodeConfigurationProperty codeConfigurationProperty = CodeConfigurationProperty.builder()
+   * .configurationSource("configurationSource")
+   * // the properties below are optional
+   * .codeConfigurationValues(CodeConfigurationValuesProperty.builder()
+   * .runtime("runtime")
+   * // the properties below are optional
+   * .buildCommand("buildCommand")
+   * .port("port")
+   * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
    * .name("name")
    * .value("value")
+   * .build()))
+   * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .startCommand("startCommand")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html)
    */
-  public interface KeyValuePairProperty {
+  public interface CodeConfigurationProperty {
     /**
-     * The key name string to map to a value.
+     * The basic configuration for building and running the App Runner service.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-name)
+     * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
+     * the source code repository (or ignoring the file if it exists).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-codeconfigurationvalues)
      */
-    public fun name(): String? = unwrap(this).getName()
+    public fun codeConfigurationValues(): Any? = unwrap(this).getCodeConfigurationValues()
 
     /**
-     * The value string to which the key name is mapped.
+     * The source of the App Runner configuration. Values are interpreted as follows:.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-value)
+     * * `REPOSITORY` – App Runner reads configuration values from the `apprunner.yaml` file in the
+     * source code repository and ignores `CodeConfigurationValues` .
+     * * `API` – App Runner uses configuration values provided in `CodeConfigurationValues` and
+     * ignores the `apprunner.yaml` file in the source code repository.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-configurationsource)
      */
-    public fun `value`(): String? = unwrap(this).getValue()
+    public fun configurationSource(): String
 
     /**
-     * A builder for [KeyValuePairProperty]
+     * A builder for [CodeConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The key name string to map to a value.
+       * @param codeConfigurationValues The basic configuration for building and running the App
+       * Runner service.
+       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
+       * the source code repository (or ignoring the file if it exists).
        */
-      public fun name(name: String)
+      public fun codeConfigurationValues(codeConfigurationValues: IResolvable)
 
       /**
-       * @param value The value string to which the key name is mapped.
+       * @param codeConfigurationValues The basic configuration for building and running the App
+       * Runner service.
+       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
+       * the source code repository (or ignoring the file if it exists).
        */
-      public fun `value`(`value`: String)
+      public fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty)
+
+      /**
+       * @param codeConfigurationValues The basic configuration for building and running the App
+       * Runner service.
+       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
+       * the source code repository (or ignoring the file if it exists).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3c42f1eedb0abdc71ecbbfd342f8f06aa8ff7fa1c27900a53c5476cca7e690d4")
+      public
+          fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty.Builder.() -> Unit)
+
+      /**
+       * @param configurationSource The source of the App Runner configuration. Values are
+       * interpreted as follows:. 
+       * * `REPOSITORY` – App Runner reads configuration values from the `apprunner.yaml` file in
+       * the source code repository and ignores `CodeConfigurationValues` .
+       * * `API` – App Runner uses configuration values provided in `CodeConfigurationValues` and
+       * ignores the `apprunner.yaml` file in the source code repository.
+       */
+      public fun configurationSource(configurationSource: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty.Builder =
-          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty.builder()
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty.Builder =
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty.builder()
 
       /**
-       * @param name The key name string to map to a value.
+       * @param codeConfigurationValues The basic configuration for building and running the App
+       * Runner service.
+       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
+       * the source code repository (or ignoring the file if it exists).
        */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun codeConfigurationValues(codeConfigurationValues: IResolvable) {
+        cdkBuilder.codeConfigurationValues(codeConfigurationValues.let(IResolvable::unwrap))
       }
 
       /**
-       * @param value The value string to which the key name is mapped.
+       * @param codeConfigurationValues The basic configuration for building and running the App
+       * Runner service.
+       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
+       * the source code repository (or ignoring the file if it exists).
        */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
+      override
+          fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty) {
+        cdkBuilder.codeConfigurationValues(codeConfigurationValues.let(CodeConfigurationValuesProperty::unwrap))
       }
 
-      public fun build(): software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty
-          = cdkBuilder.build()
+      /**
+       * @param codeConfigurationValues The basic configuration for building and running the App
+       * Runner service.
+       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
+       * the source code repository (or ignoring the file if it exists).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3c42f1eedb0abdc71ecbbfd342f8f06aa8ff7fa1c27900a53c5476cca7e690d4")
+      override
+          fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty.Builder.() -> Unit):
+          Unit = codeConfigurationValues(CodeConfigurationValuesProperty(codeConfigurationValues))
+
+      /**
+       * @param configurationSource The source of the App Runner configuration. Values are
+       * interpreted as follows:. 
+       * * `REPOSITORY` – App Runner reads configuration values from the `apprunner.yaml` file in
+       * the source code repository and ignores `CodeConfigurationValues` .
+       * * `API` – App Runner uses configuration values provided in `CodeConfigurationValues` and
+       * ignores the `apprunner.yaml` file in the source code repository.
+       */
+      override fun configurationSource(configurationSource: String) {
+        cdkBuilder.configurationSource(configurationSource)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty,
-    ) : CdkObject(cdkObject), KeyValuePairProperty {
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty,
+    ) : CdkObject(cdkObject), CodeConfigurationProperty {
       /**
-       * The key name string to map to a value.
+       * The basic configuration for building and running the App Runner service.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-name)
+       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
+       * the source code repository (or ignoring the file if it exists).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-codeconfigurationvalues)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun codeConfigurationValues(): Any? = unwrap(this).getCodeConfigurationValues()
 
       /**
-       * The value string to which the key name is mapped.
+       * The source of the App Runner configuration. Values are interpreted as follows:.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-value)
+       * * `REPOSITORY` – App Runner reads configuration values from the `apprunner.yaml` file in
+       * the source code repository and ignores `CodeConfigurationValues` .
+       * * `API` – App Runner uses configuration values provided in `CodeConfigurationValues` and
+       * ignores the `apprunner.yaml` file in the source code repository.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-configurationsource)
        */
-      override fun `value`(): String? = unwrap(this).getValue()
+      override fun configurationSource(): String = unwrap(this).getConfigurationSource()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyValuePairProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CodeConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty):
-          KeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValuePairProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty):
+          CodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: KeyValuePairProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty
+      internal fun unwrap(wrapped: CodeConfigurationProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the basic configuration needed for building and running an AWS App Runner service.
+   *
+   * This type doesn't support the full set of possible configuration options. Fur full
+   * configuration capabilities, use a `apprunner.yaml` file in the source code repository.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apprunner.*;
+   * CodeConfigurationValuesProperty codeConfigurationValuesProperty =
+   * CodeConfigurationValuesProperty.builder()
+   * .runtime("runtime")
+   * // the properties below are optional
+   * .buildCommand("buildCommand")
+   * .port("port")
+   * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .startCommand("startCommand")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html)
+   */
+  public interface CodeConfigurationValuesProperty {
+    /**
+     * The command App Runner runs to build your application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-buildcommand)
+     */
+    public fun buildCommand(): String? = unwrap(this).getBuildCommand()
+
+    /**
+     * The port that your application listens to in the container.
+     *
+     * Default: `8080`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-port)
+     */
+    public fun port(): String? = unwrap(this).getPort()
+
+    /**
+     * A runtime environment type for building and running an App Runner service.
+     *
+     * It represents a programming language runtime.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtime)
+     */
+    public fun runtime(): String
+
+    /**
+     * An array of key-value pairs representing the secrets and parameters that get referenced to
+     * your service as an environment variable.
+     *
+     * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+     * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+     *
+     *
+     * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+     * service that you're launching, you can use either the full ARN or name of the secret. If the
+     * parameter exists in a different Region, then the full ARN must be specified.
+     * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+     * not supported.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentsecrets)
+     */
+    public fun runtimeEnvironmentSecrets(): Any? = unwrap(this).getRuntimeEnvironmentSecrets()
+
+    /**
+     * The environment variables that are available to your running AWS App Runner service.
+     *
+     * An array of key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentvariables)
+     */
+    public fun runtimeEnvironmentVariables(): Any? = unwrap(this).getRuntimeEnvironmentVariables()
+
+    /**
+     * The command App Runner runs to start your application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-startcommand)
+     */
+    public fun startCommand(): String? = unwrap(this).getStartCommand()
+
+    /**
+     * A builder for [CodeConfigurationValuesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param buildCommand The command App Runner runs to build your application.
+       */
+      public fun buildCommand(buildCommand: String)
+
+      /**
+       * @param port The port that your application listens to in the container.
+       * Default: `8080`
+       */
+      public fun port(port: String)
+
+      /**
+       * @param runtime A runtime environment type for building and running an App Runner service. 
+       * It represents a programming language runtime.
+       */
+      public fun runtime(runtime: String)
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable)
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>)
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      public fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any)
+
+      /**
+       * @param runtimeEnvironmentVariables The environment variables that are available to your
+       * running AWS App Runner service.
+       * An array of key-value pairs.
+       */
+      public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable)
+
+      /**
+       * @param runtimeEnvironmentVariables The environment variables that are available to your
+       * running AWS App Runner service.
+       * An array of key-value pairs.
+       */
+      public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>)
+
+      /**
+       * @param runtimeEnvironmentVariables The environment variables that are available to your
+       * running AWS App Runner service.
+       * An array of key-value pairs.
+       */
+      public fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any)
+
+      /**
+       * @param startCommand The command App Runner runs to start your application.
+       */
+      public fun startCommand(startCommand: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty.Builder
+          =
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty.builder()
+
+      /**
+       * @param buildCommand The command App Runner runs to build your application.
+       */
+      override fun buildCommand(buildCommand: String) {
+        cdkBuilder.buildCommand(buildCommand)
+      }
+
+      /**
+       * @param port The port that your application listens to in the container.
+       * Default: `8080`
+       */
+      override fun port(port: String) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param runtime A runtime environment type for building and running an App Runner service. 
+       * It represents a programming language runtime.
+       */
+      override fun runtime(runtime: String) {
+        cdkBuilder.runtime(runtime)
+      }
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable) {
+        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>) {
+        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets)
+      }
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      override fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any): Unit =
+          runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.toList())
+
+      /**
+       * @param runtimeEnvironmentVariables The environment variables that are available to your
+       * running AWS App Runner service.
+       * An array of key-value pairs.
+       */
+      override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable) {
+        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param runtimeEnvironmentVariables The environment variables that are available to your
+       * running AWS App Runner service.
+       * An array of key-value pairs.
+       */
+      override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>) {
+        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables)
+      }
+
+      /**
+       * @param runtimeEnvironmentVariables The environment variables that are available to your
+       * running AWS App Runner service.
+       * An array of key-value pairs.
+       */
+      override fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any): Unit =
+          runtimeEnvironmentVariables(runtimeEnvironmentVariables.toList())
+
+      /**
+       * @param startCommand The command App Runner runs to start your application.
+       */
+      override fun startCommand(startCommand: String) {
+        cdkBuilder.startCommand(startCommand)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty,
+    ) : CdkObject(cdkObject), CodeConfigurationValuesProperty {
+      /**
+       * The command App Runner runs to build your application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-buildcommand)
+       */
+      override fun buildCommand(): String? = unwrap(this).getBuildCommand()
+
+      /**
+       * The port that your application listens to in the container.
+       *
+       * Default: `8080`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-port)
+       */
+      override fun port(): String? = unwrap(this).getPort()
+
+      /**
+       * A runtime environment type for building and running an App Runner service.
+       *
+       * It represents a programming language runtime.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtime)
+       */
+      override fun runtime(): String = unwrap(this).getRuntime()
+
+      /**
+       * An array of key-value pairs representing the secrets and parameters that get referenced to
+       * your service as an environment variable.
+       *
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentsecrets)
+       */
+      override fun runtimeEnvironmentSecrets(): Any? = unwrap(this).getRuntimeEnvironmentSecrets()
+
+      /**
+       * The environment variables that are available to your running AWS App Runner service.
+       *
+       * An array of key-value pairs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentvariables)
+       */
+      override fun runtimeEnvironmentVariables(): Any? =
+          unwrap(this).getRuntimeEnvironmentVariables()
+
+      /**
+       * The command App Runner runs to start your application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-startcommand)
+       */
+      override fun startCommand(): String? = unwrap(this).getStartCommand()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CodeConfigurationValuesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty):
+          CodeConfigurationValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeConfigurationValuesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CodeConfigurationValuesProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty
     }
   }
 
@@ -1524,8 +2002,8 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * Describes the configuration that AWS App Runner uses to build and run an App Runner service
-   * from a source code repository.
+   * Describes configuration settings related to outbound network traffic of an AWS App Runner
+   * service.
    *
    * Example:
    *
@@ -1533,13 +2011,849 @@ public open class CfnService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * CodeConfigurationProperty codeConfigurationProperty = CodeConfigurationProperty.builder()
-   * .configurationSource("configurationSource")
+   * EgressConfigurationProperty egressConfigurationProperty = EgressConfigurationProperty.builder()
+   * .egressType("egressType")
    * // the properties below are optional
-   * .codeConfigurationValues(CodeConfigurationValuesProperty.builder()
-   * .runtime("runtime")
+   * .vpcConnectorArn("vpcConnectorArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html)
+   */
+  public interface EgressConfigurationProperty {
+    /**
+     * The type of egress configuration.
+     *
+     * Set to `DEFAULT` for access to resources hosted on public networks.
+     *
+     * Set to `VPC` to associate your service to a custom VPC specified by `VpcConnectorArn` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html#cfn-apprunner-service-egressconfiguration-egresstype)
+     */
+    public fun egressType(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to associate
+     * with your App Runner service.
+     *
+     * Only valid when `EgressType = VPC` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html#cfn-apprunner-service-egressconfiguration-vpcconnectorarn)
+     */
+    public fun vpcConnectorArn(): String? = unwrap(this).getVpcConnectorArn()
+
+    /**
+     * A builder for [EgressConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param egressType The type of egress configuration. 
+       * Set to `DEFAULT` for access to resources hosted on public networks.
+       *
+       * Set to `VPC` to associate your service to a custom VPC specified by `VpcConnectorArn` .
+       */
+      public fun egressType(egressType: String)
+
+      /**
+       * @param vpcConnectorArn The Amazon Resource Name (ARN) of the App Runner VPC connector that
+       * you want to associate with your App Runner service.
+       * Only valid when `EgressType = VPC` .
+       */
+      public fun vpcConnectorArn(vpcConnectorArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty.Builder =
+          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty.builder()
+
+      /**
+       * @param egressType The type of egress configuration. 
+       * Set to `DEFAULT` for access to resources hosted on public networks.
+       *
+       * Set to `VPC` to associate your service to a custom VPC specified by `VpcConnectorArn` .
+       */
+      override fun egressType(egressType: String) {
+        cdkBuilder.egressType(egressType)
+      }
+
+      /**
+       * @param vpcConnectorArn The Amazon Resource Name (ARN) of the App Runner VPC connector that
+       * you want to associate with your App Runner service.
+       * Only valid when `EgressType = VPC` .
+       */
+      override fun vpcConnectorArn(vpcConnectorArn: String) {
+        cdkBuilder.vpcConnectorArn(vpcConnectorArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty,
+    ) : CdkObject(cdkObject), EgressConfigurationProperty {
+      /**
+       * The type of egress configuration.
+       *
+       * Set to `DEFAULT` for access to resources hosted on public networks.
+       *
+       * Set to `VPC` to associate your service to a custom VPC specified by `VpcConnectorArn` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html#cfn-apprunner-service-egressconfiguration-egresstype)
+       */
+      override fun egressType(): String = unwrap(this).getEgressType()
+
+      /**
+       * The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to associate
+       * with your App Runner service.
+       *
+       * Only valid when `EgressType = VPC` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html#cfn-apprunner-service-egressconfiguration-vpcconnectorarn)
+       */
+      override fun vpcConnectorArn(): String? = unwrap(this).getVpcConnectorArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EgressConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty):
+          EgressConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EgressConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EgressConfigurationProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes a custom encryption key that AWS App Runner uses to encrypt copies of the source
+   * repository and service logs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apprunner.*;
+   * EncryptionConfigurationProperty encryptionConfigurationProperty =
+   * EncryptionConfigurationProperty.builder()
+   * .kmsKey("kmsKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-encryptionconfiguration.html)
+   */
+  public interface EncryptionConfigurationProperty {
+    /**
+     * The ARN of the KMS key that's used for encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-encryptionconfiguration.html#cfn-apprunner-service-encryptionconfiguration-kmskey)
+     */
+    public fun kmsKey(): String
+
+    /**
+     * A builder for [EncryptionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKey The ARN of the KMS key that's used for encryption. 
+       */
+      public fun kmsKey(kmsKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty.builder()
+
+      /**
+       * @param kmsKey The ARN of the KMS key that's used for encryption. 
+       */
+      override fun kmsKey(kmsKey: String) {
+        cdkBuilder.kmsKey(kmsKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty,
+    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+      /**
+       * The ARN of the KMS key that's used for encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-encryptionconfiguration.html#cfn-apprunner-service-encryptionconfiguration-kmskey)
+       */
+      override fun kmsKey(): String = unwrap(this).getKmsKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty):
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionConfigurationProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the settings for the health check that AWS App Runner performs to monitor the health
+   * of a service.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apprunner.*;
+   * HealthCheckConfigurationProperty healthCheckConfigurationProperty =
+   * HealthCheckConfigurationProperty.builder()
+   * .healthyThreshold(123)
+   * .interval(123)
+   * .path("path")
+   * .protocol("protocol")
+   * .timeout(123)
+   * .unhealthyThreshold(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html)
+   */
+  public interface HealthCheckConfigurationProperty {
+    /**
+     * The number of consecutive checks that must succeed before App Runner decides that the service
+     * is healthy.
+     *
+     * Default: `1`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-healthythreshold)
+     */
+    public fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
+
+    /**
+     * The time interval, in seconds, between health checks.
+     *
+     * Default: `5`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-interval)
+     */
+    public fun interval(): Number? = unwrap(this).getInterval()
+
+    /**
+     * The URL that health check requests are sent to.
+     *
+     * `Path` is only applicable when you set `Protocol` to `HTTP` .
+     *
+     * Default: `"/"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * The IP protocol that App Runner uses to perform health checks for your service.
+     *
+     * If you set `Protocol` to `HTTP` , App Runner sends health check requests to the HTTP path
+     * specified by `Path` .
+     *
+     * Default: `TCP`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-protocol)
+     */
+    public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * The time, in seconds, to wait for a health check response before deciding it failed.
+     *
+     * Default: `2`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-timeout)
+     */
+    public fun timeout(): Number? = unwrap(this).getTimeout()
+
+    /**
+     * The number of consecutive checks that must fail before App Runner decides that the service is
+     * unhealthy.
+     *
+     * Default: `5`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-unhealthythreshold)
+     */
+    public fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
+
+    /**
+     * A builder for [HealthCheckConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param healthyThreshold The number of consecutive checks that must succeed before App
+       * Runner decides that the service is healthy.
+       * Default: `1`
+       */
+      public fun healthyThreshold(healthyThreshold: Number)
+
+      /**
+       * @param interval The time interval, in seconds, between health checks.
+       * Default: `5`
+       */
+      public fun interval(interval: Number)
+
+      /**
+       * @param path The URL that health check requests are sent to.
+       * `Path` is only applicable when you set `Protocol` to `HTTP` .
+       *
+       * Default: `"/"`
+       */
+      public fun path(path: String)
+
+      /**
+       * @param protocol The IP protocol that App Runner uses to perform health checks for your
+       * service.
+       * If you set `Protocol` to `HTTP` , App Runner sends health check requests to the HTTP path
+       * specified by `Path` .
+       *
+       * Default: `TCP`
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param timeout The time, in seconds, to wait for a health check response before deciding it
+       * failed.
+       * Default: `2`
+       */
+      public fun timeout(timeout: Number)
+
+      /**
+       * @param unhealthyThreshold The number of consecutive checks that must fail before App Runner
+       * decides that the service is unhealthy.
+       * Default: `5`
+       */
+      public fun unhealthyThreshold(unhealthyThreshold: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty.builder()
+
+      /**
+       * @param healthyThreshold The number of consecutive checks that must succeed before App
+       * Runner decides that the service is healthy.
+       * Default: `1`
+       */
+      override fun healthyThreshold(healthyThreshold: Number) {
+        cdkBuilder.healthyThreshold(healthyThreshold)
+      }
+
+      /**
+       * @param interval The time interval, in seconds, between health checks.
+       * Default: `5`
+       */
+      override fun interval(interval: Number) {
+        cdkBuilder.interval(interval)
+      }
+
+      /**
+       * @param path The URL that health check requests are sent to.
+       * `Path` is only applicable when you set `Protocol` to `HTTP` .
+       *
+       * Default: `"/"`
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      /**
+       * @param protocol The IP protocol that App Runner uses to perform health checks for your
+       * service.
+       * If you set `Protocol` to `HTTP` , App Runner sends health check requests to the HTTP path
+       * specified by `Path` .
+       *
+       * Default: `TCP`
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param timeout The time, in seconds, to wait for a health check response before deciding it
+       * failed.
+       * Default: `2`
+       */
+      override fun timeout(timeout: Number) {
+        cdkBuilder.timeout(timeout)
+      }
+
+      /**
+       * @param unhealthyThreshold The number of consecutive checks that must fail before App Runner
+       * decides that the service is unhealthy.
+       * Default: `5`
+       */
+      override fun unhealthyThreshold(unhealthyThreshold: Number) {
+        cdkBuilder.unhealthyThreshold(unhealthyThreshold)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty,
+    ) : CdkObject(cdkObject), HealthCheckConfigurationProperty {
+      /**
+       * The number of consecutive checks that must succeed before App Runner decides that the
+       * service is healthy.
+       *
+       * Default: `1`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-healthythreshold)
+       */
+      override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
+
+      /**
+       * The time interval, in seconds, between health checks.
+       *
+       * Default: `5`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-interval)
+       */
+      override fun interval(): Number? = unwrap(this).getInterval()
+
+      /**
+       * The URL that health check requests are sent to.
+       *
+       * `Path` is only applicable when you set `Protocol` to `HTTP` .
+       *
+       * Default: `"/"`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+
+      /**
+       * The IP protocol that App Runner uses to perform health checks for your service.
+       *
+       * If you set `Protocol` to `HTTP` , App Runner sends health check requests to the HTTP path
+       * specified by `Path` .
+       *
+       * Default: `TCP`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-protocol)
+       */
+      override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * The time, in seconds, to wait for a health check response before deciding it failed.
+       *
+       * Default: `2`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-timeout)
+       */
+      override fun timeout(): Number? = unwrap(this).getTimeout()
+
+      /**
+       * The number of consecutive checks that must fail before App Runner decides that the service
+       * is unhealthy.
+       *
+       * Default: `5`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-unhealthythreshold)
+       */
+      override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty):
+          HealthCheckConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthCheckConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HealthCheckConfigurationProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the configuration that AWS App Runner uses to run an App Runner service using an
+   * image pulled from a source image repository.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apprunner.*;
+   * ImageConfigurationProperty imageConfigurationProperty = ImageConfigurationProperty.builder()
+   * .port("port")
+   * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .startCommand("startCommand")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html)
+   */
+  public interface ImageConfigurationProperty {
+    /**
+     * The port that your application listens to in the container.
+     *
+     * Default: `8080`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-port)
+     */
+    public fun port(): String? = unwrap(this).getPort()
+
+    /**
+     * An array of key-value pairs representing the secrets and parameters that get referenced to
+     * your service as an environment variable.
+     *
+     * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+     * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+     *
+     *
+     * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+     * service that you're launching, you can use either the full ARN or name of the secret. If the
+     * parameter exists in a different Region, then the full ARN must be specified.
+     * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+     * not supported.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentsecrets)
+     */
+    public fun runtimeEnvironmentSecrets(): Any? = unwrap(this).getRuntimeEnvironmentSecrets()
+
+    /**
+     * Environment variables that are available to your running App Runner service.
+     *
+     * An array of key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentvariables)
+     */
+    public fun runtimeEnvironmentVariables(): Any? = unwrap(this).getRuntimeEnvironmentVariables()
+
+    /**
+     * An optional command that App Runner runs to start the application in the source image.
+     *
+     * If specified, this command overrides the Docker image’s default start command.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-startcommand)
+     */
+    public fun startCommand(): String? = unwrap(this).getStartCommand()
+
+    /**
+     * A builder for [ImageConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param port The port that your application listens to in the container.
+       * Default: `8080`
+       */
+      public fun port(port: String)
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable)
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>)
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      public fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any)
+
+      /**
+       * @param runtimeEnvironmentVariables Environment variables that are available to your running
+       * App Runner service.
+       * An array of key-value pairs.
+       */
+      public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable)
+
+      /**
+       * @param runtimeEnvironmentVariables Environment variables that are available to your running
+       * App Runner service.
+       * An array of key-value pairs.
+       */
+      public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>)
+
+      /**
+       * @param runtimeEnvironmentVariables Environment variables that are available to your running
+       * App Runner service.
+       * An array of key-value pairs.
+       */
+      public fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any)
+
+      /**
+       * @param startCommand An optional command that App Runner runs to start the application in
+       * the source image.
+       * If specified, this command overrides the Docker image’s default start command.
+       */
+      public fun startCommand(startCommand: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty.Builder =
+          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty.builder()
+
+      /**
+       * @param port The port that your application listens to in the container.
+       * Default: `8080`
+       */
+      override fun port(port: String) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable) {
+        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>) {
+        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets)
+      }
+
+      /**
+       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
+       * parameters that get referenced to your service as an environment variable.
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       */
+      override fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any): Unit =
+          runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.toList())
+
+      /**
+       * @param runtimeEnvironmentVariables Environment variables that are available to your running
+       * App Runner service.
+       * An array of key-value pairs.
+       */
+      override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable) {
+        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param runtimeEnvironmentVariables Environment variables that are available to your running
+       * App Runner service.
+       * An array of key-value pairs.
+       */
+      override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>) {
+        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables)
+      }
+
+      /**
+       * @param runtimeEnvironmentVariables Environment variables that are available to your running
+       * App Runner service.
+       * An array of key-value pairs.
+       */
+      override fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any): Unit =
+          runtimeEnvironmentVariables(runtimeEnvironmentVariables.toList())
+
+      /**
+       * @param startCommand An optional command that App Runner runs to start the application in
+       * the source image.
+       * If specified, this command overrides the Docker image’s default start command.
+       */
+      override fun startCommand(startCommand: String) {
+        cdkBuilder.startCommand(startCommand)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty,
+    ) : CdkObject(cdkObject), ImageConfigurationProperty {
+      /**
+       * The port that your application listens to in the container.
+       *
+       * Default: `8080`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-port)
+       */
+      override fun port(): String? = unwrap(this).getPort()
+
+      /**
+       * An array of key-value pairs representing the secrets and parameters that get referenced to
+       * your service as an environment variable.
+       *
+       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
+       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
+       *
+       *
+       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
+       * service that you're launching, you can use either the full ARN or name of the secret. If the
+       * parameter exists in a different Region, then the full ARN must be specified.
+       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
+       * not supported.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentsecrets)
+       */
+      override fun runtimeEnvironmentSecrets(): Any? = unwrap(this).getRuntimeEnvironmentSecrets()
+
+      /**
+       * Environment variables that are available to your running App Runner service.
+       *
+       * An array of key-value pairs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentvariables)
+       */
+      override fun runtimeEnvironmentVariables(): Any? =
+          unwrap(this).getRuntimeEnvironmentVariables()
+
+      /**
+       * An optional command that App Runner runs to start the application in the source image.
+       *
+       * If specified, this command overrides the Docker image’s default start command.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-startcommand)
+       */
+      override fun startCommand(): String? = unwrap(this).getStartCommand()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ImageConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty):
+          ImageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ImageConfigurationProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes a source image repository.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apprunner.*;
+   * ImageRepositoryProperty imageRepositoryProperty = ImageRepositoryProperty.builder()
+   * .imageIdentifier("imageIdentifier")
+   * .imageRepositoryType("imageRepositoryType")
    * // the properties below are optional
-   * .buildCommand("buildCommand")
+   * .imageConfiguration(ImageConfigurationProperty.builder()
    * .port("port")
    * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
    * .name("name")
@@ -1554,171 +2868,560 @@ public open class CfnService internal constructor(
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html)
    */
-  public interface CodeConfigurationProperty {
+  public interface ImageRepositoryProperty {
     /**
-     * The basic configuration for building and running the App Runner service.
+     * Configuration for running the identified image.
      *
-     * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
-     * the source code repository (or ignoring the file if it exists).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-codeconfigurationvalues)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageconfiguration)
      */
-    public fun codeConfigurationValues(): Any? = unwrap(this).getCodeConfigurationValues()
+    public fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
 
     /**
-     * The source of the App Runner configuration. Values are interpreted as follows:.
+     * The identifier of an image.
      *
-     * * `REPOSITORY` – App Runner reads configuration values from the `apprunner.yaml` file in the
-     * source code repository and ignores `CodeConfigurationValues` .
-     * * `API` – App Runner uses configuration values provided in `CodeConfigurationValues` and
-     * ignores the `apprunner.yaml` file in the source code repository.
+     * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For
+     * the image name format, see [Pulling an
+     * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in the
+     * *Amazon ECR User Guide* .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-configurationsource)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageidentifier)
      */
-    public fun configurationSource(): String
+    public fun imageIdentifier(): String
 
     /**
-     * A builder for [CodeConfigurationProperty]
+     * The type of the image repository.
+     *
+     * This reflects the repository provider and whether the repository is private or public.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imagerepositorytype)
+     */
+    public fun imageRepositoryType(): String
+
+    /**
+     * A builder for [ImageRepositoryProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param codeConfigurationValues The basic configuration for building and running the App
-       * Runner service.
-       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
-       * the source code repository (or ignoring the file if it exists).
+       * @param imageConfiguration Configuration for running the identified image.
        */
-      public fun codeConfigurationValues(codeConfigurationValues: IResolvable)
+      public fun imageConfiguration(imageConfiguration: IResolvable)
 
       /**
-       * @param codeConfigurationValues The basic configuration for building and running the App
-       * Runner service.
-       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
-       * the source code repository (or ignoring the file if it exists).
+       * @param imageConfiguration Configuration for running the identified image.
        */
-      public fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty)
+      public fun imageConfiguration(imageConfiguration: ImageConfigurationProperty)
 
       /**
-       * @param codeConfigurationValues The basic configuration for building and running the App
-       * Runner service.
-       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
-       * the source code repository (or ignoring the file if it exists).
+       * @param imageConfiguration Configuration for running the identified image.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3c42f1eedb0abdc71ecbbfd342f8f06aa8ff7fa1c27900a53c5476cca7e690d4")
+      @JvmName("90d6a3be65eee3a6be6da28afa8bc2b0a11a91f2090a2f062c14a88d278eb9d3")
       public
-          fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty.Builder.() -> Unit)
+          fun imageConfiguration(imageConfiguration: ImageConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param configurationSource The source of the App Runner configuration. Values are
-       * interpreted as follows:. 
-       * * `REPOSITORY` – App Runner reads configuration values from the `apprunner.yaml` file in
-       * the source code repository and ignores `CodeConfigurationValues` .
-       * * `API` – App Runner uses configuration values provided in `CodeConfigurationValues` and
-       * ignores the `apprunner.yaml` file in the source code repository.
+       * @param imageIdentifier The identifier of an image. 
+       * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For
+       * the image name format, see [Pulling an
+       * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in
+       * the *Amazon ECR User Guide* .
        */
-      public fun configurationSource(configurationSource: String)
+      public fun imageIdentifier(imageIdentifier: String)
+
+      /**
+       * @param imageRepositoryType The type of the image repository. 
+       * This reflects the repository provider and whether the repository is private or public.
+       */
+      public fun imageRepositoryType(imageRepositoryType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty.Builder =
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty.builder()
+          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty.Builder =
+          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty.builder()
 
       /**
-       * @param codeConfigurationValues The basic configuration for building and running the App
-       * Runner service.
-       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
-       * the source code repository (or ignoring the file if it exists).
+       * @param imageConfiguration Configuration for running the identified image.
        */
-      override fun codeConfigurationValues(codeConfigurationValues: IResolvable) {
-        cdkBuilder.codeConfigurationValues(codeConfigurationValues.let(IResolvable::unwrap))
+      override fun imageConfiguration(imageConfiguration: IResolvable) {
+        cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param codeConfigurationValues The basic configuration for building and running the App
-       * Runner service.
-       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
-       * the source code repository (or ignoring the file if it exists).
+       * @param imageConfiguration Configuration for running the identified image.
        */
-      override
-          fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty) {
-        cdkBuilder.codeConfigurationValues(codeConfigurationValues.let(CodeConfigurationValuesProperty::unwrap))
+      override fun imageConfiguration(imageConfiguration: ImageConfigurationProperty) {
+        cdkBuilder.imageConfiguration(imageConfiguration.let(ImageConfigurationProperty::unwrap))
       }
 
       /**
-       * @param codeConfigurationValues The basic configuration for building and running the App
-       * Runner service.
-       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
-       * the source code repository (or ignoring the file if it exists).
+       * @param imageConfiguration Configuration for running the identified image.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3c42f1eedb0abdc71ecbbfd342f8f06aa8ff7fa1c27900a53c5476cca7e690d4")
+      @JvmName("90d6a3be65eee3a6be6da28afa8bc2b0a11a91f2090a2f062c14a88d278eb9d3")
       override
-          fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty.Builder.() -> Unit):
-          Unit = codeConfigurationValues(CodeConfigurationValuesProperty(codeConfigurationValues))
+          fun imageConfiguration(imageConfiguration: ImageConfigurationProperty.Builder.() -> Unit):
+          Unit = imageConfiguration(ImageConfigurationProperty(imageConfiguration))
 
       /**
-       * @param configurationSource The source of the App Runner configuration. Values are
-       * interpreted as follows:. 
-       * * `REPOSITORY` – App Runner reads configuration values from the `apprunner.yaml` file in
-       * the source code repository and ignores `CodeConfigurationValues` .
-       * * `API` – App Runner uses configuration values provided in `CodeConfigurationValues` and
-       * ignores the `apprunner.yaml` file in the source code repository.
+       * @param imageIdentifier The identifier of an image. 
+       * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For
+       * the image name format, see [Pulling an
+       * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in
+       * the *Amazon ECR User Guide* .
        */
-      override fun configurationSource(configurationSource: String) {
-        cdkBuilder.configurationSource(configurationSource)
+      override fun imageIdentifier(imageIdentifier: String) {
+        cdkBuilder.imageIdentifier(imageIdentifier)
+      }
+
+      /**
+       * @param imageRepositoryType The type of the image repository. 
+       * This reflects the repository provider and whether the repository is private or public.
+       */
+      override fun imageRepositoryType(imageRepositoryType: String) {
+        cdkBuilder.imageRepositoryType(imageRepositoryType)
       }
 
       public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty =
+          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty,
-    ) : CdkObject(cdkObject), CodeConfigurationProperty {
+          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty,
+    ) : CdkObject(cdkObject), ImageRepositoryProperty {
       /**
-       * The basic configuration for building and running the App Runner service.
+       * Configuration for running the identified image.
        *
-       * Use it to quickly launch an App Runner service without providing a `apprunner.yaml` file in
-       * the source code repository (or ignoring the file if it exists).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-codeconfigurationvalues)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageconfiguration)
        */
-      override fun codeConfigurationValues(): Any? = unwrap(this).getCodeConfigurationValues()
+      override fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
 
       /**
-       * The source of the App Runner configuration. Values are interpreted as follows:.
+       * The identifier of an image.
        *
-       * * `REPOSITORY` – App Runner reads configuration values from the `apprunner.yaml` file in
-       * the source code repository and ignores `CodeConfigurationValues` .
-       * * `API` – App Runner uses configuration values provided in `CodeConfigurationValues` and
-       * ignores the `apprunner.yaml` file in the source code repository.
+       * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For
+       * the image name format, see [Pulling an
+       * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in
+       * the *Amazon ECR User Guide* .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-configurationsource)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageidentifier)
        */
-      override fun configurationSource(): String = unwrap(this).getConfigurationSource()
+      override fun imageIdentifier(): String = unwrap(this).getImageIdentifier()
+
+      /**
+       * The type of the image repository.
+       *
+       * This reflects the repository provider and whether the repository is private or public.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imagerepositorytype)
+       */
+      override fun imageRepositoryType(): String = unwrap(this).getImageRepositoryType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CodeConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ImageRepositoryProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty):
-          CodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CodeConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty):
+          ImageRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? ImageRepositoryProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CodeConfigurationProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty
+      internal fun unwrap(wrapped: ImageRepositoryProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty
+    }
+  }
+
+  /**
+   * Network configuration settings for inbound network traffic.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apprunner.*;
+   * IngressConfigurationProperty ingressConfigurationProperty =
+   * IngressConfigurationProperty.builder()
+   * .isPubliclyAccessible(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-ingressconfiguration.html)
+   */
+  public interface IngressConfigurationProperty {
+    /**
+     * Specifies whether your App Runner service is publicly accessible.
+     *
+     * To make the service publicly accessible set it to `True` . To make the service privately
+     * accessible, from only within an Amazon VPC set it to `False` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-ingressconfiguration.html#cfn-apprunner-service-ingressconfiguration-ispubliclyaccessible)
+     */
+    public fun isPubliclyAccessible(): Any
+
+    /**
+     * A builder for [IngressConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isPubliclyAccessible Specifies whether your App Runner service is publicly
+       * accessible. 
+       * To make the service publicly accessible set it to `True` . To make the service privately
+       * accessible, from only within an Amazon VPC set it to `False` .
+       */
+      public fun isPubliclyAccessible(isPubliclyAccessible: Boolean)
+
+      /**
+       * @param isPubliclyAccessible Specifies whether your App Runner service is publicly
+       * accessible. 
+       * To make the service publicly accessible set it to `True` . To make the service privately
+       * accessible, from only within an Amazon VPC set it to `False` .
+       */
+      public fun isPubliclyAccessible(isPubliclyAccessible: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty.builder()
+
+      /**
+       * @param isPubliclyAccessible Specifies whether your App Runner service is publicly
+       * accessible. 
+       * To make the service publicly accessible set it to `True` . To make the service privately
+       * accessible, from only within an Amazon VPC set it to `False` .
+       */
+      override fun isPubliclyAccessible(isPubliclyAccessible: Boolean) {
+        cdkBuilder.isPubliclyAccessible(isPubliclyAccessible)
+      }
+
+      /**
+       * @param isPubliclyAccessible Specifies whether your App Runner service is publicly
+       * accessible. 
+       * To make the service publicly accessible set it to `True` . To make the service privately
+       * accessible, from only within an Amazon VPC set it to `False` .
+       */
+      override fun isPubliclyAccessible(isPubliclyAccessible: IResolvable) {
+        cdkBuilder.isPubliclyAccessible(isPubliclyAccessible.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty,
+    ) : CdkObject(cdkObject), IngressConfigurationProperty {
+      /**
+       * Specifies whether your App Runner service is publicly accessible.
+       *
+       * To make the service publicly accessible set it to `True` . To make the service privately
+       * accessible, from only within an Amazon VPC set it to `False` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-ingressconfiguration.html#cfn-apprunner-service-ingressconfiguration-ispubliclyaccessible)
+       */
+      override fun isPubliclyAccessible(): Any = unwrap(this).getIsPubliclyAccessible()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IngressConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty):
+          IngressConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IngressConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IngressConfigurationProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the runtime configuration of an AWS App Runner service instance (scaling unit).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apprunner.*;
+   * InstanceConfigurationProperty instanceConfigurationProperty =
+   * InstanceConfigurationProperty.builder()
+   * .cpu("cpu")
+   * .instanceRoleArn("instanceRoleArn")
+   * .memory("memory")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html)
+   */
+  public interface InstanceConfigurationProperty {
+    /**
+     * The number of CPU units reserved for each instance of your App Runner service.
+     *
+     * Default: `1 vCPU`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-cpu)
+     */
+    public fun cpu(): String? = unwrap(this).getCpu()
+
+    /**
+     * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner
+     * service.
+     *
+     * These are permissions that your code needs when it calls any AWS APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-instancerolearn)
+     */
+    public fun instanceRoleArn(): String? = unwrap(this).getInstanceRoleArn()
+
+    /**
+     * The amount of memory, in MB or GB, reserved for each instance of your App Runner service.
+     *
+     * Default: `2 GB`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-memory)
+     */
+    public fun memory(): String? = unwrap(this).getMemory()
+
+    /**
+     * A builder for [InstanceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpu The number of CPU units reserved for each instance of your App Runner service.
+       * Default: `1 vCPU`
+       */
+      public fun cpu(cpu: String)
+
+      /**
+       * @param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides
+       * permissions to your App Runner service.
+       * These are permissions that your code needs when it calls any AWS APIs.
+       */
+      public fun instanceRoleArn(instanceRoleArn: String)
+
+      /**
+       * @param memory The amount of memory, in MB or GB, reserved for each instance of your App
+       * Runner service.
+       * Default: `2 GB`
+       */
+      public fun memory(memory: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty.builder()
+
+      /**
+       * @param cpu The number of CPU units reserved for each instance of your App Runner service.
+       * Default: `1 vCPU`
+       */
+      override fun cpu(cpu: String) {
+        cdkBuilder.cpu(cpu)
+      }
+
+      /**
+       * @param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides
+       * permissions to your App Runner service.
+       * These are permissions that your code needs when it calls any AWS APIs.
+       */
+      override fun instanceRoleArn(instanceRoleArn: String) {
+        cdkBuilder.instanceRoleArn(instanceRoleArn)
+      }
+
+      /**
+       * @param memory The amount of memory, in MB or GB, reserved for each instance of your App
+       * Runner service.
+       * Default: `2 GB`
+       */
+      override fun memory(memory: String) {
+        cdkBuilder.memory(memory)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty,
+    ) : CdkObject(cdkObject), InstanceConfigurationProperty {
+      /**
+       * The number of CPU units reserved for each instance of your App Runner service.
+       *
+       * Default: `1 vCPU`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-cpu)
+       */
+      override fun cpu(): String? = unwrap(this).getCpu()
+
+      /**
+       * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner
+       * service.
+       *
+       * These are permissions that your code needs when it calls any AWS APIs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-instancerolearn)
+       */
+      override fun instanceRoleArn(): String? = unwrap(this).getInstanceRoleArn()
+
+      /**
+       * The amount of memory, in MB or GB, reserved for each instance of your App Runner service.
+       *
+       * Default: `2 GB`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-memory)
+       */
+      override fun memory(): String? = unwrap(this).getMemory()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty):
+          InstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceConfigurationProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes a key-value pair, which is a string-to-string mapping.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apprunner.*;
+   * KeyValuePairProperty keyValuePairProperty = KeyValuePairProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html)
+   */
+  public interface KeyValuePairProperty {
+    /**
+     * The key name string to map to a value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The value string to which the key name is mapped.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [KeyValuePairProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The key name string to map to a value.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value string to which the key name is mapped.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty.Builder =
+          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty.builder()
+
+      /**
+       * @param name The key name string to map to a value.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value The value string to which the key name is mapped.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty,
+    ) : CdkObject(cdkObject), KeyValuePairProperty {
+      /**
+       * The key name string to map to a value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The value string to which the key name is mapped.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyValuePairProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty):
+          KeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValuePairProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeyValuePairProperty):
+          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty
     }
   }
 
@@ -2139,1232 +3842,6 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * Describes a custom encryption key that AWS App Runner uses to encrypt copies of the source
-   * repository and service logs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * EncryptionConfigurationProperty encryptionConfigurationProperty =
-   * EncryptionConfigurationProperty.builder()
-   * .kmsKey("kmsKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-encryptionconfiguration.html)
-   */
-  public interface EncryptionConfigurationProperty {
-    /**
-     * The ARN of the KMS key that's used for encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-encryptionconfiguration.html#cfn-apprunner-service-encryptionconfiguration-kmskey)
-     */
-    public fun kmsKey(): String
-
-    /**
-     * A builder for [EncryptionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKey The ARN of the KMS key that's used for encryption. 
-       */
-      public fun kmsKey(kmsKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty.builder()
-
-      /**
-       * @param kmsKey The ARN of the KMS key that's used for encryption. 
-       */
-      override fun kmsKey(kmsKey: String) {
-        cdkBuilder.kmsKey(kmsKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
-      /**
-       * The ARN of the KMS key that's used for encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-encryptionconfiguration.html#cfn-apprunner-service-encryptionconfiguration-kmskey)
-       */
-      override fun kmsKey(): String = unwrap(this).getKmsKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionConfigurationProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes the configuration that AWS App Runner uses to run an App Runner service using an
-   * image pulled from a source image repository.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * ImageConfigurationProperty imageConfigurationProperty = ImageConfigurationProperty.builder()
-   * .port("port")
-   * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .startCommand("startCommand")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html)
-   */
-  public interface ImageConfigurationProperty {
-    /**
-     * The port that your application listens to in the container.
-     *
-     * Default: `8080`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-port)
-     */
-    public fun port(): String? = unwrap(this).getPort()
-
-    /**
-     * An array of key-value pairs representing the secrets and parameters that get referenced to
-     * your service as an environment variable.
-     *
-     * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-     * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-     *
-     *
-     * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-     * service that you're launching, you can use either the full ARN or name of the secret. If the
-     * parameter exists in a different Region, then the full ARN must be specified.
-     * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-     * not supported.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentsecrets)
-     */
-    public fun runtimeEnvironmentSecrets(): Any? = unwrap(this).getRuntimeEnvironmentSecrets()
-
-    /**
-     * Environment variables that are available to your running App Runner service.
-     *
-     * An array of key-value pairs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentvariables)
-     */
-    public fun runtimeEnvironmentVariables(): Any? = unwrap(this).getRuntimeEnvironmentVariables()
-
-    /**
-     * An optional command that App Runner runs to start the application in the source image.
-     *
-     * If specified, this command overrides the Docker image’s default start command.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-startcommand)
-     */
-    public fun startCommand(): String? = unwrap(this).getStartCommand()
-
-    /**
-     * A builder for [ImageConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param port The port that your application listens to in the container.
-       * Default: `8080`
-       */
-      public fun port(port: String)
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable)
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>)
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      public fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any)
-
-      /**
-       * @param runtimeEnvironmentVariables Environment variables that are available to your running
-       * App Runner service.
-       * An array of key-value pairs.
-       */
-      public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable)
-
-      /**
-       * @param runtimeEnvironmentVariables Environment variables that are available to your running
-       * App Runner service.
-       * An array of key-value pairs.
-       */
-      public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>)
-
-      /**
-       * @param runtimeEnvironmentVariables Environment variables that are available to your running
-       * App Runner service.
-       * An array of key-value pairs.
-       */
-      public fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any)
-
-      /**
-       * @param startCommand An optional command that App Runner runs to start the application in
-       * the source image.
-       * If specified, this command overrides the Docker image’s default start command.
-       */
-      public fun startCommand(startCommand: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty.Builder =
-          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty.builder()
-
-      /**
-       * @param port The port that your application listens to in the container.
-       * Default: `8080`
-       */
-      override fun port(port: String) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable) {
-        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>) {
-        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets)
-      }
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      override fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any): Unit =
-          runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.toList())
-
-      /**
-       * @param runtimeEnvironmentVariables Environment variables that are available to your running
-       * App Runner service.
-       * An array of key-value pairs.
-       */
-      override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable) {
-        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param runtimeEnvironmentVariables Environment variables that are available to your running
-       * App Runner service.
-       * An array of key-value pairs.
-       */
-      override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>) {
-        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables)
-      }
-
-      /**
-       * @param runtimeEnvironmentVariables Environment variables that are available to your running
-       * App Runner service.
-       * An array of key-value pairs.
-       */
-      override fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any): Unit =
-          runtimeEnvironmentVariables(runtimeEnvironmentVariables.toList())
-
-      /**
-       * @param startCommand An optional command that App Runner runs to start the application in
-       * the source image.
-       * If specified, this command overrides the Docker image’s default start command.
-       */
-      override fun startCommand(startCommand: String) {
-        cdkBuilder.startCommand(startCommand)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty,
-    ) : CdkObject(cdkObject), ImageConfigurationProperty {
-      /**
-       * The port that your application listens to in the container.
-       *
-       * Default: `8080`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-port)
-       */
-      override fun port(): String? = unwrap(this).getPort()
-
-      /**
-       * An array of key-value pairs representing the secrets and parameters that get referenced to
-       * your service as an environment variable.
-       *
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentsecrets)
-       */
-      override fun runtimeEnvironmentSecrets(): Any? = unwrap(this).getRuntimeEnvironmentSecrets()
-
-      /**
-       * Environment variables that are available to your running App Runner service.
-       *
-       * An array of key-value pairs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentvariables)
-       */
-      override fun runtimeEnvironmentVariables(): Any? =
-          unwrap(this).getRuntimeEnvironmentVariables()
-
-      /**
-       * An optional command that App Runner runs to start the application in the source image.
-       *
-       * If specified, this command overrides the Docker image’s default start command.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-startcommand)
-       */
-      override fun startCommand(): String? = unwrap(this).getStartCommand()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ImageConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty):
-          ImageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ImageConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ImageConfigurationProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes resources needed to authenticate access to some source repositories.
-   *
-   * The specific resource depends on the repository provider.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * AuthenticationConfigurationProperty authenticationConfigurationProperty =
-   * AuthenticationConfigurationProperty.builder()
-   * .accessRoleArn("accessRoleArn")
-   * .connectionArn("connectionArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html)
-   */
-  public interface AuthenticationConfigurationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role that grants the App Runner service access to a
-     * source repository.
-     *
-     * It's required for ECR image repositories (but not for ECR Public repositories).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-accessrolearn)
-     */
-    public fun accessRoleArn(): String? = unwrap(this).getAccessRoleArn()
-
-    /**
-     * The Amazon Resource Name (ARN) of the App Runner connection that enables the App Runner
-     * service to connect to a source repository.
-     *
-     * It's required for GitHub code repositories.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-connectionarn)
-     */
-    public fun connectionArn(): String? = unwrap(this).getConnectionArn()
-
-    /**
-     * A builder for [AuthenticationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessRoleArn The Amazon Resource Name (ARN) of the IAM role that grants the App
-       * Runner service access to a source repository.
-       * It's required for ECR image repositories (but not for ECR Public repositories).
-       */
-      public fun accessRoleArn(accessRoleArn: String)
-
-      /**
-       * @param connectionArn The Amazon Resource Name (ARN) of the App Runner connection that
-       * enables the App Runner service to connect to a source repository.
-       * It's required for GitHub code repositories.
-       */
-      public fun connectionArn(connectionArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty.builder()
-
-      /**
-       * @param accessRoleArn The Amazon Resource Name (ARN) of the IAM role that grants the App
-       * Runner service access to a source repository.
-       * It's required for ECR image repositories (but not for ECR Public repositories).
-       */
-      override fun accessRoleArn(accessRoleArn: String) {
-        cdkBuilder.accessRoleArn(accessRoleArn)
-      }
-
-      /**
-       * @param connectionArn The Amazon Resource Name (ARN) of the App Runner connection that
-       * enables the App Runner service to connect to a source repository.
-       * It's required for GitHub code repositories.
-       */
-      override fun connectionArn(connectionArn: String) {
-        cdkBuilder.connectionArn(connectionArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty,
-    ) : CdkObject(cdkObject), AuthenticationConfigurationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the IAM role that grants the App Runner service access to
-       * a source repository.
-       *
-       * It's required for ECR image repositories (but not for ECR Public repositories).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-accessrolearn)
-       */
-      override fun accessRoleArn(): String? = unwrap(this).getAccessRoleArn()
-
-      /**
-       * The Amazon Resource Name (ARN) of the App Runner connection that enables the App Runner
-       * service to connect to a source repository.
-       *
-       * It's required for GitHub code repositories.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-connectionarn)
-       */
-      override fun connectionArn(): String? = unwrap(this).getConnectionArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AuthenticationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty):
-          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AuthenticationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuthenticationConfigurationProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes the basic configuration needed for building and running an AWS App Runner service.
-   *
-   * This type doesn't support the full set of possible configuration options. Fur full
-   * configuration capabilities, use a `apprunner.yaml` file in the source code repository.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * CodeConfigurationValuesProperty codeConfigurationValuesProperty =
-   * CodeConfigurationValuesProperty.builder()
-   * .runtime("runtime")
-   * // the properties below are optional
-   * .buildCommand("buildCommand")
-   * .port("port")
-   * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .startCommand("startCommand")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html)
-   */
-  public interface CodeConfigurationValuesProperty {
-    /**
-     * The command App Runner runs to build your application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-buildcommand)
-     */
-    public fun buildCommand(): String? = unwrap(this).getBuildCommand()
-
-    /**
-     * The port that your application listens to in the container.
-     *
-     * Default: `8080`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-port)
-     */
-    public fun port(): String? = unwrap(this).getPort()
-
-    /**
-     * A runtime environment type for building and running an App Runner service.
-     *
-     * It represents a programming language runtime.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtime)
-     */
-    public fun runtime(): String
-
-    /**
-     * An array of key-value pairs representing the secrets and parameters that get referenced to
-     * your service as an environment variable.
-     *
-     * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-     * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-     *
-     *
-     * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-     * service that you're launching, you can use either the full ARN or name of the secret. If the
-     * parameter exists in a different Region, then the full ARN must be specified.
-     * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-     * not supported.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentsecrets)
-     */
-    public fun runtimeEnvironmentSecrets(): Any? = unwrap(this).getRuntimeEnvironmentSecrets()
-
-    /**
-     * The environment variables that are available to your running AWS App Runner service.
-     *
-     * An array of key-value pairs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentvariables)
-     */
-    public fun runtimeEnvironmentVariables(): Any? = unwrap(this).getRuntimeEnvironmentVariables()
-
-    /**
-     * The command App Runner runs to start your application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-startcommand)
-     */
-    public fun startCommand(): String? = unwrap(this).getStartCommand()
-
-    /**
-     * A builder for [CodeConfigurationValuesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param buildCommand The command App Runner runs to build your application.
-       */
-      public fun buildCommand(buildCommand: String)
-
-      /**
-       * @param port The port that your application listens to in the container.
-       * Default: `8080`
-       */
-      public fun port(port: String)
-
-      /**
-       * @param runtime A runtime environment type for building and running an App Runner service. 
-       * It represents a programming language runtime.
-       */
-      public fun runtime(runtime: String)
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable)
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>)
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      public fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any)
-
-      /**
-       * @param runtimeEnvironmentVariables The environment variables that are available to your
-       * running AWS App Runner service.
-       * An array of key-value pairs.
-       */
-      public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable)
-
-      /**
-       * @param runtimeEnvironmentVariables The environment variables that are available to your
-       * running AWS App Runner service.
-       * An array of key-value pairs.
-       */
-      public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>)
-
-      /**
-       * @param runtimeEnvironmentVariables The environment variables that are available to your
-       * running AWS App Runner service.
-       * An array of key-value pairs.
-       */
-      public fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any)
-
-      /**
-       * @param startCommand The command App Runner runs to start your application.
-       */
-      public fun startCommand(startCommand: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty.Builder
-          =
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty.builder()
-
-      /**
-       * @param buildCommand The command App Runner runs to build your application.
-       */
-      override fun buildCommand(buildCommand: String) {
-        cdkBuilder.buildCommand(buildCommand)
-      }
-
-      /**
-       * @param port The port that your application listens to in the container.
-       * Default: `8080`
-       */
-      override fun port(port: String) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param runtime A runtime environment type for building and running an App Runner service. 
-       * It represents a programming language runtime.
-       */
-      override fun runtime(runtime: String) {
-        cdkBuilder.runtime(runtime)
-      }
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable) {
-        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>) {
-        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets)
-      }
-
-      /**
-       * @param runtimeEnvironmentSecrets An array of key-value pairs representing the secrets and
-       * parameters that get referenced to your service as an environment variable.
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       */
-      override fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any): Unit =
-          runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.toList())
-
-      /**
-       * @param runtimeEnvironmentVariables The environment variables that are available to your
-       * running AWS App Runner service.
-       * An array of key-value pairs.
-       */
-      override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable) {
-        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param runtimeEnvironmentVariables The environment variables that are available to your
-       * running AWS App Runner service.
-       * An array of key-value pairs.
-       */
-      override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>) {
-        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables)
-      }
-
-      /**
-       * @param runtimeEnvironmentVariables The environment variables that are available to your
-       * running AWS App Runner service.
-       * An array of key-value pairs.
-       */
-      override fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any): Unit =
-          runtimeEnvironmentVariables(runtimeEnvironmentVariables.toList())
-
-      /**
-       * @param startCommand The command App Runner runs to start your application.
-       */
-      override fun startCommand(startCommand: String) {
-        cdkBuilder.startCommand(startCommand)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty,
-    ) : CdkObject(cdkObject), CodeConfigurationValuesProperty {
-      /**
-       * The command App Runner runs to build your application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-buildcommand)
-       */
-      override fun buildCommand(): String? = unwrap(this).getBuildCommand()
-
-      /**
-       * The port that your application listens to in the container.
-       *
-       * Default: `8080`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-port)
-       */
-      override fun port(): String? = unwrap(this).getPort()
-
-      /**
-       * A runtime environment type for building and running an App Runner service.
-       *
-       * It represents a programming language runtime.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtime)
-       */
-      override fun runtime(): String = unwrap(this).getRuntime()
-
-      /**
-       * An array of key-value pairs representing the secrets and parameters that get referenced to
-       * your service as an environment variable.
-       *
-       * The supported values are either the full Amazon Resource Name (ARN) of the AWS Secrets
-       * Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store.
-       *
-       *
-       * * If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the
-       * service that you're launching, you can use either the full ARN or name of the secret. If the
-       * parameter exists in a different Region, then the full ARN must be specified.
-       * * Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is
-       * not supported.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentsecrets)
-       */
-      override fun runtimeEnvironmentSecrets(): Any? = unwrap(this).getRuntimeEnvironmentSecrets()
-
-      /**
-       * The environment variables that are available to your running AWS App Runner service.
-       *
-       * An array of key-value pairs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentvariables)
-       */
-      override fun runtimeEnvironmentVariables(): Any? =
-          unwrap(this).getRuntimeEnvironmentVariables()
-
-      /**
-       * The command App Runner runs to start your application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-startcommand)
-       */
-      override fun startCommand(): String? = unwrap(this).getStartCommand()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CodeConfigurationValuesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty):
-          CodeConfigurationValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CodeConfigurationValuesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CodeConfigurationValuesProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty
-    }
-  }
-
-  /**
-   * Describes the settings for the health check that AWS App Runner performs to monitor the health
-   * of a service.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * HealthCheckConfigurationProperty healthCheckConfigurationProperty =
-   * HealthCheckConfigurationProperty.builder()
-   * .healthyThreshold(123)
-   * .interval(123)
-   * .path("path")
-   * .protocol("protocol")
-   * .timeout(123)
-   * .unhealthyThreshold(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html)
-   */
-  public interface HealthCheckConfigurationProperty {
-    /**
-     * The number of consecutive checks that must succeed before App Runner decides that the service
-     * is healthy.
-     *
-     * Default: `1`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-healthythreshold)
-     */
-    public fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
-
-    /**
-     * The time interval, in seconds, between health checks.
-     *
-     * Default: `5`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-interval)
-     */
-    public fun interval(): Number? = unwrap(this).getInterval()
-
-    /**
-     * The URL that health check requests are sent to.
-     *
-     * `Path` is only applicable when you set `Protocol` to `HTTP` .
-     *
-     * Default: `"/"`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * The IP protocol that App Runner uses to perform health checks for your service.
-     *
-     * If you set `Protocol` to `HTTP` , App Runner sends health check requests to the HTTP path
-     * specified by `Path` .
-     *
-     * Default: `TCP`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-protocol)
-     */
-    public fun protocol(): String? = unwrap(this).getProtocol()
-
-    /**
-     * The time, in seconds, to wait for a health check response before deciding it failed.
-     *
-     * Default: `2`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-timeout)
-     */
-    public fun timeout(): Number? = unwrap(this).getTimeout()
-
-    /**
-     * The number of consecutive checks that must fail before App Runner decides that the service is
-     * unhealthy.
-     *
-     * Default: `5`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-unhealthythreshold)
-     */
-    public fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
-
-    /**
-     * A builder for [HealthCheckConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param healthyThreshold The number of consecutive checks that must succeed before App
-       * Runner decides that the service is healthy.
-       * Default: `1`
-       */
-      public fun healthyThreshold(healthyThreshold: Number)
-
-      /**
-       * @param interval The time interval, in seconds, between health checks.
-       * Default: `5`
-       */
-      public fun interval(interval: Number)
-
-      /**
-       * @param path The URL that health check requests are sent to.
-       * `Path` is only applicable when you set `Protocol` to `HTTP` .
-       *
-       * Default: `"/"`
-       */
-      public fun path(path: String)
-
-      /**
-       * @param protocol The IP protocol that App Runner uses to perform health checks for your
-       * service.
-       * If you set `Protocol` to `HTTP` , App Runner sends health check requests to the HTTP path
-       * specified by `Path` .
-       *
-       * Default: `TCP`
-       */
-      public fun protocol(protocol: String)
-
-      /**
-       * @param timeout The time, in seconds, to wait for a health check response before deciding it
-       * failed.
-       * Default: `2`
-       */
-      public fun timeout(timeout: Number)
-
-      /**
-       * @param unhealthyThreshold The number of consecutive checks that must fail before App Runner
-       * decides that the service is unhealthy.
-       * Default: `5`
-       */
-      public fun unhealthyThreshold(unhealthyThreshold: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty.builder()
-
-      /**
-       * @param healthyThreshold The number of consecutive checks that must succeed before App
-       * Runner decides that the service is healthy.
-       * Default: `1`
-       */
-      override fun healthyThreshold(healthyThreshold: Number) {
-        cdkBuilder.healthyThreshold(healthyThreshold)
-      }
-
-      /**
-       * @param interval The time interval, in seconds, between health checks.
-       * Default: `5`
-       */
-      override fun interval(interval: Number) {
-        cdkBuilder.interval(interval)
-      }
-
-      /**
-       * @param path The URL that health check requests are sent to.
-       * `Path` is only applicable when you set `Protocol` to `HTTP` .
-       *
-       * Default: `"/"`
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      /**
-       * @param protocol The IP protocol that App Runner uses to perform health checks for your
-       * service.
-       * If you set `Protocol` to `HTTP` , App Runner sends health check requests to the HTTP path
-       * specified by `Path` .
-       *
-       * Default: `TCP`
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param timeout The time, in seconds, to wait for a health check response before deciding it
-       * failed.
-       * Default: `2`
-       */
-      override fun timeout(timeout: Number) {
-        cdkBuilder.timeout(timeout)
-      }
-
-      /**
-       * @param unhealthyThreshold The number of consecutive checks that must fail before App Runner
-       * decides that the service is unhealthy.
-       * Default: `5`
-       */
-      override fun unhealthyThreshold(unhealthyThreshold: Number) {
-        cdkBuilder.unhealthyThreshold(unhealthyThreshold)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty,
-    ) : CdkObject(cdkObject), HealthCheckConfigurationProperty {
-      /**
-       * The number of consecutive checks that must succeed before App Runner decides that the
-       * service is healthy.
-       *
-       * Default: `1`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-healthythreshold)
-       */
-      override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
-
-      /**
-       * The time interval, in seconds, between health checks.
-       *
-       * Default: `5`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-interval)
-       */
-      override fun interval(): Number? = unwrap(this).getInterval()
-
-      /**
-       * The URL that health check requests are sent to.
-       *
-       * `Path` is only applicable when you set `Protocol` to `HTTP` .
-       *
-       * Default: `"/"`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-
-      /**
-       * The IP protocol that App Runner uses to perform health checks for your service.
-       *
-       * If you set `Protocol` to `HTTP` , App Runner sends health check requests to the HTTP path
-       * specified by `Path` .
-       *
-       * Default: `TCP`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-protocol)
-       */
-      override fun protocol(): String? = unwrap(this).getProtocol()
-
-      /**
-       * The time, in seconds, to wait for a health check response before deciding it failed.
-       *
-       * Default: `2`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-timeout)
-       */
-      override fun timeout(): Number? = unwrap(this).getTimeout()
-
-      /**
-       * The number of consecutive checks that must fail before App Runner decides that the service
-       * is unhealthy.
-       *
-       * Default: `5`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-unhealthythreshold)
-       */
-      override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty):
-          HealthCheckConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HealthCheckConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HealthCheckConfigurationProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty
-    }
-  }
-
-  /**
    * Identifies a version of code that AWS App Runner refers to within a source code repository.
    *
    * Example:
@@ -3486,483 +3963,6 @@ public open class CfnService internal constructor(
           software.amazon.awscdk.services.apprunner.CfnService.SourceCodeVersionProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.apprunner.CfnService.SourceCodeVersionProperty
-    }
-  }
-
-  /**
-   * Network configuration settings for inbound network traffic.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * IngressConfigurationProperty ingressConfigurationProperty =
-   * IngressConfigurationProperty.builder()
-   * .isPubliclyAccessible(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-ingressconfiguration.html)
-   */
-  public interface IngressConfigurationProperty {
-    /**
-     * Specifies whether your App Runner service is publicly accessible.
-     *
-     * To make the service publicly accessible set it to `True` . To make the service privately
-     * accessible, from only within an Amazon VPC set it to `False` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-ingressconfiguration.html#cfn-apprunner-service-ingressconfiguration-ispubliclyaccessible)
-     */
-    public fun isPubliclyAccessible(): Any
-
-    /**
-     * A builder for [IngressConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isPubliclyAccessible Specifies whether your App Runner service is publicly
-       * accessible. 
-       * To make the service publicly accessible set it to `True` . To make the service privately
-       * accessible, from only within an Amazon VPC set it to `False` .
-       */
-      public fun isPubliclyAccessible(isPubliclyAccessible: Boolean)
-
-      /**
-       * @param isPubliclyAccessible Specifies whether your App Runner service is publicly
-       * accessible. 
-       * To make the service publicly accessible set it to `True` . To make the service privately
-       * accessible, from only within an Amazon VPC set it to `False` .
-       */
-      public fun isPubliclyAccessible(isPubliclyAccessible: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty.builder()
-
-      /**
-       * @param isPubliclyAccessible Specifies whether your App Runner service is publicly
-       * accessible. 
-       * To make the service publicly accessible set it to `True` . To make the service privately
-       * accessible, from only within an Amazon VPC set it to `False` .
-       */
-      override fun isPubliclyAccessible(isPubliclyAccessible: Boolean) {
-        cdkBuilder.isPubliclyAccessible(isPubliclyAccessible)
-      }
-
-      /**
-       * @param isPubliclyAccessible Specifies whether your App Runner service is publicly
-       * accessible. 
-       * To make the service publicly accessible set it to `True` . To make the service privately
-       * accessible, from only within an Amazon VPC set it to `False` .
-       */
-      override fun isPubliclyAccessible(isPubliclyAccessible: IResolvable) {
-        cdkBuilder.isPubliclyAccessible(isPubliclyAccessible.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty,
-    ) : CdkObject(cdkObject), IngressConfigurationProperty {
-      /**
-       * Specifies whether your App Runner service is publicly accessible.
-       *
-       * To make the service publicly accessible set it to `True` . To make the service privately
-       * accessible, from only within an Amazon VPC set it to `False` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-ingressconfiguration.html#cfn-apprunner-service-ingressconfiguration-ispubliclyaccessible)
-       */
-      override fun isPubliclyAccessible(): Any = unwrap(this).getIsPubliclyAccessible()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IngressConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty):
-          IngressConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IngressConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IngressConfigurationProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes a source image repository.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * ImageRepositoryProperty imageRepositoryProperty = ImageRepositoryProperty.builder()
-   * .imageIdentifier("imageIdentifier")
-   * .imageRepositoryType("imageRepositoryType")
-   * // the properties below are optional
-   * .imageConfiguration(ImageConfigurationProperty.builder()
-   * .port("port")
-   * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .startCommand("startCommand")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html)
-   */
-  public interface ImageRepositoryProperty {
-    /**
-     * Configuration for running the identified image.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageconfiguration)
-     */
-    public fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
-
-    /**
-     * The identifier of an image.
-     *
-     * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For
-     * the image name format, see [Pulling an
-     * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in the
-     * *Amazon ECR User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageidentifier)
-     */
-    public fun imageIdentifier(): String
-
-    /**
-     * The type of the image repository.
-     *
-     * This reflects the repository provider and whether the repository is private or public.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imagerepositorytype)
-     */
-    public fun imageRepositoryType(): String
-
-    /**
-     * A builder for [ImageRepositoryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param imageConfiguration Configuration for running the identified image.
-       */
-      public fun imageConfiguration(imageConfiguration: IResolvable)
-
-      /**
-       * @param imageConfiguration Configuration for running the identified image.
-       */
-      public fun imageConfiguration(imageConfiguration: ImageConfigurationProperty)
-
-      /**
-       * @param imageConfiguration Configuration for running the identified image.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("90d6a3be65eee3a6be6da28afa8bc2b0a11a91f2090a2f062c14a88d278eb9d3")
-      public
-          fun imageConfiguration(imageConfiguration: ImageConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param imageIdentifier The identifier of an image. 
-       * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For
-       * the image name format, see [Pulling an
-       * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in
-       * the *Amazon ECR User Guide* .
-       */
-      public fun imageIdentifier(imageIdentifier: String)
-
-      /**
-       * @param imageRepositoryType The type of the image repository. 
-       * This reflects the repository provider and whether the repository is private or public.
-       */
-      public fun imageRepositoryType(imageRepositoryType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty.Builder =
-          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty.builder()
-
-      /**
-       * @param imageConfiguration Configuration for running the identified image.
-       */
-      override fun imageConfiguration(imageConfiguration: IResolvable) {
-        cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param imageConfiguration Configuration for running the identified image.
-       */
-      override fun imageConfiguration(imageConfiguration: ImageConfigurationProperty) {
-        cdkBuilder.imageConfiguration(imageConfiguration.let(ImageConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param imageConfiguration Configuration for running the identified image.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("90d6a3be65eee3a6be6da28afa8bc2b0a11a91f2090a2f062c14a88d278eb9d3")
-      override
-          fun imageConfiguration(imageConfiguration: ImageConfigurationProperty.Builder.() -> Unit):
-          Unit = imageConfiguration(ImageConfigurationProperty(imageConfiguration))
-
-      /**
-       * @param imageIdentifier The identifier of an image. 
-       * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For
-       * the image name format, see [Pulling an
-       * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in
-       * the *Amazon ECR User Guide* .
-       */
-      override fun imageIdentifier(imageIdentifier: String) {
-        cdkBuilder.imageIdentifier(imageIdentifier)
-      }
-
-      /**
-       * @param imageRepositoryType The type of the image repository. 
-       * This reflects the repository provider and whether the repository is private or public.
-       */
-      override fun imageRepositoryType(imageRepositoryType: String) {
-        cdkBuilder.imageRepositoryType(imageRepositoryType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty,
-    ) : CdkObject(cdkObject), ImageRepositoryProperty {
-      /**
-       * Configuration for running the identified image.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageconfiguration)
-       */
-      override fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
-
-      /**
-       * The identifier of an image.
-       *
-       * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For
-       * the image name format, see [Pulling an
-       * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in
-       * the *Amazon ECR User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageidentifier)
-       */
-      override fun imageIdentifier(): String = unwrap(this).getImageIdentifier()
-
-      /**
-       * The type of the image repository.
-       *
-       * This reflects the repository provider and whether the repository is private or public.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imagerepositorytype)
-       */
-      override fun imageRepositoryType(): String = unwrap(this).getImageRepositoryType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ImageRepositoryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty):
-          ImageRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? ImageRepositoryProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ImageRepositoryProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty
-    }
-  }
-
-  /**
-   * Describes the runtime configuration of an AWS App Runner service instance (scaling unit).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apprunner.*;
-   * InstanceConfigurationProperty instanceConfigurationProperty =
-   * InstanceConfigurationProperty.builder()
-   * .cpu("cpu")
-   * .instanceRoleArn("instanceRoleArn")
-   * .memory("memory")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html)
-   */
-  public interface InstanceConfigurationProperty {
-    /**
-     * The number of CPU units reserved for each instance of your App Runner service.
-     *
-     * Default: `1 vCPU`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-cpu)
-     */
-    public fun cpu(): String? = unwrap(this).getCpu()
-
-    /**
-     * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner
-     * service.
-     *
-     * These are permissions that your code needs when it calls any AWS APIs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-instancerolearn)
-     */
-    public fun instanceRoleArn(): String? = unwrap(this).getInstanceRoleArn()
-
-    /**
-     * The amount of memory, in MB or GB, reserved for each instance of your App Runner service.
-     *
-     * Default: `2 GB`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-memory)
-     */
-    public fun memory(): String? = unwrap(this).getMemory()
-
-    /**
-     * A builder for [InstanceConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpu The number of CPU units reserved for each instance of your App Runner service.
-       * Default: `1 vCPU`
-       */
-      public fun cpu(cpu: String)
-
-      /**
-       * @param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides
-       * permissions to your App Runner service.
-       * These are permissions that your code needs when it calls any AWS APIs.
-       */
-      public fun instanceRoleArn(instanceRoleArn: String)
-
-      /**
-       * @param memory The amount of memory, in MB or GB, reserved for each instance of your App
-       * Runner service.
-       * Default: `2 GB`
-       */
-      public fun memory(memory: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty.builder()
-
-      /**
-       * @param cpu The number of CPU units reserved for each instance of your App Runner service.
-       * Default: `1 vCPU`
-       */
-      override fun cpu(cpu: String) {
-        cdkBuilder.cpu(cpu)
-      }
-
-      /**
-       * @param instanceRoleArn The Amazon Resource Name (ARN) of an IAM role that provides
-       * permissions to your App Runner service.
-       * These are permissions that your code needs when it calls any AWS APIs.
-       */
-      override fun instanceRoleArn(instanceRoleArn: String) {
-        cdkBuilder.instanceRoleArn(instanceRoleArn)
-      }
-
-      /**
-       * @param memory The amount of memory, in MB or GB, reserved for each instance of your App
-       * Runner service.
-       * Default: `2 GB`
-       */
-      override fun memory(memory: String) {
-        cdkBuilder.memory(memory)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty,
-    ) : CdkObject(cdkObject), InstanceConfigurationProperty {
-      /**
-       * The number of CPU units reserved for each instance of your App Runner service.
-       *
-       * Default: `1 vCPU`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-cpu)
-       */
-      override fun cpu(): String? = unwrap(this).getCpu()
-
-      /**
-       * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner
-       * service.
-       *
-       * These are permissions that your code needs when it calls any AWS APIs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-instancerolearn)
-       */
-      override fun instanceRoleArn(): String? = unwrap(this).getInstanceRoleArn()
-
-      /**
-       * The amount of memory, in MB or GB, reserved for each instance of your App Runner service.
-       *
-       * Default: `2 GB`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-memory)
-       */
-      override fun memory(): String? = unwrap(this).getMemory()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty):
-          InstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceConfigurationProperty):
-          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty
     }
   }
 

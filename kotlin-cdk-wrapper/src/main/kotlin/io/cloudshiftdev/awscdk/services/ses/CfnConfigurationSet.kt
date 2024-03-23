@@ -753,6 +753,101 @@ public open class CfnConfigurationSet internal constructor(
   }
 
   /**
+   * Settings for your VDM configuration as applicable to the Dashboard.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * DashboardOptionsProperty dashboardOptionsProperty = DashboardOptionsProperty.builder()
+   * .engagementMetrics("engagementMetrics")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html)
+   */
+  public interface DashboardOptionsProperty {
+    /**
+     * Specifies the status of your VDM engagement metrics collection. Can be one of the following:.
+     *
+     * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
+     * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html#cfn-ses-configurationset-dashboardoptions-engagementmetrics)
+     */
+    public fun engagementMetrics(): String
+
+    /**
+     * A builder for [DashboardOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param engagementMetrics Specifies the status of your VDM engagement metrics collection.
+       * Can be one of the following:. 
+       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
+       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+       */
+      public fun engagementMetrics(engagementMetrics: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty.builder()
+
+      /**
+       * @param engagementMetrics Specifies the status of your VDM engagement metrics collection.
+       * Can be one of the following:. 
+       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
+       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+       */
+      override fun engagementMetrics(engagementMetrics: String) {
+        cdkBuilder.engagementMetrics(engagementMetrics)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty,
+    ) : CdkObject(cdkObject), DashboardOptionsProperty {
+      /**
+       * Specifies the status of your VDM engagement metrics collection. Can be one of the
+       * following:.
+       *
+       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
+       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html#cfn-ses-configurationset-dashboardoptions-engagementmetrics)
+       */
+      override fun engagementMetrics(): String = unwrap(this).getEngagementMetrics()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashboardOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty):
+          DashboardOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DashboardOptionsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashboardOptionsProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty
+    }
+  }
+
+  /**
    * Specifies whether messages that use the configuration set are required to use Transport Layer
    * Security (TLS).
    *
@@ -985,7 +1080,7 @@ public open class CfnConfigurationSet internal constructor(
   }
 
   /**
-   * The Virtual Deliverability Manager (VDM) options that apply to a configuration set.
+   * Contains information about the reputation settings for a configuration set.
    *
    * Example:
    *
@@ -993,255 +1088,109 @@ public open class CfnConfigurationSet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ses.*;
-   * VdmOptionsProperty vdmOptionsProperty = VdmOptionsProperty.builder()
-   * .dashboardOptions(DashboardOptionsProperty.builder()
-   * .engagementMetrics("engagementMetrics")
-   * .build())
-   * .guardianOptions(GuardianOptionsProperty.builder()
-   * .optimizedSharedDelivery("optimizedSharedDelivery")
-   * .build())
+   * ReputationOptionsProperty reputationOptionsProperty = ReputationOptionsProperty.builder()
+   * .reputationMetricsEnabled(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html)
    */
-  public interface VdmOptionsProperty {
+  public interface ReputationOptionsProperty {
     /**
-     * Settings for your VDM configuration as applicable to the Dashboard.
+     * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
+     * such as bounce and complaint rates, to Amazon CloudWatch.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-dashboardoptions)
+     * If the value is `true` , reputation metrics are published. If the value is `false` ,
+     * reputation metrics are not published. The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
      */
-    public fun dashboardOptions(): Any? = unwrap(this).getDashboardOptions()
+    public fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
 
     /**
-     * Settings for your VDM configuration as applicable to the Guardian.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-guardianoptions)
-     */
-    public fun guardianOptions(): Any? = unwrap(this).getGuardianOptions()
-
-    /**
-     * A builder for [VdmOptionsProperty]
+     * A builder for [ReputationOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
        */
-      public fun dashboardOptions(dashboardOptions: IResolvable)
+      public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean)
 
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
        */
-      public fun dashboardOptions(dashboardOptions: DashboardOptionsProperty)
-
-      /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9ae1370c8118b3db5fccd7c5d77a47a0c9fc5c5ae23baf050aa25ce11aa094cd")
-      public fun dashboardOptions(dashboardOptions: DashboardOptionsProperty.Builder.() -> Unit)
-
-      /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
-       */
-      public fun guardianOptions(guardianOptions: IResolvable)
-
-      /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
-       */
-      public fun guardianOptions(guardianOptions: GuardianOptionsProperty)
-
-      /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9632d1b5dcfc878d2221fd033755a8f3e6b6e1ed1099d509a3393553918608b9")
-      public fun guardianOptions(guardianOptions: GuardianOptionsProperty.Builder.() -> Unit)
+      public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty.builder()
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.builder()
 
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
        */
-      override fun dashboardOptions(dashboardOptions: IResolvable) {
-        cdkBuilder.dashboardOptions(dashboardOptions.let(IResolvable::unwrap))
+      override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
       }
 
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
        */
-      override fun dashboardOptions(dashboardOptions: DashboardOptionsProperty) {
-        cdkBuilder.dashboardOptions(dashboardOptions.let(DashboardOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9ae1370c8118b3db5fccd7c5d77a47a0c9fc5c5ae23baf050aa25ce11aa094cd")
-      override fun dashboardOptions(dashboardOptions: DashboardOptionsProperty.Builder.() -> Unit):
-          Unit = dashboardOptions(DashboardOptionsProperty(dashboardOptions))
-
-      /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
-       */
-      override fun guardianOptions(guardianOptions: IResolvable) {
-        cdkBuilder.guardianOptions(guardianOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
-       */
-      override fun guardianOptions(guardianOptions: GuardianOptionsProperty) {
-        cdkBuilder.guardianOptions(guardianOptions.let(GuardianOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9632d1b5dcfc878d2221fd033755a8f3e6b6e1ed1099d509a3393553918608b9")
-      override fun guardianOptions(guardianOptions: GuardianOptionsProperty.Builder.() -> Unit):
-          Unit = guardianOptions(GuardianOptionsProperty(guardianOptions))
-
-      public fun build(): software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty,
-    ) : CdkObject(cdkObject), VdmOptionsProperty {
-      /**
-       * Settings for your VDM configuration as applicable to the Dashboard.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-dashboardoptions)
-       */
-      override fun dashboardOptions(): Any? = unwrap(this).getDashboardOptions()
-
-      /**
-       * Settings for your VDM configuration as applicable to the Guardian.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-guardianoptions)
-       */
-      override fun guardianOptions(): Any? = unwrap(this).getGuardianOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VdmOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty):
-          VdmOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? VdmOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VdmOptionsProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty
-    }
-  }
-
-  /**
-   * Settings for your VDM configuration as applicable to the Dashboard.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * DashboardOptionsProperty dashboardOptionsProperty = DashboardOptionsProperty.builder()
-   * .engagementMetrics("engagementMetrics")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html)
-   */
-  public interface DashboardOptionsProperty {
-    /**
-     * Specifies the status of your VDM engagement metrics collection. Can be one of the following:.
-     *
-     * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
-     * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html#cfn-ses-configurationset-dashboardoptions-engagementmetrics)
-     */
-    public fun engagementMetrics(): String
-
-    /**
-     * A builder for [DashboardOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param engagementMetrics Specifies the status of your VDM engagement metrics collection.
-       * Can be one of the following:. 
-       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
-       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
-       */
-      public fun engagementMetrics(engagementMetrics: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty.builder()
-
-      /**
-       * @param engagementMetrics Specifies the status of your VDM engagement metrics collection.
-       * Can be one of the following:. 
-       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
-       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
-       */
-      override fun engagementMetrics(engagementMetrics: String) {
-        cdkBuilder.engagementMetrics(engagementMetrics)
+      override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty,
-    ) : CdkObject(cdkObject), DashboardOptionsProperty {
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty,
+    ) : CdkObject(cdkObject), ReputationOptionsProperty {
       /**
-       * Specifies the status of your VDM engagement metrics collection. Can be one of the
-       * following:.
+       * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
+       * such as bounce and complaint rates, to Amazon CloudWatch.
        *
-       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
-       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html#cfn-ses-configurationset-dashboardoptions-engagementmetrics)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
        */
-      override fun engagementMetrics(): String = unwrap(this).getEngagementMetrics()
+      override fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DashboardOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReputationOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty):
-          DashboardOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DashboardOptionsProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty):
+          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReputationOptionsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DashboardOptionsProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
+      internal fun unwrap(wrapped: ReputationOptionsProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty
     }
   }
 
@@ -1581,7 +1530,7 @@ public open class CfnConfigurationSet internal constructor(
   }
 
   /**
-   * Contains information about the reputation settings for a configuration set.
+   * The Virtual Deliverability Manager (VDM) options that apply to a configuration set.
    *
    * Example:
    *
@@ -1589,109 +1538,160 @@ public open class CfnConfigurationSet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ses.*;
-   * ReputationOptionsProperty reputationOptionsProperty = ReputationOptionsProperty.builder()
-   * .reputationMetricsEnabled(false)
+   * VdmOptionsProperty vdmOptionsProperty = VdmOptionsProperty.builder()
+   * .dashboardOptions(DashboardOptionsProperty.builder()
+   * .engagementMetrics("engagementMetrics")
+   * .build())
+   * .guardianOptions(GuardianOptionsProperty.builder()
+   * .optimizedSharedDelivery("optimizedSharedDelivery")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html)
    */
-  public interface ReputationOptionsProperty {
+  public interface VdmOptionsProperty {
     /**
-     * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
-     * such as bounce and complaint rates, to Amazon CloudWatch.
+     * Settings for your VDM configuration as applicable to the Dashboard.
      *
-     * If the value is `true` , reputation metrics are published. If the value is `false` ,
-     * reputation metrics are not published. The default value is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-dashboardoptions)
      */
-    public fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
+    public fun dashboardOptions(): Any? = unwrap(this).getDashboardOptions()
 
     /**
-     * A builder for [ReputationOptionsProperty]
+     * Settings for your VDM configuration as applicable to the Guardian.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-guardianoptions)
+     */
+    public fun guardianOptions(): Any? = unwrap(this).getGuardianOptions()
+
+    /**
+     * A builder for [VdmOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
        */
-      public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean)
+      public fun dashboardOptions(dashboardOptions: IResolvable)
 
       /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
        */
-      public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable)
+      public fun dashboardOptions(dashboardOptions: DashboardOptionsProperty)
+
+      /**
+       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9ae1370c8118b3db5fccd7c5d77a47a0c9fc5c5ae23baf050aa25ce11aa094cd")
+      public fun dashboardOptions(dashboardOptions: DashboardOptionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       */
+      public fun guardianOptions(guardianOptions: IResolvable)
+
+      /**
+       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       */
+      public fun guardianOptions(guardianOptions: GuardianOptionsProperty)
+
+      /**
+       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9632d1b5dcfc878d2221fd033755a8f3e6b6e1ed1099d509a3393553918608b9")
+      public fun guardianOptions(guardianOptions: GuardianOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.builder()
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty.builder()
 
       /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
        */
-      override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
-        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
+      override fun dashboardOptions(dashboardOptions: IResolvable) {
+        cdkBuilder.dashboardOptions(dashboardOptions.let(IResolvable::unwrap))
       }
 
       /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
        */
-      override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
-        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable::unwrap))
+      override fun dashboardOptions(dashboardOptions: DashboardOptionsProperty) {
+        cdkBuilder.dashboardOptions(dashboardOptions.let(DashboardOptionsProperty::unwrap))
       }
 
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =
-          cdkBuilder.build()
+      /**
+       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9ae1370c8118b3db5fccd7c5d77a47a0c9fc5c5ae23baf050aa25ce11aa094cd")
+      override fun dashboardOptions(dashboardOptions: DashboardOptionsProperty.Builder.() -> Unit):
+          Unit = dashboardOptions(DashboardOptionsProperty(dashboardOptions))
+
+      /**
+       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       */
+      override fun guardianOptions(guardianOptions: IResolvable) {
+        cdkBuilder.guardianOptions(guardianOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       */
+      override fun guardianOptions(guardianOptions: GuardianOptionsProperty) {
+        cdkBuilder.guardianOptions(guardianOptions.let(GuardianOptionsProperty::unwrap))
+      }
+
+      /**
+       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9632d1b5dcfc878d2221fd033755a8f3e6b6e1ed1099d509a3393553918608b9")
+      override fun guardianOptions(guardianOptions: GuardianOptionsProperty.Builder.() -> Unit):
+          Unit = guardianOptions(GuardianOptionsProperty(guardianOptions))
+
+      public fun build(): software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty,
-    ) : CdkObject(cdkObject), ReputationOptionsProperty {
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty,
+    ) : CdkObject(cdkObject), VdmOptionsProperty {
       /**
-       * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
-       * such as bounce and complaint rates, to Amazon CloudWatch.
+       * Settings for your VDM configuration as applicable to the Dashboard.
        *
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-dashboardoptions)
        */
-      override fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
+      override fun dashboardOptions(): Any? = unwrap(this).getDashboardOptions()
+
+      /**
+       * Settings for your VDM configuration as applicable to the Guardian.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-guardianoptions)
+       */
+      override fun guardianOptions(): Any? = unwrap(this).getGuardianOptions()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReputationOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VdmOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty):
-          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReputationOptionsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty):
+          VdmOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? VdmOptionsProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ReputationOptionsProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty
+      internal fun unwrap(wrapped: VdmOptionsProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty
     }
   }
 }

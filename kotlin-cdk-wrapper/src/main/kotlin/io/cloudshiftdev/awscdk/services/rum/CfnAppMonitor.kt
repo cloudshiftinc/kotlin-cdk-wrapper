@@ -1267,257 +1267,6 @@ public open class CfnAppMonitor internal constructor(
   }
 
   /**
-   * Creates or updates a destination to receive extended metrics from CloudWatch RUM.
-   *
-   * You can send extended metrics to CloudWatch or to a CloudWatch Evidently experiment.
-   *
-   * For more information about extended metrics, see [Extended metrics that you can send to
-   * CloudWatch and CloudWatch
-   * Evidently](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-vended-metrics.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rum.*;
-   * MetricDestinationProperty metricDestinationProperty = MetricDestinationProperty.builder()
-   * .destination("destination")
-   * // the properties below are optional
-   * .destinationArn("destinationArn")
-   * .iamRoleArn("iamRoleArn")
-   * .metricDefinitions(List.of(MetricDefinitionProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .dimensionKeys(Map.of(
-   * "dimensionKeysKey", "dimensionKeys"))
-   * .eventPattern("eventPattern")
-   * .namespace("namespace")
-   * .unitLabel("unitLabel")
-   * .valueKey("valueKey")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html)
-   */
-  public interface MetricDestinationProperty {
-    /**
-     * Defines the destination to send the metrics to.
-     *
-     * Valid values are `CloudWatch` and `Evidently` . If you specify `Evidently` , you must also
-     * specify the ARN of the CloudWatch Evidently experiment that is to be the destination and an IAM
-     * role that has permission to write to the experiment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-destination)
-     */
-    public fun destination(): String
-
-    /**
-     * Use this parameter only if `Destination` is `Evidently` .
-     *
-     * This parameter specifies the ARN of the Evidently experiment that will receive the extended
-     * metrics.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-destinationarn)
-     */
-    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-    /**
-     * This parameter is required if `Destination` is `Evidently` . If `Destination` is `CloudWatch`
-     * , do not use this parameter.
-     *
-     * This parameter specifies the ARN of an IAM role that RUM will assume to write to the
-     * Evidently experiment that you are sending metrics to. This role must have permission to write to
-     * that experiment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-iamrolearn)
-     */
-    public fun iamRoleArn(): String? = unwrap(this).getIamRoleArn()
-
-    /**
-     * An array of structures which define the metrics that you want to send.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-metricdefinitions)
-     */
-    public fun metricDefinitions(): Any? = unwrap(this).getMetricDefinitions()
-
-    /**
-     * A builder for [MetricDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destination Defines the destination to send the metrics to. 
-       * Valid values are `CloudWatch` and `Evidently` . If you specify `Evidently` , you must also
-       * specify the ARN of the CloudWatch Evidently experiment that is to be the destination and an
-       * IAM role that has permission to write to the experiment.
-       */
-      public fun destination(destination: String)
-
-      /**
-       * @param destinationArn Use this parameter only if `Destination` is `Evidently` .
-       * This parameter specifies the ARN of the Evidently experiment that will receive the extended
-       * metrics.
-       */
-      public fun destinationArn(destinationArn: String)
-
-      /**
-       * @param iamRoleArn This parameter is required if `Destination` is `Evidently` . If
-       * `Destination` is `CloudWatch` , do not use this parameter.
-       * This parameter specifies the ARN of an IAM role that RUM will assume to write to the
-       * Evidently experiment that you are sending metrics to. This role must have permission to write
-       * to that experiment.
-       */
-      public fun iamRoleArn(iamRoleArn: String)
-
-      /**
-       * @param metricDefinitions An array of structures which define the metrics that you want to
-       * send.
-       */
-      public fun metricDefinitions(metricDefinitions: IResolvable)
-
-      /**
-       * @param metricDefinitions An array of structures which define the metrics that you want to
-       * send.
-       */
-      public fun metricDefinitions(metricDefinitions: List<Any>)
-
-      /**
-       * @param metricDefinitions An array of structures which define the metrics that you want to
-       * send.
-       */
-      public fun metricDefinitions(vararg metricDefinitions: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty.Builder =
-          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty.builder()
-
-      /**
-       * @param destination Defines the destination to send the metrics to. 
-       * Valid values are `CloudWatch` and `Evidently` . If you specify `Evidently` , you must also
-       * specify the ARN of the CloudWatch Evidently experiment that is to be the destination and an
-       * IAM role that has permission to write to the experiment.
-       */
-      override fun destination(destination: String) {
-        cdkBuilder.destination(destination)
-      }
-
-      /**
-       * @param destinationArn Use this parameter only if `Destination` is `Evidently` .
-       * This parameter specifies the ARN of the Evidently experiment that will receive the extended
-       * metrics.
-       */
-      override fun destinationArn(destinationArn: String) {
-        cdkBuilder.destinationArn(destinationArn)
-      }
-
-      /**
-       * @param iamRoleArn This parameter is required if `Destination` is `Evidently` . If
-       * `Destination` is `CloudWatch` , do not use this parameter.
-       * This parameter specifies the ARN of an IAM role that RUM will assume to write to the
-       * Evidently experiment that you are sending metrics to. This role must have permission to write
-       * to that experiment.
-       */
-      override fun iamRoleArn(iamRoleArn: String) {
-        cdkBuilder.iamRoleArn(iamRoleArn)
-      }
-
-      /**
-       * @param metricDefinitions An array of structures which define the metrics that you want to
-       * send.
-       */
-      override fun metricDefinitions(metricDefinitions: IResolvable) {
-        cdkBuilder.metricDefinitions(metricDefinitions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricDefinitions An array of structures which define the metrics that you want to
-       * send.
-       */
-      override fun metricDefinitions(metricDefinitions: List<Any>) {
-        cdkBuilder.metricDefinitions(metricDefinitions)
-      }
-
-      /**
-       * @param metricDefinitions An array of structures which define the metrics that you want to
-       * send.
-       */
-      override fun metricDefinitions(vararg metricDefinitions: Any): Unit =
-          metricDefinitions(metricDefinitions.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty,
-    ) : CdkObject(cdkObject), MetricDestinationProperty {
-      /**
-       * Defines the destination to send the metrics to.
-       *
-       * Valid values are `CloudWatch` and `Evidently` . If you specify `Evidently` , you must also
-       * specify the ARN of the CloudWatch Evidently experiment that is to be the destination and an
-       * IAM role that has permission to write to the experiment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-destination)
-       */
-      override fun destination(): String = unwrap(this).getDestination()
-
-      /**
-       * Use this parameter only if `Destination` is `Evidently` .
-       *
-       * This parameter specifies the ARN of the Evidently experiment that will receive the extended
-       * metrics.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-destinationarn)
-       */
-      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-      /**
-       * This parameter is required if `Destination` is `Evidently` . If `Destination` is
-       * `CloudWatch` , do not use this parameter.
-       *
-       * This parameter specifies the ARN of an IAM role that RUM will assume to write to the
-       * Evidently experiment that you are sending metrics to. This role must have permission to write
-       * to that experiment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-iamrolearn)
-       */
-      override fun iamRoleArn(): String? = unwrap(this).getIamRoleArn()
-
-      /**
-       * An array of structures which define the metrics that you want to send.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-metricdefinitions)
-       */
-      override fun metricDefinitions(): Any? = unwrap(this).getMetricDefinitions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty):
-          MetricDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetricDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricDestinationProperty):
-          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty
-    }
-  }
-
-  /**
    * This structure specifies whether this app monitor allows the web client to define and send
    * custom events.
    *
@@ -1940,6 +1689,257 @@ public open class CfnAppMonitor internal constructor(
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty
+    }
+  }
+
+  /**
+   * Creates or updates a destination to receive extended metrics from CloudWatch RUM.
+   *
+   * You can send extended metrics to CloudWatch or to a CloudWatch Evidently experiment.
+   *
+   * For more information about extended metrics, see [Extended metrics that you can send to
+   * CloudWatch and CloudWatch
+   * Evidently](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-vended-metrics.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rum.*;
+   * MetricDestinationProperty metricDestinationProperty = MetricDestinationProperty.builder()
+   * .destination("destination")
+   * // the properties below are optional
+   * .destinationArn("destinationArn")
+   * .iamRoleArn("iamRoleArn")
+   * .metricDefinitions(List.of(MetricDefinitionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .dimensionKeys(Map.of(
+   * "dimensionKeysKey", "dimensionKeys"))
+   * .eventPattern("eventPattern")
+   * .namespace("namespace")
+   * .unitLabel("unitLabel")
+   * .valueKey("valueKey")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html)
+   */
+  public interface MetricDestinationProperty {
+    /**
+     * Defines the destination to send the metrics to.
+     *
+     * Valid values are `CloudWatch` and `Evidently` . If you specify `Evidently` , you must also
+     * specify the ARN of the CloudWatch Evidently experiment that is to be the destination and an IAM
+     * role that has permission to write to the experiment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-destination)
+     */
+    public fun destination(): String
+
+    /**
+     * Use this parameter only if `Destination` is `Evidently` .
+     *
+     * This parameter specifies the ARN of the Evidently experiment that will receive the extended
+     * metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-destinationarn)
+     */
+    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+    /**
+     * This parameter is required if `Destination` is `Evidently` . If `Destination` is `CloudWatch`
+     * , do not use this parameter.
+     *
+     * This parameter specifies the ARN of an IAM role that RUM will assume to write to the
+     * Evidently experiment that you are sending metrics to. This role must have permission to write to
+     * that experiment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-iamrolearn)
+     */
+    public fun iamRoleArn(): String? = unwrap(this).getIamRoleArn()
+
+    /**
+     * An array of structures which define the metrics that you want to send.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-metricdefinitions)
+     */
+    public fun metricDefinitions(): Any? = unwrap(this).getMetricDefinitions()
+
+    /**
+     * A builder for [MetricDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destination Defines the destination to send the metrics to. 
+       * Valid values are `CloudWatch` and `Evidently` . If you specify `Evidently` , you must also
+       * specify the ARN of the CloudWatch Evidently experiment that is to be the destination and an
+       * IAM role that has permission to write to the experiment.
+       */
+      public fun destination(destination: String)
+
+      /**
+       * @param destinationArn Use this parameter only if `Destination` is `Evidently` .
+       * This parameter specifies the ARN of the Evidently experiment that will receive the extended
+       * metrics.
+       */
+      public fun destinationArn(destinationArn: String)
+
+      /**
+       * @param iamRoleArn This parameter is required if `Destination` is `Evidently` . If
+       * `Destination` is `CloudWatch` , do not use this parameter.
+       * This parameter specifies the ARN of an IAM role that RUM will assume to write to the
+       * Evidently experiment that you are sending metrics to. This role must have permission to write
+       * to that experiment.
+       */
+      public fun iamRoleArn(iamRoleArn: String)
+
+      /**
+       * @param metricDefinitions An array of structures which define the metrics that you want to
+       * send.
+       */
+      public fun metricDefinitions(metricDefinitions: IResolvable)
+
+      /**
+       * @param metricDefinitions An array of structures which define the metrics that you want to
+       * send.
+       */
+      public fun metricDefinitions(metricDefinitions: List<Any>)
+
+      /**
+       * @param metricDefinitions An array of structures which define the metrics that you want to
+       * send.
+       */
+      public fun metricDefinitions(vararg metricDefinitions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty.Builder =
+          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty.builder()
+
+      /**
+       * @param destination Defines the destination to send the metrics to. 
+       * Valid values are `CloudWatch` and `Evidently` . If you specify `Evidently` , you must also
+       * specify the ARN of the CloudWatch Evidently experiment that is to be the destination and an
+       * IAM role that has permission to write to the experiment.
+       */
+      override fun destination(destination: String) {
+        cdkBuilder.destination(destination)
+      }
+
+      /**
+       * @param destinationArn Use this parameter only if `Destination` is `Evidently` .
+       * This parameter specifies the ARN of the Evidently experiment that will receive the extended
+       * metrics.
+       */
+      override fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+      }
+
+      /**
+       * @param iamRoleArn This parameter is required if `Destination` is `Evidently` . If
+       * `Destination` is `CloudWatch` , do not use this parameter.
+       * This parameter specifies the ARN of an IAM role that RUM will assume to write to the
+       * Evidently experiment that you are sending metrics to. This role must have permission to write
+       * to that experiment.
+       */
+      override fun iamRoleArn(iamRoleArn: String) {
+        cdkBuilder.iamRoleArn(iamRoleArn)
+      }
+
+      /**
+       * @param metricDefinitions An array of structures which define the metrics that you want to
+       * send.
+       */
+      override fun metricDefinitions(metricDefinitions: IResolvable) {
+        cdkBuilder.metricDefinitions(metricDefinitions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricDefinitions An array of structures which define the metrics that you want to
+       * send.
+       */
+      override fun metricDefinitions(metricDefinitions: List<Any>) {
+        cdkBuilder.metricDefinitions(metricDefinitions)
+      }
+
+      /**
+       * @param metricDefinitions An array of structures which define the metrics that you want to
+       * send.
+       */
+      override fun metricDefinitions(vararg metricDefinitions: Any): Unit =
+          metricDefinitions(metricDefinitions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty,
+    ) : CdkObject(cdkObject), MetricDestinationProperty {
+      /**
+       * Defines the destination to send the metrics to.
+       *
+       * Valid values are `CloudWatch` and `Evidently` . If you specify `Evidently` , you must also
+       * specify the ARN of the CloudWatch Evidently experiment that is to be the destination and an
+       * IAM role that has permission to write to the experiment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-destination)
+       */
+      override fun destination(): String = unwrap(this).getDestination()
+
+      /**
+       * Use this parameter only if `Destination` is `Evidently` .
+       *
+       * This parameter specifies the ARN of the Evidently experiment that will receive the extended
+       * metrics.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-destinationarn)
+       */
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+      /**
+       * This parameter is required if `Destination` is `Evidently` . If `Destination` is
+       * `CloudWatch` , do not use this parameter.
+       *
+       * This parameter specifies the ARN of an IAM role that RUM will assume to write to the
+       * Evidently experiment that you are sending metrics to. This role must have permission to write
+       * to that experiment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-iamrolearn)
+       */
+      override fun iamRoleArn(): String? = unwrap(this).getIamRoleArn()
+
+      /**
+       * An array of structures which define the metrics that you want to send.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html#cfn-rum-appmonitor-metricdestination-metricdefinitions)
+       */
+      override fun metricDefinitions(): Any? = unwrap(this).getMetricDefinitions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty):
+          MetricDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricDestinationProperty):
+          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty
     }
   }
 }

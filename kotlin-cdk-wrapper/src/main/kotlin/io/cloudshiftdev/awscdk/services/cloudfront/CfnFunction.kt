@@ -467,94 +467,6 @@ public open class CfnFunction internal constructor(
   }
 
   /**
-   * Contains metadata about a CloudFront function.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * FunctionMetadataProperty functionMetadataProperty = FunctionMetadataProperty.builder()
-   * .functionArn("functionArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionmetadata.html)
-   */
-  public interface FunctionMetadataProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the function.
-     *
-     * The ARN uniquely identifies the function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionmetadata.html#cfn-cloudfront-function-functionmetadata-functionarn)
-     */
-    public fun functionArn(): String? = unwrap(this).getFunctionArn()
-
-    /**
-     * A builder for [FunctionMetadataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param functionArn The Amazon Resource Name (ARN) of the function.
-       * The ARN uniquely identifies the function.
-       */
-      public fun functionArn(functionArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty.Builder =
-          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty.builder()
-
-      /**
-       * @param functionArn The Amazon Resource Name (ARN) of the function.
-       * The ARN uniquely identifies the function.
-       */
-      override fun functionArn(functionArn: String) {
-        cdkBuilder.functionArn(functionArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty,
-    ) : CdkObject(cdkObject), FunctionMetadataProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the function.
-       *
-       * The ARN uniquely identifies the function.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionmetadata.html#cfn-cloudfront-function-functionmetadata-functionarn)
-       */
-      override fun functionArn(): String? = unwrap(this).getFunctionArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FunctionMetadataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty):
-          FunctionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionMetadataProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FunctionMetadataProperty):
-          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty
-    }
-  }
-
-  /**
    * Contains configuration information about a CloudFront function.
    *
    * Example:
@@ -713,6 +625,94 @@ public open class CfnFunction internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty
+    }
+  }
+
+  /**
+   * Contains metadata about a CloudFront function.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * FunctionMetadataProperty functionMetadataProperty = FunctionMetadataProperty.builder()
+   * .functionArn("functionArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionmetadata.html)
+   */
+  public interface FunctionMetadataProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the function.
+     *
+     * The ARN uniquely identifies the function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionmetadata.html#cfn-cloudfront-function-functionmetadata-functionarn)
+     */
+    public fun functionArn(): String? = unwrap(this).getFunctionArn()
+
+    /**
+     * A builder for [FunctionMetadataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param functionArn The Amazon Resource Name (ARN) of the function.
+       * The ARN uniquely identifies the function.
+       */
+      public fun functionArn(functionArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty.Builder =
+          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty.builder()
+
+      /**
+       * @param functionArn The Amazon Resource Name (ARN) of the function.
+       * The ARN uniquely identifies the function.
+       */
+      override fun functionArn(functionArn: String) {
+        cdkBuilder.functionArn(functionArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty,
+    ) : CdkObject(cdkObject), FunctionMetadataProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the function.
+       *
+       * The ARN uniquely identifies the function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionmetadata.html#cfn-cloudfront-function-functionmetadata-functionarn)
+       */
+      override fun functionArn(): String? = unwrap(this).getFunctionArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FunctionMetadataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty):
+          FunctionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionMetadataProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FunctionMetadataProperty):
+          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty
     }
   }
 

@@ -2058,539 +2058,6 @@ public open class CfnProject internal constructor(
   }
 
   /**
-   * `ProjectCache` is a property of the [AWS CodeBuild
-   * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
-   * resource that specifies information about the cache for the build project. If `ProjectCache` is
-   * not specified, then both of its properties default to `NO_CACHE` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * ProjectCacheProperty projectCacheProperty = ProjectCacheProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .location("location")
-   * .modes(List.of("modes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html)
-   */
-  public interface ProjectCacheProperty {
-    /**
-     * Information about the cache location:.
-     *
-     * * `NO_CACHE` or `LOCAL` : This value is ignored.
-     * * `S3` : This is the S3 bucket name/prefix.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
-     */
-    public fun location(): String? = unwrap(this).getLocation()
-
-    /**
-     * An array of strings that specify the local cache modes.
-     *
-     * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
-     * cache types.
-     *
-     * Possible values are:
-     *
-     * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
-     * cache is created, subsequent builds pull only the change between commits. This mode is a good
-     * choice for projects with a clean working directory and a source that is a large Git repository.
-     * If you choose this option and your project does not use a Git repository (GitHub, GitHub
-     * Enterprise, or Bitbucket), the option is ignored.
-     * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
-     * for projects that build or pull large Docker images. It can prevent the performance issues
-     * caused by pulling large Docker images down from the network.
-     *
-     *
-     * * You can use a Docker layer cache in the Linux environment only.
-     * * The `privileged` flag must be set so that your project has the required Docker permissions.
-     * * You should consider the security implications before you use a Docker layer cache.
-     *
-     *
-     * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode is
-     * a good choice if your build scenario is not suited to one of the other three local cache modes.
-     * If you use a custom cache:
-     * * Only directories can be specified for caching. You cannot specify individual files.
-     * * Symlinks are used to reference cached directories.
-     * * Cached directories are linked to your build before it downloads its project sources. Cached
-     * items are overridden if a source item has the same name. Directories are specified using cache
-     * paths in the buildspec file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-modes)
-     */
-    public fun modes(): List<String> = unwrap(this).getModes() ?: emptyList()
-
-    /**
-     * The type of cache used by the build project. Valid values include:.
-     *
-     * * `NO_CACHE` : The build project does not use any cache.
-     * * `S3` : The build project reads and writes from and to S3.
-     * * `LOCAL` : The build project stores a cache locally on a build host that is only available
-     * to that build host.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [ProjectCacheProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param location Information about the cache location:.
-       * * `NO_CACHE` or `LOCAL` : This value is ignored.
-       * * `S3` : This is the S3 bucket name/prefix.
-       */
-      public fun location(location: String)
-
-      /**
-       * @param modes An array of strings that specify the local cache modes.
-       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
-       * cache types.
-       *
-       * Possible values are:
-       *
-       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
-       * cache is created, subsequent builds pull only the change between commits. This mode is a good
-       * choice for projects with a clean working directory and a source that is a large Git
-       * repository. If you choose this option and your project does not use a Git repository (GitHub,
-       * GitHub Enterprise, or Bitbucket), the option is ignored.
-       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
-       * for projects that build or pull large Docker images. It can prevent the performance issues
-       * caused by pulling large Docker images down from the network.
-       *
-       *
-       * * You can use a Docker layer cache in the Linux environment only.
-       * * The `privileged` flag must be set so that your project has the required Docker
-       * permissions.
-       * * You should consider the security implications before you use a Docker layer cache.
-       *
-       *
-       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
-       * is a good choice if your build scenario is not suited to one of the other three local cache
-       * modes. If you use a custom cache:
-       * * Only directories can be specified for caching. You cannot specify individual files.
-       * * Symlinks are used to reference cached directories.
-       * * Cached directories are linked to your build before it downloads its project sources.
-       * Cached items are overridden if a source item has the same name. Directories are specified
-       * using cache paths in the buildspec file.
-       */
-      public fun modes(modes: List<String>)
-
-      /**
-       * @param modes An array of strings that specify the local cache modes.
-       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
-       * cache types.
-       *
-       * Possible values are:
-       *
-       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
-       * cache is created, subsequent builds pull only the change between commits. This mode is a good
-       * choice for projects with a clean working directory and a source that is a large Git
-       * repository. If you choose this option and your project does not use a Git repository (GitHub,
-       * GitHub Enterprise, or Bitbucket), the option is ignored.
-       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
-       * for projects that build or pull large Docker images. It can prevent the performance issues
-       * caused by pulling large Docker images down from the network.
-       *
-       *
-       * * You can use a Docker layer cache in the Linux environment only.
-       * * The `privileged` flag must be set so that your project has the required Docker
-       * permissions.
-       * * You should consider the security implications before you use a Docker layer cache.
-       *
-       *
-       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
-       * is a good choice if your build scenario is not suited to one of the other three local cache
-       * modes. If you use a custom cache:
-       * * Only directories can be specified for caching. You cannot specify individual files.
-       * * Symlinks are used to reference cached directories.
-       * * Cached directories are linked to your build before it downloads its project sources.
-       * Cached items are overridden if a source item has the same name. Directories are specified
-       * using cache paths in the buildspec file.
-       */
-      public fun modes(vararg modes: String)
-
-      /**
-       * @param type The type of cache used by the build project. Valid values include:. 
-       * * `NO_CACHE` : The build project does not use any cache.
-       * * `S3` : The build project reads and writes from and to S3.
-       * * `LOCAL` : The build project stores a cache locally on a build host that is only available
-       * to that build host.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty.builder()
-
-      /**
-       * @param location Information about the cache location:.
-       * * `NO_CACHE` or `LOCAL` : This value is ignored.
-       * * `S3` : This is the S3 bucket name/prefix.
-       */
-      override fun location(location: String) {
-        cdkBuilder.location(location)
-      }
-
-      /**
-       * @param modes An array of strings that specify the local cache modes.
-       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
-       * cache types.
-       *
-       * Possible values are:
-       *
-       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
-       * cache is created, subsequent builds pull only the change between commits. This mode is a good
-       * choice for projects with a clean working directory and a source that is a large Git
-       * repository. If you choose this option and your project does not use a Git repository (GitHub,
-       * GitHub Enterprise, or Bitbucket), the option is ignored.
-       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
-       * for projects that build or pull large Docker images. It can prevent the performance issues
-       * caused by pulling large Docker images down from the network.
-       *
-       *
-       * * You can use a Docker layer cache in the Linux environment only.
-       * * The `privileged` flag must be set so that your project has the required Docker
-       * permissions.
-       * * You should consider the security implications before you use a Docker layer cache.
-       *
-       *
-       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
-       * is a good choice if your build scenario is not suited to one of the other three local cache
-       * modes. If you use a custom cache:
-       * * Only directories can be specified for caching. You cannot specify individual files.
-       * * Symlinks are used to reference cached directories.
-       * * Cached directories are linked to your build before it downloads its project sources.
-       * Cached items are overridden if a source item has the same name. Directories are specified
-       * using cache paths in the buildspec file.
-       */
-      override fun modes(modes: List<String>) {
-        cdkBuilder.modes(modes)
-      }
-
-      /**
-       * @param modes An array of strings that specify the local cache modes.
-       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
-       * cache types.
-       *
-       * Possible values are:
-       *
-       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
-       * cache is created, subsequent builds pull only the change between commits. This mode is a good
-       * choice for projects with a clean working directory and a source that is a large Git
-       * repository. If you choose this option and your project does not use a Git repository (GitHub,
-       * GitHub Enterprise, or Bitbucket), the option is ignored.
-       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
-       * for projects that build or pull large Docker images. It can prevent the performance issues
-       * caused by pulling large Docker images down from the network.
-       *
-       *
-       * * You can use a Docker layer cache in the Linux environment only.
-       * * The `privileged` flag must be set so that your project has the required Docker
-       * permissions.
-       * * You should consider the security implications before you use a Docker layer cache.
-       *
-       *
-       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
-       * is a good choice if your build scenario is not suited to one of the other three local cache
-       * modes. If you use a custom cache:
-       * * Only directories can be specified for caching. You cannot specify individual files.
-       * * Symlinks are used to reference cached directories.
-       * * Cached directories are linked to your build before it downloads its project sources.
-       * Cached items are overridden if a source item has the same name. Directories are specified
-       * using cache paths in the buildspec file.
-       */
-      override fun modes(vararg modes: String): Unit = modes(modes.toList())
-
-      /**
-       * @param type The type of cache used by the build project. Valid values include:. 
-       * * `NO_CACHE` : The build project does not use any cache.
-       * * `S3` : The build project reads and writes from and to S3.
-       * * `LOCAL` : The build project stores a cache locally on a build host that is only available
-       * to that build host.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty,
-    ) : CdkObject(cdkObject), ProjectCacheProperty {
-      /**
-       * Information about the cache location:.
-       *
-       * * `NO_CACHE` or `LOCAL` : This value is ignored.
-       * * `S3` : This is the S3 bucket name/prefix.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
-       */
-      override fun location(): String? = unwrap(this).getLocation()
-
-      /**
-       * An array of strings that specify the local cache modes.
-       *
-       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
-       * cache types.
-       *
-       * Possible values are:
-       *
-       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
-       * cache is created, subsequent builds pull only the change between commits. This mode is a good
-       * choice for projects with a clean working directory and a source that is a large Git
-       * repository. If you choose this option and your project does not use a Git repository (GitHub,
-       * GitHub Enterprise, or Bitbucket), the option is ignored.
-       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
-       * for projects that build or pull large Docker images. It can prevent the performance issues
-       * caused by pulling large Docker images down from the network.
-       *
-       *
-       * * You can use a Docker layer cache in the Linux environment only.
-       * * The `privileged` flag must be set so that your project has the required Docker
-       * permissions.
-       * * You should consider the security implications before you use a Docker layer cache.
-       *
-       *
-       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
-       * is a good choice if your build scenario is not suited to one of the other three local cache
-       * modes. If you use a custom cache:
-       * * Only directories can be specified for caching. You cannot specify individual files.
-       * * Symlinks are used to reference cached directories.
-       * * Cached directories are linked to your build before it downloads its project sources.
-       * Cached items are overridden if a source item has the same name. Directories are specified
-       * using cache paths in the buildspec file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-modes)
-       */
-      override fun modes(): List<String> = unwrap(this).getModes() ?: emptyList()
-
-      /**
-       * The type of cache used by the build project. Valid values include:.
-       *
-       * * `NO_CACHE` : The build project does not use any cache.
-       * * `S3` : The build project reads and writes from and to S3.
-       * * `LOCAL` : The build project stores a cache locally on a build host that is only available
-       * to that build host.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectCacheProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty):
-          ProjectCacheProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectCacheProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProjectCacheProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty
-    }
-  }
-
-  /**
-   * `CloudWatchLogs` is a property of the [AWS CodeBuild Project
-   * LogsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
-   * property type that specifies settings for CloudWatch logs generated by an AWS CodeBuild build.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * CloudWatchLogsConfigProperty cloudWatchLogsConfigProperty =
-   * CloudWatchLogsConfigProperty.builder()
-   * .status("status")
-   * // the properties below are optional
-   * .groupName("groupName")
-   * .streamName("streamName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html)
-   */
-  public interface CloudWatchLogsConfigProperty {
-    /**
-     * The group name of the logs in CloudWatch Logs.
-     *
-     * For more information, see [Working with Log Groups and Log
-     * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname)
-     */
-    public fun groupName(): String? = unwrap(this).getGroupName()
-
-    /**
-     * The current status of the logs in CloudWatch Logs for a build project. Valid values are:.
-     *
-     * * `ENABLED` : CloudWatch Logs are enabled for this build project.
-     * * `DISABLED` : CloudWatch Logs are not enabled for this build project.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status)
-     */
-    public fun status(): String
-
-    /**
-     * The prefix of the stream name of the CloudWatch Logs.
-     *
-     * For more information, see [Working with Log Groups and Log
-     * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname)
-     */
-    public fun streamName(): String? = unwrap(this).getStreamName()
-
-    /**
-     * A builder for [CloudWatchLogsConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param groupName The group name of the logs in CloudWatch Logs.
-       * For more information, see [Working with Log Groups and Log
-       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-       * .
-       */
-      public fun groupName(groupName: String)
-
-      /**
-       * @param status The current status of the logs in CloudWatch Logs for a build project. Valid
-       * values are:. 
-       * * `ENABLED` : CloudWatch Logs are enabled for this build project.
-       * * `DISABLED` : CloudWatch Logs are not enabled for this build project.
-       */
-      public fun status(status: String)
-
-      /**
-       * @param streamName The prefix of the stream name of the CloudWatch Logs.
-       * For more information, see [Working with Log Groups and Log
-       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-       * .
-       */
-      public fun streamName(streamName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty.builder()
-
-      /**
-       * @param groupName The group name of the logs in CloudWatch Logs.
-       * For more information, see [Working with Log Groups and Log
-       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-       * .
-       */
-      override fun groupName(groupName: String) {
-        cdkBuilder.groupName(groupName)
-      }
-
-      /**
-       * @param status The current status of the logs in CloudWatch Logs for a build project. Valid
-       * values are:. 
-       * * `ENABLED` : CloudWatch Logs are enabled for this build project.
-       * * `DISABLED` : CloudWatch Logs are not enabled for this build project.
-       */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
-      }
-
-      /**
-       * @param streamName The prefix of the stream name of the CloudWatch Logs.
-       * For more information, see [Working with Log Groups and Log
-       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-       * .
-       */
-      override fun streamName(streamName: String) {
-        cdkBuilder.streamName(streamName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsConfigProperty {
-      /**
-       * The group name of the logs in CloudWatch Logs.
-       *
-       * For more information, see [Working with Log Groups and Log
-       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname)
-       */
-      override fun groupName(): String? = unwrap(this).getGroupName()
-
-      /**
-       * The current status of the logs in CloudWatch Logs for a build project. Valid values are:.
-       *
-       * * `ENABLED` : CloudWatch Logs are enabled for this build project.
-       * * `DISABLED` : CloudWatch Logs are not enabled for this build project.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status)
-       */
-      override fun status(): String = unwrap(this).getStatus()
-
-      /**
-       * The prefix of the stream name of the CloudWatch Logs.
-       *
-       * For more information, see [Working with Log Groups and Log
-       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname)
-       */
-      override fun streamName(): String? = unwrap(this).getStreamName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogsConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty):
-          CloudWatchLogsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogsConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogsConfigProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty
-    }
-  }
-
-  /**
    * `Artifacts` is a property of the
    * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
    * resource that specifies output settings for artifacts generated by an AWS CodeBuild build.
@@ -3245,6 +2712,152 @@ public open class CfnProject internal constructor(
   }
 
   /**
+   * Specifies restrictions for the batch build.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * BatchRestrictionsProperty batchRestrictionsProperty = BatchRestrictionsProperty.builder()
+   * .computeTypesAllowed(List.of("computeTypesAllowed"))
+   * .maximumBuildsAllowed(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html)
+   */
+  public interface BatchRestrictionsProperty {
+    /**
+     * An array of strings that specify the compute types that are allowed for the batch build.
+     *
+     * See [Build environment compute
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+     * in the *AWS CodeBuild User Guide* for these values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-computetypesallowed)
+     */
+    public fun computeTypesAllowed(): List<String> = unwrap(this).getComputeTypesAllowed() ?:
+        emptyList()
+
+    /**
+     * Specifies the maximum number of builds allowed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-maximumbuildsallowed)
+     */
+    public fun maximumBuildsAllowed(): Number? = unwrap(this).getMaximumBuildsAllowed()
+
+    /**
+     * A builder for [BatchRestrictionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param computeTypesAllowed An array of strings that specify the compute types that are
+       * allowed for the batch build.
+       * See [Build environment compute
+       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+       * in the *AWS CodeBuild User Guide* for these values.
+       */
+      public fun computeTypesAllowed(computeTypesAllowed: List<String>)
+
+      /**
+       * @param computeTypesAllowed An array of strings that specify the compute types that are
+       * allowed for the batch build.
+       * See [Build environment compute
+       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+       * in the *AWS CodeBuild User Guide* for these values.
+       */
+      public fun computeTypesAllowed(vararg computeTypesAllowed: String)
+
+      /**
+       * @param maximumBuildsAllowed Specifies the maximum number of builds allowed.
+       */
+      public fun maximumBuildsAllowed(maximumBuildsAllowed: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty.builder()
+
+      /**
+       * @param computeTypesAllowed An array of strings that specify the compute types that are
+       * allowed for the batch build.
+       * See [Build environment compute
+       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+       * in the *AWS CodeBuild User Guide* for these values.
+       */
+      override fun computeTypesAllowed(computeTypesAllowed: List<String>) {
+        cdkBuilder.computeTypesAllowed(computeTypesAllowed)
+      }
+
+      /**
+       * @param computeTypesAllowed An array of strings that specify the compute types that are
+       * allowed for the batch build.
+       * See [Build environment compute
+       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+       * in the *AWS CodeBuild User Guide* for these values.
+       */
+      override fun computeTypesAllowed(vararg computeTypesAllowed: String): Unit =
+          computeTypesAllowed(computeTypesAllowed.toList())
+
+      /**
+       * @param maximumBuildsAllowed Specifies the maximum number of builds allowed.
+       */
+      override fun maximumBuildsAllowed(maximumBuildsAllowed: Number) {
+        cdkBuilder.maximumBuildsAllowed(maximumBuildsAllowed)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty,
+    ) : CdkObject(cdkObject), BatchRestrictionsProperty {
+      /**
+       * An array of strings that specify the compute types that are allowed for the batch build.
+       *
+       * See [Build environment compute
+       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+       * in the *AWS CodeBuild User Guide* for these values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-computetypesallowed)
+       */
+      override fun computeTypesAllowed(): List<String> = unwrap(this).getComputeTypesAllowed() ?:
+          emptyList()
+
+      /**
+       * Specifies the maximum number of builds allowed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-maximumbuildsallowed)
+       */
+      override fun maximumBuildsAllowed(): Number? = unwrap(this).getMaximumBuildsAllowed()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BatchRestrictionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty):
+          BatchRestrictionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchRestrictionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BatchRestrictionsProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty
+    }
+  }
+
+  /**
    * Contains information that defines how the AWS CodeBuild build project reports the build status
    * to the source provider.
    *
@@ -3443,7 +3056,9 @@ public open class CfnProject internal constructor(
   }
 
   /**
-   * Specifies restrictions for the batch build.
+   * `CloudWatchLogs` is a property of the [AWS CodeBuild Project
+   * LogsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
+   * property type that specifies settings for CloudWatch logs generated by an AWS CodeBuild build.
    *
    * Example:
    *
@@ -3451,421 +3066,173 @@ public open class CfnProject internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * BatchRestrictionsProperty batchRestrictionsProperty = BatchRestrictionsProperty.builder()
-   * .computeTypesAllowed(List.of("computeTypesAllowed"))
-   * .maximumBuildsAllowed(123)
+   * CloudWatchLogsConfigProperty cloudWatchLogsConfigProperty =
+   * CloudWatchLogsConfigProperty.builder()
+   * .status("status")
+   * // the properties below are optional
+   * .groupName("groupName")
+   * .streamName("streamName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html)
    */
-  public interface BatchRestrictionsProperty {
+  public interface CloudWatchLogsConfigProperty {
     /**
-     * An array of strings that specify the compute types that are allowed for the batch build.
+     * The group name of the logs in CloudWatch Logs.
      *
-     * See [Build environment compute
-     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
-     * in the *AWS CodeBuild User Guide* for these values.
+     * For more information, see [Working with Log Groups and Log
+     * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+     * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-computetypesallowed)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname)
      */
-    public fun computeTypesAllowed(): List<String> = unwrap(this).getComputeTypesAllowed() ?:
-        emptyList()
+    public fun groupName(): String? = unwrap(this).getGroupName()
 
     /**
-     * Specifies the maximum number of builds allowed.
+     * The current status of the logs in CloudWatch Logs for a build project. Valid values are:.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-maximumbuildsallowed)
+     * * `ENABLED` : CloudWatch Logs are enabled for this build project.
+     * * `DISABLED` : CloudWatch Logs are not enabled for this build project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status)
      */
-    public fun maximumBuildsAllowed(): Number? = unwrap(this).getMaximumBuildsAllowed()
+    public fun status(): String
 
     /**
-     * A builder for [BatchRestrictionsProperty]
+     * The prefix of the stream name of the CloudWatch Logs.
+     *
+     * For more information, see [Working with Log Groups and Log
+     * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname)
+     */
+    public fun streamName(): String? = unwrap(this).getStreamName()
+
+    /**
+     * A builder for [CloudWatchLogsConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param computeTypesAllowed An array of strings that specify the compute types that are
-       * allowed for the batch build.
-       * See [Build environment compute
-       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
-       * in the *AWS CodeBuild User Guide* for these values.
+       * @param groupName The group name of the logs in CloudWatch Logs.
+       * For more information, see [Working with Log Groups and Log
+       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+       * .
        */
-      public fun computeTypesAllowed(computeTypesAllowed: List<String>)
+      public fun groupName(groupName: String)
 
       /**
-       * @param computeTypesAllowed An array of strings that specify the compute types that are
-       * allowed for the batch build.
-       * See [Build environment compute
-       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
-       * in the *AWS CodeBuild User Guide* for these values.
+       * @param status The current status of the logs in CloudWatch Logs for a build project. Valid
+       * values are:. 
+       * * `ENABLED` : CloudWatch Logs are enabled for this build project.
+       * * `DISABLED` : CloudWatch Logs are not enabled for this build project.
        */
-      public fun computeTypesAllowed(vararg computeTypesAllowed: String)
+      public fun status(status: String)
 
       /**
-       * @param maximumBuildsAllowed Specifies the maximum number of builds allowed.
+       * @param streamName The prefix of the stream name of the CloudWatch Logs.
+       * For more information, see [Working with Log Groups and Log
+       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+       * .
        */
-      public fun maximumBuildsAllowed(maximumBuildsAllowed: Number)
+      public fun streamName(streamName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty.builder()
-
-      /**
-       * @param computeTypesAllowed An array of strings that specify the compute types that are
-       * allowed for the batch build.
-       * See [Build environment compute
-       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
-       * in the *AWS CodeBuild User Guide* for these values.
-       */
-      override fun computeTypesAllowed(computeTypesAllowed: List<String>) {
-        cdkBuilder.computeTypesAllowed(computeTypesAllowed)
-      }
-
-      /**
-       * @param computeTypesAllowed An array of strings that specify the compute types that are
-       * allowed for the batch build.
-       * See [Build environment compute
-       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
-       * in the *AWS CodeBuild User Guide* for these values.
-       */
-      override fun computeTypesAllowed(vararg computeTypesAllowed: String): Unit =
-          computeTypesAllowed(computeTypesAllowed.toList())
-
-      /**
-       * @param maximumBuildsAllowed Specifies the maximum number of builds allowed.
-       */
-      override fun maximumBuildsAllowed(maximumBuildsAllowed: Number) {
-        cdkBuilder.maximumBuildsAllowed(maximumBuildsAllowed)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty,
-    ) : CdkObject(cdkObject), BatchRestrictionsProperty {
-      /**
-       * An array of strings that specify the compute types that are allowed for the batch build.
-       *
-       * See [Build environment compute
-       * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
-       * in the *AWS CodeBuild User Guide* for these values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-computetypesallowed)
-       */
-      override fun computeTypesAllowed(): List<String> = unwrap(this).getComputeTypesAllowed() ?:
-          emptyList()
-
-      /**
-       * Specifies the maximum number of builds allowed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html#cfn-codebuild-project-batchrestrictions-maximumbuildsallowed)
-       */
-      override fun maximumBuildsAllowed(): Number? = unwrap(this).getMaximumBuildsAllowed()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BatchRestrictionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty):
-          BatchRestrictionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BatchRestrictionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BatchRestrictionsProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty
-    }
-  }
-
-  /**
-   * Contains configuration information about a batch build project.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * ProjectBuildBatchConfigProperty projectBuildBatchConfigProperty =
-   * ProjectBuildBatchConfigProperty.builder()
-   * .batchReportMode("batchReportMode")
-   * .combineArtifacts(false)
-   * .restrictions(BatchRestrictionsProperty.builder()
-   * .computeTypesAllowed(List.of("computeTypesAllowed"))
-   * .maximumBuildsAllowed(123)
-   * .build())
-   * .serviceRole("serviceRole")
-   * .timeoutInMins(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html)
-   */
-  public interface ProjectBuildBatchConfigProperty {
-    /**
-     * Specifies how build status reports are sent to the source provider for the batch build.
-     *
-     * This property is only used when the source provider for your project is Bitbucket, GitHub, or
-     * GitHub Enterprise, and your project is configured to report build statuses to the source
-     * provider.
-     *
-     * * **REPORT_AGGREGATED_BATCH** - (Default) Aggregate all of the build statuses into a single
-     * status report.
-     * * **REPORT_INDIVIDUAL_BUILDS** - Send a separate status report for each individual build.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-batchreportmode)
-     */
-    public fun batchReportMode(): String? = unwrap(this).getBatchReportMode()
-
-    /**
-     * Specifies if the build artifacts for the batch build should be combined into a single
-     * artifact location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts)
-     */
-    public fun combineArtifacts(): Any? = unwrap(this).getCombineArtifacts()
-
-    /**
-     * A `BatchRestrictions` object that specifies the restrictions for the batch build.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-restrictions)
-     */
-    public fun restrictions(): Any? = unwrap(this).getRestrictions()
-
-    /**
-     * Specifies the service role ARN for the batch build project.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-servicerole)
-     */
-    public fun serviceRole(): String? = unwrap(this).getServiceRole()
-
-    /**
-     * Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-timeoutinmins)
-     */
-    public fun timeoutInMins(): Number? = unwrap(this).getTimeoutInMins()
-
-    /**
-     * A builder for [ProjectBuildBatchConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param batchReportMode Specifies how build status reports are sent to the source provider
-       * for the batch build.
-       * This property is only used when the source provider for your project is Bitbucket, GitHub,
-       * or GitHub Enterprise, and your project is configured to report build statuses to the source
-       * provider.
-       *
-       * * **REPORT_AGGREGATED_BATCH** - (Default) Aggregate all of the build statuses into a single
-       * status report.
-       * * **REPORT_INDIVIDUAL_BUILDS** - Send a separate status report for each individual build.
-       */
-      public fun batchReportMode(batchReportMode: String)
-
-      /**
-       * @param combineArtifacts Specifies if the build artifacts for the batch build should be
-       * combined into a single artifact location.
-       */
-      public fun combineArtifacts(combineArtifacts: Boolean)
-
-      /**
-       * @param combineArtifacts Specifies if the build artifacts for the batch build should be
-       * combined into a single artifact location.
-       */
-      public fun combineArtifacts(combineArtifacts: IResolvable)
-
-      /**
-       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
-       * batch build.
-       */
-      public fun restrictions(restrictions: IResolvable)
-
-      /**
-       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
-       * batch build.
-       */
-      public fun restrictions(restrictions: BatchRestrictionsProperty)
-
-      /**
-       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
-       * batch build.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("01751331ef50dd769676487deeb1add0406ffad963fdd1b3b38d0f20bbbdcf0d")
-      public fun restrictions(restrictions: BatchRestrictionsProperty.Builder.() -> Unit)
-
-      /**
-       * @param serviceRole Specifies the service role ARN for the batch build project.
-       */
-      public fun serviceRole(serviceRole: String)
-
-      /**
-       * @param timeoutInMins Specifies the maximum amount of time, in minutes, that the batch build
-       * must be completed in.
-       */
-      public fun timeoutInMins(timeoutInMins: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty.Builder
+          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty.Builder
           =
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty.builder()
+          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty.builder()
 
       /**
-       * @param batchReportMode Specifies how build status reports are sent to the source provider
-       * for the batch build.
-       * This property is only used when the source provider for your project is Bitbucket, GitHub,
-       * or GitHub Enterprise, and your project is configured to report build statuses to the source
-       * provider.
-       *
-       * * **REPORT_AGGREGATED_BATCH** - (Default) Aggregate all of the build statuses into a single
-       * status report.
-       * * **REPORT_INDIVIDUAL_BUILDS** - Send a separate status report for each individual build.
+       * @param groupName The group name of the logs in CloudWatch Logs.
+       * For more information, see [Working with Log Groups and Log
+       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+       * .
        */
-      override fun batchReportMode(batchReportMode: String) {
-        cdkBuilder.batchReportMode(batchReportMode)
+      override fun groupName(groupName: String) {
+        cdkBuilder.groupName(groupName)
       }
 
       /**
-       * @param combineArtifacts Specifies if the build artifacts for the batch build should be
-       * combined into a single artifact location.
+       * @param status The current status of the logs in CloudWatch Logs for a build project. Valid
+       * values are:. 
+       * * `ENABLED` : CloudWatch Logs are enabled for this build project.
+       * * `DISABLED` : CloudWatch Logs are not enabled for this build project.
        */
-      override fun combineArtifacts(combineArtifacts: Boolean) {
-        cdkBuilder.combineArtifacts(combineArtifacts)
+      override fun status(status: String) {
+        cdkBuilder.status(status)
       }
 
       /**
-       * @param combineArtifacts Specifies if the build artifacts for the batch build should be
-       * combined into a single artifact location.
+       * @param streamName The prefix of the stream name of the CloudWatch Logs.
+       * For more information, see [Working with Log Groups and Log
+       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+       * .
        */
-      override fun combineArtifacts(combineArtifacts: IResolvable) {
-        cdkBuilder.combineArtifacts(combineArtifacts.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
-       * batch build.
-       */
-      override fun restrictions(restrictions: IResolvable) {
-        cdkBuilder.restrictions(restrictions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
-       * batch build.
-       */
-      override fun restrictions(restrictions: BatchRestrictionsProperty) {
-        cdkBuilder.restrictions(restrictions.let(BatchRestrictionsProperty::unwrap))
-      }
-
-      /**
-       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
-       * batch build.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("01751331ef50dd769676487deeb1add0406ffad963fdd1b3b38d0f20bbbdcf0d")
-      override fun restrictions(restrictions: BatchRestrictionsProperty.Builder.() -> Unit): Unit =
-          restrictions(BatchRestrictionsProperty(restrictions))
-
-      /**
-       * @param serviceRole Specifies the service role ARN for the batch build project.
-       */
-      override fun serviceRole(serviceRole: String) {
-        cdkBuilder.serviceRole(serviceRole)
-      }
-
-      /**
-       * @param timeoutInMins Specifies the maximum amount of time, in minutes, that the batch build
-       * must be completed in.
-       */
-      override fun timeoutInMins(timeoutInMins: Number) {
-        cdkBuilder.timeoutInMins(timeoutInMins)
+      override fun streamName(streamName: String) {
+        cdkBuilder.streamName(streamName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty =
+          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty,
-    ) : CdkObject(cdkObject), ProjectBuildBatchConfigProperty {
+          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogsConfigProperty {
       /**
-       * Specifies how build status reports are sent to the source provider for the batch build.
+       * The group name of the logs in CloudWatch Logs.
        *
-       * This property is only used when the source provider for your project is Bitbucket, GitHub,
-       * or GitHub Enterprise, and your project is configured to report build statuses to the source
-       * provider.
+       * For more information, see [Working with Log Groups and Log
+       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+       * .
        *
-       * * **REPORT_AGGREGATED_BATCH** - (Default) Aggregate all of the build statuses into a single
-       * status report.
-       * * **REPORT_INDIVIDUAL_BUILDS** - Send a separate status report for each individual build.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-batchreportmode)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname)
        */
-      override fun batchReportMode(): String? = unwrap(this).getBatchReportMode()
+      override fun groupName(): String? = unwrap(this).getGroupName()
 
       /**
-       * Specifies if the build artifacts for the batch build should be combined into a single
-       * artifact location.
+       * The current status of the logs in CloudWatch Logs for a build project. Valid values are:.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts)
+       * * `ENABLED` : CloudWatch Logs are enabled for this build project.
+       * * `DISABLED` : CloudWatch Logs are not enabled for this build project.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status)
        */
-      override fun combineArtifacts(): Any? = unwrap(this).getCombineArtifacts()
+      override fun status(): String = unwrap(this).getStatus()
 
       /**
-       * A `BatchRestrictions` object that specifies the restrictions for the batch build.
+       * The prefix of the stream name of the CloudWatch Logs.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-restrictions)
-       */
-      override fun restrictions(): Any? = unwrap(this).getRestrictions()
-
-      /**
-       * Specifies the service role ARN for the batch build project.
+       * For more information, see [Working with Log Groups and Log
+       * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+       * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-servicerole)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname)
        */
-      override fun serviceRole(): String? = unwrap(this).getServiceRole()
-
-      /**
-       * Specifies the maximum amount of time, in minutes, that the batch build must be completed
-       * in.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-timeoutinmins)
-       */
-      override fun timeoutInMins(): Number? = unwrap(this).getTimeoutInMins()
+      override fun streamName(): String? = unwrap(this).getStreamName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectBuildBatchConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogsConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty):
-          ProjectBuildBatchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProjectBuildBatchConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty):
+          CloudWatchLogsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ProjectBuildBatchConfigProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty =
+      internal fun unwrap(wrapped: CloudWatchLogsConfigProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty
+          software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty
     }
   }
 
@@ -4699,90 +4066,6 @@ public open class CfnProject internal constructor(
   }
 
   /**
-   * Information about the compute fleet of the build project.
-   *
-   * For more information, see [Working with reserved capacity in AWS
-   * CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/fleets.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * ProjectFleetProperty projectFleetProperty = ProjectFleetProperty.builder()
-   * .fleetArn("fleetArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfleet.html)
-   */
-  public interface ProjectFleetProperty {
-    /**
-     * Specifies the compute fleet ARN for the build project.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfleet.html#cfn-codebuild-project-projectfleet-fleetarn)
-     */
-    public fun fleetArn(): String? = unwrap(this).getFleetArn()
-
-    /**
-     * A builder for [ProjectFleetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fleetArn Specifies the compute fleet ARN for the build project.
-       */
-      public fun fleetArn(fleetArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty.builder()
-
-      /**
-       * @param fleetArn Specifies the compute fleet ARN for the build project.
-       */
-      override fun fleetArn(fleetArn: String) {
-        cdkBuilder.fleetArn(fleetArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty,
-    ) : CdkObject(cdkObject), ProjectFleetProperty {
-      /**
-       * Specifies the compute fleet ARN for the build project.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfleet.html#cfn-codebuild-project-projectfleet-fleetarn)
-       */
-      override fun fleetArn(): String? = unwrap(this).getFleetArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectFleetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty):
-          ProjectFleetProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectFleetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProjectFleetProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty
-    }
-  }
-
-  /**
    * `EnvironmentVariable` is a property of the [AWS CodeBuild Project
    * Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
    * property type that specifies the name and value of an environment variable for an AWS CodeBuild
@@ -5009,6 +4292,107 @@ public open class CfnProject internal constructor(
   }
 
   /**
+   * `GitSubmodulesConfig` is a property of the [AWS CodeBuild Project
+   * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+   * property type that specifies information about the Git submodules configuration for the build
+   * project.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * GitSubmodulesConfigProperty gitSubmodulesConfigProperty = GitSubmodulesConfigProperty.builder()
+   * .fetchSubmodules(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html)
+   */
+  public interface GitSubmodulesConfigProperty {
+    /**
+     * Set to true to fetch Git submodules for your AWS CodeBuild build project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules)
+     */
+    public fun fetchSubmodules(): Any
+
+    /**
+     * A builder for [GitSubmodulesConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
+       * project. 
+       */
+      public fun fetchSubmodules(fetchSubmodules: Boolean)
+
+      /**
+       * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
+       * project. 
+       */
+      public fun fetchSubmodules(fetchSubmodules: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty.builder()
+
+      /**
+       * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
+       * project. 
+       */
+      override fun fetchSubmodules(fetchSubmodules: Boolean) {
+        cdkBuilder.fetchSubmodules(fetchSubmodules)
+      }
+
+      /**
+       * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
+       * project. 
+       */
+      override fun fetchSubmodules(fetchSubmodules: IResolvable) {
+        cdkBuilder.fetchSubmodules(fetchSubmodules.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty,
+    ) : CdkObject(cdkObject), GitSubmodulesConfigProperty {
+      /**
+       * Set to true to fetch Git submodules for your AWS CodeBuild build project.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules)
+       */
+      override fun fetchSubmodules(): Any = unwrap(this).getFetchSubmodules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GitSubmodulesConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty):
+          GitSubmodulesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GitSubmodulesConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GitSubmodulesConfigProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty
+    }
+  }
+
+  /**
    * `LogsConfig` is a property of the [AWS CodeBuild
    * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
    * resource that specifies information about logs for a build project. These can be logs in Amazon
@@ -5204,16 +4588,7 @@ public open class CfnProject internal constructor(
   }
 
   /**
-   * `RegistryCredential` is a property of the [AWS CodeBuild Project
-   * Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
-   * property type that specifies information about credentials that provide access to a private Docker
-   * registry. When this is set:.
-   *
-   * * `imagePullCredentialsType` must be set to `SERVICE_ROLE` .
-   * * images cannot be curated or an Amazon ECR image.
-   *
-   * For more information, see [Private Registry with AWS Secrets Manager Sample for AWS
-   * CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-private-registry.html) .
+   * Contains configuration information about a batch build project.
    *
    * Example:
    *
@@ -5221,141 +4596,283 @@ public open class CfnProject internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * RegistryCredentialProperty registryCredentialProperty = RegistryCredentialProperty.builder()
-   * .credential("credential")
-   * .credentialProvider("credentialProvider")
+   * ProjectBuildBatchConfigProperty projectBuildBatchConfigProperty =
+   * ProjectBuildBatchConfigProperty.builder()
+   * .batchReportMode("batchReportMode")
+   * .combineArtifacts(false)
+   * .restrictions(BatchRestrictionsProperty.builder()
+   * .computeTypesAllowed(List.of("computeTypesAllowed"))
+   * .maximumBuildsAllowed(123)
+   * .build())
+   * .serviceRole("serviceRole")
+   * .timeoutInMins(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html)
    */
-  public interface RegistryCredentialProperty {
+  public interface ProjectBuildBatchConfigProperty {
     /**
-     * The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager .
+     * Specifies how build status reports are sent to the source provider for the batch build.
      *
+     * This property is only used when the source provider for your project is Bitbucket, GitHub, or
+     * GitHub Enterprise, and your project is configured to report build statuses to the source
+     * provider.
      *
-     * The `credential` can use the name of the credentials only if they exist in your current AWS
-     * Region .
+     * * **REPORT_AGGREGATED_BATCH** - (Default) Aggregate all of the build statuses into a single
+     * status report.
+     * * **REPORT_INDIVIDUAL_BUILDS** - Send a separate status report for each individual build.
      *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credential)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-batchreportmode)
      */
-    public fun credential(): String
+    public fun batchReportMode(): String? = unwrap(this).getBatchReportMode()
 
     /**
-     * The service that created the credentials to access a private Docker registry.
+     * Specifies if the build artifacts for the batch build should be combined into a single
+     * artifact location.
      *
-     * The valid value, SECRETS_MANAGER, is for AWS Secrets Manager .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credentialprovider)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts)
      */
-    public fun credentialProvider(): String
+    public fun combineArtifacts(): Any? = unwrap(this).getCombineArtifacts()
 
     /**
-     * A builder for [RegistryCredentialProperty]
+     * A `BatchRestrictions` object that specifies the restrictions for the batch build.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-restrictions)
+     */
+    public fun restrictions(): Any? = unwrap(this).getRestrictions()
+
+    /**
+     * Specifies the service role ARN for the batch build project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-servicerole)
+     */
+    public fun serviceRole(): String? = unwrap(this).getServiceRole()
+
+    /**
+     * Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-timeoutinmins)
+     */
+    public fun timeoutInMins(): Number? = unwrap(this).getTimeoutInMins()
+
+    /**
+     * A builder for [ProjectBuildBatchConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param credential The Amazon Resource Name (ARN) or name of credentials created using AWS
-       * Secrets Manager . 
+       * @param batchReportMode Specifies how build status reports are sent to the source provider
+       * for the batch build.
+       * This property is only used when the source provider for your project is Bitbucket, GitHub,
+       * or GitHub Enterprise, and your project is configured to report build statuses to the source
+       * provider.
        *
-       * The `credential` can use the name of the credentials only if they exist in your current AWS
-       * Region .
+       * * **REPORT_AGGREGATED_BATCH** - (Default) Aggregate all of the build statuses into a single
+       * status report.
+       * * **REPORT_INDIVIDUAL_BUILDS** - Send a separate status report for each individual build.
        */
-      public fun credential(credential: String)
+      public fun batchReportMode(batchReportMode: String)
 
       /**
-       * @param credentialProvider The service that created the credentials to access a private
-       * Docker registry. 
-       * The valid value, SECRETS_MANAGER, is for AWS Secrets Manager .
+       * @param combineArtifacts Specifies if the build artifacts for the batch build should be
+       * combined into a single artifact location.
        */
-      public fun credentialProvider(credentialProvider: String)
+      public fun combineArtifacts(combineArtifacts: Boolean)
+
+      /**
+       * @param combineArtifacts Specifies if the build artifacts for the batch build should be
+       * combined into a single artifact location.
+       */
+      public fun combineArtifacts(combineArtifacts: IResolvable)
+
+      /**
+       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
+       * batch build.
+       */
+      public fun restrictions(restrictions: IResolvable)
+
+      /**
+       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
+       * batch build.
+       */
+      public fun restrictions(restrictions: BatchRestrictionsProperty)
+
+      /**
+       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
+       * batch build.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("01751331ef50dd769676487deeb1add0406ffad963fdd1b3b38d0f20bbbdcf0d")
+      public fun restrictions(restrictions: BatchRestrictionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param serviceRole Specifies the service role ARN for the batch build project.
+       */
+      public fun serviceRole(serviceRole: String)
+
+      /**
+       * @param timeoutInMins Specifies the maximum amount of time, in minutes, that the batch build
+       * must be completed in.
+       */
+      public fun timeoutInMins(timeoutInMins: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty.builder()
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty.builder()
 
       /**
-       * @param credential The Amazon Resource Name (ARN) or name of credentials created using AWS
-       * Secrets Manager . 
+       * @param batchReportMode Specifies how build status reports are sent to the source provider
+       * for the batch build.
+       * This property is only used when the source provider for your project is Bitbucket, GitHub,
+       * or GitHub Enterprise, and your project is configured to report build statuses to the source
+       * provider.
        *
-       * The `credential` can use the name of the credentials only if they exist in your current AWS
-       * Region .
+       * * **REPORT_AGGREGATED_BATCH** - (Default) Aggregate all of the build statuses into a single
+       * status report.
+       * * **REPORT_INDIVIDUAL_BUILDS** - Send a separate status report for each individual build.
        */
-      override fun credential(credential: String) {
-        cdkBuilder.credential(credential)
+      override fun batchReportMode(batchReportMode: String) {
+        cdkBuilder.batchReportMode(batchReportMode)
       }
 
       /**
-       * @param credentialProvider The service that created the credentials to access a private
-       * Docker registry. 
-       * The valid value, SECRETS_MANAGER, is for AWS Secrets Manager .
+       * @param combineArtifacts Specifies if the build artifacts for the batch build should be
+       * combined into a single artifact location.
        */
-      override fun credentialProvider(credentialProvider: String) {
-        cdkBuilder.credentialProvider(credentialProvider)
+      override fun combineArtifacts(combineArtifacts: Boolean) {
+        cdkBuilder.combineArtifacts(combineArtifacts)
+      }
+
+      /**
+       * @param combineArtifacts Specifies if the build artifacts for the batch build should be
+       * combined into a single artifact location.
+       */
+      override fun combineArtifacts(combineArtifacts: IResolvable) {
+        cdkBuilder.combineArtifacts(combineArtifacts.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
+       * batch build.
+       */
+      override fun restrictions(restrictions: IResolvable) {
+        cdkBuilder.restrictions(restrictions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
+       * batch build.
+       */
+      override fun restrictions(restrictions: BatchRestrictionsProperty) {
+        cdkBuilder.restrictions(restrictions.let(BatchRestrictionsProperty::unwrap))
+      }
+
+      /**
+       * @param restrictions A `BatchRestrictions` object that specifies the restrictions for the
+       * batch build.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("01751331ef50dd769676487deeb1add0406ffad963fdd1b3b38d0f20bbbdcf0d")
+      override fun restrictions(restrictions: BatchRestrictionsProperty.Builder.() -> Unit): Unit =
+          restrictions(BatchRestrictionsProperty(restrictions))
+
+      /**
+       * @param serviceRole Specifies the service role ARN for the batch build project.
+       */
+      override fun serviceRole(serviceRole: String) {
+        cdkBuilder.serviceRole(serviceRole)
+      }
+
+      /**
+       * @param timeoutInMins Specifies the maximum amount of time, in minutes, that the batch build
+       * must be completed in.
+       */
+      override fun timeoutInMins(timeoutInMins: Number) {
+        cdkBuilder.timeoutInMins(timeoutInMins)
       }
 
       public fun build():
-          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty =
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty,
-    ) : CdkObject(cdkObject), RegistryCredentialProperty {
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty,
+    ) : CdkObject(cdkObject), ProjectBuildBatchConfigProperty {
       /**
-       * The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager .
+       * Specifies how build status reports are sent to the source provider for the batch build.
        *
+       * This property is only used when the source provider for your project is Bitbucket, GitHub,
+       * or GitHub Enterprise, and your project is configured to report build statuses to the source
+       * provider.
        *
-       * The `credential` can use the name of the credentials only if they exist in your current AWS
-       * Region .
+       * * **REPORT_AGGREGATED_BATCH** - (Default) Aggregate all of the build statuses into a single
+       * status report.
+       * * **REPORT_INDIVIDUAL_BUILDS** - Send a separate status report for each individual build.
        *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credential)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-batchreportmode)
        */
-      override fun credential(): String = unwrap(this).getCredential()
+      override fun batchReportMode(): String? = unwrap(this).getBatchReportMode()
 
       /**
-       * The service that created the credentials to access a private Docker registry.
+       * Specifies if the build artifacts for the batch build should be combined into a single
+       * artifact location.
        *
-       * The valid value, SECRETS_MANAGER, is for AWS Secrets Manager .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credentialprovider)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts)
        */
-      override fun credentialProvider(): String = unwrap(this).getCredentialProvider()
+      override fun combineArtifacts(): Any? = unwrap(this).getCombineArtifacts()
+
+      /**
+       * A `BatchRestrictions` object that specifies the restrictions for the batch build.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-restrictions)
+       */
+      override fun restrictions(): Any? = unwrap(this).getRestrictions()
+
+      /**
+       * Specifies the service role ARN for the batch build project.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-servicerole)
+       */
+      override fun serviceRole(): String? = unwrap(this).getServiceRole()
+
+      /**
+       * Specifies the maximum amount of time, in minutes, that the batch build must be completed
+       * in.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html#cfn-codebuild-project-projectbuildbatchconfig-timeoutinmins)
+       */
+      override fun timeoutInMins(): Number? = unwrap(this).getTimeoutInMins()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RegistryCredentialProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectBuildBatchConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty):
-          RegistryCredentialProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RegistryCredentialProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty):
+          ProjectBuildBatchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProjectBuildBatchConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RegistryCredentialProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty
+      internal fun unwrap(wrapped: ProjectBuildBatchConfigProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty
     }
   }
 
   /**
-   * `ProjectTriggers` is a property of the [AWS CodeBuild
+   * `ProjectCache` is a property of the [AWS CodeBuild
    * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
-   * resource that specifies webhooks that trigger an AWS CodeBuild build.
-   *
-   *
-   * The Webhook feature isn't available in AWS CloudFormation for GitHub Enterprise projects. Use
-   * the AWS CLI or AWS CodeBuild console to create the webhook.
-   *
+   * resource that specifies information about the cache for the build project. If `ProjectCache` is
+   * not specified, then both of its properties default to `NO_CACHE` .
    *
    * Example:
    *
@@ -5363,490 +4880,343 @@ public open class CfnProject internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * ProjectTriggersProperty projectTriggersProperty = ProjectTriggersProperty.builder()
-   * .buildType("buildType")
-   * .filterGroups(List.of(List.of(WebhookFilterProperty.builder()
-   * .pattern("pattern")
+   * ProjectCacheProperty projectCacheProperty = ProjectCacheProperty.builder()
    * .type("type")
    * // the properties below are optional
-   * .excludeMatchedPattern(false)
-   * .build())))
-   * .webhook(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
-   */
-  public interface ProjectTriggersProperty {
-    /**
-     * Specifies the type of build this webhook will trigger. Allowed values are:.
-     *
-     * * **BUILD** - A single build
-     * * **BUILD_BATCH** - A batch build
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-buildtype)
-     */
-    public fun buildType(): String? = unwrap(this).getBuildType()
-
-    /**
-     * A list of lists of `WebhookFilter` objects used to determine which webhook events are
-     * triggered.
-     *
-     * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-filtergroups)
-     */
-    public fun filterGroups(): Any? = unwrap(this).getFilterGroups()
-
-    /**
-     * Specifies whether or not to begin automatically rebuilding the source code every time a code
-     * change is pushed to the repository.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
-     */
-    public fun webhook(): Any? = unwrap(this).getWebhook()
-
-    /**
-     * A builder for [ProjectTriggersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param buildType Specifies the type of build this webhook will trigger. Allowed values
-       * are:.
-       * * **BUILD** - A single build
-       * * **BUILD_BATCH** - A batch build
-       */
-      public fun buildType(buildType: String)
-
-      /**
-       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
-       * webhook events are triggered.
-       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-       */
-      public fun filterGroups(filterGroups: IResolvable)
-
-      /**
-       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
-       * webhook events are triggered.
-       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-       */
-      public fun filterGroups(filterGroups: List<Any>)
-
-      /**
-       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
-       * webhook events are triggered.
-       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-       */
-      public fun filterGroups(vararg filterGroups: Any)
-
-      /**
-       * @param webhook Specifies whether or not to begin automatically rebuilding the source code
-       * every time a code change is pushed to the repository.
-       */
-      public fun webhook(webhook: Boolean)
-
-      /**
-       * @param webhook Specifies whether or not to begin automatically rebuilding the source code
-       * every time a code change is pushed to the repository.
-       */
-      public fun webhook(webhook: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty.builder()
-
-      /**
-       * @param buildType Specifies the type of build this webhook will trigger. Allowed values
-       * are:.
-       * * **BUILD** - A single build
-       * * **BUILD_BATCH** - A batch build
-       */
-      override fun buildType(buildType: String) {
-        cdkBuilder.buildType(buildType)
-      }
-
-      /**
-       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
-       * webhook events are triggered.
-       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-       */
-      override fun filterGroups(filterGroups: IResolvable) {
-        cdkBuilder.filterGroups(filterGroups.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
-       * webhook events are triggered.
-       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-       */
-      override fun filterGroups(filterGroups: List<Any>) {
-        cdkBuilder.filterGroups(filterGroups)
-      }
-
-      /**
-       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
-       * webhook events are triggered.
-       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-       */
-      override fun filterGroups(vararg filterGroups: Any): Unit =
-          filterGroups(filterGroups.toList())
-
-      /**
-       * @param webhook Specifies whether or not to begin automatically rebuilding the source code
-       * every time a code change is pushed to the repository.
-       */
-      override fun webhook(webhook: Boolean) {
-        cdkBuilder.webhook(webhook)
-      }
-
-      /**
-       * @param webhook Specifies whether or not to begin automatically rebuilding the source code
-       * every time a code change is pushed to the repository.
-       */
-      override fun webhook(webhook: IResolvable) {
-        cdkBuilder.webhook(webhook.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty,
-    ) : CdkObject(cdkObject), ProjectTriggersProperty {
-      /**
-       * Specifies the type of build this webhook will trigger. Allowed values are:.
-       *
-       * * **BUILD** - A single build
-       * * **BUILD_BATCH** - A batch build
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-buildtype)
-       */
-      override fun buildType(): String? = unwrap(this).getBuildType()
-
-      /**
-       * A list of lists of `WebhookFilter` objects used to determine which webhook events are
-       * triggered.
-       *
-       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-filtergroups)
-       */
-      override fun filterGroups(): Any? = unwrap(this).getFilterGroups()
-
-      /**
-       * Specifies whether or not to begin automatically rebuilding the source code every time a
-       * code change is pushed to the repository.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
-       */
-      override fun webhook(): Any? = unwrap(this).getWebhook()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectTriggersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty):
-          ProjectTriggersProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectTriggersProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProjectTriggersProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty
-    }
-  }
-
-  /**
-   * `GitSubmodulesConfig` is a property of the [AWS CodeBuild Project
-   * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
-   * property type that specifies information about the Git submodules configuration for the build
-   * project.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * GitSubmodulesConfigProperty gitSubmodulesConfigProperty = GitSubmodulesConfigProperty.builder()
-   * .fetchSubmodules(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html)
-   */
-  public interface GitSubmodulesConfigProperty {
-    /**
-     * Set to true to fetch Git submodules for your AWS CodeBuild build project.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules)
-     */
-    public fun fetchSubmodules(): Any
-
-    /**
-     * A builder for [GitSubmodulesConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
-       * project. 
-       */
-      public fun fetchSubmodules(fetchSubmodules: Boolean)
-
-      /**
-       * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
-       * project. 
-       */
-      public fun fetchSubmodules(fetchSubmodules: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty.builder()
-
-      /**
-       * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
-       * project. 
-       */
-      override fun fetchSubmodules(fetchSubmodules: Boolean) {
-        cdkBuilder.fetchSubmodules(fetchSubmodules)
-      }
-
-      /**
-       * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
-       * project. 
-       */
-      override fun fetchSubmodules(fetchSubmodules: IResolvable) {
-        cdkBuilder.fetchSubmodules(fetchSubmodules.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty,
-    ) : CdkObject(cdkObject), GitSubmodulesConfigProperty {
-      /**
-       * Set to true to fetch Git submodules for your AWS CodeBuild build project.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules)
-       */
-      override fun fetchSubmodules(): Any = unwrap(this).getFetchSubmodules()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GitSubmodulesConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty):
-          GitSubmodulesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GitSubmodulesConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GitSubmodulesConfigProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty
-    }
-  }
-
-  /**
-   * `S3Logs` is a property of the [AWS CodeBuild Project
-   * LogsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
-   * property type that specifies settings for logs generated by an AWS CodeBuild build in an S3
-   * bucket.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * S3LogsConfigProperty s3LogsConfigProperty = S3LogsConfigProperty.builder()
-   * .status("status")
-   * // the properties below are optional
-   * .encryptionDisabled(false)
    * .location("location")
+   * .modes(List.of("modes"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html)
    */
-  public interface S3LogsConfigProperty {
+  public interface ProjectCacheProperty {
     /**
-     * Set to true if you do not want your S3 build log output encrypted.
+     * Information about the cache location:.
      *
-     * By default S3 build logs are encrypted.
+     * * `NO_CACHE` or `LOCAL` : This value is ignored.
+     * * `S3` : This is the S3 bucket name/prefix.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-encryptiondisabled)
-     */
-    public fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
-
-    /**
-     * The ARN of an S3 bucket and the path prefix for S3 logs.
-     *
-     * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
-     * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
      */
     public fun location(): String? = unwrap(this).getLocation()
 
     /**
-     * The current status of the S3 build logs. Valid values are:.
+     * An array of strings that specify the local cache modes.
      *
-     * * `ENABLED` : S3 build logs are enabled for this build project.
-     * * `DISABLED` : S3 build logs are not enabled for this build project.
+     * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
+     * cache types.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status)
+     * Possible values are:
+     *
+     * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
+     * cache is created, subsequent builds pull only the change between commits. This mode is a good
+     * choice for projects with a clean working directory and a source that is a large Git repository.
+     * If you choose this option and your project does not use a Git repository (GitHub, GitHub
+     * Enterprise, or Bitbucket), the option is ignored.
+     * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
+     * for projects that build or pull large Docker images. It can prevent the performance issues
+     * caused by pulling large Docker images down from the network.
+     *
+     *
+     * * You can use a Docker layer cache in the Linux environment only.
+     * * The `privileged` flag must be set so that your project has the required Docker permissions.
+     * * You should consider the security implications before you use a Docker layer cache.
+     *
+     *
+     * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode is
+     * a good choice if your build scenario is not suited to one of the other three local cache modes.
+     * If you use a custom cache:
+     * * Only directories can be specified for caching. You cannot specify individual files.
+     * * Symlinks are used to reference cached directories.
+     * * Cached directories are linked to your build before it downloads its project sources. Cached
+     * items are overridden if a source item has the same name. Directories are specified using cache
+     * paths in the buildspec file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-modes)
      */
-    public fun status(): String
+    public fun modes(): List<String> = unwrap(this).getModes() ?: emptyList()
 
     /**
-     * A builder for [S3LogsConfigProperty]
+     * The type of cache used by the build project. Valid values include:.
+     *
+     * * `NO_CACHE` : The build project does not use any cache.
+     * * `S3` : The build project reads and writes from and to S3.
+     * * `LOCAL` : The build project stores a cache locally on a build host that is only available
+     * to that build host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [ProjectCacheProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param encryptionDisabled Set to true if you do not want your S3 build log output
-       * encrypted.
-       * By default S3 build logs are encrypted.
-       */
-      public fun encryptionDisabled(encryptionDisabled: Boolean)
-
-      /**
-       * @param encryptionDisabled Set to true if you do not want your S3 build log output
-       * encrypted.
-       * By default S3 build logs are encrypted.
-       */
-      public fun encryptionDisabled(encryptionDisabled: IResolvable)
-
-      /**
-       * @param location The ARN of an S3 bucket and the path prefix for S3 logs.
-       * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
-       * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
+       * @param location Information about the cache location:.
+       * * `NO_CACHE` or `LOCAL` : This value is ignored.
+       * * `S3` : This is the S3 bucket name/prefix.
        */
       public fun location(location: String)
 
       /**
-       * @param status The current status of the S3 build logs. Valid values are:. 
-       * * `ENABLED` : S3 build logs are enabled for this build project.
-       * * `DISABLED` : S3 build logs are not enabled for this build project.
+       * @param modes An array of strings that specify the local cache modes.
+       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
+       * cache types.
+       *
+       * Possible values are:
+       *
+       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
+       * cache is created, subsequent builds pull only the change between commits. This mode is a good
+       * choice for projects with a clean working directory and a source that is a large Git
+       * repository. If you choose this option and your project does not use a Git repository (GitHub,
+       * GitHub Enterprise, or Bitbucket), the option is ignored.
+       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
+       * for projects that build or pull large Docker images. It can prevent the performance issues
+       * caused by pulling large Docker images down from the network.
+       *
+       *
+       * * You can use a Docker layer cache in the Linux environment only.
+       * * The `privileged` flag must be set so that your project has the required Docker
+       * permissions.
+       * * You should consider the security implications before you use a Docker layer cache.
+       *
+       *
+       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
+       * is a good choice if your build scenario is not suited to one of the other three local cache
+       * modes. If you use a custom cache:
+       * * Only directories can be specified for caching. You cannot specify individual files.
+       * * Symlinks are used to reference cached directories.
+       * * Cached directories are linked to your build before it downloads its project sources.
+       * Cached items are overridden if a source item has the same name. Directories are specified
+       * using cache paths in the buildspec file.
        */
-      public fun status(status: String)
+      public fun modes(modes: List<String>)
+
+      /**
+       * @param modes An array of strings that specify the local cache modes.
+       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
+       * cache types.
+       *
+       * Possible values are:
+       *
+       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
+       * cache is created, subsequent builds pull only the change between commits. This mode is a good
+       * choice for projects with a clean working directory and a source that is a large Git
+       * repository. If you choose this option and your project does not use a Git repository (GitHub,
+       * GitHub Enterprise, or Bitbucket), the option is ignored.
+       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
+       * for projects that build or pull large Docker images. It can prevent the performance issues
+       * caused by pulling large Docker images down from the network.
+       *
+       *
+       * * You can use a Docker layer cache in the Linux environment only.
+       * * The `privileged` flag must be set so that your project has the required Docker
+       * permissions.
+       * * You should consider the security implications before you use a Docker layer cache.
+       *
+       *
+       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
+       * is a good choice if your build scenario is not suited to one of the other three local cache
+       * modes. If you use a custom cache:
+       * * Only directories can be specified for caching. You cannot specify individual files.
+       * * Symlinks are used to reference cached directories.
+       * * Cached directories are linked to your build before it downloads its project sources.
+       * Cached items are overridden if a source item has the same name. Directories are specified
+       * using cache paths in the buildspec file.
+       */
+      public fun modes(vararg modes: String)
+
+      /**
+       * @param type The type of cache used by the build project. Valid values include:. 
+       * * `NO_CACHE` : The build project does not use any cache.
+       * * `S3` : The build project reads and writes from and to S3.
+       * * `LOCAL` : The build project stores a cache locally on a build host that is only available
+       * to that build host.
+       */
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty.builder()
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty.builder()
 
       /**
-       * @param encryptionDisabled Set to true if you do not want your S3 build log output
-       * encrypted.
-       * By default S3 build logs are encrypted.
-       */
-      override fun encryptionDisabled(encryptionDisabled: Boolean) {
-        cdkBuilder.encryptionDisabled(encryptionDisabled)
-      }
-
-      /**
-       * @param encryptionDisabled Set to true if you do not want your S3 build log output
-       * encrypted.
-       * By default S3 build logs are encrypted.
-       */
-      override fun encryptionDisabled(encryptionDisabled: IResolvable) {
-        cdkBuilder.encryptionDisabled(encryptionDisabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param location The ARN of an S3 bucket and the path prefix for S3 logs.
-       * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
-       * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
+       * @param location Information about the cache location:.
+       * * `NO_CACHE` or `LOCAL` : This value is ignored.
+       * * `S3` : This is the S3 bucket name/prefix.
        */
       override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
       /**
-       * @param status The current status of the S3 build logs. Valid values are:. 
-       * * `ENABLED` : S3 build logs are enabled for this build project.
-       * * `DISABLED` : S3 build logs are not enabled for this build project.
+       * @param modes An array of strings that specify the local cache modes.
+       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
+       * cache types.
+       *
+       * Possible values are:
+       *
+       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
+       * cache is created, subsequent builds pull only the change between commits. This mode is a good
+       * choice for projects with a clean working directory and a source that is a large Git
+       * repository. If you choose this option and your project does not use a Git repository (GitHub,
+       * GitHub Enterprise, or Bitbucket), the option is ignored.
+       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
+       * for projects that build or pull large Docker images. It can prevent the performance issues
+       * caused by pulling large Docker images down from the network.
+       *
+       *
+       * * You can use a Docker layer cache in the Linux environment only.
+       * * The `privileged` flag must be set so that your project has the required Docker
+       * permissions.
+       * * You should consider the security implications before you use a Docker layer cache.
+       *
+       *
+       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
+       * is a good choice if your build scenario is not suited to one of the other three local cache
+       * modes. If you use a custom cache:
+       * * Only directories can be specified for caching. You cannot specify individual files.
+       * * Symlinks are used to reference cached directories.
+       * * Cached directories are linked to your build before it downloads its project sources.
+       * Cached items are overridden if a source item has the same name. Directories are specified
+       * using cache paths in the buildspec file.
        */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
+      override fun modes(modes: List<String>) {
+        cdkBuilder.modes(modes)
       }
 
-      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty
+      /**
+       * @param modes An array of strings that specify the local cache modes.
+       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
+       * cache types.
+       *
+       * Possible values are:
+       *
+       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
+       * cache is created, subsequent builds pull only the change between commits. This mode is a good
+       * choice for projects with a clean working directory and a source that is a large Git
+       * repository. If you choose this option and your project does not use a Git repository (GitHub,
+       * GitHub Enterprise, or Bitbucket), the option is ignored.
+       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
+       * for projects that build or pull large Docker images. It can prevent the performance issues
+       * caused by pulling large Docker images down from the network.
+       *
+       *
+       * * You can use a Docker layer cache in the Linux environment only.
+       * * The `privileged` flag must be set so that your project has the required Docker
+       * permissions.
+       * * You should consider the security implications before you use a Docker layer cache.
+       *
+       *
+       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
+       * is a good choice if your build scenario is not suited to one of the other three local cache
+       * modes. If you use a custom cache:
+       * * Only directories can be specified for caching. You cannot specify individual files.
+       * * Symlinks are used to reference cached directories.
+       * * Cached directories are linked to your build before it downloads its project sources.
+       * Cached items are overridden if a source item has the same name. Directories are specified
+       * using cache paths in the buildspec file.
+       */
+      override fun modes(vararg modes: String): Unit = modes(modes.toList())
+
+      /**
+       * @param type The type of cache used by the build project. Valid values include:. 
+       * * `NO_CACHE` : The build project does not use any cache.
+       * * `S3` : The build project reads and writes from and to S3.
+       * * `LOCAL` : The build project stores a cache locally on a build host that is only available
+       * to that build host.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty,
-    ) : CdkObject(cdkObject), S3LogsConfigProperty {
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty,
+    ) : CdkObject(cdkObject), ProjectCacheProperty {
       /**
-       * Set to true if you do not want your S3 build log output encrypted.
+       * Information about the cache location:.
        *
-       * By default S3 build logs are encrypted.
+       * * `NO_CACHE` or `LOCAL` : This value is ignored.
+       * * `S3` : This is the S3 bucket name/prefix.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-encryptiondisabled)
-       */
-      override fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
-
-      /**
-       * The ARN of an S3 bucket and the path prefix for S3 logs.
-       *
-       * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
-       * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location)
        */
       override fun location(): String? = unwrap(this).getLocation()
 
       /**
-       * The current status of the S3 build logs. Valid values are:.
+       * An array of strings that specify the local cache modes.
        *
-       * * `ENABLED` : S3 build logs are enabled for this build project.
-       * * `DISABLED` : S3 build logs are not enabled for this build project.
+       * You can use one or more local cache modes at the same time. This is only used for `LOCAL`
+       * cache types.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status)
+       * Possible values are:
+       *
+       * * **LOCAL_SOURCE_CACHE** - Caches Git metadata for primary and secondary sources. After the
+       * cache is created, subsequent builds pull only the change between commits. This mode is a good
+       * choice for projects with a clean working directory and a source that is a large Git
+       * repository. If you choose this option and your project does not use a Git repository (GitHub,
+       * GitHub Enterprise, or Bitbucket), the option is ignored.
+       * * **LOCAL_DOCKER_LAYER_CACHE** - Caches existing Docker layers. This mode is a good choice
+       * for projects that build or pull large Docker images. It can prevent the performance issues
+       * caused by pulling large Docker images down from the network.
+       *
+       *
+       * * You can use a Docker layer cache in the Linux environment only.
+       * * The `privileged` flag must be set so that your project has the required Docker
+       * permissions.
+       * * You should consider the security implications before you use a Docker layer cache.
+       *
+       *
+       * * **LOCAL_CUSTOM_CACHE** - Caches directories you specify in the buildspec file. This mode
+       * is a good choice if your build scenario is not suited to one of the other three local cache
+       * modes. If you use a custom cache:
+       * * Only directories can be specified for caching. You cannot specify individual files.
+       * * Symlinks are used to reference cached directories.
+       * * Cached directories are linked to your build before it downloads its project sources.
+       * Cached items are overridden if a source item has the same name. Directories are specified
+       * using cache paths in the buildspec file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-modes)
        */
-      override fun status(): String = unwrap(this).getStatus()
+      override fun modes(): List<String> = unwrap(this).getModes() ?: emptyList()
+
+      /**
+       * The type of cache used by the build project. Valid values include:.
+       *
+       * * `NO_CACHE` : The build project does not use any cache.
+       * * `S3` : The build project reads and writes from and to S3.
+       * * `LOCAL` : The build project stores a cache locally on a build host that is only available
+       * to that build host.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type)
+       */
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LogsConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectCacheProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty):
-          S3LogsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogsConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty):
+          ProjectCacheProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectCacheProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: S3LogsConfigProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty = (wrapped as
+      internal fun unwrap(wrapped: ProjectCacheProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty
     }
   }
 
@@ -6137,12 +5507,10 @@ public open class CfnProject internal constructor(
   }
 
   /**
-   * `SourceAuth` is a property of the [AWS CodeBuild Project
-   * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
-   * property type that specifies authorization settings for AWS CodeBuild to access the source code to
-   * be built.
+   * Information about the compute fleet of the build project.
    *
-   * `SourceAuth` is for use by the CodeBuild console only. Do not get or set it directly.
+   * For more information, see [Working with reserved capacity in AWS
+   * CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/fleets.html) .
    *
    * Example:
    *
@@ -6150,131 +5518,75 @@ public open class CfnProject internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * SourceAuthProperty sourceAuthProperty = SourceAuthProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .resource("resource")
+   * ProjectFleetProperty projectFleetProperty = ProjectFleetProperty.builder()
+   * .fleetArn("fleetArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfleet.html)
    */
-  public interface SourceAuthProperty {
+  public interface ProjectFleetProperty {
     /**
-     * The resource value that applies to the specified authorization type.
+     * Specifies the compute fleet ARN for the build project.
      *
-     *
-     * This data type is used by the AWS CodeBuild console only.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfleet.html#cfn-codebuild-project-projectfleet-fleetarn)
      */
-    public fun resource(): String? = unwrap(this).getResource()
+    public fun fleetArn(): String? = unwrap(this).getFleetArn()
 
     /**
-     * The authorization type to use. The only valid value is `OAUTH` , which represents the OAuth
-     * authorization type.
-     *
-     *
-     * This data type is used by the AWS CodeBuild console only.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [SourceAuthProperty]
+     * A builder for [ProjectFleetProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param resource The resource value that applies to the specified authorization type.
-       *
-       * This data type is used by the AWS CodeBuild console only.
+       * @param fleetArn Specifies the compute fleet ARN for the build project.
        */
-      public fun resource(resource: String)
-
-      /**
-       * @param type The authorization type to use. The only valid value is `OAUTH` , which
-       * represents the OAuth authorization type. 
-       *
-       * This data type is used by the AWS CodeBuild console only.
-       */
-      public fun type(type: String)
+      public fun fleetArn(fleetArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty.builder()
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty.builder()
 
       /**
-       * @param resource The resource value that applies to the specified authorization type.
-       *
-       * This data type is used by the AWS CodeBuild console only.
+       * @param fleetArn Specifies the compute fleet ARN for the build project.
        */
-      override fun resource(resource: String) {
-        cdkBuilder.resource(resource)
+      override fun fleetArn(fleetArn: String) {
+        cdkBuilder.fleetArn(fleetArn)
       }
 
-      /**
-       * @param type The authorization type to use. The only valid value is `OAUTH` , which
-       * represents the OAuth authorization type. 
-       *
-       * This data type is used by the AWS CodeBuild console only.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty =
-          cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty,
-    ) : CdkObject(cdkObject), SourceAuthProperty {
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty,
+    ) : CdkObject(cdkObject), ProjectFleetProperty {
       /**
-       * The resource value that applies to the specified authorization type.
+       * Specifies the compute fleet ARN for the build project.
        *
-       *
-       * This data type is used by the AWS CodeBuild console only.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfleet.html#cfn-codebuild-project-projectfleet-fleetarn)
        */
-      override fun resource(): String? = unwrap(this).getResource()
-
-      /**
-       * The authorization type to use. The only valid value is `OAUTH` , which represents the OAuth
-       * authorization type.
-       *
-       *
-       * This data type is used by the AWS CodeBuild console only.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
-       */
-      override fun type(): String = unwrap(this).getType()
+      override fun fleetArn(): String? = unwrap(this).getFleetArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceAuthProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectFleetProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty):
-          SourceAuthProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceAuthProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty):
+          ProjectFleetProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectFleetProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SourceAuthProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty = (wrapped as
+      internal fun unwrap(wrapped: ProjectFleetProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty
     }
   }
 
@@ -6464,9 +5776,9 @@ public open class CfnProject internal constructor(
   }
 
   /**
-   * `WebhookFilter` is a structure of the `FilterGroups` property on the [AWS CodeBuild Project
-   * ProjectTriggers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
-   * property type that specifies which webhooks trigger an AWS CodeBuild build.
+   * `ProjectTriggers` is a property of the [AWS CodeBuild
+   * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+   * resource that specifies webhooks that trigger an AWS CodeBuild build.
    *
    *
    * The Webhook feature isn't available in AWS CloudFormation for GitHub Enterprise projects. Use
@@ -6479,379 +5791,220 @@ public open class CfnProject internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * WebhookFilterProperty webhookFilterProperty = WebhookFilterProperty.builder()
+   * ProjectTriggersProperty projectTriggersProperty = ProjectTriggersProperty.builder()
+   * .buildType("buildType")
+   * .filterGroups(List.of(List.of(WebhookFilterProperty.builder()
    * .pattern("pattern")
    * .type("type")
    * // the properties below are optional
    * .excludeMatchedPattern(false)
+   * .build())))
+   * .webhook(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
    */
-  public interface WebhookFilterProperty {
+  public interface ProjectTriggersProperty {
     /**
-     * Used to indicate that the `pattern` determines which webhook events do not trigger a build.
+     * Specifies the type of build this webhook will trigger. Allowed values are:.
      *
-     * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
-     * then a webhook event that matches the `pattern` triggers a build.
+     * * **BUILD** - A single build
+     * * **BUILD_BATCH** - A batch build
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-excludematchedpattern)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-buildtype)
      */
-    public fun excludeMatchedPattern(): Any? = unwrap(this).getExcludeMatchedPattern()
+    public fun buildType(): String? = unwrap(this).getBuildType()
 
     /**
-     * For a `WebHookFilter` that uses `EVENT` type, a comma-separated string that specifies one or
-     * more events.
+     * A list of lists of `WebhookFilter` objects used to determine which webhook events are
+     * triggered.
      *
-     * For example, the webhook filter `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` allows all
-     * push, pull request created, and pull request updated events to trigger a build.
+     * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
      *
-     * For a `WebHookFilter` that uses any of the other filter types, a regular expression pattern.
-     * For example, a `WebHookFilter` that uses `HEAD_REF` for its `type` and the pattern
-     * `^refs/heads/` triggers a build when the head reference is a branch with a reference name
-     * `refs/heads/branch-name` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-pattern)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-filtergroups)
      */
-    public fun pattern(): String
+    public fun filterGroups(): Any? = unwrap(this).getFilterGroups()
 
     /**
-     * The type of webhook filter.
+     * Specifies whether or not to begin automatically rebuilding the source code every time a code
+     * change is pushed to the repository.
      *
-     * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
-     * `FILE_PATH` , and `COMMIT_MESSAGE` .
-     *
-     * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
-     * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
-     * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
-     * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters
-     * all push, pull request created, and pull request updated events.
-     *
-     *
-     * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
-     *
-     *
-     * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
-     * or Bitbucket account ID matches the regular expression `pattern` .
-     * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the regular
-     * expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
-     *
-     * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
-     * Bitbucket push, and Bitbucket pull request events.
-     *
-     * * **BASE_REF** - A webhook event triggers a build when the base reference matches the regular
-     * expression `pattern` . For example, `refs/heads/branch-name` .
-     *
-     *
-     * Works with pull request events only.
-     *
-     *
-     * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
-     * regular expression `pattern` .
-     *
-     *
-     * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
-     * Enterprise push events, but does not work with GitHub Enterprise pull request events.
-     *
-     *
-     * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
-     * regular expression `pattern` .
-     *
-     *
-     * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
-     * Enterprise push events, but does not work with GitHub Enterprise pull request events.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
      */
-    public fun type(): String
+    public fun webhook(): Any? = unwrap(this).getWebhook()
 
     /**
-     * A builder for [WebhookFilterProperty]
+     * A builder for [ProjectTriggersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param excludeMatchedPattern Used to indicate that the `pattern` determines which webhook
-       * events do not trigger a build.
-       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
-       * then a webhook event that matches the `pattern` triggers a build.
+       * @param buildType Specifies the type of build this webhook will trigger. Allowed values
+       * are:.
+       * * **BUILD** - A single build
+       * * **BUILD_BATCH** - A batch build
        */
-      public fun excludeMatchedPattern(excludeMatchedPattern: Boolean)
+      public fun buildType(buildType: String)
 
       /**
-       * @param excludeMatchedPattern Used to indicate that the `pattern` determines which webhook
-       * events do not trigger a build.
-       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
-       * then a webhook event that matches the `pattern` triggers a build.
+       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
+       * webhook events are triggered.
+       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        */
-      public fun excludeMatchedPattern(excludeMatchedPattern: IResolvable)
+      public fun filterGroups(filterGroups: IResolvable)
 
       /**
-       * @param pattern For a `WebHookFilter` that uses `EVENT` type, a comma-separated string that
-       * specifies one or more events. 
-       * For example, the webhook filter `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` allows
-       * all push, pull request created, and pull request updated events to trigger a build.
-       *
-       * For a `WebHookFilter` that uses any of the other filter types, a regular expression
-       * pattern. For example, a `WebHookFilter` that uses `HEAD_REF` for its `type` and the pattern
-       * `^refs/heads/` triggers a build when the head reference is a branch with a reference name
-       * `refs/heads/branch-name` .
+       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
+       * webhook events are triggered.
+       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        */
-      public fun pattern(pattern: String)
+      public fun filterGroups(filterGroups: List<Any>)
 
       /**
-       * @param type The type of webhook filter. 
-       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
-       *
-       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
-       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
-       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
-       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
-       * filters all push, pull request created, and pull request updated events.
-       *
-       *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
-       *
-       *
-       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
-       * or Bitbucket account ID matches the regular expression `pattern` .
-       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
-       * .
-       *
-       * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
-       * Bitbucket push, and Bitbucket pull request events.
-       *
-       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` .
-       *
-       *
-       * Works with pull request events only.
-       *
-       *
-       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
-       * regular expression `pattern` .
-       *
-       *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
-       *
-       *
-       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
-       * regular expression `pattern` .
-       *
-       *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
+       * webhook events are triggered.
+       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        */
-      public fun type(type: String)
+      public fun filterGroups(vararg filterGroups: Any)
+
+      /**
+       * @param webhook Specifies whether or not to begin automatically rebuilding the source code
+       * every time a code change is pushed to the repository.
+       */
+      public fun webhook(webhook: Boolean)
+
+      /**
+       * @param webhook Specifies whether or not to begin automatically rebuilding the source code
+       * every time a code change is pushed to the repository.
+       */
+      public fun webhook(webhook: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty.builder()
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty.builder()
 
       /**
-       * @param excludeMatchedPattern Used to indicate that the `pattern` determines which webhook
-       * events do not trigger a build.
-       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
-       * then a webhook event that matches the `pattern` triggers a build.
+       * @param buildType Specifies the type of build this webhook will trigger. Allowed values
+       * are:.
+       * * **BUILD** - A single build
+       * * **BUILD_BATCH** - A batch build
        */
-      override fun excludeMatchedPattern(excludeMatchedPattern: Boolean) {
-        cdkBuilder.excludeMatchedPattern(excludeMatchedPattern)
+      override fun buildType(buildType: String) {
+        cdkBuilder.buildType(buildType)
       }
 
       /**
-       * @param excludeMatchedPattern Used to indicate that the `pattern` determines which webhook
-       * events do not trigger a build.
-       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
-       * then a webhook event that matches the `pattern` triggers a build.
+       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
+       * webhook events are triggered.
+       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        */
-      override fun excludeMatchedPattern(excludeMatchedPattern: IResolvable) {
-        cdkBuilder.excludeMatchedPattern(excludeMatchedPattern.let(IResolvable::unwrap))
+      override fun filterGroups(filterGroups: IResolvable) {
+        cdkBuilder.filterGroups(filterGroups.let(IResolvable::unwrap))
       }
 
       /**
-       * @param pattern For a `WebHookFilter` that uses `EVENT` type, a comma-separated string that
-       * specifies one or more events. 
-       * For example, the webhook filter `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` allows
-       * all push, pull request created, and pull request updated events to trigger a build.
-       *
-       * For a `WebHookFilter` that uses any of the other filter types, a regular expression
-       * pattern. For example, a `WebHookFilter` that uses `HEAD_REF` for its `type` and the pattern
-       * `^refs/heads/` triggers a build when the head reference is a branch with a reference name
-       * `refs/heads/branch-name` .
+       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
+       * webhook events are triggered.
+       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        */
-      override fun pattern(pattern: String) {
-        cdkBuilder.pattern(pattern)
+      override fun filterGroups(filterGroups: List<Any>) {
+        cdkBuilder.filterGroups(filterGroups)
       }
 
       /**
-       * @param type The type of webhook filter. 
-       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
-       *
-       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
-       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
-       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
-       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
-       * filters all push, pull request created, and pull request updated events.
-       *
-       *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
-       *
-       *
-       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
-       * or Bitbucket account ID matches the regular expression `pattern` .
-       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
-       * .
-       *
-       * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
-       * Bitbucket push, and Bitbucket pull request events.
-       *
-       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` .
-       *
-       *
-       * Works with pull request events only.
-       *
-       *
-       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
-       * regular expression `pattern` .
-       *
-       *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
-       *
-       *
-       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
-       * regular expression `pattern` .
-       *
-       *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which
+       * webhook events are triggered.
+       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
+      override fun filterGroups(vararg filterGroups: Any): Unit =
+          filterGroups(filterGroups.toList())
+
+      /**
+       * @param webhook Specifies whether or not to begin automatically rebuilding the source code
+       * every time a code change is pushed to the repository.
+       */
+      override fun webhook(webhook: Boolean) {
+        cdkBuilder.webhook(webhook)
       }
 
-      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty
-          = cdkBuilder.build()
+      /**
+       * @param webhook Specifies whether or not to begin automatically rebuilding the source code
+       * every time a code change is pushed to the repository.
+       */
+      override fun webhook(webhook: IResolvable) {
+        cdkBuilder.webhook(webhook.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty,
-    ) : CdkObject(cdkObject), WebhookFilterProperty {
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty,
+    ) : CdkObject(cdkObject), ProjectTriggersProperty {
       /**
-       * Used to indicate that the `pattern` determines which webhook events do not trigger a build.
+       * Specifies the type of build this webhook will trigger. Allowed values are:.
        *
-       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
-       * then a webhook event that matches the `pattern` triggers a build.
+       * * **BUILD** - A single build
+       * * **BUILD_BATCH** - A batch build
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-excludematchedpattern)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-buildtype)
        */
-      override fun excludeMatchedPattern(): Any? = unwrap(this).getExcludeMatchedPattern()
+      override fun buildType(): String? = unwrap(this).getBuildType()
 
       /**
-       * For a `WebHookFilter` that uses `EVENT` type, a comma-separated string that specifies one
-       * or more events.
+       * A list of lists of `WebhookFilter` objects used to determine which webhook events are
+       * triggered.
        *
-       * For example, the webhook filter `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` allows
-       * all push, pull request created, and pull request updated events to trigger a build.
+       * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        *
-       * For a `WebHookFilter` that uses any of the other filter types, a regular expression
-       * pattern. For example, a `WebHookFilter` that uses `HEAD_REF` for its `type` and the pattern
-       * `^refs/heads/` triggers a build when the head reference is a branch with a reference name
-       * `refs/heads/branch-name` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-pattern)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-filtergroups)
        */
-      override fun pattern(): String = unwrap(this).getPattern()
+      override fun filterGroups(): Any? = unwrap(this).getFilterGroups()
 
       /**
-       * The type of webhook filter.
+       * Specifies whether or not to begin automatically rebuilding the source code every time a
+       * code change is pushed to the repository.
        *
-       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
-       *
-       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
-       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
-       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
-       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
-       * filters all push, pull request created, and pull request updated events.
-       *
-       *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
-       *
-       *
-       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
-       * or Bitbucket account ID matches the regular expression `pattern` .
-       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
-       * .
-       *
-       * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
-       * Bitbucket push, and Bitbucket pull request events.
-       *
-       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
-       * regular expression `pattern` . For example, `refs/heads/branch-name` .
-       *
-       *
-       * Works with pull request events only.
-       *
-       *
-       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
-       * regular expression `pattern` .
-       *
-       *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
-       *
-       *
-       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
-       * regular expression `pattern` .
-       *
-       *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook)
        */
-      override fun type(): String = unwrap(this).getType()
+      override fun webhook(): Any? = unwrap(this).getWebhook()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WebhookFilterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProjectTriggersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty):
-          WebhookFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? WebhookFilterProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty):
+          ProjectTriggersProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectTriggersProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: WebhookFilterProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty = (wrapped as
+      internal fun unwrap(wrapped: ProjectTriggersProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty
+          software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty
     }
   }
 
   /**
-   * `VpcConfig` is a property of the
-   * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
-   * resource that enable AWS CodeBuild to access resources in an Amazon VPC. For more information, see
-   * [Use AWS CodeBuild with Amazon Virtual Private
-   * Cloud](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html) in the *AWS
-   * CodeBuild User Guide* .
+   * `RegistryCredential` is a property of the [AWS CodeBuild Project
+   * Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
+   * property type that specifies information about credentials that provide access to a private Docker
+   * registry. When this is set:.
+   *
+   * * `imagePullCredentialsType` must be set to `SERVICE_ROLE` .
+   * * images cannot be curated or an Amazon ECR image.
+   *
+   * For more information, see [Private Registry with AWS Secrets Manager Sample for AWS
+   * CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-private-registry.html) .
    *
    * Example:
    *
@@ -6859,167 +6012,454 @@ public open class CfnProject internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codebuild.*;
-   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnets(List.of("subnets"))
-   * .vpcId("vpcId")
+   * RegistryCredentialProperty registryCredentialProperty = RegistryCredentialProperty.builder()
+   * .credential("credential")
+   * .credentialProvider("credentialProvider")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html)
    */
-  public interface VpcConfigProperty {
+  public interface RegistryCredentialProperty {
     /**
-     * A list of one or more security groups IDs in your Amazon VPC.
+     * The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager .
      *
-     * The maximum count is 5.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
+     * The `credential` can use the name of the credentials only if they exist in your current AWS
+     * Region .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credential)
      */
-    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
+    public fun credential(): String
 
     /**
-     * A list of one or more subnet IDs in your Amazon VPC.
+     * The service that created the credentials to access a private Docker registry.
      *
-     * The maximum count is 16.
+     * The valid value, SECRETS_MANAGER, is for AWS Secrets Manager .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credentialprovider)
      */
-    public fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+    public fun credentialProvider(): String
 
     /**
-     * The ID of the Amazon VPC.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
-     */
-    public fun vpcId(): String? = unwrap(this).getVpcId()
-
-    /**
-     * A builder for [VpcConfigProperty]
+     * A builder for [RegistryCredentialProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
-       * The maximum count is 5.
+       * @param credential The Amazon Resource Name (ARN) or name of credentials created using AWS
+       * Secrets Manager . 
+       *
+       * The `credential` can use the name of the credentials only if they exist in your current AWS
+       * Region .
        */
-      public fun securityGroupIds(securityGroupIds: List<String>)
+      public fun credential(credential: String)
 
       /**
-       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
-       * The maximum count is 5.
+       * @param credentialProvider The service that created the credentials to access a private
+       * Docker registry. 
+       * The valid value, SECRETS_MANAGER, is for AWS Secrets Manager .
        */
-      public fun securityGroupIds(vararg securityGroupIds: String)
-
-      /**
-       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
-       * The maximum count is 16.
-       */
-      public fun subnets(subnets: List<String>)
-
-      /**
-       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
-       * The maximum count is 16.
-       */
-      public fun subnets(vararg subnets: String)
-
-      /**
-       * @param vpcId The ID of the Amazon VPC.
-       */
-      public fun vpcId(vpcId: String)
+      public fun credentialProvider(credentialProvider: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty.Builder =
-          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty.builder()
+          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty.builder()
 
       /**
-       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
-       * The maximum count is 5.
+       * @param credential The Amazon Resource Name (ARN) or name of credentials created using AWS
+       * Secrets Manager . 
+       *
+       * The `credential` can use the name of the credentials only if they exist in your current AWS
+       * Region .
        */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
+      override fun credential(credential: String) {
+        cdkBuilder.credential(credential)
       }
 
       /**
-       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
-       * The maximum count is 5.
+       * @param credentialProvider The service that created the credentials to access a private
+       * Docker registry. 
+       * The valid value, SECRETS_MANAGER, is for AWS Secrets Manager .
        */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
-       * The maximum count is 16.
-       */
-      override fun subnets(subnets: List<String>) {
-        cdkBuilder.subnets(subnets)
+      override fun credentialProvider(credentialProvider: String) {
+        cdkBuilder.credentialProvider(credentialProvider)
       }
 
-      /**
-       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
-       * The maximum count is 16.
-       */
-      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
-
-      /**
-       * @param vpcId The ID of the Amazon VPC.
-       */
-      override fun vpcId(vpcId: String) {
-        cdkBuilder.vpcId(vpcId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty =
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty,
+    ) : CdkObject(cdkObject), RegistryCredentialProperty {
       /**
-       * A list of one or more security groups IDs in your Amazon VPC.
+       * The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager .
        *
-       * The maximum count is 5.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
+       * The `credential` can use the name of the credentials only if they exist in your current AWS
+       * Region .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credential)
        */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun credential(): String = unwrap(this).getCredential()
 
       /**
-       * A list of one or more subnet IDs in your Amazon VPC.
+       * The service that created the credentials to access a private Docker registry.
        *
-       * The maximum count is 16.
+       * The valid value, SECRETS_MANAGER, is for AWS Secrets Manager .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credentialprovider)
        */
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
-
-      /**
-       * The ID of the Amazon VPC.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
-       */
-      override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun credentialProvider(): String = unwrap(this).getCredentialProvider()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RegistryCredentialProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty):
+          RegistryCredentialProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegistryCredentialProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RegistryCredentialProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty
+    }
+  }
+
+  /**
+   * `S3Logs` is a property of the [AWS CodeBuild Project
+   * LogsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
+   * property type that specifies settings for logs generated by an AWS CodeBuild build in an S3
+   * bucket.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * S3LogsConfigProperty s3LogsConfigProperty = S3LogsConfigProperty.builder()
+   * .status("status")
+   * // the properties below are optional
+   * .encryptionDisabled(false)
+   * .location("location")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html)
+   */
+  public interface S3LogsConfigProperty {
+    /**
+     * Set to true if you do not want your S3 build log output encrypted.
+     *
+     * By default S3 build logs are encrypted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-encryptiondisabled)
+     */
+    public fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
+
+    /**
+     * The ARN of an S3 bucket and the path prefix for S3 logs.
+     *
+     * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
+     * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location)
+     */
+    public fun location(): String? = unwrap(this).getLocation()
+
+    /**
+     * The current status of the S3 build logs. Valid values are:.
+     *
+     * * `ENABLED` : S3 build logs are enabled for this build project.
+     * * `DISABLED` : S3 build logs are not enabled for this build project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status)
+     */
+    public fun status(): String
+
+    /**
+     * A builder for [S3LogsConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encryptionDisabled Set to true if you do not want your S3 build log output
+       * encrypted.
+       * By default S3 build logs are encrypted.
+       */
+      public fun encryptionDisabled(encryptionDisabled: Boolean)
+
+      /**
+       * @param encryptionDisabled Set to true if you do not want your S3 build log output
+       * encrypted.
+       * By default S3 build logs are encrypted.
+       */
+      public fun encryptionDisabled(encryptionDisabled: IResolvable)
+
+      /**
+       * @param location The ARN of an S3 bucket and the path prefix for S3 logs.
+       * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
+       * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
+       */
+      public fun location(location: String)
+
+      /**
+       * @param status The current status of the S3 build logs. Valid values are:. 
+       * * `ENABLED` : S3 build logs are enabled for this build project.
+       * * `DISABLED` : S3 build logs are not enabled for this build project.
+       */
+      public fun status(status: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty.builder()
+
+      /**
+       * @param encryptionDisabled Set to true if you do not want your S3 build log output
+       * encrypted.
+       * By default S3 build logs are encrypted.
+       */
+      override fun encryptionDisabled(encryptionDisabled: Boolean) {
+        cdkBuilder.encryptionDisabled(encryptionDisabled)
+      }
+
+      /**
+       * @param encryptionDisabled Set to true if you do not want your S3 build log output
+       * encrypted.
+       * By default S3 build logs are encrypted.
+       */
+      override fun encryptionDisabled(encryptionDisabled: IResolvable) {
+        cdkBuilder.encryptionDisabled(encryptionDisabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param location The ARN of an S3 bucket and the path prefix for S3 logs.
+       * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
+       * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
+       */
+      override fun location(location: String) {
+        cdkBuilder.location(location)
+      }
+
+      /**
+       * @param status The current status of the S3 build logs. Valid values are:. 
+       * * `ENABLED` : S3 build logs are enabled for this build project.
+       * * `DISABLED` : S3 build logs are not enabled for this build project.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty,
+    ) : CdkObject(cdkObject), S3LogsConfigProperty {
+      /**
+       * Set to true if you do not want your S3 build log output encrypted.
+       *
+       * By default S3 build logs are encrypted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-encryptiondisabled)
+       */
+      override fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
+
+      /**
+       * The ARN of an S3 bucket and the path prefix for S3 logs.
+       *
+       * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
+       * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location)
+       */
+      override fun location(): String? = unwrap(this).getLocation()
+
+      /**
+       * The current status of the S3 build logs. Valid values are:.
+       *
+       * * `ENABLED` : S3 build logs are enabled for this build project.
+       * * `DISABLED` : S3 build logs are not enabled for this build project.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status)
+       */
+      override fun status(): String = unwrap(this).getStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LogsConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty):
+          S3LogsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogsConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VpcConfigProperty):
-          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty = (wrapped as
+      internal fun unwrap(wrapped: S3LogsConfigProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty
+          software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty
+    }
+  }
+
+  /**
+   * `SourceAuth` is a property of the [AWS CodeBuild Project
+   * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+   * property type that specifies authorization settings for AWS CodeBuild to access the source code to
+   * be built.
+   *
+   * `SourceAuth` is for use by the CodeBuild console only. Do not get or set it directly.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * SourceAuthProperty sourceAuthProperty = SourceAuthProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .resource("resource")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html)
+   */
+  public interface SourceAuthProperty {
+    /**
+     * The resource value that applies to the specified authorization type.
+     *
+     *
+     * This data type is used by the AWS CodeBuild console only.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
+     */
+    public fun resource(): String? = unwrap(this).getResource()
+
+    /**
+     * The authorization type to use. The only valid value is `OAUTH` , which represents the OAuth
+     * authorization type.
+     *
+     *
+     * This data type is used by the AWS CodeBuild console only.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [SourceAuthProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resource The resource value that applies to the specified authorization type.
+       *
+       * This data type is used by the AWS CodeBuild console only.
+       */
+      public fun resource(resource: String)
+
+      /**
+       * @param type The authorization type to use. The only valid value is `OAUTH` , which
+       * represents the OAuth authorization type. 
+       *
+       * This data type is used by the AWS CodeBuild console only.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty.builder()
+
+      /**
+       * @param resource The resource value that applies to the specified authorization type.
+       *
+       * This data type is used by the AWS CodeBuild console only.
+       */
+      override fun resource(resource: String) {
+        cdkBuilder.resource(resource)
+      }
+
+      /**
+       * @param type The authorization type to use. The only valid value is `OAUTH` , which
+       * represents the OAuth authorization type. 
+       *
+       * This data type is used by the AWS CodeBuild console only.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty,
+    ) : CdkObject(cdkObject), SourceAuthProperty {
+      /**
+       * The resource value that applies to the specified authorization type.
+       *
+       *
+       * This data type is used by the AWS CodeBuild console only.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
+       */
+      override fun resource(): String? = unwrap(this).getResource()
+
+      /**
+       * The authorization type to use. The only valid value is `OAUTH` , which represents the OAuth
+       * authorization type.
+       *
+       *
+       * This data type is used by the AWS CodeBuild console only.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceAuthProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty):
+          SourceAuthProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceAuthProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceAuthProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty
     }
   }
 
@@ -7792,6 +7232,566 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty
+    }
+  }
+
+  /**
+   * `VpcConfig` is a property of the
+   * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+   * resource that enable AWS CodeBuild to access resources in an Amazon VPC. For more information, see
+   * [Use AWS CodeBuild with Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html) in the *AWS
+   * CodeBuild User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
+   * .vpcId("vpcId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html)
+   */
+  public interface VpcConfigProperty {
+    /**
+     * A list of one or more security groups IDs in your Amazon VPC.
+     *
+     * The maximum count is 5.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
+
+    /**
+     * A list of one or more subnet IDs in your Amazon VPC.
+     *
+     * The maximum count is 16.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
+     */
+    public fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+
+    /**
+     * The ID of the Amazon VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
+     */
+    public fun vpcId(): String? = unwrap(this).getVpcId()
+
+    /**
+     * A builder for [VpcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+       * The maximum count is 5.
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+       * The maximum count is 5.
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+       * The maximum count is 16.
+       */
+      public fun subnets(subnets: List<String>)
+
+      /**
+       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+       * The maximum count is 16.
+       */
+      public fun subnets(vararg subnets: String)
+
+      /**
+       * @param vpcId The ID of the Amazon VPC.
+       */
+      public fun vpcId(vpcId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty.builder()
+
+      /**
+       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+       * The maximum count is 5.
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+       * The maximum count is 5.
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+       * The maximum count is 16.
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
+      }
+
+      /**
+       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+       * The maximum count is 16.
+       */
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
+      /**
+       * @param vpcId The ID of the Amazon VPC.
+       */
+      override fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty,
+    ) : CdkObject(cdkObject), VpcConfigProperty {
+      /**
+       * A list of one or more security groups IDs in your Amazon VPC.
+       *
+       * The maximum count is 5.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+          emptyList()
+
+      /**
+       * A list of one or more subnet IDs in your Amazon VPC.
+       *
+       * The maximum count is 16.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets)
+       */
+      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+
+      /**
+       * The ID of the Amazon VPC.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid)
+       */
+      override fun vpcId(): String? = unwrap(this).getVpcId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty):
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty
+    }
+  }
+
+  /**
+   * `WebhookFilter` is a structure of the `FilterGroups` property on the [AWS CodeBuild Project
+   * ProjectTriggers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
+   * property type that specifies which webhooks trigger an AWS CodeBuild build.
+   *
+   *
+   * The Webhook feature isn't available in AWS CloudFormation for GitHub Enterprise projects. Use
+   * the AWS CLI or AWS CodeBuild console to create the webhook.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * WebhookFilterProperty webhookFilterProperty = WebhookFilterProperty.builder()
+   * .pattern("pattern")
+   * .type("type")
+   * // the properties below are optional
+   * .excludeMatchedPattern(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html)
+   */
+  public interface WebhookFilterProperty {
+    /**
+     * Used to indicate that the `pattern` determines which webhook events do not trigger a build.
+     *
+     * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
+     * then a webhook event that matches the `pattern` triggers a build.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-excludematchedpattern)
+     */
+    public fun excludeMatchedPattern(): Any? = unwrap(this).getExcludeMatchedPattern()
+
+    /**
+     * For a `WebHookFilter` that uses `EVENT` type, a comma-separated string that specifies one or
+     * more events.
+     *
+     * For example, the webhook filter `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` allows all
+     * push, pull request created, and pull request updated events to trigger a build.
+     *
+     * For a `WebHookFilter` that uses any of the other filter types, a regular expression pattern.
+     * For example, a `WebHookFilter` that uses `HEAD_REF` for its `type` and the pattern
+     * `^refs/heads/` triggers a build when the head reference is a branch with a reference name
+     * `refs/heads/branch-name` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-pattern)
+     */
+    public fun pattern(): String
+
+    /**
+     * The type of webhook filter.
+     *
+     * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
+     * `FILE_PATH` , and `COMMIT_MESSAGE` .
+     *
+     * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
+     * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
+     * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
+     * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters
+     * all push, pull request created, and pull request updated events.
+     *
+     *
+     * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
+     *
+     *
+     * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
+     * or Bitbucket account ID matches the regular expression `pattern` .
+     * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the regular
+     * expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
+     *
+     * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
+     * Bitbucket push, and Bitbucket pull request events.
+     *
+     * * **BASE_REF** - A webhook event triggers a build when the base reference matches the regular
+     * expression `pattern` . For example, `refs/heads/branch-name` .
+     *
+     *
+     * Works with pull request events only.
+     *
+     *
+     * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
+     * regular expression `pattern` .
+     *
+     *
+     * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
+     * Enterprise push events, but does not work with GitHub Enterprise pull request events.
+     *
+     *
+     * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
+     * regular expression `pattern` .
+     *
+     *
+     * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
+     * Enterprise push events, but does not work with GitHub Enterprise pull request events.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [WebhookFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param excludeMatchedPattern Used to indicate that the `pattern` determines which webhook
+       * events do not trigger a build.
+       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
+       * then a webhook event that matches the `pattern` triggers a build.
+       */
+      public fun excludeMatchedPattern(excludeMatchedPattern: Boolean)
+
+      /**
+       * @param excludeMatchedPattern Used to indicate that the `pattern` determines which webhook
+       * events do not trigger a build.
+       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
+       * then a webhook event that matches the `pattern` triggers a build.
+       */
+      public fun excludeMatchedPattern(excludeMatchedPattern: IResolvable)
+
+      /**
+       * @param pattern For a `WebHookFilter` that uses `EVENT` type, a comma-separated string that
+       * specifies one or more events. 
+       * For example, the webhook filter `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` allows
+       * all push, pull request created, and pull request updated events to trigger a build.
+       *
+       * For a `WebHookFilter` that uses any of the other filter types, a regular expression
+       * pattern. For example, a `WebHookFilter` that uses `HEAD_REF` for its `type` and the pattern
+       * `^refs/heads/` triggers a build when the head reference is a branch with a reference name
+       * `refs/heads/branch-name` .
+       */
+      public fun pattern(pattern: String)
+
+      /**
+       * @param type The type of webhook filter. 
+       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
+       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
+       *
+       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
+       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
+       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
+       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
+       * filters all push, pull request created, and pull request updated events.
+       *
+       *
+       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
+       *
+       *
+       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
+       * or Bitbucket account ID matches the regular expression `pattern` .
+       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
+       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
+       * .
+       *
+       * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
+       * Bitbucket push, and Bitbucket pull request events.
+       *
+       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
+       * regular expression `pattern` . For example, `refs/heads/branch-name` .
+       *
+       *
+       * Works with pull request events only.
+       *
+       *
+       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
+       * regular expression `pattern` .
+       *
+       *
+       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
+       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       *
+       *
+       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
+       * regular expression `pattern` .
+       *
+       *
+       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
+       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty.builder()
+
+      /**
+       * @param excludeMatchedPattern Used to indicate that the `pattern` determines which webhook
+       * events do not trigger a build.
+       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
+       * then a webhook event that matches the `pattern` triggers a build.
+       */
+      override fun excludeMatchedPattern(excludeMatchedPattern: Boolean) {
+        cdkBuilder.excludeMatchedPattern(excludeMatchedPattern)
+      }
+
+      /**
+       * @param excludeMatchedPattern Used to indicate that the `pattern` determines which webhook
+       * events do not trigger a build.
+       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
+       * then a webhook event that matches the `pattern` triggers a build.
+       */
+      override fun excludeMatchedPattern(excludeMatchedPattern: IResolvable) {
+        cdkBuilder.excludeMatchedPattern(excludeMatchedPattern.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param pattern For a `WebHookFilter` that uses `EVENT` type, a comma-separated string that
+       * specifies one or more events. 
+       * For example, the webhook filter `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` allows
+       * all push, pull request created, and pull request updated events to trigger a build.
+       *
+       * For a `WebHookFilter` that uses any of the other filter types, a regular expression
+       * pattern. For example, a `WebHookFilter` that uses `HEAD_REF` for its `type` and the pattern
+       * `^refs/heads/` triggers a build when the head reference is a branch with a reference name
+       * `refs/heads/branch-name` .
+       */
+      override fun pattern(pattern: String) {
+        cdkBuilder.pattern(pattern)
+      }
+
+      /**
+       * @param type The type of webhook filter. 
+       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
+       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
+       *
+       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
+       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
+       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
+       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
+       * filters all push, pull request created, and pull request updated events.
+       *
+       *
+       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
+       *
+       *
+       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
+       * or Bitbucket account ID matches the regular expression `pattern` .
+       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
+       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
+       * .
+       *
+       * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
+       * Bitbucket push, and Bitbucket pull request events.
+       *
+       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
+       * regular expression `pattern` . For example, `refs/heads/branch-name` .
+       *
+       *
+       * Works with pull request events only.
+       *
+       *
+       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
+       * regular expression `pattern` .
+       *
+       *
+       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
+       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       *
+       *
+       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
+       * regular expression `pattern` .
+       *
+       *
+       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
+       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty,
+    ) : CdkObject(cdkObject), WebhookFilterProperty {
+      /**
+       * Used to indicate that the `pattern` determines which webhook events do not trigger a build.
+       *
+       * If true, then a webhook event that does not match the `pattern` triggers a build. If false,
+       * then a webhook event that matches the `pattern` triggers a build.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-excludematchedpattern)
+       */
+      override fun excludeMatchedPattern(): Any? = unwrap(this).getExcludeMatchedPattern()
+
+      /**
+       * For a `WebHookFilter` that uses `EVENT` type, a comma-separated string that specifies one
+       * or more events.
+       *
+       * For example, the webhook filter `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` allows
+       * all push, pull request created, and pull request updated events to trigger a build.
+       *
+       * For a `WebHookFilter` that uses any of the other filter types, a regular expression
+       * pattern. For example, a `WebHookFilter` that uses `HEAD_REF` for its `type` and the pattern
+       * `^refs/heads/` triggers a build when the head reference is a branch with a reference name
+       * `refs/heads/branch-name` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-pattern)
+       */
+      override fun pattern(): String = unwrap(this).getPattern()
+
+      /**
+       * The type of webhook filter.
+       *
+       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
+       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
+       *
+       * * **EVENT** - A webhook event triggers a build when the provided `pattern` matches one of
+       * five event types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` ,
+       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
+       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
+       * filters all push, pull request created, and pull request updated events.
+       *
+       *
+       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
+       *
+       *
+       * * **ACTOR_ACCOUNT_ID** - A webhook event triggers a build when a GitHub, GitHub Enterprise,
+       * or Bitbucket account ID matches the regular expression `pattern` .
+       * * **HEAD_REF** - A webhook event triggers a build when the head reference matches the
+       * regular expression `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name`
+       * .
+       *
+       * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
+       * Bitbucket push, and Bitbucket pull request events.
+       *
+       * * **BASE_REF** - A webhook event triggers a build when the base reference matches the
+       * regular expression `pattern` . For example, `refs/heads/branch-name` .
+       *
+       *
+       * Works with pull request events only.
+       *
+       *
+       * * **FILE_PATH** - A webhook triggers a build when the path of a changed file matches the
+       * regular expression `pattern` .
+       *
+       *
+       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
+       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       *
+       *
+       * * **COMMIT_MESSAGE** - A webhook triggers a build when the head commit message matches the
+       * regular expression `pattern` .
+       *
+       *
+       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
+       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WebhookFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty):
+          WebhookFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? WebhookFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WebhookFilterProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty
     }
   }
 }

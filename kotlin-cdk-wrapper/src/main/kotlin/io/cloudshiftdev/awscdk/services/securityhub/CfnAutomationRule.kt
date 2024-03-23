@@ -849,7 +849,8 @@ public open class CfnAutomationRule internal constructor(
   }
 
   /**
-   * Updates to the severity information for a finding.
+   * One or more actions to update finding fields if a finding matches the defined criteria of the
+   * rule.
    *
    * Example:
    *
@@ -857,806 +858,641 @@ public open class CfnAutomationRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.securityhub.*;
-   * SeverityUpdateProperty severityUpdateProperty = SeverityUpdateProperty.builder()
+   * Object id;
+   * Object updatedBy;
+   * AutomationRulesActionProperty automationRulesActionProperty =
+   * AutomationRulesActionProperty.builder()
+   * .findingFieldsUpdate(AutomationRulesFindingFieldsUpdateProperty.builder()
+   * .confidence(123)
+   * .criticality(123)
+   * .note(NoteUpdateProperty.builder()
+   * .text("text")
+   * .updatedBy(updatedBy)
+   * .build())
+   * .relatedFindings(List.of(RelatedFindingProperty.builder()
+   * .id(id)
+   * .productArn("productArn")
+   * .build()))
+   * .severity(SeverityUpdateProperty.builder()
    * .label("label")
    * .normalized(123)
    * .product(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html)
-   */
-  public interface SeverityUpdateProperty {
-    /**
-     * The severity value of the finding. The allowed values are the following.
-     *
-     * * `INFORMATIONAL` - No issue was found.
-     * * `LOW` - The issue does not require action on its own.
-     * * `MEDIUM` - The issue must be addressed but not urgently.
-     * * `HIGH` - The issue must be addressed as a priority.
-     * * `CRITICAL` - The issue must be remediated immediately to avoid it escalating.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-label)
-     */
-    public fun label(): String? = unwrap(this).getLabel()
-
-    /**
-     * The normalized severity for the finding. This attribute is to be deprecated in favor of
-     * `Label` .
-     *
-     * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
-     * follows.
-     *
-     * * 0 - `INFORMATIONAL`
-     * * 1–39 - `LOW`
-     * * 40–69 - `MEDIUM`
-     * * 70–89 - `HIGH`
-     * * 90–100 - `CRITICAL`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-normalized)
-     */
-    public fun normalized(): Number? = unwrap(this).getNormalized()
-
-    /**
-     * The native severity as defined by the AWS service or integrated partner product that
-     * generated the finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-product)
-     */
-    public fun product(): Number? = unwrap(this).getProduct()
-
-    /**
-     * A builder for [SeverityUpdateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param label The severity value of the finding. The allowed values are the following.
-       * * `INFORMATIONAL` - No issue was found.
-       * * `LOW` - The issue does not require action on its own.
-       * * `MEDIUM` - The issue must be addressed but not urgently.
-       * * `HIGH` - The issue must be addressed as a priority.
-       * * `CRITICAL` - The issue must be remediated immediately to avoid it escalating.
-       */
-      public fun label(label: String)
-
-      /**
-       * @param normalized The normalized severity for the finding. This attribute is to be
-       * deprecated in favor of `Label` .
-       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
-       * follows.
-       *
-       * * 0 - `INFORMATIONAL`
-       * * 1–39 - `LOW`
-       * * 40–69 - `MEDIUM`
-       * * 70–89 - `HIGH`
-       * * 90–100 - `CRITICAL`
-       */
-      public fun normalized(normalized: Number)
-
-      /**
-       * @param product The native severity as defined by the AWS service or integrated partner
-       * product that generated the finding.
-       */
-      public fun product(product: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty.Builder
-          =
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty.builder()
-
-      /**
-       * @param label The severity value of the finding. The allowed values are the following.
-       * * `INFORMATIONAL` - No issue was found.
-       * * `LOW` - The issue does not require action on its own.
-       * * `MEDIUM` - The issue must be addressed but not urgently.
-       * * `HIGH` - The issue must be addressed as a priority.
-       * * `CRITICAL` - The issue must be remediated immediately to avoid it escalating.
-       */
-      override fun label(label: String) {
-        cdkBuilder.label(label)
-      }
-
-      /**
-       * @param normalized The normalized severity for the finding. This attribute is to be
-       * deprecated in favor of `Label` .
-       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
-       * follows.
-       *
-       * * 0 - `INFORMATIONAL`
-       * * 1–39 - `LOW`
-       * * 40–69 - `MEDIUM`
-       * * 70–89 - `HIGH`
-       * * 90–100 - `CRITICAL`
-       */
-      override fun normalized(normalized: Number) {
-        cdkBuilder.normalized(normalized)
-      }
-
-      /**
-       * @param product The native severity as defined by the AWS service or integrated partner
-       * product that generated the finding.
-       */
-      override fun product(product: Number) {
-        cdkBuilder.product(product)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty,
-    ) : CdkObject(cdkObject), SeverityUpdateProperty {
-      /**
-       * The severity value of the finding. The allowed values are the following.
-       *
-       * * `INFORMATIONAL` - No issue was found.
-       * * `LOW` - The issue does not require action on its own.
-       * * `MEDIUM` - The issue must be addressed but not urgently.
-       * * `HIGH` - The issue must be addressed as a priority.
-       * * `CRITICAL` - The issue must be remediated immediately to avoid it escalating.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-label)
-       */
-      override fun label(): String? = unwrap(this).getLabel()
-
-      /**
-       * The normalized severity for the finding. This attribute is to be deprecated in favor of
-       * `Label` .
-       *
-       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
-       * follows.
-       *
-       * * 0 - `INFORMATIONAL`
-       * * 1–39 - `LOW`
-       * * 40–69 - `MEDIUM`
-       * * 70–89 - `HIGH`
-       * * 90–100 - `CRITICAL`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-normalized)
-       */
-      override fun normalized(): Number? = unwrap(this).getNormalized()
-
-      /**
-       * The native severity as defined by the AWS service or integrated partner product that
-       * generated the finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-product)
-       */
-      override fun product(): Number? = unwrap(this).getProduct()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SeverityUpdateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty):
-          SeverityUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as? SeverityUpdateProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SeverityUpdateProperty):
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty
-    }
-  }
-
-  /**
-   * A map filter for filtering AWS Security Hub findings.
-   *
-   * Each map filter provides the field to check for, the value to check for, and the comparison
-   * operator.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.securityhub.*;
-   * MapFilterProperty mapFilterProperty = MapFilterProperty.builder()
-   * .comparison("comparison")
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html)
-   */
-  public interface MapFilterProperty {
-    /**
-     * The condition to apply to the key value when filtering Security Hub findings with a map
-     * filter.
-     *
-     * To search for values that have the filter value, use one of the following comparison
-     * operators:
-     *
-     * * To search for values that include the filter value, use `CONTAINS` . For example, for the
-     * `ResourceTags` field, the filter `Department CONTAINS Security` matches findings that include
-     * the value `Security` for the `Department` tag. In the same example, a finding with a value of
-     * `Security team` for the `Department` tag is a match.
-     * * To search for values that exactly match the filter value, use `EQUALS` . For example, for
-     * the `ResourceTags` field, the filter `Department EQUALS Security` matches findings that have the
-     * value `Security` for the `Department` tag.
-     *
-     * `CONTAINS` and `EQUALS` filters on the same field are joined by `OR` . A finding matches if
-     * it matches any one of those filters. For example, the filters `Department CONTAINS Security OR
-     * Department CONTAINS Finance` match a finding that includes either `Security` , `Finance` , or
-     * both values.
-     *
-     * To search for values that don't have the filter value, use one of the following comparison
-     * operators:
-     *
-     * * To search for values that exclude the filter value, use `NOT_CONTAINS` . For example, for
-     * the `ResourceTags` field, the filter `Department NOT_CONTAINS Finance` matches findings that
-     * exclude the value `Finance` for the `Department` tag.
-     * * To search for values other than the filter value, use `NOT_EQUALS` . For example, for the
-     * `ResourceTags` field, the filter `Department NOT_EQUALS Finance` matches findings that don’t
-     * have the value `Finance` for the `Department` tag.
-     *
-     * `NOT_CONTAINS` and `NOT_EQUALS` filters on the same field are joined by `AND` . A finding
-     * matches only if it matches all of those filters. For example, the filters `Department
-     * NOT_CONTAINS Security AND Department NOT_CONTAINS Finance` match a finding that excludes both
-     * the `Security` and `Finance` values.
-     *
-     * `CONTAINS` filters can only be used with other `CONTAINS` filters. `NOT_CONTAINS` filters can
-     * only be used with other `NOT_CONTAINS` filters.
-     *
-     * You can’t have both a `CONTAINS` filter and a `NOT_CONTAINS` filter on the same field.
-     * Similarly, you can’t have both an `EQUALS` filter and a `NOT_EQUALS` filter on the same field.
-     * Combining filters in this way returns an error.
-     *
-     * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
-     * information, see [Automation
-     * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
-     * *AWS Security Hub User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-comparison)
-     */
-    public fun comparison(): String
-
-    /**
-     * The key of the map filter.
-     *
-     * For example, for `ResourceTags` , `Key` identifies the name of the tag. For
-     * `UserDefinedFields` , `Key` is the name of the field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value for the key in the map filter.
-     *
-     * Filter values are case sensitive. For example, one of the values for a tag called
-     * `Department` might be `Security` . If you provide `security` as the filter value, then there's
-     * no match.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [MapFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comparison The condition to apply to the key value when filtering Security Hub
-       * findings with a map filter. 
-       * To search for values that have the filter value, use one of the following comparison
-       * operators:
-       *
-       * * To search for values that include the filter value, use `CONTAINS` . For example, for the
-       * `ResourceTags` field, the filter `Department CONTAINS Security` matches findings that include
-       * the value `Security` for the `Department` tag. In the same example, a finding with a value of
-       * `Security team` for the `Department` tag is a match.
-       * * To search for values that exactly match the filter value, use `EQUALS` . For example, for
-       * the `ResourceTags` field, the filter `Department EQUALS Security` matches findings that have
-       * the value `Security` for the `Department` tag.
-       *
-       * `CONTAINS` and `EQUALS` filters on the same field are joined by `OR` . A finding matches if
-       * it matches any one of those filters. For example, the filters `Department CONTAINS Security OR
-       * Department CONTAINS Finance` match a finding that includes either `Security` , `Finance` , or
-       * both values.
-       *
-       * To search for values that don't have the filter value, use one of the following comparison
-       * operators:
-       *
-       * * To search for values that exclude the filter value, use `NOT_CONTAINS` . For example, for
-       * the `ResourceTags` field, the filter `Department NOT_CONTAINS Finance` matches findings that
-       * exclude the value `Finance` for the `Department` tag.
-       * * To search for values other than the filter value, use `NOT_EQUALS` . For example, for the
-       * `ResourceTags` field, the filter `Department NOT_EQUALS Finance` matches findings that don’t
-       * have the value `Finance` for the `Department` tag.
-       *
-       * `NOT_CONTAINS` and `NOT_EQUALS` filters on the same field are joined by `AND` . A finding
-       * matches only if it matches all of those filters. For example, the filters `Department
-       * NOT_CONTAINS Security AND Department NOT_CONTAINS Finance` match a finding that excludes both
-       * the `Security` and `Finance` values.
-       *
-       * `CONTAINS` filters can only be used with other `CONTAINS` filters. `NOT_CONTAINS` filters
-       * can only be used with other `NOT_CONTAINS` filters.
-       *
-       * You can’t have both a `CONTAINS` filter and a `NOT_CONTAINS` filter on the same field.
-       * Similarly, you can’t have both an `EQUALS` filter and a `NOT_EQUALS` filter on the same field.
-       * Combining filters in this way returns an error.
-       *
-       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
-       * information, see [Automation
-       * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
-       * *AWS Security Hub User Guide* .
-       */
-      public fun comparison(comparison: String)
-
-      /**
-       * @param key The key of the map filter. 
-       * For example, for `ResourceTags` , `Key` identifies the name of the tag. For
-       * `UserDefinedFields` , `Key` is the name of the field.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value for the key in the map filter. 
-       * Filter values are case sensitive. For example, one of the values for a tag called
-       * `Department` might be `Security` . If you provide `security` as the filter value, then there's
-       * no match.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty.Builder =
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty.builder()
-
-      /**
-       * @param comparison The condition to apply to the key value when filtering Security Hub
-       * findings with a map filter. 
-       * To search for values that have the filter value, use one of the following comparison
-       * operators:
-       *
-       * * To search for values that include the filter value, use `CONTAINS` . For example, for the
-       * `ResourceTags` field, the filter `Department CONTAINS Security` matches findings that include
-       * the value `Security` for the `Department` tag. In the same example, a finding with a value of
-       * `Security team` for the `Department` tag is a match.
-       * * To search for values that exactly match the filter value, use `EQUALS` . For example, for
-       * the `ResourceTags` field, the filter `Department EQUALS Security` matches findings that have
-       * the value `Security` for the `Department` tag.
-       *
-       * `CONTAINS` and `EQUALS` filters on the same field are joined by `OR` . A finding matches if
-       * it matches any one of those filters. For example, the filters `Department CONTAINS Security OR
-       * Department CONTAINS Finance` match a finding that includes either `Security` , `Finance` , or
-       * both values.
-       *
-       * To search for values that don't have the filter value, use one of the following comparison
-       * operators:
-       *
-       * * To search for values that exclude the filter value, use `NOT_CONTAINS` . For example, for
-       * the `ResourceTags` field, the filter `Department NOT_CONTAINS Finance` matches findings that
-       * exclude the value `Finance` for the `Department` tag.
-       * * To search for values other than the filter value, use `NOT_EQUALS` . For example, for the
-       * `ResourceTags` field, the filter `Department NOT_EQUALS Finance` matches findings that don’t
-       * have the value `Finance` for the `Department` tag.
-       *
-       * `NOT_CONTAINS` and `NOT_EQUALS` filters on the same field are joined by `AND` . A finding
-       * matches only if it matches all of those filters. For example, the filters `Department
-       * NOT_CONTAINS Security AND Department NOT_CONTAINS Finance` match a finding that excludes both
-       * the `Security` and `Finance` values.
-       *
-       * `CONTAINS` filters can only be used with other `CONTAINS` filters. `NOT_CONTAINS` filters
-       * can only be used with other `NOT_CONTAINS` filters.
-       *
-       * You can’t have both a `CONTAINS` filter and a `NOT_CONTAINS` filter on the same field.
-       * Similarly, you can’t have both an `EQUALS` filter and a `NOT_EQUALS` filter on the same field.
-       * Combining filters in this way returns an error.
-       *
-       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
-       * information, see [Automation
-       * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
-       * *AWS Security Hub User Guide* .
-       */
-      override fun comparison(comparison: String) {
-        cdkBuilder.comparison(comparison)
-      }
-
-      /**
-       * @param key The key of the map filter. 
-       * For example, for `ResourceTags` , `Key` identifies the name of the tag. For
-       * `UserDefinedFields` , `Key` is the name of the field.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value for the key in the map filter. 
-       * Filter values are case sensitive. For example, one of the values for a tag called
-       * `Department` might be `Security` . If you provide `security` as the filter value, then there's
-       * no match.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty,
-    ) : CdkObject(cdkObject), MapFilterProperty {
-      /**
-       * The condition to apply to the key value when filtering Security Hub findings with a map
-       * filter.
-       *
-       * To search for values that have the filter value, use one of the following comparison
-       * operators:
-       *
-       * * To search for values that include the filter value, use `CONTAINS` . For example, for the
-       * `ResourceTags` field, the filter `Department CONTAINS Security` matches findings that include
-       * the value `Security` for the `Department` tag. In the same example, a finding with a value of
-       * `Security team` for the `Department` tag is a match.
-       * * To search for values that exactly match the filter value, use `EQUALS` . For example, for
-       * the `ResourceTags` field, the filter `Department EQUALS Security` matches findings that have
-       * the value `Security` for the `Department` tag.
-       *
-       * `CONTAINS` and `EQUALS` filters on the same field are joined by `OR` . A finding matches if
-       * it matches any one of those filters. For example, the filters `Department CONTAINS Security OR
-       * Department CONTAINS Finance` match a finding that includes either `Security` , `Finance` , or
-       * both values.
-       *
-       * To search for values that don't have the filter value, use one of the following comparison
-       * operators:
-       *
-       * * To search for values that exclude the filter value, use `NOT_CONTAINS` . For example, for
-       * the `ResourceTags` field, the filter `Department NOT_CONTAINS Finance` matches findings that
-       * exclude the value `Finance` for the `Department` tag.
-       * * To search for values other than the filter value, use `NOT_EQUALS` . For example, for the
-       * `ResourceTags` field, the filter `Department NOT_EQUALS Finance` matches findings that don’t
-       * have the value `Finance` for the `Department` tag.
-       *
-       * `NOT_CONTAINS` and `NOT_EQUALS` filters on the same field are joined by `AND` . A finding
-       * matches only if it matches all of those filters. For example, the filters `Department
-       * NOT_CONTAINS Security AND Department NOT_CONTAINS Finance` match a finding that excludes both
-       * the `Security` and `Finance` values.
-       *
-       * `CONTAINS` filters can only be used with other `CONTAINS` filters. `NOT_CONTAINS` filters
-       * can only be used with other `NOT_CONTAINS` filters.
-       *
-       * You can’t have both a `CONTAINS` filter and a `NOT_CONTAINS` filter on the same field.
-       * Similarly, you can’t have both an `EQUALS` filter and a `NOT_EQUALS` filter on the same field.
-       * Combining filters in this way returns an error.
-       *
-       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
-       * information, see [Automation
-       * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
-       * *AWS Security Hub User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-comparison)
-       */
-      override fun comparison(): String = unwrap(this).getComparison()
-
-      /**
-       * The key of the map filter.
-       *
-       * For example, for `ResourceTags` , `Key` identifies the name of the tag. For
-       * `UserDefinedFields` , `Key` is the name of the field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value for the key in the map filter.
-       *
-       * Filter values are case sensitive. For example, one of the values for a tag called
-       * `Department` might be `Security` . If you provide `security` as the filter value, then there's
-       * no match.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MapFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty):
-          MapFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? MapFilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MapFilterProperty):
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty
-    }
-  }
-
-  /**
-   * A date range for the date filter.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.securityhub.*;
-   * DateRangeProperty dateRangeProperty = DateRangeProperty.builder()
-   * .unit("unit")
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html)
-   */
-  public interface DateRangeProperty {
-    /**
-     * A date range unit for the date filter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html#cfn-securityhub-automationrule-daterange-unit)
-     */
-    public fun unit(): String
-
-    /**
-     * A date range value for the date filter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html#cfn-securityhub-automationrule-daterange-value)
-     */
-    public fun `value`(): Number
-
-    /**
-     * A builder for [DateRangeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param unit A date range unit for the date filter. 
-       */
-      public fun unit(unit: String)
-
-      /**
-       * @param value A date range value for the date filter. 
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty.Builder =
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty.builder()
-
-      /**
-       * @param unit A date range unit for the date filter. 
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      /**
-       * @param value A date range value for the date filter. 
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty,
-    ) : CdkObject(cdkObject), DateRangeProperty {
-      /**
-       * A date range unit for the date filter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html#cfn-securityhub-automationrule-daterange-unit)
-       */
-      override fun unit(): String = unwrap(this).getUnit()
-
-      /**
-       * A date range value for the date filter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html#cfn-securityhub-automationrule-daterange-value)
-       */
-      override fun `value`(): Number = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DateRangeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty):
-          DateRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? DateRangeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DateRangeProperty):
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty
-    }
-  }
-
-  /**
-   * Used to update information about the investigation into the finding.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.securityhub.*;
-   * WorkflowUpdateProperty workflowUpdateProperty = WorkflowUpdateProperty.builder()
+   * .build())
+   * .types(List.of("types"))
+   * .userDefinedFields(Map.of(
+   * "userDefinedFieldsKey", "userDefinedFields"))
+   * .verificationState("verificationState")
+   * .workflow(WorkflowUpdateProperty.builder()
    * .status("status")
+   * .build())
+   * .build())
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html)
    */
-  public interface WorkflowUpdateProperty {
+  public interface AutomationRulesActionProperty {
     /**
-     * The status of the investigation into the finding.
+     * Specifies that the automation rule action is an update to a finding field.
      *
-     * The workflow status is specific to an individual finding. It does not affect the generation
-     * of new findings. For example, setting the workflow status to `SUPPRESSED` or `RESOLVED` does not
-     * prevent a new finding for the same issue.
-     *
-     * The allowed values are the following.
-     *
-     * * `NEW` - The initial state of a finding, before it is reviewed.
-     *
-     * Security Hub also resets `WorkFlowStatus` from `NOTIFIED` or `RESOLVED` to `NEW` in the
-     * following cases:
-     *
-     * * The record state changes from `ARCHIVED` to `ACTIVE` .
-     * * The compliance status changes from `PASSED` to either `WARNING` , `FAILED` , or
-     * `NOT_AVAILABLE` .
-     * * `NOTIFIED` - Indicates that you notified the resource owner about the security issue. Used
-     * when the initial reviewer is not the resource owner, and needs intervention from the resource
-     * owner.
-     * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
-     * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
-     * is needed. The finding is no longer updated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html#cfn-securityhub-automationrule-workflowupdate-status)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-findingfieldsupdate)
      */
-    public fun status(): String
+    public fun findingFieldsUpdate(): Any
 
     /**
-     * A builder for [WorkflowUpdateProperty]
+     * Specifies that the rule action should update the `Types` finding field.
+     *
+     * The `Types` finding field classifies findings in the format of namespace/category/classifier.
+     * For more information, see [Types taxonomy for
+     * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
+     * in the *AWS Security Hub User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [AutomationRulesActionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param status The status of the investigation into the finding. 
-       * The workflow status is specific to an individual finding. It does not affect the generation
-       * of new findings. For example, setting the workflow status to `SUPPRESSED` or `RESOLVED` does
-       * not prevent a new finding for the same issue.
-       *
-       * The allowed values are the following.
-       *
-       * * `NEW` - The initial state of a finding, before it is reviewed.
-       *
-       * Security Hub also resets `WorkFlowStatus` from `NOTIFIED` or `RESOLVED` to `NEW` in the
-       * following cases:
-       *
-       * * The record state changes from `ARCHIVED` to `ACTIVE` .
-       * * The compliance status changes from `PASSED` to either `WARNING` , `FAILED` , or
-       * `NOT_AVAILABLE` .
-       * * `NOTIFIED` - Indicates that you notified the resource owner about the security issue.
-       * Used when the initial reviewer is not the resource owner, and needs intervention from the
-       * resource owner.
-       * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
-       * is needed. The finding is no longer updated.
+       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
+       * finding field. 
        */
-      public fun status(status: String)
+      public fun findingFieldsUpdate(findingFieldsUpdate: IResolvable)
+
+      /**
+       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
+       * finding field. 
+       */
+      public
+          fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty)
+
+      /**
+       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
+       * finding field. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0c3f16cefb02891da7c8b09db3c49d70707c13fd09f95537daf015db2dc77ec5")
+      public
+          fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty.Builder.() -> Unit)
+
+      /**
+       * @param type Specifies that the rule action should update the `Types` finding field. 
+       * The `Types` finding field classifies findings in the format of
+       * namespace/category/classifier. For more information, see [Types taxonomy for
+       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
+       * in the *AWS Security Hub User Guide* .
+       */
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty.Builder
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty.Builder
           =
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty.builder()
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty.builder()
 
       /**
-       * @param status The status of the investigation into the finding. 
-       * The workflow status is specific to an individual finding. It does not affect the generation
-       * of new findings. For example, setting the workflow status to `SUPPRESSED` or `RESOLVED` does
-       * not prevent a new finding for the same issue.
-       *
-       * The allowed values are the following.
-       *
-       * * `NEW` - The initial state of a finding, before it is reviewed.
-       *
-       * Security Hub also resets `WorkFlowStatus` from `NOTIFIED` or `RESOLVED` to `NEW` in the
-       * following cases:
-       *
-       * * The record state changes from `ARCHIVED` to `ACTIVE` .
-       * * The compliance status changes from `PASSED` to either `WARNING` , `FAILED` , or
-       * `NOT_AVAILABLE` .
-       * * `NOTIFIED` - Indicates that you notified the resource owner about the security issue.
-       * Used when the initial reviewer is not the resource owner, and needs intervention from the
-       * resource owner.
-       * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
-       * is needed. The finding is no longer updated.
+       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
+       * finding field. 
        */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
+      override fun findingFieldsUpdate(findingFieldsUpdate: IResolvable) {
+        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
+       * finding field. 
+       */
+      override
+          fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty) {
+        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate.let(AutomationRulesFindingFieldsUpdateProperty::unwrap))
+      }
+
+      /**
+       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
+       * finding field. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0c3f16cefb02891da7c8b09db3c49d70707c13fd09f95537daf015db2dc77ec5")
+      override
+          fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty.Builder.() -> Unit):
+          Unit =
+          findingFieldsUpdate(AutomationRulesFindingFieldsUpdateProperty(findingFieldsUpdate))
+
+      /**
+       * @param type Specifies that the rule action should update the `Types` finding field. 
+       * The `Types` finding field classifies findings in the format of
+       * namespace/category/classifier. For more information, see [Types taxonomy for
+       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
+       * in the *AWS Security Hub User Guide* .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
       public fun build():
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty,
-    ) : CdkObject(cdkObject), WorkflowUpdateProperty {
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty,
+    ) : CdkObject(cdkObject), AutomationRulesActionProperty {
       /**
-       * The status of the investigation into the finding.
+       * Specifies that the automation rule action is an update to a finding field.
        *
-       * The workflow status is specific to an individual finding. It does not affect the generation
-       * of new findings. For example, setting the workflow status to `SUPPRESSED` or `RESOLVED` does
-       * not prevent a new finding for the same issue.
-       *
-       * The allowed values are the following.
-       *
-       * * `NEW` - The initial state of a finding, before it is reviewed.
-       *
-       * Security Hub also resets `WorkFlowStatus` from `NOTIFIED` or `RESOLVED` to `NEW` in the
-       * following cases:
-       *
-       * * The record state changes from `ARCHIVED` to `ACTIVE` .
-       * * The compliance status changes from `PASSED` to either `WARNING` , `FAILED` , or
-       * `NOT_AVAILABLE` .
-       * * `NOTIFIED` - Indicates that you notified the resource owner about the security issue.
-       * Used when the initial reviewer is not the resource owner, and needs intervention from the
-       * resource owner.
-       * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
-       * is needed. The finding is no longer updated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html#cfn-securityhub-automationrule-workflowupdate-status)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-findingfieldsupdate)
        */
-      override fun status(): String = unwrap(this).getStatus()
+      override fun findingFieldsUpdate(): Any = unwrap(this).getFindingFieldsUpdate()
+
+      /**
+       * Specifies that the rule action should update the `Types` finding field.
+       *
+       * The `Types` finding field classifies findings in the format of
+       * namespace/category/classifier. For more information, see [Types taxonomy for
+       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
+       * in the *AWS Security Hub User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-type)
+       */
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowUpdateProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutomationRulesActionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty):
-          WorkflowUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkflowUpdateProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty):
+          AutomationRulesActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutomationRulesActionProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: WorkflowUpdateProperty):
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty
+      internal fun unwrap(wrapped: AutomationRulesActionProperty):
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty
+    }
+  }
+
+  /**
+   * Identifies the finding fields that the automation rule action updates when a finding matches
+   * the defined criteria.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.securityhub.*;
+   * Object id;
+   * Object updatedBy;
+   * AutomationRulesFindingFieldsUpdateProperty automationRulesFindingFieldsUpdateProperty =
+   * AutomationRulesFindingFieldsUpdateProperty.builder()
+   * .confidence(123)
+   * .criticality(123)
+   * .note(NoteUpdateProperty.builder()
+   * .text("text")
+   * .updatedBy(updatedBy)
+   * .build())
+   * .relatedFindings(List.of(RelatedFindingProperty.builder()
+   * .id(id)
+   * .productArn("productArn")
+   * .build()))
+   * .severity(SeverityUpdateProperty.builder()
+   * .label("label")
+   * .normalized(123)
+   * .product(123)
+   * .build())
+   * .types(List.of("types"))
+   * .userDefinedFields(Map.of(
+   * "userDefinedFieldsKey", "userDefinedFields"))
+   * .verificationState("verificationState")
+   * .workflow(WorkflowUpdateProperty.builder()
+   * .status("status")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html)
+   */
+  public interface AutomationRulesFindingFieldsUpdateProperty {
+    /**
+     * The rule action updates the `Confidence` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-confidence)
+     */
+    public fun confidence(): Number? = unwrap(this).getConfidence()
+
+    /**
+     * The rule action updates the `Criticality` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-criticality)
+     */
+    public fun criticality(): Number? = unwrap(this).getCriticality()
+
+    /**
+     * The rule action will update the `Note` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-note)
+     */
+    public fun note(): Any? = unwrap(this).getNote()
+
+    /**
+     * The rule action will update the `RelatedFindings` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-relatedfindings)
+     */
+    public fun relatedFindings(): Any? = unwrap(this).getRelatedFindings()
+
+    /**
+     * The rule action will update the `Severity` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-severity)
+     */
+    public fun severity(): Any? = unwrap(this).getSeverity()
+
+    /**
+     * The rule action updates the `Types` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-types)
+     */
+    public fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
+
+    /**
+     * The rule action updates the `UserDefinedFields` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-userdefinedfields)
+     */
+    public fun userDefinedFields(): Any? = unwrap(this).getUserDefinedFields()
+
+    /**
+     * The rule action updates the `VerificationState` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-verificationstate)
+     */
+    public fun verificationState(): String? = unwrap(this).getVerificationState()
+
+    /**
+     * The rule action will update the `Workflow` field of a finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-workflow)
+     */
+    public fun workflow(): Any? = unwrap(this).getWorkflow()
+
+    /**
+     * A builder for [AutomationRulesFindingFieldsUpdateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param confidence The rule action updates the `Confidence` field of a finding.
+       */
+      public fun confidence(confidence: Number)
+
+      /**
+       * @param criticality The rule action updates the `Criticality` field of a finding.
+       */
+      public fun criticality(criticality: Number)
+
+      /**
+       * @param note The rule action will update the `Note` field of a finding.
+       */
+      public fun note(note: IResolvable)
+
+      /**
+       * @param note The rule action will update the `Note` field of a finding.
+       */
+      public fun note(note: NoteUpdateProperty)
+
+      /**
+       * @param note The rule action will update the `Note` field of a finding.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("72379505fd3f18cca4f46ba7ad6532ed15e68d45ce50c32089e85f2f9d531ecd")
+      public fun note(note: NoteUpdateProperty.Builder.() -> Unit)
+
+      /**
+       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
+       * finding.
+       */
+      public fun relatedFindings(relatedFindings: IResolvable)
+
+      /**
+       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
+       * finding.
+       */
+      public fun relatedFindings(relatedFindings: List<Any>)
+
+      /**
+       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
+       * finding.
+       */
+      public fun relatedFindings(vararg relatedFindings: Any)
+
+      /**
+       * @param severity The rule action will update the `Severity` field of a finding.
+       */
+      public fun severity(severity: IResolvable)
+
+      /**
+       * @param severity The rule action will update the `Severity` field of a finding.
+       */
+      public fun severity(severity: SeverityUpdateProperty)
+
+      /**
+       * @param severity The rule action will update the `Severity` field of a finding.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("500bb85fb2d022fb7610811da54b2440bcbdb9429760513eaa3fce97736539a3")
+      public fun severity(severity: SeverityUpdateProperty.Builder.() -> Unit)
+
+      /**
+       * @param types The rule action updates the `Types` field of a finding.
+       */
+      public fun types(types: List<String>)
+
+      /**
+       * @param types The rule action updates the `Types` field of a finding.
+       */
+      public fun types(vararg types: String)
+
+      /**
+       * @param userDefinedFields The rule action updates the `UserDefinedFields` field of a
+       * finding.
+       */
+      public fun userDefinedFields(userDefinedFields: IResolvable)
+
+      /**
+       * @param userDefinedFields The rule action updates the `UserDefinedFields` field of a
+       * finding.
+       */
+      public fun userDefinedFields(userDefinedFields: Map<String, String>)
+
+      /**
+       * @param verificationState The rule action updates the `VerificationState` field of a
+       * finding.
+       */
+      public fun verificationState(verificationState: String)
+
+      /**
+       * @param workflow The rule action will update the `Workflow` field of a finding.
+       */
+      public fun workflow(workflow: IResolvable)
+
+      /**
+       * @param workflow The rule action will update the `Workflow` field of a finding.
+       */
+      public fun workflow(workflow: WorkflowUpdateProperty)
+
+      /**
+       * @param workflow The rule action will update the `Workflow` field of a finding.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6504fe5e9999d895f655b17bb81cf4ae03527b5f7ad2d746c1344c950dbc0e57")
+      public fun workflow(workflow: WorkflowUpdateProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty.Builder
+          =
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty.builder()
+
+      /**
+       * @param confidence The rule action updates the `Confidence` field of a finding.
+       */
+      override fun confidence(confidence: Number) {
+        cdkBuilder.confidence(confidence)
+      }
+
+      /**
+       * @param criticality The rule action updates the `Criticality` field of a finding.
+       */
+      override fun criticality(criticality: Number) {
+        cdkBuilder.criticality(criticality)
+      }
+
+      /**
+       * @param note The rule action will update the `Note` field of a finding.
+       */
+      override fun note(note: IResolvable) {
+        cdkBuilder.note(note.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param note The rule action will update the `Note` field of a finding.
+       */
+      override fun note(note: NoteUpdateProperty) {
+        cdkBuilder.note(note.let(NoteUpdateProperty::unwrap))
+      }
+
+      /**
+       * @param note The rule action will update the `Note` field of a finding.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("72379505fd3f18cca4f46ba7ad6532ed15e68d45ce50c32089e85f2f9d531ecd")
+      override fun note(note: NoteUpdateProperty.Builder.() -> Unit): Unit =
+          note(NoteUpdateProperty(note))
+
+      /**
+       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
+       * finding.
+       */
+      override fun relatedFindings(relatedFindings: IResolvable) {
+        cdkBuilder.relatedFindings(relatedFindings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
+       * finding.
+       */
+      override fun relatedFindings(relatedFindings: List<Any>) {
+        cdkBuilder.relatedFindings(relatedFindings)
+      }
+
+      /**
+       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
+       * finding.
+       */
+      override fun relatedFindings(vararg relatedFindings: Any): Unit =
+          relatedFindings(relatedFindings.toList())
+
+      /**
+       * @param severity The rule action will update the `Severity` field of a finding.
+       */
+      override fun severity(severity: IResolvable) {
+        cdkBuilder.severity(severity.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param severity The rule action will update the `Severity` field of a finding.
+       */
+      override fun severity(severity: SeverityUpdateProperty) {
+        cdkBuilder.severity(severity.let(SeverityUpdateProperty::unwrap))
+      }
+
+      /**
+       * @param severity The rule action will update the `Severity` field of a finding.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("500bb85fb2d022fb7610811da54b2440bcbdb9429760513eaa3fce97736539a3")
+      override fun severity(severity: SeverityUpdateProperty.Builder.() -> Unit): Unit =
+          severity(SeverityUpdateProperty(severity))
+
+      /**
+       * @param types The rule action updates the `Types` field of a finding.
+       */
+      override fun types(types: List<String>) {
+        cdkBuilder.types(types)
+      }
+
+      /**
+       * @param types The rule action updates the `Types` field of a finding.
+       */
+      override fun types(vararg types: String): Unit = types(types.toList())
+
+      /**
+       * @param userDefinedFields The rule action updates the `UserDefinedFields` field of a
+       * finding.
+       */
+      override fun userDefinedFields(userDefinedFields: IResolvable) {
+        cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param userDefinedFields The rule action updates the `UserDefinedFields` field of a
+       * finding.
+       */
+      override fun userDefinedFields(userDefinedFields: Map<String, String>) {
+        cdkBuilder.userDefinedFields(userDefinedFields)
+      }
+
+      /**
+       * @param verificationState The rule action updates the `VerificationState` field of a
+       * finding.
+       */
+      override fun verificationState(verificationState: String) {
+        cdkBuilder.verificationState(verificationState)
+      }
+
+      /**
+       * @param workflow The rule action will update the `Workflow` field of a finding.
+       */
+      override fun workflow(workflow: IResolvable) {
+        cdkBuilder.workflow(workflow.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param workflow The rule action will update the `Workflow` field of a finding.
+       */
+      override fun workflow(workflow: WorkflowUpdateProperty) {
+        cdkBuilder.workflow(workflow.let(WorkflowUpdateProperty::unwrap))
+      }
+
+      /**
+       * @param workflow The rule action will update the `Workflow` field of a finding.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6504fe5e9999d895f655b17bb81cf4ae03527b5f7ad2d746c1344c950dbc0e57")
+      override fun workflow(workflow: WorkflowUpdateProperty.Builder.() -> Unit): Unit =
+          workflow(WorkflowUpdateProperty(workflow))
+
+      public fun build():
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty,
+    ) : CdkObject(cdkObject), AutomationRulesFindingFieldsUpdateProperty {
+      /**
+       * The rule action updates the `Confidence` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-confidence)
+       */
+      override fun confidence(): Number? = unwrap(this).getConfidence()
+
+      /**
+       * The rule action updates the `Criticality` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-criticality)
+       */
+      override fun criticality(): Number? = unwrap(this).getCriticality()
+
+      /**
+       * The rule action will update the `Note` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-note)
+       */
+      override fun note(): Any? = unwrap(this).getNote()
+
+      /**
+       * The rule action will update the `RelatedFindings` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-relatedfindings)
+       */
+      override fun relatedFindings(): Any? = unwrap(this).getRelatedFindings()
+
+      /**
+       * The rule action will update the `Severity` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-severity)
+       */
+      override fun severity(): Any? = unwrap(this).getSeverity()
+
+      /**
+       * The rule action updates the `Types` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-types)
+       */
+      override fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
+
+      /**
+       * The rule action updates the `UserDefinedFields` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-userdefinedfields)
+       */
+      override fun userDefinedFields(): Any? = unwrap(this).getUserDefinedFields()
+
+      /**
+       * The rule action updates the `VerificationState` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-verificationstate)
+       */
+      override fun verificationState(): String? = unwrap(this).getVerificationState()
+
+      /**
+       * The rule action will update the `Workflow` field of a finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-workflow)
+       */
+      override fun workflow(): Any? = unwrap(this).getWorkflow()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AutomationRulesFindingFieldsUpdateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty):
+          AutomationRulesFindingFieldsUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutomationRulesFindingFieldsUpdateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutomationRulesFindingFieldsUpdateProperty):
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty
     }
   }
 
@@ -4474,125 +4310,6 @@ public open class CfnAutomationRule internal constructor(
   }
 
   /**
-   * Provides details about a list of findings that the current finding relates to.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.securityhub.*;
-   * Object id;
-   * RelatedFindingProperty relatedFindingProperty = RelatedFindingProperty.builder()
-   * .id(id)
-   * .productArn("productArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html)
-   */
-  public interface RelatedFindingProperty {
-    /**
-     * The product-generated identifier for a related finding.
-     *
-     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html#cfn-securityhub-automationrule-relatedfinding-id)
-     */
-    public fun id(): Any
-
-    /**
-     * The Amazon Resource Name (ARN) for the product that generated a related finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html#cfn-securityhub-automationrule-relatedfinding-productarn)
-     */
-    public fun productArn(): String
-
-    /**
-     * A builder for [RelatedFindingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The product-generated identifier for a related finding. 
-       * Array Members: Minimum number of 1 item. Maximum number of 20 items.
-       */
-      public fun id(id: Any)
-
-      /**
-       * @param productArn The Amazon Resource Name (ARN) for the product that generated a related
-       * finding. 
-       */
-      public fun productArn(productArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty.Builder
-          =
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty.builder()
-
-      /**
-       * @param id The product-generated identifier for a related finding. 
-       * Array Members: Minimum number of 1 item. Maximum number of 20 items.
-       */
-      override fun id(id: Any) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param productArn The Amazon Resource Name (ARN) for the product that generated a related
-       * finding. 
-       */
-      override fun productArn(productArn: String) {
-        cdkBuilder.productArn(productArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty,
-    ) : CdkObject(cdkObject), RelatedFindingProperty {
-      /**
-       * The product-generated identifier for a related finding.
-       *
-       * Array Members: Minimum number of 1 item. Maximum number of 20 items.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html#cfn-securityhub-automationrule-relatedfinding-id)
-       */
-      override fun id(): Any = unwrap(this).getId()
-
-      /**
-       * The Amazon Resource Name (ARN) for the product that generated a related finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html#cfn-securityhub-automationrule-relatedfinding-productarn)
-       */
-      override fun productArn(): String = unwrap(this).getProductArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RelatedFindingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty):
-          RelatedFindingProperty = CdkObjectWrappers.wrap(cdkObject) as? RelatedFindingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RelatedFindingProperty):
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty
-    }
-  }
-
-  /**
    * A date filter for querying findings.
    *
    * Example:
@@ -4795,6 +4512,452 @@ public open class CfnAutomationRule internal constructor(
   }
 
   /**
+   * A date range for the date filter.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.securityhub.*;
+   * DateRangeProperty dateRangeProperty = DateRangeProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html)
+   */
+  public interface DateRangeProperty {
+    /**
+     * A date range unit for the date filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html#cfn-securityhub-automationrule-daterange-unit)
+     */
+    public fun unit(): String
+
+    /**
+     * A date range value for the date filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html#cfn-securityhub-automationrule-daterange-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [DateRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param unit A date range unit for the date filter. 
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value A date range value for the date filter. 
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty.Builder =
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty.builder()
+
+      /**
+       * @param unit A date range unit for the date filter. 
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value A date range value for the date filter. 
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty,
+    ) : CdkObject(cdkObject), DateRangeProperty {
+      /**
+       * A date range unit for the date filter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html#cfn-securityhub-automationrule-daterange-unit)
+       */
+      override fun unit(): String = unwrap(this).getUnit()
+
+      /**
+       * A date range value for the date filter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-daterange.html#cfn-securityhub-automationrule-daterange-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DateRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty):
+          DateRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? DateRangeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DateRangeProperty):
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty
+    }
+  }
+
+  /**
+   * A map filter for filtering AWS Security Hub findings.
+   *
+   * Each map filter provides the field to check for, the value to check for, and the comparison
+   * operator.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.securityhub.*;
+   * MapFilterProperty mapFilterProperty = MapFilterProperty.builder()
+   * .comparison("comparison")
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html)
+   */
+  public interface MapFilterProperty {
+    /**
+     * The condition to apply to the key value when filtering Security Hub findings with a map
+     * filter.
+     *
+     * To search for values that have the filter value, use one of the following comparison
+     * operators:
+     *
+     * * To search for values that include the filter value, use `CONTAINS` . For example, for the
+     * `ResourceTags` field, the filter `Department CONTAINS Security` matches findings that include
+     * the value `Security` for the `Department` tag. In the same example, a finding with a value of
+     * `Security team` for the `Department` tag is a match.
+     * * To search for values that exactly match the filter value, use `EQUALS` . For example, for
+     * the `ResourceTags` field, the filter `Department EQUALS Security` matches findings that have the
+     * value `Security` for the `Department` tag.
+     *
+     * `CONTAINS` and `EQUALS` filters on the same field are joined by `OR` . A finding matches if
+     * it matches any one of those filters. For example, the filters `Department CONTAINS Security OR
+     * Department CONTAINS Finance` match a finding that includes either `Security` , `Finance` , or
+     * both values.
+     *
+     * To search for values that don't have the filter value, use one of the following comparison
+     * operators:
+     *
+     * * To search for values that exclude the filter value, use `NOT_CONTAINS` . For example, for
+     * the `ResourceTags` field, the filter `Department NOT_CONTAINS Finance` matches findings that
+     * exclude the value `Finance` for the `Department` tag.
+     * * To search for values other than the filter value, use `NOT_EQUALS` . For example, for the
+     * `ResourceTags` field, the filter `Department NOT_EQUALS Finance` matches findings that don’t
+     * have the value `Finance` for the `Department` tag.
+     *
+     * `NOT_CONTAINS` and `NOT_EQUALS` filters on the same field are joined by `AND` . A finding
+     * matches only if it matches all of those filters. For example, the filters `Department
+     * NOT_CONTAINS Security AND Department NOT_CONTAINS Finance` match a finding that excludes both
+     * the `Security` and `Finance` values.
+     *
+     * `CONTAINS` filters can only be used with other `CONTAINS` filters. `NOT_CONTAINS` filters can
+     * only be used with other `NOT_CONTAINS` filters.
+     *
+     * You can’t have both a `CONTAINS` filter and a `NOT_CONTAINS` filter on the same field.
+     * Similarly, you can’t have both an `EQUALS` filter and a `NOT_EQUALS` filter on the same field.
+     * Combining filters in this way returns an error.
+     *
+     * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
+     * information, see [Automation
+     * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
+     * *AWS Security Hub User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-comparison)
+     */
+    public fun comparison(): String
+
+    /**
+     * The key of the map filter.
+     *
+     * For example, for `ResourceTags` , `Key` identifies the name of the tag. For
+     * `UserDefinedFields` , `Key` is the name of the field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value for the key in the map filter.
+     *
+     * Filter values are case sensitive. For example, one of the values for a tag called
+     * `Department` might be `Security` . If you provide `security` as the filter value, then there's
+     * no match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [MapFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param comparison The condition to apply to the key value when filtering Security Hub
+       * findings with a map filter. 
+       * To search for values that have the filter value, use one of the following comparison
+       * operators:
+       *
+       * * To search for values that include the filter value, use `CONTAINS` . For example, for the
+       * `ResourceTags` field, the filter `Department CONTAINS Security` matches findings that include
+       * the value `Security` for the `Department` tag. In the same example, a finding with a value of
+       * `Security team` for the `Department` tag is a match.
+       * * To search for values that exactly match the filter value, use `EQUALS` . For example, for
+       * the `ResourceTags` field, the filter `Department EQUALS Security` matches findings that have
+       * the value `Security` for the `Department` tag.
+       *
+       * `CONTAINS` and `EQUALS` filters on the same field are joined by `OR` . A finding matches if
+       * it matches any one of those filters. For example, the filters `Department CONTAINS Security OR
+       * Department CONTAINS Finance` match a finding that includes either `Security` , `Finance` , or
+       * both values.
+       *
+       * To search for values that don't have the filter value, use one of the following comparison
+       * operators:
+       *
+       * * To search for values that exclude the filter value, use `NOT_CONTAINS` . For example, for
+       * the `ResourceTags` field, the filter `Department NOT_CONTAINS Finance` matches findings that
+       * exclude the value `Finance` for the `Department` tag.
+       * * To search for values other than the filter value, use `NOT_EQUALS` . For example, for the
+       * `ResourceTags` field, the filter `Department NOT_EQUALS Finance` matches findings that don’t
+       * have the value `Finance` for the `Department` tag.
+       *
+       * `NOT_CONTAINS` and `NOT_EQUALS` filters on the same field are joined by `AND` . A finding
+       * matches only if it matches all of those filters. For example, the filters `Department
+       * NOT_CONTAINS Security AND Department NOT_CONTAINS Finance` match a finding that excludes both
+       * the `Security` and `Finance` values.
+       *
+       * `CONTAINS` filters can only be used with other `CONTAINS` filters. `NOT_CONTAINS` filters
+       * can only be used with other `NOT_CONTAINS` filters.
+       *
+       * You can’t have both a `CONTAINS` filter and a `NOT_CONTAINS` filter on the same field.
+       * Similarly, you can’t have both an `EQUALS` filter and a `NOT_EQUALS` filter on the same field.
+       * Combining filters in this way returns an error.
+       *
+       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
+       * information, see [Automation
+       * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
+       * *AWS Security Hub User Guide* .
+       */
+      public fun comparison(comparison: String)
+
+      /**
+       * @param key The key of the map filter. 
+       * For example, for `ResourceTags` , `Key` identifies the name of the tag. For
+       * `UserDefinedFields` , `Key` is the name of the field.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value for the key in the map filter. 
+       * Filter values are case sensitive. For example, one of the values for a tag called
+       * `Department` might be `Security` . If you provide `security` as the filter value, then there's
+       * no match.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty.Builder =
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty.builder()
+
+      /**
+       * @param comparison The condition to apply to the key value when filtering Security Hub
+       * findings with a map filter. 
+       * To search for values that have the filter value, use one of the following comparison
+       * operators:
+       *
+       * * To search for values that include the filter value, use `CONTAINS` . For example, for the
+       * `ResourceTags` field, the filter `Department CONTAINS Security` matches findings that include
+       * the value `Security` for the `Department` tag. In the same example, a finding with a value of
+       * `Security team` for the `Department` tag is a match.
+       * * To search for values that exactly match the filter value, use `EQUALS` . For example, for
+       * the `ResourceTags` field, the filter `Department EQUALS Security` matches findings that have
+       * the value `Security` for the `Department` tag.
+       *
+       * `CONTAINS` and `EQUALS` filters on the same field are joined by `OR` . A finding matches if
+       * it matches any one of those filters. For example, the filters `Department CONTAINS Security OR
+       * Department CONTAINS Finance` match a finding that includes either `Security` , `Finance` , or
+       * both values.
+       *
+       * To search for values that don't have the filter value, use one of the following comparison
+       * operators:
+       *
+       * * To search for values that exclude the filter value, use `NOT_CONTAINS` . For example, for
+       * the `ResourceTags` field, the filter `Department NOT_CONTAINS Finance` matches findings that
+       * exclude the value `Finance` for the `Department` tag.
+       * * To search for values other than the filter value, use `NOT_EQUALS` . For example, for the
+       * `ResourceTags` field, the filter `Department NOT_EQUALS Finance` matches findings that don’t
+       * have the value `Finance` for the `Department` tag.
+       *
+       * `NOT_CONTAINS` and `NOT_EQUALS` filters on the same field are joined by `AND` . A finding
+       * matches only if it matches all of those filters. For example, the filters `Department
+       * NOT_CONTAINS Security AND Department NOT_CONTAINS Finance` match a finding that excludes both
+       * the `Security` and `Finance` values.
+       *
+       * `CONTAINS` filters can only be used with other `CONTAINS` filters. `NOT_CONTAINS` filters
+       * can only be used with other `NOT_CONTAINS` filters.
+       *
+       * You can’t have both a `CONTAINS` filter and a `NOT_CONTAINS` filter on the same field.
+       * Similarly, you can’t have both an `EQUALS` filter and a `NOT_EQUALS` filter on the same field.
+       * Combining filters in this way returns an error.
+       *
+       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
+       * information, see [Automation
+       * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
+       * *AWS Security Hub User Guide* .
+       */
+      override fun comparison(comparison: String) {
+        cdkBuilder.comparison(comparison)
+      }
+
+      /**
+       * @param key The key of the map filter. 
+       * For example, for `ResourceTags` , `Key` identifies the name of the tag. For
+       * `UserDefinedFields` , `Key` is the name of the field.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value for the key in the map filter. 
+       * Filter values are case sensitive. For example, one of the values for a tag called
+       * `Department` might be `Security` . If you provide `security` as the filter value, then there's
+       * no match.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty,
+    ) : CdkObject(cdkObject), MapFilterProperty {
+      /**
+       * The condition to apply to the key value when filtering Security Hub findings with a map
+       * filter.
+       *
+       * To search for values that have the filter value, use one of the following comparison
+       * operators:
+       *
+       * * To search for values that include the filter value, use `CONTAINS` . For example, for the
+       * `ResourceTags` field, the filter `Department CONTAINS Security` matches findings that include
+       * the value `Security` for the `Department` tag. In the same example, a finding with a value of
+       * `Security team` for the `Department` tag is a match.
+       * * To search for values that exactly match the filter value, use `EQUALS` . For example, for
+       * the `ResourceTags` field, the filter `Department EQUALS Security` matches findings that have
+       * the value `Security` for the `Department` tag.
+       *
+       * `CONTAINS` and `EQUALS` filters on the same field are joined by `OR` . A finding matches if
+       * it matches any one of those filters. For example, the filters `Department CONTAINS Security OR
+       * Department CONTAINS Finance` match a finding that includes either `Security` , `Finance` , or
+       * both values.
+       *
+       * To search for values that don't have the filter value, use one of the following comparison
+       * operators:
+       *
+       * * To search for values that exclude the filter value, use `NOT_CONTAINS` . For example, for
+       * the `ResourceTags` field, the filter `Department NOT_CONTAINS Finance` matches findings that
+       * exclude the value `Finance` for the `Department` tag.
+       * * To search for values other than the filter value, use `NOT_EQUALS` . For example, for the
+       * `ResourceTags` field, the filter `Department NOT_EQUALS Finance` matches findings that don’t
+       * have the value `Finance` for the `Department` tag.
+       *
+       * `NOT_CONTAINS` and `NOT_EQUALS` filters on the same field are joined by `AND` . A finding
+       * matches only if it matches all of those filters. For example, the filters `Department
+       * NOT_CONTAINS Security AND Department NOT_CONTAINS Finance` match a finding that excludes both
+       * the `Security` and `Finance` values.
+       *
+       * `CONTAINS` filters can only be used with other `CONTAINS` filters. `NOT_CONTAINS` filters
+       * can only be used with other `NOT_CONTAINS` filters.
+       *
+       * You can’t have both a `CONTAINS` filter and a `NOT_CONTAINS` filter on the same field.
+       * Similarly, you can’t have both an `EQUALS` filter and a `NOT_EQUALS` filter on the same field.
+       * Combining filters in this way returns an error.
+       *
+       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
+       * information, see [Automation
+       * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
+       * *AWS Security Hub User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-comparison)
+       */
+      override fun comparison(): String = unwrap(this).getComparison()
+
+      /**
+       * The key of the map filter.
+       *
+       * For example, for `ResourceTags` , `Key` identifies the name of the tag. For
+       * `UserDefinedFields` , `Key` is the name of the field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value for the key in the map filter.
+       *
+       * Filter values are case sensitive. For example, one of the values for a tag called
+       * `Department` might be `Security` . If you provide `security` as the filter value, then there's
+       * no match.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html#cfn-securityhub-automationrule-mapfilter-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MapFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty):
+          MapFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? MapFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MapFilterProperty):
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty
+    }
+  }
+
+  /**
    * The updated note.
    *
    * Example:
@@ -4901,461 +5064,6 @@ public open class CfnAutomationRule internal constructor(
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.NoteUpdateProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.NoteUpdateProperty
-    }
-  }
-
-  /**
-   * Identifies the finding fields that the automation rule action updates when a finding matches
-   * the defined criteria.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.securityhub.*;
-   * Object id;
-   * Object updatedBy;
-   * AutomationRulesFindingFieldsUpdateProperty automationRulesFindingFieldsUpdateProperty =
-   * AutomationRulesFindingFieldsUpdateProperty.builder()
-   * .confidence(123)
-   * .criticality(123)
-   * .note(NoteUpdateProperty.builder()
-   * .text("text")
-   * .updatedBy(updatedBy)
-   * .build())
-   * .relatedFindings(List.of(RelatedFindingProperty.builder()
-   * .id(id)
-   * .productArn("productArn")
-   * .build()))
-   * .severity(SeverityUpdateProperty.builder()
-   * .label("label")
-   * .normalized(123)
-   * .product(123)
-   * .build())
-   * .types(List.of("types"))
-   * .userDefinedFields(Map.of(
-   * "userDefinedFieldsKey", "userDefinedFields"))
-   * .verificationState("verificationState")
-   * .workflow(WorkflowUpdateProperty.builder()
-   * .status("status")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html)
-   */
-  public interface AutomationRulesFindingFieldsUpdateProperty {
-    /**
-     * The rule action updates the `Confidence` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-confidence)
-     */
-    public fun confidence(): Number? = unwrap(this).getConfidence()
-
-    /**
-     * The rule action updates the `Criticality` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-criticality)
-     */
-    public fun criticality(): Number? = unwrap(this).getCriticality()
-
-    /**
-     * The rule action will update the `Note` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-note)
-     */
-    public fun note(): Any? = unwrap(this).getNote()
-
-    /**
-     * The rule action will update the `RelatedFindings` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-relatedfindings)
-     */
-    public fun relatedFindings(): Any? = unwrap(this).getRelatedFindings()
-
-    /**
-     * The rule action will update the `Severity` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-severity)
-     */
-    public fun severity(): Any? = unwrap(this).getSeverity()
-
-    /**
-     * The rule action updates the `Types` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-types)
-     */
-    public fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
-
-    /**
-     * The rule action updates the `UserDefinedFields` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-userdefinedfields)
-     */
-    public fun userDefinedFields(): Any? = unwrap(this).getUserDefinedFields()
-
-    /**
-     * The rule action updates the `VerificationState` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-verificationstate)
-     */
-    public fun verificationState(): String? = unwrap(this).getVerificationState()
-
-    /**
-     * The rule action will update the `Workflow` field of a finding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-workflow)
-     */
-    public fun workflow(): Any? = unwrap(this).getWorkflow()
-
-    /**
-     * A builder for [AutomationRulesFindingFieldsUpdateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param confidence The rule action updates the `Confidence` field of a finding.
-       */
-      public fun confidence(confidence: Number)
-
-      /**
-       * @param criticality The rule action updates the `Criticality` field of a finding.
-       */
-      public fun criticality(criticality: Number)
-
-      /**
-       * @param note The rule action will update the `Note` field of a finding.
-       */
-      public fun note(note: IResolvable)
-
-      /**
-       * @param note The rule action will update the `Note` field of a finding.
-       */
-      public fun note(note: NoteUpdateProperty)
-
-      /**
-       * @param note The rule action will update the `Note` field of a finding.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("72379505fd3f18cca4f46ba7ad6532ed15e68d45ce50c32089e85f2f9d531ecd")
-      public fun note(note: NoteUpdateProperty.Builder.() -> Unit)
-
-      /**
-       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
-       * finding.
-       */
-      public fun relatedFindings(relatedFindings: IResolvable)
-
-      /**
-       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
-       * finding.
-       */
-      public fun relatedFindings(relatedFindings: List<Any>)
-
-      /**
-       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
-       * finding.
-       */
-      public fun relatedFindings(vararg relatedFindings: Any)
-
-      /**
-       * @param severity The rule action will update the `Severity` field of a finding.
-       */
-      public fun severity(severity: IResolvable)
-
-      /**
-       * @param severity The rule action will update the `Severity` field of a finding.
-       */
-      public fun severity(severity: SeverityUpdateProperty)
-
-      /**
-       * @param severity The rule action will update the `Severity` field of a finding.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("500bb85fb2d022fb7610811da54b2440bcbdb9429760513eaa3fce97736539a3")
-      public fun severity(severity: SeverityUpdateProperty.Builder.() -> Unit)
-
-      /**
-       * @param types The rule action updates the `Types` field of a finding.
-       */
-      public fun types(types: List<String>)
-
-      /**
-       * @param types The rule action updates the `Types` field of a finding.
-       */
-      public fun types(vararg types: String)
-
-      /**
-       * @param userDefinedFields The rule action updates the `UserDefinedFields` field of a
-       * finding.
-       */
-      public fun userDefinedFields(userDefinedFields: IResolvable)
-
-      /**
-       * @param userDefinedFields The rule action updates the `UserDefinedFields` field of a
-       * finding.
-       */
-      public fun userDefinedFields(userDefinedFields: Map<String, String>)
-
-      /**
-       * @param verificationState The rule action updates the `VerificationState` field of a
-       * finding.
-       */
-      public fun verificationState(verificationState: String)
-
-      /**
-       * @param workflow The rule action will update the `Workflow` field of a finding.
-       */
-      public fun workflow(workflow: IResolvable)
-
-      /**
-       * @param workflow The rule action will update the `Workflow` field of a finding.
-       */
-      public fun workflow(workflow: WorkflowUpdateProperty)
-
-      /**
-       * @param workflow The rule action will update the `Workflow` field of a finding.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6504fe5e9999d895f655b17bb81cf4ae03527b5f7ad2d746c1344c950dbc0e57")
-      public fun workflow(workflow: WorkflowUpdateProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty.Builder
-          =
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty.builder()
-
-      /**
-       * @param confidence The rule action updates the `Confidence` field of a finding.
-       */
-      override fun confidence(confidence: Number) {
-        cdkBuilder.confidence(confidence)
-      }
-
-      /**
-       * @param criticality The rule action updates the `Criticality` field of a finding.
-       */
-      override fun criticality(criticality: Number) {
-        cdkBuilder.criticality(criticality)
-      }
-
-      /**
-       * @param note The rule action will update the `Note` field of a finding.
-       */
-      override fun note(note: IResolvable) {
-        cdkBuilder.note(note.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param note The rule action will update the `Note` field of a finding.
-       */
-      override fun note(note: NoteUpdateProperty) {
-        cdkBuilder.note(note.let(NoteUpdateProperty::unwrap))
-      }
-
-      /**
-       * @param note The rule action will update the `Note` field of a finding.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("72379505fd3f18cca4f46ba7ad6532ed15e68d45ce50c32089e85f2f9d531ecd")
-      override fun note(note: NoteUpdateProperty.Builder.() -> Unit): Unit =
-          note(NoteUpdateProperty(note))
-
-      /**
-       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
-       * finding.
-       */
-      override fun relatedFindings(relatedFindings: IResolvable) {
-        cdkBuilder.relatedFindings(relatedFindings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
-       * finding.
-       */
-      override fun relatedFindings(relatedFindings: List<Any>) {
-        cdkBuilder.relatedFindings(relatedFindings)
-      }
-
-      /**
-       * @param relatedFindings The rule action will update the `RelatedFindings` field of a
-       * finding.
-       */
-      override fun relatedFindings(vararg relatedFindings: Any): Unit =
-          relatedFindings(relatedFindings.toList())
-
-      /**
-       * @param severity The rule action will update the `Severity` field of a finding.
-       */
-      override fun severity(severity: IResolvable) {
-        cdkBuilder.severity(severity.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param severity The rule action will update the `Severity` field of a finding.
-       */
-      override fun severity(severity: SeverityUpdateProperty) {
-        cdkBuilder.severity(severity.let(SeverityUpdateProperty::unwrap))
-      }
-
-      /**
-       * @param severity The rule action will update the `Severity` field of a finding.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("500bb85fb2d022fb7610811da54b2440bcbdb9429760513eaa3fce97736539a3")
-      override fun severity(severity: SeverityUpdateProperty.Builder.() -> Unit): Unit =
-          severity(SeverityUpdateProperty(severity))
-
-      /**
-       * @param types The rule action updates the `Types` field of a finding.
-       */
-      override fun types(types: List<String>) {
-        cdkBuilder.types(types)
-      }
-
-      /**
-       * @param types The rule action updates the `Types` field of a finding.
-       */
-      override fun types(vararg types: String): Unit = types(types.toList())
-
-      /**
-       * @param userDefinedFields The rule action updates the `UserDefinedFields` field of a
-       * finding.
-       */
-      override fun userDefinedFields(userDefinedFields: IResolvable) {
-        cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param userDefinedFields The rule action updates the `UserDefinedFields` field of a
-       * finding.
-       */
-      override fun userDefinedFields(userDefinedFields: Map<String, String>) {
-        cdkBuilder.userDefinedFields(userDefinedFields)
-      }
-
-      /**
-       * @param verificationState The rule action updates the `VerificationState` field of a
-       * finding.
-       */
-      override fun verificationState(verificationState: String) {
-        cdkBuilder.verificationState(verificationState)
-      }
-
-      /**
-       * @param workflow The rule action will update the `Workflow` field of a finding.
-       */
-      override fun workflow(workflow: IResolvable) {
-        cdkBuilder.workflow(workflow.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param workflow The rule action will update the `Workflow` field of a finding.
-       */
-      override fun workflow(workflow: WorkflowUpdateProperty) {
-        cdkBuilder.workflow(workflow.let(WorkflowUpdateProperty::unwrap))
-      }
-
-      /**
-       * @param workflow The rule action will update the `Workflow` field of a finding.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6504fe5e9999d895f655b17bb81cf4ae03527b5f7ad2d746c1344c950dbc0e57")
-      override fun workflow(workflow: WorkflowUpdateProperty.Builder.() -> Unit): Unit =
-          workflow(WorkflowUpdateProperty(workflow))
-
-      public fun build():
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty,
-    ) : CdkObject(cdkObject), AutomationRulesFindingFieldsUpdateProperty {
-      /**
-       * The rule action updates the `Confidence` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-confidence)
-       */
-      override fun confidence(): Number? = unwrap(this).getConfidence()
-
-      /**
-       * The rule action updates the `Criticality` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-criticality)
-       */
-      override fun criticality(): Number? = unwrap(this).getCriticality()
-
-      /**
-       * The rule action will update the `Note` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-note)
-       */
-      override fun note(): Any? = unwrap(this).getNote()
-
-      /**
-       * The rule action will update the `RelatedFindings` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-relatedfindings)
-       */
-      override fun relatedFindings(): Any? = unwrap(this).getRelatedFindings()
-
-      /**
-       * The rule action will update the `Severity` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-severity)
-       */
-      override fun severity(): Any? = unwrap(this).getSeverity()
-
-      /**
-       * The rule action updates the `Types` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-types)
-       */
-      override fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
-
-      /**
-       * The rule action updates the `UserDefinedFields` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-userdefinedfields)
-       */
-      override fun userDefinedFields(): Any? = unwrap(this).getUserDefinedFields()
-
-      /**
-       * The rule action updates the `VerificationState` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-verificationstate)
-       */
-      override fun verificationState(): String? = unwrap(this).getVerificationState()
-
-      /**
-       * The rule action will update the `Workflow` field of a finding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesfindingfieldsupdate.html#cfn-securityhub-automationrule-automationrulesfindingfieldsupdate-workflow)
-       */
-      override fun workflow(): Any? = unwrap(this).getWorkflow()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AutomationRulesFindingFieldsUpdateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty):
-          AutomationRulesFindingFieldsUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutomationRulesFindingFieldsUpdateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutomationRulesFindingFieldsUpdateProperty):
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty
     }
   }
 
@@ -5504,8 +5212,7 @@ public open class CfnAutomationRule internal constructor(
   }
 
   /**
-   * One or more actions to update finding fields if a finding matches the defined criteria of the
-   * rule.
+   * Provides details about a list of findings that the current finding relates to.
    *
    * Example:
    *
@@ -5514,185 +5221,313 @@ public open class CfnAutomationRule internal constructor(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.securityhub.*;
    * Object id;
-   * Object updatedBy;
-   * AutomationRulesActionProperty automationRulesActionProperty =
-   * AutomationRulesActionProperty.builder()
-   * .findingFieldsUpdate(AutomationRulesFindingFieldsUpdateProperty.builder()
-   * .confidence(123)
-   * .criticality(123)
-   * .note(NoteUpdateProperty.builder()
-   * .text("text")
-   * .updatedBy(updatedBy)
-   * .build())
-   * .relatedFindings(List.of(RelatedFindingProperty.builder()
+   * RelatedFindingProperty relatedFindingProperty = RelatedFindingProperty.builder()
    * .id(id)
    * .productArn("productArn")
-   * .build()))
-   * .severity(SeverityUpdateProperty.builder()
-   * .label("label")
-   * .normalized(123)
-   * .product(123)
-   * .build())
-   * .types(List.of("types"))
-   * .userDefinedFields(Map.of(
-   * "userDefinedFieldsKey", "userDefinedFields"))
-   * .verificationState("verificationState")
-   * .workflow(WorkflowUpdateProperty.builder()
-   * .status("status")
-   * .build())
-   * .build())
-   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html)
    */
-  public interface AutomationRulesActionProperty {
+  public interface RelatedFindingProperty {
     /**
-     * Specifies that the automation rule action is an update to a finding field.
+     * The product-generated identifier for a related finding.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-findingfieldsupdate)
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html#cfn-securityhub-automationrule-relatedfinding-id)
      */
-    public fun findingFieldsUpdate(): Any
+    public fun id(): Any
 
     /**
-     * Specifies that the rule action should update the `Types` finding field.
+     * The Amazon Resource Name (ARN) for the product that generated a related finding.
      *
-     * The `Types` finding field classifies findings in the format of namespace/category/classifier.
-     * For more information, see [Types taxonomy for
-     * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-     * in the *AWS Security Hub User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-type)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html#cfn-securityhub-automationrule-relatedfinding-productarn)
      */
-    public fun type(): String
+    public fun productArn(): String
 
     /**
-     * A builder for [AutomationRulesActionProperty]
+     * A builder for [RelatedFindingProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
-       * finding field. 
+       * @param id The product-generated identifier for a related finding. 
+       * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
-      public fun findingFieldsUpdate(findingFieldsUpdate: IResolvable)
+      public fun id(id: Any)
 
       /**
-       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
-       * finding field. 
+       * @param productArn The Amazon Resource Name (ARN) for the product that generated a related
+       * finding. 
        */
-      public
-          fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty)
-
-      /**
-       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
-       * finding field. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0c3f16cefb02891da7c8b09db3c49d70707c13fd09f95537daf015db2dc77ec5")
-      public
-          fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty.Builder.() -> Unit)
-
-      /**
-       * @param type Specifies that the rule action should update the `Types` finding field. 
-       * The `Types` finding field classifies findings in the format of
-       * namespace/category/classifier. For more information, see [Types taxonomy for
-       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-       * in the *AWS Security Hub User Guide* .
-       */
-      public fun type(type: String)
+      public fun productArn(productArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty.Builder
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty.Builder
           =
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty.builder()
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty.builder()
 
       /**
-       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
-       * finding field. 
+       * @param id The product-generated identifier for a related finding. 
+       * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
-      override fun findingFieldsUpdate(findingFieldsUpdate: IResolvable) {
-        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate.let(IResolvable::unwrap))
+      override fun id(id: Any) {
+        cdkBuilder.id(id)
       }
 
       /**
-       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
-       * finding field. 
+       * @param productArn The Amazon Resource Name (ARN) for the product that generated a related
+       * finding. 
        */
-      override
-          fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty) {
-        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate.let(AutomationRulesFindingFieldsUpdateProperty::unwrap))
-      }
-
-      /**
-       * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
-       * finding field. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0c3f16cefb02891da7c8b09db3c49d70707c13fd09f95537daf015db2dc77ec5")
-      override
-          fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty.Builder.() -> Unit):
-          Unit =
-          findingFieldsUpdate(AutomationRulesFindingFieldsUpdateProperty(findingFieldsUpdate))
-
-      /**
-       * @param type Specifies that the rule action should update the `Types` finding field. 
-       * The `Types` finding field classifies findings in the format of
-       * namespace/category/classifier. For more information, see [Types taxonomy for
-       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-       * in the *AWS Security Hub User Guide* .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
+      override fun productArn(productArn: String) {
+        cdkBuilder.productArn(productArn)
       }
 
       public fun build():
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty,
-    ) : CdkObject(cdkObject), AutomationRulesActionProperty {
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty,
+    ) : CdkObject(cdkObject), RelatedFindingProperty {
       /**
-       * Specifies that the automation rule action is an update to a finding field.
+       * The product-generated identifier for a related finding.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-findingfieldsupdate)
+       * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html#cfn-securityhub-automationrule-relatedfinding-id)
        */
-      override fun findingFieldsUpdate(): Any = unwrap(this).getFindingFieldsUpdate()
+      override fun id(): Any = unwrap(this).getId()
 
       /**
-       * Specifies that the rule action should update the `Types` finding field.
+       * The Amazon Resource Name (ARN) for the product that generated a related finding.
        *
-       * The `Types` finding field classifies findings in the format of
-       * namespace/category/classifier. For more information, see [Types taxonomy for
-       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-       * in the *AWS Security Hub User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-type)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html#cfn-securityhub-automationrule-relatedfinding-productarn)
        */
-      override fun type(): String = unwrap(this).getType()
+      override fun productArn(): String = unwrap(this).getProductArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutomationRulesActionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RelatedFindingProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty):
-          AutomationRulesActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutomationRulesActionProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty):
+          RelatedFindingProperty = CdkObjectWrappers.wrap(cdkObject) as? RelatedFindingProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AutomationRulesActionProperty):
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty
+      internal fun unwrap(wrapped: RelatedFindingProperty):
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty
+    }
+  }
+
+  /**
+   * Updates to the severity information for a finding.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.securityhub.*;
+   * SeverityUpdateProperty severityUpdateProperty = SeverityUpdateProperty.builder()
+   * .label("label")
+   * .normalized(123)
+   * .product(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html)
+   */
+  public interface SeverityUpdateProperty {
+    /**
+     * The severity value of the finding. The allowed values are the following.
+     *
+     * * `INFORMATIONAL` - No issue was found.
+     * * `LOW` - The issue does not require action on its own.
+     * * `MEDIUM` - The issue must be addressed but not urgently.
+     * * `HIGH` - The issue must be addressed as a priority.
+     * * `CRITICAL` - The issue must be remediated immediately to avoid it escalating.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-label)
+     */
+    public fun label(): String? = unwrap(this).getLabel()
+
+    /**
+     * The normalized severity for the finding. This attribute is to be deprecated in favor of
+     * `Label` .
+     *
+     * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
+     * follows.
+     *
+     * * 0 - `INFORMATIONAL`
+     * * 1–39 - `LOW`
+     * * 40–69 - `MEDIUM`
+     * * 70–89 - `HIGH`
+     * * 90–100 - `CRITICAL`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-normalized)
+     */
+    public fun normalized(): Number? = unwrap(this).getNormalized()
+
+    /**
+     * The native severity as defined by the AWS service or integrated partner product that
+     * generated the finding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-product)
+     */
+    public fun product(): Number? = unwrap(this).getProduct()
+
+    /**
+     * A builder for [SeverityUpdateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param label The severity value of the finding. The allowed values are the following.
+       * * `INFORMATIONAL` - No issue was found.
+       * * `LOW` - The issue does not require action on its own.
+       * * `MEDIUM` - The issue must be addressed but not urgently.
+       * * `HIGH` - The issue must be addressed as a priority.
+       * * `CRITICAL` - The issue must be remediated immediately to avoid it escalating.
+       */
+      public fun label(label: String)
+
+      /**
+       * @param normalized The normalized severity for the finding. This attribute is to be
+       * deprecated in favor of `Label` .
+       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
+       * follows.
+       *
+       * * 0 - `INFORMATIONAL`
+       * * 1–39 - `LOW`
+       * * 40–69 - `MEDIUM`
+       * * 70–89 - `HIGH`
+       * * 90–100 - `CRITICAL`
+       */
+      public fun normalized(normalized: Number)
+
+      /**
+       * @param product The native severity as defined by the AWS service or integrated partner
+       * product that generated the finding.
+       */
+      public fun product(product: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty.Builder
+          =
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty.builder()
+
+      /**
+       * @param label The severity value of the finding. The allowed values are the following.
+       * * `INFORMATIONAL` - No issue was found.
+       * * `LOW` - The issue does not require action on its own.
+       * * `MEDIUM` - The issue must be addressed but not urgently.
+       * * `HIGH` - The issue must be addressed as a priority.
+       * * `CRITICAL` - The issue must be remediated immediately to avoid it escalating.
+       */
+      override fun label(label: String) {
+        cdkBuilder.label(label)
+      }
+
+      /**
+       * @param normalized The normalized severity for the finding. This attribute is to be
+       * deprecated in favor of `Label` .
+       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
+       * follows.
+       *
+       * * 0 - `INFORMATIONAL`
+       * * 1–39 - `LOW`
+       * * 40–69 - `MEDIUM`
+       * * 70–89 - `HIGH`
+       * * 90–100 - `CRITICAL`
+       */
+      override fun normalized(normalized: Number) {
+        cdkBuilder.normalized(normalized)
+      }
+
+      /**
+       * @param product The native severity as defined by the AWS service or integrated partner
+       * product that generated the finding.
+       */
+      override fun product(product: Number) {
+        cdkBuilder.product(product)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty,
+    ) : CdkObject(cdkObject), SeverityUpdateProperty {
+      /**
+       * The severity value of the finding. The allowed values are the following.
+       *
+       * * `INFORMATIONAL` - No issue was found.
+       * * `LOW` - The issue does not require action on its own.
+       * * `MEDIUM` - The issue must be addressed but not urgently.
+       * * `HIGH` - The issue must be addressed as a priority.
+       * * `CRITICAL` - The issue must be remediated immediately to avoid it escalating.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-label)
+       */
+      override fun label(): String? = unwrap(this).getLabel()
+
+      /**
+       * The normalized severity for the finding. This attribute is to be deprecated in favor of
+       * `Label` .
+       *
+       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
+       * follows.
+       *
+       * * 0 - `INFORMATIONAL`
+       * * 1–39 - `LOW`
+       * * 40–69 - `MEDIUM`
+       * * 70–89 - `HIGH`
+       * * 90–100 - `CRITICAL`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-normalized)
+       */
+      override fun normalized(): Number? = unwrap(this).getNormalized()
+
+      /**
+       * The native severity as defined by the AWS service or integrated partner product that
+       * generated the finding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html#cfn-securityhub-automationrule-severityupdate-product)
+       */
+      override fun product(): Number? = unwrap(this).getProduct()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SeverityUpdateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty):
+          SeverityUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as? SeverityUpdateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SeverityUpdateProperty):
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty
     }
   }
 
@@ -6061,6 +5896,171 @@ public open class CfnAutomationRule internal constructor(
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.StringFilterProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.StringFilterProperty
+    }
+  }
+
+  /**
+   * Used to update information about the investigation into the finding.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.securityhub.*;
+   * WorkflowUpdateProperty workflowUpdateProperty = WorkflowUpdateProperty.builder()
+   * .status("status")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html)
+   */
+  public interface WorkflowUpdateProperty {
+    /**
+     * The status of the investigation into the finding.
+     *
+     * The workflow status is specific to an individual finding. It does not affect the generation
+     * of new findings. For example, setting the workflow status to `SUPPRESSED` or `RESOLVED` does not
+     * prevent a new finding for the same issue.
+     *
+     * The allowed values are the following.
+     *
+     * * `NEW` - The initial state of a finding, before it is reviewed.
+     *
+     * Security Hub also resets `WorkFlowStatus` from `NOTIFIED` or `RESOLVED` to `NEW` in the
+     * following cases:
+     *
+     * * The record state changes from `ARCHIVED` to `ACTIVE` .
+     * * The compliance status changes from `PASSED` to either `WARNING` , `FAILED` , or
+     * `NOT_AVAILABLE` .
+     * * `NOTIFIED` - Indicates that you notified the resource owner about the security issue. Used
+     * when the initial reviewer is not the resource owner, and needs intervention from the resource
+     * owner.
+     * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
+     * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+     * is needed. The finding is no longer updated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html#cfn-securityhub-automationrule-workflowupdate-status)
+     */
+    public fun status(): String
+
+    /**
+     * A builder for [WorkflowUpdateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param status The status of the investigation into the finding. 
+       * The workflow status is specific to an individual finding. It does not affect the generation
+       * of new findings. For example, setting the workflow status to `SUPPRESSED` or `RESOLVED` does
+       * not prevent a new finding for the same issue.
+       *
+       * The allowed values are the following.
+       *
+       * * `NEW` - The initial state of a finding, before it is reviewed.
+       *
+       * Security Hub also resets `WorkFlowStatus` from `NOTIFIED` or `RESOLVED` to `NEW` in the
+       * following cases:
+       *
+       * * The record state changes from `ARCHIVED` to `ACTIVE` .
+       * * The compliance status changes from `PASSED` to either `WARNING` , `FAILED` , or
+       * `NOT_AVAILABLE` .
+       * * `NOTIFIED` - Indicates that you notified the resource owner about the security issue.
+       * Used when the initial reviewer is not the resource owner, and needs intervention from the
+       * resource owner.
+       * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * is needed. The finding is no longer updated.
+       */
+      public fun status(status: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty.Builder
+          =
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty.builder()
+
+      /**
+       * @param status The status of the investigation into the finding. 
+       * The workflow status is specific to an individual finding. It does not affect the generation
+       * of new findings. For example, setting the workflow status to `SUPPRESSED` or `RESOLVED` does
+       * not prevent a new finding for the same issue.
+       *
+       * The allowed values are the following.
+       *
+       * * `NEW` - The initial state of a finding, before it is reviewed.
+       *
+       * Security Hub also resets `WorkFlowStatus` from `NOTIFIED` or `RESOLVED` to `NEW` in the
+       * following cases:
+       *
+       * * The record state changes from `ARCHIVED` to `ACTIVE` .
+       * * The compliance status changes from `PASSED` to either `WARNING` , `FAILED` , or
+       * `NOT_AVAILABLE` .
+       * * `NOTIFIED` - Indicates that you notified the resource owner about the security issue.
+       * Used when the initial reviewer is not the resource owner, and needs intervention from the
+       * resource owner.
+       * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * is needed. The finding is no longer updated.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty,
+    ) : CdkObject(cdkObject), WorkflowUpdateProperty {
+      /**
+       * The status of the investigation into the finding.
+       *
+       * The workflow status is specific to an individual finding. It does not affect the generation
+       * of new findings. For example, setting the workflow status to `SUPPRESSED` or `RESOLVED` does
+       * not prevent a new finding for the same issue.
+       *
+       * The allowed values are the following.
+       *
+       * * `NEW` - The initial state of a finding, before it is reviewed.
+       *
+       * Security Hub also resets `WorkFlowStatus` from `NOTIFIED` or `RESOLVED` to `NEW` in the
+       * following cases:
+       *
+       * * The record state changes from `ARCHIVED` to `ACTIVE` .
+       * * The compliance status changes from `PASSED` to either `WARNING` , `FAILED` , or
+       * `NOT_AVAILABLE` .
+       * * `NOTIFIED` - Indicates that you notified the resource owner about the security issue.
+       * Used when the initial reviewer is not the resource owner, and needs intervention from the
+       * resource owner.
+       * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * is needed. The finding is no longer updated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html#cfn-securityhub-automationrule-workflowupdate-status)
+       */
+      override fun status(): String = unwrap(this).getStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowUpdateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty):
+          WorkflowUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkflowUpdateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WorkflowUpdateProperty):
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty
     }
   }
 }

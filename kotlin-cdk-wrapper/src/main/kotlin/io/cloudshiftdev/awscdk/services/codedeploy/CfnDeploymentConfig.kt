@@ -686,6 +686,831 @@ public open class CfnDeploymentConfig internal constructor(
   }
 
   /**
+   * Information about the minimum number of healthy instances per Availability Zone.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * MinimumHealthyHostsPerZoneProperty minimumHealthyHostsPerZoneProperty =
+   * MinimumHealthyHostsPerZoneProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html)
+   */
+  public interface MinimumHealthyHostsPerZoneProperty {
+    /**
+     * The `type` associated with the `MinimumHealthyHostsPerZone` option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html#cfn-codedeploy-deploymentconfig-minimumhealthyhostsperzone-type)
+     */
+    public fun type(): String
+
+    /**
+     * The `value` associated with the `MinimumHealthyHostsPerZone` option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html#cfn-codedeploy-deploymentconfig-minimumhealthyhostsperzone-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [MinimumHealthyHostsPerZoneProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The `type` associated with the `MinimumHealthyHostsPerZone` option. 
+       */
+      public fun type(type: String)
+
+      /**
+       * @param value The `value` associated with the `MinimumHealthyHostsPerZone` option. 
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty.builder()
+
+      /**
+       * @param type The `type` associated with the `MinimumHealthyHostsPerZone` option. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param value The `value` associated with the `MinimumHealthyHostsPerZone` option. 
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty,
+    ) : CdkObject(cdkObject), MinimumHealthyHostsPerZoneProperty {
+      /**
+       * The `type` associated with the `MinimumHealthyHostsPerZone` option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html#cfn-codedeploy-deploymentconfig-minimumhealthyhostsperzone-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+
+      /**
+       * The `value` associated with the `MinimumHealthyHostsPerZone` option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html#cfn-codedeploy-deploymentconfig-minimumhealthyhostsperzone-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MinimumHealthyHostsPerZoneProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty):
+          MinimumHealthyHostsPerZoneProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MinimumHealthyHostsPerZoneProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MinimumHealthyHostsPerZoneProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty
+    }
+  }
+
+  /**
+   * `MinimumHealthyHosts` is a property of the
+   * [DeploymentConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html)
+   * resource that defines how many instances must remain healthy during an AWS CodeDeploy deployment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * MinimumHealthyHostsProperty minimumHealthyHostsProperty = MinimumHealthyHostsProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html)
+   */
+  public interface MinimumHealthyHostsProperty {
+    /**
+     * The minimum healthy instance type:.
+     *
+     * * HOST_COUNT: The minimum number of healthy instance as an absolute value.
+     * * FLEET_PERCENT: The minimum number of healthy instance as a percentage of the total number
+     * of instance in the deployment.
+     *
+     * In an example of nine instance, if a HOST_COUNT of six is specified, deploy to up to three
+     * instances at a time. The deployment is successful if six or more instances are deployed to
+     * successfully. Otherwise, the deployment fails. If a FLEET_PERCENT of 40 is specified, deploy to
+     * up to five instance at a time. The deployment is successful if four or more instance are
+     * deployed to successfully. Otherwise, the deployment fails.
+     *
+     *
+     * In a call to `GetDeploymentConfig` , CodeDeployDefault.OneAtATime returns a minimum healthy
+     * instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one instance
+     * at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or FLEET_PERCENT.)
+     * In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to ensure that all
+     * instances but one are kept in a healthy state during the deployment. Although this allows one
+     * instance at a time to be taken offline for a new deployment, it also means that if the
+     * deployment to the last instance fails, the overall deployment is still successful.
+     *
+     *
+     * For more information, see [AWS CodeDeploy Instance
+     * Health](https://docs.aws.amazon.com//codedeploy/latest/userguide/instances-health.html) in the
+     * *AWS CodeDeploy User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type)
+     */
+    public fun type(): String
+
+    /**
+     * The minimum healthy instance value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [MinimumHealthyHostsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The minimum healthy instance type:. 
+       * * HOST_COUNT: The minimum number of healthy instance as an absolute value.
+       * * FLEET_PERCENT: The minimum number of healthy instance as a percentage of the total number
+       * of instance in the deployment.
+       *
+       * In an example of nine instance, if a HOST_COUNT of six is specified, deploy to up to three
+       * instances at a time. The deployment is successful if six or more instances are deployed to
+       * successfully. Otherwise, the deployment fails. If a FLEET_PERCENT of 40 is specified, deploy
+       * to up to five instance at a time. The deployment is successful if four or more instance are
+       * deployed to successfully. Otherwise, the deployment fails.
+       *
+       *
+       * In a call to `GetDeploymentConfig` , CodeDeployDefault.OneAtATime returns a minimum healthy
+       * instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one
+       * instance at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or
+       * FLEET_PERCENT.) In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to
+       * ensure that all instances but one are kept in a healthy state during the deployment. Although
+       * this allows one instance at a time to be taken offline for a new deployment, it also means
+       * that if the deployment to the last instance fails, the overall deployment is still successful.
+       *
+       *
+       * For more information, see [AWS CodeDeploy Instance
+       * Health](https://docs.aws.amazon.com//codedeploy/latest/userguide/instances-health.html) in the
+       * *AWS CodeDeploy User Guide* .
+       */
+      public fun type(type: String)
+
+      /**
+       * @param value The minimum healthy instance value. 
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty.builder()
+
+      /**
+       * @param type The minimum healthy instance type:. 
+       * * HOST_COUNT: The minimum number of healthy instance as an absolute value.
+       * * FLEET_PERCENT: The minimum number of healthy instance as a percentage of the total number
+       * of instance in the deployment.
+       *
+       * In an example of nine instance, if a HOST_COUNT of six is specified, deploy to up to three
+       * instances at a time. The deployment is successful if six or more instances are deployed to
+       * successfully. Otherwise, the deployment fails. If a FLEET_PERCENT of 40 is specified, deploy
+       * to up to five instance at a time. The deployment is successful if four or more instance are
+       * deployed to successfully. Otherwise, the deployment fails.
+       *
+       *
+       * In a call to `GetDeploymentConfig` , CodeDeployDefault.OneAtATime returns a minimum healthy
+       * instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one
+       * instance at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or
+       * FLEET_PERCENT.) In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to
+       * ensure that all instances but one are kept in a healthy state during the deployment. Although
+       * this allows one instance at a time to be taken offline for a new deployment, it also means
+       * that if the deployment to the last instance fails, the overall deployment is still successful.
+       *
+       *
+       * For more information, see [AWS CodeDeploy Instance
+       * Health](https://docs.aws.amazon.com//codedeploy/latest/userguide/instances-health.html) in the
+       * *AWS CodeDeploy User Guide* .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param value The minimum healthy instance value. 
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty,
+    ) : CdkObject(cdkObject), MinimumHealthyHostsProperty {
+      /**
+       * The minimum healthy instance type:.
+       *
+       * * HOST_COUNT: The minimum number of healthy instance as an absolute value.
+       * * FLEET_PERCENT: The minimum number of healthy instance as a percentage of the total number
+       * of instance in the deployment.
+       *
+       * In an example of nine instance, if a HOST_COUNT of six is specified, deploy to up to three
+       * instances at a time. The deployment is successful if six or more instances are deployed to
+       * successfully. Otherwise, the deployment fails. If a FLEET_PERCENT of 40 is specified, deploy
+       * to up to five instance at a time. The deployment is successful if four or more instance are
+       * deployed to successfully. Otherwise, the deployment fails.
+       *
+       *
+       * In a call to `GetDeploymentConfig` , CodeDeployDefault.OneAtATime returns a minimum healthy
+       * instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one
+       * instance at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or
+       * FLEET_PERCENT.) In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to
+       * ensure that all instances but one are kept in a healthy state during the deployment. Although
+       * this allows one instance at a time to be taken offline for a new deployment, it also means
+       * that if the deployment to the last instance fails, the overall deployment is still successful.
+       *
+       *
+       * For more information, see [AWS CodeDeploy Instance
+       * Health](https://docs.aws.amazon.com//codedeploy/latest/userguide/instances-health.html) in the
+       * *AWS CodeDeploy User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+
+      /**
+       * The minimum healthy instance value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MinimumHealthyHostsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty):
+          MinimumHealthyHostsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MinimumHealthyHostsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MinimumHealthyHostsProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty
+    }
+  }
+
+  /**
+   * A configuration that shifts traffic from one version of a Lambda function or Amazon ECS task
+   * set to another in two increments.
+   *
+   * The original and target Lambda function versions or ECS task sets are specified in the
+   * deployment's AppSpec file.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * TimeBasedCanaryProperty timeBasedCanaryProperty = TimeBasedCanaryProperty.builder()
+   * .canaryInterval(123)
+   * .canaryPercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html)
+   */
+  public interface TimeBasedCanaryProperty {
+    /**
+     * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
+     * deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html#cfn-codedeploy-deploymentconfig-timebasedcanary-canaryinterval)
+     */
+    public fun canaryInterval(): Number
+
+    /**
+     * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html#cfn-codedeploy-deploymentconfig-timebasedcanary-canarypercentage)
+     */
+    public fun canaryPercentage(): Number
+
+    /**
+     * A builder for [TimeBasedCanaryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param canaryInterval The number of minutes between the first and second traffic shifts of
+       * a `TimeBasedCanary` deployment. 
+       */
+      public fun canaryInterval(canaryInterval: Number)
+
+      /**
+       * @param canaryPercentage The percentage of traffic to shift in the first increment of a
+       * `TimeBasedCanary` deployment. 
+       */
+      public fun canaryPercentage(canaryPercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty.builder()
+
+      /**
+       * @param canaryInterval The number of minutes between the first and second traffic shifts of
+       * a `TimeBasedCanary` deployment. 
+       */
+      override fun canaryInterval(canaryInterval: Number) {
+        cdkBuilder.canaryInterval(canaryInterval)
+      }
+
+      /**
+       * @param canaryPercentage The percentage of traffic to shift in the first increment of a
+       * `TimeBasedCanary` deployment. 
+       */
+      override fun canaryPercentage(canaryPercentage: Number) {
+        cdkBuilder.canaryPercentage(canaryPercentage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty,
+    ) : CdkObject(cdkObject), TimeBasedCanaryProperty {
+      /**
+       * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
+       * deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html#cfn-codedeploy-deploymentconfig-timebasedcanary-canaryinterval)
+       */
+      override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
+
+      /**
+       * The percentage of traffic to shift in the first increment of a `TimeBasedCanary`
+       * deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html#cfn-codedeploy-deploymentconfig-timebasedcanary-canarypercentage)
+       */
+      override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimeBasedCanaryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty):
+          TimeBasedCanaryProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeBasedCanaryProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimeBasedCanaryProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty
+    }
+  }
+
+  /**
+   * A configuration that shifts traffic from one version of a Lambda function or ECS task set to
+   * another in equal increments, with an equal number of minutes between each increment.
+   *
+   * The original and target Lambda function versions or ECS task sets are specified in the
+   * deployment's AppSpec file.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * TimeBasedLinearProperty timeBasedLinearProperty = TimeBasedLinearProperty.builder()
+   * .linearInterval(123)
+   * .linearPercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html)
+   */
+  public interface TimeBasedLinearProperty {
+    /**
+     * The number of minutes between each incremental traffic shift of a `TimeBasedLinear`
+     * deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html#cfn-codedeploy-deploymentconfig-timebasedlinear-linearinterval)
+     */
+    public fun linearInterval(): Number
+
+    /**
+     * The percentage of traffic that is shifted at the start of each increment of a
+     * `TimeBasedLinear` deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html#cfn-codedeploy-deploymentconfig-timebasedlinear-linearpercentage)
+     */
+    public fun linearPercentage(): Number
+
+    /**
+     * A builder for [TimeBasedLinearProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param linearInterval The number of minutes between each incremental traffic shift of a
+       * `TimeBasedLinear` deployment. 
+       */
+      public fun linearInterval(linearInterval: Number)
+
+      /**
+       * @param linearPercentage The percentage of traffic that is shifted at the start of each
+       * increment of a `TimeBasedLinear` deployment. 
+       */
+      public fun linearPercentage(linearPercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty.builder()
+
+      /**
+       * @param linearInterval The number of minutes between each incremental traffic shift of a
+       * `TimeBasedLinear` deployment. 
+       */
+      override fun linearInterval(linearInterval: Number) {
+        cdkBuilder.linearInterval(linearInterval)
+      }
+
+      /**
+       * @param linearPercentage The percentage of traffic that is shifted at the start of each
+       * increment of a `TimeBasedLinear` deployment. 
+       */
+      override fun linearPercentage(linearPercentage: Number) {
+        cdkBuilder.linearPercentage(linearPercentage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty,
+    ) : CdkObject(cdkObject), TimeBasedLinearProperty {
+      /**
+       * The number of minutes between each incremental traffic shift of a `TimeBasedLinear`
+       * deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html#cfn-codedeploy-deploymentconfig-timebasedlinear-linearinterval)
+       */
+      override fun linearInterval(): Number = unwrap(this).getLinearInterval()
+
+      /**
+       * The percentage of traffic that is shifted at the start of each increment of a
+       * `TimeBasedLinear` deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html#cfn-codedeploy-deploymentconfig-timebasedlinear-linearpercentage)
+       */
+      override fun linearPercentage(): Number = unwrap(this).getLinearPercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimeBasedLinearProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty):
+          TimeBasedLinearProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeBasedLinearProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimeBasedLinearProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty
+    }
+  }
+
+  /**
+   * The configuration that specifies how traffic is shifted from one version of a Lambda function
+   * to another version during an AWS Lambda deployment, or from one Amazon ECS task set to another
+   * during an Amazon ECS deployment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * TrafficRoutingConfigProperty trafficRoutingConfigProperty =
+   * TrafficRoutingConfigProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .timeBasedCanary(TimeBasedCanaryProperty.builder()
+   * .canaryInterval(123)
+   * .canaryPercentage(123)
+   * .build())
+   * .timeBasedLinear(TimeBasedLinearProperty.builder()
+   * .linearInterval(123)
+   * .linearPercentage(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html)
+   */
+  public interface TrafficRoutingConfigProperty {
+    /**
+     * A configuration that shifts traffic from one version of a Lambda function or ECS task set to
+     * another in two increments.
+     *
+     * The original and target Lambda function versions or ECS task sets are specified in the
+     * deployment's AppSpec file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary)
+     */
+    public fun timeBasedCanary(): Any? = unwrap(this).getTimeBasedCanary()
+
+    /**
+     * A configuration that shifts traffic from one version of a Lambda function or Amazon ECS task
+     * set to another in equal increments, with an equal number of minutes between each increment.
+     *
+     * The original and target Lambda function versions or Amazon ECS task sets are specified in the
+     * deployment's AppSpec file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear)
+     */
+    public fun timeBasedLinear(): Any? = unwrap(this).getTimeBasedLinear()
+
+    /**
+     * The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by a deployment
+     * configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [TrafficRoutingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+       * function or ECS task set to another in two increments.
+       * The original and target Lambda function versions or ECS task sets are specified in the
+       * deployment's AppSpec file.
+       */
+      public fun timeBasedCanary(timeBasedCanary: IResolvable)
+
+      /**
+       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+       * function or ECS task set to another in two increments.
+       * The original and target Lambda function versions or ECS task sets are specified in the
+       * deployment's AppSpec file.
+       */
+      public fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty)
+
+      /**
+       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+       * function or ECS task set to another in two increments.
+       * The original and target Lambda function versions or ECS task sets are specified in the
+       * deployment's AppSpec file.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("32115ce6e20e117c8f464c1a8cda6c2d27b8944c439b7ad12d2637c1b9038c35")
+      public fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty.Builder.() -> Unit)
+
+      /**
+       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+       * function or Amazon ECS task set to another in equal increments, with an equal number of
+       * minutes between each increment.
+       * The original and target Lambda function versions or Amazon ECS task sets are specified in
+       * the deployment's AppSpec file.
+       */
+      public fun timeBasedLinear(timeBasedLinear: IResolvable)
+
+      /**
+       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+       * function or Amazon ECS task set to another in equal increments, with an equal number of
+       * minutes between each increment.
+       * The original and target Lambda function versions or Amazon ECS task sets are specified in
+       * the deployment's AppSpec file.
+       */
+      public fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty)
+
+      /**
+       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+       * function or Amazon ECS task set to another in equal increments, with an equal number of
+       * minutes between each increment.
+       * The original and target Lambda function versions or Amazon ECS task sets are specified in
+       * the deployment's AppSpec file.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5ed05caad02b178f12e9a278512f7f6967e67dc19d57dcbdc419a042bcafa27f")
+      public fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by
+       * a deployment configuration. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty.builder()
+
+      /**
+       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+       * function or ECS task set to another in two increments.
+       * The original and target Lambda function versions or ECS task sets are specified in the
+       * deployment's AppSpec file.
+       */
+      override fun timeBasedCanary(timeBasedCanary: IResolvable) {
+        cdkBuilder.timeBasedCanary(timeBasedCanary.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+       * function or ECS task set to another in two increments.
+       * The original and target Lambda function versions or ECS task sets are specified in the
+       * deployment's AppSpec file.
+       */
+      override fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty) {
+        cdkBuilder.timeBasedCanary(timeBasedCanary.let(TimeBasedCanaryProperty::unwrap))
+      }
+
+      /**
+       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+       * function or ECS task set to another in two increments.
+       * The original and target Lambda function versions or ECS task sets are specified in the
+       * deployment's AppSpec file.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("32115ce6e20e117c8f464c1a8cda6c2d27b8944c439b7ad12d2637c1b9038c35")
+      override fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty.Builder.() -> Unit):
+          Unit = timeBasedCanary(TimeBasedCanaryProperty(timeBasedCanary))
+
+      /**
+       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+       * function or Amazon ECS task set to another in equal increments, with an equal number of
+       * minutes between each increment.
+       * The original and target Lambda function versions or Amazon ECS task sets are specified in
+       * the deployment's AppSpec file.
+       */
+      override fun timeBasedLinear(timeBasedLinear: IResolvable) {
+        cdkBuilder.timeBasedLinear(timeBasedLinear.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+       * function or Amazon ECS task set to another in equal increments, with an equal number of
+       * minutes between each increment.
+       * The original and target Lambda function versions or Amazon ECS task sets are specified in
+       * the deployment's AppSpec file.
+       */
+      override fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty) {
+        cdkBuilder.timeBasedLinear(timeBasedLinear.let(TimeBasedLinearProperty::unwrap))
+      }
+
+      /**
+       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+       * function or Amazon ECS task set to another in equal increments, with an equal number of
+       * minutes between each increment.
+       * The original and target Lambda function versions or Amazon ECS task sets are specified in
+       * the deployment's AppSpec file.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5ed05caad02b178f12e9a278512f7f6967e67dc19d57dcbdc419a042bcafa27f")
+      override fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty.Builder.() -> Unit):
+          Unit = timeBasedLinear(TimeBasedLinearProperty(timeBasedLinear))
+
+      /**
+       * @param type The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by
+       * a deployment configuration. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty,
+    ) : CdkObject(cdkObject), TrafficRoutingConfigProperty {
+      /**
+       * A configuration that shifts traffic from one version of a Lambda function or ECS task set
+       * to another in two increments.
+       *
+       * The original and target Lambda function versions or ECS task sets are specified in the
+       * deployment's AppSpec file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary)
+       */
+      override fun timeBasedCanary(): Any? = unwrap(this).getTimeBasedCanary()
+
+      /**
+       * A configuration that shifts traffic from one version of a Lambda function or Amazon ECS
+       * task set to another in equal increments, with an equal number of minutes between each
+       * increment.
+       *
+       * The original and target Lambda function versions or Amazon ECS task sets are specified in
+       * the deployment's AppSpec file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear)
+       */
+      override fun timeBasedLinear(): Any? = unwrap(this).getTimeBasedLinear()
+
+      /**
+       * The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by a
+       * deployment configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TrafficRoutingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty):
+          TrafficRoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrafficRoutingConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TrafficRoutingConfigProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty
+    }
+  }
+
+  /**
    * Configure the `ZonalConfig` object if you want AWS CodeDeploy to deploy your application to one
    * [Availability
    * Zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones)
@@ -1044,831 +1869,6 @@ public open class CfnDeploymentConfig internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty
-    }
-  }
-
-  /**
-   * `MinimumHealthyHosts` is a property of the
-   * [DeploymentConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html)
-   * resource that defines how many instances must remain healthy during an AWS CodeDeploy deployment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * MinimumHealthyHostsProperty minimumHealthyHostsProperty = MinimumHealthyHostsProperty.builder()
-   * .type("type")
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html)
-   */
-  public interface MinimumHealthyHostsProperty {
-    /**
-     * The minimum healthy instance type:.
-     *
-     * * HOST_COUNT: The minimum number of healthy instance as an absolute value.
-     * * FLEET_PERCENT: The minimum number of healthy instance as a percentage of the total number
-     * of instance in the deployment.
-     *
-     * In an example of nine instance, if a HOST_COUNT of six is specified, deploy to up to three
-     * instances at a time. The deployment is successful if six or more instances are deployed to
-     * successfully. Otherwise, the deployment fails. If a FLEET_PERCENT of 40 is specified, deploy to
-     * up to five instance at a time. The deployment is successful if four or more instance are
-     * deployed to successfully. Otherwise, the deployment fails.
-     *
-     *
-     * In a call to `GetDeploymentConfig` , CodeDeployDefault.OneAtATime returns a minimum healthy
-     * instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one instance
-     * at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or FLEET_PERCENT.)
-     * In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to ensure that all
-     * instances but one are kept in a healthy state during the deployment. Although this allows one
-     * instance at a time to be taken offline for a new deployment, it also means that if the
-     * deployment to the last instance fails, the overall deployment is still successful.
-     *
-     *
-     * For more information, see [AWS CodeDeploy Instance
-     * Health](https://docs.aws.amazon.com//codedeploy/latest/userguide/instances-health.html) in the
-     * *AWS CodeDeploy User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type)
-     */
-    public fun type(): String
-
-    /**
-     * The minimum healthy instance value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value)
-     */
-    public fun `value`(): Number
-
-    /**
-     * A builder for [MinimumHealthyHostsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The minimum healthy instance type:. 
-       * * HOST_COUNT: The minimum number of healthy instance as an absolute value.
-       * * FLEET_PERCENT: The minimum number of healthy instance as a percentage of the total number
-       * of instance in the deployment.
-       *
-       * In an example of nine instance, if a HOST_COUNT of six is specified, deploy to up to three
-       * instances at a time. The deployment is successful if six or more instances are deployed to
-       * successfully. Otherwise, the deployment fails. If a FLEET_PERCENT of 40 is specified, deploy
-       * to up to five instance at a time. The deployment is successful if four or more instance are
-       * deployed to successfully. Otherwise, the deployment fails.
-       *
-       *
-       * In a call to `GetDeploymentConfig` , CodeDeployDefault.OneAtATime returns a minimum healthy
-       * instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one
-       * instance at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or
-       * FLEET_PERCENT.) In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to
-       * ensure that all instances but one are kept in a healthy state during the deployment. Although
-       * this allows one instance at a time to be taken offline for a new deployment, it also means
-       * that if the deployment to the last instance fails, the overall deployment is still successful.
-       *
-       *
-       * For more information, see [AWS CodeDeploy Instance
-       * Health](https://docs.aws.amazon.com//codedeploy/latest/userguide/instances-health.html) in the
-       * *AWS CodeDeploy User Guide* .
-       */
-      public fun type(type: String)
-
-      /**
-       * @param value The minimum healthy instance value. 
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty.builder()
-
-      /**
-       * @param type The minimum healthy instance type:. 
-       * * HOST_COUNT: The minimum number of healthy instance as an absolute value.
-       * * FLEET_PERCENT: The minimum number of healthy instance as a percentage of the total number
-       * of instance in the deployment.
-       *
-       * In an example of nine instance, if a HOST_COUNT of six is specified, deploy to up to three
-       * instances at a time. The deployment is successful if six or more instances are deployed to
-       * successfully. Otherwise, the deployment fails. If a FLEET_PERCENT of 40 is specified, deploy
-       * to up to five instance at a time. The deployment is successful if four or more instance are
-       * deployed to successfully. Otherwise, the deployment fails.
-       *
-       *
-       * In a call to `GetDeploymentConfig` , CodeDeployDefault.OneAtATime returns a minimum healthy
-       * instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one
-       * instance at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or
-       * FLEET_PERCENT.) In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to
-       * ensure that all instances but one are kept in a healthy state during the deployment. Although
-       * this allows one instance at a time to be taken offline for a new deployment, it also means
-       * that if the deployment to the last instance fails, the overall deployment is still successful.
-       *
-       *
-       * For more information, see [AWS CodeDeploy Instance
-       * Health](https://docs.aws.amazon.com//codedeploy/latest/userguide/instances-health.html) in the
-       * *AWS CodeDeploy User Guide* .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param value The minimum healthy instance value. 
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty,
-    ) : CdkObject(cdkObject), MinimumHealthyHostsProperty {
-      /**
-       * The minimum healthy instance type:.
-       *
-       * * HOST_COUNT: The minimum number of healthy instance as an absolute value.
-       * * FLEET_PERCENT: The minimum number of healthy instance as a percentage of the total number
-       * of instance in the deployment.
-       *
-       * In an example of nine instance, if a HOST_COUNT of six is specified, deploy to up to three
-       * instances at a time. The deployment is successful if six or more instances are deployed to
-       * successfully. Otherwise, the deployment fails. If a FLEET_PERCENT of 40 is specified, deploy
-       * to up to five instance at a time. The deployment is successful if four or more instance are
-       * deployed to successfully. Otherwise, the deployment fails.
-       *
-       *
-       * In a call to `GetDeploymentConfig` , CodeDeployDefault.OneAtATime returns a minimum healthy
-       * instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one
-       * instance at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or
-       * FLEET_PERCENT.) In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to
-       * ensure that all instances but one are kept in a healthy state during the deployment. Although
-       * this allows one instance at a time to be taken offline for a new deployment, it also means
-       * that if the deployment to the last instance fails, the overall deployment is still successful.
-       *
-       *
-       * For more information, see [AWS CodeDeploy Instance
-       * Health](https://docs.aws.amazon.com//codedeploy/latest/userguide/instances-health.html) in the
-       * *AWS CodeDeploy User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-
-      /**
-       * The minimum healthy instance value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value)
-       */
-      override fun `value`(): Number = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MinimumHealthyHostsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty):
-          MinimumHealthyHostsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MinimumHealthyHostsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MinimumHealthyHostsProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty
-    }
-  }
-
-  /**
-   * Information about the minimum number of healthy instances per Availability Zone.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * MinimumHealthyHostsPerZoneProperty minimumHealthyHostsPerZoneProperty =
-   * MinimumHealthyHostsPerZoneProperty.builder()
-   * .type("type")
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html)
-   */
-  public interface MinimumHealthyHostsPerZoneProperty {
-    /**
-     * The `type` associated with the `MinimumHealthyHostsPerZone` option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html#cfn-codedeploy-deploymentconfig-minimumhealthyhostsperzone-type)
-     */
-    public fun type(): String
-
-    /**
-     * The `value` associated with the `MinimumHealthyHostsPerZone` option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html#cfn-codedeploy-deploymentconfig-minimumhealthyhostsperzone-value)
-     */
-    public fun `value`(): Number
-
-    /**
-     * A builder for [MinimumHealthyHostsPerZoneProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The `type` associated with the `MinimumHealthyHostsPerZone` option. 
-       */
-      public fun type(type: String)
-
-      /**
-       * @param value The `value` associated with the `MinimumHealthyHostsPerZone` option. 
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty.builder()
-
-      /**
-       * @param type The `type` associated with the `MinimumHealthyHostsPerZone` option. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param value The `value` associated with the `MinimumHealthyHostsPerZone` option. 
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty,
-    ) : CdkObject(cdkObject), MinimumHealthyHostsPerZoneProperty {
-      /**
-       * The `type` associated with the `MinimumHealthyHostsPerZone` option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html#cfn-codedeploy-deploymentconfig-minimumhealthyhostsperzone-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-
-      /**
-       * The `value` associated with the `MinimumHealthyHostsPerZone` option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhostsperzone.html#cfn-codedeploy-deploymentconfig-minimumhealthyhostsperzone-value)
-       */
-      override fun `value`(): Number = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MinimumHealthyHostsPerZoneProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty):
-          MinimumHealthyHostsPerZoneProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MinimumHealthyHostsPerZoneProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MinimumHealthyHostsPerZoneProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty
-    }
-  }
-
-  /**
-   * The configuration that specifies how traffic is shifted from one version of a Lambda function
-   * to another version during an AWS Lambda deployment, or from one Amazon ECS task set to another
-   * during an Amazon ECS deployment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * TrafficRoutingConfigProperty trafficRoutingConfigProperty =
-   * TrafficRoutingConfigProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .timeBasedCanary(TimeBasedCanaryProperty.builder()
-   * .canaryInterval(123)
-   * .canaryPercentage(123)
-   * .build())
-   * .timeBasedLinear(TimeBasedLinearProperty.builder()
-   * .linearInterval(123)
-   * .linearPercentage(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html)
-   */
-  public interface TrafficRoutingConfigProperty {
-    /**
-     * A configuration that shifts traffic from one version of a Lambda function or ECS task set to
-     * another in two increments.
-     *
-     * The original and target Lambda function versions or ECS task sets are specified in the
-     * deployment's AppSpec file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary)
-     */
-    public fun timeBasedCanary(): Any? = unwrap(this).getTimeBasedCanary()
-
-    /**
-     * A configuration that shifts traffic from one version of a Lambda function or Amazon ECS task
-     * set to another in equal increments, with an equal number of minutes between each increment.
-     *
-     * The original and target Lambda function versions or Amazon ECS task sets are specified in the
-     * deployment's AppSpec file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear)
-     */
-    public fun timeBasedLinear(): Any? = unwrap(this).getTimeBasedLinear()
-
-    /**
-     * The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by a deployment
-     * configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [TrafficRoutingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
-       * function or ECS task set to another in two increments.
-       * The original and target Lambda function versions or ECS task sets are specified in the
-       * deployment's AppSpec file.
-       */
-      public fun timeBasedCanary(timeBasedCanary: IResolvable)
-
-      /**
-       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
-       * function or ECS task set to another in two increments.
-       * The original and target Lambda function versions or ECS task sets are specified in the
-       * deployment's AppSpec file.
-       */
-      public fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty)
-
-      /**
-       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
-       * function or ECS task set to another in two increments.
-       * The original and target Lambda function versions or ECS task sets are specified in the
-       * deployment's AppSpec file.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("32115ce6e20e117c8f464c1a8cda6c2d27b8944c439b7ad12d2637c1b9038c35")
-      public fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty.Builder.() -> Unit)
-
-      /**
-       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
-       * function or Amazon ECS task set to another in equal increments, with an equal number of
-       * minutes between each increment.
-       * The original and target Lambda function versions or Amazon ECS task sets are specified in
-       * the deployment's AppSpec file.
-       */
-      public fun timeBasedLinear(timeBasedLinear: IResolvable)
-
-      /**
-       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
-       * function or Amazon ECS task set to another in equal increments, with an equal number of
-       * minutes between each increment.
-       * The original and target Lambda function versions or Amazon ECS task sets are specified in
-       * the deployment's AppSpec file.
-       */
-      public fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty)
-
-      /**
-       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
-       * function or Amazon ECS task set to another in equal increments, with an equal number of
-       * minutes between each increment.
-       * The original and target Lambda function versions or Amazon ECS task sets are specified in
-       * the deployment's AppSpec file.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5ed05caad02b178f12e9a278512f7f6967e67dc19d57dcbdc419a042bcafa27f")
-      public fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty.Builder.() -> Unit)
-
-      /**
-       * @param type The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by
-       * a deployment configuration. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty.builder()
-
-      /**
-       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
-       * function or ECS task set to another in two increments.
-       * The original and target Lambda function versions or ECS task sets are specified in the
-       * deployment's AppSpec file.
-       */
-      override fun timeBasedCanary(timeBasedCanary: IResolvable) {
-        cdkBuilder.timeBasedCanary(timeBasedCanary.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
-       * function or ECS task set to another in two increments.
-       * The original and target Lambda function versions or ECS task sets are specified in the
-       * deployment's AppSpec file.
-       */
-      override fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty) {
-        cdkBuilder.timeBasedCanary(timeBasedCanary.let(TimeBasedCanaryProperty::unwrap))
-      }
-
-      /**
-       * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
-       * function or ECS task set to another in two increments.
-       * The original and target Lambda function versions or ECS task sets are specified in the
-       * deployment's AppSpec file.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("32115ce6e20e117c8f464c1a8cda6c2d27b8944c439b7ad12d2637c1b9038c35")
-      override fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty.Builder.() -> Unit):
-          Unit = timeBasedCanary(TimeBasedCanaryProperty(timeBasedCanary))
-
-      /**
-       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
-       * function or Amazon ECS task set to another in equal increments, with an equal number of
-       * minutes between each increment.
-       * The original and target Lambda function versions or Amazon ECS task sets are specified in
-       * the deployment's AppSpec file.
-       */
-      override fun timeBasedLinear(timeBasedLinear: IResolvable) {
-        cdkBuilder.timeBasedLinear(timeBasedLinear.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
-       * function or Amazon ECS task set to another in equal increments, with an equal number of
-       * minutes between each increment.
-       * The original and target Lambda function versions or Amazon ECS task sets are specified in
-       * the deployment's AppSpec file.
-       */
-      override fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty) {
-        cdkBuilder.timeBasedLinear(timeBasedLinear.let(TimeBasedLinearProperty::unwrap))
-      }
-
-      /**
-       * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
-       * function or Amazon ECS task set to another in equal increments, with an equal number of
-       * minutes between each increment.
-       * The original and target Lambda function versions or Amazon ECS task sets are specified in
-       * the deployment's AppSpec file.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5ed05caad02b178f12e9a278512f7f6967e67dc19d57dcbdc419a042bcafa27f")
-      override fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty.Builder.() -> Unit):
-          Unit = timeBasedLinear(TimeBasedLinearProperty(timeBasedLinear))
-
-      /**
-       * @param type The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by
-       * a deployment configuration. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty,
-    ) : CdkObject(cdkObject), TrafficRoutingConfigProperty {
-      /**
-       * A configuration that shifts traffic from one version of a Lambda function or ECS task set
-       * to another in two increments.
-       *
-       * The original and target Lambda function versions or ECS task sets are specified in the
-       * deployment's AppSpec file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary)
-       */
-      override fun timeBasedCanary(): Any? = unwrap(this).getTimeBasedCanary()
-
-      /**
-       * A configuration that shifts traffic from one version of a Lambda function or Amazon ECS
-       * task set to another in equal increments, with an equal number of minutes between each
-       * increment.
-       *
-       * The original and target Lambda function versions or Amazon ECS task sets are specified in
-       * the deployment's AppSpec file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear)
-       */
-      override fun timeBasedLinear(): Any? = unwrap(this).getTimeBasedLinear()
-
-      /**
-       * The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by a
-       * deployment configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TrafficRoutingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty):
-          TrafficRoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TrafficRoutingConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TrafficRoutingConfigProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty
-    }
-  }
-
-  /**
-   * A configuration that shifts traffic from one version of a Lambda function or ECS task set to
-   * another in equal increments, with an equal number of minutes between each increment.
-   *
-   * The original and target Lambda function versions or ECS task sets are specified in the
-   * deployment's AppSpec file.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * TimeBasedLinearProperty timeBasedLinearProperty = TimeBasedLinearProperty.builder()
-   * .linearInterval(123)
-   * .linearPercentage(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html)
-   */
-  public interface TimeBasedLinearProperty {
-    /**
-     * The number of minutes between each incremental traffic shift of a `TimeBasedLinear`
-     * deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html#cfn-codedeploy-deploymentconfig-timebasedlinear-linearinterval)
-     */
-    public fun linearInterval(): Number
-
-    /**
-     * The percentage of traffic that is shifted at the start of each increment of a
-     * `TimeBasedLinear` deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html#cfn-codedeploy-deploymentconfig-timebasedlinear-linearpercentage)
-     */
-    public fun linearPercentage(): Number
-
-    /**
-     * A builder for [TimeBasedLinearProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param linearInterval The number of minutes between each incremental traffic shift of a
-       * `TimeBasedLinear` deployment. 
-       */
-      public fun linearInterval(linearInterval: Number)
-
-      /**
-       * @param linearPercentage The percentage of traffic that is shifted at the start of each
-       * increment of a `TimeBasedLinear` deployment. 
-       */
-      public fun linearPercentage(linearPercentage: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty.builder()
-
-      /**
-       * @param linearInterval The number of minutes between each incremental traffic shift of a
-       * `TimeBasedLinear` deployment. 
-       */
-      override fun linearInterval(linearInterval: Number) {
-        cdkBuilder.linearInterval(linearInterval)
-      }
-
-      /**
-       * @param linearPercentage The percentage of traffic that is shifted at the start of each
-       * increment of a `TimeBasedLinear` deployment. 
-       */
-      override fun linearPercentage(linearPercentage: Number) {
-        cdkBuilder.linearPercentage(linearPercentage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty,
-    ) : CdkObject(cdkObject), TimeBasedLinearProperty {
-      /**
-       * The number of minutes between each incremental traffic shift of a `TimeBasedLinear`
-       * deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html#cfn-codedeploy-deploymentconfig-timebasedlinear-linearinterval)
-       */
-      override fun linearInterval(): Number = unwrap(this).getLinearInterval()
-
-      /**
-       * The percentage of traffic that is shifted at the start of each increment of a
-       * `TimeBasedLinear` deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedlinear.html#cfn-codedeploy-deploymentconfig-timebasedlinear-linearpercentage)
-       */
-      override fun linearPercentage(): Number = unwrap(this).getLinearPercentage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimeBasedLinearProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty):
-          TimeBasedLinearProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeBasedLinearProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TimeBasedLinearProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty
-    }
-  }
-
-  /**
-   * A configuration that shifts traffic from one version of a Lambda function or Amazon ECS task
-   * set to another in two increments.
-   *
-   * The original and target Lambda function versions or ECS task sets are specified in the
-   * deployment's AppSpec file.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * TimeBasedCanaryProperty timeBasedCanaryProperty = TimeBasedCanaryProperty.builder()
-   * .canaryInterval(123)
-   * .canaryPercentage(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html)
-   */
-  public interface TimeBasedCanaryProperty {
-    /**
-     * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
-     * deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html#cfn-codedeploy-deploymentconfig-timebasedcanary-canaryinterval)
-     */
-    public fun canaryInterval(): Number
-
-    /**
-     * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html#cfn-codedeploy-deploymentconfig-timebasedcanary-canarypercentage)
-     */
-    public fun canaryPercentage(): Number
-
-    /**
-     * A builder for [TimeBasedCanaryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param canaryInterval The number of minutes between the first and second traffic shifts of
-       * a `TimeBasedCanary` deployment. 
-       */
-      public fun canaryInterval(canaryInterval: Number)
-
-      /**
-       * @param canaryPercentage The percentage of traffic to shift in the first increment of a
-       * `TimeBasedCanary` deployment. 
-       */
-      public fun canaryPercentage(canaryPercentage: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty.builder()
-
-      /**
-       * @param canaryInterval The number of minutes between the first and second traffic shifts of
-       * a `TimeBasedCanary` deployment. 
-       */
-      override fun canaryInterval(canaryInterval: Number) {
-        cdkBuilder.canaryInterval(canaryInterval)
-      }
-
-      /**
-       * @param canaryPercentage The percentage of traffic to shift in the first increment of a
-       * `TimeBasedCanary` deployment. 
-       */
-      override fun canaryPercentage(canaryPercentage: Number) {
-        cdkBuilder.canaryPercentage(canaryPercentage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty,
-    ) : CdkObject(cdkObject), TimeBasedCanaryProperty {
-      /**
-       * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
-       * deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html#cfn-codedeploy-deploymentconfig-timebasedcanary-canaryinterval)
-       */
-      override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
-
-      /**
-       * The percentage of traffic to shift in the first increment of a `TimeBasedCanary`
-       * deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-timebasedcanary.html#cfn-codedeploy-deploymentconfig-timebasedcanary-canarypercentage)
-       */
-      override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimeBasedCanaryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty):
-          TimeBasedCanaryProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeBasedCanaryProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TimeBasedCanaryProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty
     }
   }
 }

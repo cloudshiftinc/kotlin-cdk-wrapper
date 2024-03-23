@@ -1555,6 +1555,262 @@ public open class CfnBroker internal constructor(
   }
 
   /**
+   * A list of information about the configuration.
+   *
+   *
+   * Does not apply to RabbitMQ brokers.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amazonmq.*;
+   * ConfigurationIdProperty configurationIdProperty = ConfigurationIdProperty.builder()
+   * .id("id")
+   * .revision(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html)
+   */
+  public interface ConfigurationIdProperty {
+    /**
+     * The unique ID that Amazon MQ generates for the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id)
+     */
+    public fun id(): String
+
+    /**
+     * The revision number of the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision)
+     */
+    public fun revision(): Number
+
+    /**
+     * A builder for [ConfigurationIdProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The unique ID that Amazon MQ generates for the configuration. 
+       */
+      public fun id(id: String)
+
+      /**
+       * @param revision The revision number of the configuration. 
+       */
+      public fun revision(revision: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty.Builder =
+          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty.builder()
+
+      /**
+       * @param id The unique ID that Amazon MQ generates for the configuration. 
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param revision The revision number of the configuration. 
+       */
+      override fun revision(revision: Number) {
+        cdkBuilder.revision(revision)
+      }
+
+      public fun build(): software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty,
+    ) : CdkObject(cdkObject), ConfigurationIdProperty {
+      /**
+       * The unique ID that Amazon MQ generates for the configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+
+      /**
+       * The revision number of the configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision)
+       */
+      override fun revision(): Number = unwrap(this).getRevision()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationIdProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty):
+          ConfigurationIdProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationIdProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConfigurationIdProperty):
+          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty
+    }
+  }
+
+  /**
+   * Encryption options for the broker.
+   *
+   *
+   * Does not apply to RabbitMQ brokers.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amazonmq.*;
+   * EncryptionOptionsProperty encryptionOptionsProperty = EncryptionOptionsProperty.builder()
+   * .useAwsOwnedKey(false)
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html)
+   */
+  public interface EncryptionOptionsProperty {
+    /**
+     * The customer master key (CMK) to use for the A AWS KMS (KMS).
+     *
+     * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a default
+     * CMK to encrypt your data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * Enables the use of an AWS owned CMK using AWS KMS (KMS).
+     *
+     * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-useawsownedkey)
+     */
+    public fun useAwsOwnedKey(): Any
+
+    /**
+     * A builder for [EncryptionOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The customer master key (CMK) to use for the A AWS KMS (KMS).
+       * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a
+       * default CMK to encrypt your data.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
+       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
+       */
+      public fun useAwsOwnedKey(useAwsOwnedKey: Boolean)
+
+      /**
+       * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
+       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
+       */
+      public fun useAwsOwnedKey(useAwsOwnedKey: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty.Builder =
+          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty.builder()
+
+      /**
+       * @param kmsKeyId The customer master key (CMK) to use for the A AWS KMS (KMS).
+       * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a
+       * default CMK to encrypt your data.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
+       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
+       */
+      override fun useAwsOwnedKey(useAwsOwnedKey: Boolean) {
+        cdkBuilder.useAwsOwnedKey(useAwsOwnedKey)
+      }
+
+      /**
+       * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
+       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
+       */
+      override fun useAwsOwnedKey(useAwsOwnedKey: IResolvable) {
+        cdkBuilder.useAwsOwnedKey(useAwsOwnedKey.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty,
+    ) : CdkObject(cdkObject), EncryptionOptionsProperty {
+      /**
+       * The customer master key (CMK) to use for the A AWS KMS (KMS).
+       *
+       * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a
+       * default CMK to encrypt your data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * Enables the use of an AWS owned CMK using AWS KMS (KMS).
+       *
+       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-useawsownedkey)
+       */
+      override fun useAwsOwnedKey(): Any = unwrap(this).getUseAwsOwnedKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty):
+          EncryptionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionOptionsProperty):
+          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty
+    }
+  }
+
+  /**
    * Optional. The metadata of the LDAP server used to authenticate and authorize connections to the
    * broker.
    *
@@ -2104,6 +2360,289 @@ public open class CfnBroker internal constructor(
   }
 
   /**
+   * The list of information about logs to be enabled for the specified broker.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amazonmq.*;
+   * LogListProperty logListProperty = LogListProperty.builder()
+   * .audit(false)
+   * .general(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html)
+   */
+  public interface LogListProperty {
+    /**
+     * Enables audit logging.
+     *
+     * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
+     * apply to RabbitMQ brokers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit)
+     */
+    public fun audit(): Any? = unwrap(this).getAudit()
+
+    /**
+     * Enables general logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general)
+     */
+    public fun general(): Any? = unwrap(this).getGeneral()
+
+    /**
+     * A builder for [LogListProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param audit Enables audit logging.
+       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
+       * apply to RabbitMQ brokers.
+       */
+      public fun audit(audit: Boolean)
+
+      /**
+       * @param audit Enables audit logging.
+       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
+       * apply to RabbitMQ brokers.
+       */
+      public fun audit(audit: IResolvable)
+
+      /**
+       * @param general Enables general logging.
+       */
+      public fun general(general: Boolean)
+
+      /**
+       * @param general Enables general logging.
+       */
+      public fun general(general: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty.Builder =
+          software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty.builder()
+
+      /**
+       * @param audit Enables audit logging.
+       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
+       * apply to RabbitMQ brokers.
+       */
+      override fun audit(audit: Boolean) {
+        cdkBuilder.audit(audit)
+      }
+
+      /**
+       * @param audit Enables audit logging.
+       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
+       * apply to RabbitMQ brokers.
+       */
+      override fun audit(audit: IResolvable) {
+        cdkBuilder.audit(audit.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param general Enables general logging.
+       */
+      override fun general(general: Boolean) {
+        cdkBuilder.general(general)
+      }
+
+      /**
+       * @param general Enables general logging.
+       */
+      override fun general(general: IResolvable) {
+        cdkBuilder.general(general.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty,
+    ) : CdkObject(cdkObject), LogListProperty {
+      /**
+       * Enables audit logging.
+       *
+       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
+       * apply to RabbitMQ brokers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit)
+       */
+      override fun audit(): Any? = unwrap(this).getAudit()
+
+      /**
+       * Enables general logging.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general)
+       */
+      override fun general(): Any? = unwrap(this).getGeneral()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogListProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty):
+          LogListProperty = CdkObjectWrappers.wrap(cdkObject) as? LogListProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogListProperty):
+          software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty
+    }
+  }
+
+  /**
+   * The parameters that determine the `WeeklyStartTime` to apply pending updates or patches to the
+   * broker.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amazonmq.*;
+   * MaintenanceWindowProperty maintenanceWindowProperty = MaintenanceWindowProperty.builder()
+   * .dayOfWeek("dayOfWeek")
+   * .timeOfDay("timeOfDay")
+   * .timeZone("timeZone")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html)
+   */
+  public interface MaintenanceWindowProperty {
+    /**
+     * The day of the week.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek)
+     */
+    public fun dayOfWeek(): String
+
+    /**
+     * The time, in 24-hour format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday)
+     */
+    public fun timeOfDay(): String
+
+    /**
+     * The time zone, UTC by default, in either the Country/City format, or the UTC offset format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone)
+     */
+    public fun timeZone(): String
+
+    /**
+     * A builder for [MaintenanceWindowProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dayOfWeek The day of the week. 
+       */
+      public fun dayOfWeek(dayOfWeek: String)
+
+      /**
+       * @param timeOfDay The time, in 24-hour format. 
+       */
+      public fun timeOfDay(timeOfDay: String)
+
+      /**
+       * @param timeZone The time zone, UTC by default, in either the Country/City format, or the
+       * UTC offset format. 
+       */
+      public fun timeZone(timeZone: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty.Builder =
+          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty.builder()
+
+      /**
+       * @param dayOfWeek The day of the week. 
+       */
+      override fun dayOfWeek(dayOfWeek: String) {
+        cdkBuilder.dayOfWeek(dayOfWeek)
+      }
+
+      /**
+       * @param timeOfDay The time, in 24-hour format. 
+       */
+      override fun timeOfDay(timeOfDay: String) {
+        cdkBuilder.timeOfDay(timeOfDay)
+      }
+
+      /**
+       * @param timeZone The time zone, UTC by default, in either the Country/City format, or the
+       * UTC offset format. 
+       */
+      override fun timeZone(timeZone: String) {
+        cdkBuilder.timeZone(timeZone)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty,
+    ) : CdkObject(cdkObject), MaintenanceWindowProperty {
+      /**
+       * The day of the week.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek)
+       */
+      override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
+
+      /**
+       * The time, in 24-hour format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday)
+       */
+      override fun timeOfDay(): String = unwrap(this).getTimeOfDay()
+
+      /**
+       * The time zone, UTC by default, in either the Country/City format, or the UTC offset format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone)
+       */
+      override fun timeZone(): String = unwrap(this).getTimeZone()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MaintenanceWindowProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty):
+          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceWindowProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MaintenanceWindowProperty):
+          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty
+    }
+  }
+
+  /**
    * A key-value pair to associate with the broker.
    *
    * Example:
@@ -2516,545 +3055,6 @@ public open class CfnBroker internal constructor(
       internal fun unwrap(wrapped: UserProperty):
           software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty
-    }
-  }
-
-  /**
-   * Encryption options for the broker.
-   *
-   *
-   * Does not apply to RabbitMQ brokers.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amazonmq.*;
-   * EncryptionOptionsProperty encryptionOptionsProperty = EncryptionOptionsProperty.builder()
-   * .useAwsOwnedKey(false)
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html)
-   */
-  public interface EncryptionOptionsProperty {
-    /**
-     * The customer master key (CMK) to use for the A AWS KMS (KMS).
-     *
-     * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a default
-     * CMK to encrypt your data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * Enables the use of an AWS owned CMK using AWS KMS (KMS).
-     *
-     * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-useawsownedkey)
-     */
-    public fun useAwsOwnedKey(): Any
-
-    /**
-     * A builder for [EncryptionOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The customer master key (CMK) to use for the A AWS KMS (KMS).
-       * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a
-       * default CMK to encrypt your data.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
-       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
-       */
-      public fun useAwsOwnedKey(useAwsOwnedKey: Boolean)
-
-      /**
-       * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
-       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
-       */
-      public fun useAwsOwnedKey(useAwsOwnedKey: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty.Builder =
-          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty.builder()
-
-      /**
-       * @param kmsKeyId The customer master key (CMK) to use for the A AWS KMS (KMS).
-       * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a
-       * default CMK to encrypt your data.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
-       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
-       */
-      override fun useAwsOwnedKey(useAwsOwnedKey: Boolean) {
-        cdkBuilder.useAwsOwnedKey(useAwsOwnedKey)
-      }
-
-      /**
-       * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
-       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
-       */
-      override fun useAwsOwnedKey(useAwsOwnedKey: IResolvable) {
-        cdkBuilder.useAwsOwnedKey(useAwsOwnedKey.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty,
-    ) : CdkObject(cdkObject), EncryptionOptionsProperty {
-      /**
-       * The customer master key (CMK) to use for the A AWS KMS (KMS).
-       *
-       * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a
-       * default CMK to encrypt your data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * Enables the use of an AWS owned CMK using AWS KMS (KMS).
-       *
-       * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-useawsownedkey)
-       */
-      override fun useAwsOwnedKey(): Any = unwrap(this).getUseAwsOwnedKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty):
-          EncryptionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionOptionsProperty):
-          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty
-    }
-  }
-
-  /**
-   * The list of information about logs to be enabled for the specified broker.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amazonmq.*;
-   * LogListProperty logListProperty = LogListProperty.builder()
-   * .audit(false)
-   * .general(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html)
-   */
-  public interface LogListProperty {
-    /**
-     * Enables audit logging.
-     *
-     * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
-     * apply to RabbitMQ brokers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit)
-     */
-    public fun audit(): Any? = unwrap(this).getAudit()
-
-    /**
-     * Enables general logging.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general)
-     */
-    public fun general(): Any? = unwrap(this).getGeneral()
-
-    /**
-     * A builder for [LogListProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param audit Enables audit logging.
-       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
-       * apply to RabbitMQ brokers.
-       */
-      public fun audit(audit: Boolean)
-
-      /**
-       * @param audit Enables audit logging.
-       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
-       * apply to RabbitMQ brokers.
-       */
-      public fun audit(audit: IResolvable)
-
-      /**
-       * @param general Enables general logging.
-       */
-      public fun general(general: Boolean)
-
-      /**
-       * @param general Enables general logging.
-       */
-      public fun general(general: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty.Builder =
-          software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty.builder()
-
-      /**
-       * @param audit Enables audit logging.
-       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
-       * apply to RabbitMQ brokers.
-       */
-      override fun audit(audit: Boolean) {
-        cdkBuilder.audit(audit)
-      }
-
-      /**
-       * @param audit Enables audit logging.
-       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
-       * apply to RabbitMQ brokers.
-       */
-      override fun audit(audit: IResolvable) {
-        cdkBuilder.audit(audit.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param general Enables general logging.
-       */
-      override fun general(general: Boolean) {
-        cdkBuilder.general(general)
-      }
-
-      /**
-       * @param general Enables general logging.
-       */
-      override fun general(general: IResolvable) {
-        cdkBuilder.general(general.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty,
-    ) : CdkObject(cdkObject), LogListProperty {
-      /**
-       * Enables audit logging.
-       *
-       * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
-       * apply to RabbitMQ brokers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit)
-       */
-      override fun audit(): Any? = unwrap(this).getAudit()
-
-      /**
-       * Enables general logging.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general)
-       */
-      override fun general(): Any? = unwrap(this).getGeneral()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogListProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty):
-          LogListProperty = CdkObjectWrappers.wrap(cdkObject) as? LogListProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogListProperty):
-          software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty
-    }
-  }
-
-  /**
-   * The parameters that determine the `WeeklyStartTime` to apply pending updates or patches to the
-   * broker.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amazonmq.*;
-   * MaintenanceWindowProperty maintenanceWindowProperty = MaintenanceWindowProperty.builder()
-   * .dayOfWeek("dayOfWeek")
-   * .timeOfDay("timeOfDay")
-   * .timeZone("timeZone")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html)
-   */
-  public interface MaintenanceWindowProperty {
-    /**
-     * The day of the week.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek)
-     */
-    public fun dayOfWeek(): String
-
-    /**
-     * The time, in 24-hour format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday)
-     */
-    public fun timeOfDay(): String
-
-    /**
-     * The time zone, UTC by default, in either the Country/City format, or the UTC offset format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone)
-     */
-    public fun timeZone(): String
-
-    /**
-     * A builder for [MaintenanceWindowProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dayOfWeek The day of the week. 
-       */
-      public fun dayOfWeek(dayOfWeek: String)
-
-      /**
-       * @param timeOfDay The time, in 24-hour format. 
-       */
-      public fun timeOfDay(timeOfDay: String)
-
-      /**
-       * @param timeZone The time zone, UTC by default, in either the Country/City format, or the
-       * UTC offset format. 
-       */
-      public fun timeZone(timeZone: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty.Builder =
-          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty.builder()
-
-      /**
-       * @param dayOfWeek The day of the week. 
-       */
-      override fun dayOfWeek(dayOfWeek: String) {
-        cdkBuilder.dayOfWeek(dayOfWeek)
-      }
-
-      /**
-       * @param timeOfDay The time, in 24-hour format. 
-       */
-      override fun timeOfDay(timeOfDay: String) {
-        cdkBuilder.timeOfDay(timeOfDay)
-      }
-
-      /**
-       * @param timeZone The time zone, UTC by default, in either the Country/City format, or the
-       * UTC offset format. 
-       */
-      override fun timeZone(timeZone: String) {
-        cdkBuilder.timeZone(timeZone)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowProperty {
-      /**
-       * The day of the week.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek)
-       */
-      override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
-
-      /**
-       * The time, in 24-hour format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday)
-       */
-      override fun timeOfDay(): String = unwrap(this).getTimeOfDay()
-
-      /**
-       * The time zone, UTC by default, in either the Country/City format, or the UTC offset format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone)
-       */
-      override fun timeZone(): String = unwrap(this).getTimeZone()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MaintenanceWindowProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty):
-          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MaintenanceWindowProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MaintenanceWindowProperty):
-          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty
-    }
-  }
-
-  /**
-   * A list of information about the configuration.
-   *
-   *
-   * Does not apply to RabbitMQ brokers.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amazonmq.*;
-   * ConfigurationIdProperty configurationIdProperty = ConfigurationIdProperty.builder()
-   * .id("id")
-   * .revision(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html)
-   */
-  public interface ConfigurationIdProperty {
-    /**
-     * The unique ID that Amazon MQ generates for the configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id)
-     */
-    public fun id(): String
-
-    /**
-     * The revision number of the configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision)
-     */
-    public fun revision(): Number
-
-    /**
-     * A builder for [ConfigurationIdProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The unique ID that Amazon MQ generates for the configuration. 
-       */
-      public fun id(id: String)
-
-      /**
-       * @param revision The revision number of the configuration. 
-       */
-      public fun revision(revision: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty.Builder =
-          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty.builder()
-
-      /**
-       * @param id The unique ID that Amazon MQ generates for the configuration. 
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param revision The revision number of the configuration. 
-       */
-      override fun revision(revision: Number) {
-        cdkBuilder.revision(revision)
-      }
-
-      public fun build(): software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty,
-    ) : CdkObject(cdkObject), ConfigurationIdProperty {
-      /**
-       * The unique ID that Amazon MQ generates for the configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * The revision number of the configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision)
-       */
-      override fun revision(): Number = unwrap(this).getRevision()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationIdProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty):
-          ConfigurationIdProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationIdProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConfigurationIdProperty):
-          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty
     }
   }
 }

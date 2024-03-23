@@ -1724,188 +1724,6 @@ public open class CfnEnvironment internal constructor(
   }
 
   /**
-   * The VPC networking components used to secure and enable network traffic between the AWS
-   * resources for your environment.
-   *
-   * To learn more, see [About networking on Amazon
-   * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mwaa.*;
-   * NetworkConfigurationProperty networkConfigurationProperty =
-   * NetworkConfigurationProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnetIds(List.of("subnetIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html)
-   */
-  public interface NetworkConfigurationProperty {
-    /**
-     * A list of one or more security group IDs.
-     *
-     * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as the
-     * subnets. To learn more, see [Security in your VPC on Amazon
-     * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html#cfn-mwaa-environment-networkconfiguration-securitygroupids)
-     */
-    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
-
-    /**
-     * A list of subnet IDs.
-     *
-     * *Required* to create an environment. Must be private subnets in two different availability
-     * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
-     * [About networking on Amazon
-     * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html#cfn-mwaa-environment-networkconfiguration-subnetids)
-     */
-    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
-
-    /**
-     * A builder for [NetworkConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param securityGroupIds A list of one or more security group IDs.
-       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
-       * the subnets. To learn more, see [Security in your VPC on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
-       */
-      public fun securityGroupIds(securityGroupIds: List<String>)
-
-      /**
-       * @param securityGroupIds A list of one or more security group IDs.
-       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
-       * the subnets. To learn more, see [Security in your VPC on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
-       */
-      public fun securityGroupIds(vararg securityGroupIds: String)
-
-      /**
-       * @param subnetIds A list of subnet IDs.
-       * *Required* to create an environment. Must be private subnets in two different availability
-       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
-       * [About networking on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-       */
-      public fun subnetIds(subnetIds: List<String>)
-
-      /**
-       * @param subnetIds A list of subnet IDs.
-       * *Required* to create an environment. Must be private subnets in two different availability
-       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
-       * [About networking on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-       */
-      public fun subnetIds(vararg subnetIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty.Builder =
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty.builder()
-
-      /**
-       * @param securityGroupIds A list of one or more security group IDs.
-       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
-       * the subnets. To learn more, see [Security in your VPC on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
-       */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
-      }
-
-      /**
-       * @param securityGroupIds A list of one or more security group IDs.
-       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
-       * the subnets. To learn more, see [Security in your VPC on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
-       */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnetIds A list of subnet IDs.
-       * *Required* to create an environment. Must be private subnets in two different availability
-       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
-       * [About networking on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-       */
-      override fun subnetIds(subnetIds: List<String>) {
-        cdkBuilder.subnetIds(subnetIds)
-      }
-
-      /**
-       * @param subnetIds A list of subnet IDs.
-       * *Required* to create an environment. Must be private subnets in two different availability
-       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
-       * [About networking on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-       */
-      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
-      /**
-       * A list of one or more security group IDs.
-       *
-       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
-       * the subnets. To learn more, see [Security in your VPC on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html#cfn-mwaa-environment-networkconfiguration-securitygroupids)
-       */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
-
-      /**
-       * A list of subnet IDs.
-       *
-       * *Required* to create an environment. Must be private subnets in two different availability
-       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
-       * [About networking on Amazon
-       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html#cfn-mwaa-environment-networkconfiguration-subnetids)
-       */
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkConfigurationProperty):
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty
-    }
-  }
-
-  /**
    * Defines the type of logs to send for the Apache Airflow log type (e.g. `DagProcessingLogs` ).
    *
    * Example:
@@ -2097,6 +1915,188 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty
+    }
+  }
+
+  /**
+   * The VPC networking components used to secure and enable network traffic between the AWS
+   * resources for your environment.
+   *
+   * To learn more, see [About networking on Amazon
+   * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mwaa.*;
+   * NetworkConfigurationProperty networkConfigurationProperty =
+   * NetworkConfigurationProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnetIds(List.of("subnetIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html)
+   */
+  public interface NetworkConfigurationProperty {
+    /**
+     * A list of one or more security group IDs.
+     *
+     * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as the
+     * subnets. To learn more, see [Security in your VPC on Amazon
+     * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html#cfn-mwaa-environment-networkconfiguration-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
+
+    /**
+     * A list of subnet IDs.
+     *
+     * *Required* to create an environment. Must be private subnets in two different availability
+     * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
+     * [About networking on Amazon
+     * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html#cfn-mwaa-environment-networkconfiguration-subnetids)
+     */
+    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+
+    /**
+     * A builder for [NetworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroupIds A list of one or more security group IDs.
+       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
+       * the subnets. To learn more, see [Security in your VPC on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds A list of one or more security group IDs.
+       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
+       * the subnets. To learn more, see [Security in your VPC on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnetIds A list of subnet IDs.
+       * *Required* to create an environment. Must be private subnets in two different availability
+       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
+       * [About networking on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+       */
+      public fun subnetIds(subnetIds: List<String>)
+
+      /**
+       * @param subnetIds A list of subnet IDs.
+       * *Required* to create an environment. Must be private subnets in two different availability
+       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
+       * [About networking on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+       */
+      public fun subnetIds(vararg subnetIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty.Builder =
+          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty.builder()
+
+      /**
+       * @param securityGroupIds A list of one or more security group IDs.
+       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
+       * the subnets. To learn more, see [Security in your VPC on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds A list of one or more security group IDs.
+       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
+       * the subnets. To learn more, see [Security in your VPC on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnetIds A list of subnet IDs.
+       * *Required* to create an environment. Must be private subnets in two different availability
+       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
+       * [About networking on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+       */
+      override fun subnetIds(subnetIds: List<String>) {
+        cdkBuilder.subnetIds(subnetIds)
+      }
+
+      /**
+       * @param subnetIds A list of subnet IDs.
+       * *Required* to create an environment. Must be private subnets in two different availability
+       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
+       * [About networking on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+       */
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty,
+    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+      /**
+       * A list of one or more security group IDs.
+       *
+       * Accepts up to 5 security group IDs. A security group must be attached to the same VPC as
+       * the subnets. To learn more, see [Security in your VPC on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html#cfn-mwaa-environment-networkconfiguration-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+          emptyList()
+
+      /**
+       * A list of subnet IDs.
+       *
+       * *Required* to create an environment. Must be private subnets in two different availability
+       * zones. A subnet must be attached to the same VPC as the security group. To learn more, see
+       * [About networking on Amazon
+       * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html#cfn-mwaa-environment-networkconfiguration-subnetids)
+       */
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty):
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkConfigurationProperty):
+          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty
     }
   }
 }

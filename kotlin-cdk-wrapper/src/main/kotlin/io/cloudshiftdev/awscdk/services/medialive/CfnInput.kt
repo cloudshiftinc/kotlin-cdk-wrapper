@@ -755,6 +755,256 @@ public open class CfnInput internal constructor(
   }
 
   /**
+   * Settings that apply only if the input is a push type of input.
+   *
+   * The parent of this entity is Input.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * InputDestinationRequestProperty inputDestinationRequestProperty =
+   * InputDestinationRequestProperty.builder()
+   * .streamName("streamName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html)
+   */
+  public interface InputDestinationRequestProperty {
+    /**
+     * The stream name (application name/application instance) for the location the RTMP source
+     * content will be pushed to in MediaLive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-streamname)
+     */
+    public fun streamName(): String? = unwrap(this).getStreamName()
+
+    /**
+     * A builder for [InputDestinationRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param streamName The stream name (application name/application instance) for the location
+       * the RTMP source content will be pushed to in MediaLive.
+       */
+      public fun streamName(streamName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty.builder()
+
+      /**
+       * @param streamName The stream name (application name/application instance) for the location
+       * the RTMP source content will be pushed to in MediaLive.
+       */
+      override fun streamName(streamName: String) {
+        cdkBuilder.streamName(streamName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty,
+    ) : CdkObject(cdkObject), InputDestinationRequestProperty {
+      /**
+       * The stream name (application name/application instance) for the location the RTMP source
+       * content will be pushed to in MediaLive.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-streamname)
+       */
+      override fun streamName(): String? = unwrap(this).getStreamName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputDestinationRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty):
+          InputDestinationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputDestinationRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputDestinationRequestProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * InputDeviceRequestProperty inputDeviceRequestProperty = InputDeviceRequestProperty.builder()
+   * .id("id")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html)
+   */
+  public interface InputDeviceRequestProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html#cfn-medialive-input-inputdevicerequest-id)
+     */
+    public fun id(): String? = unwrap(this).getId()
+
+    /**
+     * A builder for [InputDeviceRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id the value to be set.
+       */
+      public fun id(id: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty.Builder =
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty.builder()
+
+      /**
+       * @param id the value to be set.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty,
+    ) : CdkObject(cdkObject), InputDeviceRequestProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html#cfn-medialive-input-inputdevicerequest-id)
+       */
+      override fun id(): String? = unwrap(this).getId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputDeviceRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty):
+          InputDeviceRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputDeviceRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputDeviceRequestProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty
+    }
+  }
+
+  /**
+   * Settings that apply only if the input is an Elemental Link input.
+   *
+   * The parent of this entity is Input.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * InputDeviceSettingsProperty inputDeviceSettingsProperty = InputDeviceSettingsProperty.builder()
+   * .id("id")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html)
+   */
+  public interface InputDeviceSettingsProperty {
+    /**
+     * The unique ID for the device.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html#cfn-medialive-input-inputdevicesettings-id)
+     */
+    public fun id(): String? = unwrap(this).getId()
+
+    /**
+     * A builder for [InputDeviceSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The unique ID for the device.
+       */
+      public fun id(id: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty.Builder =
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty.builder()
+
+      /**
+       * @param id The unique ID for the device.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty,
+    ) : CdkObject(cdkObject), InputDeviceSettingsProperty {
+      /**
+       * The unique ID for the device.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html#cfn-medialive-input-inputdevicesettings-id)
+       */
+      override fun id(): String? = unwrap(this).getId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputDeviceSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty):
+          InputDeviceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputDeviceSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputDeviceSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty
+    }
+  }
+
+  /**
    * Settings that apply only if the input is a pull type of input.
    *
    * The parent of this entity is Input.
@@ -1062,256 +1312,6 @@ public open class CfnInput internal constructor(
           software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty
-    }
-  }
-
-  /**
-   * Settings that apply only if the input is an Elemental Link input.
-   *
-   * The parent of this entity is Input.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.medialive.*;
-   * InputDeviceSettingsProperty inputDeviceSettingsProperty = InputDeviceSettingsProperty.builder()
-   * .id("id")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html)
-   */
-  public interface InputDeviceSettingsProperty {
-    /**
-     * The unique ID for the device.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html#cfn-medialive-input-inputdevicesettings-id)
-     */
-    public fun id(): String? = unwrap(this).getId()
-
-    /**
-     * A builder for [InputDeviceSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The unique ID for the device.
-       */
-      public fun id(id: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty.Builder =
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty.builder()
-
-      /**
-       * @param id The unique ID for the device.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty,
-    ) : CdkObject(cdkObject), InputDeviceSettingsProperty {
-      /**
-       * The unique ID for the device.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html#cfn-medialive-input-inputdevicesettings-id)
-       */
-      override fun id(): String? = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputDeviceSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty):
-          InputDeviceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InputDeviceSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputDeviceSettingsProperty):
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.medialive.*;
-   * InputDeviceRequestProperty inputDeviceRequestProperty = InputDeviceRequestProperty.builder()
-   * .id("id")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html)
-   */
-  public interface InputDeviceRequestProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html#cfn-medialive-input-inputdevicerequest-id)
-     */
-    public fun id(): String? = unwrap(this).getId()
-
-    /**
-     * A builder for [InputDeviceRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id the value to be set.
-       */
-      public fun id(id: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty.Builder =
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty.builder()
-
-      /**
-       * @param id the value to be set.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty,
-    ) : CdkObject(cdkObject), InputDeviceRequestProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html#cfn-medialive-input-inputdevicerequest-id)
-       */
-      override fun id(): String? = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputDeviceRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty):
-          InputDeviceRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InputDeviceRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputDeviceRequestProperty):
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty
-    }
-  }
-
-  /**
-   * Settings that apply only if the input is a push type of input.
-   *
-   * The parent of this entity is Input.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.medialive.*;
-   * InputDestinationRequestProperty inputDestinationRequestProperty =
-   * InputDestinationRequestProperty.builder()
-   * .streamName("streamName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html)
-   */
-  public interface InputDestinationRequestProperty {
-    /**
-     * The stream name (application name/application instance) for the location the RTMP source
-     * content will be pushed to in MediaLive.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-streamname)
-     */
-    public fun streamName(): String? = unwrap(this).getStreamName()
-
-    /**
-     * A builder for [InputDestinationRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param streamName The stream name (application name/application instance) for the location
-       * the RTMP source content will be pushed to in MediaLive.
-       */
-      public fun streamName(streamName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty.builder()
-
-      /**
-       * @param streamName The stream name (application name/application instance) for the location
-       * the RTMP source content will be pushed to in MediaLive.
-       */
-      override fun streamName(streamName: String) {
-        cdkBuilder.streamName(streamName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty,
-    ) : CdkObject(cdkObject), InputDestinationRequestProperty {
-      /**
-       * The stream name (application name/application instance) for the location the RTMP source
-       * content will be pushed to in MediaLive.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-streamname)
-       */
-      override fun streamName(): String? = unwrap(this).getStreamName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputDestinationRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty):
-          InputDestinationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InputDestinationRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputDestinationRequestProperty):
-          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty
     }
   }
 

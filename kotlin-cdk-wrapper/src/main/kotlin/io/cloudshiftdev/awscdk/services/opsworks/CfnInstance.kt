@@ -1305,6 +1305,503 @@ public open class CfnInstance internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opsworks.*;
+   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+   * .deviceName("deviceName")
+   * .ebs(EbsBlockDeviceProperty.builder()
+   * .deleteOnTermination(false)
+   * .iops(123)
+   * .snapshotId("snapshotId")
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build())
+   * .noDevice("noDevice")
+   * .virtualName("virtualName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html)
+   */
+  public interface BlockDeviceMappingProperty {
+    /**
+     * The device name that is exposed to the instance, such as `/dev/sdh` .
+     *
+     * For the root device, you can use the explicit device name or you can set this parameter to
+     * `ROOT_DEVICE` and AWS OpsWorks Stacks will provide the correct device name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename)
+     */
+    public fun deviceName(): String? = unwrap(this).getDeviceName()
+
+    /**
+     * An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the instance is
+     * launched.
+     *
+     * You can specify either the `VirtualName` or `Ebs` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs)
+     */
+    public fun ebs(): Any? = unwrap(this).getEbs()
+
+    /**
+     * Suppresses the specified device included in the AMI's block device mapping.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice)
+     */
+    public fun noDevice(): String? = unwrap(this).getNoDevice()
+
+    /**
+     * The virtual device name.
+     *
+     * For more information, see
+     * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
+     * . You can specify either the `VirtualName` or `Ebs` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname)
+     */
+    public fun virtualName(): String? = unwrap(this).getVirtualName()
+
+    /**
+     * A builder for [BlockDeviceMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deviceName The device name that is exposed to the instance, such as `/dev/sdh` .
+       * For the root device, you can use the explicit device name or you can set this parameter to
+       * `ROOT_DEVICE` and AWS OpsWorks Stacks will provide the correct device name.
+       */
+      public fun deviceName(deviceName: String)
+
+      /**
+       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
+       * instance is launched.
+       * You can specify either the `VirtualName` or `Ebs` , but not both.
+       */
+      public fun ebs(ebs: IResolvable)
+
+      /**
+       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
+       * instance is launched.
+       * You can specify either the `VirtualName` or `Ebs` , but not both.
+       */
+      public fun ebs(ebs: EbsBlockDeviceProperty)
+
+      /**
+       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
+       * instance is launched.
+       * You can specify either the `VirtualName` or `Ebs` , but not both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2db9fbc79bd708ea3ad6349cce8c96ac5bda7031f43285f108268ea1eec10429")
+      public fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit)
+
+      /**
+       * @param noDevice Suppresses the specified device included in the AMI's block device mapping.
+       */
+      public fun noDevice(noDevice: String)
+
+      /**
+       * @param virtualName The virtual device name.
+       * For more information, see
+       * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
+       * . You can specify either the `VirtualName` or `Ebs` , but not both.
+       */
+      public fun virtualName(virtualName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty.Builder =
+          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty.builder()
+
+      /**
+       * @param deviceName The device name that is exposed to the instance, such as `/dev/sdh` .
+       * For the root device, you can use the explicit device name or you can set this parameter to
+       * `ROOT_DEVICE` and AWS OpsWorks Stacks will provide the correct device name.
+       */
+      override fun deviceName(deviceName: String) {
+        cdkBuilder.deviceName(deviceName)
+      }
+
+      /**
+       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
+       * instance is launched.
+       * You can specify either the `VirtualName` or `Ebs` , but not both.
+       */
+      override fun ebs(ebs: IResolvable) {
+        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
+       * instance is launched.
+       * You can specify either the `VirtualName` or `Ebs` , but not both.
+       */
+      override fun ebs(ebs: EbsBlockDeviceProperty) {
+        cdkBuilder.ebs(ebs.let(EbsBlockDeviceProperty::unwrap))
+      }
+
+      /**
+       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
+       * instance is launched.
+       * You can specify either the `VirtualName` or `Ebs` , but not both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2db9fbc79bd708ea3ad6349cce8c96ac5bda7031f43285f108268ea1eec10429")
+      override fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit): Unit =
+          ebs(EbsBlockDeviceProperty(ebs))
+
+      /**
+       * @param noDevice Suppresses the specified device included in the AMI's block device mapping.
+       */
+      override fun noDevice(noDevice: String) {
+        cdkBuilder.noDevice(noDevice)
+      }
+
+      /**
+       * @param virtualName The virtual device name.
+       * For more information, see
+       * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
+       * . You can specify either the `VirtualName` or `Ebs` , but not both.
+       */
+      override fun virtualName(virtualName: String) {
+        cdkBuilder.virtualName(virtualName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty,
+    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+      /**
+       * The device name that is exposed to the instance, such as `/dev/sdh` .
+       *
+       * For the root device, you can use the explicit device name or you can set this parameter to
+       * `ROOT_DEVICE` and AWS OpsWorks Stacks will provide the correct device name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename)
+       */
+      override fun deviceName(): String? = unwrap(this).getDeviceName()
+
+      /**
+       * An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the instance is
+       * launched.
+       *
+       * You can specify either the `VirtualName` or `Ebs` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs)
+       */
+      override fun ebs(): Any? = unwrap(this).getEbs()
+
+      /**
+       * Suppresses the specified device included in the AMI's block device mapping.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice)
+       */
+      override fun noDevice(): String? = unwrap(this).getNoDevice()
+
+      /**
+       * The virtual device name.
+       *
+       * For more information, see
+       * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
+       * . You can specify either the `VirtualName` or `Ebs` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname)
+       */
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty):
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
+          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opsworks.*;
+   * EbsBlockDeviceProperty ebsBlockDeviceProperty = EbsBlockDeviceProperty.builder()
+   * .deleteOnTermination(false)
+   * .iops(123)
+   * .snapshotId("snapshotId")
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html)
+   */
+  public interface EbsBlockDeviceProperty {
+    /**
+     * Whether the volume is deleted on instance termination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-deleteontermination)
+     */
+    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+    /**
+     * The number of I/O operations per second (IOPS) that the volume supports.
+     *
+     * For more information, see
+     * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * The snapshot ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid)
+     */
+    public fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+    /**
+     * The volume size, in GiB.
+     *
+     * For more information, see
+     * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize)
+     */
+    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+    /**
+     * The volume type.
+     *
+     * `gp2` for General Purpose (SSD) volumes, `io1` for Provisioned IOPS (SSD) volumes, `st1` for
+     * Throughput Optimized hard disk drives (HDD), `sc1` for Cold HDD,and `standard` for Magnetic
+     * volumes.
+     *
+     * If you specify the `io1` volume type, you must also specify a value for the `Iops` attribute.
+     * The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1. AWS uses the
+     * default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x (volume size).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype)
+     */
+    public fun volumeType(): String? = unwrap(this).getVolumeType()
+
+    /**
+     * A builder for [EbsBlockDeviceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deleteOnTermination Whether the volume is deleted on instance termination.
+       */
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
+
+      /**
+       * @param deleteOnTermination Whether the volume is deleted on instance termination.
+       */
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+       * For more information, see
+       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+       * .
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param snapshotId The snapshot ID.
+       */
+      public fun snapshotId(snapshotId: String)
+
+      /**
+       * @param volumeSize The volume size, in GiB.
+       * For more information, see
+       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+       * .
+       */
+      public fun volumeSize(volumeSize: Number)
+
+      /**
+       * @param volumeType The volume type.
+       * `gp2` for General Purpose (SSD) volumes, `io1` for Provisioned IOPS (SSD) volumes, `st1`
+       * for Throughput Optimized hard disk drives (HDD), `sc1` for Cold HDD,and `standard` for
+       * Magnetic volumes.
+       *
+       * If you specify the `io1` volume type, you must also specify a value for the `Iops`
+       * attribute. The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1.
+       * AWS uses the default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x
+       * (volume size).
+       */
+      public fun volumeType(volumeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty.Builder =
+          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty.builder()
+
+      /**
+       * @param deleteOnTermination Whether the volume is deleted on instance termination.
+       */
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination)
+      }
+
+      /**
+       * @param deleteOnTermination Whether the volume is deleted on instance termination.
+       */
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+       * For more information, see
+       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+       * .
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param snapshotId The snapshot ID.
+       */
+      override fun snapshotId(snapshotId: String) {
+        cdkBuilder.snapshotId(snapshotId)
+      }
+
+      /**
+       * @param volumeSize The volume size, in GiB.
+       * For more information, see
+       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+       * .
+       */
+      override fun volumeSize(volumeSize: Number) {
+        cdkBuilder.volumeSize(volumeSize)
+      }
+
+      /**
+       * @param volumeType The volume type.
+       * `gp2` for General Purpose (SSD) volumes, `io1` for Provisioned IOPS (SSD) volumes, `st1`
+       * for Throughput Optimized hard disk drives (HDD), `sc1` for Cold HDD,and `standard` for
+       * Magnetic volumes.
+       *
+       * If you specify the `io1` volume type, you must also specify a value for the `Iops`
+       * attribute. The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1.
+       * AWS uses the default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x
+       * (volume size).
+       */
+      override fun volumeType(volumeType: String) {
+        cdkBuilder.volumeType(volumeType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty,
+    ) : CdkObject(cdkObject), EbsBlockDeviceProperty {
+      /**
+       * Whether the volume is deleted on instance termination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-deleteontermination)
+       */
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+      /**
+       * The number of I/O operations per second (IOPS) that the volume supports.
+       *
+       * For more information, see
+       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * The snapshot ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid)
+       */
+      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+      /**
+       * The volume size, in GiB.
+       *
+       * For more information, see
+       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize)
+       */
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+      /**
+       * The volume type.
+       *
+       * `gp2` for General Purpose (SSD) volumes, `io1` for Provisioned IOPS (SSD) volumes, `st1`
+       * for Throughput Optimized hard disk drives (HDD), `sc1` for Cold HDD,and `standard` for
+       * Magnetic volumes.
+       *
+       * If you specify the `io1` volume type, you must also specify a value for the `Iops`
+       * attribute. The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1.
+       * AWS uses the default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x
+       * (volume size).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype)
+       */
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EbsBlockDeviceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty):
+          EbsBlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsBlockDeviceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EbsBlockDeviceProperty):
+          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opsworks.*;
    * TimeBasedAutoScalingProperty timeBasedAutoScalingProperty =
    * TimeBasedAutoScalingProperty.builder()
    * .friday(Map.of(
@@ -1630,503 +2127,6 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * EbsBlockDeviceProperty ebsBlockDeviceProperty = EbsBlockDeviceProperty.builder()
-   * .deleteOnTermination(false)
-   * .iops(123)
-   * .snapshotId("snapshotId")
-   * .volumeSize(123)
-   * .volumeType("volumeType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html)
-   */
-  public interface EbsBlockDeviceProperty {
-    /**
-     * Whether the volume is deleted on instance termination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-deleteontermination)
-     */
-    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
-
-    /**
-     * The number of I/O operations per second (IOPS) that the volume supports.
-     *
-     * For more information, see
-     * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops)
-     */
-    public fun iops(): Number? = unwrap(this).getIops()
-
-    /**
-     * The snapshot ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid)
-     */
-    public fun snapshotId(): String? = unwrap(this).getSnapshotId()
-
-    /**
-     * The volume size, in GiB.
-     *
-     * For more information, see
-     * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize)
-     */
-    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-    /**
-     * The volume type.
-     *
-     * `gp2` for General Purpose (SSD) volumes, `io1` for Provisioned IOPS (SSD) volumes, `st1` for
-     * Throughput Optimized hard disk drives (HDD), `sc1` for Cold HDD,and `standard` for Magnetic
-     * volumes.
-     *
-     * If you specify the `io1` volume type, you must also specify a value for the `Iops` attribute.
-     * The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1. AWS uses the
-     * default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x (volume size).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype)
-     */
-    public fun volumeType(): String? = unwrap(this).getVolumeType()
-
-    /**
-     * A builder for [EbsBlockDeviceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deleteOnTermination Whether the volume is deleted on instance termination.
-       */
-      public fun deleteOnTermination(deleteOnTermination: Boolean)
-
-      /**
-       * @param deleteOnTermination Whether the volume is deleted on instance termination.
-       */
-      public fun deleteOnTermination(deleteOnTermination: IResolvable)
-
-      /**
-       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
-       * For more information, see
-       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-       * .
-       */
-      public fun iops(iops: Number)
-
-      /**
-       * @param snapshotId The snapshot ID.
-       */
-      public fun snapshotId(snapshotId: String)
-
-      /**
-       * @param volumeSize The volume size, in GiB.
-       * For more information, see
-       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-       * .
-       */
-      public fun volumeSize(volumeSize: Number)
-
-      /**
-       * @param volumeType The volume type.
-       * `gp2` for General Purpose (SSD) volumes, `io1` for Provisioned IOPS (SSD) volumes, `st1`
-       * for Throughput Optimized hard disk drives (HDD), `sc1` for Cold HDD,and `standard` for
-       * Magnetic volumes.
-       *
-       * If you specify the `io1` volume type, you must also specify a value for the `Iops`
-       * attribute. The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1.
-       * AWS uses the default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x
-       * (volume size).
-       */
-      public fun volumeType(volumeType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty.Builder =
-          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty.builder()
-
-      /**
-       * @param deleteOnTermination Whether the volume is deleted on instance termination.
-       */
-      override fun deleteOnTermination(deleteOnTermination: Boolean) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination)
-      }
-
-      /**
-       * @param deleteOnTermination Whether the volume is deleted on instance termination.
-       */
-      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
-       * For more information, see
-       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-       * .
-       */
-      override fun iops(iops: Number) {
-        cdkBuilder.iops(iops)
-      }
-
-      /**
-       * @param snapshotId The snapshot ID.
-       */
-      override fun snapshotId(snapshotId: String) {
-        cdkBuilder.snapshotId(snapshotId)
-      }
-
-      /**
-       * @param volumeSize The volume size, in GiB.
-       * For more information, see
-       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-       * .
-       */
-      override fun volumeSize(volumeSize: Number) {
-        cdkBuilder.volumeSize(volumeSize)
-      }
-
-      /**
-       * @param volumeType The volume type.
-       * `gp2` for General Purpose (SSD) volumes, `io1` for Provisioned IOPS (SSD) volumes, `st1`
-       * for Throughput Optimized hard disk drives (HDD), `sc1` for Cold HDD,and `standard` for
-       * Magnetic volumes.
-       *
-       * If you specify the `io1` volume type, you must also specify a value for the `Iops`
-       * attribute. The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1.
-       * AWS uses the default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x
-       * (volume size).
-       */
-      override fun volumeType(volumeType: String) {
-        cdkBuilder.volumeType(volumeType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty,
-    ) : CdkObject(cdkObject), EbsBlockDeviceProperty {
-      /**
-       * Whether the volume is deleted on instance termination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-deleteontermination)
-       */
-      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
-
-      /**
-       * The number of I/O operations per second (IOPS) that the volume supports.
-       *
-       * For more information, see
-       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops)
-       */
-      override fun iops(): Number? = unwrap(this).getIops()
-
-      /**
-       * The snapshot ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid)
-       */
-      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
-
-      /**
-       * The volume size, in GiB.
-       *
-       * For more information, see
-       * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize)
-       */
-      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-      /**
-       * The volume type.
-       *
-       * `gp2` for General Purpose (SSD) volumes, `io1` for Provisioned IOPS (SSD) volumes, `st1`
-       * for Throughput Optimized hard disk drives (HDD), `sc1` for Cold HDD,and `standard` for
-       * Magnetic volumes.
-       *
-       * If you specify the `io1` volume type, you must also specify a value for the `Iops`
-       * attribute. The maximum ratio of provisioned IOPS to requested volume size (in GiB) is 50:1.
-       * AWS uses the default volume size (in GiB) specified in the AMI attributes to set IOPS to 50 x
-       * (volume size).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype)
-       */
-      override fun volumeType(): String? = unwrap(this).getVolumeType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EbsBlockDeviceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty):
-          EbsBlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsBlockDeviceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EbsBlockDeviceProperty):
-          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
-   * .deviceName("deviceName")
-   * .ebs(EbsBlockDeviceProperty.builder()
-   * .deleteOnTermination(false)
-   * .iops(123)
-   * .snapshotId("snapshotId")
-   * .volumeSize(123)
-   * .volumeType("volumeType")
-   * .build())
-   * .noDevice("noDevice")
-   * .virtualName("virtualName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html)
-   */
-  public interface BlockDeviceMappingProperty {
-    /**
-     * The device name that is exposed to the instance, such as `/dev/sdh` .
-     *
-     * For the root device, you can use the explicit device name or you can set this parameter to
-     * `ROOT_DEVICE` and AWS OpsWorks Stacks will provide the correct device name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename)
-     */
-    public fun deviceName(): String? = unwrap(this).getDeviceName()
-
-    /**
-     * An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the instance is
-     * launched.
-     *
-     * You can specify either the `VirtualName` or `Ebs` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs)
-     */
-    public fun ebs(): Any? = unwrap(this).getEbs()
-
-    /**
-     * Suppresses the specified device included in the AMI's block device mapping.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice)
-     */
-    public fun noDevice(): String? = unwrap(this).getNoDevice()
-
-    /**
-     * The virtual device name.
-     *
-     * For more information, see
-     * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
-     * . You can specify either the `VirtualName` or `Ebs` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname)
-     */
-    public fun virtualName(): String? = unwrap(this).getVirtualName()
-
-    /**
-     * A builder for [BlockDeviceMappingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deviceName The device name that is exposed to the instance, such as `/dev/sdh` .
-       * For the root device, you can use the explicit device name or you can set this parameter to
-       * `ROOT_DEVICE` and AWS OpsWorks Stacks will provide the correct device name.
-       */
-      public fun deviceName(deviceName: String)
-
-      /**
-       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
-       * instance is launched.
-       * You can specify either the `VirtualName` or `Ebs` , but not both.
-       */
-      public fun ebs(ebs: IResolvable)
-
-      /**
-       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
-       * instance is launched.
-       * You can specify either the `VirtualName` or `Ebs` , but not both.
-       */
-      public fun ebs(ebs: EbsBlockDeviceProperty)
-
-      /**
-       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
-       * instance is launched.
-       * You can specify either the `VirtualName` or `Ebs` , but not both.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2db9fbc79bd708ea3ad6349cce8c96ac5bda7031f43285f108268ea1eec10429")
-      public fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit)
-
-      /**
-       * @param noDevice Suppresses the specified device included in the AMI's block device mapping.
-       */
-      public fun noDevice(noDevice: String)
-
-      /**
-       * @param virtualName The virtual device name.
-       * For more information, see
-       * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
-       * . You can specify either the `VirtualName` or `Ebs` , but not both.
-       */
-      public fun virtualName(virtualName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty.Builder =
-          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty.builder()
-
-      /**
-       * @param deviceName The device name that is exposed to the instance, such as `/dev/sdh` .
-       * For the root device, you can use the explicit device name or you can set this parameter to
-       * `ROOT_DEVICE` and AWS OpsWorks Stacks will provide the correct device name.
-       */
-      override fun deviceName(deviceName: String) {
-        cdkBuilder.deviceName(deviceName)
-      }
-
-      /**
-       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
-       * instance is launched.
-       * You can specify either the `VirtualName` or `Ebs` , but not both.
-       */
-      override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
-       * instance is launched.
-       * You can specify either the `VirtualName` or `Ebs` , but not both.
-       */
-      override fun ebs(ebs: EbsBlockDeviceProperty) {
-        cdkBuilder.ebs(ebs.let(EbsBlockDeviceProperty::unwrap))
-      }
-
-      /**
-       * @param ebs An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the
-       * instance is launched.
-       * You can specify either the `VirtualName` or `Ebs` , but not both.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2db9fbc79bd708ea3ad6349cce8c96ac5bda7031f43285f108268ea1eec10429")
-      override fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit): Unit =
-          ebs(EbsBlockDeviceProperty(ebs))
-
-      /**
-       * @param noDevice Suppresses the specified device included in the AMI's block device mapping.
-       */
-      override fun noDevice(noDevice: String) {
-        cdkBuilder.noDevice(noDevice)
-      }
-
-      /**
-       * @param virtualName The virtual device name.
-       * For more information, see
-       * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
-       * . You can specify either the `VirtualName` or `Ebs` , but not both.
-       */
-      override fun virtualName(virtualName: String) {
-        cdkBuilder.virtualName(virtualName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
-      /**
-       * The device name that is exposed to the instance, such as `/dev/sdh` .
-       *
-       * For the root device, you can use the explicit device name or you can set this parameter to
-       * `ROOT_DEVICE` and AWS OpsWorks Stacks will provide the correct device name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename)
-       */
-      override fun deviceName(): String? = unwrap(this).getDeviceName()
-
-      /**
-       * An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the instance is
-       * launched.
-       *
-       * You can specify either the `VirtualName` or `Ebs` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs)
-       */
-      override fun ebs(): Any? = unwrap(this).getEbs()
-
-      /**
-       * Suppresses the specified device included in the AMI's block device mapping.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice)
-       */
-      override fun noDevice(): String? = unwrap(this).getNoDevice()
-
-      /**
-       * The virtual device name.
-       *
-       * For more information, see
-       * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
-       * . You can specify either the `VirtualName` or `Ebs` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname)
-       */
-      override fun virtualName(): String? = unwrap(this).getVirtualName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
-          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty
     }
   }
 }

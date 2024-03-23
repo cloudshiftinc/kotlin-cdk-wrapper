@@ -375,6 +375,121 @@ public open class CfnPublicDnsNamespace internal constructor(
   }
 
   /**
+   * Properties for the public DNS namespace.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
+   * PropertiesProperty propertiesProperty = PropertiesProperty.builder()
+   * .dnsProperties(PublicDnsPropertiesMutableProperty.builder()
+   * .soa(SOAProperty.builder()
+   * .ttl(123)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-publicdnsnamespace-properties.html)
+   */
+  public interface PropertiesProperty {
+    /**
+     * DNS properties for the public DNS namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-publicdnsnamespace-properties.html#cfn-servicediscovery-publicdnsnamespace-properties-dnsproperties)
+     */
+    public fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
+
+    /**
+     * A builder for [PropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dnsProperties DNS properties for the public DNS namespace.
+       */
+      public fun dnsProperties(dnsProperties: IResolvable)
+
+      /**
+       * @param dnsProperties DNS properties for the public DNS namespace.
+       */
+      public fun dnsProperties(dnsProperties: PublicDnsPropertiesMutableProperty)
+
+      /**
+       * @param dnsProperties DNS properties for the public DNS namespace.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("24603897dd76d22da75f2f4b4a992f0dd56b12da7508ba55d2bf27269ca78942")
+      public fun dnsProperties(dnsProperties: PublicDnsPropertiesMutableProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty.builder()
+
+      /**
+       * @param dnsProperties DNS properties for the public DNS namespace.
+       */
+      override fun dnsProperties(dnsProperties: IResolvable) {
+        cdkBuilder.dnsProperties(dnsProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dnsProperties DNS properties for the public DNS namespace.
+       */
+      override fun dnsProperties(dnsProperties: PublicDnsPropertiesMutableProperty) {
+        cdkBuilder.dnsProperties(dnsProperties.let(PublicDnsPropertiesMutableProperty::unwrap))
+      }
+
+      /**
+       * @param dnsProperties DNS properties for the public DNS namespace.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("24603897dd76d22da75f2f4b4a992f0dd56b12da7508ba55d2bf27269ca78942")
+      override
+          fun dnsProperties(dnsProperties: PublicDnsPropertiesMutableProperty.Builder.() -> Unit):
+          Unit = dnsProperties(PublicDnsPropertiesMutableProperty(dnsProperties))
+
+      public fun build():
+          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty,
+    ) : CdkObject(cdkObject), PropertiesProperty {
+      /**
+       * DNS properties for the public DNS namespace.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-publicdnsnamespace-properties.html#cfn-servicediscovery-publicdnsnamespace-properties-dnsproperties)
+       */
+      override fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty):
+          PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertiesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PropertiesProperty):
+          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty
+    }
+  }
+
+  /**
    * DNS properties for the public DNS namespace.
    *
    * Example:
@@ -572,121 +687,6 @@ public open class CfnPublicDnsNamespace internal constructor(
           software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty
-    }
-  }
-
-  /**
-   * Properties for the public DNS namespace.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
-   * PropertiesProperty propertiesProperty = PropertiesProperty.builder()
-   * .dnsProperties(PublicDnsPropertiesMutableProperty.builder()
-   * .soa(SOAProperty.builder()
-   * .ttl(123)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-publicdnsnamespace-properties.html)
-   */
-  public interface PropertiesProperty {
-    /**
-     * DNS properties for the public DNS namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-publicdnsnamespace-properties.html#cfn-servicediscovery-publicdnsnamespace-properties-dnsproperties)
-     */
-    public fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
-
-    /**
-     * A builder for [PropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dnsProperties DNS properties for the public DNS namespace.
-       */
-      public fun dnsProperties(dnsProperties: IResolvable)
-
-      /**
-       * @param dnsProperties DNS properties for the public DNS namespace.
-       */
-      public fun dnsProperties(dnsProperties: PublicDnsPropertiesMutableProperty)
-
-      /**
-       * @param dnsProperties DNS properties for the public DNS namespace.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("24603897dd76d22da75f2f4b4a992f0dd56b12da7508ba55d2bf27269ca78942")
-      public fun dnsProperties(dnsProperties: PublicDnsPropertiesMutableProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty.builder()
-
-      /**
-       * @param dnsProperties DNS properties for the public DNS namespace.
-       */
-      override fun dnsProperties(dnsProperties: IResolvable) {
-        cdkBuilder.dnsProperties(dnsProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dnsProperties DNS properties for the public DNS namespace.
-       */
-      override fun dnsProperties(dnsProperties: PublicDnsPropertiesMutableProperty) {
-        cdkBuilder.dnsProperties(dnsProperties.let(PublicDnsPropertiesMutableProperty::unwrap))
-      }
-
-      /**
-       * @param dnsProperties DNS properties for the public DNS namespace.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("24603897dd76d22da75f2f4b4a992f0dd56b12da7508ba55d2bf27269ca78942")
-      override
-          fun dnsProperties(dnsProperties: PublicDnsPropertiesMutableProperty.Builder.() -> Unit):
-          Unit = dnsProperties(PublicDnsPropertiesMutableProperty(dnsProperties))
-
-      public fun build():
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty,
-    ) : CdkObject(cdkObject), PropertiesProperty {
-      /**
-       * DNS properties for the public DNS namespace.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-publicdnsnamespace-properties.html#cfn-servicediscovery-publicdnsnamespace-properties-dnsproperties)
-       */
-      override fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty):
-          PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertiesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PropertiesProperty):
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty
     }
   }
 }

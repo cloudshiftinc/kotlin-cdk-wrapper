@@ -440,7 +440,9 @@ public open class CfnListener internal constructor(
   }
 
   /**
-   * Describes the weight of a target group.
+   * The action for the default rule.
+   *
+   * Each listener has a default rule. The default rule is used if no other rules match.
    *
    * Example:
    *
@@ -448,127 +450,175 @@ public open class CfnListener internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.vpclattice.*;
-   * WeightedTargetGroupProperty weightedTargetGroupProperty = WeightedTargetGroupProperty.builder()
+   * DefaultActionProperty defaultActionProperty = DefaultActionProperty.builder()
+   * .fixedResponse(FixedResponseProperty.builder()
+   * .statusCode(123)
+   * .build())
+   * .forward(ForwardProperty.builder()
+   * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
    * .targetGroupIdentifier("targetGroupIdentifier")
    * // the properties below are optional
    * .weight(123)
+   * .build()))
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html)
    */
-  public interface WeightedTargetGroupProperty {
+  public interface DefaultActionProperty {
     /**
-     * The ID of the target group.
+     * Describes an action that returns a custom HTTP response.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html#cfn-vpclattice-listener-weightedtargetgroup-targetgroupidentifier)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html#cfn-vpclattice-listener-defaultaction-fixedresponse)
      */
-    public fun targetGroupIdentifier(): String
+    public fun fixedResponse(): Any? = unwrap(this).getFixedResponse()
 
     /**
-     * Only required if you specify multiple target groups for a forward action.
+     * Describes a forward action.
      *
-     * The weight determines how requests are distributed to the target group. For example, if you
-     * specify two target groups, each with a weight of 10, each target group receives half the
-     * requests. If you specify two target groups, one with a weight of 10 and the other with a weight
-     * of 20, the target group with a weight of 20 receives twice as many requests as the other target
-     * group. If there's only one target group specified, then the default value is 100.
+     * You can use forward actions to route requests to one or more target groups.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html#cfn-vpclattice-listener-weightedtargetgroup-weight)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html#cfn-vpclattice-listener-defaultaction-forward)
      */
-    public fun weight(): Number? = unwrap(this).getWeight()
+    public fun forward(): Any? = unwrap(this).getForward()
 
     /**
-     * A builder for [WeightedTargetGroupProperty]
+     * A builder for [DefaultActionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param targetGroupIdentifier The ID of the target group. 
+       * @param fixedResponse Describes an action that returns a custom HTTP response.
        */
-      public fun targetGroupIdentifier(targetGroupIdentifier: String)
+      public fun fixedResponse(fixedResponse: IResolvable)
 
       /**
-       * @param weight Only required if you specify multiple target groups for a forward action.
-       * The weight determines how requests are distributed to the target group. For example, if you
-       * specify two target groups, each with a weight of 10, each target group receives half the
-       * requests. If you specify two target groups, one with a weight of 10 and the other with a
-       * weight of 20, the target group with a weight of 20 receives twice as many requests as the
-       * other target group. If there's only one target group specified, then the default value is 100.
+       * @param fixedResponse Describes an action that returns a custom HTTP response.
        */
-      public fun weight(weight: Number)
+      public fun fixedResponse(fixedResponse: FixedResponseProperty)
+
+      /**
+       * @param fixedResponse Describes an action that returns a custom HTTP response.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4a3c9d278551eceb1d3b5e6deea7e01050cea016d10c69bda85c5b446a47bfd4")
+      public fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit)
+
+      /**
+       * @param forward Describes a forward action.
+       * You can use forward actions to route requests to one or more target groups.
+       */
+      public fun forward(forward: IResolvable)
+
+      /**
+       * @param forward Describes a forward action.
+       * You can use forward actions to route requests to one or more target groups.
+       */
+      public fun forward(forward: ForwardProperty)
+
+      /**
+       * @param forward Describes a forward action.
+       * You can use forward actions to route requests to one or more target groups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("692ec0d7935e4ac6fa2636c9d8edd0862e863336a5c647f4cdd8e16c4866fa47")
+      public fun forward(forward: ForwardProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty.Builder
-          =
-          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty.builder()
+          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty.Builder =
+          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty.builder()
 
       /**
-       * @param targetGroupIdentifier The ID of the target group. 
+       * @param fixedResponse Describes an action that returns a custom HTTP response.
        */
-      override fun targetGroupIdentifier(targetGroupIdentifier: String) {
-        cdkBuilder.targetGroupIdentifier(targetGroupIdentifier)
+      override fun fixedResponse(fixedResponse: IResolvable) {
+        cdkBuilder.fixedResponse(fixedResponse.let(IResolvable::unwrap))
       }
 
       /**
-       * @param weight Only required if you specify multiple target groups for a forward action.
-       * The weight determines how requests are distributed to the target group. For example, if you
-       * specify two target groups, each with a weight of 10, each target group receives half the
-       * requests. If you specify two target groups, one with a weight of 10 and the other with a
-       * weight of 20, the target group with a weight of 20 receives twice as many requests as the
-       * other target group. If there's only one target group specified, then the default value is 100.
+       * @param fixedResponse Describes an action that returns a custom HTTP response.
        */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
+      override fun fixedResponse(fixedResponse: FixedResponseProperty) {
+        cdkBuilder.fixedResponse(fixedResponse.let(FixedResponseProperty::unwrap))
       }
+
+      /**
+       * @param fixedResponse Describes an action that returns a custom HTTP response.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4a3c9d278551eceb1d3b5e6deea7e01050cea016d10c69bda85c5b446a47bfd4")
+      override fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit): Unit =
+          fixedResponse(FixedResponseProperty(fixedResponse))
+
+      /**
+       * @param forward Describes a forward action.
+       * You can use forward actions to route requests to one or more target groups.
+       */
+      override fun forward(forward: IResolvable) {
+        cdkBuilder.forward(forward.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param forward Describes a forward action.
+       * You can use forward actions to route requests to one or more target groups.
+       */
+      override fun forward(forward: ForwardProperty) {
+        cdkBuilder.forward(forward.let(ForwardProperty::unwrap))
+      }
+
+      /**
+       * @param forward Describes a forward action.
+       * You can use forward actions to route requests to one or more target groups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("692ec0d7935e4ac6fa2636c9d8edd0862e863336a5c647f4cdd8e16c4866fa47")
+      override fun forward(forward: ForwardProperty.Builder.() -> Unit): Unit =
+          forward(ForwardProperty(forward))
 
       public fun build():
-          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty =
+          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty,
-    ) : CdkObject(cdkObject), WeightedTargetGroupProperty {
+          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty,
+    ) : CdkObject(cdkObject), DefaultActionProperty {
       /**
-       * The ID of the target group.
+       * Describes an action that returns a custom HTTP response.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html#cfn-vpclattice-listener-weightedtargetgroup-targetgroupidentifier)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html#cfn-vpclattice-listener-defaultaction-fixedresponse)
        */
-      override fun targetGroupIdentifier(): String = unwrap(this).getTargetGroupIdentifier()
+      override fun fixedResponse(): Any? = unwrap(this).getFixedResponse()
 
       /**
-       * Only required if you specify multiple target groups for a forward action.
+       * Describes a forward action.
        *
-       * The weight determines how requests are distributed to the target group. For example, if you
-       * specify two target groups, each with a weight of 10, each target group receives half the
-       * requests. If you specify two target groups, one with a weight of 10 and the other with a
-       * weight of 20, the target group with a weight of 20 receives twice as many requests as the
-       * other target group. If there's only one target group specified, then the default value is 100.
+       * You can use forward actions to route requests to one or more target groups.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html#cfn-vpclattice-listener-weightedtargetgroup-weight)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html#cfn-vpclattice-listener-defaultaction-forward)
        */
-      override fun weight(): Number? = unwrap(this).getWeight()
+      override fun forward(): Any? = unwrap(this).getForward()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WeightedTargetGroupProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DefaultActionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty):
-          WeightedTargetGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WeightedTargetGroupProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty):
+          DefaultActionProperty = CdkObjectWrappers.wrap(cdkObject) as? DefaultActionProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: WeightedTargetGroupProperty):
-          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty
+      internal fun unwrap(wrapped: DefaultActionProperty):
+          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty
     }
   }
 
@@ -831,9 +881,7 @@ public open class CfnListener internal constructor(
   }
 
   /**
-   * The action for the default rule.
-   *
-   * Each listener has a default rule. The default rule is used if no other rules match.
+   * Describes the weight of a target group.
    *
    * Example:
    *
@@ -841,175 +889,127 @@ public open class CfnListener internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.vpclattice.*;
-   * DefaultActionProperty defaultActionProperty = DefaultActionProperty.builder()
-   * .fixedResponse(FixedResponseProperty.builder()
-   * .statusCode(123)
-   * .build())
-   * .forward(ForwardProperty.builder()
-   * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
+   * WeightedTargetGroupProperty weightedTargetGroupProperty = WeightedTargetGroupProperty.builder()
    * .targetGroupIdentifier("targetGroupIdentifier")
    * // the properties below are optional
    * .weight(123)
-   * .build()))
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html)
    */
-  public interface DefaultActionProperty {
+  public interface WeightedTargetGroupProperty {
     /**
-     * Describes an action that returns a custom HTTP response.
+     * The ID of the target group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html#cfn-vpclattice-listener-defaultaction-fixedresponse)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html#cfn-vpclattice-listener-weightedtargetgroup-targetgroupidentifier)
      */
-    public fun fixedResponse(): Any? = unwrap(this).getFixedResponse()
+    public fun targetGroupIdentifier(): String
 
     /**
-     * Describes a forward action.
+     * Only required if you specify multiple target groups for a forward action.
      *
-     * You can use forward actions to route requests to one or more target groups.
+     * The weight determines how requests are distributed to the target group. For example, if you
+     * specify two target groups, each with a weight of 10, each target group receives half the
+     * requests. If you specify two target groups, one with a weight of 10 and the other with a weight
+     * of 20, the target group with a weight of 20 receives twice as many requests as the other target
+     * group. If there's only one target group specified, then the default value is 100.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html#cfn-vpclattice-listener-defaultaction-forward)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html#cfn-vpclattice-listener-weightedtargetgroup-weight)
      */
-    public fun forward(): Any? = unwrap(this).getForward()
+    public fun weight(): Number? = unwrap(this).getWeight()
 
     /**
-     * A builder for [DefaultActionProperty]
+     * A builder for [WeightedTargetGroupProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param fixedResponse Describes an action that returns a custom HTTP response.
+       * @param targetGroupIdentifier The ID of the target group. 
        */
-      public fun fixedResponse(fixedResponse: IResolvable)
+      public fun targetGroupIdentifier(targetGroupIdentifier: String)
 
       /**
-       * @param fixedResponse Describes an action that returns a custom HTTP response.
+       * @param weight Only required if you specify multiple target groups for a forward action.
+       * The weight determines how requests are distributed to the target group. For example, if you
+       * specify two target groups, each with a weight of 10, each target group receives half the
+       * requests. If you specify two target groups, one with a weight of 10 and the other with a
+       * weight of 20, the target group with a weight of 20 receives twice as many requests as the
+       * other target group. If there's only one target group specified, then the default value is 100.
        */
-      public fun fixedResponse(fixedResponse: FixedResponseProperty)
-
-      /**
-       * @param fixedResponse Describes an action that returns a custom HTTP response.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4a3c9d278551eceb1d3b5e6deea7e01050cea016d10c69bda85c5b446a47bfd4")
-      public fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit)
-
-      /**
-       * @param forward Describes a forward action.
-       * You can use forward actions to route requests to one or more target groups.
-       */
-      public fun forward(forward: IResolvable)
-
-      /**
-       * @param forward Describes a forward action.
-       * You can use forward actions to route requests to one or more target groups.
-       */
-      public fun forward(forward: ForwardProperty)
-
-      /**
-       * @param forward Describes a forward action.
-       * You can use forward actions to route requests to one or more target groups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("692ec0d7935e4ac6fa2636c9d8edd0862e863336a5c647f4cdd8e16c4866fa47")
-      public fun forward(forward: ForwardProperty.Builder.() -> Unit)
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty.Builder =
-          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty.builder()
+          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty.Builder
+          =
+          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty.builder()
 
       /**
-       * @param fixedResponse Describes an action that returns a custom HTTP response.
+       * @param targetGroupIdentifier The ID of the target group. 
        */
-      override fun fixedResponse(fixedResponse: IResolvable) {
-        cdkBuilder.fixedResponse(fixedResponse.let(IResolvable::unwrap))
+      override fun targetGroupIdentifier(targetGroupIdentifier: String) {
+        cdkBuilder.targetGroupIdentifier(targetGroupIdentifier)
       }
 
       /**
-       * @param fixedResponse Describes an action that returns a custom HTTP response.
+       * @param weight Only required if you specify multiple target groups for a forward action.
+       * The weight determines how requests are distributed to the target group. For example, if you
+       * specify two target groups, each with a weight of 10, each target group receives half the
+       * requests. If you specify two target groups, one with a weight of 10 and the other with a
+       * weight of 20, the target group with a weight of 20 receives twice as many requests as the
+       * other target group. If there's only one target group specified, then the default value is 100.
        */
-      override fun fixedResponse(fixedResponse: FixedResponseProperty) {
-        cdkBuilder.fixedResponse(fixedResponse.let(FixedResponseProperty::unwrap))
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
       }
-
-      /**
-       * @param fixedResponse Describes an action that returns a custom HTTP response.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4a3c9d278551eceb1d3b5e6deea7e01050cea016d10c69bda85c5b446a47bfd4")
-      override fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit): Unit =
-          fixedResponse(FixedResponseProperty(fixedResponse))
-
-      /**
-       * @param forward Describes a forward action.
-       * You can use forward actions to route requests to one or more target groups.
-       */
-      override fun forward(forward: IResolvable) {
-        cdkBuilder.forward(forward.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param forward Describes a forward action.
-       * You can use forward actions to route requests to one or more target groups.
-       */
-      override fun forward(forward: ForwardProperty) {
-        cdkBuilder.forward(forward.let(ForwardProperty::unwrap))
-      }
-
-      /**
-       * @param forward Describes a forward action.
-       * You can use forward actions to route requests to one or more target groups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("692ec0d7935e4ac6fa2636c9d8edd0862e863336a5c647f4cdd8e16c4866fa47")
-      override fun forward(forward: ForwardProperty.Builder.() -> Unit): Unit =
-          forward(ForwardProperty(forward))
 
       public fun build():
-          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty =
+          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty,
-    ) : CdkObject(cdkObject), DefaultActionProperty {
+          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty,
+    ) : CdkObject(cdkObject), WeightedTargetGroupProperty {
       /**
-       * Describes an action that returns a custom HTTP response.
+       * The ID of the target group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html#cfn-vpclattice-listener-defaultaction-fixedresponse)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html#cfn-vpclattice-listener-weightedtargetgroup-targetgroupidentifier)
        */
-      override fun fixedResponse(): Any? = unwrap(this).getFixedResponse()
+      override fun targetGroupIdentifier(): String = unwrap(this).getTargetGroupIdentifier()
 
       /**
-       * Describes a forward action.
+       * Only required if you specify multiple target groups for a forward action.
        *
-       * You can use forward actions to route requests to one or more target groups.
+       * The weight determines how requests are distributed to the target group. For example, if you
+       * specify two target groups, each with a weight of 10, each target group receives half the
+       * requests. If you specify two target groups, one with a weight of 10 and the other with a
+       * weight of 20, the target group with a weight of 20 receives twice as many requests as the
+       * other target group. If there's only one target group specified, then the default value is 100.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html#cfn-vpclattice-listener-defaultaction-forward)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html#cfn-vpclattice-listener-weightedtargetgroup-weight)
        */
-      override fun forward(): Any? = unwrap(this).getForward()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DefaultActionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WeightedTargetGroupProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty):
-          DefaultActionProperty = CdkObjectWrappers.wrap(cdkObject) as? DefaultActionProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty):
+          WeightedTargetGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WeightedTargetGroupProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DefaultActionProperty):
-          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty
+      internal fun unwrap(wrapped: WeightedTargetGroupProperty):
+          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty
     }
   }
 }

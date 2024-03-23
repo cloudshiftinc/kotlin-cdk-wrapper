@@ -1175,890 +1175,6 @@ public open class CfnComputeEnvironment internal constructor(
   }
 
   /**
-   * Configuration for the Amazon EKS cluster that supports the AWS Batch compute environment.
-   *
-   * The cluster must exist before the compute environment can be created.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.batch.*;
-   * EksConfigurationProperty eksConfigurationProperty = EksConfigurationProperty.builder()
-   * .eksClusterArn("eksClusterArn")
-   * .kubernetesNamespace("kubernetesNamespace")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html)
-   */
-  public interface EksConfigurationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
-     *
-     * An example is `arn: *aws* :eks: *us-east-1* : *123456789012* :cluster/ *ClusterForBatch*` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-eksclusterarn)
-     */
-    public fun eksClusterArn(): String
-
-    /**
-     * The namespace of the Amazon EKS cluster.
-     *
-     * AWS Batch manages pods in this namespace. The value can't left empty or null. It must be
-     * fewer than 64 characters long, can't be set to `default` , can't start with " `kube-` ," and
-     * must match this regular expression: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$` . For more information,
-     * see
-     * [Namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
-     * in the Kubernetes documentation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-kubernetesnamespace)
-     */
-    public fun kubernetesNamespace(): String
-
-    /**
-     * A builder for [EksConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param eksClusterArn The Amazon Resource Name (ARN) of the Amazon EKS cluster. 
-       * An example is `arn: *aws* :eks: *us-east-1* : *123456789012* :cluster/ *ClusterForBatch*` .
-       */
-      public fun eksClusterArn(eksClusterArn: String)
-
-      /**
-       * @param kubernetesNamespace The namespace of the Amazon EKS cluster. 
-       * AWS Batch manages pods in this namespace. The value can't left empty or null. It must be
-       * fewer than 64 characters long, can't be set to `default` , can't start with " `kube-` ," and
-       * must match this regular expression: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$` . For more information,
-       * see
-       * [Namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
-       * in the Kubernetes documentation.
-       */
-      public fun kubernetesNamespace(kubernetesNamespace: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty.builder()
-
-      /**
-       * @param eksClusterArn The Amazon Resource Name (ARN) of the Amazon EKS cluster. 
-       * An example is `arn: *aws* :eks: *us-east-1* : *123456789012* :cluster/ *ClusterForBatch*` .
-       */
-      override fun eksClusterArn(eksClusterArn: String) {
-        cdkBuilder.eksClusterArn(eksClusterArn)
-      }
-
-      /**
-       * @param kubernetesNamespace The namespace of the Amazon EKS cluster. 
-       * AWS Batch manages pods in this namespace. The value can't left empty or null. It must be
-       * fewer than 64 characters long, can't be set to `default` , can't start with " `kube-` ," and
-       * must match this regular expression: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$` . For more information,
-       * see
-       * [Namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
-       * in the Kubernetes documentation.
-       */
-      override fun kubernetesNamespace(kubernetesNamespace: String) {
-        cdkBuilder.kubernetesNamespace(kubernetesNamespace)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty,
-    ) : CdkObject(cdkObject), EksConfigurationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
-       *
-       * An example is `arn: *aws* :eks: *us-east-1* : *123456789012* :cluster/ *ClusterForBatch*` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-eksclusterarn)
-       */
-      override fun eksClusterArn(): String = unwrap(this).getEksClusterArn()
-
-      /**
-       * The namespace of the Amazon EKS cluster.
-       *
-       * AWS Batch manages pods in this namespace. The value can't left empty or null. It must be
-       * fewer than 64 characters long, can't be set to `default` , can't start with " `kube-` ," and
-       * must match this regular expression: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$` . For more information,
-       * see
-       * [Namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
-       * in the Kubernetes documentation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-kubernetesnamespace)
-       */
-      override fun kubernetesNamespace(): String = unwrap(this).getKubernetesNamespace()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EksConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty):
-          EksConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EksConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EksConfigurationProperty):
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty
-    }
-  }
-
-  /**
-   * Provides information used to select Amazon Machine Images (AMIs) for instances in the compute
-   * environment.
-   *
-   * If `Ec2Configuration` isn't specified, the default is `ECS_AL2` ( [Amazon Linux
-   * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) ).
-   *
-   *
-   * This object isn't applicable to jobs that are running on Fargate resources.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.batch.*;
-   * Ec2ConfigurationObjectProperty ec2ConfigurationObjectProperty =
-   * Ec2ConfigurationObjectProperty.builder()
-   * .imageType("imageType")
-   * // the properties below are optional
-   * .imageIdOverride("imageIdOverride")
-   * .imageKubernetesVersion("imageKubernetesVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html)
-   */
-  public interface Ec2ConfigurationObjectProperty {
-    /**
-     * The AMI ID used for instances launched in the compute environment that match the image type.
-     *
-     * This setting overrides the `imageId` set in the `computeResource` object.
-     *
-     *
-     * The AMI that you choose for a compute environment must match the architecture of the instance
-     * types that you intend to use for that compute environment. For example, if your compute
-     * environment uses A1 instance types, the compute resource AMI that you choose must support ARM
-     * instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized Amazon Linux 2
-     * AMI. For more information, see [Amazon ECS-optimized Amazon Linux 2
-     * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html)
-     * in the *Amazon Elastic Container Service Developer Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imageidoverride)
-     */
-    public fun imageIdOverride(): String? = unwrap(this).getImageIdOverride()
-
-    /**
-     * The Kubernetes version for the compute environment.
-     *
-     * If you don't specify a value, the latest version that AWS Batch supports is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagekubernetesversion)
-     */
-    public fun imageKubernetesVersion(): String? = unwrap(this).getImageKubernetesVersion()
-
-    /**
-     * The image type to match with the instance type to select an AMI.
-     *
-     * The supported values are different for `ECS` and `EKS` resources.
-     *
-     * * **ECS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
-     * ECS-optimized Amazon Linux 2
-     * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
-     * ( `ECS_AL2` ) is used. If a new image type is specified in an update, but neither an `imageId`
-     * nor a `imageIdOverride` parameter is specified, then the latest Amazon ECS optimized AMI for
-     * that image type that's supported by AWS Batch is used.
-     * * **ECS_AL2** - [Amazon Linux
-     * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) :
-     * Default for all non-GPU instance families.
-     * * **ECS_AL2_NVIDIA** - [Amazon Linux 2
-     * (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
-     * : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for all non
-     * AWS Graviton-based instance types.
-     * * **ECS_AL2023** - [Amazon Linux
-     * 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) : AWS
-     * Batch supports Amazon Linux 2023.
-     *
-     *
-     * Amazon Linux 2023 does not support `A1` instances.
-     *
-     *
-     * * **ECS_AL1** - [Amazon
-     * Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
-     * . Amazon Linux has reached the end-of-life of standard support. For more information, see
-     * [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .
-     * * **EKS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
-     * EKS-optimized Amazon Linux
-     * AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) ( `EKS_AL2` ) is
-     * used. If a new image type is specified in an update, but neither an `imageId` nor a
-     * `imageIdOverride` parameter is specified, then the latest Amazon EKS optimized AMI for that
-     * image type that AWS Batch supports is used.
-     * * **EKS_AL2** - [Amazon Linux
-     * 2](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : Default for all
-     * non-GPU instance families.
-     * * **EKS_AL2_NVIDIA** - [Amazon Linux 2
-     * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
-     * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all non
-     * AWS Graviton-based instance types.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagetype)
-     */
-    public fun imageType(): String
-
-    /**
-     * A builder for [Ec2ConfigurationObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param imageIdOverride The AMI ID used for instances launched in the compute environment
-       * that match the image type.
-       * This setting overrides the `imageId` set in the `computeResource` object.
-       *
-       *
-       * The AMI that you choose for a compute environment must match the architecture of the
-       * instance types that you intend to use for that compute environment. For example, if your
-       * compute environment uses A1 instance types, the compute resource AMI that you choose must
-       * support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized
-       * Amazon Linux 2 AMI. For more information, see [Amazon ECS-optimized Amazon Linux 2
-       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      public fun imageIdOverride(imageIdOverride: String)
-
-      /**
-       * @param imageKubernetesVersion The Kubernetes version for the compute environment.
-       * If you don't specify a value, the latest version that AWS Batch supports is used.
-       */
-      public fun imageKubernetesVersion(imageKubernetesVersion: String)
-
-      /**
-       * @param imageType The image type to match with the instance type to select an AMI. 
-       * The supported values are different for `ECS` and `EKS` resources.
-       *
-       * * **ECS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
-       * ECS-optimized Amazon Linux 2
-       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
-       * ( `ECS_AL2` ) is used. If a new image type is specified in an update, but neither an `imageId`
-       * nor a `imageIdOverride` parameter is specified, then the latest Amazon ECS optimized AMI for
-       * that image type that's supported by AWS Batch is used.
-       * * **ECS_AL2** - [Amazon Linux
-       * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
-       * : Default for all non-GPU instance families.
-       * * **ECS_AL2_NVIDIA** - [Amazon Linux 2
-       * (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
-       * : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for all
-       * non AWS Graviton-based instance types.
-       * * **ECS_AL2023** - [Amazon Linux
-       * 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) :
-       * AWS Batch supports Amazon Linux 2023.
-       *
-       *
-       * Amazon Linux 2023 does not support `A1` instances.
-       *
-       *
-       * * **ECS_AL1** - [Amazon
-       * Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
-       * . Amazon Linux has reached the end-of-life of standard support. For more information, see
-       * [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .
-       * * **EKS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
-       * EKS-optimized Amazon Linux
-       * AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) ( `EKS_AL2` ) is
-       * used. If a new image type is specified in an update, but neither an `imageId` nor a
-       * `imageIdOverride` parameter is specified, then the latest Amazon EKS optimized AMI for that
-       * image type that AWS Batch supports is used.
-       * * **EKS_AL2** - [Amazon Linux
-       * 2](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : Default for all
-       * non-GPU instance families.
-       * * **EKS_AL2_NVIDIA** - [Amazon Linux 2
-       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
-       * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
-       * non AWS Graviton-based instance types.
-       */
-      public fun imageType(imageType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty.Builder
-          =
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty.builder()
-
-      /**
-       * @param imageIdOverride The AMI ID used for instances launched in the compute environment
-       * that match the image type.
-       * This setting overrides the `imageId` set in the `computeResource` object.
-       *
-       *
-       * The AMI that you choose for a compute environment must match the architecture of the
-       * instance types that you intend to use for that compute environment. For example, if your
-       * compute environment uses A1 instance types, the compute resource AMI that you choose must
-       * support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized
-       * Amazon Linux 2 AMI. For more information, see [Amazon ECS-optimized Amazon Linux 2
-       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      override fun imageIdOverride(imageIdOverride: String) {
-        cdkBuilder.imageIdOverride(imageIdOverride)
-      }
-
-      /**
-       * @param imageKubernetesVersion The Kubernetes version for the compute environment.
-       * If you don't specify a value, the latest version that AWS Batch supports is used.
-       */
-      override fun imageKubernetesVersion(imageKubernetesVersion: String) {
-        cdkBuilder.imageKubernetesVersion(imageKubernetesVersion)
-      }
-
-      /**
-       * @param imageType The image type to match with the instance type to select an AMI. 
-       * The supported values are different for `ECS` and `EKS` resources.
-       *
-       * * **ECS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
-       * ECS-optimized Amazon Linux 2
-       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
-       * ( `ECS_AL2` ) is used. If a new image type is specified in an update, but neither an `imageId`
-       * nor a `imageIdOverride` parameter is specified, then the latest Amazon ECS optimized AMI for
-       * that image type that's supported by AWS Batch is used.
-       * * **ECS_AL2** - [Amazon Linux
-       * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
-       * : Default for all non-GPU instance families.
-       * * **ECS_AL2_NVIDIA** - [Amazon Linux 2
-       * (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
-       * : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for all
-       * non AWS Graviton-based instance types.
-       * * **ECS_AL2023** - [Amazon Linux
-       * 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) :
-       * AWS Batch supports Amazon Linux 2023.
-       *
-       *
-       * Amazon Linux 2023 does not support `A1` instances.
-       *
-       *
-       * * **ECS_AL1** - [Amazon
-       * Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
-       * . Amazon Linux has reached the end-of-life of standard support. For more information, see
-       * [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .
-       * * **EKS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
-       * EKS-optimized Amazon Linux
-       * AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) ( `EKS_AL2` ) is
-       * used. If a new image type is specified in an update, but neither an `imageId` nor a
-       * `imageIdOverride` parameter is specified, then the latest Amazon EKS optimized AMI for that
-       * image type that AWS Batch supports is used.
-       * * **EKS_AL2** - [Amazon Linux
-       * 2](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : Default for all
-       * non-GPU instance families.
-       * * **EKS_AL2_NVIDIA** - [Amazon Linux 2
-       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
-       * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
-       * non AWS Graviton-based instance types.
-       */
-      override fun imageType(imageType: String) {
-        cdkBuilder.imageType(imageType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty,
-    ) : CdkObject(cdkObject), Ec2ConfigurationObjectProperty {
-      /**
-       * The AMI ID used for instances launched in the compute environment that match the image
-       * type.
-       *
-       * This setting overrides the `imageId` set in the `computeResource` object.
-       *
-       *
-       * The AMI that you choose for a compute environment must match the architecture of the
-       * instance types that you intend to use for that compute environment. For example, if your
-       * compute environment uses A1 instance types, the compute resource AMI that you choose must
-       * support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized
-       * Amazon Linux 2 AMI. For more information, see [Amazon ECS-optimized Amazon Linux 2
-       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imageidoverride)
-       */
-      override fun imageIdOverride(): String? = unwrap(this).getImageIdOverride()
-
-      /**
-       * The Kubernetes version for the compute environment.
-       *
-       * If you don't specify a value, the latest version that AWS Batch supports is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagekubernetesversion)
-       */
-      override fun imageKubernetesVersion(): String? = unwrap(this).getImageKubernetesVersion()
-
-      /**
-       * The image type to match with the instance type to select an AMI.
-       *
-       * The supported values are different for `ECS` and `EKS` resources.
-       *
-       * * **ECS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
-       * ECS-optimized Amazon Linux 2
-       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
-       * ( `ECS_AL2` ) is used. If a new image type is specified in an update, but neither an `imageId`
-       * nor a `imageIdOverride` parameter is specified, then the latest Amazon ECS optimized AMI for
-       * that image type that's supported by AWS Batch is used.
-       * * **ECS_AL2** - [Amazon Linux
-       * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
-       * : Default for all non-GPU instance families.
-       * * **ECS_AL2_NVIDIA** - [Amazon Linux 2
-       * (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
-       * : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for all
-       * non AWS Graviton-based instance types.
-       * * **ECS_AL2023** - [Amazon Linux
-       * 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) :
-       * AWS Batch supports Amazon Linux 2023.
-       *
-       *
-       * Amazon Linux 2023 does not support `A1` instances.
-       *
-       *
-       * * **ECS_AL1** - [Amazon
-       * Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
-       * . Amazon Linux has reached the end-of-life of standard support. For more information, see
-       * [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .
-       * * **EKS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
-       * EKS-optimized Amazon Linux
-       * AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) ( `EKS_AL2` ) is
-       * used. If a new image type is specified in an update, but neither an `imageId` nor a
-       * `imageIdOverride` parameter is specified, then the latest Amazon EKS optimized AMI for that
-       * image type that AWS Batch supports is used.
-       * * **EKS_AL2** - [Amazon Linux
-       * 2](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : Default for all
-       * non-GPU instance families.
-       * * **EKS_AL2_NVIDIA** - [Amazon Linux 2
-       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
-       * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
-       * non AWS Graviton-based instance types.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagetype)
-       */
-      override fun imageType(): String = unwrap(this).getImageType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): Ec2ConfigurationObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty):
-          Ec2ConfigurationObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          Ec2ConfigurationObjectProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: Ec2ConfigurationObjectProperty):
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty
-    }
-  }
-
-  /**
-   * An object that represents a launch template that's associated with a compute resource.
-   *
-   * You must specify either the launch template ID or launch template name in the request, but not
-   * both.
-   *
-   * If security groups are specified using both the `securityGroupIds` parameter of
-   * `CreateComputeEnvironment` and the launch template, the values in the `securityGroupIds` parameter
-   * of `CreateComputeEnvironment` will be used.
-   *
-   *
-   * This object isn't applicable to jobs that are running on Fargate resources.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.batch.*;
-   * LaunchTemplateSpecificationProperty launchTemplateSpecificationProperty =
-   * LaunchTemplateSpecificationProperty.builder()
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html)
-   */
-  public interface LaunchTemplateSpecificationProperty {
-    /**
-     * The ID of the launch template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplateid)
-     */
-    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-    /**
-     * The name of the launch template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplatename)
-     */
-    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-    /**
-     * The version number of the launch template, `$Latest` , or `$Default` .
-     *
-     * If the value is `$Latest` , the latest version of the launch template is used. If the value
-     * is `$Default` , the default version of the launch template is used.
-     *
-     *
-     * If the AMI ID that's used in a compute environment is from the launch template, the AMI isn't
-     * changed when the compute environment is updated. It's only changed if the
-     * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During an
-     * infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch re-evaluates
-     * the launch template version, and it might use a different version of the launch template. This
-     * is the case even if the launch template isn't specified in the update. When updating a compute
-     * environment, changing the launch template requires an infrastructure update of the compute
-     * environment. For more information, see [Updating compute
-     * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
-     * in the *AWS Batch User Guide* .
-     *
-     *
-     * Default: `$Default` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [LaunchTemplateSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param launchTemplateId The ID of the launch template.
-       */
-      public fun launchTemplateId(launchTemplateId: String)
-
-      /**
-       * @param launchTemplateName The name of the launch template.
-       */
-      public fun launchTemplateName(launchTemplateName: String)
-
-      /**
-       * @param version The version number of the launch template, `$Latest` , or `$Default` .
-       * If the value is `$Latest` , the latest version of the launch template is used. If the value
-       * is `$Default` , the default version of the launch template is used.
-       *
-       *
-       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
-       * isn't changed when the compute environment is updated. It's only changed if the
-       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
-       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
-       * re-evaluates the launch template version, and it might use a different version of the launch
-       * template. This is the case even if the launch template isn't specified in the update. When
-       * updating a compute environment, changing the launch template requires an infrastructure update
-       * of the compute environment. For more information, see [Updating compute
-       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
-       * in the *AWS Batch User Guide* .
-       *
-       *
-       * Default: `$Default` .
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty.builder()
-
-      /**
-       * @param launchTemplateId The ID of the launch template.
-       */
-      override fun launchTemplateId(launchTemplateId: String) {
-        cdkBuilder.launchTemplateId(launchTemplateId)
-      }
-
-      /**
-       * @param launchTemplateName The name of the launch template.
-       */
-      override fun launchTemplateName(launchTemplateName: String) {
-        cdkBuilder.launchTemplateName(launchTemplateName)
-      }
-
-      /**
-       * @param version The version number of the launch template, `$Latest` , or `$Default` .
-       * If the value is `$Latest` , the latest version of the launch template is used. If the value
-       * is `$Default` , the default version of the launch template is used.
-       *
-       *
-       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
-       * isn't changed when the compute environment is updated. It's only changed if the
-       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
-       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
-       * re-evaluates the launch template version, and it might use a different version of the launch
-       * template. This is the case even if the launch template isn't specified in the update. When
-       * updating a compute environment, changing the launch template requires an infrastructure update
-       * of the compute environment. For more information, see [Updating compute
-       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
-       * in the *AWS Batch User Guide* .
-       *
-       *
-       * Default: `$Default` .
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
-      /**
-       * The ID of the launch template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplateid)
-       */
-      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-      /**
-       * The name of the launch template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplatename)
-       */
-      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-      /**
-       * The version number of the launch template, `$Latest` , or `$Default` .
-       *
-       * If the value is `$Latest` , the latest version of the launch template is used. If the value
-       * is `$Default` , the default version of the launch template is used.
-       *
-       *
-       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
-       * isn't changed when the compute environment is updated. It's only changed if the
-       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
-       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
-       * re-evaluates the launch template version, and it might use a different version of the launch
-       * template. This is the case even if the launch template isn't specified in the update. When
-       * updating a compute environment, changing the launch template requires an infrastructure update
-       * of the compute environment. For more information, see [Updating compute
-       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
-       * in the *AWS Batch User Guide* .
-       *
-       *
-       * Default: `$Default` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LaunchTemplateSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty):
-          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies the infrastructure update policy for the compute environment.
-   *
-   * For more information about infrastructure updates, see [Updating compute
-   * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
-   * in the *AWS Batch User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.batch.*;
-   * UpdatePolicyProperty updatePolicyProperty = UpdatePolicyProperty.builder()
-   * .jobExecutionTimeoutMinutes(123)
-   * .terminateJobsOnUpdate(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html)
-   */
-  public interface UpdatePolicyProperty {
-    /**
-     * Specifies the job timeout (in minutes) when the compute environment infrastructure is
-     * updated.
-     *
-     * The default value is 30.
-     *
-     * Default: - 30
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html#cfn-batch-computeenvironment-updatepolicy-jobexecutiontimeoutminutes)
-     */
-    public fun jobExecutionTimeoutMinutes(): Number? = unwrap(this).getJobExecutionTimeoutMinutes()
-
-    /**
-     * Specifies whether jobs are automatically terminated when the computer environment
-     * infrastructure is updated.
-     *
-     * The default value is `false` .
-     *
-     * Default: - false
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html#cfn-batch-computeenvironment-updatepolicy-terminatejobsonupdate)
-     */
-    public fun terminateJobsOnUpdate(): Any? = unwrap(this).getTerminateJobsOnUpdate()
-
-    /**
-     * A builder for [UpdatePolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param jobExecutionTimeoutMinutes Specifies the job timeout (in minutes) when the compute
-       * environment infrastructure is updated.
-       * The default value is 30.
-       */
-      public fun jobExecutionTimeoutMinutes(jobExecutionTimeoutMinutes: Number)
-
-      /**
-       * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
-       * computer environment infrastructure is updated.
-       * The default value is `false` .
-       */
-      public fun terminateJobsOnUpdate(terminateJobsOnUpdate: Boolean)
-
-      /**
-       * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
-       * computer environment infrastructure is updated.
-       * The default value is `false` .
-       */
-      public fun terminateJobsOnUpdate(terminateJobsOnUpdate: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty.Builder =
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty.builder()
-
-      /**
-       * @param jobExecutionTimeoutMinutes Specifies the job timeout (in minutes) when the compute
-       * environment infrastructure is updated.
-       * The default value is 30.
-       */
-      override fun jobExecutionTimeoutMinutes(jobExecutionTimeoutMinutes: Number) {
-        cdkBuilder.jobExecutionTimeoutMinutes(jobExecutionTimeoutMinutes)
-      }
-
-      /**
-       * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
-       * computer environment infrastructure is updated.
-       * The default value is `false` .
-       */
-      override fun terminateJobsOnUpdate(terminateJobsOnUpdate: Boolean) {
-        cdkBuilder.terminateJobsOnUpdate(terminateJobsOnUpdate)
-      }
-
-      /**
-       * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
-       * computer environment infrastructure is updated.
-       * The default value is `false` .
-       */
-      override fun terminateJobsOnUpdate(terminateJobsOnUpdate: IResolvable) {
-        cdkBuilder.terminateJobsOnUpdate(terminateJobsOnUpdate.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty,
-    ) : CdkObject(cdkObject), UpdatePolicyProperty {
-      /**
-       * Specifies the job timeout (in minutes) when the compute environment infrastructure is
-       * updated.
-       *
-       * The default value is 30.
-       *
-       * Default: - 30
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html#cfn-batch-computeenvironment-updatepolicy-jobexecutiontimeoutminutes)
-       */
-      override fun jobExecutionTimeoutMinutes(): Number? =
-          unwrap(this).getJobExecutionTimeoutMinutes()
-
-      /**
-       * Specifies whether jobs are automatically terminated when the computer environment
-       * infrastructure is updated.
-       *
-       * The default value is `false` .
-       *
-       * Default: - false
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html#cfn-batch-computeenvironment-updatepolicy-terminatejobsonupdate)
-       */
-      override fun terminateJobsOnUpdate(): Any? = unwrap(this).getTerminateJobsOnUpdate()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UpdatePolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty):
-          UpdatePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? UpdatePolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UpdatePolicyProperty):
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty
-    }
-  }
-
-  /**
    * Details about the compute resources managed by the compute environment.
    *
    * This parameter is required for managed compute environments. For more information, see [Compute
@@ -4197,6 +3313,890 @@ public open class CfnComputeEnvironment internal constructor(
           software.amazon.awscdk.services.batch.CfnComputeEnvironment.ComputeResourcesProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.batch.CfnComputeEnvironment.ComputeResourcesProperty
+    }
+  }
+
+  /**
+   * Provides information used to select Amazon Machine Images (AMIs) for instances in the compute
+   * environment.
+   *
+   * If `Ec2Configuration` isn't specified, the default is `ECS_AL2` ( [Amazon Linux
+   * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) ).
+   *
+   *
+   * This object isn't applicable to jobs that are running on Fargate resources.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * Ec2ConfigurationObjectProperty ec2ConfigurationObjectProperty =
+   * Ec2ConfigurationObjectProperty.builder()
+   * .imageType("imageType")
+   * // the properties below are optional
+   * .imageIdOverride("imageIdOverride")
+   * .imageKubernetesVersion("imageKubernetesVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html)
+   */
+  public interface Ec2ConfigurationObjectProperty {
+    /**
+     * The AMI ID used for instances launched in the compute environment that match the image type.
+     *
+     * This setting overrides the `imageId` set in the `computeResource` object.
+     *
+     *
+     * The AMI that you choose for a compute environment must match the architecture of the instance
+     * types that you intend to use for that compute environment. For example, if your compute
+     * environment uses A1 instance types, the compute resource AMI that you choose must support ARM
+     * instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized Amazon Linux 2
+     * AMI. For more information, see [Amazon ECS-optimized Amazon Linux 2
+     * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imageidoverride)
+     */
+    public fun imageIdOverride(): String? = unwrap(this).getImageIdOverride()
+
+    /**
+     * The Kubernetes version for the compute environment.
+     *
+     * If you don't specify a value, the latest version that AWS Batch supports is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagekubernetesversion)
+     */
+    public fun imageKubernetesVersion(): String? = unwrap(this).getImageKubernetesVersion()
+
+    /**
+     * The image type to match with the instance type to select an AMI.
+     *
+     * The supported values are different for `ECS` and `EKS` resources.
+     *
+     * * **ECS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
+     * ECS-optimized Amazon Linux 2
+     * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
+     * ( `ECS_AL2` ) is used. If a new image type is specified in an update, but neither an `imageId`
+     * nor a `imageIdOverride` parameter is specified, then the latest Amazon ECS optimized AMI for
+     * that image type that's supported by AWS Batch is used.
+     * * **ECS_AL2** - [Amazon Linux
+     * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) :
+     * Default for all non-GPU instance families.
+     * * **ECS_AL2_NVIDIA** - [Amazon Linux 2
+     * (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
+     * : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for all non
+     * AWS Graviton-based instance types.
+     * * **ECS_AL2023** - [Amazon Linux
+     * 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) : AWS
+     * Batch supports Amazon Linux 2023.
+     *
+     *
+     * Amazon Linux 2023 does not support `A1` instances.
+     *
+     *
+     * * **ECS_AL1** - [Amazon
+     * Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
+     * . Amazon Linux has reached the end-of-life of standard support. For more information, see
+     * [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .
+     * * **EKS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
+     * EKS-optimized Amazon Linux
+     * AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) ( `EKS_AL2` ) is
+     * used. If a new image type is specified in an update, but neither an `imageId` nor a
+     * `imageIdOverride` parameter is specified, then the latest Amazon EKS optimized AMI for that
+     * image type that AWS Batch supports is used.
+     * * **EKS_AL2** - [Amazon Linux
+     * 2](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : Default for all
+     * non-GPU instance families.
+     * * **EKS_AL2_NVIDIA** - [Amazon Linux 2
+     * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
+     * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all non
+     * AWS Graviton-based instance types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagetype)
+     */
+    public fun imageType(): String
+
+    /**
+     * A builder for [Ec2ConfigurationObjectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param imageIdOverride The AMI ID used for instances launched in the compute environment
+       * that match the image type.
+       * This setting overrides the `imageId` set in the `computeResource` object.
+       *
+       *
+       * The AMI that you choose for a compute environment must match the architecture of the
+       * instance types that you intend to use for that compute environment. For example, if your
+       * compute environment uses A1 instance types, the compute resource AMI that you choose must
+       * support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized
+       * Amazon Linux 2 AMI. For more information, see [Amazon ECS-optimized Amazon Linux 2
+       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun imageIdOverride(imageIdOverride: String)
+
+      /**
+       * @param imageKubernetesVersion The Kubernetes version for the compute environment.
+       * If you don't specify a value, the latest version that AWS Batch supports is used.
+       */
+      public fun imageKubernetesVersion(imageKubernetesVersion: String)
+
+      /**
+       * @param imageType The image type to match with the instance type to select an AMI. 
+       * The supported values are different for `ECS` and `EKS` resources.
+       *
+       * * **ECS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
+       * ECS-optimized Amazon Linux 2
+       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
+       * ( `ECS_AL2` ) is used. If a new image type is specified in an update, but neither an `imageId`
+       * nor a `imageIdOverride` parameter is specified, then the latest Amazon ECS optimized AMI for
+       * that image type that's supported by AWS Batch is used.
+       * * **ECS_AL2** - [Amazon Linux
+       * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
+       * : Default for all non-GPU instance families.
+       * * **ECS_AL2_NVIDIA** - [Amazon Linux 2
+       * (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
+       * : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for all
+       * non AWS Graviton-based instance types.
+       * * **ECS_AL2023** - [Amazon Linux
+       * 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) :
+       * AWS Batch supports Amazon Linux 2023.
+       *
+       *
+       * Amazon Linux 2023 does not support `A1` instances.
+       *
+       *
+       * * **ECS_AL1** - [Amazon
+       * Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
+       * . Amazon Linux has reached the end-of-life of standard support. For more information, see
+       * [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .
+       * * **EKS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
+       * EKS-optimized Amazon Linux
+       * AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) ( `EKS_AL2` ) is
+       * used. If a new image type is specified in an update, but neither an `imageId` nor a
+       * `imageIdOverride` parameter is specified, then the latest Amazon EKS optimized AMI for that
+       * image type that AWS Batch supports is used.
+       * * **EKS_AL2** - [Amazon Linux
+       * 2](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : Default for all
+       * non-GPU instance families.
+       * * **EKS_AL2_NVIDIA** - [Amazon Linux 2
+       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
+       * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
+       * non AWS Graviton-based instance types.
+       */
+      public fun imageType(imageType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty.builder()
+
+      /**
+       * @param imageIdOverride The AMI ID used for instances launched in the compute environment
+       * that match the image type.
+       * This setting overrides the `imageId` set in the `computeResource` object.
+       *
+       *
+       * The AMI that you choose for a compute environment must match the architecture of the
+       * instance types that you intend to use for that compute environment. For example, if your
+       * compute environment uses A1 instance types, the compute resource AMI that you choose must
+       * support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized
+       * Amazon Linux 2 AMI. For more information, see [Amazon ECS-optimized Amazon Linux 2
+       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun imageIdOverride(imageIdOverride: String) {
+        cdkBuilder.imageIdOverride(imageIdOverride)
+      }
+
+      /**
+       * @param imageKubernetesVersion The Kubernetes version for the compute environment.
+       * If you don't specify a value, the latest version that AWS Batch supports is used.
+       */
+      override fun imageKubernetesVersion(imageKubernetesVersion: String) {
+        cdkBuilder.imageKubernetesVersion(imageKubernetesVersion)
+      }
+
+      /**
+       * @param imageType The image type to match with the instance type to select an AMI. 
+       * The supported values are different for `ECS` and `EKS` resources.
+       *
+       * * **ECS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
+       * ECS-optimized Amazon Linux 2
+       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
+       * ( `ECS_AL2` ) is used. If a new image type is specified in an update, but neither an `imageId`
+       * nor a `imageIdOverride` parameter is specified, then the latest Amazon ECS optimized AMI for
+       * that image type that's supported by AWS Batch is used.
+       * * **ECS_AL2** - [Amazon Linux
+       * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
+       * : Default for all non-GPU instance families.
+       * * **ECS_AL2_NVIDIA** - [Amazon Linux 2
+       * (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
+       * : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for all
+       * non AWS Graviton-based instance types.
+       * * **ECS_AL2023** - [Amazon Linux
+       * 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) :
+       * AWS Batch supports Amazon Linux 2023.
+       *
+       *
+       * Amazon Linux 2023 does not support `A1` instances.
+       *
+       *
+       * * **ECS_AL1** - [Amazon
+       * Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
+       * . Amazon Linux has reached the end-of-life of standard support. For more information, see
+       * [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .
+       * * **EKS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
+       * EKS-optimized Amazon Linux
+       * AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) ( `EKS_AL2` ) is
+       * used. If a new image type is specified in an update, but neither an `imageId` nor a
+       * `imageIdOverride` parameter is specified, then the latest Amazon EKS optimized AMI for that
+       * image type that AWS Batch supports is used.
+       * * **EKS_AL2** - [Amazon Linux
+       * 2](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : Default for all
+       * non-GPU instance families.
+       * * **EKS_AL2_NVIDIA** - [Amazon Linux 2
+       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
+       * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
+       * non AWS Graviton-based instance types.
+       */
+      override fun imageType(imageType: String) {
+        cdkBuilder.imageType(imageType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty,
+    ) : CdkObject(cdkObject), Ec2ConfigurationObjectProperty {
+      /**
+       * The AMI ID used for instances launched in the compute environment that match the image
+       * type.
+       *
+       * This setting overrides the `imageId` set in the `computeResource` object.
+       *
+       *
+       * The AMI that you choose for a compute environment must match the architecture of the
+       * instance types that you intend to use for that compute environment. For example, if your
+       * compute environment uses A1 instance types, the compute resource AMI that you choose must
+       * support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized
+       * Amazon Linux 2 AMI. For more information, see [Amazon ECS-optimized Amazon Linux 2
+       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imageidoverride)
+       */
+      override fun imageIdOverride(): String? = unwrap(this).getImageIdOverride()
+
+      /**
+       * The Kubernetes version for the compute environment.
+       *
+       * If you don't specify a value, the latest version that AWS Batch supports is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagekubernetesversion)
+       */
+      override fun imageKubernetesVersion(): String? = unwrap(this).getImageKubernetesVersion()
+
+      /**
+       * The image type to match with the instance type to select an AMI.
+       *
+       * The supported values are different for `ECS` and `EKS` resources.
+       *
+       * * **ECS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
+       * ECS-optimized Amazon Linux 2
+       * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
+       * ( `ECS_AL2` ) is used. If a new image type is specified in an update, but neither an `imageId`
+       * nor a `imageIdOverride` parameter is specified, then the latest Amazon ECS optimized AMI for
+       * that image type that's supported by AWS Batch is used.
+       * * **ECS_AL2** - [Amazon Linux
+       * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)
+       * : Default for all non-GPU instance families.
+       * * **ECS_AL2_NVIDIA** - [Amazon Linux 2
+       * (GPU)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#gpuami)
+       * : Default for all GPU instance families (for example `P4` and `G4` ) and can be used for all
+       * non AWS Graviton-based instance types.
+       * * **ECS_AL2023** - [Amazon Linux
+       * 2023](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) :
+       * AWS Batch supports Amazon Linux 2023.
+       *
+       *
+       * Amazon Linux 2023 does not support `A1` instances.
+       *
+       *
+       * * **ECS_AL1** - [Amazon
+       * Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)
+       * . Amazon Linux has reached the end-of-life of standard support. For more information, see
+       * [Amazon Linux AMI](https://docs.aws.amazon.com/amazon-linux-ami/) .
+       * * **EKS** - If the `imageIdOverride` parameter isn't specified, then a recent [Amazon
+       * EKS-optimized Amazon Linux
+       * AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) ( `EKS_AL2` ) is
+       * used. If a new image type is specified in an update, but neither an `imageId` nor a
+       * `imageIdOverride` parameter is specified, then the latest Amazon EKS optimized AMI for that
+       * image type that AWS Batch supports is used.
+       * * **EKS_AL2** - [Amazon Linux
+       * 2](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : Default for all
+       * non-GPU instance families.
+       * * **EKS_AL2_NVIDIA** - [Amazon Linux 2
+       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
+       * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
+       * non AWS Graviton-based instance types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagetype)
+       */
+      override fun imageType(): String = unwrap(this).getImageType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Ec2ConfigurationObjectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty):
+          Ec2ConfigurationObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Ec2ConfigurationObjectProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Ec2ConfigurationObjectProperty):
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty
+    }
+  }
+
+  /**
+   * Configuration for the Amazon EKS cluster that supports the AWS Batch compute environment.
+   *
+   * The cluster must exist before the compute environment can be created.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * EksConfigurationProperty eksConfigurationProperty = EksConfigurationProperty.builder()
+   * .eksClusterArn("eksClusterArn")
+   * .kubernetesNamespace("kubernetesNamespace")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html)
+   */
+  public interface EksConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+     *
+     * An example is `arn: *aws* :eks: *us-east-1* : *123456789012* :cluster/ *ClusterForBatch*` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-eksclusterarn)
+     */
+    public fun eksClusterArn(): String
+
+    /**
+     * The namespace of the Amazon EKS cluster.
+     *
+     * AWS Batch manages pods in this namespace. The value can't left empty or null. It must be
+     * fewer than 64 characters long, can't be set to `default` , can't start with " `kube-` ," and
+     * must match this regular expression: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$` . For more information,
+     * see
+     * [Namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+     * in the Kubernetes documentation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-kubernetesnamespace)
+     */
+    public fun kubernetesNamespace(): String
+
+    /**
+     * A builder for [EksConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param eksClusterArn The Amazon Resource Name (ARN) of the Amazon EKS cluster. 
+       * An example is `arn: *aws* :eks: *us-east-1* : *123456789012* :cluster/ *ClusterForBatch*` .
+       */
+      public fun eksClusterArn(eksClusterArn: String)
+
+      /**
+       * @param kubernetesNamespace The namespace of the Amazon EKS cluster. 
+       * AWS Batch manages pods in this namespace. The value can't left empty or null. It must be
+       * fewer than 64 characters long, can't be set to `default` , can't start with " `kube-` ," and
+       * must match this regular expression: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$` . For more information,
+       * see
+       * [Namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+       * in the Kubernetes documentation.
+       */
+      public fun kubernetesNamespace(kubernetesNamespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty.builder()
+
+      /**
+       * @param eksClusterArn The Amazon Resource Name (ARN) of the Amazon EKS cluster. 
+       * An example is `arn: *aws* :eks: *us-east-1* : *123456789012* :cluster/ *ClusterForBatch*` .
+       */
+      override fun eksClusterArn(eksClusterArn: String) {
+        cdkBuilder.eksClusterArn(eksClusterArn)
+      }
+
+      /**
+       * @param kubernetesNamespace The namespace of the Amazon EKS cluster. 
+       * AWS Batch manages pods in this namespace. The value can't left empty or null. It must be
+       * fewer than 64 characters long, can't be set to `default` , can't start with " `kube-` ," and
+       * must match this regular expression: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$` . For more information,
+       * see
+       * [Namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+       * in the Kubernetes documentation.
+       */
+      override fun kubernetesNamespace(kubernetesNamespace: String) {
+        cdkBuilder.kubernetesNamespace(kubernetesNamespace)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty,
+    ) : CdkObject(cdkObject), EksConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
+       *
+       * An example is `arn: *aws* :eks: *us-east-1* : *123456789012* :cluster/ *ClusterForBatch*` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-eksclusterarn)
+       */
+      override fun eksClusterArn(): String = unwrap(this).getEksClusterArn()
+
+      /**
+       * The namespace of the Amazon EKS cluster.
+       *
+       * AWS Batch manages pods in this namespace. The value can't left empty or null. It must be
+       * fewer than 64 characters long, can't be set to `default` , can't start with " `kube-` ," and
+       * must match this regular expression: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$` . For more information,
+       * see
+       * [Namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+       * in the Kubernetes documentation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html#cfn-batch-computeenvironment-eksconfiguration-kubernetesnamespace)
+       */
+      override fun kubernetesNamespace(): String = unwrap(this).getKubernetesNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EksConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty):
+          EksConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EksConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EksConfigurationProperty):
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty
+    }
+  }
+
+  /**
+   * An object that represents a launch template that's associated with a compute resource.
+   *
+   * You must specify either the launch template ID or launch template name in the request, but not
+   * both.
+   *
+   * If security groups are specified using both the `securityGroupIds` parameter of
+   * `CreateComputeEnvironment` and the launch template, the values in the `securityGroupIds` parameter
+   * of `CreateComputeEnvironment` will be used.
+   *
+   *
+   * This object isn't applicable to jobs that are running on Fargate resources.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * LaunchTemplateSpecificationProperty launchTemplateSpecificationProperty =
+   * LaunchTemplateSpecificationProperty.builder()
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html)
+   */
+  public interface LaunchTemplateSpecificationProperty {
+    /**
+     * The ID of the launch template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplateid)
+     */
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+    /**
+     * The name of the launch template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplatename)
+     */
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+    /**
+     * The version number of the launch template, `$Latest` , or `$Default` .
+     *
+     * If the value is `$Latest` , the latest version of the launch template is used. If the value
+     * is `$Default` , the default version of the launch template is used.
+     *
+     *
+     * If the AMI ID that's used in a compute environment is from the launch template, the AMI isn't
+     * changed when the compute environment is updated. It's only changed if the
+     * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During an
+     * infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch re-evaluates
+     * the launch template version, and it might use a different version of the launch template. This
+     * is the case even if the launch template isn't specified in the update. When updating a compute
+     * environment, changing the launch template requires an infrastructure update of the compute
+     * environment. For more information, see [Updating compute
+     * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+     * in the *AWS Batch User Guide* .
+     *
+     *
+     * Default: `$Default` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [LaunchTemplateSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       */
+      public fun launchTemplateId(launchTemplateId: String)
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       */
+      public fun launchTemplateName(launchTemplateName: String)
+
+      /**
+       * @param version The version number of the launch template, `$Latest` , or `$Default` .
+       * If the value is `$Latest` , the latest version of the launch template is used. If the value
+       * is `$Default` , the default version of the launch template is used.
+       *
+       *
+       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
+       * isn't changed when the compute environment is updated. It's only changed if the
+       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
+       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
+       * re-evaluates the launch template version, and it might use a different version of the launch
+       * template. This is the case even if the launch template isn't specified in the update. When
+       * updating a compute environment, changing the launch template requires an infrastructure update
+       * of the compute environment. For more information, see [Updating compute
+       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+       * in the *AWS Batch User Guide* .
+       *
+       *
+       * Default: `$Default` .
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty.builder()
+
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       */
+      override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       */
+      override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      /**
+       * @param version The version number of the launch template, `$Latest` , or `$Default` .
+       * If the value is `$Latest` , the latest version of the launch template is used. If the value
+       * is `$Default` , the default version of the launch template is used.
+       *
+       *
+       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
+       * isn't changed when the compute environment is updated. It's only changed if the
+       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
+       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
+       * re-evaluates the launch template version, and it might use a different version of the launch
+       * template. This is the case even if the launch template isn't specified in the update. When
+       * updating a compute environment, changing the launch template requires an infrastructure update
+       * of the compute environment. For more information, see [Updating compute
+       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+       * in the *AWS Batch User Guide* .
+       *
+       *
+       * Default: `$Default` .
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
+      /**
+       * The ID of the launch template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplateid)
+       */
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+      /**
+       * The name of the launch template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplatename)
+       */
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+      /**
+       * The version number of the launch template, `$Latest` , or `$Default` .
+       *
+       * If the value is `$Latest` , the latest version of the launch template is used. If the value
+       * is `$Default` , the default version of the launch template is used.
+       *
+       *
+       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
+       * isn't changed when the compute environment is updated. It's only changed if the
+       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
+       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
+       * re-evaluates the launch template version, and it might use a different version of the launch
+       * template. This is the case even if the launch template isn't specified in the update. When
+       * updating a compute environment, changing the launch template requires an infrastructure update
+       * of the compute environment. For more information, see [Updating compute
+       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+       * in the *AWS Batch User Guide* .
+       *
+       *
+       * Default: `$Default` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LaunchTemplateSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty):
+          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty
+    }
+  }
+
+  /**
+   * Specifies the infrastructure update policy for the compute environment.
+   *
+   * For more information about infrastructure updates, see [Updating compute
+   * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+   * in the *AWS Batch User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * UpdatePolicyProperty updatePolicyProperty = UpdatePolicyProperty.builder()
+   * .jobExecutionTimeoutMinutes(123)
+   * .terminateJobsOnUpdate(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html)
+   */
+  public interface UpdatePolicyProperty {
+    /**
+     * Specifies the job timeout (in minutes) when the compute environment infrastructure is
+     * updated.
+     *
+     * The default value is 30.
+     *
+     * Default: - 30
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html#cfn-batch-computeenvironment-updatepolicy-jobexecutiontimeoutminutes)
+     */
+    public fun jobExecutionTimeoutMinutes(): Number? = unwrap(this).getJobExecutionTimeoutMinutes()
+
+    /**
+     * Specifies whether jobs are automatically terminated when the computer environment
+     * infrastructure is updated.
+     *
+     * The default value is `false` .
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html#cfn-batch-computeenvironment-updatepolicy-terminatejobsonupdate)
+     */
+    public fun terminateJobsOnUpdate(): Any? = unwrap(this).getTerminateJobsOnUpdate()
+
+    /**
+     * A builder for [UpdatePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param jobExecutionTimeoutMinutes Specifies the job timeout (in minutes) when the compute
+       * environment infrastructure is updated.
+       * The default value is 30.
+       */
+      public fun jobExecutionTimeoutMinutes(jobExecutionTimeoutMinutes: Number)
+
+      /**
+       * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
+       * computer environment infrastructure is updated.
+       * The default value is `false` .
+       */
+      public fun terminateJobsOnUpdate(terminateJobsOnUpdate: Boolean)
+
+      /**
+       * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
+       * computer environment infrastructure is updated.
+       * The default value is `false` .
+       */
+      public fun terminateJobsOnUpdate(terminateJobsOnUpdate: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty.Builder =
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty.builder()
+
+      /**
+       * @param jobExecutionTimeoutMinutes Specifies the job timeout (in minutes) when the compute
+       * environment infrastructure is updated.
+       * The default value is 30.
+       */
+      override fun jobExecutionTimeoutMinutes(jobExecutionTimeoutMinutes: Number) {
+        cdkBuilder.jobExecutionTimeoutMinutes(jobExecutionTimeoutMinutes)
+      }
+
+      /**
+       * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
+       * computer environment infrastructure is updated.
+       * The default value is `false` .
+       */
+      override fun terminateJobsOnUpdate(terminateJobsOnUpdate: Boolean) {
+        cdkBuilder.terminateJobsOnUpdate(terminateJobsOnUpdate)
+      }
+
+      /**
+       * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
+       * computer environment infrastructure is updated.
+       * The default value is `false` .
+       */
+      override fun terminateJobsOnUpdate(terminateJobsOnUpdate: IResolvable) {
+        cdkBuilder.terminateJobsOnUpdate(terminateJobsOnUpdate.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty,
+    ) : CdkObject(cdkObject), UpdatePolicyProperty {
+      /**
+       * Specifies the job timeout (in minutes) when the compute environment infrastructure is
+       * updated.
+       *
+       * The default value is 30.
+       *
+       * Default: - 30
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html#cfn-batch-computeenvironment-updatepolicy-jobexecutiontimeoutminutes)
+       */
+      override fun jobExecutionTimeoutMinutes(): Number? =
+          unwrap(this).getJobExecutionTimeoutMinutes()
+
+      /**
+       * Specifies whether jobs are automatically terminated when the computer environment
+       * infrastructure is updated.
+       *
+       * The default value is `false` .
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html#cfn-batch-computeenvironment-updatepolicy-terminatejobsonupdate)
+       */
+      override fun terminateJobsOnUpdate(): Any? = unwrap(this).getTerminateJobsOnUpdate()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UpdatePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty):
+          UpdatePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? UpdatePolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UpdatePolicyProperty):
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty
     }
   }
 }

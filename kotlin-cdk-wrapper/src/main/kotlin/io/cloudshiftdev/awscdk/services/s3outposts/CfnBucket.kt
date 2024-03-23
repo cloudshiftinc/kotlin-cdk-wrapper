@@ -518,6 +518,496 @@ public open class CfnBucket internal constructor(
   }
 
   /**
+   * Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 on
+   * Outposts waits before permanently removing all parts of the upload.
+   *
+   * For more information, see [Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle
+   * Policy](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3outposts.*;
+   * AbortIncompleteMultipartUploadProperty abortIncompleteMultipartUploadProperty =
+   * AbortIncompleteMultipartUploadProperty.builder()
+   * .daysAfterInitiation(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-abortincompletemultipartupload.html)
+   */
+  public interface AbortIncompleteMultipartUploadProperty {
+    /**
+     * Specifies the number of days after initiation that Amazon S3 on Outposts aborts an incomplete
+     * multipart upload.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-abortincompletemultipartupload.html#cfn-s3outposts-bucket-abortincompletemultipartupload-daysafterinitiation)
+     */
+    public fun daysAfterInitiation(): Number
+
+    /**
+     * A builder for [AbortIncompleteMultipartUploadProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param daysAfterInitiation Specifies the number of days after initiation that Amazon S3 on
+       * Outposts aborts an incomplete multipart upload. 
+       */
+      public fun daysAfterInitiation(daysAfterInitiation: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty.Builder
+          =
+          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty.builder()
+
+      /**
+       * @param daysAfterInitiation Specifies the number of days after initiation that Amazon S3 on
+       * Outposts aborts an incomplete multipart upload. 
+       */
+      override fun daysAfterInitiation(daysAfterInitiation: Number) {
+        cdkBuilder.daysAfterInitiation(daysAfterInitiation)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty,
+    ) : CdkObject(cdkObject), AbortIncompleteMultipartUploadProperty {
+      /**
+       * Specifies the number of days after initiation that Amazon S3 on Outposts aborts an
+       * incomplete multipart upload.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-abortincompletemultipartupload.html#cfn-s3outposts-bucket-abortincompletemultipartupload-daysafterinitiation)
+       */
+      override fun daysAfterInitiation(): Number = unwrap(this).getDaysAfterInitiation()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AbortIncompleteMultipartUploadProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty):
+          AbortIncompleteMultipartUploadProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AbortIncompleteMultipartUploadProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AbortIncompleteMultipartUploadProperty):
+          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3outposts.*;
+   * FilterAndOperatorProperty filterAndOperatorProperty = FilterAndOperatorProperty.builder()
+   * .tags(List.of(FilterTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * // the properties below are optional
+   * .prefix("prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html)
+   */
+  public interface FilterAndOperatorProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-prefix)
+     */
+    public fun prefix(): String? = unwrap(this).getPrefix()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-tags)
+     */
+    public fun tags(): List<FilterTagProperty>
+
+    /**
+     * A builder for [FilterAndOperatorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param prefix the value to be set.
+       */
+      public fun prefix(prefix: String)
+
+      /**
+       * @param tags the value to be set. 
+       */
+      public fun tags(tags: List<FilterTagProperty>)
+
+      /**
+       * @param tags the value to be set. 
+       */
+      public fun tags(vararg tags: FilterTagProperty)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty.Builder =
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty.builder()
+
+      /**
+       * @param prefix the value to be set.
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      /**
+       * @param tags the value to be set. 
+       */
+      override fun tags(tags: List<FilterTagProperty>) {
+        cdkBuilder.tags(tags.map(FilterTagProperty::unwrap))
+      }
+
+      /**
+       * @param tags the value to be set. 
+       */
+      override fun tags(vararg tags: FilterTagProperty): Unit = tags(tags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty,
+    ) : CdkObject(cdkObject), FilterAndOperatorProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-prefix)
+       */
+      override fun prefix(): String? = unwrap(this).getPrefix()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-tags)
+       */
+      override fun tags(): List<FilterTagProperty> =
+          unwrap(this).getTags().map(FilterTagProperty::wrap)
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterAndOperatorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty):
+          FilterAndOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FilterAndOperatorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterAndOperatorProperty):
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3outposts.*;
+   * FilterProperty filterProperty = FilterProperty.builder()
+   * .andOperator(FilterAndOperatorProperty.builder()
+   * .tags(List.of(FilterTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * // the properties below are optional
+   * .prefix("prefix")
+   * .build())
+   * .prefix("prefix")
+   * .tag(FilterTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html)
+   */
+  public interface FilterProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-andoperator)
+     */
+    public fun andOperator(): Any? = unwrap(this).getAndOperator()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-prefix)
+     */
+    public fun prefix(): String? = unwrap(this).getPrefix()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-tag)
+     */
+    public fun tag(): Any? = unwrap(this).getTag()
+
+    /**
+     * A builder for [FilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param andOperator the value to be set.
+       */
+      public fun andOperator(andOperator: IResolvable)
+
+      /**
+       * @param andOperator the value to be set.
+       */
+      public fun andOperator(andOperator: FilterAndOperatorProperty)
+
+      /**
+       * @param andOperator the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b71659ddade6f7c3414d18dcbd9690daaab2e4c9245360663712d1c20f60dd17")
+      public fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit)
+
+      /**
+       * @param prefix the value to be set.
+       */
+      public fun prefix(prefix: String)
+
+      /**
+       * @param tag the value to be set.
+       */
+      public fun tag(tag: IResolvable)
+
+      /**
+       * @param tag the value to be set.
+       */
+      public fun tag(tag: FilterTagProperty)
+
+      /**
+       * @param tag the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("80d2ebc5a1b3d60f9f0c23045a9ce9c9a2ea11ba9bdebca176c617a4bdae06e8")
+      public fun tag(tag: FilterTagProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty.Builder =
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty.builder()
+
+      /**
+       * @param andOperator the value to be set.
+       */
+      override fun andOperator(andOperator: IResolvable) {
+        cdkBuilder.andOperator(andOperator.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param andOperator the value to be set.
+       */
+      override fun andOperator(andOperator: FilterAndOperatorProperty) {
+        cdkBuilder.andOperator(andOperator.let(FilterAndOperatorProperty::unwrap))
+      }
+
+      /**
+       * @param andOperator the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b71659ddade6f7c3414d18dcbd9690daaab2e4c9245360663712d1c20f60dd17")
+      override fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit): Unit =
+          andOperator(FilterAndOperatorProperty(andOperator))
+
+      /**
+       * @param prefix the value to be set.
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      /**
+       * @param tag the value to be set.
+       */
+      override fun tag(tag: IResolvable) {
+        cdkBuilder.tag(tag.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tag the value to be set.
+       */
+      override fun tag(tag: FilterTagProperty) {
+        cdkBuilder.tag(tag.let(FilterTagProperty::unwrap))
+      }
+
+      /**
+       * @param tag the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("80d2ebc5a1b3d60f9f0c23045a9ce9c9a2ea11ba9bdebca176c617a4bdae06e8")
+      override fun tag(tag: FilterTagProperty.Builder.() -> Unit): Unit =
+          tag(FilterTagProperty(tag))
+
+      public fun build(): software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty,
+    ) : CdkObject(cdkObject), FilterProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-andoperator)
+       */
+      override fun andOperator(): Any? = unwrap(this).getAndOperator()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-prefix)
+       */
+      override fun prefix(): String? = unwrap(this).getPrefix()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-tag)
+       */
+      override fun tag(): Any? = unwrap(this).getTag()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty):
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterProperty):
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3outposts.*;
+   * FilterTagProperty filterTagProperty = FilterTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html)
+   */
+  public interface FilterTagProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-key)
+     */
+    public fun key(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [FilterTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key the value to be set. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value the value to be set. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty.Builder =
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty.builder()
+
+      /**
+       * @param key the value to be set. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value the value to be set. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty,
+    ) : CdkObject(cdkObject), FilterTagProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty):
+          FilterTagProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterTagProperty):
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty
+    }
+  }
+
+  /**
    * The container for the lifecycle configuration for the objects stored in an S3 on Outposts
    * bucket.
    *
@@ -640,104 +1130,6 @@ public open class CfnBucket internal constructor(
           software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3outposts.*;
-   * FilterTagProperty filterTagProperty = FilterTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html)
-   */
-  public interface FilterTagProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-key)
-     */
-    public fun key(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [FilterTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key the value to be set. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value the value to be set. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty.Builder =
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty.builder()
-
-      /**
-       * @param key the value to be set. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value the value to be set. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty,
-    ) : CdkObject(cdkObject), FilterTagProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filtertag.html#cfn-s3outposts-bucket-filtertag-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty):
-          FilterTagProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterTagProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterTagProperty):
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty
     }
   }
 
@@ -1003,398 +1395,6 @@ public open class CfnBucket internal constructor(
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty
-    }
-  }
-
-  /**
-   * Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 on
-   * Outposts waits before permanently removing all parts of the upload.
-   *
-   * For more information, see [Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle
-   * Policy](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3outposts.*;
-   * AbortIncompleteMultipartUploadProperty abortIncompleteMultipartUploadProperty =
-   * AbortIncompleteMultipartUploadProperty.builder()
-   * .daysAfterInitiation(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-abortincompletemultipartupload.html)
-   */
-  public interface AbortIncompleteMultipartUploadProperty {
-    /**
-     * Specifies the number of days after initiation that Amazon S3 on Outposts aborts an incomplete
-     * multipart upload.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-abortincompletemultipartupload.html#cfn-s3outposts-bucket-abortincompletemultipartupload-daysafterinitiation)
-     */
-    public fun daysAfterInitiation(): Number
-
-    /**
-     * A builder for [AbortIncompleteMultipartUploadProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param daysAfterInitiation Specifies the number of days after initiation that Amazon S3 on
-       * Outposts aborts an incomplete multipart upload. 
-       */
-      public fun daysAfterInitiation(daysAfterInitiation: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty.Builder
-          =
-          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty.builder()
-
-      /**
-       * @param daysAfterInitiation Specifies the number of days after initiation that Amazon S3 on
-       * Outposts aborts an incomplete multipart upload. 
-       */
-      override fun daysAfterInitiation(daysAfterInitiation: Number) {
-        cdkBuilder.daysAfterInitiation(daysAfterInitiation)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty,
-    ) : CdkObject(cdkObject), AbortIncompleteMultipartUploadProperty {
-      /**
-       * Specifies the number of days after initiation that Amazon S3 on Outposts aborts an
-       * incomplete multipart upload.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-abortincompletemultipartupload.html#cfn-s3outposts-bucket-abortincompletemultipartupload-daysafterinitiation)
-       */
-      override fun daysAfterInitiation(): Number = unwrap(this).getDaysAfterInitiation()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AbortIncompleteMultipartUploadProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty):
-          AbortIncompleteMultipartUploadProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AbortIncompleteMultipartUploadProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AbortIncompleteMultipartUploadProperty):
-          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3outposts.*;
-   * FilterProperty filterProperty = FilterProperty.builder()
-   * .andOperator(FilterAndOperatorProperty.builder()
-   * .tags(List.of(FilterTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * // the properties below are optional
-   * .prefix("prefix")
-   * .build())
-   * .prefix("prefix")
-   * .tag(FilterTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html)
-   */
-  public interface FilterProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-andoperator)
-     */
-    public fun andOperator(): Any? = unwrap(this).getAndOperator()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-prefix)
-     */
-    public fun prefix(): String? = unwrap(this).getPrefix()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-tag)
-     */
-    public fun tag(): Any? = unwrap(this).getTag()
-
-    /**
-     * A builder for [FilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param andOperator the value to be set.
-       */
-      public fun andOperator(andOperator: IResolvable)
-
-      /**
-       * @param andOperator the value to be set.
-       */
-      public fun andOperator(andOperator: FilterAndOperatorProperty)
-
-      /**
-       * @param andOperator the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b71659ddade6f7c3414d18dcbd9690daaab2e4c9245360663712d1c20f60dd17")
-      public fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit)
-
-      /**
-       * @param prefix the value to be set.
-       */
-      public fun prefix(prefix: String)
-
-      /**
-       * @param tag the value to be set.
-       */
-      public fun tag(tag: IResolvable)
-
-      /**
-       * @param tag the value to be set.
-       */
-      public fun tag(tag: FilterTagProperty)
-
-      /**
-       * @param tag the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("80d2ebc5a1b3d60f9f0c23045a9ce9c9a2ea11ba9bdebca176c617a4bdae06e8")
-      public fun tag(tag: FilterTagProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty.Builder =
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty.builder()
-
-      /**
-       * @param andOperator the value to be set.
-       */
-      override fun andOperator(andOperator: IResolvable) {
-        cdkBuilder.andOperator(andOperator.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param andOperator the value to be set.
-       */
-      override fun andOperator(andOperator: FilterAndOperatorProperty) {
-        cdkBuilder.andOperator(andOperator.let(FilterAndOperatorProperty::unwrap))
-      }
-
-      /**
-       * @param andOperator the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b71659ddade6f7c3414d18dcbd9690daaab2e4c9245360663712d1c20f60dd17")
-      override fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit): Unit =
-          andOperator(FilterAndOperatorProperty(andOperator))
-
-      /**
-       * @param prefix the value to be set.
-       */
-      override fun prefix(prefix: String) {
-        cdkBuilder.prefix(prefix)
-      }
-
-      /**
-       * @param tag the value to be set.
-       */
-      override fun tag(tag: IResolvable) {
-        cdkBuilder.tag(tag.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tag the value to be set.
-       */
-      override fun tag(tag: FilterTagProperty) {
-        cdkBuilder.tag(tag.let(FilterTagProperty::unwrap))
-      }
-
-      /**
-       * @param tag the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("80d2ebc5a1b3d60f9f0c23045a9ce9c9a2ea11ba9bdebca176c617a4bdae06e8")
-      override fun tag(tag: FilterTagProperty.Builder.() -> Unit): Unit =
-          tag(FilterTagProperty(tag))
-
-      public fun build(): software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-andoperator)
-       */
-      override fun andOperator(): Any? = unwrap(this).getAndOperator()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-prefix)
-       */
-      override fun prefix(): String? = unwrap(this).getPrefix()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-tag)
-       */
-      override fun tag(): Any? = unwrap(this).getTag()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterProperty):
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3outposts.*;
-   * FilterAndOperatorProperty filterAndOperatorProperty = FilterAndOperatorProperty.builder()
-   * .tags(List.of(FilterTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * // the properties below are optional
-   * .prefix("prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html)
-   */
-  public interface FilterAndOperatorProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-prefix)
-     */
-    public fun prefix(): String? = unwrap(this).getPrefix()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-tags)
-     */
-    public fun tags(): List<FilterTagProperty>
-
-    /**
-     * A builder for [FilterAndOperatorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param prefix the value to be set.
-       */
-      public fun prefix(prefix: String)
-
-      /**
-       * @param tags the value to be set. 
-       */
-      public fun tags(tags: List<FilterTagProperty>)
-
-      /**
-       * @param tags the value to be set. 
-       */
-      public fun tags(vararg tags: FilterTagProperty)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty.Builder =
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty.builder()
-
-      /**
-       * @param prefix the value to be set.
-       */
-      override fun prefix(prefix: String) {
-        cdkBuilder.prefix(prefix)
-      }
-
-      /**
-       * @param tags the value to be set. 
-       */
-      override fun tags(tags: List<FilterTagProperty>) {
-        cdkBuilder.tags(tags.map(FilterTagProperty::unwrap))
-      }
-
-      /**
-       * @param tags the value to be set. 
-       */
-      override fun tags(vararg tags: FilterTagProperty): Unit = tags(tags.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty,
-    ) : CdkObject(cdkObject), FilterAndOperatorProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-prefix)
-       */
-      override fun prefix(): String? = unwrap(this).getPrefix()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-tags)
-       */
-      override fun tags(): List<FilterTagProperty> =
-          unwrap(this).getTags().map(FilterTagProperty::wrap)
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterAndOperatorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty):
-          FilterAndOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FilterAndOperatorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterAndOperatorProperty):
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty
     }
   }
 }

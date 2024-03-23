@@ -6,4 +6,7 @@ import kotlin.Any
 
 public abstract class CdkObject(
   internal open val cdkObject: Any,
-)
+) {
+  init {
+     CdkObjectWrappers.register(this)}
+}

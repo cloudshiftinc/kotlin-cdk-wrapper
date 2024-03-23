@@ -494,128 +494,6 @@ public open class CfnSolution internal constructor(
   }
 
   /**
-   * When the solution performs AutoML ( `performAutoML` is true in
-   * [CreateSolution](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html) ),
-   * Amazon Personalize determines which recipe, from the specified list, optimizes the given metric.
-   * Amazon Personalize then uses that recipe for the solution.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.personalize.*;
-   * AutoMLConfigProperty autoMLConfigProperty = AutoMLConfigProperty.builder()
-   * .metricName("metricName")
-   * .recipeList(List.of("recipeList"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html)
-   */
-  public interface AutoMLConfigProperty {
-    /**
-     * The metric to optimize.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html#cfn-personalize-solution-automlconfig-metricname)
-     */
-    public fun metricName(): String? = unwrap(this).getMetricName()
-
-    /**
-     * The list of candidate recipes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html#cfn-personalize-solution-automlconfig-recipelist)
-     */
-    public fun recipeList(): List<String> = unwrap(this).getRecipeList() ?: emptyList()
-
-    /**
-     * A builder for [AutoMLConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param metricName The metric to optimize.
-       */
-      public fun metricName(metricName: String)
-
-      /**
-       * @param recipeList The list of candidate recipes.
-       */
-      public fun recipeList(recipeList: List<String>)
-
-      /**
-       * @param recipeList The list of candidate recipes.
-       */
-      public fun recipeList(vararg recipeList: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty.Builder =
-          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty.builder()
-
-      /**
-       * @param metricName The metric to optimize.
-       */
-      override fun metricName(metricName: String) {
-        cdkBuilder.metricName(metricName)
-      }
-
-      /**
-       * @param recipeList The list of candidate recipes.
-       */
-      override fun recipeList(recipeList: List<String>) {
-        cdkBuilder.recipeList(recipeList)
-      }
-
-      /**
-       * @param recipeList The list of candidate recipes.
-       */
-      override fun recipeList(vararg recipeList: String): Unit = recipeList(recipeList.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty,
-    ) : CdkObject(cdkObject), AutoMLConfigProperty {
-      /**
-       * The metric to optimize.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html#cfn-personalize-solution-automlconfig-metricname)
-       */
-      override fun metricName(): String? = unwrap(this).getMetricName()
-
-      /**
-       * The list of candidate recipes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html#cfn-personalize-solution-automlconfig-recipelist)
-       */
-      override fun recipeList(): List<String> = unwrap(this).getRecipeList() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoMLConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty):
-          AutoMLConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoMLConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoMLConfigProperty):
-          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty
-    }
-  }
-
-  /**
    * Specifies the hyperparameters and their ranges.
    *
    * Hyperparameters can be categorical, continuous, or integer-valued.
@@ -860,7 +738,10 @@ public open class CfnSolution internal constructor(
   }
 
   /**
-   * Provides the name and range of an integer-valued hyperparameter.
+   * When the solution performs AutoML ( `performAutoML` is true in
+   * [CreateSolution](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html) ),
+   * Amazon Personalize determines which recipe, from the specified list, optimizes the given metric.
+   * Amazon Personalize then uses that recipe for the solution.
    *
    * Example:
    *
@@ -868,133 +749,113 @@ public open class CfnSolution internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.personalize.*;
-   * IntegerHyperParameterRangeProperty integerHyperParameterRangeProperty =
-   * IntegerHyperParameterRangeProperty.builder()
-   * .maxValue(123)
-   * .minValue(123)
-   * .name("name")
+   * AutoMLConfigProperty autoMLConfigProperty = AutoMLConfigProperty.builder()
+   * .metricName("metricName")
+   * .recipeList(List.of("recipeList"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html)
    */
-  public interface IntegerHyperParameterRangeProperty {
+  public interface AutoMLConfigProperty {
     /**
-     * The maximum allowable value for the hyperparameter.
+     * The metric to optimize.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-maxvalue)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html#cfn-personalize-solution-automlconfig-metricname)
      */
-    public fun maxValue(): Number? = unwrap(this).getMaxValue()
+    public fun metricName(): String? = unwrap(this).getMetricName()
 
     /**
-     * The minimum allowable value for the hyperparameter.
+     * The list of candidate recipes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-minvalue)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html#cfn-personalize-solution-automlconfig-recipelist)
      */
-    public fun minValue(): Number? = unwrap(this).getMinValue()
+    public fun recipeList(): List<String> = unwrap(this).getRecipeList() ?: emptyList()
 
     /**
-     * The name of the hyperparameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [IntegerHyperParameterRangeProperty]
+     * A builder for [AutoMLConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxValue The maximum allowable value for the hyperparameter.
+       * @param metricName The metric to optimize.
        */
-      public fun maxValue(maxValue: Number)
+      public fun metricName(metricName: String)
 
       /**
-       * @param minValue The minimum allowable value for the hyperparameter.
+       * @param recipeList The list of candidate recipes.
        */
-      public fun minValue(minValue: Number)
+      public fun recipeList(recipeList: List<String>)
 
       /**
-       * @param name The name of the hyperparameter.
+       * @param recipeList The list of candidate recipes.
        */
-      public fun name(name: String)
+      public fun recipeList(vararg recipeList: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty.Builder
-          =
-          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty.builder()
+          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty.Builder =
+          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty.builder()
 
       /**
-       * @param maxValue The maximum allowable value for the hyperparameter.
+       * @param metricName The metric to optimize.
        */
-      override fun maxValue(maxValue: Number) {
-        cdkBuilder.maxValue(maxValue)
+      override fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
       }
 
       /**
-       * @param minValue The minimum allowable value for the hyperparameter.
+       * @param recipeList The list of candidate recipes.
        */
-      override fun minValue(minValue: Number) {
-        cdkBuilder.minValue(minValue)
+      override fun recipeList(recipeList: List<String>) {
+        cdkBuilder.recipeList(recipeList)
       }
 
       /**
-       * @param name The name of the hyperparameter.
+       * @param recipeList The list of candidate recipes.
        */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+      override fun recipeList(vararg recipeList: String): Unit = recipeList(recipeList.toList())
 
       public fun build():
-          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty,
-    ) : CdkObject(cdkObject), IntegerHyperParameterRangeProperty {
+          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty,
+    ) : CdkObject(cdkObject), AutoMLConfigProperty {
       /**
-       * The maximum allowable value for the hyperparameter.
+       * The metric to optimize.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-maxvalue)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html#cfn-personalize-solution-automlconfig-metricname)
        */
-      override fun maxValue(): Number? = unwrap(this).getMaxValue()
+      override fun metricName(): String? = unwrap(this).getMetricName()
 
       /**
-       * The minimum allowable value for the hyperparameter.
+       * The list of candidate recipes.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-minvalue)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html#cfn-personalize-solution-automlconfig-recipelist)
        */
-      override fun minValue(): Number? = unwrap(this).getMinValue()
-
-      /**
-       * The name of the hyperparameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+      override fun recipeList(): List<String> = unwrap(this).getRecipeList() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          IntegerHyperParameterRangeProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoMLConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty):
-          IntegerHyperParameterRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IntegerHyperParameterRangeProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty):
+          AutoMLConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoMLConfigProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: IntegerHyperParameterRangeProperty):
-          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty
+      internal fun unwrap(wrapped: AutoMLConfigProperty):
+          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty
     }
   }
 
@@ -1117,238 +978,6 @@ public open class CfnSolution internal constructor(
           software.amazon.awscdk.services.personalize.CfnSolution.CategoricalHyperParameterRangeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.personalize.CfnSolution.CategoricalHyperParameterRangeProperty
-    }
-  }
-
-  /**
-   * Describes the configuration properties for the solution.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.personalize.*;
-   * Object autoMlConfig;
-   * Object hpoConfig;
-   * SolutionConfigProperty solutionConfigProperty = SolutionConfigProperty.builder()
-   * .algorithmHyperParameters(Map.of(
-   * "algorithmHyperParametersKey", "algorithmHyperParameters"))
-   * .autoMlConfig(autoMlConfig)
-   * .eventValueThreshold("eventValueThreshold")
-   * .featureTransformationParameters(Map.of(
-   * "featureTransformationParametersKey", "featureTransformationParameters"))
-   * .hpoConfig(hpoConfig)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html)
-   */
-  public interface SolutionConfigProperty {
-    /**
-     * Lists the algorithm hyperparameters and their values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-algorithmhyperparameters)
-     */
-    public fun algorithmHyperParameters(): Any? = unwrap(this).getAlgorithmHyperParameters()
-
-    /**
-     * The [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html)
-     * object containing a list of recipes to search when AutoML is performed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-automlconfig)
-     */
-    public fun autoMlConfig(): Any? = unwrap(this).getAutoMlConfig()
-
-    /**
-     * Only events with a value greater than or equal to this threshold are used for training a
-     * model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-eventvaluethreshold)
-     */
-    public fun eventValueThreshold(): String? = unwrap(this).getEventValueThreshold()
-
-    /**
-     * Lists the feature transformation parameters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-featuretransformationparameters)
-     */
-    public fun featureTransformationParameters(): Any? =
-        unwrap(this).getFeatureTransformationParameters()
-
-    /**
-     * Describes the properties for hyperparameter optimization (HPO).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-hpoconfig)
-     */
-    public fun hpoConfig(): Any? = unwrap(this).getHpoConfig()
-
-    /**
-     * A builder for [SolutionConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
-       */
-      public fun algorithmHyperParameters(algorithmHyperParameters: IResolvable)
-
-      /**
-       * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
-       */
-      public fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>)
-
-      /**
-       * @param autoMlConfig The
-       * [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html) object
-       * containing a list of recipes to search when AutoML is performed.
-       */
-      public fun autoMlConfig(autoMlConfig: Any)
-
-      /**
-       * @param eventValueThreshold Only events with a value greater than or equal to this threshold
-       * are used for training a model.
-       */
-      public fun eventValueThreshold(eventValueThreshold: String)
-
-      /**
-       * @param featureTransformationParameters Lists the feature transformation parameters.
-       */
-      public fun featureTransformationParameters(featureTransformationParameters: IResolvable)
-
-      /**
-       * @param featureTransformationParameters Lists the feature transformation parameters.
-       */
-      public
-          fun featureTransformationParameters(featureTransformationParameters: Map<String, String>)
-
-      /**
-       * @param hpoConfig Describes the properties for hyperparameter optimization (HPO).
-       */
-      public fun hpoConfig(hpoConfig: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty.Builder =
-          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty.builder()
-
-      /**
-       * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
-       */
-      override fun algorithmHyperParameters(algorithmHyperParameters: IResolvable) {
-        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
-       */
-      override fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>) {
-        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters)
-      }
-
-      /**
-       * @param autoMlConfig The
-       * [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html) object
-       * containing a list of recipes to search when AutoML is performed.
-       */
-      override fun autoMlConfig(autoMlConfig: Any) {
-        cdkBuilder.autoMlConfig(autoMlConfig)
-      }
-
-      /**
-       * @param eventValueThreshold Only events with a value greater than or equal to this threshold
-       * are used for training a model.
-       */
-      override fun eventValueThreshold(eventValueThreshold: String) {
-        cdkBuilder.eventValueThreshold(eventValueThreshold)
-      }
-
-      /**
-       * @param featureTransformationParameters Lists the feature transformation parameters.
-       */
-      override fun featureTransformationParameters(featureTransformationParameters: IResolvable) {
-        cdkBuilder.featureTransformationParameters(featureTransformationParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param featureTransformationParameters Lists the feature transformation parameters.
-       */
-      override
-          fun featureTransformationParameters(featureTransformationParameters: Map<String, String>) {
-        cdkBuilder.featureTransformationParameters(featureTransformationParameters)
-      }
-
-      /**
-       * @param hpoConfig Describes the properties for hyperparameter optimization (HPO).
-       */
-      override fun hpoConfig(hpoConfig: Any) {
-        cdkBuilder.hpoConfig(hpoConfig)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty,
-    ) : CdkObject(cdkObject), SolutionConfigProperty {
-      /**
-       * Lists the algorithm hyperparameters and their values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-algorithmhyperparameters)
-       */
-      override fun algorithmHyperParameters(): Any? = unwrap(this).getAlgorithmHyperParameters()
-
-      /**
-       * The [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html)
-       * object containing a list of recipes to search when AutoML is performed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-automlconfig)
-       */
-      override fun autoMlConfig(): Any? = unwrap(this).getAutoMlConfig()
-
-      /**
-       * Only events with a value greater than or equal to this threshold are used for training a
-       * model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-eventvaluethreshold)
-       */
-      override fun eventValueThreshold(): String? = unwrap(this).getEventValueThreshold()
-
-      /**
-       * Lists the feature transformation parameters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-featuretransformationparameters)
-       */
-      override fun featureTransformationParameters(): Any? =
-          unwrap(this).getFeatureTransformationParameters()
-
-      /**
-       * Describes the properties for hyperparameter optimization (HPO).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-hpoconfig)
-       */
-      override fun hpoConfig(): Any? = unwrap(this).getHpoConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SolutionConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty):
-          SolutionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SolutionConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SolutionConfigProperty):
-          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty
     }
   }
 
@@ -1758,132 +1387,6 @@ public open class CfnSolution internal constructor(
   }
 
   /**
-   * Describes the resource configuration for hyperparameter optimization (HPO).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.personalize.*;
-   * HpoResourceConfigProperty hpoResourceConfigProperty = HpoResourceConfigProperty.builder()
-   * .maxNumberOfTrainingJobs("maxNumberOfTrainingJobs")
-   * .maxParallelTrainingJobs("maxParallelTrainingJobs")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html)
-   */
-  public interface HpoResourceConfigProperty {
-    /**
-     * The maximum number of training jobs when you create a solution version.
-     *
-     * The maximum value for `maxNumberOfTrainingJobs` is `40` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html#cfn-personalize-solution-hporesourceconfig-maxnumberoftrainingjobs)
-     */
-    public fun maxNumberOfTrainingJobs(): String? = unwrap(this).getMaxNumberOfTrainingJobs()
-
-    /**
-     * The maximum number of parallel training jobs when you create a solution version.
-     *
-     * The maximum value for `maxParallelTrainingJobs` is `10` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html#cfn-personalize-solution-hporesourceconfig-maxparalleltrainingjobs)
-     */
-    public fun maxParallelTrainingJobs(): String? = unwrap(this).getMaxParallelTrainingJobs()
-
-    /**
-     * A builder for [HpoResourceConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxNumberOfTrainingJobs The maximum number of training jobs when you create a
-       * solution version.
-       * The maximum value for `maxNumberOfTrainingJobs` is `40` .
-       */
-      public fun maxNumberOfTrainingJobs(maxNumberOfTrainingJobs: String)
-
-      /**
-       * @param maxParallelTrainingJobs The maximum number of parallel training jobs when you create
-       * a solution version.
-       * The maximum value for `maxParallelTrainingJobs` is `10` .
-       */
-      public fun maxParallelTrainingJobs(maxParallelTrainingJobs: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty.builder()
-
-      /**
-       * @param maxNumberOfTrainingJobs The maximum number of training jobs when you create a
-       * solution version.
-       * The maximum value for `maxNumberOfTrainingJobs` is `40` .
-       */
-      override fun maxNumberOfTrainingJobs(maxNumberOfTrainingJobs: String) {
-        cdkBuilder.maxNumberOfTrainingJobs(maxNumberOfTrainingJobs)
-      }
-
-      /**
-       * @param maxParallelTrainingJobs The maximum number of parallel training jobs when you create
-       * a solution version.
-       * The maximum value for `maxParallelTrainingJobs` is `10` .
-       */
-      override fun maxParallelTrainingJobs(maxParallelTrainingJobs: String) {
-        cdkBuilder.maxParallelTrainingJobs(maxParallelTrainingJobs)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty,
-    ) : CdkObject(cdkObject), HpoResourceConfigProperty {
-      /**
-       * The maximum number of training jobs when you create a solution version.
-       *
-       * The maximum value for `maxNumberOfTrainingJobs` is `40` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html#cfn-personalize-solution-hporesourceconfig-maxnumberoftrainingjobs)
-       */
-      override fun maxNumberOfTrainingJobs(): String? = unwrap(this).getMaxNumberOfTrainingJobs()
-
-      /**
-       * The maximum number of parallel training jobs when you create a solution version.
-       *
-       * The maximum value for `maxParallelTrainingJobs` is `10` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html#cfn-personalize-solution-hporesourceconfig-maxparalleltrainingjobs)
-       */
-      override fun maxParallelTrainingJobs(): String? = unwrap(this).getMaxParallelTrainingJobs()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HpoResourceConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty):
-          HpoResourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HpoResourceConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HpoResourceConfigProperty):
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty
-    }
-  }
-
-  /**
    * The metric to optimize during hyperparameter optimization (HPO).
    *
    *
@@ -2026,6 +1529,503 @@ public open class CfnSolution internal constructor(
           software.amazon.awscdk.services.personalize.CfnSolution.HpoObjectiveProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.personalize.CfnSolution.HpoObjectiveProperty
+    }
+  }
+
+  /**
+   * Describes the resource configuration for hyperparameter optimization (HPO).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.personalize.*;
+   * HpoResourceConfigProperty hpoResourceConfigProperty = HpoResourceConfigProperty.builder()
+   * .maxNumberOfTrainingJobs("maxNumberOfTrainingJobs")
+   * .maxParallelTrainingJobs("maxParallelTrainingJobs")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html)
+   */
+  public interface HpoResourceConfigProperty {
+    /**
+     * The maximum number of training jobs when you create a solution version.
+     *
+     * The maximum value for `maxNumberOfTrainingJobs` is `40` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html#cfn-personalize-solution-hporesourceconfig-maxnumberoftrainingjobs)
+     */
+    public fun maxNumberOfTrainingJobs(): String? = unwrap(this).getMaxNumberOfTrainingJobs()
+
+    /**
+     * The maximum number of parallel training jobs when you create a solution version.
+     *
+     * The maximum value for `maxParallelTrainingJobs` is `10` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html#cfn-personalize-solution-hporesourceconfig-maxparalleltrainingjobs)
+     */
+    public fun maxParallelTrainingJobs(): String? = unwrap(this).getMaxParallelTrainingJobs()
+
+    /**
+     * A builder for [HpoResourceConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxNumberOfTrainingJobs The maximum number of training jobs when you create a
+       * solution version.
+       * The maximum value for `maxNumberOfTrainingJobs` is `40` .
+       */
+      public fun maxNumberOfTrainingJobs(maxNumberOfTrainingJobs: String)
+
+      /**
+       * @param maxParallelTrainingJobs The maximum number of parallel training jobs when you create
+       * a solution version.
+       * The maximum value for `maxParallelTrainingJobs` is `10` .
+       */
+      public fun maxParallelTrainingJobs(maxParallelTrainingJobs: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty.builder()
+
+      /**
+       * @param maxNumberOfTrainingJobs The maximum number of training jobs when you create a
+       * solution version.
+       * The maximum value for `maxNumberOfTrainingJobs` is `40` .
+       */
+      override fun maxNumberOfTrainingJobs(maxNumberOfTrainingJobs: String) {
+        cdkBuilder.maxNumberOfTrainingJobs(maxNumberOfTrainingJobs)
+      }
+
+      /**
+       * @param maxParallelTrainingJobs The maximum number of parallel training jobs when you create
+       * a solution version.
+       * The maximum value for `maxParallelTrainingJobs` is `10` .
+       */
+      override fun maxParallelTrainingJobs(maxParallelTrainingJobs: String) {
+        cdkBuilder.maxParallelTrainingJobs(maxParallelTrainingJobs)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty,
+    ) : CdkObject(cdkObject), HpoResourceConfigProperty {
+      /**
+       * The maximum number of training jobs when you create a solution version.
+       *
+       * The maximum value for `maxNumberOfTrainingJobs` is `40` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html#cfn-personalize-solution-hporesourceconfig-maxnumberoftrainingjobs)
+       */
+      override fun maxNumberOfTrainingJobs(): String? = unwrap(this).getMaxNumberOfTrainingJobs()
+
+      /**
+       * The maximum number of parallel training jobs when you create a solution version.
+       *
+       * The maximum value for `maxParallelTrainingJobs` is `10` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hporesourceconfig.html#cfn-personalize-solution-hporesourceconfig-maxparalleltrainingjobs)
+       */
+      override fun maxParallelTrainingJobs(): String? = unwrap(this).getMaxParallelTrainingJobs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HpoResourceConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty):
+          HpoResourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HpoResourceConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HpoResourceConfigProperty):
+          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty
+    }
+  }
+
+  /**
+   * Provides the name and range of an integer-valued hyperparameter.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.personalize.*;
+   * IntegerHyperParameterRangeProperty integerHyperParameterRangeProperty =
+   * IntegerHyperParameterRangeProperty.builder()
+   * .maxValue(123)
+   * .minValue(123)
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html)
+   */
+  public interface IntegerHyperParameterRangeProperty {
+    /**
+     * The maximum allowable value for the hyperparameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-maxvalue)
+     */
+    public fun maxValue(): Number? = unwrap(this).getMaxValue()
+
+    /**
+     * The minimum allowable value for the hyperparameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-minvalue)
+     */
+    public fun minValue(): Number? = unwrap(this).getMinValue()
+
+    /**
+     * The name of the hyperparameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [IntegerHyperParameterRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxValue The maximum allowable value for the hyperparameter.
+       */
+      public fun maxValue(maxValue: Number)
+
+      /**
+       * @param minValue The minimum allowable value for the hyperparameter.
+       */
+      public fun minValue(minValue: Number)
+
+      /**
+       * @param name The name of the hyperparameter.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty.Builder
+          =
+          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty.builder()
+
+      /**
+       * @param maxValue The maximum allowable value for the hyperparameter.
+       */
+      override fun maxValue(maxValue: Number) {
+        cdkBuilder.maxValue(maxValue)
+      }
+
+      /**
+       * @param minValue The minimum allowable value for the hyperparameter.
+       */
+      override fun minValue(minValue: Number) {
+        cdkBuilder.minValue(minValue)
+      }
+
+      /**
+       * @param name The name of the hyperparameter.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty,
+    ) : CdkObject(cdkObject), IntegerHyperParameterRangeProperty {
+      /**
+       * The maximum allowable value for the hyperparameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-maxvalue)
+       */
+      override fun maxValue(): Number? = unwrap(this).getMaxValue()
+
+      /**
+       * The minimum allowable value for the hyperparameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-minvalue)
+       */
+      override fun minValue(): Number? = unwrap(this).getMinValue()
+
+      /**
+       * The name of the hyperparameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html#cfn-personalize-solution-integerhyperparameterrange-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IntegerHyperParameterRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty):
+          IntegerHyperParameterRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntegerHyperParameterRangeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IntegerHyperParameterRangeProperty):
+          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty
+    }
+  }
+
+  /**
+   * Describes the configuration properties for the solution.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.personalize.*;
+   * Object autoMlConfig;
+   * Object hpoConfig;
+   * SolutionConfigProperty solutionConfigProperty = SolutionConfigProperty.builder()
+   * .algorithmHyperParameters(Map.of(
+   * "algorithmHyperParametersKey", "algorithmHyperParameters"))
+   * .autoMlConfig(autoMlConfig)
+   * .eventValueThreshold("eventValueThreshold")
+   * .featureTransformationParameters(Map.of(
+   * "featureTransformationParametersKey", "featureTransformationParameters"))
+   * .hpoConfig(hpoConfig)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html)
+   */
+  public interface SolutionConfigProperty {
+    /**
+     * Lists the algorithm hyperparameters and their values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-algorithmhyperparameters)
+     */
+    public fun algorithmHyperParameters(): Any? = unwrap(this).getAlgorithmHyperParameters()
+
+    /**
+     * The [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html)
+     * object containing a list of recipes to search when AutoML is performed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-automlconfig)
+     */
+    public fun autoMlConfig(): Any? = unwrap(this).getAutoMlConfig()
+
+    /**
+     * Only events with a value greater than or equal to this threshold are used for training a
+     * model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-eventvaluethreshold)
+     */
+    public fun eventValueThreshold(): String? = unwrap(this).getEventValueThreshold()
+
+    /**
+     * Lists the feature transformation parameters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-featuretransformationparameters)
+     */
+    public fun featureTransformationParameters(): Any? =
+        unwrap(this).getFeatureTransformationParameters()
+
+    /**
+     * Describes the properties for hyperparameter optimization (HPO).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-hpoconfig)
+     */
+    public fun hpoConfig(): Any? = unwrap(this).getHpoConfig()
+
+    /**
+     * A builder for [SolutionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
+       */
+      public fun algorithmHyperParameters(algorithmHyperParameters: IResolvable)
+
+      /**
+       * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
+       */
+      public fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>)
+
+      /**
+       * @param autoMlConfig The
+       * [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html) object
+       * containing a list of recipes to search when AutoML is performed.
+       */
+      public fun autoMlConfig(autoMlConfig: Any)
+
+      /**
+       * @param eventValueThreshold Only events with a value greater than or equal to this threshold
+       * are used for training a model.
+       */
+      public fun eventValueThreshold(eventValueThreshold: String)
+
+      /**
+       * @param featureTransformationParameters Lists the feature transformation parameters.
+       */
+      public fun featureTransformationParameters(featureTransformationParameters: IResolvable)
+
+      /**
+       * @param featureTransformationParameters Lists the feature transformation parameters.
+       */
+      public
+          fun featureTransformationParameters(featureTransformationParameters: Map<String, String>)
+
+      /**
+       * @param hpoConfig Describes the properties for hyperparameter optimization (HPO).
+       */
+      public fun hpoConfig(hpoConfig: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty.Builder =
+          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty.builder()
+
+      /**
+       * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
+       */
+      override fun algorithmHyperParameters(algorithmHyperParameters: IResolvable) {
+        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
+       */
+      override fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>) {
+        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters)
+      }
+
+      /**
+       * @param autoMlConfig The
+       * [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html) object
+       * containing a list of recipes to search when AutoML is performed.
+       */
+      override fun autoMlConfig(autoMlConfig: Any) {
+        cdkBuilder.autoMlConfig(autoMlConfig)
+      }
+
+      /**
+       * @param eventValueThreshold Only events with a value greater than or equal to this threshold
+       * are used for training a model.
+       */
+      override fun eventValueThreshold(eventValueThreshold: String) {
+        cdkBuilder.eventValueThreshold(eventValueThreshold)
+      }
+
+      /**
+       * @param featureTransformationParameters Lists the feature transformation parameters.
+       */
+      override fun featureTransformationParameters(featureTransformationParameters: IResolvable) {
+        cdkBuilder.featureTransformationParameters(featureTransformationParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param featureTransformationParameters Lists the feature transformation parameters.
+       */
+      override
+          fun featureTransformationParameters(featureTransformationParameters: Map<String, String>) {
+        cdkBuilder.featureTransformationParameters(featureTransformationParameters)
+      }
+
+      /**
+       * @param hpoConfig Describes the properties for hyperparameter optimization (HPO).
+       */
+      override fun hpoConfig(hpoConfig: Any) {
+        cdkBuilder.hpoConfig(hpoConfig)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty,
+    ) : CdkObject(cdkObject), SolutionConfigProperty {
+      /**
+       * Lists the algorithm hyperparameters and their values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-algorithmhyperparameters)
+       */
+      override fun algorithmHyperParameters(): Any? = unwrap(this).getAlgorithmHyperParameters()
+
+      /**
+       * The [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html)
+       * object containing a list of recipes to search when AutoML is performed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-automlconfig)
+       */
+      override fun autoMlConfig(): Any? = unwrap(this).getAutoMlConfig()
+
+      /**
+       * Only events with a value greater than or equal to this threshold are used for training a
+       * model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-eventvaluethreshold)
+       */
+      override fun eventValueThreshold(): String? = unwrap(this).getEventValueThreshold()
+
+      /**
+       * Lists the feature transformation parameters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-featuretransformationparameters)
+       */
+      override fun featureTransformationParameters(): Any? =
+          unwrap(this).getFeatureTransformationParameters()
+
+      /**
+       * Describes the properties for hyperparameter optimization (HPO).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html#cfn-personalize-solution-solutionconfig-hpoconfig)
+       */
+      override fun hpoConfig(): Any? = unwrap(this).getHpoConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SolutionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty):
+          SolutionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SolutionConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SolutionConfigProperty):
+          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty
     }
   }
 }

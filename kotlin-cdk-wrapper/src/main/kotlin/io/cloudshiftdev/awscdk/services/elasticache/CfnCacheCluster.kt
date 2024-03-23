@@ -1698,316 +1698,6 @@ public open class CfnCacheCluster internal constructor(
   }
 
   /**
-   * Specifies the destination, format and type of the logs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticache.*;
-   * LogDeliveryConfigurationRequestProperty logDeliveryConfigurationRequestProperty =
-   * LogDeliveryConfigurationRequestProperty.builder()
-   * .destinationDetails(DestinationDetailsProperty.builder()
-   * .cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty.builder()
-   * .logGroup("logGroup")
-   * .build())
-   * .kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty.builder()
-   * .deliveryStream("deliveryStream")
-   * .build())
-   * .build())
-   * .destinationType("destinationType")
-   * .logFormat("logFormat")
-   * .logType("logType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html)
-   */
-  public interface LogDeliveryConfigurationRequestProperty {
-    /**
-     * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose
-     * destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-destinationdetails)
-     */
-    public fun destinationDetails(): Any
-
-    /**
-     * Specify either CloudWatch Logs or Kinesis Data Firehose as the destination type.
-     *
-     * Valid values are either `cloudwatch-logs` or `kinesis-firehose` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-destinationtype)
-     */
-    public fun destinationType(): String
-
-    /**
-     * Valid values are either `json` or `text` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-logformat)
-     */
-    public fun logFormat(): String
-
-    /**
-     * Valid value is either `slow-log` , which refers to
-     * [slow-log](https://docs.aws.amazon.com/https://redis.io/commands/slowlog) or `engine-log` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-logtype)
-     */
-    public fun logType(): String
-
-    /**
-     * A builder for [LogDeliveryConfigurationRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
-       * Kinesis Data Firehose destination. 
-       */
-      public fun destinationDetails(destinationDetails: IResolvable)
-
-      /**
-       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
-       * Kinesis Data Firehose destination. 
-       */
-      public fun destinationDetails(destinationDetails: DestinationDetailsProperty)
-
-      /**
-       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
-       * Kinesis Data Firehose destination. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2e44261fa165e257bb303fce9896fc508c3a435e77b44009681d09f1efef725b")
-      public
-          fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit)
-
-      /**
-       * @param destinationType Specify either CloudWatch Logs or Kinesis Data Firehose as the
-       * destination type. 
-       * Valid values are either `cloudwatch-logs` or `kinesis-firehose` .
-       */
-      public fun destinationType(destinationType: String)
-
-      /**
-       * @param logFormat Valid values are either `json` or `text` . 
-       */
-      public fun logFormat(logFormat: String)
-
-      /**
-       * @param logType Valid value is either `slow-log` , which refers to
-       * [slow-log](https://docs.aws.amazon.com/https://redis.io/commands/slowlog) or `engine-log` . 
-       */
-      public fun logType(logType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty.builder()
-
-      /**
-       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
-       * Kinesis Data Firehose destination. 
-       */
-      override fun destinationDetails(destinationDetails: IResolvable) {
-        cdkBuilder.destinationDetails(destinationDetails.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
-       * Kinesis Data Firehose destination. 
-       */
-      override fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
-        cdkBuilder.destinationDetails(destinationDetails.let(DestinationDetailsProperty::unwrap))
-      }
-
-      /**
-       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
-       * Kinesis Data Firehose destination. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2e44261fa165e257bb303fce9896fc508c3a435e77b44009681d09f1efef725b")
-      override
-          fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit):
-          Unit = destinationDetails(DestinationDetailsProperty(destinationDetails))
-
-      /**
-       * @param destinationType Specify either CloudWatch Logs or Kinesis Data Firehose as the
-       * destination type. 
-       * Valid values are either `cloudwatch-logs` or `kinesis-firehose` .
-       */
-      override fun destinationType(destinationType: String) {
-        cdkBuilder.destinationType(destinationType)
-      }
-
-      /**
-       * @param logFormat Valid values are either `json` or `text` . 
-       */
-      override fun logFormat(logFormat: String) {
-        cdkBuilder.logFormat(logFormat)
-      }
-
-      /**
-       * @param logType Valid value is either `slow-log` , which refers to
-       * [slow-log](https://docs.aws.amazon.com/https://redis.io/commands/slowlog) or `engine-log` . 
-       */
-      override fun logType(logType: String) {
-        cdkBuilder.logType(logType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty,
-    ) : CdkObject(cdkObject), LogDeliveryConfigurationRequestProperty {
-      /**
-       * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose
-       * destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-destinationdetails)
-       */
-      override fun destinationDetails(): Any = unwrap(this).getDestinationDetails()
-
-      /**
-       * Specify either CloudWatch Logs or Kinesis Data Firehose as the destination type.
-       *
-       * Valid values are either `cloudwatch-logs` or `kinesis-firehose` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-destinationtype)
-       */
-      override fun destinationType(): String = unwrap(this).getDestinationType()
-
-      /**
-       * Valid values are either `json` or `text` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-logformat)
-       */
-      override fun logFormat(): String = unwrap(this).getLogFormat()
-
-      /**
-       * Valid value is either `slow-log` , which refers to
-       * [slow-log](https://docs.aws.amazon.com/https://redis.io/commands/slowlog) or `engine-log` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-logtype)
-       */
-      override fun logType(): String = unwrap(this).getLogType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LogDeliveryConfigurationRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty):
-          LogDeliveryConfigurationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LogDeliveryConfigurationRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogDeliveryConfigurationRequestProperty):
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty
-    }
-  }
-
-  /**
-   * The configuration details of the Kinesis Data Firehose destination.
-   *
-   * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as the
-   * destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticache.*;
-   * KinesisFirehoseDestinationDetailsProperty kinesisFirehoseDestinationDetailsProperty =
-   * KinesisFirehoseDestinationDetailsProperty.builder()
-   * .deliveryStream("deliveryStream")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-kinesisfirehosedestinationdetails.html)
-   */
-  public interface KinesisFirehoseDestinationDetailsProperty {
-    /**
-     * The name of the Kinesis Data Firehose delivery stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-kinesisfirehosedestinationdetails.html#cfn-elasticache-cachecluster-kinesisfirehosedestinationdetails-deliverystream)
-     */
-    public fun deliveryStream(): String
-
-    /**
-     * A builder for [KinesisFirehoseDestinationDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deliveryStream The name of the Kinesis Data Firehose delivery stream. 
-       */
-      public fun deliveryStream(deliveryStream: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.builder()
-
-      /**
-       * @param deliveryStream The name of the Kinesis Data Firehose delivery stream. 
-       */
-      override fun deliveryStream(deliveryStream: String) {
-        cdkBuilder.deliveryStream(deliveryStream)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseDestinationDetailsProperty {
-      /**
-       * The name of the Kinesis Data Firehose delivery stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-kinesisfirehosedestinationdetails.html#cfn-elasticache-cachecluster-kinesisfirehosedestinationdetails-deliverystream)
-       */
-      override fun deliveryStream(): String = unwrap(this).getDeliveryStream()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          KinesisFirehoseDestinationDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty):
-          KinesisFirehoseDestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisFirehoseDestinationDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisFirehoseDestinationDetailsProperty):
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty
-    }
-  }
-
-  /**
    * Configuration details of a CloudWatch Logs destination.
    *
    * Note that this field is marked as required but only if CloudWatch Logs was chosen as the
@@ -2313,6 +2003,316 @@ public open class CfnCacheCluster internal constructor(
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.DestinationDetailsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.DestinationDetailsProperty
+    }
+  }
+
+  /**
+   * The configuration details of the Kinesis Data Firehose destination.
+   *
+   * Note that this field is marked as required but only if Kinesis Data Firehose was chosen as the
+   * destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticache.*;
+   * KinesisFirehoseDestinationDetailsProperty kinesisFirehoseDestinationDetailsProperty =
+   * KinesisFirehoseDestinationDetailsProperty.builder()
+   * .deliveryStream("deliveryStream")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-kinesisfirehosedestinationdetails.html)
+   */
+  public interface KinesisFirehoseDestinationDetailsProperty {
+    /**
+     * The name of the Kinesis Data Firehose delivery stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-kinesisfirehosedestinationdetails.html#cfn-elasticache-cachecluster-kinesisfirehosedestinationdetails-deliverystream)
+     */
+    public fun deliveryStream(): String
+
+    /**
+     * A builder for [KinesisFirehoseDestinationDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deliveryStream The name of the Kinesis Data Firehose delivery stream. 
+       */
+      public fun deliveryStream(deliveryStream: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.builder()
+
+      /**
+       * @param deliveryStream The name of the Kinesis Data Firehose delivery stream. 
+       */
+      override fun deliveryStream(deliveryStream: String) {
+        cdkBuilder.deliveryStream(deliveryStream)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty,
+    ) : CdkObject(cdkObject), KinesisFirehoseDestinationDetailsProperty {
+      /**
+       * The name of the Kinesis Data Firehose delivery stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-kinesisfirehosedestinationdetails.html#cfn-elasticache-cachecluster-kinesisfirehosedestinationdetails-deliverystream)
+       */
+      override fun deliveryStream(): String = unwrap(this).getDeliveryStream()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          KinesisFirehoseDestinationDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty):
+          KinesisFirehoseDestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseDestinationDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisFirehoseDestinationDetailsProperty):
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty
+    }
+  }
+
+  /**
+   * Specifies the destination, format and type of the logs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticache.*;
+   * LogDeliveryConfigurationRequestProperty logDeliveryConfigurationRequestProperty =
+   * LogDeliveryConfigurationRequestProperty.builder()
+   * .destinationDetails(DestinationDetailsProperty.builder()
+   * .cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty.builder()
+   * .logGroup("logGroup")
+   * .build())
+   * .kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty.builder()
+   * .deliveryStream("deliveryStream")
+   * .build())
+   * .build())
+   * .destinationType("destinationType")
+   * .logFormat("logFormat")
+   * .logType("logType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html)
+   */
+  public interface LogDeliveryConfigurationRequestProperty {
+    /**
+     * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose
+     * destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-destinationdetails)
+     */
+    public fun destinationDetails(): Any
+
+    /**
+     * Specify either CloudWatch Logs or Kinesis Data Firehose as the destination type.
+     *
+     * Valid values are either `cloudwatch-logs` or `kinesis-firehose` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-destinationtype)
+     */
+    public fun destinationType(): String
+
+    /**
+     * Valid values are either `json` or `text` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-logformat)
+     */
+    public fun logFormat(): String
+
+    /**
+     * Valid value is either `slow-log` , which refers to
+     * [slow-log](https://docs.aws.amazon.com/https://redis.io/commands/slowlog) or `engine-log` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-logtype)
+     */
+    public fun logType(): String
+
+    /**
+     * A builder for [LogDeliveryConfigurationRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
+       * Kinesis Data Firehose destination. 
+       */
+      public fun destinationDetails(destinationDetails: IResolvable)
+
+      /**
+       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
+       * Kinesis Data Firehose destination. 
+       */
+      public fun destinationDetails(destinationDetails: DestinationDetailsProperty)
+
+      /**
+       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
+       * Kinesis Data Firehose destination. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2e44261fa165e257bb303fce9896fc508c3a435e77b44009681d09f1efef725b")
+      public
+          fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit)
+
+      /**
+       * @param destinationType Specify either CloudWatch Logs or Kinesis Data Firehose as the
+       * destination type. 
+       * Valid values are either `cloudwatch-logs` or `kinesis-firehose` .
+       */
+      public fun destinationType(destinationType: String)
+
+      /**
+       * @param logFormat Valid values are either `json` or `text` . 
+       */
+      public fun logFormat(logFormat: String)
+
+      /**
+       * @param logType Valid value is either `slow-log` , which refers to
+       * [slow-log](https://docs.aws.amazon.com/https://redis.io/commands/slowlog) or `engine-log` . 
+       */
+      public fun logType(logType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty.builder()
+
+      /**
+       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
+       * Kinesis Data Firehose destination. 
+       */
+      override fun destinationDetails(destinationDetails: IResolvable) {
+        cdkBuilder.destinationDetails(destinationDetails.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
+       * Kinesis Data Firehose destination. 
+       */
+      override fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
+        cdkBuilder.destinationDetails(destinationDetails.let(DestinationDetailsProperty::unwrap))
+      }
+
+      /**
+       * @param destinationDetails Configuration details of either a CloudWatch Logs destination or
+       * Kinesis Data Firehose destination. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2e44261fa165e257bb303fce9896fc508c3a435e77b44009681d09f1efef725b")
+      override
+          fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit):
+          Unit = destinationDetails(DestinationDetailsProperty(destinationDetails))
+
+      /**
+       * @param destinationType Specify either CloudWatch Logs or Kinesis Data Firehose as the
+       * destination type. 
+       * Valid values are either `cloudwatch-logs` or `kinesis-firehose` .
+       */
+      override fun destinationType(destinationType: String) {
+        cdkBuilder.destinationType(destinationType)
+      }
+
+      /**
+       * @param logFormat Valid values are either `json` or `text` . 
+       */
+      override fun logFormat(logFormat: String) {
+        cdkBuilder.logFormat(logFormat)
+      }
+
+      /**
+       * @param logType Valid value is either `slow-log` , which refers to
+       * [slow-log](https://docs.aws.amazon.com/https://redis.io/commands/slowlog) or `engine-log` . 
+       */
+      override fun logType(logType: String) {
+        cdkBuilder.logType(logType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty,
+    ) : CdkObject(cdkObject), LogDeliveryConfigurationRequestProperty {
+      /**
+       * Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose
+       * destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-destinationdetails)
+       */
+      override fun destinationDetails(): Any = unwrap(this).getDestinationDetails()
+
+      /**
+       * Specify either CloudWatch Logs or Kinesis Data Firehose as the destination type.
+       *
+       * Valid values are either `cloudwatch-logs` or `kinesis-firehose` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-destinationtype)
+       */
+      override fun destinationType(): String = unwrap(this).getDestinationType()
+
+      /**
+       * Valid values are either `json` or `text` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-logformat)
+       */
+      override fun logFormat(): String = unwrap(this).getLogFormat()
+
+      /**
+       * Valid value is either `slow-log` , which refers to
+       * [slow-log](https://docs.aws.amazon.com/https://redis.io/commands/slowlog) or `engine-log` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html#cfn-elasticache-cachecluster-logdeliveryconfigurationrequest-logtype)
+       */
+      override fun logType(): String = unwrap(this).getLogType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LogDeliveryConfigurationRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty):
+          LogDeliveryConfigurationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogDeliveryConfigurationRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogDeliveryConfigurationRequestProperty):
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty
     }
   }
 }

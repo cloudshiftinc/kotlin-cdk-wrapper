@@ -1026,1128 +1026,6 @@ public open class CfnModelQualityJobDefinition internal constructor(
   }
 
   /**
-   * Input object for the endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * EndpointInputProperty endpointInputProperty = EndpointInputProperty.builder()
-   * .endpointName("endpointName")
-   * .localPath("localPath")
-   * // the properties below are optional
-   * .endTimeOffset("endTimeOffset")
-   * .inferenceAttribute("inferenceAttribute")
-   * .probabilityAttribute("probabilityAttribute")
-   * .probabilityThresholdAttribute(123)
-   * .s3DataDistributionType("s3DataDistributionType")
-   * .s3InputMode("s3InputMode")
-   * .startTimeOffset("startTimeOffset")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html)
-   */
-  public interface EndpointInputProperty {
-    /**
-     * If specified, monitoring jobs substract this time from the end time.
-     *
-     * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
-     * Quality Monitoring
-     * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-endtimeoffset)
-     */
-    public fun endTimeOffset(): String? = unwrap(this).getEndTimeOffset()
-
-    /**
-     * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-endpointname)
-     */
-    public fun endpointName(): String
-
-    /**
-     * The attribute of the input data that represents the ground truth label.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-inferenceattribute)
-     */
-    public fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
-
-    /**
-     * Path to the filesystem where the endpoint data is available to the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-localpath)
-     */
-    public fun localPath(): String
-
-    /**
-     * In a classification problem, the attribute that represents the class probability.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-probabilityattribute)
-     */
-    public fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
-
-    /**
-     * The threshold for the class probability to be evaluated as a positive result.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-probabilitythresholdattribute)
-     */
-    public fun probabilityThresholdAttribute(): Number? =
-        unwrap(this).getProbabilityThresholdAttribute()
-
-    /**
-     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an Amazon S3
-     * key.
-     *
-     * Defaults to `FullyReplicated`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-s3datadistributiontype)
-     */
-    public fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
-
-    /**
-     * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
-     * monitoring job.
-     *
-     * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that fit
-     * in memory. Defaults to `File` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-s3inputmode)
-     */
-    public fun s3InputMode(): String? = unwrap(this).getS3InputMode()
-
-    /**
-     * If specified, monitoring jobs substract this time from the start time.
-     *
-     * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
-     * Quality Monitoring
-     * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-starttimeoffset)
-     */
-    public fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
-
-    /**
-     * A builder for [EndpointInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endTimeOffset If specified, monitoring jobs substract this time from the end time.
-       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
-       * Quality Monitoring
-       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
-       * .
-       */
-      public fun endTimeOffset(endTimeOffset: String)
-
-      /**
-       * @param endpointName An endpoint in customer's account which has enabled `DataCaptureConfig`
-       * enabled. 
-       */
-      public fun endpointName(endpointName: String)
-
-      /**
-       * @param inferenceAttribute The attribute of the input data that represents the ground truth
-       * label.
-       */
-      public fun inferenceAttribute(inferenceAttribute: String)
-
-      /**
-       * @param localPath Path to the filesystem where the endpoint data is available to the
-       * container. 
-       */
-      public fun localPath(localPath: String)
-
-      /**
-       * @param probabilityAttribute In a classification problem, the attribute that represents the
-       * class probability.
-       */
-      public fun probabilityAttribute(probabilityAttribute: String)
-
-      /**
-       * @param probabilityThresholdAttribute The threshold for the class probability to be
-       * evaluated as a positive result.
-       */
-      public fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number)
-
-      /**
-       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
-       * replicated or sharded by an Amazon S3 key.
-       * Defaults to `FullyReplicated`
-       */
-      public fun s3DataDistributionType(s3DataDistributionType: String)
-
-      /**
-       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
-       * data for the monitoring job.
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       */
-      public fun s3InputMode(s3InputMode: String)
-
-      /**
-       * @param startTimeOffset If specified, monitoring jobs substract this time from the start
-       * time.
-       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
-       * Quality Monitoring
-       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
-       * .
-       */
-      public fun startTimeOffset(startTimeOffset: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty.builder()
-
-      /**
-       * @param endTimeOffset If specified, monitoring jobs substract this time from the end time.
-       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
-       * Quality Monitoring
-       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
-       * .
-       */
-      override fun endTimeOffset(endTimeOffset: String) {
-        cdkBuilder.endTimeOffset(endTimeOffset)
-      }
-
-      /**
-       * @param endpointName An endpoint in customer's account which has enabled `DataCaptureConfig`
-       * enabled. 
-       */
-      override fun endpointName(endpointName: String) {
-        cdkBuilder.endpointName(endpointName)
-      }
-
-      /**
-       * @param inferenceAttribute The attribute of the input data that represents the ground truth
-       * label.
-       */
-      override fun inferenceAttribute(inferenceAttribute: String) {
-        cdkBuilder.inferenceAttribute(inferenceAttribute)
-      }
-
-      /**
-       * @param localPath Path to the filesystem where the endpoint data is available to the
-       * container. 
-       */
-      override fun localPath(localPath: String) {
-        cdkBuilder.localPath(localPath)
-      }
-
-      /**
-       * @param probabilityAttribute In a classification problem, the attribute that represents the
-       * class probability.
-       */
-      override fun probabilityAttribute(probabilityAttribute: String) {
-        cdkBuilder.probabilityAttribute(probabilityAttribute)
-      }
-
-      /**
-       * @param probabilityThresholdAttribute The threshold for the class probability to be
-       * evaluated as a positive result.
-       */
-      override fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number) {
-        cdkBuilder.probabilityThresholdAttribute(probabilityThresholdAttribute)
-      }
-
-      /**
-       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
-       * replicated or sharded by an Amazon S3 key.
-       * Defaults to `FullyReplicated`
-       */
-      override fun s3DataDistributionType(s3DataDistributionType: String) {
-        cdkBuilder.s3DataDistributionType(s3DataDistributionType)
-      }
-
-      /**
-       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
-       * data for the monitoring job.
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       */
-      override fun s3InputMode(s3InputMode: String) {
-        cdkBuilder.s3InputMode(s3InputMode)
-      }
-
-      /**
-       * @param startTimeOffset If specified, monitoring jobs substract this time from the start
-       * time.
-       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
-       * Quality Monitoring
-       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
-       * .
-       */
-      override fun startTimeOffset(startTimeOffset: String) {
-        cdkBuilder.startTimeOffset(startTimeOffset)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty,
-    ) : CdkObject(cdkObject), EndpointInputProperty {
-      /**
-       * If specified, monitoring jobs substract this time from the end time.
-       *
-       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
-       * Quality Monitoring
-       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-endtimeoffset)
-       */
-      override fun endTimeOffset(): String? = unwrap(this).getEndTimeOffset()
-
-      /**
-       * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-endpointname)
-       */
-      override fun endpointName(): String = unwrap(this).getEndpointName()
-
-      /**
-       * The attribute of the input data that represents the ground truth label.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-inferenceattribute)
-       */
-      override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
-
-      /**
-       * Path to the filesystem where the endpoint data is available to the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-localpath)
-       */
-      override fun localPath(): String = unwrap(this).getLocalPath()
-
-      /**
-       * In a classification problem, the attribute that represents the class probability.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-probabilityattribute)
-       */
-      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
-
-      /**
-       * The threshold for the class probability to be evaluated as a positive result.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-probabilitythresholdattribute)
-       */
-      override fun probabilityThresholdAttribute(): Number? =
-          unwrap(this).getProbabilityThresholdAttribute()
-
-      /**
-       * Whether input data distributed in Amazon S3 is fully replicated or sharded by an Amazon S3
-       * key.
-       *
-       * Defaults to `FullyReplicated`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-s3datadistributiontype)
-       */
-      override fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
-
-      /**
-       * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
-       * monitoring job.
-       *
-       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
-       * fit in memory. Defaults to `File` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-s3inputmode)
-       */
-      override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
-
-      /**
-       * If specified, monitoring jobs substract this time from the start time.
-       *
-       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
-       * Quality Monitoring
-       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-starttimeoffset)
-       */
-      override fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty):
-          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointInputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EndpointInputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty
-    }
-  }
-
-  /**
-   * Container image configuration object for the monitoring job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelQualityAppSpecificationProperty modelQualityAppSpecificationProperty =
-   * ModelQualityAppSpecificationProperty.builder()
-   * .imageUri("imageUri")
-   * .problemType("problemType")
-   * // the properties below are optional
-   * .containerArguments(List.of("containerArguments"))
-   * .containerEntrypoint(List.of("containerEntrypoint"))
-   * .environment(Map.of(
-   * "environmentKey", "environment"))
-   * .postAnalyticsProcessorSourceUri("postAnalyticsProcessorSourceUri")
-   * .recordPreprocessorSourceUri("recordPreprocessorSourceUri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html)
-   */
-  public interface ModelQualityAppSpecificationProperty {
-    /**
-     * An array of arguments for the container used to run the monitoring job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerarguments)
-     */
-    public fun containerArguments(): List<String> = unwrap(this).getContainerArguments() ?:
-        emptyList()
-
-    /**
-     * Specifies the entrypoint for a container that the monitoring job runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerentrypoint)
-     */
-    public fun containerEntrypoint(): List<String> = unwrap(this).getContainerEntrypoint() ?:
-        emptyList()
-
-    /**
-     * Sets the environment variables in the container that the monitoring job runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-environment)
-     */
-    public fun environment(): Any? = unwrap(this).getEnvironment()
-
-    /**
-     * The address of the container image that the monitoring job runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-imageuri)
-     */
-    public fun imageUri(): String
-
-    /**
-     * An Amazon S3 URI to a script that is called after analysis has been performed.
-     *
-     * Applicable only for the built-in (first party) containers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-postanalyticsprocessorsourceuri)
-     */
-    public fun postAnalyticsProcessorSourceUri(): String? =
-        unwrap(this).getPostAnalyticsProcessorSourceUri()
-
-    /**
-     * The machine learning problem type of the model that the monitoring job monitors.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-problemtype)
-     */
-    public fun problemType(): String
-
-    /**
-     * An Amazon S3 URI to a script that is called per row prior to running analysis.
-     *
-     * It can base64 decode the payload and convert it into a flattened JSON so that the built-in
-     * container can use the converted data. Applicable only for the built-in (first party) containers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-recordpreprocessorsourceuri)
-     */
-    public fun recordPreprocessorSourceUri(): String? =
-        unwrap(this).getRecordPreprocessorSourceUri()
-
-    /**
-     * A builder for [ModelQualityAppSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerArguments An array of arguments for the container used to run the
-       * monitoring job.
-       */
-      public fun containerArguments(containerArguments: List<String>)
-
-      /**
-       * @param containerArguments An array of arguments for the container used to run the
-       * monitoring job.
-       */
-      public fun containerArguments(vararg containerArguments: String)
-
-      /**
-       * @param containerEntrypoint Specifies the entrypoint for a container that the monitoring job
-       * runs.
-       */
-      public fun containerEntrypoint(containerEntrypoint: List<String>)
-
-      /**
-       * @param containerEntrypoint Specifies the entrypoint for a container that the monitoring job
-       * runs.
-       */
-      public fun containerEntrypoint(vararg containerEntrypoint: String)
-
-      /**
-       * @param environment Sets the environment variables in the container that the monitoring job
-       * runs.
-       */
-      public fun environment(environment: IResolvable)
-
-      /**
-       * @param environment Sets the environment variables in the container that the monitoring job
-       * runs.
-       */
-      public fun environment(environment: Map<String, String>)
-
-      /**
-       * @param imageUri The address of the container image that the monitoring job runs. 
-       */
-      public fun imageUri(imageUri: String)
-
-      /**
-       * @param postAnalyticsProcessorSourceUri An Amazon S3 URI to a script that is called after
-       * analysis has been performed.
-       * Applicable only for the built-in (first party) containers.
-       */
-      public fun postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri: String)
-
-      /**
-       * @param problemType The machine learning problem type of the model that the monitoring job
-       * monitors. 
-       */
-      public fun problemType(problemType: String)
-
-      /**
-       * @param recordPreprocessorSourceUri An Amazon S3 URI to a script that is called per row
-       * prior to running analysis.
-       * It can base64 decode the payload and convert it into a flattened JSON so that the built-in
-       * container can use the converted data. Applicable only for the built-in (first party)
-       * containers.
-       */
-      public fun recordPreprocessorSourceUri(recordPreprocessorSourceUri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty.builder()
-
-      /**
-       * @param containerArguments An array of arguments for the container used to run the
-       * monitoring job.
-       */
-      override fun containerArguments(containerArguments: List<String>) {
-        cdkBuilder.containerArguments(containerArguments)
-      }
-
-      /**
-       * @param containerArguments An array of arguments for the container used to run the
-       * monitoring job.
-       */
-      override fun containerArguments(vararg containerArguments: String): Unit =
-          containerArguments(containerArguments.toList())
-
-      /**
-       * @param containerEntrypoint Specifies the entrypoint for a container that the monitoring job
-       * runs.
-       */
-      override fun containerEntrypoint(containerEntrypoint: List<String>) {
-        cdkBuilder.containerEntrypoint(containerEntrypoint)
-      }
-
-      /**
-       * @param containerEntrypoint Specifies the entrypoint for a container that the monitoring job
-       * runs.
-       */
-      override fun containerEntrypoint(vararg containerEntrypoint: String): Unit =
-          containerEntrypoint(containerEntrypoint.toList())
-
-      /**
-       * @param environment Sets the environment variables in the container that the monitoring job
-       * runs.
-       */
-      override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param environment Sets the environment variables in the container that the monitoring job
-       * runs.
-       */
-      override fun environment(environment: Map<String, String>) {
-        cdkBuilder.environment(environment)
-      }
-
-      /**
-       * @param imageUri The address of the container image that the monitoring job runs. 
-       */
-      override fun imageUri(imageUri: String) {
-        cdkBuilder.imageUri(imageUri)
-      }
-
-      /**
-       * @param postAnalyticsProcessorSourceUri An Amazon S3 URI to a script that is called after
-       * analysis has been performed.
-       * Applicable only for the built-in (first party) containers.
-       */
-      override fun postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri: String) {
-        cdkBuilder.postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri)
-      }
-
-      /**
-       * @param problemType The machine learning problem type of the model that the monitoring job
-       * monitors. 
-       */
-      override fun problemType(problemType: String) {
-        cdkBuilder.problemType(problemType)
-      }
-
-      /**
-       * @param recordPreprocessorSourceUri An Amazon S3 URI to a script that is called per row
-       * prior to running analysis.
-       * It can base64 decode the payload and convert it into a flattened JSON so that the built-in
-       * container can use the converted data. Applicable only for the built-in (first party)
-       * containers.
-       */
-      override fun recordPreprocessorSourceUri(recordPreprocessorSourceUri: String) {
-        cdkBuilder.recordPreprocessorSourceUri(recordPreprocessorSourceUri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty,
-    ) : CdkObject(cdkObject), ModelQualityAppSpecificationProperty {
-      /**
-       * An array of arguments for the container used to run the monitoring job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerarguments)
-       */
-      override fun containerArguments(): List<String> = unwrap(this).getContainerArguments() ?:
-          emptyList()
-
-      /**
-       * Specifies the entrypoint for a container that the monitoring job runs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerentrypoint)
-       */
-      override fun containerEntrypoint(): List<String> = unwrap(this).getContainerEntrypoint() ?:
-          emptyList()
-
-      /**
-       * Sets the environment variables in the container that the monitoring job runs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-environment)
-       */
-      override fun environment(): Any? = unwrap(this).getEnvironment()
-
-      /**
-       * The address of the container image that the monitoring job runs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-imageuri)
-       */
-      override fun imageUri(): String = unwrap(this).getImageUri()
-
-      /**
-       * An Amazon S3 URI to a script that is called after analysis has been performed.
-       *
-       * Applicable only for the built-in (first party) containers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-postanalyticsprocessorsourceuri)
-       */
-      override fun postAnalyticsProcessorSourceUri(): String? =
-          unwrap(this).getPostAnalyticsProcessorSourceUri()
-
-      /**
-       * The machine learning problem type of the model that the monitoring job monitors.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-problemtype)
-       */
-      override fun problemType(): String = unwrap(this).getProblemType()
-
-      /**
-       * An Amazon S3 URI to a script that is called per row prior to running analysis.
-       *
-       * It can base64 decode the payload and convert it into a flattened JSON so that the built-in
-       * container can use the converted data. Applicable only for the built-in (first party)
-       * containers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-recordpreprocessorsourceuri)
-       */
-      override fun recordPreprocessorSourceUri(): String? =
-          unwrap(this).getRecordPreprocessorSourceUri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ModelQualityAppSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty):
-          ModelQualityAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ModelQualityAppSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelQualityAppSpecificationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty
-    }
-  }
-
-  /**
-   * The configuration for the cluster of resources used to run the processing job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
-   * .instanceCount(123)
-   * .instanceType("instanceType")
-   * .volumeSizeInGb(123)
-   * // the properties below are optional
-   * .volumeKmsKeyId("volumeKmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html)
-   */
-  public interface ClusterConfigProperty {
-    /**
-     * The number of ML compute instances to use in the model monitoring job.
-     *
-     * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-instancecount)
-     */
-    public fun instanceCount(): Number
-
-    /**
-     * The ML compute instance type for the processing job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-instancetype)
-     */
-    public fun instanceType(): String
-
-    /**
-     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
-     * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-volumekmskeyid)
-     */
-    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
-
-    /**
-     * The size of the ML storage volume, in gigabytes, that you want to provision.
-     *
-     * You must specify sufficient ML storage for your scenario.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-volumesizeingb)
-     */
-    public fun volumeSizeInGb(): Number
-
-    /**
-     * A builder for [ClusterConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
-       * 
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       */
-      public fun instanceCount(instanceCount: Number)
-
-      /**
-       * @param instanceType The ML compute instance type for the processing job. 
-       */
-      public fun instanceType(instanceType: String)
-
-      /**
-       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
-       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
-       * model monitoring job.
-       */
-      public fun volumeKmsKeyId(volumeKmsKeyId: String)
-
-      /**
-       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
-       * provision. 
-       * You must specify sufficient ML storage for your scenario.
-       */
-      public fun volumeSizeInGb(volumeSizeInGb: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty.builder()
-
-      /**
-       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
-       * 
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       */
-      override fun instanceCount(instanceCount: Number) {
-        cdkBuilder.instanceCount(instanceCount)
-      }
-
-      /**
-       * @param instanceType The ML compute instance type for the processing job. 
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      /**
-       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
-       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
-       * model monitoring job.
-       */
-      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
-        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
-      }
-
-      /**
-       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
-       * provision. 
-       * You must specify sufficient ML storage for your scenario.
-       */
-      override fun volumeSizeInGb(volumeSizeInGb: Number) {
-        cdkBuilder.volumeSizeInGb(volumeSizeInGb)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty,
-    ) : CdkObject(cdkObject), ClusterConfigProperty {
-      /**
-       * The number of ML compute instances to use in the model monitoring job.
-       *
-       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-instancecount)
-       */
-      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
-
-      /**
-       * The ML compute instance type for the processing job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-instancetype)
-       */
-      override fun instanceType(): String = unwrap(this).getInstanceType()
-
-      /**
-       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
-       * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-volumekmskeyid)
-       */
-      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
-
-      /**
-       * The size of the ML storage volume, in gigabytes, that you want to provision.
-       *
-       * You must specify sufficient ML storage for your scenario.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-volumesizeingb)
-       */
-      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty):
-          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClusterConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty
-    }
-  }
-
-  /**
-   * Configuration for monitoring constraints and monitoring statistics.
-   *
-   * These baseline resources are compared against the results of the current job from the series of
-   * jobs scheduled to collect data periodically.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelQualityBaselineConfigProperty modelQualityBaselineConfigProperty =
-   * ModelQualityBaselineConfigProperty.builder()
-   * .baseliningJobName("baseliningJobName")
-   * .constraintsResource(ConstraintsResourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html)
-   */
-  public interface ModelQualityBaselineConfigProperty {
-    /**
-     * The name of the job that performs baselining for the monitoring job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html#cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-baseliningjobname)
-     */
-    public fun baseliningJobName(): String? = unwrap(this).getBaseliningJobName()
-
-    /**
-     * The constraints resource for a monitoring job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html#cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-constraintsresource)
-     */
-    public fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
-
-    /**
-     * A builder for [ModelQualityBaselineConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param baseliningJobName The name of the job that performs baselining for the monitoring
-       * job.
-       */
-      public fun baseliningJobName(baseliningJobName: String)
-
-      /**
-       * @param constraintsResource The constraints resource for a monitoring job.
-       */
-      public fun constraintsResource(constraintsResource: IResolvable)
-
-      /**
-       * @param constraintsResource The constraints resource for a monitoring job.
-       */
-      public fun constraintsResource(constraintsResource: ConstraintsResourceProperty)
-
-      /**
-       * @param constraintsResource The constraints resource for a monitoring job.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("945a966ddf16d5853bdc6ec099011802c4023515328fefceefe815ef1fa1c110")
-      public
-          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.builder()
-
-      /**
-       * @param baseliningJobName The name of the job that performs baselining for the monitoring
-       * job.
-       */
-      override fun baseliningJobName(baseliningJobName: String) {
-        cdkBuilder.baseliningJobName(baseliningJobName)
-      }
-
-      /**
-       * @param constraintsResource The constraints resource for a monitoring job.
-       */
-      override fun constraintsResource(constraintsResource: IResolvable) {
-        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param constraintsResource The constraints resource for a monitoring job.
-       */
-      override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
-        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
-      }
-
-      /**
-       * @param constraintsResource The constraints resource for a monitoring job.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("945a966ddf16d5853bdc6ec099011802c4023515328fefceefe815ef1fa1c110")
-      override
-          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit):
-          Unit = constraintsResource(ConstraintsResourceProperty(constraintsResource))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty,
-    ) : CdkObject(cdkObject), ModelQualityBaselineConfigProperty {
-      /**
-       * The name of the job that performs baselining for the monitoring job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html#cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-baseliningjobname)
-       */
-      override fun baseliningJobName(): String? = unwrap(this).getBaseliningJobName()
-
-      /**
-       * The constraints resource for a monitoring job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html#cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-constraintsresource)
-       */
-      override fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ModelQualityBaselineConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty):
-          ModelQualityBaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ModelQualityBaselineConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelQualityBaselineConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty
-    }
-  }
-
-  /**
-   * The ground truth labels for the dataset used for the monitoring job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringGroundTruthS3InputProperty monitoringGroundTruthS3InputProperty =
-   * MonitoringGroundTruthS3InputProperty.builder()
-   * .s3Uri("s3Uri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input.html)
-   */
-  public interface MonitoringGroundTruthS3InputProperty {
-    /**
-     * The address of the Amazon S3 location of the ground truth labels.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input.html#cfn-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input-s3uri)
-     */
-    public fun s3Uri(): String
-
-    /**
-     * A builder for [MonitoringGroundTruthS3InputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Uri The address of the Amazon S3 location of the ground truth labels. 
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty.builder()
-
-      /**
-       * @param s3Uri The address of the Amazon S3 location of the ground truth labels. 
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty,
-    ) : CdkObject(cdkObject), MonitoringGroundTruthS3InputProperty {
-      /**
-       * The address of the Amazon S3 location of the ground truth labels.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input.html#cfn-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input-s3uri)
-       */
-      override fun s3Uri(): String = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MonitoringGroundTruthS3InputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty):
-          MonitoringGroundTruthS3InputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MonitoringGroundTruthS3InputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringGroundTruthS3InputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty
-    }
-  }
-
-  /**
    * Input object for the batch transform job.
    *
    * Example:
@@ -2581,6 +1459,949 @@ public open class CfnModelQualityJobDefinition internal constructor(
   }
 
   /**
+   * The configuration for the cluster of resources used to run the processing job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
+   * .instanceCount(123)
+   * .instanceType("instanceType")
+   * .volumeSizeInGb(123)
+   * // the properties below are optional
+   * .volumeKmsKeyId("volumeKmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html)
+   */
+  public interface ClusterConfigProperty {
+    /**
+     * The number of ML compute instances to use in the model monitoring job.
+     *
+     * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-instancecount)
+     */
+    public fun instanceCount(): Number
+
+    /**
+     * The ML compute instance type for the processing job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-instancetype)
+     */
+    public fun instanceType(): String
+
+    /**
+     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-volumekmskeyid)
+     */
+    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+    /**
+     * The size of the ML storage volume, in gigabytes, that you want to provision.
+     *
+     * You must specify sufficient ML storage for your scenario.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-volumesizeingb)
+     */
+    public fun volumeSizeInGb(): Number
+
+    /**
+     * A builder for [ClusterConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
+       * 
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+       */
+      public fun instanceCount(instanceCount: Number)
+
+      /**
+       * @param instanceType The ML compute instance type for the processing job. 
+       */
+      public fun instanceType(instanceType: String)
+
+      /**
+       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
+       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
+       * model monitoring job.
+       */
+      public fun volumeKmsKeyId(volumeKmsKeyId: String)
+
+      /**
+       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
+       * provision. 
+       * You must specify sufficient ML storage for your scenario.
+       */
+      public fun volumeSizeInGb(volumeSizeInGb: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty.builder()
+
+      /**
+       * @param instanceCount The number of ML compute instances to use in the model monitoring job.
+       * 
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+       */
+      override fun instanceCount(instanceCount: Number) {
+        cdkBuilder.instanceCount(instanceCount)
+      }
+
+      /**
+       * @param instanceType The ML compute instance type for the processing job. 
+       */
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
+      }
+
+      /**
+       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
+       * uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the
+       * model monitoring job.
+       */
+      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
+        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
+      }
+
+      /**
+       * @param volumeSizeInGb The size of the ML storage volume, in gigabytes, that you want to
+       * provision. 
+       * You must specify sufficient ML storage for your scenario.
+       */
+      override fun volumeSizeInGb(volumeSizeInGb: Number) {
+        cdkBuilder.volumeSizeInGb(volumeSizeInGb)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty,
+    ) : CdkObject(cdkObject), ClusterConfigProperty {
+      /**
+       * The number of ML compute instances to use in the model monitoring job.
+       *
+       * For distributed processing jobs, specify a value greater than 1. The default value is 1.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-instancecount)
+       */
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+
+      /**
+       * The ML compute instance type for the processing job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-instancetype)
+       */
+      override fun instanceType(): String = unwrap(this).getInstanceType()
+
+      /**
+       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on
+       * the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-volumekmskeyid)
+       */
+      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+      /**
+       * The size of the ML storage volume, in gigabytes, that you want to provision.
+       *
+       * You must specify sufficient ML storage for your scenario.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html#cfn-sagemaker-modelqualityjobdefinition-clusterconfig-volumesizeingb)
+       */
+      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty):
+          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClusterConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty
+    }
+  }
+
+  /**
+   * The constraints resource for a monitoring job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ConstraintsResourceProperty constraintsResourceProperty = ConstraintsResourceProperty.builder()
+   * .s3Uri("s3Uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-constraintsresource.html)
+   */
+  public interface ConstraintsResourceProperty {
+    /**
+     * The Amazon S3 URI for the constraints resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-constraintsresource.html#cfn-sagemaker-modelqualityjobdefinition-constraintsresource-s3uri)
+     */
+    public fun s3Uri(): String? = unwrap(this).getS3Uri()
+
+    /**
+     * A builder for [ConstraintsResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Uri The Amazon S3 URI for the constraints resource.
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty.builder()
+
+      /**
+       * @param s3Uri The Amazon S3 URI for the constraints resource.
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty,
+    ) : CdkObject(cdkObject), ConstraintsResourceProperty {
+      /**
+       * The Amazon S3 URI for the constraints resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-constraintsresource.html#cfn-sagemaker-modelqualityjobdefinition-constraintsresource-s3uri)
+       */
+      override fun s3Uri(): String? = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConstraintsResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty):
+          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConstraintsResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConstraintsResourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty
+    }
+  }
+
+  /**
+   * The CSV format.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CsvProperty csvProperty = CsvProperty.builder()
+   * .header(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-csv.html)
+   */
+  public interface CsvProperty {
+    /**
+     * A boolean flag indicating if given CSV has header.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-csv.html#cfn-sagemaker-modelqualityjobdefinition-csv-header)
+     */
+    public fun `header`(): Any? = unwrap(this).getHeader()
+
+    /**
+     * A builder for [CsvProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      public fun `header`(`header`: Boolean)
+
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      public fun `header`(`header`: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty.builder()
+
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      override fun `header`(`header`: Boolean) {
+        cdkBuilder.`header`(`header`)
+      }
+
+      /**
+       * @param header A boolean flag indicating if given CSV has header.
+       */
+      override fun `header`(`header`: IResolvable) {
+        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty,
+    ) : CdkObject(cdkObject), CsvProperty {
+      /**
+       * A boolean flag indicating if given CSV has header.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-csv.html#cfn-sagemaker-modelqualityjobdefinition-csv-header)
+       */
+      override fun `header`(): Any? = unwrap(this).getHeader()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CsvProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty):
+          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CsvProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty
+    }
+  }
+
+  /**
+   * The dataset format of the data to monitor.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DatasetFormatProperty datasetFormatProperty = DatasetFormatProperty.builder()
+   * .csv(CsvProperty.builder()
+   * .header(false)
+   * .build())
+   * .json(JsonProperty.builder()
+   * .line(false)
+   * .build())
+   * .parquet(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html)
+   */
+  public interface DatasetFormatProperty {
+    /**
+     * The CSV format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-csv)
+     */
+    public fun csv(): Any? = unwrap(this).getCsv()
+
+    /**
+     * The Json format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-json)
+     */
+    public fun json(): Any? = unwrap(this).getJson()
+
+    /**
+     * A flag indicating if the dataset format is Parquet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-parquet)
+     */
+    public fun parquet(): Any? = unwrap(this).getParquet()
+
+    /**
+     * A builder for [DatasetFormatProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param csv The CSV format.
+       */
+      public fun csv(csv: IResolvable)
+
+      /**
+       * @param csv The CSV format.
+       */
+      public fun csv(csv: CsvProperty)
+
+      /**
+       * @param csv The CSV format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2610a4a45f311cd86c74dd1598067d2928e7010119e393ae4b16e3c1b121edde")
+      public fun csv(csv: CsvProperty.Builder.() -> Unit)
+
+      /**
+       * @param json The Json format.
+       */
+      public fun json(json: IResolvable)
+
+      /**
+       * @param json The Json format.
+       */
+      public fun json(json: JsonProperty)
+
+      /**
+       * @param json The Json format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0efa400048db4040dccefc62b9defa3adede02e5be2a2604a021eb6e03a99e2a")
+      public fun json(json: JsonProperty.Builder.() -> Unit)
+
+      /**
+       * @param parquet A flag indicating if the dataset format is Parquet.
+       */
+      public fun parquet(parquet: Boolean)
+
+      /**
+       * @param parquet A flag indicating if the dataset format is Parquet.
+       */
+      public fun parquet(parquet: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty.builder()
+
+      /**
+       * @param csv The CSV format.
+       */
+      override fun csv(csv: IResolvable) {
+        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param csv The CSV format.
+       */
+      override fun csv(csv: CsvProperty) {
+        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
+      }
+
+      /**
+       * @param csv The CSV format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2610a4a45f311cd86c74dd1598067d2928e7010119e393ae4b16e3c1b121edde")
+      override fun csv(csv: CsvProperty.Builder.() -> Unit): Unit = csv(CsvProperty(csv))
+
+      /**
+       * @param json The Json format.
+       */
+      override fun json(json: IResolvable) {
+        cdkBuilder.json(json.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param json The Json format.
+       */
+      override fun json(json: JsonProperty) {
+        cdkBuilder.json(json.let(JsonProperty::unwrap))
+      }
+
+      /**
+       * @param json The Json format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0efa400048db4040dccefc62b9defa3adede02e5be2a2604a021eb6e03a99e2a")
+      override fun json(json: JsonProperty.Builder.() -> Unit): Unit = json(JsonProperty(json))
+
+      /**
+       * @param parquet A flag indicating if the dataset format is Parquet.
+       */
+      override fun parquet(parquet: Boolean) {
+        cdkBuilder.parquet(parquet)
+      }
+
+      /**
+       * @param parquet A flag indicating if the dataset format is Parquet.
+       */
+      override fun parquet(parquet: IResolvable) {
+        cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty,
+    ) : CdkObject(cdkObject), DatasetFormatProperty {
+      /**
+       * The CSV format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-csv)
+       */
+      override fun csv(): Any? = unwrap(this).getCsv()
+
+      /**
+       * The Json format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-json)
+       */
+      override fun json(): Any? = unwrap(this).getJson()
+
+      /**
+       * A flag indicating if the dataset format is Parquet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-parquet)
+       */
+      override fun parquet(): Any? = unwrap(this).getParquet()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatasetFormatProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty):
+          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetFormatProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatasetFormatProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty
+    }
+  }
+
+  /**
+   * Input object for the endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * EndpointInputProperty endpointInputProperty = EndpointInputProperty.builder()
+   * .endpointName("endpointName")
+   * .localPath("localPath")
+   * // the properties below are optional
+   * .endTimeOffset("endTimeOffset")
+   * .inferenceAttribute("inferenceAttribute")
+   * .probabilityAttribute("probabilityAttribute")
+   * .probabilityThresholdAttribute(123)
+   * .s3DataDistributionType("s3DataDistributionType")
+   * .s3InputMode("s3InputMode")
+   * .startTimeOffset("startTimeOffset")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html)
+   */
+  public interface EndpointInputProperty {
+    /**
+     * If specified, monitoring jobs substract this time from the end time.
+     *
+     * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
+     * Quality Monitoring
+     * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-endtimeoffset)
+     */
+    public fun endTimeOffset(): String? = unwrap(this).getEndTimeOffset()
+
+    /**
+     * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-endpointname)
+     */
+    public fun endpointName(): String
+
+    /**
+     * The attribute of the input data that represents the ground truth label.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-inferenceattribute)
+     */
+    public fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
+
+    /**
+     * Path to the filesystem where the endpoint data is available to the container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-localpath)
+     */
+    public fun localPath(): String
+
+    /**
+     * In a classification problem, the attribute that represents the class probability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-probabilityattribute)
+     */
+    public fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+
+    /**
+     * The threshold for the class probability to be evaluated as a positive result.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-probabilitythresholdattribute)
+     */
+    public fun probabilityThresholdAttribute(): Number? =
+        unwrap(this).getProbabilityThresholdAttribute()
+
+    /**
+     * Whether input data distributed in Amazon S3 is fully replicated or sharded by an Amazon S3
+     * key.
+     *
+     * Defaults to `FullyReplicated`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-s3datadistributiontype)
+     */
+    public fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
+
+    /**
+     * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
+     * monitoring job.
+     *
+     * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that fit
+     * in memory. Defaults to `File` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-s3inputmode)
+     */
+    public fun s3InputMode(): String? = unwrap(this).getS3InputMode()
+
+    /**
+     * If specified, monitoring jobs substract this time from the start time.
+     *
+     * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
+     * Quality Monitoring
+     * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-starttimeoffset)
+     */
+    public fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
+
+    /**
+     * A builder for [EndpointInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endTimeOffset If specified, monitoring jobs substract this time from the end time.
+       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
+       * Quality Monitoring
+       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
+       * .
+       */
+      public fun endTimeOffset(endTimeOffset: String)
+
+      /**
+       * @param endpointName An endpoint in customer's account which has enabled `DataCaptureConfig`
+       * enabled. 
+       */
+      public fun endpointName(endpointName: String)
+
+      /**
+       * @param inferenceAttribute The attribute of the input data that represents the ground truth
+       * label.
+       */
+      public fun inferenceAttribute(inferenceAttribute: String)
+
+      /**
+       * @param localPath Path to the filesystem where the endpoint data is available to the
+       * container. 
+       */
+      public fun localPath(localPath: String)
+
+      /**
+       * @param probabilityAttribute In a classification problem, the attribute that represents the
+       * class probability.
+       */
+      public fun probabilityAttribute(probabilityAttribute: String)
+
+      /**
+       * @param probabilityThresholdAttribute The threshold for the class probability to be
+       * evaluated as a positive result.
+       */
+      public fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number)
+
+      /**
+       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
+       * replicated or sharded by an Amazon S3 key.
+       * Defaults to `FullyReplicated`
+       */
+      public fun s3DataDistributionType(s3DataDistributionType: String)
+
+      /**
+       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
+       * data for the monitoring job.
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       */
+      public fun s3InputMode(s3InputMode: String)
+
+      /**
+       * @param startTimeOffset If specified, monitoring jobs substract this time from the start
+       * time.
+       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
+       * Quality Monitoring
+       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
+       * .
+       */
+      public fun startTimeOffset(startTimeOffset: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty.builder()
+
+      /**
+       * @param endTimeOffset If specified, monitoring jobs substract this time from the end time.
+       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
+       * Quality Monitoring
+       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
+       * .
+       */
+      override fun endTimeOffset(endTimeOffset: String) {
+        cdkBuilder.endTimeOffset(endTimeOffset)
+      }
+
+      /**
+       * @param endpointName An endpoint in customer's account which has enabled `DataCaptureConfig`
+       * enabled. 
+       */
+      override fun endpointName(endpointName: String) {
+        cdkBuilder.endpointName(endpointName)
+      }
+
+      /**
+       * @param inferenceAttribute The attribute of the input data that represents the ground truth
+       * label.
+       */
+      override fun inferenceAttribute(inferenceAttribute: String) {
+        cdkBuilder.inferenceAttribute(inferenceAttribute)
+      }
+
+      /**
+       * @param localPath Path to the filesystem where the endpoint data is available to the
+       * container. 
+       */
+      override fun localPath(localPath: String) {
+        cdkBuilder.localPath(localPath)
+      }
+
+      /**
+       * @param probabilityAttribute In a classification problem, the attribute that represents the
+       * class probability.
+       */
+      override fun probabilityAttribute(probabilityAttribute: String) {
+        cdkBuilder.probabilityAttribute(probabilityAttribute)
+      }
+
+      /**
+       * @param probabilityThresholdAttribute The threshold for the class probability to be
+       * evaluated as a positive result.
+       */
+      override fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number) {
+        cdkBuilder.probabilityThresholdAttribute(probabilityThresholdAttribute)
+      }
+
+      /**
+       * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully
+       * replicated or sharded by an Amazon S3 key.
+       * Defaults to `FullyReplicated`
+       */
+      override fun s3DataDistributionType(s3DataDistributionType: String) {
+        cdkBuilder.s3DataDistributionType(s3DataDistributionType)
+      }
+
+      /**
+       * @param s3InputMode Whether the `Pipe` or `File` is used as the input mode for transferring
+       * data for the monitoring job.
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       */
+      override fun s3InputMode(s3InputMode: String) {
+        cdkBuilder.s3InputMode(s3InputMode)
+      }
+
+      /**
+       * @param startTimeOffset If specified, monitoring jobs substract this time from the start
+       * time.
+       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
+       * Quality Monitoring
+       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
+       * .
+       */
+      override fun startTimeOffset(startTimeOffset: String) {
+        cdkBuilder.startTimeOffset(startTimeOffset)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty,
+    ) : CdkObject(cdkObject), EndpointInputProperty {
+      /**
+       * If specified, monitoring jobs substract this time from the end time.
+       *
+       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
+       * Quality Monitoring
+       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-endtimeoffset)
+       */
+      override fun endTimeOffset(): String? = unwrap(this).getEndTimeOffset()
+
+      /**
+       * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-endpointname)
+       */
+      override fun endpointName(): String = unwrap(this).getEndpointName()
+
+      /**
+       * The attribute of the input data that represents the ground truth label.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-inferenceattribute)
+       */
+      override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
+
+      /**
+       * Path to the filesystem where the endpoint data is available to the container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-localpath)
+       */
+      override fun localPath(): String = unwrap(this).getLocalPath()
+
+      /**
+       * In a classification problem, the attribute that represents the class probability.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-probabilityattribute)
+       */
+      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+
+      /**
+       * The threshold for the class probability to be evaluated as a positive result.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-probabilitythresholdattribute)
+       */
+      override fun probabilityThresholdAttribute(): Number? =
+          unwrap(this).getProbabilityThresholdAttribute()
+
+      /**
+       * Whether input data distributed in Amazon S3 is fully replicated or sharded by an Amazon S3
+       * key.
+       *
+       * Defaults to `FullyReplicated`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-s3datadistributiontype)
+       */
+      override fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
+
+      /**
+       * Whether the `Pipe` or `File` is used as the input mode for transferring data for the
+       * monitoring job.
+       *
+       * `Pipe` mode is recommended for large datasets. `File` mode is useful for small files that
+       * fit in memory. Defaults to `File` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-s3inputmode)
+       */
+      override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
+
+      /**
+       * If specified, monitoring jobs substract this time from the start time.
+       *
+       * For information about using offsets for scheduling monitoring jobs, see [Schedule Model
+       * Quality Monitoring
+       * Jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-model-quality-schedule.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-endpointinput.html#cfn-sagemaker-modelqualityjobdefinition-endpointinput-starttimeoffset)
+       */
+      override fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty):
+          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointInputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EndpointInputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty
+    }
+  }
+
+  /**
    * The Json format.
    *
    * Example:
@@ -2671,6 +2492,1103 @@ public open class CfnModelQualityJobDefinition internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.JsonProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.JsonProperty
+    }
+  }
+
+  /**
+   * Container image configuration object for the monitoring job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelQualityAppSpecificationProperty modelQualityAppSpecificationProperty =
+   * ModelQualityAppSpecificationProperty.builder()
+   * .imageUri("imageUri")
+   * .problemType("problemType")
+   * // the properties below are optional
+   * .containerArguments(List.of("containerArguments"))
+   * .containerEntrypoint(List.of("containerEntrypoint"))
+   * .environment(Map.of(
+   * "environmentKey", "environment"))
+   * .postAnalyticsProcessorSourceUri("postAnalyticsProcessorSourceUri")
+   * .recordPreprocessorSourceUri("recordPreprocessorSourceUri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html)
+   */
+  public interface ModelQualityAppSpecificationProperty {
+    /**
+     * An array of arguments for the container used to run the monitoring job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerarguments)
+     */
+    public fun containerArguments(): List<String> = unwrap(this).getContainerArguments() ?:
+        emptyList()
+
+    /**
+     * Specifies the entrypoint for a container that the monitoring job runs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerentrypoint)
+     */
+    public fun containerEntrypoint(): List<String> = unwrap(this).getContainerEntrypoint() ?:
+        emptyList()
+
+    /**
+     * Sets the environment variables in the container that the monitoring job runs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-environment)
+     */
+    public fun environment(): Any? = unwrap(this).getEnvironment()
+
+    /**
+     * The address of the container image that the monitoring job runs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-imageuri)
+     */
+    public fun imageUri(): String
+
+    /**
+     * An Amazon S3 URI to a script that is called after analysis has been performed.
+     *
+     * Applicable only for the built-in (first party) containers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-postanalyticsprocessorsourceuri)
+     */
+    public fun postAnalyticsProcessorSourceUri(): String? =
+        unwrap(this).getPostAnalyticsProcessorSourceUri()
+
+    /**
+     * The machine learning problem type of the model that the monitoring job monitors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-problemtype)
+     */
+    public fun problemType(): String
+
+    /**
+     * An Amazon S3 URI to a script that is called per row prior to running analysis.
+     *
+     * It can base64 decode the payload and convert it into a flattened JSON so that the built-in
+     * container can use the converted data. Applicable only for the built-in (first party) containers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-recordpreprocessorsourceuri)
+     */
+    public fun recordPreprocessorSourceUri(): String? =
+        unwrap(this).getRecordPreprocessorSourceUri()
+
+    /**
+     * A builder for [ModelQualityAppSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerArguments An array of arguments for the container used to run the
+       * monitoring job.
+       */
+      public fun containerArguments(containerArguments: List<String>)
+
+      /**
+       * @param containerArguments An array of arguments for the container used to run the
+       * monitoring job.
+       */
+      public fun containerArguments(vararg containerArguments: String)
+
+      /**
+       * @param containerEntrypoint Specifies the entrypoint for a container that the monitoring job
+       * runs.
+       */
+      public fun containerEntrypoint(containerEntrypoint: List<String>)
+
+      /**
+       * @param containerEntrypoint Specifies the entrypoint for a container that the monitoring job
+       * runs.
+       */
+      public fun containerEntrypoint(vararg containerEntrypoint: String)
+
+      /**
+       * @param environment Sets the environment variables in the container that the monitoring job
+       * runs.
+       */
+      public fun environment(environment: IResolvable)
+
+      /**
+       * @param environment Sets the environment variables in the container that the monitoring job
+       * runs.
+       */
+      public fun environment(environment: Map<String, String>)
+
+      /**
+       * @param imageUri The address of the container image that the monitoring job runs. 
+       */
+      public fun imageUri(imageUri: String)
+
+      /**
+       * @param postAnalyticsProcessorSourceUri An Amazon S3 URI to a script that is called after
+       * analysis has been performed.
+       * Applicable only for the built-in (first party) containers.
+       */
+      public fun postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri: String)
+
+      /**
+       * @param problemType The machine learning problem type of the model that the monitoring job
+       * monitors. 
+       */
+      public fun problemType(problemType: String)
+
+      /**
+       * @param recordPreprocessorSourceUri An Amazon S3 URI to a script that is called per row
+       * prior to running analysis.
+       * It can base64 decode the payload and convert it into a flattened JSON so that the built-in
+       * container can use the converted data. Applicable only for the built-in (first party)
+       * containers.
+       */
+      public fun recordPreprocessorSourceUri(recordPreprocessorSourceUri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty.builder()
+
+      /**
+       * @param containerArguments An array of arguments for the container used to run the
+       * monitoring job.
+       */
+      override fun containerArguments(containerArguments: List<String>) {
+        cdkBuilder.containerArguments(containerArguments)
+      }
+
+      /**
+       * @param containerArguments An array of arguments for the container used to run the
+       * monitoring job.
+       */
+      override fun containerArguments(vararg containerArguments: String): Unit =
+          containerArguments(containerArguments.toList())
+
+      /**
+       * @param containerEntrypoint Specifies the entrypoint for a container that the monitoring job
+       * runs.
+       */
+      override fun containerEntrypoint(containerEntrypoint: List<String>) {
+        cdkBuilder.containerEntrypoint(containerEntrypoint)
+      }
+
+      /**
+       * @param containerEntrypoint Specifies the entrypoint for a container that the monitoring job
+       * runs.
+       */
+      override fun containerEntrypoint(vararg containerEntrypoint: String): Unit =
+          containerEntrypoint(containerEntrypoint.toList())
+
+      /**
+       * @param environment Sets the environment variables in the container that the monitoring job
+       * runs.
+       */
+      override fun environment(environment: IResolvable) {
+        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param environment Sets the environment variables in the container that the monitoring job
+       * runs.
+       */
+      override fun environment(environment: Map<String, String>) {
+        cdkBuilder.environment(environment)
+      }
+
+      /**
+       * @param imageUri The address of the container image that the monitoring job runs. 
+       */
+      override fun imageUri(imageUri: String) {
+        cdkBuilder.imageUri(imageUri)
+      }
+
+      /**
+       * @param postAnalyticsProcessorSourceUri An Amazon S3 URI to a script that is called after
+       * analysis has been performed.
+       * Applicable only for the built-in (first party) containers.
+       */
+      override fun postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri: String) {
+        cdkBuilder.postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri)
+      }
+
+      /**
+       * @param problemType The machine learning problem type of the model that the monitoring job
+       * monitors. 
+       */
+      override fun problemType(problemType: String) {
+        cdkBuilder.problemType(problemType)
+      }
+
+      /**
+       * @param recordPreprocessorSourceUri An Amazon S3 URI to a script that is called per row
+       * prior to running analysis.
+       * It can base64 decode the payload and convert it into a flattened JSON so that the built-in
+       * container can use the converted data. Applicable only for the built-in (first party)
+       * containers.
+       */
+      override fun recordPreprocessorSourceUri(recordPreprocessorSourceUri: String) {
+        cdkBuilder.recordPreprocessorSourceUri(recordPreprocessorSourceUri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty,
+    ) : CdkObject(cdkObject), ModelQualityAppSpecificationProperty {
+      /**
+       * An array of arguments for the container used to run the monitoring job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerarguments)
+       */
+      override fun containerArguments(): List<String> = unwrap(this).getContainerArguments() ?:
+          emptyList()
+
+      /**
+       * Specifies the entrypoint for a container that the monitoring job runs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerentrypoint)
+       */
+      override fun containerEntrypoint(): List<String> = unwrap(this).getContainerEntrypoint() ?:
+          emptyList()
+
+      /**
+       * Sets the environment variables in the container that the monitoring job runs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-environment)
+       */
+      override fun environment(): Any? = unwrap(this).getEnvironment()
+
+      /**
+       * The address of the container image that the monitoring job runs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-imageuri)
+       */
+      override fun imageUri(): String = unwrap(this).getImageUri()
+
+      /**
+       * An Amazon S3 URI to a script that is called after analysis has been performed.
+       *
+       * Applicable only for the built-in (first party) containers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-postanalyticsprocessorsourceuri)
+       */
+      override fun postAnalyticsProcessorSourceUri(): String? =
+          unwrap(this).getPostAnalyticsProcessorSourceUri()
+
+      /**
+       * The machine learning problem type of the model that the monitoring job monitors.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-problemtype)
+       */
+      override fun problemType(): String = unwrap(this).getProblemType()
+
+      /**
+       * An Amazon S3 URI to a script that is called per row prior to running analysis.
+       *
+       * It can base64 decode the payload and convert it into a flattened JSON so that the built-in
+       * container can use the converted data. Applicable only for the built-in (first party)
+       * containers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-recordpreprocessorsourceuri)
+       */
+      override fun recordPreprocessorSourceUri(): String? =
+          unwrap(this).getRecordPreprocessorSourceUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ModelQualityAppSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty):
+          ModelQualityAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelQualityAppSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelQualityAppSpecificationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty
+    }
+  }
+
+  /**
+   * Configuration for monitoring constraints and monitoring statistics.
+   *
+   * These baseline resources are compared against the results of the current job from the series of
+   * jobs scheduled to collect data periodically.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelQualityBaselineConfigProperty modelQualityBaselineConfigProperty =
+   * ModelQualityBaselineConfigProperty.builder()
+   * .baseliningJobName("baseliningJobName")
+   * .constraintsResource(ConstraintsResourceProperty.builder()
+   * .s3Uri("s3Uri")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html)
+   */
+  public interface ModelQualityBaselineConfigProperty {
+    /**
+     * The name of the job that performs baselining for the monitoring job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html#cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-baseliningjobname)
+     */
+    public fun baseliningJobName(): String? = unwrap(this).getBaseliningJobName()
+
+    /**
+     * The constraints resource for a monitoring job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html#cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-constraintsresource)
+     */
+    public fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
+
+    /**
+     * A builder for [ModelQualityBaselineConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param baseliningJobName The name of the job that performs baselining for the monitoring
+       * job.
+       */
+      public fun baseliningJobName(baseliningJobName: String)
+
+      /**
+       * @param constraintsResource The constraints resource for a monitoring job.
+       */
+      public fun constraintsResource(constraintsResource: IResolvable)
+
+      /**
+       * @param constraintsResource The constraints resource for a monitoring job.
+       */
+      public fun constraintsResource(constraintsResource: ConstraintsResourceProperty)
+
+      /**
+       * @param constraintsResource The constraints resource for a monitoring job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("945a966ddf16d5853bdc6ec099011802c4023515328fefceefe815ef1fa1c110")
+      public
+          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.builder()
+
+      /**
+       * @param baseliningJobName The name of the job that performs baselining for the monitoring
+       * job.
+       */
+      override fun baseliningJobName(baseliningJobName: String) {
+        cdkBuilder.baseliningJobName(baseliningJobName)
+      }
+
+      /**
+       * @param constraintsResource The constraints resource for a monitoring job.
+       */
+      override fun constraintsResource(constraintsResource: IResolvable) {
+        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param constraintsResource The constraints resource for a monitoring job.
+       */
+      override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
+        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
+      }
+
+      /**
+       * @param constraintsResource The constraints resource for a monitoring job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("945a966ddf16d5853bdc6ec099011802c4023515328fefceefe815ef1fa1c110")
+      override
+          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit):
+          Unit = constraintsResource(ConstraintsResourceProperty(constraintsResource))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty,
+    ) : CdkObject(cdkObject), ModelQualityBaselineConfigProperty {
+      /**
+       * The name of the job that performs baselining for the monitoring job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html#cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-baseliningjobname)
+       */
+      override fun baseliningJobName(): String? = unwrap(this).getBaseliningJobName()
+
+      /**
+       * The constraints resource for a monitoring job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig.html#cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-constraintsresource)
+       */
+      override fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ModelQualityBaselineConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty):
+          ModelQualityBaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelQualityBaselineConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelQualityBaselineConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty
+    }
+  }
+
+  /**
+   * The input for the model quality monitoring job.
+   *
+   * Currently endpoints are supported for input for model quality monitoring jobs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelQualityJobInputProperty modelQualityJobInputProperty =
+   * ModelQualityJobInputProperty.builder()
+   * .groundTruthS3Input(MonitoringGroundTruthS3InputProperty.builder()
+   * .s3Uri("s3Uri")
+   * .build())
+   * // the properties below are optional
+   * .batchTransformInput(BatchTransformInputProperty.builder()
+   * .dataCapturedDestinationS3Uri("dataCapturedDestinationS3Uri")
+   * .datasetFormat(DatasetFormatProperty.builder()
+   * .csv(CsvProperty.builder()
+   * .header(false)
+   * .build())
+   * .json(JsonProperty.builder()
+   * .line(false)
+   * .build())
+   * .parquet(false)
+   * .build())
+   * .localPath("localPath")
+   * // the properties below are optional
+   * .endTimeOffset("endTimeOffset")
+   * .inferenceAttribute("inferenceAttribute")
+   * .probabilityAttribute("probabilityAttribute")
+   * .probabilityThresholdAttribute(123)
+   * .s3DataDistributionType("s3DataDistributionType")
+   * .s3InputMode("s3InputMode")
+   * .startTimeOffset("startTimeOffset")
+   * .build())
+   * .endpointInput(EndpointInputProperty.builder()
+   * .endpointName("endpointName")
+   * .localPath("localPath")
+   * // the properties below are optional
+   * .endTimeOffset("endTimeOffset")
+   * .inferenceAttribute("inferenceAttribute")
+   * .probabilityAttribute("probabilityAttribute")
+   * .probabilityThresholdAttribute(123)
+   * .s3DataDistributionType("s3DataDistributionType")
+   * .s3InputMode("s3InputMode")
+   * .startTimeOffset("startTimeOffset")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html)
+   */
+  public interface ModelQualityJobInputProperty {
+    /**
+     * Input object for the batch transform job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-batchtransforminput)
+     */
+    public fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
+
+    /**
+     * Input object for the endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-endpointinput)
+     */
+    public fun endpointInput(): Any? = unwrap(this).getEndpointInput()
+
+    /**
+     * The ground truth label provided for the model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-groundtruths3input)
+     */
+    public fun groundTruthS3Input(): Any
+
+    /**
+     * A builder for [ModelQualityJobInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param batchTransformInput Input object for the batch transform job.
+       */
+      public fun batchTransformInput(batchTransformInput: IResolvable)
+
+      /**
+       * @param batchTransformInput Input object for the batch transform job.
+       */
+      public fun batchTransformInput(batchTransformInput: BatchTransformInputProperty)
+
+      /**
+       * @param batchTransformInput Input object for the batch transform job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7fc15f7cd34c8b4775b1e9592f1892fc7bfb1853d2b3eefce3631c5df341e4f3")
+      public
+          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit)
+
+      /**
+       * @param endpointInput Input object for the endpoint.
+       */
+      public fun endpointInput(endpointInput: IResolvable)
+
+      /**
+       * @param endpointInput Input object for the endpoint.
+       */
+      public fun endpointInput(endpointInput: EndpointInputProperty)
+
+      /**
+       * @param endpointInput Input object for the endpoint.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("95fa11a76deeccfc69f1de14b4f53dc6220ff8de6b230af13af411602f50d92e")
+      public fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit)
+
+      /**
+       * @param groundTruthS3Input The ground truth label provided for the model. 
+       */
+      public fun groundTruthS3Input(groundTruthS3Input: IResolvable)
+
+      /**
+       * @param groundTruthS3Input The ground truth label provided for the model. 
+       */
+      public fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty)
+
+      /**
+       * @param groundTruthS3Input The ground truth label provided for the model. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("27209216e1724eaca068d3545875342c36d0dd2e2e10734cc5142ba4c7616f0d")
+      public
+          fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty.builder()
+
+      /**
+       * @param batchTransformInput Input object for the batch transform job.
+       */
+      override fun batchTransformInput(batchTransformInput: IResolvable) {
+        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param batchTransformInput Input object for the batch transform job.
+       */
+      override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
+        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
+      }
+
+      /**
+       * @param batchTransformInput Input object for the batch transform job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7fc15f7cd34c8b4775b1e9592f1892fc7bfb1853d2b3eefce3631c5df341e4f3")
+      override
+          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit):
+          Unit = batchTransformInput(BatchTransformInputProperty(batchTransformInput))
+
+      /**
+       * @param endpointInput Input object for the endpoint.
+       */
+      override fun endpointInput(endpointInput: IResolvable) {
+        cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param endpointInput Input object for the endpoint.
+       */
+      override fun endpointInput(endpointInput: EndpointInputProperty) {
+        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
+      }
+
+      /**
+       * @param endpointInput Input object for the endpoint.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("95fa11a76deeccfc69f1de14b4f53dc6220ff8de6b230af13af411602f50d92e")
+      override fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit): Unit =
+          endpointInput(EndpointInputProperty(endpointInput))
+
+      /**
+       * @param groundTruthS3Input The ground truth label provided for the model. 
+       */
+      override fun groundTruthS3Input(groundTruthS3Input: IResolvable) {
+        cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param groundTruthS3Input The ground truth label provided for the model. 
+       */
+      override fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty) {
+        cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(MonitoringGroundTruthS3InputProperty::unwrap))
+      }
+
+      /**
+       * @param groundTruthS3Input The ground truth label provided for the model. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("27209216e1724eaca068d3545875342c36d0dd2e2e10734cc5142ba4c7616f0d")
+      override
+          fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty.Builder.() -> Unit):
+          Unit = groundTruthS3Input(MonitoringGroundTruthS3InputProperty(groundTruthS3Input))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty,
+    ) : CdkObject(cdkObject), ModelQualityJobInputProperty {
+      /**
+       * Input object for the batch transform job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-batchtransforminput)
+       */
+      override fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
+
+      /**
+       * Input object for the endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-endpointinput)
+       */
+      override fun endpointInput(): Any? = unwrap(this).getEndpointInput()
+
+      /**
+       * The ground truth label provided for the model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-groundtruths3input)
+       */
+      override fun groundTruthS3Input(): Any = unwrap(this).getGroundTruthS3Input()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelQualityJobInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty):
+          ModelQualityJobInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelQualityJobInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelQualityJobInputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty
+    }
+  }
+
+  /**
+   * The ground truth labels for the dataset used for the monitoring job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MonitoringGroundTruthS3InputProperty monitoringGroundTruthS3InputProperty =
+   * MonitoringGroundTruthS3InputProperty.builder()
+   * .s3Uri("s3Uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input.html)
+   */
+  public interface MonitoringGroundTruthS3InputProperty {
+    /**
+     * The address of the Amazon S3 location of the ground truth labels.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input.html#cfn-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input-s3uri)
+     */
+    public fun s3Uri(): String
+
+    /**
+     * A builder for [MonitoringGroundTruthS3InputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Uri The address of the Amazon S3 location of the ground truth labels. 
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty.builder()
+
+      /**
+       * @param s3Uri The address of the Amazon S3 location of the ground truth labels. 
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty,
+    ) : CdkObject(cdkObject), MonitoringGroundTruthS3InputProperty {
+      /**
+       * The address of the Amazon S3 location of the ground truth labels.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input.html#cfn-sagemaker-modelqualityjobdefinition-monitoringgroundtruths3input-s3uri)
+       */
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MonitoringGroundTruthS3InputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty):
+          MonitoringGroundTruthS3InputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringGroundTruthS3InputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringGroundTruthS3InputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty
+    }
+  }
+
+  /**
+   * The output configuration for monitoring jobs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MonitoringOutputConfigProperty monitoringOutputConfigProperty =
+   * MonitoringOutputConfigProperty.builder()
+   * .monitoringOutputs(List.of(MonitoringOutputProperty.builder()
+   * .s3Output(S3OutputProperty.builder()
+   * .localPath("localPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .s3UploadMode("s3UploadMode")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html)
+   */
+  public interface MonitoringOutputConfigProperty {
+    /**
+     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+     * model artifacts at rest using Amazon S3 server-side encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * Monitoring outputs for monitoring jobs.
+     *
+     * This is where the output of the periodic monitoring jobs is uploaded.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-monitoringoutputs)
+     */
+    public fun monitoringOutputs(): Any
+
+    /**
+     * A builder for [MonitoringOutputConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
+       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(monitoringOutputs: IResolvable)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(monitoringOutputs: List<Any>)
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      public fun monitoringOutputs(vararg monitoringOutputs: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty.builder()
+
+      /**
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
+       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(monitoringOutputs: IResolvable) {
+        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(monitoringOutputs: List<Any>) {
+        cdkBuilder.monitoringOutputs(monitoringOutputs)
+      }
+
+      /**
+       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       */
+      override fun monitoringOutputs(vararg monitoringOutputs: Any): Unit =
+          monitoringOutputs(monitoringOutputs.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty,
+    ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
+      /**
+       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+       * model artifacts at rest using Amazon S3 server-side encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * Monitoring outputs for monitoring jobs.
+       *
+       * This is where the output of the periodic monitoring jobs is uploaded.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-monitoringoutputs)
+       */
+      override fun monitoringOutputs(): Any = unwrap(this).getMonitoringOutputs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty):
+          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty
+    }
+  }
+
+  /**
+   * The output object for a monitoring job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MonitoringOutputProperty monitoringOutputProperty = MonitoringOutputProperty.builder()
+   * .s3Output(S3OutputProperty.builder()
+   * .localPath("localPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .s3UploadMode("s3UploadMode")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutput.html)
+   */
+  public interface MonitoringOutputProperty {
+    /**
+     * The Amazon S3 storage location where the results of a monitoring job are saved.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutput.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutput-s3output)
+     */
+    public fun s3Output(): Any
+
+    /**
+     * A builder for [MonitoringOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      public fun s3Output(s3Output: IResolvable)
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      public fun s3Output(s3Output: S3OutputProperty)
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f719a3c56ef446f5138f7833a61d999571362d1049fad9b0ca7e5022cd11c6e9")
+      public fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty.builder()
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      override fun s3Output(s3Output: IResolvable) {
+        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      override fun s3Output(s3Output: S3OutputProperty) {
+        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+      }
+
+      /**
+       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+       * saved. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f719a3c56ef446f5138f7833a61d999571362d1049fad9b0ca7e5022cd11c6e9")
+      override fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit): Unit =
+          s3Output(S3OutputProperty(s3Output))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty,
+    ) : CdkObject(cdkObject), MonitoringOutputProperty {
+      /**
+       * The Amazon S3 storage location where the results of a monitoring job are saved.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutput.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutput-s3output)
+       */
+      override fun s3Output(): Any = unwrap(this).getS3Output()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty):
+          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringOutputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty
     }
   }
 
@@ -2793,6 +3711,239 @@ public open class CfnModelQualityJobDefinition internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty
+    }
+  }
+
+  /**
+   * Networking options for a job, such as network traffic encryption between containers, whether to
+   * allow inbound and outbound network calls to and from containers, and the VPC subnets and security
+   * groups to use for VPC-enabled jobs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * NetworkConfigProperty networkConfigProperty = NetworkConfigProperty.builder()
+   * .enableInterContainerTrafficEncryption(false)
+   * .enableNetworkIsolation(false)
+   * .vpcConfig(VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html)
+   */
+  public interface NetworkConfigProperty {
+    /**
+     * Whether to encrypt all communications between distributed processing jobs.
+     *
+     * Choose `True` to encrypt communications. Encryption provides greater security for distributed
+     * processing jobs, but the processing might take longer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-enableintercontainertrafficencryption)
+     */
+    public fun enableInterContainerTrafficEncryption(): Any? =
+        unwrap(this).getEnableInterContainerTrafficEncryption()
+
+    /**
+     * Whether to allow inbound and outbound network calls to and from the containers used for the
+     * processing job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-enablenetworkisolation)
+     */
+    public fun enableNetworkIsolation(): Any? = unwrap(this).getEnableNetworkIsolation()
+
+    /**
+     * Specifies a VPC that your training jobs and hosted models have access to.
+     *
+     * Control access to and from your training and model containers by configuring the VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-vpcconfig)
+     */
+    public fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
+
+    /**
+     * A builder for [NetworkConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between
+       * distributed processing jobs.
+       * Choose `True` to encrypt communications. Encryption provides greater security for
+       * distributed processing jobs, but the processing might take longer.
+       */
+      public
+          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: Boolean)
+
+      /**
+       * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between
+       * distributed processing jobs.
+       * Choose `True` to encrypt communications. Encryption provides greater security for
+       * distributed processing jobs, but the processing might take longer.
+       */
+      public
+          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable)
+
+      /**
+       * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and
+       * from the containers used for the processing job.
+       */
+      public fun enableNetworkIsolation(enableNetworkIsolation: Boolean)
+
+      /**
+       * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and
+       * from the containers used for the processing job.
+       */
+      public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable)
+
+      /**
+       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
+       * Control access to and from your training and model containers by configuring the VPC.
+       */
+      public fun vpcConfig(vpcConfig: IResolvable)
+
+      /**
+       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
+       * Control access to and from your training and model containers by configuring the VPC.
+       */
+      public fun vpcConfig(vpcConfig: VpcConfigProperty)
+
+      /**
+       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
+       * Control access to and from your training and model containers by configuring the VPC.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("156c44cc55e4ab74f58e06f442ad8d9e3727e4582c4f748362220851fe3cd55e")
+      public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty.builder()
+
+      /**
+       * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between
+       * distributed processing jobs.
+       * Choose `True` to encrypt communications. Encryption provides greater security for
+       * distributed processing jobs, but the processing might take longer.
+       */
+      override
+          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: Boolean) {
+        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption)
+      }
+
+      /**
+       * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between
+       * distributed processing jobs.
+       * Choose `True` to encrypt communications. Encryption provides greater security for
+       * distributed processing jobs, but the processing might take longer.
+       */
+      override
+          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable) {
+        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and
+       * from the containers used for the processing job.
+       */
+      override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
+      }
+
+      /**
+       * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and
+       * from the containers used for the processing job.
+       */
+      override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
+       * Control access to and from your training and model containers by configuring the VPC.
+       */
+      override fun vpcConfig(vpcConfig: IResolvable) {
+        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
+       * Control access to and from your training and model containers by configuring the VPC.
+       */
+      override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      }
+
+      /**
+       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
+       * Control access to and from your training and model containers by configuring the VPC.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("156c44cc55e4ab74f58e06f442ad8d9e3727e4582c4f748362220851fe3cd55e")
+      override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+          vpcConfig(VpcConfigProperty(vpcConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty,
+    ) : CdkObject(cdkObject), NetworkConfigProperty {
+      /**
+       * Whether to encrypt all communications between distributed processing jobs.
+       *
+       * Choose `True` to encrypt communications. Encryption provides greater security for
+       * distributed processing jobs, but the processing might take longer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-enableintercontainertrafficencryption)
+       */
+      override fun enableInterContainerTrafficEncryption(): Any? =
+          unwrap(this).getEnableInterContainerTrafficEncryption()
+
+      /**
+       * Whether to allow inbound and outbound network calls to and from the containers used for the
+       * processing job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-enablenetworkisolation)
+       */
+      override fun enableNetworkIsolation(): Any? = unwrap(this).getEnableNetworkIsolation()
+
+      /**
+       * Specifies a VPC that your training jobs and hosted models have access to.
+       *
+       * Control access to and from your training and model containers by configuring the VPC.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-vpcconfig)
+       */
+      override fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty):
+          NetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty
     }
   }
 
@@ -3105,489 +4256,6 @@ public open class CfnModelQualityJobDefinition internal constructor(
   }
 
   /**
-   * The output configuration for monitoring jobs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringOutputConfigProperty monitoringOutputConfigProperty =
-   * MonitoringOutputConfigProperty.builder()
-   * .monitoringOutputs(List.of(MonitoringOutputProperty.builder()
-   * .s3Output(S3OutputProperty.builder()
-   * .localPath("localPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .s3UploadMode("s3UploadMode")
-   * .build())
-   * .build()))
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html)
-   */
-  public interface MonitoringOutputConfigProperty {
-    /**
-     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
-     * model artifacts at rest using Amazon S3 server-side encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * Monitoring outputs for monitoring jobs.
-     *
-     * This is where the output of the periodic monitoring jobs is uploaded.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-monitoringoutputs)
-     */
-    public fun monitoringOutputs(): Any
-
-    /**
-     * A builder for [MonitoringOutputConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(monitoringOutputs: IResolvable)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(monitoringOutputs: List<Any>)
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      public fun monitoringOutputs(vararg monitoringOutputs: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty.builder()
-
-      /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(monitoringOutputs: IResolvable) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(monitoringOutputs: List<Any>) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs)
-      }
-
-      /**
-       * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       */
-      override fun monitoringOutputs(vararg monitoringOutputs: Any): Unit =
-          monitoringOutputs(monitoringOutputs.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
-      /**
-       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
-       * model artifacts at rest using Amazon S3 server-side encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * Monitoring outputs for monitoring jobs.
-       *
-       * This is where the output of the periodic monitoring jobs is uploaded.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-monitoringoutputs)
-       */
-      override fun monitoringOutputs(): Any = unwrap(this).getMonitoringOutputs()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty):
-          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty
-    }
-  }
-
-  /**
-   * Networking options for a job, such as network traffic encryption between containers, whether to
-   * allow inbound and outbound network calls to and from containers, and the VPC subnets and security
-   * groups to use for VPC-enabled jobs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * NetworkConfigProperty networkConfigProperty = NetworkConfigProperty.builder()
-   * .enableInterContainerTrafficEncryption(false)
-   * .enableNetworkIsolation(false)
-   * .vpcConfig(VpcConfigProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnets(List.of("subnets"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html)
-   */
-  public interface NetworkConfigProperty {
-    /**
-     * Whether to encrypt all communications between distributed processing jobs.
-     *
-     * Choose `True` to encrypt communications. Encryption provides greater security for distributed
-     * processing jobs, but the processing might take longer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-enableintercontainertrafficencryption)
-     */
-    public fun enableInterContainerTrafficEncryption(): Any? =
-        unwrap(this).getEnableInterContainerTrafficEncryption()
-
-    /**
-     * Whether to allow inbound and outbound network calls to and from the containers used for the
-     * processing job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-enablenetworkisolation)
-     */
-    public fun enableNetworkIsolation(): Any? = unwrap(this).getEnableNetworkIsolation()
-
-    /**
-     * Specifies a VPC that your training jobs and hosted models have access to.
-     *
-     * Control access to and from your training and model containers by configuring the VPC.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-vpcconfig)
-     */
-    public fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
-
-    /**
-     * A builder for [NetworkConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between
-       * distributed processing jobs.
-       * Choose `True` to encrypt communications. Encryption provides greater security for
-       * distributed processing jobs, but the processing might take longer.
-       */
-      public
-          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: Boolean)
-
-      /**
-       * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between
-       * distributed processing jobs.
-       * Choose `True` to encrypt communications. Encryption provides greater security for
-       * distributed processing jobs, but the processing might take longer.
-       */
-      public
-          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable)
-
-      /**
-       * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and
-       * from the containers used for the processing job.
-       */
-      public fun enableNetworkIsolation(enableNetworkIsolation: Boolean)
-
-      /**
-       * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and
-       * from the containers used for the processing job.
-       */
-      public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable)
-
-      /**
-       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
-       * Control access to and from your training and model containers by configuring the VPC.
-       */
-      public fun vpcConfig(vpcConfig: IResolvable)
-
-      /**
-       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
-       * Control access to and from your training and model containers by configuring the VPC.
-       */
-      public fun vpcConfig(vpcConfig: VpcConfigProperty)
-
-      /**
-       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
-       * Control access to and from your training and model containers by configuring the VPC.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("156c44cc55e4ab74f58e06f442ad8d9e3727e4582c4f748362220851fe3cd55e")
-      public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty.builder()
-
-      /**
-       * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between
-       * distributed processing jobs.
-       * Choose `True` to encrypt communications. Encryption provides greater security for
-       * distributed processing jobs, but the processing might take longer.
-       */
-      override
-          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: Boolean) {
-        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption)
-      }
-
-      /**
-       * @param enableInterContainerTrafficEncryption Whether to encrypt all communications between
-       * distributed processing jobs.
-       * Choose `True` to encrypt communications. Encryption provides greater security for
-       * distributed processing jobs, but the processing might take longer.
-       */
-      override
-          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable) {
-        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and
-       * from the containers used for the processing job.
-       */
-      override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
-        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
-      }
-
-      /**
-       * @param enableNetworkIsolation Whether to allow inbound and outbound network calls to and
-       * from the containers used for the processing job.
-       */
-      override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
-       * Control access to and from your training and model containers by configuring the VPC.
-       */
-      override fun vpcConfig(vpcConfig: IResolvable) {
-        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
-       * Control access to and from your training and model containers by configuring the VPC.
-       */
-      override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
-      }
-
-      /**
-       * @param vpcConfig Specifies a VPC that your training jobs and hosted models have access to.
-       * Control access to and from your training and model containers by configuring the VPC.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("156c44cc55e4ab74f58e06f442ad8d9e3727e4582c4f748362220851fe3cd55e")
-      override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
-          vpcConfig(VpcConfigProperty(vpcConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty,
-    ) : CdkObject(cdkObject), NetworkConfigProperty {
-      /**
-       * Whether to encrypt all communications between distributed processing jobs.
-       *
-       * Choose `True` to encrypt communications. Encryption provides greater security for
-       * distributed processing jobs, but the processing might take longer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-enableintercontainertrafficencryption)
-       */
-      override fun enableInterContainerTrafficEncryption(): Any? =
-          unwrap(this).getEnableInterContainerTrafficEncryption()
-
-      /**
-       * Whether to allow inbound and outbound network calls to and from the containers used for the
-       * processing job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-enablenetworkisolation)
-       */
-      override fun enableNetworkIsolation(): Any? = unwrap(this).getEnableNetworkIsolation()
-
-      /**
-       * Specifies a VPC that your training jobs and hosted models have access to.
-       *
-       * Control access to and from your training and model containers by configuring the VPC.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-networkconfig.html#cfn-sagemaker-modelqualityjobdefinition-networkconfig-vpcconfig)
-       */
-      override fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty):
-          NetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty
-    }
-  }
-
-  /**
-   * The CSV format.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CsvProperty csvProperty = CsvProperty.builder()
-   * .header(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-csv.html)
-   */
-  public interface CsvProperty {
-    /**
-     * A boolean flag indicating if given CSV has header.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-csv.html#cfn-sagemaker-modelqualityjobdefinition-csv-header)
-     */
-    public fun `header`(): Any? = unwrap(this).getHeader()
-
-    /**
-     * A builder for [CsvProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      public fun `header`(`header`: Boolean)
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      public fun `header`(`header`: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty.builder()
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      override fun `header`(`header`: Boolean) {
-        cdkBuilder.`header`(`header`)
-      }
-
-      /**
-       * @param header A boolean flag indicating if given CSV has header.
-       */
-      override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty,
-    ) : CdkObject(cdkObject), CsvProperty {
-      /**
-       * A boolean flag indicating if given CSV has header.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-csv.html#cfn-sagemaker-modelqualityjobdefinition-csv-header)
-       */
-      override fun `header`(): Any? = unwrap(this).getHeader()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CsvProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty):
-          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CsvProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty
-    }
-  }
-
-  /**
    * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
    * compute resources have access to.
    *
@@ -3752,674 +4420,6 @@ public open class CfnModelQualityJobDefinition internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.VpcConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.VpcConfigProperty
-    }
-  }
-
-  /**
-   * The dataset format of the data to monitor.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DatasetFormatProperty datasetFormatProperty = DatasetFormatProperty.builder()
-   * .csv(CsvProperty.builder()
-   * .header(false)
-   * .build())
-   * .json(JsonProperty.builder()
-   * .line(false)
-   * .build())
-   * .parquet(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html)
-   */
-  public interface DatasetFormatProperty {
-    /**
-     * The CSV format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-csv)
-     */
-    public fun csv(): Any? = unwrap(this).getCsv()
-
-    /**
-     * The Json format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-json)
-     */
-    public fun json(): Any? = unwrap(this).getJson()
-
-    /**
-     * A flag indicating if the dataset format is Parquet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-parquet)
-     */
-    public fun parquet(): Any? = unwrap(this).getParquet()
-
-    /**
-     * A builder for [DatasetFormatProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param csv The CSV format.
-       */
-      public fun csv(csv: IResolvable)
-
-      /**
-       * @param csv The CSV format.
-       */
-      public fun csv(csv: CsvProperty)
-
-      /**
-       * @param csv The CSV format.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2610a4a45f311cd86c74dd1598067d2928e7010119e393ae4b16e3c1b121edde")
-      public fun csv(csv: CsvProperty.Builder.() -> Unit)
-
-      /**
-       * @param json The Json format.
-       */
-      public fun json(json: IResolvable)
-
-      /**
-       * @param json The Json format.
-       */
-      public fun json(json: JsonProperty)
-
-      /**
-       * @param json The Json format.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0efa400048db4040dccefc62b9defa3adede02e5be2a2604a021eb6e03a99e2a")
-      public fun json(json: JsonProperty.Builder.() -> Unit)
-
-      /**
-       * @param parquet A flag indicating if the dataset format is Parquet.
-       */
-      public fun parquet(parquet: Boolean)
-
-      /**
-       * @param parquet A flag indicating if the dataset format is Parquet.
-       */
-      public fun parquet(parquet: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty.builder()
-
-      /**
-       * @param csv The CSV format.
-       */
-      override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param csv The CSV format.
-       */
-      override fun csv(csv: CsvProperty) {
-        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
-      }
-
-      /**
-       * @param csv The CSV format.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2610a4a45f311cd86c74dd1598067d2928e7010119e393ae4b16e3c1b121edde")
-      override fun csv(csv: CsvProperty.Builder.() -> Unit): Unit = csv(CsvProperty(csv))
-
-      /**
-       * @param json The Json format.
-       */
-      override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param json The Json format.
-       */
-      override fun json(json: JsonProperty) {
-        cdkBuilder.json(json.let(JsonProperty::unwrap))
-      }
-
-      /**
-       * @param json The Json format.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0efa400048db4040dccefc62b9defa3adede02e5be2a2604a021eb6e03a99e2a")
-      override fun json(json: JsonProperty.Builder.() -> Unit): Unit = json(JsonProperty(json))
-
-      /**
-       * @param parquet A flag indicating if the dataset format is Parquet.
-       */
-      override fun parquet(parquet: Boolean) {
-        cdkBuilder.parquet(parquet)
-      }
-
-      /**
-       * @param parquet A flag indicating if the dataset format is Parquet.
-       */
-      override fun parquet(parquet: IResolvable) {
-        cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty,
-    ) : CdkObject(cdkObject), DatasetFormatProperty {
-      /**
-       * The CSV format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-csv)
-       */
-      override fun csv(): Any? = unwrap(this).getCsv()
-
-      /**
-       * The Json format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-json)
-       */
-      override fun json(): Any? = unwrap(this).getJson()
-
-      /**
-       * A flag indicating if the dataset format is Parquet.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-datasetformat.html#cfn-sagemaker-modelqualityjobdefinition-datasetformat-parquet)
-       */
-      override fun parquet(): Any? = unwrap(this).getParquet()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatasetFormatProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty):
-          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetFormatProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatasetFormatProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty
-    }
-  }
-
-  /**
-   * The constraints resource for a monitoring job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ConstraintsResourceProperty constraintsResourceProperty = ConstraintsResourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-constraintsresource.html)
-   */
-  public interface ConstraintsResourceProperty {
-    /**
-     * The Amazon S3 URI for the constraints resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-constraintsresource.html#cfn-sagemaker-modelqualityjobdefinition-constraintsresource-s3uri)
-     */
-    public fun s3Uri(): String? = unwrap(this).getS3Uri()
-
-    /**
-     * A builder for [ConstraintsResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Uri The Amazon S3 URI for the constraints resource.
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty.builder()
-
-      /**
-       * @param s3Uri The Amazon S3 URI for the constraints resource.
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty,
-    ) : CdkObject(cdkObject), ConstraintsResourceProperty {
-      /**
-       * The Amazon S3 URI for the constraints resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-constraintsresource.html#cfn-sagemaker-modelqualityjobdefinition-constraintsresource-s3uri)
-       */
-      override fun s3Uri(): String? = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConstraintsResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty):
-          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConstraintsResourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConstraintsResourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty
-    }
-  }
-
-  /**
-   * The output object for a monitoring job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MonitoringOutputProperty monitoringOutputProperty = MonitoringOutputProperty.builder()
-   * .s3Output(S3OutputProperty.builder()
-   * .localPath("localPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .s3UploadMode("s3UploadMode")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutput.html)
-   */
-  public interface MonitoringOutputProperty {
-    /**
-     * The Amazon S3 storage location where the results of a monitoring job are saved.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutput.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutput-s3output)
-     */
-    public fun s3Output(): Any
-
-    /**
-     * A builder for [MonitoringOutputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
-       */
-      public fun s3Output(s3Output: IResolvable)
-
-      /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
-       */
-      public fun s3Output(s3Output: S3OutputProperty)
-
-      /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f719a3c56ef446f5138f7833a61d999571362d1049fad9b0ca7e5022cd11c6e9")
-      public fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty.builder()
-
-      /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
-       */
-      override fun s3Output(s3Output: IResolvable) {
-        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
-       */
-      override fun s3Output(s3Output: S3OutputProperty) {
-        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
-      }
-
-      /**
-       * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
-       * saved. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f719a3c56ef446f5138f7833a61d999571362d1049fad9b0ca7e5022cd11c6e9")
-      override fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit): Unit =
-          s3Output(S3OutputProperty(s3Output))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputProperty {
-      /**
-       * The Amazon S3 storage location where the results of a monitoring job are saved.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutput.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutput-s3output)
-       */
-      override fun s3Output(): Any = unwrap(this).getS3Output()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringOutputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty):
-          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MonitoringOutputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty
-    }
-  }
-
-  /**
-   * The input for the model quality monitoring job.
-   *
-   * Currently endpoints are supported for input for model quality monitoring jobs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelQualityJobInputProperty modelQualityJobInputProperty =
-   * ModelQualityJobInputProperty.builder()
-   * .groundTruthS3Input(MonitoringGroundTruthS3InputProperty.builder()
-   * .s3Uri("s3Uri")
-   * .build())
-   * // the properties below are optional
-   * .batchTransformInput(BatchTransformInputProperty.builder()
-   * .dataCapturedDestinationS3Uri("dataCapturedDestinationS3Uri")
-   * .datasetFormat(DatasetFormatProperty.builder()
-   * .csv(CsvProperty.builder()
-   * .header(false)
-   * .build())
-   * .json(JsonProperty.builder()
-   * .line(false)
-   * .build())
-   * .parquet(false)
-   * .build())
-   * .localPath("localPath")
-   * // the properties below are optional
-   * .endTimeOffset("endTimeOffset")
-   * .inferenceAttribute("inferenceAttribute")
-   * .probabilityAttribute("probabilityAttribute")
-   * .probabilityThresholdAttribute(123)
-   * .s3DataDistributionType("s3DataDistributionType")
-   * .s3InputMode("s3InputMode")
-   * .startTimeOffset("startTimeOffset")
-   * .build())
-   * .endpointInput(EndpointInputProperty.builder()
-   * .endpointName("endpointName")
-   * .localPath("localPath")
-   * // the properties below are optional
-   * .endTimeOffset("endTimeOffset")
-   * .inferenceAttribute("inferenceAttribute")
-   * .probabilityAttribute("probabilityAttribute")
-   * .probabilityThresholdAttribute(123)
-   * .s3DataDistributionType("s3DataDistributionType")
-   * .s3InputMode("s3InputMode")
-   * .startTimeOffset("startTimeOffset")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html)
-   */
-  public interface ModelQualityJobInputProperty {
-    /**
-     * Input object for the batch transform job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-batchtransforminput)
-     */
-    public fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
-
-    /**
-     * Input object for the endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-endpointinput)
-     */
-    public fun endpointInput(): Any? = unwrap(this).getEndpointInput()
-
-    /**
-     * The ground truth label provided for the model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-groundtruths3input)
-     */
-    public fun groundTruthS3Input(): Any
-
-    /**
-     * A builder for [ModelQualityJobInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      public fun batchTransformInput(batchTransformInput: IResolvable)
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      public fun batchTransformInput(batchTransformInput: BatchTransformInputProperty)
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7fc15f7cd34c8b4775b1e9592f1892fc7bfb1853d2b3eefce3631c5df341e4f3")
-      public
-          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit)
-
-      /**
-       * @param endpointInput Input object for the endpoint.
-       */
-      public fun endpointInput(endpointInput: IResolvable)
-
-      /**
-       * @param endpointInput Input object for the endpoint.
-       */
-      public fun endpointInput(endpointInput: EndpointInputProperty)
-
-      /**
-       * @param endpointInput Input object for the endpoint.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("95fa11a76deeccfc69f1de14b4f53dc6220ff8de6b230af13af411602f50d92e")
-      public fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit)
-
-      /**
-       * @param groundTruthS3Input The ground truth label provided for the model. 
-       */
-      public fun groundTruthS3Input(groundTruthS3Input: IResolvable)
-
-      /**
-       * @param groundTruthS3Input The ground truth label provided for the model. 
-       */
-      public fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty)
-
-      /**
-       * @param groundTruthS3Input The ground truth label provided for the model. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("27209216e1724eaca068d3545875342c36d0dd2e2e10734cc5142ba4c7616f0d")
-      public
-          fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty.builder()
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      override fun batchTransformInput(batchTransformInput: IResolvable) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
-      }
-
-      /**
-       * @param batchTransformInput Input object for the batch transform job.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7fc15f7cd34c8b4775b1e9592f1892fc7bfb1853d2b3eefce3631c5df341e4f3")
-      override
-          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit):
-          Unit = batchTransformInput(BatchTransformInputProperty(batchTransformInput))
-
-      /**
-       * @param endpointInput Input object for the endpoint.
-       */
-      override fun endpointInput(endpointInput: IResolvable) {
-        cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param endpointInput Input object for the endpoint.
-       */
-      override fun endpointInput(endpointInput: EndpointInputProperty) {
-        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
-      }
-
-      /**
-       * @param endpointInput Input object for the endpoint.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("95fa11a76deeccfc69f1de14b4f53dc6220ff8de6b230af13af411602f50d92e")
-      override fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit): Unit =
-          endpointInput(EndpointInputProperty(endpointInput))
-
-      /**
-       * @param groundTruthS3Input The ground truth label provided for the model. 
-       */
-      override fun groundTruthS3Input(groundTruthS3Input: IResolvable) {
-        cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param groundTruthS3Input The ground truth label provided for the model. 
-       */
-      override fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty) {
-        cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(MonitoringGroundTruthS3InputProperty::unwrap))
-      }
-
-      /**
-       * @param groundTruthS3Input The ground truth label provided for the model. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("27209216e1724eaca068d3545875342c36d0dd2e2e10734cc5142ba4c7616f0d")
-      override
-          fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty.Builder.() -> Unit):
-          Unit = groundTruthS3Input(MonitoringGroundTruthS3InputProperty(groundTruthS3Input))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty,
-    ) : CdkObject(cdkObject), ModelQualityJobInputProperty {
-      /**
-       * Input object for the batch transform job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-batchtransforminput)
-       */
-      override fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
-
-      /**
-       * Input object for the endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-endpointinput)
-       */
-      override fun endpointInput(): Any? = unwrap(this).getEndpointInput()
-
-      /**
-       * The ground truth label provided for the model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityjobinput.html#cfn-sagemaker-modelqualityjobdefinition-modelqualityjobinput-groundtruths3input)
-       */
-      override fun groundTruthS3Input(): Any = unwrap(this).getGroundTruthS3Input()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ModelQualityJobInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty):
-          ModelQualityJobInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ModelQualityJobInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelQualityJobInputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty
     }
   }
 }

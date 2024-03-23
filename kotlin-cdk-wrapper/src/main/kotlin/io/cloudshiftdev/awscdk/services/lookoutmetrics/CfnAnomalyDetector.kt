@@ -451,6 +451,291 @@ public open class CfnAnomalyDetector internal constructor(
   }
 
   /**
+   * Contains information about a detector's configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
+   * AnomalyDetectorConfigProperty anomalyDetectorConfigProperty =
+   * AnomalyDetectorConfigProperty.builder()
+   * .anomalyDetectorFrequency("anomalyDetectorFrequency")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-anomalydetectorconfig.html)
+   */
+  public interface AnomalyDetectorConfigProperty {
+    /**
+     * The frequency at which the detector analyzes its source data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-anomalydetectorconfig.html#cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig-anomalydetectorfrequency)
+     */
+    public fun anomalyDetectorFrequency(): String
+
+    /**
+     * A builder for [AnomalyDetectorConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param anomalyDetectorFrequency The frequency at which the detector analyzes its source
+       * data. 
+       */
+      public fun anomalyDetectorFrequency(anomalyDetectorFrequency: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty.builder()
+
+      /**
+       * @param anomalyDetectorFrequency The frequency at which the detector analyzes its source
+       * data. 
+       */
+      override fun anomalyDetectorFrequency(anomalyDetectorFrequency: String) {
+        cdkBuilder.anomalyDetectorFrequency(anomalyDetectorFrequency)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty,
+    ) : CdkObject(cdkObject), AnomalyDetectorConfigProperty {
+      /**
+       * The frequency at which the detector analyzes its source data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-anomalydetectorconfig.html#cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig-anomalydetectorfrequency)
+       */
+      override fun anomalyDetectorFrequency(): String = unwrap(this).getAnomalyDetectorFrequency()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnomalyDetectorConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty):
+          AnomalyDetectorConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnomalyDetectorConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnomalyDetectorConfigProperty):
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty
+    }
+  }
+
+  /**
+   * Details about an Amazon AppFlow flow datasource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
+   * AppFlowConfigProperty appFlowConfigProperty = AppFlowConfigProperty.builder()
+   * .flowName("flowName")
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html)
+   */
+  public interface AppFlowConfigProperty {
+    /**
+     * name of the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html#cfn-lookoutmetrics-anomalydetector-appflowconfig-flowname)
+     */
+    public fun flowName(): String
+
+    /**
+     * An IAM role that gives Amazon Lookout for Metrics permission to access the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html#cfn-lookoutmetrics-anomalydetector-appflowconfig-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [AppFlowConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param flowName name of the flow. 
+       */
+      public fun flowName(flowName: String)
+
+      /**
+       * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access the
+       * flow. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty.builder()
+
+      /**
+       * @param flowName name of the flow. 
+       */
+      override fun flowName(flowName: String) {
+        cdkBuilder.flowName(flowName)
+      }
+
+      /**
+       * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access the
+       * flow. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty,
+    ) : CdkObject(cdkObject), AppFlowConfigProperty {
+      /**
+       * name of the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html#cfn-lookoutmetrics-anomalydetector-appflowconfig-flowname)
+       */
+      override fun flowName(): String = unwrap(this).getFlowName()
+
+      /**
+       * An IAM role that gives Amazon Lookout for Metrics permission to access the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html#cfn-lookoutmetrics-anomalydetector-appflowconfig-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AppFlowConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty):
+          AppFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AppFlowConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AppFlowConfigProperty):
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty
+    }
+  }
+
+  /**
+   * Details about an Amazon CloudWatch datasource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
+   * CloudwatchConfigProperty cloudwatchConfigProperty = CloudwatchConfigProperty.builder()
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-cloudwatchconfig.html)
+   */
+  public interface CloudwatchConfigProperty {
+    /**
+     * An IAM role that gives Amazon Lookout for Metrics permission to access data in Amazon
+     * CloudWatch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-cloudwatchconfig.html#cfn-lookoutmetrics-anomalydetector-cloudwatchconfig-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [CloudwatchConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access data
+       * in Amazon CloudWatch. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty.builder()
+
+      /**
+       * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access data
+       * in Amazon CloudWatch. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty,
+    ) : CdkObject(cdkObject), CloudwatchConfigProperty {
+      /**
+       * An IAM role that gives Amazon Lookout for Metrics permission to access data in Amazon
+       * CloudWatch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-cloudwatchconfig.html#cfn-lookoutmetrics-anomalydetector-cloudwatchconfig-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudwatchConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty):
+          CloudwatchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CloudwatchConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudwatchConfigProperty):
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty
+    }
+  }
+
+  /**
    * Contains information about how a source CSV data file should be analyzed.
    *
    * Example:
@@ -691,7 +976,7 @@ public open class CfnAnomalyDetector internal constructor(
   }
 
   /**
-   * Details about an Amazon AppFlow flow datasource.
+   * Contains information about a source file's formatting.
    *
    * Example:
    *
@@ -699,106 +984,899 @@ public open class CfnAnomalyDetector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
-   * AppFlowConfigProperty appFlowConfigProperty = AppFlowConfigProperty.builder()
-   * .flowName("flowName")
-   * .roleArn("roleArn")
+   * FileFormatDescriptorProperty fileFormatDescriptorProperty =
+   * FileFormatDescriptorProperty.builder()
+   * .csvFormatDescriptor(CsvFormatDescriptorProperty.builder()
+   * .charset("charset")
+   * .containsHeader(false)
+   * .delimiter("delimiter")
+   * .fileCompression("fileCompression")
+   * .headerList(List.of("headerList"))
+   * .quoteSymbol("quoteSymbol")
+   * .build())
+   * .jsonFormatDescriptor(JsonFormatDescriptorProperty.builder()
+   * .charset("charset")
+   * .fileCompression("fileCompression")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html)
    */
-  public interface AppFlowConfigProperty {
+  public interface FileFormatDescriptorProperty {
     /**
-     * name of the flow.
+     * Contains information about how a source CSV data file should be analyzed.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html#cfn-lookoutmetrics-anomalydetector-appflowconfig-flowname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-fileformatdescriptor-csvformatdescriptor)
      */
-    public fun flowName(): String
+    public fun csvFormatDescriptor(): Any? = unwrap(this).getCsvFormatDescriptor()
 
     /**
-     * An IAM role that gives Amazon Lookout for Metrics permission to access the flow.
+     * Contains information about how a source JSON data file should be analyzed.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html#cfn-lookoutmetrics-anomalydetector-appflowconfig-rolearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-fileformatdescriptor-jsonformatdescriptor)
      */
-    public fun roleArn(): String
+    public fun jsonFormatDescriptor(): Any? = unwrap(this).getJsonFormatDescriptor()
 
     /**
-     * A builder for [AppFlowConfigProperty]
+     * A builder for [FileFormatDescriptorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param flowName name of the flow. 
+       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
+       * analyzed.
        */
-      public fun flowName(flowName: String)
+      public fun csvFormatDescriptor(csvFormatDescriptor: IResolvable)
 
       /**
-       * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access the
-       * flow. 
+       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
+       * analyzed.
        */
-      public fun roleArn(roleArn: String)
+      public fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty)
+
+      /**
+       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
+       * analyzed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30d6418ff59aaf89b781b0c583a0eb6b9303fa8ef376df16e9f445c4c4aef2c0")
+      public
+          fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty.Builder.() -> Unit)
+
+      /**
+       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
+       * be analyzed.
+       */
+      public fun jsonFormatDescriptor(jsonFormatDescriptor: IResolvable)
+
+      /**
+       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
+       * be analyzed.
+       */
+      public fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty)
+
+      /**
+       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
+       * be analyzed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c86ece7f584b864cf6c69e6c3bc75a7a3a79938f6d5e16faf4d4b0b8c3432593")
+      public
+          fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty.Builder
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty.Builder
           =
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty.builder()
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty.builder()
 
       /**
-       * @param flowName name of the flow. 
+       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
+       * analyzed.
        */
-      override fun flowName(flowName: String) {
-        cdkBuilder.flowName(flowName)
+      override fun csvFormatDescriptor(csvFormatDescriptor: IResolvable) {
+        cdkBuilder.csvFormatDescriptor(csvFormatDescriptor.let(IResolvable::unwrap))
       }
 
       /**
-       * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access the
-       * flow. 
+       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
+       * analyzed.
        */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
+      override fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty) {
+        cdkBuilder.csvFormatDescriptor(csvFormatDescriptor.let(CsvFormatDescriptorProperty::unwrap))
       }
+
+      /**
+       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
+       * analyzed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30d6418ff59aaf89b781b0c583a0eb6b9303fa8ef376df16e9f445c4c4aef2c0")
+      override
+          fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty.Builder.() -> Unit):
+          Unit = csvFormatDescriptor(CsvFormatDescriptorProperty(csvFormatDescriptor))
+
+      /**
+       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
+       * be analyzed.
+       */
+      override fun jsonFormatDescriptor(jsonFormatDescriptor: IResolvable) {
+        cdkBuilder.jsonFormatDescriptor(jsonFormatDescriptor.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
+       * be analyzed.
+       */
+      override fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty) {
+        cdkBuilder.jsonFormatDescriptor(jsonFormatDescriptor.let(JsonFormatDescriptorProperty::unwrap))
+      }
+
+      /**
+       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
+       * be analyzed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c86ece7f584b864cf6c69e6c3bc75a7a3a79938f6d5e16faf4d4b0b8c3432593")
+      override
+          fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty.Builder.() -> Unit):
+          Unit = jsonFormatDescriptor(JsonFormatDescriptorProperty(jsonFormatDescriptor))
 
       public fun build():
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty,
-    ) : CdkObject(cdkObject), AppFlowConfigProperty {
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty,
+    ) : CdkObject(cdkObject), FileFormatDescriptorProperty {
       /**
-       * name of the flow.
+       * Contains information about how a source CSV data file should be analyzed.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html#cfn-lookoutmetrics-anomalydetector-appflowconfig-flowname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-fileformatdescriptor-csvformatdescriptor)
        */
-      override fun flowName(): String = unwrap(this).getFlowName()
+      override fun csvFormatDescriptor(): Any? = unwrap(this).getCsvFormatDescriptor()
 
       /**
-       * An IAM role that gives Amazon Lookout for Metrics permission to access the flow.
+       * Contains information about how a source JSON data file should be analyzed.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-appflowconfig.html#cfn-lookoutmetrics-anomalydetector-appflowconfig-rolearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-fileformatdescriptor-jsonformatdescriptor)
        */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun jsonFormatDescriptor(): Any? = unwrap(this).getJsonFormatDescriptor()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AppFlowConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FileFormatDescriptorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty):
-          AppFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AppFlowConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty):
+          FileFormatDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FileFormatDescriptorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FileFormatDescriptorProperty):
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty
+    }
+  }
+
+  /**
+   * Contains information about how a source JSON data file should be analyzed.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
+   * JsonFormatDescriptorProperty jsonFormatDescriptorProperty =
+   * JsonFormatDescriptorProperty.builder()
+   * .charset("charset")
+   * .fileCompression("fileCompression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html)
+   */
+  public interface JsonFormatDescriptorProperty {
+    /**
+     * The character set in which the source JSON file is written.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-jsonformatdescriptor-charset)
+     */
+    public fun charset(): String? = unwrap(this).getCharset()
+
+    /**
+     * The level of compression of the source CSV file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-jsonformatdescriptor-filecompression)
+     */
+    public fun fileCompression(): String? = unwrap(this).getFileCompression()
+
+    /**
+     * A builder for [JsonFormatDescriptorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param charset The character set in which the source JSON file is written.
+       */
+      public fun charset(charset: String)
+
+      /**
+       * @param fileCompression The level of compression of the source CSV file.
+       */
+      public fun fileCompression(fileCompression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty.builder()
+
+      /**
+       * @param charset The character set in which the source JSON file is written.
+       */
+      override fun charset(charset: String) {
+        cdkBuilder.charset(charset)
+      }
+
+      /**
+       * @param fileCompression The level of compression of the source CSV file.
+       */
+      override fun fileCompression(fileCompression: String) {
+        cdkBuilder.fileCompression(fileCompression)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty,
+    ) : CdkObject(cdkObject), JsonFormatDescriptorProperty {
+      /**
+       * The character set in which the source JSON file is written.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-jsonformatdescriptor-charset)
+       */
+      override fun charset(): String? = unwrap(this).getCharset()
+
+      /**
+       * The level of compression of the source CSV file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-jsonformatdescriptor-filecompression)
+       */
+      override fun fileCompression(): String? = unwrap(this).getFileCompression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JsonFormatDescriptorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty):
+          JsonFormatDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JsonFormatDescriptorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JsonFormatDescriptorProperty):
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty
+    }
+  }
+
+  /**
+   * A calculation made by contrasting a measure and a dimension from your source data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
+   * MetricProperty metricProperty = MetricProperty.builder()
+   * .aggregationFunction("aggregationFunction")
+   * .metricName("metricName")
+   * // the properties below are optional
+   * .namespace("namespace")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html)
+   */
+  public interface MetricProperty {
+    /**
+     * The function with which the metric is calculated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-aggregationfunction)
+     */
+    public fun aggregationFunction(): String
+
+    /**
+     * The name of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-metricname)
+     */
+    public fun metricName(): String
+
+    /**
+     * The namespace for the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-namespace)
+     */
+    public fun namespace(): String? = unwrap(this).getNamespace()
+
+    /**
+     * A builder for [MetricProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param aggregationFunction The function with which the metric is calculated. 
+       */
+      public fun aggregationFunction(aggregationFunction: String)
+
+      /**
+       * @param metricName The name of the metric. 
+       */
+      public fun metricName(metricName: String)
+
+      /**
+       * @param namespace The namespace for the metric.
+       */
+      public fun namespace(namespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty.Builder =
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty.builder()
+
+      /**
+       * @param aggregationFunction The function with which the metric is calculated. 
+       */
+      override fun aggregationFunction(aggregationFunction: String) {
+        cdkBuilder.aggregationFunction(aggregationFunction)
+      }
+
+      /**
+       * @param metricName The name of the metric. 
+       */
+      override fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+      }
+
+      /**
+       * @param namespace The namespace for the metric.
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty,
+    ) : CdkObject(cdkObject), MetricProperty {
+      /**
+       * The function with which the metric is calculated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-aggregationfunction)
+       */
+      override fun aggregationFunction(): String = unwrap(this).getAggregationFunction()
+
+      /**
+       * The name of the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-metricname)
+       */
+      override fun metricName(): String = unwrap(this).getMetricName()
+
+      /**
+       * The namespace for the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-namespace)
+       */
+      override fun namespace(): String? = unwrap(this).getNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty):
+          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AppFlowConfigProperty):
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty =
+      internal fun unwrap(wrapped: MetricProperty):
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty
+    }
+  }
+
+  /**
+   * Contains information about a dataset.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
+   * MetricSetProperty metricSetProperty = MetricSetProperty.builder()
+   * .metricList(List.of(MetricProperty.builder()
+   * .aggregationFunction("aggregationFunction")
+   * .metricName("metricName")
+   * // the properties below are optional
+   * .namespace("namespace")
+   * .build()))
+   * .metricSetName("metricSetName")
+   * .metricSource(MetricSourceProperty.builder()
+   * .appFlowConfig(AppFlowConfigProperty.builder()
+   * .flowName("flowName")
+   * .roleArn("roleArn")
+   * .build())
+   * .cloudwatchConfig(CloudwatchConfigProperty.builder()
+   * .roleArn("roleArn")
+   * .build())
+   * .rdsSourceConfig(RDSSourceConfigProperty.builder()
+   * .databaseHost("databaseHost")
+   * .databaseName("databaseName")
+   * .databasePort(123)
+   * .dbInstanceIdentifier("dbInstanceIdentifier")
+   * .roleArn("roleArn")
+   * .secretManagerArn("secretManagerArn")
+   * .tableName("tableName")
+   * .vpcConfiguration(VpcConfigurationProperty.builder()
+   * .securityGroupIdList(List.of("securityGroupIdList"))
+   * .subnetIdList(List.of("subnetIdList"))
+   * .build())
+   * .build())
+   * .redshiftSourceConfig(RedshiftSourceConfigProperty.builder()
+   * .clusterIdentifier("clusterIdentifier")
+   * .databaseHost("databaseHost")
+   * .databaseName("databaseName")
+   * .databasePort(123)
+   * .roleArn("roleArn")
+   * .secretManagerArn("secretManagerArn")
+   * .tableName("tableName")
+   * .vpcConfiguration(VpcConfigurationProperty.builder()
+   * .securityGroupIdList(List.of("securityGroupIdList"))
+   * .subnetIdList(List.of("subnetIdList"))
+   * .build())
+   * .build())
+   * .s3SourceConfig(S3SourceConfigProperty.builder()
+   * .fileFormatDescriptor(FileFormatDescriptorProperty.builder()
+   * .csvFormatDescriptor(CsvFormatDescriptorProperty.builder()
+   * .charset("charset")
+   * .containsHeader(false)
+   * .delimiter("delimiter")
+   * .fileCompression("fileCompression")
+   * .headerList(List.of("headerList"))
+   * .quoteSymbol("quoteSymbol")
+   * .build())
+   * .jsonFormatDescriptor(JsonFormatDescriptorProperty.builder()
+   * .charset("charset")
+   * .fileCompression("fileCompression")
+   * .build())
+   * .build())
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .historicalDataPathList(List.of("historicalDataPathList"))
+   * .templatedPathList(List.of("templatedPathList"))
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .dimensionList(List.of("dimensionList"))
+   * .metricSetDescription("metricSetDescription")
+   * .metricSetFrequency("metricSetFrequency")
+   * .offset(123)
+   * .timestampColumn(TimestampColumnProperty.builder()
+   * .columnFormat("columnFormat")
+   * .columnName("columnName")
+   * .build())
+   * .timezone("timezone")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html)
+   */
+  public interface MetricSetProperty {
+    /**
+     * A list of the fields you want to treat as dimensions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-dimensionlist)
+     */
+    public fun dimensionList(): List<String> = unwrap(this).getDimensionList() ?: emptyList()
+
+    /**
+     * A list of metrics that the dataset will contain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metriclist)
+     */
+    public fun metricList(): Any
+
+    /**
+     * A description of the dataset you are creating.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetdescription)
+     */
+    public fun metricSetDescription(): String? = unwrap(this).getMetricSetDescription()
+
+    /**
+     * The frequency with which the source data will be analyzed for anomalies.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetfrequency)
+     */
+    public fun metricSetFrequency(): String? = unwrap(this).getMetricSetFrequency()
+
+    /**
+     * The name of the dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetname)
+     */
+    public fun metricSetName(): String
+
+    /**
+     * Contains information about how the source data should be interpreted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsource)
+     */
+    public fun metricSource(): Any
+
+    /**
+     * After an interval ends, the amount of seconds that the detector waits before importing data.
+     *
+     * Offset is only supported for S3, Redshift, Athena and datasources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-offset)
+     */
+    public fun offset(): Number? = unwrap(this).getOffset()
+
+    /**
+     * Contains information about the column used for tracking time in your source data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-timestampcolumn)
+     */
+    public fun timestampColumn(): Any? = unwrap(this).getTimestampColumn()
+
+    /**
+     * The time zone in which your source data was recorded.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-timezone)
+     */
+    public fun timezone(): String? = unwrap(this).getTimezone()
+
+    /**
+     * A builder for [MetricSetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensionList A list of the fields you want to treat as dimensions.
+       */
+      public fun dimensionList(dimensionList: List<String>)
+
+      /**
+       * @param dimensionList A list of the fields you want to treat as dimensions.
+       */
+      public fun dimensionList(vararg dimensionList: String)
+
+      /**
+       * @param metricList A list of metrics that the dataset will contain. 
+       */
+      public fun metricList(metricList: IResolvable)
+
+      /**
+       * @param metricList A list of metrics that the dataset will contain. 
+       */
+      public fun metricList(metricList: List<Any>)
+
+      /**
+       * @param metricList A list of metrics that the dataset will contain. 
+       */
+      public fun metricList(vararg metricList: Any)
+
+      /**
+       * @param metricSetDescription A description of the dataset you are creating.
+       */
+      public fun metricSetDescription(metricSetDescription: String)
+
+      /**
+       * @param metricSetFrequency The frequency with which the source data will be analyzed for
+       * anomalies.
+       */
+      public fun metricSetFrequency(metricSetFrequency: String)
+
+      /**
+       * @param metricSetName The name of the dataset. 
+       */
+      public fun metricSetName(metricSetName: String)
+
+      /**
+       * @param metricSource Contains information about how the source data should be interpreted. 
+       */
+      public fun metricSource(metricSource: IResolvable)
+
+      /**
+       * @param metricSource Contains information about how the source data should be interpreted. 
+       */
+      public fun metricSource(metricSource: MetricSourceProperty)
+
+      /**
+       * @param metricSource Contains information about how the source data should be interpreted. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8edd65da7b26df550b3da384529252571ec6d3445a5ecedfa8342c9a5d560f00")
+      public fun metricSource(metricSource: MetricSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param offset After an interval ends, the amount of seconds that the detector waits before
+       * importing data.
+       * Offset is only supported for S3, Redshift, Athena and datasources.
+       */
+      public fun offset(offset: Number)
+
+      /**
+       * @param timestampColumn Contains information about the column used for tracking time in your
+       * source data.
+       */
+      public fun timestampColumn(timestampColumn: IResolvable)
+
+      /**
+       * @param timestampColumn Contains information about the column used for tracking time in your
+       * source data.
+       */
+      public fun timestampColumn(timestampColumn: TimestampColumnProperty)
+
+      /**
+       * @param timestampColumn Contains information about the column used for tracking time in your
+       * source data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("941baba079da8b0622ec9475d1c7eb325edeed95624265d9c0087beb9442dd16")
+      public fun timestampColumn(timestampColumn: TimestampColumnProperty.Builder.() -> Unit)
+
+      /**
+       * @param timezone The time zone in which your source data was recorded.
+       */
+      public fun timezone(timezone: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty.builder()
+
+      /**
+       * @param dimensionList A list of the fields you want to treat as dimensions.
+       */
+      override fun dimensionList(dimensionList: List<String>) {
+        cdkBuilder.dimensionList(dimensionList)
+      }
+
+      /**
+       * @param dimensionList A list of the fields you want to treat as dimensions.
+       */
+      override fun dimensionList(vararg dimensionList: String): Unit =
+          dimensionList(dimensionList.toList())
+
+      /**
+       * @param metricList A list of metrics that the dataset will contain. 
+       */
+      override fun metricList(metricList: IResolvable) {
+        cdkBuilder.metricList(metricList.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricList A list of metrics that the dataset will contain. 
+       */
+      override fun metricList(metricList: List<Any>) {
+        cdkBuilder.metricList(metricList)
+      }
+
+      /**
+       * @param metricList A list of metrics that the dataset will contain. 
+       */
+      override fun metricList(vararg metricList: Any): Unit = metricList(metricList.toList())
+
+      /**
+       * @param metricSetDescription A description of the dataset you are creating.
+       */
+      override fun metricSetDescription(metricSetDescription: String) {
+        cdkBuilder.metricSetDescription(metricSetDescription)
+      }
+
+      /**
+       * @param metricSetFrequency The frequency with which the source data will be analyzed for
+       * anomalies.
+       */
+      override fun metricSetFrequency(metricSetFrequency: String) {
+        cdkBuilder.metricSetFrequency(metricSetFrequency)
+      }
+
+      /**
+       * @param metricSetName The name of the dataset. 
+       */
+      override fun metricSetName(metricSetName: String) {
+        cdkBuilder.metricSetName(metricSetName)
+      }
+
+      /**
+       * @param metricSource Contains information about how the source data should be interpreted. 
+       */
+      override fun metricSource(metricSource: IResolvable) {
+        cdkBuilder.metricSource(metricSource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricSource Contains information about how the source data should be interpreted. 
+       */
+      override fun metricSource(metricSource: MetricSourceProperty) {
+        cdkBuilder.metricSource(metricSource.let(MetricSourceProperty::unwrap))
+      }
+
+      /**
+       * @param metricSource Contains information about how the source data should be interpreted. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8edd65da7b26df550b3da384529252571ec6d3445a5ecedfa8342c9a5d560f00")
+      override fun metricSource(metricSource: MetricSourceProperty.Builder.() -> Unit): Unit =
+          metricSource(MetricSourceProperty(metricSource))
+
+      /**
+       * @param offset After an interval ends, the amount of seconds that the detector waits before
+       * importing data.
+       * Offset is only supported for S3, Redshift, Athena and datasources.
+       */
+      override fun offset(offset: Number) {
+        cdkBuilder.offset(offset)
+      }
+
+      /**
+       * @param timestampColumn Contains information about the column used for tracking time in your
+       * source data.
+       */
+      override fun timestampColumn(timestampColumn: IResolvable) {
+        cdkBuilder.timestampColumn(timestampColumn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param timestampColumn Contains information about the column used for tracking time in your
+       * source data.
+       */
+      override fun timestampColumn(timestampColumn: TimestampColumnProperty) {
+        cdkBuilder.timestampColumn(timestampColumn.let(TimestampColumnProperty::unwrap))
+      }
+
+      /**
+       * @param timestampColumn Contains information about the column used for tracking time in your
+       * source data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("941baba079da8b0622ec9475d1c7eb325edeed95624265d9c0087beb9442dd16")
+      override fun timestampColumn(timestampColumn: TimestampColumnProperty.Builder.() -> Unit):
+          Unit = timestampColumn(TimestampColumnProperty(timestampColumn))
+
+      /**
+       * @param timezone The time zone in which your source data was recorded.
+       */
+      override fun timezone(timezone: String) {
+        cdkBuilder.timezone(timezone)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty,
+    ) : CdkObject(cdkObject), MetricSetProperty {
+      /**
+       * A list of the fields you want to treat as dimensions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-dimensionlist)
+       */
+      override fun dimensionList(): List<String> = unwrap(this).getDimensionList() ?: emptyList()
+
+      /**
+       * A list of metrics that the dataset will contain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metriclist)
+       */
+      override fun metricList(): Any = unwrap(this).getMetricList()
+
+      /**
+       * A description of the dataset you are creating.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetdescription)
+       */
+      override fun metricSetDescription(): String? = unwrap(this).getMetricSetDescription()
+
+      /**
+       * The frequency with which the source data will be analyzed for anomalies.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetfrequency)
+       */
+      override fun metricSetFrequency(): String? = unwrap(this).getMetricSetFrequency()
+
+      /**
+       * The name of the dataset.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetname)
+       */
+      override fun metricSetName(): String = unwrap(this).getMetricSetName()
+
+      /**
+       * Contains information about how the source data should be interpreted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsource)
+       */
+      override fun metricSource(): Any = unwrap(this).getMetricSource()
+
+      /**
+       * After an interval ends, the amount of seconds that the detector waits before importing
+       * data.
+       *
+       * Offset is only supported for S3, Redshift, Athena and datasources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-offset)
+       */
+      override fun offset(): Number? = unwrap(this).getOffset()
+
+      /**
+       * Contains information about the column used for tracking time in your source data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-timestampcolumn)
+       */
+      override fun timestampColumn(): Any? = unwrap(this).getTimestampColumn()
+
+      /**
+       * The time zone in which your source data was recorded.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-timezone)
+       */
+      override fun timezone(): String? = unwrap(this).getTimezone()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricSetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty):
+          MetricSetProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricSetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricSetProperty):
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty
     }
   }
 
@@ -1187,432 +2265,6 @@ public open class CfnAnomalyDetector internal constructor(
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSourceProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSourceProperty
-    }
-  }
-
-  /**
-   * Contains information about a source file's formatting.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
-   * FileFormatDescriptorProperty fileFormatDescriptorProperty =
-   * FileFormatDescriptorProperty.builder()
-   * .csvFormatDescriptor(CsvFormatDescriptorProperty.builder()
-   * .charset("charset")
-   * .containsHeader(false)
-   * .delimiter("delimiter")
-   * .fileCompression("fileCompression")
-   * .headerList(List.of("headerList"))
-   * .quoteSymbol("quoteSymbol")
-   * .build())
-   * .jsonFormatDescriptor(JsonFormatDescriptorProperty.builder()
-   * .charset("charset")
-   * .fileCompression("fileCompression")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html)
-   */
-  public interface FileFormatDescriptorProperty {
-    /**
-     * Contains information about how a source CSV data file should be analyzed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-fileformatdescriptor-csvformatdescriptor)
-     */
-    public fun csvFormatDescriptor(): Any? = unwrap(this).getCsvFormatDescriptor()
-
-    /**
-     * Contains information about how a source JSON data file should be analyzed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-fileformatdescriptor-jsonformatdescriptor)
-     */
-    public fun jsonFormatDescriptor(): Any? = unwrap(this).getJsonFormatDescriptor()
-
-    /**
-     * A builder for [FileFormatDescriptorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
-       * analyzed.
-       */
-      public fun csvFormatDescriptor(csvFormatDescriptor: IResolvable)
-
-      /**
-       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
-       * analyzed.
-       */
-      public fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty)
-
-      /**
-       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
-       * analyzed.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("30d6418ff59aaf89b781b0c583a0eb6b9303fa8ef376df16e9f445c4c4aef2c0")
-      public
-          fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty.Builder.() -> Unit)
-
-      /**
-       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
-       * be analyzed.
-       */
-      public fun jsonFormatDescriptor(jsonFormatDescriptor: IResolvable)
-
-      /**
-       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
-       * be analyzed.
-       */
-      public fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty)
-
-      /**
-       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
-       * be analyzed.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c86ece7f584b864cf6c69e6c3bc75a7a3a79938f6d5e16faf4d4b0b8c3432593")
-      public
-          fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty.builder()
-
-      /**
-       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
-       * analyzed.
-       */
-      override fun csvFormatDescriptor(csvFormatDescriptor: IResolvable) {
-        cdkBuilder.csvFormatDescriptor(csvFormatDescriptor.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
-       * analyzed.
-       */
-      override fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty) {
-        cdkBuilder.csvFormatDescriptor(csvFormatDescriptor.let(CsvFormatDescriptorProperty::unwrap))
-      }
-
-      /**
-       * @param csvFormatDescriptor Contains information about how a source CSV data file should be
-       * analyzed.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("30d6418ff59aaf89b781b0c583a0eb6b9303fa8ef376df16e9f445c4c4aef2c0")
-      override
-          fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty.Builder.() -> Unit):
-          Unit = csvFormatDescriptor(CsvFormatDescriptorProperty(csvFormatDescriptor))
-
-      /**
-       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
-       * be analyzed.
-       */
-      override fun jsonFormatDescriptor(jsonFormatDescriptor: IResolvable) {
-        cdkBuilder.jsonFormatDescriptor(jsonFormatDescriptor.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
-       * be analyzed.
-       */
-      override fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty) {
-        cdkBuilder.jsonFormatDescriptor(jsonFormatDescriptor.let(JsonFormatDescriptorProperty::unwrap))
-      }
-
-      /**
-       * @param jsonFormatDescriptor Contains information about how a source JSON data file should
-       * be analyzed.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c86ece7f584b864cf6c69e6c3bc75a7a3a79938f6d5e16faf4d4b0b8c3432593")
-      override
-          fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty.Builder.() -> Unit):
-          Unit = jsonFormatDescriptor(JsonFormatDescriptorProperty(jsonFormatDescriptor))
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty,
-    ) : CdkObject(cdkObject), FileFormatDescriptorProperty {
-      /**
-       * Contains information about how a source CSV data file should be analyzed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-fileformatdescriptor-csvformatdescriptor)
-       */
-      override fun csvFormatDescriptor(): Any? = unwrap(this).getCsvFormatDescriptor()
-
-      /**
-       * Contains information about how a source JSON data file should be analyzed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-fileformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-fileformatdescriptor-jsonformatdescriptor)
-       */
-      override fun jsonFormatDescriptor(): Any? = unwrap(this).getJsonFormatDescriptor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FileFormatDescriptorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty):
-          FileFormatDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FileFormatDescriptorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FileFormatDescriptorProperty):
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty
-    }
-  }
-
-  /**
-   * Contains information about the configuration of the S3 bucket that contains source files.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
-   * S3SourceConfigProperty s3SourceConfigProperty = S3SourceConfigProperty.builder()
-   * .fileFormatDescriptor(FileFormatDescriptorProperty.builder()
-   * .csvFormatDescriptor(CsvFormatDescriptorProperty.builder()
-   * .charset("charset")
-   * .containsHeader(false)
-   * .delimiter("delimiter")
-   * .fileCompression("fileCompression")
-   * .headerList(List.of("headerList"))
-   * .quoteSymbol("quoteSymbol")
-   * .build())
-   * .jsonFormatDescriptor(JsonFormatDescriptorProperty.builder()
-   * .charset("charset")
-   * .fileCompression("fileCompression")
-   * .build())
-   * .build())
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .historicalDataPathList(List.of("historicalDataPathList"))
-   * .templatedPathList(List.of("templatedPathList"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html)
-   */
-  public interface S3SourceConfigProperty {
-    /**
-     * Contains information about a source file's formatting.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-fileformatdescriptor)
-     */
-    public fun fileFormatDescriptor(): Any
-
-    /**
-     * A list of paths to the historical data files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-historicaldatapathlist)
-     */
-    public fun historicalDataPathList(): List<String> = unwrap(this).getHistoricalDataPathList() ?:
-        emptyList()
-
-    /**
-     * The ARN of an IAM role that has read and write access permissions to the source S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A list of templated paths to the source files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-templatedpathlist)
-     */
-    public fun templatedPathList(): List<String> = unwrap(this).getTemplatedPathList() ?:
-        emptyList()
-
-    /**
-     * A builder for [S3SourceConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fileFormatDescriptor Contains information about a source file's formatting. 
-       */
-      public fun fileFormatDescriptor(fileFormatDescriptor: IResolvable)
-
-      /**
-       * @param fileFormatDescriptor Contains information about a source file's formatting. 
-       */
-      public fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty)
-
-      /**
-       * @param fileFormatDescriptor Contains information about a source file's formatting. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4ccd65d2ef4bea3cf3665b6f21068e34ba6e5a644796dd8008eb039ae6c39257")
-      public
-          fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty.Builder.() -> Unit)
-
-      /**
-       * @param historicalDataPathList A list of paths to the historical data files.
-       */
-      public fun historicalDataPathList(historicalDataPathList: List<String>)
-
-      /**
-       * @param historicalDataPathList A list of paths to the historical data files.
-       */
-      public fun historicalDataPathList(vararg historicalDataPathList: String)
-
-      /**
-       * @param roleArn The ARN of an IAM role that has read and write access permissions to the
-       * source S3 bucket. 
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param templatedPathList A list of templated paths to the source files.
-       */
-      public fun templatedPathList(templatedPathList: List<String>)
-
-      /**
-       * @param templatedPathList A list of templated paths to the source files.
-       */
-      public fun templatedPathList(vararg templatedPathList: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty.builder()
-
-      /**
-       * @param fileFormatDescriptor Contains information about a source file's formatting. 
-       */
-      override fun fileFormatDescriptor(fileFormatDescriptor: IResolvable) {
-        cdkBuilder.fileFormatDescriptor(fileFormatDescriptor.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param fileFormatDescriptor Contains information about a source file's formatting. 
-       */
-      override fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty) {
-        cdkBuilder.fileFormatDescriptor(fileFormatDescriptor.let(FileFormatDescriptorProperty::unwrap))
-      }
-
-      /**
-       * @param fileFormatDescriptor Contains information about a source file's formatting. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4ccd65d2ef4bea3cf3665b6f21068e34ba6e5a644796dd8008eb039ae6c39257")
-      override
-          fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty.Builder.() -> Unit):
-          Unit = fileFormatDescriptor(FileFormatDescriptorProperty(fileFormatDescriptor))
-
-      /**
-       * @param historicalDataPathList A list of paths to the historical data files.
-       */
-      override fun historicalDataPathList(historicalDataPathList: List<String>) {
-        cdkBuilder.historicalDataPathList(historicalDataPathList)
-      }
-
-      /**
-       * @param historicalDataPathList A list of paths to the historical data files.
-       */
-      override fun historicalDataPathList(vararg historicalDataPathList: String): Unit =
-          historicalDataPathList(historicalDataPathList.toList())
-
-      /**
-       * @param roleArn The ARN of an IAM role that has read and write access permissions to the
-       * source S3 bucket. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param templatedPathList A list of templated paths to the source files.
-       */
-      override fun templatedPathList(templatedPathList: List<String>) {
-        cdkBuilder.templatedPathList(templatedPathList)
-      }
-
-      /**
-       * @param templatedPathList A list of templated paths to the source files.
-       */
-      override fun templatedPathList(vararg templatedPathList: String): Unit =
-          templatedPathList(templatedPathList.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty,
-    ) : CdkObject(cdkObject), S3SourceConfigProperty {
-      /**
-       * Contains information about a source file's formatting.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-fileformatdescriptor)
-       */
-      override fun fileFormatDescriptor(): Any = unwrap(this).getFileFormatDescriptor()
-
-      /**
-       * A list of paths to the historical data files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-historicaldatapathlist)
-       */
-      override fun historicalDataPathList(): List<String> = unwrap(this).getHistoricalDataPathList()
-          ?: emptyList()
-
-      /**
-       * The ARN of an IAM role that has read and write access permissions to the source S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-
-      /**
-       * A list of templated paths to the source files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-templatedpathlist)
-       */
-      override fun templatedPathList(): List<String> = unwrap(this).getTemplatedPathList() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3SourceConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty):
-          S3SourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3SourceConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3SourceConfigProperty):
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty
     }
   }
 
@@ -2237,6 +2889,241 @@ public open class CfnAnomalyDetector internal constructor(
   }
 
   /**
+   * Contains information about the configuration of the S3 bucket that contains source files.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
+   * S3SourceConfigProperty s3SourceConfigProperty = S3SourceConfigProperty.builder()
+   * .fileFormatDescriptor(FileFormatDescriptorProperty.builder()
+   * .csvFormatDescriptor(CsvFormatDescriptorProperty.builder()
+   * .charset("charset")
+   * .containsHeader(false)
+   * .delimiter("delimiter")
+   * .fileCompression("fileCompression")
+   * .headerList(List.of("headerList"))
+   * .quoteSymbol("quoteSymbol")
+   * .build())
+   * .jsonFormatDescriptor(JsonFormatDescriptorProperty.builder()
+   * .charset("charset")
+   * .fileCompression("fileCompression")
+   * .build())
+   * .build())
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .historicalDataPathList(List.of("historicalDataPathList"))
+   * .templatedPathList(List.of("templatedPathList"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html)
+   */
+  public interface S3SourceConfigProperty {
+    /**
+     * Contains information about a source file's formatting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-fileformatdescriptor)
+     */
+    public fun fileFormatDescriptor(): Any
+
+    /**
+     * A list of paths to the historical data files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-historicaldatapathlist)
+     */
+    public fun historicalDataPathList(): List<String> = unwrap(this).getHistoricalDataPathList() ?:
+        emptyList()
+
+    /**
+     * The ARN of an IAM role that has read and write access permissions to the source S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A list of templated paths to the source files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-templatedpathlist)
+     */
+    public fun templatedPathList(): List<String> = unwrap(this).getTemplatedPathList() ?:
+        emptyList()
+
+    /**
+     * A builder for [S3SourceConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fileFormatDescriptor Contains information about a source file's formatting. 
+       */
+      public fun fileFormatDescriptor(fileFormatDescriptor: IResolvable)
+
+      /**
+       * @param fileFormatDescriptor Contains information about a source file's formatting. 
+       */
+      public fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty)
+
+      /**
+       * @param fileFormatDescriptor Contains information about a source file's formatting. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4ccd65d2ef4bea3cf3665b6f21068e34ba6e5a644796dd8008eb039ae6c39257")
+      public
+          fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty.Builder.() -> Unit)
+
+      /**
+       * @param historicalDataPathList A list of paths to the historical data files.
+       */
+      public fun historicalDataPathList(historicalDataPathList: List<String>)
+
+      /**
+       * @param historicalDataPathList A list of paths to the historical data files.
+       */
+      public fun historicalDataPathList(vararg historicalDataPathList: String)
+
+      /**
+       * @param roleArn The ARN of an IAM role that has read and write access permissions to the
+       * source S3 bucket. 
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param templatedPathList A list of templated paths to the source files.
+       */
+      public fun templatedPathList(templatedPathList: List<String>)
+
+      /**
+       * @param templatedPathList A list of templated paths to the source files.
+       */
+      public fun templatedPathList(vararg templatedPathList: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty.builder()
+
+      /**
+       * @param fileFormatDescriptor Contains information about a source file's formatting. 
+       */
+      override fun fileFormatDescriptor(fileFormatDescriptor: IResolvable) {
+        cdkBuilder.fileFormatDescriptor(fileFormatDescriptor.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param fileFormatDescriptor Contains information about a source file's formatting. 
+       */
+      override fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty) {
+        cdkBuilder.fileFormatDescriptor(fileFormatDescriptor.let(FileFormatDescriptorProperty::unwrap))
+      }
+
+      /**
+       * @param fileFormatDescriptor Contains information about a source file's formatting. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4ccd65d2ef4bea3cf3665b6f21068e34ba6e5a644796dd8008eb039ae6c39257")
+      override
+          fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty.Builder.() -> Unit):
+          Unit = fileFormatDescriptor(FileFormatDescriptorProperty(fileFormatDescriptor))
+
+      /**
+       * @param historicalDataPathList A list of paths to the historical data files.
+       */
+      override fun historicalDataPathList(historicalDataPathList: List<String>) {
+        cdkBuilder.historicalDataPathList(historicalDataPathList)
+      }
+
+      /**
+       * @param historicalDataPathList A list of paths to the historical data files.
+       */
+      override fun historicalDataPathList(vararg historicalDataPathList: String): Unit =
+          historicalDataPathList(historicalDataPathList.toList())
+
+      /**
+       * @param roleArn The ARN of an IAM role that has read and write access permissions to the
+       * source S3 bucket. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param templatedPathList A list of templated paths to the source files.
+       */
+      override fun templatedPathList(templatedPathList: List<String>) {
+        cdkBuilder.templatedPathList(templatedPathList)
+      }
+
+      /**
+       * @param templatedPathList A list of templated paths to the source files.
+       */
+      override fun templatedPathList(vararg templatedPathList: String): Unit =
+          templatedPathList(templatedPathList.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty,
+    ) : CdkObject(cdkObject), S3SourceConfigProperty {
+      /**
+       * Contains information about a source file's formatting.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-fileformatdescriptor)
+       */
+      override fun fileFormatDescriptor(): Any = unwrap(this).getFileFormatDescriptor()
+
+      /**
+       * A list of paths to the historical data files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-historicaldatapathlist)
+       */
+      override fun historicalDataPathList(): List<String> = unwrap(this).getHistoricalDataPathList()
+          ?: emptyList()
+
+      /**
+       * The ARN of an IAM role that has read and write access permissions to the source S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * A list of templated paths to the source files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html#cfn-lookoutmetrics-anomalydetector-s3sourceconfig-templatedpathlist)
+       */
+      override fun templatedPathList(): List<String> = unwrap(this).getTemplatedPathList() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3SourceConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty):
+          S3SourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3SourceConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3SourceConfigProperty):
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty
+    }
+  }
+
+  /**
    * Contains information about the column used to track time in a source data file.
    *
    * Example:
@@ -2343,893 +3230,6 @@ public open class CfnAnomalyDetector internal constructor(
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.TimestampColumnProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.TimestampColumnProperty
-    }
-  }
-
-  /**
-   * Contains information about a detector's configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
-   * AnomalyDetectorConfigProperty anomalyDetectorConfigProperty =
-   * AnomalyDetectorConfigProperty.builder()
-   * .anomalyDetectorFrequency("anomalyDetectorFrequency")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-anomalydetectorconfig.html)
-   */
-  public interface AnomalyDetectorConfigProperty {
-    /**
-     * The frequency at which the detector analyzes its source data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-anomalydetectorconfig.html#cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig-anomalydetectorfrequency)
-     */
-    public fun anomalyDetectorFrequency(): String
-
-    /**
-     * A builder for [AnomalyDetectorConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param anomalyDetectorFrequency The frequency at which the detector analyzes its source
-       * data. 
-       */
-      public fun anomalyDetectorFrequency(anomalyDetectorFrequency: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty.builder()
-
-      /**
-       * @param anomalyDetectorFrequency The frequency at which the detector analyzes its source
-       * data. 
-       */
-      override fun anomalyDetectorFrequency(anomalyDetectorFrequency: String) {
-        cdkBuilder.anomalyDetectorFrequency(anomalyDetectorFrequency)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty,
-    ) : CdkObject(cdkObject), AnomalyDetectorConfigProperty {
-      /**
-       * The frequency at which the detector analyzes its source data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-anomalydetectorconfig.html#cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig-anomalydetectorfrequency)
-       */
-      override fun anomalyDetectorFrequency(): String = unwrap(this).getAnomalyDetectorFrequency()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AnomalyDetectorConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty):
-          AnomalyDetectorConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AnomalyDetectorConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnomalyDetectorConfigProperty):
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty
-    }
-  }
-
-  /**
-   * Contains information about how a source JSON data file should be analyzed.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
-   * JsonFormatDescriptorProperty jsonFormatDescriptorProperty =
-   * JsonFormatDescriptorProperty.builder()
-   * .charset("charset")
-   * .fileCompression("fileCompression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html)
-   */
-  public interface JsonFormatDescriptorProperty {
-    /**
-     * The character set in which the source JSON file is written.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-jsonformatdescriptor-charset)
-     */
-    public fun charset(): String? = unwrap(this).getCharset()
-
-    /**
-     * The level of compression of the source CSV file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-jsonformatdescriptor-filecompression)
-     */
-    public fun fileCompression(): String? = unwrap(this).getFileCompression()
-
-    /**
-     * A builder for [JsonFormatDescriptorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param charset The character set in which the source JSON file is written.
-       */
-      public fun charset(charset: String)
-
-      /**
-       * @param fileCompression The level of compression of the source CSV file.
-       */
-      public fun fileCompression(fileCompression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty.builder()
-
-      /**
-       * @param charset The character set in which the source JSON file is written.
-       */
-      override fun charset(charset: String) {
-        cdkBuilder.charset(charset)
-      }
-
-      /**
-       * @param fileCompression The level of compression of the source CSV file.
-       */
-      override fun fileCompression(fileCompression: String) {
-        cdkBuilder.fileCompression(fileCompression)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty,
-    ) : CdkObject(cdkObject), JsonFormatDescriptorProperty {
-      /**
-       * The character set in which the source JSON file is written.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-jsonformatdescriptor-charset)
-       */
-      override fun charset(): String? = unwrap(this).getCharset()
-
-      /**
-       * The level of compression of the source CSV file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-jsonformatdescriptor.html#cfn-lookoutmetrics-anomalydetector-jsonformatdescriptor-filecompression)
-       */
-      override fun fileCompression(): String? = unwrap(this).getFileCompression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JsonFormatDescriptorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty):
-          JsonFormatDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JsonFormatDescriptorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JsonFormatDescriptorProperty):
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty
-    }
-  }
-
-  /**
-   * Details about an Amazon CloudWatch datasource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
-   * CloudwatchConfigProperty cloudwatchConfigProperty = CloudwatchConfigProperty.builder()
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-cloudwatchconfig.html)
-   */
-  public interface CloudwatchConfigProperty {
-    /**
-     * An IAM role that gives Amazon Lookout for Metrics permission to access data in Amazon
-     * CloudWatch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-cloudwatchconfig.html#cfn-lookoutmetrics-anomalydetector-cloudwatchconfig-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [CloudwatchConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access data
-       * in Amazon CloudWatch. 
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty.builder()
-
-      /**
-       * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access data
-       * in Amazon CloudWatch. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty,
-    ) : CdkObject(cdkObject), CloudwatchConfigProperty {
-      /**
-       * An IAM role that gives Amazon Lookout for Metrics permission to access data in Amazon
-       * CloudWatch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-cloudwatchconfig.html#cfn-lookoutmetrics-anomalydetector-cloudwatchconfig-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudwatchConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty):
-          CloudwatchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CloudwatchConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudwatchConfigProperty):
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty
-    }
-  }
-
-  /**
-   * A calculation made by contrasting a measure and a dimension from your source data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
-   * MetricProperty metricProperty = MetricProperty.builder()
-   * .aggregationFunction("aggregationFunction")
-   * .metricName("metricName")
-   * // the properties below are optional
-   * .namespace("namespace")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html)
-   */
-  public interface MetricProperty {
-    /**
-     * The function with which the metric is calculated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-aggregationfunction)
-     */
-    public fun aggregationFunction(): String
-
-    /**
-     * The name of the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-metricname)
-     */
-    public fun metricName(): String
-
-    /**
-     * The namespace for the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-namespace)
-     */
-    public fun namespace(): String? = unwrap(this).getNamespace()
-
-    /**
-     * A builder for [MetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param aggregationFunction The function with which the metric is calculated. 
-       */
-      public fun aggregationFunction(aggregationFunction: String)
-
-      /**
-       * @param metricName The name of the metric. 
-       */
-      public fun metricName(metricName: String)
-
-      /**
-       * @param namespace The namespace for the metric.
-       */
-      public fun namespace(namespace: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty.Builder =
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty.builder()
-
-      /**
-       * @param aggregationFunction The function with which the metric is calculated. 
-       */
-      override fun aggregationFunction(aggregationFunction: String) {
-        cdkBuilder.aggregationFunction(aggregationFunction)
-      }
-
-      /**
-       * @param metricName The name of the metric. 
-       */
-      override fun metricName(metricName: String) {
-        cdkBuilder.metricName(metricName)
-      }
-
-      /**
-       * @param namespace The namespace for the metric.
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty,
-    ) : CdkObject(cdkObject), MetricProperty {
-      /**
-       * The function with which the metric is calculated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-aggregationfunction)
-       */
-      override fun aggregationFunction(): String = unwrap(this).getAggregationFunction()
-
-      /**
-       * The name of the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-metricname)
-       */
-      override fun metricName(): String = unwrap(this).getMetricName()
-
-      /**
-       * The namespace for the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html#cfn-lookoutmetrics-anomalydetector-metric-namespace)
-       */
-      override fun namespace(): String? = unwrap(this).getNamespace()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty):
-          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricProperty):
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty
-    }
-  }
-
-  /**
-   * Contains information about a dataset.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutmetrics.*;
-   * MetricSetProperty metricSetProperty = MetricSetProperty.builder()
-   * .metricList(List.of(MetricProperty.builder()
-   * .aggregationFunction("aggregationFunction")
-   * .metricName("metricName")
-   * // the properties below are optional
-   * .namespace("namespace")
-   * .build()))
-   * .metricSetName("metricSetName")
-   * .metricSource(MetricSourceProperty.builder()
-   * .appFlowConfig(AppFlowConfigProperty.builder()
-   * .flowName("flowName")
-   * .roleArn("roleArn")
-   * .build())
-   * .cloudwatchConfig(CloudwatchConfigProperty.builder()
-   * .roleArn("roleArn")
-   * .build())
-   * .rdsSourceConfig(RDSSourceConfigProperty.builder()
-   * .databaseHost("databaseHost")
-   * .databaseName("databaseName")
-   * .databasePort(123)
-   * .dbInstanceIdentifier("dbInstanceIdentifier")
-   * .roleArn("roleArn")
-   * .secretManagerArn("secretManagerArn")
-   * .tableName("tableName")
-   * .vpcConfiguration(VpcConfigurationProperty.builder()
-   * .securityGroupIdList(List.of("securityGroupIdList"))
-   * .subnetIdList(List.of("subnetIdList"))
-   * .build())
-   * .build())
-   * .redshiftSourceConfig(RedshiftSourceConfigProperty.builder()
-   * .clusterIdentifier("clusterIdentifier")
-   * .databaseHost("databaseHost")
-   * .databaseName("databaseName")
-   * .databasePort(123)
-   * .roleArn("roleArn")
-   * .secretManagerArn("secretManagerArn")
-   * .tableName("tableName")
-   * .vpcConfiguration(VpcConfigurationProperty.builder()
-   * .securityGroupIdList(List.of("securityGroupIdList"))
-   * .subnetIdList(List.of("subnetIdList"))
-   * .build())
-   * .build())
-   * .s3SourceConfig(S3SourceConfigProperty.builder()
-   * .fileFormatDescriptor(FileFormatDescriptorProperty.builder()
-   * .csvFormatDescriptor(CsvFormatDescriptorProperty.builder()
-   * .charset("charset")
-   * .containsHeader(false)
-   * .delimiter("delimiter")
-   * .fileCompression("fileCompression")
-   * .headerList(List.of("headerList"))
-   * .quoteSymbol("quoteSymbol")
-   * .build())
-   * .jsonFormatDescriptor(JsonFormatDescriptorProperty.builder()
-   * .charset("charset")
-   * .fileCompression("fileCompression")
-   * .build())
-   * .build())
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .historicalDataPathList(List.of("historicalDataPathList"))
-   * .templatedPathList(List.of("templatedPathList"))
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .dimensionList(List.of("dimensionList"))
-   * .metricSetDescription("metricSetDescription")
-   * .metricSetFrequency("metricSetFrequency")
-   * .offset(123)
-   * .timestampColumn(TimestampColumnProperty.builder()
-   * .columnFormat("columnFormat")
-   * .columnName("columnName")
-   * .build())
-   * .timezone("timezone")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html)
-   */
-  public interface MetricSetProperty {
-    /**
-     * A list of the fields you want to treat as dimensions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-dimensionlist)
-     */
-    public fun dimensionList(): List<String> = unwrap(this).getDimensionList() ?: emptyList()
-
-    /**
-     * A list of metrics that the dataset will contain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metriclist)
-     */
-    public fun metricList(): Any
-
-    /**
-     * A description of the dataset you are creating.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetdescription)
-     */
-    public fun metricSetDescription(): String? = unwrap(this).getMetricSetDescription()
-
-    /**
-     * The frequency with which the source data will be analyzed for anomalies.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetfrequency)
-     */
-    public fun metricSetFrequency(): String? = unwrap(this).getMetricSetFrequency()
-
-    /**
-     * The name of the dataset.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetname)
-     */
-    public fun metricSetName(): String
-
-    /**
-     * Contains information about how the source data should be interpreted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsource)
-     */
-    public fun metricSource(): Any
-
-    /**
-     * After an interval ends, the amount of seconds that the detector waits before importing data.
-     *
-     * Offset is only supported for S3, Redshift, Athena and datasources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-offset)
-     */
-    public fun offset(): Number? = unwrap(this).getOffset()
-
-    /**
-     * Contains information about the column used for tracking time in your source data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-timestampcolumn)
-     */
-    public fun timestampColumn(): Any? = unwrap(this).getTimestampColumn()
-
-    /**
-     * The time zone in which your source data was recorded.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-timezone)
-     */
-    public fun timezone(): String? = unwrap(this).getTimezone()
-
-    /**
-     * A builder for [MetricSetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensionList A list of the fields you want to treat as dimensions.
-       */
-      public fun dimensionList(dimensionList: List<String>)
-
-      /**
-       * @param dimensionList A list of the fields you want to treat as dimensions.
-       */
-      public fun dimensionList(vararg dimensionList: String)
-
-      /**
-       * @param metricList A list of metrics that the dataset will contain. 
-       */
-      public fun metricList(metricList: IResolvable)
-
-      /**
-       * @param metricList A list of metrics that the dataset will contain. 
-       */
-      public fun metricList(metricList: List<Any>)
-
-      /**
-       * @param metricList A list of metrics that the dataset will contain. 
-       */
-      public fun metricList(vararg metricList: Any)
-
-      /**
-       * @param metricSetDescription A description of the dataset you are creating.
-       */
-      public fun metricSetDescription(metricSetDescription: String)
-
-      /**
-       * @param metricSetFrequency The frequency with which the source data will be analyzed for
-       * anomalies.
-       */
-      public fun metricSetFrequency(metricSetFrequency: String)
-
-      /**
-       * @param metricSetName The name of the dataset. 
-       */
-      public fun metricSetName(metricSetName: String)
-
-      /**
-       * @param metricSource Contains information about how the source data should be interpreted. 
-       */
-      public fun metricSource(metricSource: IResolvable)
-
-      /**
-       * @param metricSource Contains information about how the source data should be interpreted. 
-       */
-      public fun metricSource(metricSource: MetricSourceProperty)
-
-      /**
-       * @param metricSource Contains information about how the source data should be interpreted. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8edd65da7b26df550b3da384529252571ec6d3445a5ecedfa8342c9a5d560f00")
-      public fun metricSource(metricSource: MetricSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param offset After an interval ends, the amount of seconds that the detector waits before
-       * importing data.
-       * Offset is only supported for S3, Redshift, Athena and datasources.
-       */
-      public fun offset(offset: Number)
-
-      /**
-       * @param timestampColumn Contains information about the column used for tracking time in your
-       * source data.
-       */
-      public fun timestampColumn(timestampColumn: IResolvable)
-
-      /**
-       * @param timestampColumn Contains information about the column used for tracking time in your
-       * source data.
-       */
-      public fun timestampColumn(timestampColumn: TimestampColumnProperty)
-
-      /**
-       * @param timestampColumn Contains information about the column used for tracking time in your
-       * source data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("941baba079da8b0622ec9475d1c7eb325edeed95624265d9c0087beb9442dd16")
-      public fun timestampColumn(timestampColumn: TimestampColumnProperty.Builder.() -> Unit)
-
-      /**
-       * @param timezone The time zone in which your source data was recorded.
-       */
-      public fun timezone(timezone: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty.builder()
-
-      /**
-       * @param dimensionList A list of the fields you want to treat as dimensions.
-       */
-      override fun dimensionList(dimensionList: List<String>) {
-        cdkBuilder.dimensionList(dimensionList)
-      }
-
-      /**
-       * @param dimensionList A list of the fields you want to treat as dimensions.
-       */
-      override fun dimensionList(vararg dimensionList: String): Unit =
-          dimensionList(dimensionList.toList())
-
-      /**
-       * @param metricList A list of metrics that the dataset will contain. 
-       */
-      override fun metricList(metricList: IResolvable) {
-        cdkBuilder.metricList(metricList.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricList A list of metrics that the dataset will contain. 
-       */
-      override fun metricList(metricList: List<Any>) {
-        cdkBuilder.metricList(metricList)
-      }
-
-      /**
-       * @param metricList A list of metrics that the dataset will contain. 
-       */
-      override fun metricList(vararg metricList: Any): Unit = metricList(metricList.toList())
-
-      /**
-       * @param metricSetDescription A description of the dataset you are creating.
-       */
-      override fun metricSetDescription(metricSetDescription: String) {
-        cdkBuilder.metricSetDescription(metricSetDescription)
-      }
-
-      /**
-       * @param metricSetFrequency The frequency with which the source data will be analyzed for
-       * anomalies.
-       */
-      override fun metricSetFrequency(metricSetFrequency: String) {
-        cdkBuilder.metricSetFrequency(metricSetFrequency)
-      }
-
-      /**
-       * @param metricSetName The name of the dataset. 
-       */
-      override fun metricSetName(metricSetName: String) {
-        cdkBuilder.metricSetName(metricSetName)
-      }
-
-      /**
-       * @param metricSource Contains information about how the source data should be interpreted. 
-       */
-      override fun metricSource(metricSource: IResolvable) {
-        cdkBuilder.metricSource(metricSource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricSource Contains information about how the source data should be interpreted. 
-       */
-      override fun metricSource(metricSource: MetricSourceProperty) {
-        cdkBuilder.metricSource(metricSource.let(MetricSourceProperty::unwrap))
-      }
-
-      /**
-       * @param metricSource Contains information about how the source data should be interpreted. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8edd65da7b26df550b3da384529252571ec6d3445a5ecedfa8342c9a5d560f00")
-      override fun metricSource(metricSource: MetricSourceProperty.Builder.() -> Unit): Unit =
-          metricSource(MetricSourceProperty(metricSource))
-
-      /**
-       * @param offset After an interval ends, the amount of seconds that the detector waits before
-       * importing data.
-       * Offset is only supported for S3, Redshift, Athena and datasources.
-       */
-      override fun offset(offset: Number) {
-        cdkBuilder.offset(offset)
-      }
-
-      /**
-       * @param timestampColumn Contains information about the column used for tracking time in your
-       * source data.
-       */
-      override fun timestampColumn(timestampColumn: IResolvable) {
-        cdkBuilder.timestampColumn(timestampColumn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param timestampColumn Contains information about the column used for tracking time in your
-       * source data.
-       */
-      override fun timestampColumn(timestampColumn: TimestampColumnProperty) {
-        cdkBuilder.timestampColumn(timestampColumn.let(TimestampColumnProperty::unwrap))
-      }
-
-      /**
-       * @param timestampColumn Contains information about the column used for tracking time in your
-       * source data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("941baba079da8b0622ec9475d1c7eb325edeed95624265d9c0087beb9442dd16")
-      override fun timestampColumn(timestampColumn: TimestampColumnProperty.Builder.() -> Unit):
-          Unit = timestampColumn(TimestampColumnProperty(timestampColumn))
-
-      /**
-       * @param timezone The time zone in which your source data was recorded.
-       */
-      override fun timezone(timezone: String) {
-        cdkBuilder.timezone(timezone)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty,
-    ) : CdkObject(cdkObject), MetricSetProperty {
-      /**
-       * A list of the fields you want to treat as dimensions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-dimensionlist)
-       */
-      override fun dimensionList(): List<String> = unwrap(this).getDimensionList() ?: emptyList()
-
-      /**
-       * A list of metrics that the dataset will contain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metriclist)
-       */
-      override fun metricList(): Any = unwrap(this).getMetricList()
-
-      /**
-       * A description of the dataset you are creating.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetdescription)
-       */
-      override fun metricSetDescription(): String? = unwrap(this).getMetricSetDescription()
-
-      /**
-       * The frequency with which the source data will be analyzed for anomalies.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetfrequency)
-       */
-      override fun metricSetFrequency(): String? = unwrap(this).getMetricSetFrequency()
-
-      /**
-       * The name of the dataset.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsetname)
-       */
-      override fun metricSetName(): String = unwrap(this).getMetricSetName()
-
-      /**
-       * Contains information about how the source data should be interpreted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-metricsource)
-       */
-      override fun metricSource(): Any = unwrap(this).getMetricSource()
-
-      /**
-       * After an interval ends, the amount of seconds that the detector waits before importing
-       * data.
-       *
-       * Offset is only supported for S3, Redshift, Athena and datasources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-offset)
-       */
-      override fun offset(): Number? = unwrap(this).getOffset()
-
-      /**
-       * Contains information about the column used for tracking time in your source data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-timestampcolumn)
-       */
-      override fun timestampColumn(): Any? = unwrap(this).getTimestampColumn()
-
-      /**
-       * The time zone in which your source data was recorded.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metricset.html#cfn-lookoutmetrics-anomalydetector-metricset-timezone)
-       */
-      override fun timezone(): String? = unwrap(this).getTimezone()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricSetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty):
-          MetricSetProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricSetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricSetProperty):
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty
     }
   }
 

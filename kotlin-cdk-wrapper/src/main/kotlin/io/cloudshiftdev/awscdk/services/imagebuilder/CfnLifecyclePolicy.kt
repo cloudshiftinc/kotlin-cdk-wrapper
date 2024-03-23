@@ -510,316 +510,6 @@ public open class CfnLifecyclePolicy internal constructor(
   }
 
   /**
-   * Defines criteria to exclude AMIs from lifecycle actions based on the last time they were used
-   * to launch an instance.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * LastLaunchedProperty lastLaunchedProperty = LastLaunchedProperty.builder()
-   * .unit("unit")
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html)
-   */
-  public interface LastLaunchedProperty {
-    /**
-     * Defines the unit of time that the lifecycle policy uses to calculate elapsed time since the
-     * last instance launched from the AMI.
-     *
-     * For example: days, weeks, months, or years.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html#cfn-imagebuilder-lifecyclepolicy-lastlaunched-unit)
-     */
-    public fun unit(): String
-
-    /**
-     * The integer number of units for the time period.
-     *
-     * For example `6` (months).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html#cfn-imagebuilder-lifecyclepolicy-lastlaunched-value)
-     */
-    public fun `value`(): Number
-
-    /**
-     * A builder for [LastLaunchedProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param unit Defines the unit of time that the lifecycle policy uses to calculate elapsed
-       * time since the last instance launched from the AMI. 
-       * For example: days, weeks, months, or years.
-       */
-      public fun unit(unit: String)
-
-      /**
-       * @param value The integer number of units for the time period. 
-       * For example `6` (months).
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty.builder()
-
-      /**
-       * @param unit Defines the unit of time that the lifecycle policy uses to calculate elapsed
-       * time since the last instance launched from the AMI. 
-       * For example: days, weeks, months, or years.
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      /**
-       * @param value The integer number of units for the time period. 
-       * For example `6` (months).
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty,
-    ) : CdkObject(cdkObject), LastLaunchedProperty {
-      /**
-       * Defines the unit of time that the lifecycle policy uses to calculate elapsed time since the
-       * last instance launched from the AMI.
-       *
-       * For example: days, weeks, months, or years.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html#cfn-imagebuilder-lifecyclepolicy-lastlaunched-unit)
-       */
-      override fun unit(): String = unwrap(this).getUnit()
-
-      /**
-       * The integer number of units for the time period.
-       *
-       * For example `6` (months).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html#cfn-imagebuilder-lifecyclepolicy-lastlaunched-value)
-       */
-      override fun `value`(): Number = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LastLaunchedProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty):
-          LastLaunchedProperty = CdkObjectWrappers.wrap(cdkObject) as? LastLaunchedProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LastLaunchedProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty
-    }
-  }
-
-  /**
-   * Specifies how the lifecycle policy should apply actions to selected resources.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * IncludeResourcesProperty includeResourcesProperty = IncludeResourcesProperty.builder()
-   * .amis(false)
-   * .containers(false)
-   * .snapshots(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html)
-   */
-  public interface IncludeResourcesProperty {
-    /**
-     * Specifies whether the lifecycle action should apply to distributed AMIs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-amis)
-     */
-    public fun amis(): Any? = unwrap(this).getAmis()
-
-    /**
-     * Specifies whether the lifecycle action should apply to distributed containers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-containers)
-     */
-    public fun containers(): Any? = unwrap(this).getContainers()
-
-    /**
-     * Specifies whether the lifecycle action should apply to snapshots associated with distributed
-     * AMIs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-snapshots)
-     */
-    public fun snapshots(): Any? = unwrap(this).getSnapshots()
-
-    /**
-     * A builder for [IncludeResourcesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
-       */
-      public fun amis(amis: Boolean)
-
-      /**
-       * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
-       */
-      public fun amis(amis: IResolvable)
-
-      /**
-       * @param containers Specifies whether the lifecycle action should apply to distributed
-       * containers.
-       */
-      public fun containers(containers: Boolean)
-
-      /**
-       * @param containers Specifies whether the lifecycle action should apply to distributed
-       * containers.
-       */
-      public fun containers(containers: IResolvable)
-
-      /**
-       * @param snapshots Specifies whether the lifecycle action should apply to snapshots
-       * associated with distributed AMIs.
-       */
-      public fun snapshots(snapshots: Boolean)
-
-      /**
-       * @param snapshots Specifies whether the lifecycle action should apply to snapshots
-       * associated with distributed AMIs.
-       */
-      public fun snapshots(snapshots: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty.builder()
-
-      /**
-       * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
-       */
-      override fun amis(amis: Boolean) {
-        cdkBuilder.amis(amis)
-      }
-
-      /**
-       * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
-       */
-      override fun amis(amis: IResolvable) {
-        cdkBuilder.amis(amis.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param containers Specifies whether the lifecycle action should apply to distributed
-       * containers.
-       */
-      override fun containers(containers: Boolean) {
-        cdkBuilder.containers(containers)
-      }
-
-      /**
-       * @param containers Specifies whether the lifecycle action should apply to distributed
-       * containers.
-       */
-      override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param snapshots Specifies whether the lifecycle action should apply to snapshots
-       * associated with distributed AMIs.
-       */
-      override fun snapshots(snapshots: Boolean) {
-        cdkBuilder.snapshots(snapshots)
-      }
-
-      /**
-       * @param snapshots Specifies whether the lifecycle action should apply to snapshots
-       * associated with distributed AMIs.
-       */
-      override fun snapshots(snapshots: IResolvable) {
-        cdkBuilder.snapshots(snapshots.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty,
-    ) : CdkObject(cdkObject), IncludeResourcesProperty {
-      /**
-       * Specifies whether the lifecycle action should apply to distributed AMIs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-amis)
-       */
-      override fun amis(): Any? = unwrap(this).getAmis()
-
-      /**
-       * Specifies whether the lifecycle action should apply to distributed containers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-containers)
-       */
-      override fun containers(): Any? = unwrap(this).getContainers()
-
-      /**
-       * Specifies whether the lifecycle action should apply to snapshots associated with
-       * distributed AMIs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-snapshots)
-       */
-      override fun snapshots(): Any? = unwrap(this).getSnapshots()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IncludeResourcesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty):
-          IncludeResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as? IncludeResourcesProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IncludeResourcesProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty
-    }
-  }
-
-  /**
    * Contains selection criteria for the lifecycle policy.
    *
    * Example:
@@ -957,749 +647,6 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty
-    }
-  }
-
-  /**
-   * Specifies an Image Builder recipe that the lifecycle policy uses for resource selection.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * RecipeSelectionProperty recipeSelectionProperty = RecipeSelectionProperty.builder()
-   * .name("name")
-   * .semanticVersion("semanticVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html)
-   */
-  public interface RecipeSelectionProperty {
-    /**
-     * The name of an Image Builder recipe that the lifecycle policy uses for resource selection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html#cfn-imagebuilder-lifecyclepolicy-recipeselection-name)
-     */
-    public fun name(): String
-
-    /**
-     * The version of the Image Builder recipe specified by the `name` field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html#cfn-imagebuilder-lifecyclepolicy-recipeselection-semanticversion)
-     */
-    public fun semanticVersion(): String
-
-    /**
-     * A builder for [RecipeSelectionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of an Image Builder recipe that the lifecycle policy uses for resource
-       * selection. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param semanticVersion The version of the Image Builder recipe specified by the `name`
-       * field. 
-       */
-      public fun semanticVersion(semanticVersion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty.builder()
-
-      /**
-       * @param name The name of an Image Builder recipe that the lifecycle policy uses for resource
-       * selection. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param semanticVersion The version of the Image Builder recipe specified by the `name`
-       * field. 
-       */
-      override fun semanticVersion(semanticVersion: String) {
-        cdkBuilder.semanticVersion(semanticVersion)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty,
-    ) : CdkObject(cdkObject), RecipeSelectionProperty {
-      /**
-       * The name of an Image Builder recipe that the lifecycle policy uses for resource selection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html#cfn-imagebuilder-lifecyclepolicy-recipeselection-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The version of the Image Builder recipe specified by the `name` field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html#cfn-imagebuilder-lifecyclepolicy-recipeselection-semanticversion)
-       */
-      override fun semanticVersion(): String = unwrap(this).getSemanticVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecipeSelectionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty):
-          RecipeSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipeSelectionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RecipeSelectionProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty
-    }
-  }
-
-  /**
-   * Resource selection criteria for the lifecycle policy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * ResourceSelectionProperty resourceSelectionProperty = ResourceSelectionProperty.builder()
-   * .recipes(List.of(RecipeSelectionProperty.builder()
-   * .name("name")
-   * .semanticVersion("semanticVersion")
-   * .build()))
-   * .tagMap(Map.of(
-   * "tagMapKey", "tagMap"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html)
-   */
-  public interface ResourceSelectionProperty {
-    /**
-     * A list of recipes that are used as selection criteria for the output images that the
-     * lifecycle policy applies to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html#cfn-imagebuilder-lifecyclepolicy-resourceselection-recipes)
-     */
-    public fun recipes(): Any? = unwrap(this).getRecipes()
-
-    /**
-     * A list of tags that are used as selection criteria for the Image Builder image resources that
-     * the lifecycle policy applies to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html#cfn-imagebuilder-lifecyclepolicy-resourceselection-tagmap)
-     */
-    public fun tagMap(): Any? = unwrap(this).getTagMap()
-
-    /**
-     * A builder for [ResourceSelectionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param recipes A list of recipes that are used as selection criteria for the output images
-       * that the lifecycle policy applies to.
-       */
-      public fun recipes(recipes: IResolvable)
-
-      /**
-       * @param recipes A list of recipes that are used as selection criteria for the output images
-       * that the lifecycle policy applies to.
-       */
-      public fun recipes(recipes: List<Any>)
-
-      /**
-       * @param recipes A list of recipes that are used as selection criteria for the output images
-       * that the lifecycle policy applies to.
-       */
-      public fun recipes(vararg recipes: Any)
-
-      /**
-       * @param tagMap A list of tags that are used as selection criteria for the Image Builder
-       * image resources that the lifecycle policy applies to.
-       */
-      public fun tagMap(tagMap: IResolvable)
-
-      /**
-       * @param tagMap A list of tags that are used as selection criteria for the Image Builder
-       * image resources that the lifecycle policy applies to.
-       */
-      public fun tagMap(tagMap: Map<String, String>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty.builder()
-
-      /**
-       * @param recipes A list of recipes that are used as selection criteria for the output images
-       * that the lifecycle policy applies to.
-       */
-      override fun recipes(recipes: IResolvable) {
-        cdkBuilder.recipes(recipes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recipes A list of recipes that are used as selection criteria for the output images
-       * that the lifecycle policy applies to.
-       */
-      override fun recipes(recipes: List<Any>) {
-        cdkBuilder.recipes(recipes)
-      }
-
-      /**
-       * @param recipes A list of recipes that are used as selection criteria for the output images
-       * that the lifecycle policy applies to.
-       */
-      override fun recipes(vararg recipes: Any): Unit = recipes(recipes.toList())
-
-      /**
-       * @param tagMap A list of tags that are used as selection criteria for the Image Builder
-       * image resources that the lifecycle policy applies to.
-       */
-      override fun tagMap(tagMap: IResolvable) {
-        cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tagMap A list of tags that are used as selection criteria for the Image Builder
-       * image resources that the lifecycle policy applies to.
-       */
-      override fun tagMap(tagMap: Map<String, String>) {
-        cdkBuilder.tagMap(tagMap)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty,
-    ) : CdkObject(cdkObject), ResourceSelectionProperty {
-      /**
-       * A list of recipes that are used as selection criteria for the output images that the
-       * lifecycle policy applies to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html#cfn-imagebuilder-lifecyclepolicy-resourceselection-recipes)
-       */
-      override fun recipes(): Any? = unwrap(this).getRecipes()
-
-      /**
-       * A list of tags that are used as selection criteria for the Image Builder image resources
-       * that the lifecycle policy applies to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html#cfn-imagebuilder-lifecyclepolicy-resourceselection-tagmap)
-       */
-      override fun tagMap(): Any? = unwrap(this).getTagMap()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceSelectionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty):
-          ResourceSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResourceSelectionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourceSelectionProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty
-    }
-  }
-
-  /**
-   * Defines filters that the lifecycle policy uses to determine impacted resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * FilterProperty filterProperty = FilterProperty.builder()
-   * .type("type")
-   * .value(123)
-   * // the properties below are optional
-   * .retainAtLeast(123)
-   * .unit("unit")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html)
-   */
-  public interface FilterProperty {
-    /**
-     * For age-based filters, this is the number of resources to keep on hand after the lifecycle
-     * `DELETE` action is applied.
-     *
-     * Impacted resources are only deleted if you have more than this number of resources. If you
-     * have fewer resources than this number, the impacted resource is not deleted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-retainatleast)
-     */
-    public fun retainAtLeast(): Number? = unwrap(this).getRetainAtLeast()
-
-    /**
-     * Filter resources based on either `age` or `count` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-type)
-     */
-    public fun type(): String
-
-    /**
-     * Defines the unit of time that the lifecycle policy uses to determine impacted resources.
-     *
-     * This is required for age-based rules.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-unit)
-     */
-    public fun unit(): String? = unwrap(this).getUnit()
-
-    /**
-     * The number of units for the time period or for the count.
-     *
-     * For example, a value of `6` might refer to six months or six AMIs.
-     *
-     *
-     * For count-based filters, this value represents the minimum number of resources to keep on
-     * hand. If you have fewer resources than this number, the resource is excluded from lifecycle
-     * actions.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-value)
-     */
-    public fun `value`(): Number
-
-    /**
-     * A builder for [FilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param retainAtLeast For age-based filters, this is the number of resources to keep on hand
-       * after the lifecycle `DELETE` action is applied.
-       * Impacted resources are only deleted if you have more than this number of resources. If you
-       * have fewer resources than this number, the impacted resource is not deleted.
-       */
-      public fun retainAtLeast(retainAtLeast: Number)
-
-      /**
-       * @param type Filter resources based on either `age` or `count` . 
-       */
-      public fun type(type: String)
-
-      /**
-       * @param unit Defines the unit of time that the lifecycle policy uses to determine impacted
-       * resources.
-       * This is required for age-based rules.
-       */
-      public fun unit(unit: String)
-
-      /**
-       * @param value The number of units for the time period or for the count. 
-       * For example, a value of `6` might refer to six months or six AMIs.
-       *
-       *
-       * For count-based filters, this value represents the minimum number of resources to keep on
-       * hand. If you have fewer resources than this number, the resource is excluded from lifecycle
-       * actions.
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty.Builder =
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty.builder()
-
-      /**
-       * @param retainAtLeast For age-based filters, this is the number of resources to keep on hand
-       * after the lifecycle `DELETE` action is applied.
-       * Impacted resources are only deleted if you have more than this number of resources. If you
-       * have fewer resources than this number, the impacted resource is not deleted.
-       */
-      override fun retainAtLeast(retainAtLeast: Number) {
-        cdkBuilder.retainAtLeast(retainAtLeast)
-      }
-
-      /**
-       * @param type Filter resources based on either `age` or `count` . 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param unit Defines the unit of time that the lifecycle policy uses to determine impacted
-       * resources.
-       * This is required for age-based rules.
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      /**
-       * @param value The number of units for the time period or for the count. 
-       * For example, a value of `6` might refer to six months or six AMIs.
-       *
-       *
-       * For count-based filters, this value represents the minimum number of resources to keep on
-       * hand. If you have fewer resources than this number, the resource is excluded from lifecycle
-       * actions.
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
-      /**
-       * For age-based filters, this is the number of resources to keep on hand after the lifecycle
-       * `DELETE` action is applied.
-       *
-       * Impacted resources are only deleted if you have more than this number of resources. If you
-       * have fewer resources than this number, the impacted resource is not deleted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-retainatleast)
-       */
-      override fun retainAtLeast(): Number? = unwrap(this).getRetainAtLeast()
-
-      /**
-       * Filter resources based on either `age` or `count` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-
-      /**
-       * Defines the unit of time that the lifecycle policy uses to determine impacted resources.
-       *
-       * This is required for age-based rules.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-unit)
-       */
-      override fun unit(): String? = unwrap(this).getUnit()
-
-      /**
-       * The number of units for the time period or for the count.
-       *
-       * For example, a value of `6` might refer to six months or six AMIs.
-       *
-       *
-       * For count-based filters, this value represents the minimum number of resources to keep on
-       * hand. If you have fewer resources than this number, the resource is excluded from lifecycle
-       * actions.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-value)
-       */
-      override fun `value`(): Number = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty
-    }
-  }
-
-  /**
-   * The configuration details for a lifecycle policy resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * PolicyDetailProperty policyDetailProperty = PolicyDetailProperty.builder()
-   * .action(ActionProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .includeResources(IncludeResourcesProperty.builder()
-   * .amis(false)
-   * .containers(false)
-   * .snapshots(false)
-   * .build())
-   * .build())
-   * .filter(FilterProperty.builder()
-   * .type("type")
-   * .value(123)
-   * // the properties below are optional
-   * .retainAtLeast(123)
-   * .unit("unit")
-   * .build())
-   * // the properties below are optional
-   * .exclusionRules(ExclusionRulesProperty.builder()
-   * .amis(AmiExclusionRulesProperty.builder()
-   * .isPublic(false)
-   * .lastLaunched(LastLaunchedProperty.builder()
-   * .unit("unit")
-   * .value(123)
-   * .build())
-   * .regions(List.of("regions"))
-   * .sharedAccounts(List.of("sharedAccounts"))
-   * .tagMap(Map.of(
-   * "tagMapKey", "tagMap"))
-   * .build())
-   * .tagMap(Map.of(
-   * "tagMapKey", "tagMap"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html)
-   */
-  public interface PolicyDetailProperty {
-    /**
-     * Configuration details for the policy action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-action)
-     */
-    public fun action(): Any
-
-    /**
-     * Additional rules to specify resources that should be exempt from policy actions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-exclusionrules)
-     */
-    public fun exclusionRules(): Any? = unwrap(this).getExclusionRules()
-
-    /**
-     * Specifies the resources that the lifecycle policy applies to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-filter)
-     */
-    public fun filter(): Any
-
-    /**
-     * A builder for [PolicyDetailProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action Configuration details for the policy action. 
-       */
-      public fun action(action: IResolvable)
-
-      /**
-       * @param action Configuration details for the policy action. 
-       */
-      public fun action(action: ActionProperty)
-
-      /**
-       * @param action Configuration details for the policy action. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a9dbb42e008c2d9f934812afdd7d0401f3db973cb54b7172a6deac66ce238c17")
-      public fun action(action: ActionProperty.Builder.() -> Unit)
-
-      /**
-       * @param exclusionRules Additional rules to specify resources that should be exempt from
-       * policy actions.
-       */
-      public fun exclusionRules(exclusionRules: IResolvable)
-
-      /**
-       * @param exclusionRules Additional rules to specify resources that should be exempt from
-       * policy actions.
-       */
-      public fun exclusionRules(exclusionRules: ExclusionRulesProperty)
-
-      /**
-       * @param exclusionRules Additional rules to specify resources that should be exempt from
-       * policy actions.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b2aefbdee6810949a08fbc3ec96996e7ff8320d4c8ad322f84ce069c822106be")
-      public fun exclusionRules(exclusionRules: ExclusionRulesProperty.Builder.() -> Unit)
-
-      /**
-       * @param filter Specifies the resources that the lifecycle policy applies to. 
-       */
-      public fun filter(filter: IResolvable)
-
-      /**
-       * @param filter Specifies the resources that the lifecycle policy applies to. 
-       */
-      public fun filter(filter: FilterProperty)
-
-      /**
-       * @param filter Specifies the resources that the lifecycle policy applies to. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("48e93a5d8726b320824ecbcb01841580b080f8860aa78ed0736beb59b4dc81ec")
-      public fun filter(filter: FilterProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty.builder()
-
-      /**
-       * @param action Configuration details for the policy action. 
-       */
-      override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param action Configuration details for the policy action. 
-       */
-      override fun action(action: ActionProperty) {
-        cdkBuilder.action(action.let(ActionProperty::unwrap))
-      }
-
-      /**
-       * @param action Configuration details for the policy action. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a9dbb42e008c2d9f934812afdd7d0401f3db973cb54b7172a6deac66ce238c17")
-      override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
-          action(ActionProperty(action))
-
-      /**
-       * @param exclusionRules Additional rules to specify resources that should be exempt from
-       * policy actions.
-       */
-      override fun exclusionRules(exclusionRules: IResolvable) {
-        cdkBuilder.exclusionRules(exclusionRules.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param exclusionRules Additional rules to specify resources that should be exempt from
-       * policy actions.
-       */
-      override fun exclusionRules(exclusionRules: ExclusionRulesProperty) {
-        cdkBuilder.exclusionRules(exclusionRules.let(ExclusionRulesProperty::unwrap))
-      }
-
-      /**
-       * @param exclusionRules Additional rules to specify resources that should be exempt from
-       * policy actions.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b2aefbdee6810949a08fbc3ec96996e7ff8320d4c8ad322f84ce069c822106be")
-      override fun exclusionRules(exclusionRules: ExclusionRulesProperty.Builder.() -> Unit): Unit =
-          exclusionRules(ExclusionRulesProperty(exclusionRules))
-
-      /**
-       * @param filter Specifies the resources that the lifecycle policy applies to. 
-       */
-      override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filter Specifies the resources that the lifecycle policy applies to. 
-       */
-      override fun filter(filter: FilterProperty) {
-        cdkBuilder.filter(filter.let(FilterProperty::unwrap))
-      }
-
-      /**
-       * @param filter Specifies the resources that the lifecycle policy applies to. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("48e93a5d8726b320824ecbcb01841580b080f8860aa78ed0736beb59b4dc81ec")
-      override fun filter(filter: FilterProperty.Builder.() -> Unit): Unit =
-          filter(FilterProperty(filter))
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty,
-    ) : CdkObject(cdkObject), PolicyDetailProperty {
-      /**
-       * Configuration details for the policy action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-action)
-       */
-      override fun action(): Any = unwrap(this).getAction()
-
-      /**
-       * Additional rules to specify resources that should be exempt from policy actions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-exclusionrules)
-       */
-      override fun exclusionRules(): Any? = unwrap(this).getExclusionRules()
-
-      /**
-       * Specifies the resources that the lifecycle policy applies to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-filter)
-       */
-      override fun filter(): Any = unwrap(this).getFilter()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PolicyDetailProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty):
-          PolicyDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyDetailProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PolicyDetailProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty
     }
   }
 
@@ -2157,6 +1104,1059 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ExclusionRulesProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ExclusionRulesProperty
+    }
+  }
+
+  /**
+   * Defines filters that the lifecycle policy uses to determine impacted resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * FilterProperty filterProperty = FilterProperty.builder()
+   * .type("type")
+   * .value(123)
+   * // the properties below are optional
+   * .retainAtLeast(123)
+   * .unit("unit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html)
+   */
+  public interface FilterProperty {
+    /**
+     * For age-based filters, this is the number of resources to keep on hand after the lifecycle
+     * `DELETE` action is applied.
+     *
+     * Impacted resources are only deleted if you have more than this number of resources. If you
+     * have fewer resources than this number, the impacted resource is not deleted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-retainatleast)
+     */
+    public fun retainAtLeast(): Number? = unwrap(this).getRetainAtLeast()
+
+    /**
+     * Filter resources based on either `age` or `count` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-type)
+     */
+    public fun type(): String
+
+    /**
+     * Defines the unit of time that the lifecycle policy uses to determine impacted resources.
+     *
+     * This is required for age-based rules.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-unit)
+     */
+    public fun unit(): String? = unwrap(this).getUnit()
+
+    /**
+     * The number of units for the time period or for the count.
+     *
+     * For example, a value of `6` might refer to six months or six AMIs.
+     *
+     *
+     * For count-based filters, this value represents the minimum number of resources to keep on
+     * hand. If you have fewer resources than this number, the resource is excluded from lifecycle
+     * actions.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [FilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param retainAtLeast For age-based filters, this is the number of resources to keep on hand
+       * after the lifecycle `DELETE` action is applied.
+       * Impacted resources are only deleted if you have more than this number of resources. If you
+       * have fewer resources than this number, the impacted resource is not deleted.
+       */
+      public fun retainAtLeast(retainAtLeast: Number)
+
+      /**
+       * @param type Filter resources based on either `age` or `count` . 
+       */
+      public fun type(type: String)
+
+      /**
+       * @param unit Defines the unit of time that the lifecycle policy uses to determine impacted
+       * resources.
+       * This is required for age-based rules.
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value The number of units for the time period or for the count. 
+       * For example, a value of `6` might refer to six months or six AMIs.
+       *
+       *
+       * For count-based filters, this value represents the minimum number of resources to keep on
+       * hand. If you have fewer resources than this number, the resource is excluded from lifecycle
+       * actions.
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty.Builder =
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty.builder()
+
+      /**
+       * @param retainAtLeast For age-based filters, this is the number of resources to keep on hand
+       * after the lifecycle `DELETE` action is applied.
+       * Impacted resources are only deleted if you have more than this number of resources. If you
+       * have fewer resources than this number, the impacted resource is not deleted.
+       */
+      override fun retainAtLeast(retainAtLeast: Number) {
+        cdkBuilder.retainAtLeast(retainAtLeast)
+      }
+
+      /**
+       * @param type Filter resources based on either `age` or `count` . 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param unit Defines the unit of time that the lifecycle policy uses to determine impacted
+       * resources.
+       * This is required for age-based rules.
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value The number of units for the time period or for the count. 
+       * For example, a value of `6` might refer to six months or six AMIs.
+       *
+       *
+       * For count-based filters, this value represents the minimum number of resources to keep on
+       * hand. If you have fewer resources than this number, the resource is excluded from lifecycle
+       * actions.
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty,
+    ) : CdkObject(cdkObject), FilterProperty {
+      /**
+       * For age-based filters, this is the number of resources to keep on hand after the lifecycle
+       * `DELETE` action is applied.
+       *
+       * Impacted resources are only deleted if you have more than this number of resources. If you
+       * have fewer resources than this number, the impacted resource is not deleted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-retainatleast)
+       */
+      override fun retainAtLeast(): Number? = unwrap(this).getRetainAtLeast()
+
+      /**
+       * Filter resources based on either `age` or `count` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+
+      /**
+       * Defines the unit of time that the lifecycle policy uses to determine impacted resources.
+       *
+       * This is required for age-based rules.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-unit)
+       */
+      override fun unit(): String? = unwrap(this).getUnit()
+
+      /**
+       * The number of units for the time period or for the count.
+       *
+       * For example, a value of `6` might refer to six months or six AMIs.
+       *
+       *
+       * For count-based filters, this value represents the minimum number of resources to keep on
+       * hand. If you have fewer resources than this number, the resource is excluded from lifecycle
+       * actions.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-filter.html#cfn-imagebuilder-lifecyclepolicy-filter-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty):
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty
+    }
+  }
+
+  /**
+   * Specifies how the lifecycle policy should apply actions to selected resources.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * IncludeResourcesProperty includeResourcesProperty = IncludeResourcesProperty.builder()
+   * .amis(false)
+   * .containers(false)
+   * .snapshots(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html)
+   */
+  public interface IncludeResourcesProperty {
+    /**
+     * Specifies whether the lifecycle action should apply to distributed AMIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-amis)
+     */
+    public fun amis(): Any? = unwrap(this).getAmis()
+
+    /**
+     * Specifies whether the lifecycle action should apply to distributed containers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-containers)
+     */
+    public fun containers(): Any? = unwrap(this).getContainers()
+
+    /**
+     * Specifies whether the lifecycle action should apply to snapshots associated with distributed
+     * AMIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-snapshots)
+     */
+    public fun snapshots(): Any? = unwrap(this).getSnapshots()
+
+    /**
+     * A builder for [IncludeResourcesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
+       */
+      public fun amis(amis: Boolean)
+
+      /**
+       * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
+       */
+      public fun amis(amis: IResolvable)
+
+      /**
+       * @param containers Specifies whether the lifecycle action should apply to distributed
+       * containers.
+       */
+      public fun containers(containers: Boolean)
+
+      /**
+       * @param containers Specifies whether the lifecycle action should apply to distributed
+       * containers.
+       */
+      public fun containers(containers: IResolvable)
+
+      /**
+       * @param snapshots Specifies whether the lifecycle action should apply to snapshots
+       * associated with distributed AMIs.
+       */
+      public fun snapshots(snapshots: Boolean)
+
+      /**
+       * @param snapshots Specifies whether the lifecycle action should apply to snapshots
+       * associated with distributed AMIs.
+       */
+      public fun snapshots(snapshots: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty.builder()
+
+      /**
+       * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
+       */
+      override fun amis(amis: Boolean) {
+        cdkBuilder.amis(amis)
+      }
+
+      /**
+       * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
+       */
+      override fun amis(amis: IResolvable) {
+        cdkBuilder.amis(amis.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param containers Specifies whether the lifecycle action should apply to distributed
+       * containers.
+       */
+      override fun containers(containers: Boolean) {
+        cdkBuilder.containers(containers)
+      }
+
+      /**
+       * @param containers Specifies whether the lifecycle action should apply to distributed
+       * containers.
+       */
+      override fun containers(containers: IResolvable) {
+        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param snapshots Specifies whether the lifecycle action should apply to snapshots
+       * associated with distributed AMIs.
+       */
+      override fun snapshots(snapshots: Boolean) {
+        cdkBuilder.snapshots(snapshots)
+      }
+
+      /**
+       * @param snapshots Specifies whether the lifecycle action should apply to snapshots
+       * associated with distributed AMIs.
+       */
+      override fun snapshots(snapshots: IResolvable) {
+        cdkBuilder.snapshots(snapshots.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty,
+    ) : CdkObject(cdkObject), IncludeResourcesProperty {
+      /**
+       * Specifies whether the lifecycle action should apply to distributed AMIs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-amis)
+       */
+      override fun amis(): Any? = unwrap(this).getAmis()
+
+      /**
+       * Specifies whether the lifecycle action should apply to distributed containers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-containers)
+       */
+      override fun containers(): Any? = unwrap(this).getContainers()
+
+      /**
+       * Specifies whether the lifecycle action should apply to snapshots associated with
+       * distributed AMIs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-includeresources.html#cfn-imagebuilder-lifecyclepolicy-includeresources-snapshots)
+       */
+      override fun snapshots(): Any? = unwrap(this).getSnapshots()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IncludeResourcesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty):
+          IncludeResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as? IncludeResourcesProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IncludeResourcesProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty
+    }
+  }
+
+  /**
+   * Defines criteria to exclude AMIs from lifecycle actions based on the last time they were used
+   * to launch an instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * LastLaunchedProperty lastLaunchedProperty = LastLaunchedProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html)
+   */
+  public interface LastLaunchedProperty {
+    /**
+     * Defines the unit of time that the lifecycle policy uses to calculate elapsed time since the
+     * last instance launched from the AMI.
+     *
+     * For example: days, weeks, months, or years.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html#cfn-imagebuilder-lifecyclepolicy-lastlaunched-unit)
+     */
+    public fun unit(): String
+
+    /**
+     * The integer number of units for the time period.
+     *
+     * For example `6` (months).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html#cfn-imagebuilder-lifecyclepolicy-lastlaunched-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [LastLaunchedProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param unit Defines the unit of time that the lifecycle policy uses to calculate elapsed
+       * time since the last instance launched from the AMI. 
+       * For example: days, weeks, months, or years.
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value The integer number of units for the time period. 
+       * For example `6` (months).
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty.builder()
+
+      /**
+       * @param unit Defines the unit of time that the lifecycle policy uses to calculate elapsed
+       * time since the last instance launched from the AMI. 
+       * For example: days, weeks, months, or years.
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value The integer number of units for the time period. 
+       * For example `6` (months).
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty,
+    ) : CdkObject(cdkObject), LastLaunchedProperty {
+      /**
+       * Defines the unit of time that the lifecycle policy uses to calculate elapsed time since the
+       * last instance launched from the AMI.
+       *
+       * For example: days, weeks, months, or years.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html#cfn-imagebuilder-lifecyclepolicy-lastlaunched-unit)
+       */
+      override fun unit(): String = unwrap(this).getUnit()
+
+      /**
+       * The integer number of units for the time period.
+       *
+       * For example `6` (months).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-lastlaunched.html#cfn-imagebuilder-lifecyclepolicy-lastlaunched-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LastLaunchedProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty):
+          LastLaunchedProperty = CdkObjectWrappers.wrap(cdkObject) as? LastLaunchedProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LastLaunchedProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty
+    }
+  }
+
+  /**
+   * The configuration details for a lifecycle policy resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * PolicyDetailProperty policyDetailProperty = PolicyDetailProperty.builder()
+   * .action(ActionProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .includeResources(IncludeResourcesProperty.builder()
+   * .amis(false)
+   * .containers(false)
+   * .snapshots(false)
+   * .build())
+   * .build())
+   * .filter(FilterProperty.builder()
+   * .type("type")
+   * .value(123)
+   * // the properties below are optional
+   * .retainAtLeast(123)
+   * .unit("unit")
+   * .build())
+   * // the properties below are optional
+   * .exclusionRules(ExclusionRulesProperty.builder()
+   * .amis(AmiExclusionRulesProperty.builder()
+   * .isPublic(false)
+   * .lastLaunched(LastLaunchedProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build())
+   * .regions(List.of("regions"))
+   * .sharedAccounts(List.of("sharedAccounts"))
+   * .tagMap(Map.of(
+   * "tagMapKey", "tagMap"))
+   * .build())
+   * .tagMap(Map.of(
+   * "tagMapKey", "tagMap"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html)
+   */
+  public interface PolicyDetailProperty {
+    /**
+     * Configuration details for the policy action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-action)
+     */
+    public fun action(): Any
+
+    /**
+     * Additional rules to specify resources that should be exempt from policy actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-exclusionrules)
+     */
+    public fun exclusionRules(): Any? = unwrap(this).getExclusionRules()
+
+    /**
+     * Specifies the resources that the lifecycle policy applies to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-filter)
+     */
+    public fun filter(): Any
+
+    /**
+     * A builder for [PolicyDetailProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action Configuration details for the policy action. 
+       */
+      public fun action(action: IResolvable)
+
+      /**
+       * @param action Configuration details for the policy action. 
+       */
+      public fun action(action: ActionProperty)
+
+      /**
+       * @param action Configuration details for the policy action. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a9dbb42e008c2d9f934812afdd7d0401f3db973cb54b7172a6deac66ce238c17")
+      public fun action(action: ActionProperty.Builder.() -> Unit)
+
+      /**
+       * @param exclusionRules Additional rules to specify resources that should be exempt from
+       * policy actions.
+       */
+      public fun exclusionRules(exclusionRules: IResolvable)
+
+      /**
+       * @param exclusionRules Additional rules to specify resources that should be exempt from
+       * policy actions.
+       */
+      public fun exclusionRules(exclusionRules: ExclusionRulesProperty)
+
+      /**
+       * @param exclusionRules Additional rules to specify resources that should be exempt from
+       * policy actions.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b2aefbdee6810949a08fbc3ec96996e7ff8320d4c8ad322f84ce069c822106be")
+      public fun exclusionRules(exclusionRules: ExclusionRulesProperty.Builder.() -> Unit)
+
+      /**
+       * @param filter Specifies the resources that the lifecycle policy applies to. 
+       */
+      public fun filter(filter: IResolvable)
+
+      /**
+       * @param filter Specifies the resources that the lifecycle policy applies to. 
+       */
+      public fun filter(filter: FilterProperty)
+
+      /**
+       * @param filter Specifies the resources that the lifecycle policy applies to. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("48e93a5d8726b320824ecbcb01841580b080f8860aa78ed0736beb59b4dc81ec")
+      public fun filter(filter: FilterProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty.builder()
+
+      /**
+       * @param action Configuration details for the policy action. 
+       */
+      override fun action(action: IResolvable) {
+        cdkBuilder.action(action.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param action Configuration details for the policy action. 
+       */
+      override fun action(action: ActionProperty) {
+        cdkBuilder.action(action.let(ActionProperty::unwrap))
+      }
+
+      /**
+       * @param action Configuration details for the policy action. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a9dbb42e008c2d9f934812afdd7d0401f3db973cb54b7172a6deac66ce238c17")
+      override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
+          action(ActionProperty(action))
+
+      /**
+       * @param exclusionRules Additional rules to specify resources that should be exempt from
+       * policy actions.
+       */
+      override fun exclusionRules(exclusionRules: IResolvable) {
+        cdkBuilder.exclusionRules(exclusionRules.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param exclusionRules Additional rules to specify resources that should be exempt from
+       * policy actions.
+       */
+      override fun exclusionRules(exclusionRules: ExclusionRulesProperty) {
+        cdkBuilder.exclusionRules(exclusionRules.let(ExclusionRulesProperty::unwrap))
+      }
+
+      /**
+       * @param exclusionRules Additional rules to specify resources that should be exempt from
+       * policy actions.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b2aefbdee6810949a08fbc3ec96996e7ff8320d4c8ad322f84ce069c822106be")
+      override fun exclusionRules(exclusionRules: ExclusionRulesProperty.Builder.() -> Unit): Unit =
+          exclusionRules(ExclusionRulesProperty(exclusionRules))
+
+      /**
+       * @param filter Specifies the resources that the lifecycle policy applies to. 
+       */
+      override fun filter(filter: IResolvable) {
+        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param filter Specifies the resources that the lifecycle policy applies to. 
+       */
+      override fun filter(filter: FilterProperty) {
+        cdkBuilder.filter(filter.let(FilterProperty::unwrap))
+      }
+
+      /**
+       * @param filter Specifies the resources that the lifecycle policy applies to. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("48e93a5d8726b320824ecbcb01841580b080f8860aa78ed0736beb59b4dc81ec")
+      override fun filter(filter: FilterProperty.Builder.() -> Unit): Unit =
+          filter(FilterProperty(filter))
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty,
+    ) : CdkObject(cdkObject), PolicyDetailProperty {
+      /**
+       * Configuration details for the policy action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-action)
+       */
+      override fun action(): Any = unwrap(this).getAction()
+
+      /**
+       * Additional rules to specify resources that should be exempt from policy actions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-exclusionrules)
+       */
+      override fun exclusionRules(): Any? = unwrap(this).getExclusionRules()
+
+      /**
+       * Specifies the resources that the lifecycle policy applies to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-policydetail.html#cfn-imagebuilder-lifecyclepolicy-policydetail-filter)
+       */
+      override fun filter(): Any = unwrap(this).getFilter()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PolicyDetailProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty):
+          PolicyDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyDetailProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PolicyDetailProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty
+    }
+  }
+
+  /**
+   * Specifies an Image Builder recipe that the lifecycle policy uses for resource selection.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * RecipeSelectionProperty recipeSelectionProperty = RecipeSelectionProperty.builder()
+   * .name("name")
+   * .semanticVersion("semanticVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html)
+   */
+  public interface RecipeSelectionProperty {
+    /**
+     * The name of an Image Builder recipe that the lifecycle policy uses for resource selection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html#cfn-imagebuilder-lifecyclepolicy-recipeselection-name)
+     */
+    public fun name(): String
+
+    /**
+     * The version of the Image Builder recipe specified by the `name` field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html#cfn-imagebuilder-lifecyclepolicy-recipeselection-semanticversion)
+     */
+    public fun semanticVersion(): String
+
+    /**
+     * A builder for [RecipeSelectionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of an Image Builder recipe that the lifecycle policy uses for resource
+       * selection. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param semanticVersion The version of the Image Builder recipe specified by the `name`
+       * field. 
+       */
+      public fun semanticVersion(semanticVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty.builder()
+
+      /**
+       * @param name The name of an Image Builder recipe that the lifecycle policy uses for resource
+       * selection. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param semanticVersion The version of the Image Builder recipe specified by the `name`
+       * field. 
+       */
+      override fun semanticVersion(semanticVersion: String) {
+        cdkBuilder.semanticVersion(semanticVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty,
+    ) : CdkObject(cdkObject), RecipeSelectionProperty {
+      /**
+       * The name of an Image Builder recipe that the lifecycle policy uses for resource selection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html#cfn-imagebuilder-lifecyclepolicy-recipeselection-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The version of the Image Builder recipe specified by the `name` field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-recipeselection.html#cfn-imagebuilder-lifecyclepolicy-recipeselection-semanticversion)
+       */
+      override fun semanticVersion(): String = unwrap(this).getSemanticVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecipeSelectionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty):
+          RecipeSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipeSelectionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecipeSelectionProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty
+    }
+  }
+
+  /**
+   * Resource selection criteria for the lifecycle policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * ResourceSelectionProperty resourceSelectionProperty = ResourceSelectionProperty.builder()
+   * .recipes(List.of(RecipeSelectionProperty.builder()
+   * .name("name")
+   * .semanticVersion("semanticVersion")
+   * .build()))
+   * .tagMap(Map.of(
+   * "tagMapKey", "tagMap"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html)
+   */
+  public interface ResourceSelectionProperty {
+    /**
+     * A list of recipes that are used as selection criteria for the output images that the
+     * lifecycle policy applies to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html#cfn-imagebuilder-lifecyclepolicy-resourceselection-recipes)
+     */
+    public fun recipes(): Any? = unwrap(this).getRecipes()
+
+    /**
+     * A list of tags that are used as selection criteria for the Image Builder image resources that
+     * the lifecycle policy applies to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html#cfn-imagebuilder-lifecyclepolicy-resourceselection-tagmap)
+     */
+    public fun tagMap(): Any? = unwrap(this).getTagMap()
+
+    /**
+     * A builder for [ResourceSelectionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param recipes A list of recipes that are used as selection criteria for the output images
+       * that the lifecycle policy applies to.
+       */
+      public fun recipes(recipes: IResolvable)
+
+      /**
+       * @param recipes A list of recipes that are used as selection criteria for the output images
+       * that the lifecycle policy applies to.
+       */
+      public fun recipes(recipes: List<Any>)
+
+      /**
+       * @param recipes A list of recipes that are used as selection criteria for the output images
+       * that the lifecycle policy applies to.
+       */
+      public fun recipes(vararg recipes: Any)
+
+      /**
+       * @param tagMap A list of tags that are used as selection criteria for the Image Builder
+       * image resources that the lifecycle policy applies to.
+       */
+      public fun tagMap(tagMap: IResolvable)
+
+      /**
+       * @param tagMap A list of tags that are used as selection criteria for the Image Builder
+       * image resources that the lifecycle policy applies to.
+       */
+      public fun tagMap(tagMap: Map<String, String>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty.builder()
+
+      /**
+       * @param recipes A list of recipes that are used as selection criteria for the output images
+       * that the lifecycle policy applies to.
+       */
+      override fun recipes(recipes: IResolvable) {
+        cdkBuilder.recipes(recipes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param recipes A list of recipes that are used as selection criteria for the output images
+       * that the lifecycle policy applies to.
+       */
+      override fun recipes(recipes: List<Any>) {
+        cdkBuilder.recipes(recipes)
+      }
+
+      /**
+       * @param recipes A list of recipes that are used as selection criteria for the output images
+       * that the lifecycle policy applies to.
+       */
+      override fun recipes(vararg recipes: Any): Unit = recipes(recipes.toList())
+
+      /**
+       * @param tagMap A list of tags that are used as selection criteria for the Image Builder
+       * image resources that the lifecycle policy applies to.
+       */
+      override fun tagMap(tagMap: IResolvable) {
+        cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tagMap A list of tags that are used as selection criteria for the Image Builder
+       * image resources that the lifecycle policy applies to.
+       */
+      override fun tagMap(tagMap: Map<String, String>) {
+        cdkBuilder.tagMap(tagMap)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty,
+    ) : CdkObject(cdkObject), ResourceSelectionProperty {
+      /**
+       * A list of recipes that are used as selection criteria for the output images that the
+       * lifecycle policy applies to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html#cfn-imagebuilder-lifecyclepolicy-resourceselection-recipes)
+       */
+      override fun recipes(): Any? = unwrap(this).getRecipes()
+
+      /**
+       * A list of tags that are used as selection criteria for the Image Builder image resources
+       * that the lifecycle policy applies to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-lifecyclepolicy-resourceselection.html#cfn-imagebuilder-lifecyclepolicy-resourceselection-tagmap)
+       */
+      override fun tagMap(): Any? = unwrap(this).getTagMap()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceSelectionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty):
+          ResourceSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceSelectionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceSelectionProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty
     }
   }
 }

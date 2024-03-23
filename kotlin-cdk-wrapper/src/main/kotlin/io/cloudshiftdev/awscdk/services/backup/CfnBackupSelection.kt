@@ -279,128 +279,6 @@ public open class CfnBackupSelection internal constructor(
   }
 
   /**
-   * Includes information about tags you define to assign tagged resources to a backup plan.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.backup.*;
-   * ConditionParameterProperty conditionParameterProperty = ConditionParameterProperty.builder()
-   * .conditionKey("conditionKey")
-   * .conditionValue("conditionValue")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html)
-   */
-  public interface ConditionParameterProperty {
-    /**
-     * The key in a key-value pair.
-     *
-     * For example, in the tag `Department: Accounting` , `Department` is the key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html#cfn-backup-backupselection-conditionparameter-conditionkey)
-     */
-    public fun conditionKey(): String? = unwrap(this).getConditionKey()
-
-    /**
-     * The value in a key-value pair.
-     *
-     * For example, in the tag `Department: Accounting` , `Accounting` is the value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html#cfn-backup-backupselection-conditionparameter-conditionvalue)
-     */
-    public fun conditionValue(): String? = unwrap(this).getConditionValue()
-
-    /**
-     * A builder for [ConditionParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param conditionKey The key in a key-value pair.
-       * For example, in the tag `Department: Accounting` , `Department` is the key.
-       */
-      public fun conditionKey(conditionKey: String)
-
-      /**
-       * @param conditionValue The value in a key-value pair.
-       * For example, in the tag `Department: Accounting` , `Accounting` is the value.
-       */
-      public fun conditionValue(conditionValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty.builder()
-
-      /**
-       * @param conditionKey The key in a key-value pair.
-       * For example, in the tag `Department: Accounting` , `Department` is the key.
-       */
-      override fun conditionKey(conditionKey: String) {
-        cdkBuilder.conditionKey(conditionKey)
-      }
-
-      /**
-       * @param conditionValue The value in a key-value pair.
-       * For example, in the tag `Department: Accounting` , `Accounting` is the value.
-       */
-      override fun conditionValue(conditionValue: String) {
-        cdkBuilder.conditionValue(conditionValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty,
-    ) : CdkObject(cdkObject), ConditionParameterProperty {
-      /**
-       * The key in a key-value pair.
-       *
-       * For example, in the tag `Department: Accounting` , `Department` is the key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html#cfn-backup-backupselection-conditionparameter-conditionkey)
-       */
-      override fun conditionKey(): String? = unwrap(this).getConditionKey()
-
-      /**
-       * The value in a key-value pair.
-       *
-       * For example, in the tag `Department: Accounting` , `Accounting` is the value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html#cfn-backup-backupselection-conditionparameter-conditionvalue)
-       */
-      override fun conditionValue(): String? = unwrap(this).getConditionValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConditionParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty):
-          ConditionParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConditionParameterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConditionParameterProperty):
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty
-    }
-  }
-
-  /**
    * Specifies an object containing properties used to assign a set of resources to a backup plan.
    *
    * Example:
@@ -834,6 +712,128 @@ public open class CfnBackupSelection internal constructor(
           software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty
+    }
+  }
+
+  /**
+   * Includes information about tags you define to assign tagged resources to a backup plan.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.backup.*;
+   * ConditionParameterProperty conditionParameterProperty = ConditionParameterProperty.builder()
+   * .conditionKey("conditionKey")
+   * .conditionValue("conditionValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html)
+   */
+  public interface ConditionParameterProperty {
+    /**
+     * The key in a key-value pair.
+     *
+     * For example, in the tag `Department: Accounting` , `Department` is the key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html#cfn-backup-backupselection-conditionparameter-conditionkey)
+     */
+    public fun conditionKey(): String? = unwrap(this).getConditionKey()
+
+    /**
+     * The value in a key-value pair.
+     *
+     * For example, in the tag `Department: Accounting` , `Accounting` is the value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html#cfn-backup-backupselection-conditionparameter-conditionvalue)
+     */
+    public fun conditionValue(): String? = unwrap(this).getConditionValue()
+
+    /**
+     * A builder for [ConditionParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param conditionKey The key in a key-value pair.
+       * For example, in the tag `Department: Accounting` , `Department` is the key.
+       */
+      public fun conditionKey(conditionKey: String)
+
+      /**
+       * @param conditionValue The value in a key-value pair.
+       * For example, in the tag `Department: Accounting` , `Accounting` is the value.
+       */
+      public fun conditionValue(conditionValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty.Builder
+          =
+          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty.builder()
+
+      /**
+       * @param conditionKey The key in a key-value pair.
+       * For example, in the tag `Department: Accounting` , `Department` is the key.
+       */
+      override fun conditionKey(conditionKey: String) {
+        cdkBuilder.conditionKey(conditionKey)
+      }
+
+      /**
+       * @param conditionValue The value in a key-value pair.
+       * For example, in the tag `Department: Accounting` , `Accounting` is the value.
+       */
+      override fun conditionValue(conditionValue: String) {
+        cdkBuilder.conditionValue(conditionValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty,
+    ) : CdkObject(cdkObject), ConditionParameterProperty {
+      /**
+       * The key in a key-value pair.
+       *
+       * For example, in the tag `Department: Accounting` , `Department` is the key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html#cfn-backup-backupselection-conditionparameter-conditionkey)
+       */
+      override fun conditionKey(): String? = unwrap(this).getConditionKey()
+
+      /**
+       * The value in a key-value pair.
+       *
+       * For example, in the tag `Department: Accounting` , `Accounting` is the value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionparameter.html#cfn-backup-backupselection-conditionparameter-conditionvalue)
+       */
+      override fun conditionValue(): String? = unwrap(this).getConditionValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConditionParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty):
+          ConditionParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConditionParameterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConditionParameterProperty):
+          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty
     }
   }
 

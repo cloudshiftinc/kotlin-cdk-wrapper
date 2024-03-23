@@ -461,6 +461,119 @@ public open class CfnQuickConnect internal constructor(
   }
 
   /**
+   * Contains information about a queue for a quick connect.
+   *
+   * The flow must be of type Transfer to Queue.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * QueueQuickConnectConfigProperty queueQuickConnectConfigProperty =
+   * QueueQuickConnectConfigProperty.builder()
+   * .contactFlowArn("contactFlowArn")
+   * .queueArn("queueArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html)
+   */
+  public interface QueueQuickConnectConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-contactflowarn)
+     */
+    public fun contactFlowArn(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-queuearn)
+     */
+    public fun queueArn(): String
+
+    /**
+     * A builder for [QueueQuickConnectConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contactFlowArn The Amazon Resource Name (ARN) of the flow. 
+       */
+      public fun contactFlowArn(contactFlowArn: String)
+
+      /**
+       * @param queueArn The Amazon Resource Name (ARN) of the queue. 
+       */
+      public fun queueArn(queueArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty.builder()
+
+      /**
+       * @param contactFlowArn The Amazon Resource Name (ARN) of the flow. 
+       */
+      override fun contactFlowArn(contactFlowArn: String) {
+        cdkBuilder.contactFlowArn(contactFlowArn)
+      }
+
+      /**
+       * @param queueArn The Amazon Resource Name (ARN) of the queue. 
+       */
+      override fun queueArn(queueArn: String) {
+        cdkBuilder.queueArn(queueArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty,
+    ) : CdkObject(cdkObject), QueueQuickConnectConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-contactflowarn)
+       */
+      override fun contactFlowArn(): String = unwrap(this).getContactFlowArn()
+
+      /**
+       * The Amazon Resource Name (ARN) of the queue.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-queuearn)
+       */
+      override fun queueArn(): String = unwrap(this).getQueueArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QueueQuickConnectConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty):
+          QueueQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueueQuickConnectConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QueueQuickConnectConfigProperty):
+          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty
+    }
+  }
+
+  /**
    * Contains configuration settings for a quick connect.
    *
    * Example:
@@ -865,119 +978,6 @@ public open class CfnQuickConnect internal constructor(
           software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty
-    }
-  }
-
-  /**
-   * Contains information about a queue for a quick connect.
-   *
-   * The flow must be of type Transfer to Queue.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * QueueQuickConnectConfigProperty queueQuickConnectConfigProperty =
-   * QueueQuickConnectConfigProperty.builder()
-   * .contactFlowArn("contactFlowArn")
-   * .queueArn("queueArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html)
-   */
-  public interface QueueQuickConnectConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-contactflowarn)
-     */
-    public fun contactFlowArn(): String
-
-    /**
-     * The Amazon Resource Name (ARN) of the queue.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-queuearn)
-     */
-    public fun queueArn(): String
-
-    /**
-     * A builder for [QueueQuickConnectConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contactFlowArn The Amazon Resource Name (ARN) of the flow. 
-       */
-      public fun contactFlowArn(contactFlowArn: String)
-
-      /**
-       * @param queueArn The Amazon Resource Name (ARN) of the queue. 
-       */
-      public fun queueArn(queueArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty.builder()
-
-      /**
-       * @param contactFlowArn The Amazon Resource Name (ARN) of the flow. 
-       */
-      override fun contactFlowArn(contactFlowArn: String) {
-        cdkBuilder.contactFlowArn(contactFlowArn)
-      }
-
-      /**
-       * @param queueArn The Amazon Resource Name (ARN) of the queue. 
-       */
-      override fun queueArn(queueArn: String) {
-        cdkBuilder.queueArn(queueArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty,
-    ) : CdkObject(cdkObject), QueueQuickConnectConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-contactflowarn)
-       */
-      override fun contactFlowArn(): String = unwrap(this).getContactFlowArn()
-
-      /**
-       * The Amazon Resource Name (ARN) of the queue.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-queuearn)
-       */
-      override fun queueArn(): String = unwrap(this).getQueueArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): QueueQuickConnectConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty):
-          QueueQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          QueueQuickConnectConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: QueueQuickConnectConfigProperty):
-          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty
     }
   }
 }

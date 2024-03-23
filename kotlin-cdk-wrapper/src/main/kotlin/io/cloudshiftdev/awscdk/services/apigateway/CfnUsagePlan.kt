@@ -524,10 +524,7 @@ public open class CfnUsagePlan internal constructor(
   }
 
   /**
-   * `ThrottleSettings` is a property of the
-   * [AWS::ApiGateway::UsagePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
-   * resource that specifies the overall request rate (average requests per second) and burst capacity
-   * when users call your REST APIs.
+   * API stage name of the associated API stage in a usage plan.
    *
    * Example:
    *
@@ -535,109 +532,149 @@ public open class CfnUsagePlan internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * ThrottleSettingsProperty throttleSettingsProperty = ThrottleSettingsProperty.builder()
+   * ApiStageProperty apiStageProperty = ApiStageProperty.builder()
+   * .apiId("apiId")
+   * .stage("stage")
+   * .throttle(Map.of(
+   * "throttleKey", ThrottleSettingsProperty.builder()
    * .burstLimit(123)
    * .rateLimit(123)
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html)
    */
-  public interface ThrottleSettingsProperty {
+  public interface ApiStageProperty {
     /**
-     * The API target request burst rate limit.
+     * API Id of the associated API stage in a usage plan.
      *
-     * This allows more requests through for a period of time than the target rate limit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
      */
-    public fun burstLimit(): Number? = unwrap(this).getBurstLimit()
+    public fun apiId(): String? = unwrap(this).getApiId()
 
     /**
-     * The API target request rate limit.
+     * API stage name of the associated API stage in a usage plan.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
      */
-    public fun rateLimit(): Number? = unwrap(this).getRateLimit()
+    public fun stage(): String? = unwrap(this).getStage()
 
     /**
-     * A builder for [ThrottleSettingsProperty]
+     * Map containing method level throttling information for API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle)
+     */
+    public fun throttle(): Any? = unwrap(this).getThrottle()
+
+    /**
+     * A builder for [ApiStageProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param burstLimit The API target request burst rate limit.
-       * This allows more requests through for a period of time than the target rate limit.
+       * @param apiId API Id of the associated API stage in a usage plan.
        */
-      public fun burstLimit(burstLimit: Number)
+      public fun apiId(apiId: String)
 
       /**
-       * @param rateLimit The API target request rate limit.
+       * @param stage API stage name of the associated API stage in a usage plan.
        */
-      public fun rateLimit(rateLimit: Number)
+      public fun stage(stage: String)
+
+      /**
+       * @param throttle Map containing method level throttling information for API stage in a usage
+       * plan.
+       */
+      public fun throttle(throttle: IResolvable)
+
+      /**
+       * @param throttle Map containing method level throttling information for API stage in a usage
+       * plan.
+       */
+      public fun throttle(throttle: Map<String, Any>)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.Builder =
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.builder()
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty.Builder =
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty.builder()
 
       /**
-       * @param burstLimit The API target request burst rate limit.
-       * This allows more requests through for a period of time than the target rate limit.
+       * @param apiId API Id of the associated API stage in a usage plan.
        */
-      override fun burstLimit(burstLimit: Number) {
-        cdkBuilder.burstLimit(burstLimit)
+      override fun apiId(apiId: String) {
+        cdkBuilder.apiId(apiId)
       }
 
       /**
-       * @param rateLimit The API target request rate limit.
+       * @param stage API stage name of the associated API stage in a usage plan.
        */
-      override fun rateLimit(rateLimit: Number) {
-        cdkBuilder.rateLimit(rateLimit)
+      override fun stage(stage: String) {
+        cdkBuilder.stage(stage)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
+      /**
+       * @param throttle Map containing method level throttling information for API stage in a usage
+       * plan.
+       */
+      override fun throttle(throttle: IResolvable) {
+        cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param throttle Map containing method level throttling information for API stage in a usage
+       * plan.
+       */
+      override fun throttle(throttle: Map<String, Any>) {
+        cdkBuilder.throttle(throttle)
+      }
+
+      public fun build(): software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
-    ) : CdkObject(cdkObject), ThrottleSettingsProperty {
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
+    ) : CdkObject(cdkObject), ApiStageProperty {
       /**
-       * The API target request burst rate limit.
+       * API Id of the associated API stage in a usage plan.
        *
-       * This allows more requests through for a period of time than the target rate limit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
        */
-      override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
+      override fun apiId(): String? = unwrap(this).getApiId()
 
       /**
-       * The API target request rate limit.
+       * API stage name of the associated API stage in a usage plan.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
        */
-      override fun rateLimit(): Number? = unwrap(this).getRateLimit()
+      override fun stage(): String? = unwrap(this).getStage()
+
+      /**
+       * Map containing method level throttling information for API stage in a usage plan.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle)
+       */
+      override fun throttle(): Any? = unwrap(this).getThrottle()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ThrottleSettingsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApiStageProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty):
-          ThrottleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ThrottleSettingsProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty):
+          ApiStageProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiStageProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ThrottleSettingsProperty):
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty
+      internal fun unwrap(wrapped: ApiStageProperty):
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty
     }
   }
 
@@ -796,7 +833,10 @@ public open class CfnUsagePlan internal constructor(
   }
 
   /**
-   * API stage name of the associated API stage in a usage plan.
+   * `ThrottleSettings` is a property of the
+   * [AWS::ApiGateway::UsagePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
+   * resource that specifies the overall request rate (average requests per second) and burst capacity
+   * when users call your REST APIs.
    *
    * Example:
    *
@@ -804,149 +844,109 @@ public open class CfnUsagePlan internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * ApiStageProperty apiStageProperty = ApiStageProperty.builder()
-   * .apiId("apiId")
-   * .stage("stage")
-   * .throttle(Map.of(
-   * "throttleKey", ThrottleSettingsProperty.builder()
+   * ThrottleSettingsProperty throttleSettingsProperty = ThrottleSettingsProperty.builder()
    * .burstLimit(123)
    * .rateLimit(123)
-   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html)
    */
-  public interface ApiStageProperty {
+  public interface ThrottleSettingsProperty {
     /**
-     * API Id of the associated API stage in a usage plan.
+     * The API target request burst rate limit.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
+     * This allows more requests through for a period of time than the target rate limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
      */
-    public fun apiId(): String? = unwrap(this).getApiId()
+    public fun burstLimit(): Number? = unwrap(this).getBurstLimit()
 
     /**
-     * API stage name of the associated API stage in a usage plan.
+     * The API target request rate limit.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
      */
-    public fun stage(): String? = unwrap(this).getStage()
+    public fun rateLimit(): Number? = unwrap(this).getRateLimit()
 
     /**
-     * Map containing method level throttling information for API stage in a usage plan.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle)
-     */
-    public fun throttle(): Any? = unwrap(this).getThrottle()
-
-    /**
-     * A builder for [ApiStageProperty]
+     * A builder for [ThrottleSettingsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param apiId API Id of the associated API stage in a usage plan.
+       * @param burstLimit The API target request burst rate limit.
+       * This allows more requests through for a period of time than the target rate limit.
        */
-      public fun apiId(apiId: String)
+      public fun burstLimit(burstLimit: Number)
 
       /**
-       * @param stage API stage name of the associated API stage in a usage plan.
+       * @param rateLimit The API target request rate limit.
        */
-      public fun stage(stage: String)
-
-      /**
-       * @param throttle Map containing method level throttling information for API stage in a usage
-       * plan.
-       */
-      public fun throttle(throttle: IResolvable)
-
-      /**
-       * @param throttle Map containing method level throttling information for API stage in a usage
-       * plan.
-       */
-      public fun throttle(throttle: Map<String, Any>)
+      public fun rateLimit(rateLimit: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty.Builder =
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty.builder()
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.Builder =
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.builder()
 
       /**
-       * @param apiId API Id of the associated API stage in a usage plan.
+       * @param burstLimit The API target request burst rate limit.
+       * This allows more requests through for a period of time than the target rate limit.
        */
-      override fun apiId(apiId: String) {
-        cdkBuilder.apiId(apiId)
+      override fun burstLimit(burstLimit: Number) {
+        cdkBuilder.burstLimit(burstLimit)
       }
 
       /**
-       * @param stage API stage name of the associated API stage in a usage plan.
+       * @param rateLimit The API target request rate limit.
        */
-      override fun stage(stage: String) {
-        cdkBuilder.stage(stage)
+      override fun rateLimit(rateLimit: Number) {
+        cdkBuilder.rateLimit(rateLimit)
       }
 
-      /**
-       * @param throttle Map containing method level throttling information for API stage in a usage
-       * plan.
-       */
-      override fun throttle(throttle: IResolvable) {
-        cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param throttle Map containing method level throttling information for API stage in a usage
-       * plan.
-       */
-      override fun throttle(throttle: Map<String, Any>) {
-        cdkBuilder.throttle(throttle)
-      }
-
-      public fun build(): software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty =
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
-    ) : CdkObject(cdkObject), ApiStageProperty {
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
+    ) : CdkObject(cdkObject), ThrottleSettingsProperty {
       /**
-       * API Id of the associated API stage in a usage plan.
+       * The API target request burst rate limit.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
+       * This allows more requests through for a period of time than the target rate limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
        */
-      override fun apiId(): String? = unwrap(this).getApiId()
+      override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
 
       /**
-       * API stage name of the associated API stage in a usage plan.
+       * The API target request rate limit.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
        */
-      override fun stage(): String? = unwrap(this).getStage()
-
-      /**
-       * Map containing method level throttling information for API stage in a usage plan.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle)
-       */
-      override fun throttle(): Any? = unwrap(this).getThrottle()
+      override fun rateLimit(): Number? = unwrap(this).getRateLimit()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ApiStageProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ThrottleSettingsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty):
-          ApiStageProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiStageProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty):
+          ThrottleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ThrottleSettingsProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ApiStageProperty):
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty
+      internal fun unwrap(wrapped: ThrottleSettingsProperty):
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty
     }
   }
 }

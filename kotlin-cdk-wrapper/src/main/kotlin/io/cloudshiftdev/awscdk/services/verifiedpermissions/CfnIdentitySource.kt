@@ -405,6 +405,153 @@ public open class CfnIdentitySource internal constructor(
   }
 
   /**
+   * A structure that contains configuration information used when creating or updating an identity
+   * source that represents a connection to an Amazon Cognito user pool used as an identity provider
+   * for Verified Permissions .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * CognitoUserPoolConfigurationProperty cognitoUserPoolConfigurationProperty =
+   * CognitoUserPoolConfigurationProperty.builder()
+   * .userPoolArn("userPoolArn")
+   * // the properties below are optional
+   * .clientIds(List.of("clientIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html)
+   */
+  public interface CognitoUserPoolConfigurationProperty {
+    /**
+     * The unique application client IDs that are associated with the specified Amazon Cognito user
+     * pool.
+     *
+     * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-clientids)
+     */
+    public fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
+
+    /**
+     * The [Amazon Resource Name
+     * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
+     * Amazon Cognito user pool that contains the identities to be authorized.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-userpoolarn)
+     */
+    public fun userPoolArn(): String
+
+    /**
+     * A builder for [CognitoUserPoolConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientIds The unique application client IDs that are associated with the specified
+       * Amazon Cognito user pool.
+       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
+       */
+      public fun clientIds(clientIds: List<String>)
+
+      /**
+       * @param clientIds The unique application client IDs that are associated with the specified
+       * Amazon Cognito user pool.
+       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
+       */
+      public fun clientIds(vararg clientIds: String)
+
+      /**
+       * @param userPoolArn The [Amazon Resource Name
+       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
+       * Amazon Cognito user pool that contains the identities to be authorized. 
+       */
+      public fun userPoolArn(userPoolArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty.builder()
+
+      /**
+       * @param clientIds The unique application client IDs that are associated with the specified
+       * Amazon Cognito user pool.
+       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
+       */
+      override fun clientIds(clientIds: List<String>) {
+        cdkBuilder.clientIds(clientIds)
+      }
+
+      /**
+       * @param clientIds The unique application client IDs that are associated with the specified
+       * Amazon Cognito user pool.
+       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
+       */
+      override fun clientIds(vararg clientIds: String): Unit = clientIds(clientIds.toList())
+
+      /**
+       * @param userPoolArn The [Amazon Resource Name
+       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
+       * Amazon Cognito user pool that contains the identities to be authorized. 
+       */
+      override fun userPoolArn(userPoolArn: String) {
+        cdkBuilder.userPoolArn(userPoolArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty,
+    ) : CdkObject(cdkObject), CognitoUserPoolConfigurationProperty {
+      /**
+       * The unique application client IDs that are associated with the specified Amazon Cognito
+       * user pool.
+       *
+       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-clientids)
+       */
+      override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
+
+      /**
+       * The [Amazon Resource Name
+       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
+       * Amazon Cognito user pool that contains the identities to be authorized.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-userpoolarn)
+       */
+      override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CognitoUserPoolConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty):
+          CognitoUserPoolConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CognitoUserPoolConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CognitoUserPoolConfigurationProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty
+    }
+  }
+
+  /**
    * A structure that contains configuration information used when creating or updating a new
    * identity source.
    *
@@ -772,153 +919,6 @@ public open class CfnIdentitySource internal constructor(
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty
-    }
-  }
-
-  /**
-   * A structure that contains configuration information used when creating or updating an identity
-   * source that represents a connection to an Amazon Cognito user pool used as an identity provider
-   * for Verified Permissions .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
-   * CognitoUserPoolConfigurationProperty cognitoUserPoolConfigurationProperty =
-   * CognitoUserPoolConfigurationProperty.builder()
-   * .userPoolArn("userPoolArn")
-   * // the properties below are optional
-   * .clientIds(List.of("clientIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html)
-   */
-  public interface CognitoUserPoolConfigurationProperty {
-    /**
-     * The unique application client IDs that are associated with the specified Amazon Cognito user
-     * pool.
-     *
-     * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-clientids)
-     */
-    public fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
-
-    /**
-     * The [Amazon Resource Name
-     * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
-     * Amazon Cognito user pool that contains the identities to be authorized.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-userpoolarn)
-     */
-    public fun userPoolArn(): String
-
-    /**
-     * A builder for [CognitoUserPoolConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientIds The unique application client IDs that are associated with the specified
-       * Amazon Cognito user pool.
-       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
-       */
-      public fun clientIds(clientIds: List<String>)
-
-      /**
-       * @param clientIds The unique application client IDs that are associated with the specified
-       * Amazon Cognito user pool.
-       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
-       */
-      public fun clientIds(vararg clientIds: String)
-
-      /**
-       * @param userPoolArn The [Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Amazon Cognito user pool that contains the identities to be authorized. 
-       */
-      public fun userPoolArn(userPoolArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty.builder()
-
-      /**
-       * @param clientIds The unique application client IDs that are associated with the specified
-       * Amazon Cognito user pool.
-       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
-       */
-      override fun clientIds(clientIds: List<String>) {
-        cdkBuilder.clientIds(clientIds)
-      }
-
-      /**
-       * @param clientIds The unique application client IDs that are associated with the specified
-       * Amazon Cognito user pool.
-       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
-       */
-      override fun clientIds(vararg clientIds: String): Unit = clientIds(clientIds.toList())
-
-      /**
-       * @param userPoolArn The [Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Amazon Cognito user pool that contains the identities to be authorized. 
-       */
-      override fun userPoolArn(userPoolArn: String) {
-        cdkBuilder.userPoolArn(userPoolArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty,
-    ) : CdkObject(cdkObject), CognitoUserPoolConfigurationProperty {
-      /**
-       * The unique application client IDs that are associated with the specified Amazon Cognito
-       * user pool.
-       *
-       * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-clientids)
-       */
-      override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
-
-      /**
-       * The [Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Amazon Cognito user pool that contains the identities to be authorized.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-userpoolarn)
-       */
-      override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CognitoUserPoolConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty):
-          CognitoUserPoolConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CognitoUserPoolConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CognitoUserPoolConfigurationProperty):
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty
     }
   }
 }

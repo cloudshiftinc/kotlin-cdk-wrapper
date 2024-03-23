@@ -550,6 +550,133 @@ public open class CfnTable internal constructor(
   }
 
   /**
+   * The location to write error reports for records rejected, asynchronously, during magnetic store
+   * writes.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * MagneticStoreRejectedDataLocationProperty magneticStoreRejectedDataLocationProperty =
+   * MagneticStoreRejectedDataLocationProperty.builder()
+   * .s3Configuration(S3ConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * .encryptionOption("encryptionOption")
+   * // the properties below are optional
+   * .kmsKeyId("kmsKeyId")
+   * .objectKeyPrefix("objectKeyPrefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-magneticstorerejecteddatalocation.html)
+   */
+  public interface MagneticStoreRejectedDataLocationProperty {
+    /**
+     * Configuration of an S3 location to write error reports for records rejected, asynchronously,
+     * during magnetic store writes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-magneticstorerejecteddatalocation.html#cfn-timestream-table-magneticstorerejecteddatalocation-s3configuration)
+     */
+    public fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
+
+    /**
+     * A builder for [MagneticStoreRejectedDataLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Configuration Configuration of an S3 location to write error reports for records
+       * rejected, asynchronously, during magnetic store writes.
+       */
+      public fun s3Configuration(s3Configuration: IResolvable)
+
+      /**
+       * @param s3Configuration Configuration of an S3 location to write error reports for records
+       * rejected, asynchronously, during magnetic store writes.
+       */
+      public fun s3Configuration(s3Configuration: S3ConfigurationProperty)
+
+      /**
+       * @param s3Configuration Configuration of an S3 location to write error reports for records
+       * rejected, asynchronously, during magnetic store writes.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("10e1eb1148b8aba7ae6adac45f114bd752ea2d64d79ab505728e036970edb4c7")
+      public fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty.Builder
+          =
+          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty.builder()
+
+      /**
+       * @param s3Configuration Configuration of an S3 location to write error reports for records
+       * rejected, asynchronously, during magnetic store writes.
+       */
+      override fun s3Configuration(s3Configuration: IResolvable) {
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Configuration Configuration of an S3 location to write error reports for records
+       * rejected, asynchronously, during magnetic store writes.
+       */
+      override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
+        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param s3Configuration Configuration of an S3 location to write error reports for records
+       * rejected, asynchronously, during magnetic store writes.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("10e1eb1148b8aba7ae6adac45f114bd752ea2d64d79ab505728e036970edb4c7")
+      override fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit):
+          Unit = s3Configuration(S3ConfigurationProperty(s3Configuration))
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty,
+    ) : CdkObject(cdkObject), MagneticStoreRejectedDataLocationProperty {
+      /**
+       * Configuration of an S3 location to write error reports for records rejected,
+       * asynchronously, during magnetic store writes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-magneticstorerejecteddatalocation.html#cfn-timestream-table-magneticstorerejecteddatalocation-s3configuration)
+       */
+      override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MagneticStoreRejectedDataLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty):
+          MagneticStoreRejectedDataLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MagneticStoreRejectedDataLocationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MagneticStoreRejectedDataLocationProperty):
+          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty
+    }
+  }
+
+  /**
    * The set of properties on a table for configuring magnetic store writes.
    *
    * Example:
@@ -726,6 +853,282 @@ public open class CfnTable internal constructor(
   }
 
   /**
+   * An attribute used in partitioning data in a table.
+   *
+   * A dimension key partitions data using the values of the dimension specified by the
+   * dimension-name as partition key, while a measure key partitions data using measure names (values
+   * of the 'measure_name' column).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * PartitionKeyProperty partitionKeyProperty = PartitionKeyProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .enforcementInRecord("enforcementInRecord")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html)
+   */
+  public interface PartitionKeyProperty {
+    /**
+     * The level of enforcement for the specification of a dimension key in ingested records.
+     *
+     * Options are REQUIRED (dimension key must be specified) and OPTIONAL (dimension key does not
+     * have to be specified).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-enforcementinrecord)
+     */
+    public fun enforcementInRecord(): String? = unwrap(this).getEnforcementInRecord()
+
+    /**
+     * The name of the attribute used for a dimension key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The type of the partition key.
+     *
+     * Options are DIMENSION (dimension key) and MEASURE (measure key).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [PartitionKeyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enforcementInRecord The level of enforcement for the specification of a dimension
+       * key in ingested records.
+       * Options are REQUIRED (dimension key must be specified) and OPTIONAL (dimension key does not
+       * have to be specified).
+       */
+      public fun enforcementInRecord(enforcementInRecord: String)
+
+      /**
+       * @param name The name of the attribute used for a dimension key.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param type The type of the partition key. 
+       * Options are DIMENSION (dimension key) and MEASURE (measure key).
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty.Builder =
+          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty.builder()
+
+      /**
+       * @param enforcementInRecord The level of enforcement for the specification of a dimension
+       * key in ingested records.
+       * Options are REQUIRED (dimension key must be specified) and OPTIONAL (dimension key does not
+       * have to be specified).
+       */
+      override fun enforcementInRecord(enforcementInRecord: String) {
+        cdkBuilder.enforcementInRecord(enforcementInRecord)
+      }
+
+      /**
+       * @param name The name of the attribute used for a dimension key.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param type The type of the partition key. 
+       * Options are DIMENSION (dimension key) and MEASURE (measure key).
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty,
+    ) : CdkObject(cdkObject), PartitionKeyProperty {
+      /**
+       * The level of enforcement for the specification of a dimension key in ingested records.
+       *
+       * Options are REQUIRED (dimension key must be specified) and OPTIONAL (dimension key does not
+       * have to be specified).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-enforcementinrecord)
+       */
+      override fun enforcementInRecord(): String? = unwrap(this).getEnforcementInRecord()
+
+      /**
+       * The name of the attribute used for a dimension key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The type of the partition key.
+       *
+       * Options are DIMENSION (dimension key) and MEASURE (measure key).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PartitionKeyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty):
+          PartitionKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? PartitionKeyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PartitionKeyProperty):
+          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty
+    }
+  }
+
+  /**
+   * Retention properties contain the duration for which your time-series data must be stored in the
+   * magnetic store and the memory store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.timestream.*;
+   * RetentionPropertiesProperty retentionPropertiesProperty = RetentionPropertiesProperty.builder()
+   * .magneticStoreRetentionPeriodInDays("magneticStoreRetentionPeriodInDays")
+   * .memoryStoreRetentionPeriodInHours("memoryStoreRetentionPeriodInHours")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html)
+   */
+  public interface RetentionPropertiesProperty {
+    /**
+     * The duration for which data must be stored in the magnetic store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html#cfn-timestream-table-retentionproperties-magneticstoreretentionperiodindays)
+     */
+    public fun magneticStoreRetentionPeriodInDays(): String? =
+        unwrap(this).getMagneticStoreRetentionPeriodInDays()
+
+    /**
+     * The duration for which data must be stored in the memory store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html#cfn-timestream-table-retentionproperties-memorystoreretentionperiodinhours)
+     */
+    public fun memoryStoreRetentionPeriodInHours(): String? =
+        unwrap(this).getMemoryStoreRetentionPeriodInHours()
+
+    /**
+     * A builder for [RetentionPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param magneticStoreRetentionPeriodInDays The duration for which data must be stored in the
+       * magnetic store.
+       */
+      public fun magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays: String)
+
+      /**
+       * @param memoryStoreRetentionPeriodInHours The duration for which data must be stored in the
+       * memory store.
+       */
+      public fun memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty.Builder =
+          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty.builder()
+
+      /**
+       * @param magneticStoreRetentionPeriodInDays The duration for which data must be stored in the
+       * magnetic store.
+       */
+      override fun magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays: String) {
+        cdkBuilder.magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays)
+      }
+
+      /**
+       * @param memoryStoreRetentionPeriodInHours The duration for which data must be stored in the
+       * memory store.
+       */
+      override fun memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours: String) {
+        cdkBuilder.memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty,
+    ) : CdkObject(cdkObject), RetentionPropertiesProperty {
+      /**
+       * The duration for which data must be stored in the magnetic store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html#cfn-timestream-table-retentionproperties-magneticstoreretentionperiodindays)
+       */
+      override fun magneticStoreRetentionPeriodInDays(): String? =
+          unwrap(this).getMagneticStoreRetentionPeriodInDays()
+
+      /**
+       * The duration for which data must be stored in the memory store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html#cfn-timestream-table-retentionproperties-memorystoreretentionperiodinhours)
+       */
+      override fun memoryStoreRetentionPeriodInHours(): String? =
+          unwrap(this).getMemoryStoreRetentionPeriodInHours()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetentionPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty):
+          RetentionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RetentionPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RetentionPropertiesProperty):
+          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty
+    }
+  }
+
+  /**
    * The configuration that specifies an S3 location.
    *
    * Example:
@@ -898,291 +1301,6 @@ public open class CfnTable internal constructor(
   }
 
   /**
-   * The location to write error reports for records rejected, asynchronously, during magnetic store
-   * writes.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * MagneticStoreRejectedDataLocationProperty magneticStoreRejectedDataLocationProperty =
-   * MagneticStoreRejectedDataLocationProperty.builder()
-   * .s3Configuration(S3ConfigurationProperty.builder()
-   * .bucketName("bucketName")
-   * .encryptionOption("encryptionOption")
-   * // the properties below are optional
-   * .kmsKeyId("kmsKeyId")
-   * .objectKeyPrefix("objectKeyPrefix")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-magneticstorerejecteddatalocation.html)
-   */
-  public interface MagneticStoreRejectedDataLocationProperty {
-    /**
-     * Configuration of an S3 location to write error reports for records rejected, asynchronously,
-     * during magnetic store writes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-magneticstorerejecteddatalocation.html#cfn-timestream-table-magneticstorerejecteddatalocation-s3configuration)
-     */
-    public fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
-
-    /**
-     * A builder for [MagneticStoreRejectedDataLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Configuration Configuration of an S3 location to write error reports for records
-       * rejected, asynchronously, during magnetic store writes.
-       */
-      public fun s3Configuration(s3Configuration: IResolvable)
-
-      /**
-       * @param s3Configuration Configuration of an S3 location to write error reports for records
-       * rejected, asynchronously, during magnetic store writes.
-       */
-      public fun s3Configuration(s3Configuration: S3ConfigurationProperty)
-
-      /**
-       * @param s3Configuration Configuration of an S3 location to write error reports for records
-       * rejected, asynchronously, during magnetic store writes.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("10e1eb1148b8aba7ae6adac45f114bd752ea2d64d79ab505728e036970edb4c7")
-      public fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty.Builder
-          =
-          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty.builder()
-
-      /**
-       * @param s3Configuration Configuration of an S3 location to write error reports for records
-       * rejected, asynchronously, during magnetic store writes.
-       */
-      override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3Configuration Configuration of an S3 location to write error reports for records
-       * rejected, asynchronously, during magnetic store writes.
-       */
-      override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param s3Configuration Configuration of an S3 location to write error reports for records
-       * rejected, asynchronously, during magnetic store writes.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("10e1eb1148b8aba7ae6adac45f114bd752ea2d64d79ab505728e036970edb4c7")
-      override fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit):
-          Unit = s3Configuration(S3ConfigurationProperty(s3Configuration))
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty,
-    ) : CdkObject(cdkObject), MagneticStoreRejectedDataLocationProperty {
-      /**
-       * Configuration of an S3 location to write error reports for records rejected,
-       * asynchronously, during magnetic store writes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-magneticstorerejecteddatalocation.html#cfn-timestream-table-magneticstorerejecteddatalocation-s3configuration)
-       */
-      override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MagneticStoreRejectedDataLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty):
-          MagneticStoreRejectedDataLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MagneticStoreRejectedDataLocationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MagneticStoreRejectedDataLocationProperty):
-          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty
-    }
-  }
-
-  /**
-   * An attribute used in partitioning data in a table.
-   *
-   * A dimension key partitions data using the values of the dimension specified by the
-   * dimension-name as partition key, while a measure key partitions data using measure names (values
-   * of the 'measure_name' column).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * PartitionKeyProperty partitionKeyProperty = PartitionKeyProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .enforcementInRecord("enforcementInRecord")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html)
-   */
-  public interface PartitionKeyProperty {
-    /**
-     * The level of enforcement for the specification of a dimension key in ingested records.
-     *
-     * Options are REQUIRED (dimension key must be specified) and OPTIONAL (dimension key does not
-     * have to be specified).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-enforcementinrecord)
-     */
-    public fun enforcementInRecord(): String? = unwrap(this).getEnforcementInRecord()
-
-    /**
-     * The name of the attribute used for a dimension key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The type of the partition key.
-     *
-     * Options are DIMENSION (dimension key) and MEASURE (measure key).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [PartitionKeyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enforcementInRecord The level of enforcement for the specification of a dimension
-       * key in ingested records.
-       * Options are REQUIRED (dimension key must be specified) and OPTIONAL (dimension key does not
-       * have to be specified).
-       */
-      public fun enforcementInRecord(enforcementInRecord: String)
-
-      /**
-       * @param name The name of the attribute used for a dimension key.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param type The type of the partition key. 
-       * Options are DIMENSION (dimension key) and MEASURE (measure key).
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty.Builder =
-          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty.builder()
-
-      /**
-       * @param enforcementInRecord The level of enforcement for the specification of a dimension
-       * key in ingested records.
-       * Options are REQUIRED (dimension key must be specified) and OPTIONAL (dimension key does not
-       * have to be specified).
-       */
-      override fun enforcementInRecord(enforcementInRecord: String) {
-        cdkBuilder.enforcementInRecord(enforcementInRecord)
-      }
-
-      /**
-       * @param name The name of the attribute used for a dimension key.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param type The type of the partition key. 
-       * Options are DIMENSION (dimension key) and MEASURE (measure key).
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty,
-    ) : CdkObject(cdkObject), PartitionKeyProperty {
-      /**
-       * The level of enforcement for the specification of a dimension key in ingested records.
-       *
-       * Options are REQUIRED (dimension key must be specified) and OPTIONAL (dimension key does not
-       * have to be specified).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-enforcementinrecord)
-       */
-      override fun enforcementInRecord(): String? = unwrap(this).getEnforcementInRecord()
-
-      /**
-       * The name of the attribute used for a dimension key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The type of the partition key.
-       *
-       * Options are DIMENSION (dimension key) and MEASURE (measure key).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html#cfn-timestream-table-partitionkey-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PartitionKeyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty):
-          PartitionKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? PartitionKeyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PartitionKeyProperty):
-          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty
-    }
-  }
-
-  /**
    * A Schema specifies the expected data model of the table.
    *
    * Example:
@@ -1319,124 +1437,6 @@ public open class CfnTable internal constructor(
       internal fun unwrap(wrapped: SchemaProperty):
           software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty
-    }
-  }
-
-  /**
-   * Retention properties contain the duration for which your time-series data must be stored in the
-   * magnetic store and the memory store.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.timestream.*;
-   * RetentionPropertiesProperty retentionPropertiesProperty = RetentionPropertiesProperty.builder()
-   * .magneticStoreRetentionPeriodInDays("magneticStoreRetentionPeriodInDays")
-   * .memoryStoreRetentionPeriodInHours("memoryStoreRetentionPeriodInHours")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html)
-   */
-  public interface RetentionPropertiesProperty {
-    /**
-     * The duration for which data must be stored in the magnetic store.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html#cfn-timestream-table-retentionproperties-magneticstoreretentionperiodindays)
-     */
-    public fun magneticStoreRetentionPeriodInDays(): String? =
-        unwrap(this).getMagneticStoreRetentionPeriodInDays()
-
-    /**
-     * The duration for which data must be stored in the memory store.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html#cfn-timestream-table-retentionproperties-memorystoreretentionperiodinhours)
-     */
-    public fun memoryStoreRetentionPeriodInHours(): String? =
-        unwrap(this).getMemoryStoreRetentionPeriodInHours()
-
-    /**
-     * A builder for [RetentionPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param magneticStoreRetentionPeriodInDays The duration for which data must be stored in the
-       * magnetic store.
-       */
-      public fun magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays: String)
-
-      /**
-       * @param memoryStoreRetentionPeriodInHours The duration for which data must be stored in the
-       * memory store.
-       */
-      public fun memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty.Builder =
-          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty.builder()
-
-      /**
-       * @param magneticStoreRetentionPeriodInDays The duration for which data must be stored in the
-       * magnetic store.
-       */
-      override fun magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays: String) {
-        cdkBuilder.magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays)
-      }
-
-      /**
-       * @param memoryStoreRetentionPeriodInHours The duration for which data must be stored in the
-       * memory store.
-       */
-      override fun memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours: String) {
-        cdkBuilder.memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty,
-    ) : CdkObject(cdkObject), RetentionPropertiesProperty {
-      /**
-       * The duration for which data must be stored in the magnetic store.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html#cfn-timestream-table-retentionproperties-magneticstoreretentionperiodindays)
-       */
-      override fun magneticStoreRetentionPeriodInDays(): String? =
-          unwrap(this).getMagneticStoreRetentionPeriodInDays()
-
-      /**
-       * The duration for which data must be stored in the memory store.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html#cfn-timestream-table-retentionproperties-memorystoreretentionperiodinhours)
-       */
-      override fun memoryStoreRetentionPeriodInHours(): String? =
-          unwrap(this).getMemoryStoreRetentionPeriodInHours()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RetentionPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty):
-          RetentionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RetentionPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RetentionPropertiesProperty):
-          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty
     }
   }
 }

@@ -712,6 +712,261 @@ public open class CfnRule internal constructor(
   }
 
   /**
+   * Describes an action that returns a custom HTTP response.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
+   * FixedResponseProperty fixedResponseProperty = FixedResponseProperty.builder()
+   * .statusCode(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-fixedresponse.html)
+   */
+  public interface FixedResponseProperty {
+    /**
+     * The HTTP response code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-fixedresponse.html#cfn-vpclattice-rule-fixedresponse-statuscode)
+     */
+    public fun statusCode(): Number
+
+    /**
+     * A builder for [FixedResponseProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param statusCode The HTTP response code. 
+       */
+      public fun statusCode(statusCode: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty.Builder =
+          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty.builder()
+
+      /**
+       * @param statusCode The HTTP response code. 
+       */
+      override fun statusCode(statusCode: Number) {
+        cdkBuilder.statusCode(statusCode)
+      }
+
+      public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty,
+    ) : CdkObject(cdkObject), FixedResponseProperty {
+      /**
+       * The HTTP response code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-fixedresponse.html#cfn-vpclattice-rule-fixedresponse-statuscode)
+       */
+      override fun statusCode(): Number = unwrap(this).getStatusCode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FixedResponseProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty):
+          FixedResponseProperty = CdkObjectWrappers.wrap(cdkObject) as? FixedResponseProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FixedResponseProperty):
+          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty
+    }
+  }
+
+  /**
+   * The forward action.
+   *
+   * Traffic that matches the rule is forwarded to the specified target groups.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
+   * ForwardProperty forwardProperty = ForwardProperty.builder()
+   * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
+   * .targetGroupIdentifier("targetGroupIdentifier")
+   * // the properties below are optional
+   * .weight(123)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-forward.html)
+   */
+  public interface ForwardProperty {
+    /**
+     * The target groups.
+     *
+     * Traffic matching the rule is forwarded to the specified target groups. With forward actions,
+     * you can assign a weight that controls the prioritization and selection of each target group.
+     * This means that requests are distributed to individual target groups based on their weights. For
+     * example, if two target groups have the same weight, each target group receives half of the
+     * traffic.
+     *
+     * The default value is 1. This means that if only one target group is provided, there is no
+     * need to set the weight; 100% of the traffic goes to that target group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-forward.html#cfn-vpclattice-rule-forward-targetgroups)
+     */
+    public fun targetGroups(): Any
+
+    /**
+     * A builder for [ForwardProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetGroups The target groups. 
+       * Traffic matching the rule is forwarded to the specified target groups. With forward
+       * actions, you can assign a weight that controls the prioritization and selection of each target
+       * group. This means that requests are distributed to individual target groups based on their
+       * weights. For example, if two target groups have the same weight, each target group receives
+       * half of the traffic.
+       *
+       * The default value is 1. This means that if only one target group is provided, there is no
+       * need to set the weight; 100% of the traffic goes to that target group.
+       */
+      public fun targetGroups(targetGroups: IResolvable)
+
+      /**
+       * @param targetGroups The target groups. 
+       * Traffic matching the rule is forwarded to the specified target groups. With forward
+       * actions, you can assign a weight that controls the prioritization and selection of each target
+       * group. This means that requests are distributed to individual target groups based on their
+       * weights. For example, if two target groups have the same weight, each target group receives
+       * half of the traffic.
+       *
+       * The default value is 1. This means that if only one target group is provided, there is no
+       * need to set the weight; 100% of the traffic goes to that target group.
+       */
+      public fun targetGroups(targetGroups: List<Any>)
+
+      /**
+       * @param targetGroups The target groups. 
+       * Traffic matching the rule is forwarded to the specified target groups. With forward
+       * actions, you can assign a weight that controls the prioritization and selection of each target
+       * group. This means that requests are distributed to individual target groups based on their
+       * weights. For example, if two target groups have the same weight, each target group receives
+       * half of the traffic.
+       *
+       * The default value is 1. This means that if only one target group is provided, there is no
+       * need to set the weight; 100% of the traffic goes to that target group.
+       */
+      public fun targetGroups(vararg targetGroups: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty.Builder =
+          software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty.builder()
+
+      /**
+       * @param targetGroups The target groups. 
+       * Traffic matching the rule is forwarded to the specified target groups. With forward
+       * actions, you can assign a weight that controls the prioritization and selection of each target
+       * group. This means that requests are distributed to individual target groups based on their
+       * weights. For example, if two target groups have the same weight, each target group receives
+       * half of the traffic.
+       *
+       * The default value is 1. This means that if only one target group is provided, there is no
+       * need to set the weight; 100% of the traffic goes to that target group.
+       */
+      override fun targetGroups(targetGroups: IResolvable) {
+        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetGroups The target groups. 
+       * Traffic matching the rule is forwarded to the specified target groups. With forward
+       * actions, you can assign a weight that controls the prioritization and selection of each target
+       * group. This means that requests are distributed to individual target groups based on their
+       * weights. For example, if two target groups have the same weight, each target group receives
+       * half of the traffic.
+       *
+       * The default value is 1. This means that if only one target group is provided, there is no
+       * need to set the weight; 100% of the traffic goes to that target group.
+       */
+      override fun targetGroups(targetGroups: List<Any>) {
+        cdkBuilder.targetGroups(targetGroups)
+      }
+
+      /**
+       * @param targetGroups The target groups. 
+       * Traffic matching the rule is forwarded to the specified target groups. With forward
+       * actions, you can assign a weight that controls the prioritization and selection of each target
+       * group. This means that requests are distributed to individual target groups based on their
+       * weights. For example, if two target groups have the same weight, each target group receives
+       * half of the traffic.
+       *
+       * The default value is 1. This means that if only one target group is provided, there is no
+       * need to set the weight; 100% of the traffic goes to that target group.
+       */
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
+
+      public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty,
+    ) : CdkObject(cdkObject), ForwardProperty {
+      /**
+       * The target groups.
+       *
+       * Traffic matching the rule is forwarded to the specified target groups. With forward
+       * actions, you can assign a weight that controls the prioritization and selection of each target
+       * group. This means that requests are distributed to individual target groups based on their
+       * weights. For example, if two target groups have the same weight, each target group receives
+       * half of the traffic.
+       *
+       * The default value is 1. This means that if only one target group is provided, there is no
+       * need to set the weight; 100% of the traffic goes to that target group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-forward.html#cfn-vpclattice-rule-forward-targetgroups)
+       */
+      override fun targetGroups(): Any = unwrap(this).getTargetGroups()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ForwardProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty):
+          ForwardProperty = CdkObjectWrappers.wrap(cdkObject) as? ForwardProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ForwardProperty):
+          software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty
+    }
+  }
+
+  /**
    * Describes the constraints for a header match.
    *
    * Matches incoming requests with rule based on request header value before applying rule action.
@@ -1038,7 +1293,7 @@ public open class CfnRule internal constructor(
   }
 
   /**
-   * Describes an action that returns a custom HTTP response.
+   * Describes criteria that can be applied to incoming requests.
    *
    * Example:
    *
@@ -1046,359 +1301,212 @@ public open class CfnRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.vpclattice.*;
-   * FixedResponseProperty fixedResponseProperty = FixedResponseProperty.builder()
-   * .statusCode(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-fixedresponse.html)
-   */
-  public interface FixedResponseProperty {
-    /**
-     * The HTTP response code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-fixedresponse.html#cfn-vpclattice-rule-fixedresponse-statuscode)
-     */
-    public fun statusCode(): Number
-
-    /**
-     * A builder for [FixedResponseProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param statusCode The HTTP response code. 
-       */
-      public fun statusCode(statusCode: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty.Builder =
-          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty.builder()
-
-      /**
-       * @param statusCode The HTTP response code. 
-       */
-      override fun statusCode(statusCode: Number) {
-        cdkBuilder.statusCode(statusCode)
-      }
-
-      public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty,
-    ) : CdkObject(cdkObject), FixedResponseProperty {
-      /**
-       * The HTTP response code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-fixedresponse.html#cfn-vpclattice-rule-fixedresponse-statuscode)
-       */
-      override fun statusCode(): Number = unwrap(this).getStatusCode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FixedResponseProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty):
-          FixedResponseProperty = CdkObjectWrappers.wrap(cdkObject) as? FixedResponseProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FixedResponseProperty):
-          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty
-    }
-  }
-
-  /**
-   * Describes a path match type.
-   *
-   * Each rule can include only one of the following types of paths.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
-   * PathMatchTypeProperty pathMatchTypeProperty = PathMatchTypeProperty.builder()
+   * HttpMatchProperty httpMatchProperty = HttpMatchProperty.builder()
+   * .headerMatches(List.of(HeaderMatchProperty.builder()
+   * .match(HeaderMatchTypeProperty.builder()
+   * .contains("contains")
    * .exact("exact")
    * .prefix("prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html)
-   */
-  public interface PathMatchTypeProperty {
-    /**
-     * An exact match of the path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html#cfn-vpclattice-rule-pathmatchtype-exact)
-     */
-    public fun exact(): String? = unwrap(this).getExact()
-
-    /**
-     * A prefix match of the path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html#cfn-vpclattice-rule-pathmatchtype-prefix)
-     */
-    public fun prefix(): String? = unwrap(this).getPrefix()
-
-    /**
-     * A builder for [PathMatchTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param exact An exact match of the path.
-       */
-      public fun exact(exact: String)
-
-      /**
-       * @param prefix A prefix match of the path.
-       */
-      public fun prefix(prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty.Builder =
-          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty.builder()
-
-      /**
-       * @param exact An exact match of the path.
-       */
-      override fun exact(exact: String) {
-        cdkBuilder.exact(exact)
-      }
-
-      /**
-       * @param prefix A prefix match of the path.
-       */
-      override fun prefix(prefix: String) {
-        cdkBuilder.prefix(prefix)
-      }
-
-      public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty,
-    ) : CdkObject(cdkObject), PathMatchTypeProperty {
-      /**
-       * An exact match of the path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html#cfn-vpclattice-rule-pathmatchtype-exact)
-       */
-      override fun exact(): String? = unwrap(this).getExact()
-
-      /**
-       * A prefix match of the path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html#cfn-vpclattice-rule-pathmatchtype-prefix)
-       */
-      override fun prefix(): String? = unwrap(this).getPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PathMatchTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty):
-          PathMatchTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? PathMatchTypeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PathMatchTypeProperty):
-          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty
-    }
-  }
-
-  /**
-   * The forward action.
-   *
-   * Traffic that matches the rule is forwarded to the specified target groups.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
-   * ForwardProperty forwardProperty = ForwardProperty.builder()
-   * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
-   * .targetGroupIdentifier("targetGroupIdentifier")
+   * .build())
+   * .name("name")
    * // the properties below are optional
-   * .weight(123)
+   * .caseSensitive(false)
    * .build()))
+   * .method("method")
+   * .pathMatch(PathMatchProperty.builder()
+   * .match(PathMatchTypeProperty.builder()
+   * .exact("exact")
+   * .prefix("prefix")
+   * .build())
+   * // the properties below are optional
+   * .caseSensitive(false)
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-forward.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html)
    */
-  public interface ForwardProperty {
+  public interface HttpMatchProperty {
     /**
-     * The target groups.
+     * The header matches.
      *
-     * Traffic matching the rule is forwarded to the specified target groups. With forward actions,
-     * you can assign a weight that controls the prioritization and selection of each target group.
-     * This means that requests are distributed to individual target groups based on their weights. For
-     * example, if two target groups have the same weight, each target group receives half of the
-     * traffic.
+     * Matches incoming requests with rule based on request header value before applying rule
+     * action.
      *
-     * The default value is 1. This means that if only one target group is provided, there is no
-     * need to set the weight; 100% of the traffic goes to that target group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-forward.html#cfn-vpclattice-rule-forward-targetgroups)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-headermatches)
      */
-    public fun targetGroups(): Any
+    public fun headerMatches(): Any? = unwrap(this).getHeaderMatches()
 
     /**
-     * A builder for [ForwardProperty]
+     * The HTTP method type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-method)
+     */
+    public fun method(): String? = unwrap(this).getMethod()
+
+    /**
+     * The path match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-pathmatch)
+     */
+    public fun pathMatch(): Any? = unwrap(this).getPathMatch()
+
+    /**
+     * A builder for [HttpMatchProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param targetGroups The target groups. 
-       * Traffic matching the rule is forwarded to the specified target groups. With forward
-       * actions, you can assign a weight that controls the prioritization and selection of each target
-       * group. This means that requests are distributed to individual target groups based on their
-       * weights. For example, if two target groups have the same weight, each target group receives
-       * half of the traffic.
-       *
-       * The default value is 1. This means that if only one target group is provided, there is no
-       * need to set the weight; 100% of the traffic goes to that target group.
+       * @param headerMatches The header matches.
+       * Matches incoming requests with rule based on request header value before applying rule
+       * action.
        */
-      public fun targetGroups(targetGroups: IResolvable)
+      public fun headerMatches(headerMatches: IResolvable)
 
       /**
-       * @param targetGroups The target groups. 
-       * Traffic matching the rule is forwarded to the specified target groups. With forward
-       * actions, you can assign a weight that controls the prioritization and selection of each target
-       * group. This means that requests are distributed to individual target groups based on their
-       * weights. For example, if two target groups have the same weight, each target group receives
-       * half of the traffic.
-       *
-       * The default value is 1. This means that if only one target group is provided, there is no
-       * need to set the weight; 100% of the traffic goes to that target group.
+       * @param headerMatches The header matches.
+       * Matches incoming requests with rule based on request header value before applying rule
+       * action.
        */
-      public fun targetGroups(targetGroups: List<Any>)
+      public fun headerMatches(headerMatches: List<Any>)
 
       /**
-       * @param targetGroups The target groups. 
-       * Traffic matching the rule is forwarded to the specified target groups. With forward
-       * actions, you can assign a weight that controls the prioritization and selection of each target
-       * group. This means that requests are distributed to individual target groups based on their
-       * weights. For example, if two target groups have the same weight, each target group receives
-       * half of the traffic.
-       *
-       * The default value is 1. This means that if only one target group is provided, there is no
-       * need to set the weight; 100% of the traffic goes to that target group.
+       * @param headerMatches The header matches.
+       * Matches incoming requests with rule based on request header value before applying rule
+       * action.
        */
-      public fun targetGroups(vararg targetGroups: Any)
+      public fun headerMatches(vararg headerMatches: Any)
+
+      /**
+       * @param method The HTTP method type.
+       */
+      public fun method(method: String)
+
+      /**
+       * @param pathMatch The path match.
+       */
+      public fun pathMatch(pathMatch: IResolvable)
+
+      /**
+       * @param pathMatch The path match.
+       */
+      public fun pathMatch(pathMatch: PathMatchProperty)
+
+      /**
+       * @param pathMatch The path match.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("21de76d3671e887303a3cfb6606976297979e6ca33813a916c73c7ca9015475c")
+      public fun pathMatch(pathMatch: PathMatchProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty.Builder =
-          software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty.builder()
+          software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty.Builder =
+          software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty.builder()
 
       /**
-       * @param targetGroups The target groups. 
-       * Traffic matching the rule is forwarded to the specified target groups. With forward
-       * actions, you can assign a weight that controls the prioritization and selection of each target
-       * group. This means that requests are distributed to individual target groups based on their
-       * weights. For example, if two target groups have the same weight, each target group receives
-       * half of the traffic.
-       *
-       * The default value is 1. This means that if only one target group is provided, there is no
-       * need to set the weight; 100% of the traffic goes to that target group.
+       * @param headerMatches The header matches.
+       * Matches incoming requests with rule based on request header value before applying rule
+       * action.
        */
-      override fun targetGroups(targetGroups: IResolvable) {
-        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
+      override fun headerMatches(headerMatches: IResolvable) {
+        cdkBuilder.headerMatches(headerMatches.let(IResolvable::unwrap))
       }
 
       /**
-       * @param targetGroups The target groups. 
-       * Traffic matching the rule is forwarded to the specified target groups. With forward
-       * actions, you can assign a weight that controls the prioritization and selection of each target
-       * group. This means that requests are distributed to individual target groups based on their
-       * weights. For example, if two target groups have the same weight, each target group receives
-       * half of the traffic.
-       *
-       * The default value is 1. This means that if only one target group is provided, there is no
-       * need to set the weight; 100% of the traffic goes to that target group.
+       * @param headerMatches The header matches.
+       * Matches incoming requests with rule based on request header value before applying rule
+       * action.
        */
-      override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
+      override fun headerMatches(headerMatches: List<Any>) {
+        cdkBuilder.headerMatches(headerMatches)
       }
 
       /**
-       * @param targetGroups The target groups. 
-       * Traffic matching the rule is forwarded to the specified target groups. With forward
-       * actions, you can assign a weight that controls the prioritization and selection of each target
-       * group. This means that requests are distributed to individual target groups based on their
-       * weights. For example, if two target groups have the same weight, each target group receives
-       * half of the traffic.
-       *
-       * The default value is 1. This means that if only one target group is provided, there is no
-       * need to set the weight; 100% of the traffic goes to that target group.
+       * @param headerMatches The header matches.
+       * Matches incoming requests with rule based on request header value before applying rule
+       * action.
        */
-      override fun targetGroups(vararg targetGroups: Any): Unit =
-          targetGroups(targetGroups.toList())
+      override fun headerMatches(vararg headerMatches: Any): Unit =
+          headerMatches(headerMatches.toList())
 
-      public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty =
+      /**
+       * @param method The HTTP method type.
+       */
+      override fun method(method: String) {
+        cdkBuilder.method(method)
+      }
+
+      /**
+       * @param pathMatch The path match.
+       */
+      override fun pathMatch(pathMatch: IResolvable) {
+        cdkBuilder.pathMatch(pathMatch.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param pathMatch The path match.
+       */
+      override fun pathMatch(pathMatch: PathMatchProperty) {
+        cdkBuilder.pathMatch(pathMatch.let(PathMatchProperty::unwrap))
+      }
+
+      /**
+       * @param pathMatch The path match.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("21de76d3671e887303a3cfb6606976297979e6ca33813a916c73c7ca9015475c")
+      override fun pathMatch(pathMatch: PathMatchProperty.Builder.() -> Unit): Unit =
+          pathMatch(PathMatchProperty(pathMatch))
+
+      public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty,
-    ) : CdkObject(cdkObject), ForwardProperty {
+      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty,
+    ) : CdkObject(cdkObject), HttpMatchProperty {
       /**
-       * The target groups.
+       * The header matches.
        *
-       * Traffic matching the rule is forwarded to the specified target groups. With forward
-       * actions, you can assign a weight that controls the prioritization and selection of each target
-       * group. This means that requests are distributed to individual target groups based on their
-       * weights. For example, if two target groups have the same weight, each target group receives
-       * half of the traffic.
+       * Matches incoming requests with rule based on request header value before applying rule
+       * action.
        *
-       * The default value is 1. This means that if only one target group is provided, there is no
-       * need to set the weight; 100% of the traffic goes to that target group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-forward.html#cfn-vpclattice-rule-forward-targetgroups)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-headermatches)
        */
-      override fun targetGroups(): Any = unwrap(this).getTargetGroups()
+      override fun headerMatches(): Any? = unwrap(this).getHeaderMatches()
+
+      /**
+       * The HTTP method type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-method)
+       */
+      override fun method(): String? = unwrap(this).getMethod()
+
+      /**
+       * The path match.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-pathmatch)
+       */
+      override fun pathMatch(): Any? = unwrap(this).getPathMatch()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ForwardProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HttpMatchProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty):
-          ForwardProperty = CdkObjectWrappers.wrap(cdkObject) as? ForwardProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty):
+          HttpMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpMatchProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ForwardProperty):
-          software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty
+      internal fun unwrap(wrapped: HttpMatchProperty):
+          software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty
     }
   }
 
@@ -1682,6 +1790,116 @@ public open class CfnRule internal constructor(
   }
 
   /**
+   * Describes a path match type.
+   *
+   * Each rule can include only one of the following types of paths.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
+   * PathMatchTypeProperty pathMatchTypeProperty = PathMatchTypeProperty.builder()
+   * .exact("exact")
+   * .prefix("prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html)
+   */
+  public interface PathMatchTypeProperty {
+    /**
+     * An exact match of the path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html#cfn-vpclattice-rule-pathmatchtype-exact)
+     */
+    public fun exact(): String? = unwrap(this).getExact()
+
+    /**
+     * A prefix match of the path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html#cfn-vpclattice-rule-pathmatchtype-prefix)
+     */
+    public fun prefix(): String? = unwrap(this).getPrefix()
+
+    /**
+     * A builder for [PathMatchTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exact An exact match of the path.
+       */
+      public fun exact(exact: String)
+
+      /**
+       * @param prefix A prefix match of the path.
+       */
+      public fun prefix(prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty.Builder =
+          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty.builder()
+
+      /**
+       * @param exact An exact match of the path.
+       */
+      override fun exact(exact: String) {
+        cdkBuilder.exact(exact)
+      }
+
+      /**
+       * @param prefix A prefix match of the path.
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty,
+    ) : CdkObject(cdkObject), PathMatchTypeProperty {
+      /**
+       * An exact match of the path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html#cfn-vpclattice-rule-pathmatchtype-exact)
+       */
+      override fun exact(): String? = unwrap(this).getExact()
+
+      /**
+       * A prefix match of the path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html#cfn-vpclattice-rule-pathmatchtype-prefix)
+       */
+      override fun prefix(): String? = unwrap(this).getPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PathMatchTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty):
+          PathMatchTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? PathMatchTypeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PathMatchTypeProperty):
+          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty
+    }
+  }
+
+  /**
    * Describes the weight of a target group.
    *
    * Example:
@@ -1810,224 +2028,6 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty
-    }
-  }
-
-  /**
-   * Describes criteria that can be applied to incoming requests.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
-   * HttpMatchProperty httpMatchProperty = HttpMatchProperty.builder()
-   * .headerMatches(List.of(HeaderMatchProperty.builder()
-   * .match(HeaderMatchTypeProperty.builder()
-   * .contains("contains")
-   * .exact("exact")
-   * .prefix("prefix")
-   * .build())
-   * .name("name")
-   * // the properties below are optional
-   * .caseSensitive(false)
-   * .build()))
-   * .method("method")
-   * .pathMatch(PathMatchProperty.builder()
-   * .match(PathMatchTypeProperty.builder()
-   * .exact("exact")
-   * .prefix("prefix")
-   * .build())
-   * // the properties below are optional
-   * .caseSensitive(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html)
-   */
-  public interface HttpMatchProperty {
-    /**
-     * The header matches.
-     *
-     * Matches incoming requests with rule based on request header value before applying rule
-     * action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-headermatches)
-     */
-    public fun headerMatches(): Any? = unwrap(this).getHeaderMatches()
-
-    /**
-     * The HTTP method type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-method)
-     */
-    public fun method(): String? = unwrap(this).getMethod()
-
-    /**
-     * The path match.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-pathmatch)
-     */
-    public fun pathMatch(): Any? = unwrap(this).getPathMatch()
-
-    /**
-     * A builder for [HttpMatchProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param headerMatches The header matches.
-       * Matches incoming requests with rule based on request header value before applying rule
-       * action.
-       */
-      public fun headerMatches(headerMatches: IResolvable)
-
-      /**
-       * @param headerMatches The header matches.
-       * Matches incoming requests with rule based on request header value before applying rule
-       * action.
-       */
-      public fun headerMatches(headerMatches: List<Any>)
-
-      /**
-       * @param headerMatches The header matches.
-       * Matches incoming requests with rule based on request header value before applying rule
-       * action.
-       */
-      public fun headerMatches(vararg headerMatches: Any)
-
-      /**
-       * @param method The HTTP method type.
-       */
-      public fun method(method: String)
-
-      /**
-       * @param pathMatch The path match.
-       */
-      public fun pathMatch(pathMatch: IResolvable)
-
-      /**
-       * @param pathMatch The path match.
-       */
-      public fun pathMatch(pathMatch: PathMatchProperty)
-
-      /**
-       * @param pathMatch The path match.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("21de76d3671e887303a3cfb6606976297979e6ca33813a916c73c7ca9015475c")
-      public fun pathMatch(pathMatch: PathMatchProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty.Builder =
-          software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty.builder()
-
-      /**
-       * @param headerMatches The header matches.
-       * Matches incoming requests with rule based on request header value before applying rule
-       * action.
-       */
-      override fun headerMatches(headerMatches: IResolvable) {
-        cdkBuilder.headerMatches(headerMatches.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param headerMatches The header matches.
-       * Matches incoming requests with rule based on request header value before applying rule
-       * action.
-       */
-      override fun headerMatches(headerMatches: List<Any>) {
-        cdkBuilder.headerMatches(headerMatches)
-      }
-
-      /**
-       * @param headerMatches The header matches.
-       * Matches incoming requests with rule based on request header value before applying rule
-       * action.
-       */
-      override fun headerMatches(vararg headerMatches: Any): Unit =
-          headerMatches(headerMatches.toList())
-
-      /**
-       * @param method The HTTP method type.
-       */
-      override fun method(method: String) {
-        cdkBuilder.method(method)
-      }
-
-      /**
-       * @param pathMatch The path match.
-       */
-      override fun pathMatch(pathMatch: IResolvable) {
-        cdkBuilder.pathMatch(pathMatch.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param pathMatch The path match.
-       */
-      override fun pathMatch(pathMatch: PathMatchProperty) {
-        cdkBuilder.pathMatch(pathMatch.let(PathMatchProperty::unwrap))
-      }
-
-      /**
-       * @param pathMatch The path match.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("21de76d3671e887303a3cfb6606976297979e6ca33813a916c73c7ca9015475c")
-      override fun pathMatch(pathMatch: PathMatchProperty.Builder.() -> Unit): Unit =
-          pathMatch(PathMatchProperty(pathMatch))
-
-      public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty,
-    ) : CdkObject(cdkObject), HttpMatchProperty {
-      /**
-       * The header matches.
-       *
-       * Matches incoming requests with rule based on request header value before applying rule
-       * action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-headermatches)
-       */
-      override fun headerMatches(): Any? = unwrap(this).getHeaderMatches()
-
-      /**
-       * The HTTP method type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-method)
-       */
-      override fun method(): String? = unwrap(this).getMethod()
-
-      /**
-       * The path match.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-httpmatch.html#cfn-vpclattice-rule-httpmatch-pathmatch)
-       */
-      override fun pathMatch(): Any? = unwrap(this).getPathMatch()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HttpMatchProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty):
-          HttpMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpMatchProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HttpMatchProperty):
-          software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty
     }
   }
 }

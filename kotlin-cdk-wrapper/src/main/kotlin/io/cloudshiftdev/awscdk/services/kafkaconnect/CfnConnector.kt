@@ -1152,7 +1152,7 @@ public open class CfnConnector internal constructor(
   }
 
   /**
-   * The settings for delivering connector logs to Amazon CloudWatch Logs.
+   * Specifies how the connector scales.
    *
    * Example:
    *
@@ -1160,359 +1160,250 @@ public open class CfnConnector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * CloudWatchLogsLogDeliveryProperty cloudWatchLogsLogDeliveryProperty =
-   * CloudWatchLogsLogDeliveryProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .logGroup("logGroup")
+   * AutoScalingProperty autoScalingProperty = AutoScalingProperty.builder()
+   * .maxWorkerCount(123)
+   * .mcuCount(123)
+   * .minWorkerCount(123)
+   * .scaleInPolicy(ScaleInPolicyProperty.builder()
+   * .cpuUtilizationPercentage(123)
+   * .build())
+   * .scaleOutPolicy(ScaleOutPolicyProperty.builder()
+   * .cpuUtilizationPercentage(123)
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html)
    */
-  public interface CloudWatchLogsLogDeliveryProperty {
+  public interface AutoScalingProperty {
     /**
-     * Whether log delivery to Amazon CloudWatch Logs is enabled.
+     * The maximum number of workers allocated to the connector.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html#cfn-kafkaconnect-connector-cloudwatchlogslogdelivery-enabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-maxworkercount)
      */
-    public fun enabled(): Any
+    public fun maxWorkerCount(): Number
 
     /**
-     * The name of the CloudWatch log group that is the destination for log delivery.
+     * The number of microcontroller units (MCUs) allocated to each connector worker.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html#cfn-kafkaconnect-connector-cloudwatchlogslogdelivery-loggroup)
+     * The valid values are 1,2,4,8.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-mcucount)
      */
-    public fun logGroup(): String? = unwrap(this).getLogGroup()
+    public fun mcuCount(): Number
 
     /**
-     * A builder for [CloudWatchLogsLogDeliveryProperty]
+     * The minimum number of workers allocated to the connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-minworkercount)
+     */
+    public fun minWorkerCount(): Number
+
+    /**
+     * The sacle-in policy for the connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-scaleinpolicy)
+     */
+    public fun scaleInPolicy(): Any
+
+    /**
+     * The sacle-out policy for the connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-scaleoutpolicy)
+     */
+    public fun scaleOutPolicy(): Any
+
+    /**
+     * A builder for [AutoScalingProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
+       * @param maxWorkerCount The maximum number of workers allocated to the connector. 
        */
-      public fun enabled(enabled: Boolean)
+      public fun maxWorkerCount(maxWorkerCount: Number)
 
       /**
-       * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
+       * @param mcuCount The number of microcontroller units (MCUs) allocated to each connector
+       * worker. 
+       * The valid values are 1,2,4,8.
        */
-      public fun enabled(enabled: IResolvable)
+      public fun mcuCount(mcuCount: Number)
 
       /**
-       * @param logGroup The name of the CloudWatch log group that is the destination for log
-       * delivery.
+       * @param minWorkerCount The minimum number of workers allocated to the connector. 
        */
-      public fun logGroup(logGroup: String)
+      public fun minWorkerCount(minWorkerCount: Number)
+
+      /**
+       * @param scaleInPolicy The sacle-in policy for the connector. 
+       */
+      public fun scaleInPolicy(scaleInPolicy: IResolvable)
+
+      /**
+       * @param scaleInPolicy The sacle-in policy for the connector. 
+       */
+      public fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty)
+
+      /**
+       * @param scaleInPolicy The sacle-in policy for the connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("924a00c92bc533726be73cecf82968cb4d0833bcbd4018288d92d9c5250bc720")
+      public fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty.Builder.() -> Unit)
+
+      /**
+       * @param scaleOutPolicy The sacle-out policy for the connector. 
+       */
+      public fun scaleOutPolicy(scaleOutPolicy: IResolvable)
+
+      /**
+       * @param scaleOutPolicy The sacle-out policy for the connector. 
+       */
+      public fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty)
+
+      /**
+       * @param scaleOutPolicy The sacle-out policy for the connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("758b465f5bd575830bc6a5bd3795c00ca401ed930331d39366b2312db08cbbf3")
+      public fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty.Builder
-          =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty.builder()
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty.Builder =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty.builder()
 
       /**
-       * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
+       * @param maxWorkerCount The maximum number of workers allocated to the connector. 
        */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
+      override fun maxWorkerCount(maxWorkerCount: Number) {
+        cdkBuilder.maxWorkerCount(maxWorkerCount)
       }
 
       /**
-       * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
+       * @param mcuCount The number of microcontroller units (MCUs) allocated to each connector
+       * worker. 
+       * The valid values are 1,2,4,8.
        */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      override fun mcuCount(mcuCount: Number) {
+        cdkBuilder.mcuCount(mcuCount)
       }
 
       /**
-       * @param logGroup The name of the CloudWatch log group that is the destination for log
-       * delivery.
+       * @param minWorkerCount The minimum number of workers allocated to the connector. 
        */
-      override fun logGroup(logGroup: String) {
-        cdkBuilder.logGroup(logGroup)
+      override fun minWorkerCount(minWorkerCount: Number) {
+        cdkBuilder.minWorkerCount(minWorkerCount)
       }
+
+      /**
+       * @param scaleInPolicy The sacle-in policy for the connector. 
+       */
+      override fun scaleInPolicy(scaleInPolicy: IResolvable) {
+        cdkBuilder.scaleInPolicy(scaleInPolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param scaleInPolicy The sacle-in policy for the connector. 
+       */
+      override fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty) {
+        cdkBuilder.scaleInPolicy(scaleInPolicy.let(ScaleInPolicyProperty::unwrap))
+      }
+
+      /**
+       * @param scaleInPolicy The sacle-in policy for the connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("924a00c92bc533726be73cecf82968cb4d0833bcbd4018288d92d9c5250bc720")
+      override fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty.Builder.() -> Unit): Unit =
+          scaleInPolicy(ScaleInPolicyProperty(scaleInPolicy))
+
+      /**
+       * @param scaleOutPolicy The sacle-out policy for the connector. 
+       */
+      override fun scaleOutPolicy(scaleOutPolicy: IResolvable) {
+        cdkBuilder.scaleOutPolicy(scaleOutPolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param scaleOutPolicy The sacle-out policy for the connector. 
+       */
+      override fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty) {
+        cdkBuilder.scaleOutPolicy(scaleOutPolicy.let(ScaleOutPolicyProperty::unwrap))
+      }
+
+      /**
+       * @param scaleOutPolicy The sacle-out policy for the connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("758b465f5bd575830bc6a5bd3795c00ca401ed930331d39366b2312db08cbbf3")
+      override fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty.Builder.() -> Unit): Unit =
+          scaleOutPolicy(ScaleOutPolicyProperty(scaleOutPolicy))
 
       public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsLogDeliveryProperty {
-      /**
-       * Whether log delivery to Amazon CloudWatch Logs is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html#cfn-kafkaconnect-connector-cloudwatchlogslogdelivery-enabled)
-       */
-      override fun enabled(): Any = unwrap(this).getEnabled()
-
-      /**
-       * The name of the CloudWatch log group that is the destination for log delivery.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html#cfn-kafkaconnect-connector-cloudwatchlogslogdelivery-loggroup)
-       */
-      override fun logGroup(): String? = unwrap(this).getLogGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CloudWatchLogsLogDeliveryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty):
-          CloudWatchLogsLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogsLogDeliveryProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogsLogDeliveryProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty
-    }
-  }
-
-  /**
-   * Details about delivering logs to Amazon S3.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * S3LogDeliveryProperty s3LogDeliveryProperty = S3LogDeliveryProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .bucket("bucket")
-   * .prefix("prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html)
-   */
-  public interface S3LogDeliveryProperty {
-    /**
-     * The name of the S3 bucket that is the destination for log delivery.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-bucket)
-     */
-    public fun bucket(): String? = unwrap(this).getBucket()
-
-    /**
-     * Specifies whether connector logs get sent to the specified Amazon S3 destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * The S3 prefix that is the destination for log delivery.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-prefix)
-     */
-    public fun prefix(): String? = unwrap(this).getPrefix()
-
-    /**
-     * A builder for [S3LogDeliveryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket The name of the S3 bucket that is the destination for log delivery.
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
-       * destination. 
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
-       * destination. 
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param prefix The S3 prefix that is the destination for log delivery.
-       */
-      public fun prefix(prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty.Builder =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty.builder()
-
-      /**
-       * @param bucket The name of the S3 bucket that is the destination for log delivery.
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
-       * destination. 
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
-       * destination. 
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param prefix The S3 prefix that is the destination for log delivery.
-       */
-      override fun prefix(prefix: String) {
-        cdkBuilder.prefix(prefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty,
-    ) : CdkObject(cdkObject), S3LogDeliveryProperty {
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty,
+    ) : CdkObject(cdkObject), AutoScalingProperty {
       /**
-       * The name of the S3 bucket that is the destination for log delivery.
+       * The maximum number of workers allocated to the connector.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-bucket)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-maxworkercount)
        */
-      override fun bucket(): String? = unwrap(this).getBucket()
+      override fun maxWorkerCount(): Number = unwrap(this).getMaxWorkerCount()
 
       /**
-       * Specifies whether connector logs get sent to the specified Amazon S3 destination.
+       * The number of microcontroller units (MCUs) allocated to each connector worker.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-enabled)
+       * The valid values are 1,2,4,8.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-mcucount)
        */
-      override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun mcuCount(): Number = unwrap(this).getMcuCount()
 
       /**
-       * The S3 prefix that is the destination for log delivery.
+       * The minimum number of workers allocated to the connector.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-prefix)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-minworkercount)
        */
-      override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun minWorkerCount(): Number = unwrap(this).getMinWorkerCount()
+
+      /**
+       * The sacle-in policy for the connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-scaleinpolicy)
+       */
+      override fun scaleInPolicy(): Any = unwrap(this).getScaleInPolicy()
+
+      /**
+       * The sacle-out policy for the connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-scaleoutpolicy)
+       */
+      override fun scaleOutPolicy(): Any = unwrap(this).getScaleOutPolicy()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LogDeliveryProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoScalingProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty):
-          S3LogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogDeliveryProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty):
+          AutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoScalingProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: S3LogDeliveryProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty = (wrapped
+      internal fun unwrap(wrapped: AutoScalingProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty
-    }
-  }
-
-  /**
-   * Details of encryption in transit to the Apache Kafka cluster.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * KafkaClusterEncryptionInTransitProperty kafkaClusterEncryptionInTransitProperty =
-   * KafkaClusterEncryptionInTransitProperty.builder()
-   * .encryptionType("encryptionType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-kafkaclusterencryptionintransit.html)
-   */
-  public interface KafkaClusterEncryptionInTransitProperty {
-    /**
-     * The type of encryption in transit to the Apache Kafka cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-kafkaclusterencryptionintransit.html#cfn-kafkaconnect-connector-kafkaclusterencryptionintransit-encryptiontype)
-     */
-    public fun encryptionType(): String
-
-    /**
-     * A builder for [KafkaClusterEncryptionInTransitProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param encryptionType The type of encryption in transit to the Apache Kafka cluster. 
-       */
-      public fun encryptionType(encryptionType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty.Builder
-          =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty.builder()
-
-      /**
-       * @param encryptionType The type of encryption in transit to the Apache Kafka cluster. 
-       */
-      override fun encryptionType(encryptionType: String) {
-        cdkBuilder.encryptionType(encryptionType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty,
-    ) : CdkObject(cdkObject), KafkaClusterEncryptionInTransitProperty {
-      /**
-       * The type of encryption in transit to the Apache Kafka cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-kafkaclusterencryptionintransit.html#cfn-kafkaconnect-connector-kafkaclusterencryptionintransit-encryptiontype)
-       */
-      override fun encryptionType(): String = unwrap(this).getEncryptionType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          KafkaClusterEncryptionInTransitProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty):
-          KafkaClusterEncryptionInTransitProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KafkaClusterEncryptionInTransitProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KafkaClusterEncryptionInTransitProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty
     }
   }
 
@@ -1695,7 +1586,7 @@ public open class CfnConnector internal constructor(
   }
 
   /**
-   * The configuration of the workers, which are the processes that run the connector logic.
+   * The settings for delivering connector logs to Amazon CloudWatch Logs.
    *
    * Example:
    *
@@ -1703,522 +1594,121 @@ public open class CfnConnector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * WorkerConfigurationProperty workerConfigurationProperty = WorkerConfigurationProperty.builder()
-   * .revision(123)
-   * .workerConfigurationArn("workerConfigurationArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html)
-   */
-  public interface WorkerConfigurationProperty {
-    /**
-     * The revision of the worker configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-revision)
-     */
-    public fun revision(): Number
-
-    /**
-     * The Amazon Resource Name (ARN) of the worker configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-workerconfigurationarn)
-     */
-    public fun workerConfigurationArn(): String
-
-    /**
-     * A builder for [WorkerConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param revision The revision of the worker configuration. 
-       */
-      public fun revision(revision: Number)
-
-      /**
-       * @param workerConfigurationArn The Amazon Resource Name (ARN) of the worker configuration. 
-       */
-      public fun workerConfigurationArn(workerConfigurationArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty.builder()
-
-      /**
-       * @param revision The revision of the worker configuration. 
-       */
-      override fun revision(revision: Number) {
-        cdkBuilder.revision(revision)
-      }
-
-      /**
-       * @param workerConfigurationArn The Amazon Resource Name (ARN) of the worker configuration. 
-       */
-      override fun workerConfigurationArn(workerConfigurationArn: String) {
-        cdkBuilder.workerConfigurationArn(workerConfigurationArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty,
-    ) : CdkObject(cdkObject), WorkerConfigurationProperty {
-      /**
-       * The revision of the worker configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-revision)
-       */
-      override fun revision(): Number = unwrap(this).getRevision()
-
-      /**
-       * The Amazon Resource Name (ARN) of the worker configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-workerconfigurationarn)
-       */
-      override fun workerConfigurationArn(): String = unwrap(this).getWorkerConfigurationArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkerConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty):
-          WorkerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WorkerConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WorkerConfigurationProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty
-    }
-  }
-
-  /**
-   * Information about the VPC in which the connector resides.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * VpcProperty vpcProperty = VpcProperty.builder()
-   * .securityGroups(List.of("securityGroups"))
-   * .subnets(List.of("subnets"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html)
-   */
-  public interface VpcProperty {
-    /**
-     * The security groups for the connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-securitygroups)
-     */
-    public fun securityGroups(): List<String>
-
-    /**
-     * The subnets for the connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-subnets)
-     */
-    public fun subnets(): List<String>
-
-    /**
-     * A builder for [VpcProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param securityGroups The security groups for the connector. 
-       */
-      public fun securityGroups(securityGroups: List<String>)
-
-      /**
-       * @param securityGroups The security groups for the connector. 
-       */
-      public fun securityGroups(vararg securityGroups: String)
-
-      /**
-       * @param subnets The subnets for the connector. 
-       */
-      public fun subnets(subnets: List<String>)
-
-      /**
-       * @param subnets The subnets for the connector. 
-       */
-      public fun subnets(vararg subnets: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty.Builder =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty.builder()
-
-      /**
-       * @param securityGroups The security groups for the connector. 
-       */
-      override fun securityGroups(securityGroups: List<String>) {
-        cdkBuilder.securityGroups(securityGroups)
-      }
-
-      /**
-       * @param securityGroups The security groups for the connector. 
-       */
-      override fun securityGroups(vararg securityGroups: String): Unit =
-          securityGroups(securityGroups.toList())
-
-      /**
-       * @param subnets The subnets for the connector. 
-       */
-      override fun subnets(subnets: List<String>) {
-        cdkBuilder.subnets(subnets)
-      }
-
-      /**
-       * @param subnets The subnets for the connector. 
-       */
-      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
-
-      public fun build(): software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty,
-    ) : CdkObject(cdkObject), VpcProperty {
-      /**
-       * The security groups for the connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-securitygroups)
-       */
-      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups()
-
-      /**
-       * The subnets for the connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-subnets)
-       */
-      override fun subnets(): List<String> = unwrap(this).getSubnets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty):
-          VpcProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty
-    }
-  }
-
-  /**
-   * The scale-out policy for the connector.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * ScaleOutPolicyProperty scaleOutPolicyProperty = ScaleOutPolicyProperty.builder()
-   * .cpuUtilizationPercentage(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleoutpolicy.html)
-   */
-  public interface ScaleOutPolicyProperty {
-    /**
-     * The CPU utilization percentage threshold at which you want connector scale out to be
-     * triggered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleoutpolicy.html#cfn-kafkaconnect-connector-scaleoutpolicy-cpuutilizationpercentage)
-     */
-    public fun cpuUtilizationPercentage(): Number
-
-    /**
-     * A builder for [ScaleOutPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpuUtilizationPercentage The CPU utilization percentage threshold at which you want
-       * connector scale out to be triggered. 
-       */
-      public fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty.Builder =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty.builder()
-
-      /**
-       * @param cpuUtilizationPercentage The CPU utilization percentage threshold at which you want
-       * connector scale out to be triggered. 
-       */
-      override fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number) {
-        cdkBuilder.cpuUtilizationPercentage(cpuUtilizationPercentage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty,
-    ) : CdkObject(cdkObject), ScaleOutPolicyProperty {
-      /**
-       * The CPU utilization percentage threshold at which you want connector scale out to be
-       * triggered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleoutpolicy.html#cfn-kafkaconnect-connector-scaleoutpolicy-cpuutilizationpercentage)
-       */
-      override fun cpuUtilizationPercentage(): Number = unwrap(this).getCpuUtilizationPercentage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScaleOutPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty):
-          ScaleOutPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ScaleOutPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScaleOutPolicyProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty
-    }
-  }
-
-  /**
-   * The scale-in policy for the connector.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * ScaleInPolicyProperty scaleInPolicyProperty = ScaleInPolicyProperty.builder()
-   * .cpuUtilizationPercentage(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleinpolicy.html)
-   */
-  public interface ScaleInPolicyProperty {
-    /**
-     * Specifies the CPU utilization percentage threshold at which you want connector scale in to be
-     * triggered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleinpolicy.html#cfn-kafkaconnect-connector-scaleinpolicy-cpuutilizationpercentage)
-     */
-    public fun cpuUtilizationPercentage(): Number
-
-    /**
-     * A builder for [ScaleInPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpuUtilizationPercentage Specifies the CPU utilization percentage threshold at which
-       * you want connector scale in to be triggered. 
-       */
-      public fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty.Builder =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty.builder()
-
-      /**
-       * @param cpuUtilizationPercentage Specifies the CPU utilization percentage threshold at which
-       * you want connector scale in to be triggered. 
-       */
-      override fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number) {
-        cdkBuilder.cpuUtilizationPercentage(cpuUtilizationPercentage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty,
-    ) : CdkObject(cdkObject), ScaleInPolicyProperty {
-      /**
-       * Specifies the CPU utilization percentage threshold at which you want connector scale in to
-       * be triggered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleinpolicy.html#cfn-kafkaconnect-connector-scaleinpolicy-cpuutilizationpercentage)
-       */
-      override fun cpuUtilizationPercentage(): Number = unwrap(this).getCpuUtilizationPercentage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScaleInPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty):
-          ScaleInPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ScaleInPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScaleInPolicyProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty
-    }
-  }
-
-  /**
-   * Details about a connector's provisioned capacity.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * ProvisionedCapacityProperty provisionedCapacityProperty = ProvisionedCapacityProperty.builder()
-   * .workerCount(123)
+   * CloudWatchLogsLogDeliveryProperty cloudWatchLogsLogDeliveryProperty =
+   * CloudWatchLogsLogDeliveryProperty.builder()
+   * .enabled(false)
    * // the properties below are optional
-   * .mcuCount(123)
+   * .logGroup("logGroup")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html)
    */
-  public interface ProvisionedCapacityProperty {
+  public interface CloudWatchLogsLogDeliveryProperty {
     /**
-     * The number of microcontroller units (MCUs) allocated to each connector worker.
+     * Whether log delivery to Amazon CloudWatch Logs is enabled.
      *
-     * The valid values are 1,2,4,8.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html#cfn-kafkaconnect-connector-provisionedcapacity-mcucount)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html#cfn-kafkaconnect-connector-cloudwatchlogslogdelivery-enabled)
      */
-    public fun mcuCount(): Number? = unwrap(this).getMcuCount()
+    public fun enabled(): Any
 
     /**
-     * The number of workers that are allocated to the connector.
+     * The name of the CloudWatch log group that is the destination for log delivery.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html#cfn-kafkaconnect-connector-provisionedcapacity-workercount)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html#cfn-kafkaconnect-connector-cloudwatchlogslogdelivery-loggroup)
      */
-    public fun workerCount(): Number
+    public fun logGroup(): String? = unwrap(this).getLogGroup()
 
     /**
-     * A builder for [ProvisionedCapacityProperty]
+     * A builder for [CloudWatchLogsLogDeliveryProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param mcuCount The number of microcontroller units (MCUs) allocated to each connector
-       * worker.
-       * The valid values are 1,2,4,8.
+       * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
        */
-      public fun mcuCount(mcuCount: Number)
+      public fun enabled(enabled: Boolean)
 
       /**
-       * @param workerCount The number of workers that are allocated to the connector. 
+       * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
        */
-      public fun workerCount(workerCount: Number)
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param logGroup The name of the CloudWatch log group that is the destination for log
+       * delivery.
+       */
+      public fun logGroup(logGroup: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty.Builder
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty.Builder
           =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty.builder()
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty.builder()
 
       /**
-       * @param mcuCount The number of microcontroller units (MCUs) allocated to each connector
-       * worker.
-       * The valid values are 1,2,4,8.
+       * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
        */
-      override fun mcuCount(mcuCount: Number) {
-        cdkBuilder.mcuCount(mcuCount)
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param workerCount The number of workers that are allocated to the connector. 
+       * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
        */
-      override fun workerCount(workerCount: Number) {
-        cdkBuilder.workerCount(workerCount)
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param logGroup The name of the CloudWatch log group that is the destination for log
+       * delivery.
+       */
+      override fun logGroup(logGroup: String) {
+        cdkBuilder.logGroup(logGroup)
       }
 
       public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty,
-    ) : CdkObject(cdkObject), ProvisionedCapacityProperty {
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogsLogDeliveryProperty {
       /**
-       * The number of microcontroller units (MCUs) allocated to each connector worker.
+       * Whether log delivery to Amazon CloudWatch Logs is enabled.
        *
-       * The valid values are 1,2,4,8.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html#cfn-kafkaconnect-connector-provisionedcapacity-mcucount)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html#cfn-kafkaconnect-connector-cloudwatchlogslogdelivery-enabled)
        */
-      override fun mcuCount(): Number? = unwrap(this).getMcuCount()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
       /**
-       * The number of workers that are allocated to the connector.
+       * The name of the CloudWatch log group that is the destination for log delivery.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html#cfn-kafkaconnect-connector-provisionedcapacity-workercount)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-cloudwatchlogslogdelivery.html#cfn-kafkaconnect-connector-cloudwatchlogslogdelivery-loggroup)
        */
-      override fun workerCount(): Number = unwrap(this).getWorkerCount()
+      override fun logGroup(): String? = unwrap(this).getLogGroup()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProvisionedCapacityProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CloudWatchLogsLogDeliveryProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty):
-          ProvisionedCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProvisionedCapacityProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty):
+          CloudWatchLogsLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsLogDeliveryProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ProvisionedCapacityProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty
+      internal fun unwrap(wrapped: CloudWatchLogsLogDeliveryProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty
     }
   }
 
@@ -2557,6 +2047,91 @@ public open class CfnConnector internal constructor(
   }
 
   /**
+   * Details of encryption in transit to the Apache Kafka cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
+   * KafkaClusterEncryptionInTransitProperty kafkaClusterEncryptionInTransitProperty =
+   * KafkaClusterEncryptionInTransitProperty.builder()
+   * .encryptionType("encryptionType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-kafkaclusterencryptionintransit.html)
+   */
+  public interface KafkaClusterEncryptionInTransitProperty {
+    /**
+     * The type of encryption in transit to the Apache Kafka cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-kafkaclusterencryptionintransit.html#cfn-kafkaconnect-connector-kafkaclusterencryptionintransit-encryptiontype)
+     */
+    public fun encryptionType(): String
+
+    /**
+     * A builder for [KafkaClusterEncryptionInTransitProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encryptionType The type of encryption in transit to the Apache Kafka cluster. 
+       */
+      public fun encryptionType(encryptionType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty.Builder
+          =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty.builder()
+
+      /**
+       * @param encryptionType The type of encryption in transit to the Apache Kafka cluster. 
+       */
+      override fun encryptionType(encryptionType: String) {
+        cdkBuilder.encryptionType(encryptionType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty,
+    ) : CdkObject(cdkObject), KafkaClusterEncryptionInTransitProperty {
+      /**
+       * The type of encryption in transit to the Apache Kafka cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-kafkaclusterencryptionintransit.html#cfn-kafkaconnect-connector-kafkaclusterencryptionintransit-encryptiontype)
+       */
+      override fun encryptionType(): String = unwrap(this).getEncryptionType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          KafkaClusterEncryptionInTransitProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty):
+          KafkaClusterEncryptionInTransitProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KafkaClusterEncryptionInTransitProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KafkaClusterEncryptionInTransitProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty
+    }
+  }
+
+  /**
    * The details of the Apache Kafka cluster to which the connector is connected.
    *
    * Example:
@@ -2670,241 +2245,6 @@ public open class CfnConnector internal constructor(
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterProperty
-    }
-  }
-
-  /**
-   * Workers can send worker logs to different destination types.
-   *
-   * This configuration specifies the details of these destinations.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * WorkerLogDeliveryProperty workerLogDeliveryProperty = WorkerLogDeliveryProperty.builder()
-   * .cloudWatchLogs(CloudWatchLogsLogDeliveryProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .logGroup("logGroup")
-   * .build())
-   * .firehose(FirehoseLogDeliveryProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .deliveryStream("deliveryStream")
-   * .build())
-   * .s3(S3LogDeliveryProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .bucket("bucket")
-   * .prefix("prefix")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html)
-   */
-  public interface WorkerLogDeliveryProperty {
-    /**
-     * Details about delivering logs to Amazon CloudWatch Logs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-cloudwatchlogs)
-     */
-    public fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
-
-    /**
-     * Details about delivering logs to Amazon Kinesis Data Firehose.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-firehose)
-     */
-    public fun firehose(): Any? = unwrap(this).getFirehose()
-
-    /**
-     * Details about delivering logs to Amazon S3.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-s3)
-     */
-    public fun s3(): Any? = unwrap(this).getS3()
-
-    /**
-     * A builder for [WorkerLogDeliveryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
-       */
-      public fun cloudWatchLogs(cloudWatchLogs: IResolvable)
-
-      /**
-       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
-       */
-      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty)
-
-      /**
-       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9b34ed067daf3cee6b27e33033b603aa3c961ea9fe7de81813ea3812eddb8208")
-      public
-          fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty.Builder.() -> Unit)
-
-      /**
-       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
-       */
-      public fun firehose(firehose: IResolvable)
-
-      /**
-       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
-       */
-      public fun firehose(firehose: FirehoseLogDeliveryProperty)
-
-      /**
-       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2116faf9d5c1f153da9b6f426df7784b11b55d98d47ba0945959d2465615a8af")
-      public fun firehose(firehose: FirehoseLogDeliveryProperty.Builder.() -> Unit)
-
-      /**
-       * @param s3 Details about delivering logs to Amazon S3.
-       */
-      public fun s3(s3: IResolvable)
-
-      /**
-       * @param s3 Details about delivering logs to Amazon S3.
-       */
-      public fun s3(s3: S3LogDeliveryProperty)
-
-      /**
-       * @param s3 Details about delivering logs to Amazon S3.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("833142e3bf8e8d5d48d244d2bbd4a8143694542994e5182c29c48d9a84385376")
-      public fun s3(s3: S3LogDeliveryProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty.Builder
-          =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty.builder()
-
-      /**
-       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
-       */
-      override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
-       */
-      override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsLogDeliveryProperty::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9b34ed067daf3cee6b27e33033b603aa3c961ea9fe7de81813ea3812eddb8208")
-      override
-          fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty.Builder.() -> Unit):
-          Unit = cloudWatchLogs(CloudWatchLogsLogDeliveryProperty(cloudWatchLogs))
-
-      /**
-       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
-       */
-      override fun firehose(firehose: IResolvable) {
-        cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
-       */
-      override fun firehose(firehose: FirehoseLogDeliveryProperty) {
-        cdkBuilder.firehose(firehose.let(FirehoseLogDeliveryProperty::unwrap))
-      }
-
-      /**
-       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2116faf9d5c1f153da9b6f426df7784b11b55d98d47ba0945959d2465615a8af")
-      override fun firehose(firehose: FirehoseLogDeliveryProperty.Builder.() -> Unit): Unit =
-          firehose(FirehoseLogDeliveryProperty(firehose))
-
-      /**
-       * @param s3 Details about delivering logs to Amazon S3.
-       */
-      override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3 Details about delivering logs to Amazon S3.
-       */
-      override fun s3(s3: S3LogDeliveryProperty) {
-        cdkBuilder.s3(s3.let(S3LogDeliveryProperty::unwrap))
-      }
-
-      /**
-       * @param s3 Details about delivering logs to Amazon S3.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("833142e3bf8e8d5d48d244d2bbd4a8143694542994e5182c29c48d9a84385376")
-      override fun s3(s3: S3LogDeliveryProperty.Builder.() -> Unit): Unit =
-          s3(S3LogDeliveryProperty(s3))
-
-      public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty,
-    ) : CdkObject(cdkObject), WorkerLogDeliveryProperty {
-      /**
-       * Details about delivering logs to Amazon CloudWatch Logs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-cloudwatchlogs)
-       */
-      override fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
-
-      /**
-       * Details about delivering logs to Amazon Kinesis Data Firehose.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-firehose)
-       */
-      override fun firehose(): Any? = unwrap(this).getFirehose()
-
-      /**
-       * Details about delivering logs to Amazon S3.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-s3)
-       */
-      override fun s3(): Any? = unwrap(this).getS3()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkerLogDeliveryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty):
-          WorkerLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WorkerLogDeliveryProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WorkerLogDeliveryProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty
     }
   }
 
@@ -3157,7 +2497,7 @@ public open class CfnConnector internal constructor(
   }
 
   /**
-   * Specifies how the connector scales.
+   * Details about a connector's provisioned capacity.
    *
    * Example:
    *
@@ -3165,131 +2505,59 @@ public open class CfnConnector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
-   * AutoScalingProperty autoScalingProperty = AutoScalingProperty.builder()
-   * .maxWorkerCount(123)
+   * ProvisionedCapacityProperty provisionedCapacityProperty = ProvisionedCapacityProperty.builder()
+   * .workerCount(123)
+   * // the properties below are optional
    * .mcuCount(123)
-   * .minWorkerCount(123)
-   * .scaleInPolicy(ScaleInPolicyProperty.builder()
-   * .cpuUtilizationPercentage(123)
-   * .build())
-   * .scaleOutPolicy(ScaleOutPolicyProperty.builder()
-   * .cpuUtilizationPercentage(123)
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html)
    */
-  public interface AutoScalingProperty {
-    /**
-     * The maximum number of workers allocated to the connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-maxworkercount)
-     */
-    public fun maxWorkerCount(): Number
-
+  public interface ProvisionedCapacityProperty {
     /**
      * The number of microcontroller units (MCUs) allocated to each connector worker.
      *
      * The valid values are 1,2,4,8.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-mcucount)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html#cfn-kafkaconnect-connector-provisionedcapacity-mcucount)
      */
-    public fun mcuCount(): Number
+    public fun mcuCount(): Number? = unwrap(this).getMcuCount()
 
     /**
-     * The minimum number of workers allocated to the connector.
+     * The number of workers that are allocated to the connector.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-minworkercount)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html#cfn-kafkaconnect-connector-provisionedcapacity-workercount)
      */
-    public fun minWorkerCount(): Number
+    public fun workerCount(): Number
 
     /**
-     * The sacle-in policy for the connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-scaleinpolicy)
-     */
-    public fun scaleInPolicy(): Any
-
-    /**
-     * The sacle-out policy for the connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-scaleoutpolicy)
-     */
-    public fun scaleOutPolicy(): Any
-
-    /**
-     * A builder for [AutoScalingProperty]
+     * A builder for [ProvisionedCapacityProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxWorkerCount The maximum number of workers allocated to the connector. 
-       */
-      public fun maxWorkerCount(maxWorkerCount: Number)
-
-      /**
        * @param mcuCount The number of microcontroller units (MCUs) allocated to each connector
-       * worker. 
+       * worker.
        * The valid values are 1,2,4,8.
        */
       public fun mcuCount(mcuCount: Number)
 
       /**
-       * @param minWorkerCount The minimum number of workers allocated to the connector. 
+       * @param workerCount The number of workers that are allocated to the connector. 
        */
-      public fun minWorkerCount(minWorkerCount: Number)
-
-      /**
-       * @param scaleInPolicy The sacle-in policy for the connector. 
-       */
-      public fun scaleInPolicy(scaleInPolicy: IResolvable)
-
-      /**
-       * @param scaleInPolicy The sacle-in policy for the connector. 
-       */
-      public fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty)
-
-      /**
-       * @param scaleInPolicy The sacle-in policy for the connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("924a00c92bc533726be73cecf82968cb4d0833bcbd4018288d92d9c5250bc720")
-      public fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty.Builder.() -> Unit)
-
-      /**
-       * @param scaleOutPolicy The sacle-out policy for the connector. 
-       */
-      public fun scaleOutPolicy(scaleOutPolicy: IResolvable)
-
-      /**
-       * @param scaleOutPolicy The sacle-out policy for the connector. 
-       */
-      public fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty)
-
-      /**
-       * @param scaleOutPolicy The sacle-out policy for the connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("758b465f5bd575830bc6a5bd3795c00ca401ed930331d39366b2312db08cbbf3")
-      public fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty.Builder.() -> Unit)
+      public fun workerCount(workerCount: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty.Builder =
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty.builder()
-
-      /**
-       * @param maxWorkerCount The maximum number of workers allocated to the connector. 
-       */
-      override fun maxWorkerCount(maxWorkerCount: Number) {
-        cdkBuilder.maxWorkerCount(maxWorkerCount)
-      }
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty.Builder
+          =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty.builder()
 
       /**
        * @param mcuCount The number of microcontroller units (MCUs) allocated to each connector
-       * worker. 
+       * worker.
        * The valid values are 1,2,4,8.
        */
       override fun mcuCount(mcuCount: Number) {
@@ -3297,118 +2565,850 @@ public open class CfnConnector internal constructor(
       }
 
       /**
-       * @param minWorkerCount The minimum number of workers allocated to the connector. 
+       * @param workerCount The number of workers that are allocated to the connector. 
        */
-      override fun minWorkerCount(minWorkerCount: Number) {
-        cdkBuilder.minWorkerCount(minWorkerCount)
+      override fun workerCount(workerCount: Number) {
+        cdkBuilder.workerCount(workerCount)
       }
-
-      /**
-       * @param scaleInPolicy The sacle-in policy for the connector. 
-       */
-      override fun scaleInPolicy(scaleInPolicy: IResolvable) {
-        cdkBuilder.scaleInPolicy(scaleInPolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scaleInPolicy The sacle-in policy for the connector. 
-       */
-      override fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty) {
-        cdkBuilder.scaleInPolicy(scaleInPolicy.let(ScaleInPolicyProperty::unwrap))
-      }
-
-      /**
-       * @param scaleInPolicy The sacle-in policy for the connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("924a00c92bc533726be73cecf82968cb4d0833bcbd4018288d92d9c5250bc720")
-      override fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty.Builder.() -> Unit): Unit =
-          scaleInPolicy(ScaleInPolicyProperty(scaleInPolicy))
-
-      /**
-       * @param scaleOutPolicy The sacle-out policy for the connector. 
-       */
-      override fun scaleOutPolicy(scaleOutPolicy: IResolvable) {
-        cdkBuilder.scaleOutPolicy(scaleOutPolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scaleOutPolicy The sacle-out policy for the connector. 
-       */
-      override fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty) {
-        cdkBuilder.scaleOutPolicy(scaleOutPolicy.let(ScaleOutPolicyProperty::unwrap))
-      }
-
-      /**
-       * @param scaleOutPolicy The sacle-out policy for the connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("758b465f5bd575830bc6a5bd3795c00ca401ed930331d39366b2312db08cbbf3")
-      override fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty.Builder.() -> Unit): Unit =
-          scaleOutPolicy(ScaleOutPolicyProperty(scaleOutPolicy))
 
       public fun build():
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty,
-    ) : CdkObject(cdkObject), AutoScalingProperty {
-      /**
-       * The maximum number of workers allocated to the connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-maxworkercount)
-       */
-      override fun maxWorkerCount(): Number = unwrap(this).getMaxWorkerCount()
-
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty,
+    ) : CdkObject(cdkObject), ProvisionedCapacityProperty {
       /**
        * The number of microcontroller units (MCUs) allocated to each connector worker.
        *
        * The valid values are 1,2,4,8.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-mcucount)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html#cfn-kafkaconnect-connector-provisionedcapacity-mcucount)
        */
-      override fun mcuCount(): Number = unwrap(this).getMcuCount()
+      override fun mcuCount(): Number? = unwrap(this).getMcuCount()
 
       /**
-       * The minimum number of workers allocated to the connector.
+       * The number of workers that are allocated to the connector.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-minworkercount)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html#cfn-kafkaconnect-connector-provisionedcapacity-workercount)
        */
-      override fun minWorkerCount(): Number = unwrap(this).getMinWorkerCount()
-
-      /**
-       * The sacle-in policy for the connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-scaleinpolicy)
-       */
-      override fun scaleInPolicy(): Any = unwrap(this).getScaleInPolicy()
-
-      /**
-       * The sacle-out policy for the connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html#cfn-kafkaconnect-connector-autoscaling-scaleoutpolicy)
-       */
-      override fun scaleOutPolicy(): Any = unwrap(this).getScaleOutPolicy()
+      override fun workerCount(): Number = unwrap(this).getWorkerCount()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoScalingProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProvisionedCapacityProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty):
-          AutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoScalingProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty):
+          ProvisionedCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisionedCapacityProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProvisionedCapacityProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty
+    }
+  }
+
+  /**
+   * Details about delivering logs to Amazon S3.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
+   * S3LogDeliveryProperty s3LogDeliveryProperty = S3LogDeliveryProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bucket("bucket")
+   * .prefix("prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html)
+   */
+  public interface S3LogDeliveryProperty {
+    /**
+     * The name of the S3 bucket that is the destination for log delivery.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-bucket)
+     */
+    public fun bucket(): String? = unwrap(this).getBucket()
+
+    /**
+     * Specifies whether connector logs get sent to the specified Amazon S3 destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * The S3 prefix that is the destination for log delivery.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-prefix)
+     */
+    public fun prefix(): String? = unwrap(this).getPrefix()
+
+    /**
+     * A builder for [S3LogDeliveryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The name of the S3 bucket that is the destination for log delivery.
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
+       * destination. 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
+       * destination. 
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param prefix The S3 prefix that is the destination for log delivery.
+       */
+      public fun prefix(prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty.Builder =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty.builder()
+
+      /**
+       * @param bucket The name of the S3 bucket that is the destination for log delivery.
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
+       * destination. 
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
+       * destination. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param prefix The S3 prefix that is the destination for log delivery.
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty,
+    ) : CdkObject(cdkObject), S3LogDeliveryProperty {
+      /**
+       * The name of the S3 bucket that is the destination for log delivery.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-bucket)
+       */
+      override fun bucket(): String? = unwrap(this).getBucket()
+
+      /**
+       * Specifies whether connector logs get sent to the specified Amazon S3 destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+
+      /**
+       * The S3 prefix that is the destination for log delivery.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html#cfn-kafkaconnect-connector-s3logdelivery-prefix)
+       */
+      override fun prefix(): String? = unwrap(this).getPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LogDeliveryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty):
+          S3LogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogDeliveryProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AutoScalingProperty):
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty = (wrapped
+      internal fun unwrap(wrapped: S3LogDeliveryProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty
+    }
+  }
+
+  /**
+   * The scale-in policy for the connector.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
+   * ScaleInPolicyProperty scaleInPolicyProperty = ScaleInPolicyProperty.builder()
+   * .cpuUtilizationPercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleinpolicy.html)
+   */
+  public interface ScaleInPolicyProperty {
+    /**
+     * Specifies the CPU utilization percentage threshold at which you want connector scale in to be
+     * triggered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleinpolicy.html#cfn-kafkaconnect-connector-scaleinpolicy-cpuutilizationpercentage)
+     */
+    public fun cpuUtilizationPercentage(): Number
+
+    /**
+     * A builder for [ScaleInPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpuUtilizationPercentage Specifies the CPU utilization percentage threshold at which
+       * you want connector scale in to be triggered. 
+       */
+      public fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty.Builder =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty.builder()
+
+      /**
+       * @param cpuUtilizationPercentage Specifies the CPU utilization percentage threshold at which
+       * you want connector scale in to be triggered. 
+       */
+      override fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number) {
+        cdkBuilder.cpuUtilizationPercentage(cpuUtilizationPercentage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty,
+    ) : CdkObject(cdkObject), ScaleInPolicyProperty {
+      /**
+       * Specifies the CPU utilization percentage threshold at which you want connector scale in to
+       * be triggered.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleinpolicy.html#cfn-kafkaconnect-connector-scaleinpolicy-cpuutilizationpercentage)
+       */
+      override fun cpuUtilizationPercentage(): Number = unwrap(this).getCpuUtilizationPercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScaleInPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty):
+          ScaleInPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ScaleInPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScaleInPolicyProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty
+    }
+  }
+
+  /**
+   * The scale-out policy for the connector.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
+   * ScaleOutPolicyProperty scaleOutPolicyProperty = ScaleOutPolicyProperty.builder()
+   * .cpuUtilizationPercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleoutpolicy.html)
+   */
+  public interface ScaleOutPolicyProperty {
+    /**
+     * The CPU utilization percentage threshold at which you want connector scale out to be
+     * triggered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleoutpolicy.html#cfn-kafkaconnect-connector-scaleoutpolicy-cpuutilizationpercentage)
+     */
+    public fun cpuUtilizationPercentage(): Number
+
+    /**
+     * A builder for [ScaleOutPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpuUtilizationPercentage The CPU utilization percentage threshold at which you want
+       * connector scale out to be triggered. 
+       */
+      public fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty.Builder =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty.builder()
+
+      /**
+       * @param cpuUtilizationPercentage The CPU utilization percentage threshold at which you want
+       * connector scale out to be triggered. 
+       */
+      override fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number) {
+        cdkBuilder.cpuUtilizationPercentage(cpuUtilizationPercentage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty,
+    ) : CdkObject(cdkObject), ScaleOutPolicyProperty {
+      /**
+       * The CPU utilization percentage threshold at which you want connector scale out to be
+       * triggered.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleoutpolicy.html#cfn-kafkaconnect-connector-scaleoutpolicy-cpuutilizationpercentage)
+       */
+      override fun cpuUtilizationPercentage(): Number = unwrap(this).getCpuUtilizationPercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScaleOutPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty):
+          ScaleOutPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ScaleOutPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScaleOutPolicyProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty
+    }
+  }
+
+  /**
+   * Information about the VPC in which the connector resides.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
+   * VpcProperty vpcProperty = VpcProperty.builder()
+   * .securityGroups(List.of("securityGroups"))
+   * .subnets(List.of("subnets"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html)
+   */
+  public interface VpcProperty {
+    /**
+     * The security groups for the connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-securitygroups)
+     */
+    public fun securityGroups(): List<String>
+
+    /**
+     * The subnets for the connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-subnets)
+     */
+    public fun subnets(): List<String>
+
+    /**
+     * A builder for [VpcProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroups The security groups for the connector. 
+       */
+      public fun securityGroups(securityGroups: List<String>)
+
+      /**
+       * @param securityGroups The security groups for the connector. 
+       */
+      public fun securityGroups(vararg securityGroups: String)
+
+      /**
+       * @param subnets The subnets for the connector. 
+       */
+      public fun subnets(subnets: List<String>)
+
+      /**
+       * @param subnets The subnets for the connector. 
+       */
+      public fun subnets(vararg subnets: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty.Builder =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty.builder()
+
+      /**
+       * @param securityGroups The security groups for the connector. 
+       */
+      override fun securityGroups(securityGroups: List<String>) {
+        cdkBuilder.securityGroups(securityGroups)
+      }
+
+      /**
+       * @param securityGroups The security groups for the connector. 
+       */
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
+      /**
+       * @param subnets The subnets for the connector. 
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
+      }
+
+      /**
+       * @param subnets The subnets for the connector. 
+       */
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
+      public fun build(): software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty,
+    ) : CdkObject(cdkObject), VpcProperty {
+      /**
+       * The security groups for the connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-securitygroups)
+       */
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups()
+
+      /**
+       * The subnets for the connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-subnets)
+       */
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty):
+          VpcProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty
+    }
+  }
+
+  /**
+   * The configuration of the workers, which are the processes that run the connector logic.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
+   * WorkerConfigurationProperty workerConfigurationProperty = WorkerConfigurationProperty.builder()
+   * .revision(123)
+   * .workerConfigurationArn("workerConfigurationArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html)
+   */
+  public interface WorkerConfigurationProperty {
+    /**
+     * The revision of the worker configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-revision)
+     */
+    public fun revision(): Number
+
+    /**
+     * The Amazon Resource Name (ARN) of the worker configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-workerconfigurationarn)
+     */
+    public fun workerConfigurationArn(): String
+
+    /**
+     * A builder for [WorkerConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param revision The revision of the worker configuration. 
+       */
+      public fun revision(revision: Number)
+
+      /**
+       * @param workerConfigurationArn The Amazon Resource Name (ARN) of the worker configuration. 
+       */
+      public fun workerConfigurationArn(workerConfigurationArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty.builder()
+
+      /**
+       * @param revision The revision of the worker configuration. 
+       */
+      override fun revision(revision: Number) {
+        cdkBuilder.revision(revision)
+      }
+
+      /**
+       * @param workerConfigurationArn The Amazon Resource Name (ARN) of the worker configuration. 
+       */
+      override fun workerConfigurationArn(workerConfigurationArn: String) {
+        cdkBuilder.workerConfigurationArn(workerConfigurationArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty,
+    ) : CdkObject(cdkObject), WorkerConfigurationProperty {
+      /**
+       * The revision of the worker configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-revision)
+       */
+      override fun revision(): Number = unwrap(this).getRevision()
+
+      /**
+       * The Amazon Resource Name (ARN) of the worker configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-workerconfigurationarn)
+       */
+      override fun workerConfigurationArn(): String = unwrap(this).getWorkerConfigurationArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WorkerConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty):
+          WorkerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkerConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WorkerConfigurationProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty
+    }
+  }
+
+  /**
+   * Workers can send worker logs to different destination types.
+   *
+   * This configuration specifies the details of these destinations.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kafkaconnect.*;
+   * WorkerLogDeliveryProperty workerLogDeliveryProperty = WorkerLogDeliveryProperty.builder()
+   * .cloudWatchLogs(CloudWatchLogsLogDeliveryProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .logGroup("logGroup")
+   * .build())
+   * .firehose(FirehoseLogDeliveryProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .deliveryStream("deliveryStream")
+   * .build())
+   * .s3(S3LogDeliveryProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bucket("bucket")
+   * .prefix("prefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html)
+   */
+  public interface WorkerLogDeliveryProperty {
+    /**
+     * Details about delivering logs to Amazon CloudWatch Logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-cloudwatchlogs)
+     */
+    public fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
+
+    /**
+     * Details about delivering logs to Amazon Kinesis Data Firehose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-firehose)
+     */
+    public fun firehose(): Any? = unwrap(this).getFirehose()
+
+    /**
+     * Details about delivering logs to Amazon S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-s3)
+     */
+    public fun s3(): Any? = unwrap(this).getS3()
+
+    /**
+     * A builder for [WorkerLogDeliveryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
+       */
+      public fun cloudWatchLogs(cloudWatchLogs: IResolvable)
+
+      /**
+       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
+       */
+      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty)
+
+      /**
+       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b34ed067daf3cee6b27e33033b603aa3c961ea9fe7de81813ea3812eddb8208")
+      public
+          fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty.Builder.() -> Unit)
+
+      /**
+       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
+       */
+      public fun firehose(firehose: IResolvable)
+
+      /**
+       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
+       */
+      public fun firehose(firehose: FirehoseLogDeliveryProperty)
+
+      /**
+       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2116faf9d5c1f153da9b6f426df7784b11b55d98d47ba0945959d2465615a8af")
+      public fun firehose(firehose: FirehoseLogDeliveryProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3 Details about delivering logs to Amazon S3.
+       */
+      public fun s3(s3: IResolvable)
+
+      /**
+       * @param s3 Details about delivering logs to Amazon S3.
+       */
+      public fun s3(s3: S3LogDeliveryProperty)
+
+      /**
+       * @param s3 Details about delivering logs to Amazon S3.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("833142e3bf8e8d5d48d244d2bbd4a8143694542994e5182c29c48d9a84385376")
+      public fun s3(s3: S3LogDeliveryProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty.Builder
+          =
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty.builder()
+
+      /**
+       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
+       */
+      override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
+       */
+      override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty) {
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsLogDeliveryProperty::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b34ed067daf3cee6b27e33033b603aa3c961ea9fe7de81813ea3812eddb8208")
+      override
+          fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty.Builder.() -> Unit):
+          Unit = cloudWatchLogs(CloudWatchLogsLogDeliveryProperty(cloudWatchLogs))
+
+      /**
+       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
+       */
+      override fun firehose(firehose: IResolvable) {
+        cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
+       */
+      override fun firehose(firehose: FirehoseLogDeliveryProperty) {
+        cdkBuilder.firehose(firehose.let(FirehoseLogDeliveryProperty::unwrap))
+      }
+
+      /**
+       * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2116faf9d5c1f153da9b6f426df7784b11b55d98d47ba0945959d2465615a8af")
+      override fun firehose(firehose: FirehoseLogDeliveryProperty.Builder.() -> Unit): Unit =
+          firehose(FirehoseLogDeliveryProperty(firehose))
+
+      /**
+       * @param s3 Details about delivering logs to Amazon S3.
+       */
+      override fun s3(s3: IResolvable) {
+        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3 Details about delivering logs to Amazon S3.
+       */
+      override fun s3(s3: S3LogDeliveryProperty) {
+        cdkBuilder.s3(s3.let(S3LogDeliveryProperty::unwrap))
+      }
+
+      /**
+       * @param s3 Details about delivering logs to Amazon S3.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("833142e3bf8e8d5d48d244d2bbd4a8143694542994e5182c29c48d9a84385376")
+      override fun s3(s3: S3LogDeliveryProperty.Builder.() -> Unit): Unit =
+          s3(S3LogDeliveryProperty(s3))
+
+      public fun build():
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty,
+    ) : CdkObject(cdkObject), WorkerLogDeliveryProperty {
+      /**
+       * Details about delivering logs to Amazon CloudWatch Logs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-cloudwatchlogs)
+       */
+      override fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
+
+      /**
+       * Details about delivering logs to Amazon Kinesis Data Firehose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-firehose)
+       */
+      override fun firehose(): Any? = unwrap(this).getFirehose()
+
+      /**
+       * Details about delivering logs to Amazon S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html#cfn-kafkaconnect-connector-workerlogdelivery-s3)
+       */
+      override fun s3(): Any? = unwrap(this).getS3()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WorkerLogDeliveryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty):
+          WorkerLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkerLogDeliveryProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WorkerLogDeliveryProperty):
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty
     }
   }
 }

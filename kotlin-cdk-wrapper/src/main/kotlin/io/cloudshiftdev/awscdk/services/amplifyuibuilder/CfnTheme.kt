@@ -423,6 +423,141 @@ public open class CfnTheme internal constructor(
   }
 
   /**
+   * The `ThemeValue` property specifies the configuration of a theme's properties.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * ThemeValueProperty themeValueProperty_;
+   * ThemeValueProperty themeValueProperty = ThemeValueProperty.builder()
+   * .children(List.of(ThemeValuesProperty.builder()
+   * .key("key")
+   * .value(themeValueProperty_)
+   * .build()))
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html)
+   */
+  public interface ThemeValueProperty {
+    /**
+     * A list of key-value pairs that define the theme's properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html#cfn-amplifyuibuilder-theme-themevalue-children)
+     */
+    public fun children(): Any? = unwrap(this).getChildren()
+
+    /**
+     * The value of a theme property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html#cfn-amplifyuibuilder-theme-themevalue-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ThemeValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param children A list of key-value pairs that define the theme's properties.
+       */
+      public fun children(children: IResolvable)
+
+      /**
+       * @param children A list of key-value pairs that define the theme's properties.
+       */
+      public fun children(children: List<Any>)
+
+      /**
+       * @param children A list of key-value pairs that define the theme's properties.
+       */
+      public fun children(vararg children: Any)
+
+      /**
+       * @param value The value of a theme property.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty.builder()
+
+      /**
+       * @param children A list of key-value pairs that define the theme's properties.
+       */
+      override fun children(children: IResolvable) {
+        cdkBuilder.children(children.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param children A list of key-value pairs that define the theme's properties.
+       */
+      override fun children(children: List<Any>) {
+        cdkBuilder.children(children)
+      }
+
+      /**
+       * @param children A list of key-value pairs that define the theme's properties.
+       */
+      override fun children(vararg children: Any): Unit = children(children.toList())
+
+      /**
+       * @param value The value of a theme property.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty,
+    ) : CdkObject(cdkObject), ThemeValueProperty {
+      /**
+       * A list of key-value pairs that define the theme's properties.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html#cfn-amplifyuibuilder-theme-themevalue-children)
+       */
+      override fun children(): Any? = unwrap(this).getChildren()
+
+      /**
+       * The value of a theme property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html#cfn-amplifyuibuilder-theme-themevalue-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ThemeValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty):
+          ThemeValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ThemeValueProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ThemeValueProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty
+    }
+  }
+
+  /**
    * The `ThemeValues` property specifies key-value pair that defines a property of a theme.
    *
    * Example:
@@ -559,141 +694,6 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty
-    }
-  }
-
-  /**
-   * The `ThemeValue` property specifies the configuration of a theme's properties.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * ThemeValueProperty themeValueProperty_;
-   * ThemeValueProperty themeValueProperty = ThemeValueProperty.builder()
-   * .children(List.of(ThemeValuesProperty.builder()
-   * .key("key")
-   * .value(themeValueProperty_)
-   * .build()))
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html)
-   */
-  public interface ThemeValueProperty {
-    /**
-     * A list of key-value pairs that define the theme's properties.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html#cfn-amplifyuibuilder-theme-themevalue-children)
-     */
-    public fun children(): Any? = unwrap(this).getChildren()
-
-    /**
-     * The value of a theme property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html#cfn-amplifyuibuilder-theme-themevalue-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ThemeValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param children A list of key-value pairs that define the theme's properties.
-       */
-      public fun children(children: IResolvable)
-
-      /**
-       * @param children A list of key-value pairs that define the theme's properties.
-       */
-      public fun children(children: List<Any>)
-
-      /**
-       * @param children A list of key-value pairs that define the theme's properties.
-       */
-      public fun children(vararg children: Any)
-
-      /**
-       * @param value The value of a theme property.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty.builder()
-
-      /**
-       * @param children A list of key-value pairs that define the theme's properties.
-       */
-      override fun children(children: IResolvable) {
-        cdkBuilder.children(children.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param children A list of key-value pairs that define the theme's properties.
-       */
-      override fun children(children: List<Any>) {
-        cdkBuilder.children(children)
-      }
-
-      /**
-       * @param children A list of key-value pairs that define the theme's properties.
-       */
-      override fun children(vararg children: Any): Unit = children(children.toList())
-
-      /**
-       * @param value The value of a theme property.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty,
-    ) : CdkObject(cdkObject), ThemeValueProperty {
-      /**
-       * A list of key-value pairs that define the theme's properties.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html#cfn-amplifyuibuilder-theme-themevalue-children)
-       */
-      override fun children(): Any? = unwrap(this).getChildren()
-
-      /**
-       * The value of a theme property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html#cfn-amplifyuibuilder-theme-themevalue-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ThemeValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty):
-          ThemeValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ThemeValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ThemeValueProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty
     }
   }
 }

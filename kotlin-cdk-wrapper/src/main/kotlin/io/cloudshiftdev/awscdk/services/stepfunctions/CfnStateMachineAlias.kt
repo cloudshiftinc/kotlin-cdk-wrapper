@@ -691,138 +691,6 @@ public open class CfnStateMachineAlias internal constructor(
   }
 
   /**
-   * The state machine version to which you want to route the execution traffic.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
-   * RoutingConfigurationVersionProperty routingConfigurationVersionProperty =
-   * RoutingConfigurationVersionProperty.builder()
-   * .stateMachineVersionArn("stateMachineVersionArn")
-   * .weight(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html)
-   */
-  public interface RoutingConfigurationVersionProperty {
-    /**
-     * The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in
-     * the routing configuration.
-     *
-     * If you specify the ARN of a second version, it must belong to the same state machine as the
-     * first version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html#cfn-stepfunctions-statemachinealias-routingconfigurationversion-statemachineversionarn)
-     */
-    public fun stateMachineVersionArn(): String
-
-    /**
-     * The percentage of traffic you want to route to the state machine version.
-     *
-     * The sum of the weights in the routing configuration must be equal to 100.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html#cfn-stepfunctions-statemachinealias-routingconfigurationversion-weight)
-     */
-    public fun weight(): Number
-
-    /**
-     * A builder for [RoutingConfigurationVersionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param stateMachineVersionArn The Amazon Resource Name (ARN) that identifies one or two
-       * state machine versions defined in the routing configuration. 
-       * If you specify the ARN of a second version, it must belong to the same state machine as the
-       * first version.
-       */
-      public fun stateMachineVersionArn(stateMachineVersionArn: String)
-
-      /**
-       * @param weight The percentage of traffic you want to route to the state machine version. 
-       * The sum of the weights in the routing configuration must be equal to 100.
-       */
-      public fun weight(weight: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty.Builder
-          =
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty.builder()
-
-      /**
-       * @param stateMachineVersionArn The Amazon Resource Name (ARN) that identifies one or two
-       * state machine versions defined in the routing configuration. 
-       * If you specify the ARN of a second version, it must belong to the same state machine as the
-       * first version.
-       */
-      override fun stateMachineVersionArn(stateMachineVersionArn: String) {
-        cdkBuilder.stateMachineVersionArn(stateMachineVersionArn)
-      }
-
-      /**
-       * @param weight The percentage of traffic you want to route to the state machine version. 
-       * The sum of the weights in the routing configuration must be equal to 100.
-       */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty,
-    ) : CdkObject(cdkObject), RoutingConfigurationVersionProperty {
-      /**
-       * The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in
-       * the routing configuration.
-       *
-       * If you specify the ARN of a second version, it must belong to the same state machine as the
-       * first version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html#cfn-stepfunctions-statemachinealias-routingconfigurationversion-statemachineversionarn)
-       */
-      override fun stateMachineVersionArn(): String = unwrap(this).getStateMachineVersionArn()
-
-      /**
-       * The percentage of traffic you want to route to the state machine version.
-       *
-       * The sum of the weights in the routing configuration must be equal to 100.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html#cfn-stepfunctions-statemachinealias-routingconfigurationversion-weight)
-       */
-      override fun weight(): Number = unwrap(this).getWeight()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RoutingConfigurationVersionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty):
-          RoutingConfigurationVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RoutingConfigurationVersionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RoutingConfigurationVersionProperty):
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty
-    }
-  }
-
-  /**
    * Enables gradual state machine deployments.
    *
    * CloudFormation automatically shifts traffic from the version the alias currently points to, to
@@ -1135,6 +1003,138 @@ public open class CfnStateMachineAlias internal constructor(
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty
+    }
+  }
+
+  /**
+   * The state machine version to which you want to route the execution traffic.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+   * RoutingConfigurationVersionProperty routingConfigurationVersionProperty =
+   * RoutingConfigurationVersionProperty.builder()
+   * .stateMachineVersionArn("stateMachineVersionArn")
+   * .weight(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html)
+   */
+  public interface RoutingConfigurationVersionProperty {
+    /**
+     * The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in
+     * the routing configuration.
+     *
+     * If you specify the ARN of a second version, it must belong to the same state machine as the
+     * first version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html#cfn-stepfunctions-statemachinealias-routingconfigurationversion-statemachineversionarn)
+     */
+    public fun stateMachineVersionArn(): String
+
+    /**
+     * The percentage of traffic you want to route to the state machine version.
+     *
+     * The sum of the weights in the routing configuration must be equal to 100.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html#cfn-stepfunctions-statemachinealias-routingconfigurationversion-weight)
+     */
+    public fun weight(): Number
+
+    /**
+     * A builder for [RoutingConfigurationVersionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param stateMachineVersionArn The Amazon Resource Name (ARN) that identifies one or two
+       * state machine versions defined in the routing configuration. 
+       * If you specify the ARN of a second version, it must belong to the same state machine as the
+       * first version.
+       */
+      public fun stateMachineVersionArn(stateMachineVersionArn: String)
+
+      /**
+       * @param weight The percentage of traffic you want to route to the state machine version. 
+       * The sum of the weights in the routing configuration must be equal to 100.
+       */
+      public fun weight(weight: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty.Builder
+          =
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty.builder()
+
+      /**
+       * @param stateMachineVersionArn The Amazon Resource Name (ARN) that identifies one or two
+       * state machine versions defined in the routing configuration. 
+       * If you specify the ARN of a second version, it must belong to the same state machine as the
+       * first version.
+       */
+      override fun stateMachineVersionArn(stateMachineVersionArn: String) {
+        cdkBuilder.stateMachineVersionArn(stateMachineVersionArn)
+      }
+
+      /**
+       * @param weight The percentage of traffic you want to route to the state machine version. 
+       * The sum of the weights in the routing configuration must be equal to 100.
+       */
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty,
+    ) : CdkObject(cdkObject), RoutingConfigurationVersionProperty {
+      /**
+       * The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in
+       * the routing configuration.
+       *
+       * If you specify the ARN of a second version, it must belong to the same state machine as the
+       * first version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html#cfn-stepfunctions-statemachinealias-routingconfigurationversion-statemachineversionarn)
+       */
+      override fun stateMachineVersionArn(): String = unwrap(this).getStateMachineVersionArn()
+
+      /**
+       * The percentage of traffic you want to route to the state machine version.
+       *
+       * The sum of the weights in the routing configuration must be equal to 100.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html#cfn-stepfunctions-statemachinealias-routingconfigurationversion-weight)
+       */
+      override fun weight(): Number = unwrap(this).getWeight()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RoutingConfigurationVersionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty):
+          RoutingConfigurationVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RoutingConfigurationVersionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RoutingConfigurationVersionProperty):
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty
     }
   }
 }

@@ -909,6 +909,179 @@ public open class CfnMetricStream internal constructor(
   }
 
   /**
+   * This structure contains a metric namespace and optionally, a list of metric names, to either
+   * include in a metric ' stream or exclude from a metric stream.
+   *
+   * A metric stream's filters can include up to 1000 total names. This limit applies to the sum of
+   * namespace names and metric names in the filters. For example, this could include 10 metric
+   * namespace filters with 99 metrics each, or 20 namespace filters with 49 metrics specified in each
+   * filter.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+   * MetricStreamFilterProperty metricStreamFilterProperty = MetricStreamFilterProperty.builder()
+   * .namespace("namespace")
+   * // the properties below are optional
+   * .metricNames(List.of("metricNames"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html)
+   */
+  public interface MetricStreamFilterProperty {
+    /**
+     * The names of the metrics to either include or exclude from the metric stream.
+     *
+     * If you omit this parameter, all metrics in the namespace are included or excluded, depending
+     * on whether this filter is specified as an exclude filter or an include filter.
+     *
+     * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
+     * Each metric name must contain at least one non-whitespace character.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-metricnames)
+     */
+    public fun metricNames(): List<String> = unwrap(this).getMetricNames() ?: emptyList()
+
+    /**
+     * The name of the metric namespace in the filter.
+     *
+     * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It
+     * must contain at least one non-whitespace character.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-namespace)
+     */
+    public fun namespace(): String
+
+    /**
+     * A builder for [MetricStreamFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metricNames The names of the metrics to either include or exclude from the metric
+       * stream.
+       * If you omit this parameter, all metrics in the namespace are included or excluded,
+       * depending on whether this filter is specified as an exclude filter or an include filter.
+       *
+       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
+       * Each metric name must contain at least one non-whitespace character.
+       */
+      public fun metricNames(metricNames: List<String>)
+
+      /**
+       * @param metricNames The names of the metrics to either include or exclude from the metric
+       * stream.
+       * If you omit this parameter, all metrics in the namespace are included or excluded,
+       * depending on whether this filter is specified as an exclude filter or an include filter.
+       *
+       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
+       * Each metric name must contain at least one non-whitespace character.
+       */
+      public fun metricNames(vararg metricNames: String)
+
+      /**
+       * @param namespace The name of the metric namespace in the filter. 
+       * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It
+       * must contain at least one non-whitespace character.
+       */
+      public fun namespace(namespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty.builder()
+
+      /**
+       * @param metricNames The names of the metrics to either include or exclude from the metric
+       * stream.
+       * If you omit this parameter, all metrics in the namespace are included or excluded,
+       * depending on whether this filter is specified as an exclude filter or an include filter.
+       *
+       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
+       * Each metric name must contain at least one non-whitespace character.
+       */
+      override fun metricNames(metricNames: List<String>) {
+        cdkBuilder.metricNames(metricNames)
+      }
+
+      /**
+       * @param metricNames The names of the metrics to either include or exclude from the metric
+       * stream.
+       * If you omit this parameter, all metrics in the namespace are included or excluded,
+       * depending on whether this filter is specified as an exclude filter or an include filter.
+       *
+       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
+       * Each metric name must contain at least one non-whitespace character.
+       */
+      override fun metricNames(vararg metricNames: String): Unit = metricNames(metricNames.toList())
+
+      /**
+       * @param namespace The name of the metric namespace in the filter. 
+       * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It
+       * must contain at least one non-whitespace character.
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty,
+    ) : CdkObject(cdkObject), MetricStreamFilterProperty {
+      /**
+       * The names of the metrics to either include or exclude from the metric stream.
+       *
+       * If you omit this parameter, all metrics in the namespace are included or excluded,
+       * depending on whether this filter is specified as an exclude filter or an include filter.
+       *
+       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
+       * Each metric name must contain at least one non-whitespace character.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-metricnames)
+       */
+      override fun metricNames(): List<String> = unwrap(this).getMetricNames() ?: emptyList()
+
+      /**
+       * The name of the metric namespace in the filter.
+       *
+       * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It
+       * must contain at least one non-whitespace character.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-namespace)
+       */
+      override fun namespace(): String = unwrap(this).getNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricStreamFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty):
+          MetricStreamFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricStreamFilterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricStreamFilterProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty
+    }
+  }
+
+  /**
    * This structure specifies a list of additional statistics to stream, and the metrics to stream
    * those additional statistics for.
    *
@@ -1181,179 +1354,6 @@ public open class CfnMetricStream internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
-    }
-  }
-
-  /**
-   * This structure contains a metric namespace and optionally, a list of metric names, to either
-   * include in a metric ' stream or exclude from a metric stream.
-   *
-   * A metric stream's filters can include up to 1000 total names. This limit applies to the sum of
-   * namespace names and metric names in the filters. For example, this could include 10 metric
-   * namespace filters with 99 metrics each, or 20 namespace filters with 49 metrics specified in each
-   * filter.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * MetricStreamFilterProperty metricStreamFilterProperty = MetricStreamFilterProperty.builder()
-   * .namespace("namespace")
-   * // the properties below are optional
-   * .metricNames(List.of("metricNames"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html)
-   */
-  public interface MetricStreamFilterProperty {
-    /**
-     * The names of the metrics to either include or exclude from the metric stream.
-     *
-     * If you omit this parameter, all metrics in the namespace are included or excluded, depending
-     * on whether this filter is specified as an exclude filter or an include filter.
-     *
-     * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
-     * Each metric name must contain at least one non-whitespace character.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-metricnames)
-     */
-    public fun metricNames(): List<String> = unwrap(this).getMetricNames() ?: emptyList()
-
-    /**
-     * The name of the metric namespace in the filter.
-     *
-     * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It
-     * must contain at least one non-whitespace character.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-namespace)
-     */
-    public fun namespace(): String
-
-    /**
-     * A builder for [MetricStreamFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param metricNames The names of the metrics to either include or exclude from the metric
-       * stream.
-       * If you omit this parameter, all metrics in the namespace are included or excluded,
-       * depending on whether this filter is specified as an exclude filter or an include filter.
-       *
-       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
-       * Each metric name must contain at least one non-whitespace character.
-       */
-      public fun metricNames(metricNames: List<String>)
-
-      /**
-       * @param metricNames The names of the metrics to either include or exclude from the metric
-       * stream.
-       * If you omit this parameter, all metrics in the namespace are included or excluded,
-       * depending on whether this filter is specified as an exclude filter or an include filter.
-       *
-       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
-       * Each metric name must contain at least one non-whitespace character.
-       */
-      public fun metricNames(vararg metricNames: String)
-
-      /**
-       * @param namespace The name of the metric namespace in the filter. 
-       * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It
-       * must contain at least one non-whitespace character.
-       */
-      public fun namespace(namespace: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty.builder()
-
-      /**
-       * @param metricNames The names of the metrics to either include or exclude from the metric
-       * stream.
-       * If you omit this parameter, all metrics in the namespace are included or excluded,
-       * depending on whether this filter is specified as an exclude filter or an include filter.
-       *
-       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
-       * Each metric name must contain at least one non-whitespace character.
-       */
-      override fun metricNames(metricNames: List<String>) {
-        cdkBuilder.metricNames(metricNames)
-      }
-
-      /**
-       * @param metricNames The names of the metrics to either include or exclude from the metric
-       * stream.
-       * If you omit this parameter, all metrics in the namespace are included or excluded,
-       * depending on whether this filter is specified as an exclude filter or an include filter.
-       *
-       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
-       * Each metric name must contain at least one non-whitespace character.
-       */
-      override fun metricNames(vararg metricNames: String): Unit = metricNames(metricNames.toList())
-
-      /**
-       * @param namespace The name of the metric namespace in the filter. 
-       * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It
-       * must contain at least one non-whitespace character.
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty,
-    ) : CdkObject(cdkObject), MetricStreamFilterProperty {
-      /**
-       * The names of the metrics to either include or exclude from the metric stream.
-       *
-       * If you omit this parameter, all metrics in the namespace are included or excluded,
-       * depending on whether this filter is specified as an exclude filter or an include filter.
-       *
-       * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126).
-       * Each metric name must contain at least one non-whitespace character.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-metricnames)
-       */
-      override fun metricNames(): List<String> = unwrap(this).getMetricNames() ?: emptyList()
-
-      /**
-       * The name of the metric namespace in the filter.
-       *
-       * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It
-       * must contain at least one non-whitespace character.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-namespace)
-       */
-      override fun namespace(): String = unwrap(this).getNamespace()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricStreamFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty):
-          MetricStreamFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetricStreamFilterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricStreamFilterProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty
     }
   }
 }

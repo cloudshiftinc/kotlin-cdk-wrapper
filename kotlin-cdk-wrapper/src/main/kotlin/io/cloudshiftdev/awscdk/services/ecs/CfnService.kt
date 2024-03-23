@@ -2221,12 +2221,9 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * An object that represents the timeout configurations for Service Connect.
+   * An object representing the networking details for a task or service.
    *
-   *
-   * If `idleTimeout` is set to a time that is less than `perRequestTimeout` , the connection will
-   * close when the `idleTimeout` is reached and not the `perRequestTimeout` .
-   *
+   * For example `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
    *
    * Example:
    *
@@ -2234,145 +2231,1663 @@ public open class CfnService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * TimeoutConfigurationProperty timeoutConfigurationProperty =
-   * TimeoutConfigurationProperty.builder()
-   * .idleTimeoutSeconds(123)
-   * .perRequestTimeoutSeconds(123)
+   * AwsVpcConfigurationProperty awsVpcConfigurationProperty = AwsVpcConfigurationProperty.builder()
+   * .assignPublicIp("assignPublicIp")
+   * .securityGroups(List.of("securityGroups"))
+   * .subnets(List.of("subnets"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html)
    */
-  public interface TimeoutConfigurationProperty {
+  public interface AwsVpcConfigurationProperty {
     /**
-     * The amount of time in seconds a connection will stay active while idle.
+     * Whether the task's elastic network interface receives a public IP address.
      *
-     * A value of `0` can be set to disable `idleTimeout` .
+     * The default value is `DISABLED` .
      *
-     * The `idleTimeout` default for `HTTP` / `HTTP2` / `GRPC` is 5 minutes.
-     *
-     * The `idleTimeout` default for `TCP` is 1 hour.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html#cfn-ecs-service-timeoutconfiguration-idletimeoutseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
      */
-    public fun idleTimeoutSeconds(): Number? = unwrap(this).getIdleTimeoutSeconds()
+    public fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
 
     /**
-     * The amount of time waiting for the upstream to respond with a complete response per request.
+     * The IDs of the security groups associated with the task or service.
      *
-     * A value of `0` can be set to disable `perRequestTimeout` . `perRequestTimeout` can only be
-     * set if Service Connect `appProtocol` isn't `TCP` . Only `idleTimeout` is allowed for `TCP`
-     * `appProtocol` .
+     * If you don't specify a security group, the default security group for the VPC is used.
+     * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html#cfn-ecs-service-timeoutconfiguration-perrequesttimeoutseconds)
+     *
+     * All specified security groups must be from the same VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups)
      */
-    public fun perRequestTimeoutSeconds(): Number? = unwrap(this).getPerRequestTimeoutSeconds()
+    public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
     /**
-     * A builder for [TimeoutConfigurationProperty]
+     * The IDs of the subnets associated with the task or service.
+     *
+     * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+     *
+     *
+     * All specified subnets must be from the same VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets)
+     */
+    public fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+
+    /**
+     * A builder for [AwsVpcConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param idleTimeoutSeconds The amount of time in seconds a connection will stay active while
-       * idle.
-       * A value of `0` can be set to disable `idleTimeout` .
-       *
-       * The `idleTimeout` default for `HTTP` / `HTTP2` / `GRPC` is 5 minutes.
-       *
-       * The `idleTimeout` default for `TCP` is 1 hour.
+       * @param assignPublicIp Whether the task's elastic network interface receives a public IP
+       * address.
+       * The default value is `DISABLED` .
        */
-      public fun idleTimeoutSeconds(idleTimeoutSeconds: Number)
+      public fun assignPublicIp(assignPublicIp: String)
 
       /**
-       * @param perRequestTimeoutSeconds The amount of time waiting for the upstream to respond with
-       * a complete response per request.
-       * A value of `0` can be set to disable `perRequestTimeout` . `perRequestTimeout` can only be
-       * set if Service Connect `appProtocol` isn't `TCP` . Only `idleTimeout` is allowed for `TCP`
-       * `appProtocol` .
+       * @param securityGroups The IDs of the security groups associated with the task or service.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified security groups must be from the same VPC.
        */
-      public fun perRequestTimeoutSeconds(perRequestTimeoutSeconds: Number)
+      public fun securityGroups(securityGroups: List<String>)
+
+      /**
+       * @param securityGroups The IDs of the security groups associated with the task or service.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified security groups must be from the same VPC.
+       */
+      public fun securityGroups(vararg securityGroups: String)
+
+      /**
+       * @param subnets The IDs of the subnets associated with the task or service.
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       */
+      public fun subnets(subnets: List<String>)
+
+      /**
+       * @param subnets The IDs of the subnets associated with the task or service.
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       */
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty.builder()
 
       /**
-       * @param idleTimeoutSeconds The amount of time in seconds a connection will stay active while
-       * idle.
-       * A value of `0` can be set to disable `idleTimeout` .
-       *
-       * The `idleTimeout` default for `HTTP` / `HTTP2` / `GRPC` is 5 minutes.
-       *
-       * The `idleTimeout` default for `TCP` is 1 hour.
+       * @param assignPublicIp Whether the task's elastic network interface receives a public IP
+       * address.
+       * The default value is `DISABLED` .
        */
-      override fun idleTimeoutSeconds(idleTimeoutSeconds: Number) {
-        cdkBuilder.idleTimeoutSeconds(idleTimeoutSeconds)
+      override fun assignPublicIp(assignPublicIp: String) {
+        cdkBuilder.assignPublicIp(assignPublicIp)
       }
 
       /**
-       * @param perRequestTimeoutSeconds The amount of time waiting for the upstream to respond with
-       * a complete response per request.
-       * A value of `0` can be set to disable `perRequestTimeout` . `perRequestTimeout` can only be
-       * set if Service Connect `appProtocol` isn't `TCP` . Only `idleTimeout` is allowed for `TCP`
-       * `appProtocol` .
+       * @param securityGroups The IDs of the security groups associated with the task or service.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified security groups must be from the same VPC.
        */
-      override fun perRequestTimeoutSeconds(perRequestTimeoutSeconds: Number) {
-        cdkBuilder.perRequestTimeoutSeconds(perRequestTimeoutSeconds)
+      override fun securityGroups(securityGroups: List<String>) {
+        cdkBuilder.securityGroups(securityGroups)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty =
-          cdkBuilder.build()
+      /**
+       * @param securityGroups The IDs of the security groups associated with the task or service.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified security groups must be from the same VPC.
+       */
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
+      /**
+       * @param subnets The IDs of the subnets associated with the task or service.
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
+      }
+
+      /**
+       * @param subnets The IDs of the subnets associated with the task or service.
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       */
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty,
-    ) : CdkObject(cdkObject), TimeoutConfigurationProperty {
+          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty,
+    ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
       /**
-       * The amount of time in seconds a connection will stay active while idle.
+       * Whether the task's elastic network interface receives a public IP address.
        *
-       * A value of `0` can be set to disable `idleTimeout` .
+       * The default value is `DISABLED` .
        *
-       * The `idleTimeout` default for `HTTP` / `HTTP2` / `GRPC` is 5 minutes.
-       *
-       * The `idleTimeout` default for `TCP` is 1 hour.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html#cfn-ecs-service-timeoutconfiguration-idletimeoutseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
        */
-      override fun idleTimeoutSeconds(): Number? = unwrap(this).getIdleTimeoutSeconds()
+      override fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
 
       /**
-       * The amount of time waiting for the upstream to respond with a complete response per
-       * request.
+       * The IDs of the security groups associated with the task or service.
        *
-       * A value of `0` can be set to disable `perRequestTimeout` . `perRequestTimeout` can only be
-       * set if Service Connect `appProtocol` isn't `TCP` . Only `idleTimeout` is allowed for `TCP`
-       * `appProtocol` .
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html#cfn-ecs-service-timeoutconfiguration-perrequesttimeoutseconds)
+       *
+       * All specified security groups must be from the same VPC.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups)
        */
-      override fun perRequestTimeoutSeconds(): Number? = unwrap(this).getPerRequestTimeoutSeconds()
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+
+      /**
+       * The IDs of the subnets associated with the task or service.
+       *
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets)
+       */
+      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimeoutConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AwsVpcConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty):
-          TimeoutConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TimeoutConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty):
+          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TimeoutConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty = (wrapped as
+      internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty
+          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty
+    }
+  }
+
+  /**
+   * The details of a capacity provider strategy.
+   *
+   * A capacity provider strategy can be set when using the `RunTask` or `CreateService` APIs or as
+   * the default capacity provider strategy for a cluster with the `CreateCluster` API.
+   *
+   * Only capacity providers that are already associated with a cluster and have an `ACTIVE` or
+   * `UPDATING` status can be used in a capacity provider strategy. The `PutClusterCapacityProviders`
+   * API is used to associate a capacity provider with a cluster.
+   *
+   * If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must
+   * already be created. New Auto Scaling group capacity providers can be created with the
+   * `CreateCapacityProvider` API operation.
+   *
+   * To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT`
+   * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need
+   * to be associated with a cluster to be used in a capacity provider strategy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+   * CapacityProviderStrategyItemProperty.builder()
+   * .base(123)
+   * .capacityProvider("capacityProvider")
+   * .weight(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html)
+   */
+  public interface CapacityProviderStrategyItemProperty {
+    /**
+     * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
+     * provider.
+     *
+     * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+     * value is specified, the default value of `0` is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-base)
+     */
+    public fun base(): Number? = unwrap(this).getBase()
+
+    /**
+     * The short name of the capacity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-capacityprovider)
+     */
+    public fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
+
+    /**
+     * The *weight* value designates the relative percentage of the total number of tasks launched
+     * that should use the specified capacity provider.
+     *
+     * The `weight` value is taken into consideration after the `base` value, if defined, is
+     * satisfied.
+     *
+     * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+     * providers are specified within a capacity provider strategy, at least one of the capacity
+     * providers must have a weight value greater than zero and any capacity providers with a weight of
+     * `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy that
+     * all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity provider
+     * strategy will fail.
+     *
+     * An example scenario for using weights is defining a strategy that contains two capacity
+     * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+     * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+     * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every one
+     * task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-weight)
+     */
+    public fun weight(): Number? = unwrap(this).getWeight()
+
+    /**
+     * A builder for [CapacityProviderStrategyItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param base The *base* value designates how many tasks, at a minimum, to run on the
+       * specified capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       */
+      public fun base(base: Number)
+
+      /**
+       * @param capacityProvider The short name of the capacity provider.
+       */
+      public fun capacityProvider(capacityProvider: String)
+
+      /**
+       * @param weight The *weight* value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       */
+      public fun weight(weight: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty.builder()
+
+      /**
+       * @param base The *base* value designates how many tasks, at a minimum, to run on the
+       * specified capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       */
+      override fun base(base: Number) {
+        cdkBuilder.base(base)
+      }
+
+      /**
+       * @param capacityProvider The short name of the capacity provider.
+       */
+      override fun capacityProvider(capacityProvider: String) {
+        cdkBuilder.capacityProvider(capacityProvider)
+      }
+
+      /**
+       * @param weight The *weight* value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       */
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty,
+    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
+      /**
+       * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
+       * provider.
+       *
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-base)
+       */
+      override fun base(): Number? = unwrap(this).getBase()
+
+      /**
+       * The short name of the capacity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-capacityprovider)
+       */
+      override fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
+
+      /**
+       * The *weight* value designates the relative percentage of the total number of tasks launched
+       * that should use the specified capacity provider.
+       *
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-weight)
+       */
+      override fun weight(): Number? = unwrap(this).getWeight()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityProviderStrategyItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty):
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
+          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty
+    }
+  }
+
+  /**
+   * One of the methods which provide a way for you to quickly identify when a deployment has
+   * failed, and then to optionally roll back the failure to the last working deployment.
+   *
+   * When the alarms are generated, Amazon ECS sets the service deployment to failed. Set the
+   * rollback parameter to have Amazon ECS to roll back your service to the last completed deployment
+   * after a failure.
+   *
+   * You can only use the `DeploymentAlarms` method to detect failures when the
+   * `DeploymentController` is set to `ECS` (rolling update).
+   *
+   * For more information, see [Rolling
+   * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html) in
+   * the **Amazon Elastic Container Service Developer Guide** .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * DeploymentAlarmsProperty deploymentAlarmsProperty = DeploymentAlarmsProperty.builder()
+   * .alarmNames(List.of("alarmNames"))
+   * .enable(false)
+   * .rollback(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html)
+   */
+  public interface DeploymentAlarmsProperty {
+    /**
+     * One or more CloudWatch alarm names.
+     *
+     * Use a "," to separate the alarms.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-alarmnames)
+     */
+    public fun alarmNames(): List<String>
+
+    /**
+     * Determines whether to use the CloudWatch alarm option in the service deployment process.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-enable)
+     */
+    public fun enable(): Any
+
+    /**
+     * Determines whether to configure Amazon ECS to roll back the service if a service deployment
+     * fails.
+     *
+     * If rollback is used, when a service deployment fails, the service is rolled back to the last
+     * deployment that completed successfully.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-rollback)
+     */
+    public fun rollback(): Any
+
+    /**
+     * A builder for [DeploymentAlarmsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarmNames One or more CloudWatch alarm names. 
+       * Use a "," to separate the alarms.
+       */
+      public fun alarmNames(alarmNames: List<String>)
+
+      /**
+       * @param alarmNames One or more CloudWatch alarm names. 
+       * Use a "," to separate the alarms.
+       */
+      public fun alarmNames(vararg alarmNames: String)
+
+      /**
+       * @param enable Determines whether to use the CloudWatch alarm option in the service
+       * deployment process. 
+       */
+      public fun enable(enable: Boolean)
+
+      /**
+       * @param enable Determines whether to use the CloudWatch alarm option in the service
+       * deployment process. 
+       */
+      public fun enable(enable: IResolvable)
+
+      /**
+       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+       * service deployment fails. 
+       * If rollback is used, when a service deployment fails, the service is rolled back to the
+       * last deployment that completed successfully.
+       */
+      public fun rollback(rollback: Boolean)
+
+      /**
+       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+       * service deployment fails. 
+       * If rollback is used, when a service deployment fails, the service is rolled back to the
+       * last deployment that completed successfully.
+       */
+      public fun rollback(rollback: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty.builder()
+
+      /**
+       * @param alarmNames One or more CloudWatch alarm names. 
+       * Use a "," to separate the alarms.
+       */
+      override fun alarmNames(alarmNames: List<String>) {
+        cdkBuilder.alarmNames(alarmNames)
+      }
+
+      /**
+       * @param alarmNames One or more CloudWatch alarm names. 
+       * Use a "," to separate the alarms.
+       */
+      override fun alarmNames(vararg alarmNames: String): Unit = alarmNames(alarmNames.toList())
+
+      /**
+       * @param enable Determines whether to use the CloudWatch alarm option in the service
+       * deployment process. 
+       */
+      override fun enable(enable: Boolean) {
+        cdkBuilder.enable(enable)
+      }
+
+      /**
+       * @param enable Determines whether to use the CloudWatch alarm option in the service
+       * deployment process. 
+       */
+      override fun enable(enable: IResolvable) {
+        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+       * service deployment fails. 
+       * If rollback is used, when a service deployment fails, the service is rolled back to the
+       * last deployment that completed successfully.
+       */
+      override fun rollback(rollback: Boolean) {
+        cdkBuilder.rollback(rollback)
+      }
+
+      /**
+       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+       * service deployment fails. 
+       * If rollback is used, when a service deployment fails, the service is rolled back to the
+       * last deployment that completed successfully.
+       */
+      override fun rollback(rollback: IResolvable) {
+        cdkBuilder.rollback(rollback.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty,
+    ) : CdkObject(cdkObject), DeploymentAlarmsProperty {
+      /**
+       * One or more CloudWatch alarm names.
+       *
+       * Use a "," to separate the alarms.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-alarmnames)
+       */
+      override fun alarmNames(): List<String> = unwrap(this).getAlarmNames()
+
+      /**
+       * Determines whether to use the CloudWatch alarm option in the service deployment process.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-enable)
+       */
+      override fun enable(): Any = unwrap(this).getEnable()
+
+      /**
+       * Determines whether to configure Amazon ECS to roll back the service if a service deployment
+       * fails.
+       *
+       * If rollback is used, when a service deployment fails, the service is rolled back to the
+       * last deployment that completed successfully.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-rollback)
+       */
+      override fun rollback(): Any = unwrap(this).getRollback()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentAlarmsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty):
+          DeploymentAlarmsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentAlarmsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentAlarmsProperty):
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty
+    }
+  }
+
+  /**
+   * The deployment circuit breaker can only be used for services using the rolling update ( `ECS` )
+   * deployment type.
+   *
+   * The *deployment circuit breaker* determines whether a service deployment will fail if the
+   * service can't reach a steady state. If it is turned on, a service deployment will transition to a
+   * failed state and stop launching new tasks. You can also configure Amazon ECS to roll back your
+   * service to the last completed deployment after a failure. For more information, see [Rolling
+   * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html) in
+   * the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * For more information about API failure reasons, see [API failure
+   * reasons](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/api_failures_messages.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * DeploymentCircuitBreakerProperty deploymentCircuitBreakerProperty =
+   * DeploymentCircuitBreakerProperty.builder()
+   * .enable(false)
+   * .rollback(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html)
+   */
+  public interface DeploymentCircuitBreakerProperty {
+    /**
+     * Determines whether to use the deployment circuit breaker logic for the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-enable)
+     */
+    public fun enable(): Any
+
+    /**
+     * Determines whether to configure Amazon ECS to roll back the service if a service deployment
+     * fails.
+     *
+     * If rollback is on, when a service deployment fails, the service is rolled back to the last
+     * deployment that completed successfully.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-rollback)
+     */
+    public fun rollback(): Any
+
+    /**
+     * A builder for [DeploymentCircuitBreakerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enable Determines whether to use the deployment circuit breaker logic for the
+       * service. 
+       */
+      public fun enable(enable: Boolean)
+
+      /**
+       * @param enable Determines whether to use the deployment circuit breaker logic for the
+       * service. 
+       */
+      public fun enable(enable: IResolvable)
+
+      /**
+       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+       * service deployment fails. 
+       * If rollback is on, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully.
+       */
+      public fun rollback(rollback: Boolean)
+
+      /**
+       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+       * service deployment fails. 
+       * If rollback is on, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully.
+       */
+      public fun rollback(rollback: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty.builder()
+
+      /**
+       * @param enable Determines whether to use the deployment circuit breaker logic for the
+       * service. 
+       */
+      override fun enable(enable: Boolean) {
+        cdkBuilder.enable(enable)
+      }
+
+      /**
+       * @param enable Determines whether to use the deployment circuit breaker logic for the
+       * service. 
+       */
+      override fun enable(enable: IResolvable) {
+        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+       * service deployment fails. 
+       * If rollback is on, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully.
+       */
+      override fun rollback(rollback: Boolean) {
+        cdkBuilder.rollback(rollback)
+      }
+
+      /**
+       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+       * service deployment fails. 
+       * If rollback is on, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully.
+       */
+      override fun rollback(rollback: IResolvable) {
+        cdkBuilder.rollback(rollback.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty,
+    ) : CdkObject(cdkObject), DeploymentCircuitBreakerProperty {
+      /**
+       * Determines whether to use the deployment circuit breaker logic for the service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-enable)
+       */
+      override fun enable(): Any = unwrap(this).getEnable()
+
+      /**
+       * Determines whether to configure Amazon ECS to roll back the service if a service deployment
+       * fails.
+       *
+       * If rollback is on, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-rollback)
+       */
+      override fun rollback(): Any = unwrap(this).getRollback()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentCircuitBreakerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty):
+          DeploymentCircuitBreakerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentCircuitBreakerProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentCircuitBreakerProperty):
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty
+    }
+  }
+
+  /**
+   * The `DeploymentConfiguration` property specifies optional deployment parameters that control
+   * how many tasks run during the deployment and the ordering of stopping and starting tasks.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * DeploymentConfigurationProperty deploymentConfigurationProperty =
+   * DeploymentConfigurationProperty.builder()
+   * .alarms(DeploymentAlarmsProperty.builder()
+   * .alarmNames(List.of("alarmNames"))
+   * .enable(false)
+   * .rollback(false)
+   * .build())
+   * .deploymentCircuitBreaker(DeploymentCircuitBreakerProperty.builder()
+   * .enable(false)
+   * .rollback(false)
+   * .build())
+   * .maximumPercent(123)
+   * .minimumHealthyPercent(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html)
+   */
+  public interface DeploymentConfigurationProperty {
+    /**
+     * Information about the CloudWatch alarms.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-alarms)
+     */
+    public fun alarms(): Any? = unwrap(this).getAlarms()
+
+    /**
+     * The deployment circuit breaker can only be used for services using the rolling update ( `ECS`
+     * ) deployment type.
+     *
+     * The *deployment circuit breaker* determines whether a service deployment will fail if the
+     * service can't reach a steady state. If you use the deployment circuit breaker, a service
+     * deployment will transition to a failed state and stop launching new tasks. If you use the
+     * rollback option, when a service deployment fails, the service is rolled back to the last
+     * deployment that completed successfully. For more information, see [Rolling
+     * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html) in
+     * the *Amazon Elastic Container Service Developer Guide*
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker)
+     */
+    public fun deploymentCircuitBreaker(): Any? = unwrap(this).getDeploymentCircuitBreaker()
+
+    /**
+     * If a service is using the rolling update ( `ECS` ) deployment type, the `maximumPercent`
+     * parameter represents an upper limit on the number of your service's tasks that are allowed in
+     * the `RUNNING` or `PENDING` state during a deployment, as a percentage of the `desiredCount`
+     * (rounded down to the nearest integer).
+     *
+     * This parameter enables you to define the deployment batch size. For example, if your service
+     * is using the `REPLICA` service scheduler and has a `desiredCount` of four tasks and a
+     * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the four
+     * older tasks (provided that the cluster resources required to do this are available). The default
+     * `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
+     *
+     * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types
+     * and tasks that use the EC2 launch type, the *maximum percent* value is set to the default value
+     * and is used to define the upper limit on the number of the tasks in the service that remain in
+     * the `RUNNING` state while the container instances are in the `DRAINING` state. If the tasks in
+     * the service use the Fargate launch type, the maximum percent value is not used, although it is
+     * returned when describing your service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
+     */
+    public fun maximumPercent(): Number? = unwrap(this).getMaximumPercent()
+
+    /**
+     * If a service is using the rolling update ( `ECS` ) deployment type, the
+     * `minimumHealthyPercent` represents a lower limit on the number of your service's tasks that must
+     * remain in the `RUNNING` state during a deployment, as a percentage of the `desiredCount`
+     * (rounded up to the nearest integer).
+     *
+     * This parameter enables you to deploy without using additional cluster capacity. For example,
+     * if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of 50%, the
+     * service scheduler may stop two existing tasks to free up cluster capacity before starting two
+     * new tasks.
+     *
+     * For services that *do not* use a load balancer, the following should be noted:
+     *
+     * * A service is considered healthy if all essential containers within the tasks in the service
+     * pass their health checks.
+     * * If a task has no essential containers with a health check defined, the service scheduler
+     * will wait for 40 seconds after a task reaches a `RUNNING` state before the task is counted
+     * towards the minimum healthy percent total.
+     * * If a task has one or more essential containers with a health check defined, the service
+     * scheduler will wait for the task to reach a healthy status before counting it towards the
+     * minimum healthy percent total. A task is considered healthy when all essential containers within
+     * the task have passed their health checks. The amount of time the service scheduler can wait for
+     * is determined by the container health check settings.
+     *
+     * For services that *do* use a load balancer, the following should be noted:
+     *
+     * * If a task has no essential containers with a health check defined, the service scheduler
+     * will wait for the load balancer target group health check to return a healthy status before
+     * counting the task towards the minimum healthy percent total.
+     * * If a task has an essential container with a health check defined, the service scheduler
+     * will wait for both the task to reach a healthy status and the load balancer target group health
+     * check to return a healthy status before counting the task towards the minimum healthy percent
+     * total.
+     *
+     * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types
+     * and is running tasks that use the EC2 launch type, the *minimum healthy percent* value is set to
+     * the default value and is used to define the lower limit on the number of the tasks in the
+     * service that remain in the `RUNNING` state while the container instances are in the `DRAINING`
+     * state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+     * types and is running tasks that use the Fargate launch type, the minimum healthy percent value
+     * is not used, although it is returned when describing your service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
+     */
+    public fun minimumHealthyPercent(): Number? = unwrap(this).getMinimumHealthyPercent()
+
+    /**
+     * A builder for [DeploymentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarms Information about the CloudWatch alarms.
+       */
+      public fun alarms(alarms: IResolvable)
+
+      /**
+       * @param alarms Information about the CloudWatch alarms.
+       */
+      public fun alarms(alarms: DeploymentAlarmsProperty)
+
+      /**
+       * @param alarms Information about the CloudWatch alarms.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("efd9a5f127d78c01958f4cf4b39acf88204ea3d9b713d0c6e12a4bcd49c0914b")
+      public fun alarms(alarms: DeploymentAlarmsProperty.Builder.() -> Unit)
+
+      /**
+       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
+       * services using the rolling update ( `ECS` ) deployment type.
+       * The *deployment circuit breaker* determines whether a service deployment will fail if the
+       * service can't reach a steady state. If you use the deployment circuit breaker, a service
+       * deployment will transition to a failed state and stop launching new tasks. If you use the
+       * rollback option, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully. For more information, see [Rolling
+       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
+       * in the *Amazon Elastic Container Service Developer Guide*
+       */
+      public fun deploymentCircuitBreaker(deploymentCircuitBreaker: IResolvable)
+
+      /**
+       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
+       * services using the rolling update ( `ECS` ) deployment type.
+       * The *deployment circuit breaker* determines whether a service deployment will fail if the
+       * service can't reach a steady state. If you use the deployment circuit breaker, a service
+       * deployment will transition to a failed state and stop launching new tasks. If you use the
+       * rollback option, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully. For more information, see [Rolling
+       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
+       * in the *Amazon Elastic Container Service Developer Guide*
+       */
+      public
+          fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty)
+
+      /**
+       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
+       * services using the rolling update ( `ECS` ) deployment type.
+       * The *deployment circuit breaker* determines whether a service deployment will fail if the
+       * service can't reach a steady state. If you use the deployment circuit breaker, a service
+       * deployment will transition to a failed state and stop launching new tasks. If you use the
+       * rollback option, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully. For more information, see [Rolling
+       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
+       * in the *Amazon Elastic Container Service Developer Guide*
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("06d33a617c577ba243f4f0271ff561c8f6ede78b9600fbb68e0f022c6bfe2d4c")
+      public
+          fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty.Builder.() -> Unit)
+
+      /**
+       * @param maximumPercent If a service is using the rolling update ( `ECS` ) deployment type,
+       * the `maximumPercent` parameter represents an upper limit on the number of your service's tasks
+       * that are allowed in the `RUNNING` or `PENDING` state during a deployment, as a percentage of
+       * the `desiredCount` (rounded down to the nearest integer).
+       * This parameter enables you to define the deployment batch size. For example, if your
+       * service is using the `REPLICA` service scheduler and has a `desiredCount` of four tasks and a
+       * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
+       * four older tasks (provided that the cluster resources required to do this are available). The
+       * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
+       * default value and is used to define the upper limit on the number of the tasks in the service
+       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
+       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
+       * used, although it is returned when describing your service.
+       */
+      public fun maximumPercent(maximumPercent: Number)
+
+      /**
+       * @param minimumHealthyPercent If a service is using the rolling update ( `ECS` ) deployment
+       * type, the `minimumHealthyPercent` represents a lower limit on the number of your service's
+       * tasks that must remain in the `RUNNING` state during a deployment, as a percentage of the
+       * `desiredCount` (rounded up to the nearest integer).
+       * This parameter enables you to deploy without using additional cluster capacity. For
+       * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
+       * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
+       * starting two new tasks.
+       *
+       * For services that *do not* use a load balancer, the following should be noted:
+       *
+       * * A service is considered healthy if all essential containers within the tasks in the
+       * service pass their health checks.
+       * * If a task has no essential containers with a health check defined, the service scheduler
+       * will wait for 40 seconds after a task reaches a `RUNNING` state before the task is counted
+       * towards the minimum healthy percent total.
+       * * If a task has one or more essential containers with a health check defined, the service
+       * scheduler will wait for the task to reach a healthy status before counting it towards the
+       * minimum healthy percent total. A task is considered healthy when all essential containers
+       * within the task have passed their health checks. The amount of time the service scheduler can
+       * wait for is determined by the container health check settings.
+       *
+       * For services that *do* use a load balancer, the following should be noted:
+       *
+       * * If a task has no essential containers with a health check defined, the service scheduler
+       * will wait for the load balancer target group health check to return a healthy status before
+       * counting the task towards the minimum healthy percent total.
+       * * If a task has an essential container with a health check defined, the service scheduler
+       * will wait for both the task to reach a healthy status and the load balancer target group
+       * health check to return a healthy status before counting the task towards the minimum healthy
+       * percent total.
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
+       * is set to the default value and is used to define the lower limit on the number of the tasks
+       * in the service that remain in the `RUNNING` state while the container instances are in the
+       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
+       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
+       * percent value is not used, although it is returned when describing your service.
+       */
+      public fun minimumHealthyPercent(minimumHealthyPercent: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty.builder()
+
+      /**
+       * @param alarms Information about the CloudWatch alarms.
+       */
+      override fun alarms(alarms: IResolvable) {
+        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param alarms Information about the CloudWatch alarms.
+       */
+      override fun alarms(alarms: DeploymentAlarmsProperty) {
+        cdkBuilder.alarms(alarms.let(DeploymentAlarmsProperty::unwrap))
+      }
+
+      /**
+       * @param alarms Information about the CloudWatch alarms.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("efd9a5f127d78c01958f4cf4b39acf88204ea3d9b713d0c6e12a4bcd49c0914b")
+      override fun alarms(alarms: DeploymentAlarmsProperty.Builder.() -> Unit): Unit =
+          alarms(DeploymentAlarmsProperty(alarms))
+
+      /**
+       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
+       * services using the rolling update ( `ECS` ) deployment type.
+       * The *deployment circuit breaker* determines whether a service deployment will fail if the
+       * service can't reach a steady state. If you use the deployment circuit breaker, a service
+       * deployment will transition to a failed state and stop launching new tasks. If you use the
+       * rollback option, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully. For more information, see [Rolling
+       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
+       * in the *Amazon Elastic Container Service Developer Guide*
+       */
+      override fun deploymentCircuitBreaker(deploymentCircuitBreaker: IResolvable) {
+        cdkBuilder.deploymentCircuitBreaker(deploymentCircuitBreaker.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
+       * services using the rolling update ( `ECS` ) deployment type.
+       * The *deployment circuit breaker* determines whether a service deployment will fail if the
+       * service can't reach a steady state. If you use the deployment circuit breaker, a service
+       * deployment will transition to a failed state and stop launching new tasks. If you use the
+       * rollback option, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully. For more information, see [Rolling
+       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
+       * in the *Amazon Elastic Container Service Developer Guide*
+       */
+      override
+          fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty) {
+        cdkBuilder.deploymentCircuitBreaker(deploymentCircuitBreaker.let(DeploymentCircuitBreakerProperty::unwrap))
+      }
+
+      /**
+       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
+       * services using the rolling update ( `ECS` ) deployment type.
+       * The *deployment circuit breaker* determines whether a service deployment will fail if the
+       * service can't reach a steady state. If you use the deployment circuit breaker, a service
+       * deployment will transition to a failed state and stop launching new tasks. If you use the
+       * rollback option, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully. For more information, see [Rolling
+       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
+       * in the *Amazon Elastic Container Service Developer Guide*
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("06d33a617c577ba243f4f0271ff561c8f6ede78b9600fbb68e0f022c6bfe2d4c")
+      override
+          fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty.Builder.() -> Unit):
+          Unit =
+          deploymentCircuitBreaker(DeploymentCircuitBreakerProperty(deploymentCircuitBreaker))
+
+      /**
+       * @param maximumPercent If a service is using the rolling update ( `ECS` ) deployment type,
+       * the `maximumPercent` parameter represents an upper limit on the number of your service's tasks
+       * that are allowed in the `RUNNING` or `PENDING` state during a deployment, as a percentage of
+       * the `desiredCount` (rounded down to the nearest integer).
+       * This parameter enables you to define the deployment batch size. For example, if your
+       * service is using the `REPLICA` service scheduler and has a `desiredCount` of four tasks and a
+       * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
+       * four older tasks (provided that the cluster resources required to do this are available). The
+       * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
+       * default value and is used to define the upper limit on the number of the tasks in the service
+       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
+       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
+       * used, although it is returned when describing your service.
+       */
+      override fun maximumPercent(maximumPercent: Number) {
+        cdkBuilder.maximumPercent(maximumPercent)
+      }
+
+      /**
+       * @param minimumHealthyPercent If a service is using the rolling update ( `ECS` ) deployment
+       * type, the `minimumHealthyPercent` represents a lower limit on the number of your service's
+       * tasks that must remain in the `RUNNING` state during a deployment, as a percentage of the
+       * `desiredCount` (rounded up to the nearest integer).
+       * This parameter enables you to deploy without using additional cluster capacity. For
+       * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
+       * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
+       * starting two new tasks.
+       *
+       * For services that *do not* use a load balancer, the following should be noted:
+       *
+       * * A service is considered healthy if all essential containers within the tasks in the
+       * service pass their health checks.
+       * * If a task has no essential containers with a health check defined, the service scheduler
+       * will wait for 40 seconds after a task reaches a `RUNNING` state before the task is counted
+       * towards the minimum healthy percent total.
+       * * If a task has one or more essential containers with a health check defined, the service
+       * scheduler will wait for the task to reach a healthy status before counting it towards the
+       * minimum healthy percent total. A task is considered healthy when all essential containers
+       * within the task have passed their health checks. The amount of time the service scheduler can
+       * wait for is determined by the container health check settings.
+       *
+       * For services that *do* use a load balancer, the following should be noted:
+       *
+       * * If a task has no essential containers with a health check defined, the service scheduler
+       * will wait for the load balancer target group health check to return a healthy status before
+       * counting the task towards the minimum healthy percent total.
+       * * If a task has an essential container with a health check defined, the service scheduler
+       * will wait for both the task to reach a healthy status and the load balancer target group
+       * health check to return a healthy status before counting the task towards the minimum healthy
+       * percent total.
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
+       * is set to the default value and is used to define the lower limit on the number of the tasks
+       * in the service that remain in the `RUNNING` state while the container instances are in the
+       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
+       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
+       * percent value is not used, although it is returned when describing your service.
+       */
+      override fun minimumHealthyPercent(minimumHealthyPercent: Number) {
+        cdkBuilder.minimumHealthyPercent(minimumHealthyPercent)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty,
+    ) : CdkObject(cdkObject), DeploymentConfigurationProperty {
+      /**
+       * Information about the CloudWatch alarms.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-alarms)
+       */
+      override fun alarms(): Any? = unwrap(this).getAlarms()
+
+      /**
+       * The deployment circuit breaker can only be used for services using the rolling update (
+       * `ECS` ) deployment type.
+       *
+       * The *deployment circuit breaker* determines whether a service deployment will fail if the
+       * service can't reach a steady state. If you use the deployment circuit breaker, a service
+       * deployment will transition to a failed state and stop launching new tasks. If you use the
+       * rollback option, when a service deployment fails, the service is rolled back to the last
+       * deployment that completed successfully. For more information, see [Rolling
+       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
+       * in the *Amazon Elastic Container Service Developer Guide*
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker)
+       */
+      override fun deploymentCircuitBreaker(): Any? = unwrap(this).getDeploymentCircuitBreaker()
+
+      /**
+       * If a service is using the rolling update ( `ECS` ) deployment type, the `maximumPercent`
+       * parameter represents an upper limit on the number of your service's tasks that are allowed in
+       * the `RUNNING` or `PENDING` state during a deployment, as a percentage of the `desiredCount`
+       * (rounded down to the nearest integer).
+       *
+       * This parameter enables you to define the deployment batch size. For example, if your
+       * service is using the `REPLICA` service scheduler and has a `desiredCount` of four tasks and a
+       * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
+       * four older tasks (provided that the cluster resources required to do this are available). The
+       * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
+       * default value and is used to define the upper limit on the number of the tasks in the service
+       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
+       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
+       * used, although it is returned when describing your service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
+       */
+      override fun maximumPercent(): Number? = unwrap(this).getMaximumPercent()
+
+      /**
+       * If a service is using the rolling update ( `ECS` ) deployment type, the
+       * `minimumHealthyPercent` represents a lower limit on the number of your service's tasks that
+       * must remain in the `RUNNING` state during a deployment, as a percentage of the `desiredCount`
+       * (rounded up to the nearest integer).
+       *
+       * This parameter enables you to deploy without using additional cluster capacity. For
+       * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
+       * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
+       * starting two new tasks.
+       *
+       * For services that *do not* use a load balancer, the following should be noted:
+       *
+       * * A service is considered healthy if all essential containers within the tasks in the
+       * service pass their health checks.
+       * * If a task has no essential containers with a health check defined, the service scheduler
+       * will wait for 40 seconds after a task reaches a `RUNNING` state before the task is counted
+       * towards the minimum healthy percent total.
+       * * If a task has one or more essential containers with a health check defined, the service
+       * scheduler will wait for the task to reach a healthy status before counting it towards the
+       * minimum healthy percent total. A task is considered healthy when all essential containers
+       * within the task have passed their health checks. The amount of time the service scheduler can
+       * wait for is determined by the container health check settings.
+       *
+       * For services that *do* use a load balancer, the following should be noted:
+       *
+       * * If a task has no essential containers with a health check defined, the service scheduler
+       * will wait for the load balancer target group health check to return a healthy status before
+       * counting the task towards the minimum healthy percent total.
+       * * If a task has an essential container with a health check defined, the service scheduler
+       * will wait for both the task to reach a healthy status and the load balancer target group
+       * health check to return a healthy status before counting the task towards the minimum healthy
+       * percent total.
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
+       * is set to the default value and is used to define the lower limit on the number of the tasks
+       * in the service that remain in the `RUNNING` state while the container instances are in the
+       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
+       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
+       * percent value is not used, although it is returned when describing your service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
+       */
+      override fun minimumHealthyPercent(): Number? = unwrap(this).getMinimumHealthyPercent()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty):
+          DeploymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty
+    }
+  }
+
+  /**
+   * The deployment controller to use for the service.
+   *
+   * For more information, see [Amazon ECS deployment
+   * types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * DeploymentControllerProperty deploymentControllerProperty =
+   * DeploymentControllerProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html)
+   */
+  public interface DeploymentControllerProperty {
+    /**
+     * The deployment controller type to use. There are three deployment controller types
+     * available:.
+     *
+     * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
+     * running version of the container with the latest version. The number of containers Amazon ECS
+     * adds or removes from the service during a rolling update is controlled by adjusting the minimum
+     * and maximum number of healthy tasks allowed during a service deployment, as specified in the
+     * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
+     * .
+     * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
+     * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
+     * service before sending production traffic to it.
+     * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
+     * third-party deployment controller for full control over the deployment process for an Amazon ECS
+     * service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html#cfn-ecs-service-deploymentcontroller-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [DeploymentControllerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The deployment controller type to use. There are three deployment controller
+       * types available:.
+       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
+       * running version of the container with the latest version. The number of containers Amazon ECS
+       * adds or removes from the service during a rolling update is controlled by adjusting the
+       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
+       * in the
+       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
+       * .
+       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
+       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
+       * service before sending production traffic to it.
+       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
+       * third-party deployment controller for full control over the deployment process for an Amazon
+       * ECS service.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty.builder()
+
+      /**
+       * @param type The deployment controller type to use. There are three deployment controller
+       * types available:.
+       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
+       * running version of the container with the latest version. The number of containers Amazon ECS
+       * adds or removes from the service during a rolling update is controlled by adjusting the
+       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
+       * in the
+       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
+       * .
+       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
+       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
+       * service before sending production traffic to it.
+       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
+       * third-party deployment controller for full control over the deployment process for an Amazon
+       * ECS service.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty,
+    ) : CdkObject(cdkObject), DeploymentControllerProperty {
+      /**
+       * The deployment controller type to use. There are three deployment controller types
+       * available:.
+       *
+       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
+       * running version of the container with the latest version. The number of containers Amazon ECS
+       * adds or removes from the service during a rolling update is controlled by adjusting the
+       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
+       * in the
+       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
+       * .
+       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
+       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
+       * service before sending production traffic to it.
+       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
+       * third-party deployment controller for full control over the deployment process for an Amazon
+       * ECS service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html#cfn-ecs-service-deploymentcontroller-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentControllerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty):
+          DeploymentControllerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentControllerProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentControllerProperty):
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty
+    }
+  }
+
+  /**
+   * The tag specifications of an Amazon EBS volume.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * EBSTagSpecificationProperty eBSTagSpecificationProperty = EBSTagSpecificationProperty.builder()
+   * .resourceType("resourceType")
+   * // the properties below are optional
+   * .propagateTags("propagateTags")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html)
+   */
+  public interface EBSTagSpecificationProperty {
+    /**
+     * Determines whether to propagate the tags from the task definition to the Amazon EBS volume.
+     *
+     * Tags can only propagate to a `SERVICE` specified in `ServiceVolumeConfiguration` . If no
+     * value is specified, the tags aren't propagated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-propagatetags)
+     */
+    public fun propagateTags(): String? = unwrap(this).getPropagateTags()
+
+    /**
+     * The type of volume resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-resourcetype)
+     */
+    public fun resourceType(): String
+
+    /**
+     * The tags applied to this Amazon EBS volume.
+     *
+     * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [EBSTagSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param propagateTags Determines whether to propagate the tags from the task definition to
+       * the Amazon EBS volume.
+       * Tags can only propagate to a `SERVICE` specified in `ServiceVolumeConfiguration` . If no
+       * value is specified, the tags aren't propagated.
+       */
+      public fun propagateTags(propagateTags: String)
+
+      /**
+       * @param resourceType The type of volume resource. 
+       */
+      public fun resourceType(resourceType: String)
+
+      /**
+       * @param tags The tags applied to this Amazon EBS volume.
+       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The tags applied to this Amazon EBS volume.
+       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty.builder()
+
+      /**
+       * @param propagateTags Determines whether to propagate the tags from the task definition to
+       * the Amazon EBS volume.
+       * Tags can only propagate to a `SERVICE` specified in `ServiceVolumeConfiguration` . If no
+       * value is specified, the tags aren't propagated.
+       */
+      override fun propagateTags(propagateTags: String) {
+        cdkBuilder.propagateTags(propagateTags)
+      }
+
+      /**
+       * @param resourceType The type of volume resource. 
+       */
+      override fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
+      }
+
+      /**
+       * @param tags The tags applied to this Amazon EBS volume.
+       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      }
+
+      /**
+       * @param tags The tags applied to this Amazon EBS volume.
+       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty,
+    ) : CdkObject(cdkObject), EBSTagSpecificationProperty {
+      /**
+       * Determines whether to propagate the tags from the task definition to the Amazon EBS volume.
+       *
+       * Tags can only propagate to a `SERVICE` specified in `ServiceVolumeConfiguration` . If no
+       * value is specified, the tags aren't propagated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-propagatetags)
+       */
+      override fun propagateTags(): String? = unwrap(this).getPropagateTags()
+
+      /**
+       * The type of volume resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-resourcetype)
+       */
+      override fun resourceType(): String = unwrap(this).getResourceType()
+
+      /**
+       * The tags applied to this Amazon EBS volume.
+       *
+       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EBSTagSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty):
+          EBSTagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EBSTagSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EBSTagSpecificationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty
     }
   }
 
@@ -2671,6 +4186,989 @@ public open class CfnService internal constructor(
   }
 
   /**
+   * The log configuration for the container.
+   *
+   * This parameter maps to `LogConfig` in the [Create a
+   * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+   * section of the [Docker Remote
+   * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--log-driver`
+   * option to [`docker
+   * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+   *
+   * By default, containers use the same logging driver that the Docker daemon uses. However, the
+   * container might use a different logging driver than the Docker daemon by specifying a log driver
+   * configuration in the container definition. For more information about the options for different
+   * supported log drivers, see [Configure logging
+   * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in
+   * the Docker documentation.
+   *
+   * Understand the following when specifying a log configuration for your containers.
+   *
+   * * Amazon ECS currently supports a subset of the logging drivers available to the Docker daemon.
+   * Additional log drivers may be available in future releases of the Amazon ECS container agent.
+   *
+   * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+   * `awsfirelens` .
+   *
+   * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd` ,
+   * `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
+   *
+   * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+   * instance.
+   * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+   * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+   * variable before containers placed on that instance can use these log configuration options. For
+   * more information, see [Amazon ECS container agent
+   * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+   * infrastructure your tasks are hosted on, any additional software needed must be installed outside
+   * of the task. For example, the Fluentd output aggregators or a remote host running Logstash to send
+   * Gelf logs to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * LogConfigurationProperty logConfigurationProperty = LogConfigurationProperty.builder()
+   * .logDriver("logDriver")
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .secretOptions(List.of(SecretProperty.builder()
+   * .name("name")
+   * .valueFrom("valueFrom")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html)
+   */
+  public interface LogConfigurationProperty {
+    /**
+     * The log driver to use for the container.
+     *
+     * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+     * `awsfirelens` .
+     *
+     * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
+     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
+     *
+     * For more information about using the `awslogs` log driver, see [Using the awslogs log
+     * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
+     * *Amazon Elastic Container Service Developer Guide* .
+     *
+     * For more information about using the `awsfirelens` log driver, see [Custom log
+     * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the
+     * *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
+     * project that's [available on
+     * GitHub](https://docs.aws.amazon.com/https://github.com/aws/amazon-ecs-agent) and customize it to
+     * work with that driver. We encourage you to submit pull requests for changes that you would like
+     * to have included. However, we don't currently provide support for running modified copies of
+     * this software.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-logdriver)
+     */
+    public fun logDriver(): String? = unwrap(this).getLogDriver()
+
+    /**
+     * The configuration options to send to the log driver.
+     *
+     * This parameter requires version 1.19 of the Docker Remote API or greater on your container
+     * instance. To check the Docker Remote API version on your container instance, log in to your
+     * container instance and run the following command: `sudo docker version --format
+     * '{{.Server.APIVersion}}'`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-options)
+     */
+    public fun options(): Any? = unwrap(this).getOptions()
+
+    /**
+     * The secrets to pass to the log configuration.
+     *
+     * For more information, see [Specifying sensitive
+     * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-secretoptions)
+     */
+    public fun secretOptions(): Any? = unwrap(this).getSecretOptions()
+
+    /**
+     * A builder for [LogConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logDriver The log driver to use for the container.
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For more information about using the `awslogs` log driver, see [Using the awslogs log
+       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
+       * *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Custom log
+       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
+       * project that's [available on
+       * GitHub](https://docs.aws.amazon.com/https://github.com/aws/amazon-ecs-agent) and customize it
+       * to work with that driver. We encourage you to submit pull requests for changes that you would
+       * like to have included. However, we don't currently provide support for running modified copies
+       * of this software.
+       */
+      public fun logDriver(logDriver: String)
+
+      /**
+       * @param options The configuration options to send to the log driver.
+       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       */
+      public fun options(options: IResolvable)
+
+      /**
+       * @param options The configuration options to send to the log driver.
+       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       */
+      public fun options(options: Map<String, String>)
+
+      /**
+       * @param secretOptions The secrets to pass to the log configuration.
+       * For more information, see [Specifying sensitive
+       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun secretOptions(secretOptions: IResolvable)
+
+      /**
+       * @param secretOptions The secrets to pass to the log configuration.
+       * For more information, see [Specifying sensitive
+       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun secretOptions(secretOptions: List<Any>)
+
+      /**
+       * @param secretOptions The secrets to pass to the log configuration.
+       * For more information, see [Specifying sensitive
+       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun secretOptions(vararg secretOptions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty.builder()
+
+      /**
+       * @param logDriver The log driver to use for the container.
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For more information about using the `awslogs` log driver, see [Using the awslogs log
+       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
+       * *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Custom log
+       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
+       * project that's [available on
+       * GitHub](https://docs.aws.amazon.com/https://github.com/aws/amazon-ecs-agent) and customize it
+       * to work with that driver. We encourage you to submit pull requests for changes that you would
+       * like to have included. However, we don't currently provide support for running modified copies
+       * of this software.
+       */
+      override fun logDriver(logDriver: String) {
+        cdkBuilder.logDriver(logDriver)
+      }
+
+      /**
+       * @param options The configuration options to send to the log driver.
+       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       */
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param options The configuration options to send to the log driver.
+       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       */
+      override fun options(options: Map<String, String>) {
+        cdkBuilder.options(options)
+      }
+
+      /**
+       * @param secretOptions The secrets to pass to the log configuration.
+       * For more information, see [Specifying sensitive
+       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun secretOptions(secretOptions: IResolvable) {
+        cdkBuilder.secretOptions(secretOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param secretOptions The secrets to pass to the log configuration.
+       * For more information, see [Specifying sensitive
+       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun secretOptions(secretOptions: List<Any>) {
+        cdkBuilder.secretOptions(secretOptions)
+      }
+
+      /**
+       * @param secretOptions The secrets to pass to the log configuration.
+       * For more information, see [Specifying sensitive
+       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun secretOptions(vararg secretOptions: Any): Unit =
+          secretOptions(secretOptions.toList())
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty,
+    ) : CdkObject(cdkObject), LogConfigurationProperty {
+      /**
+       * The log driver to use for the container.
+       *
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For more information about using the `awslogs` log driver, see [Using the awslogs log
+       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
+       * *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Custom log
+       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
+       * project that's [available on
+       * GitHub](https://docs.aws.amazon.com/https://github.com/aws/amazon-ecs-agent) and customize it
+       * to work with that driver. We encourage you to submit pull requests for changes that you would
+       * like to have included. However, we don't currently provide support for running modified copies
+       * of this software.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-logdriver)
+       */
+      override fun logDriver(): String? = unwrap(this).getLogDriver()
+
+      /**
+       * The configuration options to send to the log driver.
+       *
+       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-options)
+       */
+      override fun options(): Any? = unwrap(this).getOptions()
+
+      /**
+       * The secrets to pass to the log configuration.
+       *
+       * For more information, see [Specifying sensitive
+       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-secretoptions)
+       */
+      override fun secretOptions(): Any? = unwrap(this).getSecretOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty):
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty
+    }
+  }
+
+  /**
+   * The `NetworkConfiguration` property specifies an object representing the network configuration
+   * for a task or service.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * NetworkConfigurationProperty networkConfigurationProperty =
+   * NetworkConfigurationProperty.builder()
+   * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
+   * .assignPublicIp("assignPublicIp")
+   * .securityGroups(List.of("securityGroups"))
+   * .subnets(List.of("subnets"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html)
+   */
+  public interface NetworkConfigurationProperty {
+    /**
+     * The VPC subnets and security groups that are associated with a task.
+     *
+     *
+     * All specified subnets and security groups must be from the same VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)
+     */
+    public fun awsvpcConfiguration(): Any? = unwrap(this).getAwsvpcConfiguration()
+
+    /**
+     * A builder for [NetworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      public fun awsvpcConfiguration(awsvpcConfiguration: IResolvable)
+
+      /**
+       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      public fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty)
+
+      /**
+       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("79684c36acab0cdfbf04ed7dac66c18ab2c1361696165365afa87bebd36dc8cf")
+      public
+          fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty.builder()
+
+      /**
+       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      override fun awsvpcConfiguration(awsvpcConfiguration: IResolvable) {
+        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      override fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty) {
+        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("79684c36acab0cdfbf04ed7dac66c18ab2c1361696165365afa87bebd36dc8cf")
+      override
+          fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit):
+          Unit = awsvpcConfiguration(AwsVpcConfigurationProperty(awsvpcConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty,
+    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+      /**
+       * The VPC subnets and security groups that are associated with a task.
+       *
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)
+       */
+      override fun awsvpcConfiguration(): Any? = unwrap(this).getAwsvpcConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty):
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty
+    }
+  }
+
+  /**
+   * The `PlacementConstraint` property specifies an object representing a constraint on task
+   * placement in the task definition.
+   *
+   * For more information, see [Task Placement
+   * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * PlacementConstraintProperty placementConstraintProperty = PlacementConstraintProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .expression("expression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html)
+   */
+  public interface PlacementConstraintProperty {
+    /**
+     * A cluster query language expression to apply to the constraint.
+     *
+     * The expression can have a maximum length of 2000 characters. You can't specify an expression
+     * if the constraint type is `distinctInstance` . For more information, see [Cluster query
+     * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression)
+     */
+    public fun expression(): String? = unwrap(this).getExpression()
+
+    /**
+     * The type of constraint.
+     *
+     * Use `distinctInstance` to ensure that each task in a particular group is running on a
+     * different container instance. Use `memberOf` to restrict the selection to a group of valid
+     * candidates.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [PlacementConstraintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expression A cluster query language expression to apply to the constraint.
+       * The expression can have a maximum length of 2000 characters. You can't specify an
+       * expression if the constraint type is `distinctInstance` . For more information, see [Cluster
+       * query
+       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun expression(expression: String)
+
+      /**
+       * @param type The type of constraint. 
+       * Use `distinctInstance` to ensure that each task in a particular group is running on a
+       * different container instance. Use `memberOf` to restrict the selection to a group of valid
+       * candidates.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty.builder()
+
+      /**
+       * @param expression A cluster query language expression to apply to the constraint.
+       * The expression can have a maximum length of 2000 characters. You can't specify an
+       * expression if the constraint type is `distinctInstance` . For more information, see [Cluster
+       * query
+       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      /**
+       * @param type The type of constraint. 
+       * Use `distinctInstance` to ensure that each task in a particular group is running on a
+       * different container instance. Use `memberOf` to restrict the selection to a group of valid
+       * candidates.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty,
+    ) : CdkObject(cdkObject), PlacementConstraintProperty {
+      /**
+       * A cluster query language expression to apply to the constraint.
+       *
+       * The expression can have a maximum length of 2000 characters. You can't specify an
+       * expression if the constraint type is `distinctInstance` . For more information, see [Cluster
+       * query
+       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression)
+       */
+      override fun expression(): String? = unwrap(this).getExpression()
+
+      /**
+       * The type of constraint.
+       *
+       * Use `distinctInstance` to ensure that each task in a particular group is running on a
+       * different container instance. Use `memberOf` to restrict the selection to a group of valid
+       * candidates.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementConstraintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty):
+          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementConstraintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementConstraintProperty):
+          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty
+    }
+  }
+
+  /**
+   * The `PlacementStrategy` property specifies the task placement strategy for a task or service.
+   *
+   * For more information, see [Task Placement
+   * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * PlacementStrategyProperty placementStrategyProperty = PlacementStrategyProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .field("field")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html)
+   */
+  public interface PlacementStrategyProperty {
+    /**
+     * The field to apply the placement strategy against.
+     *
+     * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has the
+     * same effect), or any platform or custom attribute that is applied to a container instance, such
+     * as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values are
+     * `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
+     */
+    public fun `field`(): String? = unwrap(this).getField()
+
+    /**
+     * The type of placement strategy.
+     *
+     * The `random` placement strategy randomly places tasks on available candidates. The `spread`
+     * placement strategy spreads placement across available candidates evenly based on the `field`
+     * parameter. The `binpack` strategy places tasks on available candidates that have the least
+     * available amount of the resource that's specified with the `field` parameter. For example, if
+     * you binpack on memory, a task is placed on the instance with the least amount of remaining
+     * memory but still enough to run the task.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [PlacementStrategyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param field The field to apply the placement strategy against.
+       * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
+       * the same effect), or any platform or custom attribute that is applied to a container instance,
+       * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
+       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
+       */
+      public fun `field`(`field`: String)
+
+      /**
+       * @param type The type of placement strategy. 
+       * The `random` placement strategy randomly places tasks on available candidates. The `spread`
+       * placement strategy spreads placement across available candidates evenly based on the `field`
+       * parameter. The `binpack` strategy places tasks on available candidates that have the least
+       * available amount of the resource that's specified with the `field` parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory but still enough to run the task.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty.builder()
+
+      /**
+       * @param field The field to apply the placement strategy against.
+       * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
+       * the same effect), or any platform or custom attribute that is applied to a container instance,
+       * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
+       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
+       */
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+      }
+
+      /**
+       * @param type The type of placement strategy. 
+       * The `random` placement strategy randomly places tasks on available candidates. The `spread`
+       * placement strategy spreads placement across available candidates evenly based on the `field`
+       * parameter. The `binpack` strategy places tasks on available candidates that have the least
+       * available amount of the resource that's specified with the `field` parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory but still enough to run the task.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty,
+    ) : CdkObject(cdkObject), PlacementStrategyProperty {
+      /**
+       * The field to apply the placement strategy against.
+       *
+       * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
+       * the same effect), or any platform or custom attribute that is applied to a container instance,
+       * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
+       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
+       */
+      override fun `field`(): String? = unwrap(this).getField()
+
+      /**
+       * The type of placement strategy.
+       *
+       * The `random` placement strategy randomly places tasks on available candidates. The `spread`
+       * placement strategy spreads placement across available candidates evenly based on the `field`
+       * parameter. The `binpack` strategy places tasks on available candidates that have the least
+       * available amount of the resource that's specified with the `field` parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory but still enough to run the task.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementStrategyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty):
+          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementStrategyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementStrategyProperty):
+          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty
+    }
+  }
+
+  /**
+   * An object representing the secret to expose to your container.
+   *
+   * Secrets can be exposed to a container in the following ways:
+   *
+   * * To inject sensitive data into your containers as environment variables, use the `secrets`
+   * container definition parameter.
+   * * To reference sensitive information in the log configuration of a container, use the
+   * `secretOptions` container definition parameter.
+   *
+   * For more information, see [Specifying sensitive
+   * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * SecretProperty secretProperty = SecretProperty.builder()
+   * .name("name")
+   * .valueFrom("valueFrom")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html)
+   */
+  public interface SecretProperty {
+    /**
+     * The name of the secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html#cfn-ecs-service-secret-name)
+     */
+    public fun name(): String
+
+    /**
+     * The secret to expose to the container.
+     *
+     * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
+     * ARN of the parameter in the SSM Parameter Store.
+     *
+     * For information about the require AWS Identity and Access Management permissions, see
+     * [Required IAM permissions for Amazon ECS
+     * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
+     * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
+     * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
+     * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer Guide*
+     * .
+     *
+     *
+     * If the SSM Parameter Store parameter exists in the same Region as the task you're launching,
+     * then you can use either the full ARN or name of the parameter. If the parameter exists in a
+     * different Region, then the full ARN must be specified.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html#cfn-ecs-service-secret-valuefrom)
+     */
+    public fun valueFrom(): String
+
+    /**
+     * A builder for [SecretProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the secret. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param valueFrom The secret to expose to the container. 
+       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
+       * ARN of the parameter in the SSM Parameter Store.
+       *
+       * For information about the require AWS Identity and Access Management permissions, see
+       * [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
+       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
+       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
+       * Guide* .
+       *
+       *
+       * If the SSM Parameter Store parameter exists in the same Region as the task you're
+       * launching, then you can use either the full ARN or name of the parameter. If the parameter
+       * exists in a different Region, then the full ARN must be specified.
+       */
+      public fun valueFrom(valueFrom: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnService.SecretProperty.Builder
+          = software.amazon.awscdk.services.ecs.CfnService.SecretProperty.builder()
+
+      /**
+       * @param name The name of the secret. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param valueFrom The secret to expose to the container. 
+       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
+       * ARN of the parameter in the SSM Parameter Store.
+       *
+       * For information about the require AWS Identity and Access Management permissions, see
+       * [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
+       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
+       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
+       * Guide* .
+       *
+       *
+       * If the SSM Parameter Store parameter exists in the same Region as the task you're
+       * launching, then you can use either the full ARN or name of the parameter. If the parameter
+       * exists in a different Region, then the full ARN must be specified.
+       */
+      override fun valueFrom(valueFrom: String) {
+        cdkBuilder.valueFrom(valueFrom)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnService.SecretProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.ecs.CfnService.SecretProperty,
+    ) : CdkObject(cdkObject), SecretProperty {
+      /**
+       * The name of the secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html#cfn-ecs-service-secret-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The secret to expose to the container.
+       *
+       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
+       * ARN of the parameter in the SSM Parameter Store.
+       *
+       * For information about the require AWS Identity and Access Management permissions, see
+       * [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
+       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
+       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
+       * Guide* .
+       *
+       *
+       * If the SSM Parameter Store parameter exists in the same Region as the task you're
+       * launching, then you can use either the full ARN or name of the parameter. If the parameter
+       * exists in a different Region, then the full ARN must be specified.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html#cfn-ecs-service-secret-valuefrom)
+       */
+      override fun valueFrom(): String = unwrap(this).getValueFrom()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SecretProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.SecretProperty):
+          SecretProperty = CdkObjectWrappers.wrap(cdkObject) as? SecretProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SecretProperty):
+          software.amazon.awscdk.services.ecs.CfnService.SecretProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ecs.CfnService.SecretProperty
+    }
+  }
+
+  /**
    * Each alias ("endpoint") is a fully-qualified name and port number that other tasks ("clients")
    * can use to connect to this service.
    *
@@ -2882,7 +5380,18 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * An object that represents the AWS Private Certificate Authority certificate.
+   * The Service Connect configuration of your Amazon ECS service.
+   *
+   * The configuration for this service to discover and connect to services, and be discovered by,
+   * and connected from, other services within a namespace.
+   *
+   * Tasks that run in a namespace can use short names to connect to services in the namespace.
+   * Tasks can connect to services across all of the clusters in the namespace. Tasks connect through a
+   * managed proxy container that collects logs and metrics for increased visibility. Only the tasks
+   * that Amazon ECS services create are supported with Service Connect. For more information, see
+   * [Service
+   * Connect](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
    *
    * Example:
    *
@@ -2890,79 +5399,681 @@ public open class CfnService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ServiceConnectTlsCertificateAuthorityProperty serviceConnectTlsCertificateAuthorityProperty =
-   * ServiceConnectTlsCertificateAuthorityProperty.builder()
+   * ServiceConnectConfigurationProperty serviceConnectConfigurationProperty =
+   * ServiceConnectConfigurationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .logConfiguration(LogConfigurationProperty.builder()
+   * .logDriver("logDriver")
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .secretOptions(List.of(SecretProperty.builder()
+   * .name("name")
+   * .valueFrom("valueFrom")
+   * .build()))
+   * .build())
+   * .namespace("namespace")
+   * .services(List.of(ServiceConnectServiceProperty.builder()
+   * .portName("portName")
+   * // the properties below are optional
+   * .clientAliases(List.of(ServiceConnectClientAliasProperty.builder()
+   * .port(123)
+   * // the properties below are optional
+   * .dnsName("dnsName")
+   * .build()))
+   * .discoveryName("discoveryName")
+   * .ingressPortOverride(123)
+   * .timeout(TimeoutConfigurationProperty.builder()
+   * .idleTimeoutSeconds(123)
+   * .perRequestTimeoutSeconds(123)
+   * .build())
+   * .tls(ServiceConnectTlsConfigurationProperty.builder()
+   * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
    * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+   * .build())
+   * // the properties below are optional
+   * .kmsKey("kmsKey")
+   * .roleArn("roleArn")
+   * .build())
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlscertificateauthority.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html)
    */
-  public interface ServiceConnectTlsCertificateAuthorityProperty {
+  public interface ServiceConnectConfigurationProperty {
     /**
-     * The ARN of the AWS Private Certificate Authority certificate.
+     * Specifies whether to use Service Connect with this service.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlscertificateauthority.html#cfn-ecs-service-serviceconnecttlscertificateauthority-awspcaauthorityarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-enabled)
      */
-    public fun awsPcaAuthorityArn(): String? = unwrap(this).getAwsPcaAuthorityArn()
+    public fun enabled(): Any
 
     /**
-     * A builder for [ServiceConnectTlsCertificateAuthorityProperty]
+     * The log configuration for the container.
+     *
+     * This parameter maps to `LogConfig` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+     * `--log-driver` option to [`docker
+     * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+     *
+     * By default, containers use the same logging driver that the Docker daemon uses. However, the
+     * container might use a different logging driver than the Docker daemon by specifying a log driver
+     * configuration in the container definition. For more information about the options for different
+     * supported log drivers, see [Configure logging
+     * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in
+     * the Docker documentation.
+     *
+     * Understand the following when specifying a log configuration for your containers.
+     *
+     * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+     * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
+     * agent.
+     *
+     * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+     * `awsfirelens` .
+     *
+     * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
+     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
+     *
+     * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+     * instance.
+     * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+     * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+     * variable before containers placed on that instance can use these log configuration options. For
+     * more information, see [Amazon ECS container agent
+     * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+     * infrastructure your tasks are hosted on, any additional software needed must be installed
+     * outside of the task. For example, the Fluentd output aggregators or a remote host running
+     * Logstash to send Gelf logs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-logconfiguration)
+     */
+    public fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
+
+    /**
+     * The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map namespace for use
+     * with Service Connect.
+     *
+     * The namespace must be in the same AWS Region as the Amazon ECS service and cluster. The type
+     * of namespace doesn't affect Service Connect. For more information about AWS Cloud Map , see
+     * [Working with
+     * Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the
+     * *AWS Cloud Map Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-namespace)
+     */
+    public fun namespace(): String? = unwrap(this).getNamespace()
+
+    /**
+     * The list of Service Connect service objects.
+     *
+     * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
+     * services to connect to this service.
+     *
+     * This field is not required for a "client" Amazon ECS service that's a member of a namespace
+     * only to connect to other services within the namespace. An example of this would be a frontend
+     * application that accepts incoming requests from either a load balancer that's attached to the
+     * service or by other means.
+     *
+     * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
+     * service, and a list of aliases (endpoints) and ports for client applications to refer to this
+     * service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-services)
+     */
+    public fun services(): Any? = unwrap(this).getServices()
+
+    /**
+     * A builder for [ServiceConnectConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param awsPcaAuthorityArn The ARN of the AWS Private Certificate Authority certificate.
+       * @param enabled Specifies whether to use Service Connect with this service. 
        */
-      public fun awsPcaAuthorityArn(awsPcaAuthorityArn: String)
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether to use Service Connect with this service. 
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param logConfiguration The log configuration for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [`docker
+       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However,
+       * the container might use a different logging driver than the Docker daemon by specifying a log
+       * driver configuration in the container definition. For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the Docker documentation.
+       *
+       * Understand the following when specifying a log configuration for your containers.
+       *
+       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
+       * agent.
+       *
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
+       * container instance.
+       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+       * infrastructure your tasks are hosted on, any additional software needed must be installed
+       * outside of the task. For example, the Fluentd output aggregators or a remote host running
+       * Logstash to send Gelf logs to.
+       */
+      public fun logConfiguration(logConfiguration: IResolvable)
+
+      /**
+       * @param logConfiguration The log configuration for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [`docker
+       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However,
+       * the container might use a different logging driver than the Docker daemon by specifying a log
+       * driver configuration in the container definition. For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the Docker documentation.
+       *
+       * Understand the following when specifying a log configuration for your containers.
+       *
+       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
+       * agent.
+       *
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
+       * container instance.
+       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+       * infrastructure your tasks are hosted on, any additional software needed must be installed
+       * outside of the task. For example, the Fluentd output aggregators or a remote host running
+       * Logstash to send Gelf logs to.
+       */
+      public fun logConfiguration(logConfiguration: LogConfigurationProperty)
+
+      /**
+       * @param logConfiguration The log configuration for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [`docker
+       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However,
+       * the container might use a different logging driver than the Docker daemon by specifying a log
+       * driver configuration in the container definition. For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the Docker documentation.
+       *
+       * Understand the following when specifying a log configuration for your containers.
+       *
+       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
+       * agent.
+       *
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
+       * container instance.
+       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+       * infrastructure your tasks are hosted on, any additional software needed must be installed
+       * outside of the task. For example, the Fluentd output aggregators or a remote host running
+       * Logstash to send Gelf logs to.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fbf289910965c7adb3fb8fe199c5bdef3f31a13e658bf52d05729bf25ebd57fa")
+      public fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param namespace The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map
+       * namespace for use with Service Connect.
+       * The namespace must be in the same AWS Region as the Amazon ECS service and cluster. The
+       * type of namespace doesn't affect Service Connect. For more information about AWS Cloud Map ,
+       * see [Working with
+       * Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the
+       * *AWS Cloud Map Developer Guide* .
+       */
+      public fun namespace(namespace: String)
+
+      /**
+       * @param services The list of Service Connect service objects.
+       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
+       * services to connect to this service.
+       *
+       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
+       * only to connect to other services within the namespace. An example of this would be a frontend
+       * application that accepts incoming requests from either a load balancer that's attached to the
+       * service or by other means.
+       *
+       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
+       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
+       * service.
+       */
+      public fun services(services: IResolvable)
+
+      /**
+       * @param services The list of Service Connect service objects.
+       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
+       * services to connect to this service.
+       *
+       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
+       * only to connect to other services within the namespace. An example of this would be a frontend
+       * application that accepts incoming requests from either a load balancer that's attached to the
+       * service or by other means.
+       *
+       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
+       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
+       * service.
+       */
+      public fun services(services: List<Any>)
+
+      /**
+       * @param services The list of Service Connect service objects.
+       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
+       * services to connect to this service.
+       *
+       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
+       * only to connect to other services within the namespace. An example of this would be a frontend
+       * application that accepts incoming requests from either a load balancer that's attached to the
+       * service or by other means.
+       *
+       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
+       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
+       * service.
+       */
+      public fun services(vararg services: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty.Builder
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty.builder()
 
       /**
-       * @param awsPcaAuthorityArn The ARN of the AWS Private Certificate Authority certificate.
+       * @param enabled Specifies whether to use Service Connect with this service. 
        */
-      override fun awsPcaAuthorityArn(awsPcaAuthorityArn: String) {
-        cdkBuilder.awsPcaAuthorityArn(awsPcaAuthorityArn)
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
+      /**
+       * @param enabled Specifies whether to use Service Connect with this service. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param logConfiguration The log configuration for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [`docker
+       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However,
+       * the container might use a different logging driver than the Docker daemon by specifying a log
+       * driver configuration in the container definition. For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the Docker documentation.
+       *
+       * Understand the following when specifying a log configuration for your containers.
+       *
+       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
+       * agent.
+       *
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
+       * container instance.
+       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+       * infrastructure your tasks are hosted on, any additional software needed must be installed
+       * outside of the task. For example, the Fluentd output aggregators or a remote host running
+       * Logstash to send Gelf logs to.
+       */
+      override fun logConfiguration(logConfiguration: IResolvable) {
+        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param logConfiguration The log configuration for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [`docker
+       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However,
+       * the container might use a different logging driver than the Docker daemon by specifying a log
+       * driver configuration in the container definition. For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the Docker documentation.
+       *
+       * Understand the following when specifying a log configuration for your containers.
+       *
+       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
+       * agent.
+       *
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
+       * container instance.
+       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+       * infrastructure your tasks are hosted on, any additional software needed must be installed
+       * outside of the task. For example, the Fluentd output aggregators or a remote host running
+       * Logstash to send Gelf logs to.
+       */
+      override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
+        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param logConfiguration The log configuration for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [`docker
+       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However,
+       * the container might use a different logging driver than the Docker daemon by specifying a log
+       * driver configuration in the container definition. For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the Docker documentation.
+       *
+       * Understand the following when specifying a log configuration for your containers.
+       *
+       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
+       * agent.
+       *
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
+       * container instance.
+       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+       * infrastructure your tasks are hosted on, any additional software needed must be installed
+       * outside of the task. For example, the Fluentd output aggregators or a remote host running
+       * Logstash to send Gelf logs to.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fbf289910965c7adb3fb8fe199c5bdef3f31a13e658bf52d05729bf25ebd57fa")
+      override fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit):
+          Unit = logConfiguration(LogConfigurationProperty(logConfiguration))
+
+      /**
+       * @param namespace The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map
+       * namespace for use with Service Connect.
+       * The namespace must be in the same AWS Region as the Amazon ECS service and cluster. The
+       * type of namespace doesn't affect Service Connect. For more information about AWS Cloud Map ,
+       * see [Working with
+       * Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the
+       * *AWS Cloud Map Developer Guide* .
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      /**
+       * @param services The list of Service Connect service objects.
+       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
+       * services to connect to this service.
+       *
+       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
+       * only to connect to other services within the namespace. An example of this would be a frontend
+       * application that accepts incoming requests from either a load balancer that's attached to the
+       * service or by other means.
+       *
+       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
+       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
+       * service.
+       */
+      override fun services(services: IResolvable) {
+        cdkBuilder.services(services.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param services The list of Service Connect service objects.
+       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
+       * services to connect to this service.
+       *
+       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
+       * only to connect to other services within the namespace. An example of this would be a frontend
+       * application that accepts incoming requests from either a load balancer that's attached to the
+       * service or by other means.
+       *
+       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
+       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
+       * service.
+       */
+      override fun services(services: List<Any>) {
+        cdkBuilder.services(services)
+      }
+
+      /**
+       * @param services The list of Service Connect service objects.
+       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
+       * services to connect to this service.
+       *
+       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
+       * only to connect to other services within the namespace. An example of this would be a frontend
+       * application that accepts incoming requests from either a load balancer that's attached to the
+       * service or by other means.
+       *
+       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
+       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
+       * service.
+       */
+      override fun services(vararg services: Any): Unit = services(services.toList())
+
       public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty,
-    ) : CdkObject(cdkObject), ServiceConnectTlsCertificateAuthorityProperty {
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty,
+    ) : CdkObject(cdkObject), ServiceConnectConfigurationProperty {
       /**
-       * The ARN of the AWS Private Certificate Authority certificate.
+       * Specifies whether to use Service Connect with this service.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlscertificateauthority.html#cfn-ecs-service-serviceconnecttlscertificateauthority-awspcaauthorityarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-enabled)
        */
-      override fun awsPcaAuthorityArn(): String? = unwrap(this).getAwsPcaAuthorityArn()
+      override fun enabled(): Any = unwrap(this).getEnabled()
+
+      /**
+       * The log configuration for the container.
+       *
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [`docker
+       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However,
+       * the container might use a different logging driver than the Docker daemon by specifying a log
+       * driver configuration in the container definition. For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the Docker documentation.
+       *
+       * Understand the following when specifying a log configuration for your containers.
+       *
+       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
+       * agent.
+       *
+       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
+       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
+       * `awsfirelens` .
+       *
+       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
+       * container instance.
+       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
+       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+       * infrastructure your tasks are hosted on, any additional software needed must be installed
+       * outside of the task. For example, the Fluentd output aggregators or a remote host running
+       * Logstash to send Gelf logs to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-logconfiguration)
+       */
+      override fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
+
+      /**
+       * The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map namespace for
+       * use with Service Connect.
+       *
+       * The namespace must be in the same AWS Region as the Amazon ECS service and cluster. The
+       * type of namespace doesn't affect Service Connect. For more information about AWS Cloud Map ,
+       * see [Working with
+       * Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the
+       * *AWS Cloud Map Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-namespace)
+       */
+      override fun namespace(): String? = unwrap(this).getNamespace()
+
+      /**
+       * The list of Service Connect service objects.
+       *
+       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
+       * services to connect to this service.
+       *
+       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
+       * only to connect to other services within the namespace. An example of this would be a frontend
+       * application that accepts incoming requests from either a load balancer that's attached to the
+       * service or by other means.
+       *
+       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
+       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
+       * service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-services)
+       */
+      override fun services(): Any? = unwrap(this).getServices()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceConnectTlsCertificateAuthorityProperty {
+          ServiceConnectConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty):
-          ServiceConnectTlsCertificateAuthorityProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceConnectTlsCertificateAuthorityProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty):
+          ServiceConnectConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ServiceConnectTlsCertificateAuthorityProperty):
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty
+      internal fun unwrap(wrapped: ServiceConnectConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty
     }
   }
 
@@ -3439,8 +6550,7 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * The `NetworkConfiguration` property specifies an object representing the network configuration
-   * for a task or service.
+   * An object that represents the AWS Private Certificate Authority certificate.
    *
    * Example:
    *
@@ -3448,179 +6558,84 @@ public open class CfnService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * NetworkConfigurationProperty networkConfigurationProperty =
-   * NetworkConfigurationProperty.builder()
-   * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
-   * .assignPublicIp("assignPublicIp")
-   * .securityGroups(List.of("securityGroups"))
-   * .subnets(List.of("subnets"))
-   * .build())
+   * ServiceConnectTlsCertificateAuthorityProperty serviceConnectTlsCertificateAuthorityProperty =
+   * ServiceConnectTlsCertificateAuthorityProperty.builder()
+   * .awsPcaAuthorityArn("awsPcaAuthorityArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlscertificateauthority.html)
    */
-  public interface NetworkConfigurationProperty {
+  public interface ServiceConnectTlsCertificateAuthorityProperty {
     /**
-     * The VPC subnets and security groups that are associated with a task.
+     * The ARN of the AWS Private Certificate Authority certificate.
      *
-     *
-     * All specified subnets and security groups must be from the same VPC.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlscertificateauthority.html#cfn-ecs-service-serviceconnecttlscertificateauthority-awspcaauthorityarn)
      */
-    public fun awsvpcConfiguration(): Any? = unwrap(this).getAwsvpcConfiguration()
+    public fun awsPcaAuthorityArn(): String? = unwrap(this).getAwsPcaAuthorityArn()
 
     /**
-     * A builder for [NetworkConfigurationProperty]
+     * A builder for [ServiceConnectTlsCertificateAuthorityProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
+       * @param awsPcaAuthorityArn The ARN of the AWS Private Certificate Authority certificate.
        */
-      public fun awsvpcConfiguration(awsvpcConfiguration: IResolvable)
-
-      /**
-       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      public fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty)
-
-      /**
-       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("79684c36acab0cdfbf04ed7dac66c18ab2c1361696165365afa87bebd36dc8cf")
-      public
-          fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit)
+      public fun awsPcaAuthorityArn(awsPcaAuthorityArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty.builder()
 
       /**
-       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
+       * @param awsPcaAuthorityArn The ARN of the AWS Private Certificate Authority certificate.
        */
-      override fun awsvpcConfiguration(awsvpcConfiguration: IResolvable) {
-        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(IResolvable::unwrap))
+      override fun awsPcaAuthorityArn(awsPcaAuthorityArn: String) {
+        cdkBuilder.awsPcaAuthorityArn(awsPcaAuthorityArn)
       }
-
-      /**
-       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      override fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty) {
-        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("79684c36acab0cdfbf04ed7dac66c18ab2c1361696165365afa87bebd36dc8cf")
-      override
-          fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit):
-          Unit = awsvpcConfiguration(AwsVpcConfigurationProperty(awsvpcConfiguration))
 
       public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty,
+    ) : CdkObject(cdkObject), ServiceConnectTlsCertificateAuthorityProperty {
       /**
-       * The VPC subnets and security groups that are associated with a task.
+       * The ARN of the AWS Private Certificate Authority certificate.
        *
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlscertificateauthority.html#cfn-ecs-service-serviceconnecttlscertificateauthority-awspcaauthorityarn)
        */
-      override fun awsvpcConfiguration(): Any? = unwrap(this).getAwsvpcConfiguration()
+      override fun awsPcaAuthorityArn(): String? = unwrap(this).getAwsPcaAuthorityArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceConnectTlsCertificateAuthorityProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty):
+          ServiceConnectTlsCertificateAuthorityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectTlsCertificateAuthorityProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NetworkConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty
+      internal fun unwrap(wrapped: ServiceConnectTlsCertificateAuthorityProperty):
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty
     }
   }
 
   /**
-   * The log configuration for the container.
-   *
-   * This parameter maps to `LogConfig` in the [Create a
-   * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-   * section of the [Docker Remote
-   * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--log-driver`
-   * option to [`docker
-   * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-   *
-   * By default, containers use the same logging driver that the Docker daemon uses. However, the
-   * container might use a different logging driver than the Docker daemon by specifying a log driver
-   * configuration in the container definition. For more information about the options for different
-   * supported log drivers, see [Configure logging
-   * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in
-   * the Docker documentation.
-   *
-   * Understand the following when specifying a log configuration for your containers.
-   *
-   * * Amazon ECS currently supports a subset of the logging drivers available to the Docker daemon.
-   * Additional log drivers may be available in future releases of the Amazon ECS container agent.
-   *
-   * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-   * `awsfirelens` .
-   *
-   * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd` ,
-   * `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
-   *
-   * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
-   * instance.
-   * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-   * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-   * variable before containers placed on that instance can use these log configuration options. For
-   * more information, see [Amazon ECS container agent
-   * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-   * in the *Amazon Elastic Container Service Developer Guide* .
-   * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-   * infrastructure your tasks are hosted on, any additional software needed must be installed outside
-   * of the task. For example, the Fluentd output aggregators or a remote host running Logstash to send
-   * Gelf logs to.
+   * An object that represents the configuration for Service Connect TLS.
    *
    * Example:
    *
@@ -3628,311 +6643,172 @@ public open class CfnService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * LogConfigurationProperty logConfigurationProperty = LogConfigurationProperty.builder()
-   * .logDriver("logDriver")
-   * .options(Map.of(
-   * "optionsKey", "options"))
-   * .secretOptions(List.of(SecretProperty.builder()
-   * .name("name")
-   * .valueFrom("valueFrom")
-   * .build()))
+   * ServiceConnectTlsConfigurationProperty serviceConnectTlsConfigurationProperty =
+   * ServiceConnectTlsConfigurationProperty.builder()
+   * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
+   * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+   * .build())
+   * // the properties below are optional
+   * .kmsKey("kmsKey")
+   * .roleArn("roleArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html)
    */
-  public interface LogConfigurationProperty {
+  public interface ServiceConnectTlsConfigurationProperty {
     /**
-     * The log driver to use for the container.
+     * The signer certificate authority.
      *
-     * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-     * `awsfirelens` .
-     *
-     * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
-     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
-     *
-     * For more information about using the `awslogs` log driver, see [Using the awslogs log
-     * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-     * *Amazon Elastic Container Service Developer Guide* .
-     *
-     * For more information about using the `awsfirelens` log driver, see [Custom log
-     * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the
-     * *Amazon Elastic Container Service Developer Guide* .
-     *
-     *
-     * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
-     * project that's [available on
-     * GitHub](https://docs.aws.amazon.com/https://github.com/aws/amazon-ecs-agent) and customize it to
-     * work with that driver. We encourage you to submit pull requests for changes that you would like
-     * to have included. However, we don't currently provide support for running modified copies of
-     * this software.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-logdriver)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-issuercertificateauthority)
      */
-    public fun logDriver(): String? = unwrap(this).getLogDriver()
+    public fun issuerCertificateAuthority(): Any
 
     /**
-     * The configuration options to send to the log driver.
+     * The AWS Key Management Service key.
      *
-     * This parameter requires version 1.19 of the Docker Remote API or greater on your container
-     * instance. To check the Docker Remote API version on your container instance, log in to your
-     * container instance and run the following command: `sudo docker version --format
-     * '{{.Server.APIVersion}}'`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-options)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-kmskey)
      */
-    public fun options(): Any? = unwrap(this).getOptions()
+    public fun kmsKey(): String? = unwrap(this).getKmsKey()
 
     /**
-     * The secrets to pass to the log configuration.
+     * The Amazon Resource Name (ARN) of the IAM role that's associated with the Service Connect
+     * TLS.
      *
-     * For more information, see [Specifying sensitive
-     * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-     * in the *Amazon Elastic Container Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-secretoptions)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-rolearn)
      */
-    public fun secretOptions(): Any? = unwrap(this).getSecretOptions()
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     /**
-     * A builder for [LogConfigurationProperty]
+     * A builder for [ServiceConnectTlsConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param logDriver The log driver to use for the container.
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
-       * the *Amazon Elastic Container Service Developer Guide* .
-       *
-       *
-       * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
-       * project that's [available on
-       * GitHub](https://docs.aws.amazon.com/https://github.com/aws/amazon-ecs-agent) and customize it
-       * to work with that driver. We encourage you to submit pull requests for changes that you would
-       * like to have included. However, we don't currently provide support for running modified copies
-       * of this software.
+       * @param issuerCertificateAuthority The signer certificate authority. 
        */
-      public fun logDriver(logDriver: String)
+      public fun issuerCertificateAuthority(issuerCertificateAuthority: IResolvable)
 
       /**
-       * @param options The configuration options to send to the log driver.
-       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * @param issuerCertificateAuthority The signer certificate authority. 
        */
-      public fun options(options: IResolvable)
+      public
+          fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty)
 
       /**
-       * @param options The configuration options to send to the log driver.
-       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * @param issuerCertificateAuthority The signer certificate authority. 
        */
-      public fun options(options: Map<String, String>)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8917a2b4b6006ad864bec0cd56ed283602a26562436c0e7272227f1e1b93d5ed")
+      public
+          fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty.Builder.() -> Unit)
 
       /**
-       * @param secretOptions The secrets to pass to the log configuration.
-       * For more information, see [Specifying sensitive
-       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
+       * @param kmsKey The AWS Key Management Service key.
        */
-      public fun secretOptions(secretOptions: IResolvable)
+      public fun kmsKey(kmsKey: String)
 
       /**
-       * @param secretOptions The secrets to pass to the log configuration.
-       * For more information, see [Specifying sensitive
-       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that's associated with the
+       * Service Connect TLS.
        */
-      public fun secretOptions(secretOptions: List<Any>)
-
-      /**
-       * @param secretOptions The secrets to pass to the log configuration.
-       * For more information, see [Specifying sensitive
-       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      public fun secretOptions(vararg secretOptions: Any)
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty.builder()
 
       /**
-       * @param logDriver The log driver to use for the container.
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
-       * the *Amazon Elastic Container Service Developer Guide* .
-       *
-       *
-       * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
-       * project that's [available on
-       * GitHub](https://docs.aws.amazon.com/https://github.com/aws/amazon-ecs-agent) and customize it
-       * to work with that driver. We encourage you to submit pull requests for changes that you would
-       * like to have included. However, we don't currently provide support for running modified copies
-       * of this software.
+       * @param issuerCertificateAuthority The signer certificate authority. 
        */
-      override fun logDriver(logDriver: String) {
-        cdkBuilder.logDriver(logDriver)
+      override fun issuerCertificateAuthority(issuerCertificateAuthority: IResolvable) {
+        cdkBuilder.issuerCertificateAuthority(issuerCertificateAuthority.let(IResolvable::unwrap))
       }
 
       /**
-       * @param options The configuration options to send to the log driver.
-       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * @param issuerCertificateAuthority The signer certificate authority. 
        */
-      override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
+      override
+          fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty) {
+        cdkBuilder.issuerCertificateAuthority(issuerCertificateAuthority.let(ServiceConnectTlsCertificateAuthorityProperty::unwrap))
       }
 
       /**
-       * @param options The configuration options to send to the log driver.
-       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * @param issuerCertificateAuthority The signer certificate authority. 
        */
-      override fun options(options: Map<String, String>) {
-        cdkBuilder.options(options)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8917a2b4b6006ad864bec0cd56ed283602a26562436c0e7272227f1e1b93d5ed")
+      override
+          fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty.Builder.() -> Unit):
+          Unit =
+          issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty(issuerCertificateAuthority))
+
+      /**
+       * @param kmsKey The AWS Key Management Service key.
+       */
+      override fun kmsKey(kmsKey: String) {
+        cdkBuilder.kmsKey(kmsKey)
       }
 
       /**
-       * @param secretOptions The secrets to pass to the log configuration.
-       * For more information, see [Specifying sensitive
-       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that's associated with the
+       * Service Connect TLS.
        */
-      override fun secretOptions(secretOptions: IResolvable) {
-        cdkBuilder.secretOptions(secretOptions.let(IResolvable::unwrap))
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
       }
 
-      /**
-       * @param secretOptions The secrets to pass to the log configuration.
-       * For more information, see [Specifying sensitive
-       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      override fun secretOptions(secretOptions: List<Any>) {
-        cdkBuilder.secretOptions(secretOptions)
-      }
-
-      /**
-       * @param secretOptions The secrets to pass to the log configuration.
-       * For more information, see [Specifying sensitive
-       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      override fun secretOptions(vararg secretOptions: Any): Unit =
-          secretOptions(secretOptions.toList())
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty =
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty,
-    ) : CdkObject(cdkObject), LogConfigurationProperty {
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty,
+    ) : CdkObject(cdkObject), ServiceConnectTlsConfigurationProperty {
       /**
-       * The log driver to use for the container.
+       * The signer certificate authority.
        *
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
-       * the *Amazon Elastic Container Service Developer Guide* .
-       *
-       *
-       * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
-       * project that's [available on
-       * GitHub](https://docs.aws.amazon.com/https://github.com/aws/amazon-ecs-agent) and customize it
-       * to work with that driver. We encourage you to submit pull requests for changes that you would
-       * like to have included. However, we don't currently provide support for running modified copies
-       * of this software.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-logdriver)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-issuercertificateauthority)
        */
-      override fun logDriver(): String? = unwrap(this).getLogDriver()
+      override fun issuerCertificateAuthority(): Any = unwrap(this).getIssuerCertificateAuthority()
 
       /**
-       * The configuration options to send to the log driver.
+       * The AWS Key Management Service key.
        *
-       * This parameter requires version 1.19 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-options)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-kmskey)
        */
-      override fun options(): Any? = unwrap(this).getOptions()
+      override fun kmsKey(): String? = unwrap(this).getKmsKey()
 
       /**
-       * The secrets to pass to the log configuration.
+       * The Amazon Resource Name (ARN) of the IAM role that's associated with the Service Connect
+       * TLS.
        *
-       * For more information, see [Specifying sensitive
-       * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html#cfn-ecs-service-logconfiguration-secretoptions)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-rolearn)
        */
-      override fun secretOptions(): Any? = unwrap(this).getSecretOptions()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceConnectTlsConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty):
-          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigurationProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty):
+          ServiceConnectTlsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectTlsConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LogConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty
+      internal fun unwrap(wrapped: ServiceConnectTlsConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty
     }
   }
 
@@ -4713,1687 +7589,6 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * The deployment controller to use for the service.
-   *
-   * For more information, see [Amazon ECS deployment
-   * types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the
-   * *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * DeploymentControllerProperty deploymentControllerProperty =
-   * DeploymentControllerProperty.builder()
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html)
-   */
-  public interface DeploymentControllerProperty {
-    /**
-     * The deployment controller type to use. There are three deployment controller types
-     * available:.
-     *
-     * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
-     * running version of the container with the latest version. The number of containers Amazon ECS
-     * adds or removes from the service during a rolling update is controlled by adjusting the minimum
-     * and maximum number of healthy tasks allowed during a service deployment, as specified in the
-     * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
-     * .
-     * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
-     * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
-     * service before sending production traffic to it.
-     * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
-     * third-party deployment controller for full control over the deployment process for an Amazon ECS
-     * service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html#cfn-ecs-service-deploymentcontroller-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [DeploymentControllerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The deployment controller type to use. There are three deployment controller
-       * types available:.
-       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
-       * running version of the container with the latest version. The number of containers Amazon ECS
-       * adds or removes from the service during a rolling update is controlled by adjusting the
-       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
-       * in the
-       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
-       * .
-       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
-       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
-       * service before sending production traffic to it.
-       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
-       * third-party deployment controller for full control over the deployment process for an Amazon
-       * ECS service.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty.builder()
-
-      /**
-       * @param type The deployment controller type to use. There are three deployment controller
-       * types available:.
-       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
-       * running version of the container with the latest version. The number of containers Amazon ECS
-       * adds or removes from the service during a rolling update is controlled by adjusting the
-       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
-       * in the
-       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
-       * .
-       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
-       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
-       * service before sending production traffic to it.
-       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
-       * third-party deployment controller for full control over the deployment process for an Amazon
-       * ECS service.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty,
-    ) : CdkObject(cdkObject), DeploymentControllerProperty {
-      /**
-       * The deployment controller type to use. There are three deployment controller types
-       * available:.
-       *
-       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
-       * running version of the container with the latest version. The number of containers Amazon ECS
-       * adds or removes from the service during a rolling update is controlled by adjusting the
-       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
-       * in the
-       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
-       * .
-       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
-       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
-       * service before sending production traffic to it.
-       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
-       * third-party deployment controller for full control over the deployment process for an Amazon
-       * ECS service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html#cfn-ecs-service-deploymentcontroller-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentControllerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty):
-          DeploymentControllerProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeploymentControllerProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeploymentControllerProperty):
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty
-    }
-  }
-
-  /**
-   * The Service Connect configuration of your Amazon ECS service.
-   *
-   * The configuration for this service to discover and connect to services, and be discovered by,
-   * and connected from, other services within a namespace.
-   *
-   * Tasks that run in a namespace can use short names to connect to services in the namespace.
-   * Tasks can connect to services across all of the clusters in the namespace. Tasks connect through a
-   * managed proxy container that collects logs and metrics for increased visibility. Only the tasks
-   * that Amazon ECS services create are supported with Service Connect. For more information, see
-   * [Service
-   * Connect](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html) in the
-   * *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ServiceConnectConfigurationProperty serviceConnectConfigurationProperty =
-   * ServiceConnectConfigurationProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .logConfiguration(LogConfigurationProperty.builder()
-   * .logDriver("logDriver")
-   * .options(Map.of(
-   * "optionsKey", "options"))
-   * .secretOptions(List.of(SecretProperty.builder()
-   * .name("name")
-   * .valueFrom("valueFrom")
-   * .build()))
-   * .build())
-   * .namespace("namespace")
-   * .services(List.of(ServiceConnectServiceProperty.builder()
-   * .portName("portName")
-   * // the properties below are optional
-   * .clientAliases(List.of(ServiceConnectClientAliasProperty.builder()
-   * .port(123)
-   * // the properties below are optional
-   * .dnsName("dnsName")
-   * .build()))
-   * .discoveryName("discoveryName")
-   * .ingressPortOverride(123)
-   * .timeout(TimeoutConfigurationProperty.builder()
-   * .idleTimeoutSeconds(123)
-   * .perRequestTimeoutSeconds(123)
-   * .build())
-   * .tls(ServiceConnectTlsConfigurationProperty.builder()
-   * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
-   * .awsPcaAuthorityArn("awsPcaAuthorityArn")
-   * .build())
-   * // the properties below are optional
-   * .kmsKey("kmsKey")
-   * .roleArn("roleArn")
-   * .build())
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html)
-   */
-  public interface ServiceConnectConfigurationProperty {
-    /**
-     * Specifies whether to use Service Connect with this service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * The log configuration for the container.
-     *
-     * This parameter maps to `LogConfig` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--log-driver` option to [`docker
-     * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-     *
-     * By default, containers use the same logging driver that the Docker daemon uses. However, the
-     * container might use a different logging driver than the Docker daemon by specifying a log driver
-     * configuration in the container definition. For more information about the options for different
-     * supported log drivers, see [Configure logging
-     * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in
-     * the Docker documentation.
-     *
-     * Understand the following when specifying a log configuration for your containers.
-     *
-     * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-     * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
-     * agent.
-     *
-     * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-     * `awsfirelens` .
-     *
-     * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
-     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
-     *
-     * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
-     * instance.
-     * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-     * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-     * variable before containers placed on that instance can use these log configuration options. For
-     * more information, see [Amazon ECS container agent
-     * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-     * in the *Amazon Elastic Container Service Developer Guide* .
-     * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-     * infrastructure your tasks are hosted on, any additional software needed must be installed
-     * outside of the task. For example, the Fluentd output aggregators or a remote host running
-     * Logstash to send Gelf logs to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-logconfiguration)
-     */
-    public fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
-
-    /**
-     * The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map namespace for use
-     * with Service Connect.
-     *
-     * The namespace must be in the same AWS Region as the Amazon ECS service and cluster. The type
-     * of namespace doesn't affect Service Connect. For more information about AWS Cloud Map , see
-     * [Working with
-     * Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the
-     * *AWS Cloud Map Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-namespace)
-     */
-    public fun namespace(): String? = unwrap(this).getNamespace()
-
-    /**
-     * The list of Service Connect service objects.
-     *
-     * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
-     * services to connect to this service.
-     *
-     * This field is not required for a "client" Amazon ECS service that's a member of a namespace
-     * only to connect to other services within the namespace. An example of this would be a frontend
-     * application that accepts incoming requests from either a load balancer that's attached to the
-     * service or by other means.
-     *
-     * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
-     * service, and a list of aliases (endpoints) and ports for client applications to refer to this
-     * service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-services)
-     */
-    public fun services(): Any? = unwrap(this).getServices()
-
-    /**
-     * A builder for [ServiceConnectConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Specifies whether to use Service Connect with this service. 
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specifies whether to use Service Connect with this service. 
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-       *
-       * By default, containers use the same logging driver that the Docker daemon uses. However,
-       * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
-       *
-       * Understand the following when specifying a log configuration for your containers.
-       *
-       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
-       * agent.
-       *
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
-       * container instance.
-       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-       * variable before containers placed on that instance can use these log configuration options.
-       * For more information, see [Amazon ECS container agent
-       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-       * infrastructure your tasks are hosted on, any additional software needed must be installed
-       * outside of the task. For example, the Fluentd output aggregators or a remote host running
-       * Logstash to send Gelf logs to.
-       */
-      public fun logConfiguration(logConfiguration: IResolvable)
-
-      /**
-       * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-       *
-       * By default, containers use the same logging driver that the Docker daemon uses. However,
-       * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
-       *
-       * Understand the following when specifying a log configuration for your containers.
-       *
-       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
-       * agent.
-       *
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
-       * container instance.
-       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-       * variable before containers placed on that instance can use these log configuration options.
-       * For more information, see [Amazon ECS container agent
-       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-       * infrastructure your tasks are hosted on, any additional software needed must be installed
-       * outside of the task. For example, the Fluentd output aggregators or a remote host running
-       * Logstash to send Gelf logs to.
-       */
-      public fun logConfiguration(logConfiguration: LogConfigurationProperty)
-
-      /**
-       * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-       *
-       * By default, containers use the same logging driver that the Docker daemon uses. However,
-       * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
-       *
-       * Understand the following when specifying a log configuration for your containers.
-       *
-       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
-       * agent.
-       *
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
-       * container instance.
-       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-       * variable before containers placed on that instance can use these log configuration options.
-       * For more information, see [Amazon ECS container agent
-       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-       * infrastructure your tasks are hosted on, any additional software needed must be installed
-       * outside of the task. For example, the Fluentd output aggregators or a remote host running
-       * Logstash to send Gelf logs to.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fbf289910965c7adb3fb8fe199c5bdef3f31a13e658bf52d05729bf25ebd57fa")
-      public fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param namespace The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map
-       * namespace for use with Service Connect.
-       * The namespace must be in the same AWS Region as the Amazon ECS service and cluster. The
-       * type of namespace doesn't affect Service Connect. For more information about AWS Cloud Map ,
-       * see [Working with
-       * Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the
-       * *AWS Cloud Map Developer Guide* .
-       */
-      public fun namespace(namespace: String)
-
-      /**
-       * @param services The list of Service Connect service objects.
-       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
-       * services to connect to this service.
-       *
-       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
-       * only to connect to other services within the namespace. An example of this would be a frontend
-       * application that accepts incoming requests from either a load balancer that's attached to the
-       * service or by other means.
-       *
-       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
-       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
-       * service.
-       */
-      public fun services(services: IResolvable)
-
-      /**
-       * @param services The list of Service Connect service objects.
-       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
-       * services to connect to this service.
-       *
-       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
-       * only to connect to other services within the namespace. An example of this would be a frontend
-       * application that accepts incoming requests from either a load balancer that's attached to the
-       * service or by other means.
-       *
-       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
-       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
-       * service.
-       */
-      public fun services(services: List<Any>)
-
-      /**
-       * @param services The list of Service Connect service objects.
-       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
-       * services to connect to this service.
-       *
-       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
-       * only to connect to other services within the namespace. An example of this would be a frontend
-       * application that accepts incoming requests from either a load balancer that's attached to the
-       * service or by other means.
-       *
-       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
-       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
-       * service.
-       */
-      public fun services(vararg services: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty.builder()
-
-      /**
-       * @param enabled Specifies whether to use Service Connect with this service. 
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specifies whether to use Service Connect with this service. 
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-       *
-       * By default, containers use the same logging driver that the Docker daemon uses. However,
-       * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
-       *
-       * Understand the following when specifying a log configuration for your containers.
-       *
-       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
-       * agent.
-       *
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
-       * container instance.
-       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-       * variable before containers placed on that instance can use these log configuration options.
-       * For more information, see [Amazon ECS container agent
-       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-       * infrastructure your tasks are hosted on, any additional software needed must be installed
-       * outside of the task. For example, the Fluentd output aggregators or a remote host running
-       * Logstash to send Gelf logs to.
-       */
-      override fun logConfiguration(logConfiguration: IResolvable) {
-        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-       *
-       * By default, containers use the same logging driver that the Docker daemon uses. However,
-       * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
-       *
-       * Understand the following when specifying a log configuration for your containers.
-       *
-       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
-       * agent.
-       *
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
-       * container instance.
-       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-       * variable before containers placed on that instance can use these log configuration options.
-       * For more information, see [Amazon ECS container agent
-       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-       * infrastructure your tasks are hosted on, any additional software needed must be installed
-       * outside of the task. For example, the Fluentd output aggregators or a remote host running
-       * Logstash to send Gelf logs to.
-       */
-      override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
-        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-       *
-       * By default, containers use the same logging driver that the Docker daemon uses. However,
-       * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
-       *
-       * Understand the following when specifying a log configuration for your containers.
-       *
-       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
-       * agent.
-       *
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
-       * container instance.
-       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-       * variable before containers placed on that instance can use these log configuration options.
-       * For more information, see [Amazon ECS container agent
-       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-       * infrastructure your tasks are hosted on, any additional software needed must be installed
-       * outside of the task. For example, the Fluentd output aggregators or a remote host running
-       * Logstash to send Gelf logs to.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fbf289910965c7adb3fb8fe199c5bdef3f31a13e658bf52d05729bf25ebd57fa")
-      override fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit):
-          Unit = logConfiguration(LogConfigurationProperty(logConfiguration))
-
-      /**
-       * @param namespace The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map
-       * namespace for use with Service Connect.
-       * The namespace must be in the same AWS Region as the Amazon ECS service and cluster. The
-       * type of namespace doesn't affect Service Connect. For more information about AWS Cloud Map ,
-       * see [Working with
-       * Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the
-       * *AWS Cloud Map Developer Guide* .
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      /**
-       * @param services The list of Service Connect service objects.
-       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
-       * services to connect to this service.
-       *
-       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
-       * only to connect to other services within the namespace. An example of this would be a frontend
-       * application that accepts incoming requests from either a load balancer that's attached to the
-       * service or by other means.
-       *
-       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
-       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
-       * service.
-       */
-      override fun services(services: IResolvable) {
-        cdkBuilder.services(services.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param services The list of Service Connect service objects.
-       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
-       * services to connect to this service.
-       *
-       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
-       * only to connect to other services within the namespace. An example of this would be a frontend
-       * application that accepts incoming requests from either a load balancer that's attached to the
-       * service or by other means.
-       *
-       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
-       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
-       * service.
-       */
-      override fun services(services: List<Any>) {
-        cdkBuilder.services(services)
-      }
-
-      /**
-       * @param services The list of Service Connect service objects.
-       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
-       * services to connect to this service.
-       *
-       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
-       * only to connect to other services within the namespace. An example of this would be a frontend
-       * application that accepts incoming requests from either a load balancer that's attached to the
-       * service or by other means.
-       *
-       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
-       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
-       * service.
-       */
-      override fun services(vararg services: Any): Unit = services(services.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty,
-    ) : CdkObject(cdkObject), ServiceConnectConfigurationProperty {
-      /**
-       * Specifies whether to use Service Connect with this service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-enabled)
-       */
-      override fun enabled(): Any = unwrap(this).getEnabled()
-
-      /**
-       * The log configuration for the container.
-       *
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
-       *
-       * By default, containers use the same logging driver that the Docker daemon uses. However,
-       * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
-       *
-       * Understand the following when specifying a log configuration for your containers.
-       *
-       * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-       * daemon. Additional log drivers may be available in future releases of the Amazon ECS container
-       * agent.
-       *
-       * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
-       *
-       * * This parameter requires version 1.18 of the Docker Remote API or greater on your
-       * container instance.
-       * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
-       * register the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
-       * variable before containers placed on that instance can use these log configuration options.
-       * For more information, see [Amazon ECS container agent
-       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       * * For tasks that are on AWS Fargate , because you don't have access to the underlying
-       * infrastructure your tasks are hosted on, any additional software needed must be installed
-       * outside of the task. For example, the Fluentd output aggregators or a remote host running
-       * Logstash to send Gelf logs to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-logconfiguration)
-       */
-      override fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
-
-      /**
-       * The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map namespace for
-       * use with Service Connect.
-       *
-       * The namespace must be in the same AWS Region as the Amazon ECS service and cluster. The
-       * type of namespace doesn't affect Service Connect. For more information about AWS Cloud Map ,
-       * see [Working with
-       * Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the
-       * *AWS Cloud Map Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-namespace)
-       */
-      override fun namespace(): String? = unwrap(this).getNamespace()
-
-      /**
-       * The list of Service Connect service objects.
-       *
-       * These are names and aliases (also known as endpoints) that are used by other Amazon ECS
-       * services to connect to this service.
-       *
-       * This field is not required for a "client" Amazon ECS service that's a member of a namespace
-       * only to connect to other services within the namespace. An example of this would be a frontend
-       * application that accepts incoming requests from either a load balancer that's attached to the
-       * service or by other means.
-       *
-       * An object selects a port from the task definition, assigns a name for the AWS Cloud Map
-       * service, and a list of aliases (endpoints) and ports for client applications to refer to this
-       * service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html#cfn-ecs-service-serviceconnectconfiguration-services)
-       */
-      override fun services(): Any? = unwrap(this).getServices()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceConnectConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty):
-          ServiceConnectConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceConnectConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServiceConnectConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty
-    }
-  }
-
-  /**
-   * The `DeploymentConfiguration` property specifies optional deployment parameters that control
-   * how many tasks run during the deployment and the ordering of stopping and starting tasks.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * DeploymentConfigurationProperty deploymentConfigurationProperty =
-   * DeploymentConfigurationProperty.builder()
-   * .alarms(DeploymentAlarmsProperty.builder()
-   * .alarmNames(List.of("alarmNames"))
-   * .enable(false)
-   * .rollback(false)
-   * .build())
-   * .deploymentCircuitBreaker(DeploymentCircuitBreakerProperty.builder()
-   * .enable(false)
-   * .rollback(false)
-   * .build())
-   * .maximumPercent(123)
-   * .minimumHealthyPercent(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html)
-   */
-  public interface DeploymentConfigurationProperty {
-    /**
-     * Information about the CloudWatch alarms.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-alarms)
-     */
-    public fun alarms(): Any? = unwrap(this).getAlarms()
-
-    /**
-     * The deployment circuit breaker can only be used for services using the rolling update ( `ECS`
-     * ) deployment type.
-     *
-     * The *deployment circuit breaker* determines whether a service deployment will fail if the
-     * service can't reach a steady state. If you use the deployment circuit breaker, a service
-     * deployment will transition to a failed state and stop launching new tasks. If you use the
-     * rollback option, when a service deployment fails, the service is rolled back to the last
-     * deployment that completed successfully. For more information, see [Rolling
-     * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html) in
-     * the *Amazon Elastic Container Service Developer Guide*
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker)
-     */
-    public fun deploymentCircuitBreaker(): Any? = unwrap(this).getDeploymentCircuitBreaker()
-
-    /**
-     * If a service is using the rolling update ( `ECS` ) deployment type, the `maximumPercent`
-     * parameter represents an upper limit on the number of your service's tasks that are allowed in
-     * the `RUNNING` or `PENDING` state during a deployment, as a percentage of the `desiredCount`
-     * (rounded down to the nearest integer).
-     *
-     * This parameter enables you to define the deployment batch size. For example, if your service
-     * is using the `REPLICA` service scheduler and has a `desiredCount` of four tasks and a
-     * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the four
-     * older tasks (provided that the cluster resources required to do this are available). The default
-     * `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
-     *
-     * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types
-     * and tasks that use the EC2 launch type, the *maximum percent* value is set to the default value
-     * and is used to define the upper limit on the number of the tasks in the service that remain in
-     * the `RUNNING` state while the container instances are in the `DRAINING` state. If the tasks in
-     * the service use the Fargate launch type, the maximum percent value is not used, although it is
-     * returned when describing your service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
-     */
-    public fun maximumPercent(): Number? = unwrap(this).getMaximumPercent()
-
-    /**
-     * If a service is using the rolling update ( `ECS` ) deployment type, the
-     * `minimumHealthyPercent` represents a lower limit on the number of your service's tasks that must
-     * remain in the `RUNNING` state during a deployment, as a percentage of the `desiredCount`
-     * (rounded up to the nearest integer).
-     *
-     * This parameter enables you to deploy without using additional cluster capacity. For example,
-     * if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of 50%, the
-     * service scheduler may stop two existing tasks to free up cluster capacity before starting two
-     * new tasks.
-     *
-     * For services that *do not* use a load balancer, the following should be noted:
-     *
-     * * A service is considered healthy if all essential containers within the tasks in the service
-     * pass their health checks.
-     * * If a task has no essential containers with a health check defined, the service scheduler
-     * will wait for 40 seconds after a task reaches a `RUNNING` state before the task is counted
-     * towards the minimum healthy percent total.
-     * * If a task has one or more essential containers with a health check defined, the service
-     * scheduler will wait for the task to reach a healthy status before counting it towards the
-     * minimum healthy percent total. A task is considered healthy when all essential containers within
-     * the task have passed their health checks. The amount of time the service scheduler can wait for
-     * is determined by the container health check settings.
-     *
-     * For services that *do* use a load balancer, the following should be noted:
-     *
-     * * If a task has no essential containers with a health check defined, the service scheduler
-     * will wait for the load balancer target group health check to return a healthy status before
-     * counting the task towards the minimum healthy percent total.
-     * * If a task has an essential container with a health check defined, the service scheduler
-     * will wait for both the task to reach a healthy status and the load balancer target group health
-     * check to return a healthy status before counting the task towards the minimum healthy percent
-     * total.
-     *
-     * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types
-     * and is running tasks that use the EC2 launch type, the *minimum healthy percent* value is set to
-     * the default value and is used to define the lower limit on the number of the tasks in the
-     * service that remain in the `RUNNING` state while the container instances are in the `DRAINING`
-     * state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-     * types and is running tasks that use the Fargate launch type, the minimum healthy percent value
-     * is not used, although it is returned when describing your service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
-     */
-    public fun minimumHealthyPercent(): Number? = unwrap(this).getMinimumHealthyPercent()
-
-    /**
-     * A builder for [DeploymentConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param alarms Information about the CloudWatch alarms.
-       */
-      public fun alarms(alarms: IResolvable)
-
-      /**
-       * @param alarms Information about the CloudWatch alarms.
-       */
-      public fun alarms(alarms: DeploymentAlarmsProperty)
-
-      /**
-       * @param alarms Information about the CloudWatch alarms.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("efd9a5f127d78c01958f4cf4b39acf88204ea3d9b713d0c6e12a4bcd49c0914b")
-      public fun alarms(alarms: DeploymentAlarmsProperty.Builder.() -> Unit)
-
-      /**
-       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
-       * services using the rolling update ( `ECS` ) deployment type.
-       * The *deployment circuit breaker* determines whether a service deployment will fail if the
-       * service can't reach a steady state. If you use the deployment circuit breaker, a service
-       * deployment will transition to a failed state and stop launching new tasks. If you use the
-       * rollback option, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully. For more information, see [Rolling
-       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
-       * in the *Amazon Elastic Container Service Developer Guide*
-       */
-      public fun deploymentCircuitBreaker(deploymentCircuitBreaker: IResolvable)
-
-      /**
-       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
-       * services using the rolling update ( `ECS` ) deployment type.
-       * The *deployment circuit breaker* determines whether a service deployment will fail if the
-       * service can't reach a steady state. If you use the deployment circuit breaker, a service
-       * deployment will transition to a failed state and stop launching new tasks. If you use the
-       * rollback option, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully. For more information, see [Rolling
-       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
-       * in the *Amazon Elastic Container Service Developer Guide*
-       */
-      public
-          fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty)
-
-      /**
-       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
-       * services using the rolling update ( `ECS` ) deployment type.
-       * The *deployment circuit breaker* determines whether a service deployment will fail if the
-       * service can't reach a steady state. If you use the deployment circuit breaker, a service
-       * deployment will transition to a failed state and stop launching new tasks. If you use the
-       * rollback option, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully. For more information, see [Rolling
-       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
-       * in the *Amazon Elastic Container Service Developer Guide*
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("06d33a617c577ba243f4f0271ff561c8f6ede78b9600fbb68e0f022c6bfe2d4c")
-      public
-          fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty.Builder.() -> Unit)
-
-      /**
-       * @param maximumPercent If a service is using the rolling update ( `ECS` ) deployment type,
-       * the `maximumPercent` parameter represents an upper limit on the number of your service's tasks
-       * that are allowed in the `RUNNING` or `PENDING` state during a deployment, as a percentage of
-       * the `desiredCount` (rounded down to the nearest integer).
-       * This parameter enables you to define the deployment batch size. For example, if your
-       * service is using the `REPLICA` service scheduler and has a `desiredCount` of four tasks and a
-       * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
-       * four older tasks (provided that the cluster resources required to do this are available). The
-       * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
-       *
-       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
-       * default value and is used to define the upper limit on the number of the tasks in the service
-       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
-       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
-       * used, although it is returned when describing your service.
-       */
-      public fun maximumPercent(maximumPercent: Number)
-
-      /**
-       * @param minimumHealthyPercent If a service is using the rolling update ( `ECS` ) deployment
-       * type, the `minimumHealthyPercent` represents a lower limit on the number of your service's
-       * tasks that must remain in the `RUNNING` state during a deployment, as a percentage of the
-       * `desiredCount` (rounded up to the nearest integer).
-       * This parameter enables you to deploy without using additional cluster capacity. For
-       * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
-       * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
-       * starting two new tasks.
-       *
-       * For services that *do not* use a load balancer, the following should be noted:
-       *
-       * * A service is considered healthy if all essential containers within the tasks in the
-       * service pass their health checks.
-       * * If a task has no essential containers with a health check defined, the service scheduler
-       * will wait for 40 seconds after a task reaches a `RUNNING` state before the task is counted
-       * towards the minimum healthy percent total.
-       * * If a task has one or more essential containers with a health check defined, the service
-       * scheduler will wait for the task to reach a healthy status before counting it towards the
-       * minimum healthy percent total. A task is considered healthy when all essential containers
-       * within the task have passed their health checks. The amount of time the service scheduler can
-       * wait for is determined by the container health check settings.
-       *
-       * For services that *do* use a load balancer, the following should be noted:
-       *
-       * * If a task has no essential containers with a health check defined, the service scheduler
-       * will wait for the load balancer target group health check to return a healthy status before
-       * counting the task towards the minimum healthy percent total.
-       * * If a task has an essential container with a health check defined, the service scheduler
-       * will wait for both the task to reach a healthy status and the load balancer target group
-       * health check to return a healthy status before counting the task towards the minimum healthy
-       * percent total.
-       *
-       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
-       * is set to the default value and is used to define the lower limit on the number of the tasks
-       * in the service that remain in the `RUNNING` state while the container instances are in the
-       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
-       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
-       * percent value is not used, although it is returned when describing your service.
-       */
-      public fun minimumHealthyPercent(minimumHealthyPercent: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty.builder()
-
-      /**
-       * @param alarms Information about the CloudWatch alarms.
-       */
-      override fun alarms(alarms: IResolvable) {
-        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param alarms Information about the CloudWatch alarms.
-       */
-      override fun alarms(alarms: DeploymentAlarmsProperty) {
-        cdkBuilder.alarms(alarms.let(DeploymentAlarmsProperty::unwrap))
-      }
-
-      /**
-       * @param alarms Information about the CloudWatch alarms.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("efd9a5f127d78c01958f4cf4b39acf88204ea3d9b713d0c6e12a4bcd49c0914b")
-      override fun alarms(alarms: DeploymentAlarmsProperty.Builder.() -> Unit): Unit =
-          alarms(DeploymentAlarmsProperty(alarms))
-
-      /**
-       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
-       * services using the rolling update ( `ECS` ) deployment type.
-       * The *deployment circuit breaker* determines whether a service deployment will fail if the
-       * service can't reach a steady state. If you use the deployment circuit breaker, a service
-       * deployment will transition to a failed state and stop launching new tasks. If you use the
-       * rollback option, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully. For more information, see [Rolling
-       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
-       * in the *Amazon Elastic Container Service Developer Guide*
-       */
-      override fun deploymentCircuitBreaker(deploymentCircuitBreaker: IResolvable) {
-        cdkBuilder.deploymentCircuitBreaker(deploymentCircuitBreaker.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
-       * services using the rolling update ( `ECS` ) deployment type.
-       * The *deployment circuit breaker* determines whether a service deployment will fail if the
-       * service can't reach a steady state. If you use the deployment circuit breaker, a service
-       * deployment will transition to a failed state and stop launching new tasks. If you use the
-       * rollback option, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully. For more information, see [Rolling
-       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
-       * in the *Amazon Elastic Container Service Developer Guide*
-       */
-      override
-          fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty) {
-        cdkBuilder.deploymentCircuitBreaker(deploymentCircuitBreaker.let(DeploymentCircuitBreakerProperty::unwrap))
-      }
-
-      /**
-       * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
-       * services using the rolling update ( `ECS` ) deployment type.
-       * The *deployment circuit breaker* determines whether a service deployment will fail if the
-       * service can't reach a steady state. If you use the deployment circuit breaker, a service
-       * deployment will transition to a failed state and stop launching new tasks. If you use the
-       * rollback option, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully. For more information, see [Rolling
-       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
-       * in the *Amazon Elastic Container Service Developer Guide*
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("06d33a617c577ba243f4f0271ff561c8f6ede78b9600fbb68e0f022c6bfe2d4c")
-      override
-          fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty.Builder.() -> Unit):
-          Unit =
-          deploymentCircuitBreaker(DeploymentCircuitBreakerProperty(deploymentCircuitBreaker))
-
-      /**
-       * @param maximumPercent If a service is using the rolling update ( `ECS` ) deployment type,
-       * the `maximumPercent` parameter represents an upper limit on the number of your service's tasks
-       * that are allowed in the `RUNNING` or `PENDING` state during a deployment, as a percentage of
-       * the `desiredCount` (rounded down to the nearest integer).
-       * This parameter enables you to define the deployment batch size. For example, if your
-       * service is using the `REPLICA` service scheduler and has a `desiredCount` of four tasks and a
-       * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
-       * four older tasks (provided that the cluster resources required to do this are available). The
-       * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
-       *
-       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
-       * default value and is used to define the upper limit on the number of the tasks in the service
-       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
-       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
-       * used, although it is returned when describing your service.
-       */
-      override fun maximumPercent(maximumPercent: Number) {
-        cdkBuilder.maximumPercent(maximumPercent)
-      }
-
-      /**
-       * @param minimumHealthyPercent If a service is using the rolling update ( `ECS` ) deployment
-       * type, the `minimumHealthyPercent` represents a lower limit on the number of your service's
-       * tasks that must remain in the `RUNNING` state during a deployment, as a percentage of the
-       * `desiredCount` (rounded up to the nearest integer).
-       * This parameter enables you to deploy without using additional cluster capacity. For
-       * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
-       * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
-       * starting two new tasks.
-       *
-       * For services that *do not* use a load balancer, the following should be noted:
-       *
-       * * A service is considered healthy if all essential containers within the tasks in the
-       * service pass their health checks.
-       * * If a task has no essential containers with a health check defined, the service scheduler
-       * will wait for 40 seconds after a task reaches a `RUNNING` state before the task is counted
-       * towards the minimum healthy percent total.
-       * * If a task has one or more essential containers with a health check defined, the service
-       * scheduler will wait for the task to reach a healthy status before counting it towards the
-       * minimum healthy percent total. A task is considered healthy when all essential containers
-       * within the task have passed their health checks. The amount of time the service scheduler can
-       * wait for is determined by the container health check settings.
-       *
-       * For services that *do* use a load balancer, the following should be noted:
-       *
-       * * If a task has no essential containers with a health check defined, the service scheduler
-       * will wait for the load balancer target group health check to return a healthy status before
-       * counting the task towards the minimum healthy percent total.
-       * * If a task has an essential container with a health check defined, the service scheduler
-       * will wait for both the task to reach a healthy status and the load balancer target group
-       * health check to return a healthy status before counting the task towards the minimum healthy
-       * percent total.
-       *
-       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
-       * is set to the default value and is used to define the lower limit on the number of the tasks
-       * in the service that remain in the `RUNNING` state while the container instances are in the
-       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
-       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
-       * percent value is not used, although it is returned when describing your service.
-       */
-      override fun minimumHealthyPercent(minimumHealthyPercent: Number) {
-        cdkBuilder.minimumHealthyPercent(minimumHealthyPercent)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty,
-    ) : CdkObject(cdkObject), DeploymentConfigurationProperty {
-      /**
-       * Information about the CloudWatch alarms.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-alarms)
-       */
-      override fun alarms(): Any? = unwrap(this).getAlarms()
-
-      /**
-       * The deployment circuit breaker can only be used for services using the rolling update (
-       * `ECS` ) deployment type.
-       *
-       * The *deployment circuit breaker* determines whether a service deployment will fail if the
-       * service can't reach a steady state. If you use the deployment circuit breaker, a service
-       * deployment will transition to a failed state and stop launching new tasks. If you use the
-       * rollback option, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully. For more information, see [Rolling
-       * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html)
-       * in the *Amazon Elastic Container Service Developer Guide*
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker)
-       */
-      override fun deploymentCircuitBreaker(): Any? = unwrap(this).getDeploymentCircuitBreaker()
-
-      /**
-       * If a service is using the rolling update ( `ECS` ) deployment type, the `maximumPercent`
-       * parameter represents an upper limit on the number of your service's tasks that are allowed in
-       * the `RUNNING` or `PENDING` state during a deployment, as a percentage of the `desiredCount`
-       * (rounded down to the nearest integer).
-       *
-       * This parameter enables you to define the deployment batch size. For example, if your
-       * service is using the `REPLICA` service scheduler and has a `desiredCount` of four tasks and a
-       * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
-       * four older tasks (provided that the cluster resources required to do this are available). The
-       * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
-       *
-       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
-       * default value and is used to define the upper limit on the number of the tasks in the service
-       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
-       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
-       * used, although it is returned when describing your service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
-       */
-      override fun maximumPercent(): Number? = unwrap(this).getMaximumPercent()
-
-      /**
-       * If a service is using the rolling update ( `ECS` ) deployment type, the
-       * `minimumHealthyPercent` represents a lower limit on the number of your service's tasks that
-       * must remain in the `RUNNING` state during a deployment, as a percentage of the `desiredCount`
-       * (rounded up to the nearest integer).
-       *
-       * This parameter enables you to deploy without using additional cluster capacity. For
-       * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
-       * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
-       * starting two new tasks.
-       *
-       * For services that *do not* use a load balancer, the following should be noted:
-       *
-       * * A service is considered healthy if all essential containers within the tasks in the
-       * service pass their health checks.
-       * * If a task has no essential containers with a health check defined, the service scheduler
-       * will wait for 40 seconds after a task reaches a `RUNNING` state before the task is counted
-       * towards the minimum healthy percent total.
-       * * If a task has one or more essential containers with a health check defined, the service
-       * scheduler will wait for the task to reach a healthy status before counting it towards the
-       * minimum healthy percent total. A task is considered healthy when all essential containers
-       * within the task have passed their health checks. The amount of time the service scheduler can
-       * wait for is determined by the container health check settings.
-       *
-       * For services that *do* use a load balancer, the following should be noted:
-       *
-       * * If a task has no essential containers with a health check defined, the service scheduler
-       * will wait for the load balancer target group health check to return a healthy status before
-       * counting the task towards the minimum healthy percent total.
-       * * If a task has an essential container with a health check defined, the service scheduler
-       * will wait for both the task to reach a healthy status and the load balancer target group
-       * health check to return a healthy status before counting the task towards the minimum healthy
-       * percent total.
-       *
-       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
-       * is set to the default value and is used to define the lower limit on the number of the tasks
-       * in the service that remain in the `RUNNING` state while the container instances are in the
-       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
-       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
-       * percent value is not used, although it is returned when describing your service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
-       */
-      override fun minimumHealthyPercent(): Number? = unwrap(this).getMinimumHealthyPercent()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty):
-          DeploymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeploymentConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeploymentConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty
-    }
-  }
-
-  /**
-   * The tag specifications of an Amazon EBS volume.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * EBSTagSpecificationProperty eBSTagSpecificationProperty = EBSTagSpecificationProperty.builder()
-   * .resourceType("resourceType")
-   * // the properties below are optional
-   * .propagateTags("propagateTags")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html)
-   */
-  public interface EBSTagSpecificationProperty {
-    /**
-     * Determines whether to propagate the tags from the task definition to the Amazon EBS volume.
-     *
-     * Tags can only propagate to a `SERVICE` specified in `ServiceVolumeConfiguration` . If no
-     * value is specified, the tags aren't propagated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-propagatetags)
-     */
-    public fun propagateTags(): String? = unwrap(this).getPropagateTags()
-
-    /**
-     * The type of volume resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-resourcetype)
-     */
-    public fun resourceType(): String
-
-    /**
-     * The tags applied to this Amazon EBS volume.
-     *
-     * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * A builder for [EBSTagSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param propagateTags Determines whether to propagate the tags from the task definition to
-       * the Amazon EBS volume.
-       * Tags can only propagate to a `SERVICE` specified in `ServiceVolumeConfiguration` . If no
-       * value is specified, the tags aren't propagated.
-       */
-      public fun propagateTags(propagateTags: String)
-
-      /**
-       * @param resourceType The type of volume resource. 
-       */
-      public fun resourceType(resourceType: String)
-
-      /**
-       * @param tags The tags applied to this Amazon EBS volume.
-       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags The tags applied to this Amazon EBS volume.
-       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
-       */
-      public fun tags(vararg tags: CfnTag)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty.builder()
-
-      /**
-       * @param propagateTags Determines whether to propagate the tags from the task definition to
-       * the Amazon EBS volume.
-       * Tags can only propagate to a `SERVICE` specified in `ServiceVolumeConfiguration` . If no
-       * value is specified, the tags aren't propagated.
-       */
-      override fun propagateTags(propagateTags: String) {
-        cdkBuilder.propagateTags(propagateTags)
-      }
-
-      /**
-       * @param resourceType The type of volume resource. 
-       */
-      override fun resourceType(resourceType: String) {
-        cdkBuilder.resourceType(resourceType)
-      }
-
-      /**
-       * @param tags The tags applied to this Amazon EBS volume.
-       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags The tags applied to this Amazon EBS volume.
-       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty,
-    ) : CdkObject(cdkObject), EBSTagSpecificationProperty {
-      /**
-       * Determines whether to propagate the tags from the task definition to the Amazon EBS volume.
-       *
-       * Tags can only propagate to a `SERVICE` specified in `ServiceVolumeConfiguration` . If no
-       * value is specified, the tags aren't propagated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-propagatetags)
-       */
-      override fun propagateTags(): String? = unwrap(this).getPropagateTags()
-
-      /**
-       * The type of volume resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-resourcetype)
-       */
-      override fun resourceType(): String = unwrap(this).getResourceType()
-
-      /**
-       * The tags applied to this Amazon EBS volume.
-       *
-       * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-ebstagspecification.html#cfn-ecs-service-ebstagspecification-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EBSTagSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty):
-          EBSTagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EBSTagSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EBSTagSpecificationProperty):
-          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty
-    }
-  }
-
-  /**
-   * The `PlacementStrategy` property specifies the task placement strategy for a task or service.
-   *
-   * For more information, see [Task Placement
-   * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html)
-   * in the *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * PlacementStrategyProperty placementStrategyProperty = PlacementStrategyProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .field("field")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html)
-   */
-  public interface PlacementStrategyProperty {
-    /**
-     * The field to apply the placement strategy against.
-     *
-     * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has the
-     * same effect), or any platform or custom attribute that is applied to a container instance, such
-     * as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values are
-     * `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
-     */
-    public fun `field`(): String? = unwrap(this).getField()
-
-    /**
-     * The type of placement strategy.
-     *
-     * The `random` placement strategy randomly places tasks on available candidates. The `spread`
-     * placement strategy spreads placement across available candidates evenly based on the `field`
-     * parameter. The `binpack` strategy places tasks on available candidates that have the least
-     * available amount of the resource that's specified with the `field` parameter. For example, if
-     * you binpack on memory, a task is placed on the instance with the least amount of remaining
-     * memory but still enough to run the task.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [PlacementStrategyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param field The field to apply the placement strategy against.
-       * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
-       * the same effect), or any platform or custom attribute that is applied to a container instance,
-       * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
-       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
-       */
-      public fun `field`(`field`: String)
-
-      /**
-       * @param type The type of placement strategy. 
-       * The `random` placement strategy randomly places tasks on available candidates. The `spread`
-       * placement strategy spreads placement across available candidates evenly based on the `field`
-       * parameter. The `binpack` strategy places tasks on available candidates that have the least
-       * available amount of the resource that's specified with the `field` parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory but still enough to run the task.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty.builder()
-
-      /**
-       * @param field The field to apply the placement strategy against.
-       * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
-       * the same effect), or any platform or custom attribute that is applied to a container instance,
-       * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
-       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
-       */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
-      }
-
-      /**
-       * @param type The type of placement strategy. 
-       * The `random` placement strategy randomly places tasks on available candidates. The `spread`
-       * placement strategy spreads placement across available candidates evenly based on the `field`
-       * parameter. The `binpack` strategy places tasks on available candidates that have the least
-       * available amount of the resource that's specified with the `field` parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory but still enough to run the task.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty,
-    ) : CdkObject(cdkObject), PlacementStrategyProperty {
-      /**
-       * The field to apply the placement strategy against.
-       *
-       * For the `spread` placement strategy, valid values are `instanceId` (or `host` , which has
-       * the same effect), or any platform or custom attribute that is applied to a container instance,
-       * such as `attribute:ecs.availability-zone` . For the `binpack` placement strategy, valid values
-       * are `CPU` and `MEMORY` . For the `random` placement strategy, this field is not used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field)
-       */
-      override fun `field`(): String? = unwrap(this).getField()
-
-      /**
-       * The type of placement strategy.
-       *
-       * The `random` placement strategy randomly places tasks on available candidates. The `spread`
-       * placement strategy spreads placement across available candidates evenly based on the `field`
-       * parameter. The `binpack` strategy places tasks on available candidates that have the least
-       * available amount of the resource that's specified with the `field` parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory but still enough to run the task.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementStrategyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty):
-          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PlacementStrategyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PlacementStrategyProperty):
-          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty
-    }
-  }
-
-  /**
    * The `ServiceRegistry` property specifies details of the service registry.
    *
    * For more information, see [Service
@@ -6630,1144 +7825,6 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * An object representing the secret to expose to your container.
-   *
-   * Secrets can be exposed to a container in the following ways:
-   *
-   * * To inject sensitive data into your containers as environment variables, use the `secrets`
-   * container definition parameter.
-   * * To reference sensitive information in the log configuration of a container, use the
-   * `secretOptions` container definition parameter.
-   *
-   * For more information, see [Specifying sensitive
-   * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-   * in the *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * SecretProperty secretProperty = SecretProperty.builder()
-   * .name("name")
-   * .valueFrom("valueFrom")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html)
-   */
-  public interface SecretProperty {
-    /**
-     * The name of the secret.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html#cfn-ecs-service-secret-name)
-     */
-    public fun name(): String
-
-    /**
-     * The secret to expose to the container.
-     *
-     * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
-     * ARN of the parameter in the SSM Parameter Store.
-     *
-     * For information about the require AWS Identity and Access Management permissions, see
-     * [Required IAM permissions for Amazon ECS
-     * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
-     * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
-     * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
-     * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer Guide*
-     * .
-     *
-     *
-     * If the SSM Parameter Store parameter exists in the same Region as the task you're launching,
-     * then you can use either the full ARN or name of the parameter. If the parameter exists in a
-     * different Region, then the full ARN must be specified.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html#cfn-ecs-service-secret-valuefrom)
-     */
-    public fun valueFrom(): String
-
-    /**
-     * A builder for [SecretProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the secret. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param valueFrom The secret to expose to the container. 
-       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
-       * ARN of the parameter in the SSM Parameter Store.
-       *
-       * For information about the require AWS Identity and Access Management permissions, see
-       * [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
-       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
-       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
-       * Guide* .
-       *
-       *
-       * If the SSM Parameter Store parameter exists in the same Region as the task you're
-       * launching, then you can use either the full ARN or name of the parameter. If the parameter
-       * exists in a different Region, then the full ARN must be specified.
-       */
-      public fun valueFrom(valueFrom: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnService.SecretProperty.Builder
-          = software.amazon.awscdk.services.ecs.CfnService.SecretProperty.builder()
-
-      /**
-       * @param name The name of the secret. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param valueFrom The secret to expose to the container. 
-       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
-       * ARN of the parameter in the SSM Parameter Store.
-       *
-       * For information about the require AWS Identity and Access Management permissions, see
-       * [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
-       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
-       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
-       * Guide* .
-       *
-       *
-       * If the SSM Parameter Store parameter exists in the same Region as the task you're
-       * launching, then you can use either the full ARN or name of the parameter. If the parameter
-       * exists in a different Region, then the full ARN must be specified.
-       */
-      override fun valueFrom(valueFrom: String) {
-        cdkBuilder.valueFrom(valueFrom)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnService.SecretProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnService.SecretProperty,
-    ) : CdkObject(cdkObject), SecretProperty {
-      /**
-       * The name of the secret.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html#cfn-ecs-service-secret-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The secret to expose to the container.
-       *
-       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
-       * ARN of the parameter in the SSM Parameter Store.
-       *
-       * For information about the require AWS Identity and Access Management permissions, see
-       * [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
-       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
-       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
-       * Guide* .
-       *
-       *
-       * If the SSM Parameter Store parameter exists in the same Region as the task you're
-       * launching, then you can use either the full ARN or name of the parameter. If the parameter
-       * exists in a different Region, then the full ARN must be specified.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-secret.html#cfn-ecs-service-secret-valuefrom)
-       */
-      override fun valueFrom(): String = unwrap(this).getValueFrom()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SecretProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.SecretProperty):
-          SecretProperty = CdkObjectWrappers.wrap(cdkObject) as? SecretProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SecretProperty):
-          software.amazon.awscdk.services.ecs.CfnService.SecretProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.ecs.CfnService.SecretProperty
-    }
-  }
-
-  /**
-   * The details of a capacity provider strategy.
-   *
-   * A capacity provider strategy can be set when using the `RunTask` or `CreateService` APIs or as
-   * the default capacity provider strategy for a cluster with the `CreateCluster` API.
-   *
-   * Only capacity providers that are already associated with a cluster and have an `ACTIVE` or
-   * `UPDATING` status can be used in a capacity provider strategy. The `PutClusterCapacityProviders`
-   * API is used to associate a capacity provider with a cluster.
-   *
-   * If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must
-   * already be created. New Auto Scaling group capacity providers can be created with the
-   * `CreateCapacityProvider` API operation.
-   *
-   * To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT`
-   * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need
-   * to be associated with a cluster to be used in a capacity provider strategy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
-   * CapacityProviderStrategyItemProperty.builder()
-   * .base(123)
-   * .capacityProvider("capacityProvider")
-   * .weight(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html)
-   */
-  public interface CapacityProviderStrategyItemProperty {
-    /**
-     * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
-     * provider.
-     *
-     * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
-     * value is specified, the default value of `0` is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-base)
-     */
-    public fun base(): Number? = unwrap(this).getBase()
-
-    /**
-     * The short name of the capacity provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-capacityprovider)
-     */
-    public fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
-
-    /**
-     * The *weight* value designates the relative percentage of the total number of tasks launched
-     * that should use the specified capacity provider.
-     *
-     * The `weight` value is taken into consideration after the `base` value, if defined, is
-     * satisfied.
-     *
-     * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
-     * providers are specified within a capacity provider strategy, at least one of the capacity
-     * providers must have a weight value greater than zero and any capacity providers with a weight of
-     * `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy that
-     * all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity provider
-     * strategy will fail.
-     *
-     * An example scenario for using weights is defining a strategy that contains two capacity
-     * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
-     * split evenly across the two capacity providers. Using that same logic, if you specify a weight
-     * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every one
-     * task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-weight)
-     */
-    public fun weight(): Number? = unwrap(this).getWeight()
-
-    /**
-     * A builder for [CapacityProviderStrategyItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param base The *base* value designates how many tasks, at a minimum, to run on the
-       * specified capacity provider.
-       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
-       * value is specified, the default value of `0` is used.
-       */
-      public fun base(base: Number)
-
-      /**
-       * @param capacityProvider The short name of the capacity provider.
-       */
-      public fun capacityProvider(capacityProvider: String)
-
-      /**
-       * @param weight The *weight* value designates the relative percentage of the total number of
-       * tasks launched that should use the specified capacity provider.
-       * The `weight` value is taken into consideration after the `base` value, if defined, is
-       * satisfied.
-       *
-       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
-       * providers are specified within a capacity provider strategy, at least one of the capacity
-       * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
-       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
-       * provider strategy will fail.
-       *
-       * An example scenario for using weights is defining a strategy that contains two capacity
-       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
-       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
-       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
-       */
-      public fun weight(weight: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty.builder()
-
-      /**
-       * @param base The *base* value designates how many tasks, at a minimum, to run on the
-       * specified capacity provider.
-       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
-       * value is specified, the default value of `0` is used.
-       */
-      override fun base(base: Number) {
-        cdkBuilder.base(base)
-      }
-
-      /**
-       * @param capacityProvider The short name of the capacity provider.
-       */
-      override fun capacityProvider(capacityProvider: String) {
-        cdkBuilder.capacityProvider(capacityProvider)
-      }
-
-      /**
-       * @param weight The *weight* value designates the relative percentage of the total number of
-       * tasks launched that should use the specified capacity provider.
-       * The `weight` value is taken into consideration after the `base` value, if defined, is
-       * satisfied.
-       *
-       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
-       * providers are specified within a capacity provider strategy, at least one of the capacity
-       * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
-       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
-       * provider strategy will fail.
-       *
-       * An example scenario for using weights is defining a strategy that contains two capacity
-       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
-       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
-       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
-       */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
-      /**
-       * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
-       * provider.
-       *
-       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
-       * value is specified, the default value of `0` is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-base)
-       */
-      override fun base(): Number? = unwrap(this).getBase()
-
-      /**
-       * The short name of the capacity provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-capacityprovider)
-       */
-      override fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
-
-      /**
-       * The *weight* value designates the relative percentage of the total number of tasks launched
-       * that should use the specified capacity provider.
-       *
-       * The `weight` value is taken into consideration after the `base` value, if defined, is
-       * satisfied.
-       *
-       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
-       * providers are specified within a capacity provider strategy, at least one of the capacity
-       * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
-       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
-       * provider strategy will fail.
-       *
-       * An example scenario for using weights is defining a strategy that contains two capacity
-       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
-       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
-       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-weight)
-       */
-      override fun weight(): Number? = unwrap(this).getWeight()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CapacityProviderStrategyItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
-          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty
-    }
-  }
-
-  /**
-   * The `PlacementConstraint` property specifies an object representing a constraint on task
-   * placement in the task definition.
-   *
-   * For more information, see [Task Placement
-   * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
-   * in the *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * PlacementConstraintProperty placementConstraintProperty = PlacementConstraintProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .expression("expression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html)
-   */
-  public interface PlacementConstraintProperty {
-    /**
-     * A cluster query language expression to apply to the constraint.
-     *
-     * The expression can have a maximum length of 2000 characters. You can't specify an expression
-     * if the constraint type is `distinctInstance` . For more information, see [Cluster query
-     * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-     * in the *Amazon Elastic Container Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression)
-     */
-    public fun expression(): String? = unwrap(this).getExpression()
-
-    /**
-     * The type of constraint.
-     *
-     * Use `distinctInstance` to ensure that each task in a particular group is running on a
-     * different container instance. Use `memberOf` to restrict the selection to a group of valid
-     * candidates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [PlacementConstraintProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param expression A cluster query language expression to apply to the constraint.
-       * The expression can have a maximum length of 2000 characters. You can't specify an
-       * expression if the constraint type is `distinctInstance` . For more information, see [Cluster
-       * query
-       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      public fun expression(expression: String)
-
-      /**
-       * @param type The type of constraint. 
-       * Use `distinctInstance` to ensure that each task in a particular group is running on a
-       * different container instance. Use `memberOf` to restrict the selection to a group of valid
-       * candidates.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty.builder()
-
-      /**
-       * @param expression A cluster query language expression to apply to the constraint.
-       * The expression can have a maximum length of 2000 characters. You can't specify an
-       * expression if the constraint type is `distinctInstance` . For more information, see [Cluster
-       * query
-       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      override fun expression(expression: String) {
-        cdkBuilder.expression(expression)
-      }
-
-      /**
-       * @param type The type of constraint. 
-       * Use `distinctInstance` to ensure that each task in a particular group is running on a
-       * different container instance. Use `memberOf` to restrict the selection to a group of valid
-       * candidates.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty,
-    ) : CdkObject(cdkObject), PlacementConstraintProperty {
-      /**
-       * A cluster query language expression to apply to the constraint.
-       *
-       * The expression can have a maximum length of 2000 characters. You can't specify an
-       * expression if the constraint type is `distinctInstance` . For more information, see [Cluster
-       * query
-       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression)
-       */
-      override fun expression(): String? = unwrap(this).getExpression()
-
-      /**
-       * The type of constraint.
-       *
-       * Use `distinctInstance` to ensure that each task in a particular group is running on a
-       * different container instance. Use `memberOf` to restrict the selection to a group of valid
-       * candidates.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementConstraintProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty):
-          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PlacementConstraintProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PlacementConstraintProperty):
-          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty
-    }
-  }
-
-  /**
-   * An object representing the networking details for a task or service.
-   *
-   * For example `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * AwsVpcConfigurationProperty awsVpcConfigurationProperty = AwsVpcConfigurationProperty.builder()
-   * .assignPublicIp("assignPublicIp")
-   * .securityGroups(List.of("securityGroups"))
-   * .subnets(List.of("subnets"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html)
-   */
-  public interface AwsVpcConfigurationProperty {
-    /**
-     * Whether the task's elastic network interface receives a public IP address.
-     *
-     * The default value is `DISABLED` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
-     */
-    public fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
-
-    /**
-     * The IDs of the security groups associated with the task or service.
-     *
-     * If you don't specify a security group, the default security group for the VPC is used.
-     * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-     *
-     *
-     * All specified security groups must be from the same VPC.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups)
-     */
-    public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
-
-    /**
-     * The IDs of the subnets associated with the task or service.
-     *
-     * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-     *
-     *
-     * All specified subnets must be from the same VPC.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets)
-     */
-    public fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
-
-    /**
-     * A builder for [AwsVpcConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param assignPublicIp Whether the task's elastic network interface receives a public IP
-       * address.
-       * The default value is `DISABLED` .
-       */
-      public fun assignPublicIp(assignPublicIp: String)
-
-      /**
-       * @param securityGroups The IDs of the security groups associated with the task or service.
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       */
-      public fun securityGroups(securityGroups: List<String>)
-
-      /**
-       * @param securityGroups The IDs of the security groups associated with the task or service.
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       */
-      public fun securityGroups(vararg securityGroups: String)
-
-      /**
-       * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       */
-      public fun subnets(subnets: List<String>)
-
-      /**
-       * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       */
-      public fun subnets(vararg subnets: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty.builder()
-
-      /**
-       * @param assignPublicIp Whether the task's elastic network interface receives a public IP
-       * address.
-       * The default value is `DISABLED` .
-       */
-      override fun assignPublicIp(assignPublicIp: String) {
-        cdkBuilder.assignPublicIp(assignPublicIp)
-      }
-
-      /**
-       * @param securityGroups The IDs of the security groups associated with the task or service.
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       */
-      override fun securityGroups(securityGroups: List<String>) {
-        cdkBuilder.securityGroups(securityGroups)
-      }
-
-      /**
-       * @param securityGroups The IDs of the security groups associated with the task or service.
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       */
-      override fun securityGroups(vararg securityGroups: String): Unit =
-          securityGroups(securityGroups.toList())
-
-      /**
-       * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       */
-      override fun subnets(subnets: List<String>) {
-        cdkBuilder.subnets(subnets)
-      }
-
-      /**
-       * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       */
-      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty,
-    ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
-      /**
-       * Whether the task's elastic network interface receives a public IP address.
-       *
-       * The default value is `DISABLED` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
-       */
-      override fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
-
-      /**
-       * The IDs of the security groups associated with the task or service.
-       *
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups)
-       */
-      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
-
-      /**
-       * The IDs of the subnets associated with the task or service.
-       *
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets)
-       */
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AwsVpcConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty):
-          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty
-    }
-  }
-
-  /**
-   * An object that represents the configuration for Service Connect TLS.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ServiceConnectTlsConfigurationProperty serviceConnectTlsConfigurationProperty =
-   * ServiceConnectTlsConfigurationProperty.builder()
-   * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
-   * .awsPcaAuthorityArn("awsPcaAuthorityArn")
-   * .build())
-   * // the properties below are optional
-   * .kmsKey("kmsKey")
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html)
-   */
-  public interface ServiceConnectTlsConfigurationProperty {
-    /**
-     * The signer certificate authority.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-issuercertificateauthority)
-     */
-    public fun issuerCertificateAuthority(): Any
-
-    /**
-     * The AWS Key Management Service key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-kmskey)
-     */
-    public fun kmsKey(): String? = unwrap(this).getKmsKey()
-
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role that's associated with the Service Connect
-     * TLS.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-rolearn)
-     */
-    public fun roleArn(): String? = unwrap(this).getRoleArn()
-
-    /**
-     * A builder for [ServiceConnectTlsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param issuerCertificateAuthority The signer certificate authority. 
-       */
-      public fun issuerCertificateAuthority(issuerCertificateAuthority: IResolvable)
-
-      /**
-       * @param issuerCertificateAuthority The signer certificate authority. 
-       */
-      public
-          fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty)
-
-      /**
-       * @param issuerCertificateAuthority The signer certificate authority. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8917a2b4b6006ad864bec0cd56ed283602a26562436c0e7272227f1e1b93d5ed")
-      public
-          fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty.Builder.() -> Unit)
-
-      /**
-       * @param kmsKey The AWS Key Management Service key.
-       */
-      public fun kmsKey(kmsKey: String)
-
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that's associated with the
-       * Service Connect TLS.
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty.builder()
-
-      /**
-       * @param issuerCertificateAuthority The signer certificate authority. 
-       */
-      override fun issuerCertificateAuthority(issuerCertificateAuthority: IResolvable) {
-        cdkBuilder.issuerCertificateAuthority(issuerCertificateAuthority.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param issuerCertificateAuthority The signer certificate authority. 
-       */
-      override
-          fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty) {
-        cdkBuilder.issuerCertificateAuthority(issuerCertificateAuthority.let(ServiceConnectTlsCertificateAuthorityProperty::unwrap))
-      }
-
-      /**
-       * @param issuerCertificateAuthority The signer certificate authority. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8917a2b4b6006ad864bec0cd56ed283602a26562436c0e7272227f1e1b93d5ed")
-      override
-          fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty.Builder.() -> Unit):
-          Unit =
-          issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty(issuerCertificateAuthority))
-
-      /**
-       * @param kmsKey The AWS Key Management Service key.
-       */
-      override fun kmsKey(kmsKey: String) {
-        cdkBuilder.kmsKey(kmsKey)
-      }
-
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that's associated with the
-       * Service Connect TLS.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty,
-    ) : CdkObject(cdkObject), ServiceConnectTlsConfigurationProperty {
-      /**
-       * The signer certificate authority.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-issuercertificateauthority)
-       */
-      override fun issuerCertificateAuthority(): Any = unwrap(this).getIssuerCertificateAuthority()
-
-      /**
-       * The AWS Key Management Service key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-kmskey)
-       */
-      override fun kmsKey(): String? = unwrap(this).getKmsKey()
-
-      /**
-       * The Amazon Resource Name (ARN) of the IAM role that's associated with the Service Connect
-       * TLS.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttlsconfiguration.html#cfn-ecs-service-serviceconnecttlsconfiguration-rolearn)
-       */
-      override fun roleArn(): String? = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceConnectTlsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty):
-          ServiceConnectTlsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceConnectTlsConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServiceConnectTlsConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty
-    }
-  }
-
-  /**
-   * The deployment circuit breaker can only be used for services using the rolling update ( `ECS` )
-   * deployment type.
-   *
-   * The *deployment circuit breaker* determines whether a service deployment will fail if the
-   * service can't reach a steady state. If it is turned on, a service deployment will transition to a
-   * failed state and stop launching new tasks. You can also configure Amazon ECS to roll back your
-   * service to the last completed deployment after a failure. For more information, see [Rolling
-   * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html) in
-   * the *Amazon Elastic Container Service Developer Guide* .
-   *
-   * For more information about API failure reasons, see [API failure
-   * reasons](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/api_failures_messages.html)
-   * in the *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * DeploymentCircuitBreakerProperty deploymentCircuitBreakerProperty =
-   * DeploymentCircuitBreakerProperty.builder()
-   * .enable(false)
-   * .rollback(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html)
-   */
-  public interface DeploymentCircuitBreakerProperty {
-    /**
-     * Determines whether to use the deployment circuit breaker logic for the service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-enable)
-     */
-    public fun enable(): Any
-
-    /**
-     * Determines whether to configure Amazon ECS to roll back the service if a service deployment
-     * fails.
-     *
-     * If rollback is on, when a service deployment fails, the service is rolled back to the last
-     * deployment that completed successfully.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-rollback)
-     */
-    public fun rollback(): Any
-
-    /**
-     * A builder for [DeploymentCircuitBreakerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enable Determines whether to use the deployment circuit breaker logic for the
-       * service. 
-       */
-      public fun enable(enable: Boolean)
-
-      /**
-       * @param enable Determines whether to use the deployment circuit breaker logic for the
-       * service. 
-       */
-      public fun enable(enable: IResolvable)
-
-      /**
-       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
-       * service deployment fails. 
-       * If rollback is on, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully.
-       */
-      public fun rollback(rollback: Boolean)
-
-      /**
-       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
-       * service deployment fails. 
-       * If rollback is on, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully.
-       */
-      public fun rollback(rollback: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty.builder()
-
-      /**
-       * @param enable Determines whether to use the deployment circuit breaker logic for the
-       * service. 
-       */
-      override fun enable(enable: Boolean) {
-        cdkBuilder.enable(enable)
-      }
-
-      /**
-       * @param enable Determines whether to use the deployment circuit breaker logic for the
-       * service. 
-       */
-      override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
-       * service deployment fails. 
-       * If rollback is on, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully.
-       */
-      override fun rollback(rollback: Boolean) {
-        cdkBuilder.rollback(rollback)
-      }
-
-      /**
-       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
-       * service deployment fails. 
-       * If rollback is on, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully.
-       */
-      override fun rollback(rollback: IResolvable) {
-        cdkBuilder.rollback(rollback.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty,
-    ) : CdkObject(cdkObject), DeploymentCircuitBreakerProperty {
-      /**
-       * Determines whether to use the deployment circuit breaker logic for the service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-enable)
-       */
-      override fun enable(): Any = unwrap(this).getEnable()
-
-      /**
-       * Determines whether to configure Amazon ECS to roll back the service if a service deployment
-       * fails.
-       *
-       * If rollback is on, when a service deployment fails, the service is rolled back to the last
-       * deployment that completed successfully.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-rollback)
-       */
-      override fun rollback(): Any = unwrap(this).getRollback()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentCircuitBreakerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty):
-          DeploymentCircuitBreakerProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeploymentCircuitBreakerProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeploymentCircuitBreakerProperty):
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty
-    }
-  }
-
-  /**
    * The configuration for a volume specified in the task definition as a volume that is configured
    * at launch time.
    *
@@ -7974,19 +8031,12 @@ public open class CfnService internal constructor(
   }
 
   /**
-   * One of the methods which provide a way for you to quickly identify when a deployment has
-   * failed, and then to optionally roll back the failure to the last working deployment.
+   * An object that represents the timeout configurations for Service Connect.
    *
-   * When the alarms are generated, Amazon ECS sets the service deployment to failed. Set the
-   * rollback parameter to have Amazon ECS to roll back your service to the last completed deployment
-   * after a failure.
    *
-   * You can only use the `DeploymentAlarms` method to detect failures when the
-   * `DeploymentController` is set to `ECS` (rolling update).
+   * If `idleTimeout` is set to a time that is less than `perRequestTimeout` , the connection will
+   * close when the `idleTimeout` is reached and not the `perRequestTimeout` .
    *
-   * For more information, see [Rolling
-   * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html) in
-   * the **Amazon Elastic Container Service Developer Guide** .
    *
    * Example:
    *
@@ -7994,195 +8044,145 @@ public open class CfnService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * DeploymentAlarmsProperty deploymentAlarmsProperty = DeploymentAlarmsProperty.builder()
-   * .alarmNames(List.of("alarmNames"))
-   * .enable(false)
-   * .rollback(false)
+   * TimeoutConfigurationProperty timeoutConfigurationProperty =
+   * TimeoutConfigurationProperty.builder()
+   * .idleTimeoutSeconds(123)
+   * .perRequestTimeoutSeconds(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html)
    */
-  public interface DeploymentAlarmsProperty {
+  public interface TimeoutConfigurationProperty {
     /**
-     * One or more CloudWatch alarm names.
+     * The amount of time in seconds a connection will stay active while idle.
      *
-     * Use a "," to separate the alarms.
+     * A value of `0` can be set to disable `idleTimeout` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-alarmnames)
+     * The `idleTimeout` default for `HTTP` / `HTTP2` / `GRPC` is 5 minutes.
+     *
+     * The `idleTimeout` default for `TCP` is 1 hour.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html#cfn-ecs-service-timeoutconfiguration-idletimeoutseconds)
      */
-    public fun alarmNames(): List<String>
+    public fun idleTimeoutSeconds(): Number? = unwrap(this).getIdleTimeoutSeconds()
 
     /**
-     * Determines whether to use the CloudWatch alarm option in the service deployment process.
+     * The amount of time waiting for the upstream to respond with a complete response per request.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-enable)
+     * A value of `0` can be set to disable `perRequestTimeout` . `perRequestTimeout` can only be
+     * set if Service Connect `appProtocol` isn't `TCP` . Only `idleTimeout` is allowed for `TCP`
+     * `appProtocol` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html#cfn-ecs-service-timeoutconfiguration-perrequesttimeoutseconds)
      */
-    public fun enable(): Any
+    public fun perRequestTimeoutSeconds(): Number? = unwrap(this).getPerRequestTimeoutSeconds()
 
     /**
-     * Determines whether to configure Amazon ECS to roll back the service if a service deployment
-     * fails.
-     *
-     * If rollback is used, when a service deployment fails, the service is rolled back to the last
-     * deployment that completed successfully.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-rollback)
-     */
-    public fun rollback(): Any
-
-    /**
-     * A builder for [DeploymentAlarmsProperty]
+     * A builder for [TimeoutConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param alarmNames One or more CloudWatch alarm names. 
-       * Use a "," to separate the alarms.
+       * @param idleTimeoutSeconds The amount of time in seconds a connection will stay active while
+       * idle.
+       * A value of `0` can be set to disable `idleTimeout` .
+       *
+       * The `idleTimeout` default for `HTTP` / `HTTP2` / `GRPC` is 5 minutes.
+       *
+       * The `idleTimeout` default for `TCP` is 1 hour.
        */
-      public fun alarmNames(alarmNames: List<String>)
+      public fun idleTimeoutSeconds(idleTimeoutSeconds: Number)
 
       /**
-       * @param alarmNames One or more CloudWatch alarm names. 
-       * Use a "," to separate the alarms.
+       * @param perRequestTimeoutSeconds The amount of time waiting for the upstream to respond with
+       * a complete response per request.
+       * A value of `0` can be set to disable `perRequestTimeout` . `perRequestTimeout` can only be
+       * set if Service Connect `appProtocol` isn't `TCP` . Only `idleTimeout` is allowed for `TCP`
+       * `appProtocol` .
        */
-      public fun alarmNames(vararg alarmNames: String)
-
-      /**
-       * @param enable Determines whether to use the CloudWatch alarm option in the service
-       * deployment process. 
-       */
-      public fun enable(enable: Boolean)
-
-      /**
-       * @param enable Determines whether to use the CloudWatch alarm option in the service
-       * deployment process. 
-       */
-      public fun enable(enable: IResolvable)
-
-      /**
-       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
-       * service deployment fails. 
-       * If rollback is used, when a service deployment fails, the service is rolled back to the
-       * last deployment that completed successfully.
-       */
-      public fun rollback(rollback: Boolean)
-
-      /**
-       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
-       * service deployment fails. 
-       * If rollback is used, when a service deployment fails, the service is rolled back to the
-       * last deployment that completed successfully.
-       */
-      public fun rollback(rollback: IResolvable)
+      public fun perRequestTimeoutSeconds(perRequestTimeoutSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty.builder()
 
       /**
-       * @param alarmNames One or more CloudWatch alarm names. 
-       * Use a "," to separate the alarms.
+       * @param idleTimeoutSeconds The amount of time in seconds a connection will stay active while
+       * idle.
+       * A value of `0` can be set to disable `idleTimeout` .
+       *
+       * The `idleTimeout` default for `HTTP` / `HTTP2` / `GRPC` is 5 minutes.
+       *
+       * The `idleTimeout` default for `TCP` is 1 hour.
        */
-      override fun alarmNames(alarmNames: List<String>) {
-        cdkBuilder.alarmNames(alarmNames)
+      override fun idleTimeoutSeconds(idleTimeoutSeconds: Number) {
+        cdkBuilder.idleTimeoutSeconds(idleTimeoutSeconds)
       }
 
       /**
-       * @param alarmNames One or more CloudWatch alarm names. 
-       * Use a "," to separate the alarms.
+       * @param perRequestTimeoutSeconds The amount of time waiting for the upstream to respond with
+       * a complete response per request.
+       * A value of `0` can be set to disable `perRequestTimeout` . `perRequestTimeout` can only be
+       * set if Service Connect `appProtocol` isn't `TCP` . Only `idleTimeout` is allowed for `TCP`
+       * `appProtocol` .
        */
-      override fun alarmNames(vararg alarmNames: String): Unit = alarmNames(alarmNames.toList())
-
-      /**
-       * @param enable Determines whether to use the CloudWatch alarm option in the service
-       * deployment process. 
-       */
-      override fun enable(enable: Boolean) {
-        cdkBuilder.enable(enable)
+      override fun perRequestTimeoutSeconds(perRequestTimeoutSeconds: Number) {
+        cdkBuilder.perRequestTimeoutSeconds(perRequestTimeoutSeconds)
       }
 
-      /**
-       * @param enable Determines whether to use the CloudWatch alarm option in the service
-       * deployment process. 
-       */
-      override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
-       * service deployment fails. 
-       * If rollback is used, when a service deployment fails, the service is rolled back to the
-       * last deployment that completed successfully.
-       */
-      override fun rollback(rollback: Boolean) {
-        cdkBuilder.rollback(rollback)
-      }
-
-      /**
-       * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
-       * service deployment fails. 
-       * If rollback is used, when a service deployment fails, the service is rolled back to the
-       * last deployment that completed successfully.
-       */
-      override fun rollback(rollback: IResolvable) {
-        cdkBuilder.rollback(rollback.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty =
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty,
-    ) : CdkObject(cdkObject), DeploymentAlarmsProperty {
+          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty,
+    ) : CdkObject(cdkObject), TimeoutConfigurationProperty {
       /**
-       * One or more CloudWatch alarm names.
+       * The amount of time in seconds a connection will stay active while idle.
        *
-       * Use a "," to separate the alarms.
+       * A value of `0` can be set to disable `idleTimeout` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-alarmnames)
+       * The `idleTimeout` default for `HTTP` / `HTTP2` / `GRPC` is 5 minutes.
+       *
+       * The `idleTimeout` default for `TCP` is 1 hour.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html#cfn-ecs-service-timeoutconfiguration-idletimeoutseconds)
        */
-      override fun alarmNames(): List<String> = unwrap(this).getAlarmNames()
+      override fun idleTimeoutSeconds(): Number? = unwrap(this).getIdleTimeoutSeconds()
 
       /**
-       * Determines whether to use the CloudWatch alarm option in the service deployment process.
+       * The amount of time waiting for the upstream to respond with a complete response per
+       * request.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-enable)
+       * A value of `0` can be set to disable `perRequestTimeout` . `perRequestTimeout` can only be
+       * set if Service Connect `appProtocol` isn't `TCP` . Only `idleTimeout` is allowed for `TCP`
+       * `appProtocol` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-timeoutconfiguration.html#cfn-ecs-service-timeoutconfiguration-perrequesttimeoutseconds)
        */
-      override fun enable(): Any = unwrap(this).getEnable()
-
-      /**
-       * Determines whether to configure Amazon ECS to roll back the service if a service deployment
-       * fails.
-       *
-       * If rollback is used, when a service deployment fails, the service is rolled back to the
-       * last deployment that completed successfully.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentalarms.html#cfn-ecs-service-deploymentalarms-rollback)
-       */
-      override fun rollback(): Any = unwrap(this).getRollback()
+      override fun perRequestTimeoutSeconds(): Number? = unwrap(this).getPerRequestTimeoutSeconds()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentAlarmsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimeoutConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty):
-          DeploymentAlarmsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentAlarmsProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty):
+          TimeoutConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeoutConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DeploymentAlarmsProperty):
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty = (wrapped as
+      internal fun unwrap(wrapped: TimeoutConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty
+          software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty
     }
   }
 }

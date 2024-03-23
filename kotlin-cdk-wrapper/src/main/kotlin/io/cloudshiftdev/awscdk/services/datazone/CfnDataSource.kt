@@ -843,773 +843,6 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * The details of the Amazon Redshift Serverless workgroup storage.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datazone.*;
-   * RedshiftServerlessStorageProperty redshiftServerlessStorageProperty =
-   * RedshiftServerlessStorageProperty.builder()
-   * .workgroupName("workgroupName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftserverlessstorage.html)
-   */
-  public interface RedshiftServerlessStorageProperty {
-    /**
-     * The name of the Amazon Redshift Serverless workgroup.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftserverlessstorage.html#cfn-datazone-datasource-redshiftserverlessstorage-workgroupname)
-     */
-    public fun workgroupName(): String
-
-    /**
-     * A builder for [RedshiftServerlessStorageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param workgroupName The name of the Amazon Redshift Serverless workgroup. 
-       */
-      public fun workgroupName(workgroupName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty.Builder
-          =
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty.builder()
-
-      /**
-       * @param workgroupName The name of the Amazon Redshift Serverless workgroup. 
-       */
-      override fun workgroupName(workgroupName: String) {
-        cdkBuilder.workgroupName(workgroupName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty,
-    ) : CdkObject(cdkObject), RedshiftServerlessStorageProperty {
-      /**
-       * The name of the Amazon Redshift Serverless workgroup.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftserverlessstorage.html#cfn-datazone-datasource-redshiftserverlessstorage-workgroupname)
-       */
-      override fun workgroupName(): String = unwrap(this).getWorkgroupName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RedshiftServerlessStorageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty):
-          RedshiftServerlessStorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RedshiftServerlessStorageProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedshiftServerlessStorageProperty):
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty
-    }
-  }
-
-  /**
-   * A filter expression in Amazon DataZone.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datazone.*;
-   * FilterExpressionProperty filterExpressionProperty = FilterExpressionProperty.builder()
-   * .expression("expression")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html)
-   */
-  public interface FilterExpressionProperty {
-    /**
-     * The search filter expression.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html#cfn-datazone-datasource-filterexpression-expression)
-     */
-    public fun expression(): String
-
-    /**
-     * The search filter explresison type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html#cfn-datazone-datasource-filterexpression-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [FilterExpressionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param expression The search filter expression. 
-       */
-      public fun expression(expression: String)
-
-      /**
-       * @param type The search filter explresison type. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty.Builder =
-          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty.builder()
-
-      /**
-       * @param expression The search filter expression. 
-       */
-      override fun expression(expression: String) {
-        cdkBuilder.expression(expression)
-      }
-
-      /**
-       * @param type The search filter explresison type. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty,
-    ) : CdkObject(cdkObject), FilterExpressionProperty {
-      /**
-       * The search filter expression.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html#cfn-datazone-datasource-filterexpression-expression)
-       */
-      override fun expression(): String = unwrap(this).getExpression()
-
-      /**
-       * The search filter explresison type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html#cfn-datazone-datasource-filterexpression-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterExpressionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty):
-          FilterExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterExpressionProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterExpressionProperty):
-          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty
-    }
-  }
-
-  /**
-   * The recommendation configuration for the data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datazone.*;
-   * RecommendationConfigurationProperty recommendationConfigurationProperty =
-   * RecommendationConfigurationProperty.builder()
-   * .enableBusinessNameGeneration(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-recommendationconfiguration.html)
-   */
-  public interface RecommendationConfigurationProperty {
-    /**
-     * Specifies whether automatic business name generation is to be enabled or not as part of the
-     * recommendation configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-recommendationconfiguration.html#cfn-datazone-datasource-recommendationconfiguration-enablebusinessnamegeneration)
-     */
-    public fun enableBusinessNameGeneration(): Any? = unwrap(this).getEnableBusinessNameGeneration()
-
-    /**
-     * A builder for [RecommendationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableBusinessNameGeneration Specifies whether automatic business name generation is
-       * to be enabled or not as part of the recommendation configuration.
-       */
-      public fun enableBusinessNameGeneration(enableBusinessNameGeneration: Boolean)
-
-      /**
-       * @param enableBusinessNameGeneration Specifies whether automatic business name generation is
-       * to be enabled or not as part of the recommendation configuration.
-       */
-      public fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty.builder()
-
-      /**
-       * @param enableBusinessNameGeneration Specifies whether automatic business name generation is
-       * to be enabled or not as part of the recommendation configuration.
-       */
-      override fun enableBusinessNameGeneration(enableBusinessNameGeneration: Boolean) {
-        cdkBuilder.enableBusinessNameGeneration(enableBusinessNameGeneration)
-      }
-
-      /**
-       * @param enableBusinessNameGeneration Specifies whether automatic business name generation is
-       * to be enabled or not as part of the recommendation configuration.
-       */
-      override fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable) {
-        cdkBuilder.enableBusinessNameGeneration(enableBusinessNameGeneration.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty,
-    ) : CdkObject(cdkObject), RecommendationConfigurationProperty {
-      /**
-       * Specifies whether automatic business name generation is to be enabled or not as part of the
-       * recommendation configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-recommendationconfiguration.html#cfn-datazone-datasource-recommendationconfiguration-enablebusinessnamegeneration)
-       */
-      override fun enableBusinessNameGeneration(): Any? =
-          unwrap(this).getEnableBusinessNameGeneration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RecommendationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty):
-          RecommendationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RecommendationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RecommendationConfigurationProperty):
-          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty
-    }
-  }
-
-  /**
-   * The relational filter configuration for the data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datazone.*;
-   * RelationalFilterConfigurationProperty relationalFilterConfigurationProperty =
-   * RelationalFilterConfigurationProperty.builder()
-   * .databaseName("databaseName")
-   * // the properties below are optional
-   * .filterExpressions(List.of(FilterExpressionProperty.builder()
-   * .expression("expression")
-   * .type("type")
-   * .build()))
-   * .schemaName("schemaName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html)
-   */
-  public interface RelationalFilterConfigurationProperty {
-    /**
-     * The database name specified in the relational filter configuration for the data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-databasename)
-     */
-    public fun databaseName(): String
-
-    /**
-     * The filter expressions specified in the relational filter configuration for the data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-filterexpressions)
-     */
-    public fun filterExpressions(): Any? = unwrap(this).getFilterExpressions()
-
-    /**
-     * The schema name specified in the relational filter configuration for the data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-schemaname)
-     */
-    public fun schemaName(): String? = unwrap(this).getSchemaName()
-
-    /**
-     * A builder for [RelationalFilterConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param databaseName The database name specified in the relational filter configuration for
-       * the data source. 
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param filterExpressions The filter expressions specified in the relational filter
-       * configuration for the data source.
-       */
-      public fun filterExpressions(filterExpressions: IResolvable)
-
-      /**
-       * @param filterExpressions The filter expressions specified in the relational filter
-       * configuration for the data source.
-       */
-      public fun filterExpressions(filterExpressions: List<Any>)
-
-      /**
-       * @param filterExpressions The filter expressions specified in the relational filter
-       * configuration for the data source.
-       */
-      public fun filterExpressions(vararg filterExpressions: Any)
-
-      /**
-       * @param schemaName The schema name specified in the relational filter configuration for the
-       * data source.
-       */
-      public fun schemaName(schemaName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty.builder()
-
-      /**
-       * @param databaseName The database name specified in the relational filter configuration for
-       * the data source. 
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param filterExpressions The filter expressions specified in the relational filter
-       * configuration for the data source.
-       */
-      override fun filterExpressions(filterExpressions: IResolvable) {
-        cdkBuilder.filterExpressions(filterExpressions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filterExpressions The filter expressions specified in the relational filter
-       * configuration for the data source.
-       */
-      override fun filterExpressions(filterExpressions: List<Any>) {
-        cdkBuilder.filterExpressions(filterExpressions)
-      }
-
-      /**
-       * @param filterExpressions The filter expressions specified in the relational filter
-       * configuration for the data source.
-       */
-      override fun filterExpressions(vararg filterExpressions: Any): Unit =
-          filterExpressions(filterExpressions.toList())
-
-      /**
-       * @param schemaName The schema name specified in the relational filter configuration for the
-       * data source.
-       */
-      override fun schemaName(schemaName: String) {
-        cdkBuilder.schemaName(schemaName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty,
-    ) : CdkObject(cdkObject), RelationalFilterConfigurationProperty {
-      /**
-       * The database name specified in the relational filter configuration for the data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-databasename)
-       */
-      override fun databaseName(): String = unwrap(this).getDatabaseName()
-
-      /**
-       * The filter expressions specified in the relational filter configuration for the data
-       * source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-filterexpressions)
-       */
-      override fun filterExpressions(): Any? = unwrap(this).getFilterExpressions()
-
-      /**
-       * The schema name specified in the relational filter configuration for the data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-schemaname)
-       */
-      override fun schemaName(): String? = unwrap(this).getSchemaName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RelationalFilterConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty):
-          RelationalFilterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RelationalFilterConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RelationalFilterConfigurationProperty):
-          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
-    }
-  }
-
-  /**
-   * The details of the Amazon Redshift storage as part of the configuration of an Amazon Redshift
-   * data source run.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datazone.*;
-   * RedshiftStorageProperty redshiftStorageProperty = RedshiftStorageProperty.builder()
-   * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
-   * .clusterName("clusterName")
-   * .build())
-   * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
-   * .workgroupName("workgroupName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html)
-   */
-  public interface RedshiftStorageProperty {
-    /**
-     * The details of the Amazon Redshift cluster source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html#cfn-datazone-datasource-redshiftstorage-redshiftclustersource)
-     */
-    public fun redshiftClusterSource(): Any? = unwrap(this).getRedshiftClusterSource()
-
-    /**
-     * The details of the Amazon Redshift Serverless workgroup source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html#cfn-datazone-datasource-redshiftstorage-redshiftserverlesssource)
-     */
-    public fun redshiftServerlessSource(): Any? = unwrap(this).getRedshiftServerlessSource()
-
-    /**
-     * A builder for [RedshiftStorageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
-       */
-      public fun redshiftClusterSource(redshiftClusterSource: IResolvable)
-
-      /**
-       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
-       */
-      public fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty)
-
-      /**
-       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ba8616c977c827ba122709ece163c4044a0f88c0eec2a2e168f7c5fb8764a851")
-      public
-          fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty.Builder.() -> Unit)
-
-      /**
-       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
-       * source.
-       */
-      public fun redshiftServerlessSource(redshiftServerlessSource: IResolvable)
-
-      /**
-       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
-       * source.
-       */
-      public
-          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty)
-
-      /**
-       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
-       * source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("30d400db2ad3eb359f03e7de3fd458556e7af9b01d3fdd573178e52d2eea73ea")
-      public
-          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty.Builder =
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty.builder()
-
-      /**
-       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
-       */
-      override fun redshiftClusterSource(redshiftClusterSource: IResolvable) {
-        cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
-       */
-      override fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty) {
-        cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(RedshiftClusterStorageProperty::unwrap))
-      }
-
-      /**
-       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ba8616c977c827ba122709ece163c4044a0f88c0eec2a2e168f7c5fb8764a851")
-      override
-          fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty.Builder.() -> Unit):
-          Unit = redshiftClusterSource(RedshiftClusterStorageProperty(redshiftClusterSource))
-
-      /**
-       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
-       * source.
-       */
-      override fun redshiftServerlessSource(redshiftServerlessSource: IResolvable) {
-        cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
-       * source.
-       */
-      override
-          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty) {
-        cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(RedshiftServerlessStorageProperty::unwrap))
-      }
-
-      /**
-       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
-       * source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("30d400db2ad3eb359f03e7de3fd458556e7af9b01d3fdd573178e52d2eea73ea")
-      override
-          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty.Builder.() -> Unit):
-          Unit =
-          redshiftServerlessSource(RedshiftServerlessStorageProperty(redshiftServerlessSource))
-
-      public fun build():
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty,
-    ) : CdkObject(cdkObject), RedshiftStorageProperty {
-      /**
-       * The details of the Amazon Redshift cluster source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html#cfn-datazone-datasource-redshiftstorage-redshiftclustersource)
-       */
-      override fun redshiftClusterSource(): Any? = unwrap(this).getRedshiftClusterSource()
-
-      /**
-       * The details of the Amazon Redshift Serverless workgroup source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html#cfn-datazone-datasource-redshiftstorage-redshiftserverlesssource)
-       */
-      override fun redshiftServerlessSource(): Any? = unwrap(this).getRedshiftServerlessSource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftStorageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty):
-          RedshiftStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? RedshiftStorageProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedshiftStorageProperty):
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty
-    }
-  }
-
-  /**
-   * The details of the schedule of the data source runs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datazone.*;
-   * ScheduleConfigurationProperty scheduleConfigurationProperty =
-   * ScheduleConfigurationProperty.builder()
-   * .schedule("schedule")
-   * .timezone("timezone")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html)
-   */
-  public interface ScheduleConfigurationProperty {
-    /**
-     * The schedule of the data source runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html#cfn-datazone-datasource-scheduleconfiguration-schedule)
-     */
-    public fun schedule(): String? = unwrap(this).getSchedule()
-
-    /**
-     * The timezone of the data source run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html#cfn-datazone-datasource-scheduleconfiguration-timezone)
-     */
-    public fun timezone(): String? = unwrap(this).getTimezone()
-
-    /**
-     * A builder for [ScheduleConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param schedule The schedule of the data source runs.
-       */
-      public fun schedule(schedule: String)
-
-      /**
-       * @param timezone The timezone of the data source run.
-       */
-      public fun timezone(timezone: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty.builder()
-
-      /**
-       * @param schedule The schedule of the data source runs.
-       */
-      override fun schedule(schedule: String) {
-        cdkBuilder.schedule(schedule)
-      }
-
-      /**
-       * @param timezone The timezone of the data source run.
-       */
-      override fun timezone(timezone: String) {
-        cdkBuilder.timezone(timezone)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty,
-    ) : CdkObject(cdkObject), ScheduleConfigurationProperty {
-      /**
-       * The schedule of the data source runs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html#cfn-datazone-datasource-scheduleconfiguration-schedule)
-       */
-      override fun schedule(): String? = unwrap(this).getSchedule()
-
-      /**
-       * The timezone of the data source run.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html#cfn-datazone-datasource-scheduleconfiguration-timezone)
-       */
-      override fun timezone(): String? = unwrap(this).getTimezone()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty):
-          ScheduleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ScheduleConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduleConfigurationProperty):
-          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty
-    }
-  }
-
-  /**
    * The configuration of the data source.
    *
    * Example:
@@ -1814,6 +1047,537 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.datazone.CfnDataSource.DataSourceConfigurationInputProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.datazone.CfnDataSource.DataSourceConfigurationInputProperty
+    }
+  }
+
+  /**
+   * A filter expression in Amazon DataZone.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * FilterExpressionProperty filterExpressionProperty = FilterExpressionProperty.builder()
+   * .expression("expression")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html)
+   */
+  public interface FilterExpressionProperty {
+    /**
+     * The search filter expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html#cfn-datazone-datasource-filterexpression-expression)
+     */
+    public fun expression(): String
+
+    /**
+     * The search filter explresison type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html#cfn-datazone-datasource-filterexpression-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [FilterExpressionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expression The search filter expression. 
+       */
+      public fun expression(expression: String)
+
+      /**
+       * @param type The search filter explresison type. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty.Builder =
+          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty.builder()
+
+      /**
+       * @param expression The search filter expression. 
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      /**
+       * @param type The search filter explresison type. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty,
+    ) : CdkObject(cdkObject), FilterExpressionProperty {
+      /**
+       * The search filter expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html#cfn-datazone-datasource-filterexpression-expression)
+       */
+      override fun expression(): String = unwrap(this).getExpression()
+
+      /**
+       * The search filter explresison type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-filterexpression.html#cfn-datazone-datasource-filterexpression-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterExpressionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty):
+          FilterExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterExpressionProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterExpressionProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty
+    }
+  }
+
+  /**
+   * The details of a metadata form.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * FormInputProperty formInputProperty = FormInputProperty.builder()
+   * .formName("formName")
+   * // the properties below are optional
+   * .content("content")
+   * .typeIdentifier("typeIdentifier")
+   * .typeRevision("typeRevision")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html)
+   */
+  public interface FormInputProperty {
+    /**
+     * The content of the metadata form.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-content)
+     */
+    public fun content(): String? = unwrap(this).getContent()
+
+    /**
+     * The name of the metadata form.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-formname)
+     */
+    public fun formName(): String
+
+    /**
+     * The ID of the metadata form type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-typeidentifier)
+     */
+    public fun typeIdentifier(): String? = unwrap(this).getTypeIdentifier()
+
+    /**
+     * The revision of the metadata form type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-typerevision)
+     */
+    public fun typeRevision(): String? = unwrap(this).getTypeRevision()
+
+    /**
+     * A builder for [FormInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param content The content of the metadata form.
+       */
+      public fun content(content: String)
+
+      /**
+       * @param formName The name of the metadata form. 
+       */
+      public fun formName(formName: String)
+
+      /**
+       * @param typeIdentifier The ID of the metadata form type.
+       */
+      public fun typeIdentifier(typeIdentifier: String)
+
+      /**
+       * @param typeRevision The revision of the metadata form type.
+       */
+      public fun typeRevision(typeRevision: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty.Builder =
+          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty.builder()
+
+      /**
+       * @param content The content of the metadata form.
+       */
+      override fun content(content: String) {
+        cdkBuilder.content(content)
+      }
+
+      /**
+       * @param formName The name of the metadata form. 
+       */
+      override fun formName(formName: String) {
+        cdkBuilder.formName(formName)
+      }
+
+      /**
+       * @param typeIdentifier The ID of the metadata form type.
+       */
+      override fun typeIdentifier(typeIdentifier: String) {
+        cdkBuilder.typeIdentifier(typeIdentifier)
+      }
+
+      /**
+       * @param typeRevision The revision of the metadata form type.
+       */
+      override fun typeRevision(typeRevision: String) {
+        cdkBuilder.typeRevision(typeRevision)
+      }
+
+      public fun build(): software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty,
+    ) : CdkObject(cdkObject), FormInputProperty {
+      /**
+       * The content of the metadata form.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-content)
+       */
+      override fun content(): String? = unwrap(this).getContent()
+
+      /**
+       * The name of the metadata form.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-formname)
+       */
+      override fun formName(): String = unwrap(this).getFormName()
+
+      /**
+       * The ID of the metadata form type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-typeidentifier)
+       */
+      override fun typeIdentifier(): String? = unwrap(this).getTypeIdentifier()
+
+      /**
+       * The revision of the metadata form type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-typerevision)
+       */
+      override fun typeRevision(): String? = unwrap(this).getTypeRevision()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty):
+          FormInputProperty = CdkObjectWrappers.wrap(cdkObject) as? FormInputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormInputProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty
+    }
+  }
+
+  /**
+   * The configuration details of the AWS Glue data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * GlueRunConfigurationInputProperty glueRunConfigurationInputProperty =
+   * GlueRunConfigurationInputProperty.builder()
+   * .relationalFilterConfigurations(List.of(RelationalFilterConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * // the properties below are optional
+   * .filterExpressions(List.of(FilterExpressionProperty.builder()
+   * .expression("expression")
+   * .type("type")
+   * .build()))
+   * .schemaName("schemaName")
+   * .build()))
+   * // the properties below are optional
+   * .dataAccessRole("dataAccessRole")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html)
+   */
+  public interface GlueRunConfigurationInputProperty {
+    /**
+     * The data access role included in the configuration details of the AWS Glue data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-dataaccessrole)
+     */
+    public fun dataAccessRole(): String? = unwrap(this).getDataAccessRole()
+
+    /**
+     * The relational filter configurations included in the configuration details of the AWS Glue
+     * data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-relationalfilterconfigurations)
+     */
+    public fun relationalFilterConfigurations(): Any
+
+    /**
+     * A builder for [GlueRunConfigurationInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataAccessRole The data access role included in the configuration details of the AWS
+       * Glue data source.
+       */
+      public fun dataAccessRole(dataAccessRole: String)
+
+      /**
+       * @param relationalFilterConfigurations The relational filter configurations included in the
+       * configuration details of the AWS Glue data source. 
+       */
+      public fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable)
+
+      /**
+       * @param relationalFilterConfigurations The relational filter configurations included in the
+       * configuration details of the AWS Glue data source. 
+       */
+      public fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>)
+
+      /**
+       * @param relationalFilterConfigurations The relational filter configurations included in the
+       * configuration details of the AWS Glue data source. 
+       */
+      public fun relationalFilterConfigurations(vararg relationalFilterConfigurations: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty.Builder
+          =
+          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty.builder()
+
+      /**
+       * @param dataAccessRole The data access role included in the configuration details of the AWS
+       * Glue data source.
+       */
+      override fun dataAccessRole(dataAccessRole: String) {
+        cdkBuilder.dataAccessRole(dataAccessRole)
+      }
+
+      /**
+       * @param relationalFilterConfigurations The relational filter configurations included in the
+       * configuration details of the AWS Glue data source. 
+       */
+      override fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
+        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param relationalFilterConfigurations The relational filter configurations included in the
+       * configuration details of the AWS Glue data source. 
+       */
+      override fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
+        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations)
+      }
+
+      /**
+       * @param relationalFilterConfigurations The relational filter configurations included in the
+       * configuration details of the AWS Glue data source. 
+       */
+      override fun relationalFilterConfigurations(vararg relationalFilterConfigurations: Any): Unit
+          = relationalFilterConfigurations(relationalFilterConfigurations.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty,
+    ) : CdkObject(cdkObject), GlueRunConfigurationInputProperty {
+      /**
+       * The data access role included in the configuration details of the AWS Glue data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-dataaccessrole)
+       */
+      override fun dataAccessRole(): String? = unwrap(this).getDataAccessRole()
+
+      /**
+       * The relational filter configurations included in the configuration details of the AWS Glue
+       * data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-relationalfilterconfigurations)
+       */
+      override fun relationalFilterConfigurations(): Any =
+          unwrap(this).getRelationalFilterConfigurations()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          GlueRunConfigurationInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty):
+          GlueRunConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlueRunConfigurationInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GlueRunConfigurationInputProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty
+    }
+  }
+
+  /**
+   * The recommendation configuration for the data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * RecommendationConfigurationProperty recommendationConfigurationProperty =
+   * RecommendationConfigurationProperty.builder()
+   * .enableBusinessNameGeneration(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-recommendationconfiguration.html)
+   */
+  public interface RecommendationConfigurationProperty {
+    /**
+     * Specifies whether automatic business name generation is to be enabled or not as part of the
+     * recommendation configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-recommendationconfiguration.html#cfn-datazone-datasource-recommendationconfiguration-enablebusinessnamegeneration)
+     */
+    public fun enableBusinessNameGeneration(): Any? = unwrap(this).getEnableBusinessNameGeneration()
+
+    /**
+     * A builder for [RecommendationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableBusinessNameGeneration Specifies whether automatic business name generation is
+       * to be enabled or not as part of the recommendation configuration.
+       */
+      public fun enableBusinessNameGeneration(enableBusinessNameGeneration: Boolean)
+
+      /**
+       * @param enableBusinessNameGeneration Specifies whether automatic business name generation is
+       * to be enabled or not as part of the recommendation configuration.
+       */
+      public fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty.builder()
+
+      /**
+       * @param enableBusinessNameGeneration Specifies whether automatic business name generation is
+       * to be enabled or not as part of the recommendation configuration.
+       */
+      override fun enableBusinessNameGeneration(enableBusinessNameGeneration: Boolean) {
+        cdkBuilder.enableBusinessNameGeneration(enableBusinessNameGeneration)
+      }
+
+      /**
+       * @param enableBusinessNameGeneration Specifies whether automatic business name generation is
+       * to be enabled or not as part of the recommendation configuration.
+       */
+      override fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable) {
+        cdkBuilder.enableBusinessNameGeneration(enableBusinessNameGeneration.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty,
+    ) : CdkObject(cdkObject), RecommendationConfigurationProperty {
+      /**
+       * Specifies whether automatic business name generation is to be enabled or not as part of the
+       * recommendation configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-recommendationconfiguration.html#cfn-datazone-datasource-recommendationconfiguration-enablebusinessnamegeneration)
+       */
+      override fun enableBusinessNameGeneration(): Any? =
+          unwrap(this).getEnableBusinessNameGeneration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RecommendationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty):
+          RecommendationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RecommendationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecommendationConfigurationProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty
     }
   }
 
@@ -2282,7 +2046,7 @@ public open class CfnDataSource internal constructor(
   }
 
   /**
-   * The configuration details of the AWS Glue data source.
+   * The details of the Amazon Redshift Serverless workgroup storage.
    *
    * Example:
    *
@@ -2290,9 +2054,274 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.datazone.*;
-   * GlueRunConfigurationInputProperty glueRunConfigurationInputProperty =
-   * GlueRunConfigurationInputProperty.builder()
-   * .relationalFilterConfigurations(List.of(RelationalFilterConfigurationProperty.builder()
+   * RedshiftServerlessStorageProperty redshiftServerlessStorageProperty =
+   * RedshiftServerlessStorageProperty.builder()
+   * .workgroupName("workgroupName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftserverlessstorage.html)
+   */
+  public interface RedshiftServerlessStorageProperty {
+    /**
+     * The name of the Amazon Redshift Serverless workgroup.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftserverlessstorage.html#cfn-datazone-datasource-redshiftserverlessstorage-workgroupname)
+     */
+    public fun workgroupName(): String
+
+    /**
+     * A builder for [RedshiftServerlessStorageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param workgroupName The name of the Amazon Redshift Serverless workgroup. 
+       */
+      public fun workgroupName(workgroupName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty.Builder
+          =
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty.builder()
+
+      /**
+       * @param workgroupName The name of the Amazon Redshift Serverless workgroup. 
+       */
+      override fun workgroupName(workgroupName: String) {
+        cdkBuilder.workgroupName(workgroupName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty,
+    ) : CdkObject(cdkObject), RedshiftServerlessStorageProperty {
+      /**
+       * The name of the Amazon Redshift Serverless workgroup.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftserverlessstorage.html#cfn-datazone-datasource-redshiftserverlessstorage-workgroupname)
+       */
+      override fun workgroupName(): String = unwrap(this).getWorkgroupName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftServerlessStorageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty):
+          RedshiftServerlessStorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftServerlessStorageProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftServerlessStorageProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty
+    }
+  }
+
+  /**
+   * The details of the Amazon Redshift storage as part of the configuration of an Amazon Redshift
+   * data source run.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * RedshiftStorageProperty redshiftStorageProperty = RedshiftStorageProperty.builder()
+   * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
+   * .clusterName("clusterName")
+   * .build())
+   * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
+   * .workgroupName("workgroupName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html)
+   */
+  public interface RedshiftStorageProperty {
+    /**
+     * The details of the Amazon Redshift cluster source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html#cfn-datazone-datasource-redshiftstorage-redshiftclustersource)
+     */
+    public fun redshiftClusterSource(): Any? = unwrap(this).getRedshiftClusterSource()
+
+    /**
+     * The details of the Amazon Redshift Serverless workgroup source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html#cfn-datazone-datasource-redshiftstorage-redshiftserverlesssource)
+     */
+    public fun redshiftServerlessSource(): Any? = unwrap(this).getRedshiftServerlessSource()
+
+    /**
+     * A builder for [RedshiftStorageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
+       */
+      public fun redshiftClusterSource(redshiftClusterSource: IResolvable)
+
+      /**
+       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
+       */
+      public fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty)
+
+      /**
+       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ba8616c977c827ba122709ece163c4044a0f88c0eec2a2e168f7c5fb8764a851")
+      public
+          fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty.Builder.() -> Unit)
+
+      /**
+       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
+       * source.
+       */
+      public fun redshiftServerlessSource(redshiftServerlessSource: IResolvable)
+
+      /**
+       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
+       * source.
+       */
+      public
+          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty)
+
+      /**
+       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
+       * source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30d400db2ad3eb359f03e7de3fd458556e7af9b01d3fdd573178e52d2eea73ea")
+      public
+          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty.Builder =
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty.builder()
+
+      /**
+       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
+       */
+      override fun redshiftClusterSource(redshiftClusterSource: IResolvable) {
+        cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
+       */
+      override fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty) {
+        cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(RedshiftClusterStorageProperty::unwrap))
+      }
+
+      /**
+       * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ba8616c977c827ba122709ece163c4044a0f88c0eec2a2e168f7c5fb8764a851")
+      override
+          fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty.Builder.() -> Unit):
+          Unit = redshiftClusterSource(RedshiftClusterStorageProperty(redshiftClusterSource))
+
+      /**
+       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
+       * source.
+       */
+      override fun redshiftServerlessSource(redshiftServerlessSource: IResolvable) {
+        cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
+       * source.
+       */
+      override
+          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty) {
+        cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(RedshiftServerlessStorageProperty::unwrap))
+      }
+
+      /**
+       * @param redshiftServerlessSource The details of the Amazon Redshift Serverless workgroup
+       * source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30d400db2ad3eb359f03e7de3fd458556e7af9b01d3fdd573178e52d2eea73ea")
+      override
+          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty.Builder.() -> Unit):
+          Unit =
+          redshiftServerlessSource(RedshiftServerlessStorageProperty(redshiftServerlessSource))
+
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty,
+    ) : CdkObject(cdkObject), RedshiftStorageProperty {
+      /**
+       * The details of the Amazon Redshift cluster source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html#cfn-datazone-datasource-redshiftstorage-redshiftclustersource)
+       */
+      override fun redshiftClusterSource(): Any? = unwrap(this).getRedshiftClusterSource()
+
+      /**
+       * The details of the Amazon Redshift Serverless workgroup source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftstorage.html#cfn-datazone-datasource-redshiftstorage-redshiftserverlesssource)
+       */
+      override fun redshiftServerlessSource(): Any? = unwrap(this).getRedshiftServerlessSource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftStorageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty):
+          RedshiftStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? RedshiftStorageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftStorageProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty
+    }
+  }
+
+  /**
+   * The relational filter configuration for the data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * RelationalFilterConfigurationProperty relationalFilterConfigurationProperty =
+   * RelationalFilterConfigurationProperty.builder()
    * .databaseName("databaseName")
    * // the properties below are optional
    * .filterExpressions(List.of(FilterExpressionProperty.builder()
@@ -2300,144 +2329,167 @@ public open class CfnDataSource internal constructor(
    * .type("type")
    * .build()))
    * .schemaName("schemaName")
-   * .build()))
-   * // the properties below are optional
-   * .dataAccessRole("dataAccessRole")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html)
    */
-  public interface GlueRunConfigurationInputProperty {
+  public interface RelationalFilterConfigurationProperty {
     /**
-     * The data access role included in the configuration details of the AWS Glue data source.
+     * The database name specified in the relational filter configuration for the data source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-dataaccessrole)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-databasename)
      */
-    public fun dataAccessRole(): String? = unwrap(this).getDataAccessRole()
+    public fun databaseName(): String
 
     /**
-     * The relational filter configurations included in the configuration details of the AWS Glue
-     * data source.
+     * The filter expressions specified in the relational filter configuration for the data source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-relationalfilterconfigurations)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-filterexpressions)
      */
-    public fun relationalFilterConfigurations(): Any
+    public fun filterExpressions(): Any? = unwrap(this).getFilterExpressions()
 
     /**
-     * A builder for [GlueRunConfigurationInputProperty]
+     * The schema name specified in the relational filter configuration for the data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-schemaname)
+     */
+    public fun schemaName(): String? = unwrap(this).getSchemaName()
+
+    /**
+     * A builder for [RelationalFilterConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dataAccessRole The data access role included in the configuration details of the AWS
-       * Glue data source.
+       * @param databaseName The database name specified in the relational filter configuration for
+       * the data source. 
        */
-      public fun dataAccessRole(dataAccessRole: String)
+      public fun databaseName(databaseName: String)
 
       /**
-       * @param relationalFilterConfigurations The relational filter configurations included in the
-       * configuration details of the AWS Glue data source. 
+       * @param filterExpressions The filter expressions specified in the relational filter
+       * configuration for the data source.
        */
-      public fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable)
+      public fun filterExpressions(filterExpressions: IResolvable)
 
       /**
-       * @param relationalFilterConfigurations The relational filter configurations included in the
-       * configuration details of the AWS Glue data source. 
+       * @param filterExpressions The filter expressions specified in the relational filter
+       * configuration for the data source.
        */
-      public fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>)
+      public fun filterExpressions(filterExpressions: List<Any>)
 
       /**
-       * @param relationalFilterConfigurations The relational filter configurations included in the
-       * configuration details of the AWS Glue data source. 
+       * @param filterExpressions The filter expressions specified in the relational filter
+       * configuration for the data source.
        */
-      public fun relationalFilterConfigurations(vararg relationalFilterConfigurations: Any)
+      public fun filterExpressions(vararg filterExpressions: Any)
+
+      /**
+       * @param schemaName The schema name specified in the relational filter configuration for the
+       * data source.
+       */
+      public fun schemaName(schemaName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty.Builder
+          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty.builder()
+          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty.builder()
 
       /**
-       * @param dataAccessRole The data access role included in the configuration details of the AWS
-       * Glue data source.
+       * @param databaseName The database name specified in the relational filter configuration for
+       * the data source. 
        */
-      override fun dataAccessRole(dataAccessRole: String) {
-        cdkBuilder.dataAccessRole(dataAccessRole)
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
       }
 
       /**
-       * @param relationalFilterConfigurations The relational filter configurations included in the
-       * configuration details of the AWS Glue data source. 
+       * @param filterExpressions The filter expressions specified in the relational filter
+       * configuration for the data source.
        */
-      override fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
-        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.let(IResolvable::unwrap))
+      override fun filterExpressions(filterExpressions: IResolvable) {
+        cdkBuilder.filterExpressions(filterExpressions.let(IResolvable::unwrap))
       }
 
       /**
-       * @param relationalFilterConfigurations The relational filter configurations included in the
-       * configuration details of the AWS Glue data source. 
+       * @param filterExpressions The filter expressions specified in the relational filter
+       * configuration for the data source.
        */
-      override fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
-        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations)
+      override fun filterExpressions(filterExpressions: List<Any>) {
+        cdkBuilder.filterExpressions(filterExpressions)
       }
 
       /**
-       * @param relationalFilterConfigurations The relational filter configurations included in the
-       * configuration details of the AWS Glue data source. 
+       * @param filterExpressions The filter expressions specified in the relational filter
+       * configuration for the data source.
        */
-      override fun relationalFilterConfigurations(vararg relationalFilterConfigurations: Any): Unit
-          = relationalFilterConfigurations(relationalFilterConfigurations.toList())
+      override fun filterExpressions(vararg filterExpressions: Any): Unit =
+          filterExpressions(filterExpressions.toList())
+
+      /**
+       * @param schemaName The schema name specified in the relational filter configuration for the
+       * data source.
+       */
+      override fun schemaName(schemaName: String) {
+        cdkBuilder.schemaName(schemaName)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty,
-    ) : CdkObject(cdkObject), GlueRunConfigurationInputProperty {
+          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty,
+    ) : CdkObject(cdkObject), RelationalFilterConfigurationProperty {
       /**
-       * The data access role included in the configuration details of the AWS Glue data source.
+       * The database name specified in the relational filter configuration for the data source.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-dataaccessrole)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-databasename)
        */
-      override fun dataAccessRole(): String? = unwrap(this).getDataAccessRole()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
       /**
-       * The relational filter configurations included in the configuration details of the AWS Glue
-       * data source.
+       * The filter expressions specified in the relational filter configuration for the data
+       * source.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-relationalfilterconfigurations)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-filterexpressions)
        */
-      override fun relationalFilterConfigurations(): Any =
-          unwrap(this).getRelationalFilterConfigurations()
+      override fun filterExpressions(): Any? = unwrap(this).getFilterExpressions()
+
+      /**
+       * The schema name specified in the relational filter configuration for the data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-relationalfilterconfiguration.html#cfn-datazone-datasource-relationalfilterconfiguration-schemaname)
+       */
+      override fun schemaName(): String? = unwrap(this).getSchemaName()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          GlueRunConfigurationInputProperty {
+          RelationalFilterConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty):
-          GlueRunConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GlueRunConfigurationInputProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty):
+          RelationalFilterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RelationalFilterConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: GlueRunConfigurationInputProperty):
-          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty
+      internal fun unwrap(wrapped: RelationalFilterConfigurationProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
     }
   }
 
   /**
-   * The details of a metadata form.
+   * The details of the schedule of the data source runs.
    *
    * Example:
    *
@@ -2445,157 +2497,105 @@ public open class CfnDataSource internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.datazone.*;
-   * FormInputProperty formInputProperty = FormInputProperty.builder()
-   * .formName("formName")
-   * // the properties below are optional
-   * .content("content")
-   * .typeIdentifier("typeIdentifier")
-   * .typeRevision("typeRevision")
+   * ScheduleConfigurationProperty scheduleConfigurationProperty =
+   * ScheduleConfigurationProperty.builder()
+   * .schedule("schedule")
+   * .timezone("timezone")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html)
    */
-  public interface FormInputProperty {
+  public interface ScheduleConfigurationProperty {
     /**
-     * The content of the metadata form.
+     * The schedule of the data source runs.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-content)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html#cfn-datazone-datasource-scheduleconfiguration-schedule)
      */
-    public fun content(): String? = unwrap(this).getContent()
+    public fun schedule(): String? = unwrap(this).getSchedule()
 
     /**
-     * The name of the metadata form.
+     * The timezone of the data source run.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-formname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html#cfn-datazone-datasource-scheduleconfiguration-timezone)
      */
-    public fun formName(): String
+    public fun timezone(): String? = unwrap(this).getTimezone()
 
     /**
-     * The ID of the metadata form type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-typeidentifier)
-     */
-    public fun typeIdentifier(): String? = unwrap(this).getTypeIdentifier()
-
-    /**
-     * The revision of the metadata form type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-typerevision)
-     */
-    public fun typeRevision(): String? = unwrap(this).getTypeRevision()
-
-    /**
-     * A builder for [FormInputProperty]
+     * A builder for [ScheduleConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param content The content of the metadata form.
+       * @param schedule The schedule of the data source runs.
        */
-      public fun content(content: String)
+      public fun schedule(schedule: String)
 
       /**
-       * @param formName The name of the metadata form. 
+       * @param timezone The timezone of the data source run.
        */
-      public fun formName(formName: String)
-
-      /**
-       * @param typeIdentifier The ID of the metadata form type.
-       */
-      public fun typeIdentifier(typeIdentifier: String)
-
-      /**
-       * @param typeRevision The revision of the metadata form type.
-       */
-      public fun typeRevision(typeRevision: String)
+      public fun timezone(timezone: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty.Builder =
-          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty.builder()
+          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty.builder()
 
       /**
-       * @param content The content of the metadata form.
+       * @param schedule The schedule of the data source runs.
        */
-      override fun content(content: String) {
-        cdkBuilder.content(content)
+      override fun schedule(schedule: String) {
+        cdkBuilder.schedule(schedule)
       }
 
       /**
-       * @param formName The name of the metadata form. 
+       * @param timezone The timezone of the data source run.
        */
-      override fun formName(formName: String) {
-        cdkBuilder.formName(formName)
+      override fun timezone(timezone: String) {
+        cdkBuilder.timezone(timezone)
       }
 
-      /**
-       * @param typeIdentifier The ID of the metadata form type.
-       */
-      override fun typeIdentifier(typeIdentifier: String) {
-        cdkBuilder.typeIdentifier(typeIdentifier)
-      }
-
-      /**
-       * @param typeRevision The revision of the metadata form type.
-       */
-      override fun typeRevision(typeRevision: String) {
-        cdkBuilder.typeRevision(typeRevision)
-      }
-
-      public fun build(): software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty =
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty,
-    ) : CdkObject(cdkObject), FormInputProperty {
+          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty,
+    ) : CdkObject(cdkObject), ScheduleConfigurationProperty {
       /**
-       * The content of the metadata form.
+       * The schedule of the data source runs.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-content)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html#cfn-datazone-datasource-scheduleconfiguration-schedule)
        */
-      override fun content(): String? = unwrap(this).getContent()
+      override fun schedule(): String? = unwrap(this).getSchedule()
 
       /**
-       * The name of the metadata form.
+       * The timezone of the data source run.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-formname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-scheduleconfiguration.html#cfn-datazone-datasource-scheduleconfiguration-timezone)
        */
-      override fun formName(): String = unwrap(this).getFormName()
-
-      /**
-       * The ID of the metadata form type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-typeidentifier)
-       */
-      override fun typeIdentifier(): String? = unwrap(this).getTypeIdentifier()
-
-      /**
-       * The revision of the metadata form type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-forminput.html#cfn-datazone-datasource-forminput-typerevision)
-       */
-      override fun typeRevision(): String? = unwrap(this).getTypeRevision()
+      override fun timezone(): String? = unwrap(this).getTimezone()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FormInputProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty):
-          FormInputProperty = CdkObjectWrappers.wrap(cdkObject) as? FormInputProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty):
+          ScheduleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduleConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FormInputProperty):
-          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty
+      internal fun unwrap(wrapped: ScheduleConfigurationProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty
     }
   }
 }

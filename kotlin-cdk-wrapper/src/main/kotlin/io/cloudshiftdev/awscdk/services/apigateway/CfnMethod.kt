@@ -857,254 +857,6 @@ public open class CfnMethod internal constructor(
   }
 
   /**
-   * Represents a method response of a given HTTP status code returned to the client.
-   *
-   * The method response is passed from the back end through the associated integration response
-   * that can be transformed using a mapping template.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * MethodResponseProperty methodResponseProperty = MethodResponseProperty.builder()
-   * .statusCode("statusCode")
-   * // the properties below are optional
-   * .responseModels(Map.of(
-   * "responseModelsKey", "responseModels"))
-   * .responseParameters(Map.of(
-   * "responseParametersKey", false))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html)
-   */
-  public interface MethodResponseProperty {
-    /**
-     * Specifies the Model resources used for the response's content-type.
-     *
-     * Response models are represented as a key/value map, with a content-type as the key and a
-     * Model name as the value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responsemodels)
-     */
-    public fun responseModels(): Any? = unwrap(this).getResponseModels()
-
-    /**
-     * A key-value map specifying required or optional response parameters that API Gateway can send
-     * back to the caller.
-     *
-     * A key defines a method response header and the value specifies whether the associated method
-     * response header is required or not. The expression of the key must match the pattern
-     * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
-     * passes certain integration response data to the method response headers specified here according
-     * to the mapping you prescribe in the API's IntegrationResponse. The integration response data
-     * that can be mapped include an integration response header expressed in
-     * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
-     * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
-     * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid JSON
-     * expression without the `$` prefix.)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responseparameters)
-     */
-    public fun responseParameters(): Any? = unwrap(this).getResponseParameters()
-
-    /**
-     * The method response's status code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode)
-     */
-    public fun statusCode(): String
-
-    /**
-     * A builder for [MethodResponseProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param responseModels Specifies the Model resources used for the response's content-type.
-       * Response models are represented as a key/value map, with a content-type as the key and a
-       * Model name as the value.
-       */
-      public fun responseModels(responseModels: IResolvable)
-
-      /**
-       * @param responseModels Specifies the Model resources used for the response's content-type.
-       * Response models are represented as a key/value map, with a content-type as the key and a
-       * Model name as the value.
-       */
-      public fun responseModels(responseModels: Map<String, String>)
-
-      /**
-       * @param responseParameters A key-value map specifying required or optional response
-       * parameters that API Gateway can send back to the caller.
-       * A key defines a method response header and the value specifies whether the associated
-       * method response header is required or not. The expression of the key must match the pattern
-       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
-       * passes certain integration response data to the method response headers specified here
-       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
-       * response data that can be mapped include an integration response header expressed in
-       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
-       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
-       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
-       * JSON expression without the `$` prefix.)
-       */
-      public fun responseParameters(responseParameters: IResolvable)
-
-      /**
-       * @param responseParameters A key-value map specifying required or optional response
-       * parameters that API Gateway can send back to the caller.
-       * A key defines a method response header and the value specifies whether the associated
-       * method response header is required or not. The expression of the key must match the pattern
-       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
-       * passes certain integration response data to the method response headers specified here
-       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
-       * response data that can be mapped include an integration response header expressed in
-       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
-       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
-       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
-       * JSON expression without the `$` prefix.)
-       */
-      public fun responseParameters(responseParameters: Map<String, Any>)
-
-      /**
-       * @param statusCode The method response's status code. 
-       */
-      public fun statusCode(statusCode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty.Builder =
-          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty.builder()
-
-      /**
-       * @param responseModels Specifies the Model resources used for the response's content-type.
-       * Response models are represented as a key/value map, with a content-type as the key and a
-       * Model name as the value.
-       */
-      override fun responseModels(responseModels: IResolvable) {
-        cdkBuilder.responseModels(responseModels.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param responseModels Specifies the Model resources used for the response's content-type.
-       * Response models are represented as a key/value map, with a content-type as the key and a
-       * Model name as the value.
-       */
-      override fun responseModels(responseModels: Map<String, String>) {
-        cdkBuilder.responseModels(responseModels)
-      }
-
-      /**
-       * @param responseParameters A key-value map specifying required or optional response
-       * parameters that API Gateway can send back to the caller.
-       * A key defines a method response header and the value specifies whether the associated
-       * method response header is required or not. The expression of the key must match the pattern
-       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
-       * passes certain integration response data to the method response headers specified here
-       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
-       * response data that can be mapped include an integration response header expressed in
-       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
-       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
-       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
-       * JSON expression without the `$` prefix.)
-       */
-      override fun responseParameters(responseParameters: IResolvable) {
-        cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param responseParameters A key-value map specifying required or optional response
-       * parameters that API Gateway can send back to the caller.
-       * A key defines a method response header and the value specifies whether the associated
-       * method response header is required or not. The expression of the key must match the pattern
-       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
-       * passes certain integration response data to the method response headers specified here
-       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
-       * response data that can be mapped include an integration response header expressed in
-       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
-       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
-       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
-       * JSON expression without the `$` prefix.)
-       */
-      override fun responseParameters(responseParameters: Map<String, Any>) {
-        cdkBuilder.responseParameters(responseParameters)
-      }
-
-      /**
-       * @param statusCode The method response's status code. 
-       */
-      override fun statusCode(statusCode: String) {
-        cdkBuilder.statusCode(statusCode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty,
-    ) : CdkObject(cdkObject), MethodResponseProperty {
-      /**
-       * Specifies the Model resources used for the response's content-type.
-       *
-       * Response models are represented as a key/value map, with a content-type as the key and a
-       * Model name as the value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responsemodels)
-       */
-      override fun responseModels(): Any? = unwrap(this).getResponseModels()
-
-      /**
-       * A key-value map specifying required or optional response parameters that API Gateway can
-       * send back to the caller.
-       *
-       * A key defines a method response header and the value specifies whether the associated
-       * method response header is required or not. The expression of the key must match the pattern
-       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
-       * passes certain integration response data to the method response headers specified here
-       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
-       * response data that can be mapped include an integration response header expressed in
-       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
-       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
-       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
-       * JSON expression without the `$` prefix.)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responseparameters)
-       */
-      override fun responseParameters(): Any? = unwrap(this).getResponseParameters()
-
-      /**
-       * The method response's status code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode)
-       */
-      override fun statusCode(): String = unwrap(this).getStatusCode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MethodResponseProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty):
-          MethodResponseProperty = CdkObjectWrappers.wrap(cdkObject) as? MethodResponseProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MethodResponseProperty):
-          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty
-    }
-  }
-
-  /**
    * `Integration` is a property of the
    * [AWS::ApiGateway::Method](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html)
    * resource that specifies information about the target backend that a method calls.
@@ -2253,6 +2005,254 @@ public open class CfnMethod internal constructor(
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty
+    }
+  }
+
+  /**
+   * Represents a method response of a given HTTP status code returned to the client.
+   *
+   * The method response is passed from the back end through the associated integration response
+   * that can be transformed using a mapping template.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * MethodResponseProperty methodResponseProperty = MethodResponseProperty.builder()
+   * .statusCode("statusCode")
+   * // the properties below are optional
+   * .responseModels(Map.of(
+   * "responseModelsKey", "responseModels"))
+   * .responseParameters(Map.of(
+   * "responseParametersKey", false))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html)
+   */
+  public interface MethodResponseProperty {
+    /**
+     * Specifies the Model resources used for the response's content-type.
+     *
+     * Response models are represented as a key/value map, with a content-type as the key and a
+     * Model name as the value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responsemodels)
+     */
+    public fun responseModels(): Any? = unwrap(this).getResponseModels()
+
+    /**
+     * A key-value map specifying required or optional response parameters that API Gateway can send
+     * back to the caller.
+     *
+     * A key defines a method response header and the value specifies whether the associated method
+     * response header is required or not. The expression of the key must match the pattern
+     * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
+     * passes certain integration response data to the method response headers specified here according
+     * to the mapping you prescribe in the API's IntegrationResponse. The integration response data
+     * that can be mapped include an integration response header expressed in
+     * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
+     * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
+     * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid JSON
+     * expression without the `$` prefix.)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responseparameters)
+     */
+    public fun responseParameters(): Any? = unwrap(this).getResponseParameters()
+
+    /**
+     * The method response's status code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode)
+     */
+    public fun statusCode(): String
+
+    /**
+     * A builder for [MethodResponseProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param responseModels Specifies the Model resources used for the response's content-type.
+       * Response models are represented as a key/value map, with a content-type as the key and a
+       * Model name as the value.
+       */
+      public fun responseModels(responseModels: IResolvable)
+
+      /**
+       * @param responseModels Specifies the Model resources used for the response's content-type.
+       * Response models are represented as a key/value map, with a content-type as the key and a
+       * Model name as the value.
+       */
+      public fun responseModels(responseModels: Map<String, String>)
+
+      /**
+       * @param responseParameters A key-value map specifying required or optional response
+       * parameters that API Gateway can send back to the caller.
+       * A key defines a method response header and the value specifies whether the associated
+       * method response header is required or not. The expression of the key must match the pattern
+       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
+       * passes certain integration response data to the method response headers specified here
+       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
+       * response data that can be mapped include an integration response header expressed in
+       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
+       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
+       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
+       * JSON expression without the `$` prefix.)
+       */
+      public fun responseParameters(responseParameters: IResolvable)
+
+      /**
+       * @param responseParameters A key-value map specifying required or optional response
+       * parameters that API Gateway can send back to the caller.
+       * A key defines a method response header and the value specifies whether the associated
+       * method response header is required or not. The expression of the key must match the pattern
+       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
+       * passes certain integration response data to the method response headers specified here
+       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
+       * response data that can be mapped include an integration response header expressed in
+       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
+       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
+       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
+       * JSON expression without the `$` prefix.)
+       */
+      public fun responseParameters(responseParameters: Map<String, Any>)
+
+      /**
+       * @param statusCode The method response's status code. 
+       */
+      public fun statusCode(statusCode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty.Builder =
+          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty.builder()
+
+      /**
+       * @param responseModels Specifies the Model resources used for the response's content-type.
+       * Response models are represented as a key/value map, with a content-type as the key and a
+       * Model name as the value.
+       */
+      override fun responseModels(responseModels: IResolvable) {
+        cdkBuilder.responseModels(responseModels.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param responseModels Specifies the Model resources used for the response's content-type.
+       * Response models are represented as a key/value map, with a content-type as the key and a
+       * Model name as the value.
+       */
+      override fun responseModels(responseModels: Map<String, String>) {
+        cdkBuilder.responseModels(responseModels)
+      }
+
+      /**
+       * @param responseParameters A key-value map specifying required or optional response
+       * parameters that API Gateway can send back to the caller.
+       * A key defines a method response header and the value specifies whether the associated
+       * method response header is required or not. The expression of the key must match the pattern
+       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
+       * passes certain integration response data to the method response headers specified here
+       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
+       * response data that can be mapped include an integration response header expressed in
+       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
+       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
+       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
+       * JSON expression without the `$` prefix.)
+       */
+      override fun responseParameters(responseParameters: IResolvable) {
+        cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param responseParameters A key-value map specifying required or optional response
+       * parameters that API Gateway can send back to the caller.
+       * A key defines a method response header and the value specifies whether the associated
+       * method response header is required or not. The expression of the key must match the pattern
+       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
+       * passes certain integration response data to the method response headers specified here
+       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
+       * response data that can be mapped include an integration response header expressed in
+       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
+       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
+       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
+       * JSON expression without the `$` prefix.)
+       */
+      override fun responseParameters(responseParameters: Map<String, Any>) {
+        cdkBuilder.responseParameters(responseParameters)
+      }
+
+      /**
+       * @param statusCode The method response's status code. 
+       */
+      override fun statusCode(statusCode: String) {
+        cdkBuilder.statusCode(statusCode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty,
+    ) : CdkObject(cdkObject), MethodResponseProperty {
+      /**
+       * Specifies the Model resources used for the response's content-type.
+       *
+       * Response models are represented as a key/value map, with a content-type as the key and a
+       * Model name as the value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responsemodels)
+       */
+      override fun responseModels(): Any? = unwrap(this).getResponseModels()
+
+      /**
+       * A key-value map specifying required or optional response parameters that API Gateway can
+       * send back to the caller.
+       *
+       * A key defines a method response header and the value specifies whether the associated
+       * method response header is required or not. The expression of the key must match the pattern
+       * `method.response.header.{name}` , where `name` is a valid and unique header name. API Gateway
+       * passes certain integration response data to the method response headers specified here
+       * according to the mapping you prescribe in the API's IntegrationResponse. The integration
+       * response data that can be mapped include an integration response header expressed in
+       * `integration.response.header.{name}` , a static value enclosed within a pair of single quotes
+       * (e.g., `'application/json'` ), or a JSON expression from the back-end response payload in the
+       * form of `integration.response.body.{JSON-expression}` , where `JSON-expression` is a valid
+       * JSON expression without the `$` prefix.)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-responseparameters)
+       */
+      override fun responseParameters(): Any? = unwrap(this).getResponseParameters()
+
+      /**
+       * The method response's status code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html#cfn-apigateway-method-methodresponse-statuscode)
+       */
+      override fun statusCode(): String = unwrap(this).getStatusCode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MethodResponseProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty):
+          MethodResponseProperty = CdkObjectWrappers.wrap(cdkObject) as? MethodResponseProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MethodResponseProperty):
+          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty
     }
   }
 }

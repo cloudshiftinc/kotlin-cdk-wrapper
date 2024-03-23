@@ -447,242 +447,6 @@ public open class CfnAnalyzer internal constructor(
   }
 
   /**
-   * The criteria that defines the archive rule.
-   *
-   * To learn about filter keys that you can use to create an archive rule, see [filter
-   * keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-reference-filter-keys.html)
-   * in the *User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
-   * FilterProperty filterProperty = FilterProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .contains(List.of("contains"))
-   * .eq(List.of("eq"))
-   * .exists(false)
-   * .neq(List.of("neq"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html)
-   */
-  public interface FilterProperty {
-    /**
-     * A "contains" condition to match for the rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-contains)
-     */
-    public fun contains(): List<String> = unwrap(this).getContains() ?: emptyList()
-
-    /**
-     * An "equals" condition to match for the rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-eq)
-     */
-    public fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
-
-    /**
-     * An "exists" condition to match for the rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-exists)
-     */
-    public fun exists(): Any? = unwrap(this).getExists()
-
-    /**
-     * A "not equal" condition to match for the rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-neq)
-     */
-    public fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
-
-    /**
-     * The property used to define the criteria in the filter for the rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-property)
-     */
-    public fun `property`(): String
-
-    /**
-     * A builder for [FilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contains A "contains" condition to match for the rule.
-       */
-      public fun contains(contains: List<String>)
-
-      /**
-       * @param contains A "contains" condition to match for the rule.
-       */
-      public fun contains(vararg contains: String)
-
-      /**
-       * @param eq An "equals" condition to match for the rule.
-       */
-      public fun eq(eq: List<String>)
-
-      /**
-       * @param eq An "equals" condition to match for the rule.
-       */
-      public fun eq(vararg eq: String)
-
-      /**
-       * @param exists An "exists" condition to match for the rule.
-       */
-      public fun exists(exists: Boolean)
-
-      /**
-       * @param exists An "exists" condition to match for the rule.
-       */
-      public fun exists(exists: IResolvable)
-
-      /**
-       * @param neq A "not equal" condition to match for the rule.
-       */
-      public fun neq(neq: List<String>)
-
-      /**
-       * @param neq A "not equal" condition to match for the rule.
-       */
-      public fun neq(vararg neq: String)
-
-      /**
-       * @param property The property used to define the criteria in the filter for the rule. 
-       */
-      public fun `property`(`property`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty.Builder =
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty.builder()
-
-      /**
-       * @param contains A "contains" condition to match for the rule.
-       */
-      override fun contains(contains: List<String>) {
-        cdkBuilder.contains(contains)
-      }
-
-      /**
-       * @param contains A "contains" condition to match for the rule.
-       */
-      override fun contains(vararg contains: String): Unit = contains(contains.toList())
-
-      /**
-       * @param eq An "equals" condition to match for the rule.
-       */
-      override fun eq(eq: List<String>) {
-        cdkBuilder.eq(eq)
-      }
-
-      /**
-       * @param eq An "equals" condition to match for the rule.
-       */
-      override fun eq(vararg eq: String): Unit = eq(eq.toList())
-
-      /**
-       * @param exists An "exists" condition to match for the rule.
-       */
-      override fun exists(exists: Boolean) {
-        cdkBuilder.exists(exists)
-      }
-
-      /**
-       * @param exists An "exists" condition to match for the rule.
-       */
-      override fun exists(exists: IResolvable) {
-        cdkBuilder.exists(exists.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param neq A "not equal" condition to match for the rule.
-       */
-      override fun neq(neq: List<String>) {
-        cdkBuilder.neq(neq)
-      }
-
-      /**
-       * @param neq A "not equal" condition to match for the rule.
-       */
-      override fun neq(vararg neq: String): Unit = neq(neq.toList())
-
-      /**
-       * @param property The property used to define the criteria in the filter for the rule. 
-       */
-      override fun `property`(`property`: String) {
-        cdkBuilder.`property`(`property`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
-      /**
-       * A "contains" condition to match for the rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-contains)
-       */
-      override fun contains(): List<String> = unwrap(this).getContains() ?: emptyList()
-
-      /**
-       * An "equals" condition to match for the rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-eq)
-       */
-      override fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
-
-      /**
-       * An "exists" condition to match for the rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-exists)
-       */
-      override fun exists(): Any? = unwrap(this).getExists()
-
-      /**
-       * A "not equal" condition to match for the rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-neq)
-       */
-      override fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
-
-      /**
-       * The property used to define the criteria in the filter for the rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-property)
-       */
-      override fun `property`(): String = unwrap(this).getProperty()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterProperty):
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty
-    }
-  }
-
-  /**
    * Contains information about the configuration of an unused access analyzer for an AWS
    * organization or account.
    *
@@ -953,6 +717,242 @@ public open class CfnAnalyzer internal constructor(
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty
+    }
+  }
+
+  /**
+   * The criteria that defines the archive rule.
+   *
+   * To learn about filter keys that you can use to create an archive rule, see [filter
+   * keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-reference-filter-keys.html)
+   * in the *User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+   * FilterProperty filterProperty = FilterProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .contains(List.of("contains"))
+   * .eq(List.of("eq"))
+   * .exists(false)
+   * .neq(List.of("neq"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html)
+   */
+  public interface FilterProperty {
+    /**
+     * A "contains" condition to match for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-contains)
+     */
+    public fun contains(): List<String> = unwrap(this).getContains() ?: emptyList()
+
+    /**
+     * An "equals" condition to match for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-eq)
+     */
+    public fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
+
+    /**
+     * An "exists" condition to match for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-exists)
+     */
+    public fun exists(): Any? = unwrap(this).getExists()
+
+    /**
+     * A "not equal" condition to match for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-neq)
+     */
+    public fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
+
+    /**
+     * The property used to define the criteria in the filter for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-property)
+     */
+    public fun `property`(): String
+
+    /**
+     * A builder for [FilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contains A "contains" condition to match for the rule.
+       */
+      public fun contains(contains: List<String>)
+
+      /**
+       * @param contains A "contains" condition to match for the rule.
+       */
+      public fun contains(vararg contains: String)
+
+      /**
+       * @param eq An "equals" condition to match for the rule.
+       */
+      public fun eq(eq: List<String>)
+
+      /**
+       * @param eq An "equals" condition to match for the rule.
+       */
+      public fun eq(vararg eq: String)
+
+      /**
+       * @param exists An "exists" condition to match for the rule.
+       */
+      public fun exists(exists: Boolean)
+
+      /**
+       * @param exists An "exists" condition to match for the rule.
+       */
+      public fun exists(exists: IResolvable)
+
+      /**
+       * @param neq A "not equal" condition to match for the rule.
+       */
+      public fun neq(neq: List<String>)
+
+      /**
+       * @param neq A "not equal" condition to match for the rule.
+       */
+      public fun neq(vararg neq: String)
+
+      /**
+       * @param property The property used to define the criteria in the filter for the rule. 
+       */
+      public fun `property`(`property`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty.Builder =
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty.builder()
+
+      /**
+       * @param contains A "contains" condition to match for the rule.
+       */
+      override fun contains(contains: List<String>) {
+        cdkBuilder.contains(contains)
+      }
+
+      /**
+       * @param contains A "contains" condition to match for the rule.
+       */
+      override fun contains(vararg contains: String): Unit = contains(contains.toList())
+
+      /**
+       * @param eq An "equals" condition to match for the rule.
+       */
+      override fun eq(eq: List<String>) {
+        cdkBuilder.eq(eq)
+      }
+
+      /**
+       * @param eq An "equals" condition to match for the rule.
+       */
+      override fun eq(vararg eq: String): Unit = eq(eq.toList())
+
+      /**
+       * @param exists An "exists" condition to match for the rule.
+       */
+      override fun exists(exists: Boolean) {
+        cdkBuilder.exists(exists)
+      }
+
+      /**
+       * @param exists An "exists" condition to match for the rule.
+       */
+      override fun exists(exists: IResolvable) {
+        cdkBuilder.exists(exists.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param neq A "not equal" condition to match for the rule.
+       */
+      override fun neq(neq: List<String>) {
+        cdkBuilder.neq(neq)
+      }
+
+      /**
+       * @param neq A "not equal" condition to match for the rule.
+       */
+      override fun neq(vararg neq: String): Unit = neq(neq.toList())
+
+      /**
+       * @param property The property used to define the criteria in the filter for the rule. 
+       */
+      override fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty,
+    ) : CdkObject(cdkObject), FilterProperty {
+      /**
+       * A "contains" condition to match for the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-contains)
+       */
+      override fun contains(): List<String> = unwrap(this).getContains() ?: emptyList()
+
+      /**
+       * An "equals" condition to match for the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-eq)
+       */
+      override fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
+
+      /**
+       * An "exists" condition to match for the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-exists)
+       */
+      override fun exists(): Any? = unwrap(this).getExists()
+
+      /**
+       * A "not equal" condition to match for the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-neq)
+       */
+      override fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
+
+      /**
+       * The property used to define the criteria in the filter for the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-property)
+       */
+      override fun `property`(): String = unwrap(this).getProperty()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty):
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterProperty):
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty
     }
   }
 

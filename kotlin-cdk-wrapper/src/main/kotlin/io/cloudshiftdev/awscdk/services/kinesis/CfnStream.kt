@@ -546,101 +546,6 @@ public open class CfnStream internal constructor(
   }
 
   /**
-   * Specifies the capacity mode to which you want to set your data stream.
-   *
-   * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and a
-   * *provisioned* capacity mode for your data streams.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesis.*;
-   * StreamModeDetailsProperty streamModeDetailsProperty = StreamModeDetailsProperty.builder()
-   * .streamMode("streamMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streammodedetails.html)
-   */
-  public interface StreamModeDetailsProperty {
-    /**
-     * Specifies the capacity mode to which you want to set your data stream.
-     *
-     * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and a
-     * *provisioned* capacity mode for your data streams.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streammodedetails.html#cfn-kinesis-stream-streammodedetails-streammode)
-     */
-    public fun streamMode(): String
-
-    /**
-     * A builder for [StreamModeDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param streamMode Specifies the capacity mode to which you want to set your data stream. 
-       * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and
-       * a *provisioned* capacity mode for your data streams.
-       */
-      public fun streamMode(streamMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty.Builder =
-          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty.builder()
-
-      /**
-       * @param streamMode Specifies the capacity mode to which you want to set your data stream. 
-       * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and
-       * a *provisioned* capacity mode for your data streams.
-       */
-      override fun streamMode(streamMode: String) {
-        cdkBuilder.streamMode(streamMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty,
-    ) : CdkObject(cdkObject), StreamModeDetailsProperty {
-      /**
-       * Specifies the capacity mode to which you want to set your data stream.
-       *
-       * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and
-       * a *provisioned* capacity mode for your data streams.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streammodedetails.html#cfn-kinesis-stream-streammodedetails-streammode)
-       */
-      override fun streamMode(): String = unwrap(this).getStreamMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StreamModeDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty):
-          StreamModeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StreamModeDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StreamModeDetailsProperty):
-          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty
-    }
-  }
-
-  /**
    * Enables or updates server-side encryption using an AWS KMS key for a specified stream.
    *
    *
@@ -812,6 +717,101 @@ public open class CfnStream internal constructor(
           software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty
+    }
+  }
+
+  /**
+   * Specifies the capacity mode to which you want to set your data stream.
+   *
+   * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and a
+   * *provisioned* capacity mode for your data streams.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesis.*;
+   * StreamModeDetailsProperty streamModeDetailsProperty = StreamModeDetailsProperty.builder()
+   * .streamMode("streamMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streammodedetails.html)
+   */
+  public interface StreamModeDetailsProperty {
+    /**
+     * Specifies the capacity mode to which you want to set your data stream.
+     *
+     * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and a
+     * *provisioned* capacity mode for your data streams.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streammodedetails.html#cfn-kinesis-stream-streammodedetails-streammode)
+     */
+    public fun streamMode(): String
+
+    /**
+     * A builder for [StreamModeDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param streamMode Specifies the capacity mode to which you want to set your data stream. 
+       * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and
+       * a *provisioned* capacity mode for your data streams.
+       */
+      public fun streamMode(streamMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty.Builder =
+          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty.builder()
+
+      /**
+       * @param streamMode Specifies the capacity mode to which you want to set your data stream. 
+       * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and
+       * a *provisioned* capacity mode for your data streams.
+       */
+      override fun streamMode(streamMode: String) {
+        cdkBuilder.streamMode(streamMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty,
+    ) : CdkObject(cdkObject), StreamModeDetailsProperty {
+      /**
+       * Specifies the capacity mode to which you want to set your data stream.
+       *
+       * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and
+       * a *provisioned* capacity mode for your data streams.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streammodedetails.html#cfn-kinesis-stream-streammodedetails-streammode)
+       */
+      override fun streamMode(): String = unwrap(this).getStreamMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StreamModeDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty):
+          StreamModeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamModeDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StreamModeDetailsProperty):
+          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty
     }
   }
 }

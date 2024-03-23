@@ -656,126 +656,6 @@ public open class CfnImageRecipe internal constructor(
   }
 
   /**
-   * Contains a key/value pair that sets the named component parameter.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * ComponentParameterProperty componentParameterProperty = ComponentParameterProperty.builder()
-   * .name("name")
-   * .value(List.of("value"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html)
-   */
-  public interface ComponentParameterProperty {
-    /**
-     * The name of the component parameter to set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-name)
-     */
-    public fun name(): String
-
-    /**
-     * Sets the value for the named component parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-value)
-     */
-    public fun `value`(): List<String>
-
-    /**
-     * A builder for [ComponentParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the component parameter to set. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value Sets the value for the named component parameter. 
-       */
-      public fun `value`(`value`: List<String>)
-
-      /**
-       * @param value Sets the value for the named component parameter. 
-       */
-      public fun `value`(vararg `value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty.builder()
-
-      /**
-       * @param name The name of the component parameter to set. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value Sets the value for the named component parameter. 
-       */
-      override fun `value`(`value`: List<String>) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      /**
-       * @param value Sets the value for the named component parameter. 
-       */
-      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty,
-    ) : CdkObject(cdkObject), ComponentParameterProperty {
-      /**
-       * The name of the component parameter to set.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Sets the value for the named component parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-value)
-       */
-      override fun `value`(): List<String> = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty):
-          ComponentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentParameterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentParameterProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty
-    }
-  }
-
-  /**
    * In addition to your infrastructure configuration, these settings provide an extra layer of
    * control over your build instances.
    *
@@ -1142,7 +1022,7 @@ public open class CfnImageRecipe internal constructor(
   }
 
   /**
-   * Contains settings for the Systems Manager agent on your build instance.
+   * Contains a key/value pair that sets the named component parameter.
    *
    * Example:
    *
@@ -1150,330 +1030,114 @@ public open class CfnImageRecipe internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * SystemsManagerAgentProperty systemsManagerAgentProperty = SystemsManagerAgentProperty.builder()
-   * .uninstallAfterBuild(false)
+   * ComponentParameterProperty componentParameterProperty = ComponentParameterProperty.builder()
+   * .name("name")
+   * .value(List.of("value"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html)
    */
-  public interface SystemsManagerAgentProperty {
+  public interface ComponentParameterProperty {
     /**
-     * Controls whether the Systems Manager agent is removed from your final build image, prior to
-     * creating the new AMI.
+     * The name of the component parameter to set.
      *
-     * If this is set to true, then the agent is removed from the final image. If it's set to false,
-     * then the agent is left in, so that it is included in the new AMI. The default value is false.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html#cfn-imagebuilder-imagerecipe-systemsmanageragent-uninstallafterbuild)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-name)
      */
-    public fun uninstallAfterBuild(): Any? = unwrap(this).getUninstallAfterBuild()
+    public fun name(): String
 
     /**
-     * A builder for [SystemsManagerAgentProperty]
+     * Sets the value for the named component parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-value)
+     */
+    public fun `value`(): List<String>
+
+    /**
+     * A builder for [ComponentParameterProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param uninstallAfterBuild Controls whether the Systems Manager agent is removed from your
-       * final build image, prior to creating the new AMI.
-       * If this is set to true, then the agent is removed from the final image. If it's set to
-       * false, then the agent is left in, so that it is included in the new AMI. The default value is
-       * false.
+       * @param name The name of the component parameter to set. 
        */
-      public fun uninstallAfterBuild(uninstallAfterBuild: Boolean)
+      public fun name(name: String)
 
       /**
-       * @param uninstallAfterBuild Controls whether the Systems Manager agent is removed from your
-       * final build image, prior to creating the new AMI.
-       * If this is set to true, then the agent is removed from the final image. If it's set to
-       * false, then the agent is left in, so that it is included in the new AMI. The default value is
-       * false.
+       * @param value Sets the value for the named component parameter. 
        */
-      public fun uninstallAfterBuild(uninstallAfterBuild: IResolvable)
+      public fun `value`(`value`: List<String>)
+
+      /**
+       * @param value Sets the value for the named component parameter. 
+       */
+      public fun `value`(vararg `value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty.Builder
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty.Builder
           =
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty.builder()
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty.builder()
 
       /**
-       * @param uninstallAfterBuild Controls whether the Systems Manager agent is removed from your
-       * final build image, prior to creating the new AMI.
-       * If this is set to true, then the agent is removed from the final image. If it's set to
-       * false, then the agent is left in, so that it is included in the new AMI. The default value is
-       * false.
+       * @param name The name of the component parameter to set. 
        */
-      override fun uninstallAfterBuild(uninstallAfterBuild: Boolean) {
-        cdkBuilder.uninstallAfterBuild(uninstallAfterBuild)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param uninstallAfterBuild Controls whether the Systems Manager agent is removed from your
-       * final build image, prior to creating the new AMI.
-       * If this is set to true, then the agent is removed from the final image. If it's set to
-       * false, then the agent is left in, so that it is included in the new AMI. The default value is
-       * false.
+       * @param value Sets the value for the named component parameter. 
        */
-      override fun uninstallAfterBuild(uninstallAfterBuild: IResolvable) {
-        cdkBuilder.uninstallAfterBuild(uninstallAfterBuild.let(IResolvable::unwrap))
+      override fun `value`(`value`: List<String>) {
+        cdkBuilder.`value`(`value`)
       }
+
+      /**
+       * @param value Sets the value for the named component parameter. 
+       */
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
 
       public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty =
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty,
-    ) : CdkObject(cdkObject), SystemsManagerAgentProperty {
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty,
+    ) : CdkObject(cdkObject), ComponentParameterProperty {
       /**
-       * Controls whether the Systems Manager agent is removed from your final build image, prior to
-       * creating the new AMI.
+       * The name of the component parameter to set.
        *
-       * If this is set to true, then the agent is removed from the final image. If it's set to
-       * false, then the agent is left in, so that it is included in the new AMI. The default value is
-       * false.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html#cfn-imagebuilder-imagerecipe-systemsmanageragent-uninstallafterbuild)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-name)
        */
-      override fun uninstallAfterBuild(): Any? = unwrap(this).getUninstallAfterBuild()
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Sets the value for the named component parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-value)
+       */
+      override fun `value`(): List<String> = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SystemsManagerAgentProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentParameterProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty):
-          SystemsManagerAgentProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SystemsManagerAgentProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty):
+          ComponentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentParameterProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SystemsManagerAgentProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty =
+      internal fun unwrap(wrapped: ComponentParameterProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty
-    }
-  }
-
-  /**
-   * Defines block device mappings for the instance used to configure your image.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * InstanceBlockDeviceMappingProperty instanceBlockDeviceMappingProperty =
-   * InstanceBlockDeviceMappingProperty.builder()
-   * .deviceName("deviceName")
-   * .ebs(EbsInstanceBlockDeviceSpecificationProperty.builder()
-   * .deleteOnTermination(false)
-   * .encrypted(false)
-   * .iops(123)
-   * .kmsKeyId("kmsKeyId")
-   * .snapshotId("snapshotId")
-   * .throughput(123)
-   * .volumeSize(123)
-   * .volumeType("volumeType")
-   * .build())
-   * .noDevice("noDevice")
-   * .virtualName("virtualName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html)
-   */
-  public interface InstanceBlockDeviceMappingProperty {
-    /**
-     * The device to which these mappings apply.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-devicename)
-     */
-    public fun deviceName(): String? = unwrap(this).getDeviceName()
-
-    /**
-     * Use to manage Amazon EBS-specific configuration for this mapping.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs)
-     */
-    public fun ebs(): Any? = unwrap(this).getEbs()
-
-    /**
-     * Enter an empty string to remove a mapping from the parent image.
-     *
-     * The following is an example of an empty string value in the `NoDevice` field.
-     *
-     * `NoDevice:""`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice)
-     */
-    public fun noDevice(): String? = unwrap(this).getNoDevice()
-
-    /**
-     * Manages the instance ephemeral devices.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname)
-     */
-    public fun virtualName(): String? = unwrap(this).getVirtualName()
-
-    /**
-     * A builder for [InstanceBlockDeviceMappingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deviceName The device to which these mappings apply.
-       */
-      public fun deviceName(deviceName: String)
-
-      /**
-       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
-       */
-      public fun ebs(ebs: IResolvable)
-
-      /**
-       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
-       */
-      public fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty)
-
-      /**
-       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("81df05fefd03046b380ec12ea800dec283d0ed7acb50b2a7b9ce3905e31e3b5e")
-      public fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param noDevice Enter an empty string to remove a mapping from the parent image.
-       * The following is an example of an empty string value in the `NoDevice` field.
-       *
-       * `NoDevice:""`
-       */
-      public fun noDevice(noDevice: String)
-
-      /**
-       * @param virtualName Manages the instance ephemeral devices.
-       */
-      public fun virtualName(virtualName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty.builder()
-
-      /**
-       * @param deviceName The device to which these mappings apply.
-       */
-      override fun deviceName(deviceName: String) {
-        cdkBuilder.deviceName(deviceName)
-      }
-
-      /**
-       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
-       */
-      override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
-       */
-      override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty) {
-        cdkBuilder.ebs(ebs.let(EbsInstanceBlockDeviceSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("81df05fefd03046b380ec12ea800dec283d0ed7acb50b2a7b9ce3905e31e3b5e")
-      override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty.Builder.() -> Unit): Unit =
-          ebs(EbsInstanceBlockDeviceSpecificationProperty(ebs))
-
-      /**
-       * @param noDevice Enter an empty string to remove a mapping from the parent image.
-       * The following is an example of an empty string value in the `NoDevice` field.
-       *
-       * `NoDevice:""`
-       */
-      override fun noDevice(noDevice: String) {
-        cdkBuilder.noDevice(noDevice)
-      }
-
-      /**
-       * @param virtualName Manages the instance ephemeral devices.
-       */
-      override fun virtualName(virtualName: String) {
-        cdkBuilder.virtualName(virtualName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), InstanceBlockDeviceMappingProperty {
-      /**
-       * The device to which these mappings apply.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-devicename)
-       */
-      override fun deviceName(): String? = unwrap(this).getDeviceName()
-
-      /**
-       * Use to manage Amazon EBS-specific configuration for this mapping.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs)
-       */
-      override fun ebs(): Any? = unwrap(this).getEbs()
-
-      /**
-       * Enter an empty string to remove a mapping from the parent image.
-       *
-       * The following is an example of an empty string value in the `NoDevice` field.
-       *
-       * `NoDevice:""`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice)
-       */
-      override fun noDevice(): String? = unwrap(this).getNoDevice()
-
-      /**
-       * Manages the instance ephemeral devices.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname)
-       */
-      override fun virtualName(): String? = unwrap(this).getVirtualName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InstanceBlockDeviceMappingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty):
-          InstanceBlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceBlockDeviceMappingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceBlockDeviceMappingProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty
     }
   }
 
@@ -1775,6 +1439,342 @@ public open class CfnImageRecipe internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty
+    }
+  }
+
+  /**
+   * Defines block device mappings for the instance used to configure your image.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * InstanceBlockDeviceMappingProperty instanceBlockDeviceMappingProperty =
+   * InstanceBlockDeviceMappingProperty.builder()
+   * .deviceName("deviceName")
+   * .ebs(EbsInstanceBlockDeviceSpecificationProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .kmsKeyId("kmsKeyId")
+   * .snapshotId("snapshotId")
+   * .throughput(123)
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build())
+   * .noDevice("noDevice")
+   * .virtualName("virtualName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html)
+   */
+  public interface InstanceBlockDeviceMappingProperty {
+    /**
+     * The device to which these mappings apply.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-devicename)
+     */
+    public fun deviceName(): String? = unwrap(this).getDeviceName()
+
+    /**
+     * Use to manage Amazon EBS-specific configuration for this mapping.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs)
+     */
+    public fun ebs(): Any? = unwrap(this).getEbs()
+
+    /**
+     * Enter an empty string to remove a mapping from the parent image.
+     *
+     * The following is an example of an empty string value in the `NoDevice` field.
+     *
+     * `NoDevice:""`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice)
+     */
+    public fun noDevice(): String? = unwrap(this).getNoDevice()
+
+    /**
+     * Manages the instance ephemeral devices.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname)
+     */
+    public fun virtualName(): String? = unwrap(this).getVirtualName()
+
+    /**
+     * A builder for [InstanceBlockDeviceMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deviceName The device to which these mappings apply.
+       */
+      public fun deviceName(deviceName: String)
+
+      /**
+       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
+       */
+      public fun ebs(ebs: IResolvable)
+
+      /**
+       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
+       */
+      public fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty)
+
+      /**
+       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("81df05fefd03046b380ec12ea800dec283d0ed7acb50b2a7b9ce3905e31e3b5e")
+      public fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param noDevice Enter an empty string to remove a mapping from the parent image.
+       * The following is an example of an empty string value in the `NoDevice` field.
+       *
+       * `NoDevice:""`
+       */
+      public fun noDevice(noDevice: String)
+
+      /**
+       * @param virtualName Manages the instance ephemeral devices.
+       */
+      public fun virtualName(virtualName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty.builder()
+
+      /**
+       * @param deviceName The device to which these mappings apply.
+       */
+      override fun deviceName(deviceName: String) {
+        cdkBuilder.deviceName(deviceName)
+      }
+
+      /**
+       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
+       */
+      override fun ebs(ebs: IResolvable) {
+        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
+       */
+      override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty) {
+        cdkBuilder.ebs(ebs.let(EbsInstanceBlockDeviceSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("81df05fefd03046b380ec12ea800dec283d0ed7acb50b2a7b9ce3905e31e3b5e")
+      override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty.Builder.() -> Unit): Unit =
+          ebs(EbsInstanceBlockDeviceSpecificationProperty(ebs))
+
+      /**
+       * @param noDevice Enter an empty string to remove a mapping from the parent image.
+       * The following is an example of an empty string value in the `NoDevice` field.
+       *
+       * `NoDevice:""`
+       */
+      override fun noDevice(noDevice: String) {
+        cdkBuilder.noDevice(noDevice)
+      }
+
+      /**
+       * @param virtualName Manages the instance ephemeral devices.
+       */
+      override fun virtualName(virtualName: String) {
+        cdkBuilder.virtualName(virtualName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty,
+    ) : CdkObject(cdkObject), InstanceBlockDeviceMappingProperty {
+      /**
+       * The device to which these mappings apply.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-devicename)
+       */
+      override fun deviceName(): String? = unwrap(this).getDeviceName()
+
+      /**
+       * Use to manage Amazon EBS-specific configuration for this mapping.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs)
+       */
+      override fun ebs(): Any? = unwrap(this).getEbs()
+
+      /**
+       * Enter an empty string to remove a mapping from the parent image.
+       *
+       * The following is an example of an empty string value in the `NoDevice` field.
+       *
+       * `NoDevice:""`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice)
+       */
+      override fun noDevice(): String? = unwrap(this).getNoDevice()
+
+      /**
+       * Manages the instance ephemeral devices.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname)
+       */
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceBlockDeviceMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty):
+          InstanceBlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceBlockDeviceMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceBlockDeviceMappingProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty
+    }
+  }
+
+  /**
+   * Contains settings for the Systems Manager agent on your build instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * SystemsManagerAgentProperty systemsManagerAgentProperty = SystemsManagerAgentProperty.builder()
+   * .uninstallAfterBuild(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html)
+   */
+  public interface SystemsManagerAgentProperty {
+    /**
+     * Controls whether the Systems Manager agent is removed from your final build image, prior to
+     * creating the new AMI.
+     *
+     * If this is set to true, then the agent is removed from the final image. If it's set to false,
+     * then the agent is left in, so that it is included in the new AMI. The default value is false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html#cfn-imagebuilder-imagerecipe-systemsmanageragent-uninstallafterbuild)
+     */
+    public fun uninstallAfterBuild(): Any? = unwrap(this).getUninstallAfterBuild()
+
+    /**
+     * A builder for [SystemsManagerAgentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param uninstallAfterBuild Controls whether the Systems Manager agent is removed from your
+       * final build image, prior to creating the new AMI.
+       * If this is set to true, then the agent is removed from the final image. If it's set to
+       * false, then the agent is left in, so that it is included in the new AMI. The default value is
+       * false.
+       */
+      public fun uninstallAfterBuild(uninstallAfterBuild: Boolean)
+
+      /**
+       * @param uninstallAfterBuild Controls whether the Systems Manager agent is removed from your
+       * final build image, prior to creating the new AMI.
+       * If this is set to true, then the agent is removed from the final image. If it's set to
+       * false, then the agent is left in, so that it is included in the new AMI. The default value is
+       * false.
+       */
+      public fun uninstallAfterBuild(uninstallAfterBuild: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty.builder()
+
+      /**
+       * @param uninstallAfterBuild Controls whether the Systems Manager agent is removed from your
+       * final build image, prior to creating the new AMI.
+       * If this is set to true, then the agent is removed from the final image. If it's set to
+       * false, then the agent is left in, so that it is included in the new AMI. The default value is
+       * false.
+       */
+      override fun uninstallAfterBuild(uninstallAfterBuild: Boolean) {
+        cdkBuilder.uninstallAfterBuild(uninstallAfterBuild)
+      }
+
+      /**
+       * @param uninstallAfterBuild Controls whether the Systems Manager agent is removed from your
+       * final build image, prior to creating the new AMI.
+       * If this is set to true, then the agent is removed from the final image. If it's set to
+       * false, then the agent is left in, so that it is included in the new AMI. The default value is
+       * false.
+       */
+      override fun uninstallAfterBuild(uninstallAfterBuild: IResolvable) {
+        cdkBuilder.uninstallAfterBuild(uninstallAfterBuild.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty,
+    ) : CdkObject(cdkObject), SystemsManagerAgentProperty {
+      /**
+       * Controls whether the Systems Manager agent is removed from your final build image, prior to
+       * creating the new AMI.
+       *
+       * If this is set to true, then the agent is removed from the final image. If it's set to
+       * false, then the agent is left in, so that it is included in the new AMI. The default value is
+       * false.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html#cfn-imagebuilder-imagerecipe-systemsmanageragent-uninstallafterbuild)
+       */
+      override fun uninstallAfterBuild(): Any? = unwrap(this).getUninstallAfterBuild()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SystemsManagerAgentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty):
+          SystemsManagerAgentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SystemsManagerAgentProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SystemsManagerAgentProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty
     }
   }
 }

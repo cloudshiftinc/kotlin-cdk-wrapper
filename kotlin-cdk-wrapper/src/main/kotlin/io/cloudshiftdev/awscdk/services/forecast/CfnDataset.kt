@@ -447,6 +447,113 @@ public open class CfnDataset internal constructor(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.forecast.*;
+   * AttributesItemsProperty attributesItemsProperty = AttributesItemsProperty.builder()
+   * .attributeName("attributeName")
+   * .attributeType("attributeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html)
+   */
+  public interface AttributesItemsProperty {
+    /**
+     * Name of the dataset field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html#cfn-forecast-dataset-attributesitems-attributename)
+     */
+    public fun attributeName(): String? = unwrap(this).getAttributeName()
+
+    /**
+     * Data type of the field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html#cfn-forecast-dataset-attributesitems-attributetype)
+     */
+    public fun attributeType(): String? = unwrap(this).getAttributeType()
+
+    /**
+     * A builder for [AttributesItemsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeName Name of the dataset field.
+       */
+      public fun attributeName(attributeName: String)
+
+      /**
+       * @param attributeType Data type of the field.
+       */
+      public fun attributeType(attributeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty.Builder =
+          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty.builder()
+
+      /**
+       * @param attributeName Name of the dataset field.
+       */
+      override fun attributeName(attributeName: String) {
+        cdkBuilder.attributeName(attributeName)
+      }
+
+      /**
+       * @param attributeType Data type of the field.
+       */
+      override fun attributeType(attributeType: String) {
+        cdkBuilder.attributeType(attributeType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty,
+    ) : CdkObject(cdkObject), AttributesItemsProperty {
+      /**
+       * Name of the dataset field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html#cfn-forecast-dataset-attributesitems-attributename)
+       */
+      override fun attributeName(): String? = unwrap(this).getAttributeName()
+
+      /**
+       * Data type of the field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html#cfn-forecast-dataset-attributesitems-attributetype)
+       */
+      override fun attributeType(): String? = unwrap(this).getAttributeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AttributesItemsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty):
+          AttributesItemsProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributesItemsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AttributesItemsProperty):
+          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty
+    }
+  }
+
+  /**
    * An AWS Key Management Service (KMS) key and an AWS Identity and Access Management (IAM) role
    * that Amazon Forecast can assume to access the key.
    *
@@ -812,113 +919,6 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.forecast.*;
-   * AttributesItemsProperty attributesItemsProperty = AttributesItemsProperty.builder()
-   * .attributeName("attributeName")
-   * .attributeType("attributeType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html)
-   */
-  public interface AttributesItemsProperty {
-    /**
-     * Name of the dataset field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html#cfn-forecast-dataset-attributesitems-attributename)
-     */
-    public fun attributeName(): String? = unwrap(this).getAttributeName()
-
-    /**
-     * Data type of the field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html#cfn-forecast-dataset-attributesitems-attributetype)
-     */
-    public fun attributeType(): String? = unwrap(this).getAttributeType()
-
-    /**
-     * A builder for [AttributesItemsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributeName Name of the dataset field.
-       */
-      public fun attributeName(attributeName: String)
-
-      /**
-       * @param attributeType Data type of the field.
-       */
-      public fun attributeType(attributeType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty.Builder =
-          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty.builder()
-
-      /**
-       * @param attributeName Name of the dataset field.
-       */
-      override fun attributeName(attributeName: String) {
-        cdkBuilder.attributeName(attributeName)
-      }
-
-      /**
-       * @param attributeType Data type of the field.
-       */
-      override fun attributeType(attributeType: String) {
-        cdkBuilder.attributeType(attributeType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty,
-    ) : CdkObject(cdkObject), AttributesItemsProperty {
-      /**
-       * Name of the dataset field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html#cfn-forecast-dataset-attributesitems-attributename)
-       */
-      override fun attributeName(): String? = unwrap(this).getAttributeName()
-
-      /**
-       * Data type of the field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-attributesitems.html#cfn-forecast-dataset-attributesitems-attributetype)
-       */
-      override fun attributeType(): String? = unwrap(this).getAttributeType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AttributesItemsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty):
-          AttributesItemsProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributesItemsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AttributesItemsProperty):
-          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty
     }
   }
 }
